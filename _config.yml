@@ -1,0 +1,15 @@
+exclude:  [ Gemfile, Gemfile.lock, Procfile, vendor, gems]
+
+sitename:  The Foreman
+tagline: The single address for all machines lifecycle management
+
+production_url : http://theforeman.org
+url: http://theforeman.org
+
+safe:        false
+auto:        false
+baseurl:    /
+
+future:      false
+pygments:    true
+markdown:    rdiscount
