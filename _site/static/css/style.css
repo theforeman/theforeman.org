@@ -329,3 +329,11 @@ border-radius: 4px;
 .hero-unit img {
   margin-bottom: 20px;
 }
+
+#content p {
+  margin-bottom: 25px;
+}
+
+#content h1 {
+  margin-bottom: 8px;
+}
