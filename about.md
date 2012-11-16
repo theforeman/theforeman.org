@@ -2,5 +2,7 @@
 layout: about
 title: About the Foreman
 
-current: About
+current: about.html
 ---
+
+Testing!

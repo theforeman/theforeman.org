@@ -12,8 +12,9 @@
         <img alt="Foreman" class="logo" src="static/images/foreman.png" /><a class="brand logo-text" href="/">Foreman</a>
         <div class="nav1">
           <ul class="nav" id="menu">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="/about.html">About</a></li>
+          {% for link in site.navigation %}
+            <li><a {% if current %}class="active"{% endif %} href="{{ site.baseurl }}/{{ link.url }}">{{ link.text }}</a></li>
+          {% endfor %}
           </ul>
         </div>
       </div>

@@ -8,8 +8,13 @@ url: http://theforeman.org
 
 safe:        false
 auto:        false
-baseurl:    /
 
 future:      false
 pygments:    true
 markdown:    rdiscount
+
+navigation:
+- text: About
+  url: about.html
+- text: Contribute
+  url: contribute.html
