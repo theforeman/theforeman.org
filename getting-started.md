@@ -11,10 +11,7 @@ TFTP server.
 
 
 # Downloading the installer
-**Installation via tarballs:**
-
-Download the modules:
-
+**Download the modules:**
 {% highlight bash %} 
 export MODULE_PATH="/etc/puppet/modules/common" 
 mkdir -p $MODULE_PATH
@@ -25,8 +22,7 @@ done;
 echo include puppet, puppet::server, foreman, foreman_proxy | puppet apply --modulepath $MODULE_PATH
 {% endhighlight %}
 
-To install Foreman and proxy:
+**To install Foreman and proxy:**
 {% highlight bash %}
-echo include foreman, foreman_proxy | puppet --modulepath
-/etc/puppet/modules/common
+echo include foreman, foreman_proxy | puppet --modulepath /etc/puppet/modules/common
 {% endhighlight %}
