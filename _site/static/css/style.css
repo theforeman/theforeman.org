@@ -320,3 +320,12 @@ border-radius: 4px;
   text-decoration: line-through;
 }
 .btn-toolbar-condensed{margin: 0;}
+
+/* Website specific bootstrap customizations */
+#content .hero-unit {
+  padding: 30px;
+}
+
+.hero-unit img {
+  margin-bottom: 20px;
+}
