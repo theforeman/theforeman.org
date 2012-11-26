@@ -16,5 +16,9 @@ markdown:    rdiscount
 navigation:
 - text: About
   url: about.html
+- text: Installation
+  url: getting-started.html
+- text: Screenshots & Screencasts
+  url: media.html
 - text: Contribute
   url: contribute.html
