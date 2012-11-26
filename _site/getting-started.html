@@ -40,7 +40,26 @@ TFTP server.</p>
 
 <p><strong>Download the modules:</strong></p>
 
+<div class="highlight"><pre><code class="bash"> 
+<span class="nb">export </span><span class="nv">MODULE_PATH</span><span class="o">=</span><span class="s2">&quot;/etc/puppet/modules/common&quot;</span> 
+mkdir -p <span class="nv">$MODULE_PATH</span>
+<span class="k">for </span>mod in apache foreman foreman_proxy git passenger puppet tftp xinetd; <span class="k">do</span>
+<span class="k">  </span>mkdir -p <span class="nv">$MODULE_PATH</span>/<span class="nv">$mod</span>
+  wget http://github.com/theforeman/puppet-<span class="nv">$mod</span>/tarball/master -O - | tar xzvf - -C <span class="nv">$MODULE_PATH</span>/<span class="nv">$mod</span> --strip-components<span class="o">=</span>1
+<span class="k">done</span>;
+<span class="nb">echo </span>include puppet, puppet::server, foreman, foreman_proxy | puppet apply --modulepath <span class="nv">$MODULE_PATH</span>
+</code></pre>
+</div>
+
+
 <p><strong>To install Foreman and proxy:</strong></p>
+
+<div class="highlight"><pre><code class="bash"><span class="nb">echo </span>include foreman, foreman_proxy | puppet --modulepath /etc/puppet/modules/common
+</code></pre>
+</div>
+
+
+
 
     </div>
   </div>
