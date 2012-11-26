@@ -22,3 +22,8 @@ navigation:
   url: media.html
 - text: Contribute
   url: contribute.html
+
+slideshow:
+- text: The Foreman dashboard and landing page
+  thumbnail: dashboard.png
+  full: dashboard.png

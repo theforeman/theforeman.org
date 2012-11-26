@@ -1,4 +1,4 @@
 ---
-layout: default
+layout: media
 title: Screenshots & Screencasts
 ---
