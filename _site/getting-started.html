@@ -139,6 +139,8 @@
           
             <li><a  href="contribute.html">Contribute</a></li>
           
+            <li><a  href="support.html">Support</a></li>
+          
           </ul>
         </div>
       </div>
@@ -151,13 +153,11 @@
     <div id="content" class="container">
       <h1>Summary</h1>
 
-<p>The "Foreman installer" is a collection of Puppet modules that installs
-different components needed to get a full working Foreman setup. These
-include the <a href="https://github.com/theforeman/smart-proxy">smart proxy</a>,
-Passenger (for the Puppet master and Foreman itself), and an optional
-TFTP server.</p>
+<p>The "Foreman installer" is a collection of Puppet modules that installs different components needed to get a full working Foreman setup. These include the <a href="https://github.com/theforeman/smart-proxy">smart proxy</a>, Passenger (for the Puppet master and Foreman itself), and an optional TFTP server.</p>
 
 <h1>Installation</h1>
+
+<p><a href="https://github.com/theforeman/foreman-installer">The Foreman installer</a> uses Puppet to install Foreman. This guide assumes that you've already installed Puppet itself, but the installer will setup Foreman and the Puppet master with Passenger, the <a href="https://github.com/theforeman/smart-proxy">smart proxy</a>, git, xinetd (on EL/Fedora systems), and a TFTP server.</p>
 
 <h2>Downloading the installer</h2>
 
@@ -170,14 +170,13 @@ mkdir -p <span class="nv">$MODULE_PATH</span>
 <span class="k">  </span>mkdir -p <span class="nv">$MODULE_PATH</span>/<span class="nv">$mod</span>
   wget http://github.com/theforeman/puppet-<span class="nv">$mod</span>/tarball/master -O - | tar xzvf - -C <span class="nv">$MODULE_PATH</span>/<span class="nv">$mod</span> --strip-components<span class="o">=</span>1
 <span class="k">done</span>;
-<span class="nb">echo </span>include puppet, puppet::server, foreman, foreman_proxy | puppet apply --modulepath <span class="nv">$MODULE_PATH</span>
 </code></pre>
 </div>
 
 
 <p><strong>To install Foreman and proxy:</strong></p>
 
-<div class="highlight"><pre><code class="bash"><span class="nb">echo </span>include foreman, foreman_proxy | puppet --modulepath /etc/puppet/modules/common
+<div class="highlight"><pre><code class="bash"><span class="nb">echo </span>include foreman, foreman_proxy | puppet apply --modulepath /etc/puppet/modules/common
 </code></pre>
 </div>
 
