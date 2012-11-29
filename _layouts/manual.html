@@ -1,0 +1,21 @@
+{% include header.html %}
+
+<body>
+  <div id="main">
+    <div id="content" class="container">
+      <div id="row" class="row">
+        <div id="span8" class="span8">
+          {{ content }}
+        </div>
+        <div id="span3" class="span3">
+          {% capture manual_content %}
+            {% include manual.md %}
+          {% endcapture %}
+          {{ manual_content | markdownify }}
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+{% include footer.html %}
