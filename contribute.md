@@ -1,5 +1,10 @@
 ---
 layout: default
+title: Contributing to Foreman
+---
+
+---
+layout: default
 title: Contribute
 ---
 The Foreman is an open-source project that's licensed under the GNU Public License version 3. Contributions of all types are gladly accepted!
@@ -28,25 +33,25 @@ Please make sure there is a Redmine issue open for the change you are going to s
 1. Fork theforeman/foreman (https://github.com/theforeman/foreman) to a personal github account https://help.github.com/articles/fork-a-repo
 Should end up with a repo of <username>/foreman
 2. Clone the fork you just created to your development system: `git clone https://github.com/<username>/foreman.git`
-4. Reference theforeman/foreman as upstream:
+3. Reference theforeman/foreman as upstream:
 
     * `cd foreman`
     * `git remote add upstream https://github.com/theforeman/foreman.git`
     * `git fetch upstream`
 
-5. Create a feature/topic branch
+4. Create a feature/topic branch
 
     * `git checkout -b <branchName>` - Example: git checkout -b 1656-add_TB_support
 
-6. Make changes and commit. Please reference the Redmine issue this commit addresses via "refs" or "fixes" #issueid in the commit message. 
+5. Make changes and commit. Please reference the Redmine issue this commit addresses via "refs" or "fixes" #issueid in the commit message. 
 
     * `git add <modifiedFile(s)>; git commit -m 'fixes #<bug> <message>'`
 
-7. Push topic branch to your fork:
+6. Push topic branch to your fork:
 
     * `git push origin <branchName>` - Example: git push origin 1656-add_TB_support
 
-8. [Issue a pull request](https://help.github.com/articles/using-pull-requests
+7. [Issue a pull request](https://help.github.com/articles/using-pull-requests)
 
 Once you have followed this process once, it becomes much simpler to add future patches!
 

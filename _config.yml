@@ -15,14 +15,14 @@ markdown:    rdiscount
 
 navigation:
 - text: About
-  url: about.html
-- text: Installation
-  url: getting-started.html
+  url: /about.html
+- text: Manual
+  url: /manuals/1.0/index.html
 - text: Screenshots & Screencasts
-  url: media.html
+  url: /media.html
 - text: Contribute
-  url: contribute.html
+  url: /contribute.html
 - text: Support
-  url: support.html
+  url: /support.html
 - text: API
-  url: api.html
+  url: /api.html
