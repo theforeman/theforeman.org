@@ -3,10 +3,6 @@ layout: default
 title: Contributing to Foreman
 ---
 
----
-layout: default
-title: Contribute
----
 The Foreman is an open-source project that's licensed under the GNU Public License version 3. Contributions of all types are gladly accepted!
 
 ## Code-related contributions

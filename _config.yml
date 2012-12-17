@@ -1,7 +1,8 @@
 exclude:  [ Gemfile, Gemfile.lock, Procfile, vendor, gems]
 
 sitename:  The Foreman
-tagline: A single address for server lifecycle management.
+tagline: The Foreman is a complete lifecycle management tool for physical and virtual servers.
+description: Through deep integration with configuration management, DHCP, DNS, TFTP, and PXE-based unattended installations, Foreman manages every stage of the lifecycle of your physical or virtual servers. The Foreman provides comprehensive, auditable interaction facilities including a web frontend and robust, RESTful API.
 
 production_url : http://theforeman.org
 url: http://theforeman.org
@@ -14,8 +15,6 @@ pygments:    true
 markdown:    rdiscount
 
 navigation:
-- text: About
-  url: /about.html
 - text: Manual
   url: /manuals/1.0/index.html
 - text: Screenshots & Screencasts
