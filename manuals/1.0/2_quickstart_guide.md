@@ -21,9 +21,9 @@ for mod in apache foreman foreman_proxy git passenger puppet tftp xinetd; do
 done;
 </pre>
 
-**To install Foreman and proxy:**
+**To install Foreman, the smart proxy, Puppet, and a Puppet master:**
 <pre>
-echo include foreman, foreman_proxy | puppet apply --modulepath /etc/puppet/modules/common
+echo include puppet, puppet::server, foreman, foreman_proxy | puppet apply --modulepath /etc/puppet/modules/common
 </pre>
 
 

@@ -8,7 +8,9 @@ The Foreman is an open-source project that's licensed under the GNU Public Licen
 ## Code-related contributions
 These types of tasks generally require a familiarity with Ruby (on Rails) development or RPM/Debian packaging. If you are still new to Rails, community members can help you if you get stuck with something or have any other questions.
 
-You will need to download a copy of the current development-code. The official code repository is located in Github and can be downloaded by following the Installing latest code.
+You will need to download a copy of the current development-code. [The
+official code repository](https://github.com/theforeman.org) is located
+on Github.
 
 ### Please note that there are two important branches:
 * Master - latest stable release code
@@ -17,7 +19,7 @@ You will need to download a copy of the current development-code. The official c
 **Master is frozen between major releases.**
 
 ### Setup test environment for unit/functional test development
-First, make sure you are a member of the Foreman Developers mailing list.
+First, make sure you are a member of the [Foreman Developers](https://groups.google.com/forum/?fromgroups#!forum/foreman-dev) mailing list.
 
 Patches to fix bugs or add new features are always appreciated. If you are going to work on a specific issue, make a note in the issue details so the developers will know what you're working on.
 
@@ -26,8 +28,7 @@ We try to keep a one commit per bug/feature policy, please try to create an issu
 ### Submit Patches
 Please make sure there is a Redmine issue open for the change you are going to submit, as you will want to reference it in your commit message; this is very helpful when generating release notes.
 
-1. Fork theforeman/foreman (https://github.com/theforeman/foreman) to a personal github account https://help.github.com/articles/fork-a-repo
-Should end up with a repo of <username>/foreman
+1. Fork [theforeman/foreman](https://github.com/theforeman/foreman) to a personal github account. This will create a "foreman" repo under your Github username.
 2. Clone the fork you just created to your development system: `git clone https://github.com/<username>/foreman.git`
 3. Reference theforeman/foreman as upstream:
 
