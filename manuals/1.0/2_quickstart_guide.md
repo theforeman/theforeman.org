@@ -12,20 +12,20 @@ The "Foreman installer" is a collection of Puppet modules that installs differen
 
 ## Downloading the installer
 **Download the modules:**
-<pre>
+
+{% highlight bash %}
 export MODULE_PATH="/etc/puppet/modules/common" 
 mkdir -p $MODULE_PATH
 for mod in apache foreman foreman_proxy git passenger puppet tftp xinetd; do
   mkdir -p $MODULE_PATH/$mod
   wget http://github.com/theforeman/puppet-$mod/tarball/master -O - | tar xzvf - -C $MODULE_PATH/$mod --strip-components=1
 done;
-</pre>
+{% endhighlight %}
 
 **To install Foreman, the smart proxy, Puppet, and a Puppet master:**
-<pre>
+{% highlight bash %}
 echo include puppet, puppet::server, foreman, foreman_proxy | puppet apply --modulepath /etc/puppet/modules/common
-</pre>
-
+{% endhighlight %}
 
 ## Additional reading...
 * [Managing a datacenter with Foreman and Puppet](http://engineering.yakaz.com/managing-an-infrastructure-datacenter-with-foreman-and-puppet.html)
