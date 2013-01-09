@@ -3,19 +3,23 @@
 <body>
   <div id="main">
     <div id="content" class="container">
-      <div id="row" class="row">
-        <div id="span8" class="span8">
-          {{ content }}
+      <div class="row">
+        <div id="toc" class="span3">
         </div>
-        <div id="span3" class="span3">
+        <div id="doc" class="offset4 span8">
           {% capture manual_content %}
-            {% include manual.md %}
           {% endcapture %}
-          {{ manual_content | markdownify }}
+          {{ content  }}
         </div>
       </div>
     </div>
   </div>
 </body>
+ <script type="text/javascript">
+$(function() {
+//Calls the tocify method on your HTML div.
+$("#toc").tocify({context: '#doc'});
+});
+</script>
 
 {% include footer.html %}
