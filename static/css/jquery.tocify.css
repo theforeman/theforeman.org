@@ -5,8 +5,6 @@
 
 /* The Table of Contents container element */
 #toc {
-    width: 20%;
-    margin-left: 2%;
     position: fixed;
     border: 1px solid #ccc;
     webkit-border-radius: 6px;
