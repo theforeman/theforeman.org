@@ -1,7 +1,3 @@
----
-layout: manual
-title: Troubleshooting Foreman
----
 
 There are two primary methods of getting support for the Foreman: IRC and mailing lists.
 

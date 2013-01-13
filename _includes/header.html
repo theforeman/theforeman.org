@@ -17,13 +17,11 @@
     <div class="navbar-inner">
       <div class="container">
         <img alt="Foreman" class="logo" src="/static/images/foreman.png" /><a class="brand logo-text" href="/">Foreman</a>
-        <div class="nav1">
           <ul class="nav" id="menu">
           {% for link in site.navigation %}
             <li><a {% if current %}class="active"{% endif %} href="{{ link.url }}">{{ link.text }}</a></li>
           {% endfor %}
           </ul>
-        </div>
       </div>
     </div>
   </div>
