@@ -3,22 +3,6 @@ body { height: 100%;  }
 #wrap { min-height: 100%; }
 #main {padding-bottom: 38px; padding-top:60px; }
 
-
-
-#footer {
-  margin-top: -38px; /* negative value of footer height */
-  height: 30px;
-  border-top: #aaa 1px solid;
-  color: #aaa;
-  padding-top: 7px;
-  text-align:center;
-  vertical-align: bottom;
-  clear:both;
-}
-#footer a { color: #000; text-decoration: none;}
-#footer span {position: relative; left: 240px;}
-
-
 th.underlined {
   text-decoration: underline
 }
@@ -34,7 +18,7 @@ th.underlined {
 }
 
 .logo-text {
-  margin-left: 55px !important;
+  margin-left: 45px !important;
 }
 
 /* text align left */
@@ -93,6 +77,18 @@ border-radius: 4px;
   padding-bottom: 9px;
   margin: 20px 0 30px;
   border-bottom: 1px solid #EEE;
+}
+
+#content h2 {
+  padding-top: 25px;
+  padding-bottom: 9px;
+  margin: 20px 0 30px;
+  border-bottom: 1px solid #EEE;
+}
+#content h3 {
+  padding-top: 25px;
+  padding-bottom: 9px;
+  margin: 20px 0 30px;
 }
 
 .homepage-img {
