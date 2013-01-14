@@ -103,6 +103,10 @@ border-radius: 4px;
   max-height: 200px;
 }
 
+.center{
+  text-align: center;
+}
+
 .footer{
   font-size: 11px;
   color: #888;
