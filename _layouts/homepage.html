@@ -5,23 +5,23 @@
     <div id="content" class="container">
       <div class="hero-unit">
         <p>{{ site.tagline }}</p>
-        <img src="/static/images/foreman_large.png" />
+        <img src="/static/images/foreman_large.png" class="homepage-primary-img"/>
         <p>
           {{ site.description }}
         </p>
         <a class="btn btn-primary btn-large" href="manuals/1.1/quickstart_guide.html">Get started >> </a>
       </div>
-      <div class="row-fluid">
-        <div class="span4">
-          {% include creation.html %}
-        </div>
-
+      <div class="row-fluid center">
         <div class="span4">
           {% include provisioning.html %}
         </div>
 
         <div class="span4">
-          {% include reporting.html %}
+          {% include configuration.html %}
+        </div>
+
+        <div class="span4">
+          {% include monitoring.html %}
         </div>
 
       </div>

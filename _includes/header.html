@@ -16,14 +16,16 @@
   <div class="navbar navbar-fixed-top navbar-inverse">
     <div class="navbar-inner">
       <div class="container">
-        <img alt="Foreman" class="logo" src="/static/images/foreman.png" /><a class="brand logo-text" href="/">Foreman</a>
-        <div class="nav1">
+        {% if page.url != "/index.html" %}<img alt="Foreman" class="logo" src="/static/images/foreman.png" />{% endif %}<a class="brand logo-text" href="/">Foreman</a>
           <ul class="nav" id="menu">
           {% for link in site.navigation %}
-            <li><a {% if current %}class="active"{% endif %} href="{{ link.url }}">{{ link.text }}</a></li>
+            {% assign active = nil %}
+            {% if page.url == link.url or page.layout == link.layout %}
+              {% assign active = 'active' %}
+            {% endif %}
+            <li class="{{ active }}"><a href="{{ link.url }}"> {{ link.text }} </a></li>
           {% endfor %}
           </ul>
-        </div>
       </div>
     </div>
   </div>

@@ -15,7 +15,7 @@ title: Foreman 1.1 Manual
 # 3. Installing Foreman
 {% include manuals/1.1/3_installing_foreman.md %}
 ## 3.1 Foreman Prerequisites
-{%include manuals/1.0/3.1_foreman_prerequisites.md %}
+{% include manuals/1.1/3.1_foreman_prerequisites.md %}
 ## 3.2 Foreman Installer
 {%include manuals/1.1/3.2_foreman_installer.md %}
 ## 3.3 Install From Packages
@@ -48,9 +48,9 @@ title: Foreman 1.1 Manual
 {%include manuals/1.1/4.1.2_roles_and_permissions.md %}
 ### 4.1.3 Trends
 {%include manuals/1.1/4.1.3_trends.md %}
-
 ### 4.1.4 Auditing
 {%include manuals/1.1/missing.html %}
+
 ## 4.2 Managing Puppet
 {%include manuals/1.1/missing.html %}
 ### 4.2.1 Environments
@@ -62,22 +62,23 @@ title: Foreman 1.1 Manual
 ### 4.2.4 Smart Variables
 {%include manuals/1.1/missing.html %}
 
-## 4.2 Smart Proxies
-{%include manuals/1.1/4.2_smartproxy.md %}
-### 4.2.1 Smartproxy Installation
-{%include manuals/1.1/4.2.1_smartproxy_installation.md %}
-### 4.2.2 Smartproxy Settings
-{%include manuals/1.1/4.2.2_smartproxy_settings.md %}
-### 4.2.3 ISC_DHCP
-{%include manuals/1.1/4.2.3_isc_dhcp.md %}
-### 4.2.4 MS_DHCP
-{%include manuals/1.1/4.2.4_ms_dhcp.md %}
-### 4.2.5 Bind
-{%include manuals/1.1/4.2.5_bind.md %}
-### 4.2.6 SSL
-{%include manuals/1.1/4.2.6_smartproxy_ssl.md %}
-### 4.2.7 TFTP
-{%include manuals/1.1/4.2.7_smartproxy_tftp.md %}
+## 4.3 Smart Proxies
+{%include manuals/1.1/4.3_smartproxy.md %}
+### 4.3.1 Smartproxy Installation
+{%include manuals/1.1/4.3.1_smartproxy_installation.md %}
+### 4.3.2 Smartproxy Settings
+{%include manuals/1.1/4.3.2_smartproxy_settings.md %}
+### 4.3.3 ISC_DHCP
+{%include manuals/1.1/4.3.3_isc_dhcp.md %}
+### 4.3.4 MS_DHCP
+{%include manuals/1.1/4.3.4_ms_dhcp.md %}
+### 4.3.5 Bind
+{%include manuals/1.1/4.3.5_bind.md %}
+### 4.3.6 SSL
+{%include manuals/1.1/4.3.6_smartproxy_ssl.md %}
+### 4.3.7 TFTP
+{%include manuals/1.1/4.3.7_smartproxy_tftp.md %}
+
 ## 4.4 Provisioning
 {%include manuals/1.1/missing.html %}
 ### 4.4.1 Operating Systems
