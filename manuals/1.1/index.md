@@ -61,6 +61,8 @@ title: Foreman 1.1 Manual
 {%include manuals/1.1/missing.html %}
 ### 4.2.4 Smart Variables
 {%include manuals/1.1/missing.html %}
+### 4.2.5 Parameterized Classes
+{%include manuals/1.1/missing.html %}
 
 ## 4.3 Smart Proxies
 {%include manuals/1.1/4.3_smartproxy.md %}
