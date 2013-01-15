@@ -9,7 +9,7 @@ The Foreman is an open-source project that's licensed under the GNU Public Licen
 These types of tasks generally require a familiarity with Ruby (on Rails) development or RPM/Debian packaging. If you are still new to Rails, community members can help you if you get stuck with something or have any other questions.
 
 You will need to download a copy of the current development-code. [The
-official code repository](https://github.com/theforeman.org) is located
+official code repository](https://github.com/theforeman) is located
 on Github.
 
 ### Please note that there are two important branches:
