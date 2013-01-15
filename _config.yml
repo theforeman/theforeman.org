@@ -1,4 +1,4 @@
-exclude:  [ Gemfile, Gemfile.lock, Procfile, vendor, gems]
+exclude: [ Gemfile, Gemfile.lock, Procfile, vendor, gems, README.md]
 
 sitename:  The Foreman
 tagline: The Foreman is a complete lifecycle management tool for physical and virtual servers.
