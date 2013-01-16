@@ -52,17 +52,17 @@ title: Foreman 1.1 Manual
 {%include manuals/1.1/4.1.4_auditing.md %}
 
 ## 4.2 Managing Puppet
-{%include manuals/1.1/missing.html %}
+{%include manuals/1.1/4.2_managing_puppet.md %}
 ### 4.2.1 Environments
-{%include manuals/1.1/missing.html %}
+{%include manuals/1.1/4.2.1_puppet_envs.md %}
 ### 4.2.2 Classes
-{%include manuals/1.1/missing.html %}
-### 4.2.3 Global Parameters
-{%include manuals/1.1/missing.html %}
+{%include manuals/1.1/4.2.2_puppet_classes.md %}
+### 4.2.3 Parameters
+{%include manuals/1.1/4.2.3_puppet_params.md %}
 ### 4.2.4 Smart Variables
-{%include manuals/1.1/missing.html %}
+{%include manuals/1.1/4.2.4_smart_vars.md %}
 ### 4.2.5 Parameterized Classes
-{%include manuals/1.1/missing.html %}
+{%include manuals/1.1/4.2.5_param_classes.md %}
 
 ## 4.3 Smart Proxies
 {%include manuals/1.1/4.3_smartproxy.md %}
@@ -82,17 +82,20 @@ title: Foreman 1.1 Manual
 {%include manuals/1.1/4.3.7_smartproxy_tftp.md %}
 
 ## 4.4 Provisioning
-{%include manuals/1.1/missing.html %}
+{%include manuals/1.1/4.4_provisioning.md %}
 ### 4.4.1 Operating Systems
-{%include manuals/1.1/missing.html %}
+{%include manuals/1.1/4.4.1_prov_os.md %}
 ### 4.4.2 Installation Media
-{%include manuals/1.1/missing.html %}
+{%include manuals/1.1/4.4.2_prov_media.md %}
 ### 4.4.3 Provisioning Templates
-{%include manuals/1.1/missing.html %}
+{%include manuals/1.1/4.4.3_prov_templates.md %}
 ### 4.4.4 Partition Tables
-{%include manuals/1.1/missing.html %}
+{%include manuals/1.1/4.4.4_prov_ptables.md %}
+### 4.4.5 Architectures
+{%include manuals/1.1/4.4.4_prov_archs.md %}
+
 #5. Advanced Foreman
- {%include manuals/1.1/missing.html %}
+{%include manuals/1.1/missing.html %}
 ## 5.1 API
 {%include manuals/1.1/missing.html %}
 ## 5.2 Compute Resources
