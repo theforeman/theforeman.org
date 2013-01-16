@@ -82,17 +82,20 @@ title: Foreman 1.1 Manual
 {%include manuals/1.1/4.3.7_smartproxy_tftp.md %}
 
 ## 4.4 Provisioning
-{%include manuals/1.1/missing.html %}
+{%include manuals/1.1/4.4_provisioning.md %}
 ### 4.4.1 Operating Systems
-{%include manuals/1.1/missing.html %}
+{%include manuals/1.1/4.4.1_prov_os.md %}
 ### 4.4.2 Installation Media
-{%include manuals/1.1/missing.html %}
+{%include manuals/1.1/4.4.2_prov_media.md %}
 ### 4.4.3 Provisioning Templates
-{%include manuals/1.1/missing.html %}
+{%include manuals/1.1/4.4.3_prov_templates.md %}
 ### 4.4.4 Partition Tables
-{%include manuals/1.1/missing.html %}
+{%include manuals/1.1/4.4.4_prov_ptables.md %}
+### 4.4.5 Architectures
+{%include manuals/1.1/4.4.4_prov_archs.md %}
+
 #5. Advanced Foreman
- {%include manuals/1.1/missing.html %}
+{%include manuals/1.1/missing.html %}
 ## 5.1 API
 {%include manuals/1.1/missing.html %}
 ## 5.2 Compute Resources
