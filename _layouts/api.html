@@ -8,4 +8,16 @@
   </div>
 </body>
 
+<script type="text/javascript">
+$(function (){
+	var iframe = $('iframe').first();
+  iframe.on('load', function(){frameScroll(iframe);})
+});
+
+function frameScroll(item) {
+	item[0].scrollIntoView();
+	window.scrollBy(0,-50);
+}
+</script>
+
 {% include footer.html %}
