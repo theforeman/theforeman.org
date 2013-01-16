@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: contribute
 title: Contributing to Foreman
 ---
 
@@ -12,13 +12,14 @@ You will need to download a copy of the current development-code. [The
 official code repository](https://github.com/theforeman) is located
 on Github.
 
-### Please note that there are two important branches:
+** Please note that there are two important branches:**
+
 * Master - latest stable release code
 * Develop - new features and bug fixes
 
-**Master is frozen between major releases.**
+Master is frozen between major releases.
 
-### Setup test environment for unit/functional test development
+### Setup test environment
 First, make sure you are a member of the [Foreman Developers](https://groups.google.com/forum/?fromgroups#!forum/foreman-dev) mailing list.
 
 Patches to fix bugs or add new features are always appreciated. If you are going to work on a specific issue, make a note in the issue details so the developers will know what you're working on.
@@ -26,7 +27,7 @@ Patches to fix bugs or add new features are always appreciated. If you are going
 We try to keep a one commit per bug/feature policy, please try to create an issue which is specific for your patch details.
 
 ### Submit Patches
-Please make sure there is a Redmine issue open for the change you are going to submit, as you will want to reference it in your commit message; this is very helpful when generating release notes.
+Please make sure there is a [Redmine issue](http://wiki.theforeman.org/projects/foreman/issues) open for the change you are going to submit, as you will want to reference it in your commit message; this is very helpful when generating release notes.
 
 1. Fork [theforeman/foreman](https://github.com/theforeman/foreman) to a personal github account. This will create a "foreman" repo under your Github username.
 2. Clone the fork you just created to your development system: `git clone https://github.com/<username>/foreman.git`
@@ -50,15 +51,16 @@ Please make sure there is a Redmine issue open for the change you are going to s
 
 7. [Issue a pull request](https://help.github.com/articles/using-pull-requests)
 
-Once you have followed this process once, it becomes much simpler to add future patches!
+**Once you have followed this process once, it becomes much simpler to add future patches!**
 
-### Merge upstream develop to local develop
+Merge upstream develop to local develop
+
 * git fetch upstream
 * git checkout develop
 * git merge upstream/develop develop
 * git push origin develop
 
-Now follow step 5 to the end from above.
+Now follow step 4 to the end from above.
 
 ## Non-code related contributions
 These don't require any software development experience, just some time and the desire to help.

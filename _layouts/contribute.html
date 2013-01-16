@@ -1,0 +1,24 @@
+{% include header.html %}
+
+<body>
+  <div id="main">
+    <div id="content" class="container">
+      <a href="https://github.com/theforeman" target="_blank" id="fork-me"><img style="position: fixed;top: 0; right: 0; border: 0;z-index:999999;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+      <div class="row">
+        <div id="toc" class="span3">
+        </div>
+        <div id="doc" class="offset3 span9">
+          {{ content  }}
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+ <script type="text/javascript">
+$(function() {
+//Calls the tocify method on your HTML div.
+$("#toc").tocify({context: '#doc', scrollTo: '20', selectors: "h2,h3,h4"});
+});
+</script>
+
+{% include footer.html %}
