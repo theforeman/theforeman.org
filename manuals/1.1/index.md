@@ -52,17 +52,17 @@ title: Foreman 1.1 Manual
 {%include manuals/1.1/4.1.4_auditing.md %}
 
 ## 4.2 Managing Puppet
-{%include manuals/1.1/missing.html %}
+{%include manuals/1.1/4.2_managing_puppet.md %}
 ### 4.2.1 Environments
-{%include manuals/1.1/missing.html %}
+{%include manuals/1.1/4.2.1_puppet_envs.md %}
 ### 4.2.2 Classes
-{%include manuals/1.1/missing.html %}
-### 4.2.3 Global Parameters
-{%include manuals/1.1/missing.html %}
+{%include manuals/1.1/4.2.2_puppet_classes.md %}
+### 4.2.3 Parameters
+{%include manuals/1.1/4.2.3_puppet_params.md %}
 ### 4.2.4 Smart Variables
-{%include manuals/1.1/missing.html %}
+{%include manuals/1.1/4.2.4_smart_vars.md %}
 ### 4.2.5 Parameterized Classes
-{%include manuals/1.1/missing.html %}
+{%include manuals/1.1/4.2.5_param_classes.md %}
 
 ## 4.3 Smart Proxies
 {%include manuals/1.1/4.3_smartproxy.md %}
