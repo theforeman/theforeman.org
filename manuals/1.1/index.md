@@ -49,7 +49,7 @@ title: Foreman 1.1 Manual
 ### 4.1.3 Trends
 {%include manuals/1.1/4.1.3_trends.md %}
 ### 4.1.4 Auditing
-{%include manuals/1.1/missing.html %}
+{%include manuals/1.1/4.1.4_auditing.md %}
 
 ## 4.2 Managing Puppet
 {%include manuals/1.1/missing.html %}
@@ -60,6 +60,8 @@ title: Foreman 1.1 Manual
 ### 4.2.3 Global Parameters
 {%include manuals/1.1/missing.html %}
 ### 4.2.4 Smart Variables
+{%include manuals/1.1/missing.html %}
+### 4.2.5 Parameterized Classes
 {%include manuals/1.1/missing.html %}
 
 ## 4.3 Smart Proxies
