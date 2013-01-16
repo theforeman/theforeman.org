@@ -69,7 +69,7 @@ Helping out other users in the "Forums" is always useful. Frequent problems or q
 Testing is also *very* welcome, for any issue encountered, please open a bug / feature request.
 
 ### Issue triage
-Sometimes issues are reported without all the information needed by a developer. Getting the details of the bug or feature from the reporter and the community will help everyone understand what is needed. Our issue tracker can be found here: http://wiki.theforeman.org/projects/foreman/issues
+Sometimes issues are reported without all the information needed by a developer. Getting the details of the bug or feature from the reporter and the community will help everyone understand what is needed. Our issue tracker can be found here: [http://wiki.theforeman.org/projects/foreman/issues](http://wiki.theforeman.org/projects/foreman/issues)
 
 ### Design and User interface
 Foreman has a very basic design and user interface. Any improvements to it including new themes, skinning, or interface adjustments could help every user.
