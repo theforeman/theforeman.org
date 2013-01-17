@@ -44,7 +44,7 @@
 200
 {
   &quot;role&quot;: {
-    &quot;name&quot;: &quot;Manager&quot;,
+    &quot;builtin&quot;: 0,
     &quot;permissions&quot;: [
       &quot;view_architectures&quot;,
       &quot;create_architectures&quot;,
@@ -114,10 +114,18 @@
       &quot;destroy_reports&quot;,
       &quot;view_facts&quot;,
       &quot;view_audit_logs&quot;,
-      &quot;view_statistics&quot;
+      &quot;view_statistics&quot;,
+      &quot;view_locations&quot;,
+      &quot;edit_locations&quot;,
+      &quot;create_locations&quot;,
+      &quot;destroy_locations&quot;,
+      &quot;view_organizations&quot;,
+      &quot;edit_organizations&quot;,
+      &quot;create_organizations&quot;,
+      &quot;destroy_organizations&quot;
     ],
-    &quot;builtin&quot;: 0,
-    &quot;id&quot;: 1
+    &quot;id&quot;: 1,
+    &quot;name&quot;: &quot;Manager&quot;
   }
 }</pre>
 
@@ -143,7 +151,7 @@
     <td>
       
         <br>
-        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
     </td>
   </tr>
 

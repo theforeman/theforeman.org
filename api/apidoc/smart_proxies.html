@@ -55,55 +55,13 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/smart_proxies
-200
-[
-  {
-    &quot;smart_proxy&quot;: {
-      &quot;name&quot;: &quot;DHCP Proxy&quot;,
-      &quot;id&quot;: 980190962,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;url&quot;: &quot;https://somewhere.net:8443&quot;
-    }
-  },
-  {
-    &quot;smart_proxy&quot;: {
-      &quot;name&quot;: &quot;DNS Proxy&quot;,
-      &quot;id&quot;: 113629430,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;url&quot;: &quot;http://else.where:4567&quot;
-    }
-  },
-  {
-    &quot;smart_proxy&quot;: {
-      &quot;name&quot;: &quot;Puppetmaster Proxy&quot;,
-      &quot;id&quot;: 182953976,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;url&quot;: &quot;http://else.where:4567&quot;
-    }
-  },
-  {
-    &quot;smart_proxy&quot;: {
-      &quot;name&quot;: &quot;TFTP Proxy&quot;,
-      &quot;id&quot;: 298486374,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;url&quot;: &quot;http://somewhere.else&quot;
-    }
-  },
-  {
-    &quot;smart_proxy&quot;: {
-      &quot;name&quot;: &quot;Unused Proxy&quot;,
-      &quot;id&quot;: 281110143,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;url&quot;: &quot;http://else.where:4567&quot;
-    }
+          <pre class="prettyprint">GET /api/smart_proxies?type=unknown_type
+500
+{
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;Invalid feature type. Select one of: TFTP, BMC, DNS, DHCP, Puppetca, Puppet.&quot;
   }
-]</pre>
+}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -196,12 +154,12 @@
 200
 {
   &quot;smart_proxy&quot;: {
-    &quot;name&quot;: &quot;DHCP Proxy&quot;,
-    &quot;&quot;: [],
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
     &quot;id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;url&quot;: &quot;https://somewhere.net:8443&quot;
+    &quot;url&quot;: &quot;https://somewhere.net:8443&quot;,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;name&quot;: &quot;DHCP Proxy&quot;,
+    &quot;features&quot;: []
   }
 }</pre>
 
@@ -225,7 +183,7 @@
     <td>
       
         <br>
-        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
     </td>
   </tr>
 
@@ -260,18 +218,18 @@
           <pre class="prettyprint">POST /api/smart_proxies
 {
   &quot;smart_proxy&quot;: {
-    &quot;name&quot;: &quot;master02&quot;,
-    &quot;url&quot;: &quot;http://server:8443&quot;
+    &quot;url&quot;: &quot;http://server:8443&quot;,
+    &quot;name&quot;: &quot;master02&quot;
   }
 }
 201
 {
   &quot;smart_proxy&quot;: {
-    &quot;name&quot;: &quot;master02&quot;,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:52Z&quot;,
     &quot;id&quot;: 980190963,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:55Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:55Z&quot;,
-    &quot;url&quot;: &quot;http://server:8443&quot;
+    &quot;url&quot;: &quot;http://server:8443&quot;,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:52Z&quot;,
+    &quot;name&quot;: &quot;master02&quot;
   }
 }</pre>
 
@@ -366,11 +324,11 @@
 200
 {
   &quot;smart_proxy&quot;: {
-    &quot;name&quot;: &quot;DHCP Proxy&quot;,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
     &quot;id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;url&quot;: &quot;https://somewhere.net:8443&quot;
+    &quot;url&quot;: &quot;https://somewhere.net:8443&quot;,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;name&quot;: &quot;DHCP Proxy&quot;
   }
 }</pre>
 
@@ -418,7 +376,7 @@
     <td>
       <strong>smart_proxy[name] </strong><br>
       <small>
-        required
+        optional
         
       </small>
     </td>
@@ -434,7 +392,7 @@
     <td>
       <strong>smart_proxy[url] </strong><br>
       <small>
-        required
+        optional
         
       </small>
     </td>
@@ -478,11 +436,11 @@
 200
 {
   &quot;smart_proxy&quot;: {
-    &quot;name&quot;: &quot;Unused Proxy&quot;,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
     &quot;id&quot;: 281110143,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;url&quot;: &quot;http://else.where:4567&quot;
+    &quot;url&quot;: &quot;http://else.where:4567&quot;,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;name&quot;: &quot;Unused Proxy&quot;
   }
 }</pre>
 

@@ -60,24 +60,24 @@
 [
   {
     &quot;bookmark&quot;: {
-      &quot;name&quot;: &quot;bar&quot;,
-      &quot;owner_id&quot;: null,
+      &quot;id&quot;: 298486374,
+      &quot;controller&quot;: &quot;hosts&quot;,
       &quot;public&quot;: false,
+      &quot;name&quot;: &quot;bar&quot;,
       &quot;query&quot;: &quot;bar=car&quot;,
       &quot;owner_type&quot;: null,
-      &quot;controller&quot;: &quot;hosts&quot;,
-      &quot;id&quot;: 298486374
+      &quot;owner_id&quot;: null
     }
   },
   {
     &quot;bookmark&quot;: {
-      &quot;name&quot;: &quot;foo&quot;,
-      &quot;owner_id&quot;: null,
+      &quot;id&quot;: 980190962,
+      &quot;controller&quot;: &quot;hosts&quot;,
       &quot;public&quot;: true,
+      &quot;name&quot;: &quot;foo&quot;,
       &quot;query&quot;: &quot;foo=boo&quot;,
       &quot;owner_type&quot;: null,
-      &quot;controller&quot;: &quot;hosts&quot;,
-      &quot;id&quot;: 980190962
+      &quot;owner_id&quot;: null
     }
   }
 ]</pre>
@@ -156,13 +156,13 @@
 200
 {
   &quot;bookmark&quot;: {
-    &quot;name&quot;: &quot;foo&quot;,
-    &quot;owner_id&quot;: null,
+    &quot;id&quot;: 980190962,
+    &quot;controller&quot;: &quot;hosts&quot;,
     &quot;public&quot;: true,
+    &quot;name&quot;: &quot;foo&quot;,
     &quot;query&quot;: &quot;foo=boo&quot;,
     &quot;owner_type&quot;: null,
-    &quot;controller&quot;: &quot;hosts&quot;,
-    &quot;id&quot;: 980190962
+    &quot;owner_id&quot;: null
   }
 }</pre>
 
@@ -186,7 +186,7 @@
     <td>
       
         <br>
-        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
     </td>
   </tr>
 
@@ -221,22 +221,22 @@
           <pre class="prettyprint">POST /api/bookmarks
 {
   &quot;bookmark&quot;: {
-    &quot;name&quot;: &quot;foo-bar&quot;,
+    &quot;controller&quot;: &quot;hosts&quot;,
     &quot;public&quot;: false,
-    &quot;query&quot;: &quot;bar&quot;,
-    &quot;controller&quot;: &quot;hosts&quot;
+    &quot;name&quot;: &quot;foo-bar&quot;,
+    &quot;query&quot;: &quot;bar&quot;
   }
 }
 200
 {
   &quot;bookmark&quot;: {
-    &quot;name&quot;: &quot;foo-bar&quot;,
-    &quot;owner_id&quot;: 135138680,
+    &quot;id&quot;: 980190963,
+    &quot;controller&quot;: &quot;hosts&quot;,
     &quot;public&quot;: false,
+    &quot;name&quot;: &quot;foo-bar&quot;,
     &quot;query&quot;: &quot;bar&quot;,
     &quot;owner_type&quot;: &quot;User&quot;,
-    &quot;controller&quot;: &quot;hosts&quot;,
-    &quot;id&quot;: 980190963
+    &quot;owner_id&quot;: 886836129
   }
 }</pre>
 
@@ -364,15 +364,15 @@
 {
   &quot;bookmark&quot;: {
     &quot;user&quot;: {
-      &quot;name&quot;: &quot;Admin User&quot;,
-      &quot;login&quot;: &quot;admin&quot;,
-      &quot;email&quot;: &quot;admin@someware.com&quot;
+      &quot;email&quot;: &quot;apiadmin@someware.com&quot;,
+      &quot;login&quot;: &quot;apiadmin&quot;,
+      &quot;name&quot;: &quot;apiadmin User&quot;
     },
-    &quot;name&quot;: &quot;foo&quot;,
-    &quot;public&quot;: true,
-    &quot;query&quot;: &quot;foo=boo&quot;,
+    &quot;id&quot;: 980190962,
     &quot;controller&quot;: &quot;hosts&quot;,
-    &quot;id&quot;: 980190962
+    &quot;public&quot;: true,
+    &quot;name&quot;: &quot;foo&quot;,
+    &quot;query&quot;: &quot;foo=boo&quot;
   }
 }</pre>
 
@@ -396,7 +396,7 @@
     <td>
       
         <br>
-        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
     </td>
   </tr>
 
@@ -420,7 +420,7 @@
     <td>
       <strong>bookmark[name] </strong><br>
       <small>
-        required
+        optional
         
       </small>
     </td>
@@ -436,7 +436,7 @@
     <td>
       <strong>bookmark[controller] </strong><br>
       <small>
-        required
+        optional
         
       </small>
     </td>
@@ -452,7 +452,7 @@
     <td>
       <strong>bookmark[query] </strong><br>
       <small>
-        required
+        optional
         
       </small>
     </td>
@@ -512,13 +512,13 @@
 200
 {
   &quot;bookmark&quot;: {
-    &quot;name&quot;: &quot;foo&quot;,
-    &quot;owner_id&quot;: null,
+    &quot;id&quot;: 980190962,
+    &quot;controller&quot;: &quot;hosts&quot;,
     &quot;public&quot;: true,
+    &quot;name&quot;: &quot;foo&quot;,
     &quot;query&quot;: &quot;foo=boo&quot;,
     &quot;owner_type&quot;: null,
-    &quot;controller&quot;: &quot;hosts&quot;,
-    &quot;id&quot;: 980190962
+    &quot;owner_id&quot;: null
   }
 }</pre>
 
@@ -542,7 +542,7 @@
     <td>
       
         <br>
-        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
     </td>
   </tr>
 

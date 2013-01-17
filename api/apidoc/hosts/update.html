@@ -47,54 +47,56 @@
 200
 {
   &quot;host&quot;: {
-    &quot;last_freshcheck&quot;: null,
-    &quot;model_id&quot;: null,
-    &quot;ptable_id&quot;: 980190962,
-    &quot;mac&quot;: &quot;aa:bb:cc:dd:ee:ff&quot;,
-    &quot;name&quot;: &quot;temp.yourdomain.net&quot;,
-    &quot;owner_id&quot;: 135138680,
-    &quot;sp_name&quot;: &quot;&quot;,
-    &quot;image_file&quot;: &quot;&quot;,
-    &quot;domain_id&quot;: 589326610,
-    &quot;uuid&quot;: null,
-    &quot;managed&quot;: null,
-    &quot;serial&quot;: null,
     &quot;puppet_proxy_id&quot;: 182953976,
-    &quot;build&quot;: false,
-    &quot;last_report&quot;: null,
-    &quot;sp_subnet_id&quot;: null,
-    &quot;owner_type&quot;: &quot;User&quot;,
-    &quot;subnet_id&quot;: 980190962,
+    &quot;model_id&quot;: null,
+    &quot;sp_mac&quot;: &quot;&quot;,
+    &quot;compute_resource_id&quot;: 980190962,
+    &quot;disk&quot;: null,
     &quot;hostgroup_id&quot;: null,
-    &quot;certname&quot;: &quot;temp.yourdomain.net&quot;,
+    &quot;subnet_id&quot;: 980190962,
+    &quot;build&quot;: false,
+    &quot;organization_id&quot;: null,
+    &quot;location_id&quot;: null,
+    &quot;mac&quot;: &quot;aa:bb:cc:dd:ee:ff&quot;,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:48Z&quot;,
+    &quot;last_report&quot;: null,
     &quot;architecture_id&quot;: 501905019,
     &quot;environment&quot;: {
       &quot;environment&quot;: {
-        &quot;name&quot;: &quot;production&quot;,
-        &quot;id&quot;: 334344675
+        &quot;id&quot;: 334344675,
+        &quot;name&quot;: &quot;production&quot;
       }
     },
-    &quot;compute_resource_id&quot;: 980190962,
     &quot;last_compile&quot;: null,
-    &quot;disk&quot;: null,
     &quot;id&quot;: 298486374,
     &quot;ip&quot;: &quot;2.3.4.5&quot;,
-    &quot;comment&quot;: null,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:51Z&quot;,
-    &quot;sp_mac&quot;: &quot;&quot;,
-    &quot;puppet_ca_proxy_id&quot;: null,
-    &quot;root_pass&quot;: &quot;xybxa6JUkz63w&quot;,
-    &quot;medium_id&quot;: 980190962,
-    &quot;puppet_status&quot;: 0,
-    &quot;use_image&quot;: null,
+    &quot;image_file&quot;: &quot;&quot;,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;serial&quot;: null,
+    &quot;image_id&quot;: null,
+    &quot;ptable_id&quot;: 980190962,
     &quot;environment_id&quot;: 334344675,
-    &quot;installed_at&quot;: null,
-    &quot;operatingsystem_id&quot;: 309172073,
-    &quot;sp_ip&quot;: &quot;&quot;,
+    &quot;name&quot;: &quot;temp.yourdomain.net&quot;,
     &quot;enabled&quot;: true,
+    &quot;sp_ip&quot;: &quot;&quot;,
+    &quot;owner_type&quot;: &quot;User&quot;,
+    &quot;uuid&quot;: null,
+    &quot;medium_id&quot;: 980190962,
+    &quot;sp_name&quot;: &quot;&quot;,
+    &quot;managed&quot;: null,
+    &quot;domain_id&quot;: 589326610,
+    &quot;certname&quot;: &quot;temp.yourdomain.net&quot;,
+    &quot;installed_at&quot;: null,
+    &quot;last_freshcheck&quot;: null,
     &quot;source_file_id&quot;: null,
-    &quot;image_id&quot;: null
+    &quot;operatingsystem_id&quot;: 309172073,
+    &quot;root_pass&quot;: &quot;xybxa6JUkz63w&quot;,
+    &quot;puppet_status&quot;: 0,
+    &quot;sp_subnet_id&quot;: null,
+    &quot;owner_id&quot;: 886836129,
+    &quot;comment&quot;: null,
+    &quot;use_image&quot;: null,
+    &quot;puppet_ca_proxy_id&quot;: null
   }
 }</pre>
 
@@ -120,7 +122,7 @@
     <td>
       
         <br>
-        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
     </td>
   </tr>
 
@@ -144,7 +146,7 @@
     <td>
       <strong>host[name] </strong><br>
       <small>
-        required
+        optional
         
       </small>
     </td>
@@ -160,7 +162,7 @@
     <td>
       <strong>host[environment_id] </strong><br>
       <small>
-        required
+        optional
         
       </small>
     </td>
@@ -210,7 +212,7 @@
     <td>
       <strong>host[architecture_id] </strong><br>
       <small>
-        required
+        optional
         
       </small>
     </td>
@@ -226,7 +228,7 @@
     <td>
       <strong>host[domain_id] </strong><br>
       <small>
-        required
+        optional
         
       </small>
     </td>
@@ -242,7 +244,7 @@
     <td>
       <strong>host[puppet_proxy_id] </strong><br>
       <small>
-        required
+        optional
         
       </small>
     </td>
@@ -258,7 +260,7 @@
     <td>
       <strong>host[operatingsystem_id] </strong><br>
       <small>
-        required
+        optional
         
       </small>
     </td>

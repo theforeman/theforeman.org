@@ -204,8 +204,16 @@
             <td width='60%'>Show an compute resource.</td>
           </tr>
           <tr>
+            <td><a href='./apidoc/compute_resources/create.html'>POST /api/compute_resources</a></td>
+            <td width='60%'>Create a compute resource.</td>
+          </tr>
+          <tr>
             <td><a href='./apidoc/compute_resources/update.html'>PUT /api/compute_resources/:id</a></td>
             <td width='60%'>Update a compute resource.</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/compute_resources/destroy.html'>DELETE /api/compute_resources/:id</a></td>
+            <td width='60%'>Delete a compute resource.</td>
           </tr>
     </tbody>
   </table>
@@ -443,6 +451,10 @@
             <td><a href='./apidoc/hosts/destroy.html'>DELETE /api/hosts/:id</a></td>
             <td width='60%'>Delete an host.</td>
           </tr>
+          <tr>
+            <td><a href='./apidoc/hosts/status.html'>GET /api/hosts/:id/status</a></td>
+            <td width='60%'>Get status of host</td>
+          </tr>
     </tbody>
   </table>
   <h2>
@@ -534,7 +546,7 @@
             <td width='60%'>Show a medium.</td>
           </tr>
           <tr>
-            <td><a href='./apidoc/media/create.html'>POST /api/medium</a></td>
+            <td><a href='./apidoc/media/create.html'>POST /api/media</a></td>
             <td width='60%'>Create a medium.</td>
           </tr>
           <tr>
@@ -838,6 +850,54 @@
           <tr>
             <td><a href='./apidoc/subnets/destroy.html'>DELETE /api/subnets/:id</a></td>
             <td width='60%'>Delete a subnet</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/template_combinations.html'>Template combinations</a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='./apidoc/template_combinations/index.html'>GET /api/config_templates/:config_template_id/template_combinations</a></td>
+            <td width='60%'>List Template Combination</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/template_combinations/create.html'>POST /api/config_templates/:config_template_id/template_combinations</a></td>
+            <td width='60%'>Add a Template Combination</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/template_combinations/show.html'>GET /api/template_combinations/:id</a></td>
+            <td width='60%'>Show Template Combination</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/template_combinations/destroy.html'>DELETE /api/template_combinations/:id</a></td>
+            <td width='60%'>Delete a template</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/template_kinds.html'>Template kinds</a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='./apidoc/template_kinds/index.html'>GET /api/template_kinds</a></td>
+            <td width='60%'>List all template kinds.</td>
           </tr>
     </tbody>
   </table>

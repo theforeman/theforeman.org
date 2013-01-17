@@ -43,21 +43,21 @@
       <pre class="prettyprint">PUT /api/config_templates/centos5_3_pxelinux
 {
   &quot;config_template&quot;: {
-    &quot;audit_comment&quot;: &quot;aha&quot;,
-    &quot;template&quot;: &quot;tmp&quot;
+    &quot;template&quot;: &quot;tmp&quot;,
+    &quot;audit_comment&quot;: &quot;aha&quot;
   }
 }
 200
 {
   &quot;config_template&quot;: {
-    &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
-    &quot;template_kind&quot;: {
-      &quot;name&quot;: &quot;PXELinux&quot;,
-      &quot;id&quot;: 452984334
-    },
+    &quot;snippet&quot;: null,
     &quot;template&quot;: &quot;tmp&quot;,
     &quot;id&quot;: 1007981701,
-    &quot;snippet&quot;: null
+    &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
+    &quot;template_kind&quot;: {
+      &quot;id&quot;: 452984334,
+      &quot;name&quot;: &quot;PXELinux&quot;
+    }
   }
 }</pre>
 
@@ -83,7 +83,7 @@
     <td>
       
         <br>
-        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
     </td>
   </tr>
 
@@ -173,7 +173,7 @@
       <strong>config_template[template_kind_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>

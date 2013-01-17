@@ -67,42 +67,42 @@ by machines at that site.</p>
 [
   {
     &quot;domain&quot;: {
-      &quot;name&quot;: &quot;mydomain.net&quot;,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
       &quot;dns_id&quot;: 113629430,
       &quot;fullname&quot;: null,
       &quot;id&quot;: 22495316,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+      &quot;name&quot;: &quot;mydomain.net&quot;
     }
   },
   {
     &quot;domain&quot;: {
-      &quot;name&quot;: &quot;unused.net&quot;,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
       &quot;dns_id&quot;: 113629430,
       &quot;fullname&quot;: &quot;somewhare that is never used&quot;,
       &quot;id&quot;: 759776763,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+      &quot;name&quot;: &quot;unused.net&quot;
     }
   },
   {
     &quot;domain&quot;: {
-      &quot;name&quot;: &quot;useless.net&quot;,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
       &quot;dns_id&quot;: null,
       &quot;fullname&quot;: null,
       &quot;id&quot;: 229305443,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+      &quot;name&quot;: &quot;useless.net&quot;
     }
   },
   {
     &quot;domain&quot;: {
-      &quot;name&quot;: &quot;yourdomain.net&quot;,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
       &quot;dns_id&quot;: 113629430,
       &quot;fullname&quot;: &quot;somewhere in yourdomain&quot;,
       &quot;id&quot;: 589326610,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+      &quot;name&quot;: &quot;yourdomain.net&quot;
     }
   }
 ]</pre>
@@ -215,12 +215,12 @@ by machines at that site.</p>
 200
 {
   &quot;domain&quot;: {
-    &quot;name&quot;: &quot;mydomain.net&quot;,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
     &quot;dns_id&quot;: 113629430,
     &quot;fullname&quot;: null,
     &quot;id&quot;: 22495316,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;name&quot;: &quot;mydomain.net&quot;
   }
 }</pre>
 
@@ -245,7 +245,7 @@ by machines at that site.</p>
       <p>May be numerical id or domain name</p>
 
         <br>
-        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
     </td>
   </tr>
 
@@ -289,8 +289,8 @@ an external node parameter</p>
 201
 {
   &quot;domain&quot;: {
-    &quot;name&quot;: &quot;domain.net&quot;,
-    &quot;id&quot;: 759776764
+    &quot;id&quot;: 759776764,
+    &quot;name&quot;: &quot;domain.net&quot;
   }
 }</pre>
 
@@ -423,6 +423,7 @@ an external node parameter</p>
 422
 {
   &quot;domain&quot;: {
+    &quot;id&quot;: 22495316,
     &quot;errors&quot;: {
       &quot;name&quot;: [
         &quot;can&#x27;t be blank&quot;
@@ -430,8 +431,7 @@ an external node parameter</p>
     },
     &quot;full_messages&quot;: [
       &quot;Name can&#x27;t be blank&quot;
-    ],
-    &quot;id&quot;: 22495316
+    ]
   }
 }</pre>
 
@@ -455,7 +455,7 @@ an external node parameter</p>
     <td>
       
         <br>
-        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
     </td>
   </tr>
 
@@ -479,7 +479,7 @@ an external node parameter</p>
     <td>
       <strong>domain[name] </strong><br>
       <small>
-        required
+        optional
         , nil allowed
       </small>
     </td>
@@ -575,8 +575,8 @@ an external node parameter</p>
 200
 {
   &quot;domain&quot;: {
-    &quot;name&quot;: &quot;mydomain.net&quot;,
-    &quot;id&quot;: 22495316
+    &quot;id&quot;: 22495316,
+    &quot;name&quot;: &quot;mydomain.net&quot;
   }
 }</pre>
 
@@ -600,7 +600,7 @@ an external node parameter</p>
     <td>
       
         <br>
-        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
     </td>
   </tr>
 

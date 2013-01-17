@@ -48,15 +48,15 @@
 {
   &quot;bookmark&quot;: {
     &quot;user&quot;: {
-      &quot;name&quot;: &quot;Admin User&quot;,
-      &quot;login&quot;: &quot;admin&quot;,
-      &quot;email&quot;: &quot;admin@someware.com&quot;
+      &quot;email&quot;: &quot;apiadmin@someware.com&quot;,
+      &quot;login&quot;: &quot;apiadmin&quot;,
+      &quot;name&quot;: &quot;apiadmin User&quot;
     },
-    &quot;name&quot;: &quot;foo&quot;,
-    &quot;public&quot;: true,
-    &quot;query&quot;: &quot;foo=boo&quot;,
+    &quot;id&quot;: 980190962,
     &quot;controller&quot;: &quot;hosts&quot;,
-    &quot;id&quot;: 980190962
+    &quot;public&quot;: true,
+    &quot;name&quot;: &quot;foo&quot;,
+    &quot;query&quot;: &quot;foo=boo&quot;
   }
 }</pre>
 
@@ -82,7 +82,7 @@
     <td>
       
         <br>
-        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
     </td>
   </tr>
 
@@ -106,7 +106,7 @@
     <td>
       <strong>bookmark[name] </strong><br>
       <small>
-        required
+        optional
         
       </small>
     </td>
@@ -122,7 +122,7 @@
     <td>
       <strong>bookmark[controller] </strong><br>
       <small>
-        required
+        optional
         
       </small>
     </td>
@@ -138,7 +138,7 @@
     <td>
       <strong>bookmark[query] </strong><br>
       <small>
-        required
+        optional
         
       </small>
     </td>

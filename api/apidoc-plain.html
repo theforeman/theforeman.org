@@ -39,7 +39,9 @@
   <ul>
       <li><a href='#compute_resources-index'>index</a></li>
       <li><a href='#compute_resources-show'>show</a></li>
+      <li><a href='#compute_resources-create'>create</a></li>
       <li><a href='#compute_resources-update'>update</a></li>
+      <li><a href='#compute_resources-destroy'>destroy</a></li>
   </ul>
   <h4><a href='#config_templates'>Config templates</a></h4>
   <ul>
@@ -95,6 +97,7 @@
       <li><a href='#hosts-create'>create</a></li>
       <li><a href='#hosts-update'>update</a></li>
       <li><a href='#hosts-destroy'>destroy</a></li>
+      <li><a href='#hosts-status'>status</a></li>
   </ul>
   <h4><a href='#images'>Images</a></h4>
   <ul>
@@ -189,6 +192,17 @@
       <li><a href='#subnets-update'>update</a></li>
       <li><a href='#subnets-destroy'>destroy</a></li>
   </ul>
+  <h4><a href='#template_combinations'>Template combinations</a></h4>
+  <ul>
+      <li><a href='#template_combinations-index'>index</a></li>
+      <li><a href='#template_combinations-create'>create</a></li>
+      <li><a href='#template_combinations-show'>show</a></li>
+      <li><a href='#template_combinations-destroy'>destroy</a></li>
+  </ul>
+  <h4><a href='#template_kinds'>Template kinds</a></h4>
+  <ul>
+      <li><a href='#template_kinds-index'>index</a></li>
+  </ul>
   <h4><a href='#usergroups'>Usergroups</a></h4>
   <ul>
       <li><a href='#usergroups-index'>index</a></li>
@@ -242,35 +256,35 @@
 [
   {
     &quot;architecture&quot;: {
-      &quot;name&quot;: &quot;sparc&quot;,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;operatingsystem_ids&quot;: [],
+      &quot;id&quot;: 381564594,
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;name&quot;: &quot;s390&quot;
+    }
+  },
+  {
+    &quot;architecture&quot;: {
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
       &quot;operatingsystem_ids&quot;: [
         442321401
       ],
       &quot;id&quot;: 331892513,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;name&quot;: &quot;sparc&quot;
     }
   },
   {
     &quot;architecture&quot;: {
-      &quot;name&quot;: &quot;s390&quot;,
-      &quot;operatingsystem_ids&quot;: [],
-      &quot;id&quot;: 381564594,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
-    }
-  },
-  {
-    &quot;architecture&quot;: {
-      &quot;name&quot;: &quot;x86_64&quot;,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
       &quot;operatingsystem_ids&quot;: [
-        309172073,
         331303656,
+        309172073,
         1073012828
       ],
       &quot;id&quot;: 501905019,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;name&quot;: &quot;x86_64&quot;
     }
   }
 ]</pre>
@@ -346,15 +360,15 @@
 200
 {
   &quot;architecture&quot;: {
-    &quot;name&quot;: &quot;x86_64&quot;,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
     &quot;operatingsystem_ids&quot;: [
       309172073,
       1073012828,
       331303656
     ],
     &quot;id&quot;: 501905019,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+    &quot;name&quot;: &quot;x86_64&quot;
   }
 }</pre>
 
@@ -366,7 +380,7 @@
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -400,11 +414,11 @@
 200
 {
   &quot;architecture&quot;: {
-    &quot;name&quot;: &quot;i386&quot;,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
     &quot;operatingsystem_ids&quot;: [],
     &quot;id&quot;: 501905020,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;name&quot;: &quot;i386&quot;
   }
 }</pre>
 
@@ -471,8 +485,8 @@
 200
 {
   &quot;architecture&quot;: {
-    &quot;name&quot;: &quot;x86_64&quot;,
-    &quot;id&quot;: 501905019
+    &quot;id&quot;: 501905019,
+    &quot;name&quot;: &quot;x86_64&quot;
   }
 }</pre>
 
@@ -484,7 +498,7 @@
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -546,8 +560,8 @@
 200
 {
   &quot;architecture&quot;: {
-    &quot;name&quot;: &quot;s390&quot;,
-    &quot;id&quot;: 381564594
+    &quot;id&quot;: 381564594,
+    &quot;name&quot;: &quot;s390&quot;
   }
 }</pre>
 
@@ -559,7 +573,7 @@
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -603,26 +617,26 @@
 [
   {
     &quot;audit&quot;: {
-      &quot;auditable_name&quot;: null,
+      &quot;user_type&quot;: null,
       &quot;associated_id&quot;: 272,
-      &quot;action&quot;: &quot;update&quot;,
       &quot;associated_type&quot;: &quot;Host&quot;,
-      &quot;version&quot;: 1,
       &quot;id&quot;: 1,
       &quot;created_at&quot;: &quot;2009-12-14T08:01:17Z&quot;,
-      &quot;comment&quot;: null,
-      &quot;associated_name&quot;: null,
       &quot;user_id&quot;: null,
       &quot;auditable_type&quot;: &quot;Host&quot;,
+      &quot;auditable_name&quot;: null,
       &quot;audited_changes&quot;: {
         &quot;architecture_id&quot;: [
           10463,
           10466
         ]
       },
-      &quot;user_type&quot;: null,
+      &quot;action&quot;: &quot;update&quot;,
+      &quot;associated_name&quot;: null,
+      &quot;version&quot;: 1,
       &quot;remote_address&quot;: null,
-      &quot;auditable_id&quot;: 0
+      &quot;auditable_id&quot;: 0,
+      &quot;comment&quot;: null
     }
   }
 ]</pre>
@@ -698,26 +712,26 @@
 200
 {
   &quot;audit&quot;: {
-    &quot;auditable_name&quot;: null,
+    &quot;user_type&quot;: null,
     &quot;associated_id&quot;: 272,
-    &quot;action&quot;: &quot;update&quot;,
     &quot;associated_type&quot;: &quot;Host&quot;,
-    &quot;version&quot;: 1,
     &quot;id&quot;: 1,
     &quot;created_at&quot;: &quot;2009-12-14T08:01:17Z&quot;,
-    &quot;comment&quot;: null,
-    &quot;associated_name&quot;: null,
     &quot;user_id&quot;: null,
     &quot;auditable_type&quot;: &quot;Host&quot;,
+    &quot;auditable_name&quot;: null,
     &quot;audited_changes&quot;: {
       &quot;architecture_id&quot;: [
         10463,
         10466
       ]
     },
-    &quot;user_type&quot;: null,
+    &quot;action&quot;: &quot;update&quot;,
+    &quot;associated_name&quot;: null,
+    &quot;version&quot;: 1,
     &quot;remote_address&quot;: null,
-    &quot;auditable_id&quot;: 0
+    &quot;auditable_id&quot;: 0,
+    &quot;comment&quot;: null
   }
 }</pre>
 
@@ -729,7 +743,7 @@
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -773,20 +787,20 @@
 [
   {
     &quot;auth_source_ldap&quot;: {
-      &quot;account&quot;: null,
-      &quot;port&quot;: 123,
-      &quot;name&quot;: &quot;ldap&quot;,
-      &quot;attr_lastname&quot;: &quot;sn&quot;,
-      &quot;onthefly_register&quot;: true,
-      &quot;attr_mail&quot;: &quot;mail&quot;,
-      &quot;host&quot;: &quot;ldap&quot;,
-      &quot;type&quot;: &quot;AuthSourceLdap&quot;,
-      &quot;id&quot;: 980190962,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
       &quot;attr_login&quot;: &quot;uid&quot;,
+      &quot;port&quot;: 123,
+      &quot;type&quot;: &quot;AuthSourceLdap&quot;,
+      &quot;host&quot;: &quot;ldap&quot;,
+      &quot;id&quot;: 980190962,
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+      &quot;account&quot;: null,
       &quot;attr_firstname&quot;: &quot;givenName&quot;,
+      &quot;onthefly_register&quot;: true,
       &quot;tls&quot;: true,
+      &quot;name&quot;: &quot;ldap&quot;,
+      &quot;attr_mail&quot;: &quot;mail&quot;,
+      &quot;attr_lastname&quot;: &quot;sn&quot;,
       &quot;base_dn&quot;: &quot;dn=x,dn=y&quot;
     }
   }
@@ -841,20 +855,20 @@
 200
 {
   &quot;auth_source_ldap&quot;: {
-    &quot;account&quot;: null,
-    &quot;port&quot;: 123,
-    &quot;name&quot;: &quot;ldap&quot;,
-    &quot;attr_lastname&quot;: &quot;sn&quot;,
-    &quot;onthefly_register&quot;: true,
-    &quot;attr_mail&quot;: &quot;mail&quot;,
-    &quot;host&quot;: &quot;ldap&quot;,
-    &quot;type&quot;: &quot;AuthSourceLdap&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
     &quot;attr_login&quot;: &quot;uid&quot;,
+    &quot;port&quot;: 123,
+    &quot;type&quot;: &quot;AuthSourceLdap&quot;,
+    &quot;host&quot;: &quot;ldap&quot;,
+    &quot;id&quot;: 980190962,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;account&quot;: null,
     &quot;attr_firstname&quot;: &quot;givenName&quot;,
+    &quot;onthefly_register&quot;: true,
     &quot;tls&quot;: true,
+    &quot;name&quot;: &quot;ldap&quot;,
+    &quot;attr_mail&quot;: &quot;mail&quot;,
+    &quot;attr_lastname&quot;: &quot;sn&quot;,
     &quot;base_dn&quot;: &quot;dn=x,dn=y&quot;
   }
 }</pre>
@@ -867,7 +881,7 @@
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -895,28 +909,28 @@
             <pre class="wiki">POST /api/auth_source_ldaps
 {
   &quot;auth_source_ldap&quot;: {
-    &quot;name&quot;: &quot;ldap2&quot;,
-    &quot;host&quot;: &quot;ldap2&quot;
+    &quot;host&quot;: &quot;ldap2&quot;,
+    &quot;name&quot;: &quot;ldap2&quot;
   }
 }
 201
 {
   &quot;auth_source_ldap&quot;: {
-    &quot;account&quot;: null,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:44Z&quot;,
+    &quot;attr_login&quot;: null,
     &quot;port&quot;: 389,
-    &quot;name&quot;: &quot;ldap2&quot;,
-    &quot;attr_lastname&quot;: null,
-    &quot;onthefly_register&quot;: false,
-    &quot;attr_mail&quot;: null,
-    &quot;account_password&quot;: null,
     &quot;host&quot;: &quot;ldap2&quot;,
     &quot;id&quot;: 980190963,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:47Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:47Z&quot;,
-    &quot;attr_login&quot;: null,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:44Z&quot;,
+    &quot;account&quot;: null,
     &quot;attr_firstname&quot;: null,
+    &quot;onthefly_register&quot;: false,
     &quot;tls&quot;: false,
-    &quot;base_dn&quot;: null
+    &quot;name&quot;: &quot;ldap2&quot;,
+    &quot;attr_mail&quot;: null,
+    &quot;attr_lastname&quot;: null,
+    &quot;base_dn&quot;: null,
+    &quot;account_password&quot;: null
   }
 }</pre>
 
@@ -1088,21 +1102,21 @@
 200
 {
   &quot;auth_source_ldap&quot;: {
-    &quot;account&quot;: null,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;attr_login&quot;: &quot;uid&quot;,
     &quot;port&quot;: 123,
-    &quot;name&quot;: &quot;ldap&quot;,
-    &quot;attr_lastname&quot;: &quot;sn&quot;,
-    &quot;onthefly_register&quot;: true,
-    &quot;attr_mail&quot;: &quot;mail&quot;,
-    &quot;account_password&quot;: null,
     &quot;host&quot;: &quot;ldap&quot;,
     &quot;id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;attr_login&quot;: &quot;uid&quot;,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;account&quot;: null,
     &quot;attr_firstname&quot;: &quot;givenName&quot;,
+    &quot;onthefly_register&quot;: true,
     &quot;tls&quot;: true,
-    &quot;base_dn&quot;: &quot;dn=x,dn=y&quot;
+    &quot;name&quot;: &quot;ldap&quot;,
+    &quot;attr_mail&quot;: &quot;mail&quot;,
+    &quot;attr_lastname&quot;: &quot;sn&quot;,
+    &quot;base_dn&quot;: &quot;dn=x,dn=y&quot;,
+    &quot;account_password&quot;: null
   }
 }</pre>
 
@@ -1132,7 +1146,7 @@
     <li>
       <strong>name </strong>:
       <small>
-        required
+        optional
         
           [ Must be String ]
       </small>
@@ -1142,7 +1156,7 @@
     <li>
       <strong>host </strong>:
       <small>
-        required
+        optional
         
           [ Must be String ]
       </small>
@@ -1281,21 +1295,21 @@
 200
 {
   &quot;auth_source_ldap&quot;: {
-    &quot;account&quot;: null,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;attr_login&quot;: &quot;uid&quot;,
     &quot;port&quot;: 123,
-    &quot;name&quot;: &quot;ldap&quot;,
-    &quot;attr_lastname&quot;: &quot;sn&quot;,
-    &quot;onthefly_register&quot;: true,
-    &quot;attr_mail&quot;: &quot;mail&quot;,
-    &quot;account_password&quot;: null,
     &quot;host&quot;: &quot;ldap&quot;,
     &quot;id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;attr_login&quot;: &quot;uid&quot;,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;account&quot;: null,
     &quot;attr_firstname&quot;: &quot;givenName&quot;,
+    &quot;onthefly_register&quot;: true,
     &quot;tls&quot;: true,
-    &quot;base_dn&quot;: &quot;dn=x,dn=y&quot;
+    &quot;name&quot;: &quot;ldap&quot;,
+    &quot;attr_mail&quot;: &quot;mail&quot;,
+    &quot;attr_lastname&quot;: &quot;sn&quot;,
+    &quot;base_dn&quot;: &quot;dn=x,dn=y&quot;,
+    &quot;account_password&quot;: null
   }
 }</pre>
 
@@ -1351,24 +1365,24 @@
 [
   {
     &quot;bookmark&quot;: {
-      &quot;name&quot;: &quot;bar&quot;,
-      &quot;owner_id&quot;: null,
+      &quot;id&quot;: 298486374,
+      &quot;controller&quot;: &quot;hosts&quot;,
       &quot;public&quot;: false,
+      &quot;name&quot;: &quot;bar&quot;,
       &quot;query&quot;: &quot;bar=car&quot;,
       &quot;owner_type&quot;: null,
-      &quot;controller&quot;: &quot;hosts&quot;,
-      &quot;id&quot;: 298486374
+      &quot;owner_id&quot;: null
     }
   },
   {
     &quot;bookmark&quot;: {
-      &quot;name&quot;: &quot;foo&quot;,
-      &quot;owner_id&quot;: null,
+      &quot;id&quot;: 980190962,
+      &quot;controller&quot;: &quot;hosts&quot;,
       &quot;public&quot;: true,
+      &quot;name&quot;: &quot;foo&quot;,
       &quot;query&quot;: &quot;foo=boo&quot;,
       &quot;owner_type&quot;: null,
-      &quot;controller&quot;: &quot;hosts&quot;,
-      &quot;id&quot;: 980190962
+      &quot;owner_id&quot;: null
     }
   }
 ]</pre>
@@ -1422,13 +1436,13 @@
 200
 {
   &quot;bookmark&quot;: {
-    &quot;name&quot;: &quot;foo&quot;,
-    &quot;owner_id&quot;: null,
+    &quot;id&quot;: 980190962,
+    &quot;controller&quot;: &quot;hosts&quot;,
     &quot;public&quot;: true,
+    &quot;name&quot;: &quot;foo&quot;,
     &quot;query&quot;: &quot;foo=boo&quot;,
     &quot;owner_type&quot;: null,
-    &quot;controller&quot;: &quot;hosts&quot;,
-    &quot;id&quot;: 980190962
+    &quot;owner_id&quot;: null
   }
 }</pre>
 
@@ -1440,7 +1454,7 @@
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -1468,22 +1482,22 @@
             <pre class="wiki">POST /api/bookmarks
 {
   &quot;bookmark&quot;: {
-    &quot;name&quot;: &quot;foo-bar&quot;,
+    &quot;controller&quot;: &quot;hosts&quot;,
     &quot;public&quot;: false,
-    &quot;query&quot;: &quot;bar&quot;,
-    &quot;controller&quot;: &quot;hosts&quot;
+    &quot;name&quot;: &quot;foo-bar&quot;,
+    &quot;query&quot;: &quot;bar&quot;
   }
 }
 200
 {
   &quot;bookmark&quot;: {
-    &quot;name&quot;: &quot;foo-bar&quot;,
-    &quot;owner_id&quot;: 135138680,
+    &quot;id&quot;: 980190963,
+    &quot;controller&quot;: &quot;hosts&quot;,
     &quot;public&quot;: false,
+    &quot;name&quot;: &quot;foo-bar&quot;,
     &quot;query&quot;: &quot;bar&quot;,
     &quot;owner_type&quot;: &quot;User&quot;,
-    &quot;controller&quot;: &quot;hosts&quot;,
-    &quot;id&quot;: 980190963
+    &quot;owner_id&quot;: 886836129
   }
 }</pre>
 
@@ -1570,15 +1584,15 @@
 {
   &quot;bookmark&quot;: {
     &quot;user&quot;: {
-      &quot;name&quot;: &quot;Admin User&quot;,
-      &quot;login&quot;: &quot;admin&quot;,
-      &quot;email&quot;: &quot;admin@someware.com&quot;
+      &quot;email&quot;: &quot;apiadmin@someware.com&quot;,
+      &quot;login&quot;: &quot;apiadmin&quot;,
+      &quot;name&quot;: &quot;apiadmin User&quot;
     },
-    &quot;name&quot;: &quot;foo&quot;,
-    &quot;public&quot;: true,
-    &quot;query&quot;: &quot;foo=boo&quot;,
+    &quot;id&quot;: 980190962,
     &quot;controller&quot;: &quot;hosts&quot;,
-    &quot;id&quot;: 980190962
+    &quot;public&quot;: true,
+    &quot;name&quot;: &quot;foo&quot;,
+    &quot;query&quot;: &quot;foo=boo&quot;
   }
 }</pre>
 
@@ -1590,7 +1604,7 @@
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -1608,7 +1622,7 @@
     <li>
       <strong>name </strong>:
       <small>
-        required
+        optional
         
           [ Must be String ]
       </small>
@@ -1618,7 +1632,7 @@
     <li>
       <strong>controller </strong>:
       <small>
-        required
+        optional
         
           [ Must be String ]
       </small>
@@ -1628,7 +1642,7 @@
     <li>
       <strong>query </strong>:
       <small>
-        required
+        optional
         
           [ Must be String ]
       </small>
@@ -1671,13 +1685,13 @@
 200
 {
   &quot;bookmark&quot;: {
-    &quot;name&quot;: &quot;foo&quot;,
-    &quot;owner_id&quot;: null,
+    &quot;id&quot;: 980190962,
+    &quot;controller&quot;: &quot;hosts&quot;,
     &quot;public&quot;: true,
+    &quot;name&quot;: &quot;foo&quot;,
     &quot;query&quot;: &quot;foo=boo&quot;,
     &quot;owner_type&quot;: null,
-    &quot;controller&quot;: &quot;hosts&quot;,
-    &quot;id&quot;: 980190962
+    &quot;owner_id&quot;: null
   }
 }</pre>
 
@@ -1689,7 +1703,7 @@
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -1733,9 +1747,9 @@
 [
   {
     &quot;common_parameter&quot;: {
+      &quot;id&quot;: 636252244,
       &quot;name&quot;: &quot;test&quot;,
-      &quot;value&quot;: &quot;myvalue&quot;,
-      &quot;id&quot;: 636252244
+      &quot;value&quot;: &quot;myvalue&quot;
     }
   }
 ]</pre>
@@ -1811,9 +1825,9 @@
 200
 {
   &quot;common_parameter&quot;: {
+    &quot;id&quot;: 636252244,
     &quot;name&quot;: &quot;test&quot;,
-    &quot;value&quot;: &quot;myvalue&quot;,
-    &quot;id&quot;: 636252244
+    &quot;value&quot;: &quot;myvalue&quot;
   }
 }</pre>
 
@@ -1825,7 +1839,7 @@
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -1860,9 +1874,9 @@
 200
 {
   &quot;common_parameter&quot;: {
+    &quot;id&quot;: 767575239,
     &quot;name&quot;: &quot;special_key&quot;,
-    &quot;value&quot;: &quot;123&quot;,
-    &quot;id&quot;: 767575239
+    &quot;value&quot;: &quot;123&quot;
   }
 }</pre>
 
@@ -1928,9 +1942,9 @@
 200
 {
   &quot;common_parameter&quot;: {
+    &quot;id&quot;: 636252244,
     &quot;name&quot;: &quot;test&quot;,
-    &quot;value&quot;: &quot;myvalue&quot;,
-    &quot;id&quot;: 636252244
+    &quot;value&quot;: &quot;myvalue&quot;
   }
 }</pre>
 
@@ -1942,7 +1956,7 @@
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -1960,7 +1974,7 @@
     <li>
       <strong>name </strong>:
       <small>
-        required
+        optional
         
           [ Must be String ]
       </small>
@@ -1970,7 +1984,7 @@
     <li>
       <strong>value </strong>:
       <small>
-        required
+        optional
         
           [ Must be String ]
       </small>
@@ -2003,9 +2017,9 @@
 200
 {
   &quot;common_parameter&quot;: {
+    &quot;id&quot;: 636252244,
     &quot;name&quot;: &quot;test&quot;,
-    &quot;value&quot;: &quot;myvalue&quot;,
-    &quot;id&quot;: 636252244
+    &quot;value&quot;: &quot;myvalue&quot;
   }
 }</pre>
 
@@ -2017,7 +2031,7 @@
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -2062,37 +2076,37 @@
   {
     &quot;compute_resource&quot;: {
       &quot;user&quot;: &quot;MyString&quot;,
-      &quot;name&quot;: &quot;MyString&quot;,
-      &quot;provider&quot;: &quot;Libvirt&quot;,
-      &quot;id&quot;: 980190962,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;url&quot;: &quot;qemu://stam/system&quot;,
-      &quot;description&quot;: &quot;MyString&quot;
-    }
-  },
-  {
-    &quot;compute_resource&quot;: {
-      &quot;user&quot;: &quot;MyString&quot;,
-      &quot;name&quot;: &quot;mycompute&quot;,
-      &quot;provider&quot;: &quot;Libvirt&quot;,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
       &quot;id&quot;: 367690737,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
+      &quot;provider&quot;: &quot;Libvirt&quot;,
       &quot;url&quot;: &quot;test:///default&quot;,
-      &quot;description&quot;: &quot;mycompute&quot;
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;description&quot;: &quot;mycompute&quot;,
+      &quot;name&quot;: &quot;mycompute&quot;
     }
   },
   {
     &quot;compute_resource&quot;: {
       &quot;user&quot;: &quot;MyString&quot;,
-      &quot;name&quot;: &quot;yourcompute&quot;,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;id&quot;: 980190962,
       &quot;provider&quot;: &quot;Libvirt&quot;,
+      &quot;url&quot;: &quot;qemu://stam/system&quot;,
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;description&quot;: &quot;MyString&quot;,
+      &quot;name&quot;: &quot;MyString&quot;
+    }
+  },
+  {
+    &quot;compute_resource&quot;: {
+      &quot;user&quot;: &quot;MyString&quot;,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
       &quot;id&quot;: 932571420,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
+      &quot;provider&quot;: &quot;Libvirt&quot;,
       &quot;url&quot;: &quot;test:///default&quot;,
-      &quot;description&quot;: &quot;yourcompute&quot;
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;description&quot;: &quot;yourcompute&quot;,
+      &quot;name&quot;: &quot;yourcompute&quot;
     }
   }
 ]</pre>
@@ -2169,13 +2183,13 @@
 {
   &quot;compute_resource&quot;: {
     &quot;user&quot;: &quot;MyString&quot;,
-    &quot;name&quot;: &quot;MyString&quot;,
-    &quot;provider&quot;: &quot;Libvirt&quot;,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
     &quot;id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
+    &quot;provider&quot;: &quot;Libvirt&quot;,
     &quot;url&quot;: &quot;qemu://stam/system&quot;,
-    &quot;description&quot;: &quot;MyString&quot;
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+    &quot;description&quot;: &quot;MyString&quot;,
+    &quot;name&quot;: &quot;MyString&quot;
   }
 }</pre>
 
@@ -2187,7 +2201,7 @@
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -2197,34 +2211,48 @@
       </div>
       <hr/>
 
-      <h3 id="compute_resources-update">
-      <a href='#compute_resources'>Compute resources</a> / <a href='#compute_resources-update'>update</a>
+      <h3 id="compute_resources-create">
+      <a href='#compute_resources'>Compute resources</a> / <a href='#compute_resources-create'>create</a>
       </h3>
 
       <div>
           <h4>
-              PUT /api/compute_resources/:id
+              POST /api/compute_resources
             <br>
-            <small>Update a compute resource.</small>
+            <small>Create a compute resource.</small>
           </h4>
       </div>
 
       <div>
         
+          <h4>Examples</h4>
+            <pre class="wiki">POST /api/compute_resources
+{
+  &quot;compute_resource&quot;: {
+    &quot;user&quot;: &quot;user@example.com&quot;,
+    &quot;region&quot;: &quot;eu-west-1&quot;,
+    &quot;provider&quot;: &quot;EC2&quot;,
+    &quot;password&quot;: &quot;secret&quot;,
+    &quot;name&quot;: &quot;special_compute&quot;
+  }
+}
+200
+{
+  &quot;compute_resource&quot;: {
+    &quot;user&quot;: &quot;user@example.com&quot;,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:44Z&quot;,
+    &quot;id&quot;: 980190963,
+    &quot;provider&quot;: &quot;EC2&quot;,
+    &quot;url&quot;: &quot;eu-west-1&quot;,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:44Z&quot;,
+    &quot;description&quot;: null,
+    &quot;name&quot;: &quot;special_compute&quot;
+  }
+}</pre>
 
 
           <h4>Params</h4>
           <ul>
-    <li>
-      <strong>id </strong>:
-      <small>
-        required
-        
-          [ Must be String ]
-      </small>
-      
-    </li>
-    
     <li>
       <strong>compute_resource </strong>:
       <small>
@@ -2238,7 +2266,7 @@
     <li>
       <strong>name </strong>:
       <small>
-        required
+        optional
         
           [ Must be String ]
       </small>
@@ -2248,11 +2276,11 @@
     <li>
       <strong>provider </strong>:
       <small>
-        required
+        optional
         
           [ Must be String ]
       </small>
-      <p>Providers include Libvirt, Ovirt, EC2, Vmware, Openstack</p>
+      <p>Providers include Libvirt, Ovirt, EC2, Vmware, Openstack, Rackspace</p>
 
     </li>
     
@@ -2348,6 +2376,229 @@
 </ul>
 
       </div>
+      <hr/>
+
+      <h3 id="compute_resources-update">
+      <a href='#compute_resources'>Compute resources</a> / <a href='#compute_resources-update'>update</a>
+      </h3>
+
+      <div>
+          <h4>
+              PUT /api/compute_resources/:id
+            <br>
+            <small>Update a compute resource.</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">PUT /api/compute_resources/367690737-mycompute
+{
+  &quot;compute_resource&quot;: {
+    &quot;description&quot;: &quot;new_description&quot;
+  }
+}
+200
+{
+  &quot;compute_resource&quot;: {
+    &quot;user&quot;: &quot;MyString&quot;,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:45Z&quot;,
+    &quot;id&quot;: 367690737,
+    &quot;url&quot;: &quot;test:///default&quot;,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+    &quot;description&quot;: &quot;new_description&quot;,
+    &quot;name&quot;: &quot;mycompute&quot;,
+    &quot;attrs&quot;: {},
+    &quot;uuid&quot;: &quot;mycompute&quot;
+  }
+}</pre>
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>compute_resource </strong>:
+      <small>
+        required
+        
+          [ Must be a Hash ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>name </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>provider </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>Providers include Libvirt, Ovirt, EC2, Vmware, Openstack, Rackspace</p>
+
+    </li>
+    
+    <li>
+      <strong>url </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>URL for Libvirt, Ovirt, and Openstack</p>
+
+    </li>
+    
+    <li>
+      <strong>description </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>user </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>Username for Ovirt, EC2, Vmware, Openstack. Access Key for EC2.</p>
+
+    </li>
+    
+    <li>
+      <strong>password </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>Password for Ovirt, EC2, Vmware, Openstack. Secret key for EC2</p>
+
+    </li>
+    
+    <li>
+      <strong>uuid </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>for Ovirt, Vmware Datacenter</p>
+
+    </li>
+    
+    <li>
+      <strong>region </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>for EC2 only</p>
+
+    </li>
+    
+    <li>
+      <strong>tenant </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>for Openstack only</p>
+
+    </li>
+    
+    <li>
+      <strong>server </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>for Vmware</p>
+
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="compute_resources-destroy">
+      <a href='#compute_resources'>Compute resources</a> / <a href='#compute_resources-destroy'>destroy</a>
+      </h3>
+
+      <div>
+          <h4>
+              DELETE /api/compute_resources/:id
+            <br>
+            <small>Delete a compute resource.</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">DELETE /api/compute_resources/932571420
+200
+{
+  &quot;compute_resource&quot;: {
+    &quot;user&quot;: &quot;MyString&quot;,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+    &quot;id&quot;: 932571420,
+    &quot;url&quot;: &quot;test:///default&quot;,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+    &quot;description&quot;: &quot;yourcompute&quot;,
+    &quot;name&quot;: &quot;yourcompute&quot;,
+    &quot;attrs&quot;: null,
+    &quot;uuid&quot;: &quot;yourcompute&quot;
+  }
+}</pre>
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
+      </small>
+      
+    </li>
+    
+</ul>
+
+      </div>
   </div>
 
   <hr/>
@@ -2384,90 +2635,103 @@
 [
   {
     &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;MyFinish&quot;,
-      &quot;template_kind&quot;: {
-        &quot;name&quot;: &quot;finish&quot;,
-        &quot;id&quot;: 550103832
-      },
-      &quot;audit_comment&quot;: null,
-      &quot;template&quot;: &quot;MyFinish&quot;,
-      &quot;id&quot;: 104314179,
-      &quot;snippet&quot;: null
-    }
-  },
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;MyScript&quot;,
-      &quot;template_kind&quot;: {
-        &quot;name&quot;: &quot;script&quot;,
-        &quot;id&quot;: 478250810
-      },
-      &quot;audit_comment&quot;: null,
-      &quot;template&quot;: &quot;MyText&quot;,
-      &quot;id&quot;: 981457253,
-      &quot;snippet&quot;: null
-    }
-  },
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;MyString&quot;,
-      &quot;template_kind&quot;: {
-        &quot;name&quot;: &quot;gPXE&quot;,
-        &quot;id&quot;: 158998239
-      },
-      &quot;audit_comment&quot;: null,
-      &quot;template&quot;: &quot;MyText&quot;,
-      &quot;id&quot;: 943779058,
-      &quot;snippet&quot;: null
-    }
-  },
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;MyString2&quot;,
-      &quot;template_kind&quot;: {
-        &quot;name&quot;: &quot;provision&quot;,
-        &quot;id&quot;: 983253650
-      },
-      &quot;audit_comment&quot;: null,
-      &quot;template&quot;: &quot;MyText&quot;,
-      &quot;id&quot;: 269958254,
-      &quot;snippet&quot;: null
-    }
-  },
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;PXE Default File&quot;,
-      &quot;template_kind&quot;: {
-        &quot;name&quot;: &quot;PXELinux&quot;,
-        &quot;id&quot;: 452984334
-      },
-      &quot;audit_comment&quot;: null,
-      &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ksdevice=bootif network kssendmac&quot;,
-      &quot;id&quot;: 352050261,
-      &quot;snippet&quot;: null
-    }
-  },
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;PXE Default Menu&quot;,
-      &quot;audit_comment&quot;: null,
-      &quot;template&quot;: &quot;FOO&quot;,
-      &quot;&quot;: null,
-      &quot;id&quot;: 684651467,
-      &quot;snippet&quot;: null
-    }
-  },
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
-      &quot;template_kind&quot;: {
-        &quot;name&quot;: &quot;PXELinux&quot;,
-        &quot;id&quot;: 452984334
-      },
-      &quot;audit_comment&quot;: null,
+      &quot;snippet&quot;: null,
       &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ks=&lt;%= foreman_url(\&quot;kickstart\&quot;)%&gt; ksdevice=bootif network kssendmac&quot;,
       &quot;id&quot;: 1007981701,
-      &quot;snippet&quot;: null
+      &quot;audit_comment&quot;: null,
+      &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
+      &quot;template_kind&quot;: {
+        &quot;id&quot;: 452984334,
+        &quot;name&quot;: &quot;PXELinux&quot;
+      }
+    }
+  },
+  {
+    &quot;config_template&quot;: {
+      &quot;snippet&quot;: null,
+      &quot;template&quot;: &quot;MyFinish&quot;,
+      &quot;id&quot;: 104314179,
+      &quot;audit_comment&quot;: null,
+      &quot;name&quot;: &quot;MyFinish&quot;,
+      &quot;template_kind&quot;: {
+        &quot;id&quot;: 550103832,
+        &quot;name&quot;: &quot;finish&quot;
+      }
+    }
+  },
+  {
+    &quot;config_template&quot;: {
+      &quot;snippet&quot;: null,
+      &quot;template&quot;: &quot;MyText&quot;,
+      &quot;id&quot;: 981457253,
+      &quot;audit_comment&quot;: null,
+      &quot;name&quot;: &quot;MyScript&quot;,
+      &quot;template_kind&quot;: {
+        &quot;id&quot;: 478250810,
+        &quot;name&quot;: &quot;script&quot;
+      }
+    }
+  },
+  {
+    &quot;config_template&quot;: {
+      &quot;snippet&quot;: null,
+      &quot;template&quot;: &quot;MyText&quot;,
+      &quot;id&quot;: 943779058,
+      &quot;audit_comment&quot;: null,
+      &quot;name&quot;: &quot;MyString&quot;,
+      &quot;template_kind&quot;: {
+        &quot;id&quot;: 158998239,
+        &quot;name&quot;: &quot;gPXE&quot;
+      }
+    }
+  },
+  {
+    &quot;config_template&quot;: {
+      &quot;snippet&quot;: null,
+      &quot;template&quot;: &quot;MyText&quot;,
+      &quot;id&quot;: 269958254,
+      &quot;audit_comment&quot;: null,
+      &quot;name&quot;: &quot;MyString2&quot;,
+      &quot;template_kind&quot;: {
+        &quot;id&quot;: 983253650,
+        &quot;name&quot;: &quot;provision&quot;
+      }
+    }
+  },
+  {
+    &quot;config_template&quot;: {
+      &quot;snippet&quot;: null,
+      &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ksdevice=bootif network kssendmac&quot;,
+      &quot;id&quot;: 352050261,
+      &quot;audit_comment&quot;: null,
+      &quot;name&quot;: &quot;PXE Default File&quot;,
+      &quot;template_kind&quot;: {
+        &quot;id&quot;: 452984334,
+        &quot;name&quot;: &quot;PXELinux&quot;
+      }
+    }
+  },
+  {
+    &quot;config_template&quot;: {
+      &quot;snippet&quot;: null,
+      &quot;template&quot;: &quot;FOO&quot;,
+      &quot;id&quot;: 684651467,
+      &quot;audit_comment&quot;: null,
+      &quot;name&quot;: &quot;PXE Default Menu&quot;,
+      &quot;&quot;: null
+    }
+  },
+  {
+    &quot;config_template&quot;: {
+      &quot;snippet&quot;: null,
+      &quot;template&quot;: &quot;DEFAULT menu~PROMPT 0~MENU TITLE PXE Menu~TIMEOUT 200~TOTALTIMEOUT 6000~ONTIMEOUT local~~LABEL local~MENU LABEL (local)~MENU DEFAULT~LOCALBOOT 0&quot;,
+      &quot;id&quot;: 821548108,
+      &quot;audit_comment&quot;: null,
+      &quot;name&quot;: &quot;PXE Localboot Default&quot;,
+      &quot;template_kind&quot;: {
+        &quot;id&quot;: 452984334,
+        &quot;name&quot;: &quot;PXELinux&quot;
+      }
     }
   }
 ]</pre>
@@ -2543,15 +2807,15 @@
 200
 {
   &quot;config_template&quot;: {
-    &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
-    &quot;template_kind&quot;: {
-      &quot;name&quot;: &quot;PXELinux&quot;,
-      &quot;id&quot;: 452984334
-    },
-    &quot;audit_comment&quot;: null,
+    &quot;snippet&quot;: null,
     &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ks=&lt;%= foreman_url(\&quot;kickstart\&quot;)%&gt; ksdevice=bootif network kssendmac&quot;,
     &quot;id&quot;: 1007981701,
-    &quot;snippet&quot;: null
+    &quot;audit_comment&quot;: null,
+    &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
+    &quot;template_kind&quot;: {
+      &quot;id&quot;: 452984334,
+      &quot;name&quot;: &quot;PXELinux&quot;
+    }
   }
 }</pre>
 
@@ -2563,7 +2827,7 @@
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -2591,20 +2855,20 @@
             <pre class="wiki">POST /api/config_templates
 {
   &quot;config_template&quot;: {
-    &quot;name&quot;: &quot;RandomName&quot;,
     &quot;template&quot;: &quot;This is a test template&quot;,
-    &quot;template_kind_id&quot;: 1
+    &quot;template_kind_id&quot;: 1,
+    &quot;name&quot;: &quot;RandomName&quot;
   }
 }
 200
 {
   &quot;config_template&quot;: {
-    &quot;name&quot;: &quot;RandomName&quot;,
-    &quot;audit_comment&quot;: null,
+    &quot;snippet&quot;: null,
     &quot;template&quot;: &quot;This is a test template&quot;,
-    &quot;&quot;: null,
     &quot;id&quot;: 1007981702,
-    &quot;snippet&quot;: null
+    &quot;audit_comment&quot;: null,
+    &quot;name&quot;: &quot;RandomName&quot;,
+    &quot;&quot;: null
   }
 }</pre>
 
@@ -2720,21 +2984,21 @@
             <pre class="wiki">PUT /api/config_templates/centos5_3_pxelinux
 {
   &quot;config_template&quot;: {
-    &quot;audit_comment&quot;: &quot;aha&quot;,
-    &quot;template&quot;: &quot;tmp&quot;
+    &quot;template&quot;: &quot;tmp&quot;,
+    &quot;audit_comment&quot;: &quot;aha&quot;
   }
 }
 200
 {
   &quot;config_template&quot;: {
-    &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
-    &quot;template_kind&quot;: {
-      &quot;name&quot;: &quot;PXELinux&quot;,
-      &quot;id&quot;: 452984334
-    },
+    &quot;snippet&quot;: null,
     &quot;template&quot;: &quot;tmp&quot;,
     &quot;id&quot;: 1007981701,
-    &quot;snippet&quot;: null
+    &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
+    &quot;template_kind&quot;: {
+      &quot;id&quot;: 452984334,
+      &quot;name&quot;: &quot;PXELinux&quot;
+    }
   }
 }</pre>
 
@@ -2746,7 +3010,7 @@
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -2806,7 +3070,7 @@
       <strong>template_kind_id </strong>:
       <small>
         optional
-        
+        , nil allowed
           [ Must be a number. ]
       </small>
       <p>not relevant for snippet</p>
@@ -2895,14 +3159,14 @@
 200
 {
   &quot;config_template&quot;: {
-    &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
-    &quot;template_kind&quot;: {
-      &quot;name&quot;: &quot;PXELinux&quot;,
-      &quot;id&quot;: 452984334
-    },
+    &quot;snippet&quot;: null,
     &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ks=&lt;%= foreman_url(\&quot;kickstart\&quot;)%&gt; ksdevice=bootif network kssendmac&quot;,
     &quot;id&quot;: 1007981701,
-    &quot;snippet&quot;: null
+    &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
+    &quot;template_kind&quot;: {
+      &quot;id&quot;: 452984334,
+      &quot;name&quot;: &quot;PXELinux&quot;
+    }
   }
 }</pre>
 
@@ -2914,7 +3178,7 @@
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -2979,23 +3243,23 @@ PXE Default file has been deployed to all Smart Proxies</pre>
             <pre class="wiki">GET /api/dashboard
 200
 {
-  &quot;good_hosts_enabled&quot;: 0,
-  &quot;active_hosts_ok_enabled&quot;: 0,
-  &quot;pending_hosts_enabled&quot;: 0,
-  &quot;bad_hosts&quot;: 0,
   &quot;ok_hosts_enabled&quot;: 0,
-  &quot;active_hosts_ok&quot;: 0,
-  &quot;out_of_sync_hosts_enabled&quot;: 0,
-  &quot;active_hosts&quot;: 0,
-  &quot;percentage&quot;: 0,
-  &quot;pending_hosts&quot;: 0,
-  &quot;reports_missing&quot;: 12,
-  &quot;good_hosts&quot;: 0,
-  &quot;ok_hosts&quot;: 0,
   &quot;out_of_sync_hosts&quot;: 0,
+  &quot;active_hosts_ok&quot;: 0,
+  &quot;percentage&quot;: 0,
+  &quot;active_hosts&quot;: 0,
+  &quot;pending_hosts&quot;: 0,
+  &quot;out_of_sync_hosts_enabled&quot;: 0,
   &quot;bad_hosts_enabled&quot;: 0,
+  &quot;active_hosts_ok_enabled&quot;: 0,
+  &quot;ok_hosts&quot;: 0,
+  &quot;reports_missing&quot;: 12,
+  &quot;good_hosts_enabled&quot;: 0,
   &quot;disabled_hosts&quot;: 0,
-  &quot;total_hosts&quot;: 12
+  &quot;bad_hosts&quot;: 0,
+  &quot;total_hosts&quot;: 12,
+  &quot;pending_hosts_enabled&quot;: 0,
+  &quot;good_hosts&quot;: 0
 }</pre>
 
 
@@ -3058,42 +3322,42 @@ by machines at that site.</p>
 [
   {
     &quot;domain&quot;: {
-      &quot;name&quot;: &quot;mydomain.net&quot;,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
       &quot;dns_id&quot;: 113629430,
       &quot;fullname&quot;: null,
       &quot;id&quot;: 22495316,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+      &quot;name&quot;: &quot;mydomain.net&quot;
     }
   },
   {
     &quot;domain&quot;: {
-      &quot;name&quot;: &quot;unused.net&quot;,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
       &quot;dns_id&quot;: 113629430,
       &quot;fullname&quot;: &quot;somewhare that is never used&quot;,
       &quot;id&quot;: 759776763,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+      &quot;name&quot;: &quot;unused.net&quot;
     }
   },
   {
     &quot;domain&quot;: {
-      &quot;name&quot;: &quot;useless.net&quot;,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
       &quot;dns_id&quot;: null,
       &quot;fullname&quot;: null,
       &quot;id&quot;: 229305443,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+      &quot;name&quot;: &quot;useless.net&quot;
     }
   },
   {
     &quot;domain&quot;: {
-      &quot;name&quot;: &quot;yourdomain.net&quot;,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
       &quot;dns_id&quot;: 113629430,
       &quot;fullname&quot;: &quot;somewhere in yourdomain&quot;,
       &quot;id&quot;: 589326610,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+      &quot;name&quot;: &quot;yourdomain.net&quot;
     }
   }
 ]</pre>
@@ -3169,12 +3433,12 @@ by machines at that site.</p>
 200
 {
   &quot;domain&quot;: {
-    &quot;name&quot;: &quot;mydomain.net&quot;,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
     &quot;dns_id&quot;: 113629430,
     &quot;fullname&quot;: null,
     &quot;id&quot;: 22495316,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;name&quot;: &quot;mydomain.net&quot;
   }
 }</pre>
 
@@ -3186,7 +3450,7 @@ by machines at that site.</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       <p>May be numerical id or domain name</p>
 
@@ -3224,8 +3488,8 @@ an external node parameter</p>
 201
 {
   &quot;domain&quot;: {
-    &quot;name&quot;: &quot;domain.net&quot;,
-    &quot;id&quot;: 759776764
+    &quot;id&quot;: 759776764,
+    &quot;name&quot;: &quot;domain.net&quot;
   }
 }</pre>
 
@@ -3317,6 +3581,7 @@ an external node parameter</p>
 422
 {
   &quot;domain&quot;: {
+    &quot;id&quot;: 22495316,
     &quot;errors&quot;: {
       &quot;name&quot;: [
         &quot;can&#x27;t be blank&quot;
@@ -3324,8 +3589,7 @@ an external node parameter</p>
     },
     &quot;full_messages&quot;: [
       &quot;Name can&#x27;t be blank&quot;
-    ],
-    &quot;id&quot;: 22495316
+    ]
   }
 }</pre>
 
@@ -3337,7 +3601,7 @@ an external node parameter</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -3355,7 +3619,7 @@ an external node parameter</p>
     <li>
       <strong>name </strong>:
       <small>
-        required
+        optional
         , nil allowed
           [ Must be String ]
       </small>
@@ -3422,8 +3686,8 @@ an external node parameter</p>
 200
 {
   &quot;domain&quot;: {
-    &quot;name&quot;: &quot;mydomain.net&quot;,
-    &quot;id&quot;: 22495316
+    &quot;id&quot;: 22495316,
+    &quot;name&quot;: &quot;mydomain.net&quot;
   }
 }</pre>
 
@@ -3435,7 +3699,7 @@ an external node parameter</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -3479,26 +3743,26 @@ an external node parameter</p>
 [
   {
     &quot;environment&quot;: {
-      &quot;name&quot;: &quot;global_puppetmaster&quot;,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
       &quot;id&quot;: 153855663,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;name&quot;: &quot;global_puppetmaster&quot;
     }
   },
   {
     &quot;environment&quot;: {
-      &quot;name&quot;: &quot;production&quot;,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
       &quot;id&quot;: 334344675,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;name&quot;: &quot;production&quot;
     }
   },
   {
     &quot;environment&quot;: {
-      &quot;name&quot;: &quot;testing&quot;,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
       &quot;id&quot;: 687036937,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;name&quot;: &quot;testing&quot;
     }
   }
 ]</pre>
@@ -3574,10 +3838,10 @@ an external node parameter</p>
 200
 {
   &quot;environment&quot;: {
-    &quot;name&quot;: &quot;production&quot;,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
     &quot;id&quot;: 334344675,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+    &quot;name&quot;: &quot;production&quot;
   }
 }</pre>
 
@@ -3589,7 +3853,7 @@ an external node parameter</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -3623,10 +3887,10 @@ an external node parameter</p>
 200
 {
   &quot;environment&quot;: {
-    &quot;name&quot;: &quot;Development&quot;,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:46Z&quot;,
     &quot;id&quot;: 687036938,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:50Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:50Z&quot;
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:46Z&quot;,
+    &quot;name&quot;: &quot;Development&quot;
   }
 }</pre>
 
@@ -3682,8 +3946,8 @@ an external node parameter</p>
 200
 {
   &quot;environment&quot;: {
-    &quot;name&quot;: &quot;production&quot;,
-    &quot;id&quot;: 334344675
+    &quot;id&quot;: 334344675,
+    &quot;name&quot;: &quot;production&quot;
   }
 }</pre>
 
@@ -3695,7 +3959,7 @@ an external node parameter</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -3746,8 +4010,8 @@ an external node parameter</p>
 200
 {
   &quot;environment&quot;: {
-    &quot;name&quot;: &quot;testing&quot;,
-    &quot;id&quot;: 687036937
+    &quot;id&quot;: 687036937,
+    &quot;name&quot;: &quot;testing&quot;
   }
 }</pre>
 
@@ -3759,7 +4023,7 @@ an external node parameter</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -3798,7 +4062,7 @@ an external node parameter</p>
       <div>
         
           <h4>Examples</h4>
-            <pre class="wiki">GET /api/fact_values
+            <pre class="wiki">GET /api/hosts/my5name.mydomain.net/facts
 200
 {
   &quot;my5name.mydomain.net&quot;: {
@@ -3892,35 +4156,36 @@ an external node parameter</p>
 200
 {
   &quot;links&quot;: {
-    &quot;List all smart_proxies&quot;: &quot;/api/smart_proxies&quot;,
-    &quot;List of subnets&quot;: &quot;/api/subnets&quot;,
-    &quot;List all audits&quot;: &quot;/api/audits&quot;,
-    &quot;List all reports&quot;: &quot;/api/reports&quot;,
-    &quot;Show available links&quot;: &quot;/api&quot;,
-    &quot;List all settings&quot;: &quot;/api/settings&quot;,
-    &quot;List all ptables&quot;: &quot;/api/ptables&quot;,
-    &quot;List all bookmarks&quot;: &quot;/api/bookmarks&quot;,
-    &quot;List all architectures&quot;: &quot;/api/architectures&quot;,
-    &quot;Show status&quot;: &quot;/api/status&quot;,
-    &quot;List all lookup_keys&quot;: &quot;/api/lookup_keys&quot;,
-    &quot;List all hosts&quot;: &quot;/api/hosts&quot;,
-    &quot;List all roles&quot;: &quot;/api/roles&quot;,
-    &quot;List all images for compute resource&quot;: &quot;/api/compute_resources/:compute_resource_id/images&quot;,
-    &quot;List all operating systems&quot;: &quot;/api/operatingsystems&quot;,
-    &quot;List all models&quot;: &quot;/api/models&quot;,
-    &quot;List all common parameters&quot;: &quot;/api/common_parameters&quot;,
-    &quot;List templates&quot;: &quot;/api/config_templates&quot;,
     &quot;Get Dashboard results&quot;: &quot;/api/dashboard&quot;,
-    &quot;List all authsource ldaps&quot;: &quot;/api/auth_source_ldaps&quot;,
-    &quot;List all users&quot;: &quot;/api/users&quot;,
-    &quot;List all compute resources&quot;: &quot;/api/compute_resources&quot;,
-    &quot;List all fact values&quot;: &quot;/api/fact_values&quot;,
-    &quot;List all environments&quot;: &quot;/api/environments&quot;,
+    &quot;List all models&quot;: &quot;/api/models&quot;,
+    &quot;List all lookup_keys&quot;: &quot;/api/lookup_keys&quot;,
     &quot;List all hostgroups&quot;: &quot;/api/hostgroups&quot;,
-    &quot;List all media&quot;: &quot;/api/media&quot;,
     &quot;List of domains&quot;: &quot;/api/domains&quot;,
+    &quot;List all architectures&quot;: &quot;/api/architectures&quot;,
+    &quot;List all compute resources&quot;: &quot;/api/compute_resources&quot;,
+    &quot;List all environments&quot;: &quot;/api/environments&quot;,
+    &quot;List templates&quot;: &quot;/api/config_templates&quot;,
+    &quot;List all fact values&quot;: &quot;/api/fact_values&quot;,
+    &quot;List of subnets&quot;: &quot;/api/subnets&quot;,
+    &quot;List all hosts&quot;: &quot;/api/hosts&quot;,
+    &quot;List all audits&quot;: &quot;/api/audits&quot;,
+    &quot;List all roles&quot;: &quot;/api/roles&quot;,
+    &quot;List all template kinds&quot;: &quot;/api/template_kinds&quot;,
+    &quot;Show status&quot;: &quot;/api/status&quot;,
+    &quot;List all images for compute resource&quot;: &quot;/api/compute_resources/:compute_resource_id/images&quot;,
+    &quot;List all reports&quot;: &quot;/api/reports&quot;,
+    &quot;List all smart_proxies&quot;: &quot;/api/smart_proxies&quot;,
+    &quot;Show available links&quot;: &quot;/api&quot;,
+    &quot;List all usergroups&quot;: &quot;/api/usergroups&quot;,
+    &quot;List all users&quot;: &quot;/api/users&quot;,
+    &quot;List all ptables&quot;: &quot;/api/ptables&quot;,
+    &quot;List all operating systems&quot;: &quot;/api/operatingsystems&quot;,
+    &quot;List all bookmarks&quot;: &quot;/api/bookmarks&quot;,
+    &quot;List all media&quot;: &quot;/api/media&quot;,
+    &quot;List all common parameters&quot;: &quot;/api/common_parameters&quot;,
     &quot;List all puppetclasses&quot;: &quot;/api/puppetclasses&quot;,
-    &quot;List all usergroups&quot;: &quot;/api/usergroups&quot;
+    &quot;List all settings&quot;: &quot;/api/settings&quot;,
+    &quot;List all authsource ldaps&quot;: &quot;/api/auth_source_ldaps&quot;
   }
 }</pre>
 
@@ -3981,48 +4246,48 @@ an external node parameter</p>
 [
   {
     &quot;hostgroup&quot;: {
+      &quot;puppetclass_ids&quot;: [],
+      &quot;subnet_id&quot;: null,
       &quot;ancestry&quot;: null,
+      &quot;id&quot;: 603241515,
+      &quot;parameters&quot;: {},
+      &quot;environment_id&quot;: 334344675,
       &quot;name&quot;: &quot;db&quot;,
       &quot;domain_id&quot;: null,
-      &quot;puppetclass_ids&quot;: [],
-      &quot;parameters&quot;: {},
-      &quot;subnet_id&quot;: null,
-      &quot;id&quot;: 603241515,
-      &quot;label&quot;: &quot;db&quot;,
-      &quot;environment_id&quot;: 334344675,
-      &quot;operatingsystem_id&quot;: 309172073
+      &quot;operatingsystem_id&quot;: 309172073,
+      &quot;label&quot;: &quot;db&quot;
     }
   },
   {
     &quot;hostgroup&quot;: {
-      &quot;ancestry&quot;: null,
-      &quot;name&quot;: &quot;Common&quot;,
-      &quot;domain_id&quot;: 22495316,
       &quot;puppetclass_ids&quot;: [
         980190962
       ],
+      &quot;subnet_id&quot;: null,
+      &quot;ancestry&quot;: null,
+      &quot;id&quot;: 636252244,
       &quot;parameters&quot;: {
         &quot;group1&quot;: &quot;group1&quot;
       },
-      &quot;subnet_id&quot;: null,
-      &quot;id&quot;: 636252244,
-      &quot;label&quot;: &quot;Common&quot;,
       &quot;environment_id&quot;: 334344675,
-      &quot;operatingsystem_id&quot;: 309172073
+      &quot;name&quot;: &quot;Common&quot;,
+      &quot;domain_id&quot;: 22495316,
+      &quot;operatingsystem_id&quot;: 309172073,
+      &quot;label&quot;: &quot;Common&quot;
     }
   },
   {
     &quot;hostgroup&quot;: {
+      &quot;puppetclass_ids&quot;: [],
+      &quot;subnet_id&quot;: null,
       &quot;ancestry&quot;: null,
+      &quot;id&quot;: 866317115,
+      &quot;parameters&quot;: {},
+      &quot;environment_id&quot;: null,
       &quot;name&quot;: &quot;Unusual&quot;,
       &quot;domain_id&quot;: null,
-      &quot;puppetclass_ids&quot;: [],
-      &quot;parameters&quot;: {},
-      &quot;subnet_id&quot;: null,
-      &quot;id&quot;: 866317115,
-      &quot;label&quot;: &quot;Unusual&quot;,
-      &quot;environment_id&quot;: null,
-      &quot;operatingsystem_id&quot;: null
+      &quot;operatingsystem_id&quot;: null,
+      &quot;label&quot;: &quot;Unusual&quot;
     }
   }
 ]</pre>
@@ -4098,20 +4363,20 @@ an external node parameter</p>
 200
 {
   &quot;hostgroup&quot;: {
-    &quot;ancestry&quot;: null,
-    &quot;name&quot;: &quot;Common&quot;,
-    &quot;domain_id&quot;: 22495316,
     &quot;puppetclass_ids&quot;: [
       980190962
     ],
+    &quot;subnet_id&quot;: null,
+    &quot;ancestry&quot;: null,
+    &quot;id&quot;: 636252244,
     &quot;parameters&quot;: {
       &quot;group1&quot;: &quot;group1&quot;
     },
-    &quot;subnet_id&quot;: null,
-    &quot;id&quot;: 636252244,
-    &quot;label&quot;: &quot;Common&quot;,
     &quot;environment_id&quot;: 334344675,
-    &quot;operatingsystem_id&quot;: 309172073
+    &quot;name&quot;: &quot;Common&quot;,
+    &quot;domain_id&quot;: 22495316,
+    &quot;operatingsystem_id&quot;: 309172073,
+    &quot;label&quot;: &quot;Common&quot;
   }
 }</pre>
 
@@ -4123,7 +4388,7 @@ an external node parameter</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -4157,16 +4422,16 @@ an external node parameter</p>
 200
 {
   &quot;hostgroup&quot;: {
+    &quot;puppetclass_ids&quot;: [],
+    &quot;subnet_id&quot;: null,
     &quot;ancestry&quot;: null,
+    &quot;id&quot;: 866317116,
+    &quot;parameters&quot;: {},
+    &quot;environment_id&quot;: null,
     &quot;name&quot;: &quot;TestHostgroup&quot;,
     &quot;domain_id&quot;: null,
-    &quot;puppetclass_ids&quot;: [],
-    &quot;parameters&quot;: {},
-    &quot;subnet_id&quot;: null,
-    &quot;id&quot;: 866317116,
-    &quot;label&quot;: &quot;TestHostgroup&quot;,
-    &quot;environment_id&quot;: null,
-    &quot;operatingsystem_id&quot;: null
+    &quot;operatingsystem_id&quot;: null,
+    &quot;label&quot;: &quot;TestHostgroup&quot;
   }
 }</pre>
 
@@ -4312,20 +4577,20 @@ an external node parameter</p>
 200
 {
   &quot;hostgroup&quot;: {
-    &quot;ancestry&quot;: null,
-    &quot;name&quot;: &quot;Common&quot;,
-    &quot;domain_id&quot;: 22495316,
     &quot;puppetclass_ids&quot;: [
       980190962
     ],
+    &quot;subnet_id&quot;: null,
+    &quot;ancestry&quot;: null,
+    &quot;id&quot;: 636252244,
     &quot;parameters&quot;: {
       &quot;group1&quot;: &quot;group1&quot;
     },
-    &quot;subnet_id&quot;: null,
-    &quot;id&quot;: 636252244,
-    &quot;label&quot;: &quot;Common&quot;,
     &quot;environment_id&quot;: 334344675,
-    &quot;operatingsystem_id&quot;: 309172073
+    &quot;name&quot;: &quot;Common&quot;,
+    &quot;domain_id&quot;: 22495316,
+    &quot;operatingsystem_id&quot;: 309172073,
+    &quot;label&quot;: &quot;Common&quot;
   }
 }</pre>
 
@@ -4337,7 +4602,7 @@ an external node parameter</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -4355,7 +4620,7 @@ an external node parameter</p>
     <li>
       <strong>name </strong>:
       <small>
-        required
+        optional
         
           [ Must be String ]
       </small>
@@ -4478,16 +4743,16 @@ an external node parameter</p>
 200
 {
   &quot;hostgroup&quot;: {
+    &quot;puppetclass_ids&quot;: [],
+    &quot;subnet_id&quot;: null,
     &quot;ancestry&quot;: null,
+    &quot;id&quot;: 636252244,
+    &quot;parameters&quot;: {},
+    &quot;environment_id&quot;: 334344675,
     &quot;name&quot;: &quot;Common&quot;,
     &quot;domain_id&quot;: 22495316,
-    &quot;puppetclass_ids&quot;: [],
-    &quot;parameters&quot;: {},
-    &quot;subnet_id&quot;: null,
-    &quot;id&quot;: 636252244,
-    &quot;label&quot;: &quot;Common&quot;,
-    &quot;environment_id&quot;: 334344675,
-    &quot;operatingsystem_id&quot;: 309172073
+    &quot;operatingsystem_id&quot;: 309172073,
+    &quot;label&quot;: &quot;Common&quot;
   }
 }</pre>
 
@@ -4499,7 +4764,7 @@ an external node parameter</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -4543,98 +4808,98 @@ an external node parameter</p>
 [
   {
     &quot;host&quot;: {
-      &quot;name&quot;: &quot;anotherfullhost&quot;,
       &quot;hostgroup_id&quot;: null,
       &quot;id&quot;: 55602819,
+      &quot;name&quot;: &quot;anotherfullhost&quot;,
       &quot;operatingsystem_id&quot;: 1073012828
     }
   },
   {
     &quot;host&quot;: {
-      &quot;name&quot;: &quot;dhcp.mydomain.net&quot;,
       &quot;hostgroup_id&quot;: null,
       &quot;id&quot;: 219245707,
+      &quot;name&quot;: &quot;dhcp.mydomain.net&quot;,
       &quot;operatingsystem_id&quot;: 1073012828
     }
   },
   {
     &quot;host&quot;: {
-      &quot;name&quot;: &quot;my5name.mydomain.net&quot;,
       &quot;hostgroup_id&quot;: null,
       &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;my5name.mydomain.net&quot;,
       &quot;operatingsystem_id&quot;: 1073012828
     }
   },
   {
     &quot;host&quot;: {
-      &quot;name&quot;: &quot;myfullname.mydomain.net&quot;,
       &quot;hostgroup_id&quot;: null,
       &quot;id&quot;: 1053842695,
+      &quot;name&quot;: &quot;myfullname.mydomain.net&quot;,
       &quot;operatingsystem_id&quot;: 309172073
     }
   },
   {
     &quot;host&quot;: {
-      &quot;name&quot;: &quot;otherfullhost&quot;,
       &quot;hostgroup_id&quot;: null,
       &quot;id&quot;: 661942085,
+      &quot;name&quot;: &quot;otherfullhost&quot;,
       &quot;operatingsystem_id&quot;: 1073012828
     }
   },
   {
     &quot;host&quot;: {
-      &quot;name&quot;: &quot;sdhcp.mydomain.net&quot;,
       &quot;hostgroup_id&quot;: null,
       &quot;id&quot;: 500757383,
+      &quot;name&quot;: &quot;sdhcp.mydomain.net&quot;,
       &quot;operatingsystem_id&quot;: 1073012828
     }
   },
   {
     &quot;host&quot;: {
-      &quot;name&quot;: &quot;sol10host&quot;,
       &quot;hostgroup_id&quot;: null,
       &quot;id&quot;: 715054938,
+      &quot;name&quot;: &quot;sol10host&quot;,
       &quot;operatingsystem_id&quot;: 442321401
     }
   },
   {
     &quot;host&quot;: {
-      &quot;name&quot;: &quot;suse01.yourdomain.net&quot;,
       &quot;hostgroup_id&quot;: null,
       &quot;id&quot;: 859751735,
+      &quot;name&quot;: &quot;suse01.yourdomain.net&quot;,
       &quot;operatingsystem_id&quot;: 859751735
     }
   },
   {
     &quot;host&quot;: {
-      &quot;name&quot;: &quot;temp-01.yourdomain.net&quot;,
       &quot;hostgroup_id&quot;: null,
       &quot;id&quot;: 1011586618,
+      &quot;name&quot;: &quot;temp-01.yourdomain.net&quot;,
       &quot;operatingsystem_id&quot;: 331303656
     }
   },
   {
     &quot;host&quot;: {
-      &quot;name&quot;: &quot;temp-02.useless.net&quot;,
-      &quot;hostgroup_id&quot;: null,
-      &quot;id&quot;: 3666571,
-      &quot;operatingsystem_id&quot;: 331303656
-    }
-  },
-  {
-    &quot;host&quot;: {
-      &quot;name&quot;: &quot;temp.yourdomain.net&quot;,
-      &quot;hostgroup_id&quot;: null,
-      &quot;id&quot;: 298486374,
-      &quot;operatingsystem_id&quot;: 309172073
-    }
-  },
-  {
-    &quot;host&quot;: {
-      &quot;name&quot;: &quot;temp01.yourdomain.net&quot;,
       &quot;hostgroup_id&quot;: null,
       &quot;id&quot;: 1073012828,
+      &quot;name&quot;: &quot;temp01.yourdomain.net&quot;,
       &quot;operatingsystem_id&quot;: 1073012828
+    }
+  },
+  {
+    &quot;host&quot;: {
+      &quot;hostgroup_id&quot;: null,
+      &quot;id&quot;: 3666571,
+      &quot;name&quot;: &quot;temp-02.useless.net&quot;,
+      &quot;operatingsystem_id&quot;: 331303656
+    }
+  },
+  {
+    &quot;host&quot;: {
+      &quot;hostgroup_id&quot;: null,
+      &quot;id&quot;: 298486374,
+      &quot;name&quot;: &quot;temp.yourdomain.net&quot;,
+      &quot;operatingsystem_id&quot;: 309172073
     }
   }
 ]</pre>
@@ -4710,61 +4975,61 @@ an external node parameter</p>
 200
 {
   &quot;host&quot;: {
-    &quot;ptable_id&quot;: 980190962,
-    &quot;model_id&quot;: null,
-    &quot;name&quot;: &quot;my5name.mydomain.net&quot;,
-    &quot;mac&quot;: &quot;aabbCCddeeee&quot;,
-    &quot;sp_name&quot;: &quot;&quot;,
-    &quot;owner_id&quot;: null,
-    &quot;image_file&quot;: &quot;&quot;,
-    &quot;domain_id&quot;: 22495316,
-    &quot;uuid&quot;: null,
-    &quot;host_parameters&quot;: [
-      {
-        &quot;host_parameter&quot;: {
-          &quot;priority&quot;: 4,
-          &quot;name&quot;: &quot;host1&quot;,
-          &quot;reference_id&quot;: 980190962,
-          &quot;value&quot;: &quot;host1&quot;,
-          &quot;id&quot;: 254219264,
-          &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-          &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
-        }
-      }
-    ],
-    &quot;managed&quot;: true,
     &quot;puppet_proxy_id&quot;: 182953976,
-    &quot;build&quot;: false,
-    &quot;sp_subnet_id&quot;: null,
-    &quot;last_report&quot;: null,
-    &quot;owner_type&quot;: null,
-    &quot;subnet_id&quot;: 980190962,
+    &quot;model_id&quot;: null,
+    &quot;sp_mac&quot;: &quot;&quot;,
+    &quot;compute_resource_id&quot;: 980190962,
+    &quot;disk&quot;: null,
     &quot;hostgroup_id&quot;: null,
-    &quot;certname&quot;: &quot;my5name.mydomain.net&quot;,
+    &quot;subnet_id&quot;: 980190962,
+    &quot;build&quot;: false,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;mac&quot;: &quot;aabbCCddeeee&quot;,
+    &quot;last_report&quot;: null,
     &quot;architecture_id&quot;: 501905019,
     &quot;environment&quot;: {
       &quot;environment&quot;: {
-        &quot;name&quot;: &quot;production&quot;,
-        &quot;id&quot;: 334344675
+        &quot;id&quot;: 334344675,
+        &quot;name&quot;: &quot;production&quot;
       }
     },
-    &quot;compute_resource_id&quot;: 980190962,
-    &quot;disk&quot;: null,
-    &quot;ip&quot;: &quot;2.3.4.1&quot;,
     &quot;id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;comment&quot;: null,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;sp_mac&quot;: &quot;&quot;,
-    &quot;puppet_ca_proxy_id&quot;: null,
-    &quot;medium_id&quot;: null,
-    &quot;use_image&quot;: null,
+    &quot;ip&quot;: &quot;2.3.4.1&quot;,
+    &quot;image_file&quot;: &quot;&quot;,
+    &quot;host_parameters&quot;: [
+      {
+        &quot;host_parameter&quot;: {
+          &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+          &quot;id&quot;: 254219264,
+          &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+          &quot;name&quot;: &quot;host1&quot;,
+          &quot;reference_id&quot;: 980190962,
+          &quot;priority&quot;: 4,
+          &quot;value&quot;: &quot;host1&quot;
+        }
+      }
+    ],
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;image_id&quot;: null,
+    &quot;ptable_id&quot;: 980190962,
     &quot;environment_id&quot;: 334344675,
+    &quot;name&quot;: &quot;my5name.mydomain.net&quot;,
+    &quot;enabled&quot;: true,
+    &quot;sp_ip&quot;: &quot;&quot;,
+    &quot;owner_type&quot;: null,
+    &quot;uuid&quot;: null,
+    &quot;medium_id&quot;: null,
+    &quot;sp_name&quot;: &quot;&quot;,
+    &quot;managed&quot;: true,
+    &quot;domain_id&quot;: 22495316,
+    &quot;certname&quot;: &quot;my5name.mydomain.net&quot;,
     &quot;installed_at&quot;: null,
     &quot;operatingsystem_id&quot;: 1073012828,
-    &quot;sp_ip&quot;: &quot;&quot;,
-    &quot;enabled&quot;: true,
-    &quot;image_id&quot;: null
+    &quot;sp_subnet_id&quot;: null,
+    &quot;owner_id&quot;: null,
+    &quot;use_image&quot;: null,
+    &quot;comment&quot;: null,
+    &quot;puppet_ca_proxy_id&quot;: null
   }
 }</pre>
 
@@ -4776,7 +5041,7 @@ an external node parameter</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -4804,62 +5069,62 @@ an external node parameter</p>
             <pre class="wiki">POST /api/hosts
 {
   &quot;host&quot;: {
-    &quot;name&quot;: &quot;testhost11&quot;,
-    &quot;mac&quot;: &quot;52:53:00:1e:85:93&quot;,
-    &quot;domain_id&quot;: 22495316,
     &quot;puppet_proxy_id&quot;: 7,
+    &quot;mac&quot;: &quot;52:53:00:1e:85:93&quot;,
     &quot;architecture_id&quot;: 501905019,
     &quot;ip&quot;: &quot;10.0.0.20&quot;,
     &quot;environment_id&quot;: 334344675,
+    &quot;name&quot;: &quot;testhost11&quot;,
+    &quot;domain_id&quot;: 22495316,
     &quot;operatingsystem_id&quot;: 1073012828
   }
 }
 200
 {
   &quot;host&quot;: {
-    &quot;model_id&quot;: null,
-    &quot;ptable_id&quot;: null,
-    &quot;mac&quot;: &quot;52:53:00:1e:85:93&quot;,
-    &quot;name&quot;: &quot;testhost11.mydomain.net&quot;,
-    &quot;sp_name&quot;: &quot;&quot;,
-    &quot;owner_id&quot;: 135138680,
-    &quot;image_file&quot;: &quot;&quot;,
-    &quot;domain_id&quot;: 22495316,
-    &quot;uuid&quot;: null,
-    &quot;host_parameters&quot;: [],
-    &quot;managed&quot;: true,
     &quot;puppet_proxy_id&quot;: 7,
-    &quot;build&quot;: false,
-    &quot;sp_subnet_id&quot;: null,
-    &quot;last_report&quot;: null,
-    &quot;owner_type&quot;: &quot;User&quot;,
-    &quot;subnet_id&quot;: null,
+    &quot;model_id&quot;: null,
+    &quot;sp_mac&quot;: &quot;&quot;,
+    &quot;compute_resource_id&quot;: null,
+    &quot;disk&quot;: null,
     &quot;hostgroup_id&quot;: null,
-    &quot;certname&quot;: &quot;03d92d31-e8c8-4157-aacb-7073283f4b22&quot;,
+    &quot;subnet_id&quot;: null,
+    &quot;build&quot;: false,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:48Z&quot;,
+    &quot;mac&quot;: &quot;52:53:00:1e:85:93&quot;,
+    &quot;last_report&quot;: null,
     &quot;architecture_id&quot;: 501905019,
     &quot;environment&quot;: {
       &quot;environment&quot;: {
-        &quot;name&quot;: &quot;production&quot;,
-        &quot;id&quot;: 334344675
+        &quot;id&quot;: 334344675,
+        &quot;name&quot;: &quot;production&quot;
       }
     },
-    &quot;compute_resource_id&quot;: null,
-    &quot;disk&quot;: null,
     &quot;ip&quot;: &quot;10.0.0.20&quot;,
     &quot;id&quot;: 1073012829,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:51Z&quot;,
-    &quot;comment&quot;: null,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:51Z&quot;,
-    &quot;sp_mac&quot;: &quot;&quot;,
-    &quot;puppet_ca_proxy_id&quot;: null,
-    &quot;medium_id&quot;: null,
-    &quot;use_image&quot;: null,
+    &quot;image_file&quot;: &quot;&quot;,
+    &quot;host_parameters&quot;: [],
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:48Z&quot;,
+    &quot;image_id&quot;: null,
+    &quot;ptable_id&quot;: null,
     &quot;environment_id&quot;: 334344675,
+    &quot;name&quot;: &quot;testhost11.mydomain.net&quot;,
+    &quot;enabled&quot;: true,
+    &quot;sp_ip&quot;: &quot;&quot;,
+    &quot;owner_type&quot;: &quot;User&quot;,
+    &quot;uuid&quot;: null,
+    &quot;medium_id&quot;: null,
+    &quot;sp_name&quot;: &quot;&quot;,
+    &quot;managed&quot;: true,
+    &quot;domain_id&quot;: 22495316,
+    &quot;certname&quot;: &quot;fcfce82c-33d1-4565-843a-4f58ff8e371a&quot;,
     &quot;installed_at&quot;: null,
     &quot;operatingsystem_id&quot;: 1073012828,
-    &quot;sp_ip&quot;: &quot;&quot;,
-    &quot;enabled&quot;: true,
-    &quot;image_id&quot;: null
+    &quot;sp_subnet_id&quot;: null,
+    &quot;owner_id&quot;: 886836129,
+    &quot;use_image&quot;: null,
+    &quot;comment&quot;: null,
+    &quot;puppet_ca_proxy_id&quot;: null
   }
 }</pre>
 
@@ -5087,54 +5352,56 @@ an external node parameter</p>
 200
 {
   &quot;host&quot;: {
-    &quot;last_freshcheck&quot;: null,
-    &quot;model_id&quot;: null,
-    &quot;ptable_id&quot;: 980190962,
-    &quot;mac&quot;: &quot;aa:bb:cc:dd:ee:ff&quot;,
-    &quot;name&quot;: &quot;temp.yourdomain.net&quot;,
-    &quot;owner_id&quot;: 135138680,
-    &quot;sp_name&quot;: &quot;&quot;,
-    &quot;image_file&quot;: &quot;&quot;,
-    &quot;domain_id&quot;: 589326610,
-    &quot;uuid&quot;: null,
-    &quot;managed&quot;: null,
-    &quot;serial&quot;: null,
     &quot;puppet_proxy_id&quot;: 182953976,
-    &quot;build&quot;: false,
-    &quot;last_report&quot;: null,
-    &quot;sp_subnet_id&quot;: null,
-    &quot;owner_type&quot;: &quot;User&quot;,
-    &quot;subnet_id&quot;: 980190962,
+    &quot;model_id&quot;: null,
+    &quot;sp_mac&quot;: &quot;&quot;,
+    &quot;compute_resource_id&quot;: 980190962,
+    &quot;disk&quot;: null,
     &quot;hostgroup_id&quot;: null,
-    &quot;certname&quot;: &quot;temp.yourdomain.net&quot;,
+    &quot;subnet_id&quot;: 980190962,
+    &quot;build&quot;: false,
+    &quot;organization_id&quot;: null,
+    &quot;location_id&quot;: null,
+    &quot;mac&quot;: &quot;aa:bb:cc:dd:ee:ff&quot;,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:48Z&quot;,
+    &quot;last_report&quot;: null,
     &quot;architecture_id&quot;: 501905019,
     &quot;environment&quot;: {
       &quot;environment&quot;: {
-        &quot;name&quot;: &quot;production&quot;,
-        &quot;id&quot;: 334344675
+        &quot;id&quot;: 334344675,
+        &quot;name&quot;: &quot;production&quot;
       }
     },
-    &quot;compute_resource_id&quot;: 980190962,
     &quot;last_compile&quot;: null,
-    &quot;disk&quot;: null,
     &quot;id&quot;: 298486374,
     &quot;ip&quot;: &quot;2.3.4.5&quot;,
-    &quot;comment&quot;: null,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:51Z&quot;,
-    &quot;sp_mac&quot;: &quot;&quot;,
-    &quot;puppet_ca_proxy_id&quot;: null,
-    &quot;root_pass&quot;: &quot;xybxa6JUkz63w&quot;,
-    &quot;medium_id&quot;: 980190962,
-    &quot;puppet_status&quot;: 0,
-    &quot;use_image&quot;: null,
+    &quot;image_file&quot;: &quot;&quot;,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;serial&quot;: null,
+    &quot;image_id&quot;: null,
+    &quot;ptable_id&quot;: 980190962,
     &quot;environment_id&quot;: 334344675,
-    &quot;installed_at&quot;: null,
-    &quot;operatingsystem_id&quot;: 309172073,
-    &quot;sp_ip&quot;: &quot;&quot;,
+    &quot;name&quot;: &quot;temp.yourdomain.net&quot;,
     &quot;enabled&quot;: true,
+    &quot;sp_ip&quot;: &quot;&quot;,
+    &quot;owner_type&quot;: &quot;User&quot;,
+    &quot;uuid&quot;: null,
+    &quot;medium_id&quot;: 980190962,
+    &quot;sp_name&quot;: &quot;&quot;,
+    &quot;managed&quot;: null,
+    &quot;domain_id&quot;: 589326610,
+    &quot;certname&quot;: &quot;temp.yourdomain.net&quot;,
+    &quot;installed_at&quot;: null,
+    &quot;last_freshcheck&quot;: null,
     &quot;source_file_id&quot;: null,
-    &quot;image_id&quot;: null
+    &quot;operatingsystem_id&quot;: 309172073,
+    &quot;root_pass&quot;: &quot;xybxa6JUkz63w&quot;,
+    &quot;puppet_status&quot;: 0,
+    &quot;sp_subnet_id&quot;: null,
+    &quot;owner_id&quot;: 886836129,
+    &quot;comment&quot;: null,
+    &quot;use_image&quot;: null,
+    &quot;puppet_ca_proxy_id&quot;: null
   }
 }</pre>
 
@@ -5146,7 +5413,7 @@ an external node parameter</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -5164,7 +5431,7 @@ an external node parameter</p>
     <li>
       <strong>name </strong>:
       <small>
-        required
+        optional
         
           [ Must be String ]
       </small>
@@ -5174,7 +5441,7 @@ an external node parameter</p>
     <li>
       <strong>environment_id </strong>:
       <small>
-        required
+        optional
         
           [ Must be String ]
       </small>
@@ -5206,7 +5473,7 @@ an external node parameter</p>
     <li>
       <strong>architecture_id </strong>:
       <small>
-        required
+        optional
         
           [ Must be a number. ]
       </small>
@@ -5216,7 +5483,7 @@ an external node parameter</p>
     <li>
       <strong>domain_id </strong>:
       <small>
-        required
+        optional
         
           [ Must be a number. ]
       </small>
@@ -5226,7 +5493,7 @@ an external node parameter</p>
     <li>
       <strong>puppet_proxy_id </strong>:
       <small>
-        required
+        optional
         
           [ Must be a number. ]
       </small>
@@ -5236,7 +5503,7 @@ an external node parameter</p>
     <li>
       <strong>operatingsystem_id </strong>:
       <small>
-        required
+        optional
         
           [ Must be String ]
       </small>
@@ -5369,54 +5636,56 @@ an external node parameter</p>
 200
 {
   &quot;host&quot;: {
-    &quot;last_freshcheck&quot;: null,
-    &quot;model_id&quot;: null,
-    &quot;ptable_id&quot;: 980190962,
-    &quot;mac&quot;: &quot;aabbCCddeeee&quot;,
-    &quot;name&quot;: &quot;my5name.mydomain.net&quot;,
-    &quot;owner_id&quot;: null,
-    &quot;sp_name&quot;: &quot;&quot;,
-    &quot;image_file&quot;: &quot;&quot;,
-    &quot;domain_id&quot;: 22495316,
-    &quot;uuid&quot;: null,
-    &quot;managed&quot;: true,
-    &quot;serial&quot;: null,
     &quot;puppet_proxy_id&quot;: 182953976,
-    &quot;build&quot;: false,
-    &quot;last_report&quot;: null,
-    &quot;sp_subnet_id&quot;: null,
-    &quot;owner_type&quot;: null,
-    &quot;subnet_id&quot;: 980190962,
+    &quot;model_id&quot;: null,
+    &quot;sp_mac&quot;: &quot;&quot;,
+    &quot;compute_resource_id&quot;: 980190962,
+    &quot;disk&quot;: null,
     &quot;hostgroup_id&quot;: null,
-    &quot;certname&quot;: &quot;my5name.mydomain.net&quot;,
+    &quot;subnet_id&quot;: 980190962,
+    &quot;build&quot;: false,
+    &quot;organization_id&quot;: null,
+    &quot;location_id&quot;: null,
+    &quot;mac&quot;: &quot;aabbCCddeeee&quot;,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;last_report&quot;: null,
     &quot;architecture_id&quot;: 501905019,
     &quot;environment&quot;: {
       &quot;environment&quot;: {
-        &quot;name&quot;: &quot;production&quot;,
-        &quot;id&quot;: 334344675
+        &quot;id&quot;: 334344675,
+        &quot;name&quot;: &quot;production&quot;
       }
     },
-    &quot;compute_resource_id&quot;: 980190962,
     &quot;last_compile&quot;: null,
-    &quot;disk&quot;: null,
     &quot;id&quot;: 980190962,
     &quot;ip&quot;: &quot;2.3.4.1&quot;,
-    &quot;comment&quot;: null,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;sp_mac&quot;: &quot;&quot;,
-    &quot;puppet_ca_proxy_id&quot;: null,
-    &quot;root_pass&quot;: &quot;xybxa6JUkz63w&quot;,
-    &quot;medium_id&quot;: null,
-    &quot;puppet_status&quot;: 0,
-    &quot;use_image&quot;: null,
+    &quot;image_file&quot;: &quot;&quot;,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;serial&quot;: null,
+    &quot;image_id&quot;: null,
+    &quot;ptable_id&quot;: 980190962,
     &quot;environment_id&quot;: 334344675,
-    &quot;installed_at&quot;: null,
-    &quot;operatingsystem_id&quot;: 1073012828,
-    &quot;sp_ip&quot;: &quot;&quot;,
+    &quot;name&quot;: &quot;my5name.mydomain.net&quot;,
     &quot;enabled&quot;: true,
+    &quot;sp_ip&quot;: &quot;&quot;,
+    &quot;owner_type&quot;: null,
+    &quot;uuid&quot;: null,
+    &quot;medium_id&quot;: null,
+    &quot;sp_name&quot;: &quot;&quot;,
+    &quot;managed&quot;: true,
+    &quot;domain_id&quot;: 22495316,
+    &quot;certname&quot;: &quot;my5name.mydomain.net&quot;,
+    &quot;installed_at&quot;: null,
+    &quot;last_freshcheck&quot;: null,
     &quot;source_file_id&quot;: null,
-    &quot;image_id&quot;: null
+    &quot;operatingsystem_id&quot;: 1073012828,
+    &quot;root_pass&quot;: &quot;xybxa6JUkz63w&quot;,
+    &quot;puppet_status&quot;: 0,
+    &quot;sp_subnet_id&quot;: null,
+    &quot;owner_id&quot;: null,
+    &quot;comment&quot;: null,
+    &quot;use_image&quot;: null,
+    &quot;puppet_ca_proxy_id&quot;: null
   }
 }</pre>
 
@@ -5428,7 +5697,56 @@ an external node parameter</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
+      </small>
+      
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="hosts-status">
+      <a href='#hosts'>Hosts</a> / <a href='#hosts-status'>status</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/hosts/:id/status
+            <br>
+            <small>Get status of host</small>
+          </h4>
+      </div>
+
+      <div>
+        <p>Return value may either be one of the following:</p>
+
+<ul>
+<li>missing</li>
+<li>failed</li>
+<li>pending</li>
+<li>changed</li>
+<li>unchanged</li>
+<li>unreported</li>
+</ul>
+
+          <h4>Examples</h4>
+            <pre class="wiki">GET /api/hosts/my5name.mydomain.net/status
+200
+{
+  &quot;status&quot;: &quot;missing&quot;
+}</pre>
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -5472,27 +5790,27 @@ an external node parameter</p>
 [
   {
     &quot;image&quot;: {
-      &quot;name&quot;: &quot;centos-2&quot;,
-      &quot;uuid&quot;: &quot;MyString2&quot;,
-      &quot;architecture_id&quot;: 501905019,
       &quot;compute_resource_id&quot;: 980190962,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;architecture_id&quot;: 501905019,
       &quot;id&quot;: 298486374,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;name&quot;: &quot;centos-2&quot;,
       &quot;username&quot;: &quot;MyString&quot;,
+      &quot;uuid&quot;: &quot;MyString2&quot;,
       &quot;operatingsystem_id&quot;: 309172073
     }
   },
   {
     &quot;image&quot;: {
-      &quot;name&quot;: &quot;centos-1&quot;,
-      &quot;uuid&quot;: &quot;string-of-uuid&quot;,
-      &quot;architecture_id&quot;: 501905019,
       &quot;compute_resource_id&quot;: 980190962,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;architecture_id&quot;: 501905019,
       &quot;id&quot;: 980190962,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;name&quot;: &quot;centos-1&quot;,
       &quot;username&quot;: &quot;root&quot;,
+      &quot;uuid&quot;: &quot;string-of-uuid&quot;,
       &quot;operatingsystem_id&quot;: 309172073
     }
   }
@@ -5550,7 +5868,7 @@ an external node parameter</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -5579,14 +5897,14 @@ an external node parameter</p>
 200
 {
   &quot;image&quot;: {
-    &quot;name&quot;: &quot;centos-1&quot;,
-    &quot;uuid&quot;: &quot;string-of-uuid&quot;,
-    &quot;architecture_id&quot;: 501905019,
     &quot;compute_resource_id&quot;: 980190962,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+    &quot;architecture_id&quot;: 501905019,
     &quot;id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+    &quot;name&quot;: &quot;centos-1&quot;,
     &quot;username&quot;: &quot;root&quot;,
+    &quot;uuid&quot;: &quot;string-of-uuid&quot;,
     &quot;operatingsystem_id&quot;: 309172073
   }
 }</pre>
@@ -5599,7 +5917,7 @@ an external node parameter</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -5609,7 +5927,7 @@ an external node parameter</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -5637,11 +5955,11 @@ an external node parameter</p>
             <pre class="wiki">POST /api/compute_resources/980190962/images
 {
   &quot;image&quot;: {
-    &quot;name&quot;: &quot;TestImage&quot;,
-    &quot;uuid&quot;: &quot;abcdef&quot;,
-    &quot;architecture_id&quot;: 331892513,
     &quot;compute_resource_id&quot;: 367690737,
+    &quot;architecture_id&quot;: 381564594,
+    &quot;name&quot;: &quot;TestImage&quot;,
     &quot;username&quot;: &quot;ec2-user&quot;,
+    &quot;uuid&quot;: &quot;abcdef&quot;,
     &quot;operatingsystem_id&quot;: 309172073
   }
 }
@@ -5649,14 +5967,14 @@ an external node parameter</p>
 {
   &quot;compute_resource&quot;: {
     &quot;user&quot;: &quot;MyString&quot;,
-    &quot;name&quot;: &quot;MyString&quot;,
-    &quot;uuid&quot;: &quot;MyString&quot;,
-    &quot;attrs&quot;: null,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
     &quot;id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
     &quot;url&quot;: &quot;qemu://stam/system&quot;,
-    &quot;description&quot;: &quot;MyString&quot;
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+    &quot;description&quot;: &quot;MyString&quot;,
+    &quot;name&quot;: &quot;MyString&quot;,
+    &quot;attrs&quot;: null,
+    &quot;uuid&quot;: &quot;MyString&quot;
   }
 }</pre>
 
@@ -5668,7 +5986,7 @@ an external node parameter</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -5772,14 +6090,14 @@ an external node parameter</p>
 200
 {
   &quot;image&quot;: {
-    &quot;name&quot;: &quot;centos-1&quot;,
-    &quot;uuid&quot;: &quot;string-of-uuid&quot;,
-    &quot;architecture_id&quot;: 501905019,
     &quot;compute_resource_id&quot;: 980190962,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+    &quot;architecture_id&quot;: 501905019,
     &quot;id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+    &quot;name&quot;: &quot;centos-1&quot;,
     &quot;username&quot;: &quot;root&quot;,
+    &quot;uuid&quot;: &quot;string-of-uuid&quot;,
     &quot;operatingsystem_id&quot;: 309172073
   }
 }</pre>
@@ -5792,7 +6110,7 @@ an external node parameter</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -5802,7 +6120,7 @@ an external node parameter</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -5820,7 +6138,7 @@ an external node parameter</p>
     <li>
       <strong>name </strong>:
       <small>
-        required
+        optional
         
           [ Must be String ]
       </small>
@@ -5830,7 +6148,7 @@ an external node parameter</p>
     <li>
       <strong>username </strong>:
       <small>
-        required
+        optional
         
           [ Must be String ]
       </small>
@@ -5840,7 +6158,7 @@ an external node parameter</p>
     <li>
       <strong>uuid </strong>:
       <small>
-        required
+        optional
         
           [ Must be String ]
       </small>
@@ -5850,7 +6168,7 @@ an external node parameter</p>
     <li>
       <strong>compute_resource_id </strong>:
       <small>
-        required
+        optional
         
           [ Must be a number. ]
       </small>
@@ -5860,7 +6178,7 @@ an external node parameter</p>
     <li>
       <strong>architecture_id </strong>:
       <small>
-        required
+        optional
         
           [ Must be a number. ]
       </small>
@@ -5870,7 +6188,7 @@ an external node parameter</p>
     <li>
       <strong>operatingsystem_id </strong>:
       <small>
-        required
+        optional
         
           [ Must be a number. ]
       </small>
@@ -5903,14 +6221,14 @@ an external node parameter</p>
 200
 {
   &quot;image&quot;: {
-    &quot;name&quot;: &quot;centos-1&quot;,
-    &quot;uuid&quot;: &quot;string-of-uuid&quot;,
-    &quot;architecture_id&quot;: 501905019,
     &quot;compute_resource_id&quot;: 980190962,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+    &quot;architecture_id&quot;: 501905019,
     &quot;id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+    &quot;name&quot;: &quot;centos-1&quot;,
     &quot;username&quot;: &quot;root&quot;,
+    &quot;uuid&quot;: &quot;string-of-uuid&quot;,
     &quot;operatingsystem_id&quot;: 309172073
   }
 }</pre>
@@ -5923,7 +6241,7 @@ an external node parameter</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -5933,7 +6251,7 @@ an external node parameter</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -5978,34 +6296,34 @@ an external node parameter</p>
   {
     &quot;lookup_key&quot;: {
       &quot;default_value&quot;: &quot;80&quot;,
-      &quot;override&quot;: false,
-      &quot;key&quot;: &quot;port&quot;,
       &quot;id&quot;: 980190962,
-      &quot;required&quot;: false,
       &quot;description&quot;: null,
-      &quot;is_param&quot;: true
+      &quot;override&quot;: false,
+      &quot;is_param&quot;: true,
+      &quot;key&quot;: &quot;port&quot;,
+      &quot;required&quot;: false
     }
   },
   {
     &quot;lookup_key&quot;: {
       &quot;default_value&quot;: &quot;t&quot;,
-      &quot;override&quot;: true,
-      &quot;key&quot;: &quot;ssl&quot;,
       &quot;id&quot;: 113629430,
-      &quot;required&quot;: false,
       &quot;description&quot;: null,
-      &quot;is_param&quot;: true
+      &quot;override&quot;: true,
+      &quot;is_param&quot;: true,
+      &quot;key&quot;: &quot;ssl&quot;,
+      &quot;required&quot;: false
     }
   },
   {
     &quot;lookup_key&quot;: {
       &quot;default_value&quot;: &quot;443&quot;,
-      &quot;override&quot;: false,
-      &quot;key&quot;: &quot;ssl_port&quot;,
       &quot;id&quot;: 298486374,
-      &quot;required&quot;: false,
       &quot;description&quot;: null,
-      &quot;is_param&quot;: false
+      &quot;override&quot;: false,
+      &quot;is_param&quot;: false,
+      &quot;key&quot;: &quot;ssl_port&quot;,
+      &quot;required&quot;: false
     }
   }
 ]</pre>
@@ -6082,12 +6400,12 @@ an external node parameter</p>
 {
   &quot;lookup_key&quot;: {
     &quot;default_value&quot;: &quot;80&quot;,
-    &quot;override&quot;: false,
-    &quot;key&quot;: &quot;port&quot;,
     &quot;id&quot;: 980190962,
-    &quot;required&quot;: false,
     &quot;description&quot;: null,
-    &quot;is_param&quot;: true
+    &quot;override&quot;: false,
+    &quot;is_param&quot;: true,
+    &quot;key&quot;: &quot;port&quot;,
+    &quot;required&quot;: false
   }
 }</pre>
 
@@ -6099,7 +6417,7 @@ an external node parameter</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -6135,12 +6453,12 @@ an external node parameter</p>
 {
   &quot;lookup_key&quot;: {
     &quot;default_value&quot;: null,
-    &quot;override&quot;: false,
     &quot;id&quot;: 980190963,
-    &quot;key&quot;: &quot;testkey&quot;,
-    &quot;required&quot;: false,
     &quot;description&quot;: null,
-    &quot;is_param&quot;: true
+    &quot;override&quot;: false,
+    &quot;is_param&quot;: true,
+    &quot;key&quot;: &quot;testkey&quot;,
+    &quot;required&quot;: false
   }
 }</pre>
 
@@ -6249,12 +6567,12 @@ an external node parameter</p>
 {
   &quot;lookup_key&quot;: {
     &quot;default_value&quot;: 8080,
-    &quot;override&quot;: false,
     &quot;id&quot;: 980190962,
-    &quot;key&quot;: &quot;port&quot;,
-    &quot;required&quot;: false,
     &quot;description&quot;: null,
-    &quot;is_param&quot;: true
+    &quot;override&quot;: false,
+    &quot;is_param&quot;: true,
+    &quot;key&quot;: &quot;port&quot;,
+    &quot;required&quot;: false
   }
 }</pre>
 
@@ -6266,7 +6584,7 @@ an external node parameter</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -6284,7 +6602,7 @@ an external node parameter</p>
     <li>
       <strong>key </strong>:
       <small>
-        required
+        optional
         
           [ Must be String ]
       </small>
@@ -6368,12 +6686,12 @@ an external node parameter</p>
 {
   &quot;lookup_key&quot;: {
     &quot;default_value&quot;: &quot;80&quot;,
-    &quot;override&quot;: false,
     &quot;id&quot;: 980190962,
-    &quot;key&quot;: &quot;port&quot;,
-    &quot;required&quot;: false,
     &quot;description&quot;: null,
-    &quot;is_param&quot;: true
+    &quot;override&quot;: false,
+    &quot;is_param&quot;: true,
+    &quot;key&quot;: &quot;port&quot;,
+    &quot;required&quot;: false
   }
 }</pre>
 
@@ -6385,7 +6703,7 @@ an external node parameter</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -6429,37 +6747,37 @@ an external node parameter</p>
 [
   {
     &quot;medium&quot;: {
-      &quot;name&quot;: &quot;CentOS 5.4&quot;,
       &quot;path&quot;: &quot;http://mirror.averse.net/centos/6.0/os/$arch&quot;,
-      &quot;id&quot;: 980190962
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;CentOS 5.4&quot;
     }
   },
   {
     &quot;medium&quot;: {
-      &quot;name&quot;: &quot;OpenSuse Mirror&quot;,
       &quot;path&quot;: &quot;http://mirror.isoc.org.il/pub/opensuse/distribution/$major.$minor/repo/oss&quot;,
-      &quot;id&quot;: 859751735
+      &quot;id&quot;: 859751735,
+      &quot;name&quot;: &quot;OpenSuse Mirror&quot;
     }
   },
   {
     &quot;medium&quot;: {
-      &quot;name&quot;: &quot;Solaris 10&quot;,
       &quot;path&quot;: &quot;http://brsla01/vol/solgi_5.10/sol$minor_$release_$arch&quot;,
-      &quot;id&quot;: 442321401
+      &quot;id&quot;: 442321401,
+      &quot;name&quot;: &quot;Solaris 10&quot;
     }
   },
   {
     &quot;medium&quot;: {
-      &quot;name&quot;: &quot;Ubuntu Mirror&quot;,
       &quot;path&quot;: &quot;http://sg.archive.ubuntu.com&quot;,
-      &quot;id&quot;: 1011586618
+      &quot;id&quot;: 1011586618,
+      &quot;name&quot;: &quot;Ubuntu Mirror&quot;
     }
   },
   {
     &quot;medium&quot;: {
-      &quot;name&quot;: &quot;unused&quot;,
       &quot;path&quot;: &quot;http://nothing.intersting.com&quot;,
-      &quot;id&quot;: 338446587
+      &quot;id&quot;: 338446587,
+      &quot;name&quot;: &quot;unused&quot;
     }
   }
 ]</pre>
@@ -6535,9 +6853,9 @@ an external node parameter</p>
 200
 {
   &quot;medium&quot;: {
-    &quot;name&quot;: &quot;CentOS 5.4&quot;,
     &quot;path&quot;: &quot;http://mirror.averse.net/centos/6.0/os/$arch&quot;,
-    &quot;id&quot;: 980190962
+    &quot;id&quot;: 980190962,
+    &quot;name&quot;: &quot;CentOS 5.4&quot;
   }
 }</pre>
 
@@ -6549,7 +6867,7 @@ an external node parameter</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -6565,7 +6883,7 @@ an external node parameter</p>
 
       <div>
           <h4>
-              POST /api/medium
+              POST /api/media
             <br>
             <small>Create a medium.</small>
           </h4>
@@ -6577,15 +6895,15 @@ an external node parameter</p>
             <pre class="wiki">POST /api/media
 {
   &quot;medium&quot;: {
-    &quot;name&quot;: &quot;new medium&quot;,
-    &quot;path&quot;: &quot;http://www.newmedium.com/&quot;
+    &quot;path&quot;: &quot;http://www.newmedium.com/&quot;,
+    &quot;name&quot;: &quot;new medium&quot;
   }
 }
 201
 {
   &quot;medium&quot;: {
-    &quot;name&quot;: &quot;new medium&quot;,
-    &quot;id&quot;: 1011586619
+    &quot;id&quot;: 1011586619,
+    &quot;name&quot;: &quot;new medium&quot;
   }
 }</pre>
 
@@ -6681,8 +6999,8 @@ will be substituted for the version of the operating system.</p>
 200
 {
   &quot;medium&quot;: {
-    &quot;name&quot;: &quot;CentOS 5.4&quot;,
-    &quot;id&quot;: 980190962
+    &quot;id&quot;: 980190962,
+    &quot;name&quot;: &quot;CentOS 5.4&quot;
   }
 }</pre>
 
@@ -6785,8 +7103,8 @@ will be substituted for the version of the operating system.</p>
 200
 {
   &quot;medium&quot;: {
-    &quot;name&quot;: &quot;unused&quot;,
-    &quot;id&quot;: 338446587
+    &quot;id&quot;: 338446587,
+    &quot;name&quot;: &quot;unused&quot;
   }
 }</pre>
 
@@ -6798,7 +7116,7 @@ will be substituted for the version of the operating system.</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -6843,23 +7161,23 @@ will be substituted for the version of the operating system.</p>
   {
     &quot;model&quot;: {
       &quot;info&quot;: &quot;Virtual Machine&quot;,
-      &quot;name&quot;: &quot;KVM&quot;,
       &quot;hardware_model&quot;: null,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
       &quot;vendor_class&quot;: null,
       &quot;id&quot;: 980190962,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+      &quot;name&quot;: &quot;KVM&quot;
     }
   },
   {
     &quot;model&quot;: {
       &quot;info&quot;: null,
-      &quot;name&quot;: &quot;SUN V210&quot;,
       &quot;hardware_model&quot;: &quot;SUN4U&quot;,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
       &quot;vendor_class&quot;: &quot;Sun-Fire-V210&quot;,
       &quot;id&quot;: 139037058,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+      &quot;name&quot;: &quot;SUN V210&quot;
     }
   }
 ]</pre>
@@ -6936,12 +7254,12 @@ will be substituted for the version of the operating system.</p>
 {
   &quot;model&quot;: {
     &quot;info&quot;: &quot;Virtual Machine&quot;,
-    &quot;name&quot;: &quot;KVM&quot;,
     &quot;hardware_model&quot;: null,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
     &quot;vendor_class&quot;: null,
     &quot;id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;name&quot;: &quot;KVM&quot;
   }
 }</pre>
 
@@ -6953,7 +7271,7 @@ will be substituted for the version of the operating system.</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -6988,12 +7306,12 @@ will be substituted for the version of the operating system.</p>
 {
   &quot;model&quot;: {
     &quot;info&quot;: null,
-    &quot;name&quot;: &quot;new model&quot;,
     &quot;hardware_model&quot;: null,
-    &quot;vendor_class&quot;: null,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:49Z&quot;,
     &quot;id&quot;: 980190963,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:53Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:53Z&quot;
+    &quot;vendor_class&quot;: null,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:49Z&quot;,
+    &quot;name&quot;: &quot;new model&quot;
   }
 }</pre>
 
@@ -7080,12 +7398,12 @@ will be substituted for the version of the operating system.</p>
 {
   &quot;model&quot;: {
     &quot;info&quot;: &quot;Virtual Machine&quot;,
-    &quot;name&quot;: &quot;KVM&quot;,
     &quot;hardware_model&quot;: null,
-    &quot;vendor_class&quot;: null,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
     &quot;id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+    &quot;vendor_class&quot;: null,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;name&quot;: &quot;KVM&quot;
   }
 }</pre>
 
@@ -7115,7 +7433,7 @@ will be substituted for the version of the operating system.</p>
     <li>
       <strong>name </strong>:
       <small>
-        required
+        optional
         
           [ Must be String ]
       </small>
@@ -7179,12 +7497,12 @@ will be substituted for the version of the operating system.</p>
 {
   &quot;model&quot;: {
     &quot;info&quot;: &quot;Virtual Machine&quot;,
-    &quot;name&quot;: &quot;KVM&quot;,
     &quot;hardware_model&quot;: null,
-    &quot;vendor_class&quot;: null,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
     &quot;id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+    &quot;vendor_class&quot;: null,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;name&quot;: &quot;KVM&quot;
   }
 }</pre>
 
@@ -7306,75 +7624,81 @@ will be substituted for the version of the operating system.</p>
 200
 {
   &quot;operatingsystem&quot;: {
-    &quot;name&quot;: &quot;Redhat&quot;,
-    &quot;release_name&quot;: null,
-    &quot;config_templates&quot;: [
-      {
-        &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
-          &quot;id&quot;: 1007981701
-        }
-      },
-      {
-        &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;MyFinish&quot;,
-          &quot;id&quot;: 104314179
-        }
-      },
-      {
-        &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;MyScript&quot;,
-          &quot;id&quot;: 981457253
-        }
-      },
-      {
-        &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;MyString&quot;,
-          &quot;id&quot;: 943779058
-        }
-      },
-      {
-        &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;MyString2&quot;,
-          &quot;id&quot;: 269958254
-        }
-      },
-      {
-        &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;PXE Default File&quot;,
-          &quot;id&quot;: 352050261
-        }
-      }
-    ],
-    &quot;minor&quot;: &quot;1&quot;,
-    &quot;&quot;: [],
-    &quot;family&quot;: &quot;Redhat&quot;,
-    &quot;major&quot;: &quot;6&quot;,
-    &quot;architectures&quot;: [
-      {
-        &quot;architecture&quot;: {
-          &quot;name&quot;: &quot;x86_64&quot;,
-          &quot;id&quot;: 501905019
-        }
-      }
-    ],
-    &quot;id&quot;: 1073012828,
-    &quot;ptables&quot;: [
-      {
-        &quot;ptable&quot;: {
-          &quot;name&quot;: &quot;default&quot;,
-          &quot;id&quot;: 980190962
-        }
-      }
-    ],
     &quot;media&quot;: [
       {
         &quot;medium&quot;: {
-          &quot;name&quot;: &quot;CentOS 5.4&quot;,
-          &quot;id&quot;: 980190962
+          &quot;id&quot;: 980190962,
+          &quot;name&quot;: &quot;CentOS 5.4&quot;
         }
       }
-    ]
+    ],
+    &quot;ptables&quot;: [
+      {
+        &quot;ptable&quot;: {
+          &quot;id&quot;: 980190962,
+          &quot;name&quot;: &quot;default&quot;
+        }
+      }
+    ],
+    &quot;major&quot;: &quot;6&quot;,
+    &quot;id&quot;: 1073012828,
+    &quot;config_templates&quot;: [
+      {
+        &quot;config_template&quot;: {
+          &quot;id&quot;: 1007981701,
+          &quot;name&quot;: &quot;centos5_3_pxelinux&quot;
+        }
+      },
+      {
+        &quot;config_template&quot;: {
+          &quot;id&quot;: 104314179,
+          &quot;name&quot;: &quot;MyFinish&quot;
+        }
+      },
+      {
+        &quot;config_template&quot;: {
+          &quot;id&quot;: 981457253,
+          &quot;name&quot;: &quot;MyScript&quot;
+        }
+      },
+      {
+        &quot;config_template&quot;: {
+          &quot;id&quot;: 943779058,
+          &quot;name&quot;: &quot;MyString&quot;
+        }
+      },
+      {
+        &quot;config_template&quot;: {
+          &quot;id&quot;: 269958254,
+          &quot;name&quot;: &quot;MyString2&quot;
+        }
+      },
+      {
+        &quot;config_template&quot;: {
+          &quot;id&quot;: 352050261,
+          &quot;name&quot;: &quot;PXE Default File&quot;
+        }
+      },
+      {
+        &quot;config_template&quot;: {
+          &quot;id&quot;: 821548108,
+          &quot;name&quot;: &quot;PXE Localboot Default&quot;
+        }
+      }
+    ],
+    &quot;os_default_templates&quot;: [],
+    &quot;architectures&quot;: [
+      {
+        &quot;architecture&quot;: {
+          &quot;id&quot;: 501905019,
+          &quot;name&quot;: &quot;x86_64&quot;
+        }
+      }
+    ],
+    &quot;name&quot;: &quot;Redhat&quot;,
+    &quot;family&quot;: &quot;Redhat&quot;,
+    &quot;minor&quot;: &quot;1&quot;,
+    &quot;release_name&quot;: null
   }
 }</pre>
 
@@ -7414,21 +7738,25 @@ will be substituted for the version of the operating system.</p>
             <pre class="wiki">POST /api/operatingsystems
 {
   &quot;operatingsystem&quot;: {
+    &quot;major&quot;: &quot;1&quot;,
     &quot;name&quot;: &quot;awsome_os&quot;,
-    &quot;minor&quot;: &quot;2&quot;,
-    &quot;major&quot;: &quot;1&quot;
+    &quot;minor&quot;: &quot;2&quot;
   }
 }
 200
 {
   &quot;operatingsystem&quot;: {
-    &quot;name&quot;: &quot;awsome_os&quot;,
-    &quot;release_name&quot;: null,
-    &quot;minor&quot;: &quot;2&quot;,
-    &quot;&quot;: [],
-    &quot;family&quot;: null,
+    &quot;media&quot;: [],
+    &quot;ptables&quot;: [],
     &quot;major&quot;: &quot;1&quot;,
-    &quot;id&quot;: 1073012829
+    &quot;id&quot;: 1073012829,
+    &quot;config_templates&quot;: [],
+    &quot;os_default_templates&quot;: [],
+    &quot;architectures&quot;: [],
+    &quot;name&quot;: &quot;awsome_os&quot;,
+    &quot;family&quot;: null,
+    &quot;minor&quot;: &quot;2&quot;,
+    &quot;release_name&quot;: null
   }
 }</pre>
 
@@ -7526,75 +7854,81 @@ will be substituted for the version of the operating system.</p>
 200
 {
   &quot;operatingsystem&quot;: {
-    &quot;name&quot;: &quot;new_name&quot;,
-    &quot;release_name&quot;: null,
-    &quot;config_templates&quot;: [
-      {
-        &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
-          &quot;id&quot;: 1007981701
-        }
-      },
-      {
-        &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;MyFinish&quot;,
-          &quot;id&quot;: 104314179
-        }
-      },
-      {
-        &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;MyScript&quot;,
-          &quot;id&quot;: 981457253
-        }
-      },
-      {
-        &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;MyString&quot;,
-          &quot;id&quot;: 943779058
-        }
-      },
-      {
-        &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;MyString2&quot;,
-          &quot;id&quot;: 269958254
-        }
-      },
-      {
-        &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;PXE Default File&quot;,
-          &quot;id&quot;: 352050261
-        }
-      }
-    ],
-    &quot;minor&quot;: &quot;1&quot;,
-    &quot;&quot;: [],
-    &quot;family&quot;: &quot;Redhat&quot;,
-    &quot;major&quot;: &quot;6&quot;,
-    &quot;architectures&quot;: [
-      {
-        &quot;architecture&quot;: {
-          &quot;name&quot;: &quot;x86_64&quot;,
-          &quot;id&quot;: 501905019
-        }
-      }
-    ],
-    &quot;id&quot;: 1073012828,
-    &quot;ptables&quot;: [
-      {
-        &quot;ptable&quot;: {
-          &quot;name&quot;: &quot;default&quot;,
-          &quot;id&quot;: 980190962
-        }
-      }
-    ],
     &quot;media&quot;: [
       {
         &quot;medium&quot;: {
-          &quot;name&quot;: &quot;CentOS 5.4&quot;,
-          &quot;id&quot;: 980190962
+          &quot;id&quot;: 980190962,
+          &quot;name&quot;: &quot;CentOS 5.4&quot;
         }
       }
-    ]
+    ],
+    &quot;ptables&quot;: [
+      {
+        &quot;ptable&quot;: {
+          &quot;id&quot;: 980190962,
+          &quot;name&quot;: &quot;default&quot;
+        }
+      }
+    ],
+    &quot;major&quot;: &quot;6&quot;,
+    &quot;id&quot;: 1073012828,
+    &quot;config_templates&quot;: [
+      {
+        &quot;config_template&quot;: {
+          &quot;id&quot;: 1007981701,
+          &quot;name&quot;: &quot;centos5_3_pxelinux&quot;
+        }
+      },
+      {
+        &quot;config_template&quot;: {
+          &quot;id&quot;: 104314179,
+          &quot;name&quot;: &quot;MyFinish&quot;
+        }
+      },
+      {
+        &quot;config_template&quot;: {
+          &quot;id&quot;: 981457253,
+          &quot;name&quot;: &quot;MyScript&quot;
+        }
+      },
+      {
+        &quot;config_template&quot;: {
+          &quot;id&quot;: 943779058,
+          &quot;name&quot;: &quot;MyString&quot;
+        }
+      },
+      {
+        &quot;config_template&quot;: {
+          &quot;id&quot;: 269958254,
+          &quot;name&quot;: &quot;MyString2&quot;
+        }
+      },
+      {
+        &quot;config_template&quot;: {
+          &quot;id&quot;: 352050261,
+          &quot;name&quot;: &quot;PXE Default File&quot;
+        }
+      },
+      {
+        &quot;config_template&quot;: {
+          &quot;id&quot;: 821548108,
+          &quot;name&quot;: &quot;PXE Localboot Default&quot;
+        }
+      }
+    ],
+    &quot;os_default_templates&quot;: [],
+    &quot;architectures&quot;: [
+      {
+        &quot;architecture&quot;: {
+          &quot;id&quot;: 501905019,
+          &quot;name&quot;: &quot;x86_64&quot;
+        }
+      }
+    ],
+    &quot;name&quot;: &quot;new_name&quot;,
+    &quot;family&quot;: &quot;Redhat&quot;,
+    &quot;minor&quot;: &quot;1&quot;,
+    &quot;release_name&quot;: null
   }
 }</pre>
 
@@ -7697,12 +8031,12 @@ will be substituted for the version of the operating system.</p>
 200
 {
   &quot;operatingsystem&quot;: {
-    &quot;name&quot;: &quot;NoHosts 1.1&quot;,
-    &quot;config_templates&quot;: [],
-    &quot;id&quot;: 775246587,
-    &quot;architectures&quot;: [],
+    &quot;media&quot;: [],
     &quot;ptables&quot;: [],
-    &quot;media&quot;: []
+    &quot;id&quot;: 775246587,
+    &quot;config_templates&quot;: [],
+    &quot;architectures&quot;: [],
+    &quot;name&quot;: &quot;NoHosts 1.1&quot;
   }
 }</pre>
 
@@ -7811,34 +8145,34 @@ will be substituted for the version of the operating system.</p>
 [
   {
     &quot;ptable&quot;: {
-      &quot;name&quot;: &quot;default&quot;,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
       &quot;id&quot;: 980190962,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+      &quot;name&quot;: &quot;default&quot;
     }
   },
   {
     &quot;ptable&quot;: {
-      &quot;name&quot;: &quot;four&quot;,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
       &quot;id&quot;: 281110143,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+      &quot;name&quot;: &quot;four&quot;
     }
   },
   {
     &quot;ptable&quot;: {
-      &quot;name&quot;: &quot;suse default&quot;,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
       &quot;id&quot;: 859751735,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+      &quot;name&quot;: &quot;suse default&quot;
     }
   },
   {
     &quot;ptable&quot;: {
-      &quot;name&quot;: &quot;ubuntu default&quot;,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
       &quot;id&quot;: 1011586618,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+      &quot;name&quot;: &quot;ubuntu default&quot;
     }
   }
 ]</pre>
@@ -7914,10 +8248,10 @@ will be substituted for the version of the operating system.</p>
 200
 {
   &quot;ptable&quot;: {
-    &quot;name&quot;: &quot;default&quot;,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
     &quot;id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;name&quot;: &quot;default&quot;
   }
 }</pre>
 
@@ -7929,7 +8263,7 @@ will be substituted for the version of the operating system.</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -7957,15 +8291,15 @@ will be substituted for the version of the operating system.</p>
             <pre class="wiki">POST /api/ptables
 {
   &quot;ptable&quot;: {
-    &quot;name&quot;: &quot;ptable_test&quot;,
-    &quot;layout&quot;: &quot;d-i partman-auto/disk&quot;
+    &quot;layout&quot;: &quot;d-i partman-auto/disk&quot;,
+    &quot;name&quot;: &quot;ptable_test&quot;
   }
 }
 201
 {
   &quot;ptable&quot;: {
-    &quot;name&quot;: &quot;ptable_test&quot;,
-    &quot;id&quot;: 1011586619
+    &quot;id&quot;: 1011586619,
+    &quot;name&quot;: &quot;ptable_test&quot;
   }
 }</pre>
 
@@ -8041,8 +8375,8 @@ will be substituted for the version of the operating system.</p>
 200
 {
   &quot;ptable&quot;: {
-    &quot;name&quot;: &quot;default&quot;,
-    &quot;id&quot;: 980190962
+    &quot;id&quot;: 980190962,
+    &quot;name&quot;: &quot;default&quot;
   }
 }</pre>
 
@@ -8072,7 +8406,7 @@ will be substituted for the version of the operating system.</p>
     <li>
       <strong>name </strong>:
       <small>
-        required
+        optional
         
           [ Must be String ]
       </small>
@@ -8082,7 +8416,7 @@ will be substituted for the version of the operating system.</p>
     <li>
       <strong>layout </strong>:
       <small>
-        required
+        optional
         
           [ Must be String ]
       </small>
@@ -8125,23 +8459,23 @@ will be substituted for the version of the operating system.</p>
 422
 {
   &quot;ptable&quot;: {
+    &quot;id&quot;: 980190962,
     &quot;errors&quot;: {
       &quot;base&quot;: [
-        &quot;default is used by dhcp.mydomain.net&quot;,
+        &quot;default is used by temp01.yourdomain.net&quot;,
         &quot;default is used by temp.yourdomain.net&quot;,
-        &quot;default is used by sdhcp.mydomain.net&quot;,
         &quot;default is used by my5name.mydomain.net&quot;,
-        &quot;default is used by temp01.yourdomain.net&quot;
+        &quot;default is used by dhcp.mydomain.net&quot;,
+        &quot;default is used by sdhcp.mydomain.net&quot;
       ]
     },
     &quot;full_messages&quot;: [
-      &quot;default is used by dhcp.mydomain.net&quot;,
+      &quot;default is used by temp01.yourdomain.net&quot;,
       &quot;default is used by temp.yourdomain.net&quot;,
-      &quot;default is used by sdhcp.mydomain.net&quot;,
       &quot;default is used by my5name.mydomain.net&quot;,
-      &quot;default is used by temp01.yourdomain.net&quot;
-    ],
-    &quot;id&quot;: 980190962
+      &quot;default is used by dhcp.mydomain.net&quot;,
+      &quot;default is used by sdhcp.mydomain.net&quot;
+    ]
   }
 }</pre>
 
@@ -8195,25 +8529,25 @@ will be substituted for the version of the operating system.</p>
             <pre class="wiki">GET /api/puppetclasses
 200
 {
+  &quot;apache&quot;: [
+    {
+      &quot;puppetclass&quot;: {
+        &quot;id&quot;: 298486374,
+        &quot;name&quot;: &quot;apache&quot;,
+        &quot;lookup_keys&quot;: []
+      }
+    }
+  ],
   &quot;base&quot;: [
     {
       &quot;puppetclass&quot;: {
+        &quot;id&quot;: 980190962,
         &quot;name&quot;: &quot;base&quot;,
         &quot;lookup_keys&quot;: [
           {
             &quot;id&quot;: 298486374
           }
-        ],
-        &quot;id&quot;: 980190962
-      }
-    }
-  ],
-  &quot;apache&quot;: [
-    {
-      &quot;puppetclass&quot;: {
-        &quot;name&quot;: &quot;apache&quot;,
-        &quot;lookup_keys&quot;: [],
-        &quot;id&quot;: 298486374
+        ]
       }
     }
   ]
@@ -8290,21 +8624,21 @@ will be substituted for the version of the operating system.</p>
 200
 {
   &quot;puppetclass&quot;: {
+    &quot;id&quot;: 980190962,
     &quot;name&quot;: &quot;base&quot;,
     &quot;lookup_keys&quot;: [
       {
         &quot;lookup_key&quot;: {
           &quot;default_value&quot;: &quot;443&quot;,
-          &quot;override&quot;: false,
-          &quot;key&quot;: &quot;ssl_port&quot;,
           &quot;id&quot;: 298486374,
-          &quot;required&quot;: false,
           &quot;description&quot;: null,
-          &quot;is_param&quot;: false
+          &quot;override&quot;: false,
+          &quot;is_param&quot;: false,
+          &quot;key&quot;: &quot;ssl_port&quot;,
+          &quot;required&quot;: false
         }
       }
-    ],
-    &quot;id&quot;: 980190962
+    ]
   }
 }</pre>
 
@@ -8316,7 +8650,7 @@ will be substituted for the version of the operating system.</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -8350,9 +8684,9 @@ will be substituted for the version of the operating system.</p>
 201
 {
   &quot;puppetclass&quot;: {
+    &quot;id&quot;: 980190963,
     &quot;name&quot;: &quot;test_puppetclass&quot;,
-    &quot;lookup_keys&quot;: [],
-    &quot;id&quot;: 980190963
+    &quot;lookup_keys&quot;: []
   }
 }</pre>
 
@@ -8408,13 +8742,13 @@ will be substituted for the version of the operating system.</p>
 200
 {
   &quot;puppetclass&quot;: {
+    &quot;id&quot;: 980190962,
     &quot;name&quot;: &quot;base&quot;,
     &quot;lookup_keys&quot;: [
       {
         &quot;id&quot;: 298486374
       }
-    ],
-    &quot;id&quot;: 980190962
+    ]
   }
 }</pre>
 
@@ -8444,7 +8778,7 @@ will be substituted for the version of the operating system.</p>
     <li>
       <strong>name </strong>:
       <small>
-        required
+        optional
         
           [ Must be String ]
       </small>
@@ -8477,13 +8811,13 @@ will be substituted for the version of the operating system.</p>
 200
 {
   &quot;puppetclass&quot;: {
+    &quot;id&quot;: 980190962,
     &quot;name&quot;: &quot;base&quot;,
     &quot;lookup_keys&quot;: [
       {
         &quot;id&quot;: 298486374
       }
-    ],
-    &quot;id&quot;: 980190962
+    ]
   }
 }</pre>
 
@@ -8540,36 +8874,36 @@ will be substituted for the version of the operating system.</p>
   {
     &quot;report&quot;: {
       &quot;status&quot;: {
-        &quot;pending&quot;: 0,
         &quot;applied&quot;: 0,
-        &quot;failed_restarts&quot;: 0,
+        &quot;pending&quot;: 0,
+        &quot;restarted&quot;: 0,
         &quot;failed&quot;: 0,
-        &quot;skipped&quot;: 0,
-        &quot;restarted&quot;: 0
+        &quot;failed_restarts&quot;: 0,
+        &quot;skipped&quot;: 0
       },
+      &quot;reported_at&quot;: &quot;2012-12-11T15:24:42Z&quot;,
       &quot;metrics&quot;: {
+        &quot;changes&quot;: {},
+        &quot;resources&quot;: {
+          &quot;total&quot;: 33
+        },
         &quot;events&quot;: {
           &quot;total&quot;: 0
         },
         &quot;time&quot;: {
-          &quot;exec&quot;: 0.000299,
-          &quot;service&quot;: 0.149739,
-          &quot;cron&quot;: 0.000419,
-          &quot;package&quot;: 0.003989,
-          &quot;config_retrieval&quot;: 16.3637869358063,
-          &quot;filebucket&quot;: 0.000171,
           &quot;mailalias&quot;: 0.000283,
+          &quot;exec&quot;: 0.000299,
+          &quot;config_retrieval&quot;: 16.3637869358063,
+          &quot;schedule&quot;: 0.00083,
+          &quot;package&quot;: 0.003989,
           &quot;file&quot;: 0.007025,
-          &quot;schedule&quot;: 0.00083
-        },
-        &quot;changes&quot;: {},
-        &quot;resources&quot;: {
-          &quot;total&quot;: 33
+          &quot;service&quot;: 0.149739,
+          &quot;filebucket&quot;: 0.000171,
+          &quot;cron&quot;: 0.000419
         }
       },
-      &quot;reported_at&quot;: &quot;2012-11-14T13:01:46Z&quot;,
-      &quot;&quot;: [],
       &quot;id&quot;: 70219655,
+      &quot;logs&quot;: [],
       &quot;summary&quot;: &quot;Success&quot;
     }
   }
@@ -8647,36 +8981,36 @@ will be substituted for the version of the operating system.</p>
 {
   &quot;report&quot;: {
     &quot;status&quot;: {
-      &quot;pending&quot;: 0,
       &quot;applied&quot;: 0,
-      &quot;failed_restarts&quot;: 0,
+      &quot;pending&quot;: 0,
+      &quot;restarted&quot;: 0,
       &quot;failed&quot;: 0,
-      &quot;skipped&quot;: 0,
-      &quot;restarted&quot;: 0
+      &quot;failed_restarts&quot;: 0,
+      &quot;skipped&quot;: 0
     },
+    &quot;reported_at&quot;: &quot;2012-12-11T15:24:42Z&quot;,
     &quot;metrics&quot;: {
+      &quot;changes&quot;: {},
+      &quot;resources&quot;: {
+        &quot;total&quot;: 33
+      },
       &quot;events&quot;: {
         &quot;total&quot;: 0
       },
       &quot;time&quot;: {
-        &quot;exec&quot;: 0.000299,
-        &quot;service&quot;: 0.149739,
-        &quot;cron&quot;: 0.000419,
-        &quot;package&quot;: 0.003989,
-        &quot;config_retrieval&quot;: 16.3637869358063,
-        &quot;filebucket&quot;: 0.000171,
         &quot;mailalias&quot;: 0.000283,
+        &quot;exec&quot;: 0.000299,
+        &quot;config_retrieval&quot;: 16.3637869358063,
+        &quot;schedule&quot;: 0.00083,
+        &quot;package&quot;: 0.003989,
         &quot;file&quot;: 0.007025,
-        &quot;schedule&quot;: 0.00083
-      },
-      &quot;changes&quot;: {},
-      &quot;resources&quot;: {
-        &quot;total&quot;: 33
+        &quot;service&quot;: 0.149739,
+        &quot;filebucket&quot;: 0.000171,
+        &quot;cron&quot;: 0.000419
       }
     },
-    &quot;reported_at&quot;: &quot;2012-11-14T13:01:46Z&quot;,
-    &quot;&quot;: [],
     &quot;id&quot;: 70219655,
+    &quot;logs&quot;: [],
     &quot;summary&quot;: &quot;Success&quot;
   }
 }</pre>
@@ -8689,7 +9023,7 @@ will be substituted for the version of the operating system.</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -8719,38 +9053,38 @@ will be substituted for the version of the operating system.</p>
 {
   &quot;report&quot;: {
     &quot;status&quot;: {
-      &quot;pending&quot;: 0,
       &quot;applied&quot;: 0,
-      &quot;failed_restarts&quot;: 0,
+      &quot;pending&quot;: 0,
+      &quot;restarted&quot;: 0,
       &quot;failed&quot;: 0,
-      &quot;skipped&quot;: 0,
-      &quot;restarted&quot;: 0
+      &quot;failed_restarts&quot;: 0,
+      &quot;skipped&quot;: 0
     },
+    &quot;reported_at&quot;: &quot;2012-12-11T15:24:42Z&quot;,
+    &quot;host&quot;: &quot;my5name.mydomain.net&quot;,
     &quot;metrics&quot;: {
-      &quot;time&quot;: {
-        &quot;exec&quot;: 0.000299,
-        &quot;service&quot;: 0.149739,
-        &quot;cron&quot;: 0.000419,
-        &quot;package&quot;: 0.003989,
-        &quot;config_retrieval&quot;: 16.3637869358063,
-        &quot;filebucket&quot;: 0.000171,
-        &quot;mailalias&quot;: 0.000283,
-        &quot;file&quot;: 0.007025,
-        &quot;schedule&quot;: 0.00083
+      &quot;changes&quot;: {},
+      &quot;resources&quot;: {
+        &quot;total&quot;: 33
       },
       &quot;events&quot;: {
         &quot;total&quot;: 0
       },
-      &quot;changes&quot;: {},
-      &quot;resources&quot;: {
-        &quot;total&quot;: 33
+      &quot;time&quot;: {
+        &quot;mailalias&quot;: 0.000283,
+        &quot;exec&quot;: 0.000299,
+        &quot;config_retrieval&quot;: 16.3637869358063,
+        &quot;schedule&quot;: 0.00083,
+        &quot;package&quot;: 0.003989,
+        &quot;file&quot;: 0.007025,
+        &quot;service&quot;: 0.149739,
+        &quot;filebucket&quot;: 0.000171,
+        &quot;cron&quot;: 0.000419
       }
     },
-    &quot;reported_at&quot;: &quot;2012-11-14T13:01:46Z&quot;,
-    &quot;host&quot;: &quot;my5name.mydomain.net&quot;,
     &quot;id&quot;: 70219655,
-    &quot;summary&quot;: &quot;Success&quot;,
-    &quot;logs&quot;: []
+    &quot;logs&quot;: [],
+    &quot;summary&quot;: &quot;Success&quot;
   }
 }</pre>
 
@@ -8850,7 +9184,7 @@ will be substituted for the version of the operating system.</p>
 200
 {
   &quot;role&quot;: {
-    &quot;name&quot;: &quot;Manager&quot;,
+    &quot;builtin&quot;: 0,
     &quot;permissions&quot;: [
       &quot;view_architectures&quot;,
       &quot;create_architectures&quot;,
@@ -8920,10 +9254,18 @@ will be substituted for the version of the operating system.</p>
       &quot;destroy_reports&quot;,
       &quot;view_facts&quot;,
       &quot;view_audit_logs&quot;,
-      &quot;view_statistics&quot;
+      &quot;view_statistics&quot;,
+      &quot;view_locations&quot;,
+      &quot;edit_locations&quot;,
+      &quot;create_locations&quot;,
+      &quot;destroy_locations&quot;,
+      &quot;view_organizations&quot;,
+      &quot;edit_organizations&quot;,
+      &quot;create_organizations&quot;,
+      &quot;destroy_organizations&quot;
     ],
-    &quot;builtin&quot;: 0,
-    &quot;id&quot;: 1
+    &quot;id&quot;: 1,
+    &quot;name&quot;: &quot;Manager&quot;
   }
 }</pre>
 
@@ -8935,7 +9277,7 @@ will be substituted for the version of the operating system.</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -8969,10 +9311,10 @@ will be substituted for the version of the operating system.</p>
 200
 {
   &quot;role&quot;: {
-    &quot;name&quot;: &quot;staff&quot;,
-    &quot;permissions&quot;: [],
     &quot;builtin&quot;: 0,
-    &quot;id&quot;: 15
+    &quot;permissions&quot;: [],
+    &quot;id&quot;: 11,
+    &quot;name&quot;: &quot;staff&quot;
   }
 }</pre>
 
@@ -9028,7 +9370,7 @@ will be substituted for the version of the operating system.</p>
 200
 {
   &quot;role&quot;: {
-    &quot;name&quot;: &quot;Manager&quot;,
+    &quot;builtin&quot;: 0,
     &quot;permissions&quot;: [
       &quot;view_architectures&quot;,
       &quot;create_architectures&quot;,
@@ -9098,10 +9440,18 @@ will be substituted for the version of the operating system.</p>
       &quot;destroy_reports&quot;,
       &quot;view_facts&quot;,
       &quot;view_audit_logs&quot;,
-      &quot;view_statistics&quot;
+      &quot;view_statistics&quot;,
+      &quot;view_locations&quot;,
+      &quot;edit_locations&quot;,
+      &quot;create_locations&quot;,
+      &quot;destroy_locations&quot;,
+      &quot;view_organizations&quot;,
+      &quot;edit_organizations&quot;,
+      &quot;create_organizations&quot;,
+      &quot;destroy_organizations&quot;
     ],
-    &quot;builtin&quot;: 0,
-    &quot;id&quot;: 1
+    &quot;id&quot;: 1,
+    &quot;name&quot;: &quot;Manager&quot;
   }
 }</pre>
 
@@ -9164,7 +9514,7 @@ will be substituted for the version of the operating system.</p>
 200
 {
   &quot;role&quot;: {
-    &quot;name&quot;: &quot;Manager&quot;,
+    &quot;builtin&quot;: 0,
     &quot;permissions&quot;: [
       &quot;view_architectures&quot;,
       &quot;create_architectures&quot;,
@@ -9234,10 +9584,18 @@ will be substituted for the version of the operating system.</p>
       &quot;destroy_reports&quot;,
       &quot;view_facts&quot;,
       &quot;view_audit_logs&quot;,
-      &quot;view_statistics&quot;
+      &quot;view_statistics&quot;,
+      &quot;view_locations&quot;,
+      &quot;edit_locations&quot;,
+      &quot;create_locations&quot;,
+      &quot;destroy_locations&quot;,
+      &quot;view_organizations&quot;,
+      &quot;edit_organizations&quot;,
+      &quot;create_organizations&quot;,
+      &quot;destroy_organizations&quot;
     ],
-    &quot;builtin&quot;: 0,
-    &quot;id&quot;: 1
+    &quot;id&quot;: 1,
+    &quot;name&quot;: &quot;Manager&quot;
   }
 }</pre>
 
@@ -9359,15 +9717,15 @@ will be substituted for the version of the operating system.</p>
 200
 {
   &quot;setting&quot;: {
-    &quot;name&quot;: &quot;administrator&quot;,
-    &quot;category&quot;: &quot;General&quot;,
-    &quot;value&quot;: &quot;root@some.host.fqdn&quot;,
-    &quot;id&quot;: 333972760,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
     &quot;default&quot;: &quot;root@some.host.fqdn&quot;,
+    &quot;settings_type&quot;: null,
+    &quot;id&quot;: 333972760,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;category&quot;: &quot;General&quot;,
     &quot;description&quot;: &quot;The Default administrator email address&quot;,
-    &quot;settings_type&quot;: null
+    &quot;name&quot;: &quot;administrator&quot;,
+    &quot;value&quot;: &quot;root@some.host.fqdn&quot;
   }
 }</pre>
 
@@ -9411,15 +9769,15 @@ will be substituted for the version of the operating system.</p>
 200
 {
   &quot;setting&quot;: {
-    &quot;name&quot;: &quot;administrator&quot;,
-    &quot;category&quot;: &quot;General&quot;,
-    &quot;value&quot;: &quot;root@some.host.fqdn&quot;,
-    &quot;id&quot;: 333972760,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
     &quot;default&quot;: &quot;root@some.host.fqdn&quot;,
+    &quot;settings_type&quot;: null,
+    &quot;id&quot;: 333972760,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;category&quot;: &quot;General&quot;,
     &quot;description&quot;: &quot;The Default administrator email address&quot;,
-    &quot;settings_type&quot;: null
+    &quot;name&quot;: &quot;administrator&quot;,
+    &quot;value&quot;: &quot;root@some.host.fqdn&quot;
   }
 }</pre>
 
@@ -9449,7 +9807,7 @@ will be substituted for the version of the operating system.</p>
     <li>
       <strong>value </strong>:
       <small>
-        required
+        optional
         
           [ Must be String ]
       </small>
@@ -9492,55 +9850,13 @@ will be substituted for the version of the operating system.</p>
       <div>
         
           <h4>Examples</h4>
-            <pre class="wiki">GET /api/smart_proxies
-200
-[
-  {
-    &quot;smart_proxy&quot;: {
-      &quot;name&quot;: &quot;DHCP Proxy&quot;,
-      &quot;id&quot;: 980190962,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;url&quot;: &quot;https://somewhere.net:8443&quot;
-    }
-  },
-  {
-    &quot;smart_proxy&quot;: {
-      &quot;name&quot;: &quot;DNS Proxy&quot;,
-      &quot;id&quot;: 113629430,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;url&quot;: &quot;http://else.where:4567&quot;
-    }
-  },
-  {
-    &quot;smart_proxy&quot;: {
-      &quot;name&quot;: &quot;Puppetmaster Proxy&quot;,
-      &quot;id&quot;: 182953976,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;url&quot;: &quot;http://else.where:4567&quot;
-    }
-  },
-  {
-    &quot;smart_proxy&quot;: {
-      &quot;name&quot;: &quot;TFTP Proxy&quot;,
-      &quot;id&quot;: 298486374,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;url&quot;: &quot;http://somewhere.else&quot;
-    }
-  },
-  {
-    &quot;smart_proxy&quot;: {
-      &quot;name&quot;: &quot;Unused Proxy&quot;,
-      &quot;id&quot;: 281110143,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;url&quot;: &quot;http://else.where:4567&quot;
-    }
+            <pre class="wiki">GET /api/smart_proxies?type=unknown_type
+500
+{
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;Invalid feature type. Select one of: TFTP, BMC, DNS, DHCP, Puppetca, Puppet.&quot;
   }
-]</pre>
+}</pre>
 
 
           <h4>Params</h4>
@@ -9602,12 +9918,12 @@ will be substituted for the version of the operating system.</p>
 200
 {
   &quot;smart_proxy&quot;: {
-    &quot;name&quot;: &quot;DHCP Proxy&quot;,
-    &quot;&quot;: [],
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
     &quot;id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;url&quot;: &quot;https://somewhere.net:8443&quot;
+    &quot;url&quot;: &quot;https://somewhere.net:8443&quot;,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;name&quot;: &quot;DHCP Proxy&quot;,
+    &quot;features&quot;: []
   }
 }</pre>
 
@@ -9619,7 +9935,7 @@ will be substituted for the version of the operating system.</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -9647,18 +9963,18 @@ will be substituted for the version of the operating system.</p>
             <pre class="wiki">POST /api/smart_proxies
 {
   &quot;smart_proxy&quot;: {
-    &quot;name&quot;: &quot;master02&quot;,
-    &quot;url&quot;: &quot;http://server:8443&quot;
+    &quot;url&quot;: &quot;http://server:8443&quot;,
+    &quot;name&quot;: &quot;master02&quot;
   }
 }
 201
 {
   &quot;smart_proxy&quot;: {
-    &quot;name&quot;: &quot;master02&quot;,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:52Z&quot;,
     &quot;id&quot;: 980190963,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:55Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:55Z&quot;,
-    &quot;url&quot;: &quot;http://server:8443&quot;
+    &quot;url&quot;: &quot;http://server:8443&quot;,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:52Z&quot;,
+    &quot;name&quot;: &quot;master02&quot;
   }
 }</pre>
 
@@ -9724,11 +10040,11 @@ will be substituted for the version of the operating system.</p>
 200
 {
   &quot;smart_proxy&quot;: {
-    &quot;name&quot;: &quot;DHCP Proxy&quot;,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
     &quot;id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;url&quot;: &quot;https://somewhere.net:8443&quot;
+    &quot;url&quot;: &quot;https://somewhere.net:8443&quot;,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;name&quot;: &quot;DHCP Proxy&quot;
   }
 }</pre>
 
@@ -9758,7 +10074,7 @@ will be substituted for the version of the operating system.</p>
     <li>
       <strong>name </strong>:
       <small>
-        required
+        optional
         
           [ Must be String ]
       </small>
@@ -9768,7 +10084,7 @@ will be substituted for the version of the operating system.</p>
     <li>
       <strong>url </strong>:
       <small>
-        required
+        optional
         
           [ Must be String ]
       </small>
@@ -9801,11 +10117,11 @@ will be substituted for the version of the operating system.</p>
 200
 {
   &quot;smart_proxy&quot;: {
-    &quot;name&quot;: &quot;Unused Proxy&quot;,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
     &quot;id&quot;: 281110143,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;url&quot;: &quot;http://else.where:4567&quot;
+    &quot;url&quot;: &quot;http://else.where:4567&quot;,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;name&quot;: &quot;Unused Proxy&quot;
   }
 }</pre>
 
@@ -9861,21 +10177,23 @@ will be substituted for the version of the operating system.</p>
 [
   {
     &quot;subnet&quot;: {
-      &quot;domain_ids&quot;: [],
-      &quot;priority&quot;: null,
-      &quot;name&quot;: &quot;three&quot;,
-      &quot;network&quot;: &quot;3.3.4.3&quot;,
-      &quot;dns_id&quot;: null,
-      &quot;gateway&quot;: null,
-      &quot;to&quot;: null,
-      &quot;vlanid&quot;: null,
-      &quot;tftp_id&quot;: 298486374,
-      &quot;from&quot;: null,
-      &quot;id&quot;: 113629430,
+      &quot;domain_ids&quot;: [
+        822172901
+      ],
       &quot;mask&quot;: &quot;255.255.255.0&quot;,
-      &quot;dhcp_id&quot;: 980190962,
+      &quot;dns_id&quot;: 113629430,
+      &quot;network&quot;: &quot;2.3.4.0&quot;,
+      &quot;id&quot;: 980190962,
+      &quot;tftp_id&quot;: 298486374,
+      &quot;dns_primary&quot;: null,
+      &quot;name&quot;: &quot;one&quot;,
+      &quot;gateway&quot;: null,
+      &quot;from&quot;: null,
+      &quot;priority&quot;: null,
+      &quot;vlanid&quot;: &quot;41&quot;,
       &quot;dns_secondary&quot;: null,
-      &quot;dns_primary&quot;: null
+      &quot;dhcp_id&quot;: 980190962,
+      &quot;to&quot;: null
     }
   },
   {
@@ -9883,41 +10201,39 @@ will be substituted for the version of the operating system.</p>
       &quot;domain_ids&quot;: [
         534821992
       ],
-      &quot;priority&quot;: null,
-      &quot;name&quot;: &quot;two&quot;,
-      &quot;network&quot;: &quot;3.3.4.0&quot;,
-      &quot;dns_id&quot;: null,
-      &quot;gateway&quot;: null,
-      &quot;to&quot;: null,
-      &quot;vlanid&quot;: null,
-      &quot;tftp_id&quot;: 298486374,
-      &quot;from&quot;: null,
-      &quot;id&quot;: 298486374,
       &quot;mask&quot;: &quot;255.255.255.0&quot;,
-      &quot;dhcp_id&quot;: 980190962,
+      &quot;dns_id&quot;: null,
+      &quot;network&quot;: &quot;3.3.4.0&quot;,
+      &quot;id&quot;: 298486374,
+      &quot;tftp_id&quot;: 298486374,
+      &quot;dns_primary&quot;: null,
+      &quot;name&quot;: &quot;two&quot;,
+      &quot;gateway&quot;: null,
+      &quot;from&quot;: null,
+      &quot;priority&quot;: null,
+      &quot;vlanid&quot;: &quot;42&quot;,
       &quot;dns_secondary&quot;: null,
-      &quot;dns_primary&quot;: null
+      &quot;dhcp_id&quot;: 980190962,
+      &quot;to&quot;: null
     }
   },
   {
     &quot;subnet&quot;: {
-      &quot;domain_ids&quot;: [
-        822172901
-      ],
-      &quot;priority&quot;: null,
-      &quot;name&quot;: &quot;one&quot;,
-      &quot;network&quot;: &quot;2.3.4.0&quot;,
-      &quot;dns_id&quot;: 113629430,
-      &quot;gateway&quot;: null,
-      &quot;to&quot;: null,
-      &quot;vlanid&quot;: null,
-      &quot;tftp_id&quot;: 298486374,
-      &quot;from&quot;: null,
-      &quot;id&quot;: 980190962,
+      &quot;domain_ids&quot;: [],
       &quot;mask&quot;: &quot;255.255.255.0&quot;,
-      &quot;dhcp_id&quot;: 980190962,
+      &quot;dns_id&quot;: null,
+      &quot;network&quot;: &quot;3.3.4.3&quot;,
+      &quot;id&quot;: 113629430,
+      &quot;tftp_id&quot;: 298486374,
+      &quot;dns_primary&quot;: null,
+      &quot;name&quot;: &quot;three&quot;,
+      &quot;gateway&quot;: null,
+      &quot;from&quot;: null,
+      &quot;priority&quot;: null,
+      &quot;vlanid&quot;: &quot;43&quot;,
       &quot;dns_secondary&quot;: null,
-      &quot;dns_primary&quot;: null
+      &quot;dhcp_id&quot;: 980190962,
+      &quot;to&quot;: null
     }
   }
 ]</pre>
@@ -9996,35 +10312,35 @@ will be substituted for the version of the operating system.</p>
     &quot;domain_ids&quot;: [
       822172901
     ],
-    &quot;priority&quot;: null,
-    &quot;name&quot;: &quot;one&quot;,
-    &quot;network&quot;: &quot;2.3.4.0&quot;,
+    &quot;mask&quot;: &quot;255.255.255.0&quot;,
     &quot;dns_id&quot;: 113629430,
-    &quot;gateway&quot;: null,
-    &quot;to&quot;: null,
-    &quot;dhcp&quot;: {
-      &quot;name&quot;: &quot;DHCP Proxy&quot;,
-      &quot;id&quot;: 980190962,
-      &quot;url&quot;: &quot;https://somewhere.net:8443&quot;
-    },
-    &quot;vlanid&quot;: null,
-    &quot;tftp_id&quot;: 298486374,
-    &quot;from&quot;: null,
+    &quot;network&quot;: &quot;2.3.4.0&quot;,
     &quot;tftp&quot;: {
-      &quot;name&quot;: &quot;TFTP Proxy&quot;,
       &quot;id&quot;: 298486374,
-      &quot;url&quot;: &quot;http://somewhere.else&quot;
+      &quot;url&quot;: &quot;http://somewhere.else&quot;,
+      &quot;name&quot;: &quot;TFTP Proxy&quot;
+    },
+    &quot;dhcp&quot;: {
+      &quot;id&quot;: 980190962,
+      &quot;url&quot;: &quot;https://somewhere.net:8443&quot;,
+      &quot;name&quot;: &quot;DHCP Proxy&quot;
     },
     &quot;id&quot;: 980190962,
+    &quot;tftp_id&quot;: 298486374,
     &quot;dns&quot;: {
-      &quot;name&quot;: &quot;DNS Proxy&quot;,
       &quot;id&quot;: 113629430,
-      &quot;url&quot;: &quot;http://else.where:4567&quot;
+      &quot;url&quot;: &quot;http://else.where:4567&quot;,
+      &quot;name&quot;: &quot;DNS Proxy&quot;
     },
-    &quot;mask&quot;: &quot;255.255.255.0&quot;,
-    &quot;dhcp_id&quot;: 980190962,
+    &quot;dns_primary&quot;: null,
+    &quot;name&quot;: &quot;one&quot;,
+    &quot;gateway&quot;: null,
+    &quot;from&quot;: null,
+    &quot;priority&quot;: null,
+    &quot;vlanid&quot;: &quot;41&quot;,
     &quot;dns_secondary&quot;: null,
-    &quot;dns_primary&quot;: null
+    &quot;dhcp_id&quot;: 980190962,
+    &quot;to&quot;: null
   }
 }</pre>
 
@@ -10036,7 +10352,7 @@ will be substituted for the version of the operating system.</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -10064,32 +10380,32 @@ will be substituted for the version of the operating system.</p>
             <pre class="wiki">POST /api/subnets
 {
   &quot;subnet&quot;: {
-    &quot;name&quot;: &quot;QA2&quot;,
+    &quot;mask&quot;: &quot;255.255.255.0&quot;,
     &quot;network&quot;: &quot;10.35.2.27&quot;,
-    &quot;mask&quot;: &quot;255.255.255.0&quot;
+    &quot;name&quot;: &quot;QA2&quot;
   }
 }
 200
 {
   &quot;subnet&quot;: {
     &quot;domain_ids&quot;: [],
-    &quot;priority&quot;: null,
-    &quot;name&quot;: &quot;QA2&quot;,
-    &quot;network&quot;: &quot;10.35.2.27&quot;,
-    &quot;dns_id&quot;: null,
-    &quot;gateway&quot;: null,
-    &quot;to&quot;: null,
-    &quot;dhcp&quot;: null,
-    &quot;vlanid&quot;: null,
-    &quot;tftp_id&quot;: null,
-    &quot;from&quot;: null,
-    &quot;tftp&quot;: null,
-    &quot;id&quot;: 980190963,
-    &quot;dns&quot;: null,
     &quot;mask&quot;: &quot;255.255.255.0&quot;,
-    &quot;dhcp_id&quot;: null,
+    &quot;dns_id&quot;: null,
+    &quot;network&quot;: &quot;10.35.2.27&quot;,
+    &quot;tftp&quot;: null,
+    &quot;dhcp&quot;: null,
+    &quot;id&quot;: 980190963,
+    &quot;tftp_id&quot;: null,
+    &quot;dns&quot;: null,
+    &quot;dns_primary&quot;: null,
+    &quot;name&quot;: &quot;QA2&quot;,
+    &quot;from&quot;: null,
+    &quot;gateway&quot;: null,
+    &quot;priority&quot;: null,
+    &quot;vlanid&quot;: null,
     &quot;dns_secondary&quot;: null,
-    &quot;dns_primary&quot;: null
+    &quot;dhcp_id&quot;: null,
+    &quot;to&quot;: null
   }
 }</pre>
 
@@ -10281,35 +10597,35 @@ will be substituted for the version of the operating system.</p>
     &quot;domain_ids&quot;: [
       822172901
     ],
-    &quot;priority&quot;: null,
-    &quot;name&quot;: &quot;one&quot;,
-    &quot;network&quot;: &quot;2.3.4.0&quot;,
+    &quot;mask&quot;: &quot;255.255.255.0&quot;,
     &quot;dns_id&quot;: 113629430,
-    &quot;gateway&quot;: null,
-    &quot;to&quot;: null,
-    &quot;dhcp&quot;: {
-      &quot;name&quot;: &quot;DHCP Proxy&quot;,
-      &quot;id&quot;: 980190962,
-      &quot;url&quot;: &quot;https://somewhere.net:8443&quot;
-    },
-    &quot;vlanid&quot;: null,
-    &quot;tftp_id&quot;: 298486374,
-    &quot;from&quot;: null,
+    &quot;network&quot;: &quot;2.3.4.0&quot;,
     &quot;tftp&quot;: {
-      &quot;name&quot;: &quot;TFTP Proxy&quot;,
       &quot;id&quot;: 298486374,
-      &quot;url&quot;: &quot;http://somewhere.else&quot;
+      &quot;url&quot;: &quot;http://somewhere.else&quot;,
+      &quot;name&quot;: &quot;TFTP Proxy&quot;
+    },
+    &quot;dhcp&quot;: {
+      &quot;id&quot;: 980190962,
+      &quot;url&quot;: &quot;https://somewhere.net:8443&quot;,
+      &quot;name&quot;: &quot;DHCP Proxy&quot;
     },
     &quot;id&quot;: 980190962,
+    &quot;tftp_id&quot;: 298486374,
     &quot;dns&quot;: {
-      &quot;name&quot;: &quot;DNS Proxy&quot;,
       &quot;id&quot;: 113629430,
-      &quot;url&quot;: &quot;http://else.where:4567&quot;
+      &quot;url&quot;: &quot;http://else.where:4567&quot;,
+      &quot;name&quot;: &quot;DNS Proxy&quot;
     },
-    &quot;mask&quot;: &quot;255.255.255.0&quot;,
-    &quot;dhcp_id&quot;: 980190962,
+    &quot;dns_primary&quot;: null,
+    &quot;name&quot;: &quot;one&quot;,
+    &quot;from&quot;: null,
+    &quot;gateway&quot;: null,
+    &quot;priority&quot;: null,
+    &quot;vlanid&quot;: &quot;41&quot;,
     &quot;dns_secondary&quot;: null,
-    &quot;dns_primary&quot;: null
+    &quot;dhcp_id&quot;: 980190962,
+    &quot;to&quot;: null
   }
 }</pre>
 
@@ -10506,35 +10822,35 @@ will be substituted for the version of the operating system.</p>
 422
 {
   &quot;subnet&quot;: {
+    &quot;id&quot;: 980190962,
     &quot;errors&quot;: {
       &quot;base&quot;: [
-        &quot;2.3.4.0/24 is used by anotherfullhost&quot;,
-        &quot;2.3.4.0/24 is used by dhcp.mydomain.net&quot;,
-        &quot;2.3.4.0/24 is used by temp.yourdomain.net&quot;,
-        &quot;2.3.4.0/24 is used by sdhcp.mydomain.net&quot;,
-        &quot;2.3.4.0/24 is used by otherfullhost&quot;,
-        &quot;2.3.4.0/24 is used by sol10host&quot;,
-        &quot;2.3.4.0/24 is used by suse01.yourdomain.net&quot;,
-        &quot;2.3.4.0/24 is used by my5name.mydomain.net&quot;,
         &quot;2.3.4.0/24 is used by temp-01.yourdomain.net&quot;,
+        &quot;2.3.4.0/24 is used by suse01.yourdomain.net&quot;,
         &quot;2.3.4.0/24 is used by temp01.yourdomain.net&quot;,
+        &quot;2.3.4.0/24 is used by anotherfullhost&quot;,
+        &quot;2.3.4.0/24 is used by temp.yourdomain.net&quot;,
+        &quot;2.3.4.0/24 is used by my5name.mydomain.net&quot;,
+        &quot;2.3.4.0/24 is used by dhcp.mydomain.net&quot;,
+        &quot;2.3.4.0/24 is used by otherfullhost&quot;,
+        &quot;2.3.4.0/24 is used by sdhcp.mydomain.net&quot;,
+        &quot;2.3.4.0/24 is used by sol10host&quot;,
         &quot;2.3.4.0/24 is used by sdhcp.mydomain.net&quot;
       ]
     },
     &quot;full_messages&quot;: [
-      &quot;2.3.4.0/24 is used by anotherfullhost&quot;,
-      &quot;2.3.4.0/24 is used by dhcp.mydomain.net&quot;,
-      &quot;2.3.4.0/24 is used by temp.yourdomain.net&quot;,
-      &quot;2.3.4.0/24 is used by sdhcp.mydomain.net&quot;,
-      &quot;2.3.4.0/24 is used by otherfullhost&quot;,
-      &quot;2.3.4.0/24 is used by sol10host&quot;,
-      &quot;2.3.4.0/24 is used by suse01.yourdomain.net&quot;,
-      &quot;2.3.4.0/24 is used by my5name.mydomain.net&quot;,
       &quot;2.3.4.0/24 is used by temp-01.yourdomain.net&quot;,
+      &quot;2.3.4.0/24 is used by suse01.yourdomain.net&quot;,
       &quot;2.3.4.0/24 is used by temp01.yourdomain.net&quot;,
+      &quot;2.3.4.0/24 is used by anotherfullhost&quot;,
+      &quot;2.3.4.0/24 is used by temp.yourdomain.net&quot;,
+      &quot;2.3.4.0/24 is used by my5name.mydomain.net&quot;,
+      &quot;2.3.4.0/24 is used by dhcp.mydomain.net&quot;,
+      &quot;2.3.4.0/24 is used by otherfullhost&quot;,
+      &quot;2.3.4.0/24 is used by sdhcp.mydomain.net&quot;,
+      &quot;2.3.4.0/24 is used by sol10host&quot;,
       &quot;2.3.4.0/24 is used by sdhcp.mydomain.net&quot;
-    ],
-    &quot;id&quot;: 980190962
+    ]
   }
 }</pre>
 
@@ -10549,6 +10865,280 @@ will be substituted for the version of the operating system.</p>
           [ Must be a number. ]
       </small>
       <p>Subnet numeric identifier</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h2 id="template_combinations">
+      <a href='#template_combinations'>Template combinations</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="template_combinations-index">
+      <a href='#template_combinations'>Template combinations</a> / <a href='#template_combinations-index'>index</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/config_templates/:config_template_id/template_combinations
+            <br>
+            <small>List Template Combination</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>config_template_id </strong>:
+      <small>
+        required
+        
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
+      </small>
+      
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="template_combinations-create">
+      <a href='#template_combinations'>Template combinations</a> / <a href='#template_combinations-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /api/config_templates/:config_template_id/template_combinations
+            <br>
+            <small>Add a Template Combination</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>config_template_id </strong>:
+      <small>
+        required
+        
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>template_combination </strong>:
+      <small>
+        required
+        
+          [ Must be a Hash ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>environment_id </strong>:
+      <small>
+        optional
+        , nil allowed
+          [ Must be a number. ]
+      </small>
+      <p>environment id</p>
+
+    </li>
+    
+    <li>
+      <strong>hostgroup_id </strong>:
+      <small>
+        optional
+        , nil allowed
+          [ Must be a number. ]
+      </small>
+      <p>hostgroup id</p>
+
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="template_combinations-show">
+      <a href='#template_combinations'>Template combinations</a> / <a href='#template_combinations-show'>show</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/template_combinations/:id
+            <br>
+            <small>Show Template Combination</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
+      </small>
+      
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="template_combinations-destroy">
+      <a href='#template_combinations'>Template combinations</a> / <a href='#template_combinations-destroy'>destroy</a>
+      </h3>
+
+      <div>
+          <h4>
+              DELETE /api/template_combinations/:id
+            <br>
+            <small>Delete a template</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
+      </small>
+      
+    </li>
+    
+</ul>
+
+      </div>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h2 id="template_kinds">
+      <a href='#template_kinds'>Template kinds</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="template_kinds-index">
+      <a href='#template_kinds'>Template kinds</a> / <a href='#template_kinds-index'>index</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/template_kinds
+            <br>
+            <small>List all template kinds.</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">GET /api/template_kinds
+200
+[
+  {
+    &quot;template_kind&quot;: {
+      &quot;id&quot;: 452984334,
+      &quot;name&quot;: &quot;PXELinux&quot;
+    }
+  },
+  {
+    &quot;template_kind&quot;: {
+      &quot;id&quot;: 478250810,
+      &quot;name&quot;: &quot;script&quot;
+    }
+  },
+  {
+    &quot;template_kind&quot;: {
+      &quot;id&quot;: 158998239,
+      &quot;name&quot;: &quot;gPXE&quot;
+    }
+  },
+  {
+    &quot;template_kind&quot;: {
+      &quot;id&quot;: 550103832,
+      &quot;name&quot;: &quot;finish&quot;
+    }
+  },
+  {
+    &quot;template_kind&quot;: {
+      &quot;id&quot;: 983253650,
+      &quot;name&quot;: &quot;provision&quot;
+    }
+  }
+]</pre>
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>page </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>paginate results</p>
+
+    </li>
+    
+    <li>
+      <strong>per_page </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>number of entries per request</p>
 
     </li>
     
@@ -10591,18 +11181,18 @@ will be substituted for the version of the operating system.</p>
 [
   {
     &quot;usergroup&quot;: {
-      &quot;name&quot;: &quot;MyString&quot;,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
       &quot;id&quot;: 980190962,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+      &quot;name&quot;: &quot;MyString&quot;
     }
   },
   {
     &quot;usergroup&quot;: {
-      &quot;name&quot;: &quot;MyString2&quot;,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
       &quot;id&quot;: 298486374,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+      &quot;name&quot;: &quot;MyString2&quot;
     }
   }
 ]</pre>
@@ -10656,10 +11246,10 @@ will be substituted for the version of the operating system.</p>
 200
 {
   &quot;usergroup&quot;: {
-    &quot;name&quot;: &quot;MyString&quot;,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
     &quot;id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;name&quot;: &quot;MyString&quot;
   }
 }</pre>
 
@@ -10671,7 +11261,7 @@ will be substituted for the version of the operating system.</p>
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space.. ]
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
     </li>
@@ -10705,8 +11295,8 @@ will be substituted for the version of the operating system.</p>
 201
 {
   &quot;usergroup&quot;: {
-    &quot;name&quot;: &quot;test_usergroup&quot;,
-    &quot;id&quot;: 980190963
+    &quot;id&quot;: 980190963,
+    &quot;name&quot;: &quot;test_usergroup&quot;
   }
 }</pre>
 
@@ -10762,8 +11352,8 @@ will be substituted for the version of the operating system.</p>
 200
 {
   &quot;usergroup&quot;: {
-    &quot;name&quot;: &quot;MyString&quot;,
-    &quot;id&quot;: 980190962
+    &quot;id&quot;: 980190962,
+    &quot;name&quot;: &quot;MyString&quot;
   }
 }</pre>
 
@@ -10793,7 +11383,7 @@ will be substituted for the version of the operating system.</p>
     <li>
       <strong>name </strong>:
       <small>
-        required
+        optional
         
           [ Must be String ]
       </small>
@@ -10826,8 +11416,8 @@ will be substituted for the version of the operating system.</p>
 200
 {
   &quot;usergroup&quot;: {
-    &quot;name&quot;: &quot;MyString&quot;,
-    &quot;id&quot;: 980190962
+    &quot;id&quot;: 980190962,
+    &quot;name&quot;: &quot;MyString&quot;
   }
 }</pre>
 
@@ -10883,82 +11473,102 @@ will be substituted for the version of the operating system.</p>
 [
   {
     &quot;user&quot;: {
-      &quot;firstname&quot;: &quot;Admin&quot;,
-      &quot;mail&quot;: &quot;admin@someware.com&quot;,
-      &quot;lastname&quot;: &quot;User&quot;,
       &quot;compute_resources_andor&quot;: &quot;or&quot;,
-      &quot;admin&quot;: true,
       &quot;hostgroups_andor&quot;: &quot;or&quot;,
-      &quot;role_id&quot;: null,
-      &quot;last_login_on&quot;: &quot;2009-10-12T21:50:04Z&quot;,
       &quot;login&quot;: &quot;admin&quot;,
-      &quot;auth_source_id&quot;: 980190962,
-      &quot;filter_on_owner&quot;: null,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;lastname&quot;: &quot;User&quot;,
+      &quot;facts_andor&quot;: &quot;or&quot;,
+      &quot;admin&quot;: true,
       &quot;id&quot;: 135138680,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;firstname&quot;: &quot;Admin&quot;,
+      &quot;role_id&quot;: null,
+      &quot;filter_on_owner&quot;: null,
       &quot;domains_andor&quot;: &quot;or&quot;,
-      &quot;facts_andor&quot;: &quot;or&quot;
+      &quot;auth_source_id&quot;: 980190962,
+      &quot;last_login_on&quot;: &quot;2009-10-12T21:50:04Z&quot;,
+      &quot;mail&quot;: &quot;admin@someware.com&quot;
     }
   },
   {
     &quot;user&quot;: {
-      &quot;firstname&quot;: &quot;test&quot;,
-      &quot;mail&quot;: &quot;testuser@someware.com&quot;,
-      &quot;lastname&quot;: &quot;User&quot;,
       &quot;compute_resources_andor&quot;: &quot;or&quot;,
-      &quot;admin&quot;: false,
       &quot;hostgroups_andor&quot;: &quot;or&quot;,
+      &quot;login&quot;: &quot;apiadmin&quot;,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;lastname&quot;: &quot;User&quot;,
+      &quot;facts_andor&quot;: &quot;or&quot;,
+      &quot;admin&quot;: true,
+      &quot;id&quot;: 886836129,
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;firstname&quot;: &quot;apiadmin&quot;,
       &quot;role_id&quot;: null,
-      &quot;last_login_on&quot;: &quot;2009-10-12T21:50:04Z&quot;,
-      &quot;login&quot;: &quot;test&quot;,
+      &quot;filter_on_owner&quot;: null,
+      &quot;domains_andor&quot;: &quot;or&quot;,
       &quot;auth_source_id&quot;: 200482051,
-      &quot;filter_on_owner&quot;: null,
-      &quot;id&quot;: 200482051,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;domains_andor&quot;: &quot;or&quot;,
-      &quot;facts_andor&quot;: &quot;or&quot;
+      &quot;last_login_on&quot;: &quot;2009-10-12T21:50:04Z&quot;,
+      &quot;mail&quot;: &quot;apiadmin@someware.com&quot;
     }
   },
   {
     &quot;user&quot;: {
-      &quot;firstname&quot;: &quot;Two&quot;,
-      &quot;mail&quot;: &quot;usertwo@someware.com&quot;,
-      &quot;lastname&quot;: &quot;User&quot;,
       &quot;compute_resources_andor&quot;: &quot;or&quot;,
-      &quot;admin&quot;: false,
       &quot;hostgroups_andor&quot;: &quot;or&quot;,
-      &quot;role_id&quot;: null,
-      &quot;last_login_on&quot;: &quot;2009-10-12T21:50:04Z&quot;,
-      &quot;login&quot;: &quot;two&quot;,
-      &quot;auth_source_id&quot;: 980190962,
-      &quot;filter_on_owner&quot;: null,
-      &quot;id&quot;: 298486374,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;domains_andor&quot;: &quot;or&quot;,
-      &quot;facts_andor&quot;: &quot;or&quot;
-    }
-  },
-  {
-    &quot;user&quot;: {
-      &quot;firstname&quot;: &quot;One&quot;,
-      &quot;mail&quot;: &quot;userone@someware.com&quot;,
-      &quot;lastname&quot;: &quot;User&quot;,
-      &quot;compute_resources_andor&quot;: &quot;or&quot;,
-      &quot;admin&quot;: false,
-      &quot;hostgroups_andor&quot;: &quot;or&quot;,
-      &quot;role_id&quot;: null,
-      &quot;last_login_on&quot;: &quot;2009-10-12T21:50:04Z&quot;,
       &quot;login&quot;: &quot;one&quot;,
-      &quot;auth_source_id&quot;: 980190962,
-      &quot;filter_on_owner&quot;: null,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;lastname&quot;: &quot;User&quot;,
+      &quot;facts_andor&quot;: &quot;or&quot;,
+      &quot;admin&quot;: false,
       &quot;id&quot;: 980190962,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;firstname&quot;: &quot;One&quot;,
+      &quot;role_id&quot;: null,
+      &quot;filter_on_owner&quot;: null,
       &quot;domains_andor&quot;: &quot;or&quot;,
-      &quot;facts_andor&quot;: &quot;or&quot;
+      &quot;auth_source_id&quot;: 980190962,
+      &quot;last_login_on&quot;: &quot;2009-10-12T21:50:04Z&quot;,
+      &quot;mail&quot;: &quot;userone@someware.com&quot;
+    }
+  },
+  {
+    &quot;user&quot;: {
+      &quot;compute_resources_andor&quot;: &quot;or&quot;,
+      &quot;hostgroups_andor&quot;: &quot;or&quot;,
+      &quot;login&quot;: &quot;test&quot;,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;lastname&quot;: &quot;User&quot;,
+      &quot;facts_andor&quot;: &quot;or&quot;,
+      &quot;admin&quot;: false,
+      &quot;id&quot;: 200482051,
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;firstname&quot;: &quot;test&quot;,
+      &quot;role_id&quot;: null,
+      &quot;filter_on_owner&quot;: null,
+      &quot;domains_andor&quot;: &quot;or&quot;,
+      &quot;auth_source_id&quot;: 200482051,
+      &quot;last_login_on&quot;: &quot;2009-10-12T21:50:04Z&quot;,
+      &quot;mail&quot;: &quot;testuser@someware.com&quot;
+    }
+  },
+  {
+    &quot;user&quot;: {
+      &quot;compute_resources_andor&quot;: &quot;or&quot;,
+      &quot;hostgroups_andor&quot;: &quot;or&quot;,
+      &quot;login&quot;: &quot;two&quot;,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;lastname&quot;: &quot;User&quot;,
+      &quot;facts_andor&quot;: &quot;or&quot;,
+      &quot;admin&quot;: false,
+      &quot;id&quot;: 298486374,
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;firstname&quot;: &quot;Two&quot;,
+      &quot;role_id&quot;: null,
+      &quot;filter_on_owner&quot;: null,
+      &quot;domains_andor&quot;: &quot;or&quot;,
+      &quot;auth_source_id&quot;: 980190962,
+      &quot;last_login_on&quot;: &quot;2009-10-12T21:50:04Z&quot;,
+      &quot;mail&quot;: &quot;usertwo@someware.com&quot;
     }
   }
 ]</pre>
@@ -11034,40 +11644,83 @@ will be substituted for the version of the operating system.</p>
 200
 {
   &quot;user&quot;: {
-    &quot;firstname&quot;: &quot;One&quot;,
-    &quot;mail&quot;: &quot;userone@someware.com&quot;,
-    &quot;lastname&quot;: &quot;User&quot;,
     &quot;compute_resources_andor&quot;: &quot;or&quot;,
-    &quot;admin&quot;: false,
     &quot;hostgroups_andor&quot;: &quot;or&quot;,
-    &quot;role_id&quot;: null,
-    &quot;last_login_on&quot;: &quot;2009-10-12T21:50:04Z&quot;,
-    &quot;&quot;: [],
     &quot;login&quot;: &quot;one&quot;,
-    &quot;auth_source_id&quot;: 980190962,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+    &quot;lastname&quot;: &quot;User&quot;,
+    &quot;facts_andor&quot;: &quot;or&quot;,
+    &quot;admin&quot;: false,
+    &quot;id&quot;: 980190962,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+    &quot;firstname&quot;: &quot;One&quot;,
+    &quot;role_id&quot;: null,
+    &quot;filter_on_owner&quot;: null,
+    &quot;domains_andor&quot;: &quot;or&quot;,
     &quot;auth_source_ldap&quot;: {
-      &quot;account&quot;: null,
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
       &quot;port&quot;: 123,
-      &quot;name&quot;: &quot;ldap&quot;,
-      &quot;attr_lastname&quot;: &quot;sn&quot;,
-      &quot;onthefly_register&quot;: true,
-      &quot;attr_mail&quot;: &quot;mail&quot;,
-      &quot;host&quot;: &quot;ldap&quot;,
-      &quot;type&quot;: &quot;AuthSourceLdap&quot;,
-      &quot;id&quot;: 980190962,
-      &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
       &quot;attr_login&quot;: &quot;uid&quot;,
-      &quot;tls&quot;: true,
+      &quot;type&quot;: &quot;AuthSourceLdap&quot;,
+      &quot;host&quot;: &quot;ldap&quot;,
+      &quot;id&quot;: 980190962,
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+      &quot;account&quot;: null,
       &quot;attr_firstname&quot;: &quot;givenName&quot;,
+      &quot;onthefly_register&quot;: true,
+      &quot;tls&quot;: true,
+      &quot;name&quot;: &quot;ldap&quot;,
+      &quot;attr_mail&quot;: &quot;mail&quot;,
+      &quot;attr_lastname&quot;: &quot;sn&quot;,
       &quot;base_dn&quot;: &quot;dn=x,dn=y&quot;
     },
-    &quot;filter_on_owner&quot;: null,
-    &quot;id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;domains_andor&quot;: &quot;or&quot;,
-    &quot;facts_andor&quot;: &quot;or&quot;
+    &quot;roles&quot;: [
+      {
+        &quot;role&quot;: {
+          &quot;builtin&quot;: 0,
+          &quot;permissions&quot;: [
+            &quot;view_architectures&quot;,
+            &quot;view_audit_logs&quot;,
+            &quot;view_authenticators&quot;,
+            &quot;access_dashboard&quot;,
+            &quot;view_domains&quot;,
+            &quot;view_environments&quot;,
+            &quot;view_external_variables&quot;,
+            &quot;view_facts&quot;,
+            &quot;view_globals&quot;,
+            &quot;view_hostgroups&quot;,
+            &quot;view_hosts&quot;,
+            &quot;view_locations&quot;,
+            &quot;view_media&quot;,
+            &quot;view_models&quot;,
+            &quot;view_operatingsystems&quot;,
+            &quot;view_ptables&quot;,
+            &quot;view_puppetclasses&quot;,
+            &quot;view_reports&quot;,
+            &quot;access_settings&quot;,
+            &quot;view_statistics&quot;,
+            &quot;view_organizations&quot;,
+            &quot;view_usergroups&quot;,
+            &quot;view_users&quot;
+          ],
+          &quot;id&quot;: 5,
+          &quot;name&quot;: &quot;Viewer&quot;
+        }
+      },
+      {
+        &quot;role&quot;: {
+          &quot;builtin&quot;: 2,
+          &quot;permissions&quot;: [
+            &quot;view_hosts&quot;
+          ],
+          &quot;id&quot;: 7,
+          &quot;name&quot;: &quot;Anonymous&quot;
+        }
+      }
+    ],
+    &quot;auth_source_id&quot;: 980190962,
+    &quot;last_login_on&quot;: &quot;2009-10-12T21:50:04Z&quot;,
+    &quot;mail&quot;: &quot;userone@someware.com&quot;
   }
 }</pre>
 
@@ -11216,14 +11869,15 @@ Only admin can set admin account.</p>
             <pre class="wiki">PUT /api/users/980190963
 {
   &quot;user&quot;: {
-    &quot;password&quot;: &quot;dummy&quot;,
     &quot;login&quot;: &quot;johnsmith&quot;,
+    &quot;password&quot;: &quot;dummy&quot;,
     &quot;password_confirmation&quot;: &quot;DUMMY&quot;
   }
 }
 422
 {
   &quot;user&quot;: {
+    &quot;id&quot;: 980190963,
     &quot;errors&quot;: {
       &quot;password&quot;: [
         &quot;doesn&#x27;t match confirmation&quot;
@@ -11231,8 +11885,7 @@ Only admin can set admin account.</p>
     },
     &quot;full_messages&quot;: [
       &quot;Password doesn&#x27;t match confirmation&quot;
-    ],
-    &quot;id&quot;: 980190963
+    ]
   }
 }</pre>
 
@@ -11313,7 +11966,7 @@ Only admin can set admin account.</p>
     <li>
       <strong>password </strong>:
       <small>
-        required
+        optional
         
           [ Must be String ]
       </small>
@@ -11346,24 +11999,26 @@ Only admin can set admin account.</p>
 200
 {
   &quot;user&quot;: {
-    &quot;firstname&quot;: &quot;One&quot;,
-    &quot;mail&quot;: &quot;userone@someware.com&quot;,
-    &quot;lastname&quot;: &quot;User&quot;,
-    &quot;password_salt&quot;: null,
     &quot;compute_resources_andor&quot;: &quot;or&quot;,
-    &quot;admin&quot;: false,
     &quot;hostgroups_andor&quot;: &quot;or&quot;,
-    &quot;role_id&quot;: null,
-    &quot;last_login_on&quot;: &quot;2009-10-12T21:50:04Z&quot;,
-    &quot;password_hash&quot;: null,
     &quot;login&quot;: &quot;one&quot;,
-    &quot;auth_source_id&quot;: 980190962,
-    &quot;filter_on_owner&quot;: null,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+    &quot;lastname&quot;: &quot;User&quot;,
+    &quot;facts_andor&quot;: &quot;or&quot;,
+    &quot;admin&quot;: false,
     &quot;id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-11-21T13:01:46Z&quot;,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+    &quot;password_hash&quot;: null,
+    &quot;firstname&quot;: &quot;One&quot;,
+    &quot;password_salt&quot;: null,
+    &quot;role_id&quot;: null,
     &quot;domains_andor&quot;: &quot;or&quot;,
-    &quot;facts_andor&quot;: &quot;or&quot;
+    &quot;filter_on_owner&quot;: null,
+    &quot;auth_source_id&quot;: 980190962,
+    &quot;last_login_on&quot;: &quot;2009-10-12T21:50:04Z&quot;,
+    &quot;mail&quot;: &quot;userone@someware.com&quot;,
+    &quot;locations_andor&quot;: &quot;or&quot;,
+    &quot;organizations_andor&quot;: &quot;or&quot;
   }
 }</pre>
 

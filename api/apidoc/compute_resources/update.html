@@ -39,6 +39,27 @@
 
   
 
+    <h2>Examples</h2>
+      <pre class="prettyprint">PUT /api/compute_resources/367690737-mycompute
+{
+  &quot;compute_resource&quot;: {
+    &quot;description&quot;: &quot;new_description&quot;
+  }
+}
+200
+{
+  &quot;compute_resource&quot;: {
+    &quot;user&quot;: &quot;MyString&quot;,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:45Z&quot;,
+    &quot;id&quot;: 367690737,
+    &quot;url&quot;: &quot;test:///default&quot;,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+    &quot;description&quot;: &quot;new_description&quot;,
+    &quot;name&quot;: &quot;mycompute&quot;,
+    &quot;attrs&quot;: {},
+    &quot;uuid&quot;: &quot;mycompute&quot;
+  }
+}</pre>
 
 
 
@@ -86,7 +107,7 @@
     <td>
       <strong>compute_resource[name] </strong><br>
       <small>
-        required
+        optional
         
       </small>
     </td>
@@ -102,12 +123,12 @@
     <td>
       <strong>compute_resource[provider] </strong><br>
       <small>
-        required
+        optional
         
       </small>
     </td>
     <td>
-      <p>Providers include Libvirt, Ovirt, EC2, Vmware, Openstack</p>
+      <p>Providers include Libvirt, Ovirt, EC2, Vmware, Openstack, Rackspace</p>
 
         <br>
         Value: Must be String
@@ -119,7 +140,7 @@
     <td>
       <strong>compute_resource[url] </strong><br>
       <small>
-        required
+        optional
         
       </small>
     </td>

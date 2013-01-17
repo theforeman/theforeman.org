@@ -43,20 +43,20 @@
       <pre class="prettyprint">POST /api/config_templates
 {
   &quot;config_template&quot;: {
-    &quot;name&quot;: &quot;RandomName&quot;,
     &quot;template&quot;: &quot;This is a test template&quot;,
-    &quot;template_kind_id&quot;: 1
+    &quot;template_kind_id&quot;: 1,
+    &quot;name&quot;: &quot;RandomName&quot;
   }
 }
 200
 {
   &quot;config_template&quot;: {
-    &quot;name&quot;: &quot;RandomName&quot;,
-    &quot;audit_comment&quot;: null,
+    &quot;snippet&quot;: null,
     &quot;template&quot;: &quot;This is a test template&quot;,
-    &quot;&quot;: null,
     &quot;id&quot;: 1007981702,
-    &quot;snippet&quot;: null
+    &quot;audit_comment&quot;: null,
+    &quot;name&quot;: &quot;RandomName&quot;,
+    &quot;&quot;: null
   }
 }</pre>
 
