@@ -27,7 +27,7 @@ Patches to fix bugs or add new features are always appreciated. If you are going
 We try to keep a one commit per bug/feature policy, please try to create an issue which is specific for your patch details.
 
 ### Submit Patches
-Please make sure there is a [Redmine issue](http://wiki.theforeman.org/projects/foreman/issues) open for the change you are going to submit, as you will want to reference it in your commit message; this is very helpful when generating release notes.
+Please make sure there is a [Redmine issue](http://projects.theforeman.org/projects/foreman/issues) open for the change you are going to submit, as you will want to reference it in your commit message; this is very helpful when generating release notes.
 
 1. Fork [theforeman/foreman](https://github.com/theforeman/foreman) to a personal github account. This will create a "foreman" repo under your Github username.
 2. Clone the fork you just created to your development system: `git clone https://github.com/<username>/foreman.git`
