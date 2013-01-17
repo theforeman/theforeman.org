@@ -15,4 +15,4 @@ Mailing lists are available via Google Groups. Much like IRC, we have a general 
 * [foreman-dev](https://groups.google.com/forum/?fromgroups#!forum/foreman-users)
 
 ### Issue tracker
-We use Redmine to report and track bugs and feature requests, which can be found here: [http://wiki.theforeman.org/projects/foreman/issues](http://wiki.theforeman.org/projects/foreman/issues)
+We use Redmine to report and track bugs and feature requests, which can be found here: [http://projects.theforeman.org/projects/foreman/issues](http://projects.theforeman.org/projects/foreman/issues)
