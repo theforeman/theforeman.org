@@ -12,7 +12,7 @@ We work on the [irc.freenode.net](http://webchat.freenode.net/) servers. You can
 Mailing lists are available via Google Groups. Much like IRC, we have a general users (support, Q/A, etc) lists and a development list:
 
 * [foreman-users](https://groups.google.com/forum/?fromgroups#!forum/foreman-users)
-* [foreman-dev](https://groups.google.com/forum/?fromgroups#!forum/foreman-users)
+* [foreman-dev](https://groups.google.com/forum/?fromgroups#!forum/foreman-dev)
 
 ### Issue tracker
 We use Redmine to report and track bugs and feature requests, which can be found here: [http://projects.theforeman.org/projects/foreman/issues](http://projects.theforeman.org/projects/foreman/issues)
