@@ -102,5 +102,11 @@ title: Foreman 1.1 Manual
 {%include manuals/1.1/missing.html %}
 ## 5.3 Install Locations
 {%include manuals/1.1/missing.html %}
+## 5.4 Securing Communications with SSL
+{%include manuals/1.1/5.4_communications.md %}
+## 5.4.1 Securing Puppet Master Requests
+{%include manuals/1.1/5.4.1_comms_puppetmaster.md %}
+## 5.4.2 Securing Smart Proxy Requests
+{%include manuals/1.1/5.4.2_comms_proxy.md %}
 # 6. Troubleshooting
 {%include manuals/1.1/6_troubleshooting.md %}
