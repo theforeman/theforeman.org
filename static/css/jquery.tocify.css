@@ -4,13 +4,9 @@
  */
 
 /* The Table of Contents container element */
-#toc {
-    position: fixed;
-    border: 1px solid #ccc;
-    webkit-border-radius: 6px;
-    moz-border-radius: 6px;
-    border-radius: 6px;
-}
+#toc { position: fixed;}
+@media (min-width:1px) and (max-width:767px) { #toc { position: static} }
+
 
 /* The Table of Contents is composed of multiple nested unordered lists.  These styles remove the default styling of an unordered list because it is ugly. */
 #toc ul, #toc li {
