@@ -11,6 +11,6 @@ to learn and to become rapidly productive!
 2. Clone the fork.
 3. Run `bundle install` in the root of the freshly cloned repo. This
    will install Jekyll, the tool we use to build the site.
-4. Make some changes.
-5. Run `jekyll --server` and open your browser to http://localhost:4000
-   to see the changes.
+4. Run `jekyll --server --auto` and open your browser to http://localhost:4000.
+5. Make some changes, refresh your browser to preview them.
+6. Submit a pull request.
