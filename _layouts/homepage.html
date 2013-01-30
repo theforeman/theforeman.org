@@ -1,11 +1,10 @@
 {% include header.html %}
 
-<body>
   <div id="main">
     <div id="content" class="container">
       <div class="hero-unit">
         <p>{{ site.tagline }}</p>
-        <img src="/static/images/foreman_large.png" class="homepage-primary-img"/>
+        <img src="{{ site.baseurl }}static/images/foreman_large.png" class="homepage-primary-img"/>
         <p>
           {{ site.description }}
         </p>
@@ -27,6 +26,5 @@
       </div>
     </div>
   </div>
-</body>
 
 {% include footer.html %}
