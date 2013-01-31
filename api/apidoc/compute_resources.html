@@ -60,38 +60,38 @@
 [
   {
     &quot;compute_resource&quot;: {
+      &quot;name&quot;: &quot;mycompute&quot;,
+      &quot;url&quot;: &quot;test:///default&quot;,
       &quot;user&quot;: &quot;MyString&quot;,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;provider&quot;: &quot;Libvirt&quot;,
       &quot;id&quot;: 367690737,
-      &quot;provider&quot;: &quot;Libvirt&quot;,
-      &quot;url&quot;: &quot;test:///default&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
       &quot;description&quot;: &quot;mycompute&quot;,
-      &quot;name&quot;: &quot;mycompute&quot;
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
     }
   },
   {
     &quot;compute_resource&quot;: {
-      &quot;user&quot;: &quot;MyString&quot;,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;id&quot;: 980190962,
-      &quot;provider&quot;: &quot;Libvirt&quot;,
+      &quot;name&quot;: &quot;MyString&quot;,
       &quot;url&quot;: &quot;qemu://stam/system&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;user&quot;: &quot;MyString&quot;,
+      &quot;provider&quot;: &quot;Libvirt&quot;,
+      &quot;id&quot;: 980190962,
       &quot;description&quot;: &quot;MyString&quot;,
-      &quot;name&quot;: &quot;MyString&quot;
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
     }
   },
   {
     &quot;compute_resource&quot;: {
-      &quot;user&quot;: &quot;MyString&quot;,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;id&quot;: 932571420,
-      &quot;provider&quot;: &quot;Libvirt&quot;,
+      &quot;name&quot;: &quot;yourcompute&quot;,
       &quot;url&quot;: &quot;test:///default&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;user&quot;: &quot;MyString&quot;,
+      &quot;provider&quot;: &quot;Libvirt&quot;,
+      &quot;id&quot;: 932571420,
       &quot;description&quot;: &quot;yourcompute&quot;,
-      &quot;name&quot;: &quot;yourcompute&quot;
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
     }
   }
 ]</pre>
@@ -204,14 +204,14 @@
 200
 {
   &quot;compute_resource&quot;: {
-    &quot;user&quot;: &quot;MyString&quot;,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;provider&quot;: &quot;Libvirt&quot;,
+    &quot;name&quot;: &quot;MyString&quot;,
     &quot;url&quot;: &quot;qemu://stam/system&quot;,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+    &quot;user&quot;: &quot;MyString&quot;,
+    &quot;provider&quot;: &quot;Libvirt&quot;,
+    &quot;id&quot;: 980190962,
     &quot;description&quot;: &quot;MyString&quot;,
-    &quot;name&quot;: &quot;MyString&quot;
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
   }
 }</pre>
 
@@ -270,24 +270,24 @@
           <pre class="prettyprint">POST /api/compute_resources
 {
   &quot;compute_resource&quot;: {
+    &quot;name&quot;: &quot;special_compute&quot;,
     &quot;user&quot;: &quot;user@example.com&quot;,
-    &quot;region&quot;: &quot;eu-west-1&quot;,
     &quot;provider&quot;: &quot;EC2&quot;,
     &quot;password&quot;: &quot;secret&quot;,
-    &quot;name&quot;: &quot;special_compute&quot;
+    &quot;region&quot;: &quot;eu-west-1&quot;
   }
 }
 200
 {
   &quot;compute_resource&quot;: {
-    &quot;user&quot;: &quot;user@example.com&quot;,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:44Z&quot;,
-    &quot;id&quot;: 980190963,
-    &quot;provider&quot;: &quot;EC2&quot;,
+    &quot;name&quot;: &quot;special_compute&quot;,
     &quot;url&quot;: &quot;eu-west-1&quot;,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:44Z&quot;,
+    &quot;user&quot;: &quot;user@example.com&quot;,
+    &quot;provider&quot;: &quot;EC2&quot;,
+    &quot;id&quot;: 980190963,
     &quot;description&quot;: null,
-    &quot;name&quot;: &quot;special_compute&quot;
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:44Z&quot;,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:44Z&quot;
   }
 }</pre>
 
@@ -520,15 +520,15 @@
 200
 {
   &quot;compute_resource&quot;: {
-    &quot;user&quot;: &quot;MyString&quot;,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:45Z&quot;,
-    &quot;id&quot;: 367690737,
     &quot;url&quot;: &quot;test:///default&quot;,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-    &quot;description&quot;: &quot;new_description&quot;,
     &quot;name&quot;: &quot;mycompute&quot;,
+    &quot;user&quot;: &quot;MyString&quot;,
+    &quot;id&quot;: 367690737,
+    &quot;uuid&quot;: &quot;mycompute&quot;,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:45Z&quot;,
+    &quot;description&quot;: &quot;new_description&quot;,
     &quot;attrs&quot;: {},
-    &quot;uuid&quot;: &quot;mycompute&quot;
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
   }
 }</pre>
 
@@ -772,15 +772,15 @@
 200
 {
   &quot;compute_resource&quot;: {
-    &quot;user&quot;: &quot;MyString&quot;,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-    &quot;id&quot;: 932571420,
     &quot;url&quot;: &quot;test:///default&quot;,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-    &quot;description&quot;: &quot;yourcompute&quot;,
     &quot;name&quot;: &quot;yourcompute&quot;,
+    &quot;user&quot;: &quot;MyString&quot;,
+    &quot;id&quot;: 932571420,
+    &quot;uuid&quot;: &quot;yourcompute&quot;,
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+    &quot;description&quot;: &quot;yourcompute&quot;,
     &quot;attrs&quot;: null,
-    &quot;uuid&quot;: &quot;yourcompute&quot;
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
   }
 }</pre>
 

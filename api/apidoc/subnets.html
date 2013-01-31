@@ -60,62 +60,62 @@
 [
   {
     &quot;subnet&quot;: {
+      &quot;priority&quot;: null,
+      &quot;name&quot;: &quot;one&quot;,
+      &quot;network&quot;: &quot;2.3.4.0&quot;,
+      &quot;dns_secondary&quot;: null,
       &quot;domain_ids&quot;: [
         822172901
       ],
-      &quot;mask&quot;: &quot;255.255.255.0&quot;,
-      &quot;dns_id&quot;: 113629430,
-      &quot;network&quot;: &quot;2.3.4.0&quot;,
-      &quot;id&quot;: 980190962,
       &quot;tftp_id&quot;: 298486374,
-      &quot;dns_primary&quot;: null,
-      &quot;name&quot;: &quot;one&quot;,
-      &quot;gateway&quot;: null,
-      &quot;from&quot;: null,
-      &quot;priority&quot;: null,
-      &quot;vlanid&quot;: &quot;41&quot;,
-      &quot;dns_secondary&quot;: null,
+      &quot;id&quot;: 980190962,
       &quot;dhcp_id&quot;: 980190962,
+      &quot;dns_id&quot;: 113629430,
+      &quot;dns_primary&quot;: null,
+      &quot;vlanid&quot;: &quot;41&quot;,
+      &quot;mask&quot;: &quot;255.255.255.0&quot;,
+      &quot;from&quot;: null,
+      &quot;gateway&quot;: null,
       &quot;to&quot;: null
     }
   },
   {
     &quot;subnet&quot;: {
+      &quot;priority&quot;: null,
+      &quot;name&quot;: &quot;two&quot;,
+      &quot;network&quot;: &quot;3.3.4.0&quot;,
+      &quot;dns_secondary&quot;: null,
       &quot;domain_ids&quot;: [
         534821992
       ],
-      &quot;mask&quot;: &quot;255.255.255.0&quot;,
-      &quot;dns_id&quot;: null,
-      &quot;network&quot;: &quot;3.3.4.0&quot;,
-      &quot;id&quot;: 298486374,
       &quot;tftp_id&quot;: 298486374,
-      &quot;dns_primary&quot;: null,
-      &quot;name&quot;: &quot;two&quot;,
-      &quot;gateway&quot;: null,
-      &quot;from&quot;: null,
-      &quot;priority&quot;: null,
-      &quot;vlanid&quot;: &quot;42&quot;,
-      &quot;dns_secondary&quot;: null,
+      &quot;id&quot;: 298486374,
       &quot;dhcp_id&quot;: 980190962,
+      &quot;dns_id&quot;: null,
+      &quot;dns_primary&quot;: null,
+      &quot;vlanid&quot;: &quot;42&quot;,
+      &quot;mask&quot;: &quot;255.255.255.0&quot;,
+      &quot;from&quot;: null,
+      &quot;gateway&quot;: null,
       &quot;to&quot;: null
     }
   },
   {
     &quot;subnet&quot;: {
-      &quot;domain_ids&quot;: [],
-      &quot;mask&quot;: &quot;255.255.255.0&quot;,
-      &quot;dns_id&quot;: null,
-      &quot;network&quot;: &quot;3.3.4.3&quot;,
-      &quot;id&quot;: 113629430,
-      &quot;tftp_id&quot;: 298486374,
-      &quot;dns_primary&quot;: null,
-      &quot;name&quot;: &quot;three&quot;,
-      &quot;gateway&quot;: null,
-      &quot;from&quot;: null,
       &quot;priority&quot;: null,
-      &quot;vlanid&quot;: &quot;43&quot;,
+      &quot;name&quot;: &quot;three&quot;,
+      &quot;network&quot;: &quot;3.3.4.3&quot;,
       &quot;dns_secondary&quot;: null,
+      &quot;domain_ids&quot;: [],
+      &quot;tftp_id&quot;: 298486374,
+      &quot;id&quot;: 113629430,
       &quot;dhcp_id&quot;: 980190962,
+      &quot;dns_id&quot;: null,
+      &quot;dns_primary&quot;: null,
+      &quot;vlanid&quot;: &quot;43&quot;,
+      &quot;mask&quot;: &quot;255.255.255.0&quot;,
+      &quot;from&quot;: null,
+      &quot;gateway&quot;: null,
       &quot;to&quot;: null
     }
   }
@@ -229,37 +229,37 @@
 200
 {
   &quot;subnet&quot;: {
+    &quot;priority&quot;: null,
+    &quot;name&quot;: &quot;one&quot;,
+    &quot;network&quot;: &quot;2.3.4.0&quot;,
+    &quot;dns&quot;: {
+      &quot;url&quot;: &quot;http://else.where:4567&quot;,
+      &quot;name&quot;: &quot;DNS Proxy&quot;,
+      &quot;id&quot;: 113629430
+    },
+    &quot;dns_secondary&quot;: null,
     &quot;domain_ids&quot;: [
       822172901
     ],
-    &quot;mask&quot;: &quot;255.255.255.0&quot;,
-    &quot;dns_id&quot;: 113629430,
-    &quot;network&quot;: &quot;2.3.4.0&quot;,
-    &quot;tftp&quot;: {
-      &quot;id&quot;: 298486374,
-      &quot;url&quot;: &quot;http://somewhere.else&quot;,
-      &quot;name&quot;: &quot;TFTP Proxy&quot;
-    },
-    &quot;dhcp&quot;: {
-      &quot;id&quot;: 980190962,
-      &quot;url&quot;: &quot;https://somewhere.net:8443&quot;,
-      &quot;name&quot;: &quot;DHCP Proxy&quot;
-    },
-    &quot;id&quot;: 980190962,
     &quot;tftp_id&quot;: 298486374,
-    &quot;dns&quot;: {
-      &quot;id&quot;: 113629430,
-      &quot;url&quot;: &quot;http://else.where:4567&quot;,
-      &quot;name&quot;: &quot;DNS Proxy&quot;
+    &quot;id&quot;: 980190962,
+    &quot;dhcp_id&quot;: 980190962,
+    &quot;dns_id&quot;: 113629430,
+    &quot;dhcp&quot;: {
+      &quot;url&quot;: &quot;https://somewhere.net:8443&quot;,
+      &quot;name&quot;: &quot;DHCP Proxy&quot;,
+      &quot;id&quot;: 980190962
     },
     &quot;dns_primary&quot;: null,
-    &quot;name&quot;: &quot;one&quot;,
-    &quot;gateway&quot;: null,
-    &quot;from&quot;: null,
-    &quot;priority&quot;: null,
     &quot;vlanid&quot;: &quot;41&quot;,
-    &quot;dns_secondary&quot;: null,
-    &quot;dhcp_id&quot;: 980190962,
+    &quot;mask&quot;: &quot;255.255.255.0&quot;,
+    &quot;tftp&quot;: {
+      &quot;url&quot;: &quot;http://somewhere.else&quot;,
+      &quot;name&quot;: &quot;TFTP Proxy&quot;,
+      &quot;id&quot;: 298486374
+    },
+    &quot;from&quot;: null,
+    &quot;gateway&quot;: null,
     &quot;to&quot;: null
   }
 }</pre>
@@ -319,31 +319,31 @@
           <pre class="prettyprint">POST /api/subnets
 {
   &quot;subnet&quot;: {
-    &quot;mask&quot;: &quot;255.255.255.0&quot;,
+    &quot;name&quot;: &quot;QA2&quot;,
     &quot;network&quot;: &quot;10.35.2.27&quot;,
-    &quot;name&quot;: &quot;QA2&quot;
+    &quot;mask&quot;: &quot;255.255.255.0&quot;
   }
 }
 200
 {
   &quot;subnet&quot;: {
-    &quot;domain_ids&quot;: [],
-    &quot;mask&quot;: &quot;255.255.255.0&quot;,
-    &quot;dns_id&quot;: null,
+    &quot;priority&quot;: null,
+    &quot;name&quot;: &quot;QA2&quot;,
+    &quot;dns&quot;: null,
     &quot;network&quot;: &quot;10.35.2.27&quot;,
-    &quot;tftp&quot;: null,
-    &quot;dhcp&quot;: null,
+    &quot;dns_secondary&quot;: null,
+    &quot;domain_ids&quot;: [],
     &quot;id&quot;: 980190963,
     &quot;tftp_id&quot;: null,
-    &quot;dns&quot;: null,
-    &quot;dns_primary&quot;: null,
-    &quot;name&quot;: &quot;QA2&quot;,
-    &quot;from&quot;: null,
-    &quot;gateway&quot;: null,
-    &quot;priority&quot;: null,
-    &quot;vlanid&quot;: null,
-    &quot;dns_secondary&quot;: null,
     &quot;dhcp_id&quot;: null,
+    &quot;dns_id&quot;: null,
+    &quot;dhcp&quot;: null,
+    &quot;dns_primary&quot;: null,
+    &quot;vlanid&quot;: null,
+    &quot;mask&quot;: &quot;255.255.255.0&quot;,
+    &quot;tftp&quot;: null,
+    &quot;gateway&quot;: null,
+    &quot;from&quot;: null,
     &quot;to&quot;: null
   }
 }</pre>
@@ -628,37 +628,37 @@
 200
 {
   &quot;subnet&quot;: {
+    &quot;priority&quot;: null,
+    &quot;name&quot;: &quot;one&quot;,
+    &quot;dns&quot;: {
+      &quot;url&quot;: &quot;http://else.where:4567&quot;,
+      &quot;name&quot;: &quot;DNS Proxy&quot;,
+      &quot;id&quot;: 113629430
+    },
+    &quot;network&quot;: &quot;2.3.4.0&quot;,
+    &quot;dns_secondary&quot;: null,
     &quot;domain_ids&quot;: [
       822172901
     ],
-    &quot;mask&quot;: &quot;255.255.255.0&quot;,
-    &quot;dns_id&quot;: 113629430,
-    &quot;network&quot;: &quot;2.3.4.0&quot;,
-    &quot;tftp&quot;: {
-      &quot;id&quot;: 298486374,
-      &quot;url&quot;: &quot;http://somewhere.else&quot;,
-      &quot;name&quot;: &quot;TFTP Proxy&quot;
-    },
-    &quot;dhcp&quot;: {
-      &quot;id&quot;: 980190962,
-      &quot;url&quot;: &quot;https://somewhere.net:8443&quot;,
-      &quot;name&quot;: &quot;DHCP Proxy&quot;
-    },
     &quot;id&quot;: 980190962,
     &quot;tftp_id&quot;: 298486374,
-    &quot;dns&quot;: {
-      &quot;id&quot;: 113629430,
-      &quot;url&quot;: &quot;http://else.where:4567&quot;,
-      &quot;name&quot;: &quot;DNS Proxy&quot;
+    &quot;dhcp_id&quot;: 980190962,
+    &quot;dns_id&quot;: 113629430,
+    &quot;dhcp&quot;: {
+      &quot;url&quot;: &quot;https://somewhere.net:8443&quot;,
+      &quot;name&quot;: &quot;DHCP Proxy&quot;,
+      &quot;id&quot;: 980190962
     },
     &quot;dns_primary&quot;: null,
-    &quot;name&quot;: &quot;one&quot;,
-    &quot;from&quot;: null,
-    &quot;gateway&quot;: null,
-    &quot;priority&quot;: null,
     &quot;vlanid&quot;: &quot;41&quot;,
-    &quot;dns_secondary&quot;: null,
-    &quot;dhcp_id&quot;: 980190962,
+    &quot;mask&quot;: &quot;255.255.255.0&quot;,
+    &quot;tftp&quot;: {
+      &quot;url&quot;: &quot;http://somewhere.else&quot;,
+      &quot;name&quot;: &quot;TFTP Proxy&quot;,
+      &quot;id&quot;: 298486374
+    },
+    &quot;gateway&quot;: null,
+    &quot;from&quot;: null,
     &quot;to&quot;: null
   }
 }</pre>

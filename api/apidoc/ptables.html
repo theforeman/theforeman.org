@@ -60,34 +60,34 @@
 [
   {
     &quot;ptable&quot;: {
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+      &quot;name&quot;: &quot;default&quot;,
       &quot;id&quot;: 980190962,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;name&quot;: &quot;default&quot;
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
     }
   },
   {
     &quot;ptable&quot;: {
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+      &quot;name&quot;: &quot;four&quot;,
       &quot;id&quot;: 281110143,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;name&quot;: &quot;four&quot;
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
     }
   },
   {
     &quot;ptable&quot;: {
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+      &quot;name&quot;: &quot;suse default&quot;,
       &quot;id&quot;: 859751735,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;name&quot;: &quot;suse default&quot;
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
     }
   },
   {
     &quot;ptable&quot;: {
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+      &quot;name&quot;: &quot;ubuntu default&quot;,
       &quot;id&quot;: 1011586618,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;name&quot;: &quot;ubuntu default&quot;
+      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
     }
   }
 ]</pre>
@@ -200,10 +200,10 @@
 200
 {
   &quot;ptable&quot;: {
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;name&quot;: &quot;default&quot;,
     &quot;id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;name&quot;: &quot;default&quot;
+    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
   }
 }</pre>
 
@@ -262,15 +262,15 @@
           <pre class="prettyprint">POST /api/ptables
 {
   &quot;ptable&quot;: {
-    &quot;layout&quot;: &quot;d-i partman-auto/disk&quot;,
-    &quot;name&quot;: &quot;ptable_test&quot;
+    &quot;name&quot;: &quot;ptable_test&quot;,
+    &quot;layout&quot;: &quot;d-i partman-auto/disk&quot;
   }
 }
 201
 {
   &quot;ptable&quot;: {
-    &quot;id&quot;: 1011586619,
-    &quot;name&quot;: &quot;ptable_test&quot;
+    &quot;name&quot;: &quot;ptable_test&quot;,
+    &quot;id&quot;: 1011586619
   }
 }</pre>
 
@@ -381,8 +381,8 @@
 200
 {
   &quot;ptable&quot;: {
-    &quot;id&quot;: 980190962,
-    &quot;name&quot;: &quot;default&quot;
+    &quot;name&quot;: &quot;default&quot;,
+    &quot;id&quot;: 980190962
   }
 }</pre>
 

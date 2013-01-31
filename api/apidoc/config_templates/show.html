@@ -44,14 +44,14 @@
 200
 {
   &quot;config_template&quot;: {
-    &quot;snippet&quot;: null,
-    &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ks=&lt;%= foreman_url(\&quot;kickstart\&quot;)%&gt; ksdevice=bootif network kssendmac&quot;,
+    &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
     &quot;id&quot;: 1007981701,
     &quot;audit_comment&quot;: null,
-    &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
+    &quot;snippet&quot;: null,
+    &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ks=&lt;%= foreman_url(\&quot;kickstart\&quot;)%&gt; ksdevice=bootif network kssendmac&quot;,
     &quot;template_kind&quot;: {
-      &quot;id&quot;: 452984334,
-      &quot;name&quot;: &quot;PXELinux&quot;
+      &quot;name&quot;: &quot;PXELinux&quot;,
+      &quot;id&quot;: 452984334
     }
   }
 }</pre>

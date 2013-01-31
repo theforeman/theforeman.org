@@ -60,24 +60,24 @@
 [
   {
     &quot;bookmark&quot;: {
-      &quot;id&quot;: 298486374,
-      &quot;controller&quot;: &quot;hosts&quot;,
-      &quot;public&quot;: false,
       &quot;name&quot;: &quot;bar&quot;,
       &quot;query&quot;: &quot;bar=car&quot;,
-      &quot;owner_type&quot;: null,
-      &quot;owner_id&quot;: null
+      &quot;id&quot;: 298486374,
+      &quot;owner_id&quot;: null,
+      &quot;public&quot;: false,
+      &quot;controller&quot;: &quot;hosts&quot;,
+      &quot;owner_type&quot;: null
     }
   },
   {
     &quot;bookmark&quot;: {
-      &quot;id&quot;: 980190962,
-      &quot;controller&quot;: &quot;hosts&quot;,
-      &quot;public&quot;: true,
       &quot;name&quot;: &quot;foo&quot;,
       &quot;query&quot;: &quot;foo=boo&quot;,
-      &quot;owner_type&quot;: null,
-      &quot;owner_id&quot;: null
+      &quot;id&quot;: 980190962,
+      &quot;owner_id&quot;: null,
+      &quot;public&quot;: true,
+      &quot;controller&quot;: &quot;hosts&quot;,
+      &quot;owner_type&quot;: null
     }
   }
 ]</pre>
@@ -156,13 +156,13 @@
 200
 {
   &quot;bookmark&quot;: {
-    &quot;id&quot;: 980190962,
-    &quot;controller&quot;: &quot;hosts&quot;,
-    &quot;public&quot;: true,
     &quot;name&quot;: &quot;foo&quot;,
     &quot;query&quot;: &quot;foo=boo&quot;,
-    &quot;owner_type&quot;: null,
-    &quot;owner_id&quot;: null
+    &quot;id&quot;: 980190962,
+    &quot;owner_id&quot;: null,
+    &quot;public&quot;: true,
+    &quot;controller&quot;: &quot;hosts&quot;,
+    &quot;owner_type&quot;: null
   }
 }</pre>
 
@@ -221,22 +221,22 @@
           <pre class="prettyprint">POST /api/bookmarks
 {
   &quot;bookmark&quot;: {
-    &quot;controller&quot;: &quot;hosts&quot;,
-    &quot;public&quot;: false,
+    &quot;query&quot;: &quot;bar&quot;,
     &quot;name&quot;: &quot;foo-bar&quot;,
-    &quot;query&quot;: &quot;bar&quot;
+    &quot;public&quot;: false,
+    &quot;controller&quot;: &quot;hosts&quot;
   }
 }
 200
 {
   &quot;bookmark&quot;: {
-    &quot;id&quot;: 980190963,
-    &quot;controller&quot;: &quot;hosts&quot;,
-    &quot;public&quot;: false,
     &quot;name&quot;: &quot;foo-bar&quot;,
     &quot;query&quot;: &quot;bar&quot;,
-    &quot;owner_type&quot;: &quot;User&quot;,
-    &quot;owner_id&quot;: 886836129
+    &quot;id&quot;: 980190963,
+    &quot;owner_id&quot;: 886836129,
+    &quot;public&quot;: false,
+    &quot;controller&quot;: &quot;hosts&quot;,
+    &quot;owner_type&quot;: &quot;User&quot;
   }
 }</pre>
 
@@ -363,16 +363,16 @@
 200
 {
   &quot;bookmark&quot;: {
+    &quot;name&quot;: &quot;foo&quot;,
+    &quot;query&quot;: &quot;foo=boo&quot;,
     &quot;user&quot;: {
-      &quot;email&quot;: &quot;apiadmin@someware.com&quot;,
+      &quot;name&quot;: &quot;apiadmin User&quot;,
       &quot;login&quot;: &quot;apiadmin&quot;,
-      &quot;name&quot;: &quot;apiadmin User&quot;
+      &quot;email&quot;: &quot;apiadmin@someware.com&quot;
     },
     &quot;id&quot;: 980190962,
-    &quot;controller&quot;: &quot;hosts&quot;,
     &quot;public&quot;: true,
-    &quot;name&quot;: &quot;foo&quot;,
-    &quot;query&quot;: &quot;foo=boo&quot;
+    &quot;controller&quot;: &quot;hosts&quot;
   }
 }</pre>
 
@@ -512,13 +512,13 @@
 200
 {
   &quot;bookmark&quot;: {
-    &quot;id&quot;: 980190962,
-    &quot;controller&quot;: &quot;hosts&quot;,
-    &quot;public&quot;: true,
-    &quot;name&quot;: &quot;foo&quot;,
     &quot;query&quot;: &quot;foo=boo&quot;,
-    &quot;owner_type&quot;: null,
-    &quot;owner_id&quot;: null
+    &quot;name&quot;: &quot;foo&quot;,
+    &quot;id&quot;: 980190962,
+    &quot;public&quot;: true,
+    &quot;owner_id&quot;: null,
+    &quot;controller&quot;: &quot;hosts&quot;,
+    &quot;owner_type&quot;: null
   }
 }</pre>
 
