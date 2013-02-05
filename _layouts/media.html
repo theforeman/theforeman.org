@@ -88,6 +88,8 @@ $(function() {
         content.each(function(i){$(this).attr('src', $(this).attr('link'))});
       }
     });
+  var activeTab = $('[href=' + location.hash + ']');
+  activeTab && activeTab.tab('show');
 });
 </script>
 
