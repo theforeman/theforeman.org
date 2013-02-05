@@ -3,7 +3,14 @@
 <body>
 <div id="main">
     <div id="content" class="container">
-        <div id="myCarousel" class="carousel slide">
+      <ul class="nav nav-tabs" data-tabs="tabs" id="tabs">
+        <li class="active"><a href="#screenshots" data-toggle="tab">Screenshots</a></li>
+        <li><a href="#videos" data-toggle="tab">Videos</a></li>
+        <li><a href="#presentations" data-toggle="tab">Presentations</a></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="screenshots">
+          <div id="myCarousel" class="carousel slide">
             <div class="carousel-inner">
                 <div class="item">
                     <img src="static/images/screenshots/dashboard.png" alt="">
@@ -43,9 +50,43 @@
             </div>
             <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
             <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+          </div>
         </div>
+        <div class="tab-pane" id="videos">
+          <h2>Puppet Conf 2012 - Ohad Levy </h2>
+          <iframe width="420" height="315" link="http://www.youtube.com/embed/AeVVezzZ-4w" frameborder="0" allowfullscreen></iframe>
+          <h2> Prametriezed Classes - Greg Shutcliffe </h2>
+          <iframe width="420" height="315" link="http://www.youtube.com/embed/Ksr0tilbmcc" frameborder="0" allowfullscreen></iframe>
+          <h2>Provisioning a web-server - Romain Vrignaud </h2>
+          <iframe width="420" height="315" link="http://www.youtube.com/embed/FYsHZbCQzH8" frameborder="0" allowfullscreen></iframe>
+          <h2>OpenStack integration - Dizz</h2>
+          <iframe width="420" height="315" link="http://www.youtube.com/embed/DhghHJ_9h1U" frameborder="0" allowfullscreen></iframe>
+          <h2>Puppet NYC 2013 - Sam Kottler</h2>
+          <iframe width="420" height="315" link="http://www.youtube.com/embed/o5BjZodH9Fo" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="tab-pane" id="presentations">
+          <iframe width="550" height="400" link="http://prezi.com/embed/btaqhly8_rx7/?bgcolor=ffffff&amp;lock_to_path=1&amp;autoplay=no&amp;autohide_ctrls=0" frameBorder="0"></iframe>
+          <br>
+          <iframe width="550" height="400" link="http://prezi.com/embed/tvbxtcszhus1/?bgcolor=ffffff&amp;lock_to_path=1&amp;autoplay=no&amp;autohide_ctrls=0" frameBorder="0"></iframe>
+        </div>
+      </div>
     </div>
 </div>
 </body>
+
+<script type="text/javascript">
+// AJAX load Iframe
+$(function() {
+    $('#tabs').bind('show', function(e) {
+      $('iframe').attr('src', '');
+      var contentID = e.target.toString().match(/#.+/gi)[0]; //get anchor
+      var content = $(contentID + ' iframe')
+       //load content for selected tab
+      if(contentID == "#videos" || contentID == "#presentations"){
+        content.each(function(i){$(this).attr('src', $(this).attr('link'))});
+      }
+    });
+});
+</script>
 
 {% include footer.html %}
