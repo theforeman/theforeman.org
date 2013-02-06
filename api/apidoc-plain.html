@@ -161,6 +161,7 @@
       <li><a href='#reports-index'>index</a></li>
       <li><a href='#reports-show'>show</a></li>
       <li><a href='#reports-destroy'>destroy</a></li>
+      <li><a href='#reports-last'>last</a></li>
   </ul>
   <h4><a href='#roles'>Roles</a></h4>
   <ul>
@@ -191,13 +192,6 @@
       <li><a href='#subnets-create'>create</a></li>
       <li><a href='#subnets-update'>update</a></li>
       <li><a href='#subnets-destroy'>destroy</a></li>
-  </ul>
-  <h4><a href='#template_combinations'>Template combinations</a></h4>
-  <ul>
-      <li><a href='#template_combinations-index'>index</a></li>
-      <li><a href='#template_combinations-create'>create</a></li>
-      <li><a href='#template_combinations-show'>show</a></li>
-      <li><a href='#template_combinations-destroy'>destroy</a></li>
   </ul>
   <h4><a href='#template_kinds'>Template kinds</a></h4>
   <ul>
@@ -300,7 +294,6 @@
           [ Must be String ]
       </small>
       <p>filter results</p>
-
     </li>
     
     <li>
@@ -311,7 +304,6 @@
           [ Must be String ]
       </small>
       <p>sort results</p>
-
     </li>
     
     <li>
@@ -322,7 +314,6 @@
           [ Must be String ]
       </small>
       <p>paginate results</p>
-
     </li>
     
     <li>
@@ -333,7 +324,6 @@
           [ Must be String ]
       </small>
       <p>number of entries per request</p>
-
     </li>
     
 </ul>
@@ -452,8 +442,7 @@
         
           [ Must be Array ]
       </small>
-      <p>Operatingsystem ID&#39;s</p>
-
+      <p>Operatingsystem ID&#8217;s</p>
     </li>
     
 </ul>
@@ -530,8 +519,7 @@
         
           [ Must be Array ]
       </small>
-      <p>Operatingsystem ID&#39;s</p>
-
+      <p>Operatingsystem ID&#8217;s</p>
     </li>
     
 </ul>
@@ -607,6 +595,11 @@
             <br>
             <small>List all audits.</small>
           </h4>
+          <h4>
+              GET /api/hosts/:host_id/audits
+            <br>
+            <small>List all audits for a given host.</small>
+          </h4>
       </div>
 
       <div>
@@ -652,7 +645,6 @@
           [ Must be String ]
       </small>
       <p>filter results</p>
-
     </li>
     
     <li>
@@ -663,7 +655,6 @@
           [ Must be String ]
       </small>
       <p>sort results</p>
-
     </li>
     
     <li>
@@ -674,7 +665,6 @@
           [ Must be String ]
       </small>
       <p>paginate results</p>
-
     </li>
     
     <li>
@@ -685,7 +675,6 @@
           [ Must be String ]
       </small>
       <p>number of entries per request</p>
-
     </li>
     
 </ul>
@@ -817,7 +806,6 @@
           [ Must be String ]
       </small>
       <p>paginate results</p>
-
     </li>
     
     <li>
@@ -828,7 +816,6 @@
           [ Must be String ]
       </small>
       <p>number of entries per request</p>
-
     </li>
     
 </ul>
@@ -975,7 +962,6 @@
           [ Must be a number. ]
       </small>
       <p>defaults to 389</p>
-
     </li>
     
     <li>
@@ -1006,7 +992,6 @@
           [ Must be String ]
       </small>
       <p>required if onthefly_register is true</p>
-
     </li>
     
     <li>
@@ -1017,7 +1002,6 @@
           [ Must be String ]
       </small>
       <p>required if onthefly_register is true</p>
-
     </li>
     
     <li>
@@ -1028,7 +1012,6 @@
           [ Must be String ]
       </small>
       <p>required if onthefly_register is true</p>
-
     </li>
     
     <li>
@@ -1039,7 +1022,6 @@
           [ Must be String ]
       </small>
       <p>required if onthefly_register is true</p>
-
     </li>
     
     <li>
@@ -1050,7 +1032,6 @@
           [ Must be String ]
       </small>
       <p>required if onthefly_register is true</p>
-
     </li>
     
     <li>
@@ -1171,7 +1152,6 @@
           [ Must be a number. ]
       </small>
       <p>defaults to 389</p>
-
     </li>
     
     <li>
@@ -1202,7 +1182,6 @@
           [ Must be String ]
       </small>
       <p>required if onthefly_register is true</p>
-
     </li>
     
     <li>
@@ -1213,7 +1192,6 @@
           [ Must be String ]
       </small>
       <p>required if onthefly_register is true</p>
-
     </li>
     
     <li>
@@ -1224,7 +1202,6 @@
           [ Must be String ]
       </small>
       <p>required if onthefly_register is true</p>
-
     </li>
     
     <li>
@@ -1235,7 +1212,6 @@
           [ Must be String ]
       </small>
       <p>required if onthefly_register is true</p>
-
     </li>
     
     <li>
@@ -1246,7 +1222,6 @@
           [ Must be String ]
       </small>
       <p>required if onthefly_register is true</p>
-
     </li>
     
     <li>
@@ -1398,7 +1373,6 @@
           [ Must be String ]
       </small>
       <p>paginate results</p>
-
     </li>
     
     <li>
@@ -1409,7 +1383,6 @@
           [ Must be String ]
       </small>
       <p>number of entries per request</p>
-
     </li>
     
 </ul>
@@ -1765,7 +1738,6 @@
           [ Must be String ]
       </small>
       <p>filter results</p>
-
     </li>
     
     <li>
@@ -1776,7 +1748,6 @@
           [ Must be String ]
       </small>
       <p>sort results</p>
-
     </li>
     
     <li>
@@ -1787,7 +1758,6 @@
           [ Must be String ]
       </small>
       <p>paginate results</p>
-
     </li>
     
     <li>
@@ -1798,7 +1768,6 @@
           [ Must be String ]
       </small>
       <p>number of entries per request</p>
-
     </li>
     
 </ul>
@@ -2122,7 +2091,6 @@
           [ Must be String ]
       </small>
       <p>filter results</p>
-
     </li>
     
     <li>
@@ -2133,7 +2101,6 @@
           [ Must be String ]
       </small>
       <p>sort results</p>
-
     </li>
     
     <li>
@@ -2144,7 +2111,6 @@
           [ Must be String ]
       </small>
       <p>paginate results</p>
-
     </li>
     
     <li>
@@ -2155,7 +2121,6 @@
           [ Must be String ]
       </small>
       <p>number of entries per request</p>
-
     </li>
     
 </ul>
@@ -2281,7 +2246,6 @@
           [ Must be String ]
       </small>
       <p>Providers include Libvirt, Ovirt, EC2, Vmware, Openstack, Rackspace</p>
-
     </li>
     
     <li>
@@ -2292,7 +2256,6 @@
           [ Must be String ]
       </small>
       <p>URL for Libvirt, Ovirt, and Openstack</p>
-
     </li>
     
     <li>
@@ -2313,7 +2276,6 @@
           [ Must be String ]
       </small>
       <p>Username for Ovirt, EC2, Vmware, Openstack. Access Key for EC2.</p>
-
     </li>
     
     <li>
@@ -2324,7 +2286,6 @@
           [ Must be String ]
       </small>
       <p>Password for Ovirt, EC2, Vmware, Openstack. Secret key for EC2</p>
-
     </li>
     
     <li>
@@ -2335,7 +2296,6 @@
           [ Must be String ]
       </small>
       <p>for Ovirt, Vmware Datacenter</p>
-
     </li>
     
     <li>
@@ -2346,7 +2306,6 @@
           [ Must be String ]
       </small>
       <p>for EC2 only</p>
-
     </li>
     
     <li>
@@ -2357,7 +2316,6 @@
           [ Must be String ]
       </small>
       <p>for Openstack only</p>
-
     </li>
     
     <li>
@@ -2368,7 +2326,6 @@
           [ Must be String ]
       </small>
       <p>for Vmware</p>
-
     </li>
     
 </ul>
@@ -2455,7 +2412,6 @@
           [ Must be String ]
       </small>
       <p>Providers include Libvirt, Ovirt, EC2, Vmware, Openstack, Rackspace</p>
-
     </li>
     
     <li>
@@ -2466,7 +2422,6 @@
           [ Must be String ]
       </small>
       <p>URL for Libvirt, Ovirt, and Openstack</p>
-
     </li>
     
     <li>
@@ -2487,7 +2442,6 @@
           [ Must be String ]
       </small>
       <p>Username for Ovirt, EC2, Vmware, Openstack. Access Key for EC2.</p>
-
     </li>
     
     <li>
@@ -2498,7 +2452,6 @@
           [ Must be String ]
       </small>
       <p>Password for Ovirt, EC2, Vmware, Openstack. Secret key for EC2</p>
-
     </li>
     
     <li>
@@ -2509,7 +2462,6 @@
           [ Must be String ]
       </small>
       <p>for Ovirt, Vmware Datacenter</p>
-
     </li>
     
     <li>
@@ -2520,7 +2472,6 @@
           [ Must be String ]
       </small>
       <p>for EC2 only</p>
-
     </li>
     
     <li>
@@ -2531,7 +2482,6 @@
           [ Must be String ]
       </small>
       <p>for Openstack only</p>
-
     </li>
     
     <li>
@@ -2542,7 +2492,6 @@
           [ Must be String ]
       </small>
       <p>for Vmware</p>
-
     </li>
     
 </ul>
@@ -2747,7 +2696,6 @@
           [ Must be String ]
       </small>
       <p>filter results</p>
-
     </li>
     
     <li>
@@ -2758,7 +2706,6 @@
           [ Must be String ]
       </small>
       <p>sort results</p>
-
     </li>
     
     <li>
@@ -2769,7 +2716,6 @@
           [ Must be String ]
       </small>
       <p>paginate results</p>
-
     </li>
     
     <li>
@@ -2780,7 +2726,6 @@
           [ Must be String ]
       </small>
       <p>number of entries per request</p>
-
     </li>
     
 </ul>
@@ -2893,7 +2838,6 @@
           [ Must be String ]
       </small>
       <p>template name</p>
-
     </li>
     
     <li>
@@ -2934,7 +2878,6 @@
           [ Must be a number. ]
       </small>
       <p>not relevant for snippet</p>
-
     </li>
     
     <li>
@@ -2944,8 +2887,7 @@
         
           [ Must be Array ]
       </small>
-      <p>Array of template combinations (hostgroup<em>id, environment</em>id)</p>
-
+      <p>Array of template combinations (hostgroup_id, environment_id)</p>
     </li>
     
     <li>
@@ -2956,7 +2898,6 @@
           [ Must be Array ]
       </small>
       <p>Array of operating systems ID to associate the template with</p>
-
     </li>
     
 </ul>
@@ -3033,7 +2974,6 @@
           [ Must be String ]
       </small>
       <p>template name</p>
-
     </li>
     
     <li>
@@ -3074,7 +3014,6 @@
           [ Must be a number. ]
       </small>
       <p>not relevant for snippet</p>
-
     </li>
     
     <li>
@@ -3084,8 +3023,7 @@
         
           [ Must be Array ]
       </small>
-      <p>Array of template combinations (hostgroup<em>id, environment</em>id)</p>
-
+      <p>Array of template combinations (hostgroup_id, environment_id)</p>
     </li>
     
     <li>
@@ -3096,7 +3034,6 @@
           [ Must be Array ]
       </small>
       <p>Array of operating systems ID to associate the template with</p>
-
     </li>
     
 </ul>
@@ -3132,7 +3069,6 @@
           [ Must be String ]
       </small>
       <p>template version</p>
-
     </li>
     
 </ul>
@@ -3273,7 +3209,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
           [ Must be String ]
       </small>
       <p>filter results</p>
-
     </li>
     
 </ul>
@@ -3290,13 +3225,7 @@ PXE Default file has been deployed to all Smart Proxies</pre>
     </h2>
   </div>
 
-    <div><p>Foreman considers a domain and a DNS zone as the same thing. That is, if you
-are planning to manage a site where all the machines are or the form
-<i>hostname</i>.<b>somewhere.com</b> then the domain is <b>somewhere.com</b>.
-This allows Foreman to associate a puppet variable with a domain/site
-and automatically append this variable to all external node requests made
-by machines at that site.</p>
-</div>
+    <div><p>Foreman considers a domain and a DNS zone as the same thing. That is, if you are planning to manage a site where all the machines are or the form <i>hostname</i>.<b>somewhere.com</b> then the domain is <b>somewhere.com</b>. This allows Foreman to associate a puppet variable with a domain/site and automatically append this variable to all external node requests made by machines at that site.</p></div>
 
   <div>
 
@@ -3373,7 +3302,6 @@ by machines at that site.</p>
           [ Must be String ]
       </small>
       <p>Filter results</p>
-
     </li>
     
     <li>
@@ -3384,7 +3312,6 @@ by machines at that site.</p>
           [ Must be String ]
       </small>
       <p>Sort results</p>
-
     </li>
     
     <li>
@@ -3395,7 +3322,6 @@ by machines at that site.</p>
           [ Must be String ]
       </small>
       <p>paginate results</p>
-
     </li>
     
     <li>
@@ -3406,7 +3332,6 @@ by machines at that site.</p>
           [ Must be String ]
       </small>
       <p>number of entries per request</p>
-
     </li>
     
 </ul>
@@ -3453,7 +3378,6 @@ by machines at that site.</p>
           [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       <p>May be numerical id or domain name</p>
-
     </li>
     
 </ul>
@@ -3474,10 +3398,7 @@ by machines at that site.</p>
       </div>
 
       <div>
-        <p>The <b>fullname</b> field is used for human readability in reports
-and other pages that refer to domains, and also available as
-an external node parameter</p>
-
+        <p>The <b>fullname</b> field is used for human readability in reports and other pages that refer to domains, and also available as an external node parameter</p>
           <h4>Examples</h4>
             <pre class="wiki">POST /api/domains
 {
@@ -3514,7 +3435,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>The full DNS Domain name</p>
-
     </li>
     
     <li>
@@ -3525,7 +3445,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>Full name describing the domain</p>
-
     </li>
     
     <li>
@@ -3536,7 +3455,6 @@ an external node parameter</p>
           [ Must be a number. ]
       </small>
       <p>DNS Proxy to use within this domain</p>
-
     </li>
     
     <li>
@@ -3547,7 +3465,6 @@ an external node parameter</p>
           [ Must be Array ]
       </small>
       <p>Array of parameters (name, value)</p>
-
     </li>
     
 </ul>
@@ -3624,7 +3541,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>The full DNS Domain name</p>
-
     </li>
     
     <li>
@@ -3635,7 +3551,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>Full name describing the domain</p>
-
     </li>
     
     <li>
@@ -3646,7 +3561,6 @@ an external node parameter</p>
           [ Must be a number. ]
       </small>
       <p>DNS Proxy to use within this domain</p>
-
     </li>
     
     <li>
@@ -3657,7 +3571,6 @@ an external node parameter</p>
           [ Must be Array ]
       </small>
       <p>Array of parameters (name, value)</p>
-
     </li>
     
 </ul>
@@ -3778,7 +3691,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>Filter results</p>
-
     </li>
     
     <li>
@@ -3789,7 +3701,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>Sort results</p>
-
     </li>
     
     <li>
@@ -3800,7 +3711,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>paginate results</p>
-
     </li>
     
     <li>
@@ -3811,7 +3721,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>number of entries per request</p>
-
     </li>
     
 </ul>
@@ -4057,6 +3966,11 @@ an external node parameter</p>
             <br>
             <small>List all fact values.</small>
           </h4>
+          <h4>
+              GET /api/hosts/:host_id/facts
+            <br>
+            <small>List all fact values of a given host.</small>
+          </h4>
       </div>
 
       <div>
@@ -4082,7 +3996,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>filter results</p>
-
     </li>
     
     <li>
@@ -4093,7 +4006,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>sort results</p>
-
     </li>
     
     <li>
@@ -4104,7 +4016,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>paginate results</p>
-
     </li>
     
     <li>
@@ -4115,7 +4026,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>number of entries per request</p>
-
     </li>
     
 </ul>
@@ -4303,7 +4213,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>filter results</p>
-
     </li>
     
     <li>
@@ -4314,7 +4223,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>sort results</p>
-
     </li>
     
     <li>
@@ -4325,7 +4233,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>paginate results</p>
-
     </li>
     
     <li>
@@ -4336,7 +4243,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>number of entries per request</p>
-
     </li>
     
 </ul>
@@ -4915,7 +4821,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>Filter results</p>
-
     </li>
     
     <li>
@@ -4926,7 +4831,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>Sort results</p>
-
     </li>
     
     <li>
@@ -4937,7 +4841,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>paginate results</p>
-
     </li>
     
     <li>
@@ -4948,7 +4851,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>number of entries per request</p>
-
     </li>
     
 </ul>
@@ -5169,7 +5071,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>not required if using a subnet with dhcp proxy</p>
-
     </li>
     
     <li>
@@ -5180,7 +5081,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>not required if its a virtual machine</p>
-
     </li>
     
     <li>
@@ -5456,7 +5356,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>not required if using a subnet with dhcp proxy</p>
-
     </li>
     
     <li>
@@ -5467,7 +5366,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>not required if its a virtual machine</p>
-
     </li>
     
     <li>
@@ -5724,13 +5622,17 @@ an external node parameter</p>
 
 <ul>
 <li>missing</li>
+
 <li>failed</li>
+
 <li>pending</li>
+
 <li>changed</li>
+
 <li>unchanged</li>
+
 <li>unreported</li>
 </ul>
-
           <h4>Examples</h4>
             <pre class="wiki">GET /api/hosts/my5name.mydomain.net/status
 200
@@ -5827,7 +5729,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>filter results</p>
-
     </li>
     
     <li>
@@ -5838,7 +5739,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>sort results</p>
-
     </li>
     
     <li>
@@ -5849,7 +5749,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>paginate results</p>
-
     </li>
     
     <li>
@@ -5860,7 +5759,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>number of entries per request</p>
-
     </li>
     
     <li>
@@ -6285,6 +6183,11 @@ an external node parameter</p>
             <br>
             <small>List all lookup_keys.</small>
           </h4>
+          <h4>
+              GET /api/hosts/:host_id/lookup_keys
+            <br>
+            <small>List all lookup_keys of a given host.</small>
+          </h4>
       </div>
 
       <div>
@@ -6339,7 +6242,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>filter results</p>
-
     </li>
     
     <li>
@@ -6350,7 +6252,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>sort results</p>
-
     </li>
     
     <li>
@@ -6361,7 +6262,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>paginate results</p>
-
     </li>
     
     <li>
@@ -6372,7 +6272,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>number of entries per request</p>
-
     </li>
     
 </ul>
@@ -6793,7 +6692,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>filter results</p>
-
     </li>
     
     <li>
@@ -6804,7 +6702,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>for example, name ASC, or name DESC</p>
-
     </li>
     
     <li>
@@ -6815,7 +6712,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>paginate results</p>
-
     </li>
     
     <li>
@@ -6826,7 +6722,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>number of entries per request</p>
-
     </li>
     
 </ul>
@@ -6928,7 +6823,6 @@ an external node parameter</p>
           [ Must be String ]
       </small>
       <p>Name of media</p>
-
     </li>
     
     <li>
@@ -6940,12 +6834,9 @@ an external node parameter</p>
       </small>
       <p>The path to the medium, can be a URL or a valid NFS server (exclusive of the architecture).</p>
 
-<p>for example http://mirror.averse.net/centos/$version/os/$arch
-where $arch will be substituted for the host&#39;s actual OS architecture and $version, $major and $minor
-will be substituted for the version of the operating system.</p>
+<p>for example http://mirror.averse.net/centos/$version/os/$arch where $arch will be substituted for the host&#8217;s actual OS architecture and $version, $major and $minor will be substituted for the version of the operating system.</p>
 
 <p>Solaris and Debian media may also use $release.</p>
-
     </li>
     
     <li>
@@ -6961,13 +6852,17 @@ will be substituted for the version of the operating system.</p>
 
 <ul>
 <li>Archlinux</li>
+
 <li>Debian</li>
+
 <li>Redhat</li>
+
 <li>Solaris</li>
+
 <li>Suse</li>
+
 <li>Windows</li>
 </ul>
-
     </li>
     
 </ul>
@@ -7035,7 +6930,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>Name of media</p>
-
     </li>
     
     <li>
@@ -7047,12 +6941,9 @@ will be substituted for the version of the operating system.</p>
       </small>
       <p>The path to the medium, can be a URL or a valid NFS server (exclusive of the architecture).</p>
 
-<p>for example http://mirror.averse.net/centos/$version/os/$arch
-where $arch will be substituted for the host&#39;s actual OS architecture and $version, $major and $minor
-will be substituted for the version of the operating system.</p>
+<p>for example http://mirror.averse.net/centos/$version/os/$arch where $arch will be substituted for the host&#8217;s actual OS architecture and $version, $major and $minor will be substituted for the version of the operating system.</p>
 
 <p>Solaris and Debian media may also use $release.</p>
-
     </li>
     
     <li>
@@ -7068,13 +6959,17 @@ will be substituted for the version of the operating system.</p>
 
 <ul>
 <li>Archlinux</li>
+
 <li>Debian</li>
+
 <li>Redhat</li>
+
 <li>Solaris</li>
+
 <li>Suse</li>
+
 <li>Windows</li>
 </ul>
-
     </li>
     
 </ul>
@@ -7193,7 +7088,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>filter results</p>
-
     </li>
     
     <li>
@@ -7204,7 +7098,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>sort results</p>
-
     </li>
     
     <li>
@@ -7215,7 +7108,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>paginate results</p>
-
     </li>
     
     <li>
@@ -7226,7 +7118,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>number of entries per request</p>
-
     </li>
     
 </ul>
@@ -7564,7 +7455,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>filter results</p>
-
     </li>
     
     <li>
@@ -7575,7 +7465,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>for example, name ASC, or name DESC</p>
-
     </li>
     
     <li>
@@ -7586,7 +7475,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>paginate results</p>
-
     </li>
     
     <li>
@@ -7597,7 +7485,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>number of entries per request</p>
-
     </li>
     
 </ul>
@@ -8188,7 +8075,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>filter results</p>
-
     </li>
     
     <li>
@@ -8199,7 +8085,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>sort results</p>
-
     </li>
     
     <li>
@@ -8210,7 +8095,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>paginate results</p>
-
     </li>
     
     <li>
@@ -8221,7 +8105,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>number of entries per request</p>
-
     </li>
     
 </ul>
@@ -8521,6 +8404,11 @@ will be substituted for the version of the operating system.</p>
             <br>
             <small>List all puppetclasses.</small>
           </h4>
+          <h4>
+              GET /api/hosts/:host_id/puppetclasses
+            <br>
+            <small>List all puppetclasses of a given host.</small>
+          </h4>
       </div>
 
       <div>
@@ -8564,7 +8452,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>filter results</p>
-
     </li>
     
     <li>
@@ -8575,7 +8462,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>sort results</p>
-
     </li>
     
     <li>
@@ -8586,7 +8472,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>paginate results</p>
-
     </li>
     
     <li>
@@ -8597,7 +8482,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>number of entries per request</p>
-
     </li>
     
 </ul>
@@ -8920,7 +8804,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>filter results</p>
-
     </li>
     
     <li>
@@ -8931,7 +8814,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>sort results</p>
-
     </li>
     
     <li>
@@ -8942,7 +8824,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>paginate results</p>
-
     </li>
     
     <li>
@@ -8953,7 +8834,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>number of entries per request</p>
-
     </li>
     
 </ul>
@@ -9104,6 +8984,78 @@ will be substituted for the version of the operating system.</p>
 </ul>
 
       </div>
+      <hr/>
+
+      <h3 id="reports-last">
+      <a href='#reports'>Reports</a> / <a href='#reports-last'>last</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/hosts/:host_id/reports/last
+            <br>
+            <small>Show the last report for a given host.</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">GET /api/reports/last
+200
+{
+  &quot;report&quot;: {
+    &quot;summary&quot;: &quot;Success&quot;,
+    &quot;status&quot;: {
+      &quot;skipped&quot;: 0,
+      &quot;failed_restarts&quot;: 0,
+      &quot;failed&quot;: 0,
+      &quot;pending&quot;: 0,
+      &quot;restarted&quot;: 0,
+      &quot;applied&quot;: 0
+    },
+    &quot;id&quot;: 70219655,
+    &quot;reported_at&quot;: &quot;2012-12-11T15:24:42Z&quot;,
+    &quot;metrics&quot;: {
+      &quot;events&quot;: {
+        &quot;total&quot;: 0
+      },
+      &quot;time&quot;: {
+        &quot;package&quot;: 0.003989,
+        &quot;schedule&quot;: 0.00083,
+        &quot;cron&quot;: 0.000419,
+        &quot;exec&quot;: 0.000299,
+        &quot;service&quot;: 0.149739,
+        &quot;config_retrieval&quot;: 16.3637869358063,
+        &quot;file&quot;: 0.007025,
+        &quot;filebucket&quot;: 0.000171,
+        &quot;mailalias&quot;: 0.000283
+      },
+      &quot;resources&quot;: {
+        &quot;total&quot;: 33
+      },
+      &quot;changes&quot;: {}
+    },
+    &quot;logs&quot;: []
+  }
+}</pre>
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
+      </small>
+      
+    </li>
+    
+</ul>
+
+      </div>
   </div>
 
   <hr/>
@@ -9146,7 +9098,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>paginate results</p>
-
     </li>
     
     <li>
@@ -9157,7 +9108,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>number of entries per request</p>
-
     </li>
     
 </ul>
@@ -9657,7 +9607,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>Filter results</p>
-
     </li>
     
     <li>
@@ -9668,7 +9617,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>Sort results</p>
-
     </li>
     
     <li>
@@ -9679,7 +9627,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>paginate results</p>
-
     </li>
     
     <li>
@@ -9690,7 +9637,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>number of entries per request</p>
-
     </li>
     
 </ul>
@@ -9869,7 +9815,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>filter by type</p>
-
     </li>
     
     <li>
@@ -9880,7 +9825,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>paginate results</p>
-
     </li>
     
     <li>
@@ -9891,7 +9835,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>number of entries per request</p>
-
     </li>
     
 </ul>
@@ -10249,7 +10192,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>Filter results</p>
-
     </li>
     
     <li>
@@ -10260,7 +10202,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>Sort results</p>
-
     </li>
     
     <li>
@@ -10271,7 +10212,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>paginate results</p>
-
     </li>
     
     <li>
@@ -10282,7 +10222,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>number of entries per request</p>
-
     </li>
     
 </ul>
@@ -10430,7 +10369,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>Subnet name</p>
-
     </li>
     
     <li>
@@ -10441,7 +10379,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>Subnet network</p>
-
     </li>
     
     <li>
@@ -10452,7 +10389,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>Netmask for this subnet</p>
-
     </li>
     
     <li>
@@ -10463,7 +10399,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>Primary DNS for this subnet</p>
-
     </li>
     
     <li>
@@ -10474,7 +10409,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>Primary DNS for this subnet</p>
-
     </li>
     
     <li>
@@ -10485,7 +10419,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>Secondary DNS for this subnet</p>
-
     </li>
     
     <li>
@@ -10496,7 +10429,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>Starting IP Address for IP auto suggestion</p>
-
     </li>
     
     <li>
@@ -10507,7 +10439,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>Ending IP Address for IP auto suggestion</p>
-
     </li>
     
     <li>
@@ -10518,7 +10449,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>VLAN ID for this subnet</p>
-
     </li>
     
     <li>
@@ -10529,7 +10459,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be Array ]
       </small>
       <p>Domains in which this subnet is part</p>
-
     </li>
     
     <li>
@@ -10540,7 +10469,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be a number. ]
       </small>
       <p>DHCP Proxy to use within this subnet</p>
-
     </li>
     
     <li>
@@ -10551,7 +10479,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be a number. ]
       </small>
       <p>TFTP Proxy to use within this subnet</p>
-
     </li>
     
     <li>
@@ -10562,7 +10489,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be a number. ]
       </small>
       <p>DNS Proxy to use within this subnet</p>
-
     </li>
     
 </ul>
@@ -10640,7 +10566,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be a number. ]
       </small>
       <p>Subnet numeric identifier</p>
-
     </li>
     
     <li>
@@ -10661,7 +10586,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>Subnet name</p>
-
     </li>
     
     <li>
@@ -10672,7 +10596,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>Subnet network</p>
-
     </li>
     
     <li>
@@ -10683,7 +10606,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>Netmask for this subnet</p>
-
     </li>
     
     <li>
@@ -10694,7 +10616,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>Primary DNS for this subnet</p>
-
     </li>
     
     <li>
@@ -10705,7 +10626,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>Primary DNS for this subnet</p>
-
     </li>
     
     <li>
@@ -10716,7 +10636,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>Secondary DNS for this subnet</p>
-
     </li>
     
     <li>
@@ -10727,7 +10646,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>Starting IP Address for IP auto suggestion</p>
-
     </li>
     
     <li>
@@ -10738,7 +10656,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>Ending IP Address for IP auto suggestion</p>
-
     </li>
     
     <li>
@@ -10749,7 +10666,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>VLAN ID for this subnet</p>
-
     </li>
     
     <li>
@@ -10760,7 +10676,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be Array ]
       </small>
       <p>Domains in which this subnet is part</p>
-
     </li>
     
     <li>
@@ -10771,7 +10686,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be a number. ]
       </small>
       <p>DHCP Proxy to use within this subnet</p>
-
     </li>
     
     <li>
@@ -10782,7 +10696,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be a number. ]
       </small>
       <p>TFTP Proxy to use within this subnet</p>
-
     </li>
     
     <li>
@@ -10793,7 +10706,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be a number. ]
       </small>
       <p>DNS Proxy to use within this subnet</p>
-
     </li>
     
 </ul>
@@ -10865,187 +10777,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be a number. ]
       </small>
       <p>Subnet numeric identifier</p>
-
-    </li>
-    
-</ul>
-
-      </div>
-  </div>
-
-  <hr/>
-
-  <div>
-    <h2 id="template_combinations">
-      <a href='#template_combinations'>Template combinations</a><br>
-      <small></small>
-    </h2>
-  </div>
-
-
-  <div>
-
-      <hr/>
-
-      <h3 id="template_combinations-index">
-      <a href='#template_combinations'>Template combinations</a> / <a href='#template_combinations-index'>index</a>
-      </h3>
-
-      <div>
-          <h4>
-              GET /api/config_templates/:config_template_id/template_combinations
-            <br>
-            <small>List Template Combination</small>
-          </h4>
-      </div>
-
-      <div>
-        
-
-
-          <h4>Params</h4>
-          <ul>
-    <li>
-      <strong>config_template_id </strong>:
-      <small>
-        required
-        
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
-      </small>
-      
-    </li>
-    
-</ul>
-
-      </div>
-      <hr/>
-
-      <h3 id="template_combinations-create">
-      <a href='#template_combinations'>Template combinations</a> / <a href='#template_combinations-create'>create</a>
-      </h3>
-
-      <div>
-          <h4>
-              POST /api/config_templates/:config_template_id/template_combinations
-            <br>
-            <small>Add a Template Combination</small>
-          </h4>
-      </div>
-
-      <div>
-        
-
-
-          <h4>Params</h4>
-          <ul>
-    <li>
-      <strong>config_template_id </strong>:
-      <small>
-        required
-        
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
-      </small>
-      
-    </li>
-    
-    <li>
-      <strong>template_combination </strong>:
-      <small>
-        required
-        
-          [ Must be a Hash ]
-      </small>
-      
-    </li>
-    <ul>
-    <li>
-      <strong>environment_id </strong>:
-      <small>
-        optional
-        , nil allowed
-          [ Must be a number. ]
-      </small>
-      <p>environment id</p>
-
-    </li>
-    
-    <li>
-      <strong>hostgroup_id </strong>:
-      <small>
-        optional
-        , nil allowed
-          [ Must be a number. ]
-      </small>
-      <p>hostgroup id</p>
-
-    </li>
-    
-</ul>
-
-</ul>
-
-      </div>
-      <hr/>
-
-      <h3 id="template_combinations-show">
-      <a href='#template_combinations'>Template combinations</a> / <a href='#template_combinations-show'>show</a>
-      </h3>
-
-      <div>
-          <h4>
-              GET /api/template_combinations/:id
-            <br>
-            <small>Show Template Combination</small>
-          </h4>
-      </div>
-
-      <div>
-        
-
-
-          <h4>Params</h4>
-          <ul>
-    <li>
-      <strong>id </strong>:
-      <small>
-        required
-        
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
-      </small>
-      
-    </li>
-    
-</ul>
-
-      </div>
-      <hr/>
-
-      <h3 id="template_combinations-destroy">
-      <a href='#template_combinations'>Template combinations</a> / <a href='#template_combinations-destroy'>destroy</a>
-      </h3>
-
-      <div>
-          <h4>
-              DELETE /api/template_combinations/:id
-            <br>
-            <small>Delete a template</small>
-          </h4>
-      </div>
-
-      <div>
-        
-
-
-          <h4>Params</h4>
-          <ul>
-    <li>
-      <strong>id </strong>:
-      <small>
-        required
-        
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
-      </small>
-      
     </li>
     
 </ul>
@@ -11128,7 +10859,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>paginate results</p>
-
     </li>
     
     <li>
@@ -11139,7 +10869,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>number of entries per request</p>
-
     </li>
     
 </ul>
@@ -11208,7 +10937,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>paginate results</p>
-
     </li>
     
     <li>
@@ -11219,7 +10947,26 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>number of entries per request</p>
-
+    </li>
+    
+    <li>
+      <strong>search </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>filter results</p>
+    </li>
+    
+    <li>
+      <strong>order </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>sort results</p>
     </li>
     
 </ul>
@@ -11584,7 +11331,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>filter results</p>
-
     </li>
     
     <li>
@@ -11595,7 +11341,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>sort results</p>
-
     </li>
     
     <li>
@@ -11606,7 +11351,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>paginate results</p>
-
     </li>
     
     <li>
@@ -11617,7 +11361,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be String ]
       </small>
       <p>number of entries per request</p>
-
     </li>
     
 </ul>
@@ -11755,8 +11498,7 @@ will be substituted for the version of the operating system.</p>
       </div>
 
       <div>
-        <p>Adds role &#39;Anonymous&#39; to the user by default</p>
-
+        <p>Adds role &#8216;Anonymous&#8217; to the user by default</p>
 
 
           <h4>Params</h4>
@@ -11819,7 +11561,6 @@ will be substituted for the version of the operating system.</p>
           [ Must be &#x27;true&#x27; or &#x27;false&#x27; ]
       </small>
       <p>Is an admin account?</p>
-
     </li>
     
     <li>
@@ -11862,9 +11603,7 @@ will be substituted for the version of the operating system.</p>
       </div>
 
       <div>
-        <p>Adds role &#39;Anonymous&#39; to the user if it is not already present.
-Only admin can set admin account.</p>
-
+        <p>Adds role &#8216;Anonymous&#8217; to the user if it is not already present. Only admin can set admin account.</p>
           <h4>Examples</h4>
             <pre class="wiki">PUT /api/users/980190963
 {
@@ -11960,7 +11699,6 @@ Only admin can set admin account.</p>
           [ Must be &#x27;true&#x27; or &#x27;false&#x27; ]
       </small>
       <p>Is an admin account?</p>
-
     </li>
     
     <li>

@@ -179,6 +179,7 @@
       <li><a href='#reports-index'>index</a></li>
       <li><a href='#reports-show'>show</a></li>
       <li><a href='#reports-destroy'>destroy</a></li>
+      <li><a href='#reports-last'>last</a></li>
   </ul>
   <h4><a href='#roles'>Roles</a></h4>
   <ul>
@@ -210,13 +211,6 @@
       <li><a href='#subnets-update'>update</a></li>
       <li><a href='#subnets-destroy'>destroy</a></li>
   </ul>
-  <h4><a href='#template_combinations'>Template combinations</a></h4>
-  <ul>
-      <li><a href='#template_combinations-index'>index</a></li>
-      <li><a href='#template_combinations-create'>create</a></li>
-      <li><a href='#template_combinations-show'>show</a></li>
-      <li><a href='#template_combinations-destroy'>destroy</a></li>
-  </ul>
   <h4><a href='#template_kinds'>Template kinds</a></h4>
   <ul>
       <li><a href='#template_kinds-index'>index</a></li>
@@ -240,8 +234,7 @@
 
 
 
-<div><p>The Foreman is aimed to be a single address for all machines life cycle management.</p>
-</div>
+<div>Another API description</div>
 
 <hr>
 
@@ -345,7 +338,6 @@
     </td>
     <td>
       <p>filter results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -362,7 +354,6 @@
     </td>
     <td>
       <p>sort results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -379,7 +370,6 @@
     </td>
     <td>
       <p>paginate results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -396,7 +386,6 @@
     </td>
     <td>
       <p>number of entries per request</p>
-
         <br>
         Value: Must be String
     </td>
@@ -572,8 +561,7 @@
       </small>
     </td>
     <td>
-      <p>Operatingsystem ID&#39;s</p>
-
+      <p>Operatingsystem ID&#8217;s</p>
         <br>
         Value: Must be Array
     </td>
@@ -689,8 +677,7 @@
       </small>
     </td>
     <td>
-      <p>Operatingsystem ID&#39;s</p>
-
+      <p>Operatingsystem ID&#8217;s</p>
         <br>
         Value: Must be Array
     </td>
@@ -805,6 +792,12 @@
             </a><br>
             <small>List all audits.</small>
           </h3>
+          <h3>
+            <a href='#audits-index'>
+              GET /api/hosts/:host_id/audits
+            </a><br>
+            <small>List all audits for a given host.</small>
+          </h3>
       </div>
 
       <div>
@@ -859,7 +852,6 @@
     </td>
     <td>
       <p>filter results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -876,7 +868,6 @@
     </td>
     <td>
       <p>sort results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -893,7 +884,6 @@
     </td>
     <td>
       <p>paginate results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -910,7 +900,6 @@
     </td>
     <td>
       <p>number of entries per request</p>
-
         <br>
         Value: Must be String
     </td>
@@ -1091,7 +1080,6 @@
     </td>
     <td>
       <p>paginate results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -1108,7 +1096,6 @@
     </td>
     <td>
       <p>number of entries per request</p>
-
         <br>
         Value: Must be String
     </td>
@@ -1318,7 +1305,6 @@
     </td>
     <td>
       <p>defaults to 389</p>
-
         <br>
         Value: Must be a number.
     </td>
@@ -1367,7 +1353,6 @@
     </td>
     <td>
       <p>required if onthefly_register is true</p>
-
         <br>
         Value: Must be String
     </td>
@@ -1384,7 +1369,6 @@
     </td>
     <td>
       <p>required if onthefly_register is true</p>
-
         <br>
         Value: Must be String
     </td>
@@ -1401,7 +1385,6 @@
     </td>
     <td>
       <p>required if onthefly_register is true</p>
-
         <br>
         Value: Must be String
     </td>
@@ -1418,7 +1401,6 @@
     </td>
     <td>
       <p>required if onthefly_register is true</p>
-
         <br>
         Value: Must be String
     </td>
@@ -1435,7 +1417,6 @@
     </td>
     <td>
       <p>required if onthefly_register is true</p>
-
         <br>
         Value: Must be String
     </td>
@@ -1613,7 +1594,6 @@
     </td>
     <td>
       <p>defaults to 389</p>
-
         <br>
         Value: Must be a number.
     </td>
@@ -1662,7 +1642,6 @@
     </td>
     <td>
       <p>required if onthefly_register is true</p>
-
         <br>
         Value: Must be String
     </td>
@@ -1679,7 +1658,6 @@
     </td>
     <td>
       <p>required if onthefly_register is true</p>
-
         <br>
         Value: Must be String
     </td>
@@ -1696,7 +1674,6 @@
     </td>
     <td>
       <p>required if onthefly_register is true</p>
-
         <br>
         Value: Must be String
     </td>
@@ -1713,7 +1690,6 @@
     </td>
     <td>
       <p>required if onthefly_register is true</p>
-
         <br>
         Value: Must be String
     </td>
@@ -1730,7 +1706,6 @@
     </td>
     <td>
       <p>required if onthefly_register is true</p>
-
         <br>
         Value: Must be String
     </td>
@@ -1942,7 +1917,6 @@
     </td>
     <td>
       <p>paginate results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -1959,7 +1933,6 @@
     </td>
     <td>
       <p>number of entries per request</p>
-
         <br>
         Value: Must be String
     </td>
@@ -2483,7 +2456,6 @@
     </td>
     <td>
       <p>filter results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -2500,7 +2472,6 @@
     </td>
     <td>
       <p>sort results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -2517,7 +2488,6 @@
     </td>
     <td>
       <p>paginate results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -2534,7 +2504,6 @@
     </td>
     <td>
       <p>number of entries per request</p>
-
         <br>
         Value: Must be String
     </td>
@@ -3002,7 +2971,6 @@
     </td>
     <td>
       <p>filter results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -3019,7 +2987,6 @@
     </td>
     <td>
       <p>sort results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -3036,7 +3003,6 @@
     </td>
     <td>
       <p>paginate results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -3053,7 +3019,6 @@
     </td>
     <td>
       <p>number of entries per request</p>
-
         <br>
         Value: Must be String
     </td>
@@ -3236,7 +3201,6 @@
     </td>
     <td>
       <p>Providers include Libvirt, Ovirt, EC2, Vmware, Openstack, Rackspace</p>
-
         <br>
         Value: Must be String
     </td>
@@ -3253,7 +3217,6 @@
     </td>
     <td>
       <p>URL for Libvirt, Ovirt, and Openstack</p>
-
         <br>
         Value: Must be String
     </td>
@@ -3286,7 +3249,6 @@
     </td>
     <td>
       <p>Username for Ovirt, EC2, Vmware, Openstack. Access Key for EC2.</p>
-
         <br>
         Value: Must be String
     </td>
@@ -3303,7 +3265,6 @@
     </td>
     <td>
       <p>Password for Ovirt, EC2, Vmware, Openstack. Secret key for EC2</p>
-
         <br>
         Value: Must be String
     </td>
@@ -3320,7 +3281,6 @@
     </td>
     <td>
       <p>for Ovirt, Vmware Datacenter</p>
-
         <br>
         Value: Must be String
     </td>
@@ -3337,7 +3297,6 @@
     </td>
     <td>
       <p>for EC2 only</p>
-
         <br>
         Value: Must be String
     </td>
@@ -3354,7 +3313,6 @@
     </td>
     <td>
       <p>for Openstack only</p>
-
         <br>
         Value: Must be String
     </td>
@@ -3371,7 +3329,6 @@
     </td>
     <td>
       <p>for Vmware</p>
-
         <br>
         Value: Must be String
     </td>
@@ -3497,7 +3454,6 @@
     </td>
     <td>
       <p>Providers include Libvirt, Ovirt, EC2, Vmware, Openstack, Rackspace</p>
-
         <br>
         Value: Must be String
     </td>
@@ -3514,7 +3470,6 @@
     </td>
     <td>
       <p>URL for Libvirt, Ovirt, and Openstack</p>
-
         <br>
         Value: Must be String
     </td>
@@ -3547,7 +3502,6 @@
     </td>
     <td>
       <p>Username for Ovirt, EC2, Vmware, Openstack. Access Key for EC2.</p>
-
         <br>
         Value: Must be String
     </td>
@@ -3564,7 +3518,6 @@
     </td>
     <td>
       <p>Password for Ovirt, EC2, Vmware, Openstack. Secret key for EC2</p>
-
         <br>
         Value: Must be String
     </td>
@@ -3581,7 +3534,6 @@
     </td>
     <td>
       <p>for Ovirt, Vmware Datacenter</p>
-
         <br>
         Value: Must be String
     </td>
@@ -3598,7 +3550,6 @@
     </td>
     <td>
       <p>for EC2 only</p>
-
         <br>
         Value: Must be String
     </td>
@@ -3615,7 +3566,6 @@
     </td>
     <td>
       <p>for Openstack only</p>
-
         <br>
         Value: Must be String
     </td>
@@ -3632,7 +3582,6 @@
     </td>
     <td>
       <p>for Vmware</p>
-
         <br>
         Value: Must be String
     </td>
@@ -3885,7 +3834,6 @@
     </td>
     <td>
       <p>filter results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -3902,7 +3850,6 @@
     </td>
     <td>
       <p>sort results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -3919,7 +3866,6 @@
     </td>
     <td>
       <p>paginate results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -3936,7 +3882,6 @@
     </td>
     <td>
       <p>number of entries per request</p>
-
         <br>
         Value: Must be String
     </td>
@@ -4100,7 +4045,6 @@
     </td>
     <td>
       <p>template name</p>
-
         <br>
         Value: Must be String
     </td>
@@ -4165,7 +4109,6 @@
     </td>
     <td>
       <p>not relevant for snippet</p>
-
         <br>
         Value: Must be a number.
     </td>
@@ -4181,8 +4124,7 @@
       </small>
     </td>
     <td>
-      <p>Array of template combinations (hostgroup<em>id, environment</em>id)</p>
-
+      <p>Array of template combinations (hostgroup_id, environment_id)</p>
         <br>
         Value: Must be Array
     </td>
@@ -4199,7 +4141,6 @@
     </td>
     <td>
       <p>Array of operating systems ID to associate the template with</p>
-
         <br>
         Value: Must be Array
     </td>
@@ -4309,7 +4250,6 @@
     </td>
     <td>
       <p>template name</p>
-
         <br>
         Value: Must be String
     </td>
@@ -4374,7 +4314,6 @@
     </td>
     <td>
       <p>not relevant for snippet</p>
-
         <br>
         Value: Must be a number.
     </td>
@@ -4390,8 +4329,7 @@
       </small>
     </td>
     <td>
-      <p>Array of template combinations (hostgroup<em>id, environment</em>id)</p>
-
+      <p>Array of template combinations (hostgroup_id, environment_id)</p>
         <br>
         Value: Must be Array
     </td>
@@ -4408,7 +4346,6 @@
     </td>
     <td>
       <p>Array of operating systems ID to associate the template with</p>
-
         <br>
         Value: Must be Array
     </td>
@@ -4466,7 +4403,6 @@
     </td>
     <td>
       <p>template version</p>
-
         <br>
         Value: Must be String
     </td>
@@ -4665,7 +4601,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
     </td>
     <td>
       <p>filter results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -4690,13 +4625,7 @@ PXE Default file has been deployed to all Smart Proxies</pre>
     </h1>
   </div>
 
-    <div><p>Foreman considers a domain and a DNS zone as the same thing. That is, if you
-are planning to manage a site where all the machines are or the form
-<i>hostname</i>.<b>somewhere.com</b> then the domain is <b>somewhere.com</b>.
-This allows Foreman to associate a puppet variable with a domain/site
-and automatically append this variable to all external node requests made
-by machines at that site.</p>
-</div>
+    <div><p>Foreman considers a domain and a DNS zone as the same thing. That is, if you are planning to manage a site where all the machines are or the form <i>hostname</i>.<b>somewhere.com</b> then the domain is <b>somewhere.com</b>. This allows Foreman to associate a puppet variable with a domain/site and automatically append this variable to all external node requests made by machines at that site.</p></div>
 
   <div class='accordion' id='accordion'>
 
@@ -4791,7 +4720,6 @@ by machines at that site.</p>
     </td>
     <td>
       <p>Filter results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -4808,7 +4736,6 @@ by machines at that site.</p>
     </td>
     <td>
       <p>Sort results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -4825,7 +4752,6 @@ by machines at that site.</p>
     </td>
     <td>
       <p>paginate results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -4842,7 +4768,6 @@ by machines at that site.</p>
     </td>
     <td>
       <p>number of entries per request</p>
-
         <br>
         Value: Must be String
     </td>
@@ -4912,7 +4837,6 @@ by machines at that site.</p>
     </td>
     <td>
       <p>May be numerical id or domain name</p>
-
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
     </td>
@@ -4947,10 +4871,7 @@ by machines at that site.</p>
       </div>
 
       <div>
-        <p>The <b>fullname</b> field is used for human readability in reports
-and other pages that refer to domains, and also available as
-an external node parameter</p>
-
+        <p>The <b>fullname</b> field is used for human readability in reports and other pages that refer to domains, and also available as an external node parameter</p>
           <h2>Examples</h2>
             <pre>POST /api/domains
 {
@@ -5001,7 +4922,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>The full DNS Domain name</p>
-
         <br>
         Value: Must be String
     </td>
@@ -5018,7 +4938,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>Full name describing the domain</p>
-
         <br>
         Value: Must be String
     </td>
@@ -5035,7 +4954,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>DNS Proxy to use within this domain</p>
-
         <br>
         Value: Must be a number.
     </td>
@@ -5052,7 +4970,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>Array of parameters (name, value)</p>
-
         <br>
         Value: Must be Array
     </td>
@@ -5162,7 +5079,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>The full DNS Domain name</p>
-
         <br>
         Value: Must be String
     </td>
@@ -5179,7 +5095,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>Full name describing the domain</p>
-
         <br>
         Value: Must be String
     </td>
@@ -5196,7 +5111,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>DNS Proxy to use within this domain</p>
-
         <br>
         Value: Must be a number.
     </td>
@@ -5213,7 +5127,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>Array of parameters (name, value)</p>
-
         <br>
         Value: Must be Array
     </td>
@@ -5382,7 +5295,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>Filter results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -5399,7 +5311,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>Sort results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -5416,7 +5327,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>paginate results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -5433,7 +5343,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>number of entries per request</p>
-
         <br>
         Value: Must be String
     </td>
@@ -5802,6 +5711,12 @@ an external node parameter</p>
             </a><br>
             <small>List all fact values.</small>
           </h3>
+          <h3>
+            <a href='#fact_values-index'>
+              GET /api/hosts/:host_id/facts
+            </a><br>
+            <small>List all fact values of a given host.</small>
+          </h3>
       </div>
 
       <div>
@@ -5836,7 +5751,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>filter results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -5853,7 +5767,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>sort results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -5870,7 +5783,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>paginate results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -5887,7 +5799,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>number of entries per request</p>
-
         <br>
         Value: Must be String
     </td>
@@ -6122,7 +6033,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>filter results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -6139,7 +6049,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>sort results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -6156,7 +6065,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>paginate results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -6173,7 +6081,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>number of entries per request</p>
-
         <br>
         Value: Must be String
     </td>
@@ -6992,7 +6899,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>Filter results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -7009,7 +6915,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>Sort results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -7026,7 +6931,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>paginate results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -7043,7 +6947,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>number of entries per request</p>
-
         <br>
         Value: Must be String
     </td>
@@ -7327,7 +7230,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>not required if using a subnet with dhcp proxy</p>
-
         <br>
         Value: Must be String
     </td>
@@ -7344,7 +7246,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>not required if its a virtual machine</p>
-
         <br>
         Value: Must be String
     </td>
@@ -7749,7 +7650,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>not required if using a subnet with dhcp proxy</p>
-
         <br>
         Value: Must be String
     </td>
@@ -7766,7 +7666,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>not required if its a virtual machine</p>
-
         <br>
         Value: Must be String
     </td>
@@ -8143,13 +8042,17 @@ an external node parameter</p>
 
 <ul>
 <li>missing</li>
+
 <li>failed</li>
+
 <li>pending</li>
+
 <li>changed</li>
+
 <li>unchanged</li>
+
 <li>unreported</li>
 </ul>
-
           <h2>Examples</h2>
             <pre>GET /api/hosts/my5name.mydomain.net/status
 200
@@ -8281,7 +8184,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>filter results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -8298,7 +8200,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>sort results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -8315,7 +8216,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>paginate results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -8332,7 +8232,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>number of entries per request</p>
-
         <br>
         Value: Must be String
     </td>
@@ -8970,6 +8869,12 @@ an external node parameter</p>
             </a><br>
             <small>List all lookup_keys.</small>
           </h3>
+          <h3>
+            <a href='#lookup_keys-index'>
+              GET /api/hosts/:host_id/lookup_keys
+            </a><br>
+            <small>List all lookup_keys of a given host.</small>
+          </h3>
       </div>
 
       <div>
@@ -9033,7 +8938,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>filter results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -9050,7 +8954,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>sort results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -9067,7 +8970,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>paginate results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -9084,7 +8986,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>number of entries per request</p>
-
         <br>
         Value: Must be String
     </td>
@@ -9697,7 +9598,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>filter results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -9714,7 +9614,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>for example, name ASC, or name DESC</p>
-
         <br>
         Value: Must be String
     </td>
@@ -9731,7 +9630,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>paginate results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -9748,7 +9646,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>number of entries per request</p>
-
         <br>
         Value: Must be String
     </td>
@@ -9901,7 +9798,6 @@ an external node parameter</p>
     </td>
     <td>
       <p>Name of media</p>
-
         <br>
         Value: Must be String
     </td>
@@ -9919,12 +9815,9 @@ an external node parameter</p>
     <td>
       <p>The path to the medium, can be a URL or a valid NFS server (exclusive of the architecture).</p>
 
-<p>for example http://mirror.averse.net/centos/$version/os/$arch
-where $arch will be substituted for the host&#39;s actual OS architecture and $version, $major and $minor
-will be substituted for the version of the operating system.</p>
+<p>for example http://mirror.averse.net/centos/$version/os/$arch where $arch will be substituted for the host&#8217;s actual OS architecture and $version, $major and $minor will be substituted for the version of the operating system.</p>
 
 <p>Solaris and Debian media may also use $release.</p>
-
         <br>
         Value: Must be String
     </td>
@@ -9946,13 +9839,17 @@ will be substituted for the version of the operating system.</p>
 
 <ul>
 <li>Archlinux</li>
+
 <li>Debian</li>
+
 <li>Redhat</li>
+
 <li>Solaris</li>
+
 <li>Suse</li>
+
 <li>Windows</li>
 </ul>
-
         <br>
         Value: Must be String
     </td>
@@ -10053,7 +9950,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>Name of media</p>
-
         <br>
         Value: Must be String
     </td>
@@ -10071,12 +9967,9 @@ will be substituted for the version of the operating system.</p>
     <td>
       <p>The path to the medium, can be a URL or a valid NFS server (exclusive of the architecture).</p>
 
-<p>for example http://mirror.averse.net/centos/$version/os/$arch
-where $arch will be substituted for the host&#39;s actual OS architecture and $version, $major and $minor
-will be substituted for the version of the operating system.</p>
+<p>for example http://mirror.averse.net/centos/$version/os/$arch where $arch will be substituted for the host&#8217;s actual OS architecture and $version, $major and $minor will be substituted for the version of the operating system.</p>
 
 <p>Solaris and Debian media may also use $release.</p>
-
         <br>
         Value: Must be String
     </td>
@@ -10098,13 +9991,17 @@ will be substituted for the version of the operating system.</p>
 
 <ul>
 <li>Archlinux</li>
+
 <li>Debian</li>
+
 <li>Redhat</li>
+
 <li>Solaris</li>
+
 <li>Suse</li>
+
 <li>Windows</li>
 </ul>
-
         <br>
         Value: Must be String
     </td>
@@ -10271,7 +10168,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>filter results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -10288,7 +10184,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>sort results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -10305,7 +10200,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>paginate results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -10322,7 +10216,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>number of entries per request</p>
-
         <br>
         Value: Must be String
     </td>
@@ -10828,7 +10721,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>filter results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -10845,7 +10737,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>for example, name ASC, or name DESC</p>
-
         <br>
         Value: Must be String
     </td>
@@ -10862,7 +10753,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>paginate results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -10879,7 +10769,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>number of entries per request</p>
-
         <br>
         Value: Must be String
     </td>
@@ -11685,7 +11574,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>filter results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -11702,7 +11590,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>sort results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -11719,7 +11606,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>paginate results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -11736,7 +11622,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>number of entries per request</p>
-
         <br>
         Value: Must be String
     </td>
@@ -12183,6 +12068,12 @@ will be substituted for the version of the operating system.</p>
             </a><br>
             <small>List all puppetclasses.</small>
           </h3>
+          <h3>
+            <a href='#puppetclasses-index'>
+              GET /api/hosts/:host_id/puppetclasses
+            </a><br>
+            <small>List all puppetclasses of a given host.</small>
+          </h3>
       </div>
 
       <div>
@@ -12235,7 +12126,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>filter results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -12252,7 +12142,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>sort results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -12269,7 +12158,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>paginate results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -12286,7 +12174,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>number of entries per request</p>
-
         <br>
         Value: Must be String
     </td>
@@ -12741,7 +12628,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>filter results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -12758,7 +12644,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>sort results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -12775,7 +12660,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>paginate results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -12792,7 +12676,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>number of entries per request</p>
-
         <br>
         Value: Must be String
     </td>
@@ -12994,6 +12877,101 @@ will be substituted for the version of the operating system.</p>
             </tbody>
           </table>
       </div>
+      <hr>
+
+      <ul class='breadcrumb' id='reports-last'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#reports'>Reports</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>last</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#reports-last'>
+              GET /api/hosts/:host_id/reports/last
+            </a><br>
+            <small>Show the last report for a given host.</small>
+          </h3>
+      </div>
+
+      <div>
+        
+          <h2>Examples</h2>
+            <pre>GET /api/reports/last
+200
+{
+  &quot;report&quot;: {
+    &quot;summary&quot;: &quot;Success&quot;,
+    &quot;status&quot;: {
+      &quot;skipped&quot;: 0,
+      &quot;failed_restarts&quot;: 0,
+      &quot;failed&quot;: 0,
+      &quot;pending&quot;: 0,
+      &quot;restarted&quot;: 0,
+      &quot;applied&quot;: 0
+    },
+    &quot;id&quot;: 70219655,
+    &quot;reported_at&quot;: &quot;2012-12-11T15:24:42Z&quot;,
+    &quot;metrics&quot;: {
+      &quot;events&quot;: {
+        &quot;total&quot;: 0
+      },
+      &quot;time&quot;: {
+        &quot;package&quot;: 0.003989,
+        &quot;schedule&quot;: 0.00083,
+        &quot;cron&quot;: 0.000419,
+        &quot;exec&quot;: 0.000299,
+        &quot;service&quot;: 0.149739,
+        &quot;config_retrieval&quot;: 16.3637869358063,
+        &quot;file&quot;: 0.007025,
+        &quot;filebucket&quot;: 0.000171,
+        &quot;mailalias&quot;: 0.000283
+      },
+      &quot;resources&quot;: {
+        &quot;total&quot;: 33
+      },
+      &quot;changes&quot;: {}
+    },
+    &quot;logs&quot;: []
+  }
+}</pre>
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+    </td>
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
   </div>
 
   <ul class='breadcrumb'  id='roles'>
@@ -13057,7 +13035,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>paginate results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -13074,7 +13051,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>number of entries per request</p>
-
         <br>
         Value: Must be String
     </td>
@@ -13706,7 +13682,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>Filter results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -13723,7 +13698,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>Sort results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -13740,7 +13714,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>paginate results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -13757,7 +13730,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>number of entries per request</p>
-
         <br>
         Value: Must be String
     </td>
@@ -14018,7 +13990,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>filter by type</p>
-
         <br>
         Value: Must be String
     </td>
@@ -14035,7 +14006,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>paginate results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -14052,7 +14022,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>number of entries per request</p>
-
         <br>
         Value: Must be String
     </td>
@@ -14554,7 +14523,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>Filter results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -14571,7 +14539,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>Sort results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -14588,7 +14555,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>paginate results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -14605,7 +14571,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>number of entries per request</p>
-
         <br>
         Value: Must be String
     </td>
@@ -14804,7 +14769,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>Subnet name</p>
-
         <br>
         Value: Must be String
     </td>
@@ -14821,7 +14785,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>Subnet network</p>
-
         <br>
         Value: Must be String
     </td>
@@ -14838,7 +14801,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>Netmask for this subnet</p>
-
         <br>
         Value: Must be String
     </td>
@@ -14855,7 +14817,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>Primary DNS for this subnet</p>
-
         <br>
         Value: Must be String
     </td>
@@ -14872,7 +14833,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>Primary DNS for this subnet</p>
-
         <br>
         Value: Must be String
     </td>
@@ -14889,7 +14849,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>Secondary DNS for this subnet</p>
-
         <br>
         Value: Must be String
     </td>
@@ -14906,7 +14865,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>Starting IP Address for IP auto suggestion</p>
-
         <br>
         Value: Must be String
     </td>
@@ -14923,7 +14881,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>Ending IP Address for IP auto suggestion</p>
-
         <br>
         Value: Must be String
     </td>
@@ -14940,7 +14897,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>VLAN ID for this subnet</p>
-
         <br>
         Value: Must be String
     </td>
@@ -14957,7 +14913,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>Domains in which this subnet is part</p>
-
         <br>
         Value: Must be Array
     </td>
@@ -14974,7 +14929,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>DHCP Proxy to use within this subnet</p>
-
         <br>
         Value: Must be a number.
     </td>
@@ -14991,7 +14945,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>TFTP Proxy to use within this subnet</p>
-
         <br>
         Value: Must be a number.
     </td>
@@ -15008,7 +14961,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>DNS Proxy to use within this subnet</p>
-
         <br>
         Value: Must be a number.
     </td>
@@ -15108,7 +15060,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>Subnet numeric identifier</p>
-
         <br>
         Value: Must be a number.
     </td>
@@ -15140,7 +15091,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>Subnet name</p>
-
         <br>
         Value: Must be String
     </td>
@@ -15157,7 +15107,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>Subnet network</p>
-
         <br>
         Value: Must be String
     </td>
@@ -15174,7 +15123,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>Netmask for this subnet</p>
-
         <br>
         Value: Must be String
     </td>
@@ -15191,7 +15139,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>Primary DNS for this subnet</p>
-
         <br>
         Value: Must be String
     </td>
@@ -15208,7 +15155,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>Primary DNS for this subnet</p>
-
         <br>
         Value: Must be String
     </td>
@@ -15225,7 +15171,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>Secondary DNS for this subnet</p>
-
         <br>
         Value: Must be String
     </td>
@@ -15242,7 +15187,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>Starting IP Address for IP auto suggestion</p>
-
         <br>
         Value: Must be String
     </td>
@@ -15259,7 +15203,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>Ending IP Address for IP auto suggestion</p>
-
         <br>
         Value: Must be String
     </td>
@@ -15276,7 +15219,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>VLAN ID for this subnet</p>
-
         <br>
         Value: Must be String
     </td>
@@ -15293,7 +15235,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>Domains in which this subnet is part</p>
-
         <br>
         Value: Must be Array
     </td>
@@ -15310,7 +15251,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>DHCP Proxy to use within this subnet</p>
-
         <br>
         Value: Must be a number.
     </td>
@@ -15327,7 +15267,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>TFTP Proxy to use within this subnet</p>
-
         <br>
         Value: Must be a number.
     </td>
@@ -15344,7 +15283,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>DNS Proxy to use within this subnet</p>
-
         <br>
         Value: Must be a number.
     </td>
@@ -15438,300 +15376,8 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>Subnet numeric identifier</p>
-
         <br>
         Value: Must be a number.
-    </td>
-  </tr>
-
-  
-
-            </tbody>
-          </table>
-      </div>
-  </div>
-
-  <ul class='breadcrumb'  id='template_combinations'>
-    <li><a href='#'>Foreman</a><span class='divider'>/</span></li>
-    <li class='active'>Template combinations</li>
-  </ul>
-
-  <div class='page-header'>
-    <h1>
-      <a href='#template_combinations'>Template combinations</a><br>
-      <small></small>
-    </h1>
-  </div>
-
-
-  <div class='accordion' id='accordion'>
-
-      <hr>
-
-      <ul class='breadcrumb' id='template_combinations-index'>
-        <li>
-          <a href='#'>Foreman</a>
-          <span class='divider'>/</span>
-        </li>
-        <li>
-          <a href='#template_combinations'>Template combinations</a>
-          <span class='divider'>/</span>
-        </li>
-        <li class='active'>index</li>
-      </ul>
-
-      <div>
-          <h3>
-            <a href='#template_combinations-index'>
-              GET /api/config_templates/:config_template_id/template_combinations
-            </a><br>
-            <small>List Template Combination</small>
-          </h3>
-      </div>
-
-      <div>
-        
-
-
-          <h2>Params</h2>
-          <table class='table'>
-            <thead>
-              <tr>
-                <th>Param name</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-                <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>config_template_id </strong><br>
-      <small>
-        required
-        
-      </small>
-    </td>
-    <td>
-      
-        <br>
-        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
-    </td>
-  </tr>
-
-  
-
-            </tbody>
-          </table>
-      </div>
-      <hr>
-
-      <ul class='breadcrumb' id='template_combinations-create'>
-        <li>
-          <a href='#'>Foreman</a>
-          <span class='divider'>/</span>
-        </li>
-        <li>
-          <a href='#template_combinations'>Template combinations</a>
-          <span class='divider'>/</span>
-        </li>
-        <li class='active'>create</li>
-      </ul>
-
-      <div>
-          <h3>
-            <a href='#template_combinations-create'>
-              POST /api/config_templates/:config_template_id/template_combinations
-            </a><br>
-            <small>Add a Template Combination</small>
-          </h3>
-      </div>
-
-      <div>
-        
-
-
-          <h2>Params</h2>
-          <table class='table'>
-            <thead>
-              <tr>
-                <th>Param name</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-                <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>config_template_id </strong><br>
-      <small>
-        required
-        
-      </small>
-    </td>
-    <td>
-      
-        <br>
-        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
-    </td>
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>template_combination </strong><br>
-      <small>
-        required
-        
-      </small>
-    </td>
-    <td>
-      
-        <br>
-        Value: Must be a Hash
-    </td>
-  </tr>
-
-    <tr style='background-color:rgb(250,250,250);'>
-    <td>
-      <strong>template_combination[environment_id] </strong><br>
-      <small>
-        optional
-        , nil allowed
-      </small>
-    </td>
-    <td>
-      <p>environment id</p>
-
-        <br>
-        Value: Must be a number.
-    </td>
-  </tr>
-
-  
-  <tr style='background-color:rgb(250,250,250);'>
-    <td>
-      <strong>template_combination[hostgroup_id] </strong><br>
-      <small>
-        optional
-        , nil allowed
-      </small>
-    </td>
-    <td>
-      <p>hostgroup id</p>
-
-        <br>
-        Value: Must be a number.
-    </td>
-  </tr>
-
-  
-
-
-            </tbody>
-          </table>
-      </div>
-      <hr>
-
-      <ul class='breadcrumb' id='template_combinations-show'>
-        <li>
-          <a href='#'>Foreman</a>
-          <span class='divider'>/</span>
-        </li>
-        <li>
-          <a href='#template_combinations'>Template combinations</a>
-          <span class='divider'>/</span>
-        </li>
-        <li class='active'>show</li>
-      </ul>
-
-      <div>
-          <h3>
-            <a href='#template_combinations-show'>
-              GET /api/template_combinations/:id
-            </a><br>
-            <small>Show Template Combination</small>
-          </h3>
-      </div>
-
-      <div>
-        
-
-
-          <h2>Params</h2>
-          <table class='table'>
-            <thead>
-              <tr>
-                <th>Param name</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-                <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>id </strong><br>
-      <small>
-        required
-        
-      </small>
-    </td>
-    <td>
-      
-        <br>
-        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
-    </td>
-  </tr>
-
-  
-
-            </tbody>
-          </table>
-      </div>
-      <hr>
-
-      <ul class='breadcrumb' id='template_combinations-destroy'>
-        <li>
-          <a href='#'>Foreman</a>
-          <span class='divider'>/</span>
-        </li>
-        <li>
-          <a href='#template_combinations'>Template combinations</a>
-          <span class='divider'>/</span>
-        </li>
-        <li class='active'>destroy</li>
-      </ul>
-
-      <div>
-          <h3>
-            <a href='#template_combinations-destroy'>
-              DELETE /api/template_combinations/:id
-            </a><br>
-            <small>Delete a template</small>
-          </h3>
-      </div>
-
-      <div>
-        
-
-
-          <h2>Params</h2>
-          <table class='table'>
-            <thead>
-              <tr>
-                <th>Param name</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-                <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>id </strong><br>
-      <small>
-        required
-        
-      </small>
-    </td>
-    <td>
-      
-        <br>
-        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
     </td>
   </tr>
 
@@ -15838,7 +15484,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>paginate results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -15855,7 +15500,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>number of entries per request</p>
-
         <br>
         Value: Must be String
     </td>
@@ -15950,7 +15594,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>paginate results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -15967,7 +15610,38 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>number of entries per request</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
 
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>filter results</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>sort results</p>
         <br>
         Value: Must be String
     </td>
@@ -16464,7 +16138,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>filter results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -16481,7 +16154,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>sort results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -16498,7 +16170,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>paginate results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -16515,7 +16186,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>number of entries per request</p>
-
         <br>
         Value: Must be String
     </td>
@@ -16690,8 +16360,7 @@ will be substituted for the version of the operating system.</p>
       </div>
 
       <div>
-        <p>Adds role &#39;Anonymous&#39; to the user by default</p>
-
+        <p>Adds role &#8216;Anonymous&#8217; to the user by default</p>
 
 
           <h2>Params</h2>
@@ -16792,7 +16461,6 @@ will be substituted for the version of the operating system.</p>
     </td>
     <td>
       <p>Is an admin account?</p>
-
         <br>
         Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
     </td>
@@ -16860,9 +16528,7 @@ will be substituted for the version of the operating system.</p>
       </div>
 
       <div>
-        <p>Adds role &#39;Anonymous&#39; to the user if it is not already present.
-Only admin can set admin account.</p>
-
+        <p>Adds role &#8216;Anonymous&#8217; to the user if it is not already present. Only admin can set admin account.</p>
           <h2>Examples</h2>
             <pre>PUT /api/users/980190963
 {
@@ -17002,7 +16668,6 @@ Only admin can set admin account.</p>
     </td>
     <td>
       <p>Is an admin account?</p>
-
         <br>
         Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
     </td>

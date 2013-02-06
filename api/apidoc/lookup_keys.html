@@ -17,13 +17,20 @@
     <div class="row">
       <div id='container'>
         <ul class='breadcrumb'>
-  <li><a href='../apidoc.html'>Foreman</a><span class='divider'>/</span></li>
-  <li class='active'>Lookup keys</li>
+  <li>
+    <a href='../apidoc.html'>Foreman v1</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Lookup keys
+    
+  </li>
 </ul>
 
 <div class='page-header'>
   <h1>
-    Lookup keys<br>
+    Lookup keys
+    <br>
     <small></small>
   </h1>
 </div>
@@ -45,6 +52,15 @@
             GET /api/lookup_keys
           </a><br>
           <small>List all lookup_keys.</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/hosts/:host_id/lookup_keys
+          </a><br>
+          <small>List all lookup_keys of a given host.</small>
         </h2>
     </div>
 
@@ -112,7 +128,6 @@
     </td>
     <td>
       <p>filter results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -129,7 +144,6 @@
     </td>
     <td>
       <p>sort results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -146,7 +160,6 @@
     </td>
     <td>
       <p>paginate results</p>
-
         <br>
         Value: Must be String
     </td>
@@ -163,7 +176,6 @@
     </td>
     <td>
       <p>number of entries per request</p>
-
         <br>
         Value: Must be String
     </td>
