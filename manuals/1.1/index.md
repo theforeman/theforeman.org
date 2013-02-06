@@ -6,23 +6,24 @@ title: Foreman 1.1 Manual
 # 1. Foreman 1.1 Manual
 {% include manuals/1.1/1.1_architecture.md %}
 
-## 1.2 Supported Distributions
-{% include manuals/1.1/1.2_distributions.md %}
-
 # 2. Quickstart
 {% include manuals/1.1/2_quickstart_guide.md %}
 
 # 3. Installing Foreman
 {% include manuals/1.1/3_installing_foreman.md %}
-## 3.1 Foreman Prerequisites
-{% include manuals/1.1/3.1_foreman_prerequisites.md %}
+## 3.1 Supported Platforms
+{% include manuals/1.1/3.1_platforms.md %}
 ## 3.2 Foreman Installer
 {%include manuals/1.1/3.2_foreman_installer.md %}
+### 3.2.1 Installation
+{%include manuals/1.1/3.2.1_installation.md %}
+### 3.2.2 Installer Options
+{%include manuals/1.1/3.2.2_installer_options.md %}
 ## 3.3 Install From Packages
 {%include manuals/1.1/3.3_install_from_packages.md %}
-### 3.3.1 RPM Based Packages
+### 3.3.1 RPM Packages
 {%include manuals/1.1/3.3.1_rpm_packages.md %}
-### 3.3.2 Debian Based Packages
+### 3.3.2 Debian Packages
 {%include manuals/1.1/3.3.2_debian_packages.md %}
 ## 3.4 Install From Source
 {%include manuals/1.1/3.4_install_from_source.md %}
