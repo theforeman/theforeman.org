@@ -19,7 +19,7 @@ Other operating systems will need to use alternative installation methods (see t
 For **Red Hat variants**, run this (replace both instances of 'el6' with 'el5', 'f16' or 'f17' as appropriate):
 
 {% highlight bash %}
-yum -y install http://yum.theforeman.org/releases/1.1/el6/x86_64/foreman-release-1.1stable-1.el6.noarch.rpm
+yum -y install http://yum.theforeman.org/releases/1.1/el6/x86_64/foreman-release-1.1stable-3.el6.noarch.rpm
 yum -y install foreman-installer
 {% endhighlight %}
 
