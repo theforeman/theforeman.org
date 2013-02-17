@@ -39,4 +39,4 @@ The procedure is initially interactive, allowing changes to the configuration an
 ruby /usr/share/foreman-installer/generate_answers.rb
 {% endhighlight %}
 
-The Foreman installation will be accessible after installation at `https://fqdn/` with a default username/password of "admin" and "changeme".  The installed Smart Proxy can be added with the URL `https://fqdn:8443/` and the puppet master will be operational.
+After Puppet runs, Foreman will be accessible at `https://fqdn/` with a default username/password of "admin" and "changeme".  To complete the installation, click on More, Configuration, Smart Proxies and add a new proxy with the URL `https://fqdn:8443/`.
