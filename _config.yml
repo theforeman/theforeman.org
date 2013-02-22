@@ -6,6 +6,7 @@ description: Through deep integration with configuration management, DHCP, DNS, 
 
 production_url : http://theforeman.org
 url: http://theforeman.org
+baseurl: /
 
 safe:        false
 auto:        false
@@ -16,12 +17,12 @@ markdown:    rdiscount
 
 navigation:
 - text: Manual
-  url: /manuals/1.1/index.html
+  url: manuals/1.1/index.html
 - text: Screenshots & Screencasts
-  url: /media.html
+  url: media.html
 - text: Contribute
-  url: /contribute.html
+  url: contribute.html
 - text: Support
-  url: /support.html
+  url: support.html
 - text: API
-  url: /api.html
+  url: api.html

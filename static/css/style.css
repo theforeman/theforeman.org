@@ -71,10 +71,16 @@ border-radius: 4px;
 /* Website specific bootstrap customizations */
 #content .hero-unit {
   padding: 30px;
+  overflow: auto;
+}
+
+p.tagline {
+  font-weight: bold;
 }
 
 .hero-unit img {
   margin-bottom: 20px;
+  float: right;
 }
 
 #content h1 {

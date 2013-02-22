@@ -1,13 +1,12 @@
 {% include header.html %}
 
-<body>
   <div id="main">
     <div id="content" class="container">
       <div class="hero-unit">
-        <p>{{ site.tagline }}</p>
-        <img src="/static/images/foreman_large.png" class="homepage-primary-img"/>
-        <p>
-          {{ site.description }}
+	<p class="tagline">{{ site.tagline }}</p>
+	<img src="{{ site.baseurl }}static/images/foreman_large.png" class="homepage-primary-img"/>
+	<p>
+	  {{ site.description }}
         </p>
         <a class="btn btn-primary btn-large" href="manuals/1.1/quickstart_guide.html">Get started >> </a>
       </div>
@@ -27,6 +26,5 @@
       </div>
     </div>
   </div>
-</body>
 
 {% include footer.html %}

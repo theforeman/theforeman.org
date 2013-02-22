@@ -1,20 +1,33 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/Organization" lang="en">
+  <head>
+    <base href="{{ site.baseurl }}">
+    {% if page.sitename != nil %}
+    {% assign sitename = page.sitename %}
+    {% else %}
+    {% assign sitename = site.sitename %}
+    {% endif %}
 
-  <title>{{ site.sitename }}</title>
-  <script type="text/javascript" src="/static/js/jquery.js"></script>
-  <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="/static/js/jquery-ui-1.9.2.custom.min.js"></script>
-  <script type="text/javascript" src="/static/js/jquery.tocify.min.js"></script>
+    {% if page.pagename != nil %}
+    {% assign pagename = true %}
+    {% endif %}
+  <title>{{ sitename }}{% if pagename %} :: {{ page.pagename }}{% endif %}</title>
 
-  <link rel="stylesheet" media="all" href="/static/css/bootstrap.min.css"/>
-  <link rel="stylesheet" media="all" href="/static/css/bootstrap-responsive.min.css"/>
-  <link rel="stylesheet" media="all" href="/static/css/jquery.tocify.css"/>
-  <link rel="stylesheet" media="all" href="/static/css/syntax.css" />
-  <link rel="stylesheet" media="all" href="/static/css/style.css"/>
+  <script type="text/javascript" src="{{ site.baseurl }}static/js/jquery.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}static/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}static/js/jquery-ui-1.9.2.custom.min.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}static/js/jquery.tocify.min.js"></script>
+
+  <link rel="stylesheet" media="all" href="{{ site.baseurl }}static/css/bootstrap.min.css"/>
+  <link rel="stylesheet" media="all" href="{{ site.baseurl }}static/css/bootstrap-responsive.min.css"/>
+  <link rel="stylesheet" media="all" href="{{ site.baseurl }}static/css/jquery.tocify.css"/>
+  <link rel="stylesheet" media="all" href="{{ site.baseurl }}static/css/syntax.css" />
+  <link rel="stylesheet" media="all" href="{{ site.baseurl }}static/css/style.css"/>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0;" />
+</head>
 
+<body>
   <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
           <div class="container">
@@ -23,18 +36,19 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
               </button>
-              {% if page.url != "/index.html" %}<img alt="Foreman" class="logo" src="/static/images/foreman.png" />{% endif %}<a class="brand" href="/">Foreman</a>
+	      {% if page.url != "/index.html" %}<img alt="Foreman" class="logo" src="{{ site.baseurl }}static/images/foreman.png" />{% endif %}<a class="brand" href="/">Foreman</a>
               <div class="nav-collapse collapse">
                   <ul class="nav">
                       {% for link in site.navigation %}
                       {% assign active = nil %}
                       {% if page.url == link.url or page.layout == link.layout %}
                       {% assign active = 'active' %}
-                      {% endif %}
-                      <li class="{{ active }}"><a href="{{ link.url }}"> {{ link.text }} </a></li>
-                      {% endfor %}
-                  </ul>
-              </div>
-          </div>
+		      {% endif %}
+		      <li class="{{ active }}"><a href="{{ site.baseurl}}{{ link.url }}"> {{ link.text }} </a></li>
+		      {% endfor %}
+		    </ul>
+		    {% include releasesplash.html %}
+	      </div>
+	  </div>
       </div>
   </div>
