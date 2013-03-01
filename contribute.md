@@ -73,5 +73,10 @@ Testing is also *very* welcome, for any issue encountered, please open a bug / f
 ### Issue triage
 Sometimes issues are reported without all the information needed by a developer. Getting the details of the bug or feature from the reporter and the community will help everyone understand what is needed. Our issue tracker can be found here: [http://projects.theforeman.org/projects/foreman/issues](http://projects.theforeman.org/projects/foreman/issues)
 
+### Documentation and web site
+We're trying to maintain high quality, authoritative documentation in the Foreman manual as part of this web site.  Any contributions, such as adding content, removing outdated information or improving the style and layout are greatly appreciated.
+
+Both the manual and the web site are contained in our [theforeman.org repository](https://github.com/theforeman/theforeman.org).  See the README.md to get started.  Contributions to this project are licensed under Creative Commons Attribution-ShareAlike 3.0.
+
 ### Design and User interface
 Foreman has a very basic design and user interface. Any improvements to it including new themes, skinning, or interface adjustments could help every user.
