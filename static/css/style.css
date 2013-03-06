@@ -93,13 +93,13 @@ p.tagline {
 #content h2 {
   padding-top: 25px;
   padding-bottom: 9px;
-  margin: 20px 0 30px;
+  margin: 20px 0 8px;
   border-bottom: 1px solid #EEE;
 }
 #content h3 {
-  padding-top: 25px;
+  padding-top: 8px;
   padding-bottom: 9px;
-  margin: 20px 0 30px;
+  margin: 0 0 10px;
 }
 
 .homepage-img {

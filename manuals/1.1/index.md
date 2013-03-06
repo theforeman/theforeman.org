@@ -5,6 +5,7 @@ title: Foreman 1.1 Manual
 
 # 1. Foreman 1.1 Manual
 {% include manuals/1.1/1.1_architecture.md %}
+{% include manuals/1.1/1.2_release_notes.md %}
 
 # 2. Quickstart
 {% include manuals/1.1/2_quickstart_guide.md %}
