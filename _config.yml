@@ -18,7 +18,7 @@ markdown:    rdiscount
 navigation:
 - text: Manual
   url: manuals/1.1/index.html
-- text: Screenshots & Screencasts
+- text: Screenshots & Videos
   url: media.html
 - text: Contribute
   url: contribute.html
