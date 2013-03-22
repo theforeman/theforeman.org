@@ -1,4 +1,4 @@
 ---
 layout: media
-title: Screenshots & Screencasts
+title: Screenshots & Videos
 ---
