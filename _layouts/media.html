@@ -8,7 +8,9 @@ pagename: Media
     <div class="tabbable tabs-left">
       <ul class="nav nav-tabs" data-tabs="tabs" id="tabs">
         <li class="active"><a href="#screenshots" data-toggle="tab">Screenshots</a></li>
-        <li><a href="#videos" data-toggle="tab">Videos</a></li>
+        <li><a href="#talks" data-toggle="tab">Talks</a></li>
+        <li><a href="#screencasts" data-toggle="tab">Screencasts</a></li>
+        <li><a href="#deepdives" data-toggle="tab">Deep Dives</a></li>
         <li><a href="#presentations" data-toggle="tab">Presentations</a></li>
       </ul>
       <div class="tab-content">
@@ -55,20 +57,20 @@ pagename: Media
             <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
           </div>
         </div>
-        <div class="tab-pane" id="videos">
-          <h2>General Foreman</h2>
+        <div class="tab-pane" id="talks">
           <h3>Puppet Camp Ghent 2013 - Ohad Levy</h3>
           <iframe width="420" height="315" link="http://www.youtube.com/embed/uGevzbQ469w" frameborder="0" allowfullscreen></iframe>
           <h3>Puppet Conf 2012 - Ohad Levy</h3>
           <iframe width="420" height="315" link="http://www.youtube.com/embed/AeVVezzZ-4w" frameborder="0" allowfullscreen></iframe>
           <h3>Puppet NYC 2013 - Sam Kottler</h3>
           <iframe width="420" height="315" link="http://www.youtube.com/embed/o5BjZodH9Fo" frameborder="0" allowfullscreen></iframe>
-
-          <h2>Specific topics</h2>
-          <h3>Quickstart Installation - Dominic Cleal</h3>
-          <iframe width="420" height="315" link="http://www.youtube.com/embed/2dwyzPpFJYQ" frameborder="0" allowfullscreen></iframe>
           <h3>Hardware Discovery - Greg Sutcliffe</h3>
           <video width="420" height="315" src="http://video.fosdem.org/2013/lightningtalks/Managing_your_metal_flexibly.webm" controls></video>
+        </div>
+
+        <div class="tab-pane" id="screencasts">
+          <h3>Quickstart Installation - Dominic Cleal</h3>
+          <iframe width="420" height="315" link="http://www.youtube.com/embed/2dwyzPpFJYQ" frameborder="0" allowfullscreen></iframe>
           <h3>Locations and Organizations - Sam Kottler</h3>
           <iframe width="560" height="315" link="http://www.youtube.com/embed/aB0Ek-aKmZw" frameborder="0" allowfullscreen></iframe>
           <h3>Parameterized Classes - Greg Sutcliffe</h3>
@@ -77,10 +79,29 @@ pagename: Media
           <iframe width="420" height="315" link="http://www.youtube.com/embed/FYsHZbCQzH8" frameborder="0" allowfullscreen></iframe>
           <h3>OpenStack integration - Dizz</h3>
           <iframe width="420" height="315" link="http://www.youtube.com/embed/DhghHJ_9h1U" frameborder="0" allowfullscreen></iframe>
-
-          <h3>Deep dives</h3>
-          <p>The Foreman team tries to hold regular "deep dive" sessions in which a single aspect of the project is examined and discussed in depth. We try to record these sessions so that community members can also benefit from them. You'll find past videos and upcoming topics on the <a href="http://projects.theforeman.org/projects/foreman/wiki/Development_Resources">Development Resources</a> wiki page.</p>
         </div>
+
+        <div class="tab-pane" id="deepdives">
+          <h2>Deep Dives</h2>
+          <p>The Foreman team tries to hold regular "deep dive" sessions in which a single aspect of the project is examined and discussed in depth. We try to record these sessions so anybody in the community can benefit from them. You'll find upcoming topics on the <a href="http://projects.theforeman.org/projects/foreman/wiki/Upcoming_Deep_Dives">Upcoming Deep Dives</a> wiki page.</p>
+
+          <h3>Testing Foreman</h3>
+          <p>Covers unit, functional, integration, Capybara integration tests, proxy tests and <a href="http://ci.theforeman.org">Jenkins</a>.</p>
+          <iframe width="560" height="315" link="http://www.youtube.com/embed/7VU1A-yn54E" frameborder="0" allowfullscreen></iframe>
+          <h3>Pull requests: Trello and Jenkins</h3>
+          <iframe width="560" height="315" link="http://www.youtube.com/embed/mKWw349rQwE" frameborder="0" allowfullscreen></iframe>
+          <h3>Project infrastructure discussion</h3>
+          <iframe width="560" height="315" link="http://www.youtube.com/embed/HQhlCiyv8Uw" frameborder="0" allowfullscreen></iframe>
+          <h3>MCollective and Puppet 3 data bindings</h3>
+          <iframe width="560" height="315" link="http://www.youtube.com/embed/yO2quNzmvuY" frameborder="0" allowfullscreen></iframe>
+          <h3>Organizations and Locations implementation</h3>
+          <iframe width="560" height="315" link="http://www.youtube.com/embed/g5hvddwT1os" frameborder="0" allowfullscreen></iframe>
+          <h3>Parameterized Class support</h3>
+          <iframe width="560" height="315" link="http://www.youtube.com/embed/dlgv_4rr4Ws" frameborder="0" allowfullscreen></iframe>
+          <h3>Jenkins and Packaging</h3>
+          <iframe width="560" height="315" link="http://www.youtube.com/embed/CmKoEHCYROQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+
         <div class="tab-pane" id="presentations">
           <iframe width="550" height="400" link="http://prezi.com/embed/btaqhly8_rx7/?bgcolor=ffffff&amp;lock_to_path=1&amp;autoplay=no&amp;autohide_ctrls=0" frameBorder="0"></iframe>
           <br>
@@ -99,7 +120,7 @@ $(function() {
       var contentID = e.target.toString().match(/#.+/gi)[0]; //get anchor
       var content = $(contentID + ' iframe')
        //load content for selected tab
-      if(contentID == "#videos" || contentID == "#presentations"){
+      if(contentID == "#talks" || contentID == '#screencasts' || contentID == '#deepdives' || contentID == "#presentations"){
         content.each(function(i){$(this).attr('src', $(this).attr('link'))});
       }
     });
