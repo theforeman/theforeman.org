@@ -9,7 +9,7 @@ url: http://theforeman.org
 baseurl: /
 
 safe:        false
-auto:        false
+auto:        true
 
 future:      false
 pygments:    true
