@@ -4,7 +4,7 @@ title: Foreman 1.2 Manual
 ---
 
 # 1. Foreman 1.2 Manual
-{% include manuals/1.2/1.2_architecture.md %}
+{% include manuals/1.2/1.1_architecture.md %}
 {% include manuals/1.2/1.2_release_notes.md %}
 
 # 2. Quickstart
@@ -45,7 +45,7 @@ title: Foreman 1.2 Manual
 {%include manuals/1.2/4_general_foreman.md %}
 ## 4.1 Web Interface
 ### 4.1.2 LDAP Authentication
-{%include manuals/1.2/4.1.2_authentication.md %}
+{%include manuals/1.2/4.1.1_authentication.md %}
 ### 4.1.2 Roles and Permissions
 {%include manuals/1.2/4.1.2_roles_and_permissions.md %}
 ### 4.1.3 Trends
