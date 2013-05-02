@@ -5,6 +5,20 @@ This repo contains the source code for
 [Markdown](http://daringfireball.net/projects/markdown/syntax). If you're not familiar with it, fear not; it's easy
 to learn and to become rapidly productive!
 
+Everything you push into the gh-pages branch goes live immediately!
+
+## Testing locally
+
+To test your changes locally use
+
+    # rake
+
+to generate your site in the \_site directory, or
+
+    # rake server
+
+To start Jekyll server locally.
+
 ## Contributing
 
 1. Fork this repo to your account.
