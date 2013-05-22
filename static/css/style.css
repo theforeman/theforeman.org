@@ -17,6 +17,11 @@ th.underlined {
   padding-top: 10px;
 }
 
+.brand {
+  position: relative;
+  z-index: 100;
+}
+
 body > .navbar .brand {
     margin-left: 45px;
     font-weight: bold;
