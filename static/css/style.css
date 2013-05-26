@@ -130,3 +130,13 @@ p.tagline {
 .footer a {
   color: #6AF;
 }
+
+.nav .dropdown-toggle .caret {
+  border-bottom-color: #999999;
+  border-top-color: #999999;
+}
+
+.nav .dropdown-toggle:hover .caret {
+  border-bottom-color: #FFFFFF;
+  border-top-color: #FFFFFF;
+}
