@@ -70,20 +70,22 @@ title: Foreman 1.2 Manual
 
 ## 4.3 Smart Proxies
 {%include manuals/1.2/4.3_smartproxy.md %}
-### 4.3.1 Smartproxy Installation
+### 4.3.1 Smart Proxy Installation
 {%include manuals/1.2/4.3.1_smartproxy_installation.md %}
-### 4.3.2 Smartproxy Settings
+### 4.3.2 Smart Proxy Settings
 {%include manuals/1.2/4.3.2_smartproxy_settings.md %}
-### 4.3.3 ISC_DHCP
+### 4.3.3 ISC DHCP
 {%include manuals/1.2/4.3.3_isc_dhcp.md %}
-### 4.3.4 MS_DHCP
+### 4.3.4 MS DHCP
 {%include manuals/1.2/4.3.4_ms_dhcp.md %}
-### 4.3.5 Bind
+### 4.3.5 BIND
 {%include manuals/1.2/4.3.5_bind.md %}
-### 4.3.6 SSL
-{%include manuals/1.2/4.3.6_smartproxy_ssl.md %}
-### 4.3.7 TFTP
-{%include manuals/1.2/4.3.7_smartproxy_tftp.md %}
+### 4.3.6 GSS-TSIG DNS
+{%include manuals/1.2/4.3.6_gsstsig.md %}
+### 4.3.7 SSL
+{%include manuals/1.2/4.3.7_smartproxy_ssl.md %}
+### 4.3.8 TFTP
+{%include manuals/1.2/4.3.8_smartproxy_tftp.md %}
 
 ## 4.4 Provisioning
 {%include manuals/1.2/4.4_provisioning.md %}
