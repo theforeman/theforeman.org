@@ -12,7 +12,7 @@ GEM
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
-    directory_watcher (1.5.1)
+    directory_watcher (1.4.1)
     fast-stemmer (1.0.2)
     ffi (1.0.11)
     fssm (0.2.10)
@@ -56,6 +56,7 @@ PLATFORMS
 DEPENDENCIES
   RedCloth (~> 4.2.9)
   compass (~> 0.12.1)
+  directory_watcher (~> 1.4.0)
   haml (~> 3.1.6)
   jekyll (~> 0.11.2)
   liquid (~> 2.3.0)
