@@ -17,7 +17,7 @@ Other operating systems will need to use alternative installation methods (see t
 
 #### Downloading the installer
 
-For **Red Hat variants**, run this (replace both instances of 'el6' with 'el5', or 'f18' as appropriate):
+For **Red Hat variants**, run this (replace 'el6' with 'f18' as appropriate):
 
 {% highlight bash %}
 yum -y install http://yum.theforeman.org/releases/1.2/el6/x86_64/foreman-release.rpm
