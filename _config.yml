@@ -9,7 +9,6 @@ url: http://theforeman.org
 baseurl: /
 
 safe:        false
-auto:        true
 
 future:      false
 pygments:    true
