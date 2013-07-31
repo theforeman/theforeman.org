@@ -19,16 +19,7 @@ on Github.
 
 Master is frozen between major releases.
 
-### Setup test environment
-First, make sure you are a member of the [Foreman Developers](https://groups.google.com/forum/?fromgroups#!forum/foreman-dev) mailing list.
-
-Patches to fix bugs or add new features are always appreciated. If you are going to work on a specific issue, make a note in the issue details so the developers will know what you're working on.
-
-We try to keep a one commit per bug/feature policy, please try to create an issue which is specific for your patch details.
-
-### Submit Patches
-Please make sure there is a [Redmine issue](http://projects.theforeman.org/projects/foreman/issues) open for the change you are going to submit, as you will want to reference it in your commit message; this is very helpful when generating release notes.
-
+### Setup development environment
 1. Fork [theforeman/foreman](https://github.com/theforeman/foreman) to a personal github account. This will create a "foreman" repo under your Github username.
 2. Clone the fork you just created to your development system: `git clone https://github.com/<username>/foreman.git`
 3. Reference theforeman/foreman as upstream:
@@ -37,19 +28,43 @@ Please make sure there is a [Redmine issue](http://projects.theforeman.org/proje
     * `git remote add upstream https://github.com/theforeman/foreman.git`
     * `git fetch upstream`
 
-4. Create a feature/topic branch
+4. Install all required gems: `bundle install`
+
+You may get some failures when installing the required gems due to some
+native libraries being required (notable libvirt-devel &
+postgres-devel) so you will need to install these via your distributions
+normal package manager (e.g. `yum install libvirt-devel postgres-devel`
+for RHEL/Fedora based distributions).
+
+### Setup test environment
+1. Copy `config/settings.yaml.example` to `config/settings.yaml`
+2. Copy `config/database.yaml.example` to `config/database.yaml`
+3. Create your test database: `RAILS_ENV=test rake db:migrate`
+4. Run all the tests: `RAILS_ENV=test rake db:migrate`
+5. Or a single test: `RAILS_ENV=test ruby functional/your_test.rb`
+
+### Submit Patches
+First, make sure you are a member of the [Foreman Developers](https://groups.google.com/forum/?fromgroups#!forum/foreman-dev) mailing list.
+
+Patches to fix bugs or add new features are always appreciated. If you are going to work on a specific issue, make a note in the issue details so the developers will know what you're working on.
+
+We try to keep a one commit per bug/feature policy, please try to create an issue which is specific for your patch details.
+
+Please make sure there is a [Redmine issue](http://projects.theforeman.org/projects/foreman/issues) open for the change you are going to submit, as you will want to reference it in your commit message; this is very helpful when generating release notes.
+
+1. Create a feature/topic branch
 
     * `git checkout -b <branchName>` - Example: git checkout -b 1656-add_TB_support
 
-5. Make changes and commit. Please reference the Redmine issue this commit addresses via "refs" or "fixes" #issueid in the commit message. 
+2. Make changes and commit. Please reference the Redmine issue this commit addresses via "refs" or "fixes" #issueid in the commit message. 
 
     * `git add <modifiedFile(s)>; git commit -m 'fixes #<bug> <message>'`
 
-6. Push topic branch to your fork:
+3. Push topic branch to your fork:
 
     * `git push origin <branchName>` - Example: git push origin 1656-add_TB_support
 
-7. [Issue a pull request](https://help.github.com/articles/using-pull-requests)
+4. [Issue a pull request](https://help.github.com/articles/using-pull-requests)
 
 **Once you have followed this process once, it becomes much simpler to add future patches!**
 
