@@ -4,3 +4,5 @@ _site
 *.DS_Store
 .rvmrc
 .idea/*
+.ruby-version
+.ruby-gemset
