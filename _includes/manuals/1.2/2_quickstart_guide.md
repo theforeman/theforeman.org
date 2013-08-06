@@ -5,7 +5,7 @@ Components include the Foreman web UI, Smart Proxy, Passenger (for the puppet ma
 
 #### Supported platforms
 * RHEL derivatives (CentOS), version 6 (EPEL required, plus subscribe to "optional" channel on RHEL 6)
-* Fedora 18
+* Fedora 18, 19
 * Debian 7 (Wheezy)
 * Debian 6 (Squeeze) (update Puppet from backports)
 * Ubuntu 12.04 (Precise)
@@ -17,7 +17,7 @@ Other operating systems will need to use alternative installation methods (see t
 
 #### Downloading the installer
 
-For **Red Hat variants**, run this (replace 'el6' with 'f18' as appropriate):
+For **Red Hat variants**, run this (replace 'el6' with 'f18' or 'f19' as appropriate):
 
 {% highlight bash %}
 yum -y install http://yum.theforeman.org/releases/1.2/el6/x86_64/foreman-release.rpm
