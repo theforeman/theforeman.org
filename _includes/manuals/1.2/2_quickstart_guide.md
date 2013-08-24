@@ -11,35 +11,3 @@ Components include the Foreman web UI, Smart Proxy, Passenger (for the puppet ma
 * Ubuntu 12.04 (Precise)
 
 Other operating systems will need to use alternative installation methods (see the manual).
-
-### Installation
-[The Foreman installer](https://github.com/theforeman/foreman-installer) uses Puppet to install Foreman. This guide assumes that you've already installed Puppet (without a master), but the installer will setup Foreman and the puppet master with Passenger and the [Smart Proxy](https://github.com/theforeman/smart-proxy) by default.
-
-#### Downloading the installer
-
-For **Red Hat variants**, run this (replace 'el6' with 'f18' or 'f19' as appropriate):
-
-{% highlight bash %}
-yum -y install http://yum.theforeman.org/releases/1.2/el6/x86_64/foreman-release.rpm
-yum -y install foreman-installer
-{% endhighlight %}
-
-For **Debian variants**, run this (replace 'wheezy' with 'precise' if on Ubuntu 12.04, or 'squeeze' for Debian 6):
-
-{% highlight bash %}
-echo "deb http://deb.theforeman.org/ wheezy stable" > /etc/apt/sources.list.d/foreman.list
-wget -q http://deb.theforeman.org/foreman.asc -O- | apt-key add -
-apt-get update && apt-get install foreman-installer
-{% endhighlight %}
-
-#### Running the installer
-
-The procedure is initially interactive, allowing changes to the configuration and then the option is given to run Puppet to perform the installation:
-
-{% highlight bash %}
-ruby /usr/share/foreman-installer/generate_answers.rb
-{% endhighlight %}
-
-After Puppet runs, Foreman will be accessible at `https://fqdn/` with a default
-username/password of "admin" and "changeme".  To complete the installation,
-click on *More > Configuration > Smart Proxies* and add a new proxy with the URL `https://fqdn:8443/`.

@@ -9,6 +9,10 @@ title: Foreman 1.2 Manual
 
 # 2. Quickstart
 {% include manuals/1.2/2_quickstart_guide.md %}
+## 2.1 Installation
+{% include manuals/1.2/2.1_quickstart_installation.md %}
+## 2.2 Puppet Management
+{% include manuals/1.2/2.2_quickstart_puppet.md %}
 
 # 3. Installing Foreman
 {% include manuals/1.2/3_installing_foreman.md %}
