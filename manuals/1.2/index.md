@@ -104,8 +104,24 @@ title: Foreman 1.2 Manual
 {%include manuals/1.2/missing.html %}
 ## 5.1 API
 {%include manuals/1.2/missing.html %}
+
 ## 5.2 Compute Resources
-{%include manuals/1.2/missing.html %}
+{%include manuals/1.2/5.2_compute_resources.md %}
+### 5.2.1 Using Compute Resources
+{%include manuals/1.2/5.2.1_cr_using.md %}
+### 5.2.2 EC2 Notes
+{%include manuals/1.2/5.2.2_cr_ec2.md %}
+### 5.2.3 Libvirt Notes
+{%include manuals/1.2/5.2.3_cr_libvirt.md %}
+### 5.2.4 OpenStack Notes
+{%include manuals/1.2/5.2.4_cr_openstack.md %}
+### 5.2.5 oVirt / RHEV Notes
+{%include manuals/1.2/5.2.5_cr_ovirt.md %}
+### 5.2.6 Rackspace Notes
+{%include manuals/1.2/5.2.6_cr_rackspace.md %}
+### 5.2.7 VMware Notes
+{%include manuals/1.2/5.2.7_cr_vmware.md %}
+
 ## 5.3 Install Locations
 {%include manuals/1.2/missing.html %}
 ## 5.4 Securing Communications with SSL
