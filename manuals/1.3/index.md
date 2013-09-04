@@ -1,9 +1,10 @@
 ---
 layout: manual
 title: Foreman 1.3 Manual
+version: 1.3
 ---
 
-# 1. Foreman 1.3 Manual
+# 1. {{ page.title }}
 {% include manuals/1.3/1.1_architecture.md %}
 {% include manuals/1.3/1.2_release_notes.md %}
 
@@ -46,6 +47,8 @@ title: Foreman 1.3 Manual
 {%include manuals/1.3/3.5.4_puppet_reports.md %}
 ### 3.5.5 Importing Facts
 {%include manuals/1.3/3.5.5_importing_facts.md %}
+### 3.6 Upgrade
+{%include manuals/1.3/3.6_upgrade.md %}
 
 # 4. General Foreman
 {%include manuals/1.3/4_general_foreman.md %}
@@ -134,5 +137,12 @@ title: Foreman 1.3 Manual
 {%include manuals/1.3/5.4.1_comms_puppetmaster.md %}
 ## 5.4.2 Securing Smart Proxy Requests
 {%include manuals/1.3/5.4.2_comms_proxy.md %}
+## 5.5 Backup, Recovery and Migration
+{%include manuals/1.3/5.5_backup_and_recovery.md %}
+## 5.5.1 Backup
+{%include manuals/1.3/5.5.1_backup.md %}
+## 5.5.2 Recovery
+{%include manuals/1.3/5.5.2_recovery.md %}
+
 # 6. Troubleshooting
 {%include manuals/1.3/6_troubleshooting.md %}
