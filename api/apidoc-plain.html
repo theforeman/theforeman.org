@@ -82,6 +82,18 @@
       <li><a href='#home-index'>index</a></li>
       <li><a href='#home-status'>status</a></li>
   </ul>
+  <h4><a href='#host_classes'>Host classes</a></h4>
+  <ul>
+      <li><a href='#host_classes-index'>index</a></li>
+      <li><a href='#host_classes-create'>create</a></li>
+      <li><a href='#host_classes-destroy'>destroy</a></li>
+  </ul>
+  <h4><a href='#hostgroup_classes'>Hostgroup classes</a></h4>
+  <ul>
+      <li><a href='#hostgroup_classes-index'>index</a></li>
+      <li><a href='#hostgroup_classes-create'>create</a></li>
+      <li><a href='#hostgroup_classes-destroy'>destroy</a></li>
+  </ul>
   <h4><a href='#hostgroups'>Hostgroups</a></h4>
   <ul>
       <li><a href='#hostgroups-index'>index</a></li>
@@ -98,6 +110,10 @@
       <li><a href='#hosts-update'>update</a></li>
       <li><a href='#hosts-destroy'>destroy</a></li>
       <li><a href='#hosts-status'>status</a></li>
+      <li><a href='#hosts-puppetrun'>puppetrun</a></li>
+      <li><a href='#hosts-power'>power</a></li>
+      <li><a href='#hosts-boot'>boot</a></li>
+      <li><a href='#hosts-facts'>facts</a></li>
   </ul>
   <h4><a href='#images'>Images</a></h4>
   <ul>
@@ -107,6 +123,22 @@
       <li><a href='#images-update'>update</a></li>
       <li><a href='#images-destroy'>destroy</a></li>
   </ul>
+  <h4><a href='#interfaces'>Interfaces</a></h4>
+  <ul>
+      <li><a href='#interfaces-index'>index</a></li>
+      <li><a href='#interfaces-show'>show</a></li>
+      <li><a href='#interfaces-create'>create</a></li>
+      <li><a href='#interfaces-update'>update</a></li>
+      <li><a href='#interfaces-destroy'>destroy</a></li>
+  </ul>
+  <h4><a href='#locations'>Locations</a></h4>
+  <ul>
+      <li><a href='#locations-index'>index</a></li>
+      <li><a href='#locations-show'>show</a></li>
+      <li><a href='#locations-create'>create</a></li>
+      <li><a href='#locations-update'>update</a></li>
+      <li><a href='#locations-destroy'>destroy</a></li>
+  </ul>
   <h4><a href='#lookup_keys'>Lookup keys</a></h4>
   <ul>
       <li><a href='#lookup_keys-index'>index</a></li>
@@ -114,6 +146,10 @@
       <li><a href='#lookup_keys-create'>create</a></li>
       <li><a href='#lookup_keys-update'>update</a></li>
       <li><a href='#lookup_keys-destroy'>destroy</a></li>
+      <li><a href='#lookup_keys-host_or_hostgroup_smart_parameters'>host_or_hostgroup_smart_parameters</a></li>
+      <li><a href='#lookup_keys-host_or_hostgroup_smart_class_parameters'>host_or_hostgroup_smart_class_parameters</a></li>
+      <li><a href='#lookup_keys-puppet_smart_parameters'>puppet_smart_parameters</a></li>
+      <li><a href='#lookup_keys-puppet_smart_class_parameters'>puppet_smart_class_parameters</a></li>
   </ul>
   <h4><a href='#media'>Media</a></h4>
   <ul>
@@ -140,6 +176,23 @@
       <li><a href='#operatingsystems-destroy'>destroy</a></li>
       <li><a href='#operatingsystems-bootfiles'>bootfiles</a></li>
   </ul>
+  <h4><a href='#organizations'>Organizations</a></h4>
+  <ul>
+      <li><a href='#organizations-index'>index</a></li>
+      <li><a href='#organizations-show'>show</a></li>
+      <li><a href='#organizations-create'>create</a></li>
+      <li><a href='#organizations-update'>update</a></li>
+      <li><a href='#organizations-destroy'>destroy</a></li>
+  </ul>
+  <h4><a href='#parameters'>Parameters</a></h4>
+  <ul>
+      <li><a href='#parameters-index'>index</a></li>
+      <li><a href='#parameters-show'>show</a></li>
+      <li><a href='#parameters-create'>create</a></li>
+      <li><a href='#parameters-update'>update</a></li>
+      <li><a href='#parameters-destroy'>destroy</a></li>
+      <li><a href='#parameters-reset'>reset</a></li>
+  </ul>
   <h4><a href='#ptables'>Ptables</a></h4>
   <ul>
       <li><a href='#ptables-index'>index</a></li>
@@ -162,6 +215,7 @@
       <li><a href='#reports-show'>show</a></li>
       <li><a href='#reports-destroy'>destroy</a></li>
       <li><a href='#reports-last'>last</a></li>
+      <li><a href='#reports-create'>create</a></li>
   </ul>
   <h4><a href='#roles'>Roles</a></h4>
   <ul>
@@ -192,6 +246,13 @@
       <li><a href='#subnets-create'>create</a></li>
       <li><a href='#subnets-update'>update</a></li>
       <li><a href='#subnets-destroy'>destroy</a></li>
+  </ul>
+  <h4><a href='#template_combinations'>Template combinations</a></h4>
+  <ul>
+      <li><a href='#template_combinations-index'>index</a></li>
+      <li><a href='#template_combinations-create'>create</a></li>
+      <li><a href='#template_combinations-show'>show</a></li>
+      <li><a href='#template_combinations-destroy'>destroy</a></li>
   </ul>
   <h4><a href='#template_kinds'>Template kinds</a></h4>
   <ul>
@@ -2245,7 +2306,7 @@
         
           [ Must be String ]
       </small>
-      <p>Providers include Libvirt, Ovirt, EC2, Vmware, Openstack, Rackspace</p>
+      <p>Providers include Libvirt, Ovirt, EC2, Vmware, Openstack, Rackspace, GCE</p>
     </li>
     
     <li>
@@ -2411,7 +2472,7 @@
         
           [ Must be String ]
       </small>
-      <p>Providers include Libvirt, Ovirt, EC2, Vmware, Openstack, Rackspace</p>
+      <p>Providers include Libvirt, Ovirt, EC2, Vmware, Openstack, Rackspace, GCE</p>
     </li>
     
     <li>
@@ -4125,6 +4186,244 @@ PXE Default file has been deployed to all Smart Proxies</pre>
   <hr/>
 
   <div>
+    <h2 id="host_classes">
+      <a href='#host_classes'>Host classes</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="host_classes-index">
+      <a href='#host_classes'>Host classes</a> / <a href='#host_classes-index'>index</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/hosts/:host_id/puppetclass_ids
+            <br>
+            <small>List all puppetclass id's for host</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+      </div>
+      <hr/>
+
+      <h3 id="host_classes-create">
+      <a href='#host_classes'>Host classes</a> / <a href='#host_classes-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /api/hosts/:host_id/puppetclass_ids
+            <br>
+            <small>Add a puppetclass to host</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>host_id </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      <p>id of host</p>
+    </li>
+    
+    <li>
+      <strong>puppetclass_id </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      <p>id of puppetclass</p>
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="host_classes-destroy">
+      <a href='#host_classes'>Host classes</a> / <a href='#host_classes-destroy'>destroy</a>
+      </h3>
+
+      <div>
+          <h4>
+              DELETE /api/hosts/:host_id/puppetclass_ids/:id
+            <br>
+            <small>Remove a puppetclass from host</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>host_id </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      <p>id of host</p>
+    </li>
+    
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      <p>id of puppetclass</p>
+    </li>
+    
+</ul>
+
+      </div>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h2 id="hostgroup_classes">
+      <a href='#hostgroup_classes'>Hostgroup classes</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="hostgroup_classes-index">
+      <a href='#hostgroup_classes'>Hostgroup classes</a> / <a href='#hostgroup_classes-index'>index</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/hostgroups/:hostgroup_id/puppetclass_ids
+            <br>
+            <small>List all puppetclass id's for hostgroup</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+      </div>
+      <hr/>
+
+      <h3 id="hostgroup_classes-create">
+      <a href='#hostgroup_classes'>Hostgroup classes</a> / <a href='#hostgroup_classes-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /api/hostgroups/:hostgroup_id/puppetclass_ids
+            <br>
+            <small>Add a puppetclass to hostgroup</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>hostgroup_id </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      <p>id of hostgroup</p>
+    </li>
+    
+    <li>
+      <strong>puppetclass_id </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      <p>id of puppetclass</p>
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="hostgroup_classes-destroy">
+      <a href='#hostgroup_classes'>Hostgroup classes</a> / <a href='#hostgroup_classes-destroy'>destroy</a>
+      </h3>
+
+      <div>
+          <h4>
+              DELETE /api/hostgroups/:hostgroup_id/puppetclass_ids/:id
+            <br>
+            <small>Remove a puppetclass from hostgroup</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>hostgroup_id </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      <p>id of hostgroup</p>
+    </li>
+    
+    <li>
+      <strong>puppetclass_id </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      <p>id of puppetclass</p>
+    </li>
+    
+</ul>
+
+      </div>
+  </div>
+
+  <hr/>
+
+  <div>
     <h2 id="hostgroups">
       <a href='#hostgroups'>Hostgroups</a><br>
       <small></small>
@@ -4365,6 +4664,16 @@ PXE Default file has been deployed to all Smart Proxies</pre>
     </li>
     
     <li>
+      <strong>parent_id </strong>:
+      <small>
+        optional
+        
+          [ Must be a number. ]
+      </small>
+      
+    </li>
+    
+    <li>
       <strong>environment_id </strong>:
       <small>
         optional
@@ -4529,6 +4838,16 @@ PXE Default file has been deployed to all Smart Proxies</pre>
         optional
         
           [ Must be String ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>parent_id </strong>:
+      <small>
+        optional
+        
+          [ Must be a number. ]
       </small>
       
     </li>
@@ -5656,6 +5975,174 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 </ul>
 
       </div>
+      <hr/>
+
+      <h3 id="hosts-puppetrun">
+      <a href='#hosts'>Hosts</a> / <a href='#hosts-puppetrun'>puppetrun</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/hosts/:id/puppetrun
+            <br>
+            <small>Force a puppet run on the agent.</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+      </div>
+      <hr/>
+
+      <h3 id="hosts-power">
+      <a href='#hosts'>Hosts</a> / <a href='#hosts-power'>power</a>
+      </h3>
+
+      <div>
+          <h4>
+              PUT /api/hosts/:id/power
+            <br>
+            <small>Run power operation on host.</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space. ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>power_action </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      <p>power action, valid actions are (&#8216;on&#8217;, &#8216;start&#8217;)&#8217;, (&#8216;off&#8217;, &#8216;stop&#8217;), (&#8216;soft&#8217;, &#8216;reboot&#8217;), (&#8216;cycle&#8217;, &#8216;reset&#8217;), (&#8216;state&#8217;, &#8216;status&#8217;)</p>
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="hosts-boot">
+      <a href='#hosts'>Hosts</a> / <a href='#hosts-boot'>boot</a>
+      </h3>
+
+      <div>
+          <h4>
+              PUT /api/hosts/:id/boot
+            <br>
+            <small>Boot host from specified device.</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space. ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>device </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      <p>boot device, valid devices are disk, cdrom, pxe, bios</p>
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="hosts-facts">
+      <a href='#hosts'>Hosts</a> / <a href='#hosts-facts'>facts</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /api/hosts/facts
+            <br>
+            <small>Upload facts for a host, creating the host if required.</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>name </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      <p>hostname of the host</p>
+    </li>
+    
+    <li>
+      <strong>facts </strong>:
+      <small>
+        required
+        
+          [ Must be Hash ]
+      </small>
+      <p>hash containing the facts for the host</p>
+    </li>
+    
+    <li>
+      <strong>certname </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>optional: certname of the host</p>
+    </li>
+    
+    <li>
+      <strong>type </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>optional: the STI type of host to create</p>
+    </li>
+    
+</ul>
+
+      </div>
   </div>
 
   <hr/>
@@ -6162,6 +6649,604 @@ PXE Default file has been deployed to all Smart Proxies</pre>
   <hr/>
 
   <div>
+    <h2 id="interfaces">
+      <a href='#interfaces'>Interfaces</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="interfaces-index">
+      <a href='#interfaces'>Interfaces</a> / <a href='#interfaces-index'>index</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/hosts/:host_id/interfaces
+            <br>
+            <small>List all interfaces for host</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>host_id </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      <p>id or name of host</p>
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="interfaces-show">
+      <a href='#interfaces'>Interfaces</a> / <a href='#interfaces-show'>show</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/hosts/:host_id/interfaces/:id
+            <br>
+            <small>Show an interface for host</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>host_id </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      <p>id or name of nested host</p>
+    </li>
+    
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      <p>id or name of interface</p>
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="interfaces-create">
+      <a href='#interfaces'>Interfaces</a> / <a href='#interfaces-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /api/hosts/:host_id/interfaces
+            <br>
+            <small>Create an interface linked to a host</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>host_id </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      <p>id or name of host</p>
+    </li>
+    
+    <li>
+      <strong>interface </strong>:
+      <small>
+        required
+        
+          [ Must be a Hash ]
+      </small>
+      <p>interface information</p>
+    </li>
+    <ul>
+    <li>
+      <strong>mac </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      <p>MAC address of interface</p>
+    </li>
+    
+    <li>
+      <strong>ip </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      <p>IP address of interface</p>
+    </li>
+    
+    <li>
+      <strong>type </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      <p>Interface type, i.e: Nic::BMC</p>
+    </li>
+    
+    <li>
+      <strong>name </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      <p>Interface name</p>
+    </li>
+    
+    <li>
+      <strong>subnet_id </strong>:
+      <small>
+        optional
+        
+          [ Must be Fixnum ]
+      </small>
+      <p>Foreman subnet id of interface</p>
+    </li>
+    
+    <li>
+      <strong>domain_id </strong>:
+      <small>
+        optional
+        
+          [ Must be Fixnum ]
+      </small>
+      <p>Foreman domain id of interface</p>
+    </li>
+    
+    <li>
+      <strong>username </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>password </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>provider </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>Interface provider, i.e: IPMI</p>
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="interfaces-update">
+      <a href='#interfaces'>Interfaces</a> / <a href='#interfaces-update'>update</a>
+      </h3>
+
+      <div>
+          <h4>
+              PUT /api/hosts/:host_id/interfaces/:id
+            <br>
+            <small>Update host interface</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>host_id </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      <p>id or name of host</p>
+    </li>
+    
+    <li>
+      <strong>interface </strong>:
+      <small>
+        required
+        
+          [ Must be a Hash ]
+      </small>
+      <p>interface information</p>
+    </li>
+    <ul>
+    <li>
+      <strong>mac </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>MAC address of interface</p>
+    </li>
+    
+    <li>
+      <strong>ip </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>IP address of interface</p>
+    </li>
+    
+    <li>
+      <strong>type </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>Interface type, i.e: Nic::BMC</p>
+    </li>
+    
+    <li>
+      <strong>name </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>Interface name</p>
+    </li>
+    
+    <li>
+      <strong>subnet_id </strong>:
+      <small>
+        optional
+        
+          [ Must be Fixnum ]
+      </small>
+      <p>Foreman subnet id of interface</p>
+    </li>
+    
+    <li>
+      <strong>domain_id </strong>:
+      <small>
+        optional
+        
+          [ Must be Fixnum ]
+      </small>
+      <p>Foreman domain id of interface</p>
+    </li>
+    
+    <li>
+      <strong>username </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>password </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>provider </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>Interface provider, i.e: IPMI</p>
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="interfaces-destroy">
+      <a href='#interfaces'>Interfaces</a> / <a href='#interfaces-destroy'>destroy</a>
+      </h3>
+
+      <div>
+          <h4>
+              DELETE /api/hosts/:host_id/interfaces/:id
+            <br>
+            <small>Delete a host interface</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      <p>id of interface</p>
+    </li>
+    
+</ul>
+
+      </div>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h2 id="locations">
+      <a href='#locations'>Locations</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="locations-index">
+      <a href='#locations'>Locations</a> / <a href='#locations-index'>index</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/locations
+            <br>
+            <small>List all locations</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>:search </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>filter results</p>
+    </li>
+    
+    <li>
+      <strong>:order </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>sort results</p>
+    </li>
+    
+    <li>
+      <strong>:page </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>paginate results</p>
+    </li>
+    
+    <li>
+      <strong>:per_page </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>number of entries per request</p>
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="locations-show">
+      <a href='#locations'>Locations</a> / <a href='#locations-show'>show</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/locations/:id
+            <br>
+            <small>Show a location</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+      </div>
+      <hr/>
+
+      <h3 id="locations-create">
+      <a href='#locations'>Locations</a> / <a href='#locations-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /api/locations
+            <br>
+            <small>Create a location</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>location </strong>:
+      <small>
+        required
+        
+          [ Must be a Hash ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>:name </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="locations-update">
+      <a href='#locations'>Locations</a> / <a href='#locations-update'>update</a>
+      </h3>
+
+      <div>
+          <h4>
+              PUT /api/locations/:id
+            <br>
+            <small>Update a location</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>location </strong>:
+      <small>
+        required
+        
+          [ Must be a Hash ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>:name </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="locations-destroy">
+      <a href='#locations'>Locations</a> / <a href='#locations-destroy'>destroy</a>
+      </h3>
+
+      <div>
+          <h4>
+              DELETE /api/locations/:id
+            <br>
+            <small>Delete a location</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+      </div>
+  </div>
+
+  <hr/>
+
+  <div>
     <h2 id="lookup_keys">
       <a href='#lookup_keys'>Lookup keys</a><br>
       <small></small>
@@ -6179,14 +7264,9 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
           <h4>
-              GET /api/lookup_keys
+              GET /api/smart_variables
             <br>
-            <small>List all lookup_keys.</small>
-          </h4>
-          <h4>
-              GET /api/hosts/:host_id/lookup_keys
-            <br>
-            <small>List all lookup_keys of a given host.</small>
+            <small>List all smart variables (smart parameters and smart class parameters).</small>
           </h4>
       </div>
 
@@ -6285,9 +7365,9 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
           <h4>
-              GET /api/lookup_keys/:id
+              GET /api/smart_variables/:id
             <br>
-            <small>Show a lookup key.</small>
+            <small>Show a smart variable (smart parameter or smart class parameter).</small>
           </h4>
       </div>
 
@@ -6332,9 +7412,9 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
           <h4>
-              POST /api/lookup_keys
+              POST /api/smart_variables
             <br>
-            <small>Create a lookup key.</small>
+            <small>Create a smart variable.</small>
           </h4>
       </div>
 
@@ -6425,11 +7505,61 @@ PXE Default file has been deployed to all Smart Proxies</pre>
     </li>
     
     <li>
-      <strong>lookup_values_count </strong>:
+      <strong>validator_type </strong>:
       <small>
         optional
         
-          [ Must be a number. ]
+          [ Must be String ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>validator_rule </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>is_param </strong>:
+      <small>
+        optional
+        
+          [ Must be &#x27;true&#x27; or &#x27;false&#x27; ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>key_type </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>override </strong>:
+      <small>
+        optional
+        
+          [ Must be &#x27;true&#x27; or &#x27;false&#x27; ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>required </strong>:
+      <small>
+        optional
+        
+          [ Must be &#x27;true&#x27; or &#x27;false&#x27; ]
       </small>
       
     </li>
@@ -6447,9 +7577,9 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
           <h4>
-              PUT /api/lookup_keys/:id
+              PUT /api/smart_variables/:id
             <br>
-            <small>Update a lookup key.</small>
+            <small>Update a smart variable.</small>
           </h4>
       </div>
 
@@ -6501,7 +7631,7 @@ PXE Default file has been deployed to all Smart Proxies</pre>
     <li>
       <strong>key </strong>:
       <small>
-        optional
+        required
         
           [ Must be String ]
       </small>
@@ -6549,11 +7679,61 @@ PXE Default file has been deployed to all Smart Proxies</pre>
     </li>
     
     <li>
-      <strong>lookup_values_count </strong>:
+      <strong>validator_type </strong>:
       <small>
         optional
         
-          [ Must be a number. ]
+          [ Must be String ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>validator_rule </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>is_param </strong>:
+      <small>
+        optional
+        
+          [ Must be &#x27;true&#x27; or &#x27;false&#x27; ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>key_type </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>override </strong>:
+      <small>
+        optional
+        
+          [ Must be &#x27;true&#x27; or &#x27;false&#x27; ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>required </strong>:
+      <small>
+        optional
+        
+          [ Must be &#x27;true&#x27; or &#x27;false&#x27; ]
       </small>
       
     </li>
@@ -6571,9 +7751,9 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
           <h4>
-              DELETE /api/lookup_keys/:id
+              DELETE /api/smart_variables/:id
             <br>
-            <small>Delete a lookup key.</small>
+            <small>Delete a smart variable.</small>
           </h4>
       </div>
 
@@ -6605,6 +7785,278 @@ PXE Default file has been deployed to all Smart Proxies</pre>
           [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
       </small>
       
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="lookup_keys-host_or_hostgroup_smart_parameters">
+      <a href='#lookup_keys'>Lookup keys</a> / <a href='#lookup_keys-host_or_hostgroup_smart_parameters'>host_or_hostgroup_smart_parameters</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/hosts/:host_id/smart_parameters
+            <br>
+            <small>List of smart parameters for a specific host</small>
+          </h4>
+          <h4>
+              GET /api/hostgroups/:hostgroup_id/smart_parameters
+            <br>
+            <small>List of smart parameters for a specific hostgroup</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>host_id </strong>:
+      <small>
+        optional
+        
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>hostgroup_id </strong>:
+      <small>
+        optional
+        
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>page </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>paginate results</p>
+    </li>
+    
+    <li>
+      <strong>per_page </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>number of entries per request</p>
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="lookup_keys-host_or_hostgroup_smart_class_parameters">
+      <a href='#lookup_keys'>Lookup keys</a> / <a href='#lookup_keys-host_or_hostgroup_smart_class_parameters'>host_or_hostgroup_smart_class_parameters</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/hosts/:host_id/smart_class_parameters
+            <br>
+            <small>List of smart class parameters for a specific host</small>
+          </h4>
+          <h4>
+              GET /api/hostgroups/:hostgroup_id/smart_class_parameters
+            <br>
+            <small>List of smart class parameters for a specific hostgroup</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>host_id </strong>:
+      <small>
+        optional
+        
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>hostgroup_id </strong>:
+      <small>
+        optional
+        
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>page </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>paginate results</p>
+    </li>
+    
+    <li>
+      <strong>per_page </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>number of entries per request</p>
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="lookup_keys-puppet_smart_parameters">
+      <a href='#lookup_keys'>Lookup keys</a> / <a href='#lookup_keys-puppet_smart_parameters'>puppet_smart_parameters</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/puppetclasses/:puppetclass_id/smart_parameters
+            <br>
+            <small>List of smart parameters for a specific puppetclass</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>puppetclass_id </strong>:
+      <small>
+        required
+        
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>order </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>sort results</p>
+    </li>
+    
+    <li>
+      <strong>page </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>paginate results</p>
+    </li>
+    
+    <li>
+      <strong>per_page </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>number of entries per request</p>
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="lookup_keys-puppet_smart_class_parameters">
+      <a href='#lookup_keys'>Lookup keys</a> / <a href='#lookup_keys-puppet_smart_class_parameters'>puppet_smart_class_parameters</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/puppetclasses/:puppetclass_id/environments/:environment_id/smart_class_parameters
+            <br>
+            <small>List of smart class parameters for a specific puppetclass and environment</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>puppetclass_id </strong>:
+      <small>
+        required
+        
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>environment_id </strong>:
+      <small>
+        required
+        
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>order </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>sort results</p>
+    </li>
+    
+    <li>
+      <strong>page </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>paginate results</p>
+    </li>
+    
+    <li>
+      <strong>per_page </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>number of entries per request</p>
     </li>
     
 </ul>
@@ -6855,6 +8307,8 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
 <li>Debian</li>
 
+<li>Gentoo</li>
+
 <li>Redhat</li>
 
 <li>Solaris</li>
@@ -6863,6 +8317,16 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
 <li>Windows</li>
 </ul>
+    </li>
+    
+    <li>
+      <strong>operatingsystem_ids </strong>:
+      <small>
+        optional
+        
+          [ Must be Array ]
+      </small>
+      
     </li>
     
 </ul>
@@ -6962,6 +8426,8 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
 <li>Debian</li>
 
+<li>Gentoo</li>
+
 <li>Redhat</li>
 
 <li>Solaris</li>
@@ -6970,6 +8436,16 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
 <li>Windows</li>
 </ul>
+    </li>
+    
+    <li>
+      <strong>operatingsystem_ids </strong>:
+      <small>
+        optional
+        
+          [ Must be Array ]
+      </small>
+      
     </li>
     
 </ul>
@@ -8001,6 +9477,764 @@ PXE Default file has been deployed to all Smart Proxies</pre>
   <hr/>
 
   <div>
+    <h2 id="organizations">
+      <a href='#organizations'>Organizations</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="organizations-index">
+      <a href='#organizations'>Organizations</a> / <a href='#organizations-index'>index</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/organizations
+            <br>
+            <small>List all organizations</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>:search </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>filter results</p>
+    </li>
+    
+    <li>
+      <strong>:order </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>sort results</p>
+    </li>
+    
+    <li>
+      <strong>:page </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>paginate results</p>
+    </li>
+    
+    <li>
+      <strong>:per_page </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>number of entries per request</p>
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="organizations-show">
+      <a href='#organizations'>Organizations</a> / <a href='#organizations-show'>show</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/organizations/:id
+            <br>
+            <small>Show an organization</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+      </div>
+      <hr/>
+
+      <h3 id="organizations-create">
+      <a href='#organizations'>Organizations</a> / <a href='#organizations-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /api/organizations
+            <br>
+            <small>Create an organization</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>organization </strong>:
+      <small>
+        required
+        
+          [ Must be a Hash ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>:name </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="organizations-update">
+      <a href='#organizations'>Organizations</a> / <a href='#organizations-update'>update</a>
+      </h3>
+
+      <div>
+          <h4>
+              PUT /api/organizations/:id
+            <br>
+            <small>Update an organization</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>organization </strong>:
+      <small>
+        required
+        
+          [ Must be a Hash ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>:name </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="organizations-destroy">
+      <a href='#organizations'>Organizations</a> / <a href='#organizations-destroy'>destroy</a>
+      </h3>
+
+      <div>
+          <h4>
+              DELETE /api/organizations/:id
+            <br>
+            <small>Delete an organization</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+      </div>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h2 id="parameters">
+      <a href='#parameters'>Parameters</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+    <div><p>These API calls are related to <b>nested parameters for host, domain, hostgroup, operating system</b>. If you are looking for <a href='common_parameters.html'>global parameters</a>, go to <a href='common_parameters.html'>this link</a>.</p></div>
+
+  <div>
+
+      <hr/>
+
+      <h3 id="parameters-index">
+      <a href='#parameters'>Parameters</a> / <a href='#parameters-index'>index</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/hosts/:host_id/parameters
+            <br>
+            <small>List all parameters for host</small>
+          </h4>
+          <h4>
+              GET /api/hostgroups/:hostgroup_id/parameters
+            <br>
+            <small>List all parameters for hostgroup</small>
+          </h4>
+          <h4>
+              GET /api/domains/:domain_id/parameters
+            <br>
+            <small>List all parameters for domain</small>
+          </h4>
+          <h4>
+              GET /api/operatingsystems/:operatingsystem_id/parameters
+            <br>
+            <small>List all parameters for operating system</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>host_id </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>id of host</p>
+    </li>
+    
+    <li>
+      <strong>hostgroup_id </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>id of hostgroup</p>
+    </li>
+    
+    <li>
+      <strong>domain_id </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>id of domain</p>
+    </li>
+    
+    <li>
+      <strong>operatingsystem_id </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>id of operating system</p>
+    </li>
+    
+    <li>
+      <strong>page </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>paginate results</p>
+    </li>
+    
+    <li>
+      <strong>per_page </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>number of entries per request</p>
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="parameters-show">
+      <a href='#parameters'>Parameters</a> / <a href='#parameters-show'>show</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/hosts/:host_id/parameters/:id
+            <br>
+            <small>Show a nested parameter for host</small>
+          </h4>
+          <h4>
+              GET /api/hostgroups/:hostgroup_id/parameters/:id
+            <br>
+            <small>Show a nested parameter for hostgroup</small>
+          </h4>
+          <h4>
+              GET /api/domains/:domain_id/parameters/:id
+            <br>
+            <small>Show a nested parameter for domain</small>
+          </h4>
+          <h4>
+              GET /api/operatingsystems/:operatingsystem_id/parameters/:id
+            <br>
+            <small>Show a nested parameter for operating system</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>host_id </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>id of host</p>
+    </li>
+    
+    <li>
+      <strong>hostgroup_id </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>id of hostgroup</p>
+    </li>
+    
+    <li>
+      <strong>domain_id </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>id of domain</p>
+    </li>
+    
+    <li>
+      <strong>operatingsystem_id </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>id of operating system</p>
+    </li>
+    
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      <p>id of parameter</p>
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="parameters-create">
+      <a href='#parameters'>Parameters</a> / <a href='#parameters-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /api/hosts/:host_id/parameters
+            <br>
+            <small>Create a nested parameter for host</small>
+          </h4>
+          <h4>
+              POST /api/hostgroups/:hostgroup_id/parameters
+            <br>
+            <small>Create a nested parameter for hostgroup</small>
+          </h4>
+          <h4>
+              POST /api/domains/:domain_id/parameters
+            <br>
+            <small>Create a nested parameter for domain</small>
+          </h4>
+          <h4>
+              POST /api/operatingsystems/:operatingsystem_id/parameters
+            <br>
+            <small>Create a nested parameter for operating system</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>host_id </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>id of host</p>
+    </li>
+    
+    <li>
+      <strong>hostgroup_id </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>id of hostgroup</p>
+    </li>
+    
+    <li>
+      <strong>domain_id </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>id of domain</p>
+    </li>
+    
+    <li>
+      <strong>operatingsystem_id </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>id of operating system</p>
+    </li>
+    
+    <li>
+      <strong>parameter </strong>:
+      <small>
+        required
+        
+          [ Must be a Hash ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>name </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>value </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="parameters-update">
+      <a href='#parameters'>Parameters</a> / <a href='#parameters-update'>update</a>
+      </h3>
+
+      <div>
+          <h4>
+              PUT /api/hosts/:host_id/parameters/:id
+            <br>
+            <small>Update a nested parameter for host</small>
+          </h4>
+          <h4>
+              PUT /api/hostgroups/:hostgroup_id/parameters/:id
+            <br>
+            <small>Update a nested parameter for hostgroup</small>
+          </h4>
+          <h4>
+              PUT /api/domains/:domain_id/parameters/:id
+            <br>
+            <small>Update a nested parameter for domain</small>
+          </h4>
+          <h4>
+              PUT /api/operatingsystems/:operatingsystem_id/parameters/:id
+            <br>
+            <small>Update a nested parameter for operating system</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>host_id </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>id of host</p>
+    </li>
+    
+    <li>
+      <strong>hostgroup_id </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>id of hostgroup</p>
+    </li>
+    
+    <li>
+      <strong>domain_id </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>id of domain</p>
+    </li>
+    
+    <li>
+      <strong>operatingsystem_id </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>id of operating system</p>
+    </li>
+    
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      <p>id of parameter</p>
+    </li>
+    
+    <li>
+      <strong>parameter </strong>:
+      <small>
+        required
+        
+          [ Must be a Hash ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>name </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>value </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="parameters-destroy">
+      <a href='#parameters'>Parameters</a> / <a href='#parameters-destroy'>destroy</a>
+      </h3>
+
+      <div>
+          <h4>
+              DELETE /api/hosts/:host_id/parameters/:id
+            <br>
+            <small>Delete a nested parameter for host</small>
+          </h4>
+          <h4>
+              DELETE /api/hostgroups/:hostgroup_id/parameters/:id
+            <br>
+            <small>Delete a nested parameter for hostgroup</small>
+          </h4>
+          <h4>
+              DELETE /api/domains/:domain_id/parameters/:id
+            <br>
+            <small>Delete a nested parameter for domain</small>
+          </h4>
+          <h4>
+              DELETE /api/operatingsystems/:operatingsystem_id/parameters/:id
+            <br>
+            <small>Delete a nested parameter for operating system</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>host_id </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>id of host</p>
+    </li>
+    
+    <li>
+      <strong>hostgroup_id </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>id of hostgroup</p>
+    </li>
+    
+    <li>
+      <strong>domain_id </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>id of domain</p>
+    </li>
+    
+    <li>
+      <strong>operatingsystem_id </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>id of operating system</p>
+    </li>
+    
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      <p>id of parameter</p>
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="parameters-reset">
+      <a href='#parameters'>Parameters</a> / <a href='#parameters-reset'>reset</a>
+      </h3>
+
+      <div>
+          <h4>
+              DELETE /api/hosts/:host_id/parameters
+            <br>
+            <small>Delete all nested parameters for host</small>
+          </h4>
+          <h4>
+              DELETE /api/hostgroups/:hostgroup_id/parameters
+            <br>
+            <small>Delete all nested parameters for hostgroup</small>
+          </h4>
+          <h4>
+              DELETE /api/domains/:domain_id/parameters
+            <br>
+            <small>Delete all nested parameters for domain</small>
+          </h4>
+          <h4>
+              DELETE /api/operatingsystems/:operatingsystem_id/parameters
+            <br>
+            <small>Delete all nested parameters for operating system</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+      </div>
+  </div>
+
+  <hr/>
+
+  <div>
     <h2 id="ptables">
       <a href='#ptables'>Ptables</a><br>
       <small></small>
@@ -8407,7 +10641,17 @@ PXE Default file has been deployed to all Smart Proxies</pre>
           <h4>
               GET /api/hosts/:host_id/puppetclasses
             <br>
-            <small>List all puppetclasses of a given host.</small>
+            <small>List all puppetclasses for host</small>
+          </h4>
+          <h4>
+              GET /api/hostgroups/:hostgroup_id/puppetclasses
+            <br>
+            <small>List all puppetclasses for hostgroup</small>
+          </h4>
+          <h4>
+              GET /api/environments/:environment_id/puppetclasses
+            <br>
+            <small>List all puppetclasses for environment</small>
           </h4>
       </div>
 
@@ -8445,43 +10689,33 @@ PXE Default file has been deployed to all Smart Proxies</pre>
           <h4>Params</h4>
           <ul>
     <li>
-      <strong>search </strong>:
+      <strong>host_id </strong>:
       <small>
         optional
         
           [ Must be String ]
       </small>
-      <p>filter results</p>
+      <p>id of nested host</p>
     </li>
     
     <li>
-      <strong>order </strong>:
+      <strong>hostgroup_id </strong>:
       <small>
         optional
         
           [ Must be String ]
       </small>
-      <p>sort results</p>
+      <p>id of nested hostgroup</p>
     </li>
     
     <li>
-      <strong>page </strong>:
+      <strong>environment_id </strong>:
       <small>
         optional
         
           [ Must be String ]
       </small>
-      <p>paginate results</p>
-    </li>
-    
-    <li>
-      <strong>per_page </strong>:
-      <small>
-        optional
-        
-          [ Must be String ]
-      </small>
-      <p>number of entries per request</p>
+      <p>id of nested environment</p>
     </li>
     
 </ul>
@@ -8497,7 +10731,22 @@ PXE Default file has been deployed to all Smart Proxies</pre>
           <h4>
               GET /api/puppetclasses/:id
             <br>
-            <small>Show a puppetclass.</small>
+            <small>Show a puppetclass</small>
+          </h4>
+          <h4>
+              GET /api/hosts/:host_id/puppetclasses/:id
+            <br>
+            <small>Show a puppetclass for host</small>
+          </h4>
+          <h4>
+              GET /api/hostgroups/:hostgroup_id/puppetclasses/:id
+            <br>
+            <small>Show a puppetclass for hostgroup</small>
+          </h4>
+          <h4>
+              GET /api/environments/:environment_id/puppetclasses/:id
+            <br>
+            <small>Show a puppetclass for environment</small>
           </h4>
       </div>
 
@@ -8530,13 +10779,43 @@ PXE Default file has been deployed to all Smart Proxies</pre>
           <h4>Params</h4>
           <ul>
     <li>
+      <strong>host_id </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>id of nested host</p>
+    </li>
+    
+    <li>
+      <strong>hostgroup_id </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>id of nested hostgroup</p>
+    </li>
+    
+    <li>
+      <strong>environment_id </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      <p>id of nested environment</p>
+    </li>
+    
+    <li>
       <strong>id </strong>:
       <small>
         required
         
-          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
+          [ Must be String ]
       </small>
-      
+      <p>id of puppetclass</p>
     </li>
     
 </ul>
@@ -9053,6 +11332,91 @@ PXE Default file has been deployed to all Smart Proxies</pre>
       
     </li>
     
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="reports-create">
+      <a href='#reports'>Reports</a> / <a href='#reports-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /api/reports
+            <br>
+            <small>Create a report.</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>report </strong>:
+      <small>
+        required
+        
+          [ Must be a Hash ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>host </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      <p>Hostname or certname</p>
+    </li>
+    
+    <li>
+      <strong>reported_at </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      <p>UTC time of report</p>
+    </li>
+    
+    <li>
+      <strong>status </strong>:
+      <small>
+        required
+        
+          [ Must be Hash ]
+      </small>
+      <p>Hash of status type totals</p>
+    </li>
+    
+    <li>
+      <strong>metrics </strong>:
+      <small>
+        required
+        
+          [ Must be Hash ]
+      </small>
+      <p>Hash of report metrics, can be just {}</p>
+    </li>
+    
+    <li>
+      <strong>logs </strong>:
+      <small>
+        optional
+        
+          [ Must be Array ]
+      </small>
+      <p>Optional array of log hashes</p>
+    </li>
+    
+</ul>
+
 </ul>
 
       </div>
@@ -10777,6 +13141,184 @@ PXE Default file has been deployed to all Smart Proxies</pre>
           [ Must be a number. ]
       </small>
       <p>Subnet numeric identifier</p>
+    </li>
+    
+</ul>
+
+      </div>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h2 id="template_combinations">
+      <a href='#template_combinations'>Template combinations</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="template_combinations-index">
+      <a href='#template_combinations'>Template combinations</a> / <a href='#template_combinations-index'>index</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/config_templates/:config_template_id/template_combinations
+            <br>
+            <small>List Template Combination</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>config_template_id </strong>:
+      <small>
+        required
+        
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
+      </small>
+      
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="template_combinations-create">
+      <a href='#template_combinations'>Template combinations</a> / <a href='#template_combinations-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /api/config_templates/:config_template_id/template_combinations
+            <br>
+            <small>Add a Template Combination</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>config_template_id </strong>:
+      <small>
+        required
+        
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>template_combination </strong>:
+      <small>
+        required
+        
+          [ Must be a Hash ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>environment_id </strong>:
+      <small>
+        optional
+        , nil allowed
+          [ Must be a number. ]
+      </small>
+      <p>environment id</p>
+    </li>
+    
+    <li>
+      <strong>hostgroup_id </strong>:
+      <small>
+        optional
+        , nil allowed
+          [ Must be a number. ]
+      </small>
+      <p>hostgroup id</p>
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="template_combinations-show">
+      <a href='#template_combinations'>Template combinations</a> / <a href='#template_combinations-show'>show</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/template_combinations/:id
+            <br>
+            <small>Show Template Combination</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
+      </small>
+      
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="template_combinations-destroy">
+      <a href='#template_combinations'>Template combinations</a> / <a href='#template_combinations-destroy'>destroy</a>
+      </h3>
+
+      <div>
+          <h4>
+              DELETE /api/template_combinations/:id
+            <br>
+            <small>Delete a template</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space. ]
+      </small>
+      
     </li>
     
 </ul>

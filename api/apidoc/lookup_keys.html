@@ -18,7 +18,7 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../apidoc.html'>Foreman v1</a>
+    <a href='../apidoc.html'>Foreman v2</a>
     <span class='divider'>/</span>
   </li>
   <li class='active'>
@@ -49,18 +49,9 @@
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            GET /api/lookup_keys
+            GET /api/smart_variables
           </a><br>
-          <small>List all lookup_keys.</small>
-        </h2>
-        <h2>
-          <a href='#description-index'
-           class='accordion-toggle'
-           data-toggle='collapse'
-           data-parent='#accordion'>
-            GET /api/hosts/:host_id/lookup_keys
-          </a><br>
-          <small>List all lookup_keys of a given host.</small>
+          <small>List all smart variables (smart parameters and smart class parameters).</small>
         </h2>
     </div>
 
@@ -196,9 +187,9 @@
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            GET /api/lookup_keys/:id
+            GET /api/smart_variables/:id
           </a><br>
-          <small>Show a lookup key.</small>
+          <small>Show a smart variable (smart parameter or smart class parameter).</small>
         </h2>
     </div>
 
@@ -262,9 +253,9 @@
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            POST /api/lookup_keys
+            POST /api/smart_variables
           </a><br>
-          <small>Create a lookup key.</small>
+          <small>Create a smart variable.</small>
         </h2>
     </div>
 
@@ -401,7 +392,7 @@
   
   <tr style='background-color:rgb(250,250,250);'>
     <td>
-      <strong>lookup_key[lookup_values_count] </strong><br>
+      <strong>lookup_key[validator_type] </strong><br>
       <small>
         optional
         
@@ -410,7 +401,87 @@
     <td>
       
         <br>
-        Value: Must be a number.
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>lookup_key[validator_rule] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>lookup_key[is_param] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>lookup_key[key_type] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>lookup_key[override] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>lookup_key[required] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
     </td>
   </tr>
 
@@ -430,9 +501,9 @@
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            PUT /api/lookup_keys/:id
+            PUT /api/smart_variables/:id
           </a><br>
-          <small>Update a lookup key.</small>
+          <small>Update a smart variable.</small>
         </h2>
     </div>
 
@@ -506,7 +577,7 @@
     <td>
       <strong>lookup_key[key] </strong><br>
       <small>
-        optional
+        required
         
       </small>
     </td>
@@ -584,7 +655,7 @@
   
   <tr style='background-color:rgb(250,250,250);'>
     <td>
-      <strong>lookup_key[lookup_values_count] </strong><br>
+      <strong>lookup_key[validator_type] </strong><br>
       <small>
         optional
         
@@ -593,7 +664,87 @@
     <td>
       
         <br>
-        Value: Must be a number.
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>lookup_key[validator_rule] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>lookup_key[is_param] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>lookup_key[key_type] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>lookup_key[override] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>lookup_key[required] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
     </td>
   </tr>
 
@@ -613,9 +764,9 @@
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            DELETE /api/lookup_keys/:id
+            DELETE /api/smart_variables/:id
           </a><br>
-          <small>Delete a lookup key.</small>
+          <small>Delete a smart variable.</small>
         </h2>
     </div>
 
@@ -661,6 +812,440 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/lookup_keys/host_or_hostgroup_smart_parameters.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-host_or_hostgroup_smart_parameters'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/hosts/:host_id/smart_parameters
+          </a><br>
+          <small>List of smart parameters for a specific host</small>
+        </h2>
+        <h2>
+          <a href='#description-host_or_hostgroup_smart_parameters'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/hostgroups/:hostgroup_id/smart_parameters
+          </a><br>
+          <small>List of smart parameters for a specific hostgroup</small>
+        </h2>
+    </div>
+
+
+    <div id='description-host_or_hostgroup_smart_parameters' class='collapse accordion-body'>
+      
+
+
+
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>hostgroup_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>paginate results</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>number of entries per request</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/lookup_keys/host_or_hostgroup_smart_class_parameters.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-host_or_hostgroup_smart_class_parameters'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/hosts/:host_id/smart_class_parameters
+          </a><br>
+          <small>List of smart class parameters for a specific host</small>
+        </h2>
+        <h2>
+          <a href='#description-host_or_hostgroup_smart_class_parameters'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/hostgroups/:hostgroup_id/smart_class_parameters
+          </a><br>
+          <small>List of smart class parameters for a specific hostgroup</small>
+        </h2>
+    </div>
+
+
+    <div id='description-host_or_hostgroup_smart_class_parameters' class='collapse accordion-body'>
+      
+
+
+
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>hostgroup_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>paginate results</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>number of entries per request</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/lookup_keys/puppet_smart_parameters.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-puppet_smart_parameters'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/puppetclasses/:puppetclass_id/smart_parameters
+          </a><br>
+          <small>List of smart parameters for a specific puppetclass</small>
+        </h2>
+    </div>
+
+
+    <div id='description-puppet_smart_parameters' class='collapse accordion-body'>
+      
+
+
+
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>puppetclass_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>sort results</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>paginate results</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>number of entries per request</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/lookup_keys/puppet_smart_class_parameters.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-puppet_smart_class_parameters'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/puppetclasses/:puppetclass_id/environments/:environment_id/smart_class_parameters
+          </a><br>
+          <small>List of smart class parameters for a specific puppetclass and environment</small>
+        </h2>
+    </div>
+
+
+    <div id='description-puppet_smart_class_parameters' class='collapse accordion-body'>
+      
+
+
+
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>puppetclass_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>sort results</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>paginate results</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>number of entries per request</p>
+        <br>
+        Value: Must be String
     </td>
   </tr>
 
