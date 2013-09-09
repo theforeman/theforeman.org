@@ -34,7 +34,25 @@
   <div class='page-header'>
     <h1>
       GET /api/puppetclasses/:id<br>
-      <small>Show a puppetclass.</small>
+      <small>Show a puppetclass</small>
+    </h1>
+  </div>
+  <div class='page-header'>
+    <h1>
+      GET /api/hosts/:host_id/puppetclasses/:id<br>
+      <small>Show a puppetclass for host</small>
+    </h1>
+  </div>
+  <div class='page-header'>
+    <h1>
+      GET /api/hostgroups/:hostgroup_id/puppetclasses/:id<br>
+      <small>Show a puppetclass for hostgroup</small>
+    </h1>
+  </div>
+  <div class='page-header'>
+    <h1>
+      GET /api/environments/:environment_id/puppetclasses/:id<br>
+      <small>Show a puppetclass for environment</small>
     </h1>
   </div>
 
@@ -42,28 +60,6 @@
 
   
 
-    <h2>Examples</h2>
-      <pre class="prettyprint">GET /api/puppetclasses/base
-200
-{
-  &quot;puppetclass&quot;: {
-    &quot;name&quot;: &quot;base&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;lookup_keys&quot;: [
-      {
-        &quot;lookup_key&quot;: {
-          &quot;required&quot;: false,
-          &quot;id&quot;: 298486374,
-          &quot;description&quot;: null,
-          &quot;key&quot;: &quot;ssl_port&quot;,
-          &quot;is_param&quot;: false,
-          &quot;override&quot;: false,
-          &quot;default_value&quot;: &quot;443&quot;
-        }
-      }
-    ]
-  }
-}</pre>
 
 
 
@@ -78,6 +74,54 @@
       <tbody>
           <tr style='background-color:rgb(255,255,255);'>
     <td>
+      <strong>host_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of nested host</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>hostgroup_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of nested hostgroup</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of nested environment</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
       <strong>id </strong><br>
       <small>
         required
@@ -85,9 +129,9 @@
       </small>
     </td>
     <td>
-      
+      <p>id of puppetclass</p>
         <br>
-        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+        Value: Must be String
     </td>
   </tr>
 

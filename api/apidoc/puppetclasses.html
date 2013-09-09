@@ -60,7 +60,25 @@
            data-parent='#accordion'>
             GET /api/hosts/:host_id/puppetclasses
           </a><br>
-          <small>List all puppetclasses of a given host.</small>
+          <small>List all puppetclasses for host</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/hostgroups/:hostgroup_id/puppetclasses
+          </a><br>
+          <small>List all puppetclasses for hostgroup</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/environments/:environment_id/puppetclasses
+          </a><br>
+          <small>List all puppetclasses for environment</small>
         </h2>
     </div>
 
@@ -70,33 +88,6 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/puppetclasses
-200
-{
-  &quot;base&quot;: [
-    {
-      &quot;puppetclass&quot;: {
-        &quot;name&quot;: &quot;base&quot;,
-        &quot;id&quot;: 980190962,
-        &quot;lookup_keys&quot;: [
-          {
-            &quot;id&quot;: 298486374
-          }
-        ]
-      }
-    }
-  ],
-  &quot;apache&quot;: [
-    {
-      &quot;puppetclass&quot;: {
-        &quot;name&quot;: &quot;apache&quot;,
-        &quot;id&quot;: 298486374,
-        &quot;lookup_keys&quot;: []
-      }
-    }
-  ]
-}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -109,14 +100,14 @@
           <tbody>
               <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>search </strong><br>
+      <strong>host_id </strong><br>
       <small>
         optional
         
       </small>
     </td>
     <td>
-      <p>filter results</p>
+      <p>id of nested host</p>
         <br>
         Value: Must be String
     </td>
@@ -125,14 +116,14 @@
   
   <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>order </strong><br>
+      <strong>hostgroup_id </strong><br>
       <small>
         optional
         
       </small>
     </td>
     <td>
-      <p>sort results</p>
+      <p>id of nested hostgroup</p>
         <br>
         Value: Must be String
     </td>
@@ -141,30 +132,14 @@
   
   <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>page </strong><br>
+      <strong>environment_id </strong><br>
       <small>
         optional
         
       </small>
     </td>
     <td>
-      <p>paginate results</p>
-        <br>
-        Value: Must be String
-    </td>
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>per_page </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      <p>number of entries per request</p>
+      <p>id of nested environment</p>
         <br>
         Value: Must be String
     </td>
@@ -187,7 +162,34 @@
            data-parent='#accordion'>
             GET /api/puppetclasses/:id
           </a><br>
-          <small>Show a puppetclass.</small>
+          <small>Show a puppetclass</small>
+        </h2>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/hosts/:host_id/puppetclasses/:id
+          </a><br>
+          <small>Show a puppetclass for host</small>
+        </h2>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/hostgroups/:hostgroup_id/puppetclasses/:id
+          </a><br>
+          <small>Show a puppetclass for hostgroup</small>
+        </h2>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/environments/:environment_id/puppetclasses/:id
+          </a><br>
+          <small>Show a puppetclass for environment</small>
         </h2>
     </div>
 
@@ -197,28 +199,6 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/puppetclasses/base
-200
-{
-  &quot;puppetclass&quot;: {
-    &quot;name&quot;: &quot;base&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;lookup_keys&quot;: [
-      {
-        &quot;lookup_key&quot;: {
-          &quot;required&quot;: false,
-          &quot;id&quot;: 298486374,
-          &quot;description&quot;: null,
-          &quot;key&quot;: &quot;ssl_port&quot;,
-          &quot;is_param&quot;: false,
-          &quot;override&quot;: false,
-          &quot;default_value&quot;: &quot;443&quot;
-        }
-      }
-    ]
-  }
-}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -231,6 +211,54 @@
           <tbody>
               <tr style='background-color:rgb(255,255,255);'>
     <td>
+      <strong>host_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of nested host</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>hostgroup_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of nested hostgroup</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of nested environment</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
       <strong>id </strong><br>
       <small>
         required
@@ -238,9 +266,9 @@
       </small>
     </td>
     <td>
-      
+      <p>id of puppetclass</p>
         <br>
-        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+        Value: Must be String
     </td>
   </tr>
 
@@ -271,21 +299,6 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">POST /api/puppetclasses
-{
-  &quot;puppetclass&quot;: {
-    &quot;name&quot;: &quot;test_puppetclass&quot;
-  }
-}
-201
-{
-  &quot;puppetclass&quot;: {
-    &quot;name&quot;: &quot;test_puppetclass&quot;,
-    &quot;id&quot;: 980190963,
-    &quot;lookup_keys&quot;: []
-  }
-}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -354,23 +367,6 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/puppetclasses/base
-{
-  &quot;puppetclass&quot;: {}
-}
-200
-{
-  &quot;puppetclass&quot;: {
-    &quot;name&quot;: &quot;base&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;lookup_keys&quot;: [
-      {
-        &quot;id&quot;: 298486374
-      }
-    ]
-  }
-}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -455,20 +451,6 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/puppetclasses/base
-200
-{
-  &quot;puppetclass&quot;: {
-    &quot;name&quot;: &quot;base&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;lookup_keys&quot;: [
-      {
-        &quot;id&quot;: 298486374
-      }
-    ]
-  }
-}</pre>
 
         <h3>Params</h3>
         <table class='table'>

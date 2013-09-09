@@ -20,8 +20,6 @@
   <li class='active'><a href='./apidoc.html'>Foreman v1</a></li>
 </ul>
 
-<div>Another API description</div>
-
 <h1 class='page-header'>Resources</h1>
 
   <h2>
@@ -490,6 +488,10 @@
             <td><a href='./apidoc/hosts/status.html'>GET /api/hosts/:id/status</a></td>
             <td width='60%'>Get status of host</td>
           </tr>
+          <tr>
+            <td><a href='./apidoc/hosts/puppetrun.html'>GET /api/hosts/:id/puppetrun</a></td>
+            <td width='60%'>Force a puppet run on the agent.</td>
+          </tr>
     </tbody>
   </table>
   <h2>
@@ -736,11 +738,31 @@
           </tr>
           <tr>
             <td><a href='./apidoc/puppetclasses/index.html'>GET /api/hosts/:host_id/puppetclasses</a></td>
-            <td width='60%'>List all puppetclasses of a given host.</td>
+            <td width='60%'>List all puppetclasses for host</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/puppetclasses/index.html'>GET /api/hostgroups/:hostgroup_id/puppetclasses</a></td>
+            <td width='60%'>List all puppetclasses for hostgroup</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/puppetclasses/index.html'>GET /api/environments/:environment_id/puppetclasses</a></td>
+            <td width='60%'>List all puppetclasses for environment</td>
           </tr>
           <tr>
             <td><a href='./apidoc/puppetclasses/show.html'>GET /api/puppetclasses/:id</a></td>
-            <td width='60%'>Show a puppetclass.</td>
+            <td width='60%'>Show a puppetclass</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/puppetclasses/show.html'>GET /api/hosts/:host_id/puppetclasses/:id</a></td>
+            <td width='60%'>Show a puppetclass for host</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/puppetclasses/show.html'>GET /api/hostgroups/:hostgroup_id/puppetclasses/:id</a></td>
+            <td width='60%'>Show a puppetclass for hostgroup</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/puppetclasses/show.html'>GET /api/environments/:environment_id/puppetclasses/:id</a></td>
+            <td width='60%'>Show a puppetclass for environment</td>
           </tr>
           <tr>
             <td><a href='./apidoc/puppetclasses/create.html'>POST /api/puppetclasses</a></td>

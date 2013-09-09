@@ -61,30 +61,6 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/auth_source_ldaps
-200
-[
-  {
-    &quot;auth_source_ldap&quot;: {
-      &quot;name&quot;: &quot;ldap&quot;,
-      &quot;attr_lastname&quot;: &quot;sn&quot;,
-      &quot;port&quot;: 123,
-      &quot;attr_firstname&quot;: &quot;givenName&quot;,
-      &quot;attr_login&quot;: &quot;uid&quot;,
-      &quot;tls&quot;: true,
-      &quot;id&quot;: 980190962,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;host&quot;: &quot;ldap&quot;,
-      &quot;base_dn&quot;: &quot;dn=x,dn=y&quot;,
-      &quot;attr_mail&quot;: &quot;mail&quot;,
-      &quot;account&quot;: null,
-      &quot;type&quot;: &quot;AuthSourceLdap&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;onthefly_register&quot;: true
-    }
-  }
-]</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -153,28 +129,6 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/auth_source_ldaps/980190962
-200
-{
-  &quot;auth_source_ldap&quot;: {
-    &quot;name&quot;: &quot;ldap&quot;,
-    &quot;attr_lastname&quot;: &quot;sn&quot;,
-    &quot;attr_firstname&quot;: &quot;givenName&quot;,
-    &quot;port&quot;: 123,
-    &quot;attr_login&quot;: &quot;uid&quot;,
-    &quot;tls&quot;: true,
-    &quot;id&quot;: 980190962,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;host&quot;: &quot;ldap&quot;,
-    &quot;base_dn&quot;: &quot;dn=x,dn=y&quot;,
-    &quot;attr_mail&quot;: &quot;mail&quot;,
-    &quot;account&quot;: null,
-    &quot;type&quot;: &quot;AuthSourceLdap&quot;,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;onthefly_register&quot;: true
-  }
-}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -227,34 +181,6 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">POST /api/auth_source_ldaps
-{
-  &quot;auth_source_ldap&quot;: {
-    &quot;name&quot;: &quot;ldap2&quot;,
-    &quot;host&quot;: &quot;ldap2&quot;
-  }
-}
-201
-{
-  &quot;auth_source_ldap&quot;: {
-    &quot;name&quot;: &quot;ldap2&quot;,
-    &quot;tls&quot;: false,
-    &quot;port&quot;: 389,
-    &quot;attr_login&quot;: null,
-    &quot;attr_lastname&quot;: null,
-    &quot;attr_firstname&quot;: null,
-    &quot;id&quot;: 980190963,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:44Z&quot;,
-    &quot;host&quot;: &quot;ldap2&quot;,
-    &quot;base_dn&quot;: null,
-    &quot;attr_mail&quot;: null,
-    &quot;account_password&quot;: null,
-    &quot;account&quot;: null,
-    &quot;onthefly_register&quot;: false,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:44Z&quot;
-  }
-}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -499,31 +425,6 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/auth_source_ldaps/980190962
-{
-  &quot;auth_source_ldap&quot;: {}
-}
-200
-{
-  &quot;auth_source_ldap&quot;: {
-    &quot;name&quot;: &quot;ldap&quot;,
-    &quot;tls&quot;: true,
-    &quot;port&quot;: 123,
-    &quot;attr_login&quot;: &quot;uid&quot;,
-    &quot;attr_lastname&quot;: &quot;sn&quot;,
-    &quot;attr_firstname&quot;: &quot;givenName&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;host&quot;: &quot;ldap&quot;,
-    &quot;base_dn&quot;: &quot;dn=x,dn=y&quot;,
-    &quot;attr_mail&quot;: &quot;mail&quot;,
-    &quot;account_password&quot;: null,
-    &quot;account&quot;: null,
-    &quot;onthefly_register&quot;: true,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-  }
-}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -784,28 +685,6 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/auth_source_ldaps/980190962
-200
-{
-  &quot;auth_source_ldap&quot;: {
-    &quot;name&quot;: &quot;ldap&quot;,
-    &quot;tls&quot;: true,
-    &quot;port&quot;: 123,
-    &quot;attr_login&quot;: &quot;uid&quot;,
-    &quot;attr_lastname&quot;: &quot;sn&quot;,
-    &quot;attr_firstname&quot;: &quot;givenName&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;host&quot;: &quot;ldap&quot;,
-    &quot;base_dn&quot;: &quot;dn=x,dn=y&quot;,
-    &quot;attr_mail&quot;: &quot;mail&quot;,
-    &quot;account_password&quot;: null,
-    &quot;account&quot;: null,
-    &quot;onthefly_register&quot;: true,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-  }
-}</pre>
 
         <h3>Params</h3>
         <table class='table'>
