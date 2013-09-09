@@ -17,10 +17,8 @@
     <div class="row">
       <div id='container'>
         <ul class='breadcrumb'>
-  <li class='active'><a href='./apidoc.html'>Foreman v1</a></li>
+  <li class='active'><a href='./apidoc.html'>Foreman v2</a></li>
 </ul>
-
-<div>Another API description</div>
 
 <h1 class='page-header'>Resources</h1>
 
@@ -417,6 +415,62 @@
     </tbody>
   </table>
   <h2>
+    <a href='./apidoc/host_classes.html'>
+      Host classes
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='./apidoc/host_classes/index.html'>GET /api/hosts/:host_id/puppetclass_ids</a></td>
+            <td width='60%'>List all puppetclass id&#x27;s for host</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/host_classes/create.html'>POST /api/hosts/:host_id/puppetclass_ids</a></td>
+            <td width='60%'>Add a puppetclass to host</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/host_classes/destroy.html'>DELETE /api/hosts/:host_id/puppetclass_ids/:id</a></td>
+            <td width='60%'>Remove a puppetclass from host</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/hostgroup_classes.html'>
+      Hostgroup classes
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='./apidoc/hostgroup_classes/index.html'>GET /api/hostgroups/:hostgroup_id/puppetclass_ids</a></td>
+            <td width='60%'>List all puppetclass id&#x27;s for hostgroup</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/hostgroup_classes/create.html'>POST /api/hostgroups/:hostgroup_id/puppetclass_ids</a></td>
+            <td width='60%'>Add a puppetclass to hostgroup</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/hostgroup_classes/destroy.html'>DELETE /api/hostgroups/:hostgroup_id/puppetclass_ids/:id</a></td>
+            <td width='60%'>Remove a puppetclass from hostgroup</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
     <a href='./apidoc/hostgroups.html'>
       Hostgroups
     </a><br>
@@ -490,6 +544,22 @@
             <td><a href='./apidoc/hosts/status.html'>GET /api/hosts/:id/status</a></td>
             <td width='60%'>Get status of host</td>
           </tr>
+          <tr>
+            <td><a href='./apidoc/hosts/puppetrun.html'>GET /api/hosts/:id/puppetrun</a></td>
+            <td width='60%'>Force a puppet run on the agent.</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/hosts/power.html'>PUT /api/hosts/:id/power</a></td>
+            <td width='60%'>Run power operation on host.</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/hosts/boot.html'>PUT /api/hosts/:id/boot</a></td>
+            <td width='60%'>Boot host from specified device.</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/hosts/facts.html'>POST /api/hosts/facts</a></td>
+            <td width='60%'>Upload facts for a host, creating the host if required.</td>
+          </tr>
     </tbody>
   </table>
   <h2>
@@ -529,6 +599,78 @@
     </tbody>
   </table>
   <h2>
+    <a href='./apidoc/interfaces.html'>
+      Interfaces
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='./apidoc/interfaces/index.html'>GET /api/hosts/:host_id/interfaces</a></td>
+            <td width='60%'>List all interfaces for host</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/interfaces/show.html'>GET /api/hosts/:host_id/interfaces/:id</a></td>
+            <td width='60%'>Show an interface for host</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/interfaces/create.html'>POST /api/hosts/:host_id/interfaces</a></td>
+            <td width='60%'>Create an interface linked to a host</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/interfaces/update.html'>PUT /api/hosts/:host_id/interfaces/:id</a></td>
+            <td width='60%'>Update host interface</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/interfaces/destroy.html'>DELETE /api/hosts/:host_id/interfaces/:id</a></td>
+            <td width='60%'>Delete a host interface</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/locations.html'>
+      Locations
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='./apidoc/locations/index.html'>GET /api/locations</a></td>
+            <td width='60%'>List all locations</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/locations/show.html'>GET /api/locations/:id</a></td>
+            <td width='60%'>Show a location</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/locations/create.html'>POST /api/locations</a></td>
+            <td width='60%'>Create a location</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/locations/update.html'>PUT /api/locations/:id</a></td>
+            <td width='60%'>Update a location</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/locations/destroy.html'>DELETE /api/locations/:id</a></td>
+            <td width='60%'>Delete a location</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
     <a href='./apidoc/lookup_keys.html'>
       Lookup keys
     </a><br>
@@ -543,28 +685,48 @@
     </thead>
     <tbody>
           <tr>
-            <td><a href='./apidoc/lookup_keys/index.html'>GET /api/lookup_keys</a></td>
-            <td width='60%'>List all lookup_keys.</td>
+            <td><a href='./apidoc/lookup_keys/index.html'>GET /api/smart_variables</a></td>
+            <td width='60%'>List all smart variables (smart parameters and smart class parameters).</td>
           </tr>
           <tr>
-            <td><a href='./apidoc/lookup_keys/index.html'>GET /api/hosts/:host_id/lookup_keys</a></td>
-            <td width='60%'>List all lookup_keys of a given host.</td>
+            <td><a href='./apidoc/lookup_keys/show.html'>GET /api/smart_variables/:id</a></td>
+            <td width='60%'>Show a smart variable (smart parameter or smart class parameter).</td>
           </tr>
           <tr>
-            <td><a href='./apidoc/lookup_keys/show.html'>GET /api/lookup_keys/:id</a></td>
-            <td width='60%'>Show a lookup key.</td>
+            <td><a href='./apidoc/lookup_keys/create.html'>POST /api/smart_variables</a></td>
+            <td width='60%'>Create a smart variable.</td>
           </tr>
           <tr>
-            <td><a href='./apidoc/lookup_keys/create.html'>POST /api/lookup_keys</a></td>
-            <td width='60%'>Create a lookup key.</td>
+            <td><a href='./apidoc/lookup_keys/update.html'>PUT /api/smart_variables/:id</a></td>
+            <td width='60%'>Update a smart variable.</td>
           </tr>
           <tr>
-            <td><a href='./apidoc/lookup_keys/update.html'>PUT /api/lookup_keys/:id</a></td>
-            <td width='60%'>Update a lookup key.</td>
+            <td><a href='./apidoc/lookup_keys/destroy.html'>DELETE /api/smart_variables/:id</a></td>
+            <td width='60%'>Delete a smart variable.</td>
           </tr>
           <tr>
-            <td><a href='./apidoc/lookup_keys/destroy.html'>DELETE /api/lookup_keys/:id</a></td>
-            <td width='60%'>Delete a lookup key.</td>
+            <td><a href='./apidoc/lookup_keys/host_or_hostgroup_smart_parameters.html'>GET /api/hosts/:host_id/smart_parameters</a></td>
+            <td width='60%'>List of smart parameters for a specific host</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/lookup_keys/host_or_hostgroup_smart_parameters.html'>GET /api/hostgroups/:hostgroup_id/smart_parameters</a></td>
+            <td width='60%'>List of smart parameters for a specific hostgroup</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/lookup_keys/host_or_hostgroup_smart_class_parameters.html'>GET /api/hosts/:host_id/smart_class_parameters</a></td>
+            <td width='60%'>List of smart class parameters for a specific host</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/lookup_keys/host_or_hostgroup_smart_class_parameters.html'>GET /api/hostgroups/:hostgroup_id/smart_class_parameters</a></td>
+            <td width='60%'>List of smart class parameters for a specific hostgroup</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/lookup_keys/puppet_smart_parameters.html'>GET /api/puppetclasses/:puppetclass_id/smart_parameters</a></td>
+            <td width='60%'>List of smart parameters for a specific puppetclass</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/lookup_keys/puppet_smart_class_parameters.html'>GET /api/puppetclasses/:puppetclass_id/environments/:environment_id/smart_class_parameters</a></td>
+            <td width='60%'>List of smart class parameters for a specific puppetclass and environment</td>
           </tr>
     </tbody>
   </table>
@@ -681,6 +843,154 @@
     </tbody>
   </table>
   <h2>
+    <a href='./apidoc/organizations.html'>
+      Organizations
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='./apidoc/organizations/index.html'>GET /api/organizations</a></td>
+            <td width='60%'>List all organizations</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/organizations/show.html'>GET /api/organizations/:id</a></td>
+            <td width='60%'>Show an organization</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/organizations/create.html'>POST /api/organizations</a></td>
+            <td width='60%'>Create an organization</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/organizations/update.html'>PUT /api/organizations/:id</a></td>
+            <td width='60%'>Update an organization</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/organizations/destroy.html'>DELETE /api/organizations/:id</a></td>
+            <td width='60%'>Delete an organization</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/parameters.html'>
+      Parameters
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='./apidoc/parameters/index.html'>GET /api/hosts/:host_id/parameters</a></td>
+            <td width='60%'>List all parameters for host</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/parameters/index.html'>GET /api/hostgroups/:hostgroup_id/parameters</a></td>
+            <td width='60%'>List all parameters for hostgroup</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/parameters/index.html'>GET /api/domains/:domain_id/parameters</a></td>
+            <td width='60%'>List all parameters for domain</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/parameters/index.html'>GET /api/operatingsystems/:operatingsystem_id/parameters</a></td>
+            <td width='60%'>List all parameters for operating system</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/parameters/show.html'>GET /api/hosts/:host_id/parameters/:id</a></td>
+            <td width='60%'>Show a nested parameter for host</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/parameters/show.html'>GET /api/hostgroups/:hostgroup_id/parameters/:id</a></td>
+            <td width='60%'>Show a nested parameter for hostgroup</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/parameters/show.html'>GET /api/domains/:domain_id/parameters/:id</a></td>
+            <td width='60%'>Show a nested parameter for domain</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/parameters/show.html'>GET /api/operatingsystems/:operatingsystem_id/parameters/:id</a></td>
+            <td width='60%'>Show a nested parameter for operating system</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/parameters/create.html'>POST /api/hosts/:host_id/parameters</a></td>
+            <td width='60%'>Create a nested parameter for host</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/parameters/create.html'>POST /api/hostgroups/:hostgroup_id/parameters</a></td>
+            <td width='60%'>Create a nested parameter for hostgroup</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/parameters/create.html'>POST /api/domains/:domain_id/parameters</a></td>
+            <td width='60%'>Create a nested parameter for domain</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/parameters/create.html'>POST /api/operatingsystems/:operatingsystem_id/parameters</a></td>
+            <td width='60%'>Create a nested parameter for operating system</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/parameters/update.html'>PUT /api/hosts/:host_id/parameters/:id</a></td>
+            <td width='60%'>Update a nested parameter for host</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/parameters/update.html'>PUT /api/hostgroups/:hostgroup_id/parameters/:id</a></td>
+            <td width='60%'>Update a nested parameter for hostgroup</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/parameters/update.html'>PUT /api/domains/:domain_id/parameters/:id</a></td>
+            <td width='60%'>Update a nested parameter for domain</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/parameters/update.html'>PUT /api/operatingsystems/:operatingsystem_id/parameters/:id</a></td>
+            <td width='60%'>Update a nested parameter for operating system</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/parameters/destroy.html'>DELETE /api/hosts/:host_id/parameters/:id</a></td>
+            <td width='60%'>Delete a nested parameter for host</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/parameters/destroy.html'>DELETE /api/hostgroups/:hostgroup_id/parameters/:id</a></td>
+            <td width='60%'>Delete a nested parameter for hostgroup</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/parameters/destroy.html'>DELETE /api/domains/:domain_id/parameters/:id</a></td>
+            <td width='60%'>Delete a nested parameter for domain</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/parameters/destroy.html'>DELETE /api/operatingsystems/:operatingsystem_id/parameters/:id</a></td>
+            <td width='60%'>Delete a nested parameter for operating system</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/parameters/reset.html'>DELETE /api/hosts/:host_id/parameters</a></td>
+            <td width='60%'>Delete all nested parameters for host</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/parameters/reset.html'>DELETE /api/hostgroups/:hostgroup_id/parameters</a></td>
+            <td width='60%'>Delete all nested parameters for hostgroup</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/parameters/reset.html'>DELETE /api/domains/:domain_id/parameters</a></td>
+            <td width='60%'>Delete all nested parameters for domain</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/parameters/reset.html'>DELETE /api/operatingsystems/:operatingsystem_id/parameters</a></td>
+            <td width='60%'>Delete all nested parameters for operating system</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
     <a href='./apidoc/ptables.html'>
       Ptables
     </a><br>
@@ -736,11 +1046,31 @@
           </tr>
           <tr>
             <td><a href='./apidoc/puppetclasses/index.html'>GET /api/hosts/:host_id/puppetclasses</a></td>
-            <td width='60%'>List all puppetclasses of a given host.</td>
+            <td width='60%'>List all puppetclasses for host</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/puppetclasses/index.html'>GET /api/hostgroups/:hostgroup_id/puppetclasses</a></td>
+            <td width='60%'>List all puppetclasses for hostgroup</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/puppetclasses/index.html'>GET /api/environments/:environment_id/puppetclasses</a></td>
+            <td width='60%'>List all puppetclasses for environment</td>
           </tr>
           <tr>
             <td><a href='./apidoc/puppetclasses/show.html'>GET /api/puppetclasses/:id</a></td>
-            <td width='60%'>Show a puppetclass.</td>
+            <td width='60%'>Show a puppetclass</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/puppetclasses/show.html'>GET /api/hosts/:host_id/puppetclasses/:id</a></td>
+            <td width='60%'>Show a puppetclass for host</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/puppetclasses/show.html'>GET /api/hostgroups/:hostgroup_id/puppetclasses/:id</a></td>
+            <td width='60%'>Show a puppetclass for hostgroup</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/puppetclasses/show.html'>GET /api/environments/:environment_id/puppetclasses/:id</a></td>
+            <td width='60%'>Show a puppetclass for environment</td>
           </tr>
           <tr>
             <td><a href='./apidoc/puppetclasses/create.html'>POST /api/puppetclasses</a></td>
@@ -785,6 +1115,10 @@
           <tr>
             <td><a href='./apidoc/reports/last.html'>GET /api/hosts/:host_id/reports/last</a></td>
             <td width='60%'>Show the last report for a given host.</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/reports/create.html'>POST /api/reports</a></td>
+            <td width='60%'>Create a report.</td>
           </tr>
     </tbody>
   </table>
@@ -921,6 +1255,38 @@
           <tr>
             <td><a href='./apidoc/subnets/destroy.html'>DELETE /api/subnets/:id</a></td>
             <td width='60%'>Delete a subnet</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/template_combinations.html'>
+      Template combinations
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='./apidoc/template_combinations/index.html'>GET /api/config_templates/:config_template_id/template_combinations</a></td>
+            <td width='60%'>List Template Combination</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/template_combinations/create.html'>POST /api/config_templates/:config_template_id/template_combinations</a></td>
+            <td width='60%'>Add a Template Combination</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/template_combinations/show.html'>GET /api/template_combinations/:id</a></td>
+            <td width='60%'>Show Template Combination</td>
+          </tr>
+          <tr>
+            <td><a href='./apidoc/template_combinations/destroy.html'>DELETE /api/template_combinations/:id</a></td>
+            <td width='60%'>Delete a template</td>
           </tr>
     </tbody>
   </table>

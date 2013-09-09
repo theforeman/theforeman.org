@@ -100,6 +100,18 @@
       <li><a href='#home-index'>index</a></li>
       <li><a href='#home-status'>status</a></li>
   </ul>
+  <h4><a href='#host_classes'>Host classes</a></h4>
+  <ul>
+      <li><a href='#host_classes-index'>index</a></li>
+      <li><a href='#host_classes-create'>create</a></li>
+      <li><a href='#host_classes-destroy'>destroy</a></li>
+  </ul>
+  <h4><a href='#hostgroup_classes'>Hostgroup classes</a></h4>
+  <ul>
+      <li><a href='#hostgroup_classes-index'>index</a></li>
+      <li><a href='#hostgroup_classes-create'>create</a></li>
+      <li><a href='#hostgroup_classes-destroy'>destroy</a></li>
+  </ul>
   <h4><a href='#hostgroups'>Hostgroups</a></h4>
   <ul>
       <li><a href='#hostgroups-index'>index</a></li>
@@ -116,6 +128,10 @@
       <li><a href='#hosts-update'>update</a></li>
       <li><a href='#hosts-destroy'>destroy</a></li>
       <li><a href='#hosts-status'>status</a></li>
+      <li><a href='#hosts-puppetrun'>puppetrun</a></li>
+      <li><a href='#hosts-power'>power</a></li>
+      <li><a href='#hosts-boot'>boot</a></li>
+      <li><a href='#hosts-facts'>facts</a></li>
   </ul>
   <h4><a href='#images'>Images</a></h4>
   <ul>
@@ -125,6 +141,22 @@
       <li><a href='#images-update'>update</a></li>
       <li><a href='#images-destroy'>destroy</a></li>
   </ul>
+  <h4><a href='#interfaces'>Interfaces</a></h4>
+  <ul>
+      <li><a href='#interfaces-index'>index</a></li>
+      <li><a href='#interfaces-show'>show</a></li>
+      <li><a href='#interfaces-create'>create</a></li>
+      <li><a href='#interfaces-update'>update</a></li>
+      <li><a href='#interfaces-destroy'>destroy</a></li>
+  </ul>
+  <h4><a href='#locations'>Locations</a></h4>
+  <ul>
+      <li><a href='#locations-index'>index</a></li>
+      <li><a href='#locations-show'>show</a></li>
+      <li><a href='#locations-create'>create</a></li>
+      <li><a href='#locations-update'>update</a></li>
+      <li><a href='#locations-destroy'>destroy</a></li>
+  </ul>
   <h4><a href='#lookup_keys'>Lookup keys</a></h4>
   <ul>
       <li><a href='#lookup_keys-index'>index</a></li>
@@ -132,6 +164,10 @@
       <li><a href='#lookup_keys-create'>create</a></li>
       <li><a href='#lookup_keys-update'>update</a></li>
       <li><a href='#lookup_keys-destroy'>destroy</a></li>
+      <li><a href='#lookup_keys-host_or_hostgroup_smart_parameters'>host_or_hostgroup_smart_parameters</a></li>
+      <li><a href='#lookup_keys-host_or_hostgroup_smart_class_parameters'>host_or_hostgroup_smart_class_parameters</a></li>
+      <li><a href='#lookup_keys-puppet_smart_parameters'>puppet_smart_parameters</a></li>
+      <li><a href='#lookup_keys-puppet_smart_class_parameters'>puppet_smart_class_parameters</a></li>
   </ul>
   <h4><a href='#media'>Media</a></h4>
   <ul>
@@ -158,6 +194,23 @@
       <li><a href='#operatingsystems-destroy'>destroy</a></li>
       <li><a href='#operatingsystems-bootfiles'>bootfiles</a></li>
   </ul>
+  <h4><a href='#organizations'>Organizations</a></h4>
+  <ul>
+      <li><a href='#organizations-index'>index</a></li>
+      <li><a href='#organizations-show'>show</a></li>
+      <li><a href='#organizations-create'>create</a></li>
+      <li><a href='#organizations-update'>update</a></li>
+      <li><a href='#organizations-destroy'>destroy</a></li>
+  </ul>
+  <h4><a href='#parameters'>Parameters</a></h4>
+  <ul>
+      <li><a href='#parameters-index'>index</a></li>
+      <li><a href='#parameters-show'>show</a></li>
+      <li><a href='#parameters-create'>create</a></li>
+      <li><a href='#parameters-update'>update</a></li>
+      <li><a href='#parameters-destroy'>destroy</a></li>
+      <li><a href='#parameters-reset'>reset</a></li>
+  </ul>
   <h4><a href='#ptables'>Ptables</a></h4>
   <ul>
       <li><a href='#ptables-index'>index</a></li>
@@ -180,6 +233,7 @@
       <li><a href='#reports-show'>show</a></li>
       <li><a href='#reports-destroy'>destroy</a></li>
       <li><a href='#reports-last'>last</a></li>
+      <li><a href='#reports-create'>create</a></li>
   </ul>
   <h4><a href='#roles'>Roles</a></h4>
   <ul>
@@ -211,6 +265,13 @@
       <li><a href='#subnets-update'>update</a></li>
       <li><a href='#subnets-destroy'>destroy</a></li>
   </ul>
+  <h4><a href='#template_combinations'>Template combinations</a></h4>
+  <ul>
+      <li><a href='#template_combinations-index'>index</a></li>
+      <li><a href='#template_combinations-create'>create</a></li>
+      <li><a href='#template_combinations-show'>show</a></li>
+      <li><a href='#template_combinations-destroy'>destroy</a></li>
+  </ul>
   <h4><a href='#template_kinds'>Template kinds</a></h4>
   <ul>
       <li><a href='#template_kinds-index'>index</a></li>
@@ -233,8 +294,6 @@
   </ul>
 
 
-
-<div>Another API description</div>
 
 <hr>
 
@@ -3200,7 +3259,7 @@
       </small>
     </td>
     <td>
-      <p>Providers include Libvirt, Ovirt, EC2, Vmware, Openstack, Rackspace</p>
+      <p>Providers include Libvirt, Ovirt, EC2, Vmware, Openstack, Rackspace, GCE</p>
         <br>
         Value: Must be String
     </td>
@@ -3453,7 +3512,7 @@
       </small>
     </td>
     <td>
-      <p>Providers include Libvirt, Ovirt, EC2, Vmware, Openstack, Rackspace</p>
+      <p>Providers include Libvirt, Ovirt, EC2, Vmware, Openstack, Rackspace, GCE</p>
         <br>
         Value: Must be String
     </td>
@@ -5921,6 +5980,384 @@ PXE Default file has been deployed to all Smart Proxies</pre>
       </div>
   </div>
 
+  <ul class='breadcrumb'  id='host_classes'>
+    <li><a href='#'>Foreman</a><span class='divider'>/</span></li>
+    <li class='active'>Host classes</li>
+  </ul>
+
+  <div class='page-header'>
+    <h1>
+      <a href='#host_classes'>Host classes</a><br>
+      <small></small>
+    </h1>
+  </div>
+
+
+  <div class='accordion' id='accordion'>
+
+      <hr>
+
+      <ul class='breadcrumb' id='host_classes-index'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#host_classes'>Host classes</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>index</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#host_classes-index'>
+              GET /api/hosts/:host_id/puppetclass_ids
+            </a><br>
+            <small>List all puppetclass id's for host</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='host_classes-create'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#host_classes'>Host classes</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>create</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#host_classes-create'>
+              POST /api/hosts/:host_id/puppetclass_ids
+            </a><br>
+            <small>Add a puppetclass to host</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>id of host</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>puppetclass_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>id of puppetclass</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='host_classes-destroy'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#host_classes'>Host classes</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>destroy</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#host_classes-destroy'>
+              DELETE /api/hosts/:host_id/puppetclass_ids/:id
+            </a><br>
+            <small>Remove a puppetclass from host</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>id of host</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>id of puppetclass</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+  </div>
+
+  <ul class='breadcrumb'  id='hostgroup_classes'>
+    <li><a href='#'>Foreman</a><span class='divider'>/</span></li>
+    <li class='active'>Hostgroup classes</li>
+  </ul>
+
+  <div class='page-header'>
+    <h1>
+      <a href='#hostgroup_classes'>Hostgroup classes</a><br>
+      <small></small>
+    </h1>
+  </div>
+
+
+  <div class='accordion' id='accordion'>
+
+      <hr>
+
+      <ul class='breadcrumb' id='hostgroup_classes-index'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#hostgroup_classes'>Hostgroup classes</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>index</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#hostgroup_classes-index'>
+              GET /api/hostgroups/:hostgroup_id/puppetclass_ids
+            </a><br>
+            <small>List all puppetclass id's for hostgroup</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='hostgroup_classes-create'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#hostgroup_classes'>Hostgroup classes</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>create</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#hostgroup_classes-create'>
+              POST /api/hostgroups/:hostgroup_id/puppetclass_ids
+            </a><br>
+            <small>Add a puppetclass to hostgroup</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>hostgroup_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>id of hostgroup</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>puppetclass_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>id of puppetclass</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='hostgroup_classes-destroy'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#hostgroup_classes'>Hostgroup classes</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>destroy</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#hostgroup_classes-destroy'>
+              DELETE /api/hostgroups/:hostgroup_id/puppetclass_ids/:id
+            </a><br>
+            <small>Remove a puppetclass from hostgroup</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>hostgroup_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>id of hostgroup</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>puppetclass_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>id of puppetclass</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+  </div>
+
   <ul class='breadcrumb'  id='hostgroups'>
     <li><a href='#'>Foreman</a><span class='divider'>/</span></li>
     <li class='active'>Hostgroups</li>
@@ -6259,6 +6696,22 @@ PXE Default file has been deployed to all Smart Proxies</pre>
   
   <tr style='background-color:rgb(250,250,250);'>
     <td>
+      <strong>hostgroup[parent_id] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be a number.
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
       <strong>hostgroup[environment_id] </strong><br>
       <small>
         optional
@@ -6509,6 +6962,22 @@ PXE Default file has been deployed to all Smart Proxies</pre>
       
         <br>
         Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>hostgroup[parent_id] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be a number.
     </td>
   </tr>
 
@@ -8090,6 +8559,282 @@ PXE Default file has been deployed to all Smart Proxies</pre>
             </tbody>
           </table>
       </div>
+      <hr>
+
+      <ul class='breadcrumb' id='hosts-puppetrun'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#hosts'>Hosts</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>puppetrun</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#hosts-puppetrun'>
+              GET /api/hosts/:id/puppetrun
+            </a><br>
+            <small>Force a puppet run on the agent.</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='hosts-power'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#hosts'>Hosts</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>power</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#hosts-power'>
+              PUT /api/hosts/:id/power
+            </a><br>
+            <small>Run power operation on host.</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space.
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>power_action </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>power action, valid actions are (&#8216;on&#8217;, &#8216;start&#8217;)&#8217;, (&#8216;off&#8217;, &#8216;stop&#8217;), (&#8216;soft&#8217;, &#8216;reboot&#8217;), (&#8216;cycle&#8217;, &#8216;reset&#8217;), (&#8216;state&#8217;, &#8216;status&#8217;)</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='hosts-boot'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#hosts'>Hosts</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>boot</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#hosts-boot'>
+              PUT /api/hosts/:id/boot
+            </a><br>
+            <small>Boot host from specified device.</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space.
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>device </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>boot device, valid devices are disk, cdrom, pxe, bios</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='hosts-facts'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#hosts'>Hosts</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>facts</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#hosts-facts'>
+              POST /api/hosts/facts
+            </a><br>
+            <small>Upload facts for a host, creating the host if required.</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>hostname of the host</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>facts </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>hash containing the facts for the host</p>
+        <br>
+        Value: Must be Hash
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>certname </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>optional: certname of the host</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>type </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>optional: the STI type of host to create</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
   </div>
 
   <ul class='breadcrumb'  id='images'>
@@ -8833,6 +9578,960 @@ PXE Default file has been deployed to all Smart Proxies</pre>
       </div>
   </div>
 
+  <ul class='breadcrumb'  id='interfaces'>
+    <li><a href='#'>Foreman</a><span class='divider'>/</span></li>
+    <li class='active'>Interfaces</li>
+  </ul>
+
+  <div class='page-header'>
+    <h1>
+      <a href='#interfaces'>Interfaces</a><br>
+      <small></small>
+    </h1>
+  </div>
+
+
+  <div class='accordion' id='accordion'>
+
+      <hr>
+
+      <ul class='breadcrumb' id='interfaces-index'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#interfaces'>Interfaces</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>index</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#interfaces-index'>
+              GET /api/hosts/:host_id/interfaces
+            </a><br>
+            <small>List all interfaces for host</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>id or name of host</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='interfaces-show'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#interfaces'>Interfaces</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>show</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#interfaces-show'>
+              GET /api/hosts/:host_id/interfaces/:id
+            </a><br>
+            <small>Show an interface for host</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>id or name of nested host</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>id or name of interface</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='interfaces-create'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#interfaces'>Interfaces</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>create</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#interfaces-create'>
+              POST /api/hosts/:host_id/interfaces
+            </a><br>
+            <small>Create an interface linked to a host</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>id or name of host</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>interface </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>interface information</p>
+        <br>
+        Value: Must be a Hash
+    </td>
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[mac] </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>MAC address of interface</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[ip] </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>IP address of interface</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[type] </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>Interface type, i.e: Nic::BMC</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[name] </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>Interface name</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[subnet_id] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>Foreman subnet id of interface</p>
+        <br>
+        Value: Must be Fixnum
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[domain_id] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>Foreman domain id of interface</p>
+        <br>
+        Value: Must be Fixnum
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[username] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[password] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[provider] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>Interface provider, i.e: IPMI</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='interfaces-update'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#interfaces'>Interfaces</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>update</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#interfaces-update'>
+              PUT /api/hosts/:host_id/interfaces/:id
+            </a><br>
+            <small>Update host interface</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>id or name of host</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>interface </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>interface information</p>
+        <br>
+        Value: Must be a Hash
+    </td>
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[mac] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>MAC address of interface</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[ip] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>IP address of interface</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[type] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>Interface type, i.e: Nic::BMC</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[name] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>Interface name</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[subnet_id] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>Foreman subnet id of interface</p>
+        <br>
+        Value: Must be Fixnum
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[domain_id] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>Foreman domain id of interface</p>
+        <br>
+        Value: Must be Fixnum
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[username] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[password] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[provider] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>Interface provider, i.e: IPMI</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='interfaces-destroy'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#interfaces'>Interfaces</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>destroy</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#interfaces-destroy'>
+              DELETE /api/hosts/:host_id/interfaces/:id
+            </a><br>
+            <small>Delete a host interface</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>id of interface</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+  </div>
+
+  <ul class='breadcrumb'  id='locations'>
+    <li><a href='#'>Foreman</a><span class='divider'>/</span></li>
+    <li class='active'>Locations</li>
+  </ul>
+
+  <div class='page-header'>
+    <h1>
+      <a href='#locations'>Locations</a><br>
+      <small></small>
+    </h1>
+  </div>
+
+
+  <div class='accordion' id='accordion'>
+
+      <hr>
+
+      <ul class='breadcrumb' id='locations-index'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#locations'>Locations</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>index</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#locations-index'>
+              GET /api/locations
+            </a><br>
+            <small>List all locations</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>:search </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>filter results</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>:order </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>sort results</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>:page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>paginate results</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>:per_page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>number of entries per request</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='locations-show'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#locations'>Locations</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>show</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#locations-show'>
+              GET /api/locations/:id
+            </a><br>
+            <small>Show a location</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='locations-create'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#locations'>Locations</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>create</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#locations-create'>
+              POST /api/locations
+            </a><br>
+            <small>Create a location</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be a Hash
+    </td>
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[:name] </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='locations-update'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#locations'>Locations</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>update</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#locations-update'>
+              PUT /api/locations/:id
+            </a><br>
+            <small>Update a location</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be a Hash
+    </td>
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>location[:name] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='locations-destroy'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#locations'>Locations</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>destroy</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#locations-destroy'>
+              DELETE /api/locations/:id
+            </a><br>
+            <small>Delete a location</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+      </div>
+  </div>
+
   <ul class='breadcrumb'  id='lookup_keys'>
     <li><a href='#'>Foreman</a><span class='divider'>/</span></li>
     <li class='active'>Lookup keys</li>
@@ -8865,15 +10564,9 @@ PXE Default file has been deployed to all Smart Proxies</pre>
       <div>
           <h3>
             <a href='#lookup_keys-index'>
-              GET /api/lookup_keys
+              GET /api/smart_variables
             </a><br>
-            <small>List all lookup_keys.</small>
-          </h3>
-          <h3>
-            <a href='#lookup_keys-index'>
-              GET /api/hosts/:host_id/lookup_keys
-            </a><br>
-            <small>List all lookup_keys of a given host.</small>
+            <small>List all smart variables (smart parameters and smart class parameters).</small>
           </h3>
       </div>
 
@@ -9013,9 +10706,9 @@ PXE Default file has been deployed to all Smart Proxies</pre>
       <div>
           <h3>
             <a href='#lookup_keys-show'>
-              GET /api/lookup_keys/:id
+              GET /api/smart_variables/:id
             </a><br>
-            <small>Show a lookup key.</small>
+            <small>Show a smart variable (smart parameter or smart class parameter).</small>
           </h3>
       </div>
 
@@ -9083,9 +10776,9 @@ PXE Default file has been deployed to all Smart Proxies</pre>
       <div>
           <h3>
             <a href='#lookup_keys-create'>
-              POST /api/lookup_keys
+              POST /api/smart_variables
             </a><br>
-            <small>Create a lookup key.</small>
+            <small>Create a smart variable.</small>
           </h3>
       </div>
 
@@ -9219,7 +10912,7 @@ PXE Default file has been deployed to all Smart Proxies</pre>
   
   <tr style='background-color:rgb(250,250,250);'>
     <td>
-      <strong>lookup_key[lookup_values_count] </strong><br>
+      <strong>lookup_key[validator_type] </strong><br>
       <small>
         optional
         
@@ -9228,7 +10921,87 @@ PXE Default file has been deployed to all Smart Proxies</pre>
     <td>
       
         <br>
-        Value: Must be a number.
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>lookup_key[validator_rule] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>lookup_key[is_param] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>lookup_key[key_type] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>lookup_key[override] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>lookup_key[required] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
     </td>
   </tr>
 
@@ -9255,9 +11028,9 @@ PXE Default file has been deployed to all Smart Proxies</pre>
       <div>
           <h3>
             <a href='#lookup_keys-update'>
-              PUT /api/lookup_keys/:id
+              PUT /api/smart_variables/:id
             </a><br>
-            <small>Update a lookup key.</small>
+            <small>Update a smart variable.</small>
           </h3>
       </div>
 
@@ -9328,7 +11101,7 @@ PXE Default file has been deployed to all Smart Proxies</pre>
     <td>
       <strong>lookup_key[key] </strong><br>
       <small>
-        optional
+        required
         
       </small>
     </td>
@@ -9406,7 +11179,7 @@ PXE Default file has been deployed to all Smart Proxies</pre>
   
   <tr style='background-color:rgb(250,250,250);'>
     <td>
-      <strong>lookup_key[lookup_values_count] </strong><br>
+      <strong>lookup_key[validator_type] </strong><br>
       <small>
         optional
         
@@ -9415,7 +11188,87 @@ PXE Default file has been deployed to all Smart Proxies</pre>
     <td>
       
         <br>
-        Value: Must be a number.
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>lookup_key[validator_rule] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>lookup_key[is_param] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>lookup_key[key_type] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>lookup_key[override] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>lookup_key[required] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
     </td>
   </tr>
 
@@ -9442,9 +11295,9 @@ PXE Default file has been deployed to all Smart Proxies</pre>
       <div>
           <h3>
             <a href='#lookup_keys-destroy'>
-              DELETE /api/lookup_keys/:id
+              DELETE /api/smart_variables/:id
             </a><br>
-            <small>Delete a lookup key.</small>
+            <small>Delete a smart variable.</small>
           </h3>
       </div>
 
@@ -9487,6 +11340,450 @@ PXE Default file has been deployed to all Smart Proxies</pre>
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+    </td>
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='lookup_keys-host_or_hostgroup_smart_parameters'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#lookup_keys'>Lookup keys</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>host_or_hostgroup_smart_parameters</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#lookup_keys-host_or_hostgroup_smart_parameters'>
+              GET /api/hosts/:host_id/smart_parameters
+            </a><br>
+            <small>List of smart parameters for a specific host</small>
+          </h3>
+          <h3>
+            <a href='#lookup_keys-host_or_hostgroup_smart_parameters'>
+              GET /api/hostgroups/:hostgroup_id/smart_parameters
+            </a><br>
+            <small>List of smart parameters for a specific hostgroup</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>hostgroup_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>paginate results</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>number of entries per request</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='lookup_keys-host_or_hostgroup_smart_class_parameters'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#lookup_keys'>Lookup keys</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>host_or_hostgroup_smart_class_parameters</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#lookup_keys-host_or_hostgroup_smart_class_parameters'>
+              GET /api/hosts/:host_id/smart_class_parameters
+            </a><br>
+            <small>List of smart class parameters for a specific host</small>
+          </h3>
+          <h3>
+            <a href='#lookup_keys-host_or_hostgroup_smart_class_parameters'>
+              GET /api/hostgroups/:hostgroup_id/smart_class_parameters
+            </a><br>
+            <small>List of smart class parameters for a specific hostgroup</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>hostgroup_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>paginate results</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>number of entries per request</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='lookup_keys-puppet_smart_parameters'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#lookup_keys'>Lookup keys</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>puppet_smart_parameters</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#lookup_keys-puppet_smart_parameters'>
+              GET /api/puppetclasses/:puppetclass_id/smart_parameters
+            </a><br>
+            <small>List of smart parameters for a specific puppetclass</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>puppetclass_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>sort results</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>paginate results</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>number of entries per request</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='lookup_keys-puppet_smart_class_parameters'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#lookup_keys'>Lookup keys</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>puppet_smart_class_parameters</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#lookup_keys-puppet_smart_class_parameters'>
+              GET /api/puppetclasses/:puppetclass_id/environments/:environment_id/smart_class_parameters
+            </a><br>
+            <small>List of smart class parameters for a specific puppetclass and environment</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>puppetclass_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>sort results</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>paginate results</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>number of entries per request</p>
+        <br>
+        Value: Must be String
     </td>
   </tr>
 
@@ -9842,6 +12139,8 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
 <li>Debian</li>
 
+<li>Gentoo</li>
+
 <li>Redhat</li>
 
 <li>Solaris</li>
@@ -9852,6 +12151,22 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 </ul>
         <br>
         Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>medium[operatingsystem_ids] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be Array
     </td>
   </tr>
 
@@ -9994,6 +12309,8 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
 <li>Debian</li>
 
+<li>Gentoo</li>
+
 <li>Redhat</li>
 
 <li>Solaris</li>
@@ -10004,6 +12321,22 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 </ul>
         <br>
         Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>medium[operatingsystem_ids] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be Array
     </td>
   </tr>
 
@@ -11476,6 +13809,1177 @@ PXE Default file has been deployed to all Smart Proxies</pre>
       </div>
   </div>
 
+  <ul class='breadcrumb'  id='organizations'>
+    <li><a href='#'>Foreman</a><span class='divider'>/</span></li>
+    <li class='active'>Organizations</li>
+  </ul>
+
+  <div class='page-header'>
+    <h1>
+      <a href='#organizations'>Organizations</a><br>
+      <small></small>
+    </h1>
+  </div>
+
+
+  <div class='accordion' id='accordion'>
+
+      <hr>
+
+      <ul class='breadcrumb' id='organizations-index'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#organizations'>Organizations</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>index</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#organizations-index'>
+              GET /api/organizations
+            </a><br>
+            <small>List all organizations</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>:search </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>filter results</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>:order </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>sort results</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>:page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>paginate results</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>:per_page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>number of entries per request</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='organizations-show'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#organizations'>Organizations</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>show</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#organizations-show'>
+              GET /api/organizations/:id
+            </a><br>
+            <small>Show an organization</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='organizations-create'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#organizations'>Organizations</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>create</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#organizations-create'>
+              POST /api/organizations
+            </a><br>
+            <small>Create an organization</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be a Hash
+    </td>
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[:name] </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='organizations-update'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#organizations'>Organizations</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>update</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#organizations-update'>
+              PUT /api/organizations/:id
+            </a><br>
+            <small>Update an organization</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be a Hash
+    </td>
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[:name] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='organizations-destroy'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#organizations'>Organizations</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>destroy</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#organizations-destroy'>
+              DELETE /api/organizations/:id
+            </a><br>
+            <small>Delete an organization</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+      </div>
+  </div>
+
+  <ul class='breadcrumb'  id='parameters'>
+    <li><a href='#'>Foreman</a><span class='divider'>/</span></li>
+    <li class='active'>Parameters</li>
+  </ul>
+
+  <div class='page-header'>
+    <h1>
+      <a href='#parameters'>Parameters</a><br>
+      <small></small>
+    </h1>
+  </div>
+
+    <div><p>These API calls are related to <b>nested parameters for host, domain, hostgroup, operating system</b>. If you are looking for <a href='common_parameters.html'>global parameters</a>, go to <a href='common_parameters.html'>this link</a>.</p></div>
+
+  <div class='accordion' id='accordion'>
+
+      <hr>
+
+      <ul class='breadcrumb' id='parameters-index'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#parameters'>Parameters</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>index</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#parameters-index'>
+              GET /api/hosts/:host_id/parameters
+            </a><br>
+            <small>List all parameters for host</small>
+          </h3>
+          <h3>
+            <a href='#parameters-index'>
+              GET /api/hostgroups/:hostgroup_id/parameters
+            </a><br>
+            <small>List all parameters for hostgroup</small>
+          </h3>
+          <h3>
+            <a href='#parameters-index'>
+              GET /api/domains/:domain_id/parameters
+            </a><br>
+            <small>List all parameters for domain</small>
+          </h3>
+          <h3>
+            <a href='#parameters-index'>
+              GET /api/operatingsystems/:operatingsystem_id/parameters
+            </a><br>
+            <small>List all parameters for operating system</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of host</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>hostgroup_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of hostgroup</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>domain_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of domain</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>operatingsystem_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of operating system</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>paginate results</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>number of entries per request</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='parameters-show'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#parameters'>Parameters</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>show</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#parameters-show'>
+              GET /api/hosts/:host_id/parameters/:id
+            </a><br>
+            <small>Show a nested parameter for host</small>
+          </h3>
+          <h3>
+            <a href='#parameters-show'>
+              GET /api/hostgroups/:hostgroup_id/parameters/:id
+            </a><br>
+            <small>Show a nested parameter for hostgroup</small>
+          </h3>
+          <h3>
+            <a href='#parameters-show'>
+              GET /api/domains/:domain_id/parameters/:id
+            </a><br>
+            <small>Show a nested parameter for domain</small>
+          </h3>
+          <h3>
+            <a href='#parameters-show'>
+              GET /api/operatingsystems/:operatingsystem_id/parameters/:id
+            </a><br>
+            <small>Show a nested parameter for operating system</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of host</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>hostgroup_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of hostgroup</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>domain_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of domain</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>operatingsystem_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of operating system</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>id of parameter</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='parameters-create'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#parameters'>Parameters</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>create</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#parameters-create'>
+              POST /api/hosts/:host_id/parameters
+            </a><br>
+            <small>Create a nested parameter for host</small>
+          </h3>
+          <h3>
+            <a href='#parameters-create'>
+              POST /api/hostgroups/:hostgroup_id/parameters
+            </a><br>
+            <small>Create a nested parameter for hostgroup</small>
+          </h3>
+          <h3>
+            <a href='#parameters-create'>
+              POST /api/domains/:domain_id/parameters
+            </a><br>
+            <small>Create a nested parameter for domain</small>
+          </h3>
+          <h3>
+            <a href='#parameters-create'>
+              POST /api/operatingsystems/:operatingsystem_id/parameters
+            </a><br>
+            <small>Create a nested parameter for operating system</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of host</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>hostgroup_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of hostgroup</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>domain_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of domain</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>operatingsystem_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of operating system</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>parameter </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be a Hash
+    </td>
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>parameter[name] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>parameter[value] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='parameters-update'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#parameters'>Parameters</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>update</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#parameters-update'>
+              PUT /api/hosts/:host_id/parameters/:id
+            </a><br>
+            <small>Update a nested parameter for host</small>
+          </h3>
+          <h3>
+            <a href='#parameters-update'>
+              PUT /api/hostgroups/:hostgroup_id/parameters/:id
+            </a><br>
+            <small>Update a nested parameter for hostgroup</small>
+          </h3>
+          <h3>
+            <a href='#parameters-update'>
+              PUT /api/domains/:domain_id/parameters/:id
+            </a><br>
+            <small>Update a nested parameter for domain</small>
+          </h3>
+          <h3>
+            <a href='#parameters-update'>
+              PUT /api/operatingsystems/:operatingsystem_id/parameters/:id
+            </a><br>
+            <small>Update a nested parameter for operating system</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of host</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>hostgroup_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of hostgroup</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>domain_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of domain</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>operatingsystem_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of operating system</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>id of parameter</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>parameter </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be a Hash
+    </td>
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>parameter[name] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>parameter[value] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='parameters-destroy'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#parameters'>Parameters</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>destroy</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#parameters-destroy'>
+              DELETE /api/hosts/:host_id/parameters/:id
+            </a><br>
+            <small>Delete a nested parameter for host</small>
+          </h3>
+          <h3>
+            <a href='#parameters-destroy'>
+              DELETE /api/hostgroups/:hostgroup_id/parameters/:id
+            </a><br>
+            <small>Delete a nested parameter for hostgroup</small>
+          </h3>
+          <h3>
+            <a href='#parameters-destroy'>
+              DELETE /api/domains/:domain_id/parameters/:id
+            </a><br>
+            <small>Delete a nested parameter for domain</small>
+          </h3>
+          <h3>
+            <a href='#parameters-destroy'>
+              DELETE /api/operatingsystems/:operatingsystem_id/parameters/:id
+            </a><br>
+            <small>Delete a nested parameter for operating system</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of host</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>hostgroup_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of hostgroup</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>domain_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of domain</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>operatingsystem_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of operating system</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>id of parameter</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='parameters-reset'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#parameters'>Parameters</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>reset</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#parameters-reset'>
+              DELETE /api/hosts/:host_id/parameters
+            </a><br>
+            <small>Delete all nested parameters for host</small>
+          </h3>
+          <h3>
+            <a href='#parameters-reset'>
+              DELETE /api/hostgroups/:hostgroup_id/parameters
+            </a><br>
+            <small>Delete all nested parameters for hostgroup</small>
+          </h3>
+          <h3>
+            <a href='#parameters-reset'>
+              DELETE /api/domains/:domain_id/parameters
+            </a><br>
+            <small>Delete all nested parameters for domain</small>
+          </h3>
+          <h3>
+            <a href='#parameters-reset'>
+              DELETE /api/operatingsystems/:operatingsystem_id/parameters
+            </a><br>
+            <small>Delete all nested parameters for operating system</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+      </div>
+  </div>
+
   <ul class='breadcrumb'  id='ptables'>
     <li><a href='#'>Foreman</a><span class='divider'>/</span></li>
     <li class='active'>Ptables</li>
@@ -12072,7 +15576,19 @@ PXE Default file has been deployed to all Smart Proxies</pre>
             <a href='#puppetclasses-index'>
               GET /api/hosts/:host_id/puppetclasses
             </a><br>
-            <small>List all puppetclasses of a given host.</small>
+            <small>List all puppetclasses for host</small>
+          </h3>
+          <h3>
+            <a href='#puppetclasses-index'>
+              GET /api/hostgroups/:hostgroup_id/puppetclasses
+            </a><br>
+            <small>List all puppetclasses for hostgroup</small>
+          </h3>
+          <h3>
+            <a href='#puppetclasses-index'>
+              GET /api/environments/:environment_id/puppetclasses
+            </a><br>
+            <small>List all puppetclasses for environment</small>
           </h3>
       </div>
 
@@ -12118,14 +15634,14 @@ PXE Default file has been deployed to all Smart Proxies</pre>
             <tbody>
                 <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>search </strong><br>
+      <strong>host_id </strong><br>
       <small>
         optional
         
       </small>
     </td>
     <td>
-      <p>filter results</p>
+      <p>id of nested host</p>
         <br>
         Value: Must be String
     </td>
@@ -12134,14 +15650,14 @@ PXE Default file has been deployed to all Smart Proxies</pre>
   
   <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>order </strong><br>
+      <strong>hostgroup_id </strong><br>
       <small>
         optional
         
       </small>
     </td>
     <td>
-      <p>sort results</p>
+      <p>id of nested hostgroup</p>
         <br>
         Value: Must be String
     </td>
@@ -12150,30 +15666,14 @@ PXE Default file has been deployed to all Smart Proxies</pre>
   
   <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>page </strong><br>
+      <strong>environment_id </strong><br>
       <small>
         optional
         
       </small>
     </td>
     <td>
-      <p>paginate results</p>
-        <br>
-        Value: Must be String
-    </td>
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>per_page </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      <p>number of entries per request</p>
+      <p>id of nested environment</p>
         <br>
         Value: Must be String
     </td>
@@ -12203,7 +15703,25 @@ PXE Default file has been deployed to all Smart Proxies</pre>
             <a href='#puppetclasses-show'>
               GET /api/puppetclasses/:id
             </a><br>
-            <small>Show a puppetclass.</small>
+            <small>Show a puppetclass</small>
+          </h3>
+          <h3>
+            <a href='#puppetclasses-show'>
+              GET /api/hosts/:host_id/puppetclasses/:id
+            </a><br>
+            <small>Show a puppetclass for host</small>
+          </h3>
+          <h3>
+            <a href='#puppetclasses-show'>
+              GET /api/hostgroups/:hostgroup_id/puppetclasses/:id
+            </a><br>
+            <small>Show a puppetclass for hostgroup</small>
+          </h3>
+          <h3>
+            <a href='#puppetclasses-show'>
+              GET /api/environments/:environment_id/puppetclasses/:id
+            </a><br>
+            <small>Show a puppetclass for environment</small>
           </h3>
       </div>
 
@@ -12244,6 +15762,54 @@ PXE Default file has been deployed to all Smart Proxies</pre>
             <tbody>
                 <tr style='background-color:rgb(255,255,255);'>
     <td>
+      <strong>host_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of nested host</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>hostgroup_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of nested hostgroup</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of nested environment</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
       <strong>id </strong><br>
       <small>
         required
@@ -12251,9 +15817,9 @@ PXE Default file has been deployed to all Smart Proxies</pre>
       </small>
     </td>
     <td>
-      
+      <p>id of puppetclass</p>
         <br>
-        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+        Value: Must be String
     </td>
   </tr>
 
@@ -12968,6 +16534,142 @@ PXE Default file has been deployed to all Smart Proxies</pre>
   </tr>
 
   
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='reports-create'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#reports'>Reports</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>create</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#reports-create'>
+              POST /api/reports
+            </a><br>
+            <small>Create a report.</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>report </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be a Hash
+    </td>
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>report[host] </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>Hostname or certname</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>report[reported_at] </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>UTC time of report</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>report[status] </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>Hash of status type totals</p>
+        <br>
+        Value: Must be Hash
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>report[metrics] </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>Hash of report metrics, can be just {}</p>
+        <br>
+        Value: Must be Hash
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>report[logs] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>Optional array of log hashes</p>
+        <br>
+        Value: Must be Array
+    </td>
+  </tr>
+
+  
+
 
             </tbody>
           </table>
@@ -15378,6 +19080,295 @@ PXE Default file has been deployed to all Smart Proxies</pre>
       <p>Subnet numeric identifier</p>
         <br>
         Value: Must be a number.
+    </td>
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+  </div>
+
+  <ul class='breadcrumb'  id='template_combinations'>
+    <li><a href='#'>Foreman</a><span class='divider'>/</span></li>
+    <li class='active'>Template combinations</li>
+  </ul>
+
+  <div class='page-header'>
+    <h1>
+      <a href='#template_combinations'>Template combinations</a><br>
+      <small></small>
+    </h1>
+  </div>
+
+
+  <div class='accordion' id='accordion'>
+
+      <hr>
+
+      <ul class='breadcrumb' id='template_combinations-index'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#template_combinations'>Template combinations</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>index</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#template_combinations-index'>
+              GET /api/config_templates/:config_template_id/template_combinations
+            </a><br>
+            <small>List Template Combination</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>config_template_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+    </td>
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='template_combinations-create'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#template_combinations'>Template combinations</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>create</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#template_combinations-create'>
+              POST /api/config_templates/:config_template_id/template_combinations
+            </a><br>
+            <small>Add a Template Combination</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>config_template_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>template_combination </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be a Hash
+    </td>
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>template_combination[environment_id] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      <p>environment id</p>
+        <br>
+        Value: Must be a number.
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>template_combination[hostgroup_id] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      <p>hostgroup id</p>
+        <br>
+        Value: Must be a number.
+    </td>
+  </tr>
+
+  
+
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='template_combinations-show'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#template_combinations'>Template combinations</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>show</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#template_combinations-show'>
+              GET /api/template_combinations/:id
+            </a><br>
+            <small>Show Template Combination</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+    </td>
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='template_combinations-destroy'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#template_combinations'>Template combinations</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>destroy</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#template_combinations-destroy'>
+              DELETE /api/template_combinations/:id
+            </a><br>
+            <small>Delete a template</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
     </td>
   </tr>
 
