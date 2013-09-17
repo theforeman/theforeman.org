@@ -45,8 +45,8 @@ version: 1.3
 {%include manuals/1.3/3.5.3_database_setup.md %}
 ### 3.5.4 Puppet Reports
 {%include manuals/1.3/3.5.4_puppet_reports.md %}
-### 3.5.5 Importing Facts
-{%include manuals/1.3/3.5.5_importing_facts.md %}
+### 3.5.5 Facts and the ENC
+{%include manuals/1.3/3.5.5_facts_and_the_enc.md %}
 ### 3.6 Upgrade
 {%include manuals/1.3/3.6_upgrade.md %}
 
