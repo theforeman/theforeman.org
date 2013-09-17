@@ -116,6 +116,7 @@
       <li><a href='#hosts-update'>update</a></li>
       <li><a href='#hosts-destroy'>destroy</a></li>
       <li><a href='#hosts-status'>status</a></li>
+      <li><a href='#hosts-puppetrun'>puppetrun</a></li>
   </ul>
   <h4><a href='#images'>Images</a></h4>
   <ul>
@@ -234,8 +235,6 @@
 
 
 
-<div>Another API description</div>
-
 <hr>
 
 
@@ -279,44 +278,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/architectures
-200
-[
-  {
-    &quot;architecture&quot;: {
-      &quot;name&quot;: &quot;s390&quot;,
-      &quot;id&quot;: 381564594,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;operatingsystem_ids&quot;: [],
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
-    }
-  },
-  {
-    &quot;architecture&quot;: {
-      &quot;name&quot;: &quot;sparc&quot;,
-      &quot;id&quot;: 331892513,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;operatingsystem_ids&quot;: [
-        442321401
-      ],
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
-    }
-  },
-  {
-    &quot;architecture&quot;: {
-      &quot;name&quot;: &quot;x86_64&quot;,
-      &quot;id&quot;: 501905019,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;operatingsystem_ids&quot;: [
-        331303656,
-        309172073,
-        1073012828
-      ],
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
-    }
-  }
-]</pre>
 
 
           <h2>Params</h2>
@@ -421,22 +382,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/architectures/x86_64
-200
-{
-  &quot;architecture&quot;: {
-    &quot;name&quot;: &quot;x86_64&quot;,
-    &quot;id&quot;: 501905019,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-    &quot;operatingsystem_ids&quot;: [
-      309172073,
-      1073012828,
-      331303656
-    ],
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -493,23 +438,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>POST /api/architectures
-{
-  &quot;architecture&quot;: {
-    &quot;name&quot;: &quot;i386&quot;
-  }
-}
-200
-{
-  &quot;architecture&quot;: {
-    &quot;name&quot;: &quot;i386&quot;,
-    &quot;id&quot;: 501905020,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;operatingsystem_ids&quot;: [],
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -598,18 +526,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>PUT /api/architectures/x86_64
-{
-  &quot;architecture&quot;: {}
-}
-200
-{
-  &quot;architecture&quot;: {
-    &quot;name&quot;: &quot;x86_64&quot;,
-    &quot;id&quot;: 501905019
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -714,15 +630,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>DELETE /api/architectures/s390
-200
-{
-  &quot;architecture&quot;: {
-    &quot;name&quot;: &quot;s390&quot;,
-    &quot;id&quot;: 381564594
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -802,35 +709,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/audits
-200
-[
-  {
-    &quot;audit&quot;: {
-      &quot;auditable_name&quot;: null,
-      &quot;user_id&quot;: null,
-      &quot;associated_id&quot;: 272,
-      &quot;associated_name&quot;: null,
-      &quot;id&quot;: 1,
-      &quot;comment&quot;: null,
-      &quot;auditable_id&quot;: 0,
-      &quot;auditable_type&quot;: &quot;Host&quot;,
-      &quot;associated_type&quot;: &quot;Host&quot;,
-      &quot;remote_address&quot;: null,
-      &quot;action&quot;: &quot;update&quot;,
-      &quot;audited_changes&quot;: {
-        &quot;architecture_id&quot;: [
-          10463,
-          10466
-        ]
-      },
-      &quot;user_type&quot;: null,
-      &quot;version&quot;: 1,
-      &quot;created_at&quot;: &quot;2009-12-14T08:01:17Z&quot;
-    }
-  }
-]</pre>
 
 
           <h2>Params</h2>
@@ -935,33 +813,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/audits/1
-200
-{
-  &quot;audit&quot;: {
-    &quot;auditable_name&quot;: null,
-    &quot;user_id&quot;: null,
-    &quot;associated_id&quot;: 272,
-    &quot;associated_name&quot;: null,
-    &quot;id&quot;: 1,
-    &quot;comment&quot;: null,
-    &quot;auditable_id&quot;: 0,
-    &quot;auditable_type&quot;: &quot;Host&quot;,
-    &quot;associated_type&quot;: &quot;Host&quot;,
-    &quot;remote_address&quot;: null,
-    &quot;action&quot;: &quot;update&quot;,
-    &quot;audited_changes&quot;: {
-      &quot;architecture_id&quot;: [
-        10463,
-        10466
-      ]
-    },
-    &quot;user_type&quot;: null,
-    &quot;version&quot;: 1,
-    &quot;created_at&quot;: &quot;2009-12-14T08:01:17Z&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -1035,30 +886,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/auth_source_ldaps
-200
-[
-  {
-    &quot;auth_source_ldap&quot;: {
-      &quot;name&quot;: &quot;ldap&quot;,
-      &quot;attr_lastname&quot;: &quot;sn&quot;,
-      &quot;port&quot;: 123,
-      &quot;attr_firstname&quot;: &quot;givenName&quot;,
-      &quot;attr_login&quot;: &quot;uid&quot;,
-      &quot;tls&quot;: true,
-      &quot;id&quot;: 980190962,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;host&quot;: &quot;ldap&quot;,
-      &quot;base_dn&quot;: &quot;dn=x,dn=y&quot;,
-      &quot;attr_mail&quot;: &quot;mail&quot;,
-      &quot;account&quot;: null,
-      &quot;type&quot;: &quot;AuthSourceLdap&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;onthefly_register&quot;: true
-    }
-  }
-]</pre>
 
 
           <h2>Params</h2>
@@ -1131,28 +958,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/auth_source_ldaps/980190962
-200
-{
-  &quot;auth_source_ldap&quot;: {
-    &quot;name&quot;: &quot;ldap&quot;,
-    &quot;attr_lastname&quot;: &quot;sn&quot;,
-    &quot;attr_firstname&quot;: &quot;givenName&quot;,
-    &quot;port&quot;: 123,
-    &quot;attr_login&quot;: &quot;uid&quot;,
-    &quot;tls&quot;: true,
-    &quot;id&quot;: 980190962,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;host&quot;: &quot;ldap&quot;,
-    &quot;base_dn&quot;: &quot;dn=x,dn=y&quot;,
-    &quot;attr_mail&quot;: &quot;mail&quot;,
-    &quot;account&quot;: null,
-    &quot;type&quot;: &quot;AuthSourceLdap&quot;,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;onthefly_register&quot;: true
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -1209,34 +1014,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>POST /api/auth_source_ldaps
-{
-  &quot;auth_source_ldap&quot;: {
-    &quot;name&quot;: &quot;ldap2&quot;,
-    &quot;host&quot;: &quot;ldap2&quot;
-  }
-}
-201
-{
-  &quot;auth_source_ldap&quot;: {
-    &quot;name&quot;: &quot;ldap2&quot;,
-    &quot;tls&quot;: false,
-    &quot;port&quot;: 389,
-    &quot;attr_login&quot;: null,
-    &quot;attr_lastname&quot;: null,
-    &quot;attr_firstname&quot;: null,
-    &quot;id&quot;: 980190963,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:44Z&quot;,
-    &quot;host&quot;: &quot;ldap2&quot;,
-    &quot;base_dn&quot;: null,
-    &quot;attr_mail&quot;: null,
-    &quot;account_password&quot;: null,
-    &quot;account&quot;: null,
-    &quot;onthefly_register&quot;: false,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:44Z&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -1485,31 +1262,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>PUT /api/auth_source_ldaps/980190962
-{
-  &quot;auth_source_ldap&quot;: {}
-}
-200
-{
-  &quot;auth_source_ldap&quot;: {
-    &quot;name&quot;: &quot;ldap&quot;,
-    &quot;tls&quot;: true,
-    &quot;port&quot;: 123,
-    &quot;attr_login&quot;: &quot;uid&quot;,
-    &quot;attr_lastname&quot;: &quot;sn&quot;,
-    &quot;attr_firstname&quot;: &quot;givenName&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;host&quot;: &quot;ldap&quot;,
-    &quot;base_dn&quot;: &quot;dn=x,dn=y&quot;,
-    &quot;attr_mail&quot;: &quot;mail&quot;,
-    &quot;account_password&quot;: null,
-    &quot;account&quot;: null,
-    &quot;onthefly_register&quot;: true,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -1774,28 +1526,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>DELETE /api/auth_source_ldaps/980190962
-200
-{
-  &quot;auth_source_ldap&quot;: {
-    &quot;name&quot;: &quot;ldap&quot;,
-    &quot;tls&quot;: true,
-    &quot;port&quot;: 123,
-    &quot;attr_login&quot;: &quot;uid&quot;,
-    &quot;attr_lastname&quot;: &quot;sn&quot;,
-    &quot;attr_firstname&quot;: &quot;givenName&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;host&quot;: &quot;ldap&quot;,
-    &quot;base_dn&quot;: &quot;dn=x,dn=y&quot;,
-    &quot;attr_mail&quot;: &quot;mail&quot;,
-    &quot;account_password&quot;: null,
-    &quot;account&quot;: null,
-    &quot;onthefly_register&quot;: true,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -1869,33 +1599,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/bookmarks
-200
-[
-  {
-    &quot;bookmark&quot;: {
-      &quot;name&quot;: &quot;bar&quot;,
-      &quot;query&quot;: &quot;bar=car&quot;,
-      &quot;id&quot;: 298486374,
-      &quot;owner_id&quot;: null,
-      &quot;public&quot;: false,
-      &quot;controller&quot;: &quot;hosts&quot;,
-      &quot;owner_type&quot;: null
-    }
-  },
-  {
-    &quot;bookmark&quot;: {
-      &quot;name&quot;: &quot;foo&quot;,
-      &quot;query&quot;: &quot;foo=boo&quot;,
-      &quot;id&quot;: 980190962,
-      &quot;owner_id&quot;: null,
-      &quot;public&quot;: true,
-      &quot;controller&quot;: &quot;hosts&quot;,
-      &quot;owner_type&quot;: null
-    }
-  }
-]</pre>
 
 
           <h2>Params</h2>
@@ -1968,20 +1671,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/bookmarks/foo
-200
-{
-  &quot;bookmark&quot;: {
-    &quot;name&quot;: &quot;foo&quot;,
-    &quot;query&quot;: &quot;foo=boo&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;owner_id&quot;: null,
-    &quot;public&quot;: true,
-    &quot;controller&quot;: &quot;hosts&quot;,
-    &quot;owner_type&quot;: null
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -2038,28 +1727,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>POST /api/bookmarks
-{
-  &quot;bookmark&quot;: {
-    &quot;query&quot;: &quot;bar&quot;,
-    &quot;name&quot;: &quot;foo-bar&quot;,
-    &quot;public&quot;: false,
-    &quot;controller&quot;: &quot;hosts&quot;
-  }
-}
-200
-{
-  &quot;bookmark&quot;: {
-    &quot;name&quot;: &quot;foo-bar&quot;,
-    &quot;query&quot;: &quot;bar&quot;,
-    &quot;id&quot;: 980190963,
-    &quot;owner_id&quot;: 886836129,
-    &quot;public&quot;: false,
-    &quot;controller&quot;: &quot;hosts&quot;,
-    &quot;owner_type&quot;: &quot;User&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -2180,26 +1847,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>PUT /api/bookmarks/foo
-{
-  &quot;bookmark&quot;: {}
-}
-200
-{
-  &quot;bookmark&quot;: {
-    &quot;name&quot;: &quot;foo&quot;,
-    &quot;query&quot;: &quot;foo=boo&quot;,
-    &quot;user&quot;: {
-      &quot;name&quot;: &quot;apiadmin User&quot;,
-      &quot;login&quot;: &quot;apiadmin&quot;,
-      &quot;email&quot;: &quot;apiadmin@someware.com&quot;
-    },
-    &quot;id&quot;: 980190962,
-    &quot;public&quot;: true,
-    &quot;controller&quot;: &quot;hosts&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -2336,20 +1983,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>DELETE /api/bookmarks/foo
-200
-{
-  &quot;bookmark&quot;: {
-    &quot;query&quot;: &quot;foo=boo&quot;,
-    &quot;name&quot;: &quot;foo&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;public&quot;: true,
-    &quot;owner_id&quot;: null,
-    &quot;controller&quot;: &quot;hosts&quot;,
-    &quot;owner_type&quot;: null
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -2423,18 +2056,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/common_parameters
-200
-[
-  {
-    &quot;common_parameter&quot;: {
-      &quot;name&quot;: &quot;test&quot;,
-      &quot;value&quot;: &quot;myvalue&quot;,
-      &quot;id&quot;: 636252244
-    }
-  }
-]</pre>
 
 
           <h2>Params</h2>
@@ -2539,16 +2160,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/common_parameters/636252244
-200
-{
-  &quot;common_parameter&quot;: {
-    &quot;name&quot;: &quot;test&quot;,
-    &quot;value&quot;: &quot;myvalue&quot;,
-    &quot;id&quot;: 636252244
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -2605,22 +2216,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>POST /api/common_parameters
-{
-  &quot;common_parameter&quot;: {
-    &quot;name&quot;: &quot;special_key&quot;,
-    &quot;value&quot;: &quot;123&quot;
-  }
-}
-200
-{
-  &quot;common_parameter&quot;: {
-    &quot;name&quot;: &quot;special_key&quot;,
-    &quot;value&quot;: &quot;123&quot;,
-    &quot;id&quot;: 767575239
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -2709,19 +2304,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>PUT /api/common_parameters/636252244
-{
-  &quot;common_parameter&quot;: {}
-}
-200
-{
-  &quot;common_parameter&quot;: {
-    &quot;name&quot;: &quot;test&quot;,
-    &quot;value&quot;: &quot;myvalue&quot;,
-    &quot;id&quot;: 636252244
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -2826,16 +2408,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>DELETE /api/common_parameters/636252244
-200
-{
-  &quot;common_parameter&quot;: {
-    &quot;name&quot;: &quot;test&quot;,
-    &quot;value&quot;: &quot;myvalue&quot;,
-    &quot;id&quot;: 636252244
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -2909,47 +2481,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/compute_resources
-200
-[
-  {
-    &quot;compute_resource&quot;: {
-      &quot;name&quot;: &quot;mycompute&quot;,
-      &quot;url&quot;: &quot;test:///default&quot;,
-      &quot;user&quot;: &quot;MyString&quot;,
-      &quot;provider&quot;: &quot;Libvirt&quot;,
-      &quot;id&quot;: 367690737,
-      &quot;description&quot;: &quot;mycompute&quot;,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
-    }
-  },
-  {
-    &quot;compute_resource&quot;: {
-      &quot;name&quot;: &quot;MyString&quot;,
-      &quot;url&quot;: &quot;qemu://stam/system&quot;,
-      &quot;user&quot;: &quot;MyString&quot;,
-      &quot;provider&quot;: &quot;Libvirt&quot;,
-      &quot;id&quot;: 980190962,
-      &quot;description&quot;: &quot;MyString&quot;,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
-    }
-  },
-  {
-    &quot;compute_resource&quot;: {
-      &quot;name&quot;: &quot;yourcompute&quot;,
-      &quot;url&quot;: &quot;test:///default&quot;,
-      &quot;user&quot;: &quot;MyString&quot;,
-      &quot;provider&quot;: &quot;Libvirt&quot;,
-      &quot;id&quot;: 932571420,
-      &quot;description&quot;: &quot;yourcompute&quot;,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
-    }
-  }
-]</pre>
 
 
           <h2>Params</h2>
@@ -3054,21 +2585,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/compute_resources/980190962-mystring
-200
-{
-  &quot;compute_resource&quot;: {
-    &quot;name&quot;: &quot;MyString&quot;,
-    &quot;url&quot;: &quot;qemu://stam/system&quot;,
-    &quot;user&quot;: &quot;MyString&quot;,
-    &quot;provider&quot;: &quot;Libvirt&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;description&quot;: &quot;MyString&quot;,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -3125,30 +2641,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>POST /api/compute_resources
-{
-  &quot;compute_resource&quot;: {
-    &quot;name&quot;: &quot;special_compute&quot;,
-    &quot;user&quot;: &quot;user@example.com&quot;,
-    &quot;provider&quot;: &quot;EC2&quot;,
-    &quot;password&quot;: &quot;secret&quot;,
-    &quot;region&quot;: &quot;eu-west-1&quot;
-  }
-}
-200
-{
-  &quot;compute_resource&quot;: {
-    &quot;name&quot;: &quot;special_compute&quot;,
-    &quot;url&quot;: &quot;eu-west-1&quot;,
-    &quot;user&quot;: &quot;user@example.com&quot;,
-    &quot;provider&quot;: &quot;EC2&quot;,
-    &quot;id&quot;: 980190963,
-    &quot;description&quot;: null,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:44Z&quot;,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:44Z&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -3365,27 +2857,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>PUT /api/compute_resources/367690737-mycompute
-{
-  &quot;compute_resource&quot;: {
-    &quot;description&quot;: &quot;new_description&quot;
-  }
-}
-200
-{
-  &quot;compute_resource&quot;: {
-    &quot;url&quot;: &quot;test:///default&quot;,
-    &quot;name&quot;: &quot;mycompute&quot;,
-    &quot;user&quot;: &quot;MyString&quot;,
-    &quot;id&quot;: 367690737,
-    &quot;uuid&quot;: &quot;mycompute&quot;,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:45Z&quot;,
-    &quot;description&quot;: &quot;new_description&quot;,
-    &quot;attrs&quot;: {},
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -3618,22 +3089,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>DELETE /api/compute_resources/932571420
-200
-{
-  &quot;compute_resource&quot;: {
-    &quot;url&quot;: &quot;test:///default&quot;,
-    &quot;name&quot;: &quot;yourcompute&quot;,
-    &quot;user&quot;: &quot;MyString&quot;,
-    &quot;id&quot;: 932571420,
-    &quot;uuid&quot;: &quot;yourcompute&quot;,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-    &quot;description&quot;: &quot;yourcompute&quot;,
-    &quot;attrs&quot;: null,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -3707,112 +3162,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/config_templates
-200
-[
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
-      &quot;audit_comment&quot;: null,
-      &quot;id&quot;: 1007981701,
-      &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ks=&lt;%= foreman_url(\&quot;kickstart\&quot;)%&gt; ksdevice=bootif network kssendmac&quot;,
-      &quot;template_kind&quot;: {
-        &quot;name&quot;: &quot;PXELinux&quot;,
-        &quot;id&quot;: 452984334
-      }
-    }
-  },
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;MyFinish&quot;,
-      &quot;audit_comment&quot;: null,
-      &quot;id&quot;: 104314179,
-      &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;MyFinish&quot;,
-      &quot;template_kind&quot;: {
-        &quot;name&quot;: &quot;finish&quot;,
-        &quot;id&quot;: 550103832
-      }
-    }
-  },
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;MyScript&quot;,
-      &quot;audit_comment&quot;: null,
-      &quot;id&quot;: 981457253,
-      &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;MyText&quot;,
-      &quot;template_kind&quot;: {
-        &quot;name&quot;: &quot;script&quot;,
-        &quot;id&quot;: 478250810
-      }
-    }
-  },
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;MyString&quot;,
-      &quot;audit_comment&quot;: null,
-      &quot;id&quot;: 943779058,
-      &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;MyText&quot;,
-      &quot;template_kind&quot;: {
-        &quot;name&quot;: &quot;gPXE&quot;,
-        &quot;id&quot;: 158998239
-      }
-    }
-  },
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;MyString2&quot;,
-      &quot;audit_comment&quot;: null,
-      &quot;id&quot;: 269958254,
-      &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;MyText&quot;,
-      &quot;template_kind&quot;: {
-        &quot;name&quot;: &quot;provision&quot;,
-        &quot;id&quot;: 983253650
-      }
-    }
-  },
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;PXE Default File&quot;,
-      &quot;audit_comment&quot;: null,
-      &quot;id&quot;: 352050261,
-      &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ksdevice=bootif network kssendmac&quot;,
-      &quot;template_kind&quot;: {
-        &quot;name&quot;: &quot;PXELinux&quot;,
-        &quot;id&quot;: 452984334
-      }
-    }
-  },
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;PXE Default Menu&quot;,
-      &quot;audit_comment&quot;: null,
-      &quot;id&quot;: 684651467,
-      &quot;&quot;: null,
-      &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;FOO&quot;
-    }
-  },
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;PXE Localboot Default&quot;,
-      &quot;audit_comment&quot;: null,
-      &quot;id&quot;: 821548108,
-      &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;DEFAULT menu~PROMPT 0~MENU TITLE PXE Menu~TIMEOUT 200~TOTALTIMEOUT 6000~ONTIMEOUT local~~LABEL local~MENU LABEL (local)~MENU DEFAULT~LOCALBOOT 0&quot;,
-      &quot;template_kind&quot;: {
-        &quot;name&quot;: &quot;PXELinux&quot;,
-        &quot;id&quot;: 452984334
-      }
-    }
-  }
-]</pre>
 
 
           <h2>Params</h2>
@@ -3917,22 +3266,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/config_templates/centos5_3_pxelinux
-200
-{
-  &quot;config_template&quot;: {
-    &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
-    &quot;id&quot;: 1007981701,
-    &quot;audit_comment&quot;: null,
-    &quot;snippet&quot;: null,
-    &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ks=&lt;%= foreman_url(\&quot;kickstart\&quot;)%&gt; ksdevice=bootif network kssendmac&quot;,
-    &quot;template_kind&quot;: {
-      &quot;name&quot;: &quot;PXELinux&quot;,
-      &quot;id&quot;: 452984334
-    }
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -3989,26 +3322,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>POST /api/config_templates
-{
-  &quot;config_template&quot;: {
-    &quot;name&quot;: &quot;RandomName&quot;,
-    &quot;template&quot;: &quot;This is a test template&quot;,
-    &quot;template_kind_id&quot;: 1
-  }
-}
-200
-{
-  &quot;config_template&quot;: {
-    &quot;name&quot;: &quot;RandomName&quot;,
-    &quot;audit_comment&quot;: null,
-    &quot;id&quot;: 1007981702,
-    &quot;&quot;: null,
-    &quot;snippet&quot;: null,
-    &quot;template&quot;: &quot;This is a test template&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -4177,27 +3490,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>PUT /api/config_templates/centos5_3_pxelinux
-{
-  &quot;config_template&quot;: {
-    &quot;audit_comment&quot;: &quot;aha&quot;,
-    &quot;template&quot;: &quot;tmp&quot;
-  }
-}
-200
-{
-  &quot;config_template&quot;: {
-    &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
-    &quot;id&quot;: 1007981701,
-    &quot;template&quot;: &quot;tmp&quot;,
-    &quot;snippet&quot;: null,
-    &quot;template_kind&quot;: {
-      &quot;name&quot;: &quot;PXELinux&quot;,
-      &quot;id&quot;: 452984334
-    }
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -4438,21 +3730,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>DELETE /api/config_templates/centos5_3_pxelinux
-200
-{
-  &quot;config_template&quot;: {
-    &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
-    &quot;id&quot;: 1007981701,
-    &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ks=&lt;%= foreman_url(\&quot;kickstart\&quot;)%&gt; ksdevice=bootif network kssendmac&quot;,
-    &quot;snippet&quot;: null,
-    &quot;template_kind&quot;: {
-      &quot;name&quot;: &quot;PXELinux&quot;,
-      &quot;id&quot;: 452984334
-    }
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -4509,10 +3786,6 @@
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/config_templates/build_pxe_default
-200
-PXE Default file has been deployed to all Smart Proxies</pre>
 
 
       </div>
@@ -4558,28 +3831,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/dashboard
-200
-{
-  &quot;disabled_hosts&quot;: 0,
-  &quot;ok_hosts&quot;: 0,
-  &quot;good_hosts&quot;: 0,
-  &quot;active_hosts_ok&quot;: 0,
-  &quot;pending_hosts_enabled&quot;: 0,
-  &quot;active_hosts_ok_enabled&quot;: 0,
-  &quot;good_hosts_enabled&quot;: 0,
-  &quot;active_hosts&quot;: 0,
-  &quot;percentage&quot;: 0,
-  &quot;out_of_sync_hosts&quot;: 0,
-  &quot;total_hosts&quot;: 12,
-  &quot;bad_hosts&quot;: 0,
-  &quot;out_of_sync_hosts_enabled&quot;: 0,
-  &quot;pending_hosts&quot;: 0,
-  &quot;bad_hosts_enabled&quot;: 0,
-  &quot;ok_hosts_enabled&quot;: 0,
-  &quot;reports_missing&quot;: 12
-}</pre>
 
 
           <h2>Params</h2>
@@ -4654,51 +3905,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/domains
-200
-[
-  {
-    &quot;domain&quot;: {
-      &quot;name&quot;: &quot;mydomain.net&quot;,
-      &quot;id&quot;: 22495316,
-      &quot;dns_id&quot;: 113629430,
-      &quot;fullname&quot;: null,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-    }
-  },
-  {
-    &quot;domain&quot;: {
-      &quot;name&quot;: &quot;unused.net&quot;,
-      &quot;id&quot;: 759776763,
-      &quot;dns_id&quot;: 113629430,
-      &quot;fullname&quot;: &quot;somewhare that is never used&quot;,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-    }
-  },
-  {
-    &quot;domain&quot;: {
-      &quot;name&quot;: &quot;useless.net&quot;,
-      &quot;id&quot;: 229305443,
-      &quot;dns_id&quot;: null,
-      &quot;fullname&quot;: null,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-    }
-  },
-  {
-    &quot;domain&quot;: {
-      &quot;name&quot;: &quot;yourdomain.net&quot;,
-      &quot;id&quot;: 589326610,
-      &quot;dns_id&quot;: 113629430,
-      &quot;fullname&quot;: &quot;somewhere in yourdomain&quot;,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-    }
-  }
-]</pre>
 
 
           <h2>Params</h2>
@@ -4803,19 +4009,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/domains/mydomain.net
-200
-{
-  &quot;domain&quot;: {
-    &quot;name&quot;: &quot;mydomain.net&quot;,
-    &quot;id&quot;: 22495316,
-    &quot;dns_id&quot;: 113629430,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;fullname&quot;: null,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -4872,20 +4065,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         <p>The <b>fullname</b> field is used for human readability in reports and other pages that refer to domains, and also available as an external node parameter</p>
-          <h2>Examples</h2>
-            <pre>POST /api/domains
-{
-  &quot;domain&quot;: {
-    &quot;name&quot;: &quot;domain.net&quot;
-  }
-}
-201
-{
-  &quot;domain&quot;: {
-    &quot;name&quot;: &quot;domain.net&quot;,
-    &quot;id&quot;: 759776764
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -5006,27 +4185,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>PUT /api/domains/mydomain.net
-{
-  &quot;domain&quot;: {
-    &quot;name&quot;: &quot;&quot;
-  }
-}
-422
-{
-  &quot;domain&quot;: {
-    &quot;id&quot;: 22495316,
-    &quot;errors&quot;: {
-      &quot;name&quot;: [
-        &quot;can&#x27;t be blank&quot;
-      ]
-    },
-    &quot;full_messages&quot;: [
-      &quot;Name can&#x27;t be blank&quot;
-    ]
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -5163,15 +4321,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>DELETE /api/domains/mydomain.net
-200
-{
-  &quot;domain&quot;: {
-    &quot;name&quot;: &quot;mydomain.net&quot;,
-    &quot;id&quot;: 22495316
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -5245,35 +4394,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/environments
-200
-[
-  {
-    &quot;environment&quot;: {
-      &quot;name&quot;: &quot;global_puppetmaster&quot;,
-      &quot;id&quot;: 153855663,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
-    }
-  },
-  {
-    &quot;environment&quot;: {
-      &quot;name&quot;: &quot;production&quot;,
-      &quot;id&quot;: 334344675,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
-    }
-  },
-  {
-    &quot;environment&quot;: {
-      &quot;name&quot;: &quot;testing&quot;,
-      &quot;id&quot;: 687036937,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
-    }
-  }
-]</pre>
 
 
           <h2>Params</h2>
@@ -5378,17 +4498,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/environments/production
-200
-{
-  &quot;environment&quot;: {
-    &quot;name&quot;: &quot;production&quot;,
-    &quot;id&quot;: 334344675,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -5445,22 +4554,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>POST /api/environments
-{
-  &quot;environment&quot;: {
-    &quot;name&quot;: &quot;Development&quot;
-  }
-}
-200
-{
-  &quot;environment&quot;: {
-    &quot;name&quot;: &quot;Development&quot;,
-    &quot;id&quot;: 687036938,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:46Z&quot;,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:46Z&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -5533,18 +4626,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>PUT /api/environments/production
-{
-  &quot;environment&quot;: {}
-}
-200
-{
-  &quot;environment&quot;: {
-    &quot;name&quot;: &quot;production&quot;,
-    &quot;id&quot;: 334344675
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -5633,15 +4714,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>DELETE /api/environments/testing
-200
-{
-  &quot;environment&quot;: {
-    &quot;name&quot;: &quot;testing&quot;,
-    &quot;id&quot;: 687036937
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -5721,15 +4793,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/hosts/my5name.mydomain.net/facts
-200
-{
-  &quot;my5name.mydomain.net&quot;: {
-    &quot;ipaddress&quot;: &quot;10.0.19.33&quot;,
-    &quot;kernelversion&quot;: &quot;2.6.9&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -5851,43 +4914,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api
-200
-{
-  &quot;links&quot;: {
-    &quot;List all hosts&quot;: &quot;/api/hosts&quot;,
-    &quot;List all compute resources&quot;: &quot;/api/compute_resources&quot;,
-    &quot;List of subnets&quot;: &quot;/api/subnets&quot;,
-    &quot;List all fact values&quot;: &quot;/api/fact_values&quot;,
-    &quot;List all authsource ldaps&quot;: &quot;/api/auth_source_ldaps&quot;,
-    &quot;List all settings&quot;: &quot;/api/settings&quot;,
-    &quot;List of domains&quot;: &quot;/api/domains&quot;,
-    &quot;List all operating systems&quot;: &quot;/api/operatingsystems&quot;,
-    &quot;List all images for compute resource&quot;: &quot;/api/compute_resources/:compute_resource_id/images&quot;,
-    &quot;List all smart_proxies&quot;: &quot;/api/smart_proxies&quot;,
-    &quot;List all models&quot;: &quot;/api/models&quot;,
-    &quot;List templates&quot;: &quot;/api/config_templates&quot;,
-    &quot;List all architectures&quot;: &quot;/api/architectures&quot;,
-    &quot;List all hostgroups&quot;: &quot;/api/hostgroups&quot;,
-    &quot;List all environments&quot;: &quot;/api/environments&quot;,
-    &quot;List all ptables&quot;: &quot;/api/ptables&quot;,
-    &quot;List all users&quot;: &quot;/api/users&quot;,
-    &quot;List all usergroups&quot;: &quot;/api/usergroups&quot;,
-    &quot;List all common parameters&quot;: &quot;/api/common_parameters&quot;,
-    &quot;List all puppetclasses&quot;: &quot;/api/puppetclasses&quot;,
-    &quot;Show status&quot;: &quot;/api/status&quot;,
-    &quot;List all media&quot;: &quot;/api/media&quot;,
-    &quot;List all bookmarks&quot;: &quot;/api/bookmarks&quot;,
-    &quot;List all template kinds&quot;: &quot;/api/template_kinds&quot;,
-    &quot;Get Dashboard results&quot;: &quot;/api/dashboard&quot;,
-    &quot;List all reports&quot;: &quot;/api/reports&quot;,
-    &quot;Show available links&quot;: &quot;/api&quot;,
-    &quot;List all lookup_keys&quot;: &quot;/api/lookup_keys&quot;,
-    &quot;List all roles&quot;: &quot;/api/roles&quot;,
-    &quot;List all audits&quot;: &quot;/api/audits&quot;
-  }
-}</pre>
 
 
       </div>
@@ -5961,57 +4987,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/hostgroups
-200
-[
-  {
-    &quot;hostgroup&quot;: {
-      &quot;name&quot;: &quot;db&quot;,
-      &quot;label&quot;: &quot;db&quot;,
-      &quot;id&quot;: 603241515,
-      &quot;operatingsystem_id&quot;: 309172073,
-      &quot;ancestry&quot;: null,
-      &quot;environment_id&quot;: 334344675,
-      &quot;parameters&quot;: {},
-      &quot;subnet_id&quot;: null,
-      &quot;domain_id&quot;: null,
-      &quot;puppetclass_ids&quot;: []
-    }
-  },
-  {
-    &quot;hostgroup&quot;: {
-      &quot;name&quot;: &quot;Common&quot;,
-      &quot;label&quot;: &quot;Common&quot;,
-      &quot;id&quot;: 636252244,
-      &quot;operatingsystem_id&quot;: 309172073,
-      &quot;ancestry&quot;: null,
-      &quot;environment_id&quot;: 334344675,
-      &quot;parameters&quot;: {
-        &quot;group1&quot;: &quot;group1&quot;
-      },
-      &quot;subnet_id&quot;: null,
-      &quot;domain_id&quot;: 22495316,
-      &quot;puppetclass_ids&quot;: [
-        980190962
-      ]
-    }
-  },
-  {
-    &quot;hostgroup&quot;: {
-      &quot;name&quot;: &quot;Unusual&quot;,
-      &quot;label&quot;: &quot;Unusual&quot;,
-      &quot;id&quot;: 866317115,
-      &quot;operatingsystem_id&quot;: null,
-      &quot;ancestry&quot;: null,
-      &quot;environment_id&quot;: null,
-      &quot;parameters&quot;: {},
-      &quot;subnet_id&quot;: null,
-      &quot;domain_id&quot;: null,
-      &quot;puppetclass_ids&quot;: []
-    }
-  }
-]</pre>
 
 
           <h2>Params</h2>
@@ -6116,27 +5091,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/hostgroups/636252244-common
-200
-{
-  &quot;hostgroup&quot;: {
-    &quot;name&quot;: &quot;Common&quot;,
-    &quot;label&quot;: &quot;Common&quot;,
-    &quot;id&quot;: 636252244,
-    &quot;operatingsystem_id&quot;: 309172073,
-    &quot;ancestry&quot;: null,
-    &quot;environment_id&quot;: 334344675,
-    &quot;parameters&quot;: {
-      &quot;group1&quot;: &quot;group1&quot;
-    },
-    &quot;subnet_id&quot;: null,
-    &quot;domain_id&quot;: 22495316,
-    &quot;puppetclass_ids&quot;: [
-      980190962
-    ]
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -6193,28 +5147,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>POST /api/hostgroups
-{
-  &quot;hostgroup&quot;: {
-    &quot;name&quot;: &quot;TestHostgroup&quot;
-  }
-}
-200
-{
-  &quot;hostgroup&quot;: {
-    &quot;name&quot;: &quot;TestHostgroup&quot;,
-    &quot;label&quot;: &quot;TestHostgroup&quot;,
-    &quot;id&quot;: 866317116,
-    &quot;operatingsystem_id&quot;: null,
-    &quot;ancestry&quot;: null,
-    &quot;environment_id&quot;: null,
-    &quot;parameters&quot;: {},
-    &quot;subnet_id&quot;: null,
-    &quot;domain_id&quot;: null,
-    &quot;puppetclass_ids&quot;: []
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -6253,6 +5185,22 @@ PXE Default file has been deployed to all Smart Proxies</pre>
       
         <br>
         Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>hostgroup[parent_id] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be a number.
     </td>
   </tr>
 
@@ -6431,30 +5379,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>PUT /api/hostgroups/636252244-common
-{
-  &quot;hostgroup&quot;: {}
-}
-200
-{
-  &quot;hostgroup&quot;: {
-    &quot;name&quot;: &quot;Common&quot;,
-    &quot;label&quot;: &quot;Common&quot;,
-    &quot;id&quot;: 636252244,
-    &quot;operatingsystem_id&quot;: 309172073,
-    &quot;ancestry&quot;: null,
-    &quot;parameters&quot;: {
-      &quot;group1&quot;: &quot;group1&quot;
-    },
-    &quot;environment_id&quot;: 334344675,
-    &quot;subnet_id&quot;: null,
-    &quot;domain_id&quot;: 22495316,
-    &quot;puppetclass_ids&quot;: [
-      980190962
-    ]
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -6509,6 +5433,22 @@ PXE Default file has been deployed to all Smart Proxies</pre>
       
         <br>
         Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>hostgroup[parent_id] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be a number.
     </td>
   </tr>
 
@@ -6687,23 +5627,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>DELETE /api/hostgroups/636252244-common
-200
-{
-  &quot;hostgroup&quot;: {
-    &quot;name&quot;: &quot;Common&quot;,
-    &quot;label&quot;: &quot;Common&quot;,
-    &quot;id&quot;: 636252244,
-    &quot;operatingsystem_id&quot;: 309172073,
-    &quot;ancestry&quot;: null,
-    &quot;parameters&quot;: {},
-    &quot;environment_id&quot;: 334344675,
-    &quot;subnet_id&quot;: null,
-    &quot;domain_id&quot;: 22495316,
-    &quot;puppetclass_ids&quot;: []
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -6777,107 +5700,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/hosts
-200
-[
-  {
-    &quot;host&quot;: {
-      &quot;name&quot;: &quot;anotherfullhost&quot;,
-      &quot;id&quot;: 55602819,
-      &quot;operatingsystem_id&quot;: 1073012828,
-      &quot;hostgroup_id&quot;: null
-    }
-  },
-  {
-    &quot;host&quot;: {
-      &quot;name&quot;: &quot;dhcp.mydomain.net&quot;,
-      &quot;id&quot;: 219245707,
-      &quot;operatingsystem_id&quot;: 1073012828,
-      &quot;hostgroup_id&quot;: null
-    }
-  },
-  {
-    &quot;host&quot;: {
-      &quot;name&quot;: &quot;my5name.mydomain.net&quot;,
-      &quot;id&quot;: 980190962,
-      &quot;operatingsystem_id&quot;: 1073012828,
-      &quot;hostgroup_id&quot;: null
-    }
-  },
-  {
-    &quot;host&quot;: {
-      &quot;name&quot;: &quot;myfullname.mydomain.net&quot;,
-      &quot;id&quot;: 1053842695,
-      &quot;operatingsystem_id&quot;: 309172073,
-      &quot;hostgroup_id&quot;: null
-    }
-  },
-  {
-    &quot;host&quot;: {
-      &quot;name&quot;: &quot;otherfullhost&quot;,
-      &quot;id&quot;: 661942085,
-      &quot;operatingsystem_id&quot;: 1073012828,
-      &quot;hostgroup_id&quot;: null
-    }
-  },
-  {
-    &quot;host&quot;: {
-      &quot;name&quot;: &quot;sdhcp.mydomain.net&quot;,
-      &quot;id&quot;: 500757383,
-      &quot;operatingsystem_id&quot;: 1073012828,
-      &quot;hostgroup_id&quot;: null
-    }
-  },
-  {
-    &quot;host&quot;: {
-      &quot;name&quot;: &quot;sol10host&quot;,
-      &quot;id&quot;: 715054938,
-      &quot;operatingsystem_id&quot;: 442321401,
-      &quot;hostgroup_id&quot;: null
-    }
-  },
-  {
-    &quot;host&quot;: {
-      &quot;name&quot;: &quot;suse01.yourdomain.net&quot;,
-      &quot;id&quot;: 859751735,
-      &quot;operatingsystem_id&quot;: 859751735,
-      &quot;hostgroup_id&quot;: null
-    }
-  },
-  {
-    &quot;host&quot;: {
-      &quot;name&quot;: &quot;temp-01.yourdomain.net&quot;,
-      &quot;id&quot;: 1011586618,
-      &quot;operatingsystem_id&quot;: 331303656,
-      &quot;hostgroup_id&quot;: null
-    }
-  },
-  {
-    &quot;host&quot;: {
-      &quot;name&quot;: &quot;temp01.yourdomain.net&quot;,
-      &quot;id&quot;: 1073012828,
-      &quot;operatingsystem_id&quot;: 1073012828,
-      &quot;hostgroup_id&quot;: null
-    }
-  },
-  {
-    &quot;host&quot;: {
-      &quot;name&quot;: &quot;temp-02.useless.net&quot;,
-      &quot;id&quot;: 3666571,
-      &quot;operatingsystem_id&quot;: 331303656,
-      &quot;hostgroup_id&quot;: null
-    }
-  },
-  {
-    &quot;host&quot;: {
-      &quot;name&quot;: &quot;temp.yourdomain.net&quot;,
-      &quot;id&quot;: 298486374,
-      &quot;operatingsystem_id&quot;: 309172073,
-      &quot;hostgroup_id&quot;: null
-    }
-  }
-]</pre>
 
 
           <h2>Params</h2>
@@ -6982,68 +5804,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/hosts/my5name.mydomain.net
-200
-{
-  &quot;host&quot;: {
-    &quot;host_parameters&quot;: [
-      {
-        &quot;host_parameter&quot;: {
-          &quot;priority&quot;: 4,
-          &quot;name&quot;: &quot;host1&quot;,
-          &quot;value&quot;: &quot;host1&quot;,
-          &quot;id&quot;: 254219264,
-          &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-          &quot;reference_id&quot;: 980190962,
-          &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-        }
-      }
-    ],
-    &quot;name&quot;: &quot;my5name.mydomain.net&quot;,
-    &quot;installed_at&quot;: null,
-    &quot;sp_ip&quot;: &quot;&quot;,
-    &quot;image_file&quot;: &quot;&quot;,
-    &quot;sp_name&quot;: &quot;&quot;,
-    &quot;last_report&quot;: null,
-    &quot;enabled&quot;: true,
-    &quot;ip&quot;: &quot;2.3.4.1&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;puppet_ca_proxy_id&quot;: null,
-    &quot;certname&quot;: &quot;my5name.mydomain.net&quot;,
-    &quot;medium_id&quot;: null,
-    &quot;sp_mac&quot;: &quot;&quot;,
-    &quot;model_id&quot;: null,
-    &quot;comment&quot;: null,
-    &quot;uuid&quot;: null,
-    &quot;mac&quot;: &quot;aabbCCddeeee&quot;,
-    &quot;use_image&quot;: null,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;operatingsystem_id&quot;: 1073012828,
-    &quot;owner_id&quot;: null,
-    &quot;environment_id&quot;: 334344675,
-    &quot;build&quot;: false,
-    &quot;subnet_id&quot;: 980190962,
-    &quot;domain_id&quot;: 22495316,
-    &quot;environment&quot;: {
-      &quot;environment&quot;: {
-        &quot;name&quot;: &quot;production&quot;,
-        &quot;id&quot;: 334344675
-      }
-    },
-    &quot;sp_subnet_id&quot;: null,
-    &quot;hostgroup_id&quot;: null,
-    &quot;puppet_proxy_id&quot;: 182953976,
-    &quot;owner_type&quot;: null,
-    &quot;ptable_id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;disk&quot;: null,
-    &quot;managed&quot;: true,
-    &quot;architecture_id&quot;: 501905019,
-    &quot;image_id&quot;: null,
-    &quot;compute_resource_id&quot;: 980190962
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -7100,68 +5860,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>POST /api/hosts
-{
-  &quot;host&quot;: {
-    &quot;name&quot;: &quot;testhost11&quot;,
-    &quot;ip&quot;: &quot;10.0.0.20&quot;,
-    &quot;mac&quot;: &quot;52:53:00:1e:85:93&quot;,
-    &quot;operatingsystem_id&quot;: 1073012828,
-    &quot;environment_id&quot;: 334344675,
-    &quot;domain_id&quot;: 22495316,
-    &quot;puppet_proxy_id&quot;: 7,
-    &quot;architecture_id&quot;: 501905019
-  }
-}
-200
-{
-  &quot;host&quot;: {
-    &quot;name&quot;: &quot;testhost11.mydomain.net&quot;,
-    &quot;host_parameters&quot;: [],
-    &quot;installed_at&quot;: null,
-    &quot;sp_ip&quot;: &quot;&quot;,
-    &quot;sp_name&quot;: &quot;&quot;,
-    &quot;image_file&quot;: &quot;&quot;,
-    &quot;last_report&quot;: null,
-    &quot;enabled&quot;: true,
-    &quot;id&quot;: 1073012829,
-    &quot;ip&quot;: &quot;10.0.0.20&quot;,
-    &quot;puppet_ca_proxy_id&quot;: null,
-    &quot;certname&quot;: &quot;fcfce82c-33d1-4565-843a-4f58ff8e371a&quot;,
-    &quot;medium_id&quot;: null,
-    &quot;sp_mac&quot;: &quot;&quot;,
-    &quot;model_id&quot;: null,
-    &quot;comment&quot;: null,
-    &quot;uuid&quot;: null,
-    &quot;mac&quot;: &quot;52:53:00:1e:85:93&quot;,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:48Z&quot;,
-    &quot;use_image&quot;: null,
-    &quot;operatingsystem_id&quot;: 1073012828,
-    &quot;owner_id&quot;: 886836129,
-    &quot;environment_id&quot;: 334344675,
-    &quot;build&quot;: false,
-    &quot;subnet_id&quot;: null,
-    &quot;environment&quot;: {
-      &quot;environment&quot;: {
-        &quot;name&quot;: &quot;production&quot;,
-        &quot;id&quot;: 334344675
-      }
-    },
-    &quot;domain_id&quot;: 22495316,
-    &quot;sp_subnet_id&quot;: null,
-    &quot;hostgroup_id&quot;: null,
-    &quot;puppet_proxy_id&quot;: 7,
-    &quot;owner_type&quot;: &quot;User&quot;,
-    &quot;ptable_id&quot;: null,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:48Z&quot;,
-    &quot;disk&quot;: null,
-    &quot;managed&quot;: true,
-    &quot;architecture_id&quot;: 501905019,
-    &quot;compute_resource_id&quot;: null,
-    &quot;image_id&quot;: null
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -7506,66 +6204,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>PUT /api/hosts/temp.yourdomain.net
-{
-  &quot;host&quot;: {}
-}
-200
-{
-  &quot;host&quot;: {
-    &quot;sp_name&quot;: &quot;&quot;,
-    &quot;sp_ip&quot;: &quot;&quot;,
-    &quot;serial&quot;: null,
-    &quot;name&quot;: &quot;temp.yourdomain.net&quot;,
-    &quot;installed_at&quot;: null,
-    &quot;image_file&quot;: &quot;&quot;,
-    &quot;last_report&quot;: null,
-    &quot;enabled&quot;: true,
-    &quot;sp_mac&quot;: &quot;&quot;,
-    &quot;puppet_ca_proxy_id&quot;: null,
-    &quot;medium_id&quot;: 980190962,
-    &quot;ip&quot;: &quot;2.3.4.5&quot;,
-    &quot;id&quot;: 298486374,
-    &quot;certname&quot;: &quot;temp.yourdomain.net&quot;,
-    &quot;uuid&quot;: null,
-    &quot;use_image&quot;: null,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:48Z&quot;,
-    &quot;root_pass&quot;: &quot;xybxa6JUkz63w&quot;,
-    &quot;model_id&quot;: null,
-    &quot;mac&quot;: &quot;aa:bb:cc:dd:ee:ff&quot;,
-    &quot;last_compile&quot;: null,
-    &quot;comment&quot;: null,
-    &quot;owner_id&quot;: 886836129,
-    &quot;operatingsystem_id&quot;: 309172073,
-    &quot;location_id&quot;: null,
-    &quot;organization_id&quot;: null,
-    &quot;environment_id&quot;: 334344675,
-    &quot;build&quot;: false,
-    &quot;subnet_id&quot;: 980190962,
-    &quot;sp_subnet_id&quot;: null,
-    &quot;hostgroup_id&quot;: null,
-    &quot;environment&quot;: {
-      &quot;environment&quot;: {
-        &quot;name&quot;: &quot;production&quot;,
-        &quot;id&quot;: 334344675
-      }
-    },
-    &quot;domain_id&quot;: 589326610,
-    &quot;source_file_id&quot;: null,
-    &quot;puppet_proxy_id&quot;: 182953976,
-    &quot;ptable_id&quot;: 980190962,
-    &quot;owner_type&quot;: &quot;User&quot;,
-    &quot;puppet_status&quot;: 0,
-    &quot;disk&quot;: null,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;managed&quot;: null,
-    &quot;last_freshcheck&quot;: null,
-    &quot;image_id&quot;: null,
-    &quot;compute_resource_id&quot;: 980190962,
-    &quot;architecture_id&quot;: 501905019
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -7926,63 +6564,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>DELETE /api/hosts/my5name.mydomain.net
-200
-{
-  &quot;host&quot;: {
-    &quot;sp_name&quot;: &quot;&quot;,
-    &quot;sp_ip&quot;: &quot;&quot;,
-    &quot;serial&quot;: null,
-    &quot;name&quot;: &quot;my5name.mydomain.net&quot;,
-    &quot;installed_at&quot;: null,
-    &quot;image_file&quot;: &quot;&quot;,
-    &quot;last_report&quot;: null,
-    &quot;enabled&quot;: true,
-    &quot;sp_mac&quot;: &quot;&quot;,
-    &quot;puppet_ca_proxy_id&quot;: null,
-    &quot;medium_id&quot;: null,
-    &quot;ip&quot;: &quot;2.3.4.1&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;certname&quot;: &quot;my5name.mydomain.net&quot;,
-    &quot;uuid&quot;: null,
-    &quot;use_image&quot;: null,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;root_pass&quot;: &quot;xybxa6JUkz63w&quot;,
-    &quot;model_id&quot;: null,
-    &quot;mac&quot;: &quot;aabbCCddeeee&quot;,
-    &quot;last_compile&quot;: null,
-    &quot;comment&quot;: null,
-    &quot;owner_id&quot;: null,
-    &quot;operatingsystem_id&quot;: 1073012828,
-    &quot;location_id&quot;: null,
-    &quot;organization_id&quot;: null,
-    &quot;environment_id&quot;: 334344675,
-    &quot;build&quot;: false,
-    &quot;subnet_id&quot;: 980190962,
-    &quot;sp_subnet_id&quot;: null,
-    &quot;hostgroup_id&quot;: null,
-    &quot;environment&quot;: {
-      &quot;environment&quot;: {
-        &quot;name&quot;: &quot;production&quot;,
-        &quot;id&quot;: 334344675
-      }
-    },
-    &quot;domain_id&quot;: 22495316,
-    &quot;source_file_id&quot;: null,
-    &quot;puppet_proxy_id&quot;: 182953976,
-    &quot;ptable_id&quot;: 980190962,
-    &quot;owner_type&quot;: null,
-    &quot;puppet_status&quot;: 0,
-    &quot;disk&quot;: null,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;managed&quot;: true,
-    &quot;last_freshcheck&quot;: null,
-    &quot;image_id&quot;: null,
-    &quot;compute_resource_id&quot;: 980190962,
-    &quot;architecture_id&quot;: 501905019
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -8053,12 +6634,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
 <li>unreported</li>
 </ul>
-          <h2>Examples</h2>
-            <pre>GET /api/hosts/my5name.mydomain.net/status
-200
-{
-  &quot;status&quot;: &quot;missing&quot;
-}</pre>
 
 
           <h2>Params</h2>
@@ -8089,6 +6664,34 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
             </tbody>
           </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='hosts-puppetrun'>
+        <li>
+          <a href='#'>Foreman</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#hosts'>Hosts</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>puppetrun</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#hosts-puppetrun'>
+              GET /api/hosts/:id/puppetrun
+            </a><br>
+            <small>Force a puppet run on the agent.</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
       </div>
   </div>
 
@@ -8132,37 +6735,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/compute_resources/980190962/images
-200
-[
-  {
-    &quot;image&quot;: {
-      &quot;name&quot;: &quot;centos-2&quot;,
-      &quot;id&quot;: 298486374,
-      &quot;uuid&quot;: &quot;MyString2&quot;,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;operatingsystem_id&quot;: 309172073,
-      &quot;username&quot;: &quot;MyString&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;architecture_id&quot;: 501905019,
-      &quot;compute_resource_id&quot;: 980190962
-    }
-  },
-  {
-    &quot;image&quot;: {
-      &quot;name&quot;: &quot;centos-1&quot;,
-      &quot;id&quot;: 980190962,
-      &quot;uuid&quot;: &quot;string-of-uuid&quot;,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;operatingsystem_id&quot;: 309172073,
-      &quot;username&quot;: &quot;root&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;architecture_id&quot;: 501905019,
-      &quot;compute_resource_id&quot;: 980190962
-    }
-  }
-]</pre>
 
 
           <h2>Params</h2>
@@ -8283,22 +6855,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/compute_resources/980190962/images/980190962
-200
-{
-  &quot;image&quot;: {
-    &quot;name&quot;: &quot;centos-1&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;uuid&quot;: &quot;string-of-uuid&quot;,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-    &quot;operatingsystem_id&quot;: 309172073,
-    &quot;username&quot;: &quot;root&quot;,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-    &quot;architecture_id&quot;: 501905019,
-    &quot;compute_resource_id&quot;: 980190962
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -8371,32 +6927,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>POST /api/compute_resources/980190962/images
-{
-  &quot;image&quot;: {
-    &quot;name&quot;: &quot;TestImage&quot;,
-    &quot;uuid&quot;: &quot;abcdef&quot;,
-    &quot;username&quot;: &quot;ec2-user&quot;,
-    &quot;operatingsystem_id&quot;: 309172073,
-    &quot;compute_resource_id&quot;: 367690737,
-    &quot;architecture_id&quot;: 381564594
-  }
-}
-201
-{
-  &quot;compute_resource&quot;: {
-    &quot;url&quot;: &quot;qemu://stam/system&quot;,
-    &quot;name&quot;: &quot;MyString&quot;,
-    &quot;user&quot;: &quot;MyString&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;uuid&quot;: &quot;MyString&quot;,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-    &quot;description&quot;: &quot;MyString&quot;,
-    &quot;attrs&quot;: null,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -8565,25 +7095,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>PUT /api/compute_resources/980190962/images/980190962
-{
-  &quot;image&quot;: {}
-}
-200
-{
-  &quot;image&quot;: {
-    &quot;name&quot;: &quot;centos-1&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;uuid&quot;: &quot;string-of-uuid&quot;,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-    &quot;username&quot;: &quot;root&quot;,
-    &quot;operatingsystem_id&quot;: 309172073,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-    &quot;compute_resource_id&quot;: 980190962,
-    &quot;architecture_id&quot;: 501905019
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -8768,22 +7279,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>DELETE /api/compute_resources/980190962/images/980190962
-200
-{
-  &quot;image&quot;: {
-    &quot;name&quot;: &quot;centos-1&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;uuid&quot;: &quot;string-of-uuid&quot;,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-    &quot;username&quot;: &quot;root&quot;,
-    &quot;operatingsystem_id&quot;: 309172073,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-    &quot;compute_resource_id&quot;: 980190962,
-    &quot;architecture_id&quot;: 501905019
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -8879,44 +7374,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/lookup_keys
-200
-[
-  {
-    &quot;lookup_key&quot;: {
-      &quot;id&quot;: 980190962,
-      &quot;required&quot;: false,
-      &quot;description&quot;: null,
-      &quot;key&quot;: &quot;port&quot;,
-      &quot;is_param&quot;: true,
-      &quot;override&quot;: false,
-      &quot;default_value&quot;: &quot;80&quot;
-    }
-  },
-  {
-    &quot;lookup_key&quot;: {
-      &quot;id&quot;: 113629430,
-      &quot;required&quot;: false,
-      &quot;description&quot;: null,
-      &quot;key&quot;: &quot;ssl&quot;,
-      &quot;is_param&quot;: true,
-      &quot;override&quot;: true,
-      &quot;default_value&quot;: &quot;t&quot;
-    }
-  },
-  {
-    &quot;lookup_key&quot;: {
-      &quot;id&quot;: 298486374,
-      &quot;required&quot;: false,
-      &quot;description&quot;: null,
-      &quot;key&quot;: &quot;ssl_port&quot;,
-      &quot;is_param&quot;: false,
-      &quot;override&quot;: false,
-      &quot;default_value&quot;: &quot;443&quot;
-    }
-  }
-]</pre>
 
 
           <h2>Params</h2>
@@ -9021,20 +7478,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/lookup_keys/980190962-port
-200
-{
-  &quot;lookup_key&quot;: {
-    &quot;id&quot;: 980190962,
-    &quot;required&quot;: false,
-    &quot;description&quot;: null,
-    &quot;key&quot;: &quot;port&quot;,
-    &quot;is_param&quot;: true,
-    &quot;override&quot;: false,
-    &quot;default_value&quot;: &quot;80&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -9091,26 +7534,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>POST /api/lookup_keys
-{
-  &quot;lookup_key&quot;: {
-    &quot;is_param&quot;: true,
-    &quot;key&quot;: &quot;testkey&quot;
-  }
-}
-201
-{
-  &quot;lookup_key&quot;: {
-    &quot;required&quot;: false,
-    &quot;id&quot;: 980190963,
-    &quot;description&quot;: null,
-    &quot;key&quot;: &quot;testkey&quot;,
-    &quot;is_param&quot;: true,
-    &quot;override&quot;: false,
-    &quot;default_value&quot;: null
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -9263,25 +7686,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>PUT /api/lookup_keys/980190962-port
-{
-  &quot;lookup_key&quot;: {
-    &quot;default_value&quot;: 8080
-  }
-}
-200
-{
-  &quot;lookup_key&quot;: {
-    &quot;required&quot;: false,
-    &quot;id&quot;: 980190962,
-    &quot;description&quot;: null,
-    &quot;key&quot;: &quot;port&quot;,
-    &quot;is_param&quot;: true,
-    &quot;override&quot;: false,
-    &quot;default_value&quot;: 8080
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -9450,20 +7854,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>DELETE /api/lookup_keys/980190962-port
-200
-{
-  &quot;lookup_key&quot;: {
-    &quot;required&quot;: false,
-    &quot;id&quot;: 980190962,
-    &quot;description&quot;: null,
-    &quot;key&quot;: &quot;port&quot;,
-    &quot;is_param&quot;: true,
-    &quot;override&quot;: false,
-    &quot;default_value&quot;: &quot;80&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -9537,46 +7927,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/media
-200
-[
-  {
-    &quot;medium&quot;: {
-      &quot;name&quot;: &quot;CentOS 5.4&quot;,
-      &quot;id&quot;: 980190962,
-      &quot;path&quot;: &quot;http://mirror.averse.net/centos/6.0/os/$arch&quot;
-    }
-  },
-  {
-    &quot;medium&quot;: {
-      &quot;name&quot;: &quot;OpenSuse Mirror&quot;,
-      &quot;id&quot;: 859751735,
-      &quot;path&quot;: &quot;http://mirror.isoc.org.il/pub/opensuse/distribution/$major.$minor/repo/oss&quot;
-    }
-  },
-  {
-    &quot;medium&quot;: {
-      &quot;name&quot;: &quot;Solaris 10&quot;,
-      &quot;id&quot;: 442321401,
-      &quot;path&quot;: &quot;http://brsla01/vol/solgi_5.10/sol$minor_$release_$arch&quot;
-    }
-  },
-  {
-    &quot;medium&quot;: {
-      &quot;name&quot;: &quot;Ubuntu Mirror&quot;,
-      &quot;id&quot;: 1011586618,
-      &quot;path&quot;: &quot;http://sg.archive.ubuntu.com&quot;
-    }
-  },
-  {
-    &quot;medium&quot;: {
-      &quot;name&quot;: &quot;unused&quot;,
-      &quot;id&quot;: 338446587,
-      &quot;path&quot;: &quot;http://nothing.intersting.com&quot;
-    }
-  }
-]</pre>
 
 
           <h2>Params</h2>
@@ -9681,16 +8031,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/media/980190962
-200
-{
-  &quot;medium&quot;: {
-    &quot;name&quot;: &quot;CentOS 5.4&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;path&quot;: &quot;http://mirror.averse.net/centos/6.0/os/$arch&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -9747,21 +8087,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>POST /api/media
-{
-  &quot;medium&quot;: {
-    &quot;name&quot;: &quot;new medium&quot;,
-    &quot;path&quot;: &quot;http://www.newmedium.com/&quot;
-  }
-}
-201
-{
-  &quot;medium&quot;: {
-    &quot;name&quot;: &quot;new medium&quot;,
-    &quot;id&quot;: 1011586619
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -9842,6 +8167,8 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
 <li>Debian</li>
 
+<li>Gentoo</li>
+
 <li>Redhat</li>
 
 <li>Solaris</li>
@@ -9886,18 +8213,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>PUT /api/media/980190962
-{
-  &quot;name&quot;: &quot;CentOS 5.4&quot;
-}
-200
-{
-  &quot;medium&quot;: {
-    &quot;name&quot;: &quot;CentOS 5.4&quot;,
-    &quot;id&quot;: 980190962
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -9994,6 +8309,8 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
 <li>Debian</li>
 
+<li>Gentoo</li>
+
 <li>Redhat</li>
 
 <li>Solaris</li>
@@ -10038,15 +8355,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>DELETE /api/media/338446587
-200
-{
-  &quot;medium&quot;: {
-    &quot;name&quot;: &quot;unused&quot;,
-    &quot;id&quot;: 338446587
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -10120,33 +8428,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/models
-200
-[
-  {
-    &quot;model&quot;: {
-      &quot;name&quot;: &quot;KVM&quot;,
-      &quot;id&quot;: 980190962,
-      &quot;vendor_class&quot;: null,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;info&quot;: &quot;Virtual Machine&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;hardware_model&quot;: null
-    }
-  },
-  {
-    &quot;model&quot;: {
-      &quot;name&quot;: &quot;SUN V210&quot;,
-      &quot;id&quot;: 139037058,
-      &quot;vendor_class&quot;: &quot;Sun-Fire-V210&quot;,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;info&quot;: null,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;hardware_model&quot;: &quot;SUN4U&quot;
-    }
-  }
-]</pre>
 
 
           <h2>Params</h2>
@@ -10251,20 +8532,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/models/980190962
-200
-{
-  &quot;model&quot;: {
-    &quot;name&quot;: &quot;KVM&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;vendor_class&quot;: null,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;info&quot;: &quot;Virtual Machine&quot;,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;hardware_model&quot;: null
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -10321,25 +8588,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>POST /api/models
-{
-  &quot;model&quot;: {
-    &quot;name&quot;: &quot;new model&quot;
-  }
-}
-201
-{
-  &quot;model&quot;: {
-    &quot;name&quot;: &quot;new model&quot;,
-    &quot;vendor_class&quot;: null,
-    &quot;id&quot;: 980190963,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:49Z&quot;,
-    &quot;info&quot;: null,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:49Z&quot;,
-    &quot;hardware_model&quot;: null
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -10460,23 +8708,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>PUT /api/models/980190962
-{
-  &quot;name&quot;: &quot;KVM&quot;
-}
-200
-{
-  &quot;model&quot;: {
-    &quot;name&quot;: &quot;KVM&quot;,
-    &quot;vendor_class&quot;: null,
-    &quot;id&quot;: 980190962,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;info&quot;: &quot;Virtual Machine&quot;,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;hardware_model&quot;: null
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -10613,20 +8844,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>DELETE /api/models/980190962
-200
-{
-  &quot;model&quot;: {
-    &quot;name&quot;: &quot;KVM&quot;,
-    &quot;vendor_class&quot;: null,
-    &quot;id&quot;: 980190962,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;info&quot;: &quot;Virtual Machine&quot;,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;hardware_model&quot;: null
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -10804,88 +9021,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/operatingsystems/1073012828
-200
-{
-  &quot;operatingsystem&quot;: {
-    &quot;name&quot;: &quot;Redhat&quot;,
-    &quot;minor&quot;: &quot;1&quot;,
-    &quot;id&quot;: 1073012828,
-    &quot;family&quot;: &quot;Redhat&quot;,
-    &quot;ptables&quot;: [
-      {
-        &quot;ptable&quot;: {
-          &quot;name&quot;: &quot;default&quot;,
-          &quot;id&quot;: 980190962
-        }
-      }
-    ],
-    &quot;os_default_templates&quot;: [],
-    &quot;architectures&quot;: [
-      {
-        &quot;architecture&quot;: {
-          &quot;name&quot;: &quot;x86_64&quot;,
-          &quot;id&quot;: 501905019
-        }
-      }
-    ],
-    &quot;config_templates&quot;: [
-      {
-        &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
-          &quot;id&quot;: 1007981701
-        }
-      },
-      {
-        &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;MyFinish&quot;,
-          &quot;id&quot;: 104314179
-        }
-      },
-      {
-        &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;MyScript&quot;,
-          &quot;id&quot;: 981457253
-        }
-      },
-      {
-        &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;MyString&quot;,
-          &quot;id&quot;: 943779058
-        }
-      },
-      {
-        &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;MyString2&quot;,
-          &quot;id&quot;: 269958254
-        }
-      },
-      {
-        &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;PXE Default File&quot;,
-          &quot;id&quot;: 352050261
-        }
-      },
-      {
-        &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;PXE Localboot Default&quot;,
-          &quot;id&quot;: 821548108
-        }
-      }
-    ],
-    &quot;release_name&quot;: null,
-    &quot;major&quot;: &quot;6&quot;,
-    &quot;media&quot;: [
-      {
-        &quot;medium&quot;: {
-          &quot;name&quot;: &quot;CentOS 5.4&quot;,
-          &quot;id&quot;: 980190962
-        }
-      }
-    ]
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -10942,31 +9077,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>POST /api/operatingsystems
-{
-  &quot;operatingsystem&quot;: {
-    &quot;minor&quot;: &quot;2&quot;,
-    &quot;name&quot;: &quot;awsome_os&quot;,
-    &quot;major&quot;: &quot;1&quot;
-  }
-}
-200
-{
-  &quot;operatingsystem&quot;: {
-    &quot;name&quot;: &quot;awsome_os&quot;,
-    &quot;minor&quot;: &quot;2&quot;,
-    &quot;id&quot;: 1073012829,
-    &quot;family&quot;: null,
-    &quot;ptables&quot;: [],
-    &quot;os_default_templates&quot;: [],
-    &quot;release_name&quot;: null,
-    &quot;config_templates&quot;: [],
-    &quot;architectures&quot;: [],
-    &quot;major&quot;: &quot;1&quot;,
-    &quot;media&quot;: []
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -11103,93 +9213,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>PUT /api/operatingsystems/1073012828
-{
-  &quot;operatingsystem&quot;: {
-    &quot;name&quot;: &quot;new_name&quot;
-  }
-}
-200
-{
-  &quot;operatingsystem&quot;: {
-    &quot;name&quot;: &quot;new_name&quot;,
-    &quot;minor&quot;: &quot;1&quot;,
-    &quot;id&quot;: 1073012828,
-    &quot;family&quot;: &quot;Redhat&quot;,
-    &quot;ptables&quot;: [
-      {
-        &quot;ptable&quot;: {
-          &quot;name&quot;: &quot;default&quot;,
-          &quot;id&quot;: 980190962
-        }
-      }
-    ],
-    &quot;os_default_templates&quot;: [],
-    &quot;config_templates&quot;: [
-      {
-        &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
-          &quot;id&quot;: 1007981701
-        }
-      },
-      {
-        &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;MyFinish&quot;,
-          &quot;id&quot;: 104314179
-        }
-      },
-      {
-        &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;MyScript&quot;,
-          &quot;id&quot;: 981457253
-        }
-      },
-      {
-        &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;MyString&quot;,
-          &quot;id&quot;: 943779058
-        }
-      },
-      {
-        &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;MyString2&quot;,
-          &quot;id&quot;: 269958254
-        }
-      },
-      {
-        &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;PXE Default File&quot;,
-          &quot;id&quot;: 352050261
-        }
-      },
-      {
-        &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;PXE Localboot Default&quot;,
-          &quot;id&quot;: 821548108
-        }
-      }
-    ],
-    &quot;architectures&quot;: [
-      {
-        &quot;architecture&quot;: {
-          &quot;name&quot;: &quot;x86_64&quot;,
-          &quot;id&quot;: 501905019
-        }
-      }
-    ],
-    &quot;release_name&quot;: null,
-    &quot;media&quot;: [
-      {
-        &quot;medium&quot;: {
-          &quot;name&quot;: &quot;CentOS 5.4&quot;,
-          &quot;id&quot;: 980190962
-        }
-      }
-    ],
-    &quot;major&quot;: &quot;6&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -11342,19 +9365,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>DELETE /api/operatingsystems/775246587
-200
-{
-  &quot;operatingsystem&quot;: {
-    &quot;name&quot;: &quot;NoHosts 1.1&quot;,
-    &quot;id&quot;: 775246587,
-    &quot;ptables&quot;: [],
-    &quot;architectures&quot;: [],
-    &quot;config_templates&quot;: [],
-    &quot;media&quot;: []
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -11516,43 +9526,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/ptables
-200
-[
-  {
-    &quot;ptable&quot;: {
-      &quot;name&quot;: &quot;default&quot;,
-      &quot;id&quot;: 980190962,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-    }
-  },
-  {
-    &quot;ptable&quot;: {
-      &quot;name&quot;: &quot;four&quot;,
-      &quot;id&quot;: 281110143,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-    }
-  },
-  {
-    &quot;ptable&quot;: {
-      &quot;name&quot;: &quot;suse default&quot;,
-      &quot;id&quot;: 859751735,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-    }
-  },
-  {
-    &quot;ptable&quot;: {
-      &quot;name&quot;: &quot;ubuntu default&quot;,
-      &quot;id&quot;: 1011586618,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-    }
-  }
-]</pre>
 
 
           <h2>Params</h2>
@@ -11657,17 +9630,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/ptables/980190962
-200
-{
-  &quot;ptable&quot;: {
-    &quot;name&quot;: &quot;default&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -11724,21 +9686,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>POST /api/ptables
-{
-  &quot;ptable&quot;: {
-    &quot;name&quot;: &quot;ptable_test&quot;,
-    &quot;layout&quot;: &quot;d-i partman-auto/disk&quot;
-  }
-}
-201
-{
-  &quot;ptable&quot;: {
-    &quot;name&quot;: &quot;ptable_test&quot;,
-    &quot;id&quot;: 1011586619
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -11843,18 +9790,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>PUT /api/ptables/980190962
-{
-  &quot;ptable&quot;: {}
-}
-200
-{
-  &quot;ptable&quot;: {
-    &quot;name&quot;: &quot;default&quot;,
-    &quot;id&quot;: 980190962
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -11975,30 +9910,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>DELETE /api/ptables/980190962
-422
-{
-  &quot;ptable&quot;: {
-    &quot;id&quot;: 980190962,
-    &quot;errors&quot;: {
-      &quot;base&quot;: [
-        &quot;default is used by temp01.yourdomain.net&quot;,
-        &quot;default is used by temp.yourdomain.net&quot;,
-        &quot;default is used by my5name.mydomain.net&quot;,
-        &quot;default is used by dhcp.mydomain.net&quot;,
-        &quot;default is used by sdhcp.mydomain.net&quot;
-      ]
-    },
-    &quot;full_messages&quot;: [
-      &quot;default is used by temp01.yourdomain.net&quot;,
-      &quot;default is used by temp.yourdomain.net&quot;,
-      &quot;default is used by my5name.mydomain.net&quot;,
-      &quot;default is used by dhcp.mydomain.net&quot;,
-      &quot;default is used by sdhcp.mydomain.net&quot;
-    ]
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -12072,39 +9983,24 @@ PXE Default file has been deployed to all Smart Proxies</pre>
             <a href='#puppetclasses-index'>
               GET /api/hosts/:host_id/puppetclasses
             </a><br>
-            <small>List all puppetclasses of a given host.</small>
+            <small>List all puppetclasses for host</small>
+          </h3>
+          <h3>
+            <a href='#puppetclasses-index'>
+              GET /api/hostgroups/:hostgroup_id/puppetclasses
+            </a><br>
+            <small>List all puppetclasses for hostgroup</small>
+          </h3>
+          <h3>
+            <a href='#puppetclasses-index'>
+              GET /api/environments/:environment_id/puppetclasses
+            </a><br>
+            <small>List all puppetclasses for environment</small>
           </h3>
       </div>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/puppetclasses
-200
-{
-  &quot;base&quot;: [
-    {
-      &quot;puppetclass&quot;: {
-        &quot;name&quot;: &quot;base&quot;,
-        &quot;id&quot;: 980190962,
-        &quot;lookup_keys&quot;: [
-          {
-            &quot;id&quot;: 298486374
-          }
-        ]
-      }
-    }
-  ],
-  &quot;apache&quot;: [
-    {
-      &quot;puppetclass&quot;: {
-        &quot;name&quot;: &quot;apache&quot;,
-        &quot;id&quot;: 298486374,
-        &quot;lookup_keys&quot;: []
-      }
-    }
-  ]
-}</pre>
 
 
           <h2>Params</h2>
@@ -12118,14 +10014,14 @@ PXE Default file has been deployed to all Smart Proxies</pre>
             <tbody>
                 <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>search </strong><br>
+      <strong>host_id </strong><br>
       <small>
         optional
         
       </small>
     </td>
     <td>
-      <p>filter results</p>
+      <p>id of nested host</p>
         <br>
         Value: Must be String
     </td>
@@ -12134,14 +10030,14 @@ PXE Default file has been deployed to all Smart Proxies</pre>
   
   <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>order </strong><br>
+      <strong>hostgroup_id </strong><br>
       <small>
         optional
         
       </small>
     </td>
     <td>
-      <p>sort results</p>
+      <p>id of nested hostgroup</p>
         <br>
         Value: Must be String
     </td>
@@ -12150,30 +10046,14 @@ PXE Default file has been deployed to all Smart Proxies</pre>
   
   <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>page </strong><br>
+      <strong>environment_id </strong><br>
       <small>
         optional
         
       </small>
     </td>
     <td>
-      <p>paginate results</p>
-        <br>
-        Value: Must be String
-    </td>
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>per_page </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      <p>number of entries per request</p>
+      <p>id of nested environment</p>
         <br>
         Value: Must be String
     </td>
@@ -12203,34 +10083,30 @@ PXE Default file has been deployed to all Smart Proxies</pre>
             <a href='#puppetclasses-show'>
               GET /api/puppetclasses/:id
             </a><br>
-            <small>Show a puppetclass.</small>
+            <small>Show a puppetclass</small>
+          </h3>
+          <h3>
+            <a href='#puppetclasses-show'>
+              GET /api/hosts/:host_id/puppetclasses/:id
+            </a><br>
+            <small>Show a puppetclass for host</small>
+          </h3>
+          <h3>
+            <a href='#puppetclasses-show'>
+              GET /api/hostgroups/:hostgroup_id/puppetclasses/:id
+            </a><br>
+            <small>Show a puppetclass for hostgroup</small>
+          </h3>
+          <h3>
+            <a href='#puppetclasses-show'>
+              GET /api/environments/:environment_id/puppetclasses/:id
+            </a><br>
+            <small>Show a puppetclass for environment</small>
           </h3>
       </div>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/puppetclasses/base
-200
-{
-  &quot;puppetclass&quot;: {
-    &quot;name&quot;: &quot;base&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;lookup_keys&quot;: [
-      {
-        &quot;lookup_key&quot;: {
-          &quot;required&quot;: false,
-          &quot;id&quot;: 298486374,
-          &quot;description&quot;: null,
-          &quot;key&quot;: &quot;ssl_port&quot;,
-          &quot;is_param&quot;: false,
-          &quot;override&quot;: false,
-          &quot;default_value&quot;: &quot;443&quot;
-        }
-      }
-    ]
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -12244,6 +10120,54 @@ PXE Default file has been deployed to all Smart Proxies</pre>
             <tbody>
                 <tr style='background-color:rgb(255,255,255);'>
     <td>
+      <strong>host_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of nested host</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>hostgroup_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of nested hostgroup</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of nested environment</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
       <strong>id </strong><br>
       <small>
         required
@@ -12251,9 +10175,9 @@ PXE Default file has been deployed to all Smart Proxies</pre>
       </small>
     </td>
     <td>
-      
+      <p>id of puppetclass</p>
         <br>
-        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+        Value: Must be String
     </td>
   </tr>
 
@@ -12287,21 +10211,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>POST /api/puppetclasses
-{
-  &quot;puppetclass&quot;: {
-    &quot;name&quot;: &quot;test_puppetclass&quot;
-  }
-}
-201
-{
-  &quot;puppetclass&quot;: {
-    &quot;name&quot;: &quot;test_puppetclass&quot;,
-    &quot;id&quot;: 980190963,
-    &quot;lookup_keys&quot;: []
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -12374,23 +10283,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>PUT /api/puppetclasses/base
-{
-  &quot;puppetclass&quot;: {}
-}
-200
-{
-  &quot;puppetclass&quot;: {
-    &quot;name&quot;: &quot;base&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;lookup_keys&quot;: [
-      {
-        &quot;id&quot;: 298486374
-      }
-    ]
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -12479,20 +10371,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>DELETE /api/puppetclasses/base
-200
-{
-  &quot;puppetclass&quot;: {
-    &quot;name&quot;: &quot;base&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;lookup_keys&quot;: [
-      {
-        &quot;id&quot;: 298486374
-      }
-    ]
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -12566,47 +10444,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/reports
-200
-[
-  {
-    &quot;report&quot;: {
-      &quot;summary&quot;: &quot;Success&quot;,
-      &quot;status&quot;: {
-        &quot;skipped&quot;: 0,
-        &quot;failed_restarts&quot;: 0,
-        &quot;failed&quot;: 0,
-        &quot;pending&quot;: 0,
-        &quot;restarted&quot;: 0,
-        &quot;applied&quot;: 0
-      },
-      &quot;id&quot;: 70219655,
-      &quot;reported_at&quot;: &quot;2012-12-11T15:24:42Z&quot;,
-      &quot;metrics&quot;: {
-        &quot;events&quot;: {
-          &quot;total&quot;: 0
-        },
-        &quot;time&quot;: {
-          &quot;package&quot;: 0.003989,
-          &quot;schedule&quot;: 0.00083,
-          &quot;cron&quot;: 0.000419,
-          &quot;exec&quot;: 0.000299,
-          &quot;service&quot;: 0.149739,
-          &quot;config_retrieval&quot;: 16.3637869358063,
-          &quot;file&quot;: 0.007025,
-          &quot;filebucket&quot;: 0.000171,
-          &quot;mailalias&quot;: 0.000283
-        },
-        &quot;resources&quot;: {
-          &quot;total&quot;: 33
-        },
-        &quot;changes&quot;: {}
-      },
-      &quot;logs&quot;: []
-    }
-  }
-]</pre>
 
 
           <h2>Params</h2>
@@ -12711,45 +10548,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/reports/70219655
-200
-{
-  &quot;report&quot;: {
-    &quot;summary&quot;: &quot;Success&quot;,
-    &quot;status&quot;: {
-      &quot;skipped&quot;: 0,
-      &quot;failed_restarts&quot;: 0,
-      &quot;failed&quot;: 0,
-      &quot;pending&quot;: 0,
-      &quot;restarted&quot;: 0,
-      &quot;applied&quot;: 0
-    },
-    &quot;id&quot;: 70219655,
-    &quot;reported_at&quot;: &quot;2012-12-11T15:24:42Z&quot;,
-    &quot;metrics&quot;: {
-      &quot;events&quot;: {
-        &quot;total&quot;: 0
-      },
-      &quot;time&quot;: {
-        &quot;package&quot;: 0.003989,
-        &quot;schedule&quot;: 0.00083,
-        &quot;cron&quot;: 0.000419,
-        &quot;exec&quot;: 0.000299,
-        &quot;service&quot;: 0.149739,
-        &quot;config_retrieval&quot;: 16.3637869358063,
-        &quot;file&quot;: 0.007025,
-        &quot;filebucket&quot;: 0.000171,
-        &quot;mailalias&quot;: 0.000283
-      },
-      &quot;resources&quot;: {
-        &quot;total&quot;: 33
-      },
-      &quot;changes&quot;: {}
-    },
-    &quot;logs&quot;: []
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -12806,46 +10604,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>DELETE /api/reports/70219655
-200
-{
-  &quot;report&quot;: {
-    &quot;summary&quot;: &quot;Success&quot;,
-    &quot;status&quot;: {
-      &quot;skipped&quot;: 0,
-      &quot;failed_restarts&quot;: 0,
-      &quot;failed&quot;: 0,
-      &quot;pending&quot;: 0,
-      &quot;restarted&quot;: 0,
-      &quot;applied&quot;: 0
-    },
-    &quot;id&quot;: 70219655,
-    &quot;host&quot;: &quot;my5name.mydomain.net&quot;,
-    &quot;reported_at&quot;: &quot;2012-12-11T15:24:42Z&quot;,
-    &quot;logs&quot;: [],
-    &quot;metrics&quot;: {
-      &quot;events&quot;: {
-        &quot;total&quot;: 0
-      },
-      &quot;time&quot;: {
-        &quot;package&quot;: 0.003989,
-        &quot;schedule&quot;: 0.00083,
-        &quot;cron&quot;: 0.000419,
-        &quot;service&quot;: 0.149739,
-        &quot;exec&quot;: 0.000299,
-        &quot;config_retrieval&quot;: 16.3637869358063,
-        &quot;file&quot;: 0.007025,
-        &quot;mailalias&quot;: 0.000283,
-        &quot;filebucket&quot;: 0.000171
-      },
-      &quot;changes&quot;: {},
-      &quot;resources&quot;: {
-        &quot;total&quot;: 33
-      }
-    }
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -12902,45 +10660,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/reports/last
-200
-{
-  &quot;report&quot;: {
-    &quot;summary&quot;: &quot;Success&quot;,
-    &quot;status&quot;: {
-      &quot;skipped&quot;: 0,
-      &quot;failed_restarts&quot;: 0,
-      &quot;failed&quot;: 0,
-      &quot;pending&quot;: 0,
-      &quot;restarted&quot;: 0,
-      &quot;applied&quot;: 0
-    },
-    &quot;id&quot;: 70219655,
-    &quot;reported_at&quot;: &quot;2012-12-11T15:24:42Z&quot;,
-    &quot;metrics&quot;: {
-      &quot;events&quot;: {
-        &quot;total&quot;: 0
-      },
-      &quot;time&quot;: {
-        &quot;package&quot;: 0.003989,
-        &quot;schedule&quot;: 0.00083,
-        &quot;cron&quot;: 0.000419,
-        &quot;exec&quot;: 0.000299,
-        &quot;service&quot;: 0.149739,
-        &quot;config_retrieval&quot;: 16.3637869358063,
-        &quot;file&quot;: 0.007025,
-        &quot;filebucket&quot;: 0.000171,
-        &quot;mailalias&quot;: 0.000283
-      },
-      &quot;resources&quot;: {
-        &quot;total&quot;: 33
-      },
-      &quot;changes&quot;: {}
-    },
-    &quot;logs&quot;: []
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -13086,95 +10805,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/roles/1
-200
-{
-  &quot;role&quot;: {
-    &quot;name&quot;: &quot;Manager&quot;,
-    &quot;id&quot;: 1,
-    &quot;builtin&quot;: 0,
-    &quot;permissions&quot;: [
-      &quot;view_architectures&quot;,
-      &quot;create_architectures&quot;,
-      &quot;edit_architectures&quot;,
-      &quot;destroy_architectures&quot;,
-      &quot;view_authenticators&quot;,
-      &quot;create_authenticators&quot;,
-      &quot;edit_authenticators&quot;,
-      &quot;destroy_authenticators&quot;,
-      &quot;view_environments&quot;,
-      &quot;create_environments&quot;,
-      &quot;edit_environments&quot;,
-      &quot;destroy_environments&quot;,
-      &quot;import_environments&quot;,
-      &quot;view_external_variables&quot;,
-      &quot;create_external_variables&quot;,
-      &quot;edit_external_variables&quot;,
-      &quot;destroy_external_variables&quot;,
-      &quot;view_domains&quot;,
-      &quot;create_domain&quot;,
-      &quot;edit_domains&quot;,
-      &quot;destroy_domains&quot;,
-      &quot;view_globals&quot;,
-      &quot;create_globals&quot;,
-      &quot;edit_globals&quot;,
-      &quot;destroy_globals&quot;,
-      &quot;view_hostgroups&quot;,
-      &quot;create_hostgroups&quot;,
-      &quot;edit_hostgroups&quot;,
-      &quot;destroy_hostgroups&quot;,
-      &quot;view_hosts&quot;,
-      &quot;create_hosts&quot;,
-      &quot;edit_hosts&quot;,
-      &quot;destroy_hosts&quot;,
-      &quot;view_media&quot;,
-      &quot;create_media&quot;,
-      &quot;edit_media&quot;,
-      &quot;destroy_media&quot;,
-      &quot;view_models&quot;,
-      &quot;create_models&quot;,
-      &quot;edit_models&quot;,
-      &quot;destroy_models&quot;,
-      &quot;view_operatingsystems&quot;,
-      &quot;create_operatingsystems&quot;,
-      &quot;edit_operatingsystems&quot;,
-      &quot;destroy_operatingsystems&quot;,
-      &quot;view_ptables&quot;,
-      &quot;create_ptables&quot;,
-      &quot;edit_ptables&quot;,
-      &quot;destroy_ptables&quot;,
-      &quot;view_puppetclasses&quot;,
-      &quot;create_puppetclasses&quot;,
-      &quot;edit_puppetclasses&quot;,
-      &quot;destroy_puppetclasses&quot;,
-      &quot;import_puppetclasses&quot;,
-      &quot;view_usergroups&quot;,
-      &quot;create_usergroups&quot;,
-      &quot;edit_usergroups&quot;,
-      &quot;destroy_usergroups&quot;,
-      &quot;view_users&quot;,
-      &quot;create_users&quot;,
-      &quot;edit_users&quot;,
-      &quot;destroy_users&quot;,
-      &quot;access_settings&quot;,
-      &quot;access_dashboard&quot;,
-      &quot;view_reports&quot;,
-      &quot;destroy_reports&quot;,
-      &quot;view_facts&quot;,
-      &quot;view_audit_logs&quot;,
-      &quot;view_statistics&quot;,
-      &quot;view_locations&quot;,
-      &quot;edit_locations&quot;,
-      &quot;create_locations&quot;,
-      &quot;destroy_locations&quot;,
-      &quot;view_organizations&quot;,
-      &quot;edit_organizations&quot;,
-      &quot;create_organizations&quot;,
-      &quot;destroy_organizations&quot;
-    ]
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -13231,22 +10861,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>POST /api/roles
-{
-  &quot;role&quot;: {
-    &quot;name&quot;: &quot;staff&quot;
-  }
-}
-200
-{
-  &quot;role&quot;: {
-    &quot;name&quot;: &quot;staff&quot;,
-    &quot;id&quot;: 11,
-    &quot;builtin&quot;: 0,
-    &quot;permissions&quot;: []
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -13319,98 +10933,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>PUT /api/roles/1
-{
-  &quot;role&quot;: {}
-}
-200
-{
-  &quot;role&quot;: {
-    &quot;name&quot;: &quot;Manager&quot;,
-    &quot;id&quot;: 1,
-    &quot;builtin&quot;: 0,
-    &quot;permissions&quot;: [
-      &quot;view_architectures&quot;,
-      &quot;create_architectures&quot;,
-      &quot;edit_architectures&quot;,
-      &quot;destroy_architectures&quot;,
-      &quot;view_authenticators&quot;,
-      &quot;create_authenticators&quot;,
-      &quot;edit_authenticators&quot;,
-      &quot;destroy_authenticators&quot;,
-      &quot;view_environments&quot;,
-      &quot;create_environments&quot;,
-      &quot;edit_environments&quot;,
-      &quot;destroy_environments&quot;,
-      &quot;import_environments&quot;,
-      &quot;view_external_variables&quot;,
-      &quot;create_external_variables&quot;,
-      &quot;edit_external_variables&quot;,
-      &quot;destroy_external_variables&quot;,
-      &quot;view_domains&quot;,
-      &quot;create_domain&quot;,
-      &quot;edit_domains&quot;,
-      &quot;destroy_domains&quot;,
-      &quot;view_globals&quot;,
-      &quot;create_globals&quot;,
-      &quot;edit_globals&quot;,
-      &quot;destroy_globals&quot;,
-      &quot;view_hostgroups&quot;,
-      &quot;create_hostgroups&quot;,
-      &quot;edit_hostgroups&quot;,
-      &quot;destroy_hostgroups&quot;,
-      &quot;view_hosts&quot;,
-      &quot;create_hosts&quot;,
-      &quot;edit_hosts&quot;,
-      &quot;destroy_hosts&quot;,
-      &quot;view_media&quot;,
-      &quot;create_media&quot;,
-      &quot;edit_media&quot;,
-      &quot;destroy_media&quot;,
-      &quot;view_models&quot;,
-      &quot;create_models&quot;,
-      &quot;edit_models&quot;,
-      &quot;destroy_models&quot;,
-      &quot;view_operatingsystems&quot;,
-      &quot;create_operatingsystems&quot;,
-      &quot;edit_operatingsystems&quot;,
-      &quot;destroy_operatingsystems&quot;,
-      &quot;view_ptables&quot;,
-      &quot;create_ptables&quot;,
-      &quot;edit_ptables&quot;,
-      &quot;destroy_ptables&quot;,
-      &quot;view_puppetclasses&quot;,
-      &quot;create_puppetclasses&quot;,
-      &quot;edit_puppetclasses&quot;,
-      &quot;destroy_puppetclasses&quot;,
-      &quot;import_puppetclasses&quot;,
-      &quot;view_usergroups&quot;,
-      &quot;create_usergroups&quot;,
-      &quot;edit_usergroups&quot;,
-      &quot;destroy_usergroups&quot;,
-      &quot;view_users&quot;,
-      &quot;create_users&quot;,
-      &quot;edit_users&quot;,
-      &quot;destroy_users&quot;,
-      &quot;access_settings&quot;,
-      &quot;access_dashboard&quot;,
-      &quot;view_reports&quot;,
-      &quot;destroy_reports&quot;,
-      &quot;view_facts&quot;,
-      &quot;view_audit_logs&quot;,
-      &quot;view_statistics&quot;,
-      &quot;view_locations&quot;,
-      &quot;edit_locations&quot;,
-      &quot;create_locations&quot;,
-      &quot;destroy_locations&quot;,
-      &quot;view_organizations&quot;,
-      &quot;edit_organizations&quot;,
-      &quot;create_organizations&quot;,
-      &quot;destroy_organizations&quot;
-    ]
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -13499,95 +11021,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>DELETE /api/roles/1
-200
-{
-  &quot;role&quot;: {
-    &quot;name&quot;: &quot;Manager&quot;,
-    &quot;id&quot;: 1,
-    &quot;builtin&quot;: 0,
-    &quot;permissions&quot;: [
-      &quot;view_architectures&quot;,
-      &quot;create_architectures&quot;,
-      &quot;edit_architectures&quot;,
-      &quot;destroy_architectures&quot;,
-      &quot;view_authenticators&quot;,
-      &quot;create_authenticators&quot;,
-      &quot;edit_authenticators&quot;,
-      &quot;destroy_authenticators&quot;,
-      &quot;view_environments&quot;,
-      &quot;create_environments&quot;,
-      &quot;edit_environments&quot;,
-      &quot;destroy_environments&quot;,
-      &quot;import_environments&quot;,
-      &quot;view_external_variables&quot;,
-      &quot;create_external_variables&quot;,
-      &quot;edit_external_variables&quot;,
-      &quot;destroy_external_variables&quot;,
-      &quot;view_domains&quot;,
-      &quot;create_domain&quot;,
-      &quot;edit_domains&quot;,
-      &quot;destroy_domains&quot;,
-      &quot;view_globals&quot;,
-      &quot;create_globals&quot;,
-      &quot;edit_globals&quot;,
-      &quot;destroy_globals&quot;,
-      &quot;view_hostgroups&quot;,
-      &quot;create_hostgroups&quot;,
-      &quot;edit_hostgroups&quot;,
-      &quot;destroy_hostgroups&quot;,
-      &quot;view_hosts&quot;,
-      &quot;create_hosts&quot;,
-      &quot;edit_hosts&quot;,
-      &quot;destroy_hosts&quot;,
-      &quot;view_media&quot;,
-      &quot;create_media&quot;,
-      &quot;edit_media&quot;,
-      &quot;destroy_media&quot;,
-      &quot;view_models&quot;,
-      &quot;create_models&quot;,
-      &quot;edit_models&quot;,
-      &quot;destroy_models&quot;,
-      &quot;view_operatingsystems&quot;,
-      &quot;create_operatingsystems&quot;,
-      &quot;edit_operatingsystems&quot;,
-      &quot;destroy_operatingsystems&quot;,
-      &quot;view_ptables&quot;,
-      &quot;create_ptables&quot;,
-      &quot;edit_ptables&quot;,
-      &quot;destroy_ptables&quot;,
-      &quot;view_puppetclasses&quot;,
-      &quot;create_puppetclasses&quot;,
-      &quot;edit_puppetclasses&quot;,
-      &quot;destroy_puppetclasses&quot;,
-      &quot;import_puppetclasses&quot;,
-      &quot;view_usergroups&quot;,
-      &quot;create_usergroups&quot;,
-      &quot;edit_usergroups&quot;,
-      &quot;destroy_usergroups&quot;,
-      &quot;view_users&quot;,
-      &quot;create_users&quot;,
-      &quot;edit_users&quot;,
-      &quot;destroy_users&quot;,
-      &quot;access_settings&quot;,
-      &quot;access_dashboard&quot;,
-      &quot;view_reports&quot;,
-      &quot;destroy_reports&quot;,
-      &quot;view_facts&quot;,
-      &quot;view_audit_logs&quot;,
-      &quot;view_statistics&quot;,
-      &quot;view_locations&quot;,
-      &quot;edit_locations&quot;,
-      &quot;create_locations&quot;,
-      &quot;destroy_locations&quot;,
-      &quot;view_organizations&quot;,
-      &quot;edit_organizations&quot;,
-      &quot;create_organizations&quot;,
-      &quot;destroy_organizations&quot;
-    ]
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -13765,22 +11198,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/settings/333972760
-200
-{
-  &quot;setting&quot;: {
-    &quot;name&quot;: &quot;administrator&quot;,
-    &quot;value&quot;: &quot;root@some.host.fqdn&quot;,
-    &quot;id&quot;: 333972760,
-    &quot;description&quot;: &quot;The Default administrator email address&quot;,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;category&quot;: &quot;General&quot;,
-    &quot;settings_type&quot;: null,
-    &quot;default&quot;: &quot;root@some.host.fqdn&quot;,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -13837,25 +11254,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>PUT /api/settings/333972760
-{
-  &quot;setting&quot;: {}
-}
-200
-{
-  &quot;setting&quot;: {
-    &quot;name&quot;: &quot;administrator&quot;,
-    &quot;value&quot;: &quot;root@some.host.fqdn&quot;,
-    &quot;id&quot;: 333972760,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;description&quot;: &quot;The Default administrator email address&quot;,
-    &quot;settings_type&quot;: null,
-    &quot;category&quot;: &quot;General&quot;,
-    &quot;default&quot;: &quot;root@some.host.fqdn&quot;,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -13961,14 +11359,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/smart_proxies?type=unknown_type
-500
-{
-  &quot;error&quot;: {
-    &quot;message&quot;: &quot;Invalid feature type. Select one of: TFTP, BMC, DNS, DHCP, Puppetca, Puppet.&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -14057,19 +11447,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/smart_proxies/980190962-dhcp-proxy
-200
-{
-  &quot;smart_proxy&quot;: {
-    &quot;name&quot;: &quot;DHCP Proxy&quot;,
-    &quot;features&quot;: [],
-    &quot;url&quot;: &quot;https://somewhere.net:8443&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -14126,24 +11503,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>POST /api/smart_proxies
-{
-  &quot;smart_proxy&quot;: {
-    &quot;url&quot;: &quot;http://server:8443&quot;,
-    &quot;name&quot;: &quot;master02&quot;
-  }
-}
-201
-{
-  &quot;smart_proxy&quot;: {
-    &quot;url&quot;: &quot;http://server:8443&quot;,
-    &quot;name&quot;: &quot;master02&quot;,
-    &quot;id&quot;: 980190963,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:52Z&quot;,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:52Z&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -14232,21 +11591,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>PUT /api/smart_proxies/980190962-dhcp-proxy
-{
-  &quot;smart_proxy&quot;: {}
-}
-200
-{
-  &quot;smart_proxy&quot;: {
-    &quot;url&quot;: &quot;https://somewhere.net:8443&quot;,
-    &quot;name&quot;: &quot;DHCP Proxy&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -14351,18 +11695,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>DELETE /api/smart_proxies/281110143-unused-proxy
-200
-{
-  &quot;smart_proxy&quot;: {
-    &quot;url&quot;: &quot;http://else.where:4567&quot;,
-    &quot;name&quot;: &quot;Unused Proxy&quot;,
-    &quot;id&quot;: 281110143,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -14436,72 +11768,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/subnets
-200
-[
-  {
-    &quot;subnet&quot;: {
-      &quot;priority&quot;: null,
-      &quot;name&quot;: &quot;one&quot;,
-      &quot;network&quot;: &quot;2.3.4.0&quot;,
-      &quot;dns_secondary&quot;: null,
-      &quot;domain_ids&quot;: [
-        822172901
-      ],
-      &quot;tftp_id&quot;: 298486374,
-      &quot;id&quot;: 980190962,
-      &quot;dhcp_id&quot;: 980190962,
-      &quot;dns_id&quot;: 113629430,
-      &quot;dns_primary&quot;: null,
-      &quot;vlanid&quot;: &quot;41&quot;,
-      &quot;mask&quot;: &quot;255.255.255.0&quot;,
-      &quot;from&quot;: null,
-      &quot;gateway&quot;: null,
-      &quot;to&quot;: null
-    }
-  },
-  {
-    &quot;subnet&quot;: {
-      &quot;priority&quot;: null,
-      &quot;name&quot;: &quot;two&quot;,
-      &quot;network&quot;: &quot;3.3.4.0&quot;,
-      &quot;dns_secondary&quot;: null,
-      &quot;domain_ids&quot;: [
-        534821992
-      ],
-      &quot;tftp_id&quot;: 298486374,
-      &quot;id&quot;: 298486374,
-      &quot;dhcp_id&quot;: 980190962,
-      &quot;dns_id&quot;: null,
-      &quot;dns_primary&quot;: null,
-      &quot;vlanid&quot;: &quot;42&quot;,
-      &quot;mask&quot;: &quot;255.255.255.0&quot;,
-      &quot;from&quot;: null,
-      &quot;gateway&quot;: null,
-      &quot;to&quot;: null
-    }
-  },
-  {
-    &quot;subnet&quot;: {
-      &quot;priority&quot;: null,
-      &quot;name&quot;: &quot;three&quot;,
-      &quot;network&quot;: &quot;3.3.4.3&quot;,
-      &quot;dns_secondary&quot;: null,
-      &quot;domain_ids&quot;: [],
-      &quot;tftp_id&quot;: 298486374,
-      &quot;id&quot;: 113629430,
-      &quot;dhcp_id&quot;: 980190962,
-      &quot;dns_id&quot;: null,
-      &quot;dns_primary&quot;: null,
-      &quot;vlanid&quot;: &quot;43&quot;,
-      &quot;mask&quot;: &quot;255.255.255.0&quot;,
-      &quot;from&quot;: null,
-      &quot;gateway&quot;: null,
-      &quot;to&quot;: null
-    }
-  }
-]</pre>
 
 
           <h2>Params</h2>
@@ -14606,45 +11872,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/subnets/980190962
-200
-{
-  &quot;subnet&quot;: {
-    &quot;priority&quot;: null,
-    &quot;name&quot;: &quot;one&quot;,
-    &quot;network&quot;: &quot;2.3.4.0&quot;,
-    &quot;dns&quot;: {
-      &quot;url&quot;: &quot;http://else.where:4567&quot;,
-      &quot;name&quot;: &quot;DNS Proxy&quot;,
-      &quot;id&quot;: 113629430
-    },
-    &quot;dns_secondary&quot;: null,
-    &quot;domain_ids&quot;: [
-      822172901
-    ],
-    &quot;tftp_id&quot;: 298486374,
-    &quot;id&quot;: 980190962,
-    &quot;dhcp_id&quot;: 980190962,
-    &quot;dns_id&quot;: 113629430,
-    &quot;dhcp&quot;: {
-      &quot;url&quot;: &quot;https://somewhere.net:8443&quot;,
-      &quot;name&quot;: &quot;DHCP Proxy&quot;,
-      &quot;id&quot;: 980190962
-    },
-    &quot;dns_primary&quot;: null,
-    &quot;vlanid&quot;: &quot;41&quot;,
-    &quot;mask&quot;: &quot;255.255.255.0&quot;,
-    &quot;tftp&quot;: {
-      &quot;url&quot;: &quot;http://somewhere.else&quot;,
-      &quot;name&quot;: &quot;TFTP Proxy&quot;,
-      &quot;id&quot;: 298486374
-    },
-    &quot;from&quot;: null,
-    &quot;gateway&quot;: null,
-    &quot;to&quot;: null
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -14701,38 +11928,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>POST /api/subnets
-{
-  &quot;subnet&quot;: {
-    &quot;name&quot;: &quot;QA2&quot;,
-    &quot;network&quot;: &quot;10.35.2.27&quot;,
-    &quot;mask&quot;: &quot;255.255.255.0&quot;
-  }
-}
-200
-{
-  &quot;subnet&quot;: {
-    &quot;priority&quot;: null,
-    &quot;name&quot;: &quot;QA2&quot;,
-    &quot;dns&quot;: null,
-    &quot;network&quot;: &quot;10.35.2.27&quot;,
-    &quot;dns_secondary&quot;: null,
-    &quot;domain_ids&quot;: [],
-    &quot;id&quot;: 980190963,
-    &quot;tftp_id&quot;: null,
-    &quot;dhcp_id&quot;: null,
-    &quot;dns_id&quot;: null,
-    &quot;dhcp&quot;: null,
-    &quot;dns_primary&quot;: null,
-    &quot;vlanid&quot;: null,
-    &quot;mask&quot;: &quot;255.255.255.0&quot;,
-    &quot;tftp&quot;: null,
-    &quot;gateway&quot;: null,
-    &quot;from&quot;: null,
-    &quot;to&quot;: null
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -14997,48 +12192,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>PUT /api/subnets/980190962
-{
-  &quot;subnet&quot;: {}
-}
-200
-{
-  &quot;subnet&quot;: {
-    &quot;priority&quot;: null,
-    &quot;name&quot;: &quot;one&quot;,
-    &quot;dns&quot;: {
-      &quot;url&quot;: &quot;http://else.where:4567&quot;,
-      &quot;name&quot;: &quot;DNS Proxy&quot;,
-      &quot;id&quot;: 113629430
-    },
-    &quot;network&quot;: &quot;2.3.4.0&quot;,
-    &quot;dns_secondary&quot;: null,
-    &quot;domain_ids&quot;: [
-      822172901
-    ],
-    &quot;id&quot;: 980190962,
-    &quot;tftp_id&quot;: 298486374,
-    &quot;dhcp_id&quot;: 980190962,
-    &quot;dns_id&quot;: 113629430,
-    &quot;dhcp&quot;: {
-      &quot;url&quot;: &quot;https://somewhere.net:8443&quot;,
-      &quot;name&quot;: &quot;DHCP Proxy&quot;,
-      &quot;id&quot;: 980190962
-    },
-    &quot;dns_primary&quot;: null,
-    &quot;vlanid&quot;: &quot;41&quot;,
-    &quot;mask&quot;: &quot;255.255.255.0&quot;,
-    &quot;tftp&quot;: {
-      &quot;url&quot;: &quot;http://somewhere.else&quot;,
-      &quot;name&quot;: &quot;TFTP Proxy&quot;,
-      &quot;id&quot;: 298486374
-    },
-    &quot;gateway&quot;: null,
-    &quot;from&quot;: null,
-    &quot;to&quot;: null
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -15319,42 +12472,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>DELETE /api/subnets/980190962
-422
-{
-  &quot;subnet&quot;: {
-    &quot;id&quot;: 980190962,
-    &quot;errors&quot;: {
-      &quot;base&quot;: [
-        &quot;2.3.4.0/24 is used by temp-01.yourdomain.net&quot;,
-        &quot;2.3.4.0/24 is used by suse01.yourdomain.net&quot;,
-        &quot;2.3.4.0/24 is used by temp01.yourdomain.net&quot;,
-        &quot;2.3.4.0/24 is used by anotherfullhost&quot;,
-        &quot;2.3.4.0/24 is used by temp.yourdomain.net&quot;,
-        &quot;2.3.4.0/24 is used by my5name.mydomain.net&quot;,
-        &quot;2.3.4.0/24 is used by dhcp.mydomain.net&quot;,
-        &quot;2.3.4.0/24 is used by otherfullhost&quot;,
-        &quot;2.3.4.0/24 is used by sdhcp.mydomain.net&quot;,
-        &quot;2.3.4.0/24 is used by sol10host&quot;,
-        &quot;2.3.4.0/24 is used by sdhcp.mydomain.net&quot;
-      ]
-    },
-    &quot;full_messages&quot;: [
-      &quot;2.3.4.0/24 is used by temp-01.yourdomain.net&quot;,
-      &quot;2.3.4.0/24 is used by suse01.yourdomain.net&quot;,
-      &quot;2.3.4.0/24 is used by temp01.yourdomain.net&quot;,
-      &quot;2.3.4.0/24 is used by anotherfullhost&quot;,
-      &quot;2.3.4.0/24 is used by temp.yourdomain.net&quot;,
-      &quot;2.3.4.0/24 is used by my5name.mydomain.net&quot;,
-      &quot;2.3.4.0/24 is used by dhcp.mydomain.net&quot;,
-      &quot;2.3.4.0/24 is used by otherfullhost&quot;,
-      &quot;2.3.4.0/24 is used by sdhcp.mydomain.net&quot;,
-      &quot;2.3.4.0/24 is used by sol10host&quot;,
-      &quot;2.3.4.0/24 is used by sdhcp.mydomain.net&quot;
-    ]
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -15428,41 +12545,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/template_kinds
-200
-[
-  {
-    &quot;template_kind&quot;: {
-      &quot;name&quot;: &quot;PXELinux&quot;,
-      &quot;id&quot;: 452984334
-    }
-  },
-  {
-    &quot;template_kind&quot;: {
-      &quot;name&quot;: &quot;script&quot;,
-      &quot;id&quot;: 478250810
-    }
-  },
-  {
-    &quot;template_kind&quot;: {
-      &quot;name&quot;: &quot;gPXE&quot;,
-      &quot;id&quot;: 158998239
-    }
-  },
-  {
-    &quot;template_kind&quot;: {
-      &quot;name&quot;: &quot;finish&quot;,
-      &quot;id&quot;: 550103832
-    }
-  },
-  {
-    &quot;template_kind&quot;: {
-      &quot;name&quot;: &quot;provision&quot;,
-      &quot;id&quot;: 983253650
-    }
-  }
-]</pre>
 
 
           <h2>Params</h2>
@@ -15552,27 +12634,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/usergroups
-200
-[
-  {
-    &quot;usergroup&quot;: {
-      &quot;name&quot;: &quot;MyString&quot;,
-      &quot;id&quot;: 980190962,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-    }
-  },
-  {
-    &quot;usergroup&quot;: {
-      &quot;name&quot;: &quot;MyString2&quot;,
-      &quot;id&quot;: 298486374,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-    }
-  }
-]</pre>
 
 
           <h2>Params</h2>
@@ -15677,17 +12738,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/usergroups/980190962
-200
-{
-  &quot;usergroup&quot;: {
-    &quot;name&quot;: &quot;MyString&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -15744,20 +12794,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>POST /api/usergroups
-{
-  &quot;usergroup&quot;: {
-    &quot;name&quot;: &quot;test_usergroup&quot;
-  }
-}
-201
-{
-  &quot;usergroup&quot;: {
-    &quot;name&quot;: &quot;test_usergroup&quot;,
-    &quot;id&quot;: 980190963
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -15830,18 +12866,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>PUT /api/usergroups/980190962
-{
-  &quot;usergroup&quot;: {}
-}
-200
-{
-  &quot;usergroup&quot;: {
-    &quot;name&quot;: &quot;MyString&quot;,
-    &quot;id&quot;: 980190962
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -15930,15 +12954,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>DELETE /api/usergroups/980190962
-200
-{
-  &quot;usergroup&quot;: {
-    &quot;name&quot;: &quot;MyString&quot;,
-    &quot;id&quot;: 980190962
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -16012,111 +13027,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/users
-200
-[
-  {
-    &quot;user&quot;: {
-      &quot;domains_andor&quot;: &quot;or&quot;,
-      &quot;filter_on_owner&quot;: null,
-      &quot;role_id&quot;: null,
-      &quot;mail&quot;: &quot;admin@someware.com&quot;,
-      &quot;id&quot;: 135138680,
-      &quot;hostgroups_andor&quot;: &quot;or&quot;,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;compute_resources_andor&quot;: &quot;or&quot;,
-      &quot;admin&quot;: true,
-      &quot;last_login_on&quot;: &quot;2009-10-12T21:50:04Z&quot;,
-      &quot;lastname&quot;: &quot;User&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;login&quot;: &quot;admin&quot;,
-      &quot;firstname&quot;: &quot;Admin&quot;,
-      &quot;facts_andor&quot;: &quot;or&quot;,
-      &quot;auth_source_id&quot;: 980190962
-    }
-  },
-  {
-    &quot;user&quot;: {
-      &quot;domains_andor&quot;: &quot;or&quot;,
-      &quot;filter_on_owner&quot;: null,
-      &quot;role_id&quot;: null,
-      &quot;mail&quot;: &quot;apiadmin@someware.com&quot;,
-      &quot;id&quot;: 886836129,
-      &quot;hostgroups_andor&quot;: &quot;or&quot;,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;compute_resources_andor&quot;: &quot;or&quot;,
-      &quot;admin&quot;: true,
-      &quot;last_login_on&quot;: &quot;2009-10-12T21:50:04Z&quot;,
-      &quot;lastname&quot;: &quot;User&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;login&quot;: &quot;apiadmin&quot;,
-      &quot;firstname&quot;: &quot;apiadmin&quot;,
-      &quot;facts_andor&quot;: &quot;or&quot;,
-      &quot;auth_source_id&quot;: 200482051
-    }
-  },
-  {
-    &quot;user&quot;: {
-      &quot;domains_andor&quot;: &quot;or&quot;,
-      &quot;filter_on_owner&quot;: null,
-      &quot;role_id&quot;: null,
-      &quot;mail&quot;: &quot;userone@someware.com&quot;,
-      &quot;id&quot;: 980190962,
-      &quot;hostgroups_andor&quot;: &quot;or&quot;,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;compute_resources_andor&quot;: &quot;or&quot;,
-      &quot;admin&quot;: false,
-      &quot;last_login_on&quot;: &quot;2009-10-12T21:50:04Z&quot;,
-      &quot;lastname&quot;: &quot;User&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;login&quot;: &quot;one&quot;,
-      &quot;firstname&quot;: &quot;One&quot;,
-      &quot;facts_andor&quot;: &quot;or&quot;,
-      &quot;auth_source_id&quot;: 980190962
-    }
-  },
-  {
-    &quot;user&quot;: {
-      &quot;domains_andor&quot;: &quot;or&quot;,
-      &quot;filter_on_owner&quot;: null,
-      &quot;role_id&quot;: null,
-      &quot;mail&quot;: &quot;testuser@someware.com&quot;,
-      &quot;id&quot;: 200482051,
-      &quot;hostgroups_andor&quot;: &quot;or&quot;,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;compute_resources_andor&quot;: &quot;or&quot;,
-      &quot;admin&quot;: false,
-      &quot;last_login_on&quot;: &quot;2009-10-12T21:50:04Z&quot;,
-      &quot;lastname&quot;: &quot;User&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;login&quot;: &quot;test&quot;,
-      &quot;firstname&quot;: &quot;test&quot;,
-      &quot;facts_andor&quot;: &quot;or&quot;,
-      &quot;auth_source_id&quot;: 200482051
-    }
-  },
-  {
-    &quot;user&quot;: {
-      &quot;domains_andor&quot;: &quot;or&quot;,
-      &quot;filter_on_owner&quot;: null,
-      &quot;role_id&quot;: null,
-      &quot;mail&quot;: &quot;usertwo@someware.com&quot;,
-      &quot;id&quot;: 298486374,
-      &quot;hostgroups_andor&quot;: &quot;or&quot;,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;compute_resources_andor&quot;: &quot;or&quot;,
-      &quot;admin&quot;: false,
-      &quot;last_login_on&quot;: &quot;2009-10-12T21:50:04Z&quot;,
-      &quot;lastname&quot;: &quot;User&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;login&quot;: &quot;two&quot;,
-      &quot;firstname&quot;: &quot;Two&quot;,
-      &quot;facts_andor&quot;: &quot;or&quot;,
-      &quot;auth_source_id&quot;: 980190962
-    }
-  }
-]</pre>
 
 
           <h2>Params</h2>
@@ -16221,90 +13131,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>GET /api/users/980190962-one
-200
-{
-  &quot;user&quot;: {
-    &quot;domains_andor&quot;: &quot;or&quot;,
-    &quot;filter_on_owner&quot;: null,
-    &quot;roles&quot;: [
-      {
-        &quot;role&quot;: {
-          &quot;name&quot;: &quot;Viewer&quot;,
-          &quot;id&quot;: 5,
-          &quot;builtin&quot;: 0,
-          &quot;permissions&quot;: [
-            &quot;view_architectures&quot;,
-            &quot;view_audit_logs&quot;,
-            &quot;view_authenticators&quot;,
-            &quot;access_dashboard&quot;,
-            &quot;view_domains&quot;,
-            &quot;view_environments&quot;,
-            &quot;view_external_variables&quot;,
-            &quot;view_facts&quot;,
-            &quot;view_globals&quot;,
-            &quot;view_hostgroups&quot;,
-            &quot;view_hosts&quot;,
-            &quot;view_locations&quot;,
-            &quot;view_media&quot;,
-            &quot;view_models&quot;,
-            &quot;view_operatingsystems&quot;,
-            &quot;view_ptables&quot;,
-            &quot;view_puppetclasses&quot;,
-            &quot;view_reports&quot;,
-            &quot;access_settings&quot;,
-            &quot;view_statistics&quot;,
-            &quot;view_organizations&quot;,
-            &quot;view_usergroups&quot;,
-            &quot;view_users&quot;
-          ]
-        }
-      },
-      {
-        &quot;role&quot;: {
-          &quot;name&quot;: &quot;Anonymous&quot;,
-          &quot;id&quot;: 7,
-          &quot;builtin&quot;: 2,
-          &quot;permissions&quot;: [
-            &quot;view_hosts&quot;
-          ]
-        }
-      }
-    ],
-    &quot;role_id&quot;: null,
-    &quot;auth_source_ldap&quot;: {
-      &quot;name&quot;: &quot;ldap&quot;,
-      &quot;tls&quot;: true,
-      &quot;attr_login&quot;: &quot;uid&quot;,
-      &quot;attr_firstname&quot;: &quot;givenName&quot;,
-      &quot;port&quot;: 123,
-      &quot;attr_lastname&quot;: &quot;sn&quot;,
-      &quot;id&quot;: 980190962,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;attr_mail&quot;: &quot;mail&quot;,
-      &quot;base_dn&quot;: &quot;dn=x,dn=y&quot;,
-      &quot;host&quot;: &quot;ldap&quot;,
-      &quot;account&quot;: null,
-      &quot;type&quot;: &quot;AuthSourceLdap&quot;,
-      &quot;onthefly_register&quot;: true,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-    },
-    &quot;mail&quot;: &quot;userone@someware.com&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;hostgroups_andor&quot;: &quot;or&quot;,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-    &quot;compute_resources_andor&quot;: &quot;or&quot;,
-    &quot;admin&quot;: false,
-    &quot;last_login_on&quot;: &quot;2009-10-12T21:50:04Z&quot;,
-    &quot;lastname&quot;: &quot;User&quot;,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-    &quot;login&quot;: &quot;one&quot;,
-    &quot;firstname&quot;: &quot;One&quot;,
-    &quot;facts_andor&quot;: &quot;or&quot;,
-    &quot;auth_source_id&quot;: 980190962
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -16529,29 +13355,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         <p>Adds role &#8216;Anonymous&#8217; to the user if it is not already present. Only admin can set admin account.</p>
-          <h2>Examples</h2>
-            <pre>PUT /api/users/980190963
-{
-  &quot;user&quot;: {
-    &quot;password_confirmation&quot;: &quot;DUMMY&quot;,
-    &quot;password&quot;: &quot;dummy&quot;,
-    &quot;login&quot;: &quot;johnsmith&quot;
-  }
-}
-422
-{
-  &quot;user&quot;: {
-    &quot;id&quot;: 980190963,
-    &quot;errors&quot;: {
-      &quot;password&quot;: [
-        &quot;doesn&#x27;t match confirmation&quot;
-      ]
-    },
-    &quot;full_messages&quot;: [
-      &quot;Password doesn&#x27;t match confirmation&quot;
-    ]
-  }
-}</pre>
 
 
           <h2>Params</h2>
@@ -16720,33 +13523,6 @@ PXE Default file has been deployed to all Smart Proxies</pre>
 
       <div>
         
-          <h2>Examples</h2>
-            <pre>DELETE /api/users/980190962
-200
-{
-  &quot;user&quot;: {
-    &quot;filter_on_owner&quot;: null,
-    &quot;domains_andor&quot;: &quot;or&quot;,
-    &quot;role_id&quot;: null,
-    &quot;organizations_andor&quot;: &quot;or&quot;,
-    &quot;mail&quot;: &quot;userone@someware.com&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-    &quot;hostgroups_andor&quot;: &quot;or&quot;,
-    &quot;compute_resources_andor&quot;: &quot;or&quot;,
-    &quot;admin&quot;: false,
-    &quot;password_hash&quot;: null,
-    &quot;last_login_on&quot;: &quot;2009-10-12T21:50:04Z&quot;,
-    &quot;locations_andor&quot;: &quot;or&quot;,
-    &quot;lastname&quot;: &quot;User&quot;,
-    &quot;password_salt&quot;: null,
-    &quot;login&quot;: &quot;one&quot;,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-    &quot;firstname&quot;: &quot;One&quot;,
-    &quot;facts_andor&quot;: &quot;or&quot;,
-    &quot;auth_source_id&quot;: 980190962
-  }
-}</pre>
 
 
           <h2>Params</h2>

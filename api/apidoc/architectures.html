@@ -61,44 +61,6 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/architectures
-200
-[
-  {
-    &quot;architecture&quot;: {
-      &quot;name&quot;: &quot;s390&quot;,
-      &quot;id&quot;: 381564594,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;operatingsystem_ids&quot;: [],
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
-    }
-  },
-  {
-    &quot;architecture&quot;: {
-      &quot;name&quot;: &quot;sparc&quot;,
-      &quot;id&quot;: 331892513,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;operatingsystem_ids&quot;: [
-        442321401
-      ],
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
-    }
-  },
-  {
-    &quot;architecture&quot;: {
-      &quot;name&quot;: &quot;x86_64&quot;,
-      &quot;id&quot;: 501905019,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;operatingsystem_ids&quot;: [
-        331303656,
-        309172073,
-        1073012828
-      ],
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
-    }
-  }
-]</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -199,22 +161,6 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/architectures/x86_64
-200
-{
-  &quot;architecture&quot;: {
-    &quot;name&quot;: &quot;x86_64&quot;,
-    &quot;id&quot;: 501905019,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-    &quot;operatingsystem_ids&quot;: [
-      309172073,
-      1073012828,
-      331303656
-    ],
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
-  }
-}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -267,23 +213,6 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">POST /api/architectures
-{
-  &quot;architecture&quot;: {
-    &quot;name&quot;: &quot;i386&quot;
-  }
-}
-200
-{
-  &quot;architecture&quot;: {
-    &quot;name&quot;: &quot;i386&quot;,
-    &quot;id&quot;: 501905020,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;operatingsystem_ids&quot;: [],
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-  }
-}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -368,18 +297,6 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/architectures/x86_64
-{
-  &quot;architecture&quot;: {}
-}
-200
-{
-  &quot;architecture&quot;: {
-    &quot;name&quot;: &quot;x86_64&quot;,
-    &quot;id&quot;: 501905019
-  }
-}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -480,15 +397,6 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/architectures/s390
-200
-{
-  &quot;architecture&quot;: {
-    &quot;name&quot;: &quot;s390&quot;,
-    &quot;id&quot;: 381564594
-  }
-}</pre>
 
         <h3>Params</h3>
         <table class='table'>

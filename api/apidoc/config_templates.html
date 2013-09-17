@@ -61,112 +61,6 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/config_templates
-200
-[
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
-      &quot;audit_comment&quot;: null,
-      &quot;id&quot;: 1007981701,
-      &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ks=&lt;%= foreman_url(\&quot;kickstart\&quot;)%&gt; ksdevice=bootif network kssendmac&quot;,
-      &quot;template_kind&quot;: {
-        &quot;name&quot;: &quot;PXELinux&quot;,
-        &quot;id&quot;: 452984334
-      }
-    }
-  },
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;MyFinish&quot;,
-      &quot;audit_comment&quot;: null,
-      &quot;id&quot;: 104314179,
-      &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;MyFinish&quot;,
-      &quot;template_kind&quot;: {
-        &quot;name&quot;: &quot;finish&quot;,
-        &quot;id&quot;: 550103832
-      }
-    }
-  },
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;MyScript&quot;,
-      &quot;audit_comment&quot;: null,
-      &quot;id&quot;: 981457253,
-      &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;MyText&quot;,
-      &quot;template_kind&quot;: {
-        &quot;name&quot;: &quot;script&quot;,
-        &quot;id&quot;: 478250810
-      }
-    }
-  },
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;MyString&quot;,
-      &quot;audit_comment&quot;: null,
-      &quot;id&quot;: 943779058,
-      &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;MyText&quot;,
-      &quot;template_kind&quot;: {
-        &quot;name&quot;: &quot;gPXE&quot;,
-        &quot;id&quot;: 158998239
-      }
-    }
-  },
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;MyString2&quot;,
-      &quot;audit_comment&quot;: null,
-      &quot;id&quot;: 269958254,
-      &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;MyText&quot;,
-      &quot;template_kind&quot;: {
-        &quot;name&quot;: &quot;provision&quot;,
-        &quot;id&quot;: 983253650
-      }
-    }
-  },
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;PXE Default File&quot;,
-      &quot;audit_comment&quot;: null,
-      &quot;id&quot;: 352050261,
-      &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ksdevice=bootif network kssendmac&quot;,
-      &quot;template_kind&quot;: {
-        &quot;name&quot;: &quot;PXELinux&quot;,
-        &quot;id&quot;: 452984334
-      }
-    }
-  },
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;PXE Default Menu&quot;,
-      &quot;audit_comment&quot;: null,
-      &quot;id&quot;: 684651467,
-      &quot;&quot;: null,
-      &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;FOO&quot;
-    }
-  },
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;PXE Localboot Default&quot;,
-      &quot;audit_comment&quot;: null,
-      &quot;id&quot;: 821548108,
-      &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;DEFAULT menu~PROMPT 0~MENU TITLE PXE Menu~TIMEOUT 200~TOTALTIMEOUT 6000~ONTIMEOUT local~~LABEL local~MENU LABEL (local)~MENU DEFAULT~LOCALBOOT 0&quot;,
-      &quot;template_kind&quot;: {
-        &quot;name&quot;: &quot;PXELinux&quot;,
-        &quot;id&quot;: 452984334
-      }
-    }
-  }
-]</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -267,22 +161,6 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/config_templates/centos5_3_pxelinux
-200
-{
-  &quot;config_template&quot;: {
-    &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
-    &quot;id&quot;: 1007981701,
-    &quot;audit_comment&quot;: null,
-    &quot;snippet&quot;: null,
-    &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ks=&lt;%= foreman_url(\&quot;kickstart\&quot;)%&gt; ksdevice=bootif network kssendmac&quot;,
-    &quot;template_kind&quot;: {
-      &quot;name&quot;: &quot;PXELinux&quot;,
-      &quot;id&quot;: 452984334
-    }
-  }
-}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -335,26 +213,6 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">POST /api/config_templates
-{
-  &quot;config_template&quot;: {
-    &quot;name&quot;: &quot;RandomName&quot;,
-    &quot;template&quot;: &quot;This is a test template&quot;,
-    &quot;template_kind_id&quot;: 1
-  }
-}
-200
-{
-  &quot;config_template&quot;: {
-    &quot;name&quot;: &quot;RandomName&quot;,
-    &quot;audit_comment&quot;: null,
-    &quot;id&quot;: 1007981702,
-    &quot;&quot;: null,
-    &quot;snippet&quot;: null,
-    &quot;template&quot;: &quot;This is a test template&quot;
-  }
-}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -519,27 +377,6 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/config_templates/centos5_3_pxelinux
-{
-  &quot;config_template&quot;: {
-    &quot;audit_comment&quot;: &quot;aha&quot;,
-    &quot;template&quot;: &quot;tmp&quot;
-  }
-}
-200
-{
-  &quot;config_template&quot;: {
-    &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
-    &quot;id&quot;: 1007981701,
-    &quot;template&quot;: &quot;tmp&quot;,
-    &quot;snippet&quot;: null,
-    &quot;template_kind&quot;: {
-      &quot;name&quot;: &quot;PXELinux&quot;,
-      &quot;id&quot;: 452984334
-    }
-  }
-}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -772,21 +609,6 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/config_templates/centos5_3_pxelinux
-200
-{
-  &quot;config_template&quot;: {
-    &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
-    &quot;id&quot;: 1007981701,
-    &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ks=&lt;%= foreman_url(\&quot;kickstart\&quot;)%&gt; ksdevice=bootif network kssendmac&quot;,
-    &quot;snippet&quot;: null,
-    &quot;template_kind&quot;: {
-      &quot;name&quot;: &quot;PXELinux&quot;,
-      &quot;id&quot;: 452984334
-    }
-  }
-}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -839,10 +661,6 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/config_templates/build_pxe_default
-200
-PXE Default file has been deployed to all Smart Proxies</pre>
 
     </div>
 </div>

@@ -61,33 +61,6 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/bookmarks
-200
-[
-  {
-    &quot;bookmark&quot;: {
-      &quot;name&quot;: &quot;bar&quot;,
-      &quot;query&quot;: &quot;bar=car&quot;,
-      &quot;id&quot;: 298486374,
-      &quot;owner_id&quot;: null,
-      &quot;public&quot;: false,
-      &quot;controller&quot;: &quot;hosts&quot;,
-      &quot;owner_type&quot;: null
-    }
-  },
-  {
-    &quot;bookmark&quot;: {
-      &quot;name&quot;: &quot;foo&quot;,
-      &quot;query&quot;: &quot;foo=boo&quot;,
-      &quot;id&quot;: 980190962,
-      &quot;owner_id&quot;: null,
-      &quot;public&quot;: true,
-      &quot;controller&quot;: &quot;hosts&quot;,
-      &quot;owner_type&quot;: null
-    }
-  }
-]</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -156,20 +129,6 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/bookmarks/foo
-200
-{
-  &quot;bookmark&quot;: {
-    &quot;name&quot;: &quot;foo&quot;,
-    &quot;query&quot;: &quot;foo=boo&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;owner_id&quot;: null,
-    &quot;public&quot;: true,
-    &quot;controller&quot;: &quot;hosts&quot;,
-    &quot;owner_type&quot;: null
-  }
-}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -222,28 +181,6 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">POST /api/bookmarks
-{
-  &quot;bookmark&quot;: {
-    &quot;query&quot;: &quot;bar&quot;,
-    &quot;name&quot;: &quot;foo-bar&quot;,
-    &quot;public&quot;: false,
-    &quot;controller&quot;: &quot;hosts&quot;
-  }
-}
-200
-{
-  &quot;bookmark&quot;: {
-    &quot;name&quot;: &quot;foo-bar&quot;,
-    &quot;query&quot;: &quot;bar&quot;,
-    &quot;id&quot;: 980190963,
-    &quot;owner_id&quot;: 886836129,
-    &quot;public&quot;: false,
-    &quot;controller&quot;: &quot;hosts&quot;,
-    &quot;owner_type&quot;: &quot;User&quot;
-  }
-}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -360,26 +297,6 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/bookmarks/foo
-{
-  &quot;bookmark&quot;: {}
-}
-200
-{
-  &quot;bookmark&quot;: {
-    &quot;name&quot;: &quot;foo&quot;,
-    &quot;query&quot;: &quot;foo=boo&quot;,
-    &quot;user&quot;: {
-      &quot;name&quot;: &quot;apiadmin User&quot;,
-      &quot;login&quot;: &quot;apiadmin&quot;,
-      &quot;email&quot;: &quot;apiadmin@someware.com&quot;
-    },
-    &quot;id&quot;: 980190962,
-    &quot;public&quot;: true,
-    &quot;controller&quot;: &quot;hosts&quot;
-  }
-}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -512,20 +429,6 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/bookmarks/foo
-200
-{
-  &quot;bookmark&quot;: {
-    &quot;query&quot;: &quot;foo=boo&quot;,
-    &quot;name&quot;: &quot;foo&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;public&quot;: true,
-    &quot;owner_id&quot;: null,
-    &quot;controller&quot;: &quot;hosts&quot;,
-    &quot;owner_type&quot;: null
-  }
-}</pre>
 
         <h3>Params</h3>
         <table class='table'>
