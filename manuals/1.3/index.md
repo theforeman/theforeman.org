@@ -25,6 +25,8 @@ version: 1.3
 {%include manuals/1.3/3.2.1_installation.md %}
 ### 3.2.2 Installer Options
 {%include manuals/1.3/3.2.2_installer_options.md %}
+### 3.2.3 Installation Scenarios
+{%include manuals/1.3/3.2.3_installation_scenarios.md %}
 ## 3.3 Install From Packages
 {%include manuals/1.3/3.3_install_from_packages.md %}
 ### 3.3.1 RPM Packages
