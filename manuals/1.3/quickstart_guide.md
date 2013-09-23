@@ -24,6 +24,7 @@ Or view the quickstart screencasts:
 ### Additional reading...
 
 * [Manual installation and further reading](/manuals/1.3/index.html)
+* [More installation options and scenarios](/manuals/1.3/index.html#3.2.2InstallerOptions)
 * [Managing a datacenter with Foreman and Puppet](http://engineering.yakaz.com/managing-an-infrastructure-datacenter-with-foreman-and-puppet.html)
 * [EC2 provisioning using Foreman](http://blog.theforeman.org/2012/05/ec2-provisioning-using-foreman.html)
 * [Creating a new host using the Foreman API](http://blog.theforeman.org/2012/01/creating-new-host-using-foreman-api.html)
