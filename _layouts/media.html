@@ -11,6 +11,7 @@ pagename: Screenshots & Videos
         <li><a href="#talks" data-toggle="tab">Talks</a></li>
         <li><a href="#screencasts" data-toggle="tab">Screencasts</a></li>
         <li><a href="#deepdives" data-toggle="tab">Deep Dives</a></li>
+        <li><a href="#demos" data-toggle="tab">Sprint Demos</a></li>
         <li><a href="#presentations" data-toggle="tab">Presentations</a></li>
       </ul>
       <div class="tab-content">
@@ -124,6 +125,15 @@ pagename: Screenshots & Videos
           <iframe width="560" height="315" link="http://www.youtube.com/embed/CmKoEHCYROQ" frameborder="0" allowfullscreen></iframe>
         </div>
 
+        <div class="tab-pane" id="demos">
+          <h2>Sprint Demos</h2>
+          <p>Regular end of sprint demos are recorded showing a selection of the recent work going into Foreman and related projects.</p>
+
+          <h3>Sprint 15</h3>
+          <p>Covers two pane UI, new provisioning template editor, Hammer CLI adapters and CSV output, Chef integration status, a test framework for plugins, Google Compute Engine support and the foreman-background plugin.</p>
+          <iframe width="560" height="315" link="http://www.youtube.com/embed/6B4F563l-E0" frameborder="0" allowfullscreen></iframe>
+        </div>
+
         <div class="tab-pane" id="presentations">
           <iframe width="550" height="400" link="http://prezi.com/embed/btaqhly8_rx7/?bgcolor=ffffff&amp;lock_to_path=1&amp;autoplay=no&amp;autohide_ctrls=0" frameBorder="0"></iframe>
           <br>
@@ -142,7 +152,7 @@ $(function() {
       var contentID = e.target.toString().match(/#.+/gi)[0]; //get anchor
       var content = $(contentID + ' iframe')
        //load content for selected tab
-      if(contentID == "#talks" || contentID == '#screencasts' || contentID == '#deepdives' || contentID == "#presentations"){
+      if(contentID == "#talks" || contentID == '#screencasts' || contentID == '#deepdives' || contentID == "#presentations" || contentID == '#demos'){
         content.each(function(i){$(this).attr('src', $(this).attr('link'))});
       }
     });
