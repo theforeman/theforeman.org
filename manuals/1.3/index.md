@@ -17,8 +17,12 @@ version: 1.3
 
 # 3. Installing Foreman
 {% include manuals/1.3/3_installing_foreman.md %}
-## 3.1 Supported Platforms
-{% include manuals/1.3/3.1_platforms.md %}
+## 3.1 System Requirements
+{% include manuals/1.3/3.1_system_requirements.md %}
+### 3.1.1 Supported Platforms
+{% include manuals/1.3/3.1.1_supported_platforms.md %}
+### 3.1.2 Firewall Configuration
+{% include manuals/1.3/3.1.2_firewall_configuration.md %}
 ## 3.2 Foreman Installer
 {%include manuals/1.3/3.2_foreman_installer.md %}
 ### 3.2.1 Installation

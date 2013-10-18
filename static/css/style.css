@@ -140,3 +140,8 @@ p.tagline {
   border-bottom-color: #FFFFFF;
   border-top-color: #FFFFFF;
 }
+
+.footnote {
+  color: #cd5c5c;
+  font-weight: bold
+}
