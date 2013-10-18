@@ -115,8 +115,19 @@ version: 1.3
 
 #5. Advanced Foreman
 {%include manuals/1.3/missing.html %}
+
 ## 5.1 API
-{%include manuals/1.3/missing.html %}
+{%include manuals/1.3/5.1_api.md %}
+### 5.1.1 Overview of Rabl File Structure/Setup
+{%include manuals/1.3/5.1.1_api_rabl_overview.md %}
+### 5.1.2 JSON Response for Collections
+{%include manuals/1.3/5.1.2_api_json_collections.md %}
+### 5.1.3 JSON Response for Single Objects
+{%include manuals/1.3/5.1.3_api_json_single_objects.md %}
+### 5.1.4 Nested API routes
+{%include manuals/1.3/5.1.4_nested_api_routes.md %}
+### 5.1.5 Versioning
+{%include manuals/1.3/5.1.5_versioning.md %}
 
 ## 5.2 Compute Resources
 {%include manuals/1.3/5.2_compute_resources.md %}
