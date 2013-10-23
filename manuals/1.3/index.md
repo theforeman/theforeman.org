@@ -124,16 +124,18 @@ version: 1.3
 {%include manuals/1.3/5.2.1_cr_using.md %}
 ### 5.2.2 EC2 Notes
 {%include manuals/1.3/5.2.2_cr_ec2.md %}
-### 5.2.3 Libvirt Notes
-{%include manuals/1.3/5.2.3_cr_libvirt.md %}
-### 5.2.4 OpenStack Notes
-{%include manuals/1.3/5.2.4_cr_openstack.md %}
-### 5.2.5 oVirt / RHEV Notes
-{%include manuals/1.3/5.2.5_cr_ovirt.md %}
-### 5.2.6 Rackspace Notes
-{%include manuals/1.3/5.2.6_cr_rackspace.md %}
-### 5.2.7 VMware Notes
-{%include manuals/1.3/5.2.7_cr_vmware.md %}
+### 5.2.3 Google Compute Engine Notes
+{%include manuals/1.3/5.2.3_cr_gce.md %}
+### 5.2.4 Libvirt Notes
+{%include manuals/1.3/5.2.4_cr_libvirt.md %}
+### 5.2.5 OpenStack Notes
+{%include manuals/1.3/5.2.5_cr_openstack.md %}
+### 5.2.6 oVirt / RHEV Notes
+{%include manuals/1.3/5.2.6_cr_ovirt.md %}
+### 5.2.7 Rackspace Notes
+{%include manuals/1.3/5.2.7_cr_rackspace.md %}
+### 5.2.8 VMware Notes
+{%include manuals/1.3/5.2.8_cr_vmware.md %}
 
 ## 5.3 Install Locations
 {%include manuals/1.3/missing.html %}
