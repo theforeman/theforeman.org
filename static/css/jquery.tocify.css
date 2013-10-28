@@ -4,7 +4,11 @@
  */
 
 /* The Table of Contents container element */
-#toc { position: fixed;}
+#toc {
+    position: fixed;
+    overflow: auto;
+    max-height: 90%;
+}
 @media (min-width:1px) and (max-width:767px) { #toc { position: static} }
 
 
@@ -69,7 +73,6 @@
 }
 .bs-docs-sidenav > li > a {
     display: block;
-    margin: 0 0 -1px;
     padding: 8px 14px;
     border: 1px solid #e5e5e5;
 }
