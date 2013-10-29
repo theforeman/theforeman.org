@@ -114,7 +114,6 @@ version: 1.3
 {%include manuals/1.3/4.4.4_prov_archs.md %}
 
 #5. Advanced Foreman
-{%include manuals/1.3/missing.html %}
 
 ## 5.1 API
 {%include manuals/1.3/5.1_api.md %}
