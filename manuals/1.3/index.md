@@ -117,7 +117,10 @@ version: 1.3
 
 ## 4.5 Command Line Interface
 {%include manuals/1.3/4.5_cli.md %}
-
+### 4.5.1 Usage Examples
+{%include manuals/1.3/4.5.1_cli_examples.md %}
+### 4.5.2 Success Story
+{%include manuals/1.3/4.5.2_cli_success.md %}
 
 #5. Advanced Foreman
 
