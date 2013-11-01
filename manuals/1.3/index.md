@@ -53,6 +53,8 @@ version: 1.3
 {%include manuals/1.3/3.5.4_puppet_reports.md %}
 ### 3.5.5 Facts and the ENC
 {%include manuals/1.3/3.5.5_facts_and_the_enc.md %}
+### 3.5.6 CLI
+{%include manuals/1.3/3.5.6_cli.md %}
 ## 3.6 Upgrade
 {%include manuals/1.3/3.6_upgrade.md %}
 
@@ -112,6 +114,10 @@ version: 1.3
 {%include manuals/1.3/4.4.4_prov_ptables.md %}
 ### 4.4.5 Architectures
 {%include manuals/1.3/4.4.4_prov_archs.md %}
+
+## 4.5 Command Line Interface
+{%include manuals/1.3/4.5_cli.md %}
+
 
 #5. Advanced Foreman
 
