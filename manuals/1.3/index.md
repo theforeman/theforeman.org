@@ -126,8 +126,8 @@ version: 1.3
 
 ## 5.1 API
 {%include manuals/1.3/5.1_api.md %}
-### 5.1.1 Overview of Rabl File Structure/Setup
-{%include manuals/1.3/5.1.1_api_rabl_overview.md %}
+### 5.1.1 Overview of Object Views
+{%include manuals/1.3/5.1.1_api_views_overview.md %}
 ### 5.1.2 JSON Response for Collections
 {%include manuals/1.3/5.1.2_api_json_collections.md %}
 ### 5.1.3 JSON Response for Single Objects
