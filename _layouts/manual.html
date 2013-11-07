@@ -1,5 +1,6 @@
 ---
 pagename: Manual
+latestversion: 1.3
 ---
 {% include header.html %}
 
@@ -7,6 +8,12 @@ pagename: Manual
     <div id="content" class="container">
       <div class="row">
         <div id="toc" class="span3">
+          {% if page.version != page.latestversion %}
+          <div class="alert alert-warn">
+            <p style="margin-bottom: 3px; font-weight: bold">Newer version available</p>
+            <p style="margin-bottom: 0">This manual is for Foreman {{ page.version }}, but the <a href="{{ site.baseurl }}manuals/{{ page.latestversion }}/index.html">latest version is {{ page.latestversion }}</a>.</p>
+          </div>
+          {% endif %}
         </div>
         <div id="doc" class="offset3 span9">
           {{ content  }}

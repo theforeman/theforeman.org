@@ -1,6 +1,7 @@
 ---
 layout: manual
 title: Foreman 1.2 Manual
+version: 1.2
 ---
 
 # 1. Foreman 1.2 Manual
