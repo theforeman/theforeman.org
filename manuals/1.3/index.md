@@ -136,6 +136,8 @@ version: 1.3
 {%include manuals/1.3/5.1.4_nested_api_routes.md %}
 ### 5.1.5 Versioning
 {%include manuals/1.3/5.1.5_versioning.md %}
+### 5.1.6 Request Examples
+{%include manuals/1.3/5.1.6_request_examples.md %}
 
 ## 5.2 Compute Resources
 {%include manuals/1.3/5.2_compute_resources.md %}
