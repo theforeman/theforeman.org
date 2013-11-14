@@ -126,17 +126,17 @@ version: 1.3
 
 ## 5.1 API
 {%include manuals/1.3/5.1_api.md %}
-### 5.1.1 Overview of Object Views
-{%include manuals/1.3/5.1.1_api_views_overview.md %}
-### 5.1.2 Request Examples
-{%include manuals/1.3/5.1.2_request_examples.md %}
-### 5.1.3 JSON Response for Collections
-{%include manuals/1.3/5.1.3_api_json_collections.md %}
-### 5.1.4 JSON Response for Single Objects
-{%include manuals/1.3/5.1.4_api_json_single_objects.md %}
+### 5.1.1 CRUD Request Examples
+{%include manuals/1.3/5.1.1_request_examples.md %}
+### 5.1.2 JSON Response Format for Collections
+{%include manuals/1.3/5.1.2_api_json_collections.md %}
+### 5.1.3 JSON Response Format for Single Objects
+{%include manuals/1.3/5.1.3_api_json_single_objects.md %}
+### 5.1.4 Customize JSON Responses
+{%include manuals/1.3/5.1.4_api_customize.md %}
 ### 5.1.5 Nested API routes
 {%include manuals/1.3/5.1.5_nested_api_routes.md %}
-### 5.1.6 Versioning
+### 5.1.6 API Versioning
 {%include manuals/1.3/5.1.6_versioning.md %}
 
 ## 5.2 Compute Resources
