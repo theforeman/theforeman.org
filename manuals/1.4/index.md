@@ -162,19 +162,22 @@ version: 1.4
 {%include manuals/1.4/missing.html %}
 ## 5.4 Securing Communications with SSL
 {%include manuals/1.4/5.4_communications.md %}
-## 5.4.1 Securing Puppet Master Requests
+### 5.4.1 Securing Puppet Master Requests
 {%include manuals/1.4/5.4.1_comms_puppetmaster.md %}
-## 5.4.2 Securing Smart Proxy Requests
+### 5.4.2 Securing Smart Proxy Requests
 {%include manuals/1.4/5.4.2_comms_proxy.md %}
 ## 5.5 Backup, Recovery and Migration
 {%include manuals/1.4/5.5_backup_and_recovery.md %}
-## 5.5.1 Backup
+### 5.5.1 Backup
 {%include manuals/1.4/5.5.1_backup.md %}
-## 5.5.2 Recovery
+### 5.5.2 Recovery
 {%include manuals/1.4/5.5.2_recovery.md %}
 
 ## 5.6 Rails Console
 {%include manuals/1.4/5.6_rails_console.md %}
 
-# 6. Troubleshooting
-{%include manuals/1.4/6_troubleshooting.md %}
+# 6. Plugins
+{%include manuals/1.4/6_plugins.md %}
+
+# 7. Troubleshooting
+{%include manuals/1.4/7_troubleshooting.md %}
