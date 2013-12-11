@@ -173,5 +173,8 @@ version: 1.3
 ## 5.5.2 Recovery
 {%include manuals/1.3/5.5.2_recovery.md %}
 
+## 5.6 Rails Console
+{%include manuals/1.3/5.6_rails_console.md %}
+
 # 6. Troubleshooting
 {%include manuals/1.3/6_troubleshooting.md %}
