@@ -40,7 +40,7 @@
               {% if page.url != "/index.html" %}<img alt="Foreman" class="logo" src="{{ site.baseurl }}static/images/foreman.png" />{% endif %}<a class="brand" href="/">Foreman</a>
               <div class="nav-collapse collapse">
                 <ul class="nav">
-                  <li class=""> <!-- fix active -->
+                  <li class="dropdown"> <!-- fix active -->
                     <a class="dropdown-toggle" id="dManual" data-toggle="dropdown" data-target="#" href="{{ site.baseurl}}manuals/1.2/index.html">
                       Manual
                       <b class="caret"></b>
@@ -59,6 +59,18 @@
                   {% endif %}
                   <li class="{{ active }}"><a href="{{ site.baseurl}}{{ link.url }}"> {{ link.text }} </a></li>
                   {% endfor %}
+
+
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" id="dApi" role="button" data-toggle="dropdown" href="#">
+                      API
+                      <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dApi">
+                      <li><a tabindex="-1" href="{{ site.baseurl }}api.html" style="font-weight: bold">v1 (default)</a></li>
+                      <li><a tabindex="-1" href="{{ site.baseurl }}api_v2.html">v2 (development)</a></li>
+                    </ul>
+                  </li>
                 </ul>
                 {% include releasesplash.html %}
               </div>
