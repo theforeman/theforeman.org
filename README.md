@@ -28,3 +28,19 @@ To start Jekyll server locally.
 4. Run `jekyll serve --watch` and open your browser to http://localhost:4000.
 5. Make some changes, refresh your browser to preview them.
 6. Submit a pull request.
+
+## Updating API Auto-Generated Docs by apipie
+
+Generate API docs in Foreman
+1. cd to foreman directory
+2. rake apipie:cache
+
+Copy docs to repo
+3. cd to theforeman.org directory
+4. cp -r dir/to/foreman/public/apipie-cache/apidoc api/
+5. cp dir/to/foreman/public/apipie-cache/apidoc.* api/
+
+Update href in html files
+6. Edit file api/apidoc/v1.html - change `href="../apidoc/v1` to `href="../apidoc/v1.html`
+7. Edit file api/apidoc/v2.html - change `href="../apidoc/v2` to `href="../apidoc/v2.html`
+
