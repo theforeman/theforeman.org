@@ -1,4 +1,4 @@
-f---
+---
 layout: contribute
 title: Contributing to Foreman
 ---
