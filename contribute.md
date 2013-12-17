@@ -28,7 +28,8 @@ Master is frozen between major releases.
     * `git remote add upstream https://github.com/theforeman/foreman.git`
     * `git fetch upstream`
 
-4. Install all required gems: `bundle install`
+4. Copy `config/settings.yaml.example` to `config/settings.yaml`
+5. Install all required gems: `bundle install`
 
 You may get some failures when installing the required gems due to some
 native libraries being required (notably libvirt-devel &
@@ -39,11 +40,10 @@ for RHEL/Fedora based distributions).
 You can also exclude these features by using `bundle install --without libvirt postgresql` etc (groups are under bundler.d/).
 
 ### Setup test environment
-1. Copy `config/settings.yaml.example` to `config/settings.yaml`
-2. Copy `config/database.yml.example` to `config/database.yml`
-3. Create your database: `rake db:migrate`
-4. Run all the tests: `rake test`
-5. Or a single test: `ruby -Itest test/functional/your_test.rb`
+1. Copy `config/database.yml.example` to `config/database.yml`
+2. Create your database: `rake db:migrate`
+3. Run all the tests: `rake test`
+4. Or a single test: `ruby -Itest test/functional/your_test.rb`
 
 ### Submit Patches
 First, make sure you are a member of the [Foreman Developers](https://groups.google.com/forum/?fromgroups#!forum/foreman-dev) mailing list.
