@@ -21,5 +21,3 @@ navigation:
   url: contribute.html
 - text: Support
   url: support.html
-- text: API
-  url: api.html
