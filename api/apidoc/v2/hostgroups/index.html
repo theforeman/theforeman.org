@@ -45,54 +45,103 @@
     <h2>Examples</h2>
       <pre class="prettyprint">GET /api/hostgroups
 200
-[
-  {
-    &quot;hostgroup&quot;: {
-      &quot;name&quot;: &quot;db&quot;,
-      &quot;label&quot;: &quot;db&quot;,
-      &quot;id&quot;: 603241515,
-      &quot;operatingsystem_id&quot;: 309172073,
-      &quot;ancestry&quot;: null,
-      &quot;environment_id&quot;: 334344675,
-      &quot;parameters&quot;: {},
-      &quot;subnet_id&quot;: null,
-      &quot;domain_id&quot;: null,
-      &quot;puppetclass_ids&quot;: []
-    }
+{
+  &quot;total&quot;: 5,
+  &quot;subtotal&quot;: 5,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
   },
-  {
-    &quot;hostgroup&quot;: {
+  &quot;results&quot;: [
+    {
+      &quot;id&quot;: 636252244,
       &quot;name&quot;: &quot;Common&quot;,
       &quot;label&quot;: &quot;Common&quot;,
-      &quot;id&quot;: 636252244,
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
       &quot;operatingsystem_id&quot;: 309172073,
-      &quot;ancestry&quot;: null,
+      &quot;operatingsystem_name&quot;: &quot;centos 5.3&quot;,
+      &quot;domain_id&quot;: 22495316,
+      &quot;domain_name&quot;: &quot;mydomain.net&quot;,
       &quot;environment_id&quot;: 334344675,
+      &quot;environment_name&quot;: &quot;production&quot;,
+      &quot;ancestry&quot;: null,
       &quot;parameters&quot;: {
         &quot;group1&quot;: &quot;group1&quot;
       },
-      &quot;subnet_id&quot;: null,
-      &quot;domain_id&quot;: 22495316,
       &quot;puppetclass_ids&quot;: [
         980190962
       ]
-    }
-  },
-  {
-    &quot;hostgroup&quot;: {
+    },
+    {
+      &quot;id&quot;: 603241515,
+      &quot;name&quot;: &quot;db&quot;,
+      &quot;label&quot;: &quot;db&quot;,
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;operatingsystem_id&quot;: 309172073,
+      &quot;operatingsystem_name&quot;: &quot;centos 5.3&quot;,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;environment_id&quot;: 334344675,
+      &quot;environment_name&quot;: &quot;production&quot;,
+      &quot;ancestry&quot;: null,
+      &quot;parameters&quot;: {},
+      &quot;puppetclass_ids&quot;: []
+    },
+    {
+      &quot;id&quot;: 1,
+      &quot;name&quot;: &quot;Parent&quot;,
+      &quot;label&quot;: &quot;Parent&quot;,
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;operatingsystem_id&quot;: null,
+      &quot;operatingsystem_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;environment_id&quot;: null,
+      &quot;environment_name&quot;: null,
+      &quot;ancestry&quot;: null,
+      &quot;parameters&quot;: {},
+      &quot;puppetclass_ids&quot;: []
+    },
+    {
+      &quot;id&quot;: 928644285,
+      &quot;name&quot;: &quot;inherited&quot;,
+      &quot;label&quot;: &quot;Parent/inherited&quot;,
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;operatingsystem_id&quot;: null,
+      &quot;operatingsystem_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;environment_id&quot;: 334344675,
+      &quot;environment_name&quot;: &quot;production&quot;,
+      &quot;ancestry&quot;: &quot;1&quot;,
+      &quot;parameters&quot;: {},
+      &quot;puppetclass_ids&quot;: []
+    },
+    {
+      &quot;id&quot;: 866317115,
       &quot;name&quot;: &quot;Unusual&quot;,
       &quot;label&quot;: &quot;Unusual&quot;,
-      &quot;id&quot;: 866317115,
-      &quot;operatingsystem_id&quot;: null,
-      &quot;ancestry&quot;: null,
-      &quot;environment_id&quot;: null,
-      &quot;parameters&quot;: {},
       &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;operatingsystem_id&quot;: null,
+      &quot;operatingsystem_name&quot;: null,
       &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;environment_id&quot;: null,
+      &quot;environment_name&quot;: null,
+      &quot;ancestry&quot;: null,
+      &quot;parameters&quot;: {},
       &quot;puppetclass_ids&quot;: []
     }
-  }
-]</pre>
+  ]
+}</pre>
 
 
 

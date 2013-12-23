@@ -89,6 +89,31 @@
 
 
 
+        <h3>Examples</h3>
+          <pre class="prettyprint">GET /api/hosts/my5name.mydomain.net/parameters
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;id&quot;: 254219264,
+      &quot;name&quot;: &quot;host1&quot;,
+      &quot;value&quot;: &quot;host1&quot;,
+      &quot;priority&quot;: 4,
+      &quot;is_property&quot;: null,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    }
+  ]
+}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -248,6 +273,18 @@
 
 
 
+        <h3>Examples</h3>
+          <pre class="prettyprint">GET /api/hosts/my5name.mydomain.net/parameters/254219264
+200
+{
+  &quot;id&quot;: 254219264,
+  &quot;name&quot;: &quot;host1&quot;,
+  &quot;value&quot;: &quot;host1&quot;,
+  &quot;priority&quot;: 4,
+  &quot;is_property&quot;: null,
+  &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+  &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -391,6 +428,24 @@
 
 
 
+        <h3>Examples</h3>
+          <pre class="prettyprint">POST /api/hosts/my5name.mydomain.net/parameters
+{
+  &quot;parameter&quot;: {
+    &quot;name&quot;: &quot;special_key&quot;,
+    &quot;value&quot;: &quot;123&quot;
+  }
+}
+200
+{
+  &quot;id&quot;: 767575241,
+  &quot;name&quot;: &quot;special_key&quot;,
+  &quot;value&quot;: &quot;123&quot;,
+  &quot;priority&quot;: 4,
+  &quot;is_property&quot;: null,
+  &quot;created_at&quot;: &quot;2013-12-23T09:55:29Z&quot;,
+  &quot;updated_at&quot;: &quot;2013-12-23T09:55:29Z&quot;
+}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -566,6 +621,24 @@
 
 
 
+        <h3>Examples</h3>
+          <pre class="prettyprint">PUT /api/hosts/my5name.mydomain.net/parameters/254219264
+{
+  &quot;parameter&quot;: {
+    &quot;name&quot;: &quot;special_key&quot;,
+    &quot;value&quot;: &quot;123&quot;
+  }
+}
+200
+{
+  &quot;id&quot;: 254219264,
+  &quot;name&quot;: &quot;special_key&quot;,
+  &quot;value&quot;: &quot;123&quot;,
+  &quot;priority&quot;: 4,
+  &quot;is_property&quot;: null,
+  &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+  &quot;updated_at&quot;: &quot;2013-12-23T09:55:30Z&quot;
+}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -757,6 +830,21 @@
 
 
 
+        <h3>Examples</h3>
+          <pre class="prettyprint">DELETE /api/hosts/my5name.mydomain.net/parameters/254219264
+200
+{
+  &quot;host_parameter&quot;: {
+    &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+    &quot;id&quot;: 254219264,
+    &quot;is_property&quot;: null,
+    &quot;name&quot;: &quot;host1&quot;,
+    &quot;priority&quot;: 4,
+    &quot;reference_id&quot;: 980190962,
+    &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+    &quot;value&quot;: &quot;host1&quot;
+  }
+}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -900,6 +988,12 @@
 
 
 
+        <h3>Examples</h3>
+          <pre class="prettyprint">DELETE /api/hosts/my5name.mydomain.net/parameters
+200
+[
+
+]</pre>
 
     </div>
 </div>

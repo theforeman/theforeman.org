@@ -33,7 +33,7 @@
 
   <div class='page-header'>
     <h1>
-      DELETE /api/ptables/:id<br>
+      DELETE /api/reports/:id<br>
       <small>Delete a report.</small>
     </h1>
   </div>
@@ -47,39 +47,39 @@
 200
 {
   &quot;report&quot;: {
-    &quot;summary&quot;: &quot;Success&quot;,
-    &quot;status&quot;: {
-      &quot;skipped&quot;: 0,
-      &quot;failed_restarts&quot;: 0,
-      &quot;failed&quot;: 0,
-      &quot;pending&quot;: 0,
-      &quot;restarted&quot;: 0,
-      &quot;applied&quot;: 0
-    },
+    &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+    &quot;host_id&quot;: 980190962,
     &quot;id&quot;: 70219655,
-    &quot;host&quot;: &quot;my5name.mydomain.net&quot;,
-    &quot;reported_at&quot;: &quot;2012-12-11T15:24:42Z&quot;,
-    &quot;logs&quot;: [],
     &quot;metrics&quot;: {
-      &quot;events&quot;: {
-        &quot;total&quot;: 0
-      },
       &quot;time&quot;: {
-        &quot;package&quot;: 0.003989,
         &quot;schedule&quot;: 0.00083,
-        &quot;cron&quot;: 0.000419,
         &quot;service&quot;: 0.149739,
-        &quot;exec&quot;: 0.000299,
-        &quot;config_retrieval&quot;: 16.3637869358063,
-        &quot;file&quot;: 0.007025,
         &quot;mailalias&quot;: 0.000283,
-        &quot;filebucket&quot;: 0.000171
+        &quot;cron&quot;: 0.000419,
+        &quot;config_retrieval&quot;: 16.3637869358063,
+        &quot;package&quot;: 0.003989,
+        &quot;filebucket&quot;: 0.000171,
+        &quot;file&quot;: 0.007025,
+        &quot;exec&quot;: 0.000299
       },
-      &quot;changes&quot;: {},
       &quot;resources&quot;: {
         &quot;total&quot;: 33
+      },
+      &quot;changes&quot;: {},
+      &quot;events&quot;: {
+        &quot;total&quot;: 0
       }
-    }
+    },
+    &quot;reported_at&quot;: &quot;2013-12-16T09:54:34Z&quot;,
+    &quot;status&quot;: {
+      &quot;applied&quot;: 0,
+      &quot;restarted&quot;: 0,
+      &quot;failed&quot;: 0,
+      &quot;failed_restarts&quot;: 0,
+      &quot;skipped&quot;: 0,
+      &quot;pending&quot;: 0
+    },
+    &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
   }
 }</pre>
 

@@ -64,38 +64,55 @@
         <h3>Examples</h3>
           <pre class="prettyprint">GET /api/template_kinds
 200
-[
-  {
-    &quot;template_kind&quot;: {
-      &quot;name&quot;: &quot;PXELinux&quot;,
-      &quot;id&quot;: 452984334
-    }
+{
+  &quot;total&quot;: 6,
+  &quot;subtotal&quot;: 6,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
   },
-  {
-    &quot;template_kind&quot;: {
-      &quot;name&quot;: &quot;script&quot;,
-      &quot;id&quot;: 478250810
-    }
-  },
-  {
-    &quot;template_kind&quot;: {
+  &quot;results&quot;: [
+    {
       &quot;name&quot;: &quot;gPXE&quot;,
-      &quot;id&quot;: 158998239
-    }
-  },
-  {
-    &quot;template_kind&quot;: {
-      &quot;name&quot;: &quot;finish&quot;,
-      &quot;id&quot;: 550103832
-    }
-  },
-  {
-    &quot;template_kind&quot;: {
+      &quot;id&quot;: 158998239,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
       &quot;name&quot;: &quot;provision&quot;,
-      &quot;id&quot;: 983253650
+      &quot;id&quot;: 983253650,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;name&quot;: &quot;PXELinux&quot;,
+      &quot;id&quot;: 452984334,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;name&quot;: &quot;script&quot;,
+      &quot;id&quot;: 478250810,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;name&quot;: &quot;finish&quot;,
+      &quot;id&quot;: 550103832,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;name&quot;: &quot;PXEGrub&quot;,
+      &quot;id&quot;: 131565194,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
     }
-  }
-]</pre>
+  ]
+}</pre>
 
         <h3>Params</h3>
         <table class='table'>

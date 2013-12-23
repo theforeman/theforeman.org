@@ -88,6 +88,52 @@
 
 
 
+        <h3>Examples</h3>
+          <pre class="prettyprint">GET /api/smart_variables
+200
+{
+  &quot;total&quot;: 2,
+  &quot;subtotal&quot;: 2,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;variable&quot;: &quot;special_info&quot;,
+      &quot;id&quot;: 281110143,
+      &quot;description&quot;: null,
+      &quot;parameter_type&quot;: &quot;string&quot;,
+      &quot;default_value&quot;: &quot;secret&quot;,
+      &quot;validator_type&quot;: null,
+      &quot;validator_rule&quot;: null,
+      &quot;override_value_order&quot;: &quot;organization,location&quot;,
+      &quot;override_values_count&quot;: 0,
+      &quot;puppetclass_id&quot;: 298486374,
+      &quot;puppetclass_name&quot;: &quot;apache&quot;,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;variable&quot;: &quot;ssl_port&quot;,
+      &quot;id&quot;: 298486374,
+      &quot;description&quot;: null,
+      &quot;parameter_type&quot;: &quot;string&quot;,
+      &quot;default_value&quot;: &quot;443&quot;,
+      &quot;validator_type&quot;: &quot;list&quot;,
+      &quot;validator_rule&quot;: &quot;443,8443&quot;,
+      &quot;override_value_order&quot;: &quot;fqdn\nhostgroup\nos\ndomain&quot;,
+      &quot;override_values_count&quot;: 0,
+      &quot;puppetclass_id&quot;: 980190962,
+      &quot;puppetclass_name&quot;: &quot;base&quot;,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    }
+  ]
+}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -236,6 +282,31 @@
 
 
 
+        <h3>Examples</h3>
+          <pre class="prettyprint">GET /api/puppetclasses/980190962/smart_variables/298486374-ssl_port
+200
+{
+  &quot;variable&quot;: &quot;ssl_port&quot;,
+  &quot;id&quot;: 298486374,
+  &quot;description&quot;: null,
+  &quot;parameter_type&quot;: &quot;string&quot;,
+  &quot;default_value&quot;: &quot;443&quot;,
+  &quot;validator_type&quot;: &quot;list&quot;,
+  &quot;validator_rule&quot;: &quot;443,8443&quot;,
+  &quot;override_value_order&quot;: &quot;fqdn\nhostgroup\nos\ndomain&quot;,
+  &quot;override_values_count&quot;: 0,
+  &quot;puppetclass_id&quot;: 980190962,
+  &quot;puppetclass_name&quot;: &quot;base&quot;,
+  &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+  &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+  &quot;override_values&quot;: [
+    {
+      &quot;id&quot;: 281110143,
+      &quot;match&quot;: &quot;hostgroup=Common&quot;,
+      &quot;value&quot;: &quot;8443&quot;
+    }
+  ]
+}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -288,6 +359,31 @@
 
 
 
+        <h3>Examples</h3>
+          <pre class="prettyprint">POST /api/smart_variables
+{
+  &quot;smart_variable&quot;: {
+    &quot;variable&quot;: &quot;test_smart_variable&quot;,
+    &quot;puppetclass_id&quot;: &quot;980190962&quot;
+  }
+}
+200
+{
+  &quot;variable&quot;: &quot;test_smart_variable&quot;,
+  &quot;id&quot;: 1018350823,
+  &quot;description&quot;: null,
+  &quot;parameter_type&quot;: null,
+  &quot;default_value&quot;: null,
+  &quot;validator_type&quot;: null,
+  &quot;validator_rule&quot;: null,
+  &quot;override_value_order&quot;: &quot;fqdn\nhostgroup\nos\ndomain&quot;,
+  &quot;override_values_count&quot;: 0,
+  &quot;puppetclass_id&quot;: 980190962,
+  &quot;puppetclass_name&quot;: &quot;base&quot;,
+  &quot;created_at&quot;: &quot;2013-12-23T09:55:44Z&quot;,
+  &quot;updated_at&quot;: &quot;2013-12-23T09:55:44Z&quot;,
+  &quot;override_values&quot;: []
+}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -468,6 +564,30 @@
 
 
 
+        <h3>Examples</h3>
+          <pre class="prettyprint">PUT /api/smart_variables/281110143-special_info
+{
+  &quot;smart_variable&quot;: {
+    &quot;default_value&quot;: &quot;newstring&quot;
+  }
+}
+200
+{
+  &quot;variable&quot;: &quot;special_info&quot;,
+  &quot;id&quot;: 281110143,
+  &quot;description&quot;: null,
+  &quot;parameter_type&quot;: &quot;string&quot;,
+  &quot;default_value&quot;: &quot;newstring&quot;,
+  &quot;validator_type&quot;: null,
+  &quot;validator_rule&quot;: null,
+  &quot;override_value_order&quot;: &quot;organization,location&quot;,
+  &quot;override_values_count&quot;: 0,
+  &quot;puppetclass_id&quot;: 298486374,
+  &quot;puppetclass_name&quot;: &quot;apache&quot;,
+  &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+  &quot;updated_at&quot;: &quot;2013-12-23T09:55:44Z&quot;,
+  &quot;override_values&quot;: []
+}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -664,6 +784,25 @@
 
 
 
+        <h3>Examples</h3>
+          <pre class="prettyprint">DELETE /api/smart_variables/281110143-special_info
+200
+{
+  &quot;variable&quot;: &quot;special_info&quot;,
+  &quot;id&quot;: 281110143,
+  &quot;description&quot;: null,
+  &quot;parameter_type&quot;: &quot;string&quot;,
+  &quot;default_value&quot;: &quot;secret&quot;,
+  &quot;validator_type&quot;: null,
+  &quot;validator_rule&quot;: null,
+  &quot;override_value_order&quot;: &quot;organization,location&quot;,
+  &quot;override_values_count&quot;: 0,
+  &quot;puppetclass_id&quot;: 298486374,
+  &quot;puppetclass_name&quot;: &quot;apache&quot;,
+  &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+  &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+  &quot;override_values&quot;: []
+}</pre>
 
         <h3>Params</h3>
         <table class='table'>

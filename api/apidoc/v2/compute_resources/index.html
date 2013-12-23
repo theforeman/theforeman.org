@@ -45,44 +45,68 @@
     <h2>Examples</h2>
       <pre class="prettyprint">GET /api/compute_resources
 200
-[
-  {
-    &quot;compute_resource&quot;: {
-      &quot;name&quot;: &quot;mycompute&quot;,
-      &quot;url&quot;: &quot;test:///default&quot;,
-      &quot;user&quot;: &quot;MyString&quot;,
-      &quot;provider&quot;: &quot;Libvirt&quot;,
-      &quot;id&quot;: 367690737,
-      &quot;description&quot;: &quot;mycompute&quot;,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
-    }
+{
+  &quot;total&quot;: 5,
+  &quot;subtotal&quot;: 5,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
   },
-  {
-    &quot;compute_resource&quot;: {
-      &quot;name&quot;: &quot;MyString&quot;,
-      &quot;url&quot;: &quot;qemu://stam/system&quot;,
-      &quot;user&quot;: &quot;MyString&quot;,
-      &quot;provider&quot;: &quot;Libvirt&quot;,
-      &quot;id&quot;: 980190962,
-      &quot;description&quot;: &quot;MyString&quot;,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
-    }
-  },
-  {
-    &quot;compute_resource&quot;: {
-      &quot;name&quot;: &quot;yourcompute&quot;,
-      &quot;url&quot;: &quot;test:///default&quot;,
-      &quot;user&quot;: &quot;MyString&quot;,
-      &quot;provider&quot;: &quot;Libvirt&quot;,
-      &quot;id&quot;: 932571420,
+  &quot;results&quot;: [
+    {
+      &quot;id&quot;: 928692541,
+      &quot;name&quot;: &quot;amazon123&quot;,
+      &quot;provider&quot;: &quot;EC2&quot;,
       &quot;description&quot;: &quot;yourcompute&quot;,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
+      &quot;url&quot;: &quot;eu-west-1&quot;,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;user&quot;: &quot;MyString&quot;,
+      &quot;region&quot;: &quot;eu-west-1&quot;
+    },
+    {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;bigcompute&quot;,
+      &quot;provider&quot;: &quot;Libvirt&quot;,
+      &quot;description&quot;: &quot;MyString&quot;,
+      &quot;url&quot;: &quot;qemu://stam/system&quot;,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;id&quot;: 367690737,
+      &quot;name&quot;: &quot;mycompute&quot;,
+      &quot;provider&quot;: &quot;Libvirt&quot;,
+      &quot;description&quot;: &quot;mycompute&quot;,
+      &quot;url&quot;: &quot;test:///default&quot;,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;id&quot;: 932571420,
+      &quot;name&quot;: &quot;yourcompute&quot;,
+      &quot;provider&quot;: &quot;Libvirt&quot;,
+      &quot;description&quot;: &quot;yourcompute&quot;,
+      &quot;url&quot;: &quot;test:///default&quot;,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;id&quot;: 628705878,
+      &quot;name&quot;: &quot;openstackcr&quot;,
+      &quot;provider&quot;: &quot;OpenStack&quot;,
+      &quot;description&quot;: &quot;computeresource&quot;,
+      &quot;url&quot;: &quot;test:///default&quot;,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;user&quot;: &quot;MyString&quot;,
+      &quot;tenant&quot;: null
     }
-  }
-]</pre>
+  ]
+}</pre>
 
 
 

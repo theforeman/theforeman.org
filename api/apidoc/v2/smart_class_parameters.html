@@ -106,6 +106,52 @@
 
 
 
+        <h3>Examples</h3>
+          <pre class="prettyprint">GET /api/smart_class_parameters
+200
+{
+  &quot;total&quot;: 2,
+  &quot;subtotal&quot;: 2,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;parameter&quot;: &quot;cluster&quot;,
+      &quot;id&quot;: 328495940,
+      &quot;description&quot;: null,
+      &quot;override&quot;: true,
+      &quot;parameter_type&quot;: &quot;string&quot;,
+      &quot;default_value&quot;: &quot;secret&quot;,
+      &quot;required&quot;: false,
+      &quot;validator_type&quot;: null,
+      &quot;validator_rule&quot;: null,
+      &quot;override_value_order&quot;: &quot;organization,location&quot;,
+      &quot;override_values_count&quot;: 0,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;parameter&quot;: &quot;custom_class_param&quot;,
+      &quot;id&quot;: 1018350795,
+      &quot;description&quot;: null,
+      &quot;override&quot;: true,
+      &quot;parameter_type&quot;: &quot;string&quot;,
+      &quot;default_value&quot;: &quot;abcdef&quot;,
+      &quot;required&quot;: false,
+      &quot;validator_type&quot;: null,
+      &quot;validator_rule&quot;: null,
+      &quot;override_value_order&quot;: &quot;organization,location&quot;,
+      &quot;override_values_count&quot;: 0,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    }
+  ]
+}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -270,6 +316,31 @@
 
 
 
+        <h3>Examples</h3>
+          <pre class="prettyprint">GET /api/puppetclasses/298486374/smart_class_parameters/1018350795-custom_class_param
+200
+{
+  &quot;parameter&quot;: &quot;custom_class_param&quot;,
+  &quot;id&quot;: 1018350795,
+  &quot;description&quot;: null,
+  &quot;override&quot;: true,
+  &quot;parameter_type&quot;: &quot;string&quot;,
+  &quot;default_value&quot;: &quot;abcdef&quot;,
+  &quot;required&quot;: false,
+  &quot;validator_type&quot;: null,
+  &quot;validator_rule&quot;: null,
+  &quot;override_value_order&quot;: &quot;organization,location&quot;,
+  &quot;override_values_count&quot;: 0,
+  &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+  &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+  &quot;override_values&quot;: [],
+  &quot;environments&quot;: [
+    {
+      &quot;id&quot;: 334344675,
+      &quot;name&quot;: &quot;production&quot;
+    }
+  ]
+}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -322,6 +393,40 @@
 
 
 
+        <h3>Examples</h3>
+          <pre class="prettyprint">PUT /api/smart_class_parameters/1018350795-custom_class_param
+{
+  &quot;smart_class_parameter&quot;: {
+    &quot;default_value&quot;: &quot;33333&quot;
+  }
+}
+200
+{
+  &quot;parameter&quot;: &quot;custom_class_param&quot;,
+  &quot;id&quot;: 1018350795,
+  &quot;description&quot;: null,
+  &quot;override&quot;: true,
+  &quot;parameter_type&quot;: &quot;string&quot;,
+  &quot;default_value&quot;: &quot;33333&quot;,
+  &quot;required&quot;: false,
+  &quot;validator_type&quot;: null,
+  &quot;validator_rule&quot;: null,
+  &quot;override_value_order&quot;: &quot;organization,location&quot;,
+  &quot;override_values_count&quot;: 0,
+  &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+  &quot;updated_at&quot;: &quot;2013-12-23T09:55:36Z&quot;,
+  &quot;puppetclass&quot;: {
+    &quot;id&quot;: 298486374,
+    &quot;name&quot;: &quot;apache&quot;
+  },
+  &quot;override_values&quot;: [],
+  &quot;environments&quot;: [
+    {
+      &quot;id&quot;: 334344675,
+      &quot;name&quot;: &quot;production&quot;
+    }
+  ]
+}</pre>
 
         <h3>Params</h3>
         <table class='table'>

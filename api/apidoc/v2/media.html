@@ -64,43 +64,59 @@
         <h3>Examples</h3>
           <pre class="prettyprint">GET /api/media
 200
-[
-  {
-    &quot;medium&quot;: {
-      &quot;name&quot;: &quot;CentOS 5.4&quot;,
+{
+  &quot;total&quot;: 5,
+  &quot;subtotal&quot;: 5,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
       &quot;id&quot;: 980190962,
-      &quot;path&quot;: &quot;http://mirror.averse.net/centos/6.0/os/$arch&quot;
-    }
-  },
-  {
-    &quot;medium&quot;: {
-      &quot;name&quot;: &quot;OpenSuse Mirror&quot;,
+      &quot;name&quot;: &quot;CentOS 5.4&quot;,
+      &quot;path&quot;: &quot;http://mirror.centos.org/centos/6.0/os/$arch&quot;,
+      &quot;os_family&quot;: null,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
       &quot;id&quot;: 859751735,
-      &quot;path&quot;: &quot;http://mirror.isoc.org.il/pub/opensuse/distribution/$major.$minor/repo/oss&quot;
-    }
-  },
-  {
-    &quot;medium&quot;: {
-      &quot;name&quot;: &quot;Solaris 10&quot;,
+      &quot;name&quot;: &quot;OpenSuse Mirror&quot;,
+      &quot;path&quot;: &quot;http://mirror.isoc.org.il/pub/opensuse/distribution/$major.$minor/repo/oss&quot;,
+      &quot;os_family&quot;: null,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
       &quot;id&quot;: 442321401,
-      &quot;path&quot;: &quot;http://brsla01/vol/solgi_5.10/sol$minor_$release_$arch&quot;
-    }
-  },
-  {
-    &quot;medium&quot;: {
-      &quot;name&quot;: &quot;Ubuntu Mirror&quot;,
+      &quot;name&quot;: &quot;Solaris 10&quot;,
+      &quot;path&quot;: &quot;http://brsla01/vol/solgi_5.10/sol$minor_$release_$arch&quot;,
+      &quot;os_family&quot;: null,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
       &quot;id&quot;: 1011586618,
-      &quot;path&quot;: &quot;http://sg.archive.ubuntu.com&quot;
-    }
-  },
-  {
-    &quot;medium&quot;: {
-      &quot;name&quot;: &quot;unused&quot;,
+      &quot;name&quot;: &quot;Ubuntu Mirror&quot;,
+      &quot;path&quot;: &quot;http://sg.archive.ubuntu.com&quot;,
+      &quot;os_family&quot;: null,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
       &quot;id&quot;: 338446587,
-      &quot;path&quot;: &quot;http://nothing.intersting.com&quot;
+      &quot;name&quot;: &quot;unused&quot;,
+      &quot;path&quot;: &quot;http://nothing.intersting.com&quot;,
+      &quot;os_family&quot;: null,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
     }
-  }
-]</pre>
+  ]
+}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -205,11 +221,24 @@
           <pre class="prettyprint">GET /api/media/980190962
 200
 {
-  &quot;medium&quot;: {
-    &quot;name&quot;: &quot;CentOS 5.4&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;path&quot;: &quot;http://mirror.averse.net/centos/6.0/os/$arch&quot;
-  }
+  &quot;id&quot;: 980190962,
+  &quot;name&quot;: &quot;CentOS 5.4&quot;,
+  &quot;path&quot;: &quot;http://mirror.centos.org/centos/6.0/os/$arch&quot;,
+  &quot;os_family&quot;: null,
+  &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+  &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+  &quot;operatingsystems&quot;: [
+    {
+      &quot;id&quot;: 309172073,
+      &quot;name&quot;: &quot;centos&quot;,
+      &quot;fullname&quot;: &quot;centos 5.3&quot;
+    },
+    {
+      &quot;id&quot;: 1073012828,
+      &quot;name&quot;: &quot;Redhat&quot;,
+      &quot;fullname&quot;: &quot;Redhat 6.1&quot;
+    }
+  ]
 }</pre>
 
         <h3>Params</h3>
@@ -274,8 +303,15 @@
 201
 {
   &quot;medium&quot;: {
+    &quot;config_path&quot;: null,
+    &quot;created_at&quot;: &quot;2013-12-23T09:55:26Z&quot;,
+    &quot;id&quot;: 1011586620,
+    &quot;image_path&quot;: null,
+    &quot;media_path&quot;: null,
     &quot;name&quot;: &quot;new medium&quot;,
-    &quot;id&quot;: 1011586619
+    &quot;os_family&quot;: null,
+    &quot;path&quot;: &quot;http://www.newmedium.com/&quot;,
+    &quot;updated_at&quot;: &quot;2013-12-23T09:55:26Z&quot;
   }
 }</pre>
 
@@ -426,8 +462,15 @@
 200
 {
   &quot;medium&quot;: {
+    &quot;config_path&quot;: null,
+    &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+    &quot;id&quot;: 980190962,
+    &quot;image_path&quot;: null,
+    &quot;media_path&quot;: null,
     &quot;name&quot;: &quot;CentOS 5.4&quot;,
-    &quot;id&quot;: 980190962
+    &quot;os_family&quot;: null,
+    &quot;path&quot;: &quot;http://mirror.centos.org/centos/6.0/os/$arch&quot;,
+    &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
   }
 }</pre>
 
@@ -591,8 +634,15 @@
 200
 {
   &quot;medium&quot;: {
+    &quot;config_path&quot;: null,
+    &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+    &quot;id&quot;: 338446587,
+    &quot;image_path&quot;: null,
+    &quot;media_path&quot;: null,
     &quot;name&quot;: &quot;unused&quot;,
-    &quot;id&quot;: 338446587
+    &quot;os_family&quot;: null,
+    &quot;path&quot;: &quot;http://nothing.intersting.com&quot;,
+    &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
   }
 }</pre>
 

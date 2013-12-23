@@ -45,30 +45,37 @@
     <h2>Examples</h2>
       <pre class="prettyprint">GET /api/models
 200
-[
-  {
-    &quot;model&quot;: {
-      &quot;name&quot;: &quot;KVM&quot;,
-      &quot;id&quot;: 980190962,
-      &quot;vendor_class&quot;: null,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;info&quot;: &quot;Virtual Machine&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;hardware_model&quot;: null
-    }
+{
+  &quot;total&quot;: 2,
+  &quot;subtotal&quot;: 2,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
   },
-  {
-    &quot;model&quot;: {
-      &quot;name&quot;: &quot;SUN V210&quot;,
+  &quot;results&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;KVM&quot;,
+      &quot;info&quot;: &quot;Virtual Machine&quot;,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;vendor_class&quot;: null,
+      &quot;hardware_model&quot;: null
+    },
+    {
       &quot;id&quot;: 139037058,
-      &quot;vendor_class&quot;: &quot;Sun-Fire-V210&quot;,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+      &quot;name&quot;: &quot;SUN V210&quot;,
       &quot;info&quot;: null,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;vendor_class&quot;: &quot;Sun-Fire-V210&quot;,
       &quot;hardware_model&quot;: &quot;SUN4U&quot;
     }
-  }
-]</pre>
+  ]
+}</pre>
 
 
 

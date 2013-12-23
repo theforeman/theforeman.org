@@ -64,24 +64,25 @@
         <h3>Examples</h3>
           <pre class="prettyprint">GET /api/usergroups
 200
-[
-  {
-    &quot;usergroup&quot;: {
-      &quot;name&quot;: &quot;MyString&quot;,
-      &quot;id&quot;: 980190962,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-    }
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
   },
-  {
-    &quot;usergroup&quot;: {
-      &quot;name&quot;: &quot;MyString2&quot;,
-      &quot;id&quot;: 298486374,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
+  &quot;results&quot;: [
+    {
+      &quot;name&quot;: &quot;usergroup6&quot;,
+      &quot;id&quot;: 29,
+      &quot;created_at&quot;: &quot;2013-12-23T09:55:46Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:55:46Z&quot;
     }
-  }
-]</pre>
+  ]
+}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -183,15 +184,13 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/usergroups/980190962
+          <pre class="prettyprint">GET /api/usergroups/30
 200
 {
-  &quot;usergroup&quot;: {
-    &quot;name&quot;: &quot;MyString&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-  }
+  &quot;name&quot;: &quot;usergroup7&quot;,
+  &quot;id&quot;: 30,
+  &quot;created_at&quot;: &quot;2013-12-23T09:55:46Z&quot;,
+  &quot;updated_at&quot;: &quot;2013-12-23T09:55:46Z&quot;
 }</pre>
 
         <h3>Params</h3>
@@ -255,8 +254,10 @@
 201
 {
   &quot;usergroup&quot;: {
+    &quot;created_at&quot;: &quot;2013-12-23T09:55:46Z&quot;,
+    &quot;id&quot;: 32,
     &quot;name&quot;: &quot;test_usergroup&quot;,
-    &quot;id&quot;: 980190963
+    &quot;updated_at&quot;: &quot;2013-12-23T09:55:46Z&quot;
   }
 }</pre>
 
@@ -328,15 +329,17 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/usergroups/980190962
+          <pre class="prettyprint">PUT /api/usergroups/33
 {
   &quot;usergroup&quot;: {}
 }
 200
 {
   &quot;usergroup&quot;: {
-    &quot;name&quot;: &quot;MyString&quot;,
-    &quot;id&quot;: 980190962
+    &quot;created_at&quot;: &quot;2013-12-23T09:55:46Z&quot;,
+    &quot;id&quot;: 33,
+    &quot;name&quot;: &quot;usergroup9&quot;,
+    &quot;updated_at&quot;: &quot;2013-12-23T09:55:46Z&quot;
   }
 }</pre>
 
@@ -424,12 +427,14 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/usergroups/980190962
+          <pre class="prettyprint">DELETE /api/usergroups/34
 200
 {
   &quot;usergroup&quot;: {
-    &quot;name&quot;: &quot;MyString&quot;,
-    &quot;id&quot;: 980190962
+    &quot;created_at&quot;: &quot;2013-12-23T09:55:46Z&quot;,
+    &quot;id&quot;: 34,
+    &quot;name&quot;: &quot;usergroup10&quot;,
+    &quot;updated_at&quot;: &quot;2013-12-23T09:55:46Z&quot;
   }
 }</pre>
 

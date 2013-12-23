@@ -61,6 +61,14 @@
 
 
 
+        <h3>Examples</h3>
+          <pre class="prettyprint">GET /api/hostgroups/636252244/puppetclass_ids
+200
+{
+  &quot;results&quot;: [
+    980190962
+  ]
+}</pre>
 
     </div>
     <hr>
@@ -85,6 +93,16 @@
 
 
 
+        <h3>Examples</h3>
+          <pre class="prettyprint">POST /api/hostgroups/636252244/puppetclass_ids
+{
+  &quot;puppetclass_id&quot;: &quot;281110143&quot;
+}
+200
+{
+  &quot;hostgroup_id&quot;: 636252244,
+  &quot;puppetclass_id&quot;: 281110143
+}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -153,6 +171,12 @@
 
 
 
+        <h3>Examples</h3>
+          <pre class="prettyprint">DELETE /api/hostgroups/636252244/puppetclass_ids/980190962
+200
+[
+
+]</pre>
 
         <h3>Params</h3>
         <table class='table'>
