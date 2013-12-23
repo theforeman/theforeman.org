@@ -42,6 +42,46 @@
 
   
 
+    <h2>Examples</h2>
+      <pre class="prettyprint">PUT /api/locations/255093256
+{
+  &quot;location&quot;: {
+    &quot;name&quot;: &quot;New Location&quot;,
+    &quot;ignore_types&quot;: [
+      &quot;Domain&quot;,
+      &quot;Hostgroup&quot;,
+      &quot;Environment&quot;,
+      &quot;User&quot;,
+      &quot;Medium&quot;,
+      &quot;Subnet&quot;,
+      &quot;SmartProxy&quot;,
+      &quot;ConfigTemplate&quot;,
+      &quot;ComputeResource&quot;
+    ]
+  }
+}
+200
+{
+  &quot;location&quot;: {
+    &quot;ancestry&quot;: null,
+    &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+    &quot;id&quot;: 255093256,
+    &quot;ignore_types&quot;: [
+      &quot;Domain&quot;,
+      &quot;Hostgroup&quot;,
+      &quot;Environment&quot;,
+      &quot;User&quot;,
+      &quot;Medium&quot;,
+      &quot;Subnet&quot;,
+      &quot;SmartProxy&quot;,
+      &quot;ConfigTemplate&quot;,
+      &quot;ComputeResource&quot;
+    ],
+    &quot;label&quot;: null,
+    &quot;name&quot;: &quot;New Location&quot;,
+    &quot;updated_at&quot;: &quot;2013-12-23T09:55:21Z&quot;
+  }
+}</pre>
 
 
 

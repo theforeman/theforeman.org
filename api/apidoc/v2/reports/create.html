@@ -42,6 +42,77 @@
 
   
 
+    <h2>Examples</h2>
+      <pre class="prettyprint">POST /api/reports
+{
+  &quot;report&quot;: {
+    &quot;host&quot;: &quot;rhel6n01.corp.com&quot;,
+    &quot;reported_at&quot;: &quot;2010-11-19 02:39:04 UTC&quot;,
+    &quot;metrics&quot;: {},
+    &quot;status&quot;: {
+      &quot;applied&quot;: &quot;0&quot;,
+      &quot;failed&quot;: &quot;0&quot;,
+      &quot;failed_restarts&quot;: &quot;0&quot;,
+      &quot;pending&quot;: &quot;0&quot;,
+      &quot;restarted&quot;: &quot;0&quot;,
+      &quot;skipped&quot;: &quot;0&quot;
+    },
+    &quot;logs&quot;: [
+      {
+        &quot;log&quot;: {
+          &quot;sources&quot;: {
+            &quot;source&quot;: &quot;Puppet&quot;
+          },
+          &quot;messages&quot;: {
+            &quot;message&quot;: &quot;Could not retrieve catalog from remote server: Error 400 on SERVER: Could not find node &#x27;rhel6n01.corp.com&#x27;; cannot compile&quot;
+          },
+          &quot;level&quot;: &quot;err&quot;
+        }
+      },
+      {
+        &quot;log&quot;: {
+          &quot;sources&quot;: {
+            &quot;source&quot;: &quot;Puppet&quot;
+          },
+          &quot;messages&quot;: {
+            &quot;message&quot;: &quot;Using cached catalog&quot;
+          },
+          &quot;level&quot;: &quot;notice&quot;
+        }
+      },
+      {
+        &quot;log&quot;: {
+          &quot;sources&quot;: {
+            &quot;source&quot;: &quot;Puppet&quot;
+          },
+          &quot;messages&quot;: {
+            &quot;message&quot;: &quot;Could not retrieve catalog; skipping run&quot;
+          },
+          &quot;level&quot;: &quot;err&quot;
+        }
+      }
+    ]
+  }
+}
+201
+{
+  &quot;report&quot;: {
+    &quot;created_at&quot;: &quot;2013-12-23T09:55:34Z&quot;,
+    &quot;host_id&quot;: 1073012842,
+    &quot;id&quot;: 70219656,
+    &quot;metrics&quot;: {},
+    &quot;reported_at&quot;: &quot;2010-11-19T02:39:04Z&quot;,
+    &quot;status&quot;: {
+      &quot;applied&quot;: 0,
+      &quot;restarted&quot;: 0,
+      &quot;failed&quot;: 0,
+      &quot;failed_restarts&quot;: 0,
+      &quot;skipped&quot;: 0,
+      &quot;pending&quot;: 0
+    },
+    &quot;updated_at&quot;: &quot;2013-12-23T09:55:34Z&quot;
+  }
+}</pre>
 
 
 

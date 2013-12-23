@@ -64,41 +64,37 @@
         <h3>Examples</h3>
           <pre class="prettyprint">GET /api/architectures
 200
-[
-  {
-    &quot;architecture&quot;: {
-      &quot;name&quot;: &quot;s390&quot;,
-      &quot;id&quot;: 381564594,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;operatingsystem_ids&quot;: [],
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
-    }
+{
+  &quot;total&quot;: 3,
+  &quot;subtotal&quot;: 3,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
   },
-  {
-    &quot;architecture&quot;: {
-      &quot;name&quot;: &quot;sparc&quot;,
-      &quot;id&quot;: 331892513,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;operatingsystem_ids&quot;: [
-        442321401
-      ],
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
-    }
-  },
-  {
-    &quot;architecture&quot;: {
+  &quot;results&quot;: [
+    {
       &quot;name&quot;: &quot;x86_64&quot;,
       &quot;id&quot;: 501905019,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-      &quot;operatingsystem_ids&quot;: [
-        331303656,
-        309172073,
-        1073012828
-      ],
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;name&quot;: &quot;sparc&quot;,
+      &quot;id&quot;: 331892513,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;name&quot;: &quot;s390&quot;,
+      &quot;id&quot;: 381564594,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
     }
-  }
-]</pre>
+  ]
+}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -200,20 +196,13 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/architectures/x86_64
+          <pre class="prettyprint">GET /api/architectures/501905019-x86_64
 200
 {
-  &quot;architecture&quot;: {
-    &quot;name&quot;: &quot;x86_64&quot;,
-    &quot;id&quot;: 501905019,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-    &quot;operatingsystem_ids&quot;: [
-      309172073,
-      1073012828,
-      331303656
-    ],
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
-  }
+  &quot;name&quot;: &quot;x86_64&quot;,
+  &quot;id&quot;: 501905019,
+  &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+  &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
 }</pre>
 
         <h3>Params</h3>
@@ -276,13 +265,10 @@
 }
 200
 {
-  &quot;architecture&quot;: {
-    &quot;name&quot;: &quot;i386&quot;,
-    &quot;id&quot;: 501905020,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-    &quot;operatingsystem_ids&quot;: [],
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-  }
+  &quot;name&quot;: &quot;i386&quot;,
+  &quot;id&quot;: 501905021,
+  &quot;created_at&quot;: &quot;2013-12-23T09:55:01Z&quot;,
+  &quot;updated_at&quot;: &quot;2013-12-23T09:55:01Z&quot;
 }</pre>
 
         <h3>Params</h3>
@@ -369,15 +355,17 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/architectures/x86_64
+          <pre class="prettyprint">PUT /api/architectures/501905019-x86_64
 {
   &quot;architecture&quot;: {}
 }
 200
 {
   &quot;architecture&quot;: {
+    &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+    &quot;id&quot;: 501905019,
     &quot;name&quot;: &quot;x86_64&quot;,
-    &quot;id&quot;: 501905019
+    &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
   }
 }</pre>
 
@@ -481,12 +469,14 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/architectures/s390
+          <pre class="prettyprint">DELETE /api/architectures/381564594-s390
 200
 {
   &quot;architecture&quot;: {
+    &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+    &quot;id&quot;: 381564594,
     &quot;name&quot;: &quot;s390&quot;,
-    &quot;id&quot;: 381564594
+    &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
   }
 }</pre>
 

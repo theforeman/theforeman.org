@@ -54,6 +54,36 @@
 
   
 
+    <h2>Examples</h2>
+      <pre class="prettyprint">POST /api/smart_proxies/182953976/import_puppetclasses
+{}
+200
+{
+  &quot;message&quot;: &quot;Successfully updated environment and puppetclasses from the on-disk puppet installation&quot;,
+  &quot;environments_with_new_puppetclasses&quot;: 2,
+  &quot;environments_updated_puppetclasses&quot;: 0,
+  &quot;environments_obsolete&quot;: 0,
+  &quot;results&quot;: [
+    {
+      &quot;name&quot;: &quot;env1&quot;,
+      &quot;actions&quot;: [
+        &quot;new&quot;
+      ],
+      &quot;new_puppetclasses&quot;: [
+        &quot;::a&quot;
+      ]
+    },
+    {
+      &quot;name&quot;: &quot;env2&quot;,
+      &quot;actions&quot;: [
+        &quot;new&quot;
+      ],
+      &quot;new_puppetclasses&quot;: [
+        &quot;::a&quot;
+      ]
+    }
+  ]
+}</pre>
 
 
 

@@ -45,15 +45,26 @@
     <h2>Examples</h2>
       <pre class="prettyprint">GET /api/common_parameters
 200
-[
-  {
-    &quot;common_parameter&quot;: {
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;id&quot;: 636252244,
       &quot;name&quot;: &quot;test&quot;,
       &quot;value&quot;: &quot;myvalue&quot;,
-      &quot;id&quot;: 636252244
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
     }
-  }
-]</pre>
+  ]
+}</pre>
 
 
 

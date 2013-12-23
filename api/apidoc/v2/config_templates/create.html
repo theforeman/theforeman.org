@@ -44,23 +44,28 @@
 
     <h2>Examples</h2>
       <pre class="prettyprint">POST /api/config_templates
+{}
+422
 {
-  &quot;config_template&quot;: {
-    &quot;name&quot;: &quot;RandomName&quot;,
-    &quot;template&quot;: &quot;This is a test template&quot;,
-    &quot;template_kind_id&quot;: 1
-  }
-}
-200
-{
-  &quot;config_template&quot;: {
-    &quot;name&quot;: &quot;RandomName&quot;,
-    &quot;audit_comment&quot;: null,
-    &quot;id&quot;: 1007981702,
-    &quot;&quot;: null,
-    &quot;snippet&quot;: null,
-    &quot;template&quot;: &quot;This is a test template&quot;
-  }
+  &quot;id&quot;: null,
+  &quot;errors&quot;: {
+    &quot;name&quot;: [
+      &quot;can&#x27;t be blank&quot;,
+      &quot;can&#x27;t be blank&quot;
+    ],
+    &quot;template&quot;: [
+      &quot;can&#x27;t be blank&quot;
+    ],
+    &quot;template_kind_id&quot;: [
+      &quot;can&#x27;t be blank&quot;
+    ]
+  },
+  &quot;full_messages&quot;: [
+    &quot;Name can&#x27;t be blank&quot;,
+    &quot;Name can&#x27;t be blank&quot;,
+    &quot;Template can&#x27;t be blank&quot;,
+    &quot;Template kind can&#x27;t be blank&quot;
+  ]
 }</pre>
 
 

@@ -42,6 +42,252 @@
 
   
 
+    <h2>Examples</h2>
+      <pre class="prettyprint">GET /api/settings
+200
+{
+  &quot;total&quot;: 43,
+  &quot;subtotal&quot;: 43,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;id&quot;: 333972760,
+      &quot;name&quot;: &quot;administrator&quot;,
+      &quot;value&quot;: &quot;root@some.host.fqdn&quot;,
+      &quot;description&quot;: &quot;The Default administrator email address&quot;,
+      &quot;category&quot;: &quot;Setting::General&quot;,
+      &quot;settings_type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;root@some.host.fqdn&quot;,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;id&quot;: 737268150,
+      &quot;name&quot;: &quot;authorize_login_delegation&quot;,
+      &quot;value&quot;: false,
+      &quot;description&quot;: &quot;Setting::Authorize login delegation with REMOTE_USER environment variable&quot;,
+      &quot;category&quot;: &quot;Setting::General&quot;,
+      &quot;settings_type&quot;: null,
+      &quot;default&quot;: false,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;id&quot;: 898974743,
+      &quot;name&quot;: &quot;authorize_login_delegation_api&quot;,
+      &quot;value&quot;: false,
+      &quot;description&quot;: &quot;Setting::Authorize login delegation with REMOTE_USER environment variable for API calls&quot;,
+      &quot;category&quot;: &quot;Setting::General&quot;,
+      &quot;settings_type&quot;: null,
+      &quot;default&quot;: false,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;id&quot;: 183693096,
+      &quot;name&quot;: &quot;create_new_host_when_facts_are_uploaded&quot;,
+      &quot;value&quot;: true,
+      &quot;description&quot;: &quot;Foreman will create the host when new facts are received&quot;,
+      &quot;category&quot;: &quot;Setting::Puppet&quot;,
+      &quot;settings_type&quot;: null,
+      &quot;default&quot;: true,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;id&quot;: 903449968,
+      &quot;name&quot;: &quot;create_new_host_when_report_is_uploaded&quot;,
+      &quot;value&quot;: true,
+      &quot;description&quot;: &quot;Foreman will create the host when a report is received&quot;,
+      &quot;category&quot;: &quot;Setting::Puppet&quot;,
+      &quot;settings_type&quot;: null,
+      &quot;default&quot;: true,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;id&quot;: 489917738,
+      &quot;name&quot;: &quot;default_puppet_environment&quot;,
+      &quot;value&quot;: &quot;production&quot;,
+      &quot;description&quot;: &quot;The Setting::Puppet environment foreman would default to in case it can&#x27;t auto detect it&quot;,
+      &quot;category&quot;: &quot;Setting::Puppet&quot;,
+      &quot;settings_type&quot;: null,
+      &quot;default&quot;: &quot;production&quot;,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;id&quot;: 515381208,
+      &quot;name&quot;: &quot;Default_variables_Lookup_Path&quot;,
+      &quot;value&quot;: [
+        &quot;fqdn&quot;,
+        &quot;hostgroup&quot;,
+        &quot;os&quot;,
+        &quot;domain&quot;
+      ],
+      &quot;description&quot;: &quot;The Default path in which foreman resolves host specific variables&quot;,
+      &quot;category&quot;: &quot;Setting::Puppet&quot;,
+      &quot;settings_type&quot;: null,
+      &quot;default&quot;: [
+        &quot;fqdn&quot;,
+        &quot;hostgroup&quot;,
+        &quot;os&quot;,
+        &quot;domain&quot;
+      ],
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;id&quot;: 785572700,
+      &quot;name&quot;: &quot;document_root&quot;,
+      &quot;value&quot;: &quot;/home/olevy/git/foreman/public/puppet/rdoc&quot;,
+      &quot;description&quot;: &quot;Document root where puppetdoc files should be created&quot;,
+      &quot;category&quot;: &quot;Setting::Puppet&quot;,
+      &quot;settings_type&quot;: null,
+      &quot;default&quot;: &quot;/home/olevy/git/foreman/public/puppet/rdoc&quot;,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;id&quot;: 537488238,
+      &quot;name&quot;: &quot;enc_environment&quot;,
+      &quot;value&quot;: true,
+      &quot;description&quot;: &quot;Should Foreman provide puppet environment in ENC yaml output? (this avoids the mismatch error between puppet.conf and ENC environment)&quot;,
+      &quot;category&quot;: &quot;Setting::Puppet&quot;,
+      &quot;settings_type&quot;: null,
+      &quot;default&quot;: true,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;id&quot;: 817264379,
+      &quot;name&quot;: &quot;entries_per_page&quot;,
+      &quot;value&quot;: 20,
+      &quot;description&quot;: &quot;The amount of records shown per page in foreman&quot;,
+      &quot;category&quot;: &quot;Setting::General&quot;,
+      &quot;settings_type&quot;: null,
+      &quot;default&quot;: 20,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;id&quot;: 14451317,
+      &quot;name&quot;: &quot;failed_report_email_notification&quot;,
+      &quot;value&quot;: false,
+      &quot;description&quot;: &quot;Enable Email Alerts per each failed puppet report&quot;,
+      &quot;category&quot;: &quot;Setting::Puppet&quot;,
+      &quot;settings_type&quot;: null,
+      &quot;default&quot;: false,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;id&quot;: 182539440,
+      &quot;name&quot;: &quot;foreman_url&quot;,
+      &quot;value&quot;: &quot;http://foreman.some.host.fqdn&quot;,
+      &quot;description&quot;: &quot;The URL Foreman should point to in emails etc&quot;,
+      &quot;category&quot;: &quot;Setting::General&quot;,
+      &quot;settings_type&quot;: null,
+      &quot;default&quot;: &quot;http://foreman.some.host.fqdn&quot;,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;id&quot;: 386817023,
+      &quot;name&quot;: &quot;idle_timeout&quot;,
+      &quot;value&quot;: 5,
+      &quot;description&quot;: &quot;idle timeout&quot;,
+      &quot;category&quot;: &quot;Setting::General&quot;,
+      &quot;settings_type&quot;: null,
+      &quot;default&quot;: 5,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;id&quot;: 467135553,
+      &quot;name&quot;: &quot;interpolate_erb_in_parameters&quot;,
+      &quot;value&quot;: true,
+      &quot;description&quot;: &quot;Should Foreman parse ERB to return dynamic parameters?&quot;,
+      &quot;category&quot;: &quot;Setting::Puppet&quot;,
+      &quot;settings_type&quot;: null,
+      &quot;default&quot;: true,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;id&quot;: 759874082,
+      &quot;name&quot;: &quot;legacy_puppet_hostname&quot;,
+      &quot;value&quot;: false,
+      &quot;description&quot;: &quot;Foreman will truncate hostname to &#x27;puppet&#x27; if it starts with puppet&quot;,
+      &quot;category&quot;: &quot;Setting::Puppet&quot;,
+      &quot;settings_type&quot;: null,
+      &quot;default&quot;: false,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;id&quot;: 700393283,
+      &quot;name&quot;: &quot;manage_puppetca&quot;,
+      &quot;value&quot;: true,
+      &quot;description&quot;: &quot;Should Foreman manage host certificates when provisioning hosts&quot;,
+      &quot;category&quot;: &quot;Setting::Provisioning&quot;,
+      &quot;settings_type&quot;: null,
+      &quot;default&quot;: true,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;id&quot;: 433443793,
+      &quot;name&quot;: &quot;modulepath&quot;,
+      &quot;value&quot;: &quot;/etc/puppet/modules&quot;,
+      &quot;description&quot;: &quot;The Setting::Puppet default module path in case that Foreman can&#x27;t auto detect it&quot;,
+      &quot;category&quot;: &quot;Setting::Puppet&quot;,
+      &quot;settings_type&quot;: null,
+      &quot;default&quot;: &quot;/etc/puppet/modules&quot;,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;id&quot;: 43152518,
+      &quot;name&quot;: &quot;Parametrized_Classes_in_ENC&quot;,
+      &quot;value&quot;: false,
+      &quot;description&quot;: &quot;Should Foreman use the new format (2.6.5+) to answer Setting::Puppet in its ENC yaml output?&quot;,
+      &quot;category&quot;: &quot;Setting::Puppet&quot;,
+      &quot;settings_type&quot;: null,
+      &quot;default&quot;: false,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;id&quot;: 708099507,
+      &quot;name&quot;: &quot;puppet_interval&quot;,
+      &quot;value&quot;: 30,
+      &quot;description&quot;: &quot;Setting::Puppet interval in minutes&quot;,
+      &quot;category&quot;: &quot;Setting::Puppet&quot;,
+      &quot;settings_type&quot;: &quot;integer&quot;,
+      &quot;default&quot;: 30,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;id&quot;: 1039523765,
+      &quot;name&quot;: &quot;puppetrun&quot;,
+      &quot;value&quot;: true,
+      &quot;description&quot;: &quot;Enables Puppetrun Support&quot;,
+      &quot;category&quot;: &quot;Setting::Puppet&quot;,
+      &quot;settings_type&quot;: null,
+      &quot;default&quot;: true,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    }
+  ]
+}</pre>
 
 
 

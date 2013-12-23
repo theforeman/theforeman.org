@@ -61,26 +61,38 @@
   
 
     <h2>Examples</h2>
-      <pre class="prettyprint">GET /api/puppetclasses/base
+      <pre class="prettyprint">GET /api/hosts/my5name.mydomain.net/puppetclasses/980190962
 200
 {
-  &quot;puppetclass&quot;: {
-    &quot;name&quot;: &quot;base&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;lookup_keys&quot;: [
-      {
-        &quot;lookup_key&quot;: {
-          &quot;required&quot;: false,
-          &quot;id&quot;: 298486374,
-          &quot;description&quot;: null,
-          &quot;key&quot;: &quot;ssl_port&quot;,
-          &quot;is_param&quot;: false,
-          &quot;override&quot;: false,
-          &quot;default_value&quot;: &quot;443&quot;
-        }
-      }
-    ]
-  }
+  &quot;id&quot;: 980190962,
+  &quot;name&quot;: &quot;base&quot;,
+  &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+  &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+  &quot;smart_variables&quot;: [
+    {
+      &quot;variable&quot;: &quot;ssl_port&quot;,
+      &quot;id&quot;: 298486374
+    }
+  ],
+  &quot;smart_class_parameters&quot;: [
+    {
+      &quot;parameter&quot;: &quot;cluster&quot;,
+      &quot;id&quot;: 328495940
+    }
+  ],
+  &quot;environments&quot;: [
+    {
+      &quot;name&quot;: &quot;production&quot;,
+      &quot;id&quot;: 334344675
+    }
+  ],
+  &quot;hostgroups&quot;: [
+    {
+      &quot;id&quot;: 636252244,
+      &quot;name&quot;: &quot;Common&quot;,
+      &quot;label&quot;: &quot;Common&quot;
+    }
+  ]
 }</pre>
 
 

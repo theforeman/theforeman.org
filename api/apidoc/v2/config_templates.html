@@ -64,109 +64,119 @@
         <h3>Examples</h3>
           <pre class="prettyprint">GET /api/config_templates
 200
-[
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
-      &quot;audit_comment&quot;: null,
+{
+  &quot;total&quot;: 10,
+  &quot;subtotal&quot;: 10,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
       &quot;id&quot;: 1007981701,
+      &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
       &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ks=&lt;%= foreman_url(\&quot;kickstart\&quot;)%&gt; ksdevice=bootif network kssendmac&quot;,
-      &quot;template_kind&quot;: {
-        &quot;name&quot;: &quot;PXELinux&quot;,
-        &quot;id&quot;: 452984334
-      }
-    }
-  },
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;MyFinish&quot;,
       &quot;audit_comment&quot;: null,
+      &quot;template_kind_id&quot;: 452984334,
+      &quot;template_kind_name&quot;: &quot;PXELinux&quot;,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;id&quot;: 158998239,
+      &quot;name&quot;: &quot;gPXE Dummy Menu&quot;,
+      &quot;snippet&quot;: null,
+      &quot;audit_comment&quot;: null,
+      &quot;template_kind_id&quot;: 158998239,
+      &quot;template_kind_name&quot;: &quot;gPXE&quot;,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
       &quot;id&quot;: 104314179,
+      &quot;name&quot;: &quot;MyFinish&quot;,
       &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;MyFinish&quot;,
-      &quot;template_kind&quot;: {
-        &quot;name&quot;: &quot;finish&quot;,
-        &quot;id&quot;: 550103832
-      }
-    }
-  },
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;MyScript&quot;,
       &quot;audit_comment&quot;: null,
+      &quot;template_kind_id&quot;: 550103832,
+      &quot;template_kind_name&quot;: &quot;finish&quot;,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
       &quot;id&quot;: 981457253,
+      &quot;name&quot;: &quot;MyScript&quot;,
       &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;MyText&quot;,
-      &quot;template_kind&quot;: {
-        &quot;name&quot;: &quot;script&quot;,
-        &quot;id&quot;: 478250810
-      }
-    }
-  },
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;MyString&quot;,
       &quot;audit_comment&quot;: null,
+      &quot;template_kind_id&quot;: 478250810,
+      &quot;template_kind_name&quot;: &quot;script&quot;,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
       &quot;id&quot;: 943779058,
+      &quot;name&quot;: &quot;MyString&quot;,
       &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;MyText&quot;,
-      &quot;template_kind&quot;: {
-        &quot;name&quot;: &quot;gPXE&quot;,
-        &quot;id&quot;: 158998239
-      }
-    }
-  },
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;MyString2&quot;,
       &quot;audit_comment&quot;: null,
+      &quot;template_kind_id&quot;: 158998239,
+      &quot;template_kind_name&quot;: &quot;gPXE&quot;,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
       &quot;id&quot;: 269958254,
+      &quot;name&quot;: &quot;MyString2&quot;,
       &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;MyText&quot;,
-      &quot;template_kind&quot;: {
-        &quot;name&quot;: &quot;provision&quot;,
-        &quot;id&quot;: 983253650
-      }
-    }
-  },
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;PXE Default File&quot;,
       &quot;audit_comment&quot;: null,
+      &quot;template_kind_id&quot;: 983253650,
+      &quot;template_kind_name&quot;: &quot;provision&quot;,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
       &quot;id&quot;: 352050261,
+      &quot;name&quot;: &quot;PXE Default File&quot;,
       &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ksdevice=bootif network kssendmac&quot;,
-      &quot;template_kind&quot;: {
-        &quot;name&quot;: &quot;PXELinux&quot;,
-        &quot;id&quot;: 452984334
-      }
-    }
-  },
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;PXE Default Menu&quot;,
       &quot;audit_comment&quot;: null,
+      &quot;template_kind_id&quot;: 452984334,
+      &quot;template_kind_name&quot;: &quot;PXELinux&quot;,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
       &quot;id&quot;: 684651467,
-      &quot;&quot;: null,
+      &quot;name&quot;: &quot;PXE Default Menu&quot;,
       &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;FOO&quot;
-    }
-  },
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;PXE Localboot Default&quot;,
       &quot;audit_comment&quot;: null,
-      &quot;id&quot;: 821548108,
+      &quot;template_kind_id&quot;: 710512633,
+      &quot;template_kind_name&quot;: null,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;id&quot;: 131565194,
+      &quot;name&quot;: &quot;PXEGrub Dummy Menu&quot;,
       &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;DEFAULT menu~PROMPT 0~MENU TITLE PXE Menu~TIMEOUT 200~TOTALTIMEOUT 6000~ONTIMEOUT local~~LABEL local~MENU LABEL (local)~MENU DEFAULT~LOCALBOOT 0&quot;,
-      &quot;template_kind&quot;: {
-        &quot;name&quot;: &quot;PXELinux&quot;,
-        &quot;id&quot;: 452984334
-      }
+      &quot;audit_comment&quot;: null,
+      &quot;template_kind_id&quot;: 131565194,
+      &quot;template_kind_name&quot;: &quot;PXEGrub&quot;,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    },
+    {
+      &quot;id&quot;: 821548108,
+      &quot;name&quot;: &quot;PXE Localboot Default&quot;,
+      &quot;snippet&quot;: null,
+      &quot;audit_comment&quot;: null,
+      &quot;template_kind_id&quot;: 452984334,
+      &quot;template_kind_name&quot;: &quot;PXELinux&quot;,
+      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
     }
-  }
-]</pre>
+  ]
+}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -268,20 +278,31 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/config_templates/centos5_3_pxelinux
+          <pre class="prettyprint">GET /api/config_templates/1007981701-centos5_3_pxelinux
 200
 {
-  &quot;config_template&quot;: {
-    &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
-    &quot;id&quot;: 1007981701,
-    &quot;audit_comment&quot;: null,
-    &quot;snippet&quot;: null,
-    &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ks=&lt;%= foreman_url(\&quot;kickstart\&quot;)%&gt; ksdevice=bootif network kssendmac&quot;,
-    &quot;template_kind&quot;: {
-      &quot;name&quot;: &quot;PXELinux&quot;,
-      &quot;id&quot;: 452984334
+  &quot;id&quot;: 1007981701,
+  &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
+  &quot;snippet&quot;: null,
+  &quot;audit_comment&quot;: null,
+  &quot;template_kind_id&quot;: 452984334,
+  &quot;template_kind_name&quot;: &quot;PXELinux&quot;,
+  &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+  &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+  &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ks=&lt;%= foreman_url(\&quot;kickstart\&quot;)%&gt; ksdevice=bootif network kssendmac&quot;,
+  &quot;template_combinations&quot;: [],
+  &quot;operatingsystems&quot;: [
+    {
+      &quot;id&quot;: 309172073,
+      &quot;name&quot;: &quot;centos&quot;,
+      &quot;fullname&quot;: &quot;centos 5.3&quot;
+    },
+    {
+      &quot;id&quot;: 1073012828,
+      &quot;name&quot;: &quot;Redhat&quot;,
+      &quot;fullname&quot;: &quot;Redhat 6.1&quot;
     }
-  }
+  ]
 }</pre>
 
         <h3>Params</h3>
@@ -337,23 +358,28 @@
 
         <h3>Examples</h3>
           <pre class="prettyprint">POST /api/config_templates
+{}
+422
 {
-  &quot;config_template&quot;: {
-    &quot;name&quot;: &quot;RandomName&quot;,
-    &quot;template&quot;: &quot;This is a test template&quot;,
-    &quot;template_kind_id&quot;: 1
-  }
-}
-200
-{
-  &quot;config_template&quot;: {
-    &quot;name&quot;: &quot;RandomName&quot;,
-    &quot;audit_comment&quot;: null,
-    &quot;id&quot;: 1007981702,
-    &quot;&quot;: null,
-    &quot;snippet&quot;: null,
-    &quot;template&quot;: &quot;This is a test template&quot;
-  }
+  &quot;id&quot;: null,
+  &quot;errors&quot;: {
+    &quot;name&quot;: [
+      &quot;can&#x27;t be blank&quot;,
+      &quot;can&#x27;t be blank&quot;
+    ],
+    &quot;template&quot;: [
+      &quot;can&#x27;t be blank&quot;
+    ],
+    &quot;template_kind_id&quot;: [
+      &quot;can&#x27;t be blank&quot;
+    ]
+  },
+  &quot;full_messages&quot;: [
+    &quot;Name can&#x27;t be blank&quot;,
+    &quot;Name can&#x27;t be blank&quot;,
+    &quot;Template can&#x27;t be blank&quot;,
+    &quot;Template kind can&#x27;t be blank&quot;
+  ]
 }</pre>
 
         <h3>Params</h3>
@@ -520,25 +546,25 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/config_templates/centos5_3_pxelinux
+          <pre class="prettyprint">PUT /api/config_templates/1007981701-centos5_3_pxelinux
 {
   &quot;config_template&quot;: {
-    &quot;audit_comment&quot;: &quot;aha&quot;,
-    &quot;template&quot;: &quot;tmp&quot;
+    &quot;name&quot;: &quot;&quot;
   }
 }
-200
+422
 {
-  &quot;config_template&quot;: {
-    &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
-    &quot;id&quot;: 1007981701,
-    &quot;template&quot;: &quot;tmp&quot;,
-    &quot;snippet&quot;: null,
-    &quot;template_kind&quot;: {
-      &quot;name&quot;: &quot;PXELinux&quot;,
-      &quot;id&quot;: 452984334
-    }
-  }
+  &quot;id&quot;: 1007981701,
+  &quot;errors&quot;: {
+    &quot;name&quot;: [
+      &quot;can&#x27;t be blank&quot;,
+      &quot;can&#x27;t be blank&quot;
+    ]
+  },
+  &quot;full_messages&quot;: [
+    &quot;Name can&#x27;t be blank&quot;,
+    &quot;Name can&#x27;t be blank&quot;
+  ]
 }</pre>
 
         <h3>Params</h3>
@@ -773,19 +799,18 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/config_templates/centos5_3_pxelinux
-200
+          <pre class="prettyprint">DELETE /api/config_templates/1007981701-centos5_3_pxelinux
+422
 {
-  &quot;config_template&quot;: {
-    &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
-    &quot;id&quot;: 1007981701,
-    &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ks=&lt;%= foreman_url(\&quot;kickstart\&quot;)%&gt; ksdevice=bootif network kssendmac&quot;,
-    &quot;snippet&quot;: null,
-    &quot;template_kind&quot;: {
-      &quot;name&quot;: &quot;PXELinux&quot;,
-      &quot;id&quot;: 452984334
-    }
-  }
+  &quot;id&quot;: 1007981701,
+  &quot;errors&quot;: {
+    &quot;base&quot;: [
+      &quot;centos5_3_pxelinux is used by centos 5.3 - &quot;
+    ]
+  },
+  &quot;full_messages&quot;: [
+    &quot;centos5_3_pxelinux is used by centos 5.3 - &quot;
+  ]
 }</pre>
 
         <h3>Params</h3>

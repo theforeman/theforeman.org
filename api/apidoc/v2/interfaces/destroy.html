@@ -42,6 +42,27 @@
 
   
 
+    <h2>Examples</h2>
+      <pre class="prettyprint">DELETE /api/hosts/my5name.mydomain.net/interfaces/821748566
+200
+{
+  &quot;bmc&quot;: {
+    &quot;attrs&quot;: {
+      &quot;username&quot;: &quot;foo&quot;,
+      &quot;password&quot;: &quot;bar&quot;,
+      &quot;provider&quot;: &quot;IPMI&quot;
+    },
+    &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+    &quot;domain_id&quot;: null,
+    &quot;host_id&quot;: 980190962,
+    &quot;id&quot;: 821748566,
+    &quot;ip&quot;: &quot;10.0.0.1&quot;,
+    &quot;mac&quot;: &quot;AA:AA:AA:AA:AA:AA&quot;,
+    &quot;name&quot;: &quot;host-bmc.domain.com&quot;,
+    &quot;subnet_id&quot;: null,
+    &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+  }
+}</pre>
 
 
 
