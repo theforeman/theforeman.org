@@ -40,38 +40,49 @@
               {% if page.url != "/index.html" %}<img alt="Foreman" class="logo" src="{{ site.baseurl }}static/images/foreman.png" />{% endif %}<a class="brand" href="/">Foreman</a>
               <div class="nav-collapse collapse">
                 <ul class="nav">
+                  {% for link in site.navigation %}
+                  <li><a href="{{ site.baseurl}}{{ link.url }}"> {{ link.text }} </a></li>
+                  {% endfor %}
+
                   <li class="dropdown">
-                    <a class="dropdown-toggle" id="dManual" data-toggle="dropdown" data-target="#" href="{{ site.baseurl}}manuals/1.2/index.html">
-                      Manual
+                    <a class="dropdown-toggle" id="community" data-toggle="dropdown" href="#">
+                      Community
                       <b class="caret"></b>
                     </a>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dManual">
+                     <ul class="dropdown-menu" role="menu" aria-labelledby="community">
+                       <li><a tabindex="-1" href="{{ site.baseurl }}contribute.html">Contribute</a></li>
+                       <li><a tabindex="-1" href="{{ site.baseurl }}support.html">Support</a></li>
+                    </ul>
+                  </li>
+                    <li class="dropdown">
+                      <a class="dropdown-toggle" id="documentation" data-toggle="dropdown" href="#">
+                      Documentation
+                      <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="documentation">
+                      <li class="nav-header">Release notes</li>
+                      <li><a href="{{ site.baseurl }}manuals/1.3/index.html#Releasenotesfor1.3">1.3.2</a></li>
+                      <li class="divider"></li>
+                      <li class="nav-header">Manuals</li>
                       <li><a tabindex="-1" href="{{ site.baseurl }}manuals/1.3/index.html" style="font-weight: bold">Stable: 1.3</a></li>
                       <li><a tabindex="-1" href="{{ site.baseurl }}manuals/1.2/index.html">1.2</a></li>
                       <li><a tabindex="-1" href="{{ site.baseurl }}manuals/1.1/index.html">1.1</a></li>
-                    </ul>
-                  </li>
-
-                  {% for link in site.navigation %}
-                  {% assign active = nil %}
-                  {% if page.url == link.url or page.layout == link.layout %}
-                  {% assign active = 'active' %}
-                  {% endif %}
-                  <li class="{{ active }}"><a href="{{ site.baseurl}}{{ link.url }}"> {{ link.text }} </a></li>
-                  {% endfor %}
-
-
-                  <li class="dropdown">
-                    <a class="dropdown-toggle" id="dApi" role="button" data-toggle="dropdown" href="#">
-                      API
-                      <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dApi">
+                      <li class="divider"></li>
+                      <li class="nav-header">API</li>
                       <li><a tabindex="-1" href="{{ site.baseurl }}api.html" style="font-weight: bold">v1 (default)</a></li>
                       <li><a tabindex="-1" href="{{ site.baseurl }}api_v2.html">v2 (development)</a></li>
                     </ul>
                   </li>
-                  {% include releasesplash.html %}
+                  <li>
+                    <a href="{{ site.baseurl }}blog.html">
+                    Blog
+                    </a>
+                  </li>
+                  <li>
+                  <a href="http://projects.theforeman.org/projects/foreman/wiki">
+                    Wiki <img src="{{ site.baseurl }}static/images/external-link-icon.png" alt="">
+                  </a>
+                  </li>
                 </ul>
               </div>
           </div>

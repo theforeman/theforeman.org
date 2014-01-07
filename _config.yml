@@ -15,11 +15,10 @@ pygments:    true
 markdown:    rdiscount
 
 navigation:
-- text: Learn More
+- text: Learn more
   url: learn_more.html
+- text: Getting started
+  url:  manuals/1.3/quickstart_guide.html
 - text: Videos
   url: media.html
-- text: Contribute
-  url: contribute.html
-- text: Support
-  url: support.html
+
