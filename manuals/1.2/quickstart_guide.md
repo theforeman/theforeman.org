@@ -7,11 +7,11 @@ title: Foreman Quickstart Guide
 
 {% include manuals/1.2/2_quickstart_guide.md %}
 
-### Installation
+## Installation
 
 {% include manuals/1.2/2.1_quickstart_installation.md %}
 
-### More quickstart resources...
+## More quickstart resources...
 
 Continue reading the quickstart guide in the manual:
 
@@ -21,7 +21,7 @@ Or view the quickstart screencasts:
 
 * [Quickstart screencasts](/media.html#screencasts)
 
-### Additional reading...
+## Additional reading...
 
 * [Manual installation and further reading](/manuals/1.2/index.html)
 * [Managing a datacenter with Foreman and Puppet](http://engineering.yakaz.com/managing-an-infrastructure-datacenter-with-foreman-and-puppet.html)

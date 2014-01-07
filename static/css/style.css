@@ -1,7 +1,7 @@
 html { height: 100%; overflow: auto;}
-body { height: 100%;  }
+body { height: 100%; font-family: "Cabin", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 #wrap { min-height: 100%; }
-#main {padding-bottom: 38px; padding-top:60px; }
+#main {padding-bottom: 80px; padding-top:90px;}
 
 th.underlined {
   text-decoration: underline
@@ -13,8 +13,8 @@ th.underlined {
 
 .logo {
   display: block;
-  margin-bottom: -55px;
-  padding-top: 10px;
+  margin-bottom: -79px;
+  height: 76px;
 }
 
 .brand {
@@ -22,8 +22,11 @@ th.underlined {
   z-index: 100;
 }
 
+.navbar .navbar-inner{
+  padding: 15px;
+}
 body > .navbar .brand {
-    margin-left: 45px;
+    margin-left: 68px;
     font-weight: bold;
     text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
     -webkit-transition: all .2s linear;
@@ -74,18 +77,39 @@ border-radius: 4px;
 }
 
 /* Website specific bootstrap customizations */
-#content .hero-unit {
-  padding: 30px;
-  overflow: auto;
+.hero-unit{
+    padding-bottom: 0;
+    overflow: auto;
+    color: #fff;
+    background-color: #005375;
+    margin-top: -20px;
+    margin-bottom: 50px;
+    text-align: center;
+    border-radius: 0;
+}
+.hero-unit .carousel-inner>.item>img {
+    max-height: 320px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-p.tagline {
-  font-weight: bold;
+#content h3.tagline{ padding-top: 3px; }
+
+.site-description{
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-.hero-unit img {
-  margin-bottom: 20px;
-  float: right;
+.site-description h4{
+    font-weight: normal;
+}
+
+.latest-news{
+    padding: 10px;
+    border: 1px solid #333;
+    text-align: center;
+    margin-bottom: 50px;
+    background-color: #fff;
 }
 
 #content h1 {
@@ -109,14 +133,12 @@ p.tagline {
 
 .homepage-img {
   display: block;
-  margin: 0 auto 30px;
-  max-height: 145px;
+  margin: 30px auto;
+  max-height: 80px;
 }
 
 .homepage-primary-img{
-  display: block;
-  margin: 0 auto 30px;
-  max-height: 200px;
+    max-height: 320px;
 }
 
 .center{
@@ -124,8 +146,12 @@ p.tagline {
 }
 
 .footer{
+  background-color: #f2f2f2;
+  margin-top: -80px;
+  height: 80px;
   font-size: 11px;
   color: #888;
+  text-align: center;
 }
 .footer a {
   color: #6AF;
@@ -145,3 +171,49 @@ p.tagline {
   color: #cd5c5c;
   font-weight: bold
 }
+
+.social-buttons {
+    margin-left: -125px;
+}
+
+.social-buttons li {
+    display: inline-block;
+    padding: 5px 8px;
+    line-height: 1;
+}
+
+.version-marker{
+    position: absolute;
+    margin-top: -15px;
+}
+.version-marker p{
+    background-color: #fafafa;
+    padding: 0 5px;
+    text-shadow: 0 1px 0 #fff;
+    font-weight: bold;
+    font-size: 11px;
+    color: #555;
+    border-radius: 3px;
+}
+
+#doc h2 img{
+    max-width: 60px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+code{color: #01a;}
+
+.carousel-caption {
+    position: relative;
+    background: none;
+    min-height: 70px;
+}
+
+iframe:not([allowtransparency]){
+    background-image: url('/static/images/spinner.gif');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+

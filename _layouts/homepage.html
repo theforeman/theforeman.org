@@ -1,34 +1,41 @@
 {% include header.html %}
-
-  <div id="main">
-    <div id="content" class="container">
-      <div class="hero-unit">
-	<p class="tagline">{{ site.tagline }}</p>
-	<img src="{{ site.baseurl }}static/images/foreman_large.png" class="homepage-primary-img"/>
-	<p>
-	  {{ site.description }}
-        </p>
-        <a class="btn btn-primary btn-large" href="manuals/1.3/quickstart_guide.html">Get started >> </a>
+<div id="wrap">
+<div id="main">
+  <div id="content" >
+    <div class="hero-unit">
+      <div class="container">
+        {% include carousel.html %}
       </div>
-      <div class="hero-unit">
-        <img src="{{ site.baseurl }}static/images/cfgmgmtcamp.png" style="padding-left: 20px"/>
-        <p>Join us at <a href="http://cfgmgmtcamp.eu/">CfgMgmtCamp.eu</a> on 3-4th Feb 2014 in the dedicated Foreman track.  <a href="http://cfgmgmtcamp.eu/#registration">Free registration</a> is currently open. Read <a href="https://groups.google.com/forum/#!topic/foreman-users/LLGUcIP5I9E">the announcement</a>.</p>
-      </div>
-      <div class="row-fluid center">
-        <div class="span4">
-          {% include provisioning.html %}
-        </div>
+    </div>
 
-        <div class="span4">
-          {% include configuration.html %}
+    <div class="container">
+      <div class="offset2 span8">
+        <div class="site-description">
+          <h4>
+            {{ site.description }}
+          </h4>
+          <a class="btn btn-info btn-large" href="learn_more.html">Learn more</a>
+          <a class="btn btn-primary btn-large" href="manuals/1.3/quickstart_guide.html">Get started!</a>
         </div>
-
-        <div class="span4">
-          {% include monitoring.html %}
+        <div class="clearfix"></div>
+        <h5>latest news:</h5>
+        <div class="latest-news">
+          {% include latest_news.html %}
         </div>
-
+        <div class="row-fluid center">
+          <div class="span4">
+            {% include provisioning.html %}
+          </div>
+          <div class="span4">
+            {% include configuration.html %}
+          </div>
+          <div class="span4">
+            {% include monitoring.html %}
+          </div>
+        </div>
       </div>
     </div>
   </div>
-
+</div>
+</div>
 {% include footer.html %}
