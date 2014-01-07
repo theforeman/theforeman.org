@@ -15,7 +15,9 @@ pygments:    true
 markdown:    rdiscount
 
 navigation:
-- text: Screenshots & Videos
+- text: Learn More
+  url: learn_more.html
+- text: Videos
   url: media.html
 - text: Contribute
   url: contribute.html

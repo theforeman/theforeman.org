@@ -22,11 +22,6 @@ latestversion: 1.3
     </div>
   </div>
 
- <script type="text/javascript">
-$(function() {
-//Calls the tocify method on your HTML div.
-$("#toc").tocify({context: '#doc', scrollTo: '20'});
-});
-</script>
+{% include tocify.html %}
 
 {% include footer.html %}

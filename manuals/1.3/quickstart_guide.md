@@ -8,11 +8,11 @@ version: 1.3
 
 {% include manuals/1.3/2_quickstart_guide.md %}
 
-### Installation
+## Installation
 
 {% include manuals/1.3/2.1_quickstart_installation.md %}
 
-### More quickstart resources...
+## More quickstart resources...
 
 Continue reading the quickstart guide in the manual:
 
@@ -22,7 +22,7 @@ Or view the quickstart screencasts:
 
 * [Quickstart screencasts](/media.html#screencasts)
 
-### Additional reading...
+## Additional reading...
 
 * [Manual installation and further reading](/manuals/1.3/index.html)
 * [More installation options and scenarios](/manuals/1.3/index.html#3.2.2InstallerOptions)

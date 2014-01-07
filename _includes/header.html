@@ -29,7 +29,7 @@
 </head>
 
 <body>
-  <div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
           <div class="container">
               <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -40,7 +40,7 @@
               {% if page.url != "/index.html" %}<img alt="Foreman" class="logo" src="{{ site.baseurl }}static/images/foreman.png" />{% endif %}<a class="brand" href="/">Foreman</a>
               <div class="nav-collapse collapse">
                 <ul class="nav">
-                  <li class="dropdown"> <!-- fix active -->
+                  <li class="dropdown">
                     <a class="dropdown-toggle" id="dManual" data-toggle="dropdown" data-target="#" href="{{ site.baseurl}}manuals/1.2/index.html">
                       Manual
                       <b class="caret"></b>
@@ -71,9 +71,14 @@
                       <li><a tabindex="-1" href="{{ site.baseurl }}api_v2.html">v2 (development)</a></li>
                     </ul>
                   </li>
+                  {% include releasesplash.html %}
                 </ul>
-                {% include releasesplash.html %}
               </div>
           </div>
       </div>
   </div>
+<script>
+$(function(){
+  $('.nav > li a[href="'+window.location.pathname+'"]').parents('.nav > li').addClass('active')
+})
+</script>
