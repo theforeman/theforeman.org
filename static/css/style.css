@@ -211,3 +211,9 @@ code{color: #01a;}
     min-height: 70px;
 }
 
+iframe:not([allowtransparency]){
+    background-image: url('/static/images/spinner.gif');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
