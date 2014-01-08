@@ -1,7 +1,8 @@
 html { height: 100%; overflow: auto;}
 body { height: 100%; font-family: "Cabin", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 #wrap { min-height: 100%; }
-#main {padding-bottom: 80px; padding-top:90px;}
+#main { padding-bottom: 80px; }
+@media (min-width: 979px){ #main { padding-top:90px; } }
 
 th.underlined {
   text-decoration: underline
@@ -77,6 +78,14 @@ border-radius: 4px;
 }
 
 /* Website specific bootstrap customizations */
+@media (max-width: 978px){
+    .hero-unit{
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+}
 .hero-unit{
     padding-bottom: 0;
     overflow: auto;
