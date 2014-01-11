@@ -5,7 +5,7 @@ Components include the Foreman web UI, Smart Proxy, Passenger (for the puppet ma
 
 #### Supported platforms
 * RHEL derivatives (CentOS), version 6 (EPEL required, plus subscribe to "optional" channel on RHEL 6)
-* Fedora 18, 19
+* Fedora 19
 * Debian 7 (Wheezy)
 * Debian 6 (Squeeze) (update Puppet from backports)
 * Ubuntu 12.04 (Precise)
