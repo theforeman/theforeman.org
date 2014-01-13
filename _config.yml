@@ -1,8 +1,8 @@
 exclude: [ Gemfile, Gemfile.lock, Procfile, vendor, gems, README.md]
 
 sitename:  The Foreman
-tagline: The Foreman is a complete lifecycle management tool for physical and virtual servers.
-description: Through deep integration with configuration management, DHCP, DNS, TFTP, and PXE-based unattended installations, Foreman manages every stage of the lifecycle of your physical or virtual servers. The Foreman provides comprehensive, auditable interaction facilities including a web frontend and robust, RESTful API.
+tagline: Foreman is a complete lifecycle management tool for physical and virtual servers.
+description: Foreman is an open source project that gives system administrators the power to easily automate repetitive tasks, quickly deploy applications, and proactively manage servers, on-premises or in the cloud.
 
 production_url : http://theforeman.org
 url: http://theforeman.org
