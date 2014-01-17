@@ -101,6 +101,8 @@ version: 1.4
 {%include manuals/1.4/4.3.7_smartproxy_ssl.md %}
 ### 4.3.8 TFTP
 {%include manuals/1.4/4.3.8_smartproxy_tftp.md %}
+### 4.3.9 Chef Proxy
+{%include manuals/1.4/4.3.9_chef_proxy.md %}
 
 ## 4.4 Provisioning
 {%include manuals/1.4/4.4_provisioning.md %}
