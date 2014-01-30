@@ -142,6 +142,8 @@ version: 1.4
 {%include manuals/1.4/5.1.5_nested_api_routes.md %}
 ### 5.1.6 API Versioning
 {%include manuals/1.4/5.1.6_versioning.md %}
+### 5.1.7 Handling Associations
+{%include manuals/1.4/5.1.7_associations.md %}
 
 ## 5.2 Compute Resources
 {%include manuals/1.4/5.2_compute_resources.md %}
