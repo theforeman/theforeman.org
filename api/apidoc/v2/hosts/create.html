@@ -99,13 +99,15 @@
   &quot;image_file&quot;: &quot;&quot;,
   &quot;uuid&quot;: null,
   &quot;compute_resource_id&quot;: 980190962,
-  &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
+  &quot;compute_resource_name&quot;: &quot;bigcompute (Libvirt)&quot;,
+  &quot;compute_profile_id&quot;: null,
+  &quot;compute_profile_name&quot;: null,
   &quot;puppet_proxy_id&quot;: 980190962,
   &quot;certname&quot;: &quot;testhost11.mydomain.net&quot;,
   &quot;image_id&quot;: null,
   &quot;image_name&quot;: null,
-  &quot;created_at&quot;: &quot;2013-12-23T09:55:09Z&quot;,
-  &quot;updated_at&quot;: &quot;2013-12-23T09:55:09Z&quot;,
+  &quot;created_at&quot;: &quot;2014-01-30T07:24:51Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-01-30T07:24:51Z&quot;,
   &quot;last_compile&quot;: null,
   &quot;last_freshcheck&quot;: null,
   &quot;serial&quot;: null,
@@ -134,8 +136,8 @@
     <td>
       <strong>host </strong><br>
       <small>
-        required
-        
+        optional
+        , nil allowed
       </small>
     </td>
     <td>
@@ -166,7 +168,7 @@
       <strong>host[environment_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -182,7 +184,7 @@
       <strong>host[ip] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -198,7 +200,7 @@
       <strong>host[mac] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -214,7 +216,7 @@
       <strong>host[architecture_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -230,7 +232,7 @@
       <strong>host[domain_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -246,7 +248,7 @@
       <strong>host[puppet_proxy_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -262,7 +264,7 @@
       <strong>host[puppet_class_ids] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -278,7 +280,7 @@
       <strong>host[operatingsystem_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -294,7 +296,7 @@
       <strong>host[medium_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -310,7 +312,7 @@
       <strong>host[ptable_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -326,7 +328,7 @@
       <strong>host[subnet_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -342,7 +344,7 @@
       <strong>host[compute_resource_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -358,7 +360,7 @@
       <strong>host[sp_subnet_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -374,7 +376,7 @@
       <strong>host[model_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -390,7 +392,7 @@
       <strong>host[hostgroup_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -406,7 +408,7 @@
       <strong>host[owner_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -422,7 +424,7 @@
       <strong>host[puppet_ca_proxy_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -438,7 +440,7 @@
       <strong>host[image_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -454,7 +456,7 @@
       <strong>host[host_parameters_attributes] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -470,7 +472,7 @@
       <strong>host[build] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -486,7 +488,7 @@
       <strong>host[enabled] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -502,7 +504,7 @@
       <strong>host[provision_method] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -518,7 +520,7 @@
       <strong>host[managed] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -534,7 +536,7 @@
       <strong>host[progress_report_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -550,7 +552,7 @@
       <strong>host[capabilities] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -566,7 +568,7 @@
       <strong>host[compute_attributes] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>

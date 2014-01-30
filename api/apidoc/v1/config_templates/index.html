@@ -49,10 +49,10 @@
   {
     &quot;config_template&quot;: {
       &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
+      &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ks=&lt;%= foreman_url(\&quot;kickstart\&quot;)%&gt; ksdevice=bootif network kssendmac&quot;,
+      &quot;snippet&quot;: null,
       &quot;audit_comment&quot;: null,
       &quot;id&quot;: 1007981701,
-      &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ks=&lt;%= foreman_url(\&quot;kickstart\&quot;)%&gt; ksdevice=bootif network kssendmac&quot;,
       &quot;template_kind&quot;: {
         &quot;name&quot;: &quot;PXELinux&quot;,
         &quot;id&quot;: 452984334
@@ -61,11 +61,24 @@
   },
   {
     &quot;config_template&quot;: {
+      &quot;name&quot;: &quot;iPXE Dummy Menu&quot;,
+      &quot;template&quot;: &quot;FOO&quot;,
+      &quot;snippet&quot;: null,
+      &quot;audit_comment&quot;: null,
+      &quot;id&quot;: 698706415,
+      &quot;template_kind&quot;: {
+        &quot;name&quot;: &quot;iPXE&quot;,
+        &quot;id&quot;: 698706415
+      }
+    }
+  },
+  {
+    &quot;config_template&quot;: {
       &quot;name&quot;: &quot;MyFinish&quot;,
+      &quot;template&quot;: &quot;MyFinish&quot;,
+      &quot;snippet&quot;: null,
       &quot;audit_comment&quot;: null,
       &quot;id&quot;: 104314179,
-      &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;MyFinish&quot;,
       &quot;template_kind&quot;: {
         &quot;name&quot;: &quot;finish&quot;,
         &quot;id&quot;: 550103832
@@ -75,10 +88,10 @@
   {
     &quot;config_template&quot;: {
       &quot;name&quot;: &quot;MyScript&quot;,
+      &quot;template&quot;: &quot;MyText&quot;,
+      &quot;snippet&quot;: null,
       &quot;audit_comment&quot;: null,
       &quot;id&quot;: 981457253,
-      &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;MyText&quot;,
       &quot;template_kind&quot;: {
         &quot;name&quot;: &quot;script&quot;,
         &quot;id&quot;: 478250810
@@ -88,23 +101,23 @@
   {
     &quot;config_template&quot;: {
       &quot;name&quot;: &quot;MyString&quot;,
+      &quot;template&quot;: &quot;MyText&quot;,
+      &quot;snippet&quot;: null,
       &quot;audit_comment&quot;: null,
       &quot;id&quot;: 943779058,
-      &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;MyText&quot;,
       &quot;template_kind&quot;: {
-        &quot;name&quot;: &quot;gPXE&quot;,
-        &quot;id&quot;: 158998239
+        &quot;name&quot;: &quot;iPXE&quot;,
+        &quot;id&quot;: 698706415
       }
     }
   },
   {
     &quot;config_template&quot;: {
       &quot;name&quot;: &quot;MyString2&quot;,
+      &quot;template&quot;: &quot;provision script &lt;%= foreman_url(\&quot;finish\&quot;) %&gt; static:&lt;%= @static.inspect %&gt;&quot;,
+      &quot;snippet&quot;: null,
       &quot;audit_comment&quot;: null,
       &quot;id&quot;: 269958254,
-      &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;MyText&quot;,
       &quot;template_kind&quot;: {
         &quot;name&quot;: &quot;provision&quot;,
         &quot;id&quot;: 983253650
@@ -113,11 +126,34 @@
   },
   {
     &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;PXE Default File&quot;,
-      &quot;audit_comment&quot;: null,
-      &quot;id&quot;: 352050261,
+      &quot;name&quot;: &quot;PXE Default Menu&quot;,
+      &quot;template&quot;: &quot;FOO&quot;,
       &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ksdevice=bootif network kssendmac&quot;,
+      &quot;audit_comment&quot;: null,
+      &quot;id&quot;: 684651467,
+      &quot;&quot;: null
+    }
+  },
+  {
+    &quot;config_template&quot;: {
+      &quot;name&quot;: &quot;PXEGrub Dummy Menu&quot;,
+      &quot;template&quot;: &quot;FOO&quot;,
+      &quot;snippet&quot;: null,
+      &quot;audit_comment&quot;: null,
+      &quot;id&quot;: 131565194,
+      &quot;template_kind&quot;: {
+        &quot;name&quot;: &quot;PXEGrub&quot;,
+        &quot;id&quot;: 131565194
+      }
+    }
+  },
+  {
+    &quot;config_template&quot;: {
+      &quot;name&quot;: &quot;PXELinux default local boot&quot;,
+      &quot;template&quot;: &quot;DEFAULT menu~PROMPT 0~MENU TITLE PXE Menu~TIMEOUT 200~TOTALTIMEOUT 6000~ONTIMEOUT local~~LABEL local~MENU LABEL (local)~MENU DEFAULT~LOCALBOOT 0&quot;,
+      &quot;snippet&quot;: null,
+      &quot;audit_comment&quot;: null,
+      &quot;id&quot;: 821548108,
       &quot;template_kind&quot;: {
         &quot;name&quot;: &quot;PXELinux&quot;,
         &quot;id&quot;: 452984334
@@ -126,21 +162,11 @@
   },
   {
     &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;PXE Default Menu&quot;,
-      &quot;audit_comment&quot;: null,
-      &quot;id&quot;: 684651467,
-      &quot;&quot;: null,
+      &quot;name&quot;: &quot;PXELinux global default&quot;,
+      &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ksdevice=bootif network kssendmac&quot;,
       &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;FOO&quot;
-    }
-  },
-  {
-    &quot;config_template&quot;: {
-      &quot;name&quot;: &quot;PXE Localboot Default&quot;,
       &quot;audit_comment&quot;: null,
-      &quot;id&quot;: 821548108,
-      &quot;snippet&quot;: null,
-      &quot;template&quot;: &quot;DEFAULT menu~PROMPT 0~MENU TITLE PXE Menu~TIMEOUT 200~TOTALTIMEOUT 6000~ONTIMEOUT local~~LABEL local~MENU LABEL (local)~MENU DEFAULT~LOCALBOOT 0&quot;,
+      &quot;id&quot;: 352050261,
       &quot;template_kind&quot;: {
         &quot;name&quot;: &quot;PXELinux&quot;,
         &quot;id&quot;: 452984334

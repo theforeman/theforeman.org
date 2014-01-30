@@ -46,14 +46,21 @@
       <pre class="prettyprint">POST /api/domains
 {
   &quot;domain&quot;: {
-    &quot;name&quot;: &quot;domain.net&quot;
+    &quot;fullname&quot;: &quot;&quot;
   }
 }
-201
+422
 {
   &quot;domain&quot;: {
-    &quot;name&quot;: &quot;domain.net&quot;,
-    &quot;id&quot;: 759776764
+    &quot;id&quot;: null,
+    &quot;errors&quot;: {
+      &quot;name&quot;: [
+        &quot;can&#x27;t be blank&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Name can&#x27;t be blank&quot;
+    ]
   }
 }</pre>
 

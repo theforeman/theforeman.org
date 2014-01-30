@@ -79,29 +79,29 @@
       &quot;name&quot;: &quot;default&quot;,
       &quot;id&quot;: 980190962,
       &quot;os_family&quot;: null,
-      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
-      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
     },
     {
       &quot;name&quot;: &quot;four&quot;,
       &quot;id&quot;: 281110143,
       &quot;os_family&quot;: null,
-      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
-      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
     },
     {
       &quot;name&quot;: &quot;suse default&quot;,
       &quot;id&quot;: 859751735,
       &quot;os_family&quot;: null,
-      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
-      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
     },
     {
       &quot;name&quot;: &quot;ubuntu default&quot;,
       &quot;id&quot;: 1011586618,
       &quot;os_family&quot;: null,
-      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
-      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
     }
   ]
 }</pre>
@@ -212,8 +212,8 @@
   &quot;name&quot;: &quot;default&quot;,
   &quot;id&quot;: 980190962,
   &quot;os_family&quot;: null,
-  &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
-  &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+  &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
   &quot;layout&quot;: &quot;zerombr yes\\nclearpart --all    --initlabel\\npart /boot --fstype ext3 --size=100 --asprimary\\npart /     --f   stype ext3 --size=1024 --grow\\npart swap  --recommended&quot;
 }</pre>
 
@@ -279,12 +279,12 @@
 201
 {
   &quot;ptable&quot;: {
-    &quot;created_at&quot;: &quot;2013-12-23T09:55:31Z&quot;,
+    &quot;created_at&quot;: &quot;2014-01-30T07:25:14Z&quot;,
     &quot;id&quot;: 1011586620,
     &quot;layout&quot;: &quot;d-i partman-auto/disk&quot;,
     &quot;name&quot;: &quot;ptable_test&quot;,
     &quot;os_family&quot;: null,
-    &quot;updated_at&quot;: &quot;2013-12-23T09:55:31Z&quot;
+    &quot;updated_at&quot;: &quot;2014-01-30T07:25:14Z&quot;
   }
 }</pre>
 
@@ -301,8 +301,8 @@
     <td>
       <strong>ptable </strong><br>
       <small>
-        required
-        
+        optional
+        , nil allowed
       </small>
     </td>
     <td>
@@ -349,7 +349,7 @@
       <strong>ptable[os_family] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -395,12 +395,12 @@
 200
 {
   &quot;ptable&quot;: {
-    &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
     &quot;id&quot;: 980190962,
     &quot;layout&quot;: &quot;zerombr yes\\nclearpart --all    --initlabel\\npart /boot --fstype ext3 --size=100 --asprimary\\npart /     --f   stype ext3 --size=1024 --grow\\npart swap  --recommended&quot;,
     &quot;name&quot;: &quot;default&quot;,
     &quot;os_family&quot;: null,
-    &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
   }
 }</pre>
 
@@ -433,8 +433,8 @@
     <td>
       <strong>ptable </strong><br>
       <small>
-        required
-        
+        optional
+        , nil allowed
       </small>
     </td>
     <td>
@@ -481,7 +481,7 @@
       <strong>ptable[os_family] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -523,31 +523,33 @@
           <pre class="prettyprint">DELETE /api/ptables/980190962
 422
 {
-  &quot;id&quot;: 980190962,
-  &quot;errors&quot;: {
-    &quot;base&quot;: [
+  &quot;error&quot;: {
+    &quot;id&quot;: 980190962,
+    &quot;errors&quot;: {
+      &quot;base&quot;: [
+        &quot;default is used by my5name.mydomain.net&quot;,
+        &quot;default is used by temp.yourdomain.net&quot;,
+        &quot;default is used by temp01.yourdomain.net&quot;,
+        &quot;default is used by dhcp.mydomain.net&quot;,
+        &quot;default is used by sdhcp.mydomain.net&quot;,
+        &quot;default is used by db_host.mydomain.net&quot;,
+        &quot;default is used by owned-by-restricted.mydomain.net&quot;,
+        &quot;default is used by Common&quot;,
+        &quot;default is used by db&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
       &quot;default is used by my5name.mydomain.net&quot;,
       &quot;default is used by temp.yourdomain.net&quot;,
       &quot;default is used by temp01.yourdomain.net&quot;,
       &quot;default is used by dhcp.mydomain.net&quot;,
       &quot;default is used by sdhcp.mydomain.net&quot;,
       &quot;default is used by db_host.mydomain.net&quot;,
-      &quot;default is used by owned_by_restricted.mydomain.net&quot;,
+      &quot;default is used by owned-by-restricted.mydomain.net&quot;,
       &quot;default is used by Common&quot;,
       &quot;default is used by db&quot;
     ]
-  },
-  &quot;full_messages&quot;: [
-    &quot;default is used by my5name.mydomain.net&quot;,
-    &quot;default is used by temp.yourdomain.net&quot;,
-    &quot;default is used by temp01.yourdomain.net&quot;,
-    &quot;default is used by dhcp.mydomain.net&quot;,
-    &quot;default is used by sdhcp.mydomain.net&quot;,
-    &quot;default is used by db_host.mydomain.net&quot;,
-    &quot;default is used by owned_by_restricted.mydomain.net&quot;,
-    &quot;default is used by Common&quot;,
-    &quot;default is used by db&quot;
-  ]
+  }
 }</pre>
 
         <h3>Params</h3>

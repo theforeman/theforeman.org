@@ -67,28 +67,28 @@
 [
   {
     &quot;image&quot;: {
-      &quot;name&quot;: &quot;centos-2&quot;,
-      &quot;id&quot;: 298486374,
-      &quot;uuid&quot;: &quot;MyString2&quot;,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;id&quot;: 980190962,
       &quot;operatingsystem_id&quot;: 309172073,
-      &quot;username&quot;: &quot;MyString&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;compute_resource_id&quot;: 980190962,
       &quot;architecture_id&quot;: 501905019,
-      &quot;compute_resource_id&quot;: 980190962
+      &quot;uuid&quot;: &quot;string-of-uuid&quot;,
+      &quot;username&quot;: &quot;root&quot;,
+      &quot;name&quot;: &quot;centos-1&quot;,
+      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
     }
   },
   {
     &quot;image&quot;: {
-      &quot;name&quot;: &quot;centos-1&quot;,
-      &quot;id&quot;: 980190962,
-      &quot;uuid&quot;: &quot;string-of-uuid&quot;,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;id&quot;: 298486374,
       &quot;operatingsystem_id&quot;: 309172073,
-      &quot;username&quot;: &quot;root&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+      &quot;compute_resource_id&quot;: 980190962,
       &quot;architecture_id&quot;: 501905019,
-      &quot;compute_resource_id&quot;: 980190962
+      &quot;uuid&quot;: &quot;MyString2&quot;,
+      &quot;username&quot;: &quot;MyString&quot;,
+      &quot;name&quot;: &quot;centos-2&quot;,
+      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
     }
   }
 ]</pre>
@@ -213,15 +213,15 @@
 200
 {
   &quot;image&quot;: {
-    &quot;name&quot;: &quot;centos-1&quot;,
     &quot;id&quot;: 980190962,
-    &quot;uuid&quot;: &quot;string-of-uuid&quot;,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
     &quot;operatingsystem_id&quot;: 309172073,
-    &quot;username&quot;: &quot;root&quot;,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+    &quot;compute_resource_id&quot;: 980190962,
     &quot;architecture_id&quot;: 501905019,
-    &quot;compute_resource_id&quot;: 980190962
+    &quot;uuid&quot;: &quot;string-of-uuid&quot;,
+    &quot;username&quot;: &quot;root&quot;,
+    &quot;name&quot;: &quot;centos-1&quot;,
+    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
   }
 }</pre>
 
@@ -297,25 +297,26 @@
 {
   &quot;image&quot;: {
     &quot;name&quot;: &quot;TestImage&quot;,
-    &quot;uuid&quot;: &quot;abcdef&quot;,
     &quot;username&quot;: &quot;ec2-user&quot;,
-    &quot;operatingsystem_id&quot;: 309172073,
-    &quot;compute_resource_id&quot;: 367690737,
-    &quot;architecture_id&quot;: 381564594
+    &quot;uuid&quot;: &quot;abcdef&quot;,
+    &quot;operatingsystem_id&quot;: &quot;309172073&quot;,
+    &quot;compute_resource_id&quot;: &quot;928692541&quot;,
+    &quot;architecture_id&quot;: &quot;501905019&quot;
   }
 }
 201
 {
   &quot;compute_resource&quot;: {
-    &quot;url&quot;: &quot;qemu://stam/system&quot;,
-    &quot;name&quot;: &quot;MyString&quot;,
-    &quot;user&quot;: &quot;MyString&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;uuid&quot;: &quot;MyString&quot;,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+    &quot;attrs&quot;: {},
+    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
     &quot;description&quot;: &quot;MyString&quot;,
-    &quot;attrs&quot;: null,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;
+    &quot;id&quot;: 980190962,
+    &quot;name&quot;: &quot;bigcompute&quot;,
+    &quot;password&quot;: &quot;1234567&quot;,
+    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;url&quot;: &quot;qemu://stam/system&quot;,
+    &quot;user&quot;: &quot;MyString&quot;,
+    &quot;uuid&quot;: &quot;MyString&quot;
   }
 }</pre>
 
@@ -490,15 +491,17 @@
 200
 {
   &quot;image&quot;: {
-    &quot;name&quot;: &quot;centos-1&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;uuid&quot;: &quot;string-of-uuid&quot;,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-    &quot;username&quot;: &quot;root&quot;,
-    &quot;operatingsystem_id&quot;: 309172073,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+    &quot;architecture_id&quot;: 501905019,
     &quot;compute_resource_id&quot;: 980190962,
-    &quot;architecture_id&quot;: 501905019
+    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;iam_role&quot;: null,
+    &quot;id&quot;: 980190962,
+    &quot;name&quot;: &quot;centos-1&quot;,
+    &quot;operatingsystem_id&quot;: 309172073,
+    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;user_data&quot;: false,
+    &quot;username&quot;: &quot;root&quot;,
+    &quot;uuid&quot;: &quot;string-of-uuid&quot;
   }
 }</pre>
 
@@ -686,15 +689,17 @@
 200
 {
   &quot;image&quot;: {
-    &quot;name&quot;: &quot;centos-1&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;uuid&quot;: &quot;string-of-uuid&quot;,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
-    &quot;username&quot;: &quot;root&quot;,
-    &quot;operatingsystem_id&quot;: 309172073,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:42Z&quot;,
+    &quot;architecture_id&quot;: 501905019,
     &quot;compute_resource_id&quot;: 980190962,
-    &quot;architecture_id&quot;: 501905019
+    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;iam_role&quot;: null,
+    &quot;id&quot;: 980190962,
+    &quot;name&quot;: &quot;centos-1&quot;,
+    &quot;operatingsystem_id&quot;: 309172073,
+    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;user_data&quot;: false,
+    &quot;username&quot;: &quot;root&quot;,
+    &quot;uuid&quot;: &quot;string-of-uuid&quot;
   }
 }</pre>
 

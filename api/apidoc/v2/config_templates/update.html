@@ -51,17 +51,19 @@
 }
 422
 {
-  &quot;id&quot;: 1007981701,
-  &quot;errors&quot;: {
-    &quot;name&quot;: [
-      &quot;can&#x27;t be blank&quot;,
-      &quot;can&#x27;t be blank&quot;
+  &quot;error&quot;: {
+    &quot;id&quot;: 1007981701,
+    &quot;errors&quot;: {
+      &quot;name&quot;: [
+        &quot;can&#x27;t be blank&quot;,
+        &quot;can&#x27;t be blank&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Name can&#x27;t be blank&quot;,
+      &quot;Name can&#x27;t be blank&quot;
     ]
-  },
-  &quot;full_messages&quot;: [
-    &quot;Name can&#x27;t be blank&quot;,
-    &quot;Name can&#x27;t be blank&quot;
-  ]
+  }
 }</pre>
 
 
@@ -95,8 +97,8 @@
     <td>
       <strong>config_template </strong><br>
       <small>
-        required
-        
+        optional
+        , nil allowed
       </small>
     </td>
     <td>
@@ -143,7 +145,7 @@
       <strong>config_template[snippet] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -191,7 +193,7 @@
       <strong>config_template[template_combinations_attributes] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -207,7 +209,7 @@
       <strong>config_template[operatingsystem_ids] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>

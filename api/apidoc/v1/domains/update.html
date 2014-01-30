@@ -43,24 +43,21 @@
   
 
     <h2>Examples</h2>
-      <pre class="prettyprint">PUT /api/domains/mydomain.net
+      <pre class="prettyprint">PUT /api/domains/22495316-mydomain-net
 {
   &quot;domain&quot;: {
-    &quot;name&quot;: &quot;&quot;
+    &quot;name&quot;: &quot;domain.new&quot;
   }
 }
-422
+200
 {
   &quot;domain&quot;: {
+    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;dns_id&quot;: 113629430,
+    &quot;fullname&quot;: null,
     &quot;id&quot;: 22495316,
-    &quot;errors&quot;: {
-      &quot;name&quot;: [
-        &quot;can&#x27;t be blank&quot;
-      ]
-    },
-    &quot;full_messages&quot;: [
-      &quot;Name can&#x27;t be blank&quot;
-    ]
+    &quot;name&quot;: &quot;domain.new&quot;,
+    &quot;updated_at&quot;: &quot;2014-01-30T07:24:23Z&quot;
   }
 }</pre>
 

@@ -586,7 +586,7 @@
             <td width='60%'>Get status of host</td>
           </tr>
           <tr>
-            <td><a href='../apidoc/v2/hosts/puppetrun.html'>GET /api/hosts/:id/puppetrun</a></td>
+            <td><a href='../apidoc/v2/hosts/puppetrun.html'>PUT /api/hosts/:id/puppetrun</a></td>
             <td width='60%'>Force a puppet run on the agent.</td>
           </tr>
           <tr>
@@ -860,6 +860,42 @@
     </tbody>
   </table>
   <h2>
+    <a href='../apidoc/v2/os_default_templates.html'>
+      Os default templates
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='../apidoc/v2/os_default_templates/index.html'>GET /api/operatingsystems/:operatingsystem_id/os_default_templates</a></td>
+            <td width='60%'>List os default templates for operating system</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/os_default_templates/show.html'>GET /api/operatingsystems/:operatingsystem_id/os_default_templates/:id</a></td>
+            <td width='60%'>Show a os default template kind for operating system</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/os_default_templates/create.html'>POST /api/operatingsystems/:operatingsystem_id/os_default_templates</a></td>
+            <td width='60%'>Create a os default template for operating system</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/os_default_templates/update.html'>PUT /api/operatingsystems/:operatingsystem_id/os_default_templates/:id</a></td>
+            <td width='60%'>Update a os default template for operating system</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/os_default_templates/destroy.html'>DELETE /api/operatingsystems/:operatingsystem_id/os_default_templates/:id</a></td>
+            <td width='60%'>Delete a os default template for operating system</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
     <a href='../apidoc/v2/override_values.html'>
       Override values
     </a><br>
@@ -946,6 +982,14 @@
             <td width='60%'>List all parameters for operating system</td>
           </tr>
           <tr>
+            <td><a href='../apidoc/v2/parameters/index.html'>GET /api/locations/:location_id/parameters</a></td>
+            <td width='60%'>List all parameters for location</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/parameters/index.html'>GET /api/organizations/:organization_id/parameters</a></td>
+            <td width='60%'>List all parameters for organization</td>
+          </tr>
+          <tr>
             <td><a href='../apidoc/v2/parameters/show.html'>GET /api/hosts/:host_id/parameters/:id</a></td>
             <td width='60%'>Show a nested parameter for host</td>
           </tr>
@@ -960,6 +1004,14 @@
           <tr>
             <td><a href='../apidoc/v2/parameters/show.html'>GET /api/operatingsystems/:operatingsystem_id/parameters/:id</a></td>
             <td width='60%'>Show a nested parameter for operating system</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/parameters/show.html'>GET /api/locations/:location_id/parameters/:id</a></td>
+            <td width='60%'>Show a nested parameter for location</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/parameters/show.html'>GET /api/organizations/:organization_id/parameters/:id</a></td>
+            <td width='60%'>Show a nested parameter for organization</td>
           </tr>
           <tr>
             <td><a href='../apidoc/v2/parameters/create.html'>POST /api/hosts/:host_id/parameters</a></td>
@@ -978,6 +1030,14 @@
             <td width='60%'>Create a nested parameter for operating system</td>
           </tr>
           <tr>
+            <td><a href='../apidoc/v2/parameters/create.html'>POST /api/locations/:location_id/parameters</a></td>
+            <td width='60%'>Create a nested parameter for location</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/parameters/create.html'>POST /api/organizations/:organization_id/parameters</a></td>
+            <td width='60%'>Create a nested parameter for organization</td>
+          </tr>
+          <tr>
             <td><a href='../apidoc/v2/parameters/update.html'>PUT /api/hosts/:host_id/parameters/:id</a></td>
             <td width='60%'>Update a nested parameter for host</td>
           </tr>
@@ -992,6 +1052,14 @@
           <tr>
             <td><a href='../apidoc/v2/parameters/update.html'>PUT /api/operatingsystems/:operatingsystem_id/parameters/:id</a></td>
             <td width='60%'>Update a nested parameter for operating system</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/parameters/update.html'>PUT /api/locations/:location_id/parameters/:id</a></td>
+            <td width='60%'>Update a nested parameter for location</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/parameters/update.html'>PUT /api/organizations/:organization_id/parameters/:id</a></td>
+            <td width='60%'>Update a nested parameter for organization</td>
           </tr>
           <tr>
             <td><a href='../apidoc/v2/parameters/destroy.html'>DELETE /api/hosts/:host_id/parameters/:id</a></td>
@@ -1010,6 +1078,14 @@
             <td width='60%'>Delete a nested parameter for operating system</td>
           </tr>
           <tr>
+            <td><a href='../apidoc/v2/parameters/destroy.html'>DELETE /api/locations/:location_id/parameters/:id</a></td>
+            <td width='60%'>Delete a nested parameter for location</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/parameters/destroy.html'>DELETE /api/organizations/:organization_id/parameters/:id</a></td>
+            <td width='60%'>Delete a nested parameter for organization</td>
+          </tr>
+          <tr>
             <td><a href='../apidoc/v2/parameters/reset.html'>DELETE /api/hosts/:host_id/parameters</a></td>
             <td width='60%'>Delete all nested parameters for host</td>
           </tr>
@@ -1024,6 +1100,14 @@
           <tr>
             <td><a href='../apidoc/v2/parameters/reset.html'>DELETE /api/operatingsystems/:operatingsystem_id/parameters</a></td>
             <td width='60%'>Delete all nested parameters for operating system</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/parameters/reset.html'>DELETE /api/locations/:location_id/parameters</a></td>
+            <td width='60%'>Delete all nested parameter for location</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/parameters/reset.html'>DELETE /api/organizations/:organization_id/parameters</a></td>
+            <td width='60%'>Delete all nested parameter for organization</td>
           </tr>
     </tbody>
   </table>
