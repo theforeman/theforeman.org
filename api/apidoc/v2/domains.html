@@ -81,32 +81,32 @@
       &quot;name&quot;: &quot;mydomain.net&quot;,
       &quot;fullname&quot;: null,
       &quot;dns_id&quot;: 113629430,
-      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
-      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
     },
     {
       &quot;id&quot;: 759776763,
       &quot;name&quot;: &quot;unused.net&quot;,
       &quot;fullname&quot;: &quot;somewhare that is never used&quot;,
       &quot;dns_id&quot;: 113629430,
-      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
-      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
     },
     {
       &quot;id&quot;: 229305443,
       &quot;name&quot;: &quot;useless.net&quot;,
       &quot;fullname&quot;: null,
       &quot;dns_id&quot;: null,
-      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
-      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
     },
     {
       &quot;id&quot;: 589326610,
       &quot;name&quot;: &quot;yourdomain.net&quot;,
       &quot;fullname&quot;: &quot;somewhere in yourdomain&quot;,
       &quot;dns_id&quot;: 113629430,
-      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
-      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
     }
   ]
 }</pre>
@@ -218,8 +218,8 @@
   &quot;name&quot;: &quot;mydomain.net&quot;,
   &quot;fullname&quot;: null,
   &quot;dns_id&quot;: 113629430,
-  &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
-  &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+  &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
 }</pre>
 
         <h3>Params</h3>
@@ -282,15 +282,17 @@
 }
 422
 {
-  &quot;id&quot;: null,
-  &quot;errors&quot;: {
-    &quot;name&quot;: [
-      &quot;can&#x27;t be blank&quot;
+  &quot;error&quot;: {
+    &quot;id&quot;: null,
+    &quot;errors&quot;: {
+      &quot;name&quot;: [
+        &quot;can&#x27;t be blank&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Name can&#x27;t be blank&quot;
     ]
-  },
-  &quot;full_messages&quot;: [
-    &quot;Name can&#x27;t be blank&quot;
-  ]
+  }
 }</pre>
 
         <h3>Params</h3>
@@ -306,8 +308,8 @@
     <td>
       <strong>domain </strong><br>
       <small>
-        required
-        
+        optional
+        , nil allowed
       </small>
     </td>
     <td>
@@ -370,7 +372,7 @@
       <strong>domain[domain_parameters_attributes] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -418,12 +420,12 @@
 200
 {
   &quot;domain&quot;: {
-    &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
     &quot;dns_id&quot;: 113629430,
     &quot;fullname&quot;: null,
     &quot;id&quot;: 22495316,
     &quot;name&quot;: &quot;domain.new&quot;,
-    &quot;updated_at&quot;: &quot;2013-12-23T09:55:05Z&quot;
+    &quot;updated_at&quot;: &quot;2014-01-30T07:24:47Z&quot;
   }
 }</pre>
 
@@ -456,8 +458,8 @@
     <td>
       <strong>domain </strong><br>
       <small>
-        required
-        
+        optional
+        , nil allowed
       </small>
     </td>
     <td>
@@ -472,7 +474,7 @@
       <strong>domain[name] </strong><br>
       <small>
         optional
-        , nil allowed
+        
       </small>
     </td>
     <td>
@@ -520,7 +522,7 @@
       <strong>domain[domain_parameters_attributes] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -563,12 +565,12 @@
 200
 {
   &quot;domain&quot;: {
-    &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
     &quot;dns_id&quot;: 113629430,
     &quot;fullname&quot;: null,
     &quot;id&quot;: 22495316,
     &quot;name&quot;: &quot;mydomain.net&quot;,
-    &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
   }
 }</pre>
 

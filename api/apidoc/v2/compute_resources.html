@@ -65,8 +65,8 @@
           <pre class="prettyprint">GET /api/compute_resources
 200
 {
-  &quot;total&quot;: 5,
-  &quot;subtotal&quot;: 5,
+  &quot;total&quot;: 7,
+  &quot;subtotal&quot;: 7,
   &quot;page&quot;: 1,
   &quot;per_page&quot;: 20,
   &quot;search&quot;: null,
@@ -81,10 +81,34 @@
       &quot;provider&quot;: &quot;EC2&quot;,
       &quot;description&quot;: &quot;yourcompute&quot;,
       &quot;url&quot;: &quot;eu-west-1&quot;,
-      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
-      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
-      &quot;user&quot;: &quot;MyString&quot;,
+      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;access_key&quot;: &quot;MyString&quot;,
       &quot;region&quot;: &quot;eu-west-1&quot;
+    },
+    {
+      &quot;id&quot;: 304431216,
+      &quot;name&quot;: &quot;another-ec2&quot;,
+      &quot;provider&quot;: &quot;EC2&quot;,
+      &quot;description&quot;: &quot;yourcompute&quot;,
+      &quot;url&quot;: &quot;eu-west-1&quot;,
+      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;access_key&quot;: &quot;MyString&quot;,
+      &quot;region&quot;: &quot;eu-west-1&quot;
+    },
+    {
+      &quot;id&quot;: 30517511,
+      &quot;name&quot;: &quot;gce123&quot;,
+      &quot;provider&quot;: &quot;Google&quot;,
+      &quot;description&quot;: &quot;yourcompute&quot;,
+      &quot;url&quot;: &quot;us-central1-a&quot;,
+      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;email&quot;: null,
+      &quot;zone&quot;: &quot;us-central1-a&quot;,
+      &quot;project&quot;: null,
+      &quot;key_path&quot;: null
     },
     {
       &quot;id&quot;: 980190962,
@@ -92,8 +116,9 @@
       &quot;provider&quot;: &quot;Libvirt&quot;,
       &quot;description&quot;: &quot;MyString&quot;,
       &quot;url&quot;: &quot;qemu://stam/system&quot;,
-      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
-      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;display_type&quot;: &quot;vnc&quot;
     },
     {
       &quot;id&quot;: 367690737,
@@ -101,8 +126,9 @@
       &quot;provider&quot;: &quot;Libvirt&quot;,
       &quot;description&quot;: &quot;mycompute&quot;,
       &quot;url&quot;: &quot;test:///default&quot;,
-      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
-      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;display_type&quot;: &quot;vnc&quot;
     },
     {
       &quot;id&quot;: 932571420,
@@ -110,8 +136,9 @@
       &quot;provider&quot;: &quot;Libvirt&quot;,
       &quot;description&quot;: &quot;yourcompute&quot;,
       &quot;url&quot;: &quot;test:///default&quot;,
-      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
-      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;display_type&quot;: &quot;vnc&quot;
     },
     {
       &quot;id&quot;: 628705878,
@@ -119,8 +146,8 @@
       &quot;provider&quot;: &quot;OpenStack&quot;,
       &quot;description&quot;: &quot;computeresource&quot;,
       &quot;url&quot;: &quot;test:///default&quot;,
-      &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
-      &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
       &quot;user&quot;: &quot;MyString&quot;,
       &quot;tenant&quot;: null
     }
@@ -235,8 +262,9 @@
   &quot;provider&quot;: &quot;Libvirt&quot;,
   &quot;description&quot;: &quot;MyString&quot;,
   &quot;url&quot;: &quot;qemu://stam/system&quot;,
-  &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
-  &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+  &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+  &quot;display_type&quot;: &quot;vnc&quot;
 }</pre>
 
         <h3>Params</h3>
@@ -308,9 +336,9 @@
   &quot;provider&quot;: &quot;EC2&quot;,
   &quot;description&quot;: null,
   &quot;url&quot;: &quot;eu-west-1&quot;,
-  &quot;created_at&quot;: &quot;2013-12-23T09:55:03Z&quot;,
-  &quot;updated_at&quot;: &quot;2013-12-23T09:55:03Z&quot;,
-  &quot;user&quot;: &quot;user@example.com&quot;,
+  &quot;created_at&quot;: &quot;2014-01-30T07:24:44Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-01-30T07:24:44Z&quot;,
+  &quot;access_key&quot;: &quot;user@example.com&quot;,
   &quot;region&quot;: &quot;eu-west-1&quot;
 }</pre>
 
@@ -327,8 +355,8 @@
     <td>
       <strong>compute_resource </strong><br>
       <small>
-        required
-        
+        optional
+        , nil allowed
       </small>
     </td>
     <td>
@@ -343,7 +371,7 @@
       <strong>compute_resource[name] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -359,7 +387,7 @@
       <strong>compute_resource[provider] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -391,7 +419,7 @@
       <strong>compute_resource[description] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -407,7 +435,7 @@
       <strong>compute_resource[user] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -423,7 +451,7 @@
       <strong>compute_resource[password] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -439,7 +467,7 @@
       <strong>compute_resource[uuid] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -455,7 +483,7 @@
       <strong>compute_resource[region] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -471,7 +499,7 @@
       <strong>compute_resource[tenant] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -487,7 +515,7 @@
       <strong>compute_resource[server] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -536,12 +564,12 @@
 {
   &quot;compute_resource&quot;: {
     &quot;attrs&quot;: {},
-    &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
     &quot;description&quot;: &quot;new_description&quot;,
     &quot;id&quot;: 367690737,
     &quot;name&quot;: &quot;mycompute&quot;,
     &quot;password&quot;: &quot;1234567&quot;,
-    &quot;updated_at&quot;: &quot;2013-12-23T09:55:03Z&quot;,
+    &quot;updated_at&quot;: &quot;2014-01-30T07:24:44Z&quot;,
     &quot;url&quot;: &quot;test:///default&quot;,
     &quot;user&quot;: &quot;MyString&quot;,
     &quot;uuid&quot;: &quot;mycompute&quot;
@@ -577,8 +605,8 @@
     <td>
       <strong>compute_resource </strong><br>
       <small>
-        required
-        
+        optional
+        , nil allowed
       </small>
     </td>
     <td>
@@ -593,7 +621,7 @@
       <strong>compute_resource[name] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -609,7 +637,7 @@
       <strong>compute_resource[provider] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -641,7 +669,7 @@
       <strong>compute_resource[description] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -657,7 +685,7 @@
       <strong>compute_resource[user] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -673,7 +701,7 @@
       <strong>compute_resource[password] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -689,7 +717,7 @@
       <strong>compute_resource[uuid] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -705,7 +733,7 @@
       <strong>compute_resource[region] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -721,7 +749,7 @@
       <strong>compute_resource[tenant] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -737,7 +765,7 @@
       <strong>compute_resource[server] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -781,12 +809,12 @@
 {
   &quot;compute_resource&quot;: {
     &quot;attrs&quot;: {},
-    &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
     &quot;description&quot;: &quot;yourcompute&quot;,
     &quot;id&quot;: 932571420,
     &quot;name&quot;: &quot;yourcompute&quot;,
     &quot;password&quot;: &quot;1234567&quot;,
-    &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
     &quot;url&quot;: &quot;test:///default&quot;,
     &quot;user&quot;: &quot;MyString&quot;,
     &quot;uuid&quot;: &quot;yourcompute&quot;

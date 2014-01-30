@@ -70,8 +70,8 @@
   &quot;subnet_name&quot;: null,
   &quot;domain_id&quot;: null,
   &quot;domain_name&quot;: null,
-  &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
-  &quot;updated_at&quot;: &quot;2013-12-23T09:55:21Z&quot;
+  &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-01-30T07:25:03Z&quot;
 }</pre>
 
 
@@ -103,10 +103,26 @@
   
   <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>interface </strong><br>
+      <strong>id </strong><br>
       <small>
         required
         
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>interface </strong><br>
+      <small>
+        optional
+        , nil allowed
       </small>
     </td>
     <td>
@@ -185,7 +201,7 @@
       <strong>interface[subnet_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -201,7 +217,7 @@
       <strong>interface[domain_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -217,7 +233,7 @@
       <strong>interface[username] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -233,7 +249,7 @@
       <strong>interface[password] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -249,7 +265,7 @@
       <strong>interface[provider] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>

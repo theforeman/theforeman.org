@@ -55,6 +55,18 @@
       <small>Create a nested parameter for operating system</small>
     </h1>
   </div>
+  <div class='page-header'>
+    <h1>
+      POST /api/locations/:location_id/parameters<br>
+      <small>Create a nested parameter for location</small>
+    </h1>
+  </div>
+  <div class='page-header'>
+    <h1>
+      POST /api/organizations/:organization_id/parameters<br>
+      <small>Create a nested parameter for organization</small>
+    </h1>
+  </div>
 
 <div>
 
@@ -70,13 +82,13 @@
 }
 200
 {
-  &quot;id&quot;: 767575241,
+  &quot;id&quot;: 840284804,
   &quot;name&quot;: &quot;special_key&quot;,
   &quot;value&quot;: &quot;123&quot;,
   &quot;priority&quot;: 4,
   &quot;is_property&quot;: null,
-  &quot;created_at&quot;: &quot;2013-12-23T09:55:29Z&quot;,
-  &quot;updated_at&quot;: &quot;2013-12-23T09:55:29Z&quot;
+  &quot;created_at&quot;: &quot;2014-01-30T07:25:12Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-01-30T07:25:12Z&quot;
 }</pre>
 
 
@@ -156,10 +168,42 @@
   
   <tr style='background-color:rgb(255,255,255);'>
     <td>
+      <strong>location_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of location</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>id of organization</p>
+        <br>
+        Value: Must be String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
       <strong>parameter </strong><br>
       <small>
-        required
-        
+        optional
+        , nil allowed
       </small>
     </td>
     <td>
@@ -173,7 +217,7 @@
     <td>
       <strong>parameter[name] </strong><br>
       <small>
-        optional
+        required
         
       </small>
     </td>
@@ -189,7 +233,7 @@
     <td>
       <strong>parameter[value] </strong><br>
       <small>
-        optional
+        required
         
       </small>
     </td>

@@ -54,14 +54,14 @@
 {
   &quot;medium&quot;: {
     &quot;config_path&quot;: null,
-    &quot;created_at&quot;: &quot;2013-12-23T09:55:26Z&quot;,
+    &quot;created_at&quot;: &quot;2014-01-30T07:25:08Z&quot;,
     &quot;id&quot;: 1011586620,
     &quot;image_path&quot;: null,
     &quot;media_path&quot;: null,
     &quot;name&quot;: &quot;new medium&quot;,
     &quot;os_family&quot;: null,
     &quot;path&quot;: &quot;http://www.newmedium.com/&quot;,
-    &quot;updated_at&quot;: &quot;2013-12-23T09:55:26Z&quot;
+    &quot;updated_at&quot;: &quot;2014-01-30T07:25:08Z&quot;
   }
 }</pre>
 
@@ -80,8 +80,8 @@
     <td>
       <strong>medium </strong><br>
       <small>
-        required
-        
+        optional
+        , nil allowed
       </small>
     </td>
     <td>
@@ -132,7 +132,7 @@
       <strong>medium[os_family] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -141,6 +141,8 @@
 <p>Available families:</p>
 
 <ul>
+<li>AIX</li>
+
 <li>Archlinux</li>
 
 <li>Debian</li>
@@ -148,6 +150,8 @@
 <li>Freebsd</li>
 
 <li>Gentoo</li>
+
+<li>Junos</li>
 
 <li>Redhat</li>
 
@@ -168,7 +172,7 @@
       <strong>medium[operatingsystem_ids] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>

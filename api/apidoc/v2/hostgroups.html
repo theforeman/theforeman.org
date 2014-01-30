@@ -87,6 +87,8 @@
       &quot;domain_name&quot;: &quot;mydomain.net&quot;,
       &quot;environment_id&quot;: 334344675,
       &quot;environment_name&quot;: &quot;production&quot;,
+      &quot;compute_profile_id&quot;: 980190962,
+      &quot;compute_profile_name&quot;: &quot;1-Small&quot;,
       &quot;ancestry&quot;: null,
       &quot;parameters&quot;: {
         &quot;group1&quot;: &quot;group1&quot;
@@ -107,6 +109,8 @@
       &quot;domain_name&quot;: null,
       &quot;environment_id&quot;: 334344675,
       &quot;environment_name&quot;: &quot;production&quot;,
+      &quot;compute_profile_id&quot;: null,
+      &quot;compute_profile_name&quot;: null,
       &quot;ancestry&quot;: null,
       &quot;parameters&quot;: {},
       &quot;puppetclass_ids&quot;: []
@@ -123,6 +127,8 @@
       &quot;domain_name&quot;: null,
       &quot;environment_id&quot;: null,
       &quot;environment_name&quot;: null,
+      &quot;compute_profile_id&quot;: null,
+      &quot;compute_profile_name&quot;: null,
       &quot;ancestry&quot;: null,
       &quot;parameters&quot;: {},
       &quot;puppetclass_ids&quot;: []
@@ -139,6 +145,8 @@
       &quot;domain_name&quot;: null,
       &quot;environment_id&quot;: 334344675,
       &quot;environment_name&quot;: &quot;production&quot;,
+      &quot;compute_profile_id&quot;: null,
+      &quot;compute_profile_name&quot;: null,
       &quot;ancestry&quot;: &quot;1&quot;,
       &quot;parameters&quot;: {},
       &quot;puppetclass_ids&quot;: []
@@ -155,6 +163,8 @@
       &quot;domain_name&quot;: null,
       &quot;environment_id&quot;: null,
       &quot;environment_name&quot;: null,
+      &quot;compute_profile_id&quot;: null,
+      &quot;compute_profile_name&quot;: null,
       &quot;ancestry&quot;: null,
       &quot;parameters&quot;: {},
       &quot;puppetclass_ids&quot;: []
@@ -276,6 +286,8 @@
   &quot;domain_name&quot;: &quot;mydomain.net&quot;,
   &quot;environment_id&quot;: 334344675,
   &quot;environment_name&quot;: &quot;production&quot;,
+  &quot;compute_profile_id&quot;: 980190962,
+  &quot;compute_profile_name&quot;: &quot;1-Small&quot;,
   &quot;ancestry&quot;: null,
   &quot;parameters&quot;: {
     &quot;group1&quot;: &quot;group1&quot;
@@ -356,6 +368,8 @@
   &quot;domain_name&quot;: null,
   &quot;environment_id&quot;: null,
   &quot;environment_name&quot;: null,
+  &quot;compute_profile_id&quot;: null,
+  &quot;compute_profile_name&quot;: null,
   &quot;ancestry&quot;: null,
   &quot;parameters&quot;: {},
   &quot;puppetclass_ids&quot;: []
@@ -374,8 +388,8 @@
     <td>
       <strong>hostgroup </strong><br>
       <small>
-        required
-        
+        optional
+        , nil allowed
       </small>
     </td>
     <td>
@@ -406,7 +420,7 @@
       <strong>hostgroup[parent_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -422,7 +436,7 @@
       <strong>hostgroup[environment_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -438,7 +452,7 @@
       <strong>hostgroup[operatingsystem_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -454,7 +468,7 @@
       <strong>hostgroup[architecture_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -470,7 +484,7 @@
       <strong>hostgroup[medium_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -486,7 +500,7 @@
       <strong>hostgroup[ptable_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -502,7 +516,7 @@
       <strong>hostgroup[puppet_ca_proxy_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -518,7 +532,7 @@
       <strong>hostgroup[subnet_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -534,7 +548,7 @@
       <strong>hostgroup[domain_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -550,7 +564,7 @@
       <strong>hostgroup[puppet_proxy_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -598,7 +612,8 @@
   &quot;hostgroup&quot;: {
     &quot;ancestry&quot;: null,
     &quot;architecture_id&quot;: 501905019,
-    &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+    &quot;compute_profile_id&quot;: 980190962,
+    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
     &quot;domain_id&quot;: 22495316,
     &quot;environment_id&quot;: 334344675,
     &quot;id&quot;: 636252244,
@@ -612,7 +627,7 @@
     &quot;puppet_proxy_id&quot;: 182953976,
     &quot;root_pass&quot;: &quot;$1$foreman$NW1XVtbk4/XkJqmKNrFWV0&quot;,
     &quot;subnet_id&quot;: null,
-    &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
     &quot;use_image&quot;: null,
     &quot;vm_defaults&quot;: null
   }
@@ -647,8 +662,8 @@
     <td>
       <strong>hostgroup </strong><br>
       <small>
-        required
-        
+        optional
+        , nil allowed
       </small>
     </td>
     <td>
@@ -679,7 +694,7 @@
       <strong>hostgroup[parent_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -695,7 +710,7 @@
       <strong>hostgroup[environment_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -711,7 +726,7 @@
       <strong>hostgroup[operatingsystem_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -727,7 +742,7 @@
       <strong>hostgroup[architecture_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -743,7 +758,7 @@
       <strong>hostgroup[medium_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -759,7 +774,7 @@
       <strong>hostgroup[ptable_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -775,7 +790,7 @@
       <strong>hostgroup[puppet_ca_proxy_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -791,7 +806,7 @@
       <strong>hostgroup[subnet_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -807,7 +822,7 @@
       <strong>hostgroup[domain_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -823,7 +838,7 @@
       <strong>hostgroup[puppet_proxy_id] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -868,7 +883,8 @@
   &quot;hostgroup&quot;: {
     &quot;ancestry&quot;: null,
     &quot;architecture_id&quot;: 501905019,
-    &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+    &quot;compute_profile_id&quot;: 980190962,
+    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
     &quot;domain_id&quot;: 22495316,
     &quot;environment_id&quot;: 334344675,
     &quot;id&quot;: 636252244,
@@ -882,7 +898,7 @@
     &quot;puppet_proxy_id&quot;: 182953976,
     &quot;root_pass&quot;: &quot;$1$foreman$NW1XVtbk4/XkJqmKNrFWV0&quot;,
     &quot;subnet_id&quot;: null,
-    &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
     &quot;use_image&quot;: null,
     &quot;vm_defaults&quot;: null
   }

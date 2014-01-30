@@ -46,15 +46,19 @@
       <pre class="prettyprint">DELETE /api/config_templates/1007981701-centos5_3_pxelinux
 422
 {
-  &quot;id&quot;: 1007981701,
-  &quot;errors&quot;: {
-    &quot;base&quot;: [
-      &quot;centos5_3_pxelinux is used by centos 5.3 - &quot;
+  &quot;error&quot;: {
+    &quot;id&quot;: 1007981701,
+    &quot;errors&quot;: {
+      &quot;base&quot;: [
+        &quot;centos5_3_pxelinux is used by #&lt;OsDefaultTemplate:0x0000001019d448&gt;&quot;,
+        &quot;centos5_3_pxelinux is used by #&lt;OsDefaultTemplate:0x0000001019cde0&gt;&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;centos5_3_pxelinux is used by #&lt;OsDefaultTemplate:0x0000001019d448&gt;&quot;,
+      &quot;centos5_3_pxelinux is used by #&lt;OsDefaultTemplate:0x0000001019cde0&gt;&quot;
     ]
-  },
-  &quot;full_messages&quot;: [
-    &quot;centos5_3_pxelinux is used by centos 5.3 - &quot;
-  ]
+  }
 }</pre>
 
 

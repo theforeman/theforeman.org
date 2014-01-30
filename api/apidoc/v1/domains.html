@@ -68,42 +68,42 @@
 [
   {
     &quot;domain&quot;: {
-      &quot;name&quot;: &quot;mydomain.net&quot;,
       &quot;id&quot;: 22495316,
-      &quot;dns_id&quot;: 113629430,
+      &quot;name&quot;: &quot;mydomain.net&quot;,
       &quot;fullname&quot;: null,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
+      &quot;dns_id&quot;: 113629430,
+      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
     }
   },
   {
     &quot;domain&quot;: {
-      &quot;name&quot;: &quot;unused.net&quot;,
       &quot;id&quot;: 759776763,
-      &quot;dns_id&quot;: 113629430,
+      &quot;name&quot;: &quot;unused.net&quot;,
       &quot;fullname&quot;: &quot;somewhare that is never used&quot;,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-    }
-  },
-  {
-    &quot;domain&quot;: {
-      &quot;name&quot;: &quot;useless.net&quot;,
-      &quot;id&quot;: 229305443,
-      &quot;dns_id&quot;: null,
-      &quot;fullname&quot;: null,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
-    }
-  },
-  {
-    &quot;domain&quot;: {
-      &quot;name&quot;: &quot;yourdomain.net&quot;,
-      &quot;id&quot;: 589326610,
       &quot;dns_id&quot;: 113629430,
+      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+    }
+  },
+  {
+    &quot;domain&quot;: {
+      &quot;id&quot;: 229305443,
+      &quot;name&quot;: &quot;useless.net&quot;,
+      &quot;fullname&quot;: null,
+      &quot;dns_id&quot;: null,
+      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+    }
+  },
+  {
+    &quot;domain&quot;: {
+      &quot;id&quot;: 589326610,
+      &quot;name&quot;: &quot;yourdomain.net&quot;,
       &quot;fullname&quot;: &quot;somewhere in yourdomain&quot;,
-      &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
-      &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
+      &quot;dns_id&quot;: 113629430,
+      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
     }
   }
 ]</pre>
@@ -208,16 +208,16 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/domains/mydomain.net
+          <pre class="prettyprint">GET /api/domains/22495316-mydomain-net
 200
 {
   &quot;domain&quot;: {
-    &quot;name&quot;: &quot;mydomain.net&quot;,
     &quot;id&quot;: 22495316,
-    &quot;dns_id&quot;: 113629430,
-    &quot;updated_at&quot;: &quot;2012-12-18T15:24:43Z&quot;,
+    &quot;name&quot;: &quot;mydomain.net&quot;,
     &quot;fullname&quot;: null,
-    &quot;created_at&quot;: &quot;2012-12-18T15:24:43Z&quot;
+    &quot;dns_id&quot;: 113629430,
+    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
   }
 }</pre>
 
@@ -276,14 +276,21 @@
           <pre class="prettyprint">POST /api/domains
 {
   &quot;domain&quot;: {
-    &quot;name&quot;: &quot;domain.net&quot;
+    &quot;fullname&quot;: &quot;&quot;
   }
 }
-201
+422
 {
   &quot;domain&quot;: {
-    &quot;name&quot;: &quot;domain.net&quot;,
-    &quot;id&quot;: 759776764
+    &quot;id&quot;: null,
+    &quot;errors&quot;: {
+      &quot;name&quot;: [
+        &quot;can&#x27;t be blank&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Name can&#x27;t be blank&quot;
+    ]
   }
 }</pre>
 
@@ -403,24 +410,21 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/domains/mydomain.net
+          <pre class="prettyprint">PUT /api/domains/22495316-mydomain-net
 {
   &quot;domain&quot;: {
-    &quot;name&quot;: &quot;&quot;
+    &quot;name&quot;: &quot;domain.new&quot;
   }
 }
-422
+200
 {
   &quot;domain&quot;: {
+    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;dns_id&quot;: 113629430,
+    &quot;fullname&quot;: null,
     &quot;id&quot;: 22495316,
-    &quot;errors&quot;: {
-      &quot;name&quot;: [
-        &quot;can&#x27;t be blank&quot;
-      ]
-    },
-    &quot;full_messages&quot;: [
-      &quot;Name can&#x27;t be blank&quot;
-    ]
+    &quot;name&quot;: &quot;domain.new&quot;,
+    &quot;updated_at&quot;: &quot;2014-01-30T07:24:23Z&quot;
   }
 }</pre>
 
@@ -556,12 +560,16 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/domains/mydomain.net
+          <pre class="prettyprint">DELETE /api/domains/22495316-mydomain-net
 200
 {
   &quot;domain&quot;: {
+    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;dns_id&quot;: 113629430,
+    &quot;fullname&quot;: null,
+    &quot;id&quot;: 22495316,
     &quot;name&quot;: &quot;mydomain.net&quot;,
-    &quot;id&quot;: 22495316
+    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
   }
 }</pre>
 

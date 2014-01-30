@@ -51,14 +51,14 @@
 {
   &quot;medium&quot;: {
     &quot;config_path&quot;: null,
-    &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
     &quot;id&quot;: 980190962,
     &quot;image_path&quot;: null,
     &quot;media_path&quot;: null,
     &quot;name&quot;: &quot;CentOS 5.4&quot;,
     &quot;os_family&quot;: null,
     &quot;path&quot;: &quot;http://mirror.centos.org/centos/6.0/os/$arch&quot;,
-    &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;
+    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
   }
 }</pre>
 
@@ -93,8 +93,8 @@
     <td>
       <strong>medium </strong><br>
       <small>
-        required
-        
+        optional
+        , nil allowed
       </small>
     </td>
     <td>
@@ -154,6 +154,8 @@
 <p>Available families:</p>
 
 <ul>
+<li>AIX</li>
+
 <li>Archlinux</li>
 
 <li>Debian</li>
@@ -161,6 +163,8 @@
 <li>Freebsd</li>
 
 <li>Gentoo</li>
+
+<li>Junos</li>
 
 <li>Redhat</li>
 
@@ -181,7 +185,7 @@
       <strong>medium[operatingsystem_ids] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>

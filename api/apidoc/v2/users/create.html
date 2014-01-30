@@ -61,19 +61,14 @@
   &quot;auth_source_id&quot;: 980190962,
   &quot;auth_source_name&quot;: &quot;ldap-server&quot;,
   &quot;last_login_on&quot;: null,
-  &quot;created_at&quot;: &quot;2013-12-23T09:55:47Z&quot;,
-  &quot;updated_at&quot;: &quot;2013-12-23T09:55:47Z&quot;,
+  &quot;created_at&quot;: &quot;2014-01-30T07:25:33Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-01-30T07:25:33Z&quot;,
   &quot;auth_source_ldap&quot;: {
     &quot;id&quot;: 980190962,
     &quot;type&quot;: &quot;AuthSourceLdap&quot;,
     &quot;name&quot;: &quot;ldap-server&quot;
   },
-  &quot;roles&quot;: [
-    {
-      &quot;name&quot;: &quot;Anonymous&quot;,
-      &quot;id&quot;: 7
-    }
-  ]
+  &quot;roles&quot;: []
 }</pre>
 
 
@@ -91,8 +86,8 @@
     <td>
       <strong>user </strong><br>
       <small>
-        required
-        
+        optional
+        , nil allowed
       </small>
     </td>
     <td>
@@ -123,7 +118,7 @@
       <strong>user[firstname] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -139,7 +134,7 @@
       <strong>user[lastname] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -171,7 +166,7 @@
       <strong>user[admin] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>

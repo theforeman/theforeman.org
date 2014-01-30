@@ -33,7 +33,7 @@
 
   <div class='page-header'>
     <h1>
-      GET /api/hosts/:id/puppetrun<br>
+      PUT /api/hosts/:id/puppetrun<br>
       <small>Force a puppet run on the agent.</small>
     </h1>
   </div>
@@ -43,7 +43,8 @@
   
 
     <h2>Examples</h2>
-      <pre class="prettyprint">GET /api/hosts/my5name.mydomain.net/puppetrun
+      <pre class="prettyprint">PUT /api/hosts/my5name.mydomain.net/puppetrun
+{}
 200
 {
   &quot;host&quot;: {
@@ -51,8 +52,9 @@
     &quot;build&quot;: false,
     &quot;certname&quot;: &quot;my5name.mydomain.net&quot;,
     &quot;comment&quot;: null,
+    &quot;compute_profile_id&quot;: null,
     &quot;compute_resource_id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
     &quot;disk&quot;: null,
     &quot;domain_id&quot;: 22495316,
     &quot;enabled&quot;: true,
@@ -84,7 +86,7 @@
     &quot;serial&quot;: null,
     &quot;source_file_id&quot;: null,
     &quot;subnet_id&quot;: 980190962,
-    &quot;updated_at&quot;: &quot;2013-12-23T09:54:34Z&quot;,
+    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
     &quot;use_image&quot;: null,
     &quot;uuid&quot;: null
   }
@@ -92,6 +94,34 @@
 
 
 
+    <h2>Params</h2>
+    <table class='table'>
+      <thead>
+        <tr>
+          <th>Param name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space.
+    </td>
+  </tr>
+
+  
+
+      </tbody>
+    </table>
 </div>
 
 

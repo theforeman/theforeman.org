@@ -61,6 +61,372 @@
 
 
 
+        <h3>Examples</h3>
+          <pre class="prettyprint">GET /api/operatingsystems
+200
+[
+  {
+    &quot;operatingsystem&quot;: {
+      &quot;id&quot;: 309172073,
+      &quot;name&quot;: &quot;centos&quot;,
+      &quot;major&quot;: &quot;5&quot;,
+      &quot;minor&quot;: &quot;3&quot;,
+      &quot;family&quot;: &quot;Redhat&quot;,
+      &quot;release_name&quot;: null,
+      &quot;media&quot;: [
+        {
+          &quot;medium&quot;: {
+            &quot;id&quot;: 980190962,
+            &quot;name&quot;: &quot;CentOS 5.4&quot;
+          }
+        }
+      ],
+      &quot;architectures&quot;: [
+        {
+          &quot;architecture&quot;: {
+            &quot;id&quot;: 501905019,
+            &quot;name&quot;: &quot;x86_64&quot;
+          }
+        }
+      ],
+      &quot;ptables&quot;: [
+        {
+          &quot;ptable&quot;: {
+            &quot;id&quot;: 980190962,
+            &quot;name&quot;: &quot;default&quot;
+          }
+        }
+      ],
+      &quot;config_templates&quot;: [
+        {
+          &quot;config_template&quot;: {
+            &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
+            &quot;id&quot;: 1007981701
+          }
+        },
+        {
+          &quot;config_template&quot;: {
+            &quot;name&quot;: &quot;iPXE Dummy Menu&quot;,
+            &quot;id&quot;: 698706415
+          }
+        },
+        {
+          &quot;config_template&quot;: {
+            &quot;name&quot;: &quot;MyFinish&quot;,
+            &quot;id&quot;: 104314179
+          }
+        },
+        {
+          &quot;config_template&quot;: {
+            &quot;name&quot;: &quot;MyScript&quot;,
+            &quot;id&quot;: 981457253
+          }
+        },
+        {
+          &quot;config_template&quot;: {
+            &quot;name&quot;: &quot;MyString&quot;,
+            &quot;id&quot;: 943779058
+          }
+        },
+        {
+          &quot;config_template&quot;: {
+            &quot;name&quot;: &quot;MyString2&quot;,
+            &quot;id&quot;: 269958254
+          }
+        },
+        {
+          &quot;config_template&quot;: {
+            &quot;name&quot;: &quot;PXE Default Menu&quot;,
+            &quot;id&quot;: 684651467
+          }
+        },
+        {
+          &quot;config_template&quot;: {
+            &quot;name&quot;: &quot;PXEGrub Dummy Menu&quot;,
+            &quot;id&quot;: 131565194
+          }
+        },
+        {
+          &quot;config_template&quot;: {
+            &quot;name&quot;: &quot;PXELinux default local boot&quot;,
+            &quot;id&quot;: 821548108
+          }
+        },
+        {
+          &quot;config_template&quot;: {
+            &quot;name&quot;: &quot;PXELinux global default&quot;,
+            &quot;id&quot;: 352050261
+          }
+        }
+      ],
+      &quot;os_default_templates&quot;: []
+    }
+  },
+  {
+    &quot;operatingsystem&quot;: {
+      &quot;id&quot;: 775246587,
+      &quot;name&quot;: &quot;NoHosts&quot;,
+      &quot;major&quot;: &quot;1&quot;,
+      &quot;minor&quot;: &quot;1&quot;,
+      &quot;family&quot;: &quot;Redhat&quot;,
+      &quot;release_name&quot;: null,
+      &quot;media&quot;: [],
+      &quot;architectures&quot;: [],
+      &quot;ptables&quot;: [],
+      &quot;config_templates&quot;: [],
+      &quot;os_default_templates&quot;: []
+    }
+  },
+  {
+    &quot;operatingsystem&quot;: {
+      &quot;id&quot;: 859751735,
+      &quot;name&quot;: &quot;OpenSuse&quot;,
+      &quot;major&quot;: &quot;11&quot;,
+      &quot;minor&quot;: &quot;4&quot;,
+      &quot;family&quot;: &quot;Suse&quot;,
+      &quot;release_name&quot;: null,
+      &quot;media&quot;: [],
+      &quot;architectures&quot;: [],
+      &quot;ptables&quot;: [],
+      &quot;config_templates&quot;: [],
+      &quot;os_default_templates&quot;: []
+    }
+  },
+  {
+    &quot;operatingsystem&quot;: {
+      &quot;id&quot;: 1073012828,
+      &quot;name&quot;: &quot;Redhat&quot;,
+      &quot;major&quot;: &quot;6&quot;,
+      &quot;minor&quot;: &quot;1&quot;,
+      &quot;family&quot;: &quot;Redhat&quot;,
+      &quot;release_name&quot;: null,
+      &quot;media&quot;: [
+        {
+          &quot;medium&quot;: {
+            &quot;id&quot;: 980190962,
+            &quot;name&quot;: &quot;CentOS 5.4&quot;
+          }
+        }
+      ],
+      &quot;architectures&quot;: [
+        {
+          &quot;architecture&quot;: {
+            &quot;id&quot;: 501905019,
+            &quot;name&quot;: &quot;x86_64&quot;
+          }
+        }
+      ],
+      &quot;ptables&quot;: [
+        {
+          &quot;ptable&quot;: {
+            &quot;id&quot;: 980190962,
+            &quot;name&quot;: &quot;default&quot;
+          }
+        }
+      ],
+      &quot;config_templates&quot;: [
+        {
+          &quot;config_template&quot;: {
+            &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
+            &quot;id&quot;: 1007981701
+          }
+        },
+        {
+          &quot;config_template&quot;: {
+            &quot;name&quot;: &quot;MyFinish&quot;,
+            &quot;id&quot;: 104314179
+          }
+        },
+        {
+          &quot;config_template&quot;: {
+            &quot;name&quot;: &quot;MyScript&quot;,
+            &quot;id&quot;: 981457253
+          }
+        },
+        {
+          &quot;config_template&quot;: {
+            &quot;name&quot;: &quot;MyString&quot;,
+            &quot;id&quot;: 943779058
+          }
+        },
+        {
+          &quot;config_template&quot;: {
+            &quot;name&quot;: &quot;MyString2&quot;,
+            &quot;id&quot;: 269958254
+          }
+        },
+        {
+          &quot;config_template&quot;: {
+            &quot;name&quot;: &quot;PXEGrub Dummy Menu&quot;,
+            &quot;id&quot;: 131565194
+          }
+        },
+        {
+          &quot;config_template&quot;: {
+            &quot;name&quot;: &quot;PXELinux default local boot&quot;,
+            &quot;id&quot;: 821548108
+          }
+        },
+        {
+          &quot;config_template&quot;: {
+            &quot;name&quot;: &quot;PXELinux global default&quot;,
+            &quot;id&quot;: 352050261
+          }
+        }
+      ],
+      &quot;os_default_templates&quot;: [
+        {
+          &quot;os_default_template&quot;: {
+            &quot;id&quot;: 980190962,
+            &quot;config_template_id&quot;: 943779058,
+            &quot;template_kind_id&quot;: 698706415
+          }
+        },
+        {
+          &quot;os_default_template&quot;: {
+            &quot;id&quot;: 298486374,
+            &quot;config_template_id&quot;: 269958254,
+            &quot;template_kind_id&quot;: 983253650
+          }
+        },
+        {
+          &quot;os_default_template&quot;: {
+            &quot;id&quot;: 113629430,
+            &quot;config_template_id&quot;: 981457253,
+            &quot;template_kind_id&quot;: 478250810
+          }
+        },
+        {
+          &quot;os_default_template&quot;: {
+            &quot;id&quot;: 281110143,
+            &quot;config_template_id&quot;: 1007981701,
+            &quot;template_kind_id&quot;: 710512633
+          }
+        },
+        {
+          &quot;os_default_template&quot;: {
+            &quot;id&quot;: 1018350795,
+            &quot;config_template_id&quot;: 131565194,
+            &quot;template_kind_id&quot;: 131565194
+          }
+        },
+        {
+          &quot;os_default_template&quot;: {
+            &quot;id&quot;: 51848956,
+            &quot;config_template_id&quot;: 698706415,
+            &quot;template_kind_id&quot;: 698706415
+          }
+        }
+      ]
+    }
+  },
+  {
+    &quot;operatingsystem&quot;: {
+      &quot;id&quot;: 442321401,
+      &quot;name&quot;: &quot;Solaris&quot;,
+      &quot;major&quot;: &quot;5&quot;,
+      &quot;minor&quot;: &quot;10&quot;,
+      &quot;family&quot;: &quot;Solaris&quot;,
+      &quot;release_name&quot;: &quot;hw0910&quot;,
+      &quot;media&quot;: [
+        {
+          &quot;medium&quot;: {
+            &quot;id&quot;: 442321401,
+            &quot;name&quot;: &quot;Solaris 10&quot;
+          }
+        }
+      ],
+      &quot;architectures&quot;: [
+        {
+          &quot;architecture&quot;: {
+            &quot;id&quot;: 331892513,
+            &quot;name&quot;: &quot;sparc&quot;
+          }
+        }
+      ],
+      &quot;ptables&quot;: [],
+      &quot;config_templates&quot;: [],
+      &quot;os_default_templates&quot;: []
+    }
+  },
+  {
+    &quot;operatingsystem&quot;: {
+      &quot;id&quot;: 331303656,
+      &quot;name&quot;: &quot;Ubuntu&quot;,
+      &quot;major&quot;: &quot;10&quot;,
+      &quot;minor&quot;: &quot;10&quot;,
+      &quot;family&quot;: &quot;Debian&quot;,
+      &quot;release_name&quot;: null,
+      &quot;media&quot;: [
+        {
+          &quot;medium&quot;: {
+            &quot;id&quot;: 1011586618,
+            &quot;name&quot;: &quot;Ubuntu Mirror&quot;
+          }
+        }
+      ],
+      &quot;architectures&quot;: [
+        {
+          &quot;architecture&quot;: {
+            &quot;id&quot;: 501905019,
+            &quot;name&quot;: &quot;x86_64&quot;
+          }
+        }
+      ],
+      &quot;ptables&quot;: [
+        {
+          &quot;ptable&quot;: {
+            &quot;id&quot;: 1011586618,
+            &quot;name&quot;: &quot;ubuntu default&quot;
+          }
+        }
+      ],
+      &quot;config_templates&quot;: [
+        {
+          &quot;config_template&quot;: {
+            &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
+            &quot;id&quot;: 1007981701
+          }
+        },
+        {
+          &quot;config_template&quot;: {
+            &quot;name&quot;: &quot;MyFinish&quot;,
+            &quot;id&quot;: 104314179
+          }
+        },
+        {
+          &quot;config_template&quot;: {
+            &quot;name&quot;: &quot;MyString2&quot;,
+            &quot;id&quot;: 269958254
+          }
+        }
+      ],
+      &quot;os_default_templates&quot;: [
+        {
+          &quot;os_default_template&quot;: {
+            &quot;id&quot;: 374648174,
+            &quot;config_template_id&quot;: 269958254,
+            &quot;template_kind_id&quot;: 983253650
+          }
+        },
+        {
+          &quot;os_default_template&quot;: {
+            &quot;id&quot;: 638205575,
+            &quot;config_template_id&quot;: 1007981701,
+            &quot;template_kind_id&quot;: 710512633
+          }
+        },
+        {
+          &quot;os_default_template&quot;: {
+            &quot;id&quot;: 991788158,
+            &quot;config_template_id&quot;: 104314179,
+            &quot;template_kind_id&quot;: 550103832
+          }
+        }
+      ]
+    }
+  }
+]</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -166,24 +532,33 @@
 200
 {
   &quot;operatingsystem&quot;: {
-    &quot;name&quot;: &quot;Redhat&quot;,
-    &quot;minor&quot;: &quot;1&quot;,
     &quot;id&quot;: 1073012828,
+    &quot;name&quot;: &quot;Redhat&quot;,
+    &quot;major&quot;: &quot;6&quot;,
+    &quot;minor&quot;: &quot;1&quot;,
     &quot;family&quot;: &quot;Redhat&quot;,
-    &quot;ptables&quot;: [
+    &quot;release_name&quot;: null,
+    &quot;media&quot;: [
       {
-        &quot;ptable&quot;: {
-          &quot;name&quot;: &quot;default&quot;,
-          &quot;id&quot;: 980190962
+        &quot;medium&quot;: {
+          &quot;id&quot;: 980190962,
+          &quot;name&quot;: &quot;CentOS 5.4&quot;
         }
       }
     ],
-    &quot;os_default_templates&quot;: [],
     &quot;architectures&quot;: [
       {
         &quot;architecture&quot;: {
-          &quot;name&quot;: &quot;x86_64&quot;,
-          &quot;id&quot;: 501905019
+          &quot;id&quot;: 501905019,
+          &quot;name&quot;: &quot;x86_64&quot;
+        }
+      }
+    ],
+    &quot;ptables&quot;: [
+      {
+        &quot;ptable&quot;: {
+          &quot;id&quot;: 980190962,
+          &quot;name&quot;: &quot;default&quot;
         }
       }
     ],
@@ -220,24 +595,64 @@
       },
       {
         &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;PXE Default File&quot;,
-          &quot;id&quot;: 352050261
+          &quot;name&quot;: &quot;PXEGrub Dummy Menu&quot;,
+          &quot;id&quot;: 131565194
         }
       },
       {
         &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;PXE Localboot Default&quot;,
+          &quot;name&quot;: &quot;PXELinux default local boot&quot;,
           &quot;id&quot;: 821548108
+        }
+      },
+      {
+        &quot;config_template&quot;: {
+          &quot;name&quot;: &quot;PXELinux global default&quot;,
+          &quot;id&quot;: 352050261
         }
       }
     ],
-    &quot;release_name&quot;: null,
-    &quot;major&quot;: &quot;6&quot;,
-    &quot;media&quot;: [
+    &quot;os_default_templates&quot;: [
       {
-        &quot;medium&quot;: {
-          &quot;name&quot;: &quot;CentOS 5.4&quot;,
-          &quot;id&quot;: 980190962
+        &quot;os_default_template&quot;: {
+          &quot;id&quot;: 980190962,
+          &quot;config_template_id&quot;: 943779058,
+          &quot;template_kind_id&quot;: 698706415
+        }
+      },
+      {
+        &quot;os_default_template&quot;: {
+          &quot;id&quot;: 298486374,
+          &quot;config_template_id&quot;: 269958254,
+          &quot;template_kind_id&quot;: 983253650
+        }
+      },
+      {
+        &quot;os_default_template&quot;: {
+          &quot;id&quot;: 113629430,
+          &quot;config_template_id&quot;: 981457253,
+          &quot;template_kind_id&quot;: 478250810
+        }
+      },
+      {
+        &quot;os_default_template&quot;: {
+          &quot;id&quot;: 281110143,
+          &quot;config_template_id&quot;: 1007981701,
+          &quot;template_kind_id&quot;: 710512633
+        }
+      },
+      {
+        &quot;os_default_template&quot;: {
+          &quot;id&quot;: 1018350795,
+          &quot;config_template_id&quot;: 131565194,
+          &quot;template_kind_id&quot;: 131565194
+        }
+      },
+      {
+        &quot;os_default_template&quot;: {
+          &quot;id&quot;: 51848956,
+          &quot;config_template_id&quot;: 698706415,
+          &quot;template_kind_id&quot;: 698706415
         }
       }
     ]
@@ -299,25 +714,25 @@
           <pre class="prettyprint">POST /api/operatingsystems
 {
   &quot;operatingsystem&quot;: {
-    &quot;minor&quot;: &quot;2&quot;,
     &quot;name&quot;: &quot;awsome_os&quot;,
-    &quot;major&quot;: &quot;1&quot;
+    &quot;major&quot;: &quot;1&quot;,
+    &quot;minor&quot;: &quot;2&quot;
   }
 }
 200
 {
   &quot;operatingsystem&quot;: {
-    &quot;name&quot;: &quot;awsome_os&quot;,
-    &quot;minor&quot;: &quot;2&quot;,
     &quot;id&quot;: 1073012829,
-    &quot;family&quot;: null,
-    &quot;ptables&quot;: [],
-    &quot;os_default_templates&quot;: [],
-    &quot;release_name&quot;: null,
-    &quot;config_templates&quot;: [],
-    &quot;architectures&quot;: [],
+    &quot;name&quot;: &quot;awsome_os&quot;,
     &quot;major&quot;: &quot;1&quot;,
-    &quot;media&quot;: []
+    &quot;minor&quot;: &quot;2&quot;,
+    &quot;family&quot;: null,
+    &quot;release_name&quot;: null,
+    &quot;media&quot;: [],
+    &quot;architectures&quot;: [],
+    &quot;ptables&quot;: [],
+    &quot;config_templates&quot;: [],
+    &quot;os_default_templates&quot;: []
   }
 }</pre>
 
@@ -478,19 +893,36 @@
 200
 {
   &quot;operatingsystem&quot;: {
-    &quot;name&quot;: &quot;new_name&quot;,
-    &quot;minor&quot;: &quot;1&quot;,
     &quot;id&quot;: 1073012828,
+    &quot;name&quot;: &quot;new_name&quot;,
+    &quot;major&quot;: &quot;6&quot;,
+    &quot;minor&quot;: &quot;1&quot;,
     &quot;family&quot;: &quot;Redhat&quot;,
-    &quot;ptables&quot;: [
+    &quot;release_name&quot;: null,
+    &quot;media&quot;: [
       {
-        &quot;ptable&quot;: {
-          &quot;name&quot;: &quot;default&quot;,
-          &quot;id&quot;: 980190962
+        &quot;medium&quot;: {
+          &quot;id&quot;: 980190962,
+          &quot;name&quot;: &quot;CentOS 5.4&quot;
         }
       }
     ],
-    &quot;os_default_templates&quot;: [],
+    &quot;architectures&quot;: [
+      {
+        &quot;architecture&quot;: {
+          &quot;id&quot;: 501905019,
+          &quot;name&quot;: &quot;x86_64&quot;
+        }
+      }
+    ],
+    &quot;ptables&quot;: [
+      {
+        &quot;ptable&quot;: {
+          &quot;id&quot;: 980190962,
+          &quot;name&quot;: &quot;default&quot;
+        }
+      }
+    ],
     &quot;config_templates&quot;: [
       {
         &quot;config_template&quot;: {
@@ -524,35 +956,67 @@
       },
       {
         &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;PXE Default File&quot;,
-          &quot;id&quot;: 352050261
+          &quot;name&quot;: &quot;PXEGrub Dummy Menu&quot;,
+          &quot;id&quot;: 131565194
         }
       },
       {
         &quot;config_template&quot;: {
-          &quot;name&quot;: &quot;PXE Localboot Default&quot;,
+          &quot;name&quot;: &quot;PXELinux default local boot&quot;,
           &quot;id&quot;: 821548108
         }
-      }
-    ],
-    &quot;architectures&quot;: [
+      },
       {
-        &quot;architecture&quot;: {
-          &quot;name&quot;: &quot;x86_64&quot;,
-          &quot;id&quot;: 501905019
+        &quot;config_template&quot;: {
+          &quot;name&quot;: &quot;PXELinux global default&quot;,
+          &quot;id&quot;: 352050261
         }
       }
     ],
-    &quot;release_name&quot;: null,
-    &quot;media&quot;: [
+    &quot;os_default_templates&quot;: [
       {
-        &quot;medium&quot;: {
-          &quot;name&quot;: &quot;CentOS 5.4&quot;,
-          &quot;id&quot;: 980190962
+        &quot;os_default_template&quot;: {
+          &quot;id&quot;: 980190962,
+          &quot;config_template_id&quot;: 943779058,
+          &quot;template_kind_id&quot;: 698706415
+        }
+      },
+      {
+        &quot;os_default_template&quot;: {
+          &quot;id&quot;: 298486374,
+          &quot;config_template_id&quot;: 269958254,
+          &quot;template_kind_id&quot;: 983253650
+        }
+      },
+      {
+        &quot;os_default_template&quot;: {
+          &quot;id&quot;: 113629430,
+          &quot;config_template_id&quot;: 981457253,
+          &quot;template_kind_id&quot;: 478250810
+        }
+      },
+      {
+        &quot;os_default_template&quot;: {
+          &quot;id&quot;: 281110143,
+          &quot;config_template_id&quot;: 1007981701,
+          &quot;template_kind_id&quot;: 710512633
+        }
+      },
+      {
+        &quot;os_default_template&quot;: {
+          &quot;id&quot;: 1018350795,
+          &quot;config_template_id&quot;: 131565194,
+          &quot;template_kind_id&quot;: 131565194
+        }
+      },
+      {
+        &quot;os_default_template&quot;: {
+          &quot;id&quot;: 51848956,
+          &quot;config_template_id&quot;: 698706415,
+          &quot;template_kind_id&quot;: 698706415
         }
       }
-    ],
-    &quot;major&quot;: &quot;6&quot;
+    ]
   }
 }</pre>
 
@@ -724,12 +1188,15 @@
 200
 {
   &quot;operatingsystem&quot;: {
-    &quot;name&quot;: &quot;NoHosts 1.1&quot;,
+    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;description&quot;: null,
     &quot;id&quot;: 775246587,
-    &quot;ptables&quot;: [],
-    &quot;architectures&quot;: [],
-    &quot;config_templates&quot;: [],
-    &quot;media&quot;: []
+    &quot;major&quot;: &quot;1&quot;,
+    &quot;minor&quot;: &quot;1&quot;,
+    &quot;name&quot;: &quot;NoHosts&quot;,
+    &quot;nameindicator&quot;: null,
+    &quot;release_name&quot;: null,
+    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
   }
 }</pre>
 

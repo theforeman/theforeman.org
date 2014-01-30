@@ -67,35 +67,79 @@
 [
   {
     &quot;lookup_key&quot;: {
-      &quot;id&quot;: 980190962,
+      &quot;key&quot;: &quot;cluster&quot;,
+      &quot;is_param&quot;: true,
       &quot;required&quot;: false,
+      &quot;override&quot;: true,
       &quot;description&quot;: null,
+      &quot;default_value&quot;: &quot;secret&quot;,
+      &quot;id&quot;: 328495940
+    }
+  },
+  {
+    &quot;lookup_key&quot;: {
+      &quot;key&quot;: &quot;custom_class_param&quot;,
+      &quot;is_param&quot;: true,
+      &quot;required&quot;: false,
+      &quot;override&quot;: true,
+      &quot;description&quot;: null,
+      &quot;default_value&quot;: &quot;abcdef&quot;,
+      &quot;id&quot;: 1018350795
+    }
+  },
+  {
+    &quot;lookup_key&quot;: {
+      &quot;key&quot;: &quot;custom_class_param&quot;,
+      &quot;is_param&quot;: true,
+      &quot;required&quot;: false,
+      &quot;override&quot;: true,
+      &quot;description&quot;: null,
+      &quot;default_value&quot;: &quot;abcdef&quot;,
+      &quot;id&quot;: 742046652
+    }
+  },
+  {
+    &quot;lookup_key&quot;: {
       &quot;key&quot;: &quot;port&quot;,
       &quot;is_param&quot;: true,
+      &quot;required&quot;: false,
       &quot;override&quot;: false,
-      &quot;default_value&quot;: &quot;80&quot;
+      &quot;description&quot;: null,
+      &quot;default_value&quot;: &quot;80&quot;,
+      &quot;id&quot;: 980190962
     }
   },
   {
     &quot;lookup_key&quot;: {
-      &quot;id&quot;: 113629430,
+      &quot;key&quot;: &quot;special_info&quot;,
+      &quot;is_param&quot;: false,
       &quot;required&quot;: false,
+      &quot;override&quot;: true,
       &quot;description&quot;: null,
+      &quot;default_value&quot;: &quot;secret&quot;,
+      &quot;id&quot;: 281110143
+    }
+  },
+  {
+    &quot;lookup_key&quot;: {
       &quot;key&quot;: &quot;ssl&quot;,
       &quot;is_param&quot;: true,
+      &quot;required&quot;: false,
       &quot;override&quot;: true,
-      &quot;default_value&quot;: &quot;t&quot;
+      &quot;description&quot;: null,
+      &quot;default_value&quot;: &quot;t&quot;,
+      &quot;id&quot;: 113629430
     }
   },
   {
     &quot;lookup_key&quot;: {
-      &quot;id&quot;: 298486374,
-      &quot;required&quot;: false,
-      &quot;description&quot;: null,
       &quot;key&quot;: &quot;ssl_port&quot;,
       &quot;is_param&quot;: false,
+      &quot;required&quot;: false,
       &quot;override&quot;: false,
-      &quot;default_value&quot;: &quot;443&quot;
+      &quot;description&quot;: null,
+      &quot;default_value&quot;: &quot;443&quot;,
+      &quot;id&quot;: 298486374
     }
   }
 ]</pre>
@@ -204,13 +248,13 @@
 200
 {
   &quot;lookup_key&quot;: {
-    &quot;id&quot;: 980190962,
-    &quot;required&quot;: false,
-    &quot;description&quot;: null,
     &quot;key&quot;: &quot;port&quot;,
     &quot;is_param&quot;: true,
+    &quot;required&quot;: false,
     &quot;override&quot;: false,
-    &quot;default_value&quot;: &quot;80&quot;
+    &quot;description&quot;: null,
+    &quot;default_value&quot;: &quot;80&quot;,
+    &quot;id&quot;: 980190962
   }
 }</pre>
 
@@ -269,20 +313,28 @@
           <pre class="prettyprint">POST /api/lookup_keys
 {
   &quot;lookup_key&quot;: {
-    &quot;is_param&quot;: true,
-    &quot;key&quot;: &quot;testkey&quot;
+    &quot;key&quot;: &quot;testkey&quot;,
+    &quot;is_param&quot;: true
   }
 }
 201
 {
   &quot;lookup_key&quot;: {
-    &quot;required&quot;: false,
-    &quot;id&quot;: 980190963,
+    &quot;created_at&quot;: &quot;2014-01-30T07:24:29Z&quot;,
+    &quot;default_value&quot;: null,
     &quot;description&quot;: null,
-    &quot;key&quot;: &quot;testkey&quot;,
+    &quot;id&quot;: 1018350796,
     &quot;is_param&quot;: true,
+    &quot;key&quot;: &quot;testkey&quot;,
+    &quot;key_type&quot;: null,
+    &quot;lookup_values_count&quot;: 0,
     &quot;override&quot;: false,
-    &quot;default_value&quot;: null
+    &quot;path&quot;: &quot;fqdn\nhostgroup\nos\ndomain&quot;,
+    &quot;puppetclass_id&quot;: null,
+    &quot;required&quot;: false,
+    &quot;updated_at&quot;: &quot;2014-01-30T07:24:29Z&quot;,
+    &quot;validator_rule&quot;: null,
+    &quot;validator_type&quot;: null
   }
 }</pre>
 
@@ -437,19 +489,27 @@
           <pre class="prettyprint">PUT /api/lookup_keys/980190962-port
 {
   &quot;lookup_key&quot;: {
-    &quot;default_value&quot;: 8080
+    &quot;default_value&quot;: &quot;8080&quot;
   }
 }
 200
 {
   &quot;lookup_key&quot;: {
-    &quot;required&quot;: false,
-    &quot;id&quot;: 980190962,
+    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;default_value&quot;: 8080,
     &quot;description&quot;: null,
-    &quot;key&quot;: &quot;port&quot;,
+    &quot;id&quot;: 980190962,
     &quot;is_param&quot;: true,
+    &quot;key&quot;: &quot;port&quot;,
+    &quot;key_type&quot;: &quot;integer&quot;,
+    &quot;lookup_values_count&quot;: 0,
     &quot;override&quot;: false,
-    &quot;default_value&quot;: 8080
+    &quot;path&quot;: &quot;fqdn\nhostgroup\nos\ndomain&quot;,
+    &quot;puppetclass_id&quot;: null,
+    &quot;required&quot;: false,
+    &quot;updated_at&quot;: &quot;2014-01-30T07:24:29Z&quot;,
+    &quot;validator_rule&quot;: null,
+    &quot;validator_type&quot;: null
   }
 }</pre>
 
@@ -621,13 +681,21 @@
 200
 {
   &quot;lookup_key&quot;: {
-    &quot;required&quot;: false,
-    &quot;id&quot;: 980190962,
+    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;default_value&quot;: &quot;80&quot;,
     &quot;description&quot;: null,
-    &quot;key&quot;: &quot;port&quot;,
+    &quot;id&quot;: 980190962,
     &quot;is_param&quot;: true,
+    &quot;key&quot;: &quot;port&quot;,
+    &quot;key_type&quot;: &quot;integer&quot;,
+    &quot;lookup_values_count&quot;: 0,
     &quot;override&quot;: false,
-    &quot;default_value&quot;: &quot;80&quot;
+    &quot;path&quot;: &quot;fqdn\nhostgroup\nos\ndomain&quot;,
+    &quot;puppetclass_id&quot;: null,
+    &quot;required&quot;: false,
+    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;validator_rule&quot;: null,
+    &quot;validator_type&quot;: null
   }
 }</pre>
 
