@@ -30,7 +30,13 @@ an extensive library of plugins.
  ![](static/images/os/Suse.png) OpenSUSE
 
 ##### Foreman can provision on bare metal as well as the following cloud providers:
- Amazon EC2, Google Compute Engine, Libvirt, OpenStack, oVirt and RHEV, Rackspace, VMware
+ ![](static/images/clouds/amazonaws.png) Amazon EC2  ![](static/images/clouds/google-compute-engine.png) Google Compute Engine
+ ![](static/images/clouds/libvirt.png) Libvirt  ![](static/images/clouds/openstack.png) OpenStack
+ ![](static/images/clouds/ovirt.png) oVirt and RHEV  ![](static/images/clouds/rackspace.png) Rackspace
+ ![](static/images/clouds/vsphere.png) VMware
+
+
+
 
 ## Learn what Foreman is all about
 The following presentation explains what Foreman is and how it works.
