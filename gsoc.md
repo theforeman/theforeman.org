@@ -1,6 +1,6 @@
 ---
 layout: contribute
-title: Google Summer of Code 2014
+title: Google Summer of Code
 ---
 ## Mentors
 
@@ -8,21 +8,8 @@ Please see [GSoC mentoring](http://en.flossmanuals.net/GSoCMentoring/) and [Fede
 
 ## Project Suggestions
 
-Please list project selections below. Send a pull request with the content of your proposal to github.com/theforeman.org. See [Dave Neary's post](http://www.outercurve.org/Blogs/EntryId/45/Making-the-most-of-Google-Summer-of-Code-Dave-Neary-guest-blogger) for
+Please list project selections below. Send a pull request with the content of your proposal to [theforeman.org at Github](http://github.com/theforeman/theforeman.org). See [Dave Neary's post](http://www.outercurve.org/Blogs/EntryId/45/Making-the-most-of-Google-Summer-of-Code-Dave-Neary-guest-blogger) for
 suggestions on how to propose ideas. They should be useful to the community, and achievable by a student in the time allotted.
-
-Please use the following format:
-
-### Project name
-
-
-* *Status*:
-* *Summary of idea*:
-* *Knowledge prerequisite*:
-* *Skill level*:
-* *Contacts*:
-* *Mentor(s)*:
-* *Notes*:
 
 ## Projects
 
@@ -35,8 +22,6 @@ Please use the following format:
 * *Contacts*:
 * *Mentor(s)*: Daniel Lobato Garcia
 * *Notes*: In a similar way to what Foreman is doing now to pick up provisioning templates from the community, I believe we could take advantage of the Puppet Forge to allow users to use modules from there. Importing these modules into a new model, and importing the puppet classes into Foreman should be achievable by a motivated student with help from the community. This will allow Foreman users to configure their hosts without having to worry about keeping repositories for modules already in the Puppet Forge.
-
-GregSutcliffe: This is pretty close to what we get from Katello (via Pulp) so I'd be wary of duplicating effort here. In addition, we've historically always maintained the position of "Foreman doesn't modify your manfiests, it just parses them for info" and I'd be wary of blurring that line - we get enough questions that should really be in #puppet already :)
 
 ### Multi-host deployments in the Foreman
 
