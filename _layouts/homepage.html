@@ -1,42 +1,47 @@
 {% include header.html %}
 <div id="wrap">
-<div id="main">
-  <div id="content" >
-    <div class="hero-unit">
-      <div class="container">
-        {% include carousel.html %}
+  <div id="main">
+    <div id="content" >
+      <div class="hero-unit">
+        <div class="container">
+          {% include carousel.html %}
+        </div>
       </div>
-    </div>
+      <section id="home" data-speed="4" data-type="background" style="background-position: 50% 0px;">
+        <div class="container">
+          <div class="offset2 span8">
+            <div class="site-description">
+              <h4>
+                {{ site.description }}
+                <a href="learn_more.html">read more ..</a>
+              </h4>
+              <a class="btn btn-info btn-large" href="learn_more.html">Learn more</a>
+              <a class="btn btn-primary btn-large" href="manuals/1.4/quickstart_guide.html">Get started!</a>
+            </div>
+          </div>
 
-    <div class="container">
-      <div class="offset2 span8">
-        <div class="site-description">
-          <h4>
-            {{ site.description }}
-            <a href="learn_more.html">read more ..</a>
-          </h4>
-          <a class="btn btn-info btn-large" href="learn_more.html">Learn more</a>
-          <a class="btn btn-primary btn-large" href="manuals/1.4/quickstart_guide.html">Get started!</a>
-        </div>
-        <div class="clearfix"></div>
-        <h5>latest news:</h5>
-        <div class="latest-news">
-          {% include latest_news.html %}
-        </div>
-        <div class="row-fluid center">
-          <div class="span4">
-            {% include provisioning.html %}
-          </div>
-          <div class="span4">
-            {% include configuration.html %}
-          </div>
-          <div class="span4">
-            {% include monitoring.html %}
+          <div class="row-fluid center">
+            <div class="span4">
+              {% include provisioning.html %}
+            </div>
+            <div class="span4">
+              {% include configuration.html %}
+            </div>
+            <div class="span4">
+              {% include monitoring.html %}
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+      <section id="latest-news" data-speed="4" data-type="background" style="background-position: 50% 0px;">
+        <div class="container">
+          <h5>latest news:</h5>
+          <div class="latest-news">
+            {% include latest_news.html %}
+          </div>
+        </div>
+      </section>
     </div>
   </div>
-</div>
 </div>
 {% include footer.html %}
