@@ -182,6 +182,11 @@ version: 1.4
 ## 5.6 Rails Console
 {%include manuals/1.4/5.6_rails_console.md %}
 
+## 5.7 SPNEGO authentication
+{%include manuals/1.4/5.7_spnego_authentication.md %}
+### 5.7.1 Populate attributes for externally authenticated users
+{%include manuals/1.4/5.7.1_populate_attributes.md %}
+
 # 6. Plugins
 {%include manuals/1.4/6_plugins.md %}
 
