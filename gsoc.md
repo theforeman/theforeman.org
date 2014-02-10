@@ -63,3 +63,25 @@ suggestions on how to propose ideas. They should be useful to the community, and
 * *Contacts*:
 * *Mentor(s)*: Joseph Magen, Ohad Levy
 * *Notes*: We want to offer a way for new users to Foreman to have a low-barrier entry way to start playing with Foreman and spin up some VMs in several compute resources such as Rackspace, EC2 and Google Compute Engine. This would be a non-full featured version of Foreman to encourage users to install a full featured Foreman version.
+
+### Foreman git interface
+
+* *Status*: Not started
+* *Summary of idea*: Control the Foreman via editing a git repository
+* *Knowledge prerequisite*: Ruby on Rails, Git
+* *Skill level*: Medium
+* *Contacts*:
+* *Mentor(s)*: Ivan Nečas
+* *Notes*: Sysadmins don't like UIs that much. API/CLI is better but
+   still, there is an ultimate tool every administrator loves: git.
+   The idea is to have a tooling, that would turn the Foreman instance
+   into a git repository of the managed infrastructure, allowing the
+   user to edit that as any other config files, and reflecting the
+   changes into the Foreman instance again via the API,once the
+   changes are pushed.
+
+   Effectively, you would have a git repository
+   representing the whole infrastructure. Cloning a host would
+   copying a file, changing a parameter would mean just editing it's
+   representation. One could even manage the whole infrastructure with
+   Puppet (and another over Foreman managing that Puppet master [joking] :)
