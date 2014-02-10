@@ -42,7 +42,7 @@ suggestions on how to propose ideas. They should be useful to the community, and
 * *Contacts*:
 * *Mentor(s)*: Daniel Lobato Garcia
 * *Notes*: Compute resources could be expensive. Whether you are managing your own virtualization resources with Ovirt, or you're using EC2 in Amazon, currently Foreman does not offer you a way to check what are the utilization stats for this. We should offer a way for users to do this and graph this information. This information can be also used to scale up and down your instances, using some policies like keeping track of energy savings, morning-night usage, etc..
-* *Internal Note: It would be useful to track compute resources usage per host group.
+* *Internal Note*: It would be useful to track compute resources usage per host group.
 
 ### Host health checks
 
