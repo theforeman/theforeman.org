@@ -63,3 +63,23 @@ suggestions on how to propose ideas. They should be useful to the community, and
 * *Contacts*:
 * *Mentor(s)*: Joseph Magen, Ohad Levy
 * *Notes*: We want to offer a way for new users to Foreman to have a low-barrier entry way to start playing with Foreman and spin up some VMs in several compute resources such as Rackspace, EC2 and Google Compute Engine. This would be a non-full featured version of Foreman to encourage users to install a full featured Foreman version.
+
+### Post-installation import
+
+* *Status:* Not started
+* *Summart of idea*: After running foreman-installation, all resources should be imported into Foreman to continiously manage the host
+* *Knowledge prerequisite*: Ruby, Puppet
+* *Skill level*: Medium
+* *Contacts*: Ewoud Kohl van Wijngaarden
+* *Mentor(s)*:
+* *Notes*: The installer is a wrapper around a set of puppet modules combined
+  with answers, which are just puppet parameters. Foreman manages Puppet
+  modules and their parameters. If those modules were imported into an
+  environment, all answers converted to a parameter and applied to a host or
+  hostgroup the user could easily change the configuration afterward with all
+  the benefits Foreman already provides. Working title for this is answers2enc.
+
+  An optional expansion would be the other way around. Foreman can contain an
+  environment with puppet modules and parameters. This could be extracted into
+  an installer to deploy a new host or maybe a Docker image. Working title for
+  this is enc2answers.
