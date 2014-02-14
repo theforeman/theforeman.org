@@ -186,4 +186,9 @@ version: 1.4
 {%include manuals/1.4/6_plugins.md %}
 
 # 7. Troubleshooting
-{%include manuals/1.4/7_troubleshooting.md %}
+
+## 7.1 NoVNC
+{%include manuals/1.4/7.1_novnc.md %}
+
+## 7.2 Getting Help
+{%include manuals/1.4/7.2_getting_help.md %}
