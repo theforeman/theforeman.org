@@ -45,6 +45,12 @@ You can also exclude these features by using `bundle install --without libvirt p
 3. Run all the tests: `rake test`
 4. Or a single test: `ruby -Itest test/functional/your_test.rb`
 
+### Startup foreman
+1. Follow steps 1 and 2 from the section "setup test environment" if you haven't done so already
+2. Populate database: `rake db:seed`
+3. Startup the server: `rails server`
+
+
 ### Submit Patches
 First, make sure you are a member of the [Foreman Developers](https://groups.google.com/forum/?fromgroups#!forum/foreman-dev) mailing list.
 
