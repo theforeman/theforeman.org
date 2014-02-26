@@ -15,7 +15,7 @@ Thank you to Rackspace, who provide infrastructure on Rackspace Cloud to power o
 
 Thank you to Brandorr Group, who provide servers for our website, continuous integration system and build system.
 
-<div class="lead text-center"><a href="http://www.brandorr.com">Brandorr Group</a></div>
+<div class="lead text-center"><a href="http://www.brandorr.com"><img src="/static/images/sponsors/brandorr.jpeg" /></a></div>
 
 ## Positive Internet
 
