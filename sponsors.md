@@ -34,3 +34,9 @@ Thank you to Kentucky WiMax, who provide servers for our continuous integration 
 Thank you to Red Hat, who provide servers for our RPM build system.
 
 <div class="lead text-center"><a href="http://www.redhat.com"><img src="/static/images/sponsors/redhat.png" /></a></div>
+
+## JetBrains
+
+Thank you to JetBrains, who provide licenses for Rubymine IDE.
+
+<div class="lead text-center"><a href="http://www.jetbrains.com/ruby">RubyMine</a></div>
