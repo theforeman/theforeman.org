@@ -21,8 +21,10 @@ version: 1.4
 {% include manuals/1.4/3.1_system_requirements.md %}
 ### 3.1.1 Supported Platforms
 {% include manuals/1.4/3.1.1_supported_platforms.md %}
-### 3.1.2 Firewall Configuration
-{% include manuals/1.4/3.1.2_firewall_configuration.md %}
+### 3.1.2 Puppet Compatibility
+{% include manuals/1.4/3.1.2_puppet_versions.md %}
+### 3.1.3 Firewall Configuration
+{% include manuals/1.4/3.1.3_firewall_configuration.md %}
 ## 3.2 Foreman Installer
 {%include manuals/1.4/3.2_foreman_installer.md %}
 ### 3.2.1 Installation
