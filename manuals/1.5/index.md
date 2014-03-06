@@ -105,6 +105,8 @@ version: 1.5
 {%include manuals/1.5/4.3.9_smartproxy_libvirt.md %}
 ### 4.3.10 Chef Proxy
 {%include manuals/1.5/4.3.10_chef_proxy.md %}
+### 4.3.11 FreeIPA Realm
+{%include manuals/1.5/4.3.11_freeipa_realm.md %}
 
 ## 4.4 Provisioning
 {%include manuals/1.5/4.4_provisioning.md %}
