@@ -6,3 +6,4 @@ _site
 .idea/*
 .ruby-version
 .ruby-gemset
+.bundle
