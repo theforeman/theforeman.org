@@ -49,7 +49,8 @@ You can also exclude these features by using `bundle install --without libvirt p
 1. Follow steps 1 and 2 from the section "setup test environment" if you haven't done so already
 2. Populate database: `rake db:seed`
 3. Startup the server: `rails server`
-
+4. Navigate to `localhost:3000`
+5. Login with `admin/changeme`
 
 ### Submit Patches
 First, make sure you are a member of the [Foreman Developers](https://groups.google.com/forum/?fromgroups#!forum/foreman-dev) mailing list.
