@@ -30,9 +30,9 @@ Some plugins (e.g. foreman_column_view) may also require configuration in `/usr/
 
 A limited number of plugins are available fully packaged from our deb repositories for ease of use. The number of these is increasing, so check the list of plugins to see if a Debian package is available yet. If it's a useful or popular plugin and not yet packaged, please file a feature request in [the packaging project](http://projects.theforeman.org/projects/rpms/issues/new).
 
-The repo is available at `http://deb.theforeman.org plugins main`. There is only one component (main) for all plugins at this time. They are signed with the Foreman APT key.
+The repo is available at `http://deb.theforeman.org plugins <component>`. Separate repos are available for each Foreman release, containing plugins that are compatible with that particular version. They are signed with the Foreman APT key.
 
-1. Add a source line like this: `deb http://deb.theforeman.org/ plugins main` to Apt
+1. Add a source line like this: `deb http://deb.theforeman.org/ plugins {{page.version}}` to Apt
 2. Find the package for the plugin: `apt-cache search ruby-foreman`
 3. Install the package, e.g. `apt-get install ruby-foreman-discovery`
 4. Restart Foreman: `touch ~foreman/tmp/restart.txt` or `service apache2 restart`
