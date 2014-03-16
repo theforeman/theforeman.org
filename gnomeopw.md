@@ -3,6 +3,10 @@ layout: contribute
 title: Gnome Outreach Program for Women
 ---
 
+## What is OPW?
+
+Please see the general resources for the [Outreach Program for Women](https://gnome.org/opw) for the information about program requirements and the application process.
+
 ## How can I get familiar with this project?
 
 * Grab a cup of your favorite beverage
@@ -15,7 +19,7 @@ title: Gnome Outreach Program for Women
 ## Project Suggestions
 
 Please list project selections below. Send a pull request with the content of your proposal to [theforeman.org at Github](http://github.com/theforeman/theforeman.org). See [Dave Neary's post](http://www.outercurve.org/Blogs/EntryId/45/Making-the-most-of-Google-Summer-of-Code-Dave-Neary-guest-blogger) for
-suggestions on how to propose ideas. Ideas should be useful to the community, and achievable by a student in the time allotted.
+suggestions on how to propose ideas. Ideas should be useful to the community, and achievable by a participant in the time allotted.
 Original good ideas will be valued. We don't want to impose anything. This is Free and Open Source software.
 As usual, if you are doubtful about whether your idea is ok or not, feel free to ask at #theforeman-dev or #theforeman on Freenode.
 
@@ -29,7 +33,7 @@ As usual, if you are doubtful about whether your idea is ok or not, feel free to
 * *Skill level*: Medium
 * *Contacts*:
 * *Mentor(s)*: Daniel Lobato Garcia
-* *Notes*: In a similar way to what Foreman is doing now to pick up provisioning templates from the community, I believe we could take advantage of the Puppet Forge to allow users to use modules from there. Importing these modules into a new model, and importing the puppet classes into Foreman should be achievable by a motivated student with help from the community. This will allow Foreman users to configure their hosts without having to worry about keeping repositories for modules already in the Puppet Forge.
+* *Notes*: In a similar way to what Foreman is doing now to pick up provisioning templates from the community, I believe we could take advantage of the Puppet Forge to allow users to use modules from there. Importing these modules into a new model, and importing the puppet classes into Foreman should be achievable by a motivated participant with help from the community. This will allow Foreman users to configure their hosts without having to worry about keeping repositories for modules already in the Puppet Forge.
 
 ### Multi-host deployments in the Foreman
 
@@ -75,7 +79,7 @@ As usual, if you are doubtful about whether your idea is ok or not, feel free to
 ### Post-installation import
 
 * *Status:* Not started
-* *Summart of idea*: After running foreman-installation, all resources should be imported into Foreman to continiously manage the host
+* *Summary of idea*: After running foreman-installation, all resources should be imported into Foreman to continuously manage the host
 * *Knowledge prerequisite*: Ruby, Puppet
 * *Skill level*: Medium
 * *Contacts*: Ewoud Kohl van Wijngaarden
