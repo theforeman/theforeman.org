@@ -13,6 +13,8 @@ We will endeavour to resolve high severity issues in the current stable release 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2014-0090: session fixation, new session IDs are not generated on login](security.html#2014-0090)
+* [CVE-2014-0089: stored cross site scripting (XSS) on 500 error page](security.html#2014-0089)
 * [CVE-2013-4386: SQL injection in host/host group parameter overrides](security.html#2013-4386)
 * [CVE-2013-4182: hosts API privilege escalation](security.html#2013-4182)
 * [CVE-2013-4180: DoS via hosts controller input conversion](security.html#2013-4180)
@@ -28,6 +30,24 @@ All security advisories made for Foreman are listed below with their correspondi
 
 ### Disclosure details
 
+#### <a id="2014-0090"></a>CVE-2014-0090: session fixation, new session IDs are not generated on login
+
+Upon successful login, a new session ID was not generated for the user, so an attacker who had set the session ID in the request from the user's browser would be able to exploit the escalated session with the user's privileges.
+
+* Affects all known Foreman versions
+* Fix released in Foreman 1.4.2
+* Redmine issue [#4457](http://projects.theforeman.org/issues/4457)
+* [Red Hat Bugzilla](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-0090)
+
+#### <a id="2014-0089"></a>CVE-2014-0089: stored cross site scripting (XSS) on 500 error page
+
+The 500 error page was vulnerable to stored cross site scripting attacks, where the error message was rendered without HTML encoding.  In addition, bookmarks could be saved by any user with HTML in the name which caused an error when rendering the bookmark list, leading to a 500 error and execution of the HTML in the browser.
+
+* Affects Foreman 1.4.0 to 1.4.1 inclusive
+* Fix released in Foreman 1.4.2
+* Redmine issue [#4456](http://projects.theforeman.org/issues/4456)
+* [Red Hat Bugzilla](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-0089)
+
 #### <a id="2013-4386"></a>CVE-2013-4386: SQL injection in host/host group parameter overrides
 
 Host and host group parameter overrides (lookup_values) allowed SQL injection from the host FQDN or host group label.
@@ -40,7 +60,7 @@ Host and host group parameter overrides (lookup_values) allowed SQL injection fr
 
 The /api/hosts API was found to provide access to all hosts without checking whether the current user has privileges to view a particular host.
 
-Thanks to Daniel Lobato of CERN IT-PES-PS for discovering this issue.
+Thanks to Daniel Lobato Garcia of CERN IT-PES-PS for discovering this issue.
 
 * Fix released in Foreman 1.2.2
 * Redmine issue [#2863](http://projects.theforeman.org/issues/2863)
