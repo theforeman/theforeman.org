@@ -44,6 +44,8 @@ When Kafo (used in the Foreman installer) runs, a /tmp/default_values.yaml file 
 
 Upon successful login, a new session ID was not generated for the user, so an attacker who had set the session ID in the request from the user's browser would be able to exploit the escalated session with the user's privileges.
 
+Thanks to Jeremy Choi and Keqin Hong of the Red Hat HSS Pen-Test Team for discovering this issue.
+
 * Affects all known Foreman versions
 * Fix released in Foreman 1.4.2
 * Redmine issue [#4457](http://projects.theforeman.org/issues/4457)
@@ -52,6 +54,8 @@ Upon successful login, a new session ID was not generated for the user, so an at
 #### <a id="2014-0089"></a>CVE-2014-0089: stored cross site scripting (XSS) on 500 error page
 
 The 500 error page was vulnerable to stored cross site scripting attacks, where the error message was rendered without HTML encoding.  In addition, bookmarks could be saved by any user with HTML in the name which caused an error when rendering the bookmark list, leading to a 500 error and execution of the HTML in the browser.
+
+Thanks to Jeremy Choi and Keqin Hong of the Red Hat HSS Pen-Test Team for discovering this issue.
 
 * Affects Foreman 1.4.0 to 1.4.1 inclusive
 * Fix released in Foreman 1.4.2
