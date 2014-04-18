@@ -3,29 +3,42 @@ require 'tmpdir'
 require 'git'
 
 @tagged_repos = %w(foreman smart-proxy foreman-installer foreman-selinux)
-@tag_from     = "1.2.0"
-@tag_to       = "1.3.0"
+@tag_from     = "1.4.0"
+@tag_to       = "1.5.0-RC1"
 
 @untagged_repos = %w(
   theforeman.org
   puppet-foreman
   puppet-foreman_proxy
   puppet-puppet
-  puppet-apache
   puppet-dhcp
   puppet-dns
   puppet-tftp
   kafo
+  kafo_parsers
   hammer-cli
   hammer-cli-foreman
-  hammer-cli-katello
-  hammer-cli-katello-bridge
   community-templates
+  chef-handler-foreman
+  foreman-bats
+  foreman_bootdisk
+  foreman_chef
+  foreman_discovery
+  foreman-docker
+  foreman_hooks
+  foreman_setup
+  foreman_snapshot
+  foreman-tasks
+  foreman_templates
+  ovirt-node-plugin-foreman
+  puppetdb_foreman
 )
-@date_from     = '2013-07-01'
-@date_to       = '2013-10-14'
+@date_from     = '2014-01-30'
+@date_to       = '2014-05-05'
 
 @author_map = {
+  "abenari"        => "Amos Benari",
+  "Daniel Lobato"  => "Daniel Lobato Garcia",
   "Joseph Magen"   => "Joseph Mitchell Magen",
   "Ivan Necas"     => "Ivan Nečas",
   "Lukas Zapletal" => "Lukáš Zapletal",
