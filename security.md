@@ -13,6 +13,7 @@ We will endeavour to resolve high severity issues in the current stable release 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2014-0192: provisioning template previews are world-readable](security.html#2014-0192)
 * [CVE-2014-0135: Kafo leaves world-readable default_values.yaml file](security.html#2014-0135)
 * [CVE-2014-0090: session fixation, new session IDs are not generated on login](security.html#2014-0090)
 * [CVE-2014-0089: stored cross site scripting (XSS) on 500 error page](security.html#2014-0089)
@@ -30,6 +31,15 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2014-0192"></a>CVE-2014-0192: provisioning template previews are world-readable
+
+Provisioning templates previews ("spoof") are accessible without authentication when used with the hostname parameter.
+
+* Affects Foreman 1.4.0 to 1.4.3 inclusive
+* Fix released in Foreman 1.5.0
+* Redmine issue [#5436](http://projects.theforeman.org/issues/5436)
+* Red Hat Bugzilla [#1092354](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-0192)
 
 #### <a id="2014-0135"></a>CVE-2014-0135: Kafo leaves world-readable default_values.yaml file
 
