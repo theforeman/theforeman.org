@@ -11,6 +11,7 @@ Components include the Foreman web UI, Smart Proxy, Passenger (for the puppet ma
 * Fedora 19
 * Debian 7 (Wheezy)
 * Debian 6 (Squeeze) (update Puppet [from backports](http://backports.debian.org/Instructions/))
+* Ubuntu 14.04 (Trusty)
 * Ubuntu 12.04 (Precise)
 
 Other operating systems will need to use alternative installation methods (see the manual).
