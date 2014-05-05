@@ -8,6 +8,7 @@ Components include the Foreman web UI, Smart Proxy, Passenger (for the puppet ma
   * [EPEL](http://fedoraproject.org/wiki/EPEL/FAQ#How_can_I_install_the_packages_from_the_EPEL_software_rep) is required
   * On RHEL 6, additionally the Optional and RHSCL 1.0 repositories/channels:
     * `yum-config-manager --enable rhel-6-server-optional-rpms rhel-server-rhscl-6-rpms`
+    * check the above repositories because the command can silently fail when subscription does not provide it: `yum repolist`
 * Fedora 19
 * Debian 7 (Wheezy)
 * Debian 6 (Squeeze) (update Puppet [from backports](http://backports.debian.org/Instructions/))
