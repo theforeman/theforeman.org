@@ -18,7 +18,7 @@ navigation:
 - text: Learn more
   url: learn_more.html
 - text: Getting started
-  url:  manuals/1.4/quickstart_guide.html
+  url:  manuals/1.5/quickstart_guide.html
 - text: Videos
   url: media.html
 
