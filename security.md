@@ -13,6 +13,7 @@ We will endeavour to resolve high severity issues in the current stable release 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2014-0208: stored cross site scripting (XSS) in search auto-completion](security.html#2014-0208)
 * [CVE-2014-0192: provisioning template previews are world-readable](security.html#2014-0192)
 * [CVE-2014-0135: Kafo leaves world-readable default_values.yaml file](security.html#2014-0135)
 * [CVE-2014-0090: session fixation, new session IDs are not generated on login](security.html#2014-0090)
@@ -32,12 +33,21 @@ All security advisories made for Foreman are listed below with their correspondi
 
 ### Disclosure details
 
+#### <a id="2014-0208"></a>CVE-2014-0208: stored cross site scripting (XSS) in search auto-completion
+
+The search auto-completion was vulnerable to a stored cross site scripting (XSS) attack via completion of (global/host) parameters in search keys.
+
+* Affects all known Foreman versions
+* Fix released in Foreman 1.4.4 and 1.5.0
+* Redmine issue [#5471](http://projects.theforeman.org/issues/5471)
+* Red Hat Bugzilla [#1094642](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-0208)
+
 #### <a id="2014-0192"></a>CVE-2014-0192: provisioning template previews are world-readable
 
 Provisioning templates previews ("spoof") are accessible without authentication when used with the hostname parameter.
 
 * Affects Foreman 1.4.0 to 1.4.3 inclusive
-* Fix released in Foreman 1.5.0
+* Fix released in Foreman 1.4.4 and 1.5.0
 * Redmine issue [#5436](http://projects.theforeman.org/issues/5436)
 * Red Hat Bugzilla [#1092354](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-0192)
 
