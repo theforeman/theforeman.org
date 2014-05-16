@@ -6,7 +6,7 @@ description: Foreman is an open source project that gives system administrators 
 
 production_url : http://theforeman.org
 url: http://theforeman.org
-baseurl: /
+baseurl: /theforeman.org/
 
 safe:        false
 
