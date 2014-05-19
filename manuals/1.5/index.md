@@ -198,7 +198,7 @@ version: 1.5
 ### 5.7.3 PAM Authentication
 {%include manuals/1.5/5.7.3_pam_authentication.md %}
 ### 5.7.4 Populate users and attributes
-{%include manuals/1.5/5.7.4_populate_users_attributes.md %}
+{%include manuals/1.5/5.7.4_populate_users_attributes_groups.md %}
 ### 5.7.5 Namespace separation
 {%include manuals/1.5/5.7.5_namespace_separation.md %}
 
