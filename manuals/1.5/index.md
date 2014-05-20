@@ -188,10 +188,19 @@ version: 1.5
 ## 5.6 Rails Console
 {%include manuals/1.5/5.6_rails_console.md %}
 
-## 5.7 SPNEGO authentication
-{%include manuals/1.5/5.7_spnego_authentication.md %}
-### 5.7.1 Populate attributes for externally authenticated users
-{%include manuals/1.5/5.7.1_populate_attributes.md %}
+<a name="#5.7SPNEGOauthentication"></a>
+## 5.7 External Authentication
+{%include manuals/1.5/5.7_external_authentication.md %}
+### 5.7.1 Preparatory steps
+{%include manuals/1.5/5.7.1_preparation.md %}
+### 5.7.2 Kerberos Single Sign-On
+{%include manuals/1.5/5.7.2_kerberos.md %}
+### 5.7.3 PAM Authentication
+{%include manuals/1.5/5.7.3_pam_authentication.md %}
+### 5.7.4 Populate users and attributes
+{%include manuals/1.5/5.7.4_populate_users_attributes.md %}
+### 5.7.5 Namespace separation
+{%include manuals/1.5/5.7.5_namespace_separation.md %}
 
 # 6. Plugins
 {%include manuals/1.5/6_plugins.md %}
