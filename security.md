@@ -13,6 +13,9 @@ We will endeavour to resolve high severity issues in the current stable release 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2014-3492: stored cross site scripting (XSS) in YAML preview](security.html#2014-3492)
+* [CVE-2014-3491: stored cross site scripting (XSS) in notification dialogs](security.html#2014-3491)
+* [CVE-2014-0007: TFTP boot file fetch API permits remote code execution](security.html#2014-0007)
 * [CVE-2014-0208: stored cross site scripting (XSS) in search auto-completion](security.html#2014-0208)
 * [CVE-2014-0192: provisioning template previews are world-readable](security.html#2014-0192)
 * [CVE-2014-0135: Kafo leaves world-readable default_values.yaml file](security.html#2014-0135)
@@ -33,9 +36,42 @@ All security advisories made for Foreman are listed below with their correspondi
 
 ### Disclosure details
 
+#### <a id="2014-3492"></a>CVE-2014-3491: stored cross site scripting (XSS) in YAML preview
+
+The host YAML page, used to preview the Foreman response for the Puppet ENC, will evaluate HTML stored in any host data such as parameters or comments, allowing a cross site scripting (XSS) attack against the user.
+
+* Affects all known Foreman versions
+* Fix released in Foreman 1.4.5 and 1.5.1
+* Redmine issue [#6149](http://projects.theforeman.org/issues/6149)
+* [Red Hat Bugzilla](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-3492)
+
+#### <a id="2014-3491"></a>CVE-2014-3491: stored cross site scripting (XSS) in notification dialogs
+
+When resources (e.g. a host group) was saved or deleted through the web UI, the name of the resource would be evaluated unsafely inside the notification popup, allowing a cross site scripting (XSS) attack against the user changing the resource.
+
+Thanks to Adam Salah of the Red Hat Satellite 6 QE Team for discovering this issue.
+
+* Affects all known Foreman versions
+* Fix released in Foreman 1.4.5 and 1.5.1
+* Redmine issue [#5881](http://projects.theforeman.org/issues/5881)
+* Red Hat Bugzilla [#1100313](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-3491)
+
+#### <a id="2014-0007"></a>CVE-2014-0007: TFTP boot file fetch API permits remote code execution
+
+The Smart Proxy API for downloading boot files from installation media to the TFTP server was vulnerable to remote code execution exploits.
+
+Thanks to Lukas Zapletal of the Red Hat Foreman Team for discovering this issue.
+
+* Affects all known Foreman versions
+* Fix released in Foreman 1.4.5 and 1.5.1
+* Redmine issue [#6086](http://projects.theforeman.org/issues/6086)
+* [Red Hat Bugzilla](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-0007)
+
 #### <a id="2014-0208"></a>CVE-2014-0208: stored cross site scripting (XSS) in search auto-completion
 
 The search auto-completion was vulnerable to a stored cross site scripting (XSS) attack via completion of (global/host) parameters in search keys.
+
+Thanks to Jan Hutař of Red Hat for discovering this issue.
 
 * Affects all known Foreman versions
 * Fix released in Foreman 1.4.4 and 1.5.0
