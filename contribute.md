@@ -43,7 +43,7 @@ You can also exclude these features by using `bundle install --without libvirt p
 1. Copy `config/database.yml.example` to `config/database.yml`
 2. Create your database: `rake db:migrate`
 3. Run all the tests: `rake test`
-4. Or a single test: `ruby -Itest test/functional/your_test.rb`
+4. Or a single test: `ruby -Itest test/functional/your_test.rb` (if you didn't run all tests before, you need to prepare the test environment with `rake db:test:prepare` the first time).
 
 ### Startup foreman
 1. Follow steps 1 and 2 from the section "setup test environment" if you haven't done so already
