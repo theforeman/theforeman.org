@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: security
 title: Security
 ---
 
@@ -213,3 +213,58 @@ The smart proxy daemon ran with a umask of 0, causing files and directories writ
 
 * Fix released in Foreman 1.1
 * Redmine issue [#1929](http://projects.theforeman.org/issues/1929)
+
+## GPG keys
+
+The Foreman project uses multiple GPG keys to sign packages and release artifacts.  All stable releases will be signed by one of the keys.  Nightly and plugin Debian packages will be signed, while nightly and plugin RPM packages will not (this may change in the future).
+
+Signing for the Debian family of operating systems is via secure apt and more information, including verification steps can be found [on the Debian web site](https://wiki.debian.org/SecureApt#Debian_archive_key_expiry).  RPMs themselves are signed and can be verified using `rpm --checksig PACKAGE`.  All yum repository configs set up by foreman-release RPMs or the installer will enable GPG checking by default.
+
+Key management is changing at the time of writing to cycle nightly keys every two years, and issue limited duration keys per stable release.
+
+<div>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Key ID</th>
+        <th>Fingerprint</th>
+        <th>Description</th>
+        <th>Created</th>
+        <th>Expires</th>
+        <th>Revoked</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&search=0x1DCB15D12CA140EEF4947E5766CF053FE775FF07">E775FF07</a></td>
+        <td>1DCB 15D1 2CA1 40EE F494  7E57 66CF 053F E775 FF07</td>
+        <td>Foreman Archive Signing Key</td>
+        <td style='white-space:nowrap'>2010-11-10</td>
+        <td style='white-space:nowrap'></td>
+        <td style='white-space:nowrap'><a href="https://groups.google.com/forum/#!topic/foreman-announce/BiIT784Mb7Q">2014-07-08</a></td>
+        <td>Used up to Foreman 1.5.1</td>
+      </tr>
+      <tr>
+        <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&search=0x7059542D5AEA367F78732D02B3484CB71AA043B8">1AA043B8</a></td>
+        <td>7059 542D 5AEA 367F 7873  2D02 B348 4CB7 1AA0 43B8</td>
+        <td>Foreman Automatic Signing Key (2014)</td>
+        <td style='white-space:nowrap'>2014-07-01</td>
+        <td style='white-space:nowrap'>2016-06-30</td>
+        <td style='white-space:nowrap'></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Key changes in July 2014
+
+In July 2014 after a server was compromised, the existing GPG key (0xE775FF07) was revoked and replaced with a new key (0x1AA043B8) as a precaution.  All existing packages were re-signed with the new key and thereafter, new major releases are signed with new per-release keys.
+
+All users with the old key trusted are urged to immediately disable this as follows:
+
+* Debian users must run `sudo apt-key del E775FF07`
+* RPM users must run `sudo rpm -e gpg-pubkey-e775ff07-4cda3cf9`
+
+More information is available in [the announcement](https://groups.google.com/forum/#!topic/foreman-announce/BiIT784Mb7Q).
