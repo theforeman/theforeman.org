@@ -9,10 +9,13 @@ We take security issues seriously and welcome responsible disclosure from resear
 
 We will endeavour to resolve high severity issues in the current stable release and lower severity issues in the next major release.  Announcements of security issues will be made on [foreman-announce](https://groups.google.com/forum/#!forum/foreman-announce) when a release containing a fix is available to end users and credit will be given to the researcher if desired.
 
+The policy of the project is to treat all newly reported issues as private, and after evaluation, low to medium severity issues will be made public while high severity issues will be fixed under an embargo.  Typically the project supports only one major (x.y) release at a time, though high severity issues may also be fixed in the previous release if it was only recently superseded.
+
 ## Security advisories
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2014-3531: stored cross site scripting (XSS) in operating system names](security.html#2014-3531)
 * [CVE-2014-3492: stored cross site scripting (XSS) in YAML preview](security.html#2014-3492)
 * [CVE-2014-3491: stored cross site scripting (XSS) in notification dialogs](security.html#2014-3491)
 * [CVE-2014-0007: TFTP boot file fetch API permits remote code execution](security.html#2014-0007)
@@ -36,6 +39,17 @@ All security advisories made for Foreman are listed below with their correspondi
 
 ### Disclosure details
 
+#### <a id="2014-3531"></a>CVE-2014-3531: stored cross site scripting (XSS) in operating system names
+
+Operating system names and descriptions could store and cause evaluation of HTML in page views, allowing a cross site scripting (XSS) attack against the user.
+
+Thanks to Jan Hutař of Red Hat for discovering this issue.
+
+* Affects all known Foreman versions
+* Fix due in Foreman 1.5.2
+* Redmine issue [#6580](http://projects.theforeman.org/issues/6580)
+* Red Hat Bugzilla [#1108745] [#1108745(https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-3531)
+
 #### <a id="2014-3492"></a>CVE-2014-3491: stored cross site scripting (XSS) in YAML preview
 
 The host YAML page, used to preview the Foreman response for the Puppet ENC, will evaluate HTML stored in any host data such as parameters or comments, allowing a cross site scripting (XSS) attack against the user.
@@ -47,7 +61,7 @@ The host YAML page, used to preview the Foreman response for the Puppet ENC, wil
 
 #### <a id="2014-3491"></a>CVE-2014-3491: stored cross site scripting (XSS) in notification dialogs
 
-When resources (e.g. a host group) was saved or deleted through the web UI, the name of the resource would be evaluated unsafely inside the notification popup, allowing a cross site scripting (XSS) attack against the user changing the resource.
+When resources (e.g. a host group) were saved or deleted through the web UI, the name of the resource would be evaluated unsafely inside the notification popup, allowing a cross site scripting (XSS) attack against the user changing the resource.
 
 Thanks to Adam Salah of the Red Hat Satellite 6 QE Team for discovering this issue.
 
