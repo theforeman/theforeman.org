@@ -46,7 +46,7 @@ Operating system names and descriptions could store and cause evaluation of HTML
 Thanks to Jan Hutař of Red Hat for discovering this issue.
 
 * Affects all known Foreman versions
-* Fix due in Foreman 1.5.2
+* Fix released in Foreman 1.5.2
 * Redmine issue [#6580](http://projects.theforeman.org/issues/6580)
 * Red Hat Bugzilla [#1108745](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-3531)
 
