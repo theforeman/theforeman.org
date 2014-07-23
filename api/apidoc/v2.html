@@ -18,12 +18,15 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li class='active'><a href='../apidoc/v2.html'>Foreman v2</a></li>
+  
   <li class='pull-right'>
     <a href="../apidoc/v1.html">v1</a> / <a href="../apidoc/v2.html">v2</a>
   </li>
 </ul>
 
-<div><p>Foreman v2 is currently in development and is not the default version. You may use v2 by either passing &#8216;version=2&#8217; in the Accept Header or entering api/v2/ in the URL.</p></div>
+<div>
+<p>Foreman v2 is stable and recommended for use. You may use v2 by either passing ‘version=2’ in the Accept Header or using api/v2/ in the URL.</p>
+</div>
 
 <h1 class='page-header'>Resources</h1>
 
@@ -220,6 +223,98 @@
     </tbody>
   </table>
   <h2>
+    <a href='../apidoc/v2/compute_attributes.html'>
+      Compute attributes
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='../apidoc/v2/compute_attributes/create.html'>POST /api/compute_resources/:compute_resource_id/compute_profiles/:compute_profile_id/compute_attributes</a></td>
+            <td width='60%'>Create a compute attribute</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/compute_attributes/create.html'>POST /api/compute_profiles/:compute_profile_id/compute_resources/:compute_resource_id/compute_attributes</a></td>
+            <td width='60%'>Create a compute attribute</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/compute_attributes/create.html'>POST /api/compute_resources/:compute_resource_id/compute_attributes</a></td>
+            <td width='60%'>Create a compute attribute</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/compute_attributes/create.html'>POST /api/compute_profiles/:compute_profile_id/compute_attributes</a></td>
+            <td width='60%'>Create a compute attribute</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/compute_attributes/create.html'>POST /api/compute_attributes</a></td>
+            <td width='60%'>Create a compute attribute.</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/compute_attributes/update.html'>PUT /api/compute_resources/:compute_resource_id/compute_profiles/:compute_profile_id/compute_attributes/:id</a></td>
+            <td width='60%'>Update a compute attribute</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/compute_attributes/update.html'>PUT /api/compute_profiles/:compute_profile_id/compute_resources/:compute_resource_id/compute_attributes/:id</a></td>
+            <td width='60%'>Update a compute attribute</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/compute_attributes/update.html'>PUT /api/compute_resources/:compute_resource_id/compute_attributes/:id</a></td>
+            <td width='60%'>Update a compute attribute</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/compute_attributes/update.html'>PUT /api/compute_profiles/:compute_profile_id/compute_attributes/:id</a></td>
+            <td width='60%'>Update a compute attribute</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/compute_attributes/update.html'>PUT /api/compute_attributes/:id</a></td>
+            <td width='60%'>Update a compute attribute.</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='../apidoc/v2/compute_profiles.html'>
+      Compute profiles
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='../apidoc/v2/compute_profiles/index.html'>GET /api/compute_profiles</a></td>
+            <td width='60%'>List of compute profiles</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/compute_profiles/show.html'>GET /api/compute_profiles/:id</a></td>
+            <td width='60%'>Show a compute profile.</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/compute_profiles/create.html'>POST /api/compute_profiles</a></td>
+            <td width='60%'>Create a compute profile.</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/compute_profiles/update.html'>PUT /api/compute_profiles/:id</a></td>
+            <td width='60%'>Update a compute profile.</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/compute_profiles/destroy.html'>DELETE /api/compute_profiles/:id</a></td>
+            <td width='60%'>Delete a compute profile.</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
     <a href='../apidoc/v2/compute_resources.html'>
       Compute resources
     </a><br>
@@ -256,6 +351,62 @@
           <tr>
             <td><a href='../apidoc/v2/compute_resources/available_images.html'>GET /api/compute_resources/:id/available_images</a></td>
             <td width='60%'>List available images for a compute resource.</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/compute_resources/available_clusters.html'>GET /api/compute_resources/:id/available_clusters</a></td>
+            <td width='60%'>List available clusters for a compute resource</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/compute_resources/available_networks.html'>GET /api/compute_resources/:id/available_networks</a></td>
+            <td width='60%'>List available networks for a compute resource</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/compute_resources/available_networks.html'>GET /api/compute_resources/:id/available_clusters/:cluster_id/available_networks</a></td>
+            <td width='60%'>List available networks for a compute resource cluster</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/compute_resources/available_storage_domains.html'>GET /api/compute_resources/:id/available_storage_domains</a></td>
+            <td width='60%'>List storage_domains for a compute resource</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/compute_resources/associate.html'>PUT /api/compute_resources/:id/associate</a></td>
+            <td width='60%'>Associate VMs to Hosts.</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='../apidoc/v2/config_groups.html'>
+      Config groups
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='../apidoc/v2/config_groups/index.html'>GET /api/config_groups</a></td>
+            <td width='60%'>List of config groups</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/config_groups/show.html'>GET /api/config_groups/:id</a></td>
+            <td width='60%'>Show a config group.</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/config_groups/create.html'>POST /api/config_groups</a></td>
+            <td width='60%'>Create a config group.</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/config_groups/update.html'>PUT /api/config_groups/:id</a></td>
+            <td width='60%'>Update a config group.</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/config_groups/destroy.html'>DELETE /api/config_groups/:id</a></td>
+            <td width='60%'>Delete a config group.</td>
           </tr>
     </tbody>
   </table>
@@ -432,6 +583,42 @@
     </tbody>
   </table>
   <h2>
+    <a href='../apidoc/v2/filters.html'>
+      Filters
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='../apidoc/v2/filters/index.html'>GET /api/filters</a></td>
+            <td width='60%'>List all filters.</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/filters/show.html'>GET /api/filters/:id</a></td>
+            <td width='60%'>Show a filter.</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/filters/create.html'>POST /api/filters</a></td>
+            <td width='60%'>Create a filter.</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/filters/update.html'>PUT /api/filters/:id</a></td>
+            <td width='60%'>Update a filter.</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/filters/destroy.html'>DELETE /api/filters/:id</a></td>
+            <td width='60%'>Delete a filter.</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
     <a href='../apidoc/v2/home.html'>
       Home
     </a><br>
@@ -588,6 +775,10 @@
           <tr>
             <td><a href='../apidoc/v2/hosts/puppetrun.html'>PUT /api/hosts/:id/puppetrun</a></td>
             <td width='60%'>Force a puppet run on the agent.</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/hosts/disassociate.html'>PUT /api/hosts/:id/disassociate</a></td>
+            <td width='60%'>Disassociate the host from a VM.</td>
           </tr>
           <tr>
             <td><a href='../apidoc/v2/hosts/power.html'>PUT /api/hosts/:id/power</a></td>
@@ -1112,6 +1303,34 @@
     </tbody>
   </table>
   <h2>
+    <a href='../apidoc/v2/permissions.html'>
+      Permissions
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='../apidoc/v2/permissions/index.html'>GET /api/permissions</a></td>
+            <td width='60%'>List all permissions.</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/permissions/show.html'>GET /api/permissions/:id</a></td>
+            <td width='60%'>Show a permission.</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/permissions/resource_types.html'>GET /api/permissions/resource_types</a></td>
+            <td width='60%'>List available resource types.</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
     <a href='../apidoc/v2/plugins.html'>
       Plugins
     </a><br>
@@ -1224,6 +1443,42 @@
           <tr>
             <td><a href='../apidoc/v2/puppetclasses/destroy.html'>DELETE /api/puppetclasses/:id</a></td>
             <td width='60%'>Delete a puppetclass.</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='../apidoc/v2/realms.html'>
+      Realms
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='../apidoc/v2/realms/index.html'>GET /api/realms</a></td>
+            <td width='60%'>List of realms</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/realms/show.html'>GET /api/realms/:id</a></td>
+            <td width='60%'>Show a realm.</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/realms/create.html'>POST /api/realms</a></td>
+            <td width='60%'>Create a realm.</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/realms/update.html'>PUT /api/realms/:id</a></td>
+            <td width='60%'>Update a realm.</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/v2/realms/destroy.html'>DELETE /api/realms/:id</a></td>
+            <td width='60%'>Delete a realm.</td>
           </tr>
     </tbody>
   </table>
@@ -1619,23 +1874,23 @@
     <tbody>
           <tr>
             <td><a href='../apidoc/v2/usergroups/index.html'>GET /api/usergroups</a></td>
-            <td width='60%'>List all usergroups.</td>
+            <td width='60%'>List all user groups.</td>
           </tr>
           <tr>
             <td><a href='../apidoc/v2/usergroups/show.html'>GET /api/usergroups/:id</a></td>
-            <td width='60%'>Show a usergroup.</td>
+            <td width='60%'>Show a user group.</td>
           </tr>
           <tr>
             <td><a href='../apidoc/v2/usergroups/create.html'>POST /api/usergroups</a></td>
-            <td width='60%'>Create a usergroup.</td>
+            <td width='60%'>Create a user group.</td>
           </tr>
           <tr>
             <td><a href='../apidoc/v2/usergroups/update.html'>PUT /api/usergroups/:id</a></td>
-            <td width='60%'>Update a usergroup.</td>
+            <td width='60%'>Update a user group.</td>
           </tr>
           <tr>
             <td><a href='../apidoc/v2/usergroups/destroy.html'>DELETE /api/usergroups/:id</a></td>
-            <td width='60%'>Delete a usergroup.</td>
+            <td width='60%'>Delete a user group.</td>
           </tr>
     </tbody>
   </table>
@@ -1677,12 +1932,11 @@
   </table>
 
 
-
+        
       </div>
     </div>
     <hr>
-    <footer>
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

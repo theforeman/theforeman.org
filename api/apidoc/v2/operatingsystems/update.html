@@ -29,6 +29,8 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>update</li>
+  
+
 </ul>
 
   <div class='page-header'>
@@ -42,8 +44,11 @@
 
   
 
-    <h2>Examples</h2>
-      <pre class="prettyprint">PUT /api/operatingsystems/1073012828
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">PUT /api/operatingsystems/1073012828
 {
   &quot;operatingsystem&quot;: {
     &quot;name&quot;: &quot;new_name&quot;
@@ -54,13 +59,20 @@
   &quot;id&quot;: 1073012828,
   &quot;name&quot;: &quot;new_name&quot;,
   &quot;fullname&quot;: &quot;new_name 6.1&quot;,
-  &quot;description&quot;: null,
+  &quot;description&quot;: &quot;RHEL 6.1&quot;,
   &quot;major&quot;: &quot;6&quot;,
   &quot;minor&quot;: &quot;1&quot;,
   &quot;family&quot;: &quot;Redhat&quot;,
   &quot;release_name&quot;: null,
-  &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-01-30T07:25:10Z&quot;,
+  &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-07-23T13:31:56Z&quot;,
+  &quot;parameters&quot;: [
+    {
+      &quot;id&quot;: 716195090,
+      &quot;name&quot;: &quot;os1&quot;,
+      &quot;value&quot;: &quot;os1&quot;
+    }
+  ],
   &quot;media&quot;: [
     {
       &quot;id&quot;: 980190962,
@@ -172,21 +184,20 @@
       &quot;template_kind_id&quot;: 698706415,
       &quot;template_kind_name&quot;: &quot;iPXE&quot;
     }
-  ]
+  ],
+  &quot;images&quot;: []
 }</pre>
 
-
-
-    <h2>Params</h2>
-    <table class='table'>
-      <thead>
-        <tr>
-          <th>Param name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr style='background-color:rgb(255,255,255);'>
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -198,7 +209,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -214,7 +228,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -229,7 +246,10 @@
       
         <br>
         Value: Must match regular expression /\A(\S+)\Z/.
+
+
     </td>
+
   </tr>
 
   
@@ -245,7 +265,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -254,14 +277,17 @@
       <strong>operatingsystem[minor] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -277,7 +303,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -293,7 +322,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -309,14 +341,18 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
 
-      </tbody>
-    </table>
+    </tbody>
+  </table>
+
 </div>
 
 
@@ -324,8 +360,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

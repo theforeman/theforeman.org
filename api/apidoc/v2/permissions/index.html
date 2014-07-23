@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../../apidoc/v2/permissions.html'>
+      Permissions
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>index</li>
+  
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      GET /api/permissions<br>
+      <small>List all permissions.</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">GET /api/permissions
+200
+{
+  &quot;total&quot;: 139,
+  &quot;subtotal&quot;: 139,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;name&quot;: &quot;view_architectures&quot;,
+      &quot;id&quot;: 350275019,
+      &quot;resource_type&quot;: &quot;Architecture&quot;
+    },
+    {
+      &quot;name&quot;: &quot;create_architectures&quot;,
+      &quot;id&quot;: 912770095,
+      &quot;resource_type&quot;: &quot;Architecture&quot;
+    },
+    {
+      &quot;name&quot;: &quot;edit_architectures&quot;,
+      &quot;id&quot;: 874798611,
+      &quot;resource_type&quot;: &quot;Architecture&quot;
+    },
+    {
+      &quot;name&quot;: &quot;destroy_architectures&quot;,
+      &quot;id&quot;: 586604735,
+      &quot;resource_type&quot;: &quot;Architecture&quot;
+    },
+    {
+      &quot;name&quot;: &quot;view_authenticators&quot;,
+      &quot;id&quot;: 687843582,
+      &quot;resource_type&quot;: &quot;AuthSourceLdap&quot;
+    },
+    {
+      &quot;name&quot;: &quot;create_authenticators&quot;,
+      &quot;id&quot;: 956119309,
+      &quot;resource_type&quot;: &quot;AuthSourceLdap&quot;
+    },
+    {
+      &quot;name&quot;: &quot;edit_authenticators&quot;,
+      &quot;id&quot;: 395314704,
+      &quot;resource_type&quot;: &quot;AuthSourceLdap&quot;
+    },
+    {
+      &quot;name&quot;: &quot;destroy_authenticators&quot;,
+      &quot;id&quot;: 1067518973,
+      &quot;resource_type&quot;: &quot;AuthSourceLdap&quot;
+    },
+    {
+      &quot;name&quot;: &quot;view_bookmarks&quot;,
+      &quot;id&quot;: 995886532,
+      &quot;resource_type&quot;: &quot;Bookmark&quot;
+    },
+    {
+      &quot;name&quot;: &quot;create_bookmarks&quot;,
+      &quot;id&quot;: 435712857,
+      &quot;resource_type&quot;: &quot;Bookmark&quot;
+    },
+    {
+      &quot;name&quot;: &quot;edit_bookmarks&quot;,
+      &quot;id&quot;: 978016136,
+      &quot;resource_type&quot;: &quot;Bookmark&quot;
+    },
+    {
+      &quot;name&quot;: &quot;destroy_bookmarks&quot;,
+      &quot;id&quot;: 1027408783,
+      &quot;resource_type&quot;: &quot;Bookmark&quot;
+    },
+    {
+      &quot;name&quot;: &quot;view_compute_resources&quot;,
+      &quot;id&quot;: 524255159,
+      &quot;resource_type&quot;: &quot;ComputeResource&quot;
+    },
+    {
+      &quot;name&quot;: &quot;create_compute_resources&quot;,
+      &quot;id&quot;: 673360498,
+      &quot;resource_type&quot;: &quot;ComputeResource&quot;
+    },
+    {
+      &quot;name&quot;: &quot;edit_compute_resources&quot;,
+      &quot;id&quot;: 385985960,
+      &quot;resource_type&quot;: &quot;ComputeResource&quot;
+    },
+    {
+      &quot;name&quot;: &quot;destroy_compute_resources&quot;,
+      &quot;id&quot;: 382135357,
+      &quot;resource_type&quot;: &quot;ComputeResource&quot;
+    },
+    {
+      &quot;name&quot;: &quot;view_templates&quot;,
+      &quot;id&quot;: 749123858,
+      &quot;resource_type&quot;: &quot;ConfigTemplate&quot;
+    },
+    {
+      &quot;name&quot;: &quot;create_templates&quot;,
+      &quot;id&quot;: 235065239,
+      &quot;resource_type&quot;: &quot;ConfigTemplate&quot;
+    },
+    {
+      &quot;name&quot;: &quot;edit_templates&quot;,
+      &quot;id&quot;: 766634822,
+      &quot;resource_type&quot;: &quot;ConfigTemplate&quot;
+    },
+    {
+      &quot;name&quot;: &quot;destroy_templates&quot;,
+      &quot;id&quot;: 717733701,
+      &quot;resource_type&quot;: &quot;ConfigTemplate&quot;
+    },
+    {
+      &quot;name&quot;: &quot;deploy_templates&quot;,
+      &quot;id&quot;: 281250359,
+      &quot;resource_type&quot;: &quot;ConfigTemplate&quot;
+    },
+    {
+      &quot;name&quot;: &quot;access_dashboard&quot;,
+      &quot;id&quot;: 220719619,
+      &quot;resource_type&quot;: null
+    },
+    {
+      &quot;name&quot;: &quot;view_domains&quot;,
+      &quot;id&quot;: 623290985,
+      &quot;resource_type&quot;: &quot;Domain&quot;
+    },
+    {
+      &quot;name&quot;: &quot;create_domains&quot;,
+      &quot;id&quot;: 776153244,
+      &quot;resource_type&quot;: &quot;Domain&quot;
+    },
+    {
+      &quot;name&quot;: &quot;edit_domains&quot;,
+      &quot;id&quot;: 914687015,
+      &quot;resource_type&quot;: &quot;Domain&quot;
+    },
+    {
+      &quot;name&quot;: &quot;destroy_domains&quot;,
+      &quot;id&quot;: 808331307,
+      &quot;resource_type&quot;: &quot;Domain&quot;
+    },
+    {
+      &quot;name&quot;: &quot;view_realms&quot;,
+      &quot;id&quot;: 959316070,
+      &quot;resource_type&quot;: &quot;Realm&quot;
+    },
+    {
+      &quot;name&quot;: &quot;create_realms&quot;,
+      &quot;id&quot;: 125033645,
+      &quot;resource_type&quot;: &quot;Realm&quot;
+    },
+    {
+      &quot;name&quot;: &quot;edit_realms&quot;,
+      &quot;id&quot;: 327146991,
+      &quot;resource_type&quot;: &quot;Realm&quot;
+    },
+    {
+      &quot;name&quot;: &quot;destroy_realms&quot;,
+      &quot;id&quot;: 300788035,
+      &quot;resource_type&quot;: &quot;Realm&quot;
+    }
+  ]
+}</pre>
+
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>paginate results</p>
+
+        <br>
+        Value: Must be String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>number of entries per request</p>
+
+        <br>
+        Value: Must be String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>resource_type </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be String
+
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+</div>
+
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

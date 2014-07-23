@@ -25,6 +25,7 @@
     Smart class parameters
     
   </li>
+  
 </ul>
 
 <div class='page-header'>
@@ -34,6 +35,7 @@
     <small></small>
   </h1>
 </div>
+
 
 
 
@@ -106,8 +108,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/smart_class_parameters
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/smart_class_parameters
 200
 {
   &quot;total&quot;: 2,
@@ -132,8 +135,8 @@
       &quot;validator_rule&quot;: null,
       &quot;override_value_order&quot;: &quot;organization,location&quot;,
       &quot;override_values_count&quot;: 0,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     },
     {
       &quot;parameter&quot;: &quot;custom_class_param&quot;,
@@ -147,22 +150,22 @@
       &quot;validator_rule&quot;: null,
       &quot;override_value_order&quot;: &quot;organization,location&quot;,
       &quot;override_values_count&quot;: 0,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     }
   ]
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>host_id </strong><br>
       <small>
@@ -174,7 +177,10 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
@@ -190,7 +196,10 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
@@ -206,7 +215,10 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
@@ -222,7 +234,10 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
@@ -235,10 +250,15 @@
       </small>
     </td>
     <td>
-      <p>Filter results</p>
+      
+<p>Filter results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -251,10 +271,15 @@
       </small>
     </td>
     <td>
-      <p>sort results</p>
+      
+<p>sort results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -267,10 +292,15 @@
       </small>
     </td>
     <td>
-      <p>paginate results</p>
+      
+<p>paginate results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -283,16 +313,22 @@
       </small>
     </td>
     <td>
-      <p>number of entries per request</p>
+      
+<p>number of entries per request</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -316,8 +352,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/puppetclasses/298486374/smart_class_parameters/1018350795-custom_class_param
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/puppetclasses/298486374/smart_class_parameters/1018350795-custom_class_param
 200
 {
   &quot;parameter&quot;: &quot;custom_class_param&quot;,
@@ -331,8 +368,8 @@
   &quot;validator_rule&quot;: null,
   &quot;override_value_order&quot;: &quot;organization,location&quot;,
   &quot;override_values_count&quot;: 0,
-  &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+  &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
   &quot;override_values&quot;: [],
   &quot;environments&quot;: [
     {
@@ -342,16 +379,16 @@
   ]
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -363,13 +400,17 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -393,8 +434,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/smart_class_parameters/1018350795-custom_class_param
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/smart_class_parameters/1018350795-custom_class_param
 {
   &quot;smart_class_parameter&quot;: {
     &quot;default_value&quot;: &quot;33333&quot;
@@ -413,11 +455,12 @@
   &quot;validator_rule&quot;: null,
   &quot;override_value_order&quot;: &quot;organization,location&quot;,
   &quot;override_values_count&quot;: 0,
-  &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-01-30T07:25:20Z&quot;,
+  &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-07-23T13:32:09Z&quot;,
   &quot;puppetclass&quot;: {
     &quot;id&quot;: 298486374,
-    &quot;name&quot;: &quot;apache&quot;
+    &quot;name&quot;: &quot;apache&quot;,
+    &quot;module_name&quot;: &quot;apache&quot;
   },
   &quot;override_values&quot;: [],
   &quot;environments&quot;: [
@@ -428,16 +471,16 @@
   ]
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -449,7 +492,10 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
@@ -465,7 +511,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -480,7 +529,10 @@
       
         <br>
         Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+
+
     </td>
+
   </tr>
 
   
@@ -496,7 +548,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -512,7 +567,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -528,7 +586,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -544,7 +605,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -560,7 +624,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -576,7 +643,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -592,7 +662,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -608,14 +681,18 @@
       
         <br>
         Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
 </div>
 
@@ -624,8 +701,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

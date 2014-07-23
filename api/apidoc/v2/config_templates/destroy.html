@@ -29,6 +29,8 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>destroy</li>
+  
+
 </ul>
 
   <div class='page-header'>
@@ -42,37 +44,38 @@
 
   
 
-    <h2>Examples</h2>
-      <pre class="prettyprint">DELETE /api/config_templates/1007981701-centos5_3_pxelinux
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">DELETE /api/config_templates/1007981701-centos5_3_pxelinux
 422
 {
   &quot;error&quot;: {
     &quot;id&quot;: 1007981701,
     &quot;errors&quot;: {
       &quot;base&quot;: [
-        &quot;centos5_3_pxelinux is used by #&lt;OsDefaultTemplate:0x0000001019d448&gt;&quot;,
-        &quot;centos5_3_pxelinux is used by #&lt;OsDefaultTemplate:0x0000001019cde0&gt;&quot;
+        &quot;centos5_3_pxelinux is used by #&lt;OsDefaultTemplate:0x00000012220ad0&gt;&quot;,
+        &quot;centos5_3_pxelinux is used by #&lt;OsDefaultTemplate:0x000000122281e0&gt;&quot;
       ]
     },
     &quot;full_messages&quot;: [
-      &quot;centos5_3_pxelinux is used by #&lt;OsDefaultTemplate:0x0000001019d448&gt;&quot;,
-      &quot;centos5_3_pxelinux is used by #&lt;OsDefaultTemplate:0x0000001019cde0&gt;&quot;
+      &quot;centos5_3_pxelinux is used by #&lt;OsDefaultTemplate:0x00000012220ad0&gt;&quot;,
+      &quot;centos5_3_pxelinux is used by #&lt;OsDefaultTemplate:0x000000122281e0&gt;&quot;
     ]
   }
 }</pre>
 
-
-
-    <h2>Params</h2>
-    <table class='table'>
-      <thead>
-        <tr>
-          <th>Param name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr style='background-color:rgb(255,255,255);'>
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -84,13 +87,17 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-      </tbody>
-    </table>
+    </tbody>
+  </table>
+
 </div>
 
 
@@ -98,8 +105,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

@@ -25,6 +25,7 @@
     Settings
     
   </li>
+  
 </ul>
 
 <div class='page-header'>
@@ -34,6 +35,7 @@
     <small></small>
   </h1>
 </div>
+
 
 
 
@@ -61,8 +63,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/settings
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/settings
 200
 [
   {
@@ -74,8 +77,8 @@
       &quot;category&quot;: &quot;Setting::General&quot;,
       &quot;settings_type&quot;: &quot;string&quot;,
       &quot;default&quot;: &quot;root@some.host.fqdn&quot;,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     }
   },
   {
@@ -87,8 +90,8 @@
       &quot;category&quot;: &quot;Setting::General&quot;,
       &quot;settings_type&quot;: null,
       &quot;default&quot;: false,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     }
   },
   {
@@ -100,8 +103,8 @@
       &quot;category&quot;: &quot;Setting::General&quot;,
       &quot;settings_type&quot;: null,
       &quot;default&quot;: false,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     }
   },
   {
@@ -113,8 +116,8 @@
       &quot;category&quot;: &quot;Setting::Puppet&quot;,
       &quot;settings_type&quot;: null,
       &quot;default&quot;: true,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     }
   },
   {
@@ -126,8 +129,34 @@
       &quot;category&quot;: &quot;Setting::Puppet&quot;,
       &quot;settings_type&quot;: null,
       &quot;default&quot;: true,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
+    }
+  },
+  {
+    &quot;setting&quot;: {
+      &quot;id&quot;: 348705543,
+      &quot;name&quot;: &quot;default_location&quot;,
+      &quot;value&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: &quot;Default location when importing hosts&quot;,
+      &quot;category&quot;: &quot;Setting::Puppet&quot;,
+      &quot;settings_type&quot;: null,
+      &quot;default&quot;: &quot;Location 1&quot;,
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
+    }
+  },
+  {
+    &quot;setting&quot;: {
+      &quot;id&quot;: 600826774,
+      &quot;name&quot;: &quot;default_organization&quot;,
+      &quot;value&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: &quot;Default organization when importing hosts&quot;,
+      &quot;category&quot;: &quot;Setting::Puppet&quot;,
+      &quot;settings_type&quot;: null,
+      &quot;default&quot;: &quot;Organization 1&quot;,
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     }
   },
   {
@@ -139,8 +168,8 @@
       &quot;category&quot;: &quot;Setting::Puppet&quot;,
       &quot;settings_type&quot;: null,
       &quot;default&quot;: &quot;production&quot;,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     }
   },
   {
@@ -162,8 +191,8 @@
         &quot;os&quot;,
         &quot;domain&quot;
       ],
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     }
   },
   {
@@ -175,8 +204,21 @@
       &quot;category&quot;: &quot;Setting::Puppet&quot;,
       &quot;settings_type&quot;: null,
       &quot;default&quot;: &quot;/home/olevy/git/foreman/public/puppet/rdoc&quot;,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
+    }
+  },
+  {
+    &quot;setting&quot;: {
+      &quot;id&quot;: 712617915,
+      &quot;name&quot;: &quot;Enable_Smart_Variables_in_ENC&quot;,
+      &quot;value&quot;: true,
+      &quot;description&quot;: &quot;Foreman smart variables will be exposed via the ENC yaml output&quot;,
+      &quot;category&quot;: &quot;Setting::Puppet&quot;,
+      &quot;settings_type&quot;: null,
+      &quot;default&quot;: true,
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     }
   },
   {
@@ -188,8 +230,8 @@
       &quot;category&quot;: &quot;Setting::Puppet&quot;,
       &quot;settings_type&quot;: null,
       &quot;default&quot;: true,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     }
   },
   {
@@ -201,8 +243,8 @@
       &quot;category&quot;: &quot;Setting::General&quot;,
       &quot;settings_type&quot;: null,
       &quot;default&quot;: 20,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     }
   },
   {
@@ -214,8 +256,8 @@
       &quot;category&quot;: &quot;Setting::Puppet&quot;,
       &quot;settings_type&quot;: null,
       &quot;default&quot;: false,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     }
   },
   {
@@ -227,8 +269,8 @@
       &quot;category&quot;: &quot;Setting::General&quot;,
       &quot;settings_type&quot;: null,
       &quot;default&quot;: &quot;http://foreman.some.host.fqdn&quot;,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     }
   },
   {
@@ -240,8 +282,8 @@
       &quot;category&quot;: &quot;Setting::General&quot;,
       &quot;settings_type&quot;: null,
       &quot;default&quot;: 5,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     }
   },
   {
@@ -253,8 +295,8 @@
       &quot;category&quot;: &quot;Setting::Puppet&quot;,
       &quot;settings_type&quot;: null,
       &quot;default&quot;: true,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     }
   },
   {
@@ -266,8 +308,21 @@
       &quot;category&quot;: &quot;Setting::Puppet&quot;,
       &quot;settings_type&quot;: null,
       &quot;default&quot;: false,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
+    }
+  },
+  {
+    &quot;setting&quot;: {
+      &quot;id&quot;: 230785727,
+      &quot;name&quot;: &quot;location_fact&quot;,
+      &quot;value&quot;: &quot;foreman_location&quot;,
+      &quot;description&quot;: &quot;Fact to set location from when importing hosts&quot;,
+      &quot;category&quot;: &quot;Setting::Puppet&quot;,
+      &quot;settings_type&quot;: null,
+      &quot;default&quot;: &quot;foreman_location&quot;,
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     }
   },
   {
@@ -279,74 +334,22 @@
       &quot;category&quot;: &quot;Setting::Provisioning&quot;,
       &quot;settings_type&quot;: null,
       &quot;default&quot;: true,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
-    }
-  },
-  {
-    &quot;setting&quot;: {
-      &quot;id&quot;: 433443793,
-      &quot;name&quot;: &quot;modulepath&quot;,
-      &quot;value&quot;: &quot;/etc/puppet/modules&quot;,
-      &quot;description&quot;: &quot;The Setting::Puppet default module path in case that Foreman can&#x27;t auto detect it&quot;,
-      &quot;category&quot;: &quot;Setting::Puppet&quot;,
-      &quot;settings_type&quot;: null,
-      &quot;default&quot;: &quot;/etc/puppet/modules&quot;,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
-    }
-  },
-  {
-    &quot;setting&quot;: {
-      &quot;id&quot;: 43152518,
-      &quot;name&quot;: &quot;Parametrized_Classes_in_ENC&quot;,
-      &quot;value&quot;: false,
-      &quot;description&quot;: &quot;Should Foreman use the new format (2.6.5+) to answer Setting::Puppet in its ENC yaml output?&quot;,
-      &quot;category&quot;: &quot;Setting::Puppet&quot;,
-      &quot;settings_type&quot;: null,
-      &quot;default&quot;: false,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
-    }
-  },
-  {
-    &quot;setting&quot;: {
-      &quot;id&quot;: 708099507,
-      &quot;name&quot;: &quot;puppet_interval&quot;,
-      &quot;value&quot;: 30,
-      &quot;description&quot;: &quot;Setting::Puppet interval in minutes&quot;,
-      &quot;category&quot;: &quot;Setting::Puppet&quot;,
-      &quot;settings_type&quot;: &quot;integer&quot;,
-      &quot;default&quot;: 30,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
-    }
-  },
-  {
-    &quot;setting&quot;: {
-      &quot;id&quot;: 1039523765,
-      &quot;name&quot;: &quot;puppetrun&quot;,
-      &quot;value&quot;: true,
-      &quot;description&quot;: &quot;Enables Puppetrun Support&quot;,
-      &quot;category&quot;: &quot;Setting::Puppet&quot;,
-      &quot;settings_type&quot;: null,
-      &quot;default&quot;: true,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     }
   }
 ]</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>search </strong><br>
       <small>
@@ -355,10 +358,15 @@
       </small>
     </td>
     <td>
-      <p>Filter results</p>
+      
+<p>Filter results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -371,10 +379,15 @@
       </small>
     </td>
     <td>
-      <p>Sort results</p>
+      
+<p>Sort results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -387,10 +400,15 @@
       </small>
     </td>
     <td>
-      <p>paginate results</p>
+      
+<p>paginate results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -403,16 +421,22 @@
       </small>
     </td>
     <td>
-      <p>number of entries per request</p>
+      
+<p>number of entries per request</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -436,8 +460,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/settings/333972760
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/settings/333972760
 200
 {
   &quot;setting&quot;: {
@@ -448,21 +473,21 @@
     &quot;category&quot;: &quot;Setting::General&quot;,
     &quot;settings_type&quot;: &quot;string&quot;,
     &quot;default&quot;: &quot;root@some.host.fqdn&quot;,
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+    &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+    &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -474,13 +499,17 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -504,35 +533,36 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/settings/333972760
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/settings/333972760
 {
   &quot;setting&quot;: {}
 }
 200
 {
   &quot;setting&quot;: {
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
     &quot;default&quot;: &quot;root@some.host.fqdn&quot;,
     &quot;description&quot;: &quot;The Default administrator email address&quot;,
     &quot;id&quot;: 333972760,
     &quot;name&quot;: &quot;administrator&quot;,
     &quot;settings_type&quot;: &quot;string&quot;,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-    &quot;value&quot;: &quot;root@some.host.fqdn&quot;
+    &quot;updated_at&quot;: &quot;2014-07-23T13:31:11Z&quot;,
+    &quot;value&quot;: &quot;&quot;
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -544,7 +574,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -560,7 +593,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -575,14 +611,18 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
 </div>
 
@@ -591,8 +631,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

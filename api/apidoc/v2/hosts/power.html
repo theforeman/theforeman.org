@@ -29,6 +29,8 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>power</li>
+  
+
 </ul>
 
   <div class='page-header'>
@@ -42,8 +44,11 @@
 
   
 
-    <h2>Examples</h2>
-      <pre class="prettyprint">PUT /api/hosts/my5name.mydomain.net/power
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">PUT /api/hosts/my5name.mydomain.net/power
 {
   &quot;power_action&quot;: &quot;status&quot;
 }
@@ -52,18 +57,16 @@
   &quot;power&quot;: &quot;on&quot;
 }</pre>
 
-
-
-    <h2>Params</h2>
-    <table class='table'>
-      <thead>
-        <tr>
-          <th>Param name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr style='background-color:rgb(255,255,255);'>
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -75,7 +78,10 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
@@ -88,16 +94,22 @@
       </small>
     </td>
     <td>
-      <p>power action, valid actions are (&#8216;on&#8217;, &#8216;start&#8217;)&#8217;, (&#8216;off&#8217;, &#8216;stop&#8217;), (&#8216;soft&#8217;, &#8216;reboot&#8217;), (&#8216;cycle&#8217;, &#8216;reset&#8217;), (&#8216;state&#8217;, &#8216;status&#8217;)</p>
+      
+<p>power action, valid actions are (‘on’, ‘start’)‘, (’off’, ‘stop’), (‘soft’, ‘reboot’), (‘cycle’, ‘reset’), (‘state’, ‘status’)</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-      </tbody>
-    </table>
+    </tbody>
+  </table>
+
 </div>
 
 
@@ -105,8 +117,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

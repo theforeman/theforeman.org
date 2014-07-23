@@ -29,6 +29,8 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>index</li>
+  
+
 </ul>
 
   <div class='page-header'>
@@ -42,17 +44,20 @@
 
   
 
-    <h2>Examples</h2>
-      <pre class="prettyprint">GET /api/smart_proxies
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">GET /api/smart_proxies
 200
 [
   {
     &quot;smart_proxy&quot;: {
       &quot;name&quot;: &quot;BMC proxy&quot;,
       &quot;id&quot;: 821748566,
-      &quot;url&quot;: &quot;http://else.where:4567&quot;,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;url&quot;: &quot;http://else.where:45673&quot;,
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     }
   },
   {
@@ -60,17 +65,17 @@
       &quot;name&quot;: &quot;DHCP Proxy&quot;,
       &quot;id&quot;: 980190962,
       &quot;url&quot;: &quot;https://somewhere.net:8443&quot;,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     }
   },
   {
     &quot;smart_proxy&quot;: {
       &quot;name&quot;: &quot;DNS Proxy&quot;,
       &quot;id&quot;: 113629430,
-      &quot;url&quot;: &quot;http://else.where:4567&quot;,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;url&quot;: &quot;http://else.where:45671&quot;,
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     }
   },
   {
@@ -78,8 +83,17 @@
       &quot;name&quot;: &quot;Puppetmaster Proxy&quot;,
       &quot;id&quot;: 182953976,
       &quot;url&quot;: &quot;http://else.where:4567&quot;,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
+    }
+  },
+  {
+    &quot;smart_proxy&quot;: {
+      &quot;name&quot;: &quot;Realm Proxy&quot;,
+      &quot;id&quot;: 982965213,
+      &quot;url&quot;: &quot;http://else.where:1337&quot;,
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     }
   },
   {
@@ -87,33 +101,31 @@
       &quot;name&quot;: &quot;TFTP Proxy&quot;,
       &quot;id&quot;: 298486374,
       &quot;url&quot;: &quot;http://somewhere.else&quot;,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     }
   },
   {
     &quot;smart_proxy&quot;: {
       &quot;name&quot;: &quot;Unused Proxy&quot;,
       &quot;id&quot;: 281110143,
-      &quot;url&quot;: &quot;http://else.where:4567&quot;,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;url&quot;: &quot;http://else.where:45672&quot;,
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     }
   }
 ]</pre>
 
-
-
-    <h2>Params</h2>
-    <table class='table'>
-      <thead>
-        <tr>
-          <th>Param name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr style='background-color:rgb(255,255,255);'>
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>type </strong><br>
       <small>
@@ -122,10 +134,15 @@
       </small>
     </td>
     <td>
-      <p>filter by type</p>
+      
+<p>filter by type</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -138,10 +155,15 @@
       </small>
     </td>
     <td>
-      <p>paginate results</p>
+      
+<p>paginate results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -154,16 +176,22 @@
       </small>
     </td>
     <td>
-      <p>number of entries per request</p>
+      
+<p>number of entries per request</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-      </tbody>
-    </table>
+    </tbody>
+  </table>
+
 </div>
 
 
@@ -171,8 +199,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

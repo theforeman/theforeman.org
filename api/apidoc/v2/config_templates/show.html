@@ -29,6 +29,8 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>show</li>
+  
+
 </ul>
 
   <div class='page-header'>
@@ -42,8 +44,11 @@
 
   
 
-    <h2>Examples</h2>
-      <pre class="prettyprint">GET /api/config_templates/1007981701-centos5_3_pxelinux
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">GET /api/config_templates/1007981701-centos5_3_pxelinux
 200
 {
   &quot;id&quot;: 1007981701,
@@ -52,9 +57,12 @@
   &quot;template_kind_name&quot;: &quot;PXELinux&quot;,
   &quot;snippet&quot;: null,
   &quot;audit_comment&quot;: null,
-  &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+  &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
   &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ks=&lt;%= foreman_url(\&quot;kickstart\&quot;)%&gt; ksdevice=bootif network kssendmac&quot;,
+  &quot;locked&quot;: false,
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: [],
   &quot;template_combinations&quot;: [],
   &quot;operatingsystems&quot;: [
     {
@@ -72,21 +80,35 @@
       &quot;name&quot;: &quot;Ubuntu&quot;,
       &quot;fullname&quot;: &quot;Ubuntu 10.10&quot;
     }
+  ],
+  &quot;os_default_templates&quot;: [
+    {
+      &quot;id&quot;: 281110143,
+      &quot;config_template_id&quot;: 1007981701,
+      &quot;config_template_name&quot;: &quot;centos5_3_pxelinux&quot;,
+      &quot;template_kind_id&quot;: 710512633,
+      &quot;template_kind_name&quot;: null
+    },
+    {
+      &quot;id&quot;: 638205575,
+      &quot;config_template_id&quot;: 1007981701,
+      &quot;config_template_name&quot;: &quot;centos5_3_pxelinux&quot;,
+      &quot;template_kind_id&quot;: 710512633,
+      &quot;template_kind_name&quot;: null
+    }
   ]
 }</pre>
 
-
-
-    <h2>Params</h2>
-    <table class='table'>
-      <thead>
-        <tr>
-          <th>Param name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr style='background-color:rgb(255,255,255);'>
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -98,13 +120,17 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-      </tbody>
-    </table>
+    </tbody>
+  </table>
+
 </div>
 
 
@@ -112,8 +138,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

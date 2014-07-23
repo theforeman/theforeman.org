@@ -25,6 +25,7 @@
     Subnets
     
   </li>
+  
 </ul>
 
 <div class='page-header'>
@@ -34,6 +35,7 @@
     <small></small>
   </h1>
 </div>
+
 
 
 
@@ -61,12 +63,13 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/subnets
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/subnets
 200
 {
-  &quot;total&quot;: 4,
-  &quot;subtotal&quot;: 4,
+  &quot;total&quot;: 5,
+  &quot;subtotal&quot;: 5,
   &quot;page&quot;: 1,
   &quot;per_page&quot;: 20,
   &quot;search&quot;: null,
@@ -78,7 +81,9 @@
     {
       &quot;id&quot;: 980190962,
       &quot;name&quot;: &quot;one&quot;,
+      &quot;network_address&quot;: &quot;2.3.4.0/24&quot;,
       &quot;network&quot;: &quot;2.3.4.0&quot;,
+      &quot;cidr&quot;: 24,
       &quot;mask&quot;: &quot;255.255.255.0&quot;,
       &quot;priority&quot;: null,
       &quot;vlanid&quot;: &quot;41&quot;,
@@ -87,16 +92,30 @@
       &quot;dns_secondary&quot;: null,
       &quot;from&quot;: null,
       &quot;to&quot;: null,
-      &quot;domain_ids&quot;: [],
-      &quot;dns_id&quot;: 113629430,
-      &quot;dhcp_id&quot;: 980190962,
-      &quot;tftp_id&quot;: 298486374,
-      &quot;cidr&quot;: 24
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;dhcp&quot;: {
+        &quot;name&quot;: &quot;DHCP Proxy&quot;,
+        &quot;id&quot;: 980190962,
+        &quot;url&quot;: &quot;https://somewhere.net:8443&quot;
+      },
+      &quot;tftp&quot;: {
+        &quot;name&quot;: &quot;TFTP Proxy&quot;,
+        &quot;id&quot;: 298486374,
+        &quot;url&quot;: &quot;http://somewhere.else&quot;
+      },
+      &quot;dns&quot;: {
+        &quot;name&quot;: &quot;DNS Proxy&quot;,
+        &quot;id&quot;: 113629430,
+        &quot;url&quot;: &quot;http://else.where:45671&quot;
+      }
     },
     {
       &quot;id&quot;: 298486374,
       &quot;name&quot;: &quot;two&quot;,
+      &quot;network_address&quot;: &quot;3.3.4.0/24&quot;,
       &quot;network&quot;: &quot;3.3.4.0&quot;,
+      &quot;cidr&quot;: 24,
       &quot;mask&quot;: &quot;255.255.255.0&quot;,
       &quot;priority&quot;: null,
       &quot;vlanid&quot;: &quot;42&quot;,
@@ -105,16 +124,26 @@
       &quot;dns_secondary&quot;: null,
       &quot;from&quot;: null,
       &quot;to&quot;: null,
-      &quot;domain_ids&quot;: [],
-      &quot;dns_id&quot;: null,
-      &quot;dhcp_id&quot;: 980190962,
-      &quot;tftp_id&quot;: 298486374,
-      &quot;cidr&quot;: 24
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;dhcp&quot;: {
+        &quot;name&quot;: &quot;DHCP Proxy&quot;,
+        &quot;id&quot;: 980190962,
+        &quot;url&quot;: &quot;https://somewhere.net:8443&quot;
+      },
+      &quot;tftp&quot;: {
+        &quot;name&quot;: &quot;TFTP Proxy&quot;,
+        &quot;id&quot;: 298486374,
+        &quot;url&quot;: &quot;http://somewhere.else&quot;
+      },
+      &quot;dns&quot;: null
     },
     {
       &quot;id&quot;: 113629430,
       &quot;name&quot;: &quot;three&quot;,
+      &quot;network_address&quot;: &quot;3.3.4.3/24&quot;,
       &quot;network&quot;: &quot;3.3.4.3&quot;,
+      &quot;cidr&quot;: 24,
       &quot;mask&quot;: &quot;255.255.255.0&quot;,
       &quot;priority&quot;: null,
       &quot;vlanid&quot;: &quot;43&quot;,
@@ -123,16 +152,26 @@
       &quot;dns_secondary&quot;: null,
       &quot;from&quot;: null,
       &quot;to&quot;: null,
-      &quot;domain_ids&quot;: [],
-      &quot;dns_id&quot;: null,
-      &quot;dhcp_id&quot;: 980190962,
-      &quot;tftp_id&quot;: 298486374,
-      &quot;cidr&quot;: 24
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;dhcp&quot;: {
+        &quot;name&quot;: &quot;DHCP Proxy&quot;,
+        &quot;id&quot;: 980190962,
+        &quot;url&quot;: &quot;https://somewhere.net:8443&quot;
+      },
+      &quot;tftp&quot;: {
+        &quot;name&quot;: &quot;TFTP Proxy&quot;,
+        &quot;id&quot;: 298486374,
+        &quot;url&quot;: &quot;http://somewhere.else&quot;
+      },
+      &quot;dns&quot;: null
     },
     {
       &quot;id&quot;: 281110143,
       &quot;name&quot;: &quot;four&quot;,
+      &quot;network_address&quot;: &quot;3.3.5.0/24&quot;,
       &quot;network&quot;: &quot;3.3.5.0&quot;,
+      &quot;cidr&quot;: 24,
       &quot;mask&quot;: &quot;255.255.255.0&quot;,
       &quot;priority&quot;: null,
       &quot;vlanid&quot;: &quot;44&quot;,
@@ -141,25 +180,61 @@
       &quot;dns_secondary&quot;: null,
       &quot;from&quot;: null,
       &quot;to&quot;: null,
-      &quot;domain_ids&quot;: [],
-      &quot;dns_id&quot;: null,
-      &quot;dhcp_id&quot;: null,
-      &quot;tftp_id&quot;: 298486374,
-      &quot;cidr&quot;: 24
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;dhcp&quot;: null,
+      &quot;tftp&quot;: {
+        &quot;name&quot;: &quot;TFTP Proxy&quot;,
+        &quot;id&quot;: 298486374,
+        &quot;url&quot;: &quot;http://somewhere.else&quot;
+      },
+      &quot;dns&quot;: null
+    },
+    {
+      &quot;id&quot;: 1018350795,
+      &quot;name&quot;: &quot;five&quot;,
+      &quot;network_address&quot;: &quot;10.0.0.0/24&quot;,
+      &quot;network&quot;: &quot;10.0.0.0&quot;,
+      &quot;cidr&quot;: 24,
+      &quot;mask&quot;: &quot;255.255.255.0&quot;,
+      &quot;priority&quot;: null,
+      &quot;vlanid&quot;: null,
+      &quot;gateway&quot;: null,
+      &quot;dns_primary&quot;: null,
+      &quot;dns_secondary&quot;: null,
+      &quot;from&quot;: null,
+      &quot;to&quot;: null,
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;dhcp&quot;: {
+        &quot;name&quot;: &quot;DHCP Proxy&quot;,
+        &quot;id&quot;: 980190962,
+        &quot;url&quot;: &quot;https://somewhere.net:8443&quot;
+      },
+      &quot;tftp&quot;: {
+        &quot;name&quot;: &quot;TFTP Proxy&quot;,
+        &quot;id&quot;: 298486374,
+        &quot;url&quot;: &quot;http://somewhere.else&quot;
+      },
+      &quot;dns&quot;: {
+        &quot;name&quot;: &quot;DNS Proxy&quot;,
+        &quot;id&quot;: 113629430,
+        &quot;url&quot;: &quot;http://else.where:45671&quot;
+      }
     }
   ]
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>search </strong><br>
       <small>
@@ -168,10 +243,15 @@
       </small>
     </td>
     <td>
-      <p>Filter results</p>
+      
+<p>Filter results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -184,10 +264,15 @@
       </small>
     </td>
     <td>
-      <p>Sort results</p>
+      
+<p>Sort results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -200,10 +285,15 @@
       </small>
     </td>
     <td>
-      <p>paginate results</p>
+      
+<p>paginate results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -216,16 +306,22 @@
       </small>
     </td>
     <td>
-      <p>number of entries per request</p>
+      
+<p>number of entries per request</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -249,13 +345,16 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/subnets/980190962
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/subnets/980190962
 200
 {
   &quot;id&quot;: 980190962,
   &quot;name&quot;: &quot;one&quot;,
+  &quot;network_address&quot;: &quot;2.3.4.0/24&quot;,
   &quot;network&quot;: &quot;2.3.4.0&quot;,
+  &quot;cidr&quot;: 24,
   &quot;mask&quot;: &quot;255.255.255.0&quot;,
   &quot;priority&quot;: null,
   &quot;vlanid&quot;: &quot;41&quot;,
@@ -264,11 +363,8 @@
   &quot;dns_secondary&quot;: null,
   &quot;from&quot;: null,
   &quot;to&quot;: null,
-  &quot;domain_ids&quot;: [],
-  &quot;dns_id&quot;: 113629430,
-  &quot;dhcp_id&quot;: 980190962,
-  &quot;tftp_id&quot;: 298486374,
-  &quot;cidr&quot;: 24,
+  &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
   &quot;dhcp&quot;: {
     &quot;name&quot;: &quot;DHCP Proxy&quot;,
     &quot;id&quot;: 980190962,
@@ -282,20 +378,40 @@
   &quot;dns&quot;: {
     &quot;name&quot;: &quot;DNS Proxy&quot;,
     &quot;id&quot;: 113629430,
-    &quot;url&quot;: &quot;http://else.where:4567&quot;
-  }
+    &quot;url&quot;: &quot;http://else.where:45671&quot;
+  },
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;
+    }
+  ],
+  &quot;domains&quot;: [
+    {
+      &quot;id&quot;: 22495316,
+      &quot;name&quot;: &quot;mydomain.net&quot;
+    }
+  ]
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -307,13 +423,17 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -337,8 +457,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">POST /api/subnets
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/subnets
 {
   &quot;subnet&quot;: {
     &quot;name&quot;: &quot;QA2&quot;,
@@ -348,9 +469,11 @@
 }
 200
 {
-  &quot;id&quot;: 980190964,
+  &quot;id&quot;: 1018350797,
   &quot;name&quot;: &quot;QA2&quot;,
+  &quot;network_address&quot;: &quot;10.35.2.27/24&quot;,
   &quot;network&quot;: &quot;10.35.2.27&quot;,
+  &quot;cidr&quot;: 24,
   &quot;mask&quot;: &quot;255.255.255.0&quot;,
   &quot;priority&quot;: null,
   &quot;vlanid&quot;: null,
@@ -359,26 +482,26 @@
   &quot;dns_secondary&quot;: null,
   &quot;from&quot;: null,
   &quot;to&quot;: null,
-  &quot;domain_ids&quot;: [],
-  &quot;dns_id&quot;: null,
-  &quot;dhcp_id&quot;: null,
-  &quot;tftp_id&quot;: null,
-  &quot;cidr&quot;: 24,
+  &quot;created_at&quot;: &quot;2014-07-23T13:32:21Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-07-23T13:32:21Z&quot;,
   &quot;dhcp&quot;: null,
   &quot;tftp&quot;: null,
-  &quot;dns&quot;: null
+  &quot;dns&quot;: null,
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: [],
+  &quot;domains&quot;: []
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>subnet </strong><br>
       <small>
@@ -390,7 +513,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -402,10 +528,15 @@
       </small>
     </td>
     <td>
-      <p>Subnet name</p>
+      
+<p>Subnet name</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -418,10 +549,15 @@
       </small>
     </td>
     <td>
-      <p>Subnet network</p>
+      
+<p>Subnet network</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -434,10 +570,15 @@
       </small>
     </td>
     <td>
-      <p>Netmask for this subnet</p>
+      
+<p>Netmask for this subnet</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -450,10 +591,15 @@
       </small>
     </td>
     <td>
-      <p>Primary DNS for this subnet</p>
+      
+<p>Primary DNS for this subnet</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -466,10 +612,15 @@
       </small>
     </td>
     <td>
-      <p>Primary DNS for this subnet</p>
+      
+<p>Primary DNS for this subnet</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -482,10 +633,15 @@
       </small>
     </td>
     <td>
-      <p>Secondary DNS for this subnet</p>
+      
+<p>Secondary DNS for this subnet</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -498,10 +654,15 @@
       </small>
     </td>
     <td>
-      <p>Starting IP Address for IP auto suggestion</p>
+      
+<p>Starting IP Address for IP auto suggestion</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -514,10 +675,15 @@
       </small>
     </td>
     <td>
-      <p>Ending IP Address for IP auto suggestion</p>
+      
+<p>Ending IP Address for IP auto suggestion</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -530,10 +696,15 @@
       </small>
     </td>
     <td>
-      <p>VLAN ID for this subnet</p>
+      
+<p>VLAN ID for this subnet</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -546,10 +717,15 @@
       </small>
     </td>
     <td>
-      <p>Domains in which this subnet is part</p>
+      
+<p>Domains in which this subnet is part</p>
+
         <br>
         Value: Must be Array
+
+
     </td>
+
   </tr>
 
   
@@ -562,10 +738,15 @@
       </small>
     </td>
     <td>
-      <p>DHCP Proxy to use within this subnet</p>
+      
+<p>DHCP Proxy to use within this subnet</p>
+
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -578,10 +759,15 @@
       </small>
     </td>
     <td>
-      <p>TFTP Proxy to use within this subnet</p>
+      
+<p>TFTP Proxy to use within this subnet</p>
+
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -594,17 +780,23 @@
       </small>
     </td>
     <td>
-      <p>DNS Proxy to use within this subnet</p>
+      
+<p>DNS Proxy to use within this subnet</p>
+
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -628,8 +820,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/subnets/980190962
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/subnets/980190962
 {
   &quot;subnet&quot;: {}
 }
@@ -637,7 +830,9 @@
 {
   &quot;id&quot;: 980190962,
   &quot;name&quot;: &quot;one&quot;,
+  &quot;network_address&quot;: &quot;2.3.4.0/24&quot;,
   &quot;network&quot;: &quot;2.3.4.0&quot;,
+  &quot;cidr&quot;: 24,
   &quot;mask&quot;: &quot;255.255.255.0&quot;,
   &quot;priority&quot;: null,
   &quot;vlanid&quot;: &quot;41&quot;,
@@ -646,11 +841,8 @@
   &quot;dns_secondary&quot;: null,
   &quot;from&quot;: null,
   &quot;to&quot;: null,
-  &quot;domain_ids&quot;: [],
-  &quot;dns_id&quot;: 113629430,
-  &quot;dhcp_id&quot;: 980190962,
-  &quot;tftp_id&quot;: 298486374,
-  &quot;cidr&quot;: 24,
+  &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
   &quot;dhcp&quot;: {
     &quot;name&quot;: &quot;DHCP Proxy&quot;,
     &quot;id&quot;: 980190962,
@@ -664,20 +856,40 @@
   &quot;dns&quot;: {
     &quot;name&quot;: &quot;DNS Proxy&quot;,
     &quot;id&quot;: 113629430,
-    &quot;url&quot;: &quot;http://else.where:4567&quot;
-  }
+    &quot;url&quot;: &quot;http://else.where:45671&quot;
+  },
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;
+    }
+  ],
+  &quot;domains&quot;: [
+    {
+      &quot;id&quot;: 22495316,
+      &quot;name&quot;: &quot;mydomain.net&quot;
+    }
+  ]
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -686,10 +898,15 @@
       </small>
     </td>
     <td>
-      <p>Subnet numeric identifier</p>
+      
+<p>Subnet numeric identifier</p>
+
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -705,7 +922,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -717,10 +937,15 @@
       </small>
     </td>
     <td>
-      <p>Subnet name</p>
+      
+<p>Subnet name</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -733,10 +958,15 @@
       </small>
     </td>
     <td>
-      <p>Subnet network</p>
+      
+<p>Subnet network</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -749,10 +979,15 @@
       </small>
     </td>
     <td>
-      <p>Netmask for this subnet</p>
+      
+<p>Netmask for this subnet</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -765,10 +1000,15 @@
       </small>
     </td>
     <td>
-      <p>Primary DNS for this subnet</p>
+      
+<p>Primary DNS for this subnet</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -781,10 +1021,15 @@
       </small>
     </td>
     <td>
-      <p>Primary DNS for this subnet</p>
+      
+<p>Primary DNS for this subnet</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -797,10 +1042,15 @@
       </small>
     </td>
     <td>
-      <p>Secondary DNS for this subnet</p>
+      
+<p>Secondary DNS for this subnet</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -813,10 +1063,15 @@
       </small>
     </td>
     <td>
-      <p>Starting IP Address for IP auto suggestion</p>
+      
+<p>Starting IP Address for IP auto suggestion</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -829,10 +1084,15 @@
       </small>
     </td>
     <td>
-      <p>Ending IP Address for IP auto suggestion</p>
+      
+<p>Ending IP Address for IP auto suggestion</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -845,10 +1105,15 @@
       </small>
     </td>
     <td>
-      <p>VLAN ID for this subnet</p>
+      
+<p>VLAN ID for this subnet</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -861,10 +1126,15 @@
       </small>
     </td>
     <td>
-      <p>Domains in which this subnet is part</p>
+      
+<p>Domains in which this subnet is part</p>
+
         <br>
         Value: Must be Array
+
+
     </td>
+
   </tr>
 
   
@@ -877,10 +1147,15 @@
       </small>
     </td>
     <td>
-      <p>DHCP Proxy to use within this subnet</p>
+      
+<p>DHCP Proxy to use within this subnet</p>
+
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -893,10 +1168,15 @@
       </small>
     </td>
     <td>
-      <p>TFTP Proxy to use within this subnet</p>
+      
+<p>TFTP Proxy to use within this subnet</p>
+
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -909,17 +1189,23 @@
       </small>
     </td>
     <td>
-      <p>DNS Proxy to use within this subnet</p>
+      
+<p>DNS Proxy to use within this subnet</p>
+
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -943,40 +1229,40 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/subnets/113629430
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/subnets/281110143
 200
 {
-  &quot;subnet&quot;: {
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-    &quot;dhcp_id&quot;: 980190962,
-    &quot;dns_id&quot;: null,
-    &quot;dns_primary&quot;: null,
-    &quot;dns_secondary&quot;: null,
-    &quot;from&quot;: null,
-    &quot;gateway&quot;: null,
-    &quot;id&quot;: 113629430,
-    &quot;mask&quot;: &quot;255.255.255.0&quot;,
-    &quot;name&quot;: &quot;three&quot;,
-    &quot;network&quot;: &quot;3.3.4.3&quot;,
-    &quot;priority&quot;: null,
-    &quot;tftp_id&quot;: 298486374,
-    &quot;to&quot;: null,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-    &quot;vlanid&quot;: &quot;43&quot;
-  }
+  &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+  &quot;dhcp_id&quot;: null,
+  &quot;dns_id&quot;: null,
+  &quot;dns_primary&quot;: null,
+  &quot;dns_secondary&quot;: null,
+  &quot;from&quot;: null,
+  &quot;gateway&quot;: null,
+  &quot;id&quot;: 281110143,
+  &quot;mask&quot;: &quot;255.255.255.0&quot;,
+  &quot;name&quot;: &quot;four&quot;,
+  &quot;network&quot;: &quot;3.3.5.0&quot;,
+  &quot;priority&quot;: null,
+  &quot;sort_network_id&quot;: null,
+  &quot;tftp_id&quot;: 298486374,
+  &quot;to&quot;: null,
+  &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+  &quot;vlanid&quot;: &quot;44&quot;
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -985,16 +1271,22 @@
       </small>
     </td>
     <td>
-      <p>Subnet numeric identifier</p>
+      
+<p>Subnet numeric identifier</p>
+
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
 </div>
 
@@ -1003,8 +1295,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

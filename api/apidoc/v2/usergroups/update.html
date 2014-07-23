@@ -29,12 +29,14 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>update</li>
+  
+
 </ul>
 
   <div class='page-header'>
     <h1>
       PUT /api/usergroups/:id<br>
-      <small>Update a usergroup.</small>
+      <small>Update a user group.</small>
     </h1>
   </div>
 
@@ -42,33 +44,33 @@
 
   
 
-    <h2>Examples</h2>
-      <pre class="prettyprint">PUT /api/usergroups/33
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">PUT /api/usergroups/108
 {
   &quot;usergroup&quot;: {}
 }
 200
 {
-  &quot;usergroup&quot;: {
-    &quot;created_at&quot;: &quot;2014-01-30T07:25:31Z&quot;,
-    &quot;id&quot;: 33,
-    &quot;name&quot;: &quot;usergroup9&quot;,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:25:31Z&quot;
-  }
+  &quot;admin&quot;: false,
+  &quot;created_at&quot;: &quot;2014-07-23T13:32:23Z&quot;,
+  &quot;id&quot;: 108,
+  &quot;name&quot;: &quot;usergroup9&quot;,
+  &quot;updated_at&quot;: &quot;2014-07-23T13:32:23Z&quot;
 }</pre>
 
-
-
-    <h2>Params</h2>
-    <table class='table'>
-      <thead>
-        <tr>
-          <th>Param name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr style='background-color:rgb(255,255,255);'>
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -80,7 +82,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -96,7 +101,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -111,14 +119,75 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>usergroup[user_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be Array
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>usergroup[usergroup_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be Array
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>usergroup[role_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be Array
+
+
+    </td>
+
   </tr>
 
   
 
 
-      </tbody>
-    </table>
+    </tbody>
+  </table>
+
 </div>
 
 
@@ -126,8 +195,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

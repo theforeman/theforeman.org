@@ -29,6 +29,8 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>show</li>
+  
+
 </ul>
 
   <div class='page-header'>
@@ -42,30 +44,43 @@
 
   
 
-    <h2>Examples</h2>
-      <pre class="prettyprint">GET /api/ptables/980190962
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">GET /api/ptables/980190962
 200
 {
   &quot;name&quot;: &quot;default&quot;,
   &quot;id&quot;: 980190962,
   &quot;os_family&quot;: null,
-  &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-  &quot;layout&quot;: &quot;zerombr yes\\nclearpart --all    --initlabel\\npart /boot --fstype ext3 --size=100 --asprimary\\npart /     --f   stype ext3 --size=1024 --grow\\npart swap  --recommended&quot;
+  &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+  &quot;layout&quot;: &quot;zerombr yes\\nclearpart --all    --initlabel\\npart /boot --fstype ext3 --size=100 --asprimary\\npart /     --f   stype ext3 --size=1024 --grow\\npart swap  --recommended&quot;,
+  &quot;operatingsystems&quot;: [
+    {
+      &quot;id&quot;: 309172073,
+      &quot;name&quot;: &quot;centos&quot;,
+      &quot;fullname&quot;: &quot;centos 5.3&quot;
+    },
+    {
+      &quot;id&quot;: 1073012828,
+      &quot;name&quot;: &quot;Redhat&quot;,
+      &quot;fullname&quot;: &quot;Redhat 6.1&quot;
+    }
+  ]
 }</pre>
 
-
-
-    <h2>Params</h2>
-    <table class='table'>
-      <thead>
-        <tr>
-          <th>Param name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr style='background-color:rgb(255,255,255);'>
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -77,13 +92,17 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-      </tbody>
-    </table>
+    </tbody>
+  </table>
+
 </div>
 
 
@@ -91,8 +110,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

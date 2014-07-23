@@ -25,6 +25,7 @@
     Hostgroups
     
   </li>
+  
 </ul>
 
 <div class='page-header'>
@@ -34,6 +35,7 @@
     <small></small>
   </h1>
 </div>
+
 
 
 
@@ -61,8 +63,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/hostgroups
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/hostgroups
 200
 {
   &quot;total&quot;: 5,
@@ -78,7 +81,7 @@
     {
       &quot;id&quot;: 636252244,
       &quot;name&quot;: &quot;Common&quot;,
-      &quot;label&quot;: &quot;Common&quot;,
+      &quot;title&quot;: &quot;Common&quot;,
       &quot;subnet_id&quot;: null,
       &quot;subnet_name&quot;: null,
       &quot;operatingsystem_id&quot;: 309172073,
@@ -90,17 +93,23 @@
       &quot;compute_profile_id&quot;: 980190962,
       &quot;compute_profile_name&quot;: &quot;1-Small&quot;,
       &quot;ancestry&quot;: null,
-      &quot;parameters&quot;: {
-        &quot;group1&quot;: &quot;group1&quot;
-      },
-      &quot;puppetclass_ids&quot;: [
-        980190962
-      ]
+      &quot;puppet_proxy_id&quot;: 182953976,
+      &quot;puppet_ca_proxy_id&quot;: null,
+      &quot;ptable_id&quot;: 980190962,
+      &quot;ptable_name&quot;: &quot;default&quot;,
+      &quot;medium_id&quot;: 980190962,
+      &quot;medium_name&quot;: &quot;CentOS 5.4&quot;,
+      &quot;architecture_id&quot;: 501905019,
+      &quot;architecture_name&quot;: &quot;x86_64&quot;,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     },
     {
       &quot;id&quot;: 603241515,
       &quot;name&quot;: &quot;db&quot;,
-      &quot;label&quot;: &quot;db&quot;,
+      &quot;title&quot;: &quot;db&quot;,
       &quot;subnet_id&quot;: null,
       &quot;subnet_name&quot;: null,
       &quot;operatingsystem_id&quot;: 309172073,
@@ -112,31 +121,51 @@
       &quot;compute_profile_id&quot;: null,
       &quot;compute_profile_name&quot;: null,
       &quot;ancestry&quot;: null,
-      &quot;parameters&quot;: {},
-      &quot;puppetclass_ids&quot;: []
+      &quot;puppet_proxy_id&quot;: 182953976,
+      &quot;puppet_ca_proxy_id&quot;: null,
+      &quot;ptable_id&quot;: 980190962,
+      &quot;ptable_name&quot;: &quot;default&quot;,
+      &quot;medium_id&quot;: 980190962,
+      &quot;medium_name&quot;: &quot;CentOS 5.4&quot;,
+      &quot;architecture_id&quot;: 501905019,
+      &quot;architecture_name&quot;: &quot;x86_64&quot;,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     },
     {
       &quot;id&quot;: 1,
       &quot;name&quot;: &quot;Parent&quot;,
-      &quot;label&quot;: &quot;Parent&quot;,
-      &quot;subnet_id&quot;: null,
-      &quot;subnet_name&quot;: null,
-      &quot;operatingsystem_id&quot;: null,
-      &quot;operatingsystem_name&quot;: null,
-      &quot;domain_id&quot;: null,
-      &quot;domain_name&quot;: null,
-      &quot;environment_id&quot;: null,
-      &quot;environment_name&quot;: null,
-      &quot;compute_profile_id&quot;: null,
-      &quot;compute_profile_name&quot;: null,
+      &quot;title&quot;: &quot;Parent&quot;,
+      &quot;subnet_id&quot;: 113629430,
+      &quot;subnet_name&quot;: &quot;three&quot;,
+      &quot;operatingsystem_id&quot;: 309172073,
+      &quot;operatingsystem_name&quot;: &quot;centos 5.3&quot;,
+      &quot;domain_id&quot;: 22495316,
+      &quot;domain_name&quot;: &quot;mydomain.net&quot;,
+      &quot;environment_id&quot;: 153855663,
+      &quot;environment_name&quot;: &quot;global_puppetmaster&quot;,
+      &quot;compute_profile_id&quot;: 980190962,
+      &quot;compute_profile_name&quot;: &quot;1-Small&quot;,
       &quot;ancestry&quot;: null,
-      &quot;parameters&quot;: {},
-      &quot;puppetclass_ids&quot;: []
+      &quot;puppet_proxy_id&quot;: 182953976,
+      &quot;puppet_ca_proxy_id&quot;: 182953976,
+      &quot;ptable_id&quot;: 980190962,
+      &quot;ptable_name&quot;: &quot;default&quot;,
+      &quot;medium_id&quot;: 980190962,
+      &quot;medium_name&quot;: &quot;CentOS 5.4&quot;,
+      &quot;architecture_id&quot;: 501905019,
+      &quot;architecture_name&quot;: &quot;x86_64&quot;,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     },
     {
       &quot;id&quot;: 928644285,
       &quot;name&quot;: &quot;inherited&quot;,
-      &quot;label&quot;: &quot;Parent/inherited&quot;,
+      &quot;title&quot;: &quot;Parent/inherited&quot;,
       &quot;subnet_id&quot;: null,
       &quot;subnet_name&quot;: null,
       &quot;operatingsystem_id&quot;: null,
@@ -148,13 +177,23 @@
       &quot;compute_profile_id&quot;: null,
       &quot;compute_profile_name&quot;: null,
       &quot;ancestry&quot;: &quot;1&quot;,
-      &quot;parameters&quot;: {},
-      &quot;puppetclass_ids&quot;: []
+      &quot;puppet_proxy_id&quot;: null,
+      &quot;puppet_ca_proxy_id&quot;: null,
+      &quot;ptable_id&quot;: null,
+      &quot;ptable_name&quot;: null,
+      &quot;medium_id&quot;: null,
+      &quot;medium_name&quot;: null,
+      &quot;architecture_id&quot;: null,
+      &quot;architecture_name&quot;: null,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     },
     {
       &quot;id&quot;: 866317115,
       &quot;name&quot;: &quot;Unusual&quot;,
-      &quot;label&quot;: &quot;Unusual&quot;,
+      &quot;title&quot;: &quot;Unusual&quot;,
       &quot;subnet_id&quot;: null,
       &quot;subnet_name&quot;: null,
       &quot;operatingsystem_id&quot;: null,
@@ -166,22 +205,32 @@
       &quot;compute_profile_id&quot;: null,
       &quot;compute_profile_name&quot;: null,
       &quot;ancestry&quot;: null,
-      &quot;parameters&quot;: {},
-      &quot;puppetclass_ids&quot;: []
+      &quot;puppet_proxy_id&quot;: 182953976,
+      &quot;puppet_ca_proxy_id&quot;: null,
+      &quot;ptable_id&quot;: null,
+      &quot;ptable_name&quot;: null,
+      &quot;medium_id&quot;: null,
+      &quot;medium_name&quot;: null,
+      &quot;architecture_id&quot;: null,
+      &quot;architecture_name&quot;: null,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     }
   ]
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>search </strong><br>
       <small>
@@ -190,10 +239,15 @@
       </small>
     </td>
     <td>
-      <p>filter results</p>
+      
+<p>filter results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -206,10 +260,15 @@
       </small>
     </td>
     <td>
-      <p>sort results</p>
+      
+<p>sort results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -222,10 +281,15 @@
       </small>
     </td>
     <td>
-      <p>paginate results</p>
+      
+<p>paginate results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -238,16 +302,22 @@
       </small>
     </td>
     <td>
-      <p>number of entries per request</p>
+      
+<p>number of entries per request</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -271,13 +341,14 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/hostgroups/636252244-common
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/hostgroups/636252244-common
 200
 {
   &quot;id&quot;: 636252244,
   &quot;name&quot;: &quot;Common&quot;,
-  &quot;label&quot;: &quot;Common&quot;,
+  &quot;title&quot;: &quot;Common&quot;,
   &quot;subnet_id&quot;: null,
   &quot;subnet_name&quot;: null,
   &quot;operatingsystem_id&quot;: 309172073,
@@ -289,24 +360,126 @@
   &quot;compute_profile_id&quot;: 980190962,
   &quot;compute_profile_name&quot;: &quot;1-Small&quot;,
   &quot;ancestry&quot;: null,
-  &quot;parameters&quot;: {
-    &quot;group1&quot;: &quot;group1&quot;
-  },
-  &quot;puppetclass_ids&quot;: [
-    980190962
+  &quot;puppet_proxy_id&quot;: 182953976,
+  &quot;puppet_ca_proxy_id&quot;: null,
+  &quot;ptable_id&quot;: 980190962,
+  &quot;ptable_name&quot;: &quot;default&quot;,
+  &quot;medium_id&quot;: 980190962,
+  &quot;medium_name&quot;: &quot;CentOS 5.4&quot;,
+  &quot;architecture_id&quot;: 501905019,
+  &quot;architecture_name&quot;: &quot;x86_64&quot;,
+  &quot;realm_id&quot;: null,
+  &quot;realm_name&quot;: null,
+  &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+  &quot;all_puppetclasses&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;base&quot;,
+      &quot;module_name&quot;: &quot;base&quot;
+    },
+    {
+      &quot;id&quot;: 51848956,
+      &quot;name&quot;: &quot;chkmk&quot;,
+      &quot;module_name&quot;: &quot;chkmk&quot;
+    },
+    {
+      &quot;id&quot;: 1018350795,
+      &quot;name&quot;: &quot;nagios&quot;,
+      &quot;module_name&quot;: &quot;nagios&quot;
+    },
+    {
+      &quot;id&quot;: 281110143,
+      &quot;name&quot;: &quot;vim&quot;,
+      &quot;module_name&quot;: &quot;vim&quot;
+    }
+  ],
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: [],
+  &quot;parameters&quot;: [
+    {
+      &quot;id&quot;: 767575238,
+      &quot;name&quot;: &quot;group1&quot;,
+      &quot;value&quot;: &quot;group1&quot;
+    }
+  ],
+  &quot;template_combinations&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;config_template_id&quot;: 943779058,
+      &quot;config_template_name&quot;: &quot;MyString&quot;,
+      &quot;hostgroup_id&quot;: 636252244,
+      &quot;hostgroup_name&quot;: &quot;Common&quot;,
+      &quot;environment_id&quot;: 334344675,
+      &quot;environment_name&quot;: &quot;production&quot;
+    },
+    {
+      &quot;id&quot;: 281110143,
+      &quot;config_template_id&quot;: 269958254,
+      &quot;config_template_name&quot;: &quot;MyString2&quot;,
+      &quot;hostgroup_id&quot;: 636252244,
+      &quot;hostgroup_name&quot;: &quot;Common&quot;,
+      &quot;environment_id&quot;: 334344675,
+      &quot;environment_name&quot;: &quot;production&quot;
+    }
+  ],
+  &quot;puppetclasses&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;base&quot;,
+      &quot;module_name&quot;: &quot;base&quot;
+    }
+  ],
+  &quot;config_groups&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;Monitoring&quot;,
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;puppetclasses&quot;: [
+        {
+          &quot;id&quot;: 51848956,
+          &quot;name&quot;: &quot;chkmk&quot;,
+          &quot;module_name&quot;: &quot;chkmk&quot;
+        },
+        {
+          &quot;id&quot;: 1018350795,
+          &quot;name&quot;: &quot;nagios&quot;,
+          &quot;module_name&quot;: &quot;nagios&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: 113629430,
+      &quot;name&quot;: &quot;Tools&quot;,
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;puppetclasses&quot;: [
+        {
+          &quot;id&quot;: 113629430,
+          &quot;name&quot;: &quot;git&quot;,
+          &quot;module_name&quot;: &quot;git&quot;
+        },
+        {
+          &quot;id&quot;: 281110143,
+          &quot;name&quot;: &quot;vim&quot;,
+          &quot;module_name&quot;: &quot;vim&quot;
+        }
+      ]
+    }
   ]
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -318,13 +491,17 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -348,8 +525,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">POST /api/hostgroups
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/hostgroups
 {
   &quot;hostgroup&quot;: {
     &quot;name&quot;: &quot;TestHostgroup&quot;
@@ -359,7 +537,7 @@
 {
   &quot;id&quot;: 928644288,
   &quot;name&quot;: &quot;TestHostgroup&quot;,
-  &quot;label&quot;: &quot;TestHostgroup&quot;,
+  &quot;title&quot;: &quot;TestHostgroup&quot;,
   &quot;subnet_id&quot;: null,
   &quot;subnet_name&quot;: null,
   &quot;operatingsystem_id&quot;: null,
@@ -371,20 +549,37 @@
   &quot;compute_profile_id&quot;: null,
   &quot;compute_profile_name&quot;: null,
   &quot;ancestry&quot;: null,
-  &quot;parameters&quot;: {},
-  &quot;puppetclass_ids&quot;: []
+  &quot;puppet_proxy_id&quot;: null,
+  &quot;puppet_ca_proxy_id&quot;: null,
+  &quot;ptable_id&quot;: null,
+  &quot;ptable_name&quot;: null,
+  &quot;medium_id&quot;: null,
+  &quot;medium_name&quot;: null,
+  &quot;architecture_id&quot;: null,
+  &quot;architecture_name&quot;: null,
+  &quot;realm_id&quot;: null,
+  &quot;realm_name&quot;: null,
+  &quot;created_at&quot;: &quot;2014-07-23T13:31:34Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-07-23T13:31:34Z&quot;,
+  &quot;all_puppetclasses&quot;: [],
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: [],
+  &quot;parameters&quot;: [],
+  &quot;template_combinations&quot;: [],
+  &quot;puppetclasses&quot;: [],
+  &quot;config_groups&quot;: []
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>hostgroup </strong><br>
       <small>
@@ -396,7 +591,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -411,7 +609,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -427,7 +628,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -443,7 +647,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -459,7 +666,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -475,7 +685,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -491,7 +704,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -507,7 +723,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -523,7 +742,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -539,7 +761,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -555,7 +780,29 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>hostgroup[realm_id] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be a number.
+
+
+    </td>
+
   </tr>
 
   
@@ -571,14 +818,18 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -602,47 +853,47 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/hostgroups/636252244-common
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/hostgroups/636252244-common
 {
   &quot;hostgroup&quot;: {}
 }
 200
 {
-  &quot;hostgroup&quot;: {
-    &quot;ancestry&quot;: null,
-    &quot;architecture_id&quot;: 501905019,
-    &quot;compute_profile_id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-    &quot;domain_id&quot;: 22495316,
-    &quot;environment_id&quot;: 334344675,
-    &quot;id&quot;: 636252244,
-    &quot;image_file&quot;: &quot;&quot;,
-    &quot;label&quot;: &quot;Common&quot;,
-    &quot;medium_id&quot;: 980190962,
-    &quot;name&quot;: &quot;Common&quot;,
-    &quot;operatingsystem_id&quot;: 309172073,
-    &quot;ptable_id&quot;: 980190962,
-    &quot;puppet_ca_proxy_id&quot;: null,
-    &quot;puppet_proxy_id&quot;: 182953976,
-    &quot;root_pass&quot;: &quot;$1$foreman$NW1XVtbk4/XkJqmKNrFWV0&quot;,
-    &quot;subnet_id&quot;: null,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-    &quot;use_image&quot;: null,
-    &quot;vm_defaults&quot;: null
-  }
+  &quot;ancestry&quot;: null,
+  &quot;architecture_id&quot;: 501905019,
+  &quot;compute_profile_id&quot;: 980190962,
+  &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+  &quot;domain_id&quot;: 22495316,
+  &quot;environment_id&quot;: 334344675,
+  &quot;id&quot;: 636252244,
+  &quot;image_file&quot;: &quot;&quot;,
+  &quot;medium_id&quot;: 980190962,
+  &quot;name&quot;: &quot;Common&quot;,
+  &quot;operatingsystem_id&quot;: 309172073,
+  &quot;ptable_id&quot;: 980190962,
+  &quot;puppet_ca_proxy_id&quot;: 182953976,
+  &quot;puppet_proxy_id&quot;: 182953976,
+  &quot;realm_id&quot;: null,
+  &quot;root_pass&quot;: &quot;$1$foreman$NW1XVtbk4/XkJqmKNrFWV0&quot;,
+  &quot;subnet_id&quot;: null,
+  &quot;title&quot;: &quot;Common&quot;,
+  &quot;updated_at&quot;: &quot;2014-07-23T13:31:34Z&quot;,
+  &quot;use_image&quot;: null,
+  &quot;vm_defaults&quot;: null
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -654,7 +905,10 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
@@ -670,7 +924,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -685,7 +942,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -701,7 +961,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -717,7 +980,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -733,7 +999,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -749,7 +1018,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -765,7 +1037,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -781,7 +1056,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -797,7 +1075,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -813,7 +1094,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -829,7 +1113,29 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>hostgroup[realm_id] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be a number.
+
+
+    </td>
+
   </tr>
 
   
@@ -845,14 +1151,18 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -876,44 +1186,44 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/hostgroups/636252244-common
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/hostgroups/866317115-unusual
 200
 {
-  &quot;hostgroup&quot;: {
-    &quot;ancestry&quot;: null,
-    &quot;architecture_id&quot;: 501905019,
-    &quot;compute_profile_id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-    &quot;domain_id&quot;: 22495316,
-    &quot;environment_id&quot;: 334344675,
-    &quot;id&quot;: 636252244,
-    &quot;image_file&quot;: &quot;&quot;,
-    &quot;label&quot;: &quot;Common&quot;,
-    &quot;medium_id&quot;: 980190962,
-    &quot;name&quot;: &quot;Common&quot;,
-    &quot;operatingsystem_id&quot;: 309172073,
-    &quot;ptable_id&quot;: 980190962,
-    &quot;puppet_ca_proxy_id&quot;: null,
-    &quot;puppet_proxy_id&quot;: 182953976,
-    &quot;root_pass&quot;: &quot;$1$foreman$NW1XVtbk4/XkJqmKNrFWV0&quot;,
-    &quot;subnet_id&quot;: null,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-    &quot;use_image&quot;: null,
-    &quot;vm_defaults&quot;: null
-  }
+  &quot;ancestry&quot;: null,
+  &quot;architecture_id&quot;: null,
+  &quot;compute_profile_id&quot;: null,
+  &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+  &quot;domain_id&quot;: null,
+  &quot;environment_id&quot;: null,
+  &quot;id&quot;: 866317115,
+  &quot;image_file&quot;: &quot;&quot;,
+  &quot;medium_id&quot;: null,
+  &quot;name&quot;: &quot;Unusual&quot;,
+  &quot;operatingsystem_id&quot;: null,
+  &quot;ptable_id&quot;: null,
+  &quot;puppet_ca_proxy_id&quot;: null,
+  &quot;puppet_proxy_id&quot;: 182953976,
+  &quot;realm_id&quot;: null,
+  &quot;root_pass&quot;: null,
+  &quot;subnet_id&quot;: null,
+  &quot;title&quot;: &quot;Unusual&quot;,
+  &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+  &quot;use_image&quot;: null,
+  &quot;vm_defaults&quot;: null
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -925,13 +1235,17 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
 </div>
 
@@ -940,8 +1254,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

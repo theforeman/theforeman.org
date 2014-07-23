@@ -25,6 +25,7 @@
     Parameters
     
   </li>
+  
 </ul>
 
 <div class='page-header'>
@@ -35,7 +36,10 @@
   </h1>
 </div>
 
-  <div><p>These API calls are related to <b>nested parameters for host, domain, hostgroup, operating system</b>. If you are looking for <a href='common_parameters.html'>global parameters</a>, go to <a href='common_parameters.html'>this link</a>.</p></div>
+  <div>
+<p>These API calls are related to <b>nested parameters for host, domain, hostgroup, operating system</b>. If you are looking for <a href='common_parameters.html'>global parameters</a>, go to <a href='common_parameters.html'>this link</a>.</p>
+</div>
+
 
 
 <div class='accordion' id='accordion'>
@@ -107,8 +111,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/hosts/my5name.mydomain.net/parameters
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/hosts/my5name.mydomain.net/parameters
 200
 {
   &quot;total&quot;: 1,
@@ -127,22 +132,22 @@
       &quot;value&quot;: &quot;host1&quot;,
       &quot;priority&quot;: 4,
       &quot;is_property&quot;: null,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
     }
   ]
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>host_id </strong><br>
       <small>
@@ -151,10 +156,15 @@
       </small>
     </td>
     <td>
-      <p>id of host</p>
+      
+<p>id of host</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -167,10 +177,15 @@
       </small>
     </td>
     <td>
-      <p>id of hostgroup</p>
+      
+<p>id of hostgroup</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -183,10 +198,15 @@
       </small>
     </td>
     <td>
-      <p>id of domain</p>
+      
+<p>id of domain</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -199,10 +219,15 @@
       </small>
     </td>
     <td>
-      <p>id of operating system</p>
+      
+<p>id of operating system</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -215,10 +240,15 @@
       </small>
     </td>
     <td>
-      <p>id of location</p>
+      
+<p>id of location</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -231,10 +261,15 @@
       </small>
     </td>
     <td>
-      <p>id of organization</p>
+      
+<p>id of organization</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -247,10 +282,15 @@
       </small>
     </td>
     <td>
-      <p>paginate results</p>
+      
+<p>paginate results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -263,16 +303,22 @@
       </small>
     </td>
     <td>
-      <p>number of entries per request</p>
+      
+<p>number of entries per request</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -341,8 +387,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/hosts/my5name.mydomain.net/parameters/254219264
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/hosts/my5name.mydomain.net/parameters/254219264
 200
 {
   &quot;id&quot;: 254219264,
@@ -350,20 +397,20 @@
   &quot;value&quot;: &quot;host1&quot;,
   &quot;priority&quot;: 4,
   &quot;is_property&quot;: null,
-  &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+  &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>host_id </strong><br>
       <small>
@@ -372,10 +419,15 @@
       </small>
     </td>
     <td>
-      <p>id of host</p>
+      
+<p>id of host</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -388,10 +440,15 @@
       </small>
     </td>
     <td>
-      <p>id of hostgroup</p>
+      
+<p>id of hostgroup</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -404,10 +461,15 @@
       </small>
     </td>
     <td>
-      <p>id of domain</p>
+      
+<p>id of domain</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -420,10 +482,15 @@
       </small>
     </td>
     <td>
-      <p>id of operating system</p>
+      
+<p>id of operating system</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -436,10 +503,15 @@
       </small>
     </td>
     <td>
-      <p>id of location</p>
+      
+<p>id of location</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -452,10 +524,15 @@
       </small>
     </td>
     <td>
-      <p>id of organization</p>
+      
+<p>id of organization</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -468,16 +545,22 @@
       </small>
     </td>
     <td>
-      <p>id of parameter</p>
+      
+<p>id of parameter</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -546,8 +629,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">POST /api/hosts/my5name.mydomain.net/parameters
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/hosts/my5name.mydomain.net/parameters
 {
   &quot;parameter&quot;: {
     &quot;name&quot;: &quot;special_key&quot;,
@@ -561,20 +645,20 @@
   &quot;value&quot;: &quot;123&quot;,
   &quot;priority&quot;: 4,
   &quot;is_property&quot;: null,
-  &quot;created_at&quot;: &quot;2014-01-30T07:25:12Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-01-30T07:25:12Z&quot;
+  &quot;created_at&quot;: &quot;2014-07-23T13:31:59Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-07-23T13:31:59Z&quot;
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>host_id </strong><br>
       <small>
@@ -583,10 +667,15 @@
       </small>
     </td>
     <td>
-      <p>id of host</p>
+      
+<p>id of host</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -599,10 +688,15 @@
       </small>
     </td>
     <td>
-      <p>id of hostgroup</p>
+      
+<p>id of hostgroup</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -615,10 +709,15 @@
       </small>
     </td>
     <td>
-      <p>id of domain</p>
+      
+<p>id of domain</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -631,10 +730,15 @@
       </small>
     </td>
     <td>
-      <p>id of operating system</p>
+      
+<p>id of operating system</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -647,10 +751,15 @@
       </small>
     </td>
     <td>
-      <p>id of location</p>
+      
+<p>id of location</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -663,10 +772,15 @@
       </small>
     </td>
     <td>
-      <p>id of organization</p>
+      
+<p>id of organization</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -682,7 +796,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -697,7 +814,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -713,14 +833,18 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -789,8 +913,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/hosts/my5name.mydomain.net/parameters/254219264
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/hosts/my5name.mydomain.net/parameters/254219264
 {
   &quot;parameter&quot;: {
     &quot;name&quot;: &quot;special_key&quot;,
@@ -804,20 +929,20 @@
   &quot;value&quot;: &quot;123&quot;,
   &quot;priority&quot;: 4,
   &quot;is_property&quot;: null,
-  &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-01-30T07:25:13Z&quot;
+  &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-07-23T13:32:00Z&quot;
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>host_id </strong><br>
       <small>
@@ -826,10 +951,15 @@
       </small>
     </td>
     <td>
-      <p>id of host</p>
+      
+<p>id of host</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -842,10 +972,15 @@
       </small>
     </td>
     <td>
-      <p>id of hostgroup</p>
+      
+<p>id of hostgroup</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -858,10 +993,15 @@
       </small>
     </td>
     <td>
-      <p>id of domain</p>
+      
+<p>id of domain</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -874,10 +1014,15 @@
       </small>
     </td>
     <td>
-      <p>id of operating system</p>
+      
+<p>id of operating system</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -890,10 +1035,15 @@
       </small>
     </td>
     <td>
-      <p>id of location</p>
+      
+<p>id of location</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -906,10 +1056,15 @@
       </small>
     </td>
     <td>
-      <p>id of organization</p>
+      
+<p>id of organization</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -922,10 +1077,15 @@
       </small>
     </td>
     <td>
-      <p>id of parameter</p>
+      
+<p>id of parameter</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -941,7 +1101,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -956,7 +1119,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -972,14 +1138,18 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -1048,32 +1218,31 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/hosts/my5name.mydomain.net/parameters/254219264
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/hosts/my5name.mydomain.net/parameters/254219264
 200
 {
-  &quot;host_parameter&quot;: {
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-    &quot;id&quot;: 254219264,
-    &quot;is_property&quot;: null,
-    &quot;name&quot;: &quot;host1&quot;,
-    &quot;priority&quot;: 4,
-    &quot;reference_id&quot;: 980190962,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-    &quot;value&quot;: &quot;host1&quot;
-  }
+  &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+  &quot;id&quot;: 254219264,
+  &quot;is_property&quot;: null,
+  &quot;name&quot;: &quot;host1&quot;,
+  &quot;priority&quot;: 4,
+  &quot;reference_id&quot;: 980190962,
+  &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+  &quot;value&quot;: &quot;host1&quot;
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>host_id </strong><br>
       <small>
@@ -1082,10 +1251,15 @@
       </small>
     </td>
     <td>
-      <p>id of host</p>
+      
+<p>id of host</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1098,10 +1272,15 @@
       </small>
     </td>
     <td>
-      <p>id of hostgroup</p>
+      
+<p>id of hostgroup</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1114,10 +1293,15 @@
       </small>
     </td>
     <td>
-      <p>id of domain</p>
+      
+<p>id of domain</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1130,10 +1314,15 @@
       </small>
     </td>
     <td>
-      <p>id of operating system</p>
+      
+<p>id of operating system</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1146,10 +1335,15 @@
       </small>
     </td>
     <td>
-      <p>id of location</p>
+      
+<p>id of location</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1162,10 +1356,15 @@
       </small>
     </td>
     <td>
-      <p>id of organization</p>
+      
+<p>id of organization</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1178,16 +1377,22 @@
       </small>
     </td>
     <td>
-      <p>id of parameter</p>
+      
+<p>id of parameter</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -1256,23 +1461,24 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/hosts/my5name.mydomain.net/parameters
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/hosts/my5name.mydomain.net/parameters
 200
 [
 
 ]</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>host_id </strong><br>
       <small>
@@ -1281,10 +1487,15 @@
       </small>
     </td>
     <td>
-      <p>id of host</p>
+      
+<p>id of host</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1297,10 +1508,15 @@
       </small>
     </td>
     <td>
-      <p>id of hostgroup</p>
+      
+<p>id of hostgroup</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1313,10 +1529,15 @@
       </small>
     </td>
     <td>
-      <p>id of domain</p>
+      
+<p>id of domain</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1329,10 +1550,15 @@
       </small>
     </td>
     <td>
-      <p>id of operating system</p>
+      
+<p>id of operating system</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1345,10 +1571,15 @@
       </small>
     </td>
     <td>
-      <p>id of location</p>
+      
+<p>id of location</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1361,16 +1592,22 @@
       </small>
     </td>
     <td>
-      <p>id of organization</p>
+      
+<p>id of organization</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
 </div>
 
@@ -1379,8 +1616,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

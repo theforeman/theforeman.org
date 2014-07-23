@@ -29,6 +29,8 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>destroy</li>
+  
+
 </ul>
 
   <div class='page-header'>
@@ -42,37 +44,39 @@
 
   
 
-    <h2>Examples</h2>
-      <pre class="prettyprint">DELETE /api/compute_resources/980190962/images/980190962
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">DELETE /api/compute_resources/980190962/images/980190962
 200
 {
   &quot;image&quot;: {
     &quot;architecture_id&quot;: 501905019,
     &quot;compute_resource_id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
     &quot;iam_role&quot;: null,
     &quot;id&quot;: 980190962,
     &quot;name&quot;: &quot;centos-1&quot;,
     &quot;operatingsystem_id&quot;: 309172073,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;password&quot;: null,
+    &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
     &quot;user_data&quot;: false,
     &quot;username&quot;: &quot;root&quot;,
     &quot;uuid&quot;: &quot;string-of-uuid&quot;
   }
 }</pre>
 
-
-
-    <h2>Params</h2>
-    <table class='table'>
-      <thead>
-        <tr>
-          <th>Param name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr style='background-color:rgb(255,255,255);'>
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>compute_resource_id </strong><br>
       <small>
@@ -84,7 +88,10 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
@@ -100,13 +107,17 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-      </tbody>
-    </table>
+    </tbody>
+  </table>
+
 </div>
 
 
@@ -114,8 +125,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

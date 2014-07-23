@@ -29,6 +29,8 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>create</li>
+  
+
 </ul>
 
   <div class='page-header'>
@@ -42,8 +44,11 @@
 
   
 
-    <h2>Examples</h2>
-      <pre class="prettyprint">POST /api/hosts/my5name.mydomain.net/interfaces
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">POST /api/hosts/my5name.mydomain.net/interfaces
 {
   &quot;interface&quot;: {
     &quot;name&quot;: &quot;test.foreman.com&quot;,
@@ -56,36 +61,32 @@
 }
 201
 {
-  &quot;bmc&quot;: {
-    &quot;attrs&quot;: {
-      &quot;username&quot;: &quot;foo&quot;,
-      &quot;password&quot;: &quot;bar&quot;,
-      &quot;provider&quot;: &quot;IPMI&quot;
-    },
-    &quot;created_at&quot;: &quot;2014-01-30T07:25:03Z&quot;,
-    &quot;domain_id&quot;: null,
-    &quot;host_id&quot;: 980190962,
-    &quot;id&quot;: 821748567,
-    &quot;ip&quot;: &quot;10.0.1.1&quot;,
-    &quot;mac&quot;: &quot;aa:aa:aa:aa:aa:aa&quot;,
-    &quot;name&quot;: &quot;test.foreman.com&quot;,
-    &quot;subnet_id&quot;: null,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:25:03Z&quot;
-  }
+  &quot;attrs&quot;: {
+    &quot;username&quot;: &quot;foo&quot;,
+    &quot;password&quot;: &quot;bar&quot;,
+    &quot;provider&quot;: &quot;IPMI&quot;
+  },
+  &quot;created_at&quot;: &quot;2014-07-23T13:31:48Z&quot;,
+  &quot;domain_id&quot;: null,
+  &quot;host_id&quot;: 980190962,
+  &quot;id&quot;: 821748567,
+  &quot;ip&quot;: &quot;10.0.1.1&quot;,
+  &quot;mac&quot;: &quot;aa:aa:aa:aa:aa:aa&quot;,
+  &quot;name&quot;: &quot;test.foreman.com&quot;,
+  &quot;subnet_id&quot;: null,
+  &quot;updated_at&quot;: &quot;2014-07-23T13:31:48Z&quot;
 }</pre>
 
-
-
-    <h2>Params</h2>
-    <table class='table'>
-      <thead>
-        <tr>
-          <th>Param name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr style='background-color:rgb(255,255,255);'>
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>host_id </strong><br>
       <small>
@@ -94,10 +95,15 @@
       </small>
     </td>
     <td>
-      <p>id or name of host</p>
+      
+<p>id or name of host</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -110,10 +116,15 @@
       </small>
     </td>
     <td>
-      <p>interface information</p>
+      
+<p>interface information</p>
+
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -125,10 +136,15 @@
       </small>
     </td>
     <td>
-      <p>MAC address of interface</p>
+      
+<p>MAC address of interface</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -141,10 +157,15 @@
       </small>
     </td>
     <td>
-      <p>IP address of interface</p>
+      
+<p>IP address of interface</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -157,10 +178,15 @@
       </small>
     </td>
     <td>
-      <p>Interface type, i.e: Nic::BMC</p>
+      
+<p>Interface type, i.e: Nic::BMC</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -173,10 +199,15 @@
       </small>
     </td>
     <td>
-      <p>Interface name</p>
+      
+<p>Interface name</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -189,10 +220,15 @@
       </small>
     </td>
     <td>
-      <p>Foreman subnet id of interface</p>
+      
+<p>Foreman subnet id of interface</p>
+
         <br>
         Value: Must be Fixnum
+
+
     </td>
+
   </tr>
 
   
@@ -205,10 +241,15 @@
       </small>
     </td>
     <td>
-      <p>Foreman domain id of interface</p>
+      
+<p>Foreman domain id of interface</p>
+
         <br>
         Value: Must be Fixnum
+
+
     </td>
+
   </tr>
 
   
@@ -224,7 +265,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -240,7 +284,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -253,17 +300,23 @@
       </small>
     </td>
     <td>
-      <p>Interface provider, i.e: IPMI</p>
+      
+<p>Interface provider, i.e: IPMI</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
 
-      </tbody>
-    </table>
+    </tbody>
+  </table>
+
 </div>
 
 
@@ -271,8 +324,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
