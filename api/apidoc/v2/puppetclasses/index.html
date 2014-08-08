@@ -29,30 +29,32 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>index</li>
+  
+
 </ul>
 
   <div class='page-header'>
     <h1>
       GET /api/puppetclasses<br>
-      <small>List all puppetclasses.</small>
+      <small>List all Puppet classes</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
       GET /api/hosts/:host_id/puppetclasses<br>
-      <small>List all puppetclasses for host</small>
+      <small>List all Puppet classes for a host</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
       GET /api/hostgroups/:hostgroup_id/puppetclasses<br>
-      <small>List all puppetclasses for hostgroup</small>
+      <small>List all Puppet classes for a host group</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
       GET /api/environments/:environment_id/puppetclasses<br>
-      <small>List all puppetclasses for environment</small>
+      <small>List all Puppet classes for an environment</small>
     </h1>
   </div>
 
@@ -60,12 +62,15 @@
 
   
 
-    <h2>Examples</h2>
-      <pre class="prettyprint">GET /api/puppetclasses
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">GET /api/puppetclasses
 200
 {
-  &quot;total&quot;: 4,
-  &quot;subtotal&quot;: 4,
+  &quot;total&quot;: 8,
+  &quot;subtotal&quot;: 8,
   &quot;page&quot;: 1,
   &quot;per_page&quot;: 20,
   &quot;search&quot;: null,
@@ -78,49 +83,79 @@
       {
         &quot;id&quot;: 298486374,
         &quot;name&quot;: &quot;apache&quot;,
-        &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-        &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+        &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+        &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      }
+    ],
+    &quot;auth&quot;: [
+      {
+        &quot;id&quot;: 638205575,
+        &quot;name&quot;: &quot;auth&quot;,
+        &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+        &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
       }
     ],
     &quot;base&quot;: [
       {
         &quot;id&quot;: 980190962,
         &quot;name&quot;: &quot;base&quot;,
-        &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-        &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+        &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+        &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      }
+    ],
+    &quot;chkmk&quot;: [
+      {
+        &quot;id&quot;: 51848956,
+        &quot;name&quot;: &quot;chkmk&quot;,
+        &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+        &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
       }
     ],
     &quot;git&quot;: [
       {
         &quot;id&quot;: 113629430,
         &quot;name&quot;: &quot;git&quot;,
-        &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-        &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+        &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+        &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      }
+    ],
+    &quot;nagios&quot;: [
+      {
+        &quot;id&quot;: 1018350795,
+        &quot;name&quot;: &quot;nagios&quot;,
+        &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+        &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      }
+    ],
+    &quot;pam&quot;: [
+      {
+        &quot;id&quot;: 374648174,
+        &quot;name&quot;: &quot;pam&quot;,
+        &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+        &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
       }
     ],
     &quot;vim&quot;: [
       {
         &quot;id&quot;: 281110143,
         &quot;name&quot;: &quot;vim&quot;,
-        &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-        &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+        &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+        &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
       }
     ]
   }
 }</pre>
 
-
-
-    <h2>Params</h2>
-    <table class='table'>
-      <thead>
-        <tr>
-          <th>Param name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr style='background-color:rgb(255,255,255);'>
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>host_id </strong><br>
       <small>
@@ -129,10 +164,15 @@
       </small>
     </td>
     <td>
-      <p>id of nested host</p>
+      
+<p>ID of host</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -145,10 +185,15 @@
       </small>
     </td>
     <td>
-      <p>id of nested hostgroup</p>
+      
+<p>ID of host group</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -161,10 +206,15 @@
       </small>
     </td>
     <td>
-      <p>id of nested environment</p>
+      
+<p>ID of environment</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -177,10 +227,15 @@
       </small>
     </td>
     <td>
-      <p>Filter results</p>
+      
+<p>filter results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -193,10 +248,15 @@
       </small>
     </td>
     <td>
-      <p>Sort results</p>
+      
+<p>sort results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -209,10 +269,15 @@
       </small>
     </td>
     <td>
-      <p>paginate results</p>
+      
+<p>paginate results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -225,16 +290,22 @@
       </small>
     </td>
     <td>
-      <p>number of entries per request</p>
+      
+<p>number of entries per request</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-      </tbody>
-    </table>
+    </tbody>
+  </table>
+
 </div>
 
 
@@ -242,8 +313,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

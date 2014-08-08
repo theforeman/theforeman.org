@@ -29,42 +29,44 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>destroy</li>
+  
+
 </ul>
 
   <div class='page-header'>
     <h1>
       DELETE /api/hosts/:host_id/parameters/:id<br>
-      <small>Delete a nested parameter for host</small>
+      <small>Delete a nested parameter for a host</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
       DELETE /api/hostgroups/:hostgroup_id/parameters/:id<br>
-      <small>Delete a nested parameter for hostgroup</small>
+      <small>Delete a nested parameter for a host group</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
       DELETE /api/domains/:domain_id/parameters/:id<br>
-      <small>Delete a nested parameter for domain</small>
+      <small>Delete a nested parameter for a domain</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
       DELETE /api/operatingsystems/:operatingsystem_id/parameters/:id<br>
-      <small>Delete a nested parameter for operating system</small>
+      <small>Delete a nested parameter for an operating system</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
       DELETE /api/locations/:location_id/parameters/:id<br>
-      <small>Delete a nested parameter for location</small>
+      <small>Delete a nested parameter for a location</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
       DELETE /api/organizations/:organization_id/parameters/:id<br>
-      <small>Delete a nested parameter for organization</small>
+      <small>Delete a nested parameter for an organization</small>
     </h1>
   </div>
 
@@ -72,34 +74,33 @@
 
   
 
-    <h2>Examples</h2>
-      <pre class="prettyprint">DELETE /api/hosts/my5name.mydomain.net/parameters/254219264
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">DELETE /api/hosts/my5name.mydomain.net/parameters/254219264
 200
 {
-  &quot;host_parameter&quot;: {
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-    &quot;id&quot;: 254219264,
-    &quot;is_property&quot;: null,
-    &quot;name&quot;: &quot;host1&quot;,
-    &quot;priority&quot;: 4,
-    &quot;reference_id&quot;: 980190962,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-    &quot;value&quot;: &quot;host1&quot;
-  }
+  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;id&quot;: 254219264,
+  &quot;is_property&quot;: null,
+  &quot;name&quot;: &quot;host1&quot;,
+  &quot;priority&quot;: 4,
+  &quot;reference_id&quot;: 980190962,
+  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;value&quot;: &quot;host1&quot;
 }</pre>
 
-
-
-    <h2>Params</h2>
-    <table class='table'>
-      <thead>
-        <tr>
-          <th>Param name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr style='background-color:rgb(255,255,255);'>
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>host_id </strong><br>
       <small>
@@ -108,10 +109,15 @@
       </small>
     </td>
     <td>
-      <p>id of host</p>
+      
+<p>ID of host</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -124,10 +130,15 @@
       </small>
     </td>
     <td>
-      <p>id of hostgroup</p>
+      
+<p>ID of hostgroup</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -140,10 +151,15 @@
       </small>
     </td>
     <td>
-      <p>id of domain</p>
+      
+<p>ID of domain</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -156,10 +172,15 @@
       </small>
     </td>
     <td>
-      <p>id of operating system</p>
+      
+<p>ID of operating system</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -172,10 +193,15 @@
       </small>
     </td>
     <td>
-      <p>id of location</p>
+      
+<p>ID of location</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -188,10 +214,15 @@
       </small>
     </td>
     <td>
-      <p>id of organization</p>
+      
+<p>ID of organization</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -204,16 +235,22 @@
       </small>
     </td>
     <td>
-      <p>id of parameter</p>
+      
+<p>ID of parameter</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-      </tbody>
-    </table>
+    </tbody>
+  </table>
+
 </div>
 
 
@@ -221,8 +258,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

@@ -29,12 +29,14 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>boot</li>
+  
+
 </ul>
 
   <div class='page-header'>
     <h1>
       PUT /api/hosts/:id/boot<br>
-      <small>Boot host from specified device.</small>
+      <small>Boot host from specified device</small>
     </h1>
   </div>
 
@@ -42,28 +44,30 @@
 
   
 
-    <h2>Examples</h2>
-      <pre class="prettyprint">PUT /api/hosts/my5name.mydomain.net/boot
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">PUT /api/hosts/my5name.mydomain.net/boot
 {
-  &quot;device&quot;: &quot;bios&quot;
+  &quot;device&quot;: &quot;bios&quot;,
+  &quot;base&quot;: {}
 }
 200
 {
   &quot;boot&quot;: &quot;{\&quot;action\&quot;:\&quot;bios\&quot;,\&quot;result\&quot;:true}&quot;
 }</pre>
 
-
-
-    <h2>Params</h2>
-    <table class='table'>
-      <thead>
-        <tr>
-          <th>Param name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr style='background-color:rgb(255,255,255);'>
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -75,7 +79,10 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
@@ -88,16 +95,22 @@
       </small>
     </td>
     <td>
-      <p>boot device, valid devices are disk, cdrom, pxe, bios</p>
+      
+<p>boot device, valid devices are disk, cdrom, pxe, bios</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-      </tbody>
-    </table>
+    </tbody>
+  </table>
+
 </div>
 
 
@@ -105,8 +118,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

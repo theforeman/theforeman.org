@@ -25,6 +25,7 @@
     Domains
     
   </li>
+  
 </ul>
 
 <div class='page-header'>
@@ -35,7 +36,10 @@
   </h1>
 </div>
 
-  <div><p>Foreman considers a domain and a DNS zone as the same thing. That is, if you are planning to manage a site where all the machines are or the form <i>hostname</i>.<b>somewhere.com</b> then the domain is <b>somewhere.com</b>. This allows Foreman to associate a puppet variable with a domain/site and automatically append this variable to all external node requests made by machines at that site.</p></div>
+  <div>
+<p>Foreman considers a domain and a DNS zone as the same thing. That is, if you are planning to manage a site where all the machines are or the form <i>hostname</i>.<b>somewhere.com</b> then the domain is <b>somewhere.com</b>. This allows Foreman to associate a puppet variable with a domain/site and automatically append this variable to all external node requests made by machines at that site.</p>
+</div>
+
 
 
 <div class='accordion' id='accordion'>
@@ -62,8 +66,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/domains
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/domains
 200
 [
   {
@@ -72,8 +77,8 @@
       &quot;name&quot;: &quot;mydomain.net&quot;,
       &quot;fullname&quot;: null,
       &quot;dns_id&quot;: 113629430,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
     }
   },
   {
@@ -82,8 +87,8 @@
       &quot;name&quot;: &quot;unused.net&quot;,
       &quot;fullname&quot;: &quot;somewhare that is never used&quot;,
       &quot;dns_id&quot;: 113629430,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
     }
   },
   {
@@ -92,8 +97,8 @@
       &quot;name&quot;: &quot;useless.net&quot;,
       &quot;fullname&quot;: null,
       &quot;dns_id&quot;: null,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
     }
   },
   {
@@ -102,22 +107,22 @@
       &quot;name&quot;: &quot;yourdomain.net&quot;,
       &quot;fullname&quot;: &quot;somewhere in yourdomain&quot;,
       &quot;dns_id&quot;: 113629430,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
     }
   }
 ]</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>search </strong><br>
       <small>
@@ -126,10 +131,15 @@
       </small>
     </td>
     <td>
-      <p>Filter results</p>
+      
+<p>Filter results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -142,10 +152,15 @@
       </small>
     </td>
     <td>
-      <p>Sort results</p>
+      
+<p>Sort results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -158,10 +173,15 @@
       </small>
     </td>
     <td>
-      <p>paginate results</p>
+      
+<p>paginate results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -174,16 +194,22 @@
       </small>
     </td>
     <td>
-      <p>number of entries per request</p>
+      
+<p>number of entries per request</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -207,8 +233,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/domains/22495316-mydomain-net
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/domains/22495316-mydomain-net
 200
 {
   &quot;domain&quot;: {
@@ -216,21 +243,21 @@
     &quot;name&quot;: &quot;mydomain.net&quot;,
     &quot;fullname&quot;: null,
     &quot;dns_id&quot;: 113629430,
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+    &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+    &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -239,16 +266,22 @@
       </small>
     </td>
     <td>
-      <p>May be numerical id or domain name</p>
+      
+<p>May be numerical id or domain name</p>
+
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -268,42 +301,44 @@
 
 
     <div id='description-create' class='collapse accordion-body'>
-      <p>The <b>fullname</b> field is used for human readability in reports and other pages that refer to domains, and also available as an external node parameter</p>
+      
+<p>The <b>fullname</b> field is used for human readability in reports and other pages that refer to domains, and also available as an external node parameter</p>
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">POST /api/domains
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/domains
 {
   &quot;domain&quot;: {
-    &quot;fullname&quot;: &quot;&quot;
+    &quot;name&quot;: &quot;domain.net&quot;
   }
 }
-422
+201
 {
   &quot;domain&quot;: {
-    &quot;id&quot;: null,
-    &quot;errors&quot;: {
-      &quot;name&quot;: [
-        &quot;can&#x27;t be blank&quot;
-      ]
-    },
-    &quot;full_messages&quot;: [
-      &quot;Name can&#x27;t be blank&quot;
-    ]
+    &quot;created_at&quot;: &quot;2014-08-07T20:40:20Z&quot;,
+    &quot;dns_id&quot;: null,
+    &quot;fullname&quot;: null,
+    &quot;hostgroups_count&quot;: 0,
+    &quot;hosts_count&quot;: 0,
+    &quot;id&quot;: 759776764,
+    &quot;name&quot;: &quot;domain.net&quot;,
+    &quot;updated_at&quot;: &quot;2014-08-07T20:40:20Z&quot;
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>domain </strong><br>
       <small>
@@ -315,7 +350,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -327,10 +365,15 @@
       </small>
     </td>
     <td>
-      <p>The full DNS Domain name</p>
+      
+<p>The full DNS Domain name</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -343,10 +386,15 @@
       </small>
     </td>
     <td>
-      <p>Full name describing the domain</p>
+      
+<p>Full name describing the domain</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -359,10 +407,15 @@
       </small>
     </td>
     <td>
-      <p>DNS Proxy to use within this domain</p>
+      
+<p>DNS Proxy to use within this domain</p>
+
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -375,17 +428,23 @@
       </small>
     </td>
     <td>
-      <p>Array of parameters (name, value)</p>
+      
+<p>Array of parameters (name, value)</p>
+
         <br>
         Value: Must be Array
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -409,8 +468,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/domains/22495316-mydomain-net
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/domains/22495316-mydomain-net
 {
   &quot;domain&quot;: {
     &quot;name&quot;: &quot;domain.new&quot;
@@ -419,25 +479,27 @@
 200
 {
   &quot;domain&quot;: {
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
     &quot;dns_id&quot;: 113629430,
     &quot;fullname&quot;: null,
+    &quot;hostgroups_count&quot;: 0,
+    &quot;hosts_count&quot;: 0,
     &quot;id&quot;: 22495316,
     &quot;name&quot;: &quot;domain.new&quot;,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:23Z&quot;
+    &quot;updated_at&quot;: &quot;2014-08-07T20:40:20Z&quot;
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -449,7 +511,10 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
@@ -465,7 +530,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -477,10 +545,15 @@
       </small>
     </td>
     <td>
-      <p>The full DNS Domain name</p>
+      
+<p>The full DNS Domain name</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -493,10 +566,15 @@
       </small>
     </td>
     <td>
-      <p>Full name describing the domain</p>
+      
+<p>Full name describing the domain</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -509,10 +587,15 @@
       </small>
     </td>
     <td>
-      <p>DNS Proxy to use within this domain</p>
+      
+<p>DNS Proxy to use within this domain</p>
+
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -525,17 +608,23 @@
       </small>
     </td>
     <td>
-      <p>Array of parameters (name, value)</p>
+      
+<p>Array of parameters (name, value)</p>
+
         <br>
         Value: Must be Array
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -559,30 +648,33 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/domains/22495316-mydomain-net
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/domains/22495316-mydomain-net
 200
 {
   &quot;domain&quot;: {
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
     &quot;dns_id&quot;: 113629430,
     &quot;fullname&quot;: null,
+    &quot;hostgroups_count&quot;: -2,
+    &quot;hosts_count&quot;: -9,
     &quot;id&quot;: 22495316,
     &quot;name&quot;: &quot;mydomain.net&quot;,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+    &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -594,13 +686,17 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
 </div>
 
@@ -609,8 +705,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

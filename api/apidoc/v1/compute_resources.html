@@ -25,6 +25,7 @@
     Compute resources
     
   </li>
+  
 </ul>
 
 <div class='page-header'>
@@ -34,6 +35,7 @@
     <small></small>
   </h1>
 </div>
+
 
 
 
@@ -61,8 +63,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/compute_resources
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/compute_resources
 200
 [
   {
@@ -71,8 +74,8 @@
       &quot;name&quot;: &quot;amazon123&quot;,
       &quot;description&quot;: &quot;yourcompute&quot;,
       &quot;url&quot;: &quot;eu-west-1&quot;,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
       &quot;provider&quot;: &quot;EC2&quot;,
       &quot;user&quot;: &quot;MyString&quot;,
       &quot;region&quot;: &quot;eu-west-1&quot;
@@ -84,11 +87,22 @@
       &quot;name&quot;: &quot;another-ec2&quot;,
       &quot;description&quot;: &quot;yourcompute&quot;,
       &quot;url&quot;: &quot;eu-west-1&quot;,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
       &quot;provider&quot;: &quot;EC2&quot;,
       &quot;user&quot;: &quot;MyString&quot;,
       &quot;region&quot;: &quot;eu-west-1&quot;
+    }
+  },
+  {
+    &quot;compute_resource&quot;: {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;bigcompute&quot;,
+      &quot;description&quot;: &quot;MyString&quot;,
+      &quot;url&quot;: &quot;qemu://stam/system&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;provider&quot;: &quot;Libvirt&quot;
     }
   },
   {
@@ -97,8 +111,8 @@
       &quot;name&quot;: &quot;gce123&quot;,
       &quot;description&quot;: &quot;yourcompute&quot;,
       &quot;url&quot;: &quot;us-central1-a&quot;,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
       &quot;provider&quot;: &quot;Google&quot;,
       &quot;email&quot;: null,
       &quot;zone&quot;: &quot;us-central1-a&quot;,
@@ -108,34 +122,12 @@
   },
   {
     &quot;compute_resource&quot;: {
-      &quot;id&quot;: 980190962,
-      &quot;name&quot;: &quot;bigcompute&quot;,
-      &quot;description&quot;: &quot;MyString&quot;,
-      &quot;url&quot;: &quot;qemu://stam/system&quot;,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;provider&quot;: &quot;Libvirt&quot;
-    }
-  },
-  {
-    &quot;compute_resource&quot;: {
       &quot;id&quot;: 367690737,
       &quot;name&quot;: &quot;mycompute&quot;,
       &quot;description&quot;: &quot;mycompute&quot;,
       &quot;url&quot;: &quot;test:///default&quot;,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;provider&quot;: &quot;Libvirt&quot;
-    }
-  },
-  {
-    &quot;compute_resource&quot;: {
-      &quot;id&quot;: 932571420,
-      &quot;name&quot;: &quot;yourcompute&quot;,
-      &quot;description&quot;: &quot;yourcompute&quot;,
-      &quot;url&quot;: &quot;test:///default&quot;,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
       &quot;provider&quot;: &quot;Libvirt&quot;
     }
   },
@@ -145,25 +137,63 @@
       &quot;name&quot;: &quot;openstackcr&quot;,
       &quot;description&quot;: &quot;computeresource&quot;,
       &quot;url&quot;: &quot;test:///default&quot;,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
       &quot;provider&quot;: &quot;OpenStack&quot;,
       &quot;user&quot;: &quot;MyString&quot;,
       &quot;tenant&quot;: null
     }
+  },
+  {
+    &quot;compute_resource&quot;: {
+      &quot;id&quot;: 510899777,
+      &quot;name&quot;: &quot;Ovirt&quot;,
+      &quot;description&quot;: &quot;ovirt resource&quot;,
+      &quot;url&quot;: &quot;https://myovirt/api&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;provider&quot;: &quot;oVirt&quot;,
+      &quot;user&quot;: &quot;MyString&quot;,
+      &quot;uuid&quot;: &quot;1234567891011&quot;
+    }
+  },
+  {
+    &quot;compute_resource&quot;: {
+      &quot;id&quot;: 305613588,
+      &quot;name&quot;: &quot;Vmware&quot;,
+      &quot;description&quot;: &quot;vmware resource&quot;,
+      &quot;url&quot;: &quot;https://myvmware/api&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;provider&quot;: &quot;VMWare&quot;,
+      &quot;user&quot;: &quot;MyString&quot;,
+      &quot;uuid&quot;: &quot;1234567891011&quot;,
+      &quot;server&quot;: &quot;https://myvmware/api&quot;
+    }
+  },
+  {
+    &quot;compute_resource&quot;: {
+      &quot;id&quot;: 932571420,
+      &quot;name&quot;: &quot;yourcompute&quot;,
+      &quot;description&quot;: &quot;yourcompute&quot;,
+      &quot;url&quot;: &quot;test:///default&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;provider&quot;: &quot;Libvirt&quot;
+    }
   }
 ]</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>search </strong><br>
       <small>
@@ -172,10 +202,15 @@
       </small>
     </td>
     <td>
-      <p>filter results</p>
+      
+<p>filter results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -188,10 +223,15 @@
       </small>
     </td>
     <td>
-      <p>sort results</p>
+      
+<p>sort results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -204,10 +244,15 @@
       </small>
     </td>
     <td>
-      <p>paginate results</p>
+      
+<p>paginate results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -220,16 +265,22 @@
       </small>
     </td>
     <td>
-      <p>number of entries per request</p>
+      
+<p>number of entries per request</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -253,8 +304,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/compute_resources/980190962-bigcompute
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/compute_resources/980190962-bigcompute
 200
 {
   &quot;compute_resource&quot;: {
@@ -262,22 +314,22 @@
     &quot;name&quot;: &quot;bigcompute&quot;,
     &quot;description&quot;: &quot;MyString&quot;,
     &quot;url&quot;: &quot;qemu://stam/system&quot;,
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+    &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
     &quot;provider&quot;: &quot;Libvirt&quot;
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -289,13 +341,17 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -319,12 +375,12 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">POST /api/compute_resources
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/compute_resources
 {
   &quot;compute_resource&quot;: {
     &quot;name&quot;: &quot;special_compute&quot;,
-    &quot;provider&quot;: &quot;EC2&quot;,
     &quot;region&quot;: &quot;eu-west-1&quot;,
     &quot;user&quot;: &quot;user@example.com&quot;,
     &quot;password&quot;: &quot;secret&quot;
@@ -337,24 +393,24 @@
     &quot;name&quot;: &quot;special_compute&quot;,
     &quot;description&quot;: null,
     &quot;url&quot;: &quot;eu-west-1&quot;,
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:18Z&quot;,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:18Z&quot;,
+    &quot;created_at&quot;: &quot;2014-08-07T20:40:16Z&quot;,
+    &quot;updated_at&quot;: &quot;2014-08-07T20:40:16Z&quot;,
     &quot;provider&quot;: &quot;EC2&quot;,
     &quot;user&quot;: &quot;user@example.com&quot;,
     &quot;region&quot;: &quot;eu-west-1&quot;
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>compute_resource </strong><br>
       <small>
@@ -366,14 +422,17 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
     <td>
       <strong>compute_resource[name] </strong><br>
       <small>
-        optional
+        required
         
       </small>
     </td>
@@ -381,7 +440,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -394,10 +456,15 @@
       </small>
     </td>
     <td>
-      <p>Providers include Libvirt, Ovirt, EC2, Vmware, Openstack, Rackspace, GCE</p>
+      
+<p>Providers include Libvirt, Ovirt, EC2, Vmware, Openstack, Rackspace, GCE</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -410,10 +477,15 @@
       </small>
     </td>
     <td>
-      <p>URL for Libvirt, Ovirt, and Openstack</p>
+      
+<p>URL for Libvirt, Ovirt, and Openstack</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -429,7 +501,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -442,10 +517,15 @@
       </small>
     </td>
     <td>
-      <p>Username for Ovirt, EC2, Vmware, Openstack. Access Key for EC2.</p>
+      
+<p>Username for Ovirt, EC2, Vmware, Openstack. Access Key for EC2.</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -458,10 +538,15 @@
       </small>
     </td>
     <td>
-      <p>Password for Ovirt, EC2, Vmware, Openstack. Secret key for EC2</p>
+      
+<p>Password for Ovirt, EC2, Vmware, Openstack. Secret key for EC2</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -474,10 +559,15 @@
       </small>
     </td>
     <td>
-      <p>for Ovirt, Vmware Datacenter</p>
+      
+<p>for Ovirt, Vmware Datacenter</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -490,10 +580,15 @@
       </small>
     </td>
     <td>
-      <p>for EC2 only</p>
+      
+<p>for EC2 only</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -506,10 +601,15 @@
       </small>
     </td>
     <td>
-      <p>for Openstack only</p>
+      
+<p>for Openstack only</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -522,17 +622,23 @@
       </small>
     </td>
     <td>
-      <p>for Vmware</p>
+      
+<p>for Vmware</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -556,8 +662,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/compute_resources/367690737-mycompute
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/compute_resources/367690737-mycompute
 {
   &quot;compute_resource&quot;: {
     &quot;description&quot;: &quot;new_description&quot;
@@ -567,28 +674,28 @@
 {
   &quot;compute_resource&quot;: {
     &quot;attrs&quot;: {},
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
     &quot;description&quot;: &quot;new_description&quot;,
     &quot;id&quot;: 367690737,
     &quot;name&quot;: &quot;mycompute&quot;,
     &quot;password&quot;: &quot;1234567&quot;,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:21Z&quot;,
+    &quot;updated_at&quot;: &quot;2014-08-07T20:40:17Z&quot;,
     &quot;url&quot;: &quot;test:///default&quot;,
     &quot;user&quot;: &quot;MyString&quot;,
     &quot;uuid&quot;: &quot;mycompute&quot;
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -600,7 +707,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -616,7 +726,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -631,7 +744,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -644,10 +760,15 @@
       </small>
     </td>
     <td>
-      <p>Providers include Libvirt, Ovirt, EC2, Vmware, Openstack, Rackspace, GCE</p>
+      
+<p>Providers include Libvirt, Ovirt, EC2, Vmware, Openstack, Rackspace, GCE</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -660,10 +781,15 @@
       </small>
     </td>
     <td>
-      <p>URL for Libvirt, Ovirt, and Openstack</p>
+      
+<p>URL for Libvirt, Ovirt, and Openstack</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -679,7 +805,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -692,10 +821,15 @@
       </small>
     </td>
     <td>
-      <p>Username for Ovirt, EC2, Vmware, Openstack. Access Key for EC2.</p>
+      
+<p>Username for Ovirt, EC2, Vmware, Openstack. Access Key for EC2.</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -708,10 +842,15 @@
       </small>
     </td>
     <td>
-      <p>Password for Ovirt, EC2, Vmware, Openstack. Secret key for EC2</p>
+      
+<p>Password for Ovirt, EC2, Vmware, Openstack. Secret key for EC2</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -724,10 +863,15 @@
       </small>
     </td>
     <td>
-      <p>for Ovirt, Vmware Datacenter</p>
+      
+<p>for Ovirt, Vmware Datacenter</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -740,10 +884,15 @@
       </small>
     </td>
     <td>
-      <p>for EC2 only</p>
+      
+<p>for EC2 only</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -756,10 +905,15 @@
       </small>
     </td>
     <td>
-      <p>for Openstack only</p>
+      
+<p>for Openstack only</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -772,17 +926,23 @@
       </small>
     </td>
     <td>
-      <p>for Vmware</p>
+      
+<p>for Vmware</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -806,34 +966,35 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/compute_resources/932571420
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/compute_resources/932571420
 200
 {
   &quot;compute_resource&quot;: {
     &quot;attrs&quot;: {},
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
     &quot;description&quot;: &quot;yourcompute&quot;,
     &quot;id&quot;: 932571420,
     &quot;name&quot;: &quot;yourcompute&quot;,
     &quot;password&quot;: &quot;1234567&quot;,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
     &quot;url&quot;: &quot;test:///default&quot;,
     &quot;user&quot;: &quot;MyString&quot;,
     &quot;uuid&quot;: &quot;yourcompute&quot;
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -845,13 +1006,17 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
 </div>
 
@@ -860,8 +1025,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
