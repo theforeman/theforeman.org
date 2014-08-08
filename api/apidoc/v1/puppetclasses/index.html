@@ -29,6 +29,8 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>index</li>
+  
+
 </ul>
 
   <div class='page-header'>
@@ -48,8 +50,11 @@
 
   
 
-    <h2>Examples</h2>
-      <pre class="prettyprint">GET /api/puppetclasses
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">GET /api/puppetclasses
 200
 {
   &quot;apache&quot;: [
@@ -57,6 +62,14 @@
       &quot;puppetclass&quot;: {
         &quot;id&quot;: 298486374,
         &quot;name&quot;: &quot;apache&quot;
+      }
+    }
+  ],
+  &quot;auth&quot;: [
+    {
+      &quot;puppetclass&quot;: {
+        &quot;id&quot;: 638205575,
+        &quot;name&quot;: &quot;auth&quot;
       }
     }
   ],
@@ -68,11 +81,35 @@
       }
     }
   ],
+  &quot;chkmk&quot;: [
+    {
+      &quot;puppetclass&quot;: {
+        &quot;id&quot;: 51848956,
+        &quot;name&quot;: &quot;chkmk&quot;
+      }
+    }
+  ],
   &quot;git&quot;: [
     {
       &quot;puppetclass&quot;: {
         &quot;id&quot;: 113629430,
         &quot;name&quot;: &quot;git&quot;
+      }
+    }
+  ],
+  &quot;nagios&quot;: [
+    {
+      &quot;puppetclass&quot;: {
+        &quot;id&quot;: 1018350795,
+        &quot;name&quot;: &quot;nagios&quot;
+      }
+    }
+  ],
+  &quot;pam&quot;: [
+    {
+      &quot;puppetclass&quot;: {
+        &quot;id&quot;: 374648174,
+        &quot;name&quot;: &quot;pam&quot;
       }
     }
   ],
@@ -86,18 +123,16 @@
   ]
 }</pre>
 
-
-
-    <h2>Params</h2>
-    <table class='table'>
-      <thead>
-        <tr>
-          <th>Param name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr style='background-color:rgb(255,255,255);'>
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>search </strong><br>
       <small>
@@ -106,10 +141,15 @@
       </small>
     </td>
     <td>
-      <p>filter results</p>
+      
+<p>filter results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -122,10 +162,15 @@
       </small>
     </td>
     <td>
-      <p>sort results</p>
+      
+<p>sort results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -138,10 +183,15 @@
       </small>
     </td>
     <td>
-      <p>paginate results</p>
+      
+<p>paginate results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -154,16 +204,22 @@
       </small>
     </td>
     <td>
-      <p>number of entries per request</p>
+      
+<p>number of entries per request</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-      </tbody>
-    </table>
+    </tbody>
+  </table>
+
 </div>
 
 
@@ -171,8 +227,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

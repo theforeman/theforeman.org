@@ -25,6 +25,7 @@
     Hosts
     
   </li>
+  
 </ul>
 
 <div class='page-header'>
@@ -34,6 +35,7 @@
     <small></small>
   </h1>
 </div>
+
 
 
 
@@ -51,7 +53,7 @@
            data-parent='#accordion'>
             GET /api/hosts
           </a><br>
-          <small>List all hosts.</small>
+          <small>List all hosts</small>
         </h2>
     </div>
 
@@ -61,12 +63,13 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/hosts
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/hosts
 200
 {
-  &quot;total&quot;: 15,
-  &quot;subtotal&quot;: 15,
+  &quot;total&quot;: 17,
+  &quot;subtotal&quot;: 17,
   &quot;page&quot;: 1,
   &quot;per_page&quot;: 20,
   &quot;search&quot;: null,
@@ -83,6 +86,8 @@
       &quot;environment_name&quot;: &quot;production&quot;,
       &quot;last_report&quot;: null,
       &quot;mac&quot;: &quot;aabbecddee22&quot;,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
       &quot;sp_mac&quot;: null,
       &quot;sp_ip&quot;: null,
       &quot;sp_name&quot;: null,
@@ -91,7 +96,7 @@
       &quot;architecture_id&quot;: 501905019,
       &quot;architecture_name&quot;: &quot;x86_64&quot;,
       &quot;operatingsystem_id&quot;: 1073012828,
-      &quot;operatingsystem_name&quot;: &quot;Redhat 6.1&quot;,
+      &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
       &quot;subnet_id&quot;: 980190962,
       &quot;subnet_name&quot;: &quot;one&quot;,
       &quot;sp_subnet_id&quot;: null,
@@ -111,20 +116,91 @@
       &quot;owner_type&quot;: null,
       &quot;enabled&quot;: true,
       &quot;puppet_ca_proxy_id&quot;: null,
-      &quot;managed&quot;: null,
+      &quot;managed&quot;: false,
       &quot;use_image&quot;: null,
       &quot;image_file&quot;: &quot;&quot;,
       &quot;uuid&quot;: null,
       &quot;compute_resource_id&quot;: 980190962,
-      &quot;compute_resource_name&quot;: &quot;bigcompute (Libvirt)&quot;,
+      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
       &quot;compute_profile_id&quot;: null,
       &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;,
+        &quot;image&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
       &quot;puppet_proxy_id&quot;: 182953976,
       &quot;certname&quot;: &quot;anotherfullhost&quot;,
       &quot;image_id&quot;: null,
       &quot;image_name&quot;: null,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;last_compile&quot;: null,
+      &quot;last_freshcheck&quot;: null,
+      &quot;serial&quot;: null,
+      &quot;source_file_id&quot;: null,
+      &quot;puppet_status&quot;: 0,
+      &quot;organization_id&quot;: null,
+      &quot;organization_name&quot;: null,
+      &quot;location_id&quot;: null,
+      &quot;location_name&quot;: null
+    },
+    {
+      &quot;name&quot;: &quot;bare-metal.mydomain.net&quot;,
+      &quot;id&quot;: 836986247,
+      &quot;ip&quot;: &quot;2.3.10.91&quot;,
+      &quot;environment_id&quot;: 334344675,
+      &quot;environment_name&quot;: &quot;production&quot;,
+      &quot;last_report&quot;: null,
+      &quot;mac&quot;: &quot;da:bb:ss:dd:ee:af&quot;,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
+      &quot;sp_mac&quot;: null,
+      &quot;sp_ip&quot;: null,
+      &quot;sp_name&quot;: null,
+      &quot;domain_id&quot;: 22495316,
+      &quot;domain_name&quot;: &quot;mydomain.net&quot;,
+      &quot;architecture_id&quot;: 501905019,
+      &quot;architecture_name&quot;: &quot;x86_64&quot;,
+      &quot;operatingsystem_id&quot;: 1073012828,
+      &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
+      &quot;subnet_id&quot;: 980190962,
+      &quot;subnet_name&quot;: &quot;one&quot;,
+      &quot;sp_subnet_id&quot;: null,
+      &quot;ptable_id&quot;: 980190962,
+      &quot;ptable_name&quot;: &quot;default&quot;,
+      &quot;medium_id&quot;: 980190962,
+      &quot;medium_name&quot;: &quot;CentOS 5.4&quot;,
+      &quot;build&quot;: false,
+      &quot;comment&quot;: null,
+      &quot;disk&quot;: null,
+      &quot;installed_at&quot;: null,
+      &quot;model_id&quot;: null,
+      &quot;model_name&quot;: null,
+      &quot;hostgroup_id&quot;: null,
+      &quot;hostgroup_name&quot;: null,
+      &quot;owner_id&quot;: null,
+      &quot;owner_type&quot;: null,
+      &quot;enabled&quot;: true,
+      &quot;puppet_ca_proxy_id&quot;: null,
+      &quot;managed&quot;: true,
+      &quot;use_image&quot;: null,
+      &quot;image_file&quot;: &quot;&quot;,
+      &quot;uuid&quot;: null,
+      &quot;compute_resource_id&quot;: null,
+      &quot;compute_resource_name&quot;: null,
+      &quot;compute_profile_id&quot;: null,
+      &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
+      &quot;puppet_proxy_id&quot;: 182953976,
+      &quot;certname&quot;: &quot;bare-metal.mydomain.net&quot;,
+      &quot;image_id&quot;: null,
+      &quot;image_name&quot;: null,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
       &quot;last_compile&quot;: null,
       &quot;last_freshcheck&quot;: null,
       &quot;serial&quot;: null,
@@ -143,6 +219,8 @@
       &quot;environment_name&quot;: &quot;production&quot;,
       &quot;last_report&quot;: null,
       &quot;mac&quot;: &quot;da:bb:ss:dd:ee:ae&quot;,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
       &quot;sp_mac&quot;: null,
       &quot;sp_ip&quot;: null,
       &quot;sp_name&quot;: null,
@@ -151,14 +229,14 @@
       &quot;architecture_id&quot;: 501905019,
       &quot;architecture_name&quot;: &quot;x86_64&quot;,
       &quot;operatingsystem_id&quot;: 1073012828,
-      &quot;operatingsystem_name&quot;: &quot;Redhat 6.1&quot;,
+      &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
       &quot;subnet_id&quot;: 980190962,
       &quot;subnet_name&quot;: &quot;one&quot;,
       &quot;sp_subnet_id&quot;: null,
       &quot;ptable_id&quot;: 980190962,
       &quot;ptable_name&quot;: &quot;default&quot;,
-      &quot;medium_id&quot;: null,
-      &quot;medium_name&quot;: null,
+      &quot;medium_id&quot;: 980190962,
+      &quot;medium_name&quot;: &quot;CentOS 5.4&quot;,
       &quot;build&quot;: false,
       &quot;comment&quot;: null,
       &quot;disk&quot;: null,
@@ -176,15 +254,20 @@
       &quot;image_file&quot;: &quot;&quot;,
       &quot;uuid&quot;: null,
       &quot;compute_resource_id&quot;: 980190962,
-      &quot;compute_resource_name&quot;: &quot;bigcompute (Libvirt)&quot;,
+      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
       &quot;compute_profile_id&quot;: null,
       &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;,
+        &quot;image&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
       &quot;puppet_proxy_id&quot;: 182953976,
       &quot;certname&quot;: &quot;db_host.mydomain.net&quot;,
       &quot;image_id&quot;: null,
       &quot;image_name&quot;: null,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
       &quot;last_compile&quot;: null,
       &quot;last_freshcheck&quot;: null,
       &quot;serial&quot;: null,
@@ -203,6 +286,8 @@
       &quot;environment_name&quot;: &quot;production&quot;,
       &quot;last_report&quot;: null,
       &quot;mac&quot;: &quot;da:bb:cc:dd:ee:ee&quot;,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
       &quot;sp_mac&quot;: null,
       &quot;sp_ip&quot;: null,
       &quot;sp_name&quot;: null,
@@ -211,14 +296,14 @@
       &quot;architecture_id&quot;: 501905019,
       &quot;architecture_name&quot;: &quot;x86_64&quot;,
       &quot;operatingsystem_id&quot;: 1073012828,
-      &quot;operatingsystem_name&quot;: &quot;Redhat 6.1&quot;,
+      &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
       &quot;subnet_id&quot;: 980190962,
       &quot;subnet_name&quot;: &quot;one&quot;,
       &quot;sp_subnet_id&quot;: null,
       &quot;ptable_id&quot;: 980190962,
       &quot;ptable_name&quot;: &quot;default&quot;,
-      &quot;medium_id&quot;: null,
-      &quot;medium_name&quot;: null,
+      &quot;medium_id&quot;: 980190962,
+      &quot;medium_name&quot;: &quot;CentOS 5.4&quot;,
       &quot;build&quot;: false,
       &quot;comment&quot;: null,
       &quot;disk&quot;: null,
@@ -236,15 +321,20 @@
       &quot;image_file&quot;: &quot;&quot;,
       &quot;uuid&quot;: null,
       &quot;compute_resource_id&quot;: 980190962,
-      &quot;compute_resource_name&quot;: &quot;bigcompute (Libvirt)&quot;,
+      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
       &quot;compute_profile_id&quot;: null,
       &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;,
+        &quot;image&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
       &quot;puppet_proxy_id&quot;: 182953976,
       &quot;certname&quot;: &quot;dhcp.mydomain.net&quot;,
       &quot;image_id&quot;: null,
       &quot;image_name&quot;: null,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
       &quot;last_compile&quot;: null,
       &quot;last_freshcheck&quot;: null,
       &quot;serial&quot;: null,
@@ -263,22 +353,24 @@
       &quot;environment_name&quot;: &quot;production&quot;,
       &quot;last_report&quot;: null,
       &quot;mac&quot;: &quot;aabbCCddeeee&quot;,
+      &quot;realm_id&quot;: 664044182,
+      &quot;realm_name&quot;: &quot;myrealm.net&quot;,
       &quot;sp_mac&quot;: &quot;AA:AA:AA:AA:AA:AA&quot;,
       &quot;sp_ip&quot;: &quot;10.0.0.1&quot;,
-      &quot;sp_name&quot;: &quot;host-bmc.domain.com&quot;,
+      &quot;sp_name&quot;: &quot;host-bmc&quot;,
       &quot;domain_id&quot;: 22495316,
       &quot;domain_name&quot;: &quot;mydomain.net&quot;,
       &quot;architecture_id&quot;: 501905019,
       &quot;architecture_name&quot;: &quot;x86_64&quot;,
       &quot;operatingsystem_id&quot;: 1073012828,
-      &quot;operatingsystem_name&quot;: &quot;Redhat 6.1&quot;,
+      &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
       &quot;subnet_id&quot;: 980190962,
       &quot;subnet_name&quot;: &quot;one&quot;,
       &quot;sp_subnet_id&quot;: null,
       &quot;ptable_id&quot;: 980190962,
       &quot;ptable_name&quot;: &quot;default&quot;,
-      &quot;medium_id&quot;: null,
-      &quot;medium_name&quot;: null,
+      &quot;medium_id&quot;: 980190962,
+      &quot;medium_name&quot;: &quot;CentOS 5.4&quot;,
       &quot;build&quot;: false,
       &quot;comment&quot;: null,
       &quot;disk&quot;: null,
@@ -296,15 +388,20 @@
       &quot;image_file&quot;: &quot;&quot;,
       &quot;uuid&quot;: null,
       &quot;compute_resource_id&quot;: 980190962,
-      &quot;compute_resource_name&quot;: &quot;bigcompute (Libvirt)&quot;,
+      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
       &quot;compute_profile_id&quot;: null,
       &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;,
+        &quot;image&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
       &quot;puppet_proxy_id&quot;: 182953976,
       &quot;certname&quot;: &quot;my5name.mydomain.net&quot;,
       &quot;image_id&quot;: null,
       &quot;image_name&quot;: null,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
       &quot;last_compile&quot;: null,
       &quot;last_freshcheck&quot;: null,
       &quot;serial&quot;: null,
@@ -323,6 +420,8 @@
       &quot;environment_name&quot;: null,
       &quot;last_report&quot;: null,
       &quot;mac&quot;: &quot;112233445566&quot;,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
       &quot;sp_mac&quot;: null,
       &quot;sp_ip&quot;: null,
       &quot;sp_name&quot;: null,
@@ -351,20 +450,92 @@
       &quot;owner_type&quot;: null,
       &quot;enabled&quot;: true,
       &quot;puppet_ca_proxy_id&quot;: null,
-      &quot;managed&quot;: null,
+      &quot;managed&quot;: false,
       &quot;use_image&quot;: null,
       &quot;image_file&quot;: &quot;&quot;,
       &quot;uuid&quot;: null,
       &quot;compute_resource_id&quot;: 980190962,
-      &quot;compute_resource_name&quot;: &quot;bigcompute (Libvirt)&quot;,
+      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
       &quot;compute_profile_id&quot;: null,
       &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;,
+        &quot;image&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
       &quot;puppet_proxy_id&quot;: 182953976,
       &quot;certname&quot;: &quot;myfullname.mydomain.net&quot;,
       &quot;image_id&quot;: null,
       &quot;image_name&quot;: null,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;last_compile&quot;: null,
+      &quot;last_freshcheck&quot;: null,
+      &quot;serial&quot;: null,
+      &quot;source_file_id&quot;: null,
+      &quot;puppet_status&quot;: 0,
+      &quot;organization_id&quot;: null,
+      &quot;organization_name&quot;: null,
+      &quot;location_id&quot;: null,
+      &quot;location_name&quot;: null
+    },
+    {
+      &quot;name&quot;: &quot;noip.yourdomain.net&quot;,
+      &quot;id&quot;: 487355108,
+      &quot;ip&quot;: null,
+      &quot;environment_id&quot;: 334344675,
+      &quot;environment_name&quot;: &quot;production&quot;,
+      &quot;last_report&quot;: null,
+      &quot;mac&quot;: &quot;ac:bb:cc:dd:ee:ff&quot;,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
+      &quot;sp_mac&quot;: null,
+      &quot;sp_ip&quot;: null,
+      &quot;sp_name&quot;: null,
+      &quot;domain_id&quot;: 589326610,
+      &quot;domain_name&quot;: &quot;yourdomain.net&quot;,
+      &quot;architecture_id&quot;: 501905019,
+      &quot;architecture_name&quot;: &quot;x86_64&quot;,
+      &quot;operatingsystem_id&quot;: 331303656,
+      &quot;operatingsystem_name&quot;: &quot;Ubuntu 10.10&quot;,
+      &quot;subnet_id&quot;: 980190962,
+      &quot;subnet_name&quot;: &quot;one&quot;,
+      &quot;sp_subnet_id&quot;: null,
+      &quot;ptable_id&quot;: 1011586618,
+      &quot;ptable_name&quot;: &quot;ubuntu default&quot;,
+      &quot;medium_id&quot;: 1011586618,
+      &quot;medium_name&quot;: &quot;Ubuntu Mirror&quot;,
+      &quot;build&quot;: true,
+      &quot;comment&quot;: null,
+      &quot;disk&quot;: null,
+      &quot;installed_at&quot;: null,
+      &quot;model_id&quot;: null,
+      &quot;model_name&quot;: null,
+      &quot;hostgroup_id&quot;: null,
+      &quot;hostgroup_name&quot;: null,
+      &quot;owner_id&quot;: null,
+      &quot;owner_type&quot;: null,
+      &quot;enabled&quot;: true,
+      &quot;puppet_ca_proxy_id&quot;: null,
+      &quot;managed&quot;: false,
+      &quot;use_image&quot;: null,
+      &quot;image_file&quot;: &quot;&quot;,
+      &quot;uuid&quot;: null,
+      &quot;compute_resource_id&quot;: 980190962,
+      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
+      &quot;compute_profile_id&quot;: null,
+      &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;,
+        &quot;image&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
+      &quot;puppet_proxy_id&quot;: 182953976,
+      &quot;certname&quot;: &quot;noip.yourdomain.net&quot;,
+      &quot;image_id&quot;: null,
+      &quot;image_name&quot;: null,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
       &quot;last_compile&quot;: null,
       &quot;last_freshcheck&quot;: null,
       &quot;serial&quot;: null,
@@ -383,6 +554,8 @@
       &quot;environment_name&quot;: &quot;production&quot;,
       &quot;last_report&quot;: null,
       &quot;mac&quot;: &quot;aabbecddee11&quot;,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
       &quot;sp_mac&quot;: null,
       &quot;sp_ip&quot;: null,
       &quot;sp_name&quot;: null,
@@ -391,7 +564,7 @@
       &quot;architecture_id&quot;: 501905019,
       &quot;architecture_name&quot;: &quot;x86_64&quot;,
       &quot;operatingsystem_id&quot;: 1073012828,
-      &quot;operatingsystem_name&quot;: &quot;Redhat 6.1&quot;,
+      &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
       &quot;subnet_id&quot;: 980190962,
       &quot;subnet_name&quot;: &quot;one&quot;,
       &quot;sp_subnet_id&quot;: null,
@@ -411,20 +584,25 @@
       &quot;owner_type&quot;: null,
       &quot;enabled&quot;: true,
       &quot;puppet_ca_proxy_id&quot;: null,
-      &quot;managed&quot;: null,
+      &quot;managed&quot;: false,
       &quot;use_image&quot;: null,
       &quot;image_file&quot;: &quot;&quot;,
       &quot;uuid&quot;: null,
       &quot;compute_resource_id&quot;: 980190962,
-      &quot;compute_resource_name&quot;: &quot;bigcompute (Libvirt)&quot;,
+      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
       &quot;compute_profile_id&quot;: null,
       &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;,
+        &quot;image&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
       &quot;puppet_proxy_id&quot;: 182953976,
       &quot;certname&quot;: &quot;otherfullhost&quot;,
       &quot;image_id&quot;: null,
       &quot;image_name&quot;: null,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
       &quot;last_compile&quot;: null,
       &quot;last_freshcheck&quot;: null,
       &quot;serial&quot;: null,
@@ -443,6 +621,8 @@
       &quot;environment_name&quot;: &quot;production&quot;,
       &quot;last_report&quot;: null,
       &quot;mac&quot;: &quot;deadbeeffeed&quot;,
+      &quot;realm_id&quot;: 664044182,
+      &quot;realm_name&quot;: &quot;myrealm.net&quot;,
       &quot;sp_mac&quot;: null,
       &quot;sp_ip&quot;: null,
       &quot;sp_name&quot;: null,
@@ -451,14 +631,14 @@
       &quot;architecture_id&quot;: 501905019,
       &quot;architecture_name&quot;: &quot;x86_64&quot;,
       &quot;operatingsystem_id&quot;: 1073012828,
-      &quot;operatingsystem_name&quot;: &quot;Redhat 6.1&quot;,
+      &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
       &quot;subnet_id&quot;: 980190962,
       &quot;subnet_name&quot;: &quot;one&quot;,
       &quot;sp_subnet_id&quot;: null,
       &quot;ptable_id&quot;: 980190962,
       &quot;ptable_name&quot;: &quot;default&quot;,
-      &quot;medium_id&quot;: null,
-      &quot;medium_name&quot;: null,
+      &quot;medium_id&quot;: 980190962,
+      &quot;medium_name&quot;: &quot;CentOS 5.4&quot;,
       &quot;build&quot;: false,
       &quot;comment&quot;: null,
       &quot;disk&quot;: null,
@@ -476,15 +656,20 @@
       &quot;image_file&quot;: &quot;&quot;,
       &quot;uuid&quot;: null,
       &quot;compute_resource_id&quot;: 980190962,
-      &quot;compute_resource_name&quot;: &quot;bigcompute (Libvirt)&quot;,
+      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
       &quot;compute_profile_id&quot;: null,
       &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;,
+        &quot;image&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
       &quot;puppet_proxy_id&quot;: 182953976,
       &quot;certname&quot;: &quot;owned-by-restricted.mydomain.net&quot;,
       &quot;image_id&quot;: null,
       &quot;image_name&quot;: null,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
       &quot;last_compile&quot;: null,
       &quot;last_freshcheck&quot;: null,
       &quot;serial&quot;: null,
@@ -503,6 +688,8 @@
       &quot;environment_name&quot;: &quot;production&quot;,
       &quot;last_report&quot;: null,
       &quot;mac&quot;: &quot;da:bb:cc:dd:ee:ae&quot;,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
       &quot;sp_mac&quot;: null,
       &quot;sp_ip&quot;: null,
       &quot;sp_name&quot;: null,
@@ -511,22 +698,22 @@
       &quot;architecture_id&quot;: 501905019,
       &quot;architecture_name&quot;: &quot;x86_64&quot;,
       &quot;operatingsystem_id&quot;: 1073012828,
-      &quot;operatingsystem_name&quot;: &quot;Redhat 6.1&quot;,
+      &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
       &quot;subnet_id&quot;: 980190962,
       &quot;subnet_name&quot;: &quot;one&quot;,
       &quot;sp_subnet_id&quot;: null,
       &quot;ptable_id&quot;: 980190962,
       &quot;ptable_name&quot;: &quot;default&quot;,
-      &quot;medium_id&quot;: null,
-      &quot;medium_name&quot;: null,
+      &quot;medium_id&quot;: 980190962,
+      &quot;medium_name&quot;: &quot;CentOS 5.4&quot;,
       &quot;build&quot;: false,
       &quot;comment&quot;: null,
       &quot;disk&quot;: null,
       &quot;installed_at&quot;: null,
       &quot;model_id&quot;: null,
       &quot;model_name&quot;: null,
-      &quot;hostgroup_id&quot;: null,
-      &quot;hostgroup_name&quot;: null,
+      &quot;hostgroup_id&quot;: 636252244,
+      &quot;hostgroup_name&quot;: &quot;Common&quot;,
       &quot;owner_id&quot;: null,
       &quot;owner_type&quot;: null,
       &quot;enabled&quot;: true,
@@ -536,15 +723,20 @@
       &quot;image_file&quot;: &quot;&quot;,
       &quot;uuid&quot;: null,
       &quot;compute_resource_id&quot;: 980190962,
-      &quot;compute_resource_name&quot;: &quot;bigcompute (Libvirt)&quot;,
-      &quot;compute_profile_id&quot;: null,
-      &quot;compute_profile_name&quot;: null,
+      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
+      &quot;compute_profile_id&quot;: 980190962,
+      &quot;compute_profile_name&quot;: &quot;1-Small&quot;,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;,
+        &quot;image&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
       &quot;puppet_proxy_id&quot;: 182953976,
       &quot;certname&quot;: &quot;sdhcp.mydomain.net&quot;,
       &quot;image_id&quot;: null,
       &quot;image_name&quot;: null,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
       &quot;last_compile&quot;: null,
       &quot;last_freshcheck&quot;: null,
       &quot;serial&quot;: null,
@@ -563,6 +755,8 @@
       &quot;environment_name&quot;: &quot;production&quot;,
       &quot;last_report&quot;: null,
       &quot;mac&quot;: &quot;44:55:66:77:88:99&quot;,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
       &quot;sp_mac&quot;: null,
       &quot;sp_ip&quot;: null,
       &quot;sp_name&quot;: null,
@@ -571,7 +765,7 @@
       &quot;architecture_id&quot;: 331892513,
       &quot;architecture_name&quot;: &quot;sparc&quot;,
       &quot;operatingsystem_id&quot;: 442321401,
-      &quot;operatingsystem_name&quot;: &quot;Solaris 5.10&quot;,
+      &quot;operatingsystem_name&quot;: &quot;Solaris 5.10 (hw0910)&quot;,
       &quot;subnet_id&quot;: 980190962,
       &quot;subnet_name&quot;: &quot;one&quot;,
       &quot;sp_subnet_id&quot;: null,
@@ -591,20 +785,25 @@
       &quot;owner_type&quot;: null,
       &quot;enabled&quot;: true,
       &quot;puppet_ca_proxy_id&quot;: null,
-      &quot;managed&quot;: null,
+      &quot;managed&quot;: false,
       &quot;use_image&quot;: null,
       &quot;image_file&quot;: &quot;brsla01:/vol/solgi_5.10/sol10_hw0910_sparc/flash/Solaris-5.10.sparc.sun4u.flar&quot;,
       &quot;uuid&quot;: null,
       &quot;compute_resource_id&quot;: 980190962,
-      &quot;compute_resource_name&quot;: &quot;bigcompute (Libvirt)&quot;,
+      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
       &quot;compute_profile_id&quot;: null,
       &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;,
+        &quot;image&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
       &quot;puppet_proxy_id&quot;: 182953976,
       &quot;certname&quot;: &quot;sol10host&quot;,
       &quot;image_id&quot;: null,
       &quot;image_name&quot;: null,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
       &quot;last_compile&quot;: null,
       &quot;last_freshcheck&quot;: null,
       &quot;serial&quot;: null,
@@ -623,6 +822,8 @@
       &quot;environment_name&quot;: &quot;production&quot;,
       &quot;last_report&quot;: null,
       &quot;mac&quot;: &quot;ad:bb:cc:da:ae:ff&quot;,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
       &quot;sp_mac&quot;: null,
       &quot;sp_ip&quot;: null,
       &quot;sp_name&quot;: null,
@@ -651,20 +852,25 @@
       &quot;owner_type&quot;: null,
       &quot;enabled&quot;: true,
       &quot;puppet_ca_proxy_id&quot;: null,
-      &quot;managed&quot;: null,
+      &quot;managed&quot;: false,
       &quot;use_image&quot;: null,
       &quot;image_file&quot;: &quot;&quot;,
       &quot;uuid&quot;: null,
       &quot;compute_resource_id&quot;: 980190962,
-      &quot;compute_resource_name&quot;: &quot;bigcompute (Libvirt)&quot;,
+      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
       &quot;compute_profile_id&quot;: null,
       &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;,
+        &quot;image&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
       &quot;puppet_proxy_id&quot;: 182953976,
       &quot;certname&quot;: &quot;suse01.yourdomain.net&quot;,
       &quot;image_id&quot;: null,
       &quot;image_name&quot;: null,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
       &quot;last_compile&quot;: null,
       &quot;last_freshcheck&quot;: null,
       &quot;serial&quot;: null,
@@ -683,6 +889,8 @@
       &quot;environment_name&quot;: &quot;production&quot;,
       &quot;last_report&quot;: null,
       &quot;mac&quot;: &quot;ac:bb:cc:dd:ee:ff&quot;,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
       &quot;sp_mac&quot;: null,
       &quot;sp_ip&quot;: null,
       &quot;sp_name&quot;: null,
@@ -711,20 +919,25 @@
       &quot;owner_type&quot;: null,
       &quot;enabled&quot;: true,
       &quot;puppet_ca_proxy_id&quot;: null,
-      &quot;managed&quot;: null,
+      &quot;managed&quot;: false,
       &quot;use_image&quot;: null,
       &quot;image_file&quot;: &quot;&quot;,
       &quot;uuid&quot;: null,
       &quot;compute_resource_id&quot;: 980190962,
-      &quot;compute_resource_name&quot;: &quot;bigcompute (Libvirt)&quot;,
+      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
       &quot;compute_profile_id&quot;: null,
       &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;,
+        &quot;image&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
       &quot;puppet_proxy_id&quot;: 182953976,
       &quot;certname&quot;: &quot;temp-01.yourdomain.net&quot;,
       &quot;image_id&quot;: null,
       &quot;image_name&quot;: null,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
       &quot;last_compile&quot;: null,
       &quot;last_freshcheck&quot;: null,
       &quot;serial&quot;: null,
@@ -743,6 +956,8 @@
       &quot;environment_name&quot;: &quot;production&quot;,
       &quot;last_report&quot;: null,
       &quot;mac&quot;: &quot;ad:bb:cc:dd:ee:ff&quot;,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
       &quot;sp_mac&quot;: null,
       &quot;sp_ip&quot;: null,
       &quot;sp_name&quot;: null,
@@ -751,7 +966,7 @@
       &quot;architecture_id&quot;: 501905019,
       &quot;architecture_name&quot;: &quot;x86_64&quot;,
       &quot;operatingsystem_id&quot;: 1073012828,
-      &quot;operatingsystem_name&quot;: &quot;Redhat 6.1&quot;,
+      &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
       &quot;subnet_id&quot;: 980190962,
       &quot;subnet_name&quot;: &quot;one&quot;,
       &quot;sp_subnet_id&quot;: null,
@@ -771,20 +986,25 @@
       &quot;owner_type&quot;: null,
       &quot;enabled&quot;: true,
       &quot;puppet_ca_proxy_id&quot;: null,
-      &quot;managed&quot;: null,
+      &quot;managed&quot;: false,
       &quot;use_image&quot;: null,
       &quot;image_file&quot;: &quot;&quot;,
       &quot;uuid&quot;: null,
       &quot;compute_resource_id&quot;: 980190962,
-      &quot;compute_resource_name&quot;: &quot;bigcompute (Libvirt)&quot;,
+      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
       &quot;compute_profile_id&quot;: null,
       &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;,
+        &quot;image&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
       &quot;puppet_proxy_id&quot;: 182953976,
       &quot;certname&quot;: &quot;temp01.yourdomain.net&quot;,
       &quot;image_id&quot;: null,
       &quot;image_name&quot;: null,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
       &quot;last_compile&quot;: null,
       &quot;last_freshcheck&quot;: null,
       &quot;serial&quot;: null,
@@ -803,6 +1023,8 @@
       &quot;environment_name&quot;: &quot;production&quot;,
       &quot;last_report&quot;: null,
       &quot;mac&quot;: &quot;ac:bb:cc:aa:ee:ff&quot;,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
       &quot;sp_mac&quot;: null,
       &quot;sp_ip&quot;: null,
       &quot;sp_name&quot;: null,
@@ -831,20 +1053,25 @@
       &quot;owner_type&quot;: null,
       &quot;enabled&quot;: true,
       &quot;puppet_ca_proxy_id&quot;: null,
-      &quot;managed&quot;: null,
+      &quot;managed&quot;: false,
       &quot;use_image&quot;: null,
       &quot;image_file&quot;: &quot;&quot;,
       &quot;uuid&quot;: null,
       &quot;compute_resource_id&quot;: 980190962,
-      &quot;compute_resource_name&quot;: &quot;bigcompute (Libvirt)&quot;,
+      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
       &quot;compute_profile_id&quot;: null,
       &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;,
+        &quot;image&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
       &quot;puppet_proxy_id&quot;: 182953976,
       &quot;certname&quot;: &quot;temp-02.useless.net&quot;,
       &quot;image_id&quot;: null,
       &quot;image_name&quot;: null,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
       &quot;last_compile&quot;: null,
       &quot;last_freshcheck&quot;: null,
       &quot;serial&quot;: null,
@@ -863,6 +1090,8 @@
       &quot;environment_name&quot;: &quot;production&quot;,
       &quot;last_report&quot;: null,
       &quot;mac&quot;: &quot;ac:bb:cc:de:ee:ff&quot;,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
       &quot;sp_mac&quot;: null,
       &quot;sp_ip&quot;: null,
       &quot;sp_name&quot;: null,
@@ -896,15 +1125,20 @@
       &quot;image_file&quot;: &quot;&quot;,
       &quot;uuid&quot;: null,
       &quot;compute_resource_id&quot;: 980190962,
-      &quot;compute_resource_name&quot;: &quot;bigcompute (Libvirt)&quot;,
+      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
       &quot;compute_profile_id&quot;: null,
       &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;,
+        &quot;image&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
       &quot;puppet_proxy_id&quot;: 182953976,
       &quot;certname&quot;: &quot;temp-02.yourdomain.net&quot;,
       &quot;image_id&quot;: null,
       &quot;image_name&quot;: null,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
       &quot;last_compile&quot;: null,
       &quot;last_freshcheck&quot;: null,
       &quot;serial&quot;: null,
@@ -923,6 +1157,8 @@
       &quot;environment_name&quot;: &quot;production&quot;,
       &quot;last_report&quot;: null,
       &quot;mac&quot;: &quot;aa:bb:cc:dd:ee:ff&quot;,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
       &quot;sp_mac&quot;: null,
       &quot;sp_ip&quot;: null,
       &quot;sp_name&quot;: null,
@@ -951,20 +1187,25 @@
       &quot;owner_type&quot;: null,
       &quot;enabled&quot;: true,
       &quot;puppet_ca_proxy_id&quot;: null,
-      &quot;managed&quot;: null,
+      &quot;managed&quot;: false,
       &quot;use_image&quot;: null,
       &quot;image_file&quot;: &quot;&quot;,
       &quot;uuid&quot;: null,
       &quot;compute_resource_id&quot;: 980190962,
-      &quot;compute_resource_name&quot;: &quot;bigcompute (Libvirt)&quot;,
+      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
       &quot;compute_profile_id&quot;: null,
       &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;,
+        &quot;image&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
       &quot;puppet_proxy_id&quot;: 182953976,
       &quot;certname&quot;: &quot;temp.yourdomain.net&quot;,
       &quot;image_id&quot;: null,
       &quot;image_name&quot;: null,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
       &quot;last_compile&quot;: null,
       &quot;last_freshcheck&quot;: null,
       &quot;serial&quot;: null,
@@ -978,16 +1219,16 @@
   ]
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>search </strong><br>
       <small>
@@ -996,10 +1237,15 @@
       </small>
     </td>
     <td>
-      <p>Filter results</p>
+      
+<p>filter results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1012,10 +1258,15 @@
       </small>
     </td>
     <td>
-      <p>Sort results</p>
+      
+<p>sort results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1028,10 +1279,15 @@
       </small>
     </td>
     <td>
-      <p>paginate results</p>
+      
+<p>paginate results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1044,16 +1300,22 @@
       </small>
     </td>
     <td>
-      <p>number of entries per request</p>
+      
+<p>number of entries per request</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -1067,7 +1329,7 @@
            data-parent='#accordion'>
             GET /api/hosts/:id
           </a><br>
-          <small>Show a host.</small>
+          <small>Show a host</small>
         </h2>
     </div>
 
@@ -1077,8 +1339,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/hosts/my5name.mydomain.net
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/hosts/my5name.mydomain.net
 200
 {
   &quot;name&quot;: &quot;my5name.mydomain.net&quot;,
@@ -1088,22 +1351,24 @@
   &quot;environment_name&quot;: &quot;production&quot;,
   &quot;last_report&quot;: null,
   &quot;mac&quot;: &quot;aabbCCddeeee&quot;,
+  &quot;realm_id&quot;: 664044182,
+  &quot;realm_name&quot;: &quot;myrealm.net&quot;,
   &quot;sp_mac&quot;: &quot;AA:AA:AA:AA:AA:AA&quot;,
   &quot;sp_ip&quot;: &quot;10.0.0.1&quot;,
-  &quot;sp_name&quot;: &quot;host-bmc.domain.com&quot;,
+  &quot;sp_name&quot;: &quot;host-bmc&quot;,
   &quot;domain_id&quot;: 22495316,
   &quot;domain_name&quot;: &quot;mydomain.net&quot;,
   &quot;architecture_id&quot;: 501905019,
   &quot;architecture_name&quot;: &quot;x86_64&quot;,
   &quot;operatingsystem_id&quot;: 1073012828,
-  &quot;operatingsystem_name&quot;: &quot;Redhat 6.1&quot;,
+  &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
   &quot;subnet_id&quot;: 980190962,
   &quot;subnet_name&quot;: &quot;one&quot;,
   &quot;sp_subnet_id&quot;: null,
   &quot;ptable_id&quot;: 980190962,
   &quot;ptable_name&quot;: &quot;default&quot;,
-  &quot;medium_id&quot;: null,
-  &quot;medium_name&quot;: null,
+  &quot;medium_id&quot;: 980190962,
+  &quot;medium_name&quot;: &quot;CentOS 5.4&quot;,
   &quot;build&quot;: false,
   &quot;comment&quot;: null,
   &quot;disk&quot;: null,
@@ -1121,15 +1386,20 @@
   &quot;image_file&quot;: &quot;&quot;,
   &quot;uuid&quot;: null,
   &quot;compute_resource_id&quot;: 980190962,
-  &quot;compute_resource_name&quot;: &quot;bigcompute (Libvirt)&quot;,
+  &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
   &quot;compute_profile_id&quot;: null,
   &quot;compute_profile_name&quot;: null,
+  &quot;capabilities&quot;: [
+    &quot;build&quot;,
+    &quot;image&quot;
+  ],
+  &quot;provision_method&quot;: &quot;build&quot;,
   &quot;puppet_proxy_id&quot;: 182953976,
   &quot;certname&quot;: &quot;my5name.mydomain.net&quot;,
   &quot;image_id&quot;: null,
   &quot;image_name&quot;: null,
-  &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
   &quot;last_compile&quot;: null,
   &quot;last_freshcheck&quot;: null,
   &quot;serial&quot;: null,
@@ -1139,43 +1409,106 @@
   &quot;organization_name&quot;: &quot;Organization 1&quot;,
   &quot;location_id&quot;: 255093256,
   &quot;location_name&quot;: &quot;Location 1&quot;,
-  &quot;interfaces&quot;: [
+  &quot;all_puppetclasses&quot;: [
     {
-      &quot;id&quot;: 821748566,
-      &quot;name&quot;: &quot;host-bmc.domain.com&quot;,
-      &quot;type&quot;: &quot;Nic::BMC&quot;,
-      &quot;ip&quot;: &quot;10.0.0.1&quot;,
-      &quot;mac&quot;: &quot;AA:AA:AA:AA:AA:AA&quot;,
-      &quot;username&quot;: &quot;foo&quot;,
-      &quot;password&quot;: &quot;bar&quot;,
-      &quot;provider&quot;: &quot;IPMI&quot;,
-      &quot;subnet_id&quot;: null,
-      &quot;subnet_name&quot;: null,
-      &quot;domain_id&quot;: null,
-      &quot;domain_name&quot;: null,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;id&quot;: 638205575,
+      &quot;name&quot;: &quot;auth&quot;,
+      &quot;module_name&quot;: &quot;auth&quot;
+    },
+    {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;base&quot;,
+      &quot;module_name&quot;: &quot;base&quot;
+    },
+    {
+      &quot;id&quot;: 51848956,
+      &quot;name&quot;: &quot;chkmk&quot;,
+      &quot;module_name&quot;: &quot;chkmk&quot;
+    },
+    {
+      &quot;id&quot;: 1018350795,
+      &quot;name&quot;: &quot;nagios&quot;,
+      &quot;module_name&quot;: &quot;nagios&quot;
+    },
+    {
+      &quot;id&quot;: 374648174,
+      &quot;name&quot;: &quot;pam&quot;,
+      &quot;module_name&quot;: &quot;pam&quot;
     }
   ],
-  &quot;host_parameters&quot;: [
+  &quot;parameters&quot;: [
     {
       &quot;id&quot;: 254219264,
       &quot;name&quot;: &quot;host1&quot;,
       &quot;value&quot;: &quot;host1&quot;
     }
+  ],
+  &quot;interfaces&quot;: [
+    {
+      &quot;id&quot;: 821748566,
+      &quot;name&quot;: &quot;host-bmc&quot;,
+      &quot;type&quot;: &quot;Nic::BMC&quot;,
+      &quot;ip&quot;: &quot;10.0.0.1&quot;,
+      &quot;mac&quot;: &quot;AA:AA:AA:AA:AA:AA&quot;
+    }
+  ],
+  &quot;puppetclasses&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;base&quot;,
+      &quot;module_name&quot;: &quot;base&quot;
+    }
+  ],
+  &quot;config_groups&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;Monitoring&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;puppetclasses&quot;: [
+        {
+          &quot;id&quot;: 51848956,
+          &quot;name&quot;: &quot;chkmk&quot;,
+          &quot;module_name&quot;: &quot;chkmk&quot;
+        },
+        {
+          &quot;id&quot;: 1018350795,
+          &quot;name&quot;: &quot;nagios&quot;,
+          &quot;module_name&quot;: &quot;nagios&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: 298486374,
+      &quot;name&quot;: &quot;Security&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;puppetclasses&quot;: [
+        {
+          &quot;id&quot;: 638205575,
+          &quot;name&quot;: &quot;auth&quot;,
+          &quot;module_name&quot;: &quot;auth&quot;
+        },
+        {
+          &quot;id&quot;: 374648174,
+          &quot;name&quot;: &quot;pam&quot;,
+          &quot;module_name&quot;: &quot;pam&quot;
+        }
+      ]
+    }
   ]
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -1187,13 +1520,17 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -1207,7 +1544,7 @@
            data-parent='#accordion'>
             POST /api/hosts
           </a><br>
-          <small>Create a host.</small>
+          <small>Create a host</small>
         </h2>
     </div>
 
@@ -1217,8 +1554,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">POST /api/hosts
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/hosts
 {
   &quot;host&quot;: {
     &quot;name&quot;: &quot;testhost11&quot;,
@@ -1226,21 +1564,29 @@
     &quot;domain_id&quot;: &quot;22495316&quot;,
     &quot;ip&quot;: &quot;10.0.0.20&quot;,
     &quot;mac&quot;: &quot;52:53:00:1e:85:93&quot;,
+    &quot;ptable_id&quot;: &quot;980190962&quot;,
+    &quot;medium_id&quot;: &quot;980190962&quot;,
     &quot;architecture_id&quot;: &quot;501905019&quot;,
     &quot;operatingsystem_id&quot;: &quot;1073012828&quot;,
     &quot;puppet_proxy_id&quot;: &quot;980190962&quot;,
-    &quot;compute_resource_id&quot;: &quot;980190962&quot;
-  }
+    &quot;compute_resource_id&quot;: &quot;980190962&quot;,
+    &quot;root_pass&quot;: &quot;xybxa6JUkz63w&quot;,
+    &quot;location_id&quot;: &quot;255093256&quot;,
+    &quot;organization_id&quot;: &quot;447626438&quot;
+  },
+  &quot;base&quot;: {}
 }
 200
 {
   &quot;name&quot;: &quot;testhost11.mydomain.net&quot;,
-  &quot;id&quot;: 1073012832,
+  &quot;id&quot;: 1073012834,
   &quot;ip&quot;: &quot;10.0.0.20&quot;,
   &quot;environment_id&quot;: 334344675,
   &quot;environment_name&quot;: &quot;production&quot;,
   &quot;last_report&quot;: null,
   &quot;mac&quot;: &quot;52:53:00:1e:85:93&quot;,
+  &quot;realm_id&quot;: null,
+  &quot;realm_name&quot;: null,
   &quot;sp_mac&quot;: null,
   &quot;sp_ip&quot;: null,
   &quot;sp_name&quot;: null,
@@ -1249,14 +1595,14 @@
   &quot;architecture_id&quot;: 501905019,
   &quot;architecture_name&quot;: &quot;x86_64&quot;,
   &quot;operatingsystem_id&quot;: 1073012828,
-  &quot;operatingsystem_name&quot;: &quot;Redhat 6.1&quot;,
+  &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
   &quot;subnet_id&quot;: null,
   &quot;subnet_name&quot;: null,
   &quot;sp_subnet_id&quot;: null,
-  &quot;ptable_id&quot;: null,
-  &quot;ptable_name&quot;: null,
-  &quot;medium_id&quot;: null,
-  &quot;medium_name&quot;: null,
+  &quot;ptable_id&quot;: 980190962,
+  &quot;ptable_name&quot;: &quot;default&quot;,
+  &quot;medium_id&quot;: 980190962,
+  &quot;medium_name&quot;: &quot;CentOS 5.4&quot;,
   &quot;build&quot;: false,
   &quot;comment&quot;: null,
   &quot;disk&quot;: null,
@@ -1265,8 +1611,8 @@
   &quot;model_name&quot;: null,
   &quot;hostgroup_id&quot;: null,
   &quot;hostgroup_name&quot;: null,
-  &quot;owner_id&quot;: null,
-  &quot;owner_type&quot;: null,
+  &quot;owner_id&quot;: 886836129,
+  &quot;owner_type&quot;: &quot;User&quot;,
   &quot;enabled&quot;: true,
   &quot;puppet_ca_proxy_id&quot;: null,
   &quot;managed&quot;: true,
@@ -1274,38 +1620,46 @@
   &quot;image_file&quot;: &quot;&quot;,
   &quot;uuid&quot;: null,
   &quot;compute_resource_id&quot;: 980190962,
-  &quot;compute_resource_name&quot;: &quot;bigcompute (Libvirt)&quot;,
+  &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
   &quot;compute_profile_id&quot;: null,
   &quot;compute_profile_name&quot;: null,
+  &quot;capabilities&quot;: [
+    &quot;build&quot;,
+    &quot;image&quot;
+  ],
+  &quot;provision_method&quot;: &quot;build&quot;,
   &quot;puppet_proxy_id&quot;: 980190962,
   &quot;certname&quot;: &quot;testhost11.mydomain.net&quot;,
   &quot;image_id&quot;: null,
   &quot;image_name&quot;: null,
-  &quot;created_at&quot;: &quot;2014-01-30T07:24:51Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-01-30T07:24:51Z&quot;,
+  &quot;created_at&quot;: &quot;2014-08-07T20:41:01Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-08-07T20:41:01Z&quot;,
   &quot;last_compile&quot;: null,
   &quot;last_freshcheck&quot;: null,
   &quot;serial&quot;: null,
   &quot;source_file_id&quot;: null,
   &quot;puppet_status&quot;: 0,
-  &quot;organization_id&quot;: null,
-  &quot;organization_name&quot;: null,
-  &quot;location_id&quot;: null,
-  &quot;location_name&quot;: null,
+  &quot;organization_id&quot;: 447626438,
+  &quot;organization_name&quot;: &quot;Organization 1&quot;,
+  &quot;location_id&quot;: 255093256,
+  &quot;location_name&quot;: &quot;Location 1&quot;,
+  &quot;all_puppetclasses&quot;: [],
+  &quot;parameters&quot;: [],
   &quot;interfaces&quot;: [],
-  &quot;host_parameters&quot;: []
+  &quot;puppetclasses&quot;: [],
+  &quot;config_groups&quot;: []
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>host </strong><br>
       <small>
@@ -1317,7 +1671,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -1332,7 +1689,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1348,7 +1708,52 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>host[location_id] </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>required if locations are enabled</p>
+
+        <br>
+        Value: Must be a number.
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>host[organization_id] </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>required if organizations are enabled</p>
+
+        <br>
+        Value: Must be a number.
+
+
+    </td>
+
   </tr>
 
   
@@ -1361,10 +1766,15 @@
       </small>
     </td>
     <td>
-      <p>not required if using a subnet with dhcp proxy</p>
+      
+<p>not required if using a subnet with DHCP proxy</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1377,10 +1787,15 @@
       </small>
     </td>
     <td>
-      <p>not required if its a virtual machine</p>
+      
+<p>not required if it’s a virtual machine</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1396,7 +1811,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -1412,7 +1830,29 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>host[realm_id] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be a number.
+
+
+    </td>
+
   </tr>
 
   
@@ -1428,7 +1868,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -1444,7 +1887,10 @@
       
         <br>
         Value: Must be Array
+
+
     </td>
+
   </tr>
 
   
@@ -1460,7 +1906,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1476,7 +1925,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -1492,7 +1944,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -1508,7 +1963,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -1524,7 +1982,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -1540,7 +2001,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -1556,7 +2020,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -1572,7 +2039,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -1588,7 +2058,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -1604,7 +2077,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -1620,7 +2096,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -1636,7 +2115,10 @@
       
         <br>
         Value: Must be Array
+
+
     </td>
+
   </tr>
 
   
@@ -1652,7 +2134,10 @@
       
         <br>
         Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+
+
     </td>
+
   </tr>
 
   
@@ -1668,7 +2153,10 @@
       
         <br>
         Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+
+
     </td>
+
   </tr>
 
   
@@ -1684,7 +2172,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1700,7 +2191,10 @@
       
         <br>
         Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+
+
     </td>
+
   </tr>
 
   
@@ -1713,10 +2207,15 @@
       </small>
     </td>
     <td>
-      <p>UUID to track orchestration tasks status, GET /api/orchestration/:UUID/tasks</p>
+      
+<p>UUID to track orchestration tasks status, GET /api/orchestration/:UUID/tasks</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1732,7 +2231,29 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>host[compute_profile_id] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be a number.
+
+
+    </td>
+
   </tr>
 
   
@@ -1748,14 +2269,18 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -1769,7 +2294,7 @@
            data-parent='#accordion'>
             PUT /api/hosts/:id
           </a><br>
-          <small>Update a host.</small>
+          <small>Update a host</small>
         </h2>
     </div>
 
@@ -1779,68 +2304,71 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/hosts/temp.yourdomain.net
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/hosts/temp.yourdomain.net
 {
-  &quot;host&quot;: {}
+  &quot;host&quot;: {},
+  &quot;base&quot;: {}
 }
 200
 {
-  &quot;host&quot;: {
-    &quot;architecture_id&quot;: 501905019,
-    &quot;build&quot;: false,
-    &quot;certname&quot;: &quot;temp.yourdomain.net&quot;,
-    &quot;comment&quot;: null,
-    &quot;compute_profile_id&quot;: null,
-    &quot;compute_resource_id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-    &quot;disk&quot;: null,
-    &quot;domain_id&quot;: 589326610,
-    &quot;enabled&quot;: true,
-    &quot;environment_id&quot;: 334344675,
-    &quot;hostgroup_id&quot;: null,
-    &quot;id&quot;: 298486374,
-    &quot;image_file&quot;: &quot;&quot;,
-    &quot;image_id&quot;: null,
-    &quot;installed_at&quot;: null,
-    &quot;ip&quot;: &quot;2.3.4.5&quot;,
-    &quot;last_compile&quot;: null,
-    &quot;last_freshcheck&quot;: null,
-    &quot;last_report&quot;: null,
-    &quot;location_id&quot;: 255093256,
-    &quot;mac&quot;: &quot;aa:bb:cc:dd:ee:ff&quot;,
-    &quot;managed&quot;: null,
-    &quot;medium_id&quot;: 980190962,
-    &quot;model_id&quot;: null,
-    &quot;name&quot;: &quot;temp.yourdomain.net&quot;,
-    &quot;operatingsystem_id&quot;: 309172073,
-    &quot;organization_id&quot;: null,
-    &quot;owner_id&quot;: null,
-    &quot;owner_type&quot;: null,
-    &quot;ptable_id&quot;: 980190962,
-    &quot;puppet_ca_proxy_id&quot;: null,
-    &quot;puppet_proxy_id&quot;: 182953976,
-    &quot;puppet_status&quot;: 0,
-    &quot;root_pass&quot;: &quot;xybxa6JUkz63w&quot;,
-    &quot;serial&quot;: null,
-    &quot;source_file_id&quot;: null,
-    &quot;subnet_id&quot;: 980190962,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-    &quot;use_image&quot;: null,
-    &quot;uuid&quot;: null
-  }
+  &quot;architecture_id&quot;: 501905019,
+  &quot;build&quot;: false,
+  &quot;certname&quot;: &quot;temp.yourdomain.net&quot;,
+  &quot;comment&quot;: null,
+  &quot;compute_profile_id&quot;: null,
+  &quot;compute_resource_id&quot;: 980190962,
+  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;disk&quot;: null,
+  &quot;domain_id&quot;: 589326610,
+  &quot;enabled&quot;: true,
+  &quot;environment_id&quot;: 334344675,
+  &quot;hostgroup_id&quot;: null,
+  &quot;id&quot;: 298486374,
+  &quot;image_file&quot;: &quot;&quot;,
+  &quot;image_id&quot;: null,
+  &quot;installed_at&quot;: null,
+  &quot;ip&quot;: &quot;2.3.4.5&quot;,
+  &quot;last_compile&quot;: null,
+  &quot;last_freshcheck&quot;: null,
+  &quot;last_report&quot;: null,
+  &quot;location_id&quot;: 255093256,
+  &quot;mac&quot;: &quot;aa:bb:cc:dd:ee:ff&quot;,
+  &quot;managed&quot;: false,
+  &quot;medium_id&quot;: 980190962,
+  &quot;model_id&quot;: null,
+  &quot;name&quot;: &quot;temp.yourdomain.net&quot;,
+  &quot;operatingsystem_id&quot;: 309172073,
+  &quot;organization_id&quot;: null,
+  &quot;otp&quot;: null,
+  &quot;owner_id&quot;: 886836129,
+  &quot;owner_type&quot;: &quot;User&quot;,
+  &quot;provision_method&quot;: &quot;build&quot;,
+  &quot;ptable_id&quot;: 980190962,
+  &quot;puppet_ca_proxy_id&quot;: 182953976,
+  &quot;puppet_proxy_id&quot;: 182953976,
+  &quot;puppet_status&quot;: 0,
+  &quot;realm_id&quot;: null,
+  &quot;root_pass&quot;: &quot;$1$z/f+YKqx$Mk7gGZkiba9pAEk6u7SMa1&quot;,
+  &quot;serial&quot;: null,
+  &quot;source_file_id&quot;: null,
+  &quot;subnet_id&quot;: 980190962,
+  &quot;updated_at&quot;: &quot;2014-08-07T20:41:02Z&quot;,
+  &quot;use_image&quot;: null,
+  &quot;uuid&quot;: null
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -1852,7 +2380,10 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
@@ -1868,7 +2399,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -1883,7 +2417,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1899,7 +2436,52 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>host[location_id] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>required if locations are enabled</p>
+
+        <br>
+        Value: Must be a number.
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>host[organization_id] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>required if organizations are enabled</p>
+
+        <br>
+        Value: Must be a number.
+
+
+    </td>
+
   </tr>
 
   
@@ -1912,10 +2494,15 @@
       </small>
     </td>
     <td>
-      <p>not required if using a subnet with dhcp proxy</p>
+      
+<p>not required if using a subnet with DHCP proxy</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1928,10 +2515,15 @@
       </small>
     </td>
     <td>
-      <p>not required if its a virtual machine</p>
+      
+<p>not required if it’s a virtual machine</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1947,7 +2539,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -1963,7 +2558,29 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>host[realm_id] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be a number.
+
+
+    </td>
+
   </tr>
 
   
@@ -1979,7 +2596,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -1995,7 +2615,10 @@
       
         <br>
         Value: Must be Array
+
+
     </td>
+
   </tr>
 
   
@@ -2011,7 +2634,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -2027,7 +2653,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -2043,7 +2672,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -2059,7 +2691,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -2075,7 +2710,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -2091,7 +2729,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -2107,7 +2748,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -2123,7 +2767,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -2139,7 +2786,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -2155,7 +2805,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -2171,7 +2824,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -2187,7 +2843,10 @@
       
         <br>
         Value: Must be Array
+
+
     </td>
+
   </tr>
 
   
@@ -2203,7 +2862,10 @@
       
         <br>
         Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+
+
     </td>
+
   </tr>
 
   
@@ -2219,7 +2881,10 @@
       
         <br>
         Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+
+
     </td>
+
   </tr>
 
   
@@ -2235,7 +2900,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -2251,7 +2919,10 @@
       
         <br>
         Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+
+
     </td>
+
   </tr>
 
   
@@ -2264,10 +2935,15 @@
       </small>
     </td>
     <td>
-      <p>UUID to track orchestration tasks status, GET /api/orchestration/:UUID/tasks</p>
+      
+<p>UUID to track orchestration tasks status, GET /api/orchestration/:UUID/tasks</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -2283,7 +2959,29 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>host[compute_profile_id] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be a number.
+
+
+    </td>
+
   </tr>
 
   
@@ -2299,14 +2997,18 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -2320,7 +3022,7 @@
            data-parent='#accordion'>
             DELETE /api/hosts/:id
           </a><br>
-          <small>Delete an host.</small>
+          <small>Delete a host</small>
         </h2>
     </div>
 
@@ -2330,65 +3032,67 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/hosts/my5name.mydomain.net
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/hosts/my5name.mydomain.net
 200
 {
-  &quot;host&quot;: {
-    &quot;architecture_id&quot;: 501905019,
-    &quot;build&quot;: false,
-    &quot;certname&quot;: &quot;my5name.mydomain.net&quot;,
-    &quot;comment&quot;: null,
-    &quot;compute_profile_id&quot;: null,
-    &quot;compute_resource_id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-    &quot;disk&quot;: null,
-    &quot;domain_id&quot;: 22495316,
-    &quot;enabled&quot;: true,
-    &quot;environment_id&quot;: 334344675,
-    &quot;hostgroup_id&quot;: null,
-    &quot;id&quot;: 980190962,
-    &quot;image_file&quot;: &quot;&quot;,
-    &quot;image_id&quot;: null,
-    &quot;installed_at&quot;: null,
-    &quot;ip&quot;: &quot;2.3.4.1&quot;,
-    &quot;last_compile&quot;: null,
-    &quot;last_freshcheck&quot;: null,
-    &quot;last_report&quot;: null,
-    &quot;location_id&quot;: 255093256,
-    &quot;mac&quot;: &quot;aabbCCddeeee&quot;,
-    &quot;managed&quot;: true,
-    &quot;medium_id&quot;: null,
-    &quot;model_id&quot;: null,
-    &quot;name&quot;: &quot;my5name.mydomain.net&quot;,
-    &quot;operatingsystem_id&quot;: 1073012828,
-    &quot;organization_id&quot;: 447626438,
-    &quot;owner_id&quot;: null,
-    &quot;owner_type&quot;: null,
-    &quot;ptable_id&quot;: 980190962,
-    &quot;puppet_ca_proxy_id&quot;: null,
-    &quot;puppet_proxy_id&quot;: 182953976,
-    &quot;puppet_status&quot;: 0,
-    &quot;root_pass&quot;: &quot;xybxa6JUkz63w&quot;,
-    &quot;serial&quot;: null,
-    &quot;source_file_id&quot;: null,
-    &quot;subnet_id&quot;: 980190962,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-    &quot;use_image&quot;: null,
-    &quot;uuid&quot;: null
-  }
+  &quot;architecture_id&quot;: 501905019,
+  &quot;build&quot;: false,
+  &quot;certname&quot;: &quot;my5name.mydomain.net&quot;,
+  &quot;comment&quot;: null,
+  &quot;compute_profile_id&quot;: null,
+  &quot;compute_resource_id&quot;: 980190962,
+  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;disk&quot;: null,
+  &quot;domain_id&quot;: 22495316,
+  &quot;enabled&quot;: true,
+  &quot;environment_id&quot;: 334344675,
+  &quot;hostgroup_id&quot;: null,
+  &quot;id&quot;: 980190962,
+  &quot;image_file&quot;: &quot;&quot;,
+  &quot;image_id&quot;: null,
+  &quot;installed_at&quot;: null,
+  &quot;ip&quot;: &quot;2.3.4.1&quot;,
+  &quot;last_compile&quot;: null,
+  &quot;last_freshcheck&quot;: null,
+  &quot;last_report&quot;: null,
+  &quot;location_id&quot;: 255093256,
+  &quot;mac&quot;: &quot;aabbCCddeeee&quot;,
+  &quot;managed&quot;: true,
+  &quot;medium_id&quot;: 980190962,
+  &quot;model_id&quot;: null,
+  &quot;name&quot;: &quot;my5name.mydomain.net&quot;,
+  &quot;operatingsystem_id&quot;: 1073012828,
+  &quot;organization_id&quot;: 447626438,
+  &quot;otp&quot;: null,
+  &quot;owner_id&quot;: null,
+  &quot;owner_type&quot;: null,
+  &quot;provision_method&quot;: &quot;build&quot;,
+  &quot;ptable_id&quot;: 980190962,
+  &quot;puppet_ca_proxy_id&quot;: null,
+  &quot;puppet_proxy_id&quot;: 182953976,
+  &quot;puppet_status&quot;: 0,
+  &quot;realm_id&quot;: 664044182,
+  &quot;root_pass&quot;: &quot;xybxa6JUkz63w&quot;,
+  &quot;serial&quot;: null,
+  &quot;source_file_id&quot;: null,
+  &quot;subnet_id&quot;: 980190962,
+  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;use_image&quot;: null,
+  &quot;uuid&quot;: null
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -2400,13 +3104,17 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -2426,7 +3134,8 @@
 
 
     <div id='description-status' class='collapse accordion-body'>
-      <p>Return value may either be one of the following:</p>
+      
+<p>Return value may either be one of the following:</p>
 
 <ul>
 <li>missing</li>
@@ -2444,23 +3153,25 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/hosts/my5name.mydomain.net/status
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/hosts/my5name.mydomain.net/status
 200
 {
   &quot;status&quot;: &quot;No reports&quot;
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -2472,13 +3183,17 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -2492,7 +3207,7 @@
            data-parent='#accordion'>
             PUT /api/hosts/:id/puppetrun
           </a><br>
-          <small>Force a puppet run on the agent.</small>
+          <small>Force a Puppet agent run on the host</small>
         </h2>
     </div>
 
@@ -2502,66 +3217,70 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/hosts/my5name.mydomain.net/puppetrun
-{}
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/hosts/my5name.mydomain.net/puppetrun
+{
+  &quot;base&quot;: {}
+}
 200
 {
-  &quot;host&quot;: {
-    &quot;architecture_id&quot;: 501905019,
-    &quot;build&quot;: false,
-    &quot;certname&quot;: &quot;my5name.mydomain.net&quot;,
-    &quot;comment&quot;: null,
-    &quot;compute_profile_id&quot;: null,
-    &quot;compute_resource_id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-    &quot;disk&quot;: null,
-    &quot;domain_id&quot;: 22495316,
-    &quot;enabled&quot;: true,
-    &quot;environment_id&quot;: 334344675,
-    &quot;hostgroup_id&quot;: null,
-    &quot;id&quot;: 980190962,
-    &quot;image_file&quot;: &quot;&quot;,
-    &quot;image_id&quot;: null,
-    &quot;installed_at&quot;: null,
-    &quot;ip&quot;: &quot;2.3.4.1&quot;,
-    &quot;last_compile&quot;: null,
-    &quot;last_freshcheck&quot;: null,
-    &quot;last_report&quot;: null,
-    &quot;location_id&quot;: 255093256,
-    &quot;mac&quot;: &quot;aabbCCddeeee&quot;,
-    &quot;managed&quot;: true,
-    &quot;medium_id&quot;: null,
-    &quot;model_id&quot;: null,
-    &quot;name&quot;: &quot;my5name.mydomain.net&quot;,
-    &quot;operatingsystem_id&quot;: 1073012828,
-    &quot;organization_id&quot;: 447626438,
-    &quot;owner_id&quot;: null,
-    &quot;owner_type&quot;: null,
-    &quot;ptable_id&quot;: 980190962,
-    &quot;puppet_ca_proxy_id&quot;: null,
-    &quot;puppet_proxy_id&quot;: 182953976,
-    &quot;puppet_status&quot;: 0,
-    &quot;root_pass&quot;: &quot;xybxa6JUkz63w&quot;,
-    &quot;serial&quot;: null,
-    &quot;source_file_id&quot;: null,
-    &quot;subnet_id&quot;: 980190962,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-    &quot;use_image&quot;: null,
-    &quot;uuid&quot;: null
-  }
+  &quot;architecture_id&quot;: 501905019,
+  &quot;build&quot;: false,
+  &quot;certname&quot;: &quot;my5name.mydomain.net&quot;,
+  &quot;comment&quot;: null,
+  &quot;compute_profile_id&quot;: null,
+  &quot;compute_resource_id&quot;: 980190962,
+  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;disk&quot;: null,
+  &quot;domain_id&quot;: 22495316,
+  &quot;enabled&quot;: true,
+  &quot;environment_id&quot;: 334344675,
+  &quot;hostgroup_id&quot;: null,
+  &quot;id&quot;: 980190962,
+  &quot;image_file&quot;: &quot;&quot;,
+  &quot;image_id&quot;: null,
+  &quot;installed_at&quot;: null,
+  &quot;ip&quot;: &quot;2.3.4.1&quot;,
+  &quot;last_compile&quot;: null,
+  &quot;last_freshcheck&quot;: null,
+  &quot;last_report&quot;: null,
+  &quot;location_id&quot;: 255093256,
+  &quot;mac&quot;: &quot;aabbCCddeeee&quot;,
+  &quot;managed&quot;: true,
+  &quot;medium_id&quot;: 980190962,
+  &quot;model_id&quot;: null,
+  &quot;name&quot;: &quot;my5name.mydomain.net&quot;,
+  &quot;operatingsystem_id&quot;: 1073012828,
+  &quot;organization_id&quot;: 447626438,
+  &quot;otp&quot;: null,
+  &quot;owner_id&quot;: null,
+  &quot;owner_type&quot;: null,
+  &quot;provision_method&quot;: &quot;build&quot;,
+  &quot;ptable_id&quot;: 980190962,
+  &quot;puppet_ca_proxy_id&quot;: null,
+  &quot;puppet_proxy_id&quot;: 182953976,
+  &quot;puppet_status&quot;: 0,
+  &quot;realm_id&quot;: 664044182,
+  &quot;root_pass&quot;: &quot;xybxa6JUkz63w&quot;,
+  &quot;serial&quot;: null,
+  &quot;source_file_id&quot;: null,
+  &quot;subnet_id&quot;: 980190962,
+  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;use_image&quot;: null,
+  &quot;uuid&quot;: null
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -2573,13 +3292,151 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/hosts/disassociate.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-disassociate'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /api/hosts/:id/disassociate
+          </a><br>
+          <small>Disassociate the host from a VM</small>
+        </h2>
+    </div>
+
+
+    <div id='description-disassociate' class='collapse accordion-body'>
+      
+
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/hosts/host3.example3.com/disassociate
+{
+  &quot;base&quot;: {}
+}
+200
+{
+  &quot;name&quot;: &quot;host3.example3.com&quot;,
+  &quot;id&quot;: 1073012837,
+  &quot;ip&quot;: null,
+  &quot;environment_id&quot;: 687036972,
+  &quot;environment_name&quot;: &quot;environment3&quot;,
+  &quot;last_report&quot;: null,
+  &quot;mac&quot;: null,
+  &quot;realm_id&quot;: null,
+  &quot;realm_name&quot;: null,
+  &quot;sp_mac&quot;: null,
+  &quot;sp_ip&quot;: null,
+  &quot;sp_name&quot;: null,
+  &quot;domain_id&quot;: 759776768,
+  &quot;domain_name&quot;: &quot;example3.com&quot;,
+  &quot;architecture_id&quot;: null,
+  &quot;architecture_name&quot;: null,
+  &quot;operatingsystem_id&quot;: null,
+  &quot;operatingsystem_name&quot;: null,
+  &quot;subnet_id&quot;: null,
+  &quot;subnet_name&quot;: null,
+  &quot;sp_subnet_id&quot;: null,
+  &quot;ptable_id&quot;: null,
+  &quot;ptable_name&quot;: null,
+  &quot;medium_id&quot;: null,
+  &quot;medium_name&quot;: null,
+  &quot;build&quot;: false,
+  &quot;comment&quot;: null,
+  &quot;disk&quot;: null,
+  &quot;installed_at&quot;: null,
+  &quot;model_id&quot;: null,
+  &quot;model_name&quot;: null,
+  &quot;hostgroup_id&quot;: null,
+  &quot;hostgroup_name&quot;: null,
+  &quot;owner_id&quot;: null,
+  &quot;owner_type&quot;: null,
+  &quot;enabled&quot;: true,
+  &quot;puppet_ca_proxy_id&quot;: null,
+  &quot;managed&quot;: false,
+  &quot;use_image&quot;: null,
+  &quot;image_file&quot;: &quot;&quot;,
+  &quot;uuid&quot;: null,
+  &quot;compute_resource_id&quot;: null,
+  &quot;compute_resource_name&quot;: null,
+  &quot;compute_profile_id&quot;: null,
+  &quot;compute_profile_name&quot;: null,
+  &quot;capabilities&quot;: [
+    &quot;build&quot;
+  ],
+  &quot;provision_method&quot;: &quot;build&quot;,
+  &quot;puppet_proxy_id&quot;: null,
+  &quot;certname&quot;: &quot;host3.example3.com&quot;,
+  &quot;image_id&quot;: null,
+  &quot;image_name&quot;: null,
+  &quot;created_at&quot;: &quot;2014-08-07T20:41:05Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-08-07T20:41:05Z&quot;,
+  &quot;last_compile&quot;: null,
+  &quot;last_freshcheck&quot;: null,
+  &quot;serial&quot;: null,
+  &quot;source_file_id&quot;: null,
+  &quot;puppet_status&quot;: 0,
+  &quot;organization_id&quot;: null,
+  &quot;organization_name&quot;: null,
+  &quot;location_id&quot;: null,
+  &quot;location_name&quot;: null,
+  &quot;all_puppetclasses&quot;: [],
+  &quot;parameters&quot;: [],
+  &quot;interfaces&quot;: [],
+  &quot;puppetclasses&quot;: [],
+  &quot;config_groups&quot;: []
+}</pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space.
+
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -2593,7 +3450,7 @@
            data-parent='#accordion'>
             PUT /api/hosts/:id/power
           </a><br>
-          <small>Run power operation on host.</small>
+          <small>Run a power operation on host</small>
         </h2>
     </div>
 
@@ -2603,26 +3460,28 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/hosts/my5name.mydomain.net/power
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/hosts/my5name.mydomain.net/power
 {
-  &quot;power_action&quot;: &quot;status&quot;
+  &quot;power_action&quot;: &quot;status&quot;,
+  &quot;base&quot;: {}
 }
 200
 {
   &quot;power&quot;: &quot;on&quot;
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -2634,7 +3493,10 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
@@ -2647,16 +3509,22 @@
       </small>
     </td>
     <td>
-      <p>power action, valid actions are (&#8216;on&#8217;, &#8216;start&#8217;)&#8217;, (&#8216;off&#8217;, &#8216;stop&#8217;), (&#8216;soft&#8217;, &#8216;reboot&#8217;), (&#8216;cycle&#8217;, &#8216;reset&#8217;), (&#8216;state&#8217;, &#8216;status&#8217;)</p>
+      
+<p>power action, valid actions are (on/start), (off/stop), (soft/reboot), (cycle/reset), (state/status)</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -2670,7 +3538,7 @@
            data-parent='#accordion'>
             PUT /api/hosts/:id/boot
           </a><br>
-          <small>Boot host from specified device.</small>
+          <small>Boot host from specified device</small>
         </h2>
     </div>
 
@@ -2680,26 +3548,28 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/hosts/my5name.mydomain.net/boot
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/hosts/my5name.mydomain.net/boot
 {
-  &quot;device&quot;: &quot;bios&quot;
+  &quot;device&quot;: &quot;bios&quot;,
+  &quot;base&quot;: {}
 }
 200
 {
   &quot;boot&quot;: &quot;{\&quot;action\&quot;:\&quot;bios\&quot;,\&quot;result\&quot;:true}&quot;
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -2711,7 +3581,10 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
@@ -2724,16 +3597,22 @@
       </small>
     </td>
     <td>
-      <p>boot device, valid devices are disk, cdrom, pxe, bios</p>
+      
+<p>boot device, valid devices are disk, cdrom, pxe, bios</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -2747,7 +3626,7 @@
            data-parent='#accordion'>
             POST /api/hosts/facts
           </a><br>
-          <small>Upload facts for a host, creating the host if required.</small>
+          <small>Upload facts for a host, creating the host if required</small>
         </h2>
     </div>
 
@@ -2757,8 +3636,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">POST /api/hosts/facts
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/hosts/facts
 {
   &quot;name&quot;: &quot;brslc022.brs.infineon.com&quot;,
   &quot;facts&quot;: {
@@ -2827,65 +3707,69 @@
     &quot;lsbmajdistrelease&quot;: &quot;4&quot;,
     &quot;sshdsakey&quot;: &quot;AAAAB3NzaC1kc3MAAACBAIUasO2eEvlRHfcO8wMPfbo98YfgVsJj0qhUDSSoSa6xmYI8QWBDMoxf1h8INiDfrNQ5e4VreLQjt4/2Ex7OXoeB7C9Cg18/TlfZU+RTNMdsL85W5hQrrKoBm+ksMnxidkDC66ROq+pmxBTGDwwxg3ugF8eZnVSzCZ1FE605AsStAAAAFQCrr3s1cLQFRc6oZJAx3EZDxDraCQAAAIBqIqIvY7KtRsI+8y8E5MSZXpRRZxf0zqbraDxASwzImUr6ysEmpJsHbHyi6UePnF55tG/iZNM4bSNg/3qExK8So040byV71qN4HNT48nIh3cCS0z8oKLqvlCRJ+dOY1QMkE8ZLfOyF4A6ZOTuE8TTsGpvUIR0HyXkpoiIR9XcgzgAAAIA4nkedBQi+VA01NvWx27GGz5P3TTQ36yDODZdLmXoepQM1rPfKWvPFFd5MxgJumSU5BKhYUiQTOImcRlQcY5DA3dGbog1dOAKlWyeJn4WRHbYr+VNgR/HwBzHLMW4TXLt38ThmPv9TiLS1RvTdHuDm2oRTadNZOrmQz619kZejmw==&quot;,
     &quot;lsbdistid&quot;: &quot;RedHatEnterpriseAS&quot;
+  },
+  &quot;base&quot;: {
+    &quot;name&quot;: &quot;brslc022.brs.infineon.com&quot;
   }
 }
 201
 {
-  &quot;host&quot;: {
-    &quot;architecture_id&quot;: 501905022,
-    &quot;build&quot;: false,
-    &quot;certname&quot;: &quot;brslc022.brs.infineon.com&quot;,
-    &quot;comment&quot;: null,
-    &quot;compute_profile_id&quot;: null,
-    &quot;compute_resource_id&quot;: null,
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:53Z&quot;,
-    &quot;disk&quot;: null,
-    &quot;domain_id&quot;: 759776766,
-    &quot;enabled&quot;: true,
-    &quot;environment_id&quot;: 687036970,
-    &quot;hostgroup_id&quot;: null,
-    &quot;id&quot;: 1073012835,
-    &quot;image_file&quot;: &quot;&quot;,
-    &quot;image_id&quot;: null,
-    &quot;installed_at&quot;: null,
-    &quot;ip&quot;: &quot;172.29.205.22&quot;,
-    &quot;last_compile&quot;: &quot;2010-02-16T11:52:38Z&quot;,
-    &quot;last_freshcheck&quot;: null,
-    &quot;last_report&quot;: null,
-    &quot;location_id&quot;: null,
-    &quot;mac&quot;: &quot;00:0c:29:cf:00:45&quot;,
-    &quot;managed&quot;: null,
-    &quot;medium_id&quot;: null,
-    &quot;model_id&quot;: 980190964,
-    &quot;name&quot;: &quot;brslc022.brs.infineon.com&quot;,
-    &quot;operatingsystem_id&quot;: 1073012830,
-    &quot;organization_id&quot;: null,
-    &quot;owner_id&quot;: null,
-    &quot;owner_type&quot;: null,
-    &quot;ptable_id&quot;: null,
-    &quot;puppet_ca_proxy_id&quot;: null,
-    &quot;puppet_proxy_id&quot;: null,
-    &quot;puppet_status&quot;: 0,
-    &quot;root_pass&quot;: &quot;xybxa6JUkz63w&quot;,
-    &quot;serial&quot;: null,
-    &quot;source_file_id&quot;: null,
-    &quot;subnet_id&quot;: null,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:54Z&quot;,
-    &quot;use_image&quot;: null,
-    &quot;uuid&quot;: null
-  }
+  &quot;architecture_id&quot;: 501905022,
+  &quot;build&quot;: false,
+  &quot;certname&quot;: &quot;brslc022.brs.infineon.com&quot;,
+  &quot;comment&quot;: null,
+  &quot;compute_profile_id&quot;: null,
+  &quot;compute_resource_id&quot;: null,
+  &quot;created_at&quot;: &quot;2014-08-07T20:41:06Z&quot;,
+  &quot;disk&quot;: null,
+  &quot;domain_id&quot;: 759776769,
+  &quot;enabled&quot;: true,
+  &quot;environment_id&quot;: 687036973,
+  &quot;hostgroup_id&quot;: null,
+  &quot;id&quot;: 1073012838,
+  &quot;image_file&quot;: &quot;&quot;,
+  &quot;image_id&quot;: null,
+  &quot;installed_at&quot;: null,
+  &quot;ip&quot;: &quot;172.29.205.22&quot;,
+  &quot;last_compile&quot;: &quot;2010-02-16T11:52:38Z&quot;,
+  &quot;last_freshcheck&quot;: null,
+  &quot;last_report&quot;: null,
+  &quot;location_id&quot;: 255093256,
+  &quot;mac&quot;: &quot;00:0c:29:cf:00:45&quot;,
+  &quot;managed&quot;: false,
+  &quot;medium_id&quot;: null,
+  &quot;model_id&quot;: 980190964,
+  &quot;name&quot;: &quot;brslc022.brs.infineon.com&quot;,
+  &quot;operatingsystem_id&quot;: 1073012830,
+  &quot;organization_id&quot;: 447626438,
+  &quot;otp&quot;: null,
+  &quot;owner_id&quot;: null,
+  &quot;owner_type&quot;: null,
+  &quot;provision_method&quot;: &quot;build&quot;,
+  &quot;ptable_id&quot;: null,
+  &quot;puppet_ca_proxy_id&quot;: null,
+  &quot;puppet_proxy_id&quot;: null,
+  &quot;puppet_status&quot;: 0,
+  &quot;realm_id&quot;: null,
+  &quot;root_pass&quot;: null,
+  &quot;serial&quot;: null,
+  &quot;source_file_id&quot;: null,
+  &quot;subnet_id&quot;: null,
+  &quot;updated_at&quot;: &quot;2014-08-07T20:41:07Z&quot;,
+  &quot;use_image&quot;: null,
+  &quot;uuid&quot;: null
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>name </strong><br>
       <small>
@@ -2894,10 +3778,15 @@
       </small>
     </td>
     <td>
-      <p>hostname of the host</p>
+      
+<p>hostname of the host</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -2910,10 +3799,15 @@
       </small>
     </td>
     <td>
-      <p>hash containing the facts for the host</p>
+      
+<p>hash containing the facts for the host</p>
+
         <br>
         Value: Must be Hash
+
+
     </td>
+
   </tr>
 
   
@@ -2926,10 +3820,15 @@
       </small>
     </td>
     <td>
-      <p>optional: certname of the host</p>
+      
+<p>optional: certname of the host</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -2942,16 +3841,22 @@
       </small>
     </td>
     <td>
-      <p>optional: the STI type of host to create</p>
+      
+<p>optional: the STI type of host to create</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
 </div>
 
@@ -2960,8 +3865,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
