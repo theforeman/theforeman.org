@@ -41,9 +41,3 @@ Copy docs to repo
 3. cd to theforeman.org directory
 4. cp -r dir/to/foreman/public/apipie-cache/apidoc api/
 5. cp dir/to/foreman/public/apipie-cache/apidoc.* api/
-
-Update href in html files
-
-6. Edit file api/apidoc/v1.html - change `href="../apidoc/v1` to `href="../apidoc/v1.html`
-7. Edit file api/apidoc/v2.html - change `href="../apidoc/v2` to `href="../apidoc/v2.html`
-
