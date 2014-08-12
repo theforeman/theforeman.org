@@ -25,6 +25,7 @@
     Statistics
     
   </li>
+  
 </ul>
 
 <div class='page-header'>
@@ -34,6 +35,7 @@
     <small></small>
   </h1>
 </div>
+
 
 
 
@@ -61,25 +63,26 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/statistics
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/statistics
 200
 {
   &quot;os_count&quot;: [
     {
       &quot;label&quot;: &quot;Ubuntu 10.10&quot;,
-      &quot;data&quot;: 3
+      &quot;data&quot;: 4
     },
     {
-      &quot;label&quot;: &quot;Redhat 6.1&quot;,
-      &quot;data&quot;: 8
-    },
-    {
-      &quot;label&quot;: &quot;Solaris 5.10 (hw0910)&quot;,
-      &quot;data&quot;: 1
+      &quot;label&quot;: &quot;RHEL 6.1&quot;,
+      &quot;data&quot;: 9
     },
     {
       &quot;label&quot;: &quot;OpenSuse 11.4&quot;,
+      &quot;data&quot;: 1
+    },
+    {
+      &quot;label&quot;: &quot;Solaris 5.10 (hw0910)&quot;,
       &quot;data&quot;: 1
     },
     {
@@ -94,13 +97,14 @@
     },
     {
       &quot;label&quot;: &quot;x86_64&quot;,
-      &quot;data&quot;: 14
+      &quot;data&quot;: 16
     }
   ],
+  &quot;swap_size&quot;: 0,
   &quot;env_count&quot;: [
     {
       &quot;label&quot;: &quot;production&quot;,
-      &quot;data&quot;: 14
+      &quot;data&quot;: 16
     }
   ],
   &quot;klass_count&quot;: [
@@ -113,11 +117,11 @@
   &quot;model_count&quot;: [],
   &quot;mem_size&quot;: 0,
   &quot;mem_free&quot;: 0,
-  &quot;swap_size&quot;: 0,
   &quot;swap_free&quot;: 0,
   &quot;mem_totsize&quot;: 0.0,
   &quot;mem_totfree&quot;: 0.0
 }</pre>
+
 
     </div>
 </div>
@@ -127,8 +131,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

@@ -29,6 +29,8 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>update</li>
+  
+
 </ul>
 
   <div class='page-header'>
@@ -42,38 +44,37 @@
 
   
 
-    <h2>Examples</h2>
-      <pre class="prettyprint">PUT /api/media/980190962
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">PUT /api/media/980190962
 {
   &quot;name&quot;: &quot;CentOS 5.4&quot;
 }
 200
 {
-  &quot;medium&quot;: {
-    &quot;config_path&quot;: null,
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;image_path&quot;: null,
-    &quot;media_path&quot;: null,
-    &quot;name&quot;: &quot;CentOS 5.4&quot;,
-    &quot;os_family&quot;: null,
-    &quot;path&quot;: &quot;http://mirror.centos.org/centos/6.0/os/$arch&quot;,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
-  }
+  &quot;config_path&quot;: null,
+  &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+  &quot;id&quot;: 980190962,
+  &quot;image_path&quot;: null,
+  &quot;media_path&quot;: null,
+  &quot;name&quot;: &quot;CentOS 5.4&quot;,
+  &quot;os_family&quot;: null,
+  &quot;path&quot;: &quot;http://mirror.centos.org/centos/6.0/os/$arch&quot;,
+  &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
 }</pre>
 
-
-
-    <h2>Params</h2>
-    <table class='table'>
-      <thead>
-        <tr>
-          <th>Param name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr style='background-color:rgb(255,255,255);'>
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -85,7 +86,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -101,7 +105,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -113,10 +120,15 @@
       </small>
     </td>
     <td>
-      <p>Name of media</p>
+      
+<p>Name of media</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -129,14 +141,19 @@
       </small>
     </td>
     <td>
-      <p>The path to the medium, can be a URL or a valid NFS server (exclusive of the architecture).</p>
+      
+<p>The path to the medium, can be a URL or a valid NFS server (exclusive of the architecture).</p>
 
-<p>for example http://mirror.centos.org/centos/$version/os/$arch where $arch will be substituted for the host&#8217;s actual OS architecture and $version, $major and $minor will be substituted for the version of the operating system.</p>
+<p>for example http://mirror.centos.org/centos/$version/os/$arch where $arch will be substituted for the host’s actual OS architecture and $version, $major and $minor will be substituted for the version of the operating system.</p>
 
 <p>Solaris and Debian media may also use $release.</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -149,12 +166,15 @@
       </small>
     </td>
     <td>
-      <p>The family that the operating system belongs to.</p>
+      
+<p>The family that the operating system belongs to.</p>
 
 <p>Available families:</p>
 
 <ul>
 <li>AIX</li>
+
+<li>Altlinux</li>
 
 <li>Archlinux</li>
 
@@ -174,9 +194,13 @@
 
 <li>Windows</li>
 </ul>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -192,14 +216,18 @@
       
         <br>
         Value: Must be Array
+
+
     </td>
+
   </tr>
 
   
 
 
-      </tbody>
-    </table>
+    </tbody>
+  </table>
+
 </div>
 
 
@@ -207,8 +235,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

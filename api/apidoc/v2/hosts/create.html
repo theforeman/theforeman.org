@@ -29,6 +29,8 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>create</li>
+  
+
 </ul>
 
   <div class='page-header'>
@@ -42,8 +44,11 @@
 
   
 
-    <h2>Examples</h2>
-      <pre class="prettyprint">POST /api/hosts
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">POST /api/hosts
 {
   &quot;host&quot;: {
     &quot;name&quot;: &quot;testhost11&quot;,
@@ -51,21 +56,26 @@
     &quot;domain_id&quot;: &quot;22495316&quot;,
     &quot;ip&quot;: &quot;10.0.0.20&quot;,
     &quot;mac&quot;: &quot;52:53:00:1e:85:93&quot;,
+    &quot;ptable_id&quot;: &quot;980190962&quot;,
+    &quot;medium_id&quot;: &quot;980190962&quot;,
     &quot;architecture_id&quot;: &quot;501905019&quot;,
     &quot;operatingsystem_id&quot;: &quot;1073012828&quot;,
     &quot;puppet_proxy_id&quot;: &quot;980190962&quot;,
-    &quot;compute_resource_id&quot;: &quot;980190962&quot;
+    &quot;compute_resource_id&quot;: &quot;980190962&quot;,
+    &quot;root_pass&quot;: &quot;xybxa6JUkz63w&quot;
   }
 }
 200
 {
   &quot;name&quot;: &quot;testhost11.mydomain.net&quot;,
-  &quot;id&quot;: 1073012832,
+  &quot;id&quot;: 1073012834,
   &quot;ip&quot;: &quot;10.0.0.20&quot;,
   &quot;environment_id&quot;: 334344675,
   &quot;environment_name&quot;: &quot;production&quot;,
   &quot;last_report&quot;: null,
   &quot;mac&quot;: &quot;52:53:00:1e:85:93&quot;,
+  &quot;realm_id&quot;: null,
+  &quot;realm_name&quot;: null,
   &quot;sp_mac&quot;: null,
   &quot;sp_ip&quot;: null,
   &quot;sp_name&quot;: null,
@@ -74,14 +84,14 @@
   &quot;architecture_id&quot;: 501905019,
   &quot;architecture_name&quot;: &quot;x86_64&quot;,
   &quot;operatingsystem_id&quot;: 1073012828,
-  &quot;operatingsystem_name&quot;: &quot;Redhat 6.1&quot;,
+  &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
   &quot;subnet_id&quot;: null,
   &quot;subnet_name&quot;: null,
   &quot;sp_subnet_id&quot;: null,
-  &quot;ptable_id&quot;: null,
-  &quot;ptable_name&quot;: null,
-  &quot;medium_id&quot;: null,
-  &quot;medium_name&quot;: null,
+  &quot;ptable_id&quot;: 980190962,
+  &quot;ptable_name&quot;: &quot;default&quot;,
+  &quot;medium_id&quot;: 980190962,
+  &quot;medium_name&quot;: &quot;CentOS 5.4&quot;,
   &quot;build&quot;: false,
   &quot;comment&quot;: null,
   &quot;disk&quot;: null,
@@ -90,8 +100,8 @@
   &quot;model_name&quot;: null,
   &quot;hostgroup_id&quot;: null,
   &quot;hostgroup_name&quot;: null,
-  &quot;owner_id&quot;: null,
-  &quot;owner_type&quot;: null,
+  &quot;owner_id&quot;: 886836129,
+  &quot;owner_type&quot;: &quot;User&quot;,
   &quot;enabled&quot;: true,
   &quot;puppet_ca_proxy_id&quot;: null,
   &quot;managed&quot;: true,
@@ -99,15 +109,20 @@
   &quot;image_file&quot;: &quot;&quot;,
   &quot;uuid&quot;: null,
   &quot;compute_resource_id&quot;: 980190962,
-  &quot;compute_resource_name&quot;: &quot;bigcompute (Libvirt)&quot;,
+  &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
   &quot;compute_profile_id&quot;: null,
   &quot;compute_profile_name&quot;: null,
+  &quot;capabilities&quot;: [
+    &quot;build&quot;,
+    &quot;image&quot;
+  ],
+  &quot;provision_method&quot;: &quot;build&quot;,
   &quot;puppet_proxy_id&quot;: 980190962,
   &quot;certname&quot;: &quot;testhost11.mydomain.net&quot;,
   &quot;image_id&quot;: null,
   &quot;image_name&quot;: null,
-  &quot;created_at&quot;: &quot;2014-01-30T07:24:51Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-01-30T07:24:51Z&quot;,
+  &quot;created_at&quot;: &quot;2014-07-23T13:31:36Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-07-23T13:31:36Z&quot;,
   &quot;last_compile&quot;: null,
   &quot;last_freshcheck&quot;: null,
   &quot;serial&quot;: null,
@@ -117,22 +132,23 @@
   &quot;organization_name&quot;: null,
   &quot;location_id&quot;: null,
   &quot;location_name&quot;: null,
+  &quot;all_puppetclasses&quot;: [],
+  &quot;parameters&quot;: [],
   &quot;interfaces&quot;: [],
-  &quot;host_parameters&quot;: []
+  &quot;puppetclasses&quot;: [],
+  &quot;config_groups&quot;: []
 }</pre>
 
-
-
-    <h2>Params</h2>
-    <table class='table'>
-      <thead>
-        <tr>
-          <th>Param name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr style='background-color:rgb(255,255,255);'>
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>host </strong><br>
       <small>
@@ -144,7 +160,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -159,7 +178,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -175,7 +197,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -188,10 +213,15 @@
       </small>
     </td>
     <td>
-      <p>not required if using a subnet with dhcp proxy</p>
+      
+<p>not required if using a subnet with dhcp proxy</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -204,10 +234,15 @@
       </small>
     </td>
     <td>
-      <p>not required if its a virtual machine</p>
+      
+<p>not required if its a virtual machine</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -223,7 +258,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -239,7 +277,29 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>host[realm_id] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be a number.
+
+
+    </td>
+
   </tr>
 
   
@@ -255,7 +315,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -271,7 +334,10 @@
       
         <br>
         Value: Must be Array
+
+
     </td>
+
   </tr>
 
   
@@ -287,7 +353,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -303,7 +372,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -319,7 +391,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -335,7 +410,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -351,7 +429,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -367,7 +448,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -383,7 +467,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -399,7 +486,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -415,7 +505,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -431,7 +524,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -447,7 +543,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -463,7 +562,10 @@
       
         <br>
         Value: Must be Array
+
+
     </td>
+
   </tr>
 
   
@@ -479,7 +581,10 @@
       
         <br>
         Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+
+
     </td>
+
   </tr>
 
   
@@ -495,7 +600,10 @@
       
         <br>
         Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+
+
     </td>
+
   </tr>
 
   
@@ -511,7 +619,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -527,7 +638,10 @@
       
         <br>
         Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+
+
     </td>
+
   </tr>
 
   
@@ -540,10 +654,15 @@
       </small>
     </td>
     <td>
-      <p>UUID to track orchestration tasks status, GET /api/orchestration/:UUID/tasks</p>
+      
+<p>UUID to track orchestration tasks status, GET /api/orchestration/:UUID/tasks</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -559,7 +678,29 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>host[compute_profile_id] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be a number.
+
+
+    </td>
+
   </tr>
 
   
@@ -575,14 +716,18 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
   
 
 
-      </tbody>
-    </table>
+    </tbody>
+  </table>
+
 </div>
 
 
@@ -590,8 +735,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

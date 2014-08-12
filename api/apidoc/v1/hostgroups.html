@@ -25,6 +25,7 @@
     Hostgroups
     
   </li>
+  
 </ul>
 
 <div class='page-header'>
@@ -34,6 +35,7 @@
     <small></small>
   </h1>
 </div>
+
 
 
 
@@ -61,8 +63,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/hostgroups
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/hostgroups
 200
 [
   {
@@ -74,12 +77,14 @@
       &quot;domain_id&quot;: 22495316,
       &quot;environment_id&quot;: 334344675,
       &quot;ancestry&quot;: null,
-      &quot;label&quot;: &quot;Common&quot;,
       &quot;parameters&quot;: {
         &quot;group1&quot;: &quot;group1&quot;
       },
       &quot;puppetclass_ids&quot;: [
-        980190962
+        980190962,
+        281110143,
+        1018350795,
+        51848956
       ]
     }
   },
@@ -92,23 +97,25 @@
       &quot;domain_id&quot;: null,
       &quot;environment_id&quot;: 334344675,
       &quot;ancestry&quot;: null,
-      &quot;label&quot;: &quot;db&quot;,
       &quot;parameters&quot;: {},
-      &quot;puppetclass_ids&quot;: []
+      &quot;puppetclass_ids&quot;: [
+        281110143
+      ]
     }
   },
   {
     &quot;hostgroup&quot;: {
       &quot;name&quot;: &quot;Parent&quot;,
       &quot;id&quot;: 1,
-      &quot;subnet_id&quot;: null,
-      &quot;operatingsystem_id&quot;: null,
-      &quot;domain_id&quot;: null,
-      &quot;environment_id&quot;: null,
+      &quot;subnet_id&quot;: 113629430,
+      &quot;operatingsystem_id&quot;: 309172073,
+      &quot;domain_id&quot;: 22495316,
+      &quot;environment_id&quot;: 153855663,
       &quot;ancestry&quot;: null,
-      &quot;label&quot;: &quot;Parent&quot;,
       &quot;parameters&quot;: {},
-      &quot;puppetclass_ids&quot;: []
+      &quot;puppetclass_ids&quot;: [
+        113629430
+      ]
     }
   },
   {
@@ -120,9 +127,13 @@
       &quot;domain_id&quot;: null,
       &quot;environment_id&quot;: 334344675,
       &quot;ancestry&quot;: &quot;1&quot;,
-      &quot;label&quot;: &quot;Parent/inherited&quot;,
       &quot;parameters&quot;: {},
-      &quot;puppetclass_ids&quot;: []
+      &quot;puppetclass_ids&quot;: [
+        1018350795,
+        374648174,
+        638205575,
+        51848956
+      ]
     }
   },
   {
@@ -134,23 +145,22 @@
       &quot;domain_id&quot;: null,
       &quot;environment_id&quot;: null,
       &quot;ancestry&quot;: null,
-      &quot;label&quot;: &quot;Unusual&quot;,
       &quot;parameters&quot;: {},
       &quot;puppetclass_ids&quot;: []
     }
   }
 ]</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>search </strong><br>
       <small>
@@ -159,10 +169,15 @@
       </small>
     </td>
     <td>
-      <p>filter results</p>
+      
+<p>filter results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -175,10 +190,15 @@
       </small>
     </td>
     <td>
-      <p>sort results</p>
+      
+<p>sort results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -191,10 +211,15 @@
       </small>
     </td>
     <td>
-      <p>paginate results</p>
+      
+<p>paginate results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -207,16 +232,22 @@
       </small>
     </td>
     <td>
-      <p>number of entries per request</p>
+      
+<p>number of entries per request</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -240,8 +271,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/hostgroups/636252244-common
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/hostgroups/636252244-common
 200
 {
   &quot;hostgroup&quot;: {
@@ -252,26 +284,28 @@
     &quot;domain_id&quot;: 22495316,
     &quot;environment_id&quot;: 334344675,
     &quot;ancestry&quot;: null,
-    &quot;label&quot;: &quot;Common&quot;,
     &quot;parameters&quot;: {
       &quot;group1&quot;: &quot;group1&quot;
     },
     &quot;puppetclass_ids&quot;: [
-      980190962
+      980190962,
+      281110143,
+      1018350795,
+      51848956
     ]
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -283,13 +317,17 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -313,8 +351,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">POST /api/hostgroups
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/hostgroups
 {
   &quot;hostgroup&quot;: {
     &quot;name&quot;: &quot;TestHostgroup&quot;
@@ -330,22 +369,21 @@
     &quot;domain_id&quot;: null,
     &quot;environment_id&quot;: null,
     &quot;ancestry&quot;: null,
-    &quot;label&quot;: &quot;TestHostgroup&quot;,
     &quot;parameters&quot;: {},
     &quot;puppetclass_ids&quot;: []
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>hostgroup </strong><br>
       <small>
@@ -357,7 +395,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -372,7 +413,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -388,7 +432,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -404,7 +451,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -420,7 +470,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -436,7 +489,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -452,7 +508,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -468,7 +527,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -484,7 +546,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -500,7 +565,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -516,7 +584,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -532,14 +603,18 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -563,8 +638,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/hostgroups/636252244-common
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/hostgroups/636252244-common
 {
   &quot;hostgroup&quot;: {}
 }
@@ -574,36 +650,37 @@
     &quot;ancestry&quot;: null,
     &quot;architecture_id&quot;: 501905019,
     &quot;compute_profile_id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
     &quot;domain_id&quot;: 22495316,
     &quot;environment_id&quot;: 334344675,
     &quot;id&quot;: 636252244,
     &quot;image_file&quot;: &quot;&quot;,
-    &quot;label&quot;: &quot;Common&quot;,
     &quot;medium_id&quot;: 980190962,
     &quot;name&quot;: &quot;Common&quot;,
     &quot;operatingsystem_id&quot;: 309172073,
     &quot;ptable_id&quot;: 980190962,
-    &quot;puppet_ca_proxy_id&quot;: null,
+    &quot;puppet_ca_proxy_id&quot;: 182953976,
     &quot;puppet_proxy_id&quot;: 182953976,
+    &quot;realm_id&quot;: null,
     &quot;root_pass&quot;: &quot;$1$foreman$NW1XVtbk4/XkJqmKNrFWV0&quot;,
     &quot;subnet_id&quot;: null,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;title&quot;: &quot;Common&quot;,
+    &quot;updated_at&quot;: &quot;2014-07-23T13:31:01Z&quot;,
     &quot;use_image&quot;: null,
     &quot;vm_defaults&quot;: null
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -615,7 +692,10 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
@@ -631,7 +711,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -646,7 +729,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -662,7 +748,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -678,7 +767,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -694,7 +786,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -710,7 +805,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -726,7 +824,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -742,7 +843,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -758,7 +862,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -774,7 +881,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -790,7 +900,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -806,14 +919,18 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -837,44 +954,46 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/hostgroups/636252244-common
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/hostgroups/866317115-unusual
 200
 {
   &quot;hostgroup&quot;: {
     &quot;ancestry&quot;: null,
-    &quot;architecture_id&quot;: 501905019,
-    &quot;compute_profile_id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-    &quot;domain_id&quot;: 22495316,
-    &quot;environment_id&quot;: 334344675,
-    &quot;id&quot;: 636252244,
+    &quot;architecture_id&quot;: null,
+    &quot;compute_profile_id&quot;: null,
+    &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
+    &quot;domain_id&quot;: null,
+    &quot;environment_id&quot;: null,
+    &quot;id&quot;: 866317115,
     &quot;image_file&quot;: &quot;&quot;,
-    &quot;label&quot;: &quot;Common&quot;,
-    &quot;medium_id&quot;: 980190962,
-    &quot;name&quot;: &quot;Common&quot;,
-    &quot;operatingsystem_id&quot;: 309172073,
-    &quot;ptable_id&quot;: 980190962,
+    &quot;medium_id&quot;: null,
+    &quot;name&quot;: &quot;Unusual&quot;,
+    &quot;operatingsystem_id&quot;: null,
+    &quot;ptable_id&quot;: null,
     &quot;puppet_ca_proxy_id&quot;: null,
     &quot;puppet_proxy_id&quot;: 182953976,
-    &quot;root_pass&quot;: &quot;$1$foreman$NW1XVtbk4/XkJqmKNrFWV0&quot;,
+    &quot;realm_id&quot;: null,
+    &quot;root_pass&quot;: null,
     &quot;subnet_id&quot;: null,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;title&quot;: &quot;Unusual&quot;,
+    &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
     &quot;use_image&quot;: null,
     &quot;vm_defaults&quot;: null
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -886,13 +1005,17 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
 </div>
 
@@ -901,8 +1024,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

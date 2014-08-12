@@ -29,6 +29,8 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>facts</li>
+  
+
 </ul>
 
   <div class='page-header'>
@@ -42,8 +44,11 @@
 
   
 
-    <h2>Examples</h2>
-      <pre class="prettyprint">POST /api/hosts/facts
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">POST /api/hosts/facts
 {
   &quot;name&quot;: &quot;brslc022.brs.infineon.com&quot;,
   &quot;facts&quot;: {
@@ -116,63 +121,62 @@
 }
 201
 {
-  &quot;host&quot;: {
-    &quot;architecture_id&quot;: 501905022,
-    &quot;build&quot;: false,
-    &quot;certname&quot;: &quot;brslc022.brs.infineon.com&quot;,
-    &quot;comment&quot;: null,
-    &quot;compute_profile_id&quot;: null,
-    &quot;compute_resource_id&quot;: null,
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:53Z&quot;,
-    &quot;disk&quot;: null,
-    &quot;domain_id&quot;: 759776766,
-    &quot;enabled&quot;: true,
-    &quot;environment_id&quot;: 687036970,
-    &quot;hostgroup_id&quot;: null,
-    &quot;id&quot;: 1073012835,
-    &quot;image_file&quot;: &quot;&quot;,
-    &quot;image_id&quot;: null,
-    &quot;installed_at&quot;: null,
-    &quot;ip&quot;: &quot;172.29.205.22&quot;,
-    &quot;last_compile&quot;: &quot;2010-02-16T11:52:38Z&quot;,
-    &quot;last_freshcheck&quot;: null,
-    &quot;last_report&quot;: null,
-    &quot;location_id&quot;: null,
-    &quot;mac&quot;: &quot;00:0c:29:cf:00:45&quot;,
-    &quot;managed&quot;: null,
-    &quot;medium_id&quot;: null,
-    &quot;model_id&quot;: 980190964,
-    &quot;name&quot;: &quot;brslc022.brs.infineon.com&quot;,
-    &quot;operatingsystem_id&quot;: 1073012830,
-    &quot;organization_id&quot;: null,
-    &quot;owner_id&quot;: null,
-    &quot;owner_type&quot;: null,
-    &quot;ptable_id&quot;: null,
-    &quot;puppet_ca_proxy_id&quot;: null,
-    &quot;puppet_proxy_id&quot;: null,
-    &quot;puppet_status&quot;: 0,
-    &quot;root_pass&quot;: &quot;xybxa6JUkz63w&quot;,
-    &quot;serial&quot;: null,
-    &quot;source_file_id&quot;: null,
-    &quot;subnet_id&quot;: null,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:54Z&quot;,
-    &quot;use_image&quot;: null,
-    &quot;uuid&quot;: null
-  }
+  &quot;architecture_id&quot;: 501905022,
+  &quot;build&quot;: false,
+  &quot;certname&quot;: &quot;brslc022.brs.infineon.com&quot;,
+  &quot;comment&quot;: null,
+  &quot;compute_profile_id&quot;: null,
+  &quot;compute_resource_id&quot;: null,
+  &quot;created_at&quot;: &quot;2014-07-23T13:31:39Z&quot;,
+  &quot;disk&quot;: null,
+  &quot;domain_id&quot;: 759776769,
+  &quot;enabled&quot;: true,
+  &quot;environment_id&quot;: 687036973,
+  &quot;hostgroup_id&quot;: null,
+  &quot;id&quot;: 1073012838,
+  &quot;image_file&quot;: &quot;&quot;,
+  &quot;image_id&quot;: null,
+  &quot;installed_at&quot;: null,
+  &quot;ip&quot;: &quot;172.29.205.22&quot;,
+  &quot;last_compile&quot;: &quot;2010-02-16T11:52:38Z&quot;,
+  &quot;last_freshcheck&quot;: null,
+  &quot;last_report&quot;: null,
+  &quot;location_id&quot;: 255093256,
+  &quot;mac&quot;: &quot;00:0c:29:cf:00:45&quot;,
+  &quot;managed&quot;: false,
+  &quot;medium_id&quot;: null,
+  &quot;model_id&quot;: 980190964,
+  &quot;name&quot;: &quot;brslc022.brs.infineon.com&quot;,
+  &quot;operatingsystem_id&quot;: 1073012830,
+  &quot;organization_id&quot;: 447626438,
+  &quot;otp&quot;: null,
+  &quot;owner_id&quot;: null,
+  &quot;owner_type&quot;: null,
+  &quot;provision_method&quot;: &quot;build&quot;,
+  &quot;ptable_id&quot;: null,
+  &quot;puppet_ca_proxy_id&quot;: null,
+  &quot;puppet_proxy_id&quot;: null,
+  &quot;puppet_status&quot;: 0,
+  &quot;realm_id&quot;: null,
+  &quot;root_pass&quot;: null,
+  &quot;serial&quot;: null,
+  &quot;source_file_id&quot;: null,
+  &quot;subnet_id&quot;: null,
+  &quot;updated_at&quot;: &quot;2014-07-23T13:31:40Z&quot;,
+  &quot;use_image&quot;: null,
+  &quot;uuid&quot;: null
 }</pre>
 
-
-
-    <h2>Params</h2>
-    <table class='table'>
-      <thead>
-        <tr>
-          <th>Param name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr style='background-color:rgb(255,255,255);'>
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>name </strong><br>
       <small>
@@ -181,10 +185,15 @@
       </small>
     </td>
     <td>
-      <p>hostname of the host</p>
+      
+<p>hostname of the host</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -197,10 +206,15 @@
       </small>
     </td>
     <td>
-      <p>hash containing the facts for the host</p>
+      
+<p>hash containing the facts for the host</p>
+
         <br>
         Value: Must be Hash
+
+
     </td>
+
   </tr>
 
   
@@ -213,10 +227,15 @@
       </small>
     </td>
     <td>
-      <p>optional: certname of the host</p>
+      
+<p>optional: certname of the host</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -229,16 +248,22 @@
       </small>
     </td>
     <td>
-      <p>optional: the STI type of host to create</p>
+      
+<p>optional: the STI type of host to create</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-      </tbody>
-    </table>
+    </tbody>
+  </table>
+
 </div>
 
 
@@ -246,8 +271,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

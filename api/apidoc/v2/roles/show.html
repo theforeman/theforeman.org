@@ -29,6 +29,8 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>show</li>
+  
+
 </ul>
 
   <div class='page-header'>
@@ -42,107 +44,99 @@
 
   
 
-    <h2>Examples</h2>
-      <pre class="prettyprint">GET /api/roles/1
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">GET /api/roles/1
 200
 {
   &quot;name&quot;: &quot;Manager&quot;,
   &quot;id&quot;: 1,
   &quot;builtin&quot;: 0,
-  &quot;permissions&quot;: [
-    &quot;view_architectures&quot;,
-    &quot;create_architectures&quot;,
-    &quot;edit_architectures&quot;,
-    &quot;destroy_architectures&quot;,
-    &quot;view_authenticators&quot;,
-    &quot;create_authenticators&quot;,
-    &quot;edit_authenticators&quot;,
-    &quot;destroy_authenticators&quot;,
-    &quot;view_environments&quot;,
-    &quot;create_environments&quot;,
-    &quot;edit_environments&quot;,
-    &quot;destroy_environments&quot;,
-    &quot;import_environments&quot;,
-    &quot;view_external_variables&quot;,
-    &quot;create_external_variables&quot;,
-    &quot;edit_external_variables&quot;,
-    &quot;destroy_external_variables&quot;,
-    &quot;view_domains&quot;,
-    &quot;create_domain&quot;,
-    &quot;edit_domains&quot;,
-    &quot;destroy_domains&quot;,
-    &quot;view_globals&quot;,
-    &quot;create_globals&quot;,
-    &quot;edit_globals&quot;,
-    &quot;destroy_globals&quot;,
-    &quot;view_hostgroups&quot;,
-    &quot;create_hostgroups&quot;,
-    &quot;edit_hostgroups&quot;,
-    &quot;destroy_hostgroups&quot;,
-    &quot;view_hosts&quot;,
-    &quot;create_hosts&quot;,
-    &quot;edit_hosts&quot;,
-    &quot;destroy_hosts&quot;,
-    &quot;view_media&quot;,
-    &quot;create_media&quot;,
-    &quot;edit_media&quot;,
-    &quot;destroy_media&quot;,
-    &quot;view_models&quot;,
-    &quot;create_models&quot;,
-    &quot;edit_models&quot;,
-    &quot;destroy_models&quot;,
-    &quot;view_operatingsystems&quot;,
-    &quot;create_operatingsystems&quot;,
-    &quot;edit_operatingsystems&quot;,
-    &quot;destroy_operatingsystems&quot;,
-    &quot;view_ptables&quot;,
-    &quot;create_ptables&quot;,
-    &quot;edit_ptables&quot;,
-    &quot;destroy_ptables&quot;,
-    &quot;view_puppetclasses&quot;,
-    &quot;create_puppetclasses&quot;,
-    &quot;edit_puppetclasses&quot;,
-    &quot;destroy_puppetclasses&quot;,
-    &quot;import_puppetclasses&quot;,
-    &quot;view_usergroups&quot;,
-    &quot;create_usergroups&quot;,
-    &quot;edit_usergroups&quot;,
-    &quot;destroy_usergroups&quot;,
-    &quot;view_users&quot;,
-    &quot;create_users&quot;,
-    &quot;edit_users&quot;,
-    &quot;destroy_users&quot;,
-    &quot;access_settings&quot;,
-    &quot;access_dashboard&quot;,
-    &quot;view_reports&quot;,
-    &quot;destroy_reports&quot;,
-    &quot;view_facts&quot;,
-    &quot;view_audit_logs&quot;,
-    &quot;view_statistics&quot;,
-    &quot;view_locations&quot;,
-    &quot;edit_locations&quot;,
-    &quot;create_locations&quot;,
-    &quot;destroy_locations&quot;,
-    &quot;view_organizations&quot;,
-    &quot;edit_organizations&quot;,
-    &quot;create_organizations&quot;,
-    &quot;destroy_organizations&quot;,
-    &quot;edit_classes&quot;
+  &quot;filters&quot;: [
+    {
+      &quot;id&quot;: 139728896
+    },
+    {
+      &quot;id&quot;: 170801529
+    },
+    {
+      &quot;id&quot;: 222559602
+    },
+    {
+      &quot;id&quot;: 225912082
+    },
+    {
+      &quot;id&quot;: 255448041
+    },
+    {
+      &quot;id&quot;: 291325508
+    },
+    {
+      &quot;id&quot;: 321349837
+    },
+    {
+      &quot;id&quot;: 340438230
+    },
+    {
+      &quot;id&quot;: 343831726
+    },
+    {
+      &quot;id&quot;: 372277853
+    },
+    {
+      &quot;id&quot;: 503111935
+    },
+    {
+      &quot;id&quot;: 528928374
+    },
+    {
+      &quot;id&quot;: 557298380
+    },
+    {
+      &quot;id&quot;: 592288835
+    },
+    {
+      &quot;id&quot;: 595149887
+    },
+    {
+      &quot;id&quot;: 643462867
+    },
+    {
+      &quot;id&quot;: 679608033
+    },
+    {
+      &quot;id&quot;: 721145960
+    },
+    {
+      &quot;id&quot;: 943645556
+    },
+    {
+      &quot;id&quot;: 977587707
+    },
+    {
+      &quot;id&quot;: 980424071
+    },
+    {
+      &quot;id&quot;: 1026099682
+    },
+    {
+      &quot;id&quot;: 1062414187
+    }
   ]
 }</pre>
 
-
-
-    <h2>Params</h2>
-    <table class='table'>
-      <thead>
-        <tr>
-          <th>Param name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr style='background-color:rgb(255,255,255);'>
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -154,13 +148,17 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-      </tbody>
-    </table>
+    </tbody>
+  </table>
+
 </div>
 
 
@@ -168,8 +166,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

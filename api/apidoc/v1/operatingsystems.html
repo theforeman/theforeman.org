@@ -25,6 +25,7 @@
     Operating systems
     
   </li>
+  
 </ul>
 
 <div class='page-header'>
@@ -34,6 +35,7 @@
     <small></small>
   </h1>
 </div>
+
 
 
 
@@ -61,8 +63,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/operatingsystems
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/operatingsystems
 200
 [
   {
@@ -108,6 +111,12 @@
           &quot;config_template&quot;: {
             &quot;name&quot;: &quot;iPXE Dummy Menu&quot;,
             &quot;id&quot;: 698706415
+          }
+        },
+        {
+          &quot;config_template&quot;: {
+            &quot;name&quot;: &quot;Locked Template&quot;,
+            &quot;id&quot;: 718456980
           }
         },
         {
@@ -428,16 +437,16 @@
   }
 ]</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>search </strong><br>
       <small>
@@ -446,10 +455,15 @@
       </small>
     </td>
     <td>
-      <p>filter results</p>
+      
+<p>filter results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -462,10 +476,15 @@
       </small>
     </td>
     <td>
-      <p>for example, name ASC, or name DESC</p>
+      
+<p>for example, name ASC, or name DESC</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -478,10 +497,15 @@
       </small>
     </td>
     <td>
-      <p>paginate results</p>
+      
+<p>paginate results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -494,16 +518,22 @@
       </small>
     </td>
     <td>
-      <p>number of entries per request</p>
+      
+<p>number of entries per request</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -527,8 +557,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/operatingsystems/1073012828
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/operatingsystems/1073012828
 200
 {
   &quot;operatingsystem&quot;: {
@@ -659,16 +690,16 @@
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -680,13 +711,17 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -710,8 +745,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">POST /api/operatingsystems
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/operatingsystems
 {
   &quot;operatingsystem&quot;: {
     &quot;name&quot;: &quot;awsome_os&quot;,
@@ -736,16 +772,16 @@
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>operatingsystem </strong><br>
       <small>
@@ -757,7 +793,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -772,7 +811,10 @@
       
         <br>
         Value: Must match regular expression /\A(\S+)\Z/.
+
+
     </td>
+
   </tr>
 
   
@@ -788,7 +830,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -796,7 +841,7 @@
     <td>
       <strong>operatingsystem[minor] </strong><br>
       <small>
-        required
+        optional
         
       </small>
     </td>
@@ -804,7 +849,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -820,7 +868,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -836,7 +887,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -852,14 +906,18 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -883,8 +941,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/operatingsystems/1073012828
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/operatingsystems/1073012828
 {
   &quot;operatingsystem&quot;: {
     &quot;name&quot;: &quot;new_name&quot;
@@ -1020,16 +1079,16 @@
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -1041,7 +1100,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1057,7 +1119,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -1072,7 +1137,10 @@
       
         <br>
         Value: Must match regular expression /\A(\S+)\Z/.
+
+
     </td>
+
   </tr>
 
   
@@ -1088,7 +1156,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1104,7 +1175,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1120,7 +1194,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1136,7 +1213,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1152,14 +1232,18 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -1183,33 +1267,36 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/operatingsystems/775246587
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/operatingsystems/775246587
 200
 {
   &quot;operatingsystem&quot;: {
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;created_at&quot;: &quot;2014-07-23T13:30:50Z&quot;,
     &quot;description&quot;: null,
+    &quot;hostgroups_count&quot;: 0,
+    &quot;hosts_count&quot;: 0,
     &quot;id&quot;: 775246587,
     &quot;major&quot;: &quot;1&quot;,
     &quot;minor&quot;: &quot;1&quot;,
     &quot;name&quot;: &quot;NoHosts&quot;,
     &quot;nameindicator&quot;: null,
     &quot;release_name&quot;: null,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+    &quot;updated_at&quot;: &quot;2014-07-23T13:30:50Z&quot;
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -1221,13 +1308,17 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -1252,16 +1343,17 @@
 
 
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -1273,7 +1365,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1289,7 +1384,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1305,13 +1403,17 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
 </div>
 
@@ -1320,8 +1422,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

@@ -29,6 +29,8 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>update</li>
+  
+
 </ul>
 
   <div class='page-header'>
@@ -40,10 +42,15 @@
 
 <div>
 
-  <p>Adds role &#8216;Anonymous&#8217; to the user if it is not already present. Only admin can set admin account.</p>
+  
+<p>Adds role ‘Anonymous’ to the user if it is not already present. Only admin can set admin account.</p>
 
-    <h2>Examples</h2>
-      <pre class="prettyprint">PUT /api/users/980190963
+
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">PUT /api/users/980190963
 {
   &quot;user&quot;: {
     &quot;login&quot;: &quot;johnsmith&quot;
@@ -54,8 +61,11 @@
   &quot;user&quot;: {
     &quot;admin&quot;: null,
     &quot;auth_source_id&quot;: 980190962,
+    &quot;avatar_hash&quot;: null,
     &quot;compute_resources_andor&quot;: &quot;or&quot;,
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:41Z&quot;,
+    &quot;created_at&quot;: &quot;2014-07-23T13:31:20Z&quot;,
+    &quot;default_location_id&quot;: null,
+    &quot;default_organization_id&quot;: null,
     &quot;domains_andor&quot;: &quot;or&quot;,
     &quot;facts_andor&quot;: &quot;or&quot;,
     &quot;filter_on_owner&quot;: null,
@@ -72,22 +82,20 @@
     &quot;password_hash&quot;: null,
     &quot;password_salt&quot;: null,
     &quot;subscribe_to_all_hostgroups&quot;: null,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:41Z&quot;
+    &quot;updated_at&quot;: &quot;2014-07-23T13:31:20Z&quot;
   }
 }</pre>
 
-
-
-    <h2>Params</h2>
-    <table class='table'>
-      <thead>
-        <tr>
-          <th>Param name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr style='background-color:rgb(255,255,255);'>
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -99,7 +107,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -115,7 +126,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -130,7 +144,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -146,7 +163,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -162,7 +182,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -178,7 +201,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -191,10 +217,15 @@
       </small>
     </td>
     <td>
-      <p>Is an admin account?</p>
+      
+<p>Is an admin account?</p>
+
         <br>
         Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+
+
     </td>
+
   </tr>
 
   
@@ -210,14 +241,18 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
 
-      </tbody>
-    </table>
+    </tbody>
+  </table>
+
 </div>
 
 
@@ -225,8 +260,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
