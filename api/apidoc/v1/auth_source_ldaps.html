@@ -25,6 +25,7 @@
     Auth source ldaps
     
   </li>
+  
 </ul>
 
 <div class='page-header'>
@@ -34,6 +35,7 @@
     <small></small>
   </h1>
 </div>
+
 
 
 
@@ -61,8 +63,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/auth_source_ldaps
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/auth_source_ldaps
 200
 [
   {
@@ -79,24 +82,25 @@
       &quot;attr_firstname&quot;: &quot;givenName&quot;,
       &quot;attr_lastname&quot;: &quot;sn&quot;,
       &quot;attr_mail&quot;: &quot;mail&quot;,
+      &quot;attr_photo&quot;: null,
       &quot;onthefly_register&quot;: true,
       &quot;tls&quot;: true,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
     }
   }
 ]</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>page </strong><br>
       <small>
@@ -105,10 +109,15 @@
       </small>
     </td>
     <td>
-      <p>paginate results</p>
+      
+<p>paginate results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -121,16 +130,22 @@
       </small>
     </td>
     <td>
-      <p>number of entries per request</p>
+      
+<p>number of entries per request</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -154,8 +169,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/auth_source_ldaps/980190962
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/auth_source_ldaps/980190962
 200
 {
   &quot;auth_source_ldap&quot;: {
@@ -171,23 +187,24 @@
     &quot;attr_firstname&quot;: &quot;givenName&quot;,
     &quot;attr_lastname&quot;: &quot;sn&quot;,
     &quot;attr_mail&quot;: &quot;mail&quot;,
+    &quot;attr_photo&quot;: null,
     &quot;onthefly_register&quot;: true,
     &quot;tls&quot;: true,
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+    &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+    &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -199,13 +216,17 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -229,12 +250,14 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">POST /api/auth_source_ldaps
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/auth_source_ldaps
 {
   &quot;auth_source_ldap&quot;: {
     &quot;name&quot;: &quot;ldap2&quot;,
-    &quot;host&quot;: &quot;ldap2&quot;
+    &quot;host&quot;: &quot;ldap2&quot;,
+    &quot;server_type&quot;: &quot;posix&quot;
   }
 }
 201
@@ -246,29 +269,32 @@
     &quot;attr_lastname&quot;: null,
     &quot;attr_login&quot;: null,
     &quot;attr_mail&quot;: null,
+    &quot;attr_photo&quot;: null,
     &quot;base_dn&quot;: null,
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:16Z&quot;,
+    &quot;created_at&quot;: &quot;2014-08-07T20:40:14Z&quot;,
+    &quot;groups_base&quot;: null,
     &quot;host&quot;: &quot;ldap2&quot;,
     &quot;id&quot;: 980190963,
     &quot;ldap_filter&quot;: null,
     &quot;name&quot;: &quot;ldap2&quot;,
     &quot;onthefly_register&quot;: false,
     &quot;port&quot;: 389,
+    &quot;server_type&quot;: &quot;posix&quot;,
     &quot;tls&quot;: false,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:16Z&quot;
+    &quot;updated_at&quot;: &quot;2014-08-07T20:40:14Z&quot;
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>auth_source_ldap </strong><br>
       <small>
@@ -280,7 +306,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -295,7 +324,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -311,7 +343,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -324,10 +359,15 @@
       </small>
     </td>
     <td>
-      <p>defaults to 389</p>
+      
+<p>defaults to 389</p>
+
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -343,7 +383,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -359,7 +402,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -372,10 +418,15 @@
       </small>
     </td>
     <td>
-      <p>required if onthefly_register is true</p>
+      
+<p>required if onthefly_register is true</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -388,10 +439,15 @@
       </small>
     </td>
     <td>
-      <p>required if onthefly_register is true</p>
+      
+<p>required if onthefly_register is true</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -404,10 +460,15 @@
       </small>
     </td>
     <td>
-      <p>required if onthefly_register is true</p>
+      
+<p>required if onthefly_register is true</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -420,10 +481,15 @@
       </small>
     </td>
     <td>
-      <p>required if onthefly_register is true</p>
+      
+<p>required if onthefly_register is true</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -436,10 +502,34 @@
       </small>
     </td>
     <td>
-      <p>required if onthefly_register is true</p>
+      
+<p>required if onthefly_register is true</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>auth_source_ldap[attr_photo] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be String
+
+
+    </td>
+
   </tr>
 
   
@@ -455,7 +545,10 @@
       
         <br>
         Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+
+
     </td>
+
   </tr>
 
   
@@ -471,14 +564,18 @@
       
         <br>
         Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -502,8 +599,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/auth_source_ldaps/980190962
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/auth_source_ldaps/980190962
 {
   &quot;auth_source_ldap&quot;: {}
 }
@@ -516,29 +614,32 @@
     &quot;attr_lastname&quot;: &quot;sn&quot;,
     &quot;attr_login&quot;: &quot;uid&quot;,
     &quot;attr_mail&quot;: &quot;mail&quot;,
+    &quot;attr_photo&quot;: null,
     &quot;base_dn&quot;: &quot;dn=x,dn=y&quot;,
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+    &quot;groups_base&quot;: null,
     &quot;host&quot;: &quot;ldap&quot;,
     &quot;id&quot;: 980190962,
     &quot;ldap_filter&quot;: null,
     &quot;name&quot;: &quot;ldap-server&quot;,
     &quot;onthefly_register&quot;: true,
     &quot;port&quot;: 123,
+    &quot;server_type&quot;: &quot;posix&quot;,
     &quot;tls&quot;: true,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+    &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -550,7 +651,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -566,7 +670,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -581,7 +688,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -597,7 +707,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -610,10 +723,15 @@
       </small>
     </td>
     <td>
-      <p>defaults to 389</p>
+      
+<p>defaults to 389</p>
+
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -629,7 +747,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -645,7 +766,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -658,10 +782,15 @@
       </small>
     </td>
     <td>
-      <p>required if onthefly_register is true</p>
+      
+<p>required if onthefly_register is true</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -674,10 +803,15 @@
       </small>
     </td>
     <td>
-      <p>required if onthefly_register is true</p>
+      
+<p>required if onthefly_register is true</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -690,10 +824,15 @@
       </small>
     </td>
     <td>
-      <p>required if onthefly_register is true</p>
+      
+<p>required if onthefly_register is true</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -706,10 +845,15 @@
       </small>
     </td>
     <td>
-      <p>required if onthefly_register is true</p>
+      
+<p>required if onthefly_register is true</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -722,10 +866,34 @@
       </small>
     </td>
     <td>
-      <p>required if onthefly_register is true</p>
+      
+<p>required if onthefly_register is true</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>auth_source_ldap[attr_photo] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Must be String
+
+
+    </td>
+
   </tr>
 
   
@@ -741,7 +909,10 @@
       
         <br>
         Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+
+
     </td>
+
   </tr>
 
   
@@ -757,14 +928,18 @@
       
         <br>
         Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -788,8 +963,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/auth_source_ldaps/980190962
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/auth_source_ldaps/980190962
 200
 {
   &quot;auth_source_ldap&quot;: {
@@ -799,29 +975,32 @@
     &quot;attr_lastname&quot;: &quot;sn&quot;,
     &quot;attr_login&quot;: &quot;uid&quot;,
     &quot;attr_mail&quot;: &quot;mail&quot;,
+    &quot;attr_photo&quot;: null,
     &quot;base_dn&quot;: &quot;dn=x,dn=y&quot;,
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+    &quot;groups_base&quot;: null,
     &quot;host&quot;: &quot;ldap&quot;,
     &quot;id&quot;: 980190962,
     &quot;ldap_filter&quot;: null,
     &quot;name&quot;: &quot;ldap-server&quot;,
     &quot;onthefly_register&quot;: true,
     &quot;port&quot;: 123,
+    &quot;server_type&quot;: &quot;posix&quot;,
     &quot;tls&quot;: true,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+    &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -833,13 +1012,17 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
 </div>
 
@@ -848,8 +1031,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

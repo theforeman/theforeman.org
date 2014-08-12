@@ -25,6 +25,7 @@
     Smart variables
     
   </li>
+  
 </ul>
 
 <div class='page-header'>
@@ -34,6 +35,7 @@
     <small></small>
   </h1>
 </div>
+
 
 
 
@@ -69,7 +71,7 @@
            data-parent='#accordion'>
             GET /api/hostgroups/:hostgroup_id/smart_variables
           </a><br>
-          <small>List of smart variables for a specific hostgroup</small>
+          <small>List of smart variables for a specific host group</small>
         </h2>
         <h2>
           <a href='#description-index'
@@ -78,7 +80,7 @@
            data-parent='#accordion'>
             GET /api/puppetclasses/:puppetclass_id/smart_variables
           </a><br>
-          <small>List of smart variables for a specific puppetclass</small>
+          <small>List of smart variables for a specific Puppet class</small>
         </h2>
     </div>
 
@@ -88,8 +90,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/smart_variables
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/smart_variables
 200
 {
   &quot;total&quot;: 2,
@@ -114,8 +117,8 @@
       &quot;override_values_count&quot;: 0,
       &quot;puppetclass_id&quot;: 298486374,
       &quot;puppetclass_name&quot;: &quot;apache&quot;,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
     },
     {
       &quot;variable&quot;: &quot;ssl_port&quot;,
@@ -129,22 +132,22 @@
       &quot;override_values_count&quot;: 0,
       &quot;puppetclass_id&quot;: 980190962,
       &quot;puppetclass_name&quot;: &quot;base&quot;,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
     }
   ]
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>host_id </strong><br>
       <small>
@@ -156,7 +159,10 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
@@ -172,7 +178,10 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
@@ -188,7 +197,10 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
@@ -201,10 +213,15 @@
       </small>
     </td>
     <td>
-      <p>Filter results</p>
+      
+<p>filter results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -217,10 +234,15 @@
       </small>
     </td>
     <td>
-      <p>sort results</p>
+      
+<p>sort results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -233,10 +255,15 @@
       </small>
     </td>
     <td>
-      <p>paginate results</p>
+      
+<p>paginate results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -249,16 +276,22 @@
       </small>
     </td>
     <td>
-      <p>number of entries per request</p>
+      
+<p>number of entries per request</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -272,7 +305,7 @@
            data-parent='#accordion'>
             GET /api/smart_variables/:id
           </a><br>
-          <small>Show a smart variable.</small>
+          <small>Show a smart variable</small>
         </h2>
     </div>
 
@@ -282,8 +315,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/puppetclasses/980190962/smart_variables/298486374-ssl_port
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/puppetclasses/980190962/smart_variables/298486374-ssl_port
 200
 {
   &quot;variable&quot;: &quot;ssl_port&quot;,
@@ -297,8 +331,8 @@
   &quot;override_values_count&quot;: 0,
   &quot;puppetclass_id&quot;: 980190962,
   &quot;puppetclass_name&quot;: &quot;base&quot;,
-  &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
   &quot;override_values&quot;: [
     {
       &quot;id&quot;: 281110143,
@@ -308,16 +342,16 @@
   ]
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -329,13 +363,17 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -349,7 +387,7 @@
            data-parent='#accordion'>
             POST /api/smart_variables
           </a><br>
-          <small>Create a smart variable.</small>
+          <small>Create a smart variable</small>
         </h2>
     </div>
 
@@ -359,8 +397,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">POST /api/smart_variables
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/smart_variables
 {
   &quot;smart_variable&quot;: {
     &quot;variable&quot;: &quot;test_smart_variable&quot;,
@@ -370,7 +409,7 @@
 200
 {
   &quot;variable&quot;: &quot;test_smart_variable&quot;,
-  &quot;id&quot;: 1018350825,
+  &quot;id&quot;: 1018350816,
   &quot;description&quot;: null,
   &quot;parameter_type&quot;: null,
   &quot;default_value&quot;: null,
@@ -380,21 +419,21 @@
   &quot;override_values_count&quot;: 0,
   &quot;puppetclass_id&quot;: 980190962,
   &quot;puppetclass_name&quot;: &quot;base&quot;,
-  &quot;created_at&quot;: &quot;2014-01-30T07:25:29Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-01-30T07:25:29Z&quot;,
+  &quot;created_at&quot;: &quot;2014-08-07T20:41:52Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-08-07T20:41:52Z&quot;,
   &quot;override_values&quot;: []
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>smart_variable </strong><br>
       <small>
@@ -406,7 +445,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -421,7 +463,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -437,7 +482,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -453,7 +501,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -469,7 +520,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -485,7 +539,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -501,7 +558,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -517,7 +577,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -533,14 +596,18 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -554,7 +621,7 @@
            data-parent='#accordion'>
             PUT /api/smart_variables/:id
           </a><br>
-          <small>Update a smart variable.</small>
+          <small>Update a smart variable</small>
         </h2>
     </div>
 
@@ -564,8 +631,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/smart_variables/281110143-special_info
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/smart_variables/281110143-special_info
 {
   &quot;smart_variable&quot;: {
     &quot;default_value&quot;: &quot;newstring&quot;
@@ -584,8 +652,8 @@
   &quot;override_values_count&quot;: 0,
   &quot;puppetclass_id&quot;: 298486374,
   &quot;puppetclass_name&quot;: &quot;apache&quot;,
-  &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-01-30T07:25:29Z&quot;,
+  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-08-07T20:41:53Z&quot;,
   &quot;override_values&quot;: [
     {
       &quot;id&quot;: 1018350795,
@@ -600,16 +668,16 @@
   ]
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -621,7 +689,10 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
@@ -637,7 +708,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -652,7 +726,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -668,7 +745,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -684,7 +764,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -700,7 +783,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -716,7 +802,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -732,7 +821,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -748,7 +840,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -764,14 +859,18 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -785,7 +884,7 @@
            data-parent='#accordion'>
             DELETE /api/smart_variables/:id
           </a><br>
-          <small>Delete a smart variable.</small>
+          <small>Delete a smart variable</small>
         </h2>
     </div>
 
@@ -795,8 +894,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/smart_variables/281110143-special_info
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/smart_variables/281110143-special_info
 200
 {
   &quot;variable&quot;: &quot;special_info&quot;,
@@ -810,21 +910,21 @@
   &quot;override_values_count&quot;: 0,
   &quot;puppetclass_id&quot;: 298486374,
   &quot;puppetclass_name&quot;: &quot;apache&quot;,
-  &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
   &quot;override_values&quot;: []
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -836,13 +936,17 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
 </div>
 
@@ -851,8 +955,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

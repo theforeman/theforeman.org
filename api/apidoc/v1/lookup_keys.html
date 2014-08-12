@@ -25,6 +25,7 @@
     Lookup keys
     
   </li>
+  
 </ul>
 
 <div class='page-header'>
@@ -34,6 +35,7 @@
     <small></small>
   </h1>
 </div>
+
 
 
 
@@ -61,10 +63,22 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/lookup_keys
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/lookup_keys
 200
 [
+  {
+    &quot;lookup_key&quot;: {
+      &quot;key&quot;: &quot;array_test&quot;,
+      &quot;is_param&quot;: true,
+      &quot;required&quot;: false,
+      &quot;override&quot;: true,
+      &quot;description&quot;: null,
+      &quot;default_value&quot;: &quot;[{&#x27;hostname&#x27;: &#x27;test.example.com&#x27;}]&quot;,
+      &quot;id&quot;: 374648174
+    }
+  },
   {
     &quot;lookup_key&quot;: {
       &quot;key&quot;: &quot;cluster&quot;,
@@ -141,19 +155,32 @@
       &quot;default_value&quot;: &quot;443&quot;,
       &quot;id&quot;: 298486374
     }
+  },
+  {
+    &quot;lookup_key&quot;: {
+      &quot;key&quot;: &quot;yaml_test&quot;,
+      &quot;is_param&quot;: true,
+      &quot;required&quot;: false,
+      &quot;override&quot;: true,
+      &quot;description&quot;: null,
+      &quot;default_value&quot;: {
+        &quot;foo&quot;: &quot;bar&quot;
+      },
+      &quot;id&quot;: 51848956
+    }
   }
 ]</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>search </strong><br>
       <small>
@@ -162,10 +189,15 @@
       </small>
     </td>
     <td>
-      <p>filter results</p>
+      
+<p>filter results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -178,10 +210,15 @@
       </small>
     </td>
     <td>
-      <p>sort results</p>
+      
+<p>sort results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -194,10 +231,15 @@
       </small>
     </td>
     <td>
-      <p>paginate results</p>
+      
+<p>paginate results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -210,16 +252,22 @@
       </small>
     </td>
     <td>
-      <p>number of entries per request</p>
+      
+<p>number of entries per request</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -243,8 +291,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/lookup_keys/980190962-port
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/lookup_keys/980190962-port
 200
 {
   &quot;lookup_key&quot;: {
@@ -258,16 +307,16 @@
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -279,13 +328,17 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -309,8 +362,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">POST /api/lookup_keys
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/lookup_keys
 {
   &quot;lookup_key&quot;: {
     &quot;key&quot;: &quot;testkey&quot;,
@@ -320,7 +374,7 @@
 201
 {
   &quot;lookup_key&quot;: {
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:29Z&quot;,
+    &quot;created_at&quot;: &quot;2014-08-07T20:40:28Z&quot;,
     &quot;default_value&quot;: null,
     &quot;description&quot;: null,
     &quot;id&quot;: 1018350796,
@@ -332,22 +386,22 @@
     &quot;path&quot;: &quot;fqdn\nhostgroup\nos\ndomain&quot;,
     &quot;puppetclass_id&quot;: null,
     &quot;required&quot;: false,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:29Z&quot;,
+    &quot;updated_at&quot;: &quot;2014-08-07T20:40:28Z&quot;,
     &quot;validator_rule&quot;: null,
     &quot;validator_type&quot;: null
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>lookup_key </strong><br>
       <small>
@@ -359,7 +413,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -374,7 +431,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -390,7 +450,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -406,7 +469,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -422,7 +488,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -438,7 +507,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -454,14 +526,18 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -485,8 +561,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/lookup_keys/980190962-port
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/lookup_keys/980190962-port
 {
   &quot;lookup_key&quot;: {
     &quot;default_value&quot;: &quot;8080&quot;
@@ -495,7 +572,7 @@
 200
 {
   &quot;lookup_key&quot;: {
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
     &quot;default_value&quot;: 8080,
     &quot;description&quot;: null,
     &quot;id&quot;: 980190962,
@@ -507,22 +584,22 @@
     &quot;path&quot;: &quot;fqdn\nhostgroup\nos\ndomain&quot;,
     &quot;puppetclass_id&quot;: null,
     &quot;required&quot;: false,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:29Z&quot;,
+    &quot;updated_at&quot;: &quot;2014-08-07T20:40:28Z&quot;,
     &quot;validator_rule&quot;: null,
     &quot;validator_type&quot;: null
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -534,7 +611,10 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
@@ -550,7 +630,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -565,7 +648,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -581,7 +667,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -597,7 +686,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -613,7 +705,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -629,7 +724,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -645,14 +743,18 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -676,12 +778,13 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/lookup_keys/980190962-port
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/lookup_keys/980190962-port
 200
 {
   &quot;lookup_key&quot;: {
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
     &quot;default_value&quot;: &quot;80&quot;,
     &quot;description&quot;: null,
     &quot;id&quot;: 980190962,
@@ -693,22 +796,22 @@
     &quot;path&quot;: &quot;fqdn\nhostgroup\nos\ndomain&quot;,
     &quot;puppetclass_id&quot;: null,
     &quot;required&quot;: false,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
     &quot;validator_rule&quot;: null,
     &quot;validator_type&quot;: null
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -720,13 +823,17 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
 </div>
 
@@ -735,8 +842,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

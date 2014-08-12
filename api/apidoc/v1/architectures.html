@@ -25,6 +25,7 @@
     Architectures
     
   </li>
+  
 </ul>
 
 <div class='page-header'>
@@ -34,6 +35,7 @@
     <small></small>
   </h1>
 </div>
+
 
 
 
@@ -61,55 +63,56 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/architectures
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/architectures
 200
 [
   {
     &quot;architecture&quot;: {
       &quot;name&quot;: &quot;x86_64&quot;,
       &quot;id&quot;: 501905019,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
       &quot;operatingsystem_ids&quot;: [
         309172073,
         1073012828,
         331303656
       ],
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
     }
   },
   {
     &quot;architecture&quot;: {
       &quot;name&quot;: &quot;sparc&quot;,
       &quot;id&quot;: 331892513,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
       &quot;operatingsystem_ids&quot;: [
         442321401
       ],
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
     }
   },
   {
     &quot;architecture&quot;: {
       &quot;name&quot;: &quot;s390&quot;,
       &quot;id&quot;: 381564594,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
       &quot;operatingsystem_ids&quot;: [],
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
     }
   }
 ]</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>search </strong><br>
       <small>
@@ -118,10 +121,15 @@
       </small>
     </td>
     <td>
-      <p>filter results</p>
+      
+<p>filter results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -134,10 +142,15 @@
       </small>
     </td>
     <td>
-      <p>sort results</p>
+      
+<p>sort results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -150,10 +163,15 @@
       </small>
     </td>
     <td>
-      <p>paginate results</p>
+      
+<p>paginate results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -166,16 +184,22 @@
       </small>
     </td>
     <td>
-      <p>number of entries per request</p>
+      
+<p>number of entries per request</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -199,33 +223,34 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/architectures/501905019-x86_64
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/architectures/501905019-x86_64
 200
 {
   &quot;architecture&quot;: {
     &quot;name&quot;: &quot;x86_64&quot;,
     &quot;id&quot;: 501905019,
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
     &quot;operatingsystem_ids&quot;: [
       309172073,
       1073012828,
       331303656
     ],
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+    &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -237,13 +262,17 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -267,8 +296,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">POST /api/architectures
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/architectures
 {
   &quot;architecture&quot;: {
     &quot;name&quot;: &quot;i386&quot;
@@ -279,22 +309,22 @@
   &quot;architecture&quot;: {
     &quot;name&quot;: &quot;i386&quot;,
     &quot;id&quot;: 501905020,
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:15Z&quot;,
+    &quot;created_at&quot;: &quot;2014-08-07T20:40:13Z&quot;,
     &quot;operatingsystem_ids&quot;: [],
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:15Z&quot;
+    &quot;updated_at&quot;: &quot;2014-08-07T20:40:13Z&quot;
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>architecture </strong><br>
       <small>
@@ -306,7 +336,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -321,7 +354,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -334,17 +370,23 @@
       </small>
     </td>
     <td>
-      <p>Operatingsystem ID&#8217;s</p>
+      
+<p>Operatingsystem ID’s</p>
+
         <br>
         Value: Must be Array
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -368,31 +410,34 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/architectures/501905019-x86_64
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/architectures/501905019-x86_64
 {
   &quot;architecture&quot;: {}
 }
 200
 {
   &quot;architecture&quot;: {
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+    &quot;hostgroups_count&quot;: 0,
+    &quot;hosts_count&quot;: 0,
     &quot;id&quot;: 501905019,
     &quot;name&quot;: &quot;x86_64&quot;,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+    &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -404,7 +449,10 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
@@ -420,7 +468,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -435,7 +486,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -448,17 +502,23 @@
       </small>
     </td>
     <td>
-      <p>Operatingsystem ID&#8217;s</p>
+      
+<p>Operatingsystem ID’s</p>
+
         <br>
         Value: Must be Array
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -482,28 +542,31 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/architectures/381564594-s390
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/architectures/381564594-s390
 200
 {
   &quot;architecture&quot;: {
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+    &quot;hostgroups_count&quot;: 0,
+    &quot;hosts_count&quot;: 0,
     &quot;id&quot;: 381564594,
     &quot;name&quot;: &quot;s390&quot;,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+    &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -515,13 +578,17 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
 </div>
 
@@ -530,8 +597,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

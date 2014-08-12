@@ -25,6 +25,7 @@
     Hosts
     
   </li>
+  
 </ul>
 
 <div class='page-header'>
@@ -34,6 +35,7 @@
     <small></small>
   </h1>
 </div>
+
 
 
 
@@ -61,14 +63,23 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/hosts
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/hosts
 200
 [
   {
     &quot;host&quot;: {
       &quot;name&quot;: &quot;anotherfullhost&quot;,
       &quot;id&quot;: 55602819,
+      &quot;hostgroup_id&quot;: null,
+      &quot;operatingsystem_id&quot;: 1073012828
+    }
+  },
+  {
+    &quot;host&quot;: {
+      &quot;name&quot;: &quot;bare-metal.mydomain.net&quot;,
+      &quot;id&quot;: 836986247,
       &quot;hostgroup_id&quot;: null,
       &quot;operatingsystem_id&quot;: 1073012828
     }
@@ -107,6 +118,14 @@
   },
   {
     &quot;host&quot;: {
+      &quot;name&quot;: &quot;noip.yourdomain.net&quot;,
+      &quot;id&quot;: 487355108,
+      &quot;hostgroup_id&quot;: null,
+      &quot;operatingsystem_id&quot;: 331303656
+    }
+  },
+  {
+    &quot;host&quot;: {
       &quot;name&quot;: &quot;otherfullhost&quot;,
       &quot;id&quot;: 661942085,
       &quot;hostgroup_id&quot;: null,
@@ -125,7 +144,7 @@
     &quot;host&quot;: {
       &quot;name&quot;: &quot;sdhcp.mydomain.net&quot;,
       &quot;id&quot;: 500757383,
-      &quot;hostgroup_id&quot;: null,
+      &quot;hostgroup_id&quot;: 636252244,
       &quot;operatingsystem_id&quot;: 1073012828
     }
   },
@@ -187,16 +206,16 @@
   }
 ]</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>search </strong><br>
       <small>
@@ -205,10 +224,15 @@
       </small>
     </td>
     <td>
-      <p>Filter results</p>
+      
+<p>Filter results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -221,10 +245,15 @@
       </small>
     </td>
     <td>
-      <p>Sort results</p>
+      
+<p>Sort results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -237,10 +266,15 @@
       </small>
     </td>
     <td>
-      <p>paginate results</p>
+      
+<p>paginate results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -253,16 +287,22 @@
       </small>
     </td>
     <td>
-      <p>number of entries per request</p>
+      
+<p>number of entries per request</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -286,8 +326,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/hosts/my5name.mydomain.net
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/hosts/my5name.mydomain.net
 200
 {
   &quot;host&quot;: {
@@ -296,19 +337,19 @@
     &quot;ip&quot;: &quot;2.3.4.1&quot;,
     &quot;environment_id&quot;: 334344675,
     &quot;last_report&quot;: null,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+    &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
     &quot;mac&quot;: &quot;aabbCCddeeee&quot;,
     &quot;sp_mac&quot;: &quot;AA:AA:AA:AA:AA:AA&quot;,
     &quot;sp_ip&quot;: &quot;10.0.0.1&quot;,
-    &quot;sp_name&quot;: &quot;host-bmc.domain.com&quot;,
+    &quot;sp_name&quot;: &quot;host-bmc&quot;,
     &quot;domain_id&quot;: 22495316,
     &quot;architecture_id&quot;: 501905019,
     &quot;operatingsystem_id&quot;: 1073012828,
     &quot;subnet_id&quot;: 980190962,
     &quot;sp_subnet_id&quot;: null,
     &quot;ptable_id&quot;: 980190962,
-    &quot;medium_id&quot;: null,
+    &quot;medium_id&quot;: 980190962,
     &quot;build&quot;: false,
     &quot;comment&quot;: null,
     &quot;disk&quot;: null,
@@ -351,44 +392,44 @@
           &quot;password&quot;: &quot;bar&quot;,
           &quot;provider&quot;: &quot;IPMI&quot;
         },
-        &quot;name&quot;: &quot;host-bmc.domain.com&quot;,
+        &quot;name&quot;: &quot;host-bmc&quot;,
         &quot;type&quot;: &quot;Nic::BMC&quot;,
         &quot;username&quot;: &quot;foo&quot;,
         &quot;password&quot;: &quot;bar&quot;,
         &quot;provider&quot;: &quot;IPMI&quot;,
         &quot;subnet_id&quot;: null,
         &quot;domain_id&quot;: null,
-        &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-        &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+        &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+        &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
       }
     ],
-    &quot;host_parameters&quot;: [
+    &quot;parameters&quot;: [
       {
-        &quot;host_parameter&quot;: {
+        &quot;parameter&quot;: {
           &quot;id&quot;: 254219264,
           &quot;name&quot;: &quot;host1&quot;,
           &quot;value&quot;: &quot;host1&quot;,
           &quot;priority&quot;: 4,
           &quot;is_property&quot;: null,
           &quot;reference_id&quot;: 980190962,
-          &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-          &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+          &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+          &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
         }
       }
     ]
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -400,13 +441,17 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -430,8 +475,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">POST /api/hosts
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/hosts
 {
   &quot;host&quot;: {
     &quot;name&quot;: &quot;testhost11&quot;,
@@ -439,10 +485,15 @@
     &quot;domain_id&quot;: &quot;22495316&quot;,
     &quot;ip&quot;: &quot;10.0.0.20&quot;,
     &quot;mac&quot;: &quot;52:53:00:1e:85:93&quot;,
+    &quot;ptable_id&quot;: &quot;980190962&quot;,
+    &quot;medium_id&quot;: &quot;980190962&quot;,
     &quot;architecture_id&quot;: &quot;501905019&quot;,
     &quot;operatingsystem_id&quot;: &quot;1073012828&quot;,
     &quot;puppet_proxy_id&quot;: &quot;980190962&quot;,
-    &quot;compute_resource_id&quot;: &quot;980190962&quot;
+    &quot;compute_resource_id&quot;: &quot;980190962&quot;,
+    &quot;root_pass&quot;: &quot;xybxa6JUkz63w&quot;,
+    &quot;location_id&quot;: &quot;255093256&quot;,
+    &quot;organization_id&quot;: &quot;447626438&quot;
   }
 }
 200
@@ -453,8 +504,8 @@
     &quot;ip&quot;: &quot;10.0.0.20&quot;,
     &quot;environment_id&quot;: 334344675,
     &quot;last_report&quot;: null,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:26Z&quot;,
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:26Z&quot;,
+    &quot;updated_at&quot;: &quot;2014-08-07T20:40:23Z&quot;,
+    &quot;created_at&quot;: &quot;2014-08-07T20:40:23Z&quot;,
     &quot;mac&quot;: &quot;52:53:00:1e:85:93&quot;,
     &quot;sp_mac&quot;: null,
     &quot;sp_ip&quot;: null,
@@ -464,16 +515,16 @@
     &quot;operatingsystem_id&quot;: 1073012828,
     &quot;subnet_id&quot;: null,
     &quot;sp_subnet_id&quot;: null,
-    &quot;ptable_id&quot;: null,
-    &quot;medium_id&quot;: null,
+    &quot;ptable_id&quot;: 980190962,
+    &quot;medium_id&quot;: 980190962,
     &quot;build&quot;: false,
     &quot;comment&quot;: null,
     &quot;disk&quot;: null,
     &quot;installed_at&quot;: null,
     &quot;model_id&quot;: null,
     &quot;hostgroup_id&quot;: null,
-    &quot;owner_id&quot;: null,
-    &quot;owner_type&quot;: null,
+    &quot;owner_id&quot;: 886836129,
+    &quot;owner_type&quot;: &quot;User&quot;,
     &quot;enabled&quot;: true,
     &quot;puppet_ca_proxy_id&quot;: null,
     &quot;managed&quot;: true,
@@ -489,9 +540,9 @@
     &quot;serial&quot;: null,
     &quot;source_file_id&quot;: null,
     &quot;puppet_status&quot;: 0,
-    &quot;root_pass&quot;: &quot;xybxa6JUkz63w&quot;,
-    &quot;organization_id&quot;: null,
-    &quot;location_id&quot;: null,
+    &quot;root_pass&quot;: &quot;$1$/qfqVaSB$B.1ZqxQLQGhau25Xa.xp21&quot;,
+    &quot;organization_id&quot;: 447626438,
+    &quot;location_id&quot;: 255093256,
     &quot;environment&quot;: {
       &quot;environment&quot;: {
         &quot;id&quot;: 334344675,
@@ -499,20 +550,20 @@
       }
     },
     &quot;interfaces&quot;: [],
-    &quot;host_parameters&quot;: []
+    &quot;parameters&quot;: []
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>host </strong><br>
       <small>
@@ -524,7 +575,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -539,7 +593,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -555,7 +612,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -568,10 +628,15 @@
       </small>
     </td>
     <td>
-      <p>not required if using a subnet with dhcp proxy</p>
+      
+<p>not required if using a subnet with dhcp proxy</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -584,10 +649,15 @@
       </small>
     </td>
     <td>
-      <p>not required if its a virtual machine</p>
+      
+<p>not required if its a virtual machine</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -603,7 +673,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -619,7 +692,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -635,7 +711,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -651,7 +730,10 @@
       
         <br>
         Value: Must be Array
+
+
     </td>
+
   </tr>
 
   
@@ -667,7 +749,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -683,7 +768,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -699,7 +787,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -715,7 +806,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -731,7 +825,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -747,7 +844,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -763,7 +863,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -779,7 +882,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -795,7 +901,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -811,7 +920,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -827,7 +939,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -843,7 +958,10 @@
       
         <br>
         Value: Must be Array
+
+
     </td>
+
   </tr>
 
   
@@ -859,7 +977,10 @@
       
         <br>
         Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+
+
     </td>
+
   </tr>
 
   
@@ -875,7 +996,10 @@
       
         <br>
         Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+
+
     </td>
+
   </tr>
 
   
@@ -891,7 +1015,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -907,7 +1034,10 @@
       
         <br>
         Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+
+
     </td>
+
   </tr>
 
   
@@ -920,10 +1050,15 @@
       </small>
     </td>
     <td>
-      <p>UUID to track orchestration tasks status, GET /api/orchestration/:UUID/tasks</p>
+      
+<p>UUID to track orchestration tasks status, GET /api/orchestration/:UUID/tasks</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -939,7 +1074,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -955,14 +1093,18 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -986,8 +1128,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/hosts/temp.yourdomain.net
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/hosts/temp.yourdomain.net
 {
   &quot;host&quot;: {}
 }
@@ -1000,7 +1143,7 @@
     &quot;comment&quot;: null,
     &quot;compute_profile_id&quot;: null,
     &quot;compute_resource_id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
     &quot;disk&quot;: null,
     &quot;domain_id&quot;: 589326610,
     &quot;enabled&quot;: true,
@@ -1016,38 +1159,41 @@
     &quot;last_report&quot;: null,
     &quot;location_id&quot;: 255093256,
     &quot;mac&quot;: &quot;aa:bb:cc:dd:ee:ff&quot;,
-    &quot;managed&quot;: null,
+    &quot;managed&quot;: false,
     &quot;medium_id&quot;: 980190962,
     &quot;model_id&quot;: null,
     &quot;name&quot;: &quot;temp.yourdomain.net&quot;,
     &quot;operatingsystem_id&quot;: 309172073,
     &quot;organization_id&quot;: null,
-    &quot;owner_id&quot;: null,
-    &quot;owner_type&quot;: null,
+    &quot;otp&quot;: null,
+    &quot;owner_id&quot;: 886836129,
+    &quot;owner_type&quot;: &quot;User&quot;,
+    &quot;provision_method&quot;: &quot;build&quot;,
     &quot;ptable_id&quot;: 980190962,
-    &quot;puppet_ca_proxy_id&quot;: null,
+    &quot;puppet_ca_proxy_id&quot;: 182953976,
     &quot;puppet_proxy_id&quot;: 182953976,
     &quot;puppet_status&quot;: 0,
-    &quot;root_pass&quot;: &quot;xybxa6JUkz63w&quot;,
+    &quot;realm_id&quot;: null,
+    &quot;root_pass&quot;: &quot;$1$v/KjFh1y$Gq/qdZtcUQkvNb/lImL1H.&quot;,
     &quot;serial&quot;: null,
     &quot;source_file_id&quot;: null,
     &quot;subnet_id&quot;: 980190962,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;updated_at&quot;: &quot;2014-08-07T20:40:24Z&quot;,
     &quot;use_image&quot;: null,
     &quot;uuid&quot;: null
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -1059,7 +1205,10 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
@@ -1075,7 +1224,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -1090,7 +1242,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1106,7 +1261,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1119,10 +1277,15 @@
       </small>
     </td>
     <td>
-      <p>not required if using a subnet with dhcp proxy</p>
+      
+<p>not required if using a subnet with dhcp proxy</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1135,10 +1298,15 @@
       </small>
     </td>
     <td>
-      <p>not required if its a virtual machine</p>
+      
+<p>not required if its a virtual machine</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1154,7 +1322,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -1170,7 +1341,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -1186,7 +1360,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -1202,7 +1379,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1218,7 +1398,10 @@
       
         <br>
         Value: Must be Array
+
+
     </td>
+
   </tr>
 
   
@@ -1234,7 +1417,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -1250,7 +1436,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -1266,7 +1455,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -1282,7 +1474,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -1298,7 +1493,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -1314,7 +1512,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -1330,7 +1531,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -1346,7 +1550,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -1362,7 +1569,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -1378,7 +1588,10 @@
       
         <br>
         Value: Must be a number.
+
+
     </td>
+
   </tr>
 
   
@@ -1394,7 +1607,10 @@
       
         <br>
         Value: Must be Array
+
+
     </td>
+
   </tr>
 
   
@@ -1410,7 +1626,10 @@
       
         <br>
         Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+
+
     </td>
+
   </tr>
 
   
@@ -1426,7 +1645,10 @@
       
         <br>
         Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+
+
     </td>
+
   </tr>
 
   
@@ -1442,7 +1664,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1458,7 +1683,10 @@
       
         <br>
         Value: Must be &#x27;true&#x27; or &#x27;false&#x27;
+
+
     </td>
+
   </tr>
 
   
@@ -1471,10 +1699,15 @@
       </small>
     </td>
     <td>
-      <p>UUID to track orchestration tasks status, GET /api/orchestration/:UUID/tasks</p>
+      
+<p>UUID to track orchestration tasks status, GET /api/orchestration/:UUID/tasks</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1490,7 +1723,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -1506,14 +1742,18 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -1537,8 +1777,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/hosts/my5name.mydomain.net
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/hosts/my5name.mydomain.net
 200
 {
   &quot;host&quot;: {
@@ -1548,7 +1789,7 @@
     &quot;comment&quot;: null,
     &quot;compute_profile_id&quot;: null,
     &quot;compute_resource_id&quot;: 980190962,
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
     &quot;disk&quot;: null,
     &quot;domain_id&quot;: 22495316,
     &quot;enabled&quot;: true,
@@ -1565,37 +1806,40 @@
     &quot;location_id&quot;: 255093256,
     &quot;mac&quot;: &quot;aabbCCddeeee&quot;,
     &quot;managed&quot;: true,
-    &quot;medium_id&quot;: null,
+    &quot;medium_id&quot;: 980190962,
     &quot;model_id&quot;: null,
     &quot;name&quot;: &quot;my5name.mydomain.net&quot;,
     &quot;operatingsystem_id&quot;: 1073012828,
     &quot;organization_id&quot;: 447626438,
+    &quot;otp&quot;: null,
     &quot;owner_id&quot;: null,
     &quot;owner_type&quot;: null,
+    &quot;provision_method&quot;: &quot;build&quot;,
     &quot;ptable_id&quot;: 980190962,
     &quot;puppet_ca_proxy_id&quot;: null,
     &quot;puppet_proxy_id&quot;: 182953976,
     &quot;puppet_status&quot;: 0,
+    &quot;realm_id&quot;: 664044182,
     &quot;root_pass&quot;: &quot;xybxa6JUkz63w&quot;,
     &quot;serial&quot;: null,
     &quot;source_file_id&quot;: null,
     &quot;subnet_id&quot;: 980190962,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
+    &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
     &quot;use_image&quot;: null,
     &quot;uuid&quot;: null
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -1607,13 +1851,17 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -1633,7 +1881,8 @@
 
 
     <div id='description-status' class='collapse accordion-body'>
-      <p>Return value may either be one of the following:</p>
+      
+<p>Return value may either be one of the following:</p>
 
 <ul>
 <li>missing</li>
@@ -1651,23 +1900,25 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/hosts/my5name.mydomain.net/status
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/hosts/my5name.mydomain.net/status
 200
 {
   &quot;status&quot;: &quot;No reports&quot;
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -1679,13 +1930,17 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
 </div>
 
@@ -1694,8 +1949,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

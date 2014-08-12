@@ -25,6 +25,7 @@
     Ptables
     
   </li>
+  
 </ul>
 
 <div class='page-header'>
@@ -34,6 +35,7 @@
     <small></small>
   </h1>
 </div>
+
 
 
 
@@ -51,7 +53,7 @@
            data-parent='#accordion'>
             GET /api/ptables
           </a><br>
-          <small>List all ptables.</small>
+          <small>List all partition tables</small>
         </h2>
     </div>
 
@@ -61,8 +63,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/ptables
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/ptables
 200
 {
   &quot;total&quot;: 4,
@@ -79,43 +82,43 @@
       &quot;name&quot;: &quot;default&quot;,
       &quot;id&quot;: 980190962,
       &quot;os_family&quot;: null,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
     },
     {
       &quot;name&quot;: &quot;four&quot;,
       &quot;id&quot;: 281110143,
       &quot;os_family&quot;: null,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
     },
     {
       &quot;name&quot;: &quot;suse default&quot;,
       &quot;id&quot;: 859751735,
       &quot;os_family&quot;: null,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
     },
     {
       &quot;name&quot;: &quot;ubuntu default&quot;,
       &quot;id&quot;: 1011586618,
       &quot;os_family&quot;: null,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
     }
   ]
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>search </strong><br>
       <small>
@@ -124,10 +127,15 @@
       </small>
     </td>
     <td>
-      <p>filter results</p>
+      
+<p>filter results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -140,10 +148,15 @@
       </small>
     </td>
     <td>
-      <p>sort results</p>
+      
+<p>sort results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -156,10 +169,15 @@
       </small>
     </td>
     <td>
-      <p>paginate results</p>
+      
+<p>paginate results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -172,16 +190,22 @@
       </small>
     </td>
     <td>
-      <p>number of entries per request</p>
+      
+<p>number of entries per request</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -195,7 +219,7 @@
            data-parent='#accordion'>
             GET /api/ptables/:id
           </a><br>
-          <small>Show a ptable.</small>
+          <small>Show a partition table</small>
         </h2>
     </div>
 
@@ -205,28 +229,41 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/ptables/980190962
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/ptables/980190962
 200
 {
   &quot;name&quot;: &quot;default&quot;,
   &quot;id&quot;: 980190962,
   &quot;os_family&quot;: null,
-  &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-  &quot;layout&quot;: &quot;zerombr yes\\nclearpart --all    --initlabel\\npart /boot --fstype ext3 --size=100 --asprimary\\npart /     --f   stype ext3 --size=1024 --grow\\npart swap  --recommended&quot;
+  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;layout&quot;: &quot;zerombr yes\\nclearpart --all    --initlabel\\npart /boot --fstype ext3 --size=100 --asprimary\\npart /     --f   stype ext3 --size=1024 --grow\\npart swap  --recommended&quot;,
+  &quot;operatingsystems&quot;: [
+    {
+      &quot;id&quot;: 309172073,
+      &quot;name&quot;: &quot;centos&quot;,
+      &quot;fullname&quot;: &quot;centos 5.3&quot;
+    },
+    {
+      &quot;id&quot;: 1073012828,
+      &quot;name&quot;: &quot;Redhat&quot;,
+      &quot;fullname&quot;: &quot;Redhat 6.1&quot;
+    }
+  ]
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -238,13 +275,17 @@
       
         <br>
         Value: Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, space, underscore(_), hypen(-) with no leading or trailing space.
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -258,7 +299,7 @@
            data-parent='#accordion'>
             POST /api/ptables
           </a><br>
-          <small>Create a ptable.</small>
+          <small>Create a partition table</small>
         </h2>
     </div>
 
@@ -268,8 +309,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">POST /api/ptables
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/ptables
 {
   &quot;ptable&quot;: {
     &quot;name&quot;: &quot;ptable_test&quot;,
@@ -278,26 +320,24 @@
 }
 201
 {
-  &quot;ptable&quot;: {
-    &quot;created_at&quot;: &quot;2014-01-30T07:25:14Z&quot;,
-    &quot;id&quot;: 1011586620,
-    &quot;layout&quot;: &quot;d-i partman-auto/disk&quot;,
-    &quot;name&quot;: &quot;ptable_test&quot;,
-    &quot;os_family&quot;: null,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:25:14Z&quot;
-  }
+  &quot;created_at&quot;: &quot;2014-08-07T20:41:31Z&quot;,
+  &quot;id&quot;: 1011586620,
+  &quot;layout&quot;: &quot;d-i partman-auto/disk&quot;,
+  &quot;name&quot;: &quot;ptable_test&quot;,
+  &quot;os_family&quot;: null,
+  &quot;updated_at&quot;: &quot;2014-08-07T20:41:31Z&quot;
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>ptable </strong><br>
       <small>
@@ -309,7 +349,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -324,7 +367,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -340,7 +386,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -356,14 +405,18 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -377,7 +430,7 @@
            data-parent='#accordion'>
             PUT /api/ptables/:id
           </a><br>
-          <small>Update a ptable.</small>
+          <small>Update a partition table</small>
         </h2>
     </div>
 
@@ -387,33 +440,32 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/ptables/980190962
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">PUT /api/ptables/980190962
 {
   &quot;ptable&quot;: {}
 }
 200
 {
-  &quot;ptable&quot;: {
-    &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;layout&quot;: &quot;zerombr yes\\nclearpart --all    --initlabel\\npart /boot --fstype ext3 --size=100 --asprimary\\npart /     --f   stype ext3 --size=1024 --grow\\npart swap  --recommended&quot;,
-    &quot;name&quot;: &quot;default&quot;,
-    &quot;os_family&quot;: null,
-    &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
-  }
+  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;id&quot;: 980190962,
+  &quot;layout&quot;: &quot;zerombr yes\\nclearpart --all    --initlabel\\npart /boot --fstype ext3 --size=100 --asprimary\\npart /     --f   stype ext3 --size=1024 --grow\\npart swap  --recommended&quot;,
+  &quot;name&quot;: &quot;default&quot;,
+  &quot;os_family&quot;: null,
+  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -425,7 +477,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -441,7 +496,10 @@
       
         <br>
         Value: Must be a Hash
+
+
     </td>
+
   </tr>
 
     <tr style='background-color:rgb(250,250,250);'>
@@ -456,7 +514,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -472,7 +533,10 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -488,14 +552,18 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -509,7 +577,7 @@
            data-parent='#accordion'>
             DELETE /api/ptables/:id
           </a><br>
-          <small>Delete a ptable.</small>
+          <small>Delete a partition table</small>
         </h2>
     </div>
 
@@ -519,8 +587,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/ptables/980190962
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/ptables/980190962
 422
 {
   &quot;error&quot;: {
@@ -534,8 +603,10 @@
         &quot;default is used by sdhcp.mydomain.net&quot;,
         &quot;default is used by db_host.mydomain.net&quot;,
         &quot;default is used by owned-by-restricted.mydomain.net&quot;,
+        &quot;default is used by bare-metal.mydomain.net&quot;,
         &quot;default is used by Common&quot;,
-        &quot;default is used by db&quot;
+        &quot;default is used by db&quot;,
+        &quot;default is used by Parent&quot;
       ]
     },
     &quot;full_messages&quot;: [
@@ -546,22 +617,24 @@
       &quot;default is used by sdhcp.mydomain.net&quot;,
       &quot;default is used by db_host.mydomain.net&quot;,
       &quot;default is used by owned-by-restricted.mydomain.net&quot;,
+      &quot;default is used by bare-metal.mydomain.net&quot;,
       &quot;default is used by Common&quot;,
-      &quot;default is used by db&quot;
+      &quot;default is used by db&quot;,
+      &quot;default is used by Parent&quot;
     ]
   }
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>id </strong><br>
       <small>
@@ -573,13 +646,17 @@
       
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
 </div>
 
@@ -588,8 +665,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

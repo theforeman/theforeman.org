@@ -25,6 +25,7 @@
     Hostgroup classes
     
   </li>
+  
 </ul>
 
 <div class='page-header'>
@@ -34,6 +35,7 @@
     <small></small>
   </h1>
 </div>
+
 
 
 
@@ -51,7 +53,7 @@
            data-parent='#accordion'>
             GET /api/hostgroups/:hostgroup_id/puppetclass_ids
           </a><br>
-          <small>List all puppetclass id's for hostgroup</small>
+          <small>List all Puppet class IDs for host group</small>
         </h2>
     </div>
 
@@ -61,14 +63,16 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/hostgroups/636252244/puppetclass_ids
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/hostgroups/636252244/puppetclass_ids
 200
 {
   &quot;results&quot;: [
     980190962
   ]
 }</pre>
+
 
     </div>
     <hr>
@@ -83,7 +87,7 @@
            data-parent='#accordion'>
             POST /api/hostgroups/:hostgroup_id/puppetclass_ids
           </a><br>
-          <small>Add a puppetclass to hostgroup</small>
+          <small>Add a Puppet class to host group</small>
         </h2>
     </div>
 
@@ -93,10 +97,14 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">POST /api/hostgroups/636252244/puppetclass_ids
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">POST /api/hostgroups/636252244/puppetclass_ids
 {
-  &quot;puppetclass_id&quot;: &quot;281110143&quot;
+  &quot;puppetclass_id&quot;: &quot;281110143&quot;,
+  &quot;hostgroup_class&quot;: {
+    &quot;puppetclass_id&quot;: &quot;281110143&quot;
+  }
 }
 200
 {
@@ -104,16 +112,16 @@
   &quot;puppetclass_id&quot;: 281110143
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>hostgroup_id </strong><br>
       <small>
@@ -122,10 +130,15 @@
       </small>
     </td>
     <td>
-      <p>id of hostgroup</p>
+      
+<p>ID of host group</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -138,16 +151,22 @@
       </small>
     </td>
     <td>
-      <p>id of puppetclass</p>
+      
+<p>ID of Puppet class</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
     <hr>
     <div class='pull-right small'>
@@ -161,7 +180,7 @@
            data-parent='#accordion'>
             DELETE /api/hostgroups/:hostgroup_id/puppetclass_ids/:id
           </a><br>
-          <small>Remove a puppetclass from hostgroup</small>
+          <small>Remove a Puppet class from host group</small>
         </h2>
     </div>
 
@@ -171,23 +190,24 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/hostgroups/636252244/puppetclass_ids/980190962
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">DELETE /api/hostgroups/636252244/puppetclass_ids/980190962
 200
 [
 
 ]</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>hostgroup_id </strong><br>
       <small>
@@ -196,10 +216,15 @@
       </small>
     </td>
     <td>
-      <p>id of hostgroup</p>
+      
+<p>ID of host group</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -212,16 +237,22 @@
       </small>
     </td>
     <td>
-      <p>id of puppetclass</p>
+      
+<p>ID of Puppet class</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
 </div>
 
@@ -230,8 +261,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
