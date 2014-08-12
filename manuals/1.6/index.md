@@ -91,24 +91,39 @@ version: 1.6
 {%include manuals/1.6/4.3.1_smartproxy_installation.md %}
 ### 4.3.2 Smart Proxy Settings
 {%include manuals/1.6/4.3.2_smartproxy_settings.md %}
-### 4.3.3 ISC DHCP
-{%include manuals/1.6/4.3.3_isc_dhcp.md %}
-### 4.3.4 MS DHCP
-{%include manuals/1.6/4.3.4_ms_dhcp.md %}
-### 4.3.5 BIND
-{%include manuals/1.6/4.3.5_bind.md %}
-### 4.3.6 GSS-TSIG DNS
-{%include manuals/1.6/4.3.6_gsstsig.md %}
-### 4.3.7 SSL
-{%include manuals/1.6/4.3.7_smartproxy_ssl.md %}
-### 4.3.8 TFTP
-{%include manuals/1.6/4.3.8_smartproxy_tftp.md %}
-### 4.3.9 Libvirt
-{%include manuals/1.6/4.3.9_smartproxy_libvirt.md %}
-### 4.3.10 Chef Proxy
-{%include manuals/1.6/4.3.10_chef_proxy.md %}
-### 4.3.11 FreeIPA Realm
-{%include manuals/1.6/4.3.11_freeipa_realm.md %}
+### 4.3.3 BMC
+{%include manuals/1.6/4.3.3_smartproxy_bmc.md %}
+### 4.3.4 Chef
+{%include manuals/1.6/4.3.4_chef_proxy.md %}
+### 4.3.5 DHCP
+#### 4.3.5.1 dhcp.yml
+{%include manuals/1.6/4.3.5_smartproxy_dhcp.md %}
+#### 4.3.5.2 ISC DHCP
+{%include manuals/1.6/4.3.5.2_isc_dhcp.md %}
+#### 4.3.5.3 MS DHCP
+{%include manuals/1.6/4.3.5.3_ms_dhcp.md %}
+### 4.3.6 DNS
+#### 4.3.6.1 dns.yml
+{%include manuals/1.6/4.3.6_smartproxy_dns.md %}
+#### 4.3.6.2 BIND
+{%include manuals/1.6/4.3.6.2_bind.md %}
+#### 4.3.6.3 GSS-TSIG DNS
+{%include manuals/1.6/4.3.6.3_gsstsig.md %}
+### 4.3.7 Puppet
+{%include manuals/1.6/4.3.7_smartproxy_puppet.md %}
+### 4.3.8 Puppet CA
+{%include manuals/1.6/4.3.8_smartproxy_puppetca.md %}
+### 4.3.9 Realm
+#### 4.3.9.1 realm.yml
+{%include manuals/1.6/4.3.9_smartproxy_realm.md %}
+#### 4.3.9.2 FreeIPA Realm
+{%include manuals/1.6/4.3.9.2_freeipa_realm.md %}
+### 4.3.10 TFTP
+{%include manuals/1.6/4.3.10_smartproxy_tftp.md %}
+### 4.3.11 SSL
+{%include manuals/1.6/4.3.11_smartproxy_ssl.md %}
+### 4.3.12 Libvirt
+{%include manuals/1.6/4.3.12_smartproxy_libvirt.md %}
 
 ## 4.4 Provisioning
 {%include manuals/1.6/4.4_provisioning.md %}
