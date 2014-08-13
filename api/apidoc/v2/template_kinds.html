@@ -25,6 +25,7 @@
     Template kinds
     
   </li>
+  
 </ul>
 
 <div class='page-header'>
@@ -34,6 +35,7 @@
     <small></small>
   </h1>
 </div>
+
 
 
 
@@ -51,7 +53,7 @@
            data-parent='#accordion'>
             GET /api/template_kinds
           </a><br>
-          <small>List all template kinds.</small>
+          <small>List all template kinds</small>
         </h2>
     </div>
 
@@ -61,8 +63,9 @@
 
 
 
-        <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/template_kinds
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">GET /api/template_kinds
 200
 {
   &quot;total&quot;: 6,
@@ -78,52 +81,94 @@
     {
       &quot;name&quot;: &quot;iPXE&quot;,
       &quot;id&quot;: 698706415,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
     },
     {
       &quot;name&quot;: &quot;provision&quot;,
       &quot;id&quot;: 983253650,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
     },
     {
       &quot;name&quot;: &quot;PXELinux&quot;,
       &quot;id&quot;: 452984334,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
     },
     {
       &quot;name&quot;: &quot;script&quot;,
       &quot;id&quot;: 478250810,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
     },
     {
       &quot;name&quot;: &quot;finish&quot;,
       &quot;id&quot;: 550103832,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
     },
     {
       &quot;name&quot;: &quot;PXEGrub&quot;,
       &quot;id&quot;: 131565194,
-      &quot;created_at&quot;: &quot;2014-01-30T07:24:13Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-01-30T07:24:13Z&quot;
+      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
     }
   ]
 }</pre>
 
-        <h3>Params</h3>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th>Param name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr style='background-color:rgb(255,255,255);'>
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>filter results</p>
+
+        <br>
+        Value: Must be String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>sort results</p>
+
+        <br>
+        Value: Must be String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>page </strong><br>
       <small>
@@ -132,10 +177,15 @@
       </small>
     </td>
     <td>
-      <p>paginate results</p>
+      
+<p>paginate results</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -148,16 +198,22 @@
       </small>
     </td>
     <td>
-      <p>number of entries per request</p>
+      
+<p>number of entries per request</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-          </tbody>
-        </table>
+    </tbody>
+  </table>
+
     </div>
 </div>
 
@@ -166,8 +222,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

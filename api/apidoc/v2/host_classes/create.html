@@ -29,12 +29,14 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>create</li>
+  
+
 </ul>
 
   <div class='page-header'>
     <h1>
       POST /api/hosts/:host_id/puppetclass_ids<br>
-      <small>Add a puppetclass to host</small>
+      <small>Add a Puppet class to host</small>
     </h1>
   </div>
 
@@ -42,10 +44,16 @@
 
   
 
-    <h2>Examples</h2>
-      <pre class="prettyprint">POST /api/hosts/my5name.mydomain.net/puppetclass_ids
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">POST /api/hosts/my5name.mydomain.net/puppetclass_ids
 {
-  &quot;puppetclass_id&quot;: &quot;281110143&quot;
+  &quot;puppetclass_id&quot;: &quot;281110143&quot;,
+  &quot;host_class&quot;: {
+    &quot;puppetclass_id&quot;: &quot;281110143&quot;
+  }
 }
 200
 {
@@ -53,18 +61,16 @@
   &quot;puppetclass_id&quot;: 281110143
 }</pre>
 
-
-
-    <h2>Params</h2>
-    <table class='table'>
-      <thead>
-        <tr>
-          <th>Param name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr style='background-color:rgb(255,255,255);'>
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>host_id </strong><br>
       <small>
@@ -73,10 +79,15 @@
       </small>
     </td>
     <td>
-      <p>id of host</p>
+      
+<p>ID of host</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
@@ -89,16 +100,22 @@
       </small>
     </td>
     <td>
-      <p>id of puppetclass</p>
+      
+<p>ID of puppetclass</p>
+
         <br>
         Value: Must be String
+
+
     </td>
+
   </tr>
 
   
 
-      </tbody>
-    </table>
+    </tbody>
+  </table>
+
 </div>
 
 
@@ -106,8 +123,7 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
   <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
 <script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
