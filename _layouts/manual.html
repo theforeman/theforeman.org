@@ -8,10 +8,16 @@ latestversion: 1.5
     <div id="content" class="container">
       <div class="row">
         <div id="toc" class="span3">
-          {% if page.version != page.latestversion %}
+          {% if page.version < page.latestversion %}
           <div class="alert alert-warn">
             <p style="margin-bottom: 3px; font-weight: bold">Newer version available</p>
             <p style="margin-bottom: 0">This manual is for Foreman {{ page.version }}, but the <a href="{{ site.baseurl }}manuals/{{ page.latestversion }}/index.html">latest version is {{ page.latestversion }}</a>.</p>
+          </div>
+          {% endif %}
+          {% if page.version > page.latestversion %}
+          <div class="alert alert-warn">
+            <p style="margin-bottom: 3px; font-weight: bold">Not yet released</p>
+            <p style="margin-bottom: 0">This manual is for Foreman {{ page.version }}, but <a href="{{ site.baseurl }}manuals/{{ page.latestversion }}/index.html">{{ page.latestversion }}</a> is the current stable version.</p>
           </div>
           {% endif %}
         </div>
