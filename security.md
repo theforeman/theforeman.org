@@ -50,7 +50,7 @@ Thanks to Jan Hutař of Red Hat for discovering this issue.
 * Redmine issue [#6580](http://projects.theforeman.org/issues/6580)
 * Red Hat Bugzilla [#1108745](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-3531)
 
-#### <a id="2014-3492"></a>CVE-2014-3491: stored cross site scripting (XSS) in YAML preview
+#### <a id="2014-3492"></a>CVE-2014-3492: stored cross site scripting (XSS) in YAML preview
 
 The host YAML page, used to preview the Foreman response for the Puppet ENC, will evaluate HTML stored in any host data such as parameters or comments, allowing a cross site scripting (XSS) attack against the user.
 
