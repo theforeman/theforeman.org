@@ -71,6 +71,8 @@ version: 1.6
 {%include manuals/1.6/4.1.3_trends.md %}
 ### 4.1.4 Auditing
 {%include manuals/1.6/4.1.4_auditing.md %}
+### 4.1.5 Searching
+{%include manuals/1.6/4.1.5_searching.md %}
 
 ## 4.2 Managing Puppet
 {%include manuals/1.6/4.2_managing_puppet.md %}
