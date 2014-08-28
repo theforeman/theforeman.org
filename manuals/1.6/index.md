@@ -208,16 +208,18 @@ version: 1.6
 <a name="5.7SPNEGOauthentication"></a>
 ## 5.7 External Authentication
 {%include manuals/1.6/5.7_external_authentication.md %}
-### 5.7.1 Preparatory steps
-{%include manuals/1.6/5.7.1_preparation.md %}
-### 5.7.2 Kerberos Single Sign-On
-{%include manuals/1.6/5.7.2_kerberos.md %}
-### 5.7.3 PAM Authentication
-{%include manuals/1.6/5.7.3_pam_authentication.md %}
-### 5.7.4 Populate users and attributes
-{%include manuals/1.6/5.7.4_populate_users_attributes_groups.md %}
-### 5.7.5 Namespace separation
-{%include manuals/1.6/5.7.5_namespace_separation.md %}
+### 5.7.1 Configuration via Foreman installer
+{%include manuals/1.6/5.7.1_quick_configuration.md %}
+### 5.7.2 HBAC configuration
+{%include manuals/1.6/5.7.2_HBAC_rules.md %}
+### 5.7.3 Kerberos Single Sign-On
+{%include manuals/1.6/5.7.3_kerberos.md %}
+### 5.7.4 PAM Authentication
+{%include manuals/1.6/5.7.4_pam_authentication.md %}
+### 5.7.5 Populate users and attributes
+{%include manuals/1.6/5.7.5_populate_users_attributes_groups.md %}
+### 5.7.6 Namespace separation
+{%include manuals/1.6/5.7.6_namespace_separation.md %}
 
 # 6. Plugins
 {%include manuals/1.6/6_plugins.md %}
