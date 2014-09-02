@@ -52,7 +52,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/config_templates
-          </a><br>
+          </a>
+          <br>
           <small>List templates</small>
         </h2>
     </div>
@@ -319,7 +320,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/config_templates/:id
-          </a><br>
+          </a>
+          <br>
           <small>Show template details</small>
         </h2>
     </div>
@@ -392,7 +394,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/config_templates
-          </a><br>
+          </a>
+          <br>
           <small>Create a template</small>
         </h2>
     </div>
@@ -567,7 +570,7 @@
 <p>Array of template combinations (hostgroup_id, environment_id)</p>
 
         <br>
-        Value: Must be Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -588,7 +591,7 @@
 <p>Array of operating systems ID to associate the template with</p>
 
         <br>
-        Value: Must be Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -613,7 +616,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /api/config_templates/:id
-          </a><br>
+          </a>
+          <br>
           <small>Update a template</small>
         </h2>
     </div>
@@ -635,7 +639,7 @@
 200
 {
   &quot;config_template&quot;: {
-    &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+    &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
     &quot;default&quot;: false,
     &quot;id&quot;: 1007981701,
     &quot;locked&quot;: false,
@@ -643,7 +647,7 @@
     &quot;snippet&quot;: null,
     &quot;template&quot;: &quot;blah&quot;,
     &quot;template_kind_id&quot;: 452984334,
-    &quot;updated_at&quot;: &quot;2014-08-07T20:40:19Z&quot;,
+    &quot;updated_at&quot;: &quot;2014-09-02T14:00:21Z&quot;,
     &quot;vendor&quot;: null
   }
 }</pre>
@@ -806,7 +810,7 @@
 <p>Array of template combinations (hostgroup_id, environment_id)</p>
 
         <br>
-        Value: Must be Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -827,7 +831,7 @@
 <p>Array of operating systems ID to associate the template with</p>
 
         <br>
-        Value: Must be Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -852,7 +856,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/config_templates/revision
-          </a><br>
+          </a>
+          <br>
           <small></small>
         </h2>
     </div>
@@ -911,7 +916,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/config_templates/:id
-          </a><br>
+          </a>
+          <br>
           <small>Delete a template</small>
         </h2>
     </div>
@@ -931,13 +937,13 @@
     &quot;id&quot;: 1007981701,
     &quot;errors&quot;: {
       &quot;base&quot;: [
-        &quot;centos5_3_pxelinux is used by #&lt;OsDefaultTemplate:0x0000000e0a2e00&gt;&quot;,
-        &quot;centos5_3_pxelinux is used by #&lt;OsDefaultTemplate:0x0000000f7aa3f0&gt;&quot;
+        &quot;centos5_3_pxelinux is used by #&lt;OsDefaultTemplate:0x000000114aeed8&gt;&quot;,
+        &quot;centos5_3_pxelinux is used by #&lt;OsDefaultTemplate:0x000000114eab68&gt;&quot;
       ]
     },
     &quot;full_messages&quot;: [
-      &quot;centos5_3_pxelinux is used by #&lt;OsDefaultTemplate:0x0000000e0a2e00&gt;&quot;,
-      &quot;centos5_3_pxelinux is used by #&lt;OsDefaultTemplate:0x0000000f7aa3f0&gt;&quot;
+      &quot;centos5_3_pxelinux is used by #&lt;OsDefaultTemplate:0x000000114aeed8&gt;&quot;,
+      &quot;centos5_3_pxelinux is used by #&lt;OsDefaultTemplate:0x000000114eab68&gt;&quot;
     ]
   }
 }</pre>
@@ -986,7 +992,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/config_templates/build_pxe_default
-          </a><br>
+          </a>
+          <br>
           <small>Change the default PXE menu on all configured TFTP servers</small>
         </h2>
     </div>

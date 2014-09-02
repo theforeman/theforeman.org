@@ -52,7 +52,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/ptables
-          </a><br>
+          </a>
+          <br>
           <small>List all ptables.</small>
         </h2>
     </div>
@@ -74,8 +75,8 @@
       &quot;id&quot;: 980190962,
       &quot;layout&quot;: &quot;zerombr yes\\nclearpart --all    --initlabel\\npart /boot --fstype ext3 --size=100 --asprimary\\npart /     --f   stype ext3 --size=1024 --grow\\npart swap  --recommended&quot;,
       &quot;os_family&quot;: null,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;
     }
   },
   {
@@ -84,8 +85,8 @@
       &quot;id&quot;: 281110143,
       &quot;layout&quot;: &quot;&lt;partitioning  config:type=\&quot;list\&quot;&gt;\n  &lt;drive&gt;\n    &lt;device&gt;/dev/hda&lt;/device&gt;\n    &lt;use&gt;all&lt;/use&gt;\n  &lt;/drive&gt;\n&lt;/partitioning&gt;&quot;,
       &quot;os_family&quot;: null,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;
     }
   },
   {
@@ -94,8 +95,8 @@
       &quot;id&quot;: 859751735,
       &quot;layout&quot;: &quot;&lt;partitioning  config:type=\&quot;list\&quot;&gt;\n  &lt;drive&gt;\n    &lt;device&gt;/dev/hda&lt;/device&gt;\n    &lt;use&gt;all&lt;/use&gt;\n  &lt;/drive&gt;\n&lt;/partitioning&gt;&quot;,
       &quot;os_family&quot;: null,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;
     }
   },
   {
@@ -104,8 +105,8 @@
       &quot;id&quot;: 1011586618,
       &quot;layout&quot;: &quot;d-i partman-auto/disk string /dev/sda\\nd-i partman-auto/method string regular...&quot;,
       &quot;os_family&quot;: null,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;
     }
   }
 ]</pre>
@@ -219,7 +220,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/ptables/:id
-          </a><br>
+          </a>
+          <br>
           <small>Show a ptable.</small>
         </h2>
     </div>
@@ -240,8 +242,8 @@
     &quot;id&quot;: 980190962,
     &quot;layout&quot;: &quot;zerombr yes\\nclearpart --all    --initlabel\\npart /boot --fstype ext3 --size=100 --asprimary\\npart /     --f   stype ext3 --size=1024 --grow\\npart swap  --recommended&quot;,
     &quot;os_family&quot;: null,
-    &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-    &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+    &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
+    &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;
   }
 }</pre>
 
@@ -289,7 +291,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/ptables
-          </a><br>
+          </a>
+          <br>
           <small>Create a ptable.</small>
         </h2>
     </div>
@@ -312,12 +315,12 @@
 201
 {
   &quot;ptable&quot;: {
-    &quot;created_at&quot;: &quot;2014-08-07T20:40:31Z&quot;,
+    &quot;created_at&quot;: &quot;2014-09-02T14:00:26Z&quot;,
     &quot;id&quot;: 1011586619,
     &quot;layout&quot;: &quot;d-i partman-auto/disk&quot;,
     &quot;name&quot;: &quot;ptable_test&quot;,
     &quot;os_family&quot;: null,
-    &quot;updated_at&quot;: &quot;2014-08-07T20:40:31Z&quot;
+    &quot;updated_at&quot;: &quot;2014-09-02T14:00:26Z&quot;
   }
 }</pre>
 
@@ -422,7 +425,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /api/ptables/:id
-          </a><br>
+          </a>
+          <br>
           <small>Update a ptable.</small>
         </h2>
     </div>
@@ -442,12 +446,12 @@
 200
 {
   &quot;ptable&quot;: {
-    &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+    &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
     &quot;id&quot;: 980190962,
     &quot;layout&quot;: &quot;zerombr yes\\nclearpart --all    --initlabel\\npart /boot --fstype ext3 --size=100 --asprimary\\npart /     --f   stype ext3 --size=1024 --grow\\npart swap  --recommended&quot;,
     &quot;name&quot;: &quot;default&quot;,
     &quot;os_family&quot;: null,
-    &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+    &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;
   }
 }</pre>
 
@@ -571,7 +575,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/ptables/:id
-          </a><br>
+          </a>
+          <br>
           <small>Delete a ptable.</small>
         </h2>
     </div>

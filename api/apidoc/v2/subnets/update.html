@@ -35,7 +35,8 @@
 
   <div class='page-header'>
     <h1>
-      PUT /api/subnets/:id<br>
+      PUT /api/subnets/:id
+      <br>
       <small>Update a subnet</small>
     </h1>
   </div>
@@ -67,8 +68,8 @@
   &quot;dns_secondary&quot;: null,
   &quot;from&quot;: null,
   &quot;to&quot;: null,
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
   &quot;ipam&quot;: true,
   &quot;dhcp&quot;: {
     &quot;name&quot;: &quot;DHCP Proxy&quot;,
@@ -141,8 +142,8 @@
     <td>
       <strong>subnet </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
@@ -378,7 +379,7 @@
 <p>Domains in which this subnet is part</p>
 
         <br>
-        Value: Must be Array
+        Value: Must be an array of any type
 
 
     </td>

@@ -35,7 +35,8 @@
 
   <div class='page-header'>
     <h1>
-      POST /api/architectures<br>
+      POST /api/architectures
+      <br>
       <small>Create an architecture</small>
     </h1>
   </div>
@@ -58,8 +59,8 @@
 {
   &quot;name&quot;: &quot;i386&quot;,
   &quot;id&quot;: 501905021,
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:46Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:46Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:34Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:34Z&quot;,
   &quot;operatingsystems&quot;: [],
   &quot;images&quot;: []
 }</pre>
@@ -77,8 +78,8 @@
     <td>
       <strong>architecture </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
@@ -123,7 +124,7 @@
 <p>Operatingsystem IDs</p>
 
         <br>
-        Value: Must be Array
+        Value: Must be an array of any type
 
 
     </td>

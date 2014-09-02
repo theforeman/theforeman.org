@@ -52,7 +52,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/common_parameters
-          </a><br>
+          </a>
+          <br>
           <small>List all global parameters.</small>
         </h2>
     </div>
@@ -82,8 +83,8 @@
       &quot;id&quot;: 636252244,
       &quot;name&quot;: &quot;test&quot;,
       &quot;value&quot;: &quot;myvalue&quot;,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;
     }
   ]
 }</pre>
@@ -197,7 +198,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/common_parameters/:id
-          </a><br>
+          </a>
+          <br>
           <small>Show a global parameter</small>
         </h2>
     </div>
@@ -216,8 +218,8 @@
   &quot;id&quot;: 636252244,
   &quot;name&quot;: &quot;test&quot;,
   &quot;value&quot;: &quot;myvalue&quot;,
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;
 }</pre>
 
   <h3>Params</h3>
@@ -264,7 +266,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/common_parameters
-          </a><br>
+          </a>
+          <br>
           <small>Create a global parameter</small>
         </h2>
     </div>
@@ -289,8 +292,8 @@
   &quot;id&quot;: 840284803,
   &quot;name&quot;: &quot;special_key&quot;,
   &quot;value&quot;: &quot;123&quot;,
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:48Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:48Z&quot;
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:35Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:35Z&quot;
 }</pre>
 
   <h3>Params</h3>
@@ -306,8 +309,8 @@
     <td>
       <strong>common_parameter </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
@@ -375,7 +378,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /api/common_parameters/:id
-          </a><br>
+          </a>
+          <br>
           <small>Update a global parameter</small>
         </h2>
     </div>
@@ -394,13 +398,12 @@
 }
 200
 {
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
   &quot;id&quot;: 636252244,
-  &quot;is_property&quot;: null,
   &quot;name&quot;: &quot;test&quot;,
   &quot;priority&quot;: 0,
   &quot;reference_id&quot;: null,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:48Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:35Z&quot;,
   &quot;value&quot;: &quot;myvalue&quot;
 }</pre>
 
@@ -436,8 +439,8 @@
     <td>
       <strong>common_parameter </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
@@ -505,7 +508,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/common_parameters/:id
-          </a><br>
+          </a>
+          <br>
           <small>Delete a global parameter</small>
         </h2>
     </div>
@@ -521,13 +525,12 @@
     <pre class="prettyprint">DELETE /api/common_parameters/636252244
 200
 {
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
   &quot;id&quot;: 636252244,
-  &quot;is_property&quot;: null,
   &quot;name&quot;: &quot;test&quot;,
   &quot;priority&quot;: 0,
   &quot;reference_id&quot;: null,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
   &quot;value&quot;: &quot;myvalue&quot;
 }</pre>
 

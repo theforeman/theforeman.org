@@ -35,7 +35,8 @@
 
   <div class='page-header'>
     <h1>
-      PUT /api/domains/:id<br>
+      PUT /api/domains/:id
+      <br>
       <small>Update a domain</small>
     </h1>
   </div>
@@ -56,14 +57,14 @@
 }
 200
 {
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
   &quot;dns_id&quot;: 113629430,
   &quot;fullname&quot;: null,
   &quot;hostgroups_count&quot;: 0,
   &quot;hosts_count&quot;: 0,
   &quot;id&quot;: 22495316,
   &quot;name&quot;: &quot;domain.new&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:55Z&quot;
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:38Z&quot;
 }</pre>
 
   <h2>Params</h2>
@@ -98,8 +99,8 @@
     <td>
       <strong>domain </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
@@ -188,7 +189,7 @@
 <p>Array of parameters (name, value)</p>
 
         <br>
-        Value: Must be Array
+        Value: Must be an array of any type
 
 
     </td>

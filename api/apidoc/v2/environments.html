@@ -52,7 +52,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/smart_proxies/:id/import_puppetclasses
-          </a><br>
+          </a>
+          <br>
           <small>Import puppet classes from puppet proxy.</small>
         </h2>
         <h2>
@@ -61,7 +62,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/smart_proxies/:smart_proxy_id/environments/:id/import_puppetclasses
-          </a><br>
+          </a>
+          <br>
           <small>Import puppet classes from puppet proxy for an environment</small>
         </h2>
         <h2>
@@ -70,7 +72,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/environments/:environment_id/smart_proxies/:id/import_puppetclasses
-          </a><br>
+          </a>
+          <br>
           <small>Import puppet classes from puppet proxy for an environment</small>
         </h2>
     </div>
@@ -178,7 +181,7 @@
     </td>
     <td>
       
-<p>Optional comma-deliminated string containing either ‘new,updated,obsolete’ used to limit the import_puppetclasses actions</p>
+<p>Optional comma-delimited string containing either ‘new’, ‘updated’, or ‘obsolete’ that is used to limit the imported Puppet classes</p>
 
         <br>
         Value: Must be String
@@ -205,7 +208,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/environments
-          </a><br>
+          </a>
+          <br>
           <small>List all environments</small>
         </h2>
     </div>
@@ -234,20 +238,20 @@
     {
       &quot;name&quot;: &quot;global_puppetmaster&quot;,
       &quot;id&quot;: 153855663,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;
     },
     {
       &quot;name&quot;: &quot;production&quot;,
       &quot;id&quot;: 334344675,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;
     },
     {
       &quot;name&quot;: &quot;testing&quot;,
       &quot;id&quot;: 687036937,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;
     }
   ]
 }</pre>
@@ -361,7 +365,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/environments/:id
-          </a><br>
+          </a>
+          <br>
           <small>Show an environment</small>
         </h2>
     </div>
@@ -379,8 +384,8 @@
 {
   &quot;name&quot;: &quot;production&quot;,
   &quot;id&quot;: 334344675,
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
   &quot;locations&quot;: [
     {
       &quot;id&quot;: 255093256,
@@ -507,7 +512,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/environments
-          </a><br>
+          </a>
+          <br>
           <small>Create an environment</small>
         </h2>
     </div>
@@ -530,8 +536,8 @@
 {
   &quot;name&quot;: &quot;Development&quot;,
   &quot;id&quot;: 687036971,
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:56Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:56Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:39Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:39Z&quot;,
   &quot;locations&quot;: [],
   &quot;organizations&quot;: [],
   &quot;template_combinations&quot;: [],
@@ -551,8 +557,8 @@
     <td>
       <strong>environment </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
@@ -601,7 +607,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /api/environments/:id
-          </a><br>
+          </a>
+          <br>
           <small>Update an environment</small>
         </h2>
     </div>
@@ -620,13 +627,12 @@
 }
 200
 {
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
   &quot;hostgroups_count&quot;: 0,
   &quot;hosts_count&quot;: 0,
   &quot;id&quot;: 334344675,
-  &quot;katello_id&quot;: null,
   &quot;name&quot;: &quot;production&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;
 }</pre>
 
   <h3>Params</h3>
@@ -661,8 +667,8 @@
     <td>
       <strong>environment </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
@@ -711,7 +717,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/environments/:id
-          </a><br>
+          </a>
+          <br>
           <small>Delete an environment</small>
         </h2>
     </div>
@@ -727,13 +734,12 @@
     <pre class="prettyprint">DELETE /api/environments/testing
 200
 {
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
   &quot;hostgroups_count&quot;: 0,
   &quot;hosts_count&quot;: 0,
   &quot;id&quot;: 687036937,
-  &quot;katello_id&quot;: null,
   &quot;name&quot;: &quot;testing&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;
 }</pre>
 
   <h3>Params</h3>

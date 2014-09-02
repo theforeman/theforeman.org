@@ -52,7 +52,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/architectures
-          </a><br>
+          </a>
+          <br>
           <small>List all architectures</small>
         </h2>
     </div>
@@ -81,20 +82,20 @@
     {
       &quot;name&quot;: &quot;x86_64&quot;,
       &quot;id&quot;: 501905019,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;
     },
     {
       &quot;name&quot;: &quot;sparc&quot;,
       &quot;id&quot;: 331892513,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;
     },
     {
       &quot;name&quot;: &quot;s390&quot;,
       &quot;id&quot;: 381564594,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;
     }
   ]
 }</pre>
@@ -208,7 +209,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/architectures/:id
-          </a><br>
+          </a>
+          <br>
           <small>Show an architecture</small>
         </h2>
     </div>
@@ -226,8 +228,8 @@
 {
   &quot;name&quot;: &quot;x86_64&quot;,
   &quot;id&quot;: 501905019,
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
   &quot;operatingsystems&quot;: [
     {
       &quot;id&quot;: 309172073,
@@ -301,7 +303,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/architectures
-          </a><br>
+          </a>
+          <br>
           <small>Create an architecture</small>
         </h2>
     </div>
@@ -324,8 +327,8 @@
 {
   &quot;name&quot;: &quot;i386&quot;,
   &quot;id&quot;: 501905021,
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:46Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:46Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:34Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:34Z&quot;,
   &quot;operatingsystems&quot;: [],
   &quot;images&quot;: []
 }</pre>
@@ -343,8 +346,8 @@
     <td>
       <strong>architecture </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
@@ -389,7 +392,7 @@
 <p>Operatingsystem IDs</p>
 
         <br>
-        Value: Must be Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -414,7 +417,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /api/architectures/:id
-          </a><br>
+          </a>
+          <br>
           <small>Update an architecture</small>
         </h2>
     </div>
@@ -433,12 +437,12 @@
 }
 200
 {
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
   &quot;hostgroups_count&quot;: 0,
   &quot;hosts_count&quot;: 0,
   &quot;id&quot;: 501905019,
   &quot;name&quot;: &quot;x86_64&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;
 }</pre>
 
   <h3>Params</h3>
@@ -473,8 +477,8 @@
     <td>
       <strong>architecture </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
@@ -519,7 +523,7 @@
 <p>Operatingsystem IDs</p>
 
         <br>
-        Value: Must be Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -544,7 +548,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/architectures/:id
-          </a><br>
+          </a>
+          <br>
           <small>Delete an architecture</small>
         </h2>
     </div>
@@ -560,12 +565,12 @@
     <pre class="prettyprint">DELETE /api/architectures/381564594-s390
 200
 {
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
   &quot;hostgroups_count&quot;: 0,
   &quot;hosts_count&quot;: 0,
   &quot;id&quot;: 381564594,
   &quot;name&quot;: &quot;s390&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;
 }</pre>
 
   <h3>Params</h3>

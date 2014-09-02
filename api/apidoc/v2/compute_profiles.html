@@ -52,7 +52,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/compute_profiles
-          </a><br>
+          </a>
+          <br>
           <small>List of compute profiles</small>
         </h2>
     </div>
@@ -81,20 +82,20 @@
     {
       &quot;id&quot;: 980190962,
       &quot;name&quot;: &quot;1-Small&quot;,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;
     },
     {
       &quot;id&quot;: 298486374,
       &quot;name&quot;: &quot;2-Medium&quot;,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;
     },
     {
       &quot;id&quot;: 113629430,
       &quot;name&quot;: &quot;3-Large&quot;,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;
     }
   ]
 }</pre>
@@ -208,7 +209,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/compute_profiles/:id
-          </a><br>
+          </a>
+          <br>
           <small>Show a compute profile</small>
         </h2>
     </div>
@@ -226,8 +228,8 @@
 {
   &quot;id&quot;: 980190962,
   &quot;name&quot;: &quot;1-Small&quot;,
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
   &quot;compute_attributes&quot;: [
     {
       &quot;id&quot;: 298486374,
@@ -300,7 +302,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/compute_profiles
-          </a><br>
+          </a>
+          <br>
           <small>Create a compute profile</small>
         </h2>
     </div>
@@ -321,10 +324,10 @@
 }
 201
 {
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:49Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:36Z&quot;,
   &quot;id&quot;: 980190963,
   &quot;name&quot;: &quot;4-Xlarge&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:49Z&quot;
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:36Z&quot;
 }</pre>
 
   <h3>Params</h3>
@@ -340,8 +343,8 @@
     <td>
       <strong>compute_profile </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
@@ -390,7 +393,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /api/compute_profiles/:id
-          </a><br>
+          </a>
+          <br>
           <small>Update a compute profile</small>
         </h2>
     </div>
@@ -411,10 +415,10 @@
 }
 200
 {
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
   &quot;id&quot;: 980190962,
   &quot;name&quot;: &quot;new name&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:49Z&quot;
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:36Z&quot;
 }</pre>
 
   <h3>Params</h3>
@@ -449,8 +453,8 @@
     <td>
       <strong>compute_profile </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
@@ -499,7 +503,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/compute_profiles/:id
-          </a><br>
+          </a>
+          <br>
           <small>Delete a compute profile</small>
         </h2>
     </div>
@@ -515,10 +520,10 @@
     <pre class="prettyprint">DELETE /api/compute_profiles/113629430-3-large
 200
 {
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
   &quot;id&quot;: 113629430,
   &quot;name&quot;: &quot;3-Large&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;
 }</pre>
 
   <h3>Params</h3>
