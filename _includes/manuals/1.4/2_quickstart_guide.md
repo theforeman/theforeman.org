@@ -5,7 +5,7 @@ Components include the Foreman web UI, Smart Proxy, Passenger (for the puppet ma
 
 #### Supported platforms
 * Red Hat Enterprise Linux 6 and derivatives (CentOS, Scientific Linux)
-  * [EPEL](http://fedoraproject.org/wiki/EPEL/FAQ#How_can_I_install_the_packages_from_the_EPEL_software_rep) is required
+  * [EPEL](http://fedoraproject.org/wiki/EPEL/FAQ#How_can_I_install_the_packages_from_the_EPEL_software_repository.3F) is required
   * On RHEL 6, additionally the Optional and RHSCL 1.0 repositories/channels:
     * `yum-config-manager --enable rhel-6-server-optional-rpms rhel-server-rhscl-6-rpms`
 * Fedora 19
