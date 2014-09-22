@@ -15,6 +15,8 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2014-3653: stored cross site scripting (XSS) in template previews](security.html#2014-3653)
+* [CVE-2014-3590: user logout vulnerable to CSRF](security.html#2014-3590)
 * [CVE-2014-3531: stored cross site scripting (XSS) in operating system names](security.html#2014-3531)
 * [CVE-2014-3492: stored cross site scripting (XSS) in YAML preview](security.html#2014-3492)
 * [CVE-2014-3491: stored cross site scripting (XSS) in notification dialogs](security.html#2014-3491)
@@ -39,6 +41,28 @@ All security advisories made for Foreman are listed below with their correspondi
 
 ### Disclosure details
 
+#### <a id="2014-3653"></a>CVE-2014-3653: stored cross site scripting (XSS) in template previews
+
+Provisioning templates can store HTML and then evaluate HTML or JS content when using the editor's preview function.
+
+Thanks to Aaron Stone for reporting this issue.
+
+* Affects all known Foreman versions
+* Fix planned for Foreman 1.6.1
+* Redmine issue [#7483](http://projects.theforeman.org/issues/7483)
+* [Red Hat Bugzilla](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-3653)
+
+#### <a id="2014-3590"></a>CVE-2014-3590: user logout vulnerable to CSRF
+
+The user logout function could be triggered through cross-site request forgery (e.g. a redirect), causing a user to be logged out and lose their active session.
+
+Thanks to Jan Hutař of Red Hat for discovering this issue.
+
+* Affects all known Foreman versions
+* Fix planned for Foreman 1.6.1
+* Redmine issue [#6999](http://projects.theforeman.org/issues/6999)
+* Red Hat Bugzilla [#1128108](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-3590)
+
 #### <a id="2014-3531"></a>CVE-2014-3531: stored cross site scripting (XSS) in operating system names
 
 Operating system names and descriptions could store and cause evaluation of HTML in page views, allowing a cross site scripting (XSS) attack against the user.
@@ -57,7 +81,7 @@ The host YAML page, used to preview the Foreman response for the Puppet ENC, wil
 * Affects all known Foreman versions
 * Fix released in Foreman 1.4.5 and 1.5.1
 * Redmine issue [#6149](http://projects.theforeman.org/issues/6149)
-* [Red Hat Bugzilla](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-3492)
+* Red Hat Bugzilla [#1108241](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-3492)
 
 #### <a id="2014-3491"></a>CVE-2014-3491: stored cross site scripting (XSS) in notification dialogs
 
@@ -79,7 +103,7 @@ Thanks to Lukas Zapletal of the Red Hat Foreman Team for discovering this issue.
 * Affects all known Foreman versions
 * Fix released in Foreman 1.4.5 and 1.5.1
 * Redmine issue [#6086](http://projects.theforeman.org/issues/6086)
-* [Red Hat Bugzilla](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-0007)
+* Red Hat Bugzilla [#1105369](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-0007)
 
 #### <a id="2014-0208"></a>CVE-2014-0208: stored cross site scripting (XSS) in search auto-completion
 
