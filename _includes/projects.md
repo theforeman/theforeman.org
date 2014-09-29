@@ -68,13 +68,3 @@
   environment with puppet modules and parameters. This could be extracted into
   an installer to deploy a new host or maybe a Docker image. Working title for
   this is enc2answers.
-
-### System testing: Puppet management
-
-* *Status*: Not started
-* *Summary of idea*: Test Puppet import and management features on a full Foreman installation
-* *Knowledge prerequisite*: Shell scripting, basic Puppet
-* *Skill level*: Easy to Medium
-* *Contacts*: Dominic Cleal, Greg Sutcliffe,  Ewoud Kohl van Wijngaarden, Lukas Zapletal
-* *Mentor(s)*: Dominic Cleal, Greg Sutcliffe
-* *Notes*: As part of our automated release process, we run the bash-based test suite [foreman-bats](https://github.com/theforeman/foreman-bats) on our nightly and final release packages to do an end to end test of Foreman.  This tests a basic Foreman installation today, but it could be extended to add a basic Puppet module, import it to Foreman, apply it to the host using Foreman and Puppet, then verify the result.  Some familiarity with the [Quickstart Guide](/manuals/latest/quickstart_guide.html) and [Puppet management steps](/manuals/latest/index.html#2.2PuppetManagement), along with some shell scripting knowledge would put you in good stead for this task.
