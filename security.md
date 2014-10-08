@@ -48,9 +48,9 @@ Provisioning templates can store HTML and then evaluate HTML or JS content when 
 Thanks to Aaron Stone for reporting this issue.
 
 * Affects all known Foreman versions
-* Fix planned for Foreman 1.6.1
+* Fix released in Foreman 1.6.1
 * Redmine issue [#7483](http://projects.theforeman.org/issues/7483)
-* [Red Hat Bugzilla](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-3653)
+* Red Hat Bugzilla [#1145398](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-3653)
 
 #### <a id="2014-3590"></a>CVE-2014-3590: user logout vulnerable to CSRF
 
@@ -59,7 +59,7 @@ The user logout function could be triggered through cross-site request forgery (
 Thanks to Jan Hutař of Red Hat for discovering this issue.
 
 * Affects all known Foreman versions
-* Fix planned for Foreman 1.6.1
+* Fix released in Foreman 1.6.1
 * Redmine issue [#6999](http://projects.theforeman.org/issues/6999)
 * Red Hat Bugzilla [#1128108](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-3590)
 
