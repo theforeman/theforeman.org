@@ -35,7 +35,8 @@
 
   <div class='page-header'>
     <h1>
-      POST /api/media<br>
+      POST /api/media
+      <br>
       <small>Create a medium</small>
     </h1>
   </div>
@@ -58,14 +59,14 @@
 201
 {
   &quot;config_path&quot;: null,
-  &quot;created_at&quot;: &quot;2014-08-07T20:41:24Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:52Z&quot;,
   &quot;id&quot;: 1011586620,
   &quot;image_path&quot;: null,
   &quot;media_path&quot;: null,
   &quot;name&quot;: &quot;new medium&quot;,
   &quot;os_family&quot;: null,
   &quot;path&quot;: &quot;http://www.newmedium.com/&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:41:24Z&quot;
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:52Z&quot;
 }</pre>
 
   <h2>Params</h2>
@@ -81,8 +82,8 @@
     <td>
       <strong>medium </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
@@ -173,7 +174,7 @@
     <td>
       
         <br>
-        Value: Must be Array
+        Value: Must be an array of any type
 
 
     </td>

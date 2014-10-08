@@ -35,7 +35,8 @@
 
   <div class='page-header'>
     <h1>
-      POST /api/reports<br>
+      POST /api/reports
+      <br>
       <small>Create a report</small>
     </h1>
   </div>
@@ -101,7 +102,7 @@
 }
 201
 {
-  &quot;created_at&quot;: &quot;2014-08-07T20:41:35Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:59Z&quot;,
   &quot;host_id&quot;: 1073012845,
   &quot;id&quot;: 70219656,
   &quot;metrics&quot;: {},
@@ -114,7 +115,7 @@
     &quot;skipped&quot;: 0,
     &quot;pending&quot;: 0
   },
-  &quot;updated_at&quot;: &quot;2014-08-07T20:41:35Z&quot;
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:59Z&quot;
 }</pre>
 
   <h2>Params</h2>
@@ -130,8 +131,8 @@
     <td>
       <strong>report </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
@@ -241,7 +242,7 @@
 <p>Optional array of log hashes</p>
 
         <br>
-        Value: Must be Array
+        Value: Must be an array of any type
 
 
     </td>

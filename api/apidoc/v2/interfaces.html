@@ -52,7 +52,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/hosts/:host_id/interfaces
-          </a><br>
+          </a>
+          <br>
           <small>List all interfaces for host</small>
         </h2>
     </div>
@@ -91,8 +92,8 @@
       &quot;subnet_name&quot;: null,
       &quot;domain_id&quot;: null,
       &quot;domain_name&quot;: null,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;
     }
   ]
 }</pre>
@@ -143,7 +144,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/hosts/:host_id/interfaces/:id
-          </a><br>
+          </a>
+          <br>
           <small>Show an interface for host</small>
         </h2>
     </div>
@@ -171,8 +173,8 @@
   &quot;subnet_name&quot;: null,
   &quot;domain_id&quot;: null,
   &quot;domain_name&quot;: null,
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;
 }</pre>
 
   <h3>Params</h3>
@@ -242,7 +244,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/hosts/:host_id/interfaces
-          </a><br>
+          </a>
+          <br>
           <small>Create an interface on a host</small>
         </h2>
     </div>
@@ -273,7 +276,7 @@
     &quot;password&quot;: &quot;bar&quot;,
     &quot;provider&quot;: &quot;IPMI&quot;
   },
-  &quot;created_at&quot;: &quot;2014-08-07T20:41:15Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:48Z&quot;,
   &quot;domain_id&quot;: null,
   &quot;host_id&quot;: 980190962,
   &quot;id&quot;: 821748567,
@@ -281,7 +284,7 @@
   &quot;mac&quot;: &quot;aa:aa:aa:aa:aa:aa&quot;,
   &quot;name&quot;: &quot;test.foreman.com&quot;,
   &quot;subnet_id&quot;: null,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:41:15Z&quot;
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:48Z&quot;
 }</pre>
 
   <h3>Params</h3>
@@ -318,8 +321,8 @@
     <td>
       <strong>interface </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
@@ -536,7 +539,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /api/hosts/:host_id/interfaces/:id
-          </a><br>
+          </a>
+          <br>
           <small>Update a host's interface</small>
         </h2>
     </div>
@@ -576,8 +580,8 @@
   &quot;subnet_name&quot;: null,
   &quot;domain_id&quot;: null,
   &quot;domain_name&quot;: null,
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:41:16Z&quot;
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:48Z&quot;
 }</pre>
 
   <h3>Params</h3>
@@ -635,8 +639,8 @@
     <td>
       <strong>interface </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
@@ -853,7 +857,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/hosts/:host_id/interfaces/:id
-          </a><br>
+          </a>
+          <br>
           <small>Delete a host's interface</small>
         </h2>
     </div>
@@ -874,7 +879,7 @@
     &quot;password&quot;: &quot;bar&quot;,
     &quot;provider&quot;: &quot;IPMI&quot;
   },
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
   &quot;domain_id&quot;: null,
   &quot;host_id&quot;: 980190962,
   &quot;id&quot;: 821748566,
@@ -882,7 +887,7 @@
   &quot;mac&quot;: &quot;AA:AA:AA:AA:AA:AA&quot;,
   &quot;name&quot;: &quot;host-bmc&quot;,
   &quot;subnet_id&quot;: null,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;
 }</pre>
 
   <h3>Params</h3>

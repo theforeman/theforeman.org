@@ -52,7 +52,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/reports
-          </a><br>
+          </a>
+          <br>
           <small>List all reports</small>
         </h2>
     </div>
@@ -82,7 +83,7 @@
       &quot;id&quot;: 70219655,
       &quot;host_id&quot;: 980190962,
       &quot;host_name&quot;: &quot;my5name.mydomain.net&quot;,
-      &quot;reported_at&quot;: &quot;2014-07-31T20:40:10Z&quot;,
+      &quot;reported_at&quot;: &quot;2014-08-26T14:00:17Z&quot;,
       &quot;status&quot;: {
         &quot;applied&quot;: 0,
         &quot;restarted&quot;: 0,
@@ -111,8 +112,8 @@
           &quot;total&quot;: 0
         }
       },
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;
     }
   ]
 }</pre>
@@ -226,7 +227,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/reports/:id
-          </a><br>
+          </a>
+          <br>
           <small>Show a report</small>
         </h2>
     </div>
@@ -245,7 +247,7 @@
   &quot;id&quot;: 70219655,
   &quot;host_id&quot;: 980190962,
   &quot;host_name&quot;: &quot;my5name.mydomain.net&quot;,
-  &quot;reported_at&quot;: &quot;2014-07-31T20:40:10Z&quot;,
+  &quot;reported_at&quot;: &quot;2014-08-26T14:00:17Z&quot;,
   &quot;status&quot;: {
     &quot;applied&quot;: 0,
     &quot;restarted&quot;: 0,
@@ -274,8 +276,8 @@
       &quot;total&quot;: 0
     }
   },
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
   &quot;summary&quot;: &quot;Success&quot;,
   &quot;logs&quot;: []
 }</pre>
@@ -324,7 +326,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/reports
-          </a><br>
+          </a>
+          <br>
           <small>Create a report</small>
         </h2>
     </div>
@@ -390,7 +393,7 @@
 }
 201
 {
-  &quot;created_at&quot;: &quot;2014-08-07T20:41:35Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:59Z&quot;,
   &quot;host_id&quot;: 1073012845,
   &quot;id&quot;: 70219656,
   &quot;metrics&quot;: {},
@@ -403,7 +406,7 @@
     &quot;skipped&quot;: 0,
     &quot;pending&quot;: 0
   },
-  &quot;updated_at&quot;: &quot;2014-08-07T20:41:35Z&quot;
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:59Z&quot;
 }</pre>
 
   <h3>Params</h3>
@@ -419,8 +422,8 @@
     <td>
       <strong>report </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
@@ -530,7 +533,7 @@
 <p>Optional array of log hashes</p>
 
         <br>
-        Value: Must be Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -555,7 +558,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/reports/:id
-          </a><br>
+          </a>
+          <br>
           <small>Delete a report</small>
         </h2>
     </div>
@@ -571,7 +575,7 @@
     <pre class="prettyprint">DELETE /api/reports/70219655
 200
 {
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
   &quot;host_id&quot;: 980190962,
   &quot;id&quot;: 70219655,
   &quot;metrics&quot;: {
@@ -594,7 +598,7 @@
       &quot;total&quot;: 0
     }
   },
-  &quot;reported_at&quot;: &quot;2014-07-31T20:40:10Z&quot;,
+  &quot;reported_at&quot;: &quot;2014-08-26T14:00:17Z&quot;,
   &quot;status&quot;: {
     &quot;applied&quot;: 0,
     &quot;restarted&quot;: 0,
@@ -603,7 +607,7 @@
     &quot;skipped&quot;: 0,
     &quot;pending&quot;: 0
   },
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;
 }</pre>
 
   <h3>Params</h3>
@@ -650,7 +654,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/hosts/:host_id/reports/last
-          </a><br>
+          </a>
+          <br>
           <small>Show the last report for a host</small>
         </h2>
     </div>
@@ -669,7 +674,7 @@
   &quot;id&quot;: 70219655,
   &quot;host_id&quot;: 980190962,
   &quot;host_name&quot;: &quot;my5name.mydomain.net&quot;,
-  &quot;reported_at&quot;: &quot;2014-07-31T20:40:10Z&quot;,
+  &quot;reported_at&quot;: &quot;2014-08-26T14:00:17Z&quot;,
   &quot;status&quot;: {
     &quot;applied&quot;: 0,
     &quot;restarted&quot;: 0,
@@ -698,8 +703,8 @@
       &quot;total&quot;: 0
     }
   },
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
   &quot;summary&quot;: &quot;Success&quot;,
   &quot;logs&quot;: []
 }</pre>

@@ -35,7 +35,8 @@
 
   <div class='page-header'>
     <h1>
-      POST /api/config_templates<br>
+      POST /api/config_templates
+      <br>
       <small>Create a provisioning template</small>
     </h1>
   </div>
@@ -64,8 +65,8 @@
   &quot;template_kind_name&quot;: &quot;iPXE&quot;,
   &quot;snippet&quot;: null,
   &quot;audit_comment&quot;: null,
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:53Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:53Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:38Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:38Z&quot;,
   &quot;template&quot;: &quot;This is a test template&quot;,
   &quot;locked&quot;: false,
   &quot;locations&quot;: [],
@@ -88,8 +89,8 @@
     <td>
       <strong>config_template </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
@@ -214,7 +215,7 @@
 <p>Array of template combinations (hostgroup_id, environment_id)</p>
 
         <br>
-        Value: Must be Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -235,7 +236,7 @@
 <p>Array of operating system IDs to associate with the template</p>
 
         <br>
-        Value: Must be Array
+        Value: Must be an array of any type
 
 
     </td>

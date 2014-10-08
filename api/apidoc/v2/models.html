@@ -52,7 +52,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/models
-          </a><br>
+          </a>
+          <br>
           <small>List all hardware models</small>
         </h2>
     </div>
@@ -82,8 +83,8 @@
       &quot;id&quot;: 980190962,
       &quot;name&quot;: &quot;KVM&quot;,
       &quot;info&quot;: &quot;Virtual Machine&quot;,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
       &quot;vendor_class&quot;: null,
       &quot;hardware_model&quot;: null
     },
@@ -91,8 +92,8 @@
       &quot;id&quot;: 139037058,
       &quot;name&quot;: &quot;SUN V210&quot;,
       &quot;info&quot;: null,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
       &quot;vendor_class&quot;: &quot;Sun-Fire-V210&quot;,
       &quot;hardware_model&quot;: &quot;SUN4U&quot;
     }
@@ -208,7 +209,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/models/:id
-          </a><br>
+          </a>
+          <br>
           <small>Show a hardware model</small>
         </h2>
     </div>
@@ -227,8 +229,8 @@
   &quot;id&quot;: 980190962,
   &quot;name&quot;: &quot;KVM&quot;,
   &quot;info&quot;: &quot;Virtual Machine&quot;,
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
   &quot;vendor_class&quot;: null,
   &quot;hardware_model&quot;: null
 }</pre>
@@ -277,7 +279,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/models
-          </a><br>
+          </a>
+          <br>
           <small>Create a hardware model</small>
         </h2>
     </div>
@@ -298,13 +301,13 @@
 }
 201
 {
-  &quot;created_at&quot;: &quot;2014-08-07T20:41:24Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:52Z&quot;,
   &quot;hardware_model&quot;: null,
   &quot;hosts_count&quot;: 0,
   &quot;id&quot;: 980190972,
   &quot;info&quot;: null,
   &quot;name&quot;: &quot;new model&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:41:24Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:52Z&quot;,
   &quot;vendor_class&quot;: null
 }</pre>
 
@@ -321,8 +324,8 @@
     <td>
       <strong>model </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
@@ -428,7 +431,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /api/models/:id
-          </a><br>
+          </a>
+          <br>
           <small>Update a hardware model</small>
         </h2>
     </div>
@@ -450,13 +454,13 @@
 }
 200
 {
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
   &quot;hardware_model&quot;: null,
   &quot;hosts_count&quot;: 0,
   &quot;id&quot;: 980190962,
   &quot;info&quot;: &quot;Virtual Machine&quot;,
   &quot;name&quot;: &quot;KVM&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
   &quot;vendor_class&quot;: null
 }</pre>
 
@@ -492,8 +496,8 @@
     <td>
       <strong>model </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
@@ -599,7 +603,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/models/:id
-          </a><br>
+          </a>
+          <br>
           <small>Delete a hardware model</small>
         </h2>
     </div>
@@ -615,13 +620,13 @@
     <pre class="prettyprint">DELETE /api/models/980190962
 200
 {
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
   &quot;hardware_model&quot;: null,
   &quot;hosts_count&quot;: 0,
   &quot;id&quot;: 980190962,
   &quot;info&quot;: &quot;Virtual Machine&quot;,
   &quot;name&quot;: &quot;KVM&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
   &quot;vendor_class&quot;: null
 }</pre>
 

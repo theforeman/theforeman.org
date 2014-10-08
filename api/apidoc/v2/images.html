@@ -52,7 +52,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/compute_resources/:compute_resource_id/images
-          </a><br>
+          </a>
+          <br>
           <small>List all images for a compute resource</small>
         </h2>
     </div>
@@ -89,8 +90,8 @@
       &quot;architecture_name&quot;: &quot;x86_64&quot;,
       &quot;uuid&quot;: &quot;string-of-uuid&quot;,
       &quot;username&quot;: &quot;root&quot;,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;
     },
     {
       &quot;id&quot;: 298486374,
@@ -103,8 +104,8 @@
       &quot;architecture_name&quot;: &quot;x86_64&quot;,
       &quot;uuid&quot;: &quot;MyString2&quot;,
       &quot;username&quot;: &quot;MyString&quot;,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;
     }
   ]
 }</pre>
@@ -237,7 +238,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/compute_resources/:compute_resource_id/images/:id
-          </a><br>
+          </a>
+          <br>
           <small>Show an image</small>
         </h2>
     </div>
@@ -263,8 +265,8 @@
   &quot;architecture_name&quot;: &quot;x86_64&quot;,
   &quot;uuid&quot;: &quot;string-of-uuid&quot;,
   &quot;username&quot;: &quot;root&quot;,
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;
 }</pre>
 
   <h3>Params</h3>
@@ -330,7 +332,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/compute_resources/:compute_resource_id/images
-          </a><br>
+          </a>
+          <br>
           <small>Create an image</small>
         </h2>
     </div>
@@ -357,12 +360,12 @@
 201
 {
   &quot;attrs&quot;: {},
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
   &quot;description&quot;: &quot;MyString&quot;,
   &quot;id&quot;: 980190962,
   &quot;name&quot;: &quot;bigcompute&quot;,
   &quot;password&quot;: &quot;1234567&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
   &quot;url&quot;: &quot;qemu://stam/system&quot;,
   &quot;user&quot;: &quot;MyString&quot;,
   &quot;uuid&quot;: &quot;MyString&quot;
@@ -400,8 +403,8 @@
     <td>
       <strong>image </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
@@ -545,7 +548,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /api/compute_resources/:compute_resource_id/images/:id
-          </a><br>
+          </a>
+          <br>
           <small>Update an image</small>
         </h2>
     </div>
@@ -566,13 +570,13 @@
 {
   &quot;architecture_id&quot;: 501905019,
   &quot;compute_resource_id&quot;: 980190962,
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
   &quot;iam_role&quot;: null,
   &quot;id&quot;: 980190962,
   &quot;name&quot;: &quot;centos-1&quot;,
   &quot;operatingsystem_id&quot;: 309172073,
   &quot;password&quot;: null,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
   &quot;user_data&quot;: false,
   &quot;username&quot;: &quot;root&quot;,
   &quot;uuid&quot;: &quot;string-of-uuid&quot;
@@ -629,8 +633,8 @@
     <td>
       <strong>image </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
@@ -774,7 +778,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/compute_resources/:compute_resource_id/images/:id
-          </a><br>
+          </a>
+          <br>
           <small>Delete an image</small>
         </h2>
     </div>
@@ -792,13 +797,13 @@
 {
   &quot;architecture_id&quot;: 501905019,
   &quot;compute_resource_id&quot;: 980190962,
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
   &quot;iam_role&quot;: null,
   &quot;id&quot;: 980190962,
   &quot;name&quot;: &quot;centos-1&quot;,
   &quot;operatingsystem_id&quot;: 309172073,
   &quot;password&quot;: null,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:17Z&quot;,
   &quot;user_data&quot;: false,
   &quot;username&quot;: &quot;root&quot;,
   &quot;uuid&quot;: &quot;string-of-uuid&quot;

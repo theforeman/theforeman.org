@@ -52,7 +52,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/realms
-          </a><br>
+          </a>
+          <br>
           <small>List of realms</small>
         </h2>
     </div>
@@ -83,32 +84,32 @@
       &quot;name&quot;: &quot;myrealm.net&quot;,
       &quot;realm_proxy_id&quot;: 982965213,
       &quot;realm_type&quot;: &quot;FreeIPA&quot;,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;
     },
     {
       &quot;id&quot;: 90728897,
       &quot;name&quot;: &quot;unused.net&quot;,
       &quot;realm_proxy_id&quot;: 982965213,
       &quot;realm_type&quot;: &quot;FreeIPA&quot;,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;
     },
     {
       &quot;id&quot;: 229305443,
       &quot;name&quot;: &quot;useless.net&quot;,
       &quot;realm_proxy_id&quot;: 982965213,
       &quot;realm_type&quot;: &quot;FreeIPA&quot;,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;
     },
     {
       &quot;id&quot;: 936160439,
       &quot;name&quot;: &quot;yourrealm.net&quot;,
       &quot;realm_proxy_id&quot;: 982965213,
       &quot;realm_type&quot;: &quot;FreeIPA&quot;,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;
     }
   ]
 }</pre>
@@ -222,7 +223,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/realms/:id
-          </a><br>
+          </a>
+          <br>
           <small>Show a realm</small>
         </h2>
     </div>
@@ -242,8 +244,8 @@
   &quot;name&quot;: &quot;myrealm.net&quot;,
   &quot;realm_proxy_id&quot;: 982965213,
   &quot;realm_type&quot;: &quot;FreeIPA&quot;,
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
   &quot;locations&quot;: [
     {
       &quot;id&quot;: 255093256,
@@ -306,7 +308,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/realms
-          </a><br>
+          </a>
+          <br>
           <small>Create a realm</small>
         </h2>
     </div>
@@ -365,8 +368,8 @@
     <td>
       <strong>realm </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
@@ -459,7 +462,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /api/realms/:id
-          </a><br>
+          </a>
+          <br>
           <small>Update a realm</small>
         </h2>
     </div>
@@ -480,14 +484,14 @@
 }
 200
 {
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
   &quot;hostgroups_count&quot;: 0,
   &quot;hosts_count&quot;: 0,
   &quot;id&quot;: 664044182,
   &quot;name&quot;: &quot;realm.new&quot;,
   &quot;realm_proxy_id&quot;: 982965213,
   &quot;realm_type&quot;: &quot;FreeIPA&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:41:34Z&quot;
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:58Z&quot;
 }</pre>
 
   <h3>Params</h3>
@@ -522,8 +526,8 @@
     <td>
       <strong>realm </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
@@ -616,7 +620,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/realms/:id
-          </a><br>
+          </a>
+          <br>
           <small>Delete a realm</small>
         </h2>
     </div>
@@ -632,14 +637,14 @@
     <pre class="prettyprint">DELETE /api/realms/664044182
 200
 {
-  &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
   &quot;hostgroups_count&quot;: 0,
   &quot;hosts_count&quot;: -2,
   &quot;id&quot;: 664044182,
   &quot;name&quot;: &quot;myrealm.net&quot;,
   &quot;realm_proxy_id&quot;: 982965213,
   &quot;realm_type&quot;: &quot;FreeIPA&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;
 }</pre>
 
   <h3>Params</h3>

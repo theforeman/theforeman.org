@@ -52,7 +52,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/smart_proxies/:id/import_puppetclasses
-          </a><br>
+          </a>
+          <br>
           <small>Import puppet classes from puppet proxy.</small>
         </h2>
         <h2>
@@ -61,7 +62,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/smart_proxies/:smart_proxy_id/environments/:id/import_puppetclasses
-          </a><br>
+          </a>
+          <br>
           <small>Import puppet classes from puppet proxy for an environment</small>
         </h2>
         <h2>
@@ -70,7 +72,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/environments/:environment_id/smart_proxies/:id/import_puppetclasses
-          </a><br>
+          </a>
+          <br>
           <small>Import puppet classes from puppet proxy for an environment</small>
         </h2>
     </div>
@@ -210,7 +213,7 @@
     </td>
     <td>
       
-<p>Optional comma-deliminated string containing either ‘new,updated,obsolete’ used to limit the import_puppetclasses actions</p>
+<p>Optional comma-delimited string containing either ‘new’, ‘updated’, or ‘obsolete’ that is used to limit the imported Puppet classes</p>
 
         <br>
         Value: Must be String
@@ -237,7 +240,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/smart_proxies
-          </a><br>
+          </a>
+          <br>
           <small>List all smart_proxies.</small>
         </h2>
     </div>
@@ -258,8 +262,8 @@
       &quot;name&quot;: &quot;BMC proxy&quot;,
       &quot;id&quot;: 821748566,
       &quot;url&quot;: &quot;http://else.where:45673&quot;,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;
     }
   },
   {
@@ -267,8 +271,8 @@
       &quot;name&quot;: &quot;DHCP Proxy&quot;,
       &quot;id&quot;: 980190962,
       &quot;url&quot;: &quot;https://somewhere.net:8443&quot;,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;
     }
   },
   {
@@ -276,8 +280,8 @@
       &quot;name&quot;: &quot;DNS Proxy&quot;,
       &quot;id&quot;: 113629430,
       &quot;url&quot;: &quot;http://else.where:45671&quot;,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;
     }
   },
   {
@@ -285,8 +289,8 @@
       &quot;name&quot;: &quot;Puppetmaster Proxy&quot;,
       &quot;id&quot;: 182953976,
       &quot;url&quot;: &quot;http://else.where:4567&quot;,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;
     }
   },
   {
@@ -294,8 +298,8 @@
       &quot;name&quot;: &quot;Realm Proxy&quot;,
       &quot;id&quot;: 982965213,
       &quot;url&quot;: &quot;http://else.where:1337&quot;,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;
     }
   },
   {
@@ -303,8 +307,8 @@
       &quot;name&quot;: &quot;TFTP Proxy&quot;,
       &quot;id&quot;: 298486374,
       &quot;url&quot;: &quot;http://somewhere.else&quot;,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;
     }
   },
   {
@@ -312,8 +316,8 @@
       &quot;name&quot;: &quot;Unused Proxy&quot;,
       &quot;id&quot;: 281110143,
       &quot;url&quot;: &quot;http://else.where:45672&quot;,
-      &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-      &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;
+      &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
+      &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;
     }
   }
 ]</pre>
@@ -406,7 +410,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/smart_proxies/:id
-          </a><br>
+          </a>
+          <br>
           <small>Show a smart proxy.</small>
         </h2>
     </div>
@@ -426,8 +431,8 @@
     &quot;name&quot;: &quot;DHCP Proxy&quot;,
     &quot;id&quot;: 980190962,
     &quot;url&quot;: &quot;https://somewhere.net:8443&quot;,
-    &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
-    &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+    &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
+    &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
     &quot;features&quot;: [
       {
         &quot;feature&quot;: {
@@ -483,7 +488,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/smart_proxies
-          </a><br>
+          </a>
+          <br>
           <small>Create a smart proxy.</small>
         </h2>
     </div>
@@ -506,10 +512,10 @@
 201
 {
   &quot;smart_proxy&quot;: {
-    &quot;created_at&quot;: &quot;2014-08-07T20:40:34Z&quot;,
+    &quot;created_at&quot;: &quot;2014-09-02T14:00:28Z&quot;,
     &quot;id&quot;: 982965214,
     &quot;name&quot;: &quot;master02&quot;,
-    &quot;updated_at&quot;: &quot;2014-08-07T20:40:34Z&quot;,
+    &quot;updated_at&quot;: &quot;2014-09-02T14:00:28Z&quot;,
     &quot;url&quot;: &quot;http://server:8443&quot;
   }
 }</pre>
@@ -596,7 +602,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /api/smart_proxies/:id
-          </a><br>
+          </a>
+          <br>
           <small>Update a smart proxy.</small>
         </h2>
     </div>
@@ -616,10 +623,10 @@
 200
 {
   &quot;smart_proxy&quot;: {
-    &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+    &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
     &quot;id&quot;: 980190962,
     &quot;name&quot;: &quot;DHCP Proxy&quot;,
-    &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+    &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
     &quot;url&quot;: &quot;https://somewhere.net:8443&quot;
   }
 }</pre>
@@ -725,7 +732,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/smart_proxies/:id
-          </a><br>
+          </a>
+          <br>
           <small>Delete a smart_proxy.</small>
         </h2>
     </div>
@@ -742,10 +750,10 @@
 200
 {
   &quot;smart_proxy&quot;: {
-    &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+    &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
     &quot;id&quot;: 281110143,
     &quot;name&quot;: &quot;Unused Proxy&quot;,
-    &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+    &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
     &quot;url&quot;: &quot;http://else.where:45672&quot;
   }
 }</pre>
@@ -794,7 +802,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /api/smart_proxies/:id/refresh
-          </a><br>
+          </a>
+          <br>
           <small>Refresh smart proxy features</small>
         </h2>
     </div>
@@ -814,10 +823,10 @@
 201
 {
   &quot;smart_proxy&quot;: {
-    &quot;created_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+    &quot;created_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
     &quot;id&quot;: 980190962,
     &quot;name&quot;: &quot;DHCP Proxy&quot;,
-    &quot;updated_at&quot;: &quot;2014-08-07T20:40:10Z&quot;,
+    &quot;updated_at&quot;: &quot;2014-09-02T14:00:18Z&quot;,
     &quot;url&quot;: &quot;https://somewhere.net:8443&quot;
   }
 }</pre>

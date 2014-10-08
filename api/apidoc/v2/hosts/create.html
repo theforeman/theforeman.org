@@ -35,7 +35,8 @@
 
   <div class='page-header'>
     <h1>
-      POST /api/hosts<br>
+      POST /api/hosts
+      <br>
       <small>Create a host</small>
     </h1>
   </div>
@@ -65,8 +66,7 @@
     &quot;root_pass&quot;: &quot;xybxa6JUkz63w&quot;,
     &quot;location_id&quot;: &quot;255093256&quot;,
     &quot;organization_id&quot;: &quot;447626438&quot;
-  },
-  &quot;base&quot;: {}
+  }
 }
 200
 {
@@ -124,8 +124,8 @@
   &quot;certname&quot;: &quot;testhost11.mydomain.net&quot;,
   &quot;image_id&quot;: null,
   &quot;image_name&quot;: null,
-  &quot;created_at&quot;: &quot;2014-08-07T20:41:01Z&quot;,
-  &quot;updated_at&quot;: &quot;2014-08-07T20:41:01Z&quot;,
+  &quot;created_at&quot;: &quot;2014-09-02T14:00:42Z&quot;,
+  &quot;updated_at&quot;: &quot;2014-09-02T14:00:42Z&quot;,
   &quot;last_compile&quot;: null,
   &quot;last_freshcheck&quot;: null,
   &quot;serial&quot;: null,
@@ -155,8 +155,8 @@
     <td>
       <strong>host </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
@@ -378,7 +378,7 @@
     <td>
       
         <br>
-        Value: Must be Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -606,7 +606,7 @@
     <td>
       
         <br>
-        Value: Must be Array
+        Value: Must be an array of any type
 
 
     </td>
