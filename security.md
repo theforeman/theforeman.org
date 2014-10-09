@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2014-3691: SSL certificate verification bypass in smart proxy](security.html#2014-3691)
 * [CVE-2014-3653: stored cross site scripting (XSS) in template previews](security.html#2014-3653)
 * [CVE-2014-3590: user logout vulnerable to CSRF](security.html#2014-3590)
 * [CVE-2014-3531: stored cross site scripting (XSS) in operating system names](security.html#2014-3531)
@@ -40,6 +41,19 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2014-3691"></a>CVE-2014-3691: SSL certificate verification bypass in smart proxy
+
+The smart proxy (foreman-proxy) fails to block connections when no client SSL certificate is supplied, instead permitting any request.  Typically the smart proxy is configured to receive HTTPS requests with a client SSL certificate that is signed by the same CA (certificate authority) as its own, preventing unauthorized access to manage services such as DHCP, DNS and the Puppet CA.
+
+It is strongly recommended to mitigate the problem by restricting access to the smart proxy.  More information on [foreman-announce](https://groups.google.com/forum/#!topic/foreman-announce/jXC5ixybjqo).
+
+Thanks to Michael Moll, Jon McKenzie and Michael Messmore for reporting the issue.
+
+* Affects all known Foreman versions
+* Fix planned for Foreman 1.6.2 and 1.5.4
+* Redmine issue [#7822](http://projects.theforeman.org/issues/7822)
+* Red Hat Bugzilla [#1150879](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-3691)
 
 #### <a id="2014-3653"></a>CVE-2014-3653: stored cross site scripting (XSS) in template previews
 
