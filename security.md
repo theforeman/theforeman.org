@@ -51,7 +51,7 @@ It is strongly recommended to mitigate the problem by restricting access to the 
 Thanks to Michael Moll, Jon McKenzie and Michael Messmore for reporting the issue.
 
 * Affects all known Foreman versions
-* Fix planned for Foreman 1.6.2 and 1.5.4
+* Fix released in Foreman 1.6.2 and 1.5.4
 * Redmine issue [#7822](http://projects.theforeman.org/issues/7822)
 * Red Hat Bugzilla [#1150879](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-3691)
 
