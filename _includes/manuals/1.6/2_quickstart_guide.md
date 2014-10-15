@@ -4,18 +4,10 @@ The Foreman installer is a collection of Puppet modules that installs everything
 Components include the Foreman web UI, Smart Proxy, Passenger (for the puppet master and Foreman itself), and optionally TFTP, DNS and DHCP servers.  It is configurable and the Puppet modules can be read or run in "no-op" mode to see what changes it will make.
 
 #### Supported platforms
-* Red Hat Enterprise Linux 6 or 7
-  * [EPEL](http://fedoraproject.org/wiki/EPEL/FAQ#How_can_I_install_the_packages_from_the_EPEL_software_repository.3F) is required
-  * Enable the Optional and RHSCL 1 repositories/channels:
-    * `yum-config-manager --enable rhel-6-server-optional-rpms rhel-server-rhscl-6-rpms`
-    * check the above repositories because the command can silently fail when subscription does not provide it: `yum repolist`
-* CentOS or Scientific Linux 6
-  * [EPEL](http://fedoraproject.org/wiki/EPEL/FAQ#How_can_I_install_the_packages_from_the_EPEL_software_repository.3F) is required
-  * Version 7 will be supported when SCL becomes available
+* CentOS or Scientific Linux 6 or 7
+* Debian 6 (Squeeze) or 7 (Wheezy)
 * Fedora 19
-* Debian 7 (Wheezy)
-* Debian 6 (Squeeze) (update Puppet [from backports](http://backports.debian.org/Instructions/))
-* Ubuntu 14.04 (Trusty)
-* Ubuntu 12.04 (Precise)
+* Red Hat Enterprise Linux 6 or 7
+* Ubuntu 12.04 (Precise) or 14.04 (Trusty)
 
 Other operating systems will need to use alternative installation methods (see the manual).

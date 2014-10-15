@@ -256,3 +256,6 @@ iframe:not([allowtransparency]){
     padding: 50px 0;
 }
 
+.quickstart_os:not(.quickstart_os_none) {
+  display: none;
+}
