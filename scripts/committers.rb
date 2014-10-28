@@ -13,6 +13,7 @@ require 'git'
   puppet-puppet
   puppet-dhcp
   puppet-dns
+  puppet-git
   puppet-tftp
   kafo
   kafo_parsers
@@ -33,8 +34,8 @@ require 'git'
   ovirt-node-plugin-foreman
   puppetdb_foreman
 )
-@date_from     = '2014-05-05'
-@date_to       = '2014-08-13'
+@date_from     = '2014-08-13'
+@date_to       = '2014-10-28'
 
 @author_map = {
   "abenari"        => "Amos Benari",
