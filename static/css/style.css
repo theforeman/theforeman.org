@@ -265,5 +265,10 @@ iframe:not([allowtransparency]){
 }
 
 .quickstart_os:not(.quickstart_os_none) {
-  display: none;
+    display: none;
+}
+
+.modal-youtube {
+    width: 700px;
+    margin-left:-320px;
 }
