@@ -86,6 +86,8 @@ version: 1.7
 {%include manuals/1.7/4.2.4_smart_vars.md %}
 ### 4.2.5 Parameterized Classes
 {%include manuals/1.7/4.2.5_param_classes.md %}
+### 4.2.6 Smart Matchers
+{%include manuals/1.7/4.2.6_matchers.md %}
 
 ## 4.3 Smart Proxies
 {%include manuals/1.7/4.3_smartproxy.md %}
