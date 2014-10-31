@@ -5,7 +5,7 @@ Components include the Foreman web UI, Smart Proxy, Passenger (for the puppet ma
 
 #### Supported platforms
 * CentOS or Scientific Linux 6 or 7
-* Debian 6 (Squeeze) or 7 (Wheezy)
+* Debian 7 (Wheezy)
 * Fedora 19
 * Red Hat Enterprise Linux 6 or 7
 * Ubuntu 12.04 (Precise) or 14.04 (Trusty)
