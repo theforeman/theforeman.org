@@ -149,6 +149,15 @@ version: 1.7
 ### 4.5.2 Success Story
 {%include manuals/1.7/4.5.2_cli_success.md %}
 
+## 4.6 Email Management
+{%include manuals/1.7/4.6_email.md %}
+### 4.6.1 Email Preferences
+{%include manuals/1.7/4.6.1_email_preferences.md %}
+### 4.6.2 Account Notifications
+{%include manuals/1.7/4.6.2_email_account.md %}
+### 4.6.3 Puppet Notifications
+{%include manuals/1.7/4.6.3_email_puppet.md %}
+
 #5. Advanced Foreman
 
 ## 5.1 API
