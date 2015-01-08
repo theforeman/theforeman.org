@@ -70,3 +70,5 @@ Then restart Foreman with `touch ~foreman/tmp/restart.txt`
 ### 6.2 Plugin List
 An up-to-date plugin list is kept in the [wiki](http://projects.theforeman.org/projects/foreman/wiki/List_of_Plugins)
 
+### 6.3 Plugin Documentation
+More information for some plugins can be found in our [Plugin Documentation](/plugins/)
