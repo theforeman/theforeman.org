@@ -31,6 +31,7 @@ configure this mode which is not recommended.
 ### 1.1.1 Foreman Discovery plugin
 
 **2.0**: New features:
+
 * automatic provisioning
 * ZIP-based extensions
 * indirect communication via foreman proxy plugin
