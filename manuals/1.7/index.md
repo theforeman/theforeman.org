@@ -128,6 +128,9 @@ version: 1.7
 {%include manuals/1.7/4.3.11_smartproxy_ssl.md %}
 ### 4.3.12 Libvirt
 {%include manuals/1.7/4.3.12_smartproxy_libvirt.md %}
+### 4.3.13 Templates
+#### 4.3.13.1 templates.yml
+{%include manuals/1.7/4.3.13_smartproxy_templates.md %}
 
 ## 4.4 Provisioning
 {%include manuals/1.7/4.4_provisioning.md %}
