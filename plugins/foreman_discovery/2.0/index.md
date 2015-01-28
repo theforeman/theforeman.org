@@ -189,8 +189,9 @@ communication goes directly to Foreman (legacy mode). This is the default when
 not specified.
 
 The *proxy.url* specifies URL of the Smart Proxy or Foreman depending on the
-previous setting. Both http and https schemes are supported. For backward
-compatibility, *foreman.url* is an alias for this setting.
+previous setting. Currently only http scheme is supported, https will be 
+added in the future. For backward compatibility, 
+*foreman.url* is an alias for this setting.
 
 Once the APPEND line is modified properly, set the entry to be default via the
 ONTIMEOUT option:
