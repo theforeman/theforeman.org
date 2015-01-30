@@ -23,10 +23,59 @@ direct access both to the provisioning network and Foreman instance:
     --
 
 Foreman Discovery does support "legacy" mode where communication is direct
-with no Foreman Proxy involved. See remarks in this documentation about how to
-configure this mode which is not recommended.
+with no Foreman Proxy involved. Currently (Foreman Discovery 2.0) this is
+still the recommended way to configure it due to technical limitations of
+Foreman Proxy 1.7 (this is explained below).
 
 ## 1.1 Release Notes
+
+For each Foreman version there is particular version of Foreman Discovery
+plugin:
+
+<table class="table table-bordered table-condensed">
+  <tr>
+    <th>Foreman version</th>
+    <th>Plugin version</th>
+    <th>Proxy version</th>
+    <th>Image version</th>
+  </tr>
+  <tr>
+    <td>&lt;= 1.2</td>
+    <td>1.0.2</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>= 1.3</td>
+    <td>1.1.0</td>
+    <td>N/A</td>
+    <td>0.1.1</td>
+  </tr>
+  <tr>
+    <td>= 1.4</td>
+    <td>1.2.0</td>
+    <td>N/A</td>
+    <td>0.3.0</td>
+  </tr>
+  <tr>
+    <td>= 1.5</td>
+    <td>1.3.0</td>
+    <td>N/A</td>
+    <td>0.5.0</td>
+  </tr>
+  <tr>
+    <td>= 1.6</td>
+    <td>1.4.0</td>
+    <td>N/A</td>
+    <td>0.6 or 2.0</td>
+  </tr>
+  <tr>
+    <td>= 1.7</td>
+    <td>2.0.0</td>
+    <td>0.1</td>
+    <td>2.0</td>
+  </tr>
+</table>
 
 ### 1.1.1 Foreman Discovery plugin
 
@@ -94,7 +143,8 @@ Restart of Foreman is needed when installing the package separately.
 ## 2.2 Foreman Proxy Discovery plugin
 
 Foreman Proxy Discovery plugin must be installed on all proxy hosts on the
-network where discovery feature is supposed to work.
+network where discovery feature is supposed to work. It is possible to skip
+this step if direct communication is planned.
 
 To install the plugin, do
 
@@ -160,6 +210,38 @@ To build a discovery image, please visit the foreman-discovery-image git
 [repository](https://github.com/theforeman/foreman-discovery-image) and find
 the README for further instructions.
 
+## 2.4 Upgrade
+
+To upgrade Foreman Discovery follow the standard procedure of upgrading all
+the Foreman packages.
+
+New component Proxy Discovery plugin was introduced for Discovery 2.0
+therefore there are multiple ways how to re-configure existing installation.
+
+### 2.4.1 Upgrade without Proxy Discovery plugin (recommended)
+
+Proceed with the next step (Reboot discovered hosts) and in the next section
+(Configuration) make sure the kernel line in the PXELinux default template has
+`proxy.type` set to `foreman` and `proxy.url` points to a *Foreman* instance.
+
+    APPEND ... proxy.url=https://YOUR_FOREMAN proxy.type=foreman
+
+### 2.4.2 Upgrade with Proxy Discovery plugin
+
+This method is *not recommended* for Discovery 2.0 because due to limitation
+of Foreman Proxy 1.7 it is not possible to configure this via HTTPS protocol.
+There is a possible workaround: it is possible to run a separate http only
+proxy with only discovery plugin enabled dedicated to discovery communication.
+
+Follow Manual installation > Foreman Proxy Discovery plugin from above and
+proceed with the next upgrade step (Reboot discovered hosts).
+
+### 2.4.3 Reboot discovered hosts
+
+After the upgrade, if there were any existing discovered hosts, it is required
+to reboot and delete them. To do this, click on Reboot and Delete buttons for
+each one of them.
+
 # 3. Configuration
 
 The following chapter covers configuration of all the components installed.
@@ -180,7 +262,7 @@ options:
     MENU LABEL Foreman Discovery
     MENU DEFAULT
     KERNEL boot/fdi-image/vmlinuz0
-    APPEND initrd=boot/fdi-image/initrd0.img rootflags=loop root=live:/fdi.iso rootfstype=auto ro rd.live.image acpi=force rd.luks=0 rd.md=0 rd.dm=0 rd.lvm=0 rd.bootif=0 rd.neednet=0 nomodeset proxy.url=http://YOUR_PROXY proxy.type=proxy
+    APPEND initrd=boot/fdi-image/initrd0.img rootflags=loop root=live:/fdi.iso rootfstype=auto ro rd.live.image acpi=force rd.luks=0 rd.md=0 rd.dm=0 rd.lvm=0 rd.bootif=0 rd.neednet=0 nomodeset proxy.url=https://FOREMAN_INSTANCE proxy.type=foreman
     IPAPPEND 2
 
 The *proxy.type* option can be either *proxy* or *foreman*. In the first case
@@ -252,20 +334,34 @@ new column, set to a blank value.
 
 Make sure *foreman_url* setting is present in the Foreman Proxy configuration file.
 
-    # grep foreman_url /etc/foreman-proxy/settings.yml 
+    # grep foreman_url /etc/foreman-proxy/settings.yml
     :foreman_url: https://FOREMAN_HOST
 
 This should by done automatically by our installer. It is a good idea to check
 if the host responds properly and there are no firewalls blocking the
 communication.
 
+## 3.3 Permissions
+
+The plugin will create a Role called Discovery when first started. This can be
+assigned to roles for non-admins to allow them to use the discovery plugin.
+Alternatively assign the `perform_discovery` permission to an existing Role.
+
 # 4. Usage
 
+Foreman Discovery plugin provides user interface, API and CLI.
+
+## 4.1 Hardware discovery
+
 Boot a machine in any provisioning network that was configured with the default
-PXE configuration above. It should register with Foreman and appear in 
-*Hosts > Discovered Hosts*. Select it and choose Provision. This will redirect to the
-normal Edit page for a Host, with the discovered data filled in where possible.
-Fill in the details as normal.
+PXE configuration above. It should register with Foreman and appear in
+*Hosts > Discovered Hosts*.
+
+## 4.2 Manual provisioning
+
+Select a discovered host and choose Provision. This will redirect to the
+normal Edit page for a Host, with the discovered data filled in where
+possible. Fill in the details as normal.
 
 On save, Foreman modifies the host's PXELinux file on the TFTP server and
 reboots the discovered host, after which it boots into an installer for the
@@ -273,7 +369,90 @@ chosen OS, and finally into the installed OS.
 
 Delete a machine and reboot it to have it move back to the Discovery Pool.
 
-# 4.1 Automatic provisioning
+## 4.3 Automatic provisioning
+
+Starting with version 2.0, it is possible to predefine provisioning rules
+which will assign host group to provisioned hosts and trigger provisioning
+automatically. To do that, head over to *Configure > Discovery rules* and
+create such a rule:
+
+* **Name** represents rule name shown to the users. It must not contain spaces
+  or non-alphanumeric characters.
+* **Search** statement is used to match discovered hosts for the particular
+  rule. Use Scoped Search syntax to define it. Examples are shown below.
+* **Host Group** is assigned to a matching host before starting provisioning
+  process. It is very important the selected Host Group has all the required
+  parameters set (domain, subnet, root password), otherwise provisioning
+  process will fail.
+* **Hostname** defines a pattern to assign human-readable hostnames to the
+  matching hosts. When left empty, hostname is assigned in a form of
+  `macMACADDRESS` by default. The same syntax as for provisioning templates is
+  used. See below for more information and examples.
+* **Hosts limit** enables to limit maximum amount of provisioned hosts per
+  rule. If a limit was reached, the rule will not tkae effect until one or
+  more hosts are deleted. Typical use case are rules per server rack or row
+  when it is necessary to change provisioning parameters like hostname or host
+  group per each entry.
+* **Priority** puts the rules in order. Must be greater than zero and low
+  numbers go first. Rules are always matched by priority given.
+* **Enabled** flag is used for temporary shutdown of rules.
+
+Once some rules are defined, the good practice is to discover a host and apply
+the rules using Auto discover button on the host.
+
+By default, Foreman does not trigger auto discovery automatically. This must
+be explicitly turned on in
+*Administer > Settings > Discovered > discovery_auto*.
+
+## 4.3.1 Search syntax
+
+Easiest way of testing search patterns is in Discovered hosts list, because
+the search box gives the same results. Typical search fields are facts, they
+all start with "facts.". Auto completion can be used to browse the facts as
+well as discovered hosts detail screen. Typical search queries:
+
+    facts.architecture = x86_64
+    facts.bios_vendor ~ 'Dell*'
+    facts.macaddress = "aa:bb:cc:dd:ee:ff"
+    facts.macaddress_eth0 = "aa:bb:cc:dd:ee:ff"
+    facts.ipaddress_eth1 = ~ "192.168."
+
+As of Foreman 1.7, all the facts are currently simple strings, so it is not
+possible to do numeric comparisons.
+
+Some important facts are extracted and converted to numbers. These are:
+
+* cpu_count - number of CPUs
+* disk_count - number of disks attached
+* disks_size - total amount of disk space (in MiB)
+
+Possible queries are:
+
+    cpu_count >= 8
+    disk_count < 10
+    disks_size > 1000000
+
+See the
+[searching section]({{site.baseurl}}manuals/latest/index.html#4.1.5Searching)
+for more information.
+
+## 4.3.2 Hostname patterns
+
+The target hostname template pattern has the same syntax as in Provisioning
+Templates (ERB). Domain will be appended automatically. A hostname based on
+MAC address will be used when left blank. In addition to @host attribute
+function rand for random integers is available. Examples:
+
+    application-server-<%= rand(99999) %>
+    load-balancer-<%= @host.facts['bios_vendor'] + '-' + rand(99999) %>
+    wwwsrv-<%= @host.hostgroup.name %>
+    minion-<%= @host.discovery_rule.name %>
+    db-server-<%= @host.ip.gsub('.','-') + '-' + @host.hostgroup.subnet.name %>
+
+When creating hostname patterns, make sure the resulting host names are
+**unique**. This is very important. Hostnames must not start with numbers. A
+good approach is to use unique information provided by facter (MAC address,
+BIOS or serial ID) or to randomize the hostname somehow.
 
 # 5. Extending the image
 
