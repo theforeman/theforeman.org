@@ -503,7 +503,7 @@ paths are relative to the TFTP root. So if you have two zips at
 $TFTP/zip1.zip and $TFTP/boot/zip2.zip, you would use
 `fdi.zips=zip1.zip,boot/zip2.zip`.
 
-## 5.1 Image building with extensions
+## 5.2 Image building with extensions
 
 The very same ZIP file with the structure described above can be injected into
 your own image. This is useful for network drivers when there is a chicken and
