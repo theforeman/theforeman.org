@@ -141,6 +141,8 @@ version: 1.7
 {%include manuals/1.7/4.4.4_prov_ptables.md %}
 ### 4.4.5 Architectures
 {%include manuals/1.7/4.4.4_prov_archs.md %}
+### 4.4.6 Workflow
+{%include manuals/1.7/4.4.6_prov_workflow.md %}
 
 ## 4.5 Command Line Interface
 {%include manuals/1.7/4.5_cli.md %}
