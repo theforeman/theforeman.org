@@ -341,6 +341,16 @@ This should by done automatically by our installer. It is a good idea to check
 if the host responds properly and there are no firewalls blocking the
 communication.
 
+## 3.2.1 Subnet proxy setup
+
+All subnets with discovered nodes need this specified in Foreman so it
+connects via the Foreman Proxy. To do this, go to *Infrastructure > Smart
+Proxies* and verify if the desired proxy lists *Discovery* feature. If not,
+click on *Refresh features* button and it will appear immediately.
+
+In *Infrastructure > Subnets* select the desired *Discovery Proxy* for each
+appropriate Subnet.
+
 ## 3.3 Permissions
 
 The plugin will create a Role called Discovery when first started. This can be
