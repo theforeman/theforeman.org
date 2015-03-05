@@ -1,11 +1,11 @@
 ---
 layout: contribute
-title: Gnome Outreach Program for Women
+title: Outreachy
 ---
 
-## What is OPW?
+## What is Outreachy?
 
-Please see the general resources for the [Outreach Program for Women](https://gnome.org/opw) for the information about program requirements and the application process.
+Please see the general resources for the [Outreachy program](https://www.gnome.org/outreachy/) for the information about program requirements and the application process.
 
 ## How can I get familiar with this project?
 
@@ -14,7 +14,7 @@ Please see the general resources for the [Outreach Program for Women](https://gn
 * Install Foreman on a virtual machine or your own computer
 * In the meantime, watch a few [demo videos](http://theforeman.org/media.html)
 * If the installation hasn't finished yet, read a couple posts from the [mailing list](http://theforeman.org/support.html#Mailinglists)
-* Join us on [IRC](http://theforeman.org/support.html#IRC) at #theforeman and #theforeman-dev on Freenode. Don't be shy and tell us you're there because OPW.
+* Join us on [IRC](http://theforeman.org/support.html#IRC) at #theforeman and #theforeman-dev on Freenode. Don't be shy and tell us you're there because of Outreachy.
 
 ## Project Suggestions
 
