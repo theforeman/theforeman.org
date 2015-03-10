@@ -38,10 +38,12 @@ plugin:
     <th>Plugin version</th>
     <th>Proxy version</th>
     <th>Image version</th>
+    <th>CLI version</th>
   </tr>
   <tr>
     <td>&lt;= 1.2</td>
     <td>1.0.2</td>
+    <td>N/A</td>
     <td>N/A</td>
     <td>N/A</td>
   </tr>
@@ -50,30 +52,35 @@ plugin:
     <td>1.1.0</td>
     <td>N/A</td>
     <td>0.1.1</td>
+    <td>N/A</td>
   </tr>
   <tr>
     <td>= 1.4</td>
     <td>1.2.0</td>
     <td>N/A</td>
     <td>0.3.0</td>
+    <td>N/A</td>
   </tr>
   <tr>
     <td>= 1.5</td>
     <td>1.3.0</td>
     <td>N/A</td>
     <td>0.5.0</td>
+    <td>N/A</td>
   </tr>
   <tr>
     <td>= 1.6</td>
     <td>1.4.0</td>
     <td>N/A</td>
     <td>0.6 or 2.0</td>
+    <td>N/A</td>
   </tr>
   <tr>
     <td>= 1.7</td>
     <td>2.0.0</td>
     <td>0.1</td>
     <td>2.0</td>
+    <td>0.0.1</td>
   </tr>
 </table>
 
@@ -103,6 +110,10 @@ plugin:
 * based on centos7 and fedora19
 * systemd and network manager full support
 * better troubleshooting (discovery-debug script)
+
+### 1.1.4 Hammer CLI Foreman Discovery plugin
+
+**0.0.1**: Initial version.
 
 # 2. Installation
 
@@ -210,7 +221,21 @@ To build a discovery image, please visit the foreman-discovery-image git
 [repository](https://github.com/theforeman/foreman-discovery-image) and find
 the README for further instructions.
 
-## 2.4 Upgrade
+## 2.4 Hammer CLI Foreman Discovery
+
+### 2.4.1 Installation
+
+Before installing make sure you have installed the [hammer_cli_foreman plugin](https://github.com/theforeman/hammer-cli/blob/master/doc/installation.md),
+
+#### 2.4.1.1 RPM
+
+```yum install rubygem-hammer_cli_foreman_discovery```
+
+#### 2.4.1.2 GEM
+
+```gem install hammer_cli_foreman_discovery```.
+
+## 2.5 Upgrade
 
 To upgrade Foreman Discovery follow the standard procedure of upgrading all
 the Foreman packages.
@@ -218,7 +243,7 @@ the Foreman packages.
 New component Proxy Discovery plugin was introduced for Discovery 2.0
 therefore there are multiple ways how to re-configure existing installation.
 
-### 2.4.1 Upgrade without Proxy Discovery plugin (recommended)
+### 2.5.1 Upgrade without Proxy Discovery plugin (recommended)
 
 Proceed with the next step (Reboot discovered hosts) and in the next section
 (Configuration) make sure the kernel line in the PXELinux default template has
@@ -226,7 +251,7 @@ Proceed with the next step (Reboot discovered hosts) and in the next section
 
     APPEND ... proxy.url=https://YOUR_FOREMAN proxy.type=foreman
 
-### 2.4.2 Upgrade with Proxy Discovery plugin
+### 2.5.2 Upgrade with Proxy Discovery plugin
 
 This method is *not recommended* for Discovery 2.0 because due to limitation
 of Foreman Proxy 1.7 it is not possible to configure this via HTTPS protocol.
@@ -236,7 +261,7 @@ proxy with only discovery plugin enabled dedicated to discovery communication.
 Follow Manual installation > Foreman Proxy Discovery plugin from above and
 proceed with the next upgrade step (Reboot discovered hosts).
 
-### 2.4.3 Reboot discovered hosts
+### 2.5.3 Reboot discovered hosts
 
 After the upgrade, if there were any existing discovered hosts, it is required
 to reboot and delete them. To do this, click on Reboot and Delete buttons for
@@ -271,8 +296,8 @@ communication goes directly to Foreman (legacy mode). This is the default when
 not specified.
 
 The *proxy.url* specifies URL of the Smart Proxy or Foreman depending on the
-previous setting. Currently only http scheme is supported, https will be 
-added in the future. For backward compatibility, 
+previous setting. Currently only http scheme is supported, https will be
+added in the future. For backward compatibility,
 *foreman.url* is an alias for this setting.
 
 Once the APPEND line is modified properly, set the entry to be default via the
@@ -351,7 +376,17 @@ click on *Refresh features* button and it will appear immediately.
 In *Infrastructure > Subnets* select the desired *Discovery Proxy* for each
 appropriate Subnet.
 
-## 3.3 Permissions
+## 3.3 Hammer CLI Foreman Discovery plugin
+
+The plugin must be enabled in ```cli.modules.d/foreman_discovery.yml``` (see [Hammer config directories](https://github.com/theforeman/hammer-cli/blob/master/doc/installation.md#locations))
+as follows:
+
+```yaml
+:foreman_discovery:
+    :enable_module: true
+```
+
+## 3.4 Permissions
 
 The plugin will create a Role called Discovery when first started. This can be
 assigned to roles for non-admins to allow them to use the discovery plugin.
@@ -463,6 +498,61 @@ When creating hostname patterns, make sure the resulting host names are
 **unique**. This is very important. Hostnames must not start with numbers. A
 good approach is to use unique information provided by facter (MAC address,
 BIOS or serial ID) or to randomize the hostname somehow.
+
+## 4.4 Hammer CLI Foreman Discovery plugin
+
+Confirm your setup by running `hammer -h` and check that the discovery command is listed.
+
+```
+$ hammer -h
+...
+Subcommands:
+ ...
+ discovery                     Discovery related actions.
+ ...
+...
+```
+
+The actions you can use with discovery will appear as follows:
+
+```
+$ hammer discovery -h
+Usage:
+    hammer discovery [OPTIONS] SUBCOMMAND [ARG] ...
+
+Parameters:
+ SUBCOMMAND                    subcommand
+ [ARG] ...                     subcommand arguments
+
+Subcommands:
+ auto-provision                Auto provision a host
+ delete                        Delete a discovered host
+ facts                         Show a discovered host
+ info                          Show a discovered host
+ list                          List all discovered hosts
+ provision                     Provision a discovered host
+ reboot                        Reboot a host
+ refresh-facts                 Refresh the facts of a host
+
+Options:
+ -h, --help                    print help
+```
+
+For example to reboot a discovered_host:
+
+```
+$ hammer discovery reboot -h
+Usage:
+    hammer discovery reboot [OPTIONS]
+
+Options:
+ --id ID
+ --name NAME                   Name to search by
+ -h, --help                    print help
+
+$ hammer discovery reboot --id 130
+Host reboot started
+```
 
 # 5. Extending the image
 
