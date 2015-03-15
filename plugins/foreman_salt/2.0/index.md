@@ -6,8 +6,7 @@ version: 2.0
 
 # 1. {{ page.title }}
 
-
-Salt support in Foreman is implemented by two plugins, smart_proxy_salt and foreman_salt. These are compatible with Foreman 1.6 or newer. RPM and DEB packages are available in the official Foreman repositories.
+Salt support in Foreman is implemented through two plugins, smart_proxy_salt and foreman_salt. These plugins enable Foreman to manage Salt minions, including provisioning, keys, states, pillars, and grains, as well as providing advanced reporting features.
 
 The core plugin major version will increment with the specific Foreman release, as shown in the table below.  Proxy releases tend to be compatible for longer, as the Foreman Proxy plugin API changes less frequently.
 
@@ -41,7 +40,7 @@ The core plugin major version will increment with the specific Foreman release, 
 - **2.0**:
   - Compatibility with Foreman 1.8
   - RESTful API
-  - Hammer plugin for API
+  - Hammer CLI plugin
   - Misc bug fixes
 
 - **1.1.1**:
@@ -69,9 +68,9 @@ The core plugin major version will increment with the specific Foreman release, 
 
 ### 1.1.2 Smart Proxy plugin
 
-- **1.0.0**: Support for uploading Salt state.highstate reports
+- **2.0**: Foreman 1.8 compatability
 
-- **1.0.0**: Support for uploading Salt state.highstate reports
+- **1.0**: Support for uploading Salt state.highstate reports
 
 - **0.0.2**: First public release. See [the wiki](https://github.com/theforeman/smart_proxy_salt/wiki/Salt-Proxy-API)
   for info on current API end points.
@@ -85,7 +84,7 @@ Arnold Bechtoldt, Daniel Lobato, Dominic Cleal, Michael Moll, Lukáš Zapletal, 
 
 # 2. Installation
 
-You will need to install the Smart Proxy plugin, `smart_proxy_salt`, as well as the Foreman plugin, `foreman_salt`.
+You will need to install the Smart Proxy plugin, `smart_proxy_salt`, as well as the Foreman plugin, `foreman_salt`. RPM and DEB packages are available in the official Foreman repositories.
 
 If using the Foreman installer, install the core and smart proxy plugins with:
 
@@ -239,9 +238,11 @@ By default, reports are uploaded to Foreman once every 10 minutes from the Salt 
 
 ### 3.7.1 Scheduling
 
-<b><u>Note</u></b>!! If you are using scheduling [as per the Salt documentation](http://docs.saltstack.com/en/latest/topics/jobs/schedule.html), this will NOT upload reports to Foreman as minions do not return locally called `state.highstate` runs to the job cache. This is being tracked as a feature request at https://github.com/saltstack/salt/issues/12653.
+<div class="alert alert-info">
+If you are using scheduling <a href="http://docs.saltstack.com/en/latest/topics/jobs/schedule.html">as per the Salt documentation</a>, this will NOT upload reports to Foreman as minions do not return locally called `state.highstate` runs to the job cache. This is being tracked as a feature request at <a href="https://github.com/saltstack/salt/issues/12653">https://github.com/saltstack/salt/issues/12653</a>.
+</div>
 
-If you want to schedule your minions to run Salt on a recurring basis, you could modify the cron job to execute something like this (doing in batches, if needed, see scalability section below as well):
+If you want to schedule your minions to run Salt on a recurring basis, you could modify the cron job to execute something like this: 
 
     (salt '*' -b 1000 state.highstate && sleep 60 && /usr/sbin/upload-salt-reports) >> /var/log/foreman-proxy/salt-cron.log
 
