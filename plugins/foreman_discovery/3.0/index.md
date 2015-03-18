@@ -235,7 +235,7 @@ the README for further instructions.
 
 ### 2.4.1 Installation
 
-Before installing make sure you have installed the 
+Before installing make sure you have installed the
 [hammer_cli_foreman plugin](https://github.com/theforeman/hammer-cli/blob/master/doc/installation.md),
 
 #### 2.4.1.1 rpm (Fedora, CentOS, Red Hat...)
@@ -392,10 +392,8 @@ The plugin must be enabled in ```cli.modules.d/foreman_discovery.yml```
 (see [Hammer config directories](https://github.com/theforeman/hammer-cli/blob/master/doc/installation.md#locations))
 as follows:
 
-```yaml
-:foreman_discovery:
-    :enable_module: true
-```
+    :foreman_discovery:
+        :enable_module: true
 
 ## 3.4 Permissions
 
@@ -514,56 +512,50 @@ BIOS or serial ID) or to randomize the hostname somehow.
 
 Confirm your setup by running `hammer -h` and check that the discovery command is listed.
 
-```
-$ hammer -h
-...
-Subcommands:
- ...
- discovery                     Discovery related actions.
- ...
-...
-```
+    $ hammer -h
+    ...
+    Subcommands:
+     ...
+     discovery                     Discovery related actions.
+     ...
+    ...
 
 The actions you can use with discovery will appear as follows:
 
-```
-$ hammer discovery -h
-Usage:
-    hammer discovery [OPTIONS] SUBCOMMAND [ARG] ...
+    $ hammer discovery -h
+    Usage:
+        hammer discovery [OPTIONS] SUBCOMMAND [ARG] ...
 
-Parameters:
- SUBCOMMAND                    subcommand
- [ARG] ...                     subcommand arguments
+    Parameters:
+     SUBCOMMAND                    subcommand
+     [ARG] ...                     subcommand arguments
 
-Subcommands:
- auto-provision                Auto provision a host
- delete                        Delete a discovered host
- facts                         Show a discovered host
- info                          Show a discovered host
- list                          List all discovered hosts
- provision                     Provision a discovered host
- reboot                        Reboot a host
- refresh-facts                 Refresh the facts of a host
+    Subcommands:
+     auto-provision                Auto provision a host
+     delete                        Delete a discovered host
+     facts                         Show a discovered host
+     info                          Show a discovered host
+     list                          List all discovered hosts
+     provision                     Provision a discovered host
+     reboot                        Reboot a host
+     refresh-facts                 Refresh the facts of a host
 
-Options:
- -h, --help                    print help
-```
+    Options:
+     -h, --help                    print help
 
-For example to reboot a discovered_host:
+  For example to reboot a discovered_host:
 
-```
-$ hammer discovery reboot -h
-Usage:
-    hammer discovery reboot [OPTIONS]
+    $ hammer discovery reboot -h
+    Usage:
+        hammer discovery reboot [OPTIONS]
 
-Options:
- --id ID
- --name NAME                   Name to search by
- -h, --help                    print help
+    Options:
+     --id ID
+     --name NAME                   Name to search by
+     -h, --help                    print help
 
-$ hammer discovery reboot --id 130
-Host reboot started
-```
+    $ hammer discovery reboot --id 130
+    Host reboot started
 
 # 5. Extending the image
 
