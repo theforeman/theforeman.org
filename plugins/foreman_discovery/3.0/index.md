@@ -238,11 +238,15 @@ the README for further instructions.
 Before installing make sure you have installed the 
 [hammer_cli_foreman plugin](https://github.com/theforeman/hammer-cli/blob/master/doc/installation.md),
 
-#### 2.4.1.1 RPM
+#### 2.4.1.1 rpm (Fedora, CentOS, Red Hat...)
 
 ```yum install rubygem-hammer_cli_foreman_discovery```
 
-#### 2.4.1.2 GEM
+#### 2.4.1.2 deb (Debian, Ubuntu...)
+
+```apt-get install ruby-hammer-cli-foreman-discovery```
+
+#### 2.4.1.3 gem
 
 ```gem install hammer_cli_foreman_discovery```.
 
