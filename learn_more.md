@@ -6,7 +6,7 @@ title: Learn more
 ## What is Foreman?
 Foreman is an open source project that helps system administrators manage servers throughout their lifecycle,
 from provisioning and configuration to orchestration and monitoring.
-Using Puppet or Chef and Foreman's smart proxy architecture, you can easily automate repetitive tasks,
+Using Puppet, Chef, Salt, and Foreman's smart proxy architecture, you can easily automate repetitive tasks,
 quickly deploy applications, and proactively manage change, both on-premise with VMs and bare-metal or in the cloud.
 
 Foreman provides comprehensive, interaction facilities including a web frontend, CLI and RESTful API

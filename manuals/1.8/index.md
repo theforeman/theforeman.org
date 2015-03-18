@@ -160,6 +160,12 @@ version: 1.8
 ### 4.6.3 Puppet Notifications
 {%include manuals/1.8/4.6.3_email_puppet.md %}
 
+## 4.7 Managing Salt
+{%include manuals/1.8/4.7_managing_salt.md %}
+
+## 4.8 Managing Chef
+{%include manuals/1.8/4.8_managing_chef.md %}
+
 #5. Advanced Foreman
 
 ## 5.1 API

@@ -168,8 +168,8 @@ google.setOnLoadCallback(function() {
   }
 </style>
 
-## ![](static/images/stackoverflow.png) [Server Fault](http://serverfault.com/search?q=foreman)
-Ask questions about how to use Foreman on Server Fault, so anyone can benefit from the answers.
+## ![](static/images/stackoverflow.png) [Server Fault](http://serverfault.com/questions/tagged/foreman)
+Ask questions about how to use Foreman on Server Fault, so anyone can benefit from the answers. Tag your questions with 'foreman'.
 
 ## ![](static/images/google-groups.png) Mailing lists
 Mailing lists are available via Google Groups. Much like IRC, we have a general users (support, Q/A, etc) lists and a development list:
@@ -223,3 +223,9 @@ We also have a few IRC-specific guidelines:
 More information: This [IRC primer](http://irchelp.org/irchelp/ircprimer.html) for new users and the [general IRC guidelines, from freenode](http://freenode.net/channel_guidelines.shtml), are also useful resources.
 
 (_Thanks to the [Puppet Labs IRC Guidelines](http://docs.puppetlabs.com/community/community_guidelines.html#irc-guidelines) for the original document_)
+
+## ![YouTube icon](static/images/youtube.png) [YouTube channel](https://www.youtube.com/channel/UCCo7AZ1oG6TbG0-dwjRqCmw)
+
+Please subscribe to our [YouTube channel](https://www.youtube.com/channel/UCCo7AZ1oG6TbG0-dwjRqCmw). We regularly upload deep dives on Foreman features, screencasts to learn how to use the different features and plugins of Foreman, discussions and much more.
+
+Our [Google+ community](https://plus.google.com/102496134326414788199) regularly hosts live hangouts on a variety of topics. Become a member of the community and you will be notified about these events, so you can ask questions to the presenters and join the conversation.
