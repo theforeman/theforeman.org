@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2015-1816: SSL certificate not verified on LDAP connections](security.html#2015-1816)
 * [CVE-2014-3691: SSL certificate verification bypass in smart proxy](security.html#2014-3691)
 * [CVE-2014-3653: stored cross site scripting (XSS) in template previews](security.html#2014-3653)
 * [CVE-2014-3590: user logout vulnerable to CSRF](security.html#2014-3590)
@@ -41,6 +42,18 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2015-1816"></a>CVE-2015-1816: SSL certificate not verified on LDAP connections
+
+When making an SSL connection to an LDAP authentication source in Foreman, the remote server certificate is accepted without any verification against known certificate authorities.
+
+This can allow the LDAP connection between Foreman and the LDAP server to be attacked, and a different LDAP server could be contacted to authenticate users to Foreman.
+
+Mitigation can be performed by applying a patch locally, see the Redmine ticket for more information.
+
+* Affects Foreman 1.3.0 and higher
+* Fix to be released in Foreman 1.7.4 and 1.8.0-RC2
+* Redmine issue [#9858](http://projects.theforeman.org/issues/9858)
 
 #### <a id="2014-3691"></a>CVE-2014-3691: SSL certificate verification bypass in smart proxy
 
