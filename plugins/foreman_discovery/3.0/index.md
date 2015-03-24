@@ -443,13 +443,15 @@ create such a rule:
   `macMACADDRESS` by default. The same syntax as for provisioning templates is
   used. See below for more information and examples.
 * **Hosts limit** enables to limit maximum amount of provisioned hosts per
-  rule. If a limit was reached, the rule will not tkae effect until one or
+  rule. If a limit was reached, the rule will not take effect until one or
   more hosts are deleted. Typical use case are rules per server rack or row
   when it is necessary to change provisioning parameters like hostname or host
   group per each entry.
 * **Priority** puts the rules in order. Must be greater than zero and low
   numbers go first. Rules are always matched by priority given.
 * **Enabled** flag is used for temporary shutdown of rules.
+* **Organizations\Locations** discovered hosts can only auto provision
+from rules in the same organization/location as the discovered host.
 
 Once some rules are defined, the good practice is to discover a host and apply
 the rules using Auto discover button on the host.
