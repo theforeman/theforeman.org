@@ -49,10 +49,8 @@ When making an SSL connection to an LDAP authentication source in Foreman, the r
 
 This can allow the LDAP connection between Foreman and the LDAP server to be attacked, and a different LDAP server could be contacted to authenticate users to Foreman.
 
-Mitigation can be performed by applying a patch locally, see the Redmine ticket for more information.
-
 * Affects Foreman 1.3.0 and higher
-* Fix to be released in Foreman 1.7.4 and 1.8.0-RC2
+* Fix released in Foreman 1.7.4 and 1.8.0-RC2
 * Redmine issue [#9858](http://projects.theforeman.org/issues/9858)
 
 #### <a id="2014-3691"></a>CVE-2014-3691: SSL certificate verification bypass in smart proxy
