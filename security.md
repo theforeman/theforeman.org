@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2015-1844: API does not restrict users to organizations/locations](security.html#2015-1844)
 * [CVE-2015-1816: SSL certificate not verified on LDAP connections](security.html#2015-1816)
 * [CVE-2014-3691: SSL certificate verification bypass in smart proxy](security.html#2014-3691)
 * [CVE-2014-3653: stored cross site scripting (XSS) in template previews](security.html#2014-3653)
@@ -42,6 +43,16 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2015-1844"></a>CVE-2015-1844: users are not restricted to organizations/locations
+
+When a non-admin user is associated to organizations or locations, their access is not correctly restricted.  API access allows access to resources in any org/location, and UI access when the user is associated to more than one org/location is not restricted.
+
+This allows users to read, edit and perform actions on resources (e.g. hosts) outside of the organizations or locations they have been assigned to.
+
+* Affects Foreman 1.2.0 (TBC) and higher
+* Fix in progress
+* Redmine issue [#9947](http://projects.theforeman.org/issues/9947)
 
 #### <a id="2015-1816"></a>CVE-2015-1816: SSL certificate not verified on LDAP connections
 
