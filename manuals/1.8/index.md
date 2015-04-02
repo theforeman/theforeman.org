@@ -205,6 +205,8 @@ version: 1.8
 {%include manuals/1.8/5.2.8_cr_rackspace.md %}
 ### 5.2.9 VMware Notes
 {%include manuals/1.8/5.2.9_cr_vmware.md %}
+### 5.2.10 Password Encryption
+{%include manuals/1.8/5.2.10_cr_encryption_key.md %}
 
 ## 5.3 Install Locations
 {%include manuals/1.8/missing.html %}
