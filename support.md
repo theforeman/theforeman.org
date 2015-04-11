@@ -3,15 +3,17 @@ layout: support
 title: Support
 ---
 
-There are two primary methods of getting support for the Foreman: IRC and mailing lists.
+# Support
+------------------------------
 
 ## Gathering information
 
 To get appropriate support, you need to provide sufficient information about
 your operating system, environment and setup. You can utilize the
 foreman-debug tool which collects information about your OS, Foreman and
-related components. If you installed from packages, the command is available
-to root:
+related components.
+
+If you installed from packages, the command is available to root:
 
     # foreman-debug
 
@@ -23,155 +25,9 @@ If you run it without any options, it will collect data, filter out possible
 passwords or tokens and create a tarball which can be safely handed over to
 us.
 
-## Search in our issue trackers
+## ![Redmine icon](static/images/redmine.png) [Issue tracker](http://projects.theforeman.org/projects/foreman/issues)
 
-Before you even ask, try to search for your problem or error message in our
-issue tracker. Use this Google Search appliance to do that or head over
-directly to our [Issue tracker](http://projects.theforeman.org/projects/foreman/issues)
-
-<div id='cse' style='width: 100%;'>Loading</div>
-<script src='//www.google.com/jsapi' type='text/javascript'></script>
-<script type='text/javascript'>
-google.load('search', '1', {language: 'en', style: google.loader.themes.V2_DEFAULT});
-google.setOnLoadCallback(function() {
-  var customSearchOptions = {};
-  var orderByOptions = {};
-  orderByOptions['keys'] = [{label: 'Relevance', key: ''} , {label: 'Date', key: 'date'}];
-  customSearchOptions['enableOrderBy'] = true;
-  customSearchOptions['orderByOptions'] = orderByOptions;
-  customSearchOptions['overlayResults'] = true;
-  var customSearchControl =   new google.search.CustomSearchControl('008733672072027131561:vylcjp0yqjw', customSearchOptions);
-  customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
-  var options = new google.search.DrawOptions();
-  options.setAutoComplete(true);
-  customSearchControl.draw('cse', options);
-}, true);
-</script>
-<style type='text/css'>
-  .gsc-control-cse {
-    font-family: Arial, sans-serif;
-    border-color: #FFFFFF;
-    background-color: #FFFFFF;
-  }
-  .gsc-control-cse .gsc-table-result {
-    font-family: Arial, sans-serif;
-  }
-  input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
-    border-color: #D9D9D9;
-  }
-  input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus {
-    border-color: #666666;
-    background-color: #CECECE;
-    background-image: none;
-    filter: none;
-
-  }
-  .gsc-tabHeader.gsc-tabhInactive {
-    border-color: #FF9900;
-    background-color: #FFFFFF;
-  }
-  .gsc-tabHeader.gsc-tabhActive {
-    border-color: #E9E9E9;
-    background-color: #E9E9E9;
-    border-bottom-color: #FF9900
-  }
-  .gsc-tabsArea {
-    border-color: #FF9900;
-  }
-  .gsc-webResult.gsc-result, .gsc-results .gsc-imageResult {
-    border-color: #FFFFFF;
-    background-color: #FFFFFF;
-  }
-  .gsc-webResult.gsc-result:hover, .gsc-imageResult:hover {
-    border-color: #FFFFFF;
-    background-color: #FFFFFF;
-  }
-  .gs-webResult.gs-result a.gs-title:link, .gs-webResult.gs-result a.gs-title:link b, .gs-imageResult a.gs-title:link, .gs-imageResult a.gs-title:link b  {
-    color: #0000CC;
-  }
-  .gs-webResult.gs-result a.gs-title:visited, .gs-webResult.gs-result a.gs-title:visited b, .gs-imageResult a.gs-title:visited, .gs-imageResult a.gs-title:visited b {
-    color: #0000CC;
-  }
-  .gs-webResult.gs-result a.gs-title:hover, .gs-webResult.gs-result a.gs-title:hover b, .gs-imageResult a.gs-title:hover, .gs-imageResult a.gs-title:hover b {
-    color: #0000CC;
-  }
-  .gs-webResult.gs-result a.gs-title:active, .gs-webResult.gs-result a.gs-title:active b, .gs-imageResult a.gs-title:active, .gs-imageResult a.gs-title:active b {
-    color: #0000CC;
-  }
-  .gsc-cursor-page {
-    color: #0000CC;
-  }
-  a.gsc-trailing-more-results:link {
-    color: #0000CC;
-  }
-  .gs-webResult .gs-snippet, .gs-imageResult .gs-snippet, .gs-fileFormatType {
-    color: #000000;
-  }
-  .gs-webResult div.gs-visibleUrl, .gs-imageResult div.gs-visibleUrl {
-    color: #008000;
-  }
-  .gs-webResult div.gs-visibleUrl-short {
-    color: #008000;
-  }
-  .gs-webResult div.gs-visibleUrl-short  {
-    display: none;
-  }
-  .gs-webResult div.gs-visibleUrl-long {
-    display: block;
-  }
-  .gs-promotion div.gs-visibleUrl-short {
-    display: none;
-  }
-  .gs-promotion div.gs-visibleUrl-long  {
-    display: block;
-  }
-  .gsc-cursor-box {
-    border-color: #FFFFFF;
-  }
-  .gsc-results .gsc-cursor-box .gsc-cursor-page {
-    border-color: #E9E9E9;
-    background-color: #FFFFFF;
-    color: #0000CC;
-  }
-  .gsc-results .gsc-cursor-box .gsc-cursor-current-page {
-    border-color: #FF9900;
-    background-color: #FFFFFF;
-    color: #0000CC;
-  }
-  .gsc-webResult.gsc-result.gsc-promotion {
-    border-color: #336699;
-    background-color: #FFFFFF;
-  }
-  .gsc-completion-title {
-    color: #0000CC;
-  }
-  .gsc-completion-snippet {
-    color: #000000;
-  }
-  .gs-promotion a.gs-title:link,.gs-promotion a.gs-title:link *,.gs-promotion .gs-snippet a:link  {
-    color: #0000CC;
-  }
-  .gs-promotion a.gs-title:visited,.gs-promotion a.gs-title:visited *,.gs-promotion .gs-snippet a:visited {
-    color: #0000CC;
-  }
-  .gs-promotion a.gs-title:hover,.gs-promotion a.gs-title:hover *,.gs-promotion .gs-snippet a:hover  {
-    color: #0000CC;
-  }
-  .gs-promotion a.gs-title:active,.gs-promotion a.gs-title:active *,.gs-promotion .gs-snippet a:active {
-    color: #0000CC;
-  }
-  .gs-promotion .gs-snippet, .gs-promotion .gs-title .gs-promotion-title-right, .gs-promotion .gs-title .gs-promotion-title-right * {
-    color: #000000;
-  }
-  .gs-promotion .gs-visibleUrl,.gs-promotion .gs-visibleUrl-short  {
-    color: #008000;
-  }
-</style>
-
-## ![](static/images/stackoverflow.png) [Server Fault](http://serverfault.com/questions/tagged/foreman)
-Ask questions about how to use Foreman on Server Fault, so anyone can benefit from the answers. Tag your questions with 'foreman'.
-
-## ![](static/images/google-groups.png) Mailing lists
+## ![Google groups icon](static/images/google-groups.png) Mailing lists
 Mailing lists are available via Google Groups. Much like IRC, we have a general users (support, Q/A, etc) lists and a development list:
 
 * [foreman-users](https://groups.google.com/forum/?fromgroups#!forum/foreman-users) or email `foreman-users+subscribe@googlegroups.com`
@@ -181,15 +37,14 @@ There is also a low-traffic list dedicated to release and security announcements
 
 * [foreman-announce](https://groups.google.com/forum/?fromgroups#!forum/foreman-announce) or email `foreman-announce+subscribe@googlegroups.com`
 
-## ![](static/images/redmine.png) [Issue tracker](http://projects.theforeman.org/projects/foreman/issues)
-We use Redmine to report and track bugs and feature requests, which can be found here: [http://projects.theforeman.org/projects/foreman/issues](http://projects.theforeman.org/projects/foreman/issues)
+## ![Stack overflow icon](static/images/stackoverflow.png) [Server Fault](http://serverfault.com/questions/tagged/foreman)
+Ask questions about how to use Foreman on Server Fault, so anyone can benefit from the answers. Tag your questions with ['foreman'](http://serverfault.com/questions/tagged/foreman).
 
-## ![](static/images/freenode.png) IRC
-
-A great place to get real-time help with The Foreman is our IRC channel: #theforeman
+## ![IRC icon](static/images/freenode.png) [IRC](https://kiwiirc.com/client/irc.freenode.net/?#theforeman)
+A great place to get real-time help with The Foreman is our IRC channel: [#theforeman](https://kiwiirc.com/client/irc.freenode.net/?#theforeman)
 on [irc.freenode.net](http://webchat.freenode.net/). There are
 usually many helpful people there in addition to some of the Foreman
-developers. For development discussions, there is also #theforeman-dev.
+developers. For development discussions, there is also [#theforeman-dev](https://kiwiirc.com/client/irc.freenode.net/?#theforeman-dev).
 
 Please read and understand [this fantastic guide](http://workaround.org/getting-help-on-irc)
 to getting help for open-source projects on irc before diving in. All of the
@@ -225,7 +80,8 @@ More information: This [IRC primer](http://irchelp.org/irchelp/ircprimer.html) f
 (_Thanks to the [Puppet Labs IRC Guidelines](http://docs.puppetlabs.com/community/community_guidelines.html#irc-guidelines) for the original document_)
 
 ## ![YouTube icon](static/images/youtube.png) [YouTube channel](https://www.youtube.com/channel/UCCo7AZ1oG6TbG0-dwjRqCmw)
-
 Please subscribe to our [YouTube channel](https://www.youtube.com/channel/UCCo7AZ1oG6TbG0-dwjRqCmw). We regularly upload deep dives on Foreman features, screencasts to learn how to use the different features and plugins of Foreman, discussions and much more.
 
 Our [Google+ community](https://plus.google.com/102496134326414788199) regularly hosts live hangouts on a variety of topics. Become a member of the community and you will be notified about these events, so you can ask questions to the presenters and join the conversation.
+
+<hr/>

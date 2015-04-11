@@ -3,6 +3,8 @@ layout: contribute
 title: Contributing to Foreman
 ---
 
+# Contributing
+
 The Foreman is an open-source project that's licensed under the GNU Public License version 3. Contributions of all types are gladly accepted!
 
 ## Code-related contributions
@@ -20,16 +22,22 @@ on Github.
 Master is frozen between major releases.
 
 ### Setup development environment
-1. Fork [theforeman/foreman](https://github.com/theforeman/foreman) to a personal GitHub account. This will create a "foreman" repo under your GitHub username.
-2. Clone the fork you just created to your development system: `git clone https://github.com/<username>/foreman.git`
-3. Reference theforeman/foreman as upstream:
-
-    * `cd foreman`
-    * `git remote add upstream https://github.com/theforeman/foreman.git`
-    * `git fetch upstream`
-
-4. Copy `config/settings.yaml.example` to `config/settings.yaml`
-5. Install all required gems: `bundle install`
+* Fork [theforeman/foreman](https://github.com/theforeman/foreman) to a personal GitHub account. This will create a "foreman" repo under your GitHub username.
+* Clone the fork you just created to your development system:
+{% highlight bash %}
+git clone https://github.com/<username>/foreman.git
+{% endhighlight %}
+* Reference theforeman/foreman as upstream:
+{% highlight bash %}
+cd foreman
+git remote add upstream https://github.com/theforeman/foreman.git
+git fetch upstream
+{% endhighlight %}
+* Copy `config/settings.yaml.example` to `config/settings.yaml`
+* Install all required gems:
+{% highlight bash %}
+bundle install
+{% endhighlight %}
 
 You may get some failures when installing the required gems due to some
 native libraries being required (notably libvirt-devel &
@@ -47,7 +55,7 @@ You can also exclude these features by using `bundle install --without libvirt p
 5. Or a single test: `ruby -Itest test/functional/your_test.rb` (if you didn't run all tests before, you need to prepare the test environment with `rake db:test:prepare` the first time).
 
 ### Startup foreman
-1. Follow steps 1 and 2 from the section "setup test environment" if you haven't done so already
+1. Follow steps 1, 2 and 3 from the section "setup test environment" if you haven't done so already
 2. Populate database: `rake db:seed`
 3. Startup the server: `rails server`
 4. Navigate to `localhost:3000`
@@ -62,28 +70,37 @@ We try to keep a one commit per bug/feature policy, please try to create an issu
 
 Please make sure there is a [Redmine issue](http://projects.theforeman.org/projects/foreman/issues) open for the change you are going to submit, as you will want to reference it in your commit message; this is very helpful when generating release notes.
 
-1. Create a feature/topic branch
+* Create a feature/topic branch
 
-    * `git checkout -b <branchName>` - Example: git checkout -b 1656-add_TB_support
+{% highlight bash %}
+git checkout -b <branchName> # Example: git checkout -b 1656-add_TB_support
+{% endhighlight %}
 
-2. Make changes and commit. Please reference the Redmine issue this commit addresses via "refs" or "fixes" #issueid in the commit message. 
+*  Make changes and commit. Please reference the Redmine issue this commit addresses via "refs" or "fixes" #issueid in the commit message.
 
-    * `git add <modifiedFile(s)>; git commit -m 'fixes #<bug> <message>'`
+{% highlight bash %}
+git add <modifiedFile(s)>
+git commit -m 'fixes #<bug> <message>'
+{% endhighlight %}
 
-3. Push topic branch to your fork:
+* Push topic branch to your fork:
 
-    * `git push origin <branchName>` - Example: git push origin 1656-add_TB_support
+{% highlight bash %}
+git push origin <branchName> # Example: git push origin 1656-add_TB_support
+{% endhighlight %}
 
-4. [Issue a pull request](https://help.github.com/articles/using-pull-requests)
+* [Issue a pull request](https://help.github.com/articles/using-pull-requests)
 
 **Once you have followed this process once, it becomes much simpler to add future patches!**
 
 Merge upstream develop to local develop
 
-* git fetch upstream
-* git checkout develop
-* git merge upstream/develop develop
-* git push origin develop
+{% highlight bash %}
+git fetch upstream
+git checkout develop
+git merge upstream/develop develop
+git push origin develop
+{% endhighlight %}
 
 Now follow step 4 to the end from above.
 
