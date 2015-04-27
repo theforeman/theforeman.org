@@ -143,6 +143,8 @@ version: 1.8
 {%include manuals/1.8/4.4.4_prov_archs.md %}
 ### 4.4.6 Workflow
 {%include manuals/1.8/4.4.6_prov_workflow.md %}
+### 4.4.7 Networking
+{%include manuals/1.8/4.4.7_prov_networking.md %}
 
 ## 4.5 Command Line Interface
 {%include manuals/1.8/4.5_cli.md %}
