@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2015-3155: session cookie set without secure flag on HTTPS](security.html#2015-3155)
 * [CVE-2015-1844: users are not restricted to organizations/locations](security.html#2015-1844)
 * [CVE-2015-1816: SSL certificate not verified on LDAP connections](security.html#2015-1816)
 * [CVE-2014-3691: SSL certificate verification bypass in smart proxy](security.html#2014-3691)
@@ -43,6 +44,16 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2015-3155"></a>CVE-2015-3155: session cookie set without secure flag on HTTPS
+
+The session cookie created when accessing the Foreman web UI over HTTPS is not set with the 'secure' flag, which may lead to session hijacking.
+
+If a user successfully logs into Foreman, then accesses Foreman over HTTP (which redirects to HTTPS, but with a window of opportunity), the session ID will be sent unencrypted and the session may be hijacked by an attacker.
+
+* Affects all known Foreman versions
+* Fix in progress
+* Redmine issue [#10275](http://projects.theforeman.org/issues/10275)
 
 #### <a id="2015-1844"></a>CVE-2015-1844: users are not restricted to organizations/locations
 
