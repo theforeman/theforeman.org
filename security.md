@@ -62,7 +62,7 @@ When a non-admin user is associated to organizations or locations, their access 
 This allows users to read, edit and perform actions on resources (e.g. hosts) outside of the organizations or locations they have been assigned to.
 
 * Affects Foreman 1.2.0 (TBC) and higher
-* Fix released in Foreman 1.8.0-RC3 (in progress for 1.7)
+* Fix released in Foreman 1.8.0-RC3 and 1.7.5
 * Redmine issue [#9947](http://projects.theforeman.org/issues/9947)
 
 #### <a id="2015-1816"></a>CVE-2015-1816: SSL certificate not verified on LDAP connections
