@@ -272,3 +272,19 @@ iframe:not([allowtransparency]){
     width: 700px;
     margin-left:-320px;
 }
+
+pre {
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  font-family: FreeMono,monospace;
+  color: white;
+  background-color: #2f2f2f;
+  font-size: 13px;
+  line-height: 14px;
+  height: auto;
+}
+
+pre code {
+	font-size: 13px;
+}
