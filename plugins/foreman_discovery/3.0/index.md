@@ -386,6 +386,11 @@ click on *Refresh features* button and it will appear immediately.
 In *Infrastructure > Subnets* select the desired *Discovery Proxy* for each
 appropriate Subnet.
 
+Make sure that lease pool (defined in ISC DHCP configuration) and reservation
+pool (defined in *Infrastructure > Subnets*) are disjoint. More on that topic
+in the [installation scenarios]({{site.baseurl}}manuals/latest/index.html#3.2.3InstallationScenarios)
+section.
+
 ## 3.3 Hammer CLI Foreman Discovery plugin
 
 The plugin must be enabled in ```cli.modules.d/foreman_discovery.yml```
