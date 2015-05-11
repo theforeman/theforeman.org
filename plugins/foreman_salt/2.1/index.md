@@ -107,11 +107,17 @@ For manual installation, see [How to Install a Plugin](http://www.theforeman.org
 
 Install the Salt Smart Proxy package for your operating system (see above). The Salt smart proxy needs to run on the same server as your Salt master, and the foreman-proxy user needs to be able to run the 'salt' and 'salt-key' commands via sudo.
 
-Add this to /etc/sudoers:
+### 2.1.1 System Configuration
 
-    Cmnd_Alias SALT = /usr/bin/salt, /usr/bin/salt-key
-    foreman-proxy ALL = NOPASSWD: SALT
-    Defaults:foreman-proxy !requiretty
+  - Add this to /etc/sudoers:
+
+        Cmnd_Alias SALT = /usr/bin/salt, /usr/bin/salt-key
+        foreman-proxy ALL = NOPASSWD: SALT
+        Defaults:foreman-proxy !requiretty
+
+   - For the salt-api, ensure the salt-api package is installed, and a supported server such as python-cherrypy is installed.
+
+### 2.1.2 Salt Master Configuration
 
 In `/etc/salt/master`, make the following changes:
 
@@ -129,38 +135,54 @@ In `/etc/salt/master`, make the following changes:
 
         autosign_file: /etc/salt/autosign.conf
 
-  - Set group ownership to foreman-proxy and allow group writing:
+Set group ownership to foreman-proxy and allow group writing:
 
-        touch /etc/salt/autosign.conf
-        chgrp foreman-proxy /etc/salt/autosign.conf
-        chmod g+w /etc/salt/autosign.conf
+    touch /etc/salt/autosign.conf
+    chgrp foreman-proxy /etc/salt/autosign.conf
+    chmod g+w /etc/salt/autosign.conf
 
-  - Edit `/etc/salt/foreman.yaml` to set the appropriate settings:
+In `/etc/salt/foreman.yaml`, make the following changes:
 
-        ---
-        :proto: https
-        :host: foreman.example.com
-        :port: 443
-        :ssl_ca: "/etc/puppet/ssl_ca.pem"
-        :ssl_cert: "/etc/puppet/client_cert.pem"
-        :ssl_key: "/etc/puppet/client_key.pem"
-        :timeout:  10
-        :salt:  /usr/bin/salt
-        :upload_grains:  true
+    :proto: https
+    :host: foreman.example.com
+    :port: 443
+    :ssl_ca: /var/lib/puppet/ssl/certs/ca.pem
+    :ssl_key: /var/lib/puppet/ssl/private_keys/foreman.example.com.pem
+    :ssl_cert: /var/lib/puppet/ssl/certs/foreman.example.com.pem
+    :timeout:  10
+    :salt:  /usr/bin/salt
+    :upload_grains:  true
 
-   - To support state and environment importing, configure salt-api as per the [Salt documentation](https://salt-api.readthedocs.org/en/latest/)
+If your Smart Proxy uses SSL, then the certs and key configured in the YAML should be the same ones it uses to talk to Foreman. If you're already using Puppet in Foreman, consult `/etc/puppet/foreman.yaml` or `/etc/puppet/node.rb` for those settings.
 
-   - Edit `/etc/foreman-proxy/settings.d/salt.yml`, and configure the API-related settings:
+### 2.1.3 Salt API Configuration
 
-        :use_api: true
-        :api_auth: pam
-        :api_url: https://saltmaster.bitbin.de:9191
-        :api_username: saltuser
-        :api_password: saltpassword
+To support state and environment importing, configure salt-api as per the [Salt documentation](https://salt-api.readthedocs.org/en/latest/).  The user for the Smart Proxy requires a minimum of the `@runner` permission. An example for CherryPy is below, using the Puppet certificates for SSL.
 
-   - If your Smart Proxy uses SSL, then the certs and key configured in the YAML should be the same ones it uses to talk to Foreman. If you're already using Puppet in Foreman, consult `/etc/puppet/foreman.yaml` or `/etc/puppet/node.rb` for those settings.
+    external_auth:
+      pam:
+        saltuser:
+          - '@runner'
 
-  - Lastly, restart the `foreman-proxy` service
+    rest_cherrypy:
+      port: 9191
+      host: 0.0.0.0
+      ssl_key: /var/lib/puppet/ssl/private_keys/foreman.example.com.pem
+      ssl_crt: /var/lib/puppet/ssl/certs/foreman.example.com.pem
+
+
+Edit `/etc/foreman-proxy/settings.d/salt.yml`, and configure the API-related settings:
+
+    :use_api: true
+    :api_auth: pam
+    :api_url: https://saltmaster.bitbin.de:9191
+    :api_username: saltuser
+    :api_password: saltpassword
+
+
+### 2.1.4 Final Configuration
+
+Restart the `foreman`, `foreman-proxy`, `salt-master`, `salt-api`, and `foreman-tasks` services.
 
 ## 2.2 Foreman
 
@@ -169,19 +191,11 @@ Salt feature.
 
 # 3. Upgrade
 
-  - Ensure you have the latest stable foreman-release package, and follow the [Foreman upgrade instructions](/manuals/site.latest/index.html#3.6Upgrade), including perhaps backing up your database.
+Ensure you have the latest stable foreman-release package, and follow the [Foreman upgrade instructions](/manuals/latest/index.html#3.6Upgrade), including backing up your database.
 
-  - To support state and environment importing, configure salt-api as per the [Salt documentation](https://salt-api.readthedocs.org/en/latest/), and ensure the service is started on boot.
+To support state and environment importing, configure salt-api as per the [Salt documentation](https://salt-api.readthedocs.org/en/latest/), and ensure the service is started on boot.  See the [Smart Proxy installation section](/plugins/foreman_salt/2.1/#2.1.3SaltAPIConfiguration) for an example of how to configure the API.
 
-  - Edit `/etc/foreman-proxy/settings.d/salt.yml`, and configure the API-related settings:
-
-        :use_api: true
-        :api_auth: pam
-        :api_url: https://saltmaster.bitbin.de:9191
-        :api_username: saltuser
-        :api_password: saltpassword
-
-  - Restart the `foreman`, `foreman-proxy`, and `foreman-tasks` services
+Restart the `foreman`, `foreman-proxy`, `salt-master`, `salt-api`, and `foreman-tasks` services.
 
 # 4. Features
 
