@@ -19,7 +19,7 @@ pagename: Media
 			</div>
 			<div id="presentations">
 				<h1>Introductory presentations</h1>
-				<iframe width="650" height="400" link="/slides/foreman-intro.html" frameBorder="0"></iframe>
+				<iframe width="650" height="400" src="http://www.slideshare.net/slideshow/embed_code/key/t6BM0vxUBf0RG" frameBorder="0"></iframe>
 				<h1>Other presentations</h1>
 				<ul>
 					<li><a href="http://www.slideshare.net/inovex/deploying-foreman-in-enterprise-environments">Deploying Foreman in Enterprise Environments: best practices and lessons learned</a> (Nils Domrose)</li>
@@ -68,17 +68,6 @@ pagename: Media
 		</div>
 	</div>
 </div>
-
-<script type="text/javascript">
-// AJAX load Iframe
-$(function() {
-		$('#tabs').bind('shown', function(e) {
-				$('iframe').attr('src', '');
-				$('.tab-pane.active iframe').each(function(i){$(this).attr('src', $(this).attr('link'))});
-				});
-		$('[data-toggle="tab"][href="#talks"]').tab('show')
-		});
-</script>
 
 <script type="text/javascript">
 $(function() {

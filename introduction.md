@@ -68,8 +68,8 @@ Foreman can provision on bare metal as well as the following cloud providers:
 ------------------
 
 <div class='row'>
-  <div class='col-md-6 col-md-offset-3 center'>
-    <iframe src="//www.slideshare.net/slideshow/embed_code/key/t6BM0vxUBf0RG" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+  <div class='center'>
+    <iframe src="http://www.slideshare.net/slideshow/embed_code/key/t6BM0vxUBf0RG" width="850" height="710" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
   </div>
 </div>
 

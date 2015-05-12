@@ -682,7 +682,6 @@ border-radius: 4px;
 #doc img{
 	padding: 5px;
 	margin: 5px 0;
-	background-color: #f2f2f2;
 	max-width: 100%;
 }
 
@@ -710,6 +709,9 @@ border-radius: 4px;
 	margin-top: 0px;
 }
 
+#introduction {
+	font-size: 14px;
+}
 #introduction > p > img {
 	max-height: 25px;
 	margin-left: 15px;
