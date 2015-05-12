@@ -12,7 +12,7 @@ quickly deploy applications, and proactively manage change, both on-premise with
 Foreman provides comprehensive, interaction facilities including a web frontend, CLI and RESTful API
 which enables you to build higher level business logic on top of a solid foundation.
 
-Foreman is 4+ years old, and deployed in many organizations, managing from 10s to 1000s of servers.
+Foreman is 5+ years old, and deployed in many organizations, managing from 10s to 10,000s of servers.
 It is used in distributions such as RDO and RHOS (Red Hat OpenStack distribution) and has
 an extensive library of plugins.
 
