@@ -1,0 +1,23 @@
+---
+pagename: Introduction
+---
+{% include header.html %}
+<div id="wrap">
+	<div class="container">
+		<div id='introduction' class="col-md-12">
+			{{ content }}
+		</div>
+	</div>
+</div>
+{% include footer.html %}
+
+<script type="text/javascript">
+// AJAX load Iframe
+$(function() {
+		$('iframe').attr('src', '');
+		$('iframe').each(function(i){
+				$(this).attr('src', $(this).attr('link'))
+				});
+		});
+</script>
+

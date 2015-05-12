@@ -1,6 +1,6 @@
-exclude: [ Gemfile, Gemfile.lock, Procfile, vendor, gems, README.md]
+exclude: [Gemfile, Gemfile.lock, Procfile, vendor, gems, README.md]
 
-sitename:  The Foreman
+sitename:  Foreman
 tagline: Foreman is a complete lifecycle management tool for physical and virtual servers.
 description: Foreman is an open source project that gives system administrators the power to easily automate repetitive tasks, quickly deploy applications, and proactively manage servers, on-premises or in the cloud.
 
@@ -15,10 +15,13 @@ pygments:    true
 markdown:    rdiscount
 
 navigation:
-- text: Learn more
-  url: learn_more.html
-- text: Getting started
-  url:  manuals/1.8/quickstart_guide.html
-- text: Media
+- text: Introduction
+  url: introduction.html
+- text: Quickstart
+  url: manuals/1.8/quickstart_guide.html#QuickstartGuide
+- text: Documentation
+  url: documentation.html
+- text: Community
+  url: contribute.html
+- text: Videos
   url: media.html
-

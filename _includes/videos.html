@@ -1,0 +1,16 @@
+<script type="text/javascript">
+$('.video').on('click', function() {
+	$(this).html('<iframe src="//www.youtube.com/embed/' + $(this).data('video-id') + '?autoplay=1" width="397.5px" height="297px" frameborder="0" allowfullscreen></iframe>').css('background', 'none');
+});
+
+function getYoutubeID(url) {
+	var id = url.match("[\\?&]v=([^&#]*)");
+	id = id[1];
+	return id;
+};
+$('div.youtube').each(function() {
+	var id = $(this).data('video-id');
+	var thumb_url = "http://img.youtube.com/vi/"+id+"/hqdefault.jpg";
+	$('<img width="100%" class="video" src="'+thumb_url+'" />').appendTo($(this));
+});
+</script>

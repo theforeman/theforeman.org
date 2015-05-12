@@ -4,20 +4,18 @@ pagename: Contribute
 
 {% include header.html %}
 <div id="wrap">
-  <div id="main">
-    <div id="content" class="container">
-      <a href="https://github.com/theforeman" target="_blank" id="fork-me" class='hidden-tablet hidden-phone'><img style="position: fixed;top: 0; right: 0; border: 0;z-index:999999;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
-      <div class="row">
-        <div id="toc" class="span3">
-        </div>
-        <div id="doc" class="offset3 span9">
-          {{ content  }}
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="container">
+		<a href="https://github.com/theforeman" target="_blank" id="fork-me" class='hidden-tablet hidden-phone'><img style="position: fixed;top: 0; right: 0; border: 0;z-index:999999;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+		<div class="row">
+      <div class="col-md-3">
+				<div id="toc" class="sidebar-nav-fixed pull-right" data-spy="affix" data-offset-top="60" data-offset-bottom="300">
+				</div>
+			</div>
+			<div id='doc' class="col-md-9">
+				{{ content }}
+			</div>
+		</div>
+	</div>
 </div>
-
 {% include tocify.html %}
-
 {% include footer.html %}
