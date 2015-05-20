@@ -61,7 +61,7 @@ The session cookie created when accessing the Foreman web UI over HTTPS is not s
 If a user successfully logs into Foreman, then accesses Foreman over HTTP (which redirects to HTTPS, but with a window of opportunity), the session ID will be sent unencrypted and the session may be hijacked by an attacker.
 
 * Affects all known Foreman versions
-* Fix in progress, due to be released in 1.8.1
+* Fix released in Foreman 1.8.1
 * Redmine issue [#10275](http://projects.theforeman.org/issues/10275)
 
 #### <a id="2015-1844"></a>CVE-2015-1844: users are not restricted to organizations/locations
