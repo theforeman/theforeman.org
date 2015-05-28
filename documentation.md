@@ -138,7 +138,7 @@ version: 1.8
 		</a>
 	</div>
 	<div class='col-md-3 center'>
-		<a href="https://github.com/OpenSCAP/foreman_openscap/" class="btn-doc btn">
+		<a href="plugins/foreman_openscap/0.4" class="btn-doc btn">
 			<h2 class='doc-icon'><i class="fa fa-bank"></i></h2>
 			OpenSCAP
 		</a>
