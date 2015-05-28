@@ -94,8 +94,8 @@ Edit ```openscap.yml``` with the appropriate settings
 
     puppet module install isimluk-foreman_scap_client
     
-Running puppet on the client host, will install also foreman_scap_client.
-
+This puppet module will automatically install foreman_scap_client (if not installed) and will configure the client's ```/etc/foreman_scap_client/config.yaml``` with parameters which are needed for the operation of foreman_scap_client.
+foreman_scap_client to run scans and upload results to the Smart Proxy.
 
 # 4. Usage 
 
