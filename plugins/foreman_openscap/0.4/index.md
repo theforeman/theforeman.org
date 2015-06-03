@@ -22,13 +22,13 @@ Foreman OpenSCAP plugin is made of 5 components:
 * [foreman_scap_client](https://github.com/theforeman/foreman_scap_client) - A client script which runs OpenSCAP scan and uploads the scan report to the Smart-Proxy
 * [puppet-foreman_scap_client](https://github.com/theforeman/puppet-foreman_scap_client) - A puppet module which configures foreman_scap_client
 
-## 1.1 OpenSCAP basic boncepts
+## 1.1 OpenSCAP basic concepts
 
 There are three basic concepts (entities) in OpenSCAP plug-in: SCAP Contents, Compliance Policies and ARF Reports.
 
-__SCAP Content__ represents SCAP DataStream XML file as defined by SCAP 1.2 standard. DataStream file contains implementation of compliance, 
-configuration or security baselines. Users are advised to acquire examplary baseline by installing scap-security-guide package. 
-DataStream file usualy contains multiple XCCDF Profiles. Each for different security target. The content of DataStream file can be inspected by oscap tool from openscap-scanner package. 
+__SCAP Content__ represents SCAP DataStream XML file as defined by SCAP 1.2 standard. DataStream file contains implementation of compliance,
+configuration or security baselines. Users are advised to acquire examplary baseline by installing scap-security-guide package.
+DataStream file usualy contains multiple XCCDF Profiles. Each for different security target. The content of DataStream file can be inspected by oscap tool from openscap-scanner package.
 (XCCDF = Extensible Configuration Checklist Description Format, XCCDF profile = A checklist which audit specific security target)
 
 __Compliance Policy__ is high level concept of a baseline applied to the infrastructure. Compliance policy is defined by user on web interface. Users may assign following information to the policy:
@@ -69,7 +69,7 @@ Both versions' functionality is the same, the changes only affect to the way it 
 
 # 2. Installation
 
-There are a few components to install: 
+There are a few components to install:
 
 Foreman OpenSCAP (foreman_openscap), Smart Proxy OpenSCAP (smart_proxy_openscap), foreman_scap_client and puppet-foreman_scap_client.
 
@@ -81,9 +81,9 @@ Please refer to Foreman install plugin [manual](http://theforeman.org/manuals/1.
 
 On the Smart-Proxy server:
 
-    
+
     > yum install smart_proxy_openscap
-    
+
 Edit ```openscap.yml``` with the appropriate settings
 
     ---
@@ -93,14 +93,14 @@ Edit ```openscap.yml``` with the appropriate settings
 ### 2.3 Installing puppet-foreman_scap_client
 
     puppet module install isimluk-foreman_scap_client
-    
+
 This puppet module will automatically install foreman_scap_client (if not installed) and will configure the client's ```/etc/foreman_scap_client/config.yaml``` with parameters which are needed for the operation of foreman_scap_client.
 foreman_scap_client to run scans and upload results to the Smart Proxy.
 
-# 4. Usage 
+# 4. Usage
 
 This chapter covers features that you can use in terms of Foreman and OpenSCAP
-integration. Everything described below assumes you've sucessfully installed 
+integration. Everything described below assumes you've sucessfully installed
 foreman_openscap, smart_proxy_openscap and puppet-foreman_scap_client is available on your puppetmaster and Foreman.
 
 You would usually start with uploading SCAP contents, then create policies of those SCAP contents and assign the policy to hosts or hostgroups.
@@ -143,7 +143,7 @@ You can assign a policy in two ways:
 You can access the generated reports via Hosts -> Compliance -> Reports
 ![ARF reports index]({{page.images}}/arf_index.png)
 Clicking on "View Report" will lead you to the actual security audit report, with detailed information on the host's security check and suggested remediation.
-![ARF report]({{page.images}}/arf_report.png) 
+![ARF report]({{page.images}}/arf_report.png)
 
 # 5. Advanced topics
 
