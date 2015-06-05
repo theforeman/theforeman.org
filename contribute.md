@@ -126,3 +126,9 @@ Both the manual and the web site are contained in our [theforeman.org repository
 
 ### Design and User interface
 Foreman has a very basic design and user interface. Any improvements to it including new themes, skinning, or interface adjustments could help every user.
+
+### Hosted hardware
+
+We have an ever-growing number of contributions and other plugins and projects that require computing power, mostly in our Jenkins CI environment.  We also have package builders, web hosting and other services to run.
+
+Foreman has a number of generous sponsors who provide hosted, publicly accessible servers (usually virtual machines) or cloud accounts that we can use.  Please see the [sponsors page](/sponsors.html) for more details.
