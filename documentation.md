@@ -64,5 +64,4 @@ version: 1.9
     </a>
   </div>
 </div>
-
 <hr/>
