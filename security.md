@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2015-3235: edit_users permission allows changing of admin passwords](security.html#2015-3235)
 * [CVE-2015-3199: Discovery: auto provision rule not enforcing org/locations](security.html#2015-3199)
 * [CVE-2015-3155: session cookie set without secure flag on HTTPS](security.html#2015-3155)
 * [CVE-2015-1844: users are not restricted to organizations/locations](security.html#2015-1844)
@@ -46,11 +47,23 @@ All security advisories made for Foreman are listed below with their correspondi
 
 ### Disclosure details
 
+#### <a id="2015-3235"></a>CVE-2015-3235: edit_users permission allows changing of admin passwords
+
+A user with the edit_users permission (e.g. with the Manager role) is allowed to edit admin users. This allows them to change the password of the admin user's account and gain access to it.
+
+**Mitigation:** change roles of users with the edit_users permission, remove the *Unlimited* flag and set a search query of `admin = false`.
+
+* Affects all known Foreman versions
+* Fix in progress
+* Redmine issue [#10829](http://projects.theforeman.org/issues/10829)
+
 #### <a id="2015-3199"></a>CVE-2015-3199: Discovery: auto provision rule not enforcing org/locations
+
+*This CVE identifier was assigned before realizing that no released versions of Foreman Discovery were affected.  It will remain assigned for future reference only.*
 
 The Foreman Discovery plugin auto provisioning rules do not enforce that the rule and the assigned host group are in the same organization and location.  This can allow a rule to be configured with mismatched orgs/locations, and for another user who has access to the rule but not the host group, to run it and provision a host into a group in a different org/location to their own.
 
-* Affects Foreman Discovery 2.0 and higher
+* Affects no released versions of Foreman Discovery
 * Fix in progress
 * Redmine issue [#10469](http://projects.theforeman.org/issues/10469)
 
