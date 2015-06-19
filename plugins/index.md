@@ -133,13 +133,19 @@ Plugins are tools to extend and modify the functionality of Foreman. The core of
 # 2. Installation
 
 Foreman plugins are implemented as [gems](http://guides.rubygems.org/what-is-a-gem/) in [Ruby on Rails](http://www.rubyonrails.org). See below for the different installation methods, which depend on your platform.
+A number of plugins are available packaged from our yum and apt repositories for ease of use. The number of these is increasing, so check the [wiki](http://projects.theforeman.org/projects/foreman/wiki/List_of_Plugins) to see if a package is available yet.  If it's an useful or popular plugin and not yet packaged, please file a feature request in [the packaging project](http://projects.theforeman.org/projects/rpms/issues/new).
 
 ## 2.1 RPM installations
+The repositories are available at [yum.theforeman.org/plugins](http://yum.theforeman.org/plugins/).  Separate repositories are available for each Foreman release, containing plugins that are compatible with that particular version.  Packages are not currently GPG signed.
 
-A limited number of plugins are available fully packaged from our yum repositories for ease of use. The number of these is increasing, so check the [wiki](http://projects.theforeman.org/projects/foreman/wiki/List_of_Plugins) to see if a package is available yet.  If it's a useful or popular plugin and not yet packaged, please file a feature request in [the packaging project](http://projects.theforeman.org/projects/rpms/issues/new).
-
-The repos are available at [yum.theforeman.org/plugins](http://yum.theforeman.org/plugins/).  Separate repos are available for each Foreman release, containing plugins that are compatible with that particular version.  Packages are not currently GPG signed.
-
+* Configure the repo by creating `/etc/yum.repos.d/foreman_plugins.repo` with the following content:
+<pre>
+[foreman-plugins]
+name=Foreman plugins
+baseurl=http://yum.theforeman.org/plugins/{{page.version}}/el6/x86_64/
+enabled=1
+gpgcheck=0
+</pre>
 * Find the package for the plugin: `yum search rubygem-foreman` or `yum search rubygem-smart_proxy`
 * Install the package, e.g. `yum install ruby193-rubygem-foreman_discovery`
 * Restart Foreman with `service foreman restart`
@@ -147,10 +153,7 @@ The repos are available at [yum.theforeman.org/plugins](http://yum.theforeman.or
 Some plugins (e.g. foreman_column_view) may also require configuration in `/usr/share/foreman/config/settings.plugins.d/`, check for any .example files.
 
 ## 2.2 Debian installations
-
-A limited number of plugins are available fully packaged from our deb repositories for ease of use. The number of these is increasing, so check the list of plugins to see if a Debian package is available yet. If it's a useful or popular plugin and not yet packaged, please file a feature request in [the packaging project](http://projects.theforeman.org/projects/rpms/issues/new).
-
-The repo is available at `http://deb.theforeman.org plugins <component>`. Separate repos are available for each Foreman release, containing plugins that are compatible with that particular version. They are signed with the Foreman APT key.
+The repositories are available at `http://deb.theforeman.org plugins <component>`. Separate repositories are available for each Foreman release, containing plugins that are compatible with that particular version. They are signed with the Foreman APT key.
 
 * Add a source line like this to apt:
 <pre>deb http://deb.theforeman.org/ plugins 1.8</pre>
