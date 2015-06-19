@@ -43,24 +43,20 @@ version: 1.8
     </a>
   </div>
 </div>
-
-<hr/>
-
-<h2 style="text-align: center;">Or perhaps you want to check out our extensive <a href="/plugins">collection of plugins</a>?</h2>
-
-<hr/>
-
-## Need help?
----------------------------
-
 <div class='row'>
-  <div class='col-md-6 center'>
+  <div class='col-md-4 center'>
+		<a href='/plugins' class="btn-doc btn">
+      <h2 class='doc-icon'><i class="fa fa-cubes"></i></h2>
+      <p id='plugins'>plugins</p>
+    </a>
+  </div>
+  <div class='col-md-4 center'>
     <a href="/support.html" class="btn-doc btn">
       <h2 class='doc-icon'><i class="fa fa-support"></i></h2>
       Support
     </a>
   </div>
-  <div class='col-md-6 center'>
+  <div class='col-md-4 center'>
     <a href="/security.html" class="btn-doc btn">
       <h2 class='doc-icon'><i class="fa fa-lock"></i></h2>
       Security
@@ -68,4 +64,4 @@ version: 1.8
   </div>
 </div>
 
-
+<hr/>
