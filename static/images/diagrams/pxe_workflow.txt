@@ -1,0 +1,50 @@
+# Use http://sequencediagram.org/ to generate image
+
+title PXE-based provisioning with Puppet
+
+participant User
+participant "Provisioned Host" as Host
+participant "Foreman" as Foreman
+participant "Foreman Proxy" as Proxy
+participant TFTP
+participant DHCP
+participant DNS
+participant "Puppet master" as Puppet
+
+linear
+autonumber
+
+User->Foreman:clicks on New Host
+Foreman->Proxy:requests free IP address
+Proxy->DHCP:forwards free IP request
+User->Foreman:clicks Submit button in the New host form
+Foreman->Proxy:creates TFTP record
+Proxy->TFTP:drops TFTP configuration file
+Foreman->Proxy:creates DHCP reservation
+Proxy->DHCP:forwards DHCP reservation
+Foreman->Proxy:creates DNS records
+Proxy->DNS:forwards DNS records
+note over Foreman:new host is in Build mode
+
+== Boot into Anaconda ==
+
+User->Host:powers on the machine
+Host->DHCP:requests the reserved IP
+Host->TFTP:downloads Anaconda image/kernel
+Host->Foreman:request Kickstart
+note over Host:installs OS
+Host->Puppet:signs puppet client certificate (puppet agent)
+Host->Foreman:turns off build mode
+Foreman->Proxy:sends TFTP removal request
+Proxy->TFTP:removes TFTP configuration file
+note over Host:reboots
+
+== First boot ==
+
+Host->DHCP:requests the reserved IP
+Host->Puppet:sends initial facts
+Puppet->Foreman:forwards initial facts
+note over Host:performs initial configuration
+Host->Puppet:sends initial report
+Puppet->Foreman:forwards initial report
+note over Host:in operation

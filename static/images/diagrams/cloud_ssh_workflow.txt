@@ -1,0 +1,41 @@
+# Use http://sequencediagram.org/ to generate image
+
+title Cloud-based provisioning with Puppet over ssh
+
+participant User
+participant "Provisioned Instance" as Host
+participant "Foreman" as Foreman
+participant "Foreman Proxy" as Proxy
+participant "Infrastructure Cloud" as Cloud
+participant DNS
+participant "Puppet master" as Puppet
+
+linear
+autonumber
+
+note over Foreman:has an Image with credentials defined in Compute Resource
+User->Foreman:clicks on New Host
+User->Foreman:selects cloud resource, the image and submits
+Foreman->Cloud:creates new instance
+Cloud->Foreman:reports IP address
+Foreman->Proxy:creates DNS records
+Proxy->DNS:forwards DNS records
+Foreman->Proxy:creates DNS records
+Foreman->Cloud:starts the instance
+note over Host:boots up
+Foreman->Host:executes finish script via ssh
+
+== Finish script ==
+
+Host->Puppet:signs puppet client certificate (puppet agent)
+note over Host:build mode is turned off
+
+== First puppet run ==
+
+Host->Puppet:sends initial facts
+Puppet->Foreman:forwards initial facts
+Host->Puppet:compiles catalog
+note over Host:host is configured
+Host->Puppet:sends initial report
+Puppet->Foreman:forwards initial report
+note over Host:in operation
