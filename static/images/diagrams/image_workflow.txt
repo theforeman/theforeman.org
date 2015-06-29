@@ -1,0 +1,47 @@
+# Use http://sequencediagram.org/ to generate image
+
+title Image-based provisioning with Puppet
+
+participant User
+participant "Provisioned Host" as Host
+participant "Foreman" as Foreman
+participant "Foreman Proxy" as Proxy
+participant "Hypervisor" as HVM
+participant DHCP
+participant DNS
+participant "Puppet master" as Puppet
+
+linear
+autonumber
+
+note over Foreman:has an Image with credentials defined
+User->Foreman:clicks on New Host
+Foreman->Proxy:requests free IP address
+Proxy->DHCP:forwards free IP request
+User->Foreman:selects virtualization resource and submits
+Foreman->HVM:creates new VM
+HVM->Foreman:reports MAC address
+Foreman->Proxy:creates DHCP reservation
+Proxy->DHCP:forwards DHCP reservation
+Foreman->Proxy:creates DNS records
+Proxy->DNS:forwards DNS records
+Foreman->Proxy:creates DNS records
+Foreman->HVM:starts the VM
+Host->DHCP:requests the reserved IP
+note over Host:boots up
+Foreman->Host:executes finish script via ssh
+
+== Finish script ==
+
+Host->Puppet:signs puppet client certificate (puppet agent)
+note over Host:build mode is turned off
+
+== First puppet run ==
+
+Host->Puppet:sends initial facts
+Puppet->Foreman:forwards initial facts
+Host->Puppet:compiles catalog
+note over Host:host is configured
+Host->Puppet:sends initial report
+Puppet->Foreman:forwards initial report
+note over Host:in operation
