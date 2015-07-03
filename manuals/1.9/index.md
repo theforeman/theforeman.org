@@ -250,5 +250,8 @@ version: 1.9
 ## 7.1 NoVNC
 {%include manuals/1.9/7.1_novnc.md %}
 
-## 7.2 Getting Help
-{%include manuals/1.9/7.2_getting_help.md %}
+## 7.2 Debugging
+{%include manuals/1.9/7.2_debugging.md %}
+
+## 7.3 Getting Help
+{%include manuals/1.9/7.3_getting_help.md %}
