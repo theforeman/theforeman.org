@@ -97,37 +97,35 @@ version: 1.9
 {%include manuals/1.9/4.3.2_smartproxy_settings.md %}
 ### 4.3.3 BMC
 {%include manuals/1.9/4.3.3_smartproxy_bmc.md %}
-### 4.3.4 Chef
-{%include manuals/1.9/4.3.4_chef_proxy.md %}
-### 4.3.5 DHCP
-#### 4.3.5.1 dhcp.yml
-{%include manuals/1.9/4.3.5_smartproxy_dhcp.md %}
-#### 4.3.5.2 ISC DHCP
-{%include manuals/1.9/4.3.5.2_isc_dhcp.md %}
-#### 4.3.5.3 MS DHCP
-{%include manuals/1.9/4.3.5.3_ms_dhcp.md %}
-### 4.3.6 DNS
-#### 4.3.6.1 dns.yml
-{%include manuals/1.9/4.3.6_smartproxy_dns.md %}
-#### 4.3.6.2 BIND
-{%include manuals/1.9/4.3.6.2_bind.md %}
-#### 4.3.6.3 GSS-TSIG DNS
-{%include manuals/1.9/4.3.6.3_gsstsig.md %}
-### 4.3.7 Puppet
-{%include manuals/1.9/4.3.7_smartproxy_puppet.md %}
-### 4.3.8 Puppet CA
-{%include manuals/1.9/4.3.8_smartproxy_puppetca.md %}
-### 4.3.9 Realm
-#### 4.3.9.1 realm.yml
-{%include manuals/1.9/4.3.9_smartproxy_realm.md %}
-#### 4.3.9.2 FreeIPA Realm
-{%include manuals/1.9/4.3.9.2_freeipa_realm.md %}
-### 4.3.10 TFTP
-{%include manuals/1.9/4.3.10_smartproxy_tftp.md %}
-### 4.3.11 SSL
-{%include manuals/1.9/4.3.11_smartproxy_ssl.md %}
-### 4.3.12 Libvirt
-{%include manuals/1.9/4.3.12_smartproxy_libvirt.md %}
+### 4.3.4 DHCP
+#### 4.3.4.1 dhcp.yml
+{%include manuals/1.9/4.3.4_smartproxy_dhcp.md %}
+#### 4.3.4.2 ISC DHCP
+{%include manuals/1.9/4.3.4.2_isc_dhcp.md %}
+#### 4.3.4.3 MS DHCP
+{%include manuals/1.9/4.3.4.3_ms_dhcp.md %}
+### 4.3.5 DNS
+#### 4.3.5.1 dns.yml
+{%include manuals/1.9/4.3.5_smartproxy_dns.md %}
+#### 4.3.5.2 BIND
+{%include manuals/1.9/4.3.5.2_bind.md %}
+#### 4.3.5.3 GSS-TSIG DNS
+{%include manuals/1.9/4.3.5.3_gsstsig.md %}
+### 4.3.6 Puppet
+{%include manuals/1.9/4.3.6_smartproxy_puppet.md %}
+### 4.3.7 Puppet CA
+{%include manuals/1.9/4.3.7_smartproxy_puppetca.md %}
+### 4.3.8 Realm
+#### 4.3.8.1 realm.yml
+{%include manuals/1.9/4.3.8_smartproxy_realm.md %}
+#### 4.3.8.2 FreeIPA Realm
+{%include manuals/1.9/4.3.8.2_freeipa_realm.md %}
+### 4.3.9 TFTP
+{%include manuals/1.9/4.3.9_smartproxy_tftp.md %}
+### 4.3.10 SSL
+{%include manuals/1.9/4.3.10_smartproxy_ssl.md %}
+### 4.3.11 Libvirt
+{%include manuals/1.9/4.3.11_smartproxy_libvirt.md %}
 
 ## 4.4 Provisioning
 {%include manuals/1.9/4.4_provisioning.md %}
