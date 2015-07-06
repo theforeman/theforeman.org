@@ -54,7 +54,7 @@ A user with the edit_users permission (e.g. with the Manager role) is allowed to
 **Mitigation:** change roles of users with the edit_users permission, remove the *Unlimited* flag and set a search query of `admin = false`.
 
 * Affects all known Foreman versions
-* Fix in progress
+* Fix released in Foreman 1.9.0-RC1
 * Redmine issue [#10829](http://projects.theforeman.org/issues/10829)
 
 #### <a id="2015-3199"></a>CVE-2015-3199: Discovery: auto provision rule not enforcing org/locations
