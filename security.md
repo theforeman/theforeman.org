@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2015-5152: require_ssl does not enforce HTTPS on API](security.html#2015-5152)
 * [CVE-2015-3235: edit_users permission allows changing of admin passwords](security.html#2015-3235)
 * [CVE-2015-3199: Discovery: auto provision rule not enforcing org/locations](security.html#2015-3199)
 * [CVE-2015-3155: session cookie set without secure flag on HTTPS](security.html#2015-3155)
@@ -46,6 +47,21 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2015-5152"></a>CVE-2015-5152: require_ssl does not enforce HTTPS on API
+
+The "require_ssl" setting in /etc/foreman/settings.yml should enforce that web requests sent to Foreman over HTTP are redirected to HTTPS, but this was found not to happen with API requests (e.g. from Hammer CLI). Foreman will process API requests over HTTP, but should have redirected.
+
+Redirection won't help with credentials having already been sent, but should give some notification that the user/app is using the wrong URL.
+
+**Mitigation:** add the following to the Apache HTTP VirtualHost, e.g. in `/etc/httpd/conf.d/05-foreman.d/api_request.conf`:
+
+    RewriteEngine On
+    RewriteRule ^/api/(.*) https://%{SERVER_NAME}/api/$1 [R,L]
+
+* Affects Foreman 1.1 and higher
+* Fix released in Foreman 1.9.0-RC1
+* Redmine issue [#11119](http://projects.theforeman.org/issues/11119)
 
 #### <a id="2015-3235"></a>CVE-2015-3235: edit_users permission allows changing of admin passwords
 
