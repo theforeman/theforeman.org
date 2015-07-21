@@ -10,20 +10,7 @@ title: Support
 
 To get appropriate support, you need to provide sufficient information about
 your operating system, environment and setup. You can utilize the
-foreman-debug tool which collects information about your OS, Foreman and
-related components.
-
-If you installed from packages, the command is available to root:
-
-    # foreman-debug
-
-If you installed from git, you can find it in the Foreman directory:
-
-    # script/foreman-debug
-
-If you run it without any options, it will collect data, filter out possible
-passwords or tokens and create a tarball which can be safely handed over to
-us.
+foreman-debug tool. For more info use the [manual](/manuals/latest/index.html#7.3GettingHelp).
 
 ## ![Redmine icon](static/images/redmine.png) [Issue tracker](http://projects.theforeman.org/projects/foreman/issues)
 
