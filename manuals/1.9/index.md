@@ -157,8 +157,10 @@ version: 1.9
 {%include manuals/1.9/4.6.1_email_preferences.md %}
 ### 4.6.2 Account Notifications
 {%include manuals/1.9/4.6.2_email_account.md %}
-### 4.6.3 Puppet Notifications
-{%include manuals/1.9/4.6.3_email_puppet.md %}
+### 4.6.3 Host Notifications
+{%include manuals/1.9/4.6.3_email_host.md %}
+### 4.6.4 Scheduled Emails
+{%include manuals/1.9/4.6.4_email_scheduled.md %}
 
 ## 4.7 Managing Salt
 {%include manuals/1.9/4.7_managing_salt.md %}
