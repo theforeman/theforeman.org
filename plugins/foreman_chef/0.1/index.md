@@ -280,6 +280,27 @@ client and modify chef-client config file (/etc/chef/client.rb).
     foreman_reports_upload  true
     reports_log_level       "notice"
 
+You can even customize which attributes will be sent to Foreman
+by specifying a whitelist and/or blacklist. Whitelist will keep only
+attributes that belongs to listed root attributes. Blacklist filters
+out attributes on any level. In following examples only cpu and lsb
+attributes are uploaded and all attributes matching *flags* are omitted,
+which means no attribute like "cpu::1::flags::1" will be sent.
+
+    foreman_facts_whitelist ['cpu', 'lsb']
+    foreman_facts_blacklist ['flags']
+
+Be careful when limiting attributes, Foreman uses some of them to adjust
+host attributes (e.g. network interfaces related ones)
+
+If you filter out attributes that changes with each run (e.g. uptime),
+you can use facts caching to decrease Foreman server load. Chef client
+will compute hash of attributes set that would be sent and if it matches
+hash from previous run it does not send it. To enable this feature,
+you have to specify a file in which a md5 hash will be kept.
+
+    foreman_facts_cache_file '/var/cache/chef_foreman_cache.md5'
+
 For more information, please visit [project readme on github](https://github.com/theforeman/chef-handler-foreman)
 
 # 4. Usage (features description)
