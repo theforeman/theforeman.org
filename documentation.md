@@ -38,7 +38,7 @@ version: 1.8
     </a>
   </div>
   <div class='col-md-4 center'>
-    <a href="api_v2.html" class="btn-doc btn">
+    <a id="api-ref-link" href="api/{{page.version}}/index.html" class="btn-doc btn">
       <h2 class='doc-icon'><i class="fa fa-terminal"></i></h2>
       <p id='api-ref'>api</p>
     </a>
