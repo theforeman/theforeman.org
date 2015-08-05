@@ -687,6 +687,7 @@ border-radius: 4px;
 
 #doc {
   font-size: 14px;
+  min-height: 500px;
 }
 
 #doc h2 img {

@@ -36,8 +36,12 @@ Generate API docs in Foreman
 1. cd to foreman directory
 2. rake apipie:cache
 
+Prepare folder for the new version (X.Y)
+
+3. cd to theforeman.org/api directory
+4. cp -r new_version_template X.Y
+5. edit file X.Y/index.md and set correct version
+
 Copy docs to repo
 
-3. cd to theforeman.org directory
-4. cp -r dir/to/foreman/public/apipie-cache/apidoc api/
-5. cp dir/to/foreman/public/apipie-cache/apidoc.* api/
+6. cp -r dir/to/foreman/public/apipie-cache/apidoc/* Y.Y/apidoc

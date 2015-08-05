@@ -4,13 +4,13 @@ pagename: API
 {% include header.html %}
 <div id="wrap">
 	<div id="content">
-		<iframe src="api/apidoc/v1.html" frameborder="0" width="100%" height="1000px"  onload='resizeIframe(this);' ></iframe>
+    <iframe src="api/{{page.version}}/apidoc/v1.html" frameborder="0" width="100%" height="1000px" onload='resizeIframe(this);'></iframe>
 	</div>
 </div>
 
 <script language="javascript" type="text/javascript">
 function resizeIframe(obj) {
-	obj.height=$('#wrap').height()-180+"px"
+  obj.style.height = obj.contentWindow.document.getElementById('container').scrollHeight + 150 + 'px';
 }
 </script>
 

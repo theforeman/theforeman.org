@@ -5,6 +5,8 @@ function setVersion(version) {
     $('#manual-link').attr('href', 'manuals/' + version + '/index.html');
     $('#release-notes').html('release notes ' + version);
     $('#release-notes-link').attr('href', 'manuals/' + version + '/index.html#Releasenotesfor' + version);
+    $('#api-ref').html('api ' + version);
+    $('#api-ref-link').attr('href', 'api/' + version + '/index.html');
   }
 }
 
