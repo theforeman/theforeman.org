@@ -91,6 +91,12 @@ Plugins are tools to extend and modify the functionality of Foreman. The core of
 </div>
 <div class='row'>
 	<div class='col-md-3 center'>
+		<a href="plugins/foreman_remote_execution/0.0/" class="btn-doc btn">
+			<p class='h2 doc-icon'><i class="fa fa-toggle-right"></i></p>
+			Remote Execution
+		</a>
+	</div>
+	<div class='col-md-3 center'>
 		<a href="plugins/foreman_salt/" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-cube"></i></p>
 			Salt
@@ -108,14 +114,14 @@ Plugins are tools to extend and modify the functionality of Foreman. The core of
 			Templates
 		</a>
 	</div>
+</div>
+<div class='row'>
 	<div class='col-md-3 center'>
 		<a href="https://github.com/theforeman/puppetdb_foreman" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-database"></i></p>
 			PuppetDB
 		</a>
 	</div>
-</div>
-<div class='row'>
 	<div class='col-md-3 center'>
 		<a href="https://github.com/theforeman/foreman-xen" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-dashboard"></i></p>
