@@ -18,7 +18,7 @@ navigation:
 - text: Introduction
   url: introduction.html
 - text: Quickstart
-  url: manuals/1.8/quickstart_guide.html#QuickstartGuide
+  url: manuals/1.9/quickstart_guide.html#QuickstartGuide
 - text: Documentation
   url: documentation.html
 - text: Community
