@@ -26,7 +26,7 @@ Few examples of tasks that this plugins helps you to achieve
 
 - install/update/remove package
 - bootstrap configuration management agent
-- trigger puppet/salt/chef/... run
+- trigger Rpppet/salt/Chef/... run
 
 
 ## 1.1 Components
@@ -59,7 +59,7 @@ several components that must be installed on Foreman  and Foreman proxy.
 </table>
 
 Each component is packaged for platforms that Foreman is officially
-packaged for. Since both Foreman a Smart proxy plugins requires
+packaged for. Since both Foreman and Smart proxy plugins requires
 Dynflow, Ruby 1.9+ is required. Foreman 1.9+ should be compatible with
 0.0.* versions.
 
@@ -70,14 +70,11 @@ nightly repositories on CentOS 7.1. We assume smart proxy being
 installed on the same host, it's not requirement though.
 Please adapt according to your needs.
 
-Start by installing Foreman nightly repository and EPEL7 by
-
-    yum install http://yum.theforeman.org/nightly/el7/x86_64/foreman-release.rpm
-    yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-
-Install the foreman-installer
-
-    yum install foreman-installer
+Start by installing Foreman nightly repository and EPEL7, see 
+[Quickstart instructions](/manuals/latest/index.html#2.Quickstart)
+and
+[Foreman manual](/manuals/latest/index.html#3.InstallingForeman)
+for more information.
 
 Run foreman-installer and let it install foreman-tasks plugin
 
@@ -87,11 +84,6 @@ After it sucessfully finishes you'll have to manually install plugins
 by following command
 
     yum install ruby193-rubygem-foreman_remote_execution rubygem-smart_proxy_remote_execution_ssh
-
-Now migrate the database and load default data
-
-    foreman-rake db:migrate
-    foreman-rake db:seed
 
 Next you have to setup ssh keys. By default smart proxy loads the key
 from `/usr/share/foreman-proxy/.ssh/id_rsa_foreman_proxy` and use root
@@ -109,7 +101,7 @@ To generate a key, run following command on the host where Smart proxy runs
 Don't forget to restart Foreman, Smart proxy and Foreman tasks so
 plugins are loaded
 
-    service foreman restart
+    service httpd restart
     service foreman-tasks restart
     service foreman-proxy restart
 
@@ -141,7 +133,7 @@ definition first.
 ## 3.1 Job Templates
 
 If you're familiar with Foreman provisioning templates, you should
-find writing job templates familiar. First navigate to Host -> Job
+find writing job templates familiar. First navigate to Host > Job
 Templates (new menu entry). Then hit the green button with label "New
 Job Template".
 
@@ -293,7 +285,7 @@ whole Job task.
 
 ## 3.4 Jobs list
 
-You can find all Jobs when you navigate to Monitor -> Jobs. A table
+You can find all Jobs when you navigate to Monitor > Jobs. A table
 lists all jobs from history to future. You can search jobs by **Job
 name** with a queries like
 
