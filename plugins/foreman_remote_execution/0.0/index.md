@@ -26,7 +26,7 @@ Few examples of tasks that this plugins helps you to achieve
 
 - install/update/remove package
 - bootstrap configuration management agent
-- trigger Rpppet/salt/Chef/... run
+- trigger Puppet/Salt/Chef/... run
 
 
 ## 1.1 Components
