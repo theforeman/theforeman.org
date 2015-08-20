@@ -8,9 +8,9 @@ version: 0.0
 
 This plugin enables Foreman to run arbitrary commands on hosts using
 different providers. Initially only SSH provider is supported but we
-plan to add more. Communication goes through Smart proxy so Foreman 
+plan to add more. Communication goes through Smart proxy so Foreman
 does not have to have direct access to the target host and can scale
-to control many hosts. A command can be customized similarly to 
+to control many hosts. A command can be customized similarly to
 provisioning templates or partition tables, for more details see
 [Job Templates](plugins/foreman_remote_execution/{{page.version}}/index.html#3.1JobTemplates)
 section.
@@ -70,7 +70,7 @@ nightly repositories on CentOS 7.1. We assume smart proxy being
 installed on the same host, it's not requirement though.
 Please adapt according to your needs.
 
-Start by installing Foreman nightly repository and EPEL7, see 
+Start by installing Foreman nightly repository and EPEL7, see
 [Quickstart instructions](/manuals/latest/index.html#2.Quickstart)
 and
 [Foreman manual](/manuals/latest/index.html#3.InstallingForeman)
@@ -88,7 +88,7 @@ by following command
 Next you have to setup ssh keys. By default smart proxy loads the key
 from `/usr/share/foreman-proxy/.ssh/id_rsa_foreman_proxy` and use root
 user on target host. To customize it you can edit the configuration in
-`/etc/foreman-proxy/config/settings.d/dynflow.yml`. Without
+`/etc/foreman-proxy/config/settings.d/remote_execution_ssh.yml`. Without
 customization you need to create new ssh key and distribute it to
 target hosts. The key must not use passphrase.
 
@@ -329,8 +329,8 @@ remote hosts (see
 for details). The remote hosts need to be configured to accept the
 private key that the smart proxy is using.
 
-In future versions, it will be possible to provide the target hosts 
-public keys or obtain them through available config management system 
+In future versions, it will be possible to provide the target hosts
+public keys or obtain them through available config management system
 facts.
 
 For now, the `root` is used as the user to access the remote hosts. It
