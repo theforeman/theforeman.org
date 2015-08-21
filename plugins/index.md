@@ -51,7 +51,7 @@ Plugins are tools to extend and modify the functionality of Foreman. The core of
 		</a>
 	</div>
 	<div class='col-md-3 center'>
-		<a href="https://github.com/theforeman/foreman-docker/" class="btn-doc btn">
+		<a href="plugins/foreman_docker/1.x/" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-ship"></i></p>
 			Docker
 		</a>
