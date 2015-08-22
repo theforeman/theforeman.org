@@ -83,7 +83,7 @@ Plugins are tools to extend and modify the functionality of Foreman. The core of
 		</a>
 	</div>
 	<div class='col-md-3 center'>
-		<a href="https://github.com/OpenSCAP/foreman_openscap/" class="btn-doc btn">
+		<a href="plugins/foreman_openscap/0.4/" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-bank"></i></p>
 			OpenSCAP
 		</a>
