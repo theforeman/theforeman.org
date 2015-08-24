@@ -406,12 +406,30 @@ rewrite the *pxelinux.cfg/default* file.
 
 Repeat this step every time a change is made to the default template.
 
-## 3.1.3 Global settings
+## 3.1.3 Organizations and Locations
 
-If Locations and/or Organisations are enabled, Foreman will default to using
-the first Location and first Organisation for Discovered hosts. If hosts should
-be placed in some other Location/Organization, alter the default settings in
-*Administer > Settings > Discovered*.
+If Locations and/or Organisations are enabled, Foreman assigns Organization
+and Location to discovered hosts according to the following rules from top to
+bottom:
+
+* According to the `discovery_organization` or `discovery_location`, if
+present. These can be set under *Administer > Settings > Discovered*.
+
+* If `foreman_organization` or `foreman_location` fact is present, set
+accordingly. Fact names which are looked up can be configured in
+*Administer > Settings > Puppet* section as *Organization/Location fact* setting.
+
+* If Subnet was determined for particular discovered host, use the first
+Organization and Location associated with the Subnet.
+
+* Select the first Organization / Location ordered by title (name the org/loc
+was created with). This is a workaround until we fix provisioning of discovered
+hosts [without taxonomy](http://projects.theforeman.org/issues/4426).
+
+Organization or Location can be changed via the "bulk actions" menu which
+appears once once or more discovered hosts are selected.
+
+## 3.1.4 Global settings
 
 There is also setting called *discovery_fact* which defaults to
 *discovery_bootif*. It specify which incoming fact should be used to get the
