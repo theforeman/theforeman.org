@@ -82,7 +82,7 @@ Please refer to Foreman install plugin [manual](http://theforeman.org/manuals/1.
 On the Smart-Proxy server:
 
 
-    > yum install smart_proxy_openscap
+    > yum install rubygem-smart_proxy_openscap.noarch
 
 Edit ```openscap.yml``` with the appropriate settings
 
