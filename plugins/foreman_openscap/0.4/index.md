@@ -75,14 +75,19 @@ Foreman OpenSCAP (foreman_openscap), Smart Proxy OpenSCAP (smart_proxy_openscap)
 
 ### 2.1 Installing foreman_openscap
 
-Please refer to Foreman install plugin [manual](http://theforeman.org/manuals/1.8/index.html#6.1InstallaPlugin) to install the plugin on Foreman.
+On the Foreman server:
+
+	> yum install ruby193-rubygem-foreman_openscap
+	> service httpd reload
+
+Please refer the Foreman plugin [manual](http://theforeman.org/manuals/latest/index.html#6.1InstallaPlugin) for more information about installing Foreman plugins.
 
 ### 2.2 Installing smart_proxy_openscap
 
 On the Smart-Proxy server:
 
 
-    > yum install rubygem-smart_proxy_openscap.noarch
+    > yum install rubygem-smart_proxy_openscap
 
 Edit ```openscap.yml``` with the appropriate settings
 
