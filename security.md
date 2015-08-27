@@ -93,7 +93,7 @@ A user with the edit_users permission (e.g. with the Manager role) is allowed to
 The Foreman Discovery plugin auto provisioning rules do not enforce that the rule and the assigned host group are in the same organization and location.  This can allow a rule to be configured with mismatched orgs/locations, and for another user who has access to the rule but not the host group, to run it and provision a host into a group in a different org/location to their own.
 
 * Affects no released versions of Foreman Discovery
-* Fix in progress
+* Fix released in Foreman Discovery 4.0.0
 * Redmine issue [#10469](http://projects.theforeman.org/issues/10469)
 
 #### <a id="2015-3155"></a>CVE-2015-3155: session cookie set without secure flag on HTTPS
