@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2015-5233: reports show/destroy not restricted by host authorization](security.html#2015-5233)
 * [CVE-2015-5152: require_ssl does not enforce HTTPS on API](security.html#2015-5152)
 * [CVE-2015-3235: edit_users permission allows changing of admin passwords](security.html#2015-3235)
 * [CVE-2015-3199: Discovery: auto provision rule not enforcing org/locations](security.html#2015-3199)
@@ -48,13 +49,25 @@ All security advisories made for Foreman are listed below with their correspondi
 
 ### Disclosure details
 
+#### <a id="2015-5233"></a>CVE-2015-5233: reports show/destroy not restricted by host authorization
+
+Users with view_reports or destroy_reports permissions allows a user to view or delete reports from any host without taking their view_hosts permission into account.
+
+The reports list and other views combine the reports and hosts permissions to only show reports for hosts that a user can view, but the individual report show/delete pages and APIs do not apply the hosts permissions.
+
+*Mitigation:* remove view_reports and destroy_reports permissions from users until a fix is available, or add a search query to the role filter to restrict it.
+
+* Affects Foreman 1.5.0 and higher
+* Fix being developed
+* Redmine issue [#11579](http://projects.theforeman.org/issues/11579)
+
 #### <a id="2015-5152"></a>CVE-2015-5152: require_ssl does not enforce HTTPS on API
 
 The "require_ssl" setting in /etc/foreman/settings.yml should enforce that web requests sent to Foreman over HTTP are redirected to HTTPS, but this was found not to happen with API requests (e.g. from Hammer CLI). Foreman will process API requests over HTTP, but should have redirected.
 
 Redirection won't help with credentials having already been sent, but should give some notification that the user/app is using the wrong URL.
 
-**Mitigation:** add the following to the Apache HTTP VirtualHost, e.g. in `/etc/httpd/conf.d/05-foreman.d/api_request.conf`:
+*Mitigation:* add the following to the Apache HTTP VirtualHost, e.g. in `/etc/httpd/conf.d/05-foreman.d/api_request.conf`:
 
     RewriteEngine On
     RewriteRule ^/api/(.*) https://%{SERVER_NAME}/api/$1 [R,L]
@@ -67,7 +80,7 @@ Redirection won't help with credentials having already been sent, but should giv
 
 A user with the edit_users permission (e.g. with the Manager role) is allowed to edit admin users. This allows them to change the password of the admin user's account and gain access to it.
 
-**Mitigation:** change roles of users with the edit_users permission, remove the *Unlimited* flag and set a search query of `admin = false`.
+*Mitigation:* change roles of users with the edit_users permission, remove the *Unlimited* flag and set a search query of `admin = false`.
 
 * Affects all known Foreman versions
 * Fix released in Foreman 1.9.0-RC1
