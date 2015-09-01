@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2015-5246: Active Directory login works with old password after change](security.html#2015-5246)
 * [CVE-2015-5233: reports show/destroy not restricted by host authorization](security.html#2015-5233)
 * [CVE-2015-5152: require_ssl does not enforce HTTPS on API](security.html#2015-5152)
 * [CVE-2015-3235: edit_users permission allows changing of admin passwords](security.html#2015-3235)
@@ -48,6 +49,16 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2015-5246"></a>CVE-2015-5246: Active Directory login works with old password after change
+
+When using an Active Directory instance to log into Foreman (via an LDAP authentication source), it is possible to log into Foreman after a password change in AD using the old password.
+
+This issue is under investigation.
+
+* At least Foreman 1.9, affected versions not known
+* Fix being developed
+* Redmine issue [#11471](http://projects.theforeman.org/issues/11471)
 
 #### <a id="2015-5233"></a>CVE-2015-5233: reports show/destroy not restricted by host authorization
 
