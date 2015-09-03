@@ -179,6 +179,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9d216', end
 	padding: 20px 0;
 }
 
+#page-header a {
+  color: #fcfcff;
+}
+#page-header a:hover,
+#page-header a:focus {
+  color: #23b0db;
+}
+
 #page-header .brand {
   color: #ffffff;
   font-size: 3.3em;
@@ -648,28 +656,16 @@ border-radius: 4px;
   font-weight: bold
 }
 
-.social-buttons {
-	margin-left: -125px;
-}
-
-.social-buttons li {
-	display: inline-block;
-	padding: 5px 8px;
-	line-height: 1;
-}
-
-.version-marker{
-	position: absolute;
-	margin-top: -15px;
-}
-.version-marker p{
-	background-color: #fafafa;
-	padding: 0 5px;
-	text-shadow: 0 1px 0 #fff;
+.version-marker {
+	margin-top: 20px;
+  text-align: center;
 	font-weight: bold;
-	font-size: 11px;
-	color: #555;
-	border-radius: 3px;
+	font-size: 14px;
+	color: #ffffff;
+}
+
+.version-marker p {
+  margin-bottom: 0;
 }
 
 #support h2 img{
