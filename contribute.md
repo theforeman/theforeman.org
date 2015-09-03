@@ -47,6 +47,8 @@ for RHEL/Fedora based distributions).
 
 You can also exclude these features by using `bundle install --without libvirt postgresql` etc (groups are under bundler.d/).
 
+If you experience problems related to therubyracer or libv8, you can install without the therubyracer bundler group but make sure node.js is installed.
+
 ### Setup test environment
 1. Copy `config/database.yml.example` to `config/database.yml`
 2. Edit `config/settings.yaml` to set :locations_enabled: and :organizations_enabled: to true
