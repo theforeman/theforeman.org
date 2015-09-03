@@ -169,7 +169,7 @@ Salt feature.
 
 Ensure you have the latest stable foreman-release package, and follow the [Foreman upgrade instructions](/manuals/latest/index.html#3.6Upgrade), including backing up your database.
 
-To support state and environment importing, configure salt-api as per the [Salt documentation](https://salt-api.readthedocs.org/en/latest/), and ensure the service is started on boot.  See the [Smart Proxy installation section](/plugins/foreman_salt/2.1/#2.1.3SaltAPIConfiguration) for an example of how to configure the API.
+To support state and environment importing, configure salt-api as per the [Salt documentation](https://salt-api.readthedocs.org/en/latest/), and ensure the service is started on boot.  See the [Smart Proxy installation section]({{ page.url }}#2.1.3SaltAPIConfiguration) for an example of how to configure the API.
 
 Restart the `foreman`, `foreman-proxy`, `salt-master`, `salt-api`, and `foreman-tasks` services.
 
