@@ -143,6 +143,12 @@ version: 1.9
 {%include manuals/1.9/4.4.6_prov_workflow.md %}
 ### 4.4.7 Networking
 {%include manuals/1.9/4.4.7_prov_networking.md %}
+### 4.4.8 OS Specific Notes
+{%include manuals/1.9/4.4.8_prov_os_notes.md %}
+### 4.4.8.1 FreeBSD
+{%include manuals/1.9/4.4.8.1_prov_freebsd.md %}
+### 4.4.8.2 SLES
+{%include manuals/1.9/4.4.8.2_prov_sles.md %}
 
 ## 4.5 Command Line Interface
 {%include manuals/1.9/4.5_cli.md %}

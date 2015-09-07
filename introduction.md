@@ -32,8 +32,9 @@ The following operating systems are known to install successfully from Foreman:
 
  ![](static/images/os/Redhat.png) RHEL ![](static/images/os/Centos.png) CentOS ![](static/images/os/Fedora.png) Fedora
  ![](static/images/os/Ubuntu.png) Ubuntu ![](static/images/os/Debian.png) Debian ![](static/images/os/Solaris.png) Solaris 8, 10
- ![](static/images/os/Suse.png) OpenSUSE ![](static/images/os/Oracle.png) Oracle Linux ![](static/images/os/CoreOS.png) CoreOS
- ![](static/images/os/Junos.png) Junos
+
+ ![](static/images/os/Suse.png) OpenSUSE ![](static/images/os/Suse.png) SLES ![](static/images/os/Oracle.png) Oracle Linux
+ ![](static/images/os/CoreOS.png) CoreOS ![](static/images/os/FreeBSD.png) FreeBSD ![](static/images/os/Junos.png) Junos
 
 Foreman can provision on bare metal as well as the following cloud providers:
 
