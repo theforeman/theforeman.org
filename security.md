@@ -52,12 +52,11 @@ All security advisories made for Foreman are listed below with their correspondi
 
 #### <a id="2015-5246"></a>CVE-2015-5246: Active Directory login works with old password after change
 
-When using an Active Directory instance to log into Foreman (via an LDAP authentication source), it is possible to log into Foreman after a password change in AD using the old password.
+*This CVE identifier was assigned before realizing that this was not a bug in Foreman, but a feature of Active Directory.  It will remain assigned for future reference only.  See [the Active Directory password changes](/manuals/latest/index.html#4.1.1LDAPAuthentication) section of the manual or [Microsoft KB906305](https://support.microsoft.com/en-us/kb/906305) for more details.*
 
-This issue is under investigation.
+When using an Active Directory instance to log into Foreman (via an LDAP authentication source), it is possible to log into Foreman for up to one hour after a password change in AD using the old password.
 
-* At least Foreman 1.9, affected versions not known
-* Fix being developed
+* Fix to Foreman not required, reconfigure Active Directory
 * Redmine issue [#11471](http://projects.theforeman.org/issues/11471)
 
 #### <a id="2015-5233"></a>CVE-2015-5233: reports show/destroy not restricted by host authorization
