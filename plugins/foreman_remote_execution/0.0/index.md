@@ -98,6 +98,11 @@ To generate a key, run following command on the host where Smart proxy runs
     chown foreman-proxy ~foreman-proxy/.ssh
     sudo -u foreman-proxy ssh-keygen -f ~foreman-proxy/.ssh/id_rsa_foreman_proxy -N ''
 
+When using SELinux make sure the directory and the files have correct labels
+of ssh_home_t. If not, restore the context:
+
+    restorecon -RvF ~foreman-proxy/.ssh
+
 Don't forget to restart Foreman, Smart proxy and Foreman tasks so
 plugins are loaded
 
