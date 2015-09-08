@@ -29,6 +29,9 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0;" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  {% if page.redirect != nil %}
+  <meta http-equiv="refresh" content="1; url={{ page.redirect }}" />
+  {% endif %}
 </head>
 
 <body>
