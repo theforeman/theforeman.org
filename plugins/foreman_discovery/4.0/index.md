@@ -446,6 +446,11 @@ that, set the value of this setting to name of a fact reported. To hide the
 new column, set to a blank value. To show multiple columns, separate fact
 names by comma.
 
+The discovery view uses regular expressions to decide which category
+each fact belongs to, it's possible to change the regular expression used for
+each category by changing the values of discovery_facts_category_name
+(a valid regex will need to be given instead).
+
 ## 3.2 Foreman Proxy Discovery plugin
 
 Make sure *foreman_url* setting is present in the Foreman Proxy configuration file.
