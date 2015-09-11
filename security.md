@@ -68,7 +68,7 @@ The reports list and other views combine the reports and hosts permissions to on
 *Mitigation:* remove view_reports and destroy_reports permissions from users until a fix is available, or add a search query to the role filter to restrict it.
 
 * Affects Foreman 1.5.0 and higher
-* Fix being developed
+* Fix released in Foreman 1.9.1 and will be released in 1.8.4
 * Redmine issue [#11579](http://projects.theforeman.org/issues/11579)
 
 #### <a id="2015-5152"></a>CVE-2015-5152: require_ssl does not enforce HTTPS on API
