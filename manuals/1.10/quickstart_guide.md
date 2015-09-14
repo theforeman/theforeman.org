@@ -1,16 +1,16 @@
 ---
 layout: manual
 title: Foreman Quickstart Guide
-version: 1.9
+version: 1.10
 ---
 
 # Quickstart Guide
 
-{% include manuals/1.9/2_quickstart_guide.md %}
+{% include manuals/1.10/2_quickstart_guide.md %}
 
 ## Installation
 
-{% include manuals/1.9/2.1_quickstart_installation.md %}
+{% include manuals/1.10/2.1_quickstart_installation.md %}
 
 ## More quickstart resources...
 
