@@ -1,7 +1,7 @@
 ---
 layout: manual
 title: Foreman 1.1 Manual
-version: 1.1
+version: "1.1"
 ---
 
 # 1. Foreman 1.1 Manual

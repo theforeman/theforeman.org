@@ -1,6 +1,6 @@
 ---
 pagename: Manual
-latestversion: 1.9
+latestversion: "1.9"
 ---
 {% include header.html %}
 <div id="wrap">
@@ -9,13 +9,17 @@ latestversion: 1.9
 			{% unless page.url contains "quickstart_guide" %}
 			<div class="col-md-3">
 				<div id="toc" class="sidebar-nav-fixed pull-right hidden-sm hidden-xs" data-spy="affix" data-offset-top="60" data-offset-bottom="300">
-					{% if page.version < page.latestversion %}
+					{% capture versionmaj %}{{ page.version | split: "." | first | times: 100 }}{% endcapture %}
+					{% capture versioni %}{{ page.version | split: "." | last | plus: versionmaj }}{% endcapture %}
+					{% capture latestmaj %}{{ page.latestversion | split: "." | first | times: 100 }}{% endcapture %}
+					{% capture latesti %}{{ page.latestversion | split: "." | last | plus: latestmaj }}{% endcapture %}
+					{% if versioni < latesti %}
 					<div class="alert alert-warning">
 						<p style="margin-bottom: 3px"><strong>Newer version available</strong></p>
 						<p style="margin-bottom: 0">This manual is for Foreman {{ page.version }}, but the <a href="{{ site.baseurl }}manuals/{{ page.latestversion }}/index.html">latest version is {{ page.latestversion }}</a>.</p>
 					</div>
 					{% endif %}
-					{% if page.version > page.latestversion %}
+					{% if versioni > latesti %}
 					<div class="alert alert-warning">
 						<p style="margin-bottom: 3px"><strong>Not yet released</strong></p>
 						<p style="margin-bottom: 0">This manual is for Foreman {{ page.version }}, but <a href="{{ site.baseurl }}manuals/{{ page.latestversion }}/index.html">{{ page.latestversion }}</a> is the current stable version.</p>

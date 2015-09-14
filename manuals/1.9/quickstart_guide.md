@@ -1,7 +1,7 @@
 ---
 layout: manual
 title: Foreman Quickstart Guide
-version: 1.9
+version: "1.9"
 ---
 
 # Quickstart Guide

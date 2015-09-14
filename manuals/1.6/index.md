@@ -1,7 +1,7 @@
 ---
 layout: manual
 title: Foreman 1.6 Manual
-version: 1.6
+version: "1.6"
 ---
 
 # 1. {{ page.title }}
