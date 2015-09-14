@@ -76,7 +76,7 @@ If using the Foreman installer, install the core and smart proxy plugins with:
 foreman-installer --enable-foreman-plugin-salt --enable-foreman-proxy-plugin-salt
 ```
 
-For manual installation, see [How to Install a Plugin](http://www.theforeman.org/manuals/latest/index.html#6.1InstallaPlugin) for more info.
+For manual installation, see the [plugin manual]({{ site.baseurl }}plugins/#2.Installation) for more info.
 
 
 ## 2.1 Smart Proxy
@@ -288,7 +288,7 @@ Using Curl to get a list of keys from "smartproxy.example.com":
 
 ## 4.9 CLI
 
-A [hammer](www.theforeman.org/manuals/latest/index.html#4.5CommandLineInterface) plugin for Salt is available, [follow the instructions for installing a plugin](http://www.theforeman.org/manuals/latest/index.html#6.1InstallaPlugin) to install hammer_cli_foreman_salt, and then see `hammer --help` for more information.
+A [hammer]({{ site.baseurl }}manuals/latest/index.html#4.5CommandLineInterface) plugin for Salt is available, [follow the instructions for installing a plugin]({{ site.baseurl }}plugins/#2.Installation) to install hammer_cli_foreman_salt, and then see `hammer --help` for more information.
 
 Examples:
 
@@ -313,10 +313,10 @@ If you find a bug, please file it in
 [Redmine](http://projects.theforeman.org/projects/salt/issues/new).  You can
 find us on freenode on #theforeman as well.
 
-See the [troubleshooting section](http://theforeman.org/manuals/latest/index.html#7.2GettingHelp)
+See the [troubleshooting section]({{ site.baseurl }}manuals/latest/index.html#7.3GettingHelp)
 in the Foreman manual for more info.
 
 ## 5.2 Contributing
 
-Follow the [same process as Foreman](http://theforeman.org/contribute.html#SubmitPatches)
+Follow the [same process as Foreman]({{ site.baseurl }}contribute.html#SubmitPatches)
 for contributing.
