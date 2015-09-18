@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2015-5282: parameter hide checkbox allows stored XSS during change](security.html#2015-5282)
 * [CVE-2015-5246: Active Directory login works with old password after change](security.html#2015-5246)
 * [CVE-2015-5233: reports show/destroy not restricted by host authorization](security.html#2015-5233)
 * [CVE-2015-5152: require_ssl does not enforce HTTPS on API](security.html#2015-5152)
@@ -49,6 +50,14 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2015-5282"></a>CVE-2015-5282: parameter hide checkbox allows stored XSS during change
+
+The parameter management UI has a checkbox to mark values as hidden to mask them from casual viewing. The checkbox that hides/shows the value fails to handle HTML properly and so is vulnerable to an XSS issue where HTML can be stored in a parameter, and executed by another user if they later tick/untick the hide box.
+
+* Affects Foreman 1.7.0 and higher
+* Fix in progress for Foreman 1.10.0
+* Redmine issue [#11859](http://projects.theforeman.org/issues/11859)
 
 #### <a id="2015-5246"></a>CVE-2015-5246: Active Directory login works with old password after change
 
