@@ -275,7 +275,7 @@ client and modify chef-client config file (/etc/chef/client.rb).
  You have to put the following lines at the end of your config files
 
     require 'chef_handler_foreman'
-    foreman_server_options  :url => 'https://your.server/'
+    foreman_server_options  :url => 'https://your.proxy.server:8443'
     foreman_facts_upload    true
     foreman_reports_upload  true
     reports_log_level       "notice"
