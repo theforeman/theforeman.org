@@ -106,6 +106,10 @@ git push origin develop
 
 Now follow step 4 to the end from above.
 
+### Projects / mentoring
+
+Please see [this page](/projects.html) for details on our currrent projects.
+
 ## Non-code related contributions
 These don't require any software development experience, just some time and the desire to help.
 

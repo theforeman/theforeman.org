@@ -1,3 +1,28 @@
+---
+layout: contribute
+title: Mentoring Projects
+---
+
+## Mentoring Projects
+
+This page details potential projects and their mentors, for participants of
+internship programs such as [Google Summer of Code](https://www.google-melange.com/),
+[Outreachy](https://www.gnome.org/outreachy/), and so forth. Each program will
+have its own requirements and application process - this page simply lists the
+currently available projects.
+
+## I'm interested - how can I get familiar with Foreman?
+
+* [Install Foreman](/manuals/latest/quickstart_guide.html) on a virtual machine or your own computer
+* Skim through the [manual](/documentation.html)
+* Watch a few [demo videos](/media.html)
+* Read a couple posts from the [mailing list](/support.html#Mailinglists)
+* Join us on [IRC](/support.html#IRC):
+  * \#theforeman on Freenode for generally getting to know Foreman and asking user questions
+  * \#theforeman-dev on Freenode for development/mentoring questions. Don't be shy; tell us you're interested in one of our open mentoring projects
+
+## Open Projects
+
 ### Puppet Forge and Foreman
 
 * *Status*: Not started
@@ -68,3 +93,18 @@
   environment with puppet modules and parameters. This could be extracted into
   an installer to deploy a new host or maybe a Docker image. Working title for
   this is enc2answers.
+
+## Project Suggestions
+
+Send a pull request with the content of your proposal to [theforeman.org at
+GitHub](http://github.com/theforeman/theforeman.org). See [Dave Neary's
+post](http://www.outercurve.org/Blogs/EntryId/45/Making-the-most-of-Google-Summer-of-Code-Dave-Neary-guest-blogger)
+for suggestions on how to propose ideas.
+
+Ideas should be useful to the community, and should have an estimated time, to
+help participants choose work that can be completed in the time allotted.
+Original good ideas will be valued. We don't want to impose anything. This is
+Free and Open Source software.
+
+As usual, if you are doubtful about whether your idea is ok or not, feel free
+to ask in #theforeman-dev on Freenode.
