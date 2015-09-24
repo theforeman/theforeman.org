@@ -31,6 +31,12 @@ Thank you to Kentucky WiMax, who provide servers for our continuous integration 
 
 <div class="lead text-center"><a href="http://www.kywimax.com">Kentucky WiMax</a></div>
 
+### DataCentred
+
+Thank you to DataCentred, who provide ARM cloud servers for our package build system.
+
+<div class="lead text-center"><a href="http://www.datacentred.co.uk/"><img src="/static/images/sponsors/datacentred.jpg" /></a></div>
+
 ### Red Hat
 
 Thank you to Red Hat, who provide servers for our RPM build system and staffs developers to work on Foreman and its plugins full-time.
