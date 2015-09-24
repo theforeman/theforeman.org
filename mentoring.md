@@ -94,6 +94,15 @@ currently available projects.
   an installer to deploy a new host or maybe a Docker image. Working title for
   this is enc2answers.
 
+### [Domain-less provisioning for VMs](http://projects.theforeman.org/issues/11989)
+
+* *Status:* Not started
+* *Summary of idea*: Users can't create domains on demand on certain cloud services (AWS, DO, etc). We should fetch existing domains from compute resources, or at least allow creating virtual hosts without one. This would make Foreman more accessible as users don't necessarily want to deal with interfaces setup. We could even have an 'advanced' tick button or something that limits the Host form to the minimal requirements unless the button is checked.
+* *Knowledge prerequisite*: Ruby, some Javascript
+* *Skill level*: Medium
+* *Contacts*: Daniel Lobato Garcia
+* *Mentor(s)*: Daniel Lobato Garcia
+
 ## Project Suggestions
 
 Send a pull request with the content of your proposal to [theforeman.org at
