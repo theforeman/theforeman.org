@@ -19,7 +19,7 @@ Plugins are tools to extend and modify the functionality of Foreman. The core of
 		</a>
 	</div>
 	<div class='col-md-3 center'>
-		<a href="plugins/foreman_chef/0.1" class="btn-doc btn">
+		<a href="plugins/foreman_chef/0.2" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-cutlery"></i></p>
 			Chef
 		</a>
