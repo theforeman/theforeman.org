@@ -44,7 +44,6 @@ version: 1.9
       <p id='api-ref'>api</p>
     </a>
   </div>
-</div>
 <div class='row'>
   <div class='col-md-4 center'>
 		<a href='/plugins' class="btn-doc btn">
@@ -62,6 +61,14 @@ version: 1.9
     <a href="/security.html" class="btn-doc btn">
       <h2 class='doc-icon'><i class="fa fa-lock"></i></h2>
       Security
+    </a>
+  </div>
+</div>
+<div class='row'>
+  <div class='col-md-4 col-md-offset-4'>
+    <a href="http://blog.theforeman.org" class="btn-doc btn">
+      <h2 class='doc-icon'><i class="fa fa-rss"></i></h2>
+      Blog
     </a>
   </div>
 </div>
