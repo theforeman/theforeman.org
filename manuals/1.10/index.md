@@ -151,6 +151,8 @@ version: "1.10"
 {%include manuals/1.10/4.4.8.1_prov_freebsd.md %}
 ### 4.4.8.2 SLES
 {%include manuals/1.10/4.4.8.2_prov_sles.md %}
+### 4.4.8.3 Windows
+{%include manuals/1.10/4.4.8.3_prov_windows.md %}
 
 ## 4.5 Command Line Interface
 {%include manuals/1.10/4.5_cli.md %}
