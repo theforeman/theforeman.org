@@ -7,3 +7,4 @@ _site
 .ruby-version
 .ruby-gemset
 .bundle
+Gemfile.lock
