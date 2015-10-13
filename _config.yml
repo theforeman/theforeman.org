@@ -11,7 +11,7 @@ baseurl: /
 safe:        false
 
 future:      false
-pygments:    true
+highlighter: pygments
 markdown:    rdiscount
 
 navigation:
