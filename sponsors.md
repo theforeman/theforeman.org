@@ -37,6 +37,10 @@ Thank you to DataCentred, who provide ARM cloud servers for our package build sy
 
 <div class="lead text-center"><a href="http://www.datacentred.co.uk/"><img src="/static/images/sponsors/datacentred.jpg" /></a></div>
 
+### Enrico Bartz
+
+Thank you to Enrico, who provides an ARM server for our package build system.
+
 ### Red Hat
 
 Thank you to Red Hat, who provide servers for our RPM build system and staffs developers to work on Foreman and its plugins full-time.
