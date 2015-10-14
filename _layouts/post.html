@@ -1,0 +1,44 @@
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="https://apis.google.com/js/plusone.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+{% include header.html %}
+<div class="container-fluid container-body">
+  <div class="col-md-8 col-md-offset-2 col-centered">
+    <section>
+      {% if page.pagename != nil %}
+      <h2>{{ page.pagename }}</h2>
+      {% else %}
+      <h2>{{ page.title }}</h2>
+      {% endif %}
+      <h3>{{ page.author }} - {{ page.date | date: "%-d %B %Y" }}</h3>
+
+      <hr/>
+
+      {{ content }}
+
+      <hr/>
+      <div>
+        You can follow us on Twitter: @ForemanProject. If you tweet about foreman, please use the hashtag #theforeman so we can see it!
+          We also have a Google+ group which you can join for updates & discussion.
+      </div>
+      <hr/>
+      <div>
+        <div class="g-plusone"
+             data-size="tall"
+             data-annotation="none"
+             data-href="{{ site.url }}{{ page.url }}">
+        </div>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{site.url}}{{page.url}}" data-hashtags="theforeman" data-dnt="true">Tweet</a>
+        <a href="{{site.baseurl}}blog/">Return</a>
+      </div>
+      <hr/>
+      <div class="g-comments"
+           data-href="{{ site.url }}{{ page.url }}"
+           data-width="642"
+           data-first_party_property="BLOGGER"
+           data-view_type="FILTERED_POSTMOD">
+      </div>
+    </section>
+  </div>
+</div>
+{% include footer.html %}

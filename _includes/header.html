@@ -12,6 +12,7 @@
     {% assign pagename = true %}
     {% endif %}
   <title>{{ sitename }}{% if pagename %} :: {{ page.pagename }}{% endif %}</title>
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="http://{{ site.url }}/feed.xml" />
 
   <script type="text/javascript" src="{{ site.baseurl }}static/js/jquery.js"></script>
   <script type="text/javascript" src="{{ site.baseurl }}static/js/bootstrap.min.js"></script>
