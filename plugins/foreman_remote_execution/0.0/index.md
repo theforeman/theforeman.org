@@ -76,6 +76,14 @@ and
 [Foreman manual](/manuals/latest/index.html#3.InstallingForeman)
 for more information.
 
+## Foreman 1.10 and later
+
+You can install both the Foreman and Smart Proxy plugin with the installer:
+
+    foreman-installer --enable-foreman-plugin-remote-execution --enable-foreman-proxy-plugin-remote-execution-ssh
+
+## Foreman 1.9 and earlier
+
 Run foreman-installer and let it install foreman-tasks plugin
 
     foreman-installer --enable-foreman-plugin-tasks
