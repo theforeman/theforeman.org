@@ -5,32 +5,44 @@
 <div class="container-fluid container-body">
   <div class="col-md-8 col-md-offset-2 col-centered">
     <section>
-      {% if page.pagename != nil %}
-      <h2>{{ page.pagename }}</h2>
-      {% else %}
-      <h2>{{ page.title }}</h2>
-      {% endif %}
-      <h3>{{ page.author }} - {{ page.date | date: "%-d %B %Y" }}</h3>
-
-      <hr/>
-
-      {{ content }}
-
-      <hr/>
-      <div>
-        You can follow us on Twitter: @ForemanProject. If you tweet about foreman, please use the hashtag #theforeman so we can see it!
-          We also have a Google+ group which you can join for updates & discussion.
+      <div class="post-header">
+        {% if page.pagename != nil %}
+        <h2>{{ page.pagename }}</h2>
+        {% else %}
+        <h2>{{ page.title }}</h2>
+        {% endif %}
+        <p class="metadata">
+          <span class="author">{{ page.author }}</span> - <span class="date">{{ page.date | date: "%-d %B %Y" }}</span>
+        </p>
       </div>
+
       <hr/>
-      <div>
-        <div class="g-plusone"
-             data-size="tall"
-             data-annotation="none"
-             data-href="{{ site.url }}{{ page.url }}">
+
+      <div class="post-content bold-headings">
+        {{ content }}
+      </div>
+
+      <div class="well">
+        You can follow us on Twitter: @ForemanProject. If you tweet about foreman, please use the hashtag #theforeman so we can see it!<br />
+        We also have a Google+ group which you can join for updates &amp; discussion.
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-6">
+          <a href="{{site.baseurl}}blog/" class="btn btn-foreman-blue"><span aria-hidden="true">&larr;</span> Return</a>
         </div>
-        <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{site.url}}{{page.url}}" data-hashtags="theforeman" data-dnt="true">Tweet</a>
-        <a href="{{site.baseurl}}blog/">Return</a>
+        <div class="col-md-6 col-sm-6 col-xs-6 clearfix">
+          <div class="pull-right">
+            <div class="g-plusone"
+                 data-size="standard"
+                 data-annotation="none"
+                 data-href="{{ site.url }}{{ page.url }}">
+            </div>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{site.url}}{{page.url}}" data-hashtags="theforeman" data-dnt="true" data-size="large">Tweet</a>
+          </div>
+        </div>
       </div>
+
       <hr/>
       <div class="g-comments"
            data-href="{{ site.url }}{{ page.url }}"

@@ -390,6 +390,8 @@ video {
 @media (min-width: 768px) {
   .navbar-static-top {
     border-radius: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -849,18 +851,27 @@ fieldset[disabled] .source-buttons .btn-primary.active {
   border: 1px solid transparent;
   white-space: nowrap;
   line-height: 1.42857143;
-  border-radius: 0px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   text-transform: uppercase;
   text-shadow: none;
-  letter-spacing: .15em;
+  letter-spacing: .05em;
   font-weight: bold;
-  font-size: .9em;
-  padding: 13px 15px 10px;
 }
+
+.btn-foreman-blue {
+  background-color: #23B0DB;
+  color: #fff;
+}
+
+.btn-foreman-blue:hover {
+  color: #23B0DB !important;
+  background-color: #eee;
+  border: 1px solid #CCC;
+}
+
 .btn:focus,
 .btn:active:focus,
 .btn.active:focus {
@@ -1061,4 +1072,32 @@ code {
 
 .plugin-manual {
   font-size: 50px;
+}
+
+.container-search {
+  padding-top: 10px;
+}
+
+.blog-item {
+  padding-bottom: 30px;
+}
+
+.blog-item:not(:first-child) {
+  border-top: 1px #eee solid;
+}
+
+.metadata {
+  color: #777;
+}
+
+.post-content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.bold-headings h1,
+.bold-headings h2,
+.bold-headings h3,
+.bold-headings h4 {
+  font-weight: bold;
 }
