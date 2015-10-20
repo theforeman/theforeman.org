@@ -735,7 +735,7 @@ iframe:not([allowtransparency]){
 	padding: 50px 0;
 }
 
-.quickstart_os:not(.quickstart_os_none) {
+.quickstart_os:not(.quickstart_os_none), .installation_os:not(.installation_os_none) {
 	display: none;
 }
 
