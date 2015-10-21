@@ -5,16 +5,20 @@ title: Contributing to Foreman
 
 # Contributing
 
-The Foreman is an open-source project that's licensed under the GNU Public License version 3. Contributions of all types are gladly accepted!
+## Read the Foreman [handbook](/handbook.html)
+
+The Foreman is an open-source project that's licensed under the GNU Public License version 3.<br>
+Contributions of all types are gladly accepted!
 
 ## Code-related contributions
+
 These types of tasks generally require a familiarity with Ruby (on Rails) development or RPM/Debian packaging. If you are still new to Rails, community members can help you if you get stuck with something or have any other questions.
 
 You will need to download a copy of the current development-code. [The
 official code repository](https://github.com/theforeman) is located
 on Github.
 
-** Please note that there are two important branches:**
+Please note that there are two important branches:
 
 * Master - latest stable release code
 * Develop - new features and bug fixes
