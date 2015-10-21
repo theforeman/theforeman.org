@@ -1,7 +1,18 @@
 ---
 layout: plugin
+pluginname: foreman_discovery
 title: Foreman Discovery 4.1 Manual
 version: 4.1
+# versions for matrix and snippets
+# (use short version for imgver e.g. 3.0)
+pluginver: 4.1.1
+proxyver: 1.0.3
+imgver: 3.0
+cliver: 0.0.2
+# uncomment to show warning box for an old release
+#warning: old
+# uncomment to show development version warning
+#warning: unreleased
 ---
 
 # 1. {{ page.title }}
@@ -16,11 +27,7 @@ predefined Discovery Rules.
 All communication can be optionally passed through Smart Proxy which has
 direct access both to the provisioning network and Foreman instance:
 
-    --
-    Discovered Host > Smart Proxy > Foreman
-    --
-    Foreman > Smart Proxy > Discovered Host
-    --
+![Discovery Communication Workflows](/static/images/diagrams/discovery_comm.png)
 
 ## 1.1 Release Notes
 
@@ -88,15 +95,15 @@ plugin:
     <td>= 1.9</td>
     <td>4.0.0</td>
     <td>1.0.2</td>
-    <td>2.1.1</td>
+    <td>2.1</td>
     <td>0.0.2</td>
   </tr>
   <tr>
     <td>= 1.10</td>
-    <td>4.1.1</td>
-    <td>1.0.3</td>
-    <td>3.0.2</td>
-    <td>0.0.2</td>
+    <td>{{page.pluginver}}</td>
+    <td>{{page.proxyver}}</td>
+    <td>{{page.imgver}}</td>
+    <td>{{page.cliver}}</td>
   </tr>
 </table>
 
@@ -195,7 +202,7 @@ but check if everything is setup properly.
 **3.0.0**: The new image now does not initialize all network cards with DHCP
 by default (use fdi.initnet=all to force this behavior). We have cleaned up
 network initialization little bit further, which solved two race conditions
-with systemd. Also, initial five fact uploads are not cached to solve some
+with systemd. Also, new option cachefacts was introduced to solve issues with
 hardware with late initialization. This can be overriden with kernel command
 line options. Also, systemctl is following system journal on the second
 console and smart proxy now logs into journald instead of separate file.
@@ -330,7 +337,11 @@ As of Foreman 1.8+, the foreman-installer is able to automatically download
 latest stable image. For this, re-run the installer with the following option:
 
     # foreman-installer \
+        --foreman-plugin-discovery-source-url=http://downloads.theforeman.org/discovery/releases/{{page.imgver}}/ \
         --foreman-plugin-discovery-install-images=true
+
+Check the version number in `foreman-plugin-discovery-source-url` option
+against the table above. Some image-plugin combinations are not compatible.
 
 Tip: It is possible to install both Discovery plugin and image in one
 installer run by providing both the options.
@@ -346,12 +357,26 @@ download](http://downloads.theforeman.org/discovery/)
 To download the latest release to the expected location, do the following on
 Fedora and Red Hat systems:
 
-    # wget http://downloads.theforeman.org/discovery/releases/latest/fdi-image-latest.tar \
+    # wget http://downloads.theforeman.org/discovery/releases/{{page.imgver}}/fdi-image-latest.tar \
       -O - | tar x --overwrite -C /var/lib/tftpboot/boot
+
+Check the version number in the url against the table above. Some image-plugin
+combinations are not compatible.
 
 On Debian systems, use `/srv/tftp/boot` instead of `/var/tftpboot/boot`.
 
-### 2.3.3 Verify checksums
+### 2.3.3 Verify signatures and checksums
+
+To verify individual ISO/tar files, import our Discovery Plugin key
+[7E81E7B0](http://keys.fedoraproject.org:11371/pks/lookup?search=0x7E81E7B0&op=get)
+and verify individual files:
+
+    # wget 'http://keys.fedoraproject.org:11371/pks/lookup?search=0x7E81E7B0&op=get' -O- | gpg --import
+    # gpg --verify --multifile *.asc
+    gpg: Signature made Fri 06 Nov 2015 09:42:55 AM UTC using RSA key ID 7E81E7B0
+    gpg: Good signature from "Foreman Discovery <foreman-xxx@googlegroups.com>"
+
+To verify extracted init RAM disk and linux kernel do:
 
     # cat /var/lib/tftpboot/boot/fdi-image/SHA256SUM
     beb3cfba7d9fb9d71481c0c8f... initrd0.img
@@ -507,6 +532,32 @@ global option onto the Discovered Hosts page table as a new column. To do
 that, set the value of this setting to name of a fact reported. To hide the
 new column, set to a blank value. To show multiple columns, separate fact
 names by comma.
+
+## 3.1.5 Discovery image kernel options
+
+Foreman discovery image currently recognizes the following list of
+configuration options:
+
+* proxy.url - URL to Foreman or Proxy (if omitted DNS SRV lookup is made)
+* proxy.type - endpoint type: "foreman" or "proxy"
+* fdi.zips - extensions to download
+* fdi.zipserver - override TFTP server reported by DHCP
+* fdi.initnet=all/bootif - initialize all or pxe NICs (default) during startup
+* fdi.ssh - configure ssh daemon after start (1 to enable)
+* fdi.rootpw - configure ssh daemon password (plain string)
+* fdi.countdown - initial countdown in seconds before registration attempt (15 by default)
+* fdi.uploadsleep - seconds between facter runs (30 by default)
+* fdi.cachefacts - number of fact uploads without caching (0 by default)
+* fdi.px* - PXE-less workflow (described below)
+
+By default, the image tries to send initial facts multiple times. Delay
+between facter runs can be changed with `fdi.uploadsleep`. Once facts are
+successfully sent to Foreman server, additional uploads are done only on
+hardware configuration change (e.g. disk drive is added). It is possible to
+force arbitrary amount of uploads via `fdi.cachefacts` option. Reasonable
+value is 2-3 and also increase `fdi.uploadsleep` to more than 60 seconds to
+prevent race conditions when provisioning hosts (host could be discovered
+second time when provisioning window is hit).
 
 ## 3.2 Smart Proxy Discovery plugin
 
@@ -775,8 +826,8 @@ It is possible to use the Discovery image directly as a CDROM/DVDROM ISO that
 can be also transferred to hard drive or USB stick. Download the image from
 our site and transfer it onto a flash drive:
 
-    wget http://downloads.theforeman.org/discovery/{{ page.version }}.0/fdi-bootable-{{ page.version }}.0.iso
-    dd if=fdi-bootable-{{ page.version }}.0.iso of=/dev/sdx
+    wget http://downloads.theforeman.org/discovery/releases/{{page.imgver}}/fdi-bootable-{{page.imgver}}.X.iso
+    dd if=fdi-bootable-{{page.imgver}}.X.iso of=/dev/sdx
 
 In this case, automatic discovery process is not started automatically and the
 user can select the primary network interface interactively. On the next
@@ -800,7 +851,7 @@ or "password" to secure PXE-less provisioning.
 Before a system can be discovered without PXE there must be a discovery rule
 associated with a hostgroup having an OS associated with a "kexec" template
 kind. This template is used to pass in parameters for kexec call (kernel,
-initrd, append line). Discovery ships with templates for Red Hat
+initrd, append line). Discovery ships with templates for Red Hat and Debian
 distributions at the moment.
 
 Make sure the associated provisioning template is configured with static
@@ -827,7 +878,7 @@ be either entered during SYSLINUX/Grub2 boot screen or burnt into the image
     fdi.pxfactnameN=
     fdi.pxfactvalueN=
 
-When px.ip and/or px.gw are ommited, image tries to acquire network
+When px.ip and/or px.gw are omitted, image tries to acquire network
 credentials over DHCP, which can be useful in PXE-less environments with DHCP
 server deployed. Therefore the absolute minimum set of options in this case
 is:
@@ -845,8 +896,11 @@ semi-automatic behavior. To initiate the provisioning without any question
 When fdi.pxauto is not provided, Ok/Next buttons are always focused first on
 all screens therefore it is easier to walk through.
 
-If no fdi.pxmac is provided and the node has multiple NICs, random network
-card with an active link is picked up for configuration.
+The pxmac option defines the provisioning interface to be used to acquire
+network credentials (optionally) and send facts. If omitted in unattended
+mode, the first NIC with link is picked up (in alphabetical order by network
+identifier in case of multiple items). In semi-automated mode, screen will
+appear to select the correct interface.
 
 ### 5.3.2 Remastering Discovery Image
 
@@ -857,10 +911,11 @@ into the image.
 
 Helper script called
 [discovery_remaster](https://github.com/theforeman/foreman-discovery-image/blob/master/aux/remaster/discovery-remaster)
-is available to make a copy of the ISO image with additional kernel command
-line options. Usage is simple:
+is being shipped with the foreman_discovery plugin. It can be used to make a
+copy of the ISO image with additional kernel command line options. Usage is
+simple:
 
-    sudo ./discovery-remaster fdi-bootable-X.Y.Z.iso "fdi.pxip=192.168.100.68/24 fdi.pxgw=192.168.100.1 fdi.pxdns=192.168.100.1 proxy.url=https://192.168.100.1:8443 proxy.type=proxy fdi.pxfactname1=myfact fdi.pxfactvalue1=somevalue fdi.pxmac=52:54:00:be:8e:8c fdi.pxauto=1"
+    sudo discovery-remaster fdi-bootable-{{page.imgver}}.X.iso "fdi.pxip=192.168.100.68/24 fdi.pxgw=192.168.100.1 fdi.pxdns=192.168.100.1 proxy.url=https://192.168.100.1:8443 proxy.type=proxy fdi.pxfactname1=myfact fdi.pxfactvalue1=somevalue fdi.pxmac=52:54:00:be:8e:8c fdi.pxauto=1"
 
 The above command creates a copy in the same directory with date/time stamp in
 the name.
@@ -910,21 +965,7 @@ the name.
 * Modify the discovery ISO and set all required options including MAC and IP address
 * Make sure the *fdi.pxauto* option is set to *1*
 * Transfer the ISO image onto an USB stick or CDROM and boot it.
-* The rest is same as in the examples above
-
-Foreman discovery image currently recognizes the following list of
-configuration options:
-
-* proxy.url - URL to Foreman or Proxy (if omitted DNS SRV lookup is made)
-* proxy.type - endpoint type: "foreman" or "proxy"
-* fdi.zips - extensions to download
-* fdi.zipserver - override TFTP server reported by DHCP
-* fdi.initnet=all/bootif - initialize all or pxe NICs (default) during startup
-* fdi.ssh - configure ssh daemon after start (1 to enable)
-* fdi.rootpw - configure ssh daemon password (plain string)
-* fdi.uploadsleep - seconds between facter runs (30 by default)
-* fdi.cachefacts - number of fact uploads without caching (5 by default)
-* fdi.px* - PXE-less workflow (described above)
+* Discovered node automatically uploads facts and reloads kernel into installer.
 
 # 6 Help
 
@@ -979,6 +1020,17 @@ ssh and set root password using the following kernel command line options:
     fdi.ssh=1 fdi.rootpw=redhat
 
 Use tty2 console (or higher) to login onto a discovered host.
+
+## 6.1.3 Blacklisting drivers
+
+Since the image is based on CentOS 7, all kernel options are valid and should
+work normally, including `modprobe.blacklist` to blacklist a driver in init
+RAM disk.
+
+## 6.1.4 Maximum length of command line
+
+CentOS 7 distribution ships with COMMAND_LINE_SIZE option set to 2048.
+Therefore kernel command line must not be longer than that.
 
 ## 6.2 UEFI
 

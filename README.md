@@ -38,6 +38,22 @@ To start Jekyll server locally.
 5. Add content, and preview as above.
 6. Submit PR
 
+## New release actions
+
+For each new release we keep stable documentation tree for the record.
+
+### Foreman Core
+
+1. cp -r manuals/X.Y manuals/X.Z
+1. change version numbers in manuals/1.10/*.md
+1. add version to documentation.md
+
+### Foreman Plugins
+
+1. cp -r plugins/foreman_plugin/X.Y plugins/foreman_plugin/X.Z
+1. add "warning: old" to plugins/foreman_plugin/X.Y/index.md
+1. update plugins/foreman_plugin/index.md
+
 ## Updating API Auto-Generated Docs by apipie
 
 Generate API docs in Foreman

@@ -1,7 +1,9 @@
 ---
 layout: plugin
+pluginname: foreman_discovery
 title: Foreman Discovery 3.0 Manual
 version: 3.0
+warning: old
 ---
 
 # 1. {{ page.title }}
@@ -216,7 +218,18 @@ Fedora and Red Hat systems:
 
 On Debian systems, use `/srv/tftp/boot` instead of `/var/tftpboot/boot`.
 
-### 2.3.3 Verify checksums
+### 2.3.3 Verify signatures and checksums
+
+To verify individual ISO/tar files, import our Discovery Plugin key
+[7E81E7B0](http://keys.fedoraproject.org:11371/pks/lookup?search=0x7E81E7B0&op=get)
+and verify individual files:
+
+    # wget 'http://keys.fedoraproject.org:11371/pks/lookup?search=0x7E81E7B0&op=get' -O- | gpg --import
+    # gpg --verify --multifile *.asc
+    gpg: Signature made Fri 06 Nov 2015 09:42:55 AM UTC using RSA key ID 7E81E7B0
+    gpg: Good signature from "Foreman Discovery <foreman-xxx@googlegroups.com>"
+
+To verify extracted init RAM disk and linux kernel do:
 
     # cat /var/lib/tftpboot/boot/fdi-image/SHA256SUM
     beb3cfba7d9fb9d71481c0c8f... initrd0.img
