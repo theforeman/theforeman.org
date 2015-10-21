@@ -44,6 +44,7 @@ version: 1.9
       <p id='api-ref'>api</p>
     </a>
   </div>
+</div>
 <div class='row'>
   <div class='col-md-4 center'>
 		<a href='/plugins' class="btn-doc btn">
