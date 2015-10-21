@@ -5,3 +5,4 @@ group :therubyracer do
 end
 
 gem 'github-pages'
+gem 'rake'
