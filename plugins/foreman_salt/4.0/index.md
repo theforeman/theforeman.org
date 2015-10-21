@@ -143,6 +143,8 @@ If your Smart Proxy uses SSL, then the certs and key configured in the YAML shou
 
 To support state and environment importing, configure salt-api as per the [Salt documentation](https://salt-api.readthedocs.org/en/latest/).  The user for the Smart Proxy requires a minimum of the `@runner` permission. An example for CherryPy is below, using the Puppet certificates for SSL.
 
+Add the following section to your /etc/salt/master, and create a system user for the API to use (in this case 'saltuser'):
+
     external_auth:
       pam:
         saltuser:
@@ -163,6 +165,7 @@ Edit `/etc/foreman-proxy/settings.d/salt.yml`, and configure the API-related set
     :api_username: saltuser
     :api_password: saltpassword
 
+Then restart the services mentioned in the next section for the changes to take effect.
 
 ### 2.1.4 Final Configuration
 
