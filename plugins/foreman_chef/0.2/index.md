@@ -172,7 +172,7 @@ can find two of such name - **gem** and **omnibus**. There's a third
 snippet provided by the plugin called "chef-client bootstrap" which is
 a shared part for strategies mentioned before.
 
-![Bootstrap templates](/plugins/foreman_chef/{{ page.verion }}/templates.png)
+![Bootstrap templates](/plugins/foreman_chef/{{ page.version }}/templates.png)
 
 Note that all of the snippets are locked which means they should not
 be modified directly. If you want to change them, you should clone them
