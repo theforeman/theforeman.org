@@ -178,10 +178,46 @@ Run again without noop to make the changes:
 
 Some plugins have additional parameters, which can be changed using `foreman-installer -i` for interactive mode or found in the `foreman-installer --help` output.
 
-## 2.2 RPM installations
-The repositories are available at [yum.theforeman.org/plugins](http://yum.theforeman.org/plugins/).  Separate repositories are available for each Foreman release, containing plugins that are compatible with that particular version.  Packages are not currently GPG signed.
+## 2.2 Package installation
 
-If not already configured by foreman-release, add the repo by creating `/etc/yum.repos.d/foreman-plugins.repo` with the following content:
+#### Select operating system
+
+<script type="text/javascript">
+function update_installation_os(select) {
+  var os = select.value;
+  $(".installation_os").hide();
+  if (os && os != 'none') {
+    $(".installation_os_"+os).show();
+  } else {
+    $(".installation_os_none").show();
+  }
+}
+</script>
+
+To provide specific installation instructions, please select your operating system:
+<select onChange="update_installation_os(this);">
+  <option value="none">-- select operating system --</option>
+  <option value="debian">Debian or Ubuntu</option>
+  <option value="el6">Enterprise Linux 6</option>
+  <option value="el7">Enterprise Linux 7</option>
+  <option value="fedora19">Fedora 19</option>
+</select>
+
+<div class="installation_os installation_os_none">
+  <i>No operating system selected.</i>
+</div>
+
+<div class="installation_os installation_os_el6 installation_os_el7 installation_os_fedora19">
+  <p>
+    The repositories are available at <a href="http://yum.theforeman.org/plugins/">yum.theforeman.org/plugins</a>.  Separate repositories are available for each Foreman release, containing plugins that are compatible with that particular version.  Packages are not currently GPG signed.
+  </p>
+
+  <p>
+    If not already configured by foreman-release, add the repo by creating <code>/etc/yum.repos.d/foreman-plugins.repo</code> with the following content:
+  </p>
+</div>
+
+<div class="installation_os installation_os_el6">
 <pre>
 [foreman-plugins]
 name=Foreman plugins
@@ -189,51 +225,121 @@ baseurl=http://yum.theforeman.org/plugins/{{page.version}}/el6/x86_64/
 enabled=1
 gpgcheck=0
 </pre>
+</div>
 
-Change the version number in the URL to match the Foreman release in use.
+<div class="installation_os installation_os_el7">
+<pre>
+[foreman-plugins]
+name=Foreman plugins
+baseurl=http://yum.theforeman.org/plugins/{{page.version}}/el7/x86_64/
+enabled=1
+gpgcheck=0
+</pre>
+</div>
 
-To install a plugin:
+<div class="installation_os installation_os_fedora19">
+<pre>
+[foreman-plugins]
+name=Foreman plugins
+baseurl=http://yum.theforeman.org/plugins/{{page.version}}/f19/x86_64/
+enabled=1
+gpgcheck=0
+</pre>
+</div>
 
-1. Find the package for the plugin with the search function: `yum search discovery` or by checking the plugin documentation.
-1. Install the package, e.g. `yum install tfm-rubygem-foreman_discovery`.
-1. Restart Foreman with `touch ~foreman/tmp/restart.txt` or `service httpd restart`
+<div class="installation_os installation_os_debian">
+  <p>
+    The repositories are available at <code>http://deb.theforeman.org plugins &lt;version&gt;</code>. Separate repositories are available for each Foreman release, containing plugins that are compatible with that particular version. They are signed with the Foreman APT key.
+  </p>
 
-Some plugins (e.g. foreman_column_view) may also require configuration in `/etc/foreman/plugins/`, check for any .example files.  Smart proxy plugins can be configured in `/etc/foreman-proxy/settings.d/`.
+  <p>
+    If not already configured, add the repo by editing <code>/etc/apt/sources.list.d/foreman.repo</code> and adding the following line:
+  </p>
 
-The naming of packages is as follows:
+<pre>
+deb http://deb.theforeman.org/ plugins {{page.version}}
+</pre>
+</div>
 
-* Packages for Foreman 1.10 or newer have a `tfm-rubygem-` prefix, while packages for Foreman 1.9 or older will have a `ruby193-rubygem-` prefix instead.  Adapt any instructions to suit.
-* Smart proxy packages have a `rubygem-` prefix only.
-* Hammer CLI packages for Foreman 1.10 or newer have a `tfm-rubygem-` prefix, while CLI packages for 1.9 or older will have a `rubygem-` prefix only.
+<div class="installation_os installation_os_el6 installation_os_el7 installation_os_fedora19">
+  <p>
+    Change the version number in the URL to match the Foreman release in use.
+  </p>
 
-## 2.3 Debian installations
-The repositories are available at `http://deb.theforeman.org plugins <component>`. Separate repositories are available for each Foreman release, containing plugins that are compatible with that particular version. They are signed with the Foreman APT key.
+  <p>
+    To install a plugin:
+  </p>
 
-If not already configured, add the repo by editing `/etc/apt/sources.list.d/foreman.repo` and adding the following line:
+  <ol>
+    <li>Find the package for the plugin with the search function: <code>yum search discovery</code> or by checking the plugin documentation.</li>
+    <li>Install the package, e.g. <code>yum install tfm-rubygem-foreman_discovery</code>.</li>
+    <li>Restart Foreman with <code>touch ~foreman/tmp/restart.txt</code> or <code>service httpd restart</code></li>
+  </ol>
 
-    deb http://deb.theforeman.org/ plugins {{page.version}}
+  <p>
+    Some plugins (e.g. foreman_column_view) may also require configuration in <code>/etc/foreman/plugins/</code>, check for any .example files.  Smart proxy plugins can be configured in <code>/etc/foreman-proxy/settings.d/</code>.
+  </p>
+</div>
 
-To install a plugin:
+<div class="installation_os installation_os_debian">
+  <p>
+    To install a plugin:
+  </p>
 
-1. Find the package for the plugin: `apt-cache search discovery`
-1. Install the package, e.g. `apt-get install ruby-foreman-discovery`
-1. Restart Foreman: `touch ~foreman/tmp/restart.txt` or `service apache2 restart`
+  <ol>
+    <li>Find the package for the plugin: <code>apt-cache search discovery</code></li>
+    <li>Install the package, e.g. <code>apt-get install ruby-foreman-discovery</code></li>
+    <li>Restart Foreman: <code>touch ~foreman/tmp/restart.txt</code> or <code>service apache2 restart</code></li>
+  </ol>
 
-Some plugins (e.g. foreman_column_view) may also require configuration in `/etc/foreman/plugins/`, check for any .example files.  Smart proxy plugins can be configured in `/etc/foreman-proxy/settings.d/`.
+  <p>
+    Some plugins (e.g. foreman_column_view) may also require configuration in <code>/etc/foreman/plugins/</code>, check for any .example files.  Smart proxy plugins can be configured in <code>/etc/foreman-proxy/settings.d/</code>.
+  </p>
+</div>
 
-The naming of packages is as follows:
+<div class="installation_os installation_os_el6 installation_os_el7">
+  <p>
+    The naming of packages is as follows:
+  </p>
 
-* Packages for Foreman have a `ruby-foreman-` prefix.
-* Smart proxy packages have a `ruby-smart-proxy-` prefix.
-* Hammer CLI packages have a `ruby-hammer-cli-` prefix.
+  <ul>
+    <li>Packages for Foreman 1.10 or newer have a <code>tfm-rubygem-foreman_</code> codefix, while packages for Foreman 1.9 or older will have a <code>ruby193-rubygem-foreman_</code> codefix instead.  Adapt any instructions to suit.</li>
+    <li>Smart proxy packages have a <code>rubygem-smart_proxy_</code> codefix.</li>
+    <li>Hammer CLI packages for Foreman 1.10 or newer have a <code>tfm-rubygem-hammer_cli_</code> codefix, while CLI packages for 1.9 or older will have a <code>rubygem-hammer_cli_</code> codefix only.</li>
+  </ul>
+</div>
 
-## 2.4 Advanced Installation from Gems
+<div class="installation_os installation_os_fedora19">
+  <p>
+    The naming of packages is as follows:
+  </p>
+
+  <ul>
+    <li>Foreman plugin packages have a <code>rubygem-foreman_</code> codefix.  Adapt any instructions to suit.</li>
+    <li>Smart proxy packages have a <code>rubygem-smart_proxy_</code> codefix.</li>
+    <li>Hammer CLI packages have a <code>rubygem-hammer_cli_</code> codefix.</li>
+  </ul>
+</div>
+
+<div class="installation_os installation_os_debian">
+  <p>
+    The naming of packages is as follows:
+  </p>
+
+  <ul>
+    <li>Packages for Foreman have a <code>ruby-foreman-</code> codefix.</li>
+    <li>Smart proxy packages have a <code>ruby-smart-proxy-</code> codefix.</li>
+    <li>Hammer CLI packages have a <code>ruby-hammer-cli-</code> codefix.</li>
+  </ul>
+</div>
+
+## 2.3 Advanced Installation from Gems
 
 Not recommended, as it's possible for the 'gem' command to install other, newer dependencies, which can cause problems with the Foreman installation. Do note the install without dependencies below to avoid this problem.
 
 Ensure the plugin you want is available from rubygems.org as a gem. Plugins that aren't published (just git repos) can't be installed with this method without being built as a gem.
 
-### 2.4.1 Red Hat distributions
+### 2.3.1 Red Hat distributions
 
 If on EL6 or EL7, run `scl enable tfm bash` first for an SCL-enabled shell (not needed on Fedora).  On Foreman 1.9 or older, use `scl enable ruby193 bash` instead.
 
@@ -244,7 +350,7 @@ If on EL6 or EL7, run `scl enable tfm bash` first for an SCL-enabled shell (not 
 
 If you hit problems, uninstall the added gems with <pre>gem uninstall -v VERSION GEM</pre>
 
-### 2.4.2 Debian distributions
+### 2.3.2 Debian distributions
 
 It is recommended to use `~foreman/bundler.d/Gemfile.local.rb` so that it is not overwritten by future upgrades.
 
