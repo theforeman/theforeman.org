@@ -24,7 +24,7 @@ Foreman plugins are implemented as [Rails engines](http://guides.rubyonrails.org
 		</a>
 	</div>
 	<div class='col-md-3 center'>
-		<a href="plugins/foreman_chef/0.2" class="btn-doc btn">
+		<a href="plugins/foreman_chef" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-cutlery"></i></p>
 			Chef
 		</a>
@@ -50,13 +50,13 @@ Foreman plugins are implemented as [Rails engines](http://guides.rubyonrails.org
 		</a>
 	</div>
 	<div class='col-md-3 center'>
-		<a href="plugins/foreman_discovery/" class="btn-doc btn">
+		<a href="plugins/foreman_discovery" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-wifi"></i></p>
 			Discovery
 		</a>
 	</div>
 	<div class='col-md-3 center'>
-		<a href="plugins/foreman_docker/1.x/" class="btn-doc btn">
+		<a href="plugins/foreman_docker" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-ship"></i></p>
 			Docker
 		</a>
@@ -88,7 +88,7 @@ Foreman plugins are implemented as [Rails engines](http://guides.rubyonrails.org
 		</a>
 	</div>
 	<div class='col-md-3 center'>
-		<a href="plugins/foreman_openscap/0.4/" class="btn-doc btn">
+		<a href="plugins/foreman_openscap" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-bank"></i></p>
 			OpenSCAP
 		</a>
@@ -96,13 +96,13 @@ Foreman plugins are implemented as [Rails engines](http://guides.rubyonrails.org
 </div>
 <div class='row'>
 	<div class='col-md-3 center'>
-		<a href="plugins/foreman_remote_execution/0.0/" class="btn-doc btn">
+		<a href="plugins/foreman_remote_execution" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-toggle-right"></i></p>
 			Remote Execution
 		</a>
 	</div>
 	<div class='col-md-3 center'>
-		<a href="plugins/foreman_salt/" class="btn-doc btn">
+		<a href="plugins/foreman_salt" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-cube"></i></p>
 			Salt
 		</a>

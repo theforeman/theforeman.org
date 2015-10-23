@@ -1,34 +1,19 @@
 ---
 layout: plugin_index
 title: Foreman Salt documentation
+versions: [4.0, 3.0, 2.1, 2.0]
 ---
 
 # Foreman Salt manuals
 -----------------------------
 
 <div class='row plugin-manual'>
+    {% for version in page.versions %}
 	<div class='col-md-4 center'>
-		<a href="plugins/foreman_salt/4.0/index.html" class="btn-doc btn">
+		<a href="plugins/foreman_salt/{{ version }}/index.html" class="btn-doc btn">
 			<i class="fa fa-newspaper-o"></i>
-			<p id='manual'>4.0</p>
+			<p id='manual'>{{ version }}</p>
 		</a>
 	</div>
-	<div class='col-md-4 center'>
-		<a href="plugins/foreman_salt/3.0/index.html" class="btn-doc btn">
-			<i class="fa fa-newspaper-o"></i>
-			<p id='manual'>3.0</p>
-		</a>
-	</div>
-	<div class='col-md-4 center'>
-		<a href="plugins/foreman_salt/2.1/index.html" class="btn-doc btn">
-			<i class="fa fa-newspaper-o"></i>
-			<p id='manual'>2.1</p>
-		</a>
-	</div>
-    <div class='col-md-4 center'>
-		<a href="plugins/foreman_salt/2.0/index.html" class="btn-doc btn">
-			<i class="fa fa-newspaper-o"></i>
-			<p id='manual'>2.0</p>
-		</a>
-	</div>
+    {% endfor %}
 </div>

@@ -1,16 +1,16 @@
 ---
 layout: plugin_index
-title: Foreman discovery documentation
-versions: [4.1, 4.0, 3.0, 2.0]
+title: Foreman Chef documentation
+versions: [0.2, 0.1]
 ---
 
-# Foreman discovery manuals
+# Foreman Chef manuals
 -----------------------------
 
 <div class='row plugin-manual'>
     {% for version in page.versions %}
 	<div class='col-md-4 center'>
-		<a href="plugins/foreman_discovery/{{ version }}/index.html" class="btn-doc btn">
+		<a href="plugins/foreman_chef/{{ version }}/index.html" class="btn-doc btn">
 			<i class="fa fa-newspaper-o"></i>
 			<p id='manual'>{{ version }}</p>
 		</a>
