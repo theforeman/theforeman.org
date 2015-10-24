@@ -35,14 +35,18 @@ Foreman plugins are implemented as [Rails engines](http://guides.rubyonrails.org
 			Column view
 		</a>
 	</div>
+ 	<div class='col-md-3 center'>
+		<a href="plugins/foreman_cockpit/" class="btn-doc btn">
+			<p class='h2 doc-icon'><i class="fa fa-rocket"></i></p>
+			Cockpit
+		</a>
+	</div>
 	<div class='col-md-3 center'>
 		<a href="https://github.com/theforeman/foreman_default_hostgroup/" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-check-circle"></i></p>
 			Default host group
 		</a>
 	</div>
-</div>
-<div class='row'>
 	<div class='col-md-3 center'>
 		<a href="https://github.com/theforeman/foreman-digitalocean/" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-pencil"></i></p>
@@ -67,8 +71,6 @@ Foreman plugins are implemented as [Rails engines](http://guides.rubyonrails.org
 			Graphite
 		</a>
 	</div>
-</div>
-<div class='row'>
 	<div class='col-md-3 center'>
 		<a href="https://github.com/theforeman/foreman_hooks" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-anchor"></i></p>
@@ -93,8 +95,6 @@ Foreman plugins are implemented as [Rails engines](http://guides.rubyonrails.org
 			OpenSCAP
 		</a>
 	</div>
-</div>
-<div class='row'>
 	<div class='col-md-3 center'>
 		<a href="plugins/foreman_remote_execution/0.0/" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-toggle-right"></i></p>
@@ -119,8 +119,6 @@ Foreman plugins are implemented as [Rails engines](http://guides.rubyonrails.org
 			Templates
 		</a>
 	</div>
-</div>
-<div class='row'>
 	<div class='col-md-3 center'>
 		<a href="https://github.com/theforeman/puppetdb_foreman" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-database"></i></p>
