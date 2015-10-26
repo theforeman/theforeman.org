@@ -85,7 +85,7 @@ On the Foreman server:
 	> yum install ruby193-rubygem-foreman_openscap
 	> service httpd reload
 
-Please refer the Foreman plugin [manual](http://theforeman.org/manuals/latest/index.html#6.1InstallaPlugin) for more information about installing Foreman plugins.
+Please refer to the Foreman plugin [manual]({{site.baseurl}}/manuals/latest/index.html#6.1InstallaPlugin) for more information about installing Foreman plugins.
 
 ### 2.2 Installing smart_proxy_openscap
 
@@ -94,7 +94,7 @@ On the Smart-Proxy server:
 
     > yum install rubygem-smart_proxy_openscap
 
-Edit ```openscap.yml``` with the appropriate settings
+Edit ```/etc/foreman-proxy/settings.d/openscap.yml``` with the appropriate settings
 
     ---
     :enabled: true
@@ -107,23 +107,22 @@ Edit ```openscap.yml``` with the appropriate settings
     puppet module install isimluk-foreman_scap_client
 
 This puppet module will automatically install foreman_scap_client (if not installed) and will configure the client's ```/etc/foreman_scap_client/config.yaml``` with parameters which are needed for the operation of foreman_scap_client.
-foreman_scap_client to run scans and upload results to the Smart Proxy.
 
 # 4. Usage
 
 This chapter covers features that you can use in terms of Foreman and OpenSCAP
 integration. Everything described below assumes you've sucessfully installed
-foreman_openscap, smart_proxy_openscap and puppet-foreman_scap_client is available on your puppetmaster and Foreman.
+foreman_openscap, smart_proxy_openscap and puppet-foreman_scap_client is available on your Puppet master and Foreman.
 
-*__Please note:__ smart_proxy_openscap is __required__ for the norman operation of foreman_openscap*
+*__Please note:__ smart_proxy_openscap is __required__ for the normal operation of foreman_openscap*
 
 You would usually start with uploading SCAP contents, then create policies of those SCAP contents and assign the policy to hosts or hostgroups.
 The puppet module will install ```foreman_scap_client``` and configure it with the needed policy information. The puppet module also adds a cron line,
-which runs the scap client at the schedule select when creating the policy.
+which runs the SCAP client at the schedule select when creating the policy.
 
 ## 4.1 Creating SCAP content
 
-foreman_openscap comes with default scap content provided by [scap-security-guide](https://fedorahosted.org/scap-security-guide/).
+foreman_openscap comes with default SCAP content provided by [scap-security-guide](https://fedorahosted.org/scap-security-guide/).
 
 The default SCAP content is available for RHEL 6, RHEL 7 and Fedora.
 
@@ -142,8 +141,8 @@ __Create SCAP Content__ - You can upload any valid OpenSCAP DataStream file
 * Name your policy
 * Choose which SCAP content & SCAP profile to apply
 * Choose schedule when to run this policy
-* Select to which locations / orgaginations this policy belongs to, if enabled
-* Choose to which hostgroup you wish apply this policy
+* Select which locations / organizations this policy belongs to, if enabled
+* Choose which hostgroups you wish apply this policy
 
 ![Policy Wizard]({{page.images}}/policy_wizard.png)
 ## 4.3 Assigning policy to host
@@ -184,7 +183,6 @@ Clicking on "View Report" will lead you to the actual security audit report, wit
 * Once the JSON report has been successfully posted to the Foreman, the XML file is saved on the Smart-Proxy's filesystem for later use from the Foreman
 * (If the post to the Foreman fails the file is saved for later retry)
 * On the Foreman side: 
-  * ARF report inherits from Report model.
   * The ARF report receives the JSON formatter report from the proxy and generates the report, its logs and messages.
   * The complete report can be downloaded from the Smart-Proxy as a compressed XML, or viewed in OpenSCAP style HTML.  
 
