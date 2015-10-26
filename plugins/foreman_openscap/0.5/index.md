@@ -1,7 +1,7 @@
 ---
 layout: plugin
 title: Foreman OpenSCAP manual
-images: /plugins/foreman_openscap/0.4
+images: /plugins/foreman_openscap/0.5
 version: 0.4.1
 ---
 
@@ -16,9 +16,8 @@ OpenSCAP reports (aka ARF reports) will help you find vulnerabilities on your ho
 
 Foreman OpenSCAP plugin is made of 5 components:
 
-* [Scaptimony](https://github.com/OpenSCAP/scaptimony) - Rails engine which creates and persists SCAP content, compliance policy and ARF report objects
-* [foreman_openscap](https://github.com/theforeman/foreman_openscap) - UI to display Scaptimony engine (which actually connects to OpenSCAP)
-* [smart_proxy_openscap](https://github.com/theforeman/smart_proxy_openscap) - Smart-Proxy plugin which distributes SCAP content to hosts and post ARF reports from client hosts to Foreman
+* [foreman_openscap](https://github.com/theforeman/foreman_openscap) - Foreman plugin which creates and persists SCAP content, compliance policy and ARF report objects.
+* [smart_proxy_openscap](https://github.com/theforeman/smart_proxy_openscap) - Smart-Proxy plugin which validates SCAP content from Foreman, distributes SCAP content to clients and posts ARF reports from client hosts to Foreman
 * [foreman_scap_client](https://github.com/theforeman/foreman_scap_client) - A client script which runs OpenSCAP scan and uploads the scan report to the Smart-Proxy
 * [puppet-foreman_scap_client](https://github.com/theforeman/puppet-foreman_scap_client) - A puppet module which configures foreman_scap_client
 
@@ -42,7 +41,7 @@ __ARF Report__ is XML output of single scan occurrence per single host. Asset Re
 
 
 ## 1.2 Release notes
-foreman_openscap has two versions: 0.3.4 for Foreman 1.7 and 0.4.x for 1.8+.
+foreman_openscap has two versions: 0.4.x for 1.8+, 0.5.x for 1.11+
 
 Both versions' functionality is the same, the changes only affect to the way it communicates with Foreman and Smart-Proxy APIs
 
@@ -64,6 +63,12 @@ Both versions' functionality is the same, the changes only affect to the way it 
     <td>0.4.1</td>
     <td>0.4.0</td>
     <td>0.1.1</td>
+  </tr>
+  <tr>
+    <td>>= 1.11</td>
+    <td>0.5.0</td>
+    <td>0.5.0</td>
+    <td>0.1.2</td>
   </tr>
 </table>
 
@@ -93,6 +98,8 @@ Edit ```openscap.yml``` with the appropriate settings
 
     ---
     :enabled: true
+    :reportsdir: /path/to/saved/arf_reports/
+    :spooldir: /path/to/arf_reports/which/failed/to/post/to/foreman
 
 
 ### 2.3 Installing puppet-foreman_scap_client
@@ -107,6 +114,8 @@ foreman_scap_client to run scans and upload results to the Smart Proxy.
 This chapter covers features that you can use in terms of Foreman and OpenSCAP
 integration. Everything described below assumes you've sucessfully installed
 foreman_openscap, smart_proxy_openscap and puppet-foreman_scap_client is available on your puppetmaster and Foreman.
+
+*__Please note:__ smart_proxy_openscap is __required__ for the norman operation of foreman_openscap*
 
 You would usually start with uploading SCAP contents, then create policies of those SCAP contents and assign the policy to hosts or hostgroups.
 The puppet module will install ```foreman_scap_client``` and configure it with the needed policy information. The puppet module also adds a cron line,
@@ -123,6 +132,8 @@ Besides the default SCAP content, you can also upload your own SCAP content.
 __Access SCAP contents__ - Hosts -> Compliance -> SCAP Contents
 
 __Create SCAP Content__ - You can upload any valid OpenSCAP DataStream file
+
+(After upload, SCAP content is validated at the Smart-Proxy and SCAP profiles are extracted)
 ![New SCAP Content]({{page.images}}/create_new_scap_content.png)
 
 
@@ -161,7 +172,24 @@ Clicking on "View Report" will lead you to the actual security audit report, wit
 ![Distribute SCAP Content]({{page.images}}/scap_design.png)
 
 
+## 5.2 Validating SCAP content on the proxy
 
+* When uploading an SCAP content to Foreman it sends the file for validation at the Smart-Proxy:
+  * The Smart-Proxy validates that the SCAP xml file is a valid OpenSCAP file, and returns the errors if not.
+  * Once the SCAP content is validated, the Smart-Proxy is extracting the SCAP profiles for later use when creating a policy.
+  
+## 5.3 Arf Report retrieval process
+* The client host is running oscap test and uploads ARF report to the Smart-Proxy as an XML file.
+* The Smart-Proxy parses the XML and generates a JSON report. 
+* Once the JSON report has been successfully posted to the Foreman, the XML file is saved on the Smart-Proxy's filesystem for later use from the Foreman
+* (If the post to the Foreman fails the file is saved for later retry)
+* On the Foreman side: 
+  * ARF report inherits from Report model.
+  * The ARF report receives the JSON formatter report from the proxy and generates the report, its logs and messages.
+  * The complete report can be downloaded from the Smart-Proxy as a compressed XML, or viewed in OpenSCAP style HTML.  
+
+![Upload ARF Reports]({{page.images}}/reports_design.png)
+  
 # 6. Help
 
 Please follow our [standard procedures and
