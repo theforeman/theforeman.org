@@ -29,9 +29,9 @@ navigation:
 - text: Documentation
   url: documentation.html
 - text: Community
-  url: contribute.html
-- text: Videos
-  url: media.html
+  url: community.html
+- text: Blog
+  url: blog/
 
 gems:
   - jekyll-feed
