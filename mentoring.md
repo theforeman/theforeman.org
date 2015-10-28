@@ -71,7 +71,8 @@ currently available projects.
 * *Knowledge prerequisite*: Ruby on Rails
 * *Skill level*: Medium
 * *Contacts*:
-* *Mentor(s)*: Joseph Magen, Ohad Levy
+* *Mentor(s)*: **needs new mentor**
+* *Proposer(s)*: Joseph Magen, Ohad Levy
 * *Notes*: We want to offer a way for new users to Foreman to have a low-barrier entry way to start playing with Foreman and spin up some VMs in several compute resources such as Rackspace, EC2 and Google Compute Engine. This would be a non-full featured version of Foreman to encourage users to install a full featured Foreman version.
 
 ### Post-installation import
