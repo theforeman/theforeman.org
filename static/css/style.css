@@ -851,17 +851,23 @@ fieldset[disabled] .source-buttons .btn-primary.active {
   border: 1px solid transparent;
   white-space: nowrap;
   line-height: 1.42857143;
+  border-radius: 0px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   text-transform: uppercase;
   text-shadow: none;
-  letter-spacing: .05em;
+  letter-spacing: .15em;
   font-weight: bold;
+  font-size: 0.9em;
 }
 
 .btn-foreman-blue {
+  border-radius: 4px;
+  letter-spacing: .05em;
+  font-size: 14px;
+  padding: 6px 12px 6px;
   background-color: #23B0DB;
   color: #fff;
 }
@@ -1091,13 +1097,16 @@ code {
 }
 
 .post-content {
-  padding-top: 20px;
   padding-bottom: 20px;
+  font-size: 14px;
 }
 
-.bold-headings h1,
-.bold-headings h2,
-.bold-headings h3,
-.bold-headings h4 {
-  font-weight: bold;
+.post-content h5 {
+  font-size: 16px;
+}
+
+.post-content img {
+  padding: 5px;
+  margin: 5px 0;
+  max-width: 100%;
 }

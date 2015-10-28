@@ -35,6 +35,12 @@ author: Foreman
 tags:
 - foreman
 ---
+
+My abstract goes here
+
+<!--more-->
+
+The rest of the post goes here.
 EOS
   end
   puts "#{path} is ready for editing."
