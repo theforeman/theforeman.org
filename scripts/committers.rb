@@ -3,8 +3,8 @@ require 'tmpdir'
 require 'git'
 
 @tagged_repos = %w(foreman smart-proxy foreman-installer foreman-selinux)
-@tag_from     = "1.8.0"
-@tag_to       = "1.9.0-RC1"
+@tag_from     = "1.9.0"
+@tag_to       = "1.10.0-RC2"
 
 @untagged_repos = %w(
   theforeman.org
@@ -34,8 +34,8 @@ require 'git'
   ovirt-node-plugin-foreman
   puppetdb_foreman
 )
-@date_from     = '2015-02-24'
-@date_to       = '2015-06-27'
+@date_from     = '2015-06-27'
+@date_to       = '2015-10-30'
 
 @author_map = {
   "abenari"        => "Amos Benari",
@@ -46,6 +46,9 @@ require 'git'
   "Lukas Zapletal" => "Lukáš Zapletal",
   "Marek Hulan"    => "Marek Hulán",
   "mbacovsky"      => "Martin Bačovský",
+  "amirfefer"      => "Amir Fefer",
+  "Amir Feferkuchen" => "Amir Fefer",
+  "imriz"          => "Imri Zvik",
 }
 
 @authors={}
