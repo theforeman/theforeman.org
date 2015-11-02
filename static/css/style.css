@@ -1082,6 +1082,7 @@ code {
 
 .container-search {
   padding-top: 10px;
+  padding-left: 0px;
 }
 
 .blog-item {
