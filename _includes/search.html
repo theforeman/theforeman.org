@@ -1,0 +1,24 @@
+<script language="Javascript" type="text/javascript">
+  function my_search_google()
+  {
+    var query = document.getElementById("search").value;
+    window.open("http://google.com/search?q=" + query
+	+ "%20site:" + "http://theforeman.org");
+  }
+</script>
+
+<div class="container container-search">
+  <a class="pull-left" href="/feed.xml">
+    <img src="/static/images/rss.png" alt="RSS Feed" />Get the RSS News Feed
+  </a>
+  <form class="form-inline pull-right" onsubmit="my_search_google()">
+    <div class="form-group">
+      <div class="input-group">
+        <input type="text" class="form-control" id="search" placeholder="Search">
+        <span class="input-group-btn">
+          <button type="submit" class="btn btn-foreman-blue">Search</button>
+        </span>
+      </div>
+    </div>
+  </form>
+</div>

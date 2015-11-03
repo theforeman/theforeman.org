@@ -67,7 +67,7 @@ version: 1.9
 </div>
 <div class='row'>
   <div class='col-md-4 col-md-offset-4'>
-    <a href="http://blog.theforeman.org" class="btn-doc btn">
+    <a href="/blog" class="btn-doc btn">
       <h2 class='doc-icon'><i class="fa fa-rss"></i></h2>
       Blog
     </a>

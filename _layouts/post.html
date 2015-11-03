@@ -1,0 +1,56 @@
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="https://apis.google.com/js/plusone.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+{% include header.html %}
+<div class="container-fluid container-body">
+  <div class="col-md-8 col-md-offset-2 col-centered">
+    <section>
+      <div class="post-header">
+        {% if page.pagename != nil %}
+        <h2>{{ page.pagename }}</h2>
+        {% else %}
+        <h2>{{ page.title }}</h2>
+        {% endif %}
+        <p class="metadata">
+          <span class="author">{{ page.author }}</span> - <span class="date">{{ page.date | date: "%-d %B %Y" }}</span>
+        </p>
+      </div>
+
+      <hr/>
+
+      <div class="post-content">
+        {{ content }}
+      </div>
+
+      <div class="well post-content">
+        You can follow us on Twitter: <a href='http://twitter.com/ForemanProject'>@ForemanProject</a>. If you tweet about Foreman, please use the hashtag <a href='https://twitter.com/hashtag/theforeman'>#theforeman</a> so we can see it!<br />
+        We also have a <a href='https://plus.google.com/communities/106976851375995577697'>Google+ group</a> which you can join for updates &amp; discussion.
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-6">
+          <a href="{{site.baseurl}}blog/" class="btn btn-foreman-blue"><span aria-hidden="true">&larr;</span> Return</a>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-6 clearfix">
+          <div class="pull-right">
+            <div class="g-plusone"
+                 data-size="standard"
+                 data-annotation="none"
+                 data-href="{{ site.url }}{{ page.url }}">
+            </div>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{site.url}}{{page.url}}" data-hashtags="theforeman" data-dnt="true" data-size="large">Tweet</a>
+          </div>
+        </div>
+      </div>
+
+      <hr/>
+      <div class="g-comments"
+           data-href="{{ site.url }}{{ page.url }}"
+           data-width="642"
+           data-first_party_property="BLOGGER"
+           data-view_type="FILTERED_POSTMOD">
+      </div>
+    </section>
+  </div>
+</div>
+{% include footer.html %}

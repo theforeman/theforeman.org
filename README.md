@@ -29,6 +29,15 @@ To start Jekyll server locally.
 5. Make some changes, refresh your browser to preview them.
 6. Submit a pull request.
 
+## Contributing a blog post
+
+1. (following on from step 5 above)
+2. Run `rake new_post['title of my post']` to generate a new empty blog post
+3. Edit _posts/YYYY-MM-DD-title\_of\_my\_post.md
+4. Set the author correctly, and appropriate tags (see previous posts for examples)
+5. Add content, and preview as above.
+6. Submit PR
+
 ## Updating API Auto-Generated Docs by apipie
 
 Generate API docs in Foreman

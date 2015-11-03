@@ -390,6 +390,8 @@ video {
 @media (min-width: 768px) {
   .navbar-static-top {
     border-radius: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -858,9 +860,24 @@ fieldset[disabled] .source-buttons .btn-primary.active {
   text-shadow: none;
   letter-spacing: .15em;
   font-weight: bold;
-  font-size: .9em;
-  padding: 13px 15px 10px;
+  font-size: 0.9em;
 }
+
+.btn-foreman-blue {
+  border-radius: 4px;
+  letter-spacing: .05em;
+  font-size: 14px;
+  padding: 6px 12px 6px;
+  background-color: #23B0DB;
+  color: #fff;
+}
+
+.btn-foreman-blue:hover {
+  color: #23B0DB !important;
+  background-color: #eee;
+  border: 1px solid #CCC;
+}
+
 .btn:focus,
 .btn:active:focus,
 .btn.active:focus {
@@ -1061,4 +1078,36 @@ code {
 
 .plugin-manual {
   font-size: 50px;
+}
+
+.container-search {
+  padding-top: 10px;
+  padding-left: 0px;
+}
+
+.blog-item {
+  padding-bottom: 30px;
+}
+
+.blog-item:not(:first-child) {
+  border-top: 1px #eee solid;
+}
+
+.metadata {
+  color: #777;
+}
+
+.post-content {
+  padding-bottom: 20px;
+  font-size: 14px;
+}
+
+.post-content h5 {
+  font-size: 16px;
+}
+
+.post-content img {
+  padding: 5px;
+  margin: 5px 0;
+  max-width: 100%;
 }

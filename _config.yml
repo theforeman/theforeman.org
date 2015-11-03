@@ -8,6 +8,13 @@ production_url : http://theforeman.org
 url: http://theforeman.org
 baseurl: /
 
+paginate: 5
+paginate_path: "blog/page:num"
+excerpt_separator: <!--more-->
+permalink: /:year/:month/:title.html
+blogname: Foreman Blog
+blogdesc: News, notes and noise from around the Foreman community
+
 safe:        false
 
 future:      false
@@ -25,3 +32,6 @@ navigation:
   url: contribute.html
 - text: Videos
   url: media.html
+
+gems:
+  - jekyll-feed
