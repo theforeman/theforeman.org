@@ -126,6 +126,8 @@ version: "1.9"
 {%include manuals/1.9/4.3.10_smartproxy_ssl.md %}
 ### 4.3.11 Libvirt
 {%include manuals/1.9/4.3.11_smartproxy_libvirt.md %}
+### 4.3.12 Templates
+{%include manuals/1.9/4.3.12_smartproxy_templates.md %}
 
 ## 4.4 Provisioning
 {%include manuals/1.9/4.4_provisioning.md %}
