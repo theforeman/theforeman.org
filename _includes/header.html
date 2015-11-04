@@ -1,7 +1,7 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/Organization" lang="en">
   <head>
-    <base href="{{ site.baseurl }}">
+    <base href="{{ site.baseurl }}/">
     {% if page.sitename != nil %}
     {% assign sitename = page.sitename %}
     {% else %}
@@ -13,17 +13,17 @@
     {% endif %}
   <title>{{ sitename }}{% if pagename %} :: {{ page.pagename }}{% endif %}</title>
 
-  <script type="text/javascript" src="{{ site.baseurl }}static/js/jquery.js"></script>
-  <script type="text/javascript" src="{{ site.baseurl }}static/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="{{ site.baseurl }}static/js/jquery-ui-1.9.2.custom.min.js"></script>
-  <script type="text/javascript" src="{{ site.baseurl }}static/js/jquery.tocify.min.js"></script>
-  <script type="text/javascript" src="{{ site.baseurl }}static/js/scroll.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/static/js/jquery.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/static/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/static/js/jquery-ui-1.9.2.custom.min.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/static/js/jquery.tocify.min.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/static/js/scroll.js"></script>
 
-  <link rel="stylesheet" media="all" href="{{ site.baseurl }}static/css/bootstrap.min.css"/>
-  <link rel="stylesheet" media="all" href="{{ site.baseurl }}static/css/bootstrap-responsive.min.css"/>
-  <link rel="stylesheet" media="all" href="{{ site.baseurl }}static/css/jquery.tocify.css"/>
-  <link rel="stylesheet" media="all" href="{{ site.baseurl }}static/css/syntax.css" />
-	<link rel="stylesheet" media="all" href="{{ site.baseurl }}static/css/style.css"/>
+  <link rel="stylesheet" media="all" href="{{ site.baseurl }}/static/css/bootstrap.min.css"/>
+  <link rel="stylesheet" media="all" href="{{ site.baseurl }}/static/css/bootstrap-responsive.min.css"/>
+  <link rel="stylesheet" media="all" href="{{ site.baseurl }}/static/css/jquery.tocify.css"/>
+  <link rel="stylesheet" media="all" href="{{ site.baseurl }}/static/css/syntax.css" />
+	<link rel="stylesheet" media="all" href="{{ site.baseurl }}/static/css/style.css"/>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans">
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -55,7 +55,7 @@
 						</a></li>
           {% endif %}
 					{% for link in site.navigation %}
-			  		<li><a href="{{ site.baseurl}}{{ link.url }}"> {{ link.text }} </a></li>
+			  		<li><a href="{{ site.baseurl}}/{{ link.url }}"> {{ link.text }} </a></li>
 					{% endfor %}
 					</li>
 				</ul>

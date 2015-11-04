@@ -6,7 +6,7 @@ description: Foreman is an open source project that gives system administrators 
 
 production_url : http://theforeman.org
 url: http://theforeman.org
-baseurl: /
+baseurl: "" #keep at "" for the Atom feed
 
 paginate: 5
 paginate_path: "blog/page:num"
