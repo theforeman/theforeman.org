@@ -11,7 +11,11 @@
     {% if page.pagename != nil %}
     {% assign pagename = true %}
     {% endif %}
+  {% if page.layout == "post" %}
+  <title>{{ sitename }} :: {{ page.title }}</title>
+  {% else %}
   <title>{{ sitename }}{% if pagename %} :: {{ page.pagename }}{% endif %}</title>
+  {% endif %}
 
   <script type="text/javascript" src="{{ site.baseurl }}/static/js/jquery.js"></script>
   <script type="text/javascript" src="{{ site.baseurl }}/static/js/bootstrap.min.js"></script>
