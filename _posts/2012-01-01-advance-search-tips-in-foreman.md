@@ -20,6 +20,9 @@ via the API, in a follow up blog I'll describe how to use the API and
 search via puppet directly as an alternative to storeconfigs -
 UPDATED: [here](http://blog.theforeman.org/2012/01/getting-foreman-search-results-into.html)
 
+**This blog entry has been updated and incorporated into our regular documentation.
+Please read on from the Foreman manual's [search chapter]({{site.baseurl}}/manuals/latest/index.html#4.1.5Searching).**
+
 <!--more-->
 
 **Search Per Page**
