@@ -7,6 +7,8 @@ tags:
 modified_time: '2015-06-11T17:05:40.896+03:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-4810446073191972741
 blogger_orig_url: http://blog.theforeman.org/2015/06/coreos-cluster-deployments-with-foreman.html
+guest_post: true
+guest_url: http://blog.daniellobato.me/coreos-cluster-deployments-with-foreman
 excerpt: |
   As Major Hayden mentioned more than a year ago, deploying CoreOS is a bit of
   a different beast than deploying other operating systems. In this case, we
@@ -14,9 +16,6 @@ excerpt: |
   cloud-config script which will will set the SSH keys, core user password,
   CoreOS version, and register in etcd.
 ---
-
-*This is an authorized repost of [CoreOS cluster deployments with
-Foreman](http://blog.daniellobato.me/coreos-cluster-deployments-with-foreman/)*
 
 As [Major
 Hayden](https://major.io/2014/05/13/coreos-vs-project-atomic-a-review/)

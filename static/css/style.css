@@ -1111,3 +1111,15 @@ code {
   margin: 5px 0;
   max-width: 100%;
 }
+
+.foreman-blue-infobox {
+  background-color: #23B0DB;
+  border-style: solid;
+  border-radius: 4px;
+  padding: 2px 6px 2px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  border-width: 0.833333px;
+}

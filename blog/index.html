@@ -8,6 +8,9 @@ layout: post_index
     <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
     <p class="metadata">
       <span class="author">{{ post.author }}</span> - <span class="date">{{ post.date | date: "%-d %B %Y" }}</span>
+    {% if post.guest_post %}
+      <span class="foreman-blue-infobox pull-right">Guest Post</span>&nbsp;
+    {% endif %}
     </p>
     <div class="post-content">
       {{ post.excerpt }}
