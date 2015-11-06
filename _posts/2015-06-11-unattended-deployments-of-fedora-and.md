@@ -7,14 +7,13 @@ tags:
 modified_time: '2015-06-11T17:01:51.974+03:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-339523326737578400
 blogger_orig_url: http://blog.theforeman.org/2015/06/unattended-deployments-of-fedora-and.html
+guest_post: true
+guest_url: http://blog.daniellobato.me/unattended-deployments-of-fedora-and-rhel-atomic-with-foreman
+excerpt: |
+  Project Atomic is a new initiative to have a family of well-known,
+  enterprise-tested operating systems ready for massive container deployments.
 ---
 
-This blog post is an authorized repost of [Unattended deployments of
-Fedora and RHEL Atomic with
-Foreman](http://blog.daniellobato.me/unattended-deployments-of-fedora-and-rhel-atomic-with-foreman/)  
-
-<!--more-->
-  
 [Project Atomic](http://www.projectatomic.io/) is a new initiative to
 have a family of well-known, enterprise-tested operating systems ready
 for massive container deployments. Atomic operating systems focus on:  

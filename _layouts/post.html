@@ -13,12 +13,18 @@
         {% endif %}
         <p class="metadata">
           <span class="author">{{ page.author }}</span> - <span class="date">{{ page.date | date: "%-d %B %Y" }}</span>
+          {% if page.guest_post %}
+          <span class="foreman-blue-infobox pull-right">Guest Post</span>&nbsp;
+          {% endif %}
         </p>
       </div>
 
       <hr/>
 
       <div class="post-content">
+        {% if page.guest_url %}
+        <p><em>This is an authorized repost of <a href="{{ page.guest_url }}">{{ page.guest_url }}</a></em></p>
+        {% endif %}
         {{ content }}
       </div>
 
