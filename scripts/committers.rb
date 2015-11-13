@@ -59,15 +59,15 @@ def get_repo_committers repo, tagged = false
   g = Git.clone("https://github.com/theforeman/#{repo}", repo)
   g.chdir do
     if tagged
-      raw = `git log #{@tag_from}..#{@tag_to} --pretty="%aN" --abbrev-commit`.split("\n").uniq
+      raw = `git log #{@tag_from}..#{@tag_to} --pretty="%aN" --abbrev-commit`.split("\n")
     else
-      raw = `git log --since=#{@date_from} --until=#{@date_to} --pretty="%aN" --abbrev-commit`.split("\n").uniq
+      raw = `git log --since=#{@date_from} --until=#{@date_to} --pretty="%aN" --abbrev-commit`.split("\n")
     end
   end
   raw.each do |author|
     author = @author_map.keys.include?(author) ? @author_map[author] : author
-    @authors.keys.include?(author) ? @authors[author] << repo : @authors[author] = [repo]
-    @authors[author].sort!.uniq!
+    @authors[author] = {} unless @authors.keys.include?(author)
+    @authors[author].keys.include?(repo) ? @authors[author][repo] +=1 : @authors[author][repo] = 1
   end
 end
 
@@ -81,10 +81,28 @@ Dir.mktmpdir do |dir|
   end
 end
 
+with_repo  = ARGV.delete("--with-repo")
+with_count =  ARGV.delete("--with-count")
 $stderr.puts "---"
-if ARGV.delete("--with-repo")
-  @authors.sort.map {|a,r| puts "#{a}: #{r.join(',')}" }
+if with_repo
+  if with_count
+    @authors.sort.map do |author,repos|
+      puts "#{author}:"
+      repos.each do |repo,commits|
+        puts "  #{repo}: #{commits}"
+      end
+    end
+  else
+    @authors.sort.map {|a,r| puts "#{a}: #{r.keys.join(',')}" }
+  end
 else
-  puts @authors.keys.sort.join("\n")
+  if with_count
+    @authors.sort.map do |author,repos|
+      total = repos.values.reduce( :+ )
+      puts "#{author}: #{total}"
+    end
+  else
+    puts @authors.keys.sort.join("\n")
+  end
 end
 $stderr.puts "Total committers: #{@authors.keys.size}"
