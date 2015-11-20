@@ -51,16 +51,16 @@ If you experience problems related to therubyracer or libv8, you can install wit
 
 ### Setup test environment
 1. Copy `config/database.yml.example` to `config/database.yml`
-2. Create your database: `rake db:migrate`
-3. Run all the tests: `rake test`
-4. Or a single test: `ruby -Itest test/functional/your_test.rb` (if you didn't run all tests before, you need to prepare the test environment with `rake db:test:prepare` the first time).
+1. Create your database: `rake db:migrate`
+1. Run all the tests: `rake test`
+1. Or a single test: `ruby -Itest test/functional/your_test.rb` (if you didn't run all tests before, you need to prepare the test environment with `rake db:test:prepare` the first time).
 
 ### Startup foreman
 1. Follow steps 1, 2 and 3 from the section "setup test environment" if you haven't done so already
-2. Populate database: `rake db:seed` and take note of the password it generates
-3. Startup the server: `rails server`
-4. Navigate to `localhost:3000`
-5. Login as `admin` with the password from the db:seed step earlier (or reset it with `rake permissions:reset`)
+1. Populate database: `rake db:seed` and take note of the password it generates
+1. Startup the server: `rails server`
+1. Navigate to `localhost:3000`
+1. Login as `admin` with the password from the db:seed step earlier (or reset it with `rake permissions:reset`)
 
 ### Submit Patches
 First, make sure you are a member of the [Foreman Developers](https://groups.google.com/forum/?fromgroups#!forum/foreman-dev) mailing list.
