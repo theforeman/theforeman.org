@@ -58,10 +58,10 @@ If you experience problems related to therubyracer or libv8, you can install wit
 
 ### Startup foreman
 1. Follow steps 1, 2 and 3 from the section "setup test environment" if you haven't done so already
-2. Populate database: `rake db:seed`
+2. Populate database: `rake db:seed` and take note of the password it generates
 3. Startup the server: `rails server`
 4. Navigate to `localhost:3000`
-5. Login with `admin/changeme`
+5. Login as `admin` with the password from the db:seed step earlier (or reset it with `rake permissions:reset`)
 
 ### Submit Patches
 First, make sure you are a member of the [Foreman Developers](https://groups.google.com/forum/?fromgroups#!forum/foreman-dev) mailing list.
