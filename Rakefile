@@ -22,7 +22,9 @@ end
 
 desc "Given a title as an argument, create a new post file"
 task :new_post, [:title] do |t, args|
-  filename = "#{Time.now.strftime('%Y-%m-%d')}-#{args.title.gsub(/\s/, '_').downcase}.md"
+  title = args.title || "new-post"
+  title_clean = title.downcase.strip.gsub(/\s/, '-').gsub(/[^\w-]/, '')
+  filename = "#{Time.now.strftime('%Y-%m-%d')}-#{title_clean}.md"
   path = File.join("_posts", filename)
   if File.exist? path; raise RuntimeError.new("#{path} exists! Refusing to overwrite"); end
   File.open(path, 'w') do |file|
@@ -43,5 +45,9 @@ My abstract goes here
 The rest of the post goes here.
 EOS
   end
-  puts "#{path} is ready for editing."
+  if editor = ENV["EDITOR"]
+    system("#{editor} #{path}")
+  else
+    puts "#{path} is ready for editing."
+  end
 end
