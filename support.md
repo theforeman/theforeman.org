@@ -14,10 +14,20 @@ foreman-debug tool - for more info see the [manual](/manuals/latest/index.html#7
 
 ## ![Redmine icon](static/images/redmine.png) [Issue tracker](http://projects.theforeman.org/projects/foreman/issues)
 
+The issue tracker (Redmine) should be used to check for existing issues or to file a new issue.  First, [find the project](http://projects.theforeman.org/projects) and then use the _Issues_ tab to view bugs and feature requests.  Use the search feature at the top of the issue list to filter by _Category_ to narrow down the results.
+
+When filing a new issue, check that the correct project is selected, then click the _New Issue_ link in the header.  Try to set the _Category_, _Found in release_ and include as much information as possible, including log files and screenshots.  For support requests, please use one of the other options below.
+
 ## ![Google groups icon](static/images/google-groups.png) Mailing lists
-Mailing lists are available via Google Groups. Much like IRC, we have a general users (support, Q/A, etc) lists and a development list:
+
+Mailing lists are available via Google Groups.  For help or support with
+Foreman problems, questions and answers or general discussion, post to the
+foreman-users list:
 
 * [foreman-users](https://groups.google.com/forum/?fromgroups#!forum/foreman-users) or email `foreman-users+subscribe@googlegroups.com`
+
+For discussions about developing Foreman or plugins, use the development list:
+
 * [foreman-dev](https://groups.google.com/forum/?fromgroups#!forum/foreman-dev) or email `foreman-dev+subscribe@googlegroups.com`
 
 There is also a low-traffic list dedicated to release and security announcements:
@@ -28,10 +38,15 @@ There is also a low-traffic list dedicated to release and security announcements
 Ask questions about how to use Foreman on Server Fault, so anyone can benefit from the answers. Tag your questions with ['foreman'](http://serverfault.com/questions/tagged/foreman).
 
 ## ![IRC icon](static/images/freenode.png) [IRC](https://kiwiirc.com/client/irc.freenode.net/?#theforeman)
-A great place to get real-time help with The Foreman is our IRC channel: [#theforeman](https://kiwiirc.com/client/irc.freenode.net/?#theforeman)
-on [irc.freenode.net](http://webchat.freenode.net/). There are
-usually many helpful people there in addition to some of the Foreman
-developers. For development discussions, there is also [#theforeman-dev](https://kiwiirc.com/client/irc.freenode.net/?#theforeman-dev).
+A great place to get real-time help with The Foreman is our IRC channel:
+
+* [#theforeman](https://kiwiirc.com/client/irc.freenode.net/?#theforeman) on [irc.freenode.net](http://webchat.freenode.net/)
+
+There are usually many helpful people there in addition to some of the Foreman
+developers.  For discussions about the intricacies of developing Foreman or
+plugins, use the development channel:
+
+* [#theforeman-dev](https://kiwiirc.com/client/irc.freenode.net/?#theforeman-dev) on [irc.freenode.net](http://webchat.freenode.net/)
 
 Please read and understand [this fantastic guide](http://workaround.org/getting-help-on-irc)
 to getting help for open-source projects on irc before diving in. All of the
