@@ -15,6 +15,8 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2015-7518: parameter information popup allows stored XSS](security.html#2015-7518)
+* [SQL injection via facts search terms](security.html#2015-facts-sql)
 * [CVE-2015-5282: parameter hide checkbox allows stored XSS during change](security.html#2015-5282)
 * [CVE-2015-5246: Active Directory login works with old password after change](security.html#2015-5246)
 * [CVE-2015-5233: reports show/destroy not restricted by host authorization](security.html#2015-5233)
@@ -51,12 +53,32 @@ All security advisories made for Foreman are listed below with their correspondi
 
 ### Disclosure details
 
+#### <a id="2015-7518"></a>CVE-2015-7518: parameter information popup allows stored XSS
+
+The popup boxes next to global parameters, smart class parameters and smart variables on the host and host group edit forms can allow stored XSS to be executed in the browser from the parameter description etc.
+
+*Mitigation:* do not click on the information popup box next to parameters in the host/group forms, and/or remove permission to edit Puppet classes from untrusted users.
+
+* Affects all known Foreman versions
+* Fix in progress for Foreman 1.10.0
+* Redmine issue [#12611](http://projects.theforeman.org/issues/12611)
+
+#### <a id="2015-facts-sql"></a>SQL injection via facts search terms
+
+The search for facts and also hosts by facts is vulnerable to SQL injection by breaking out of quotes in either the fact name or the fact value.
+
+No CVE identifier will be assigned to this vulnerability as it affects only release candidates.
+
+* Affects Foreman 1.10.0-RC1 and higher
+* Fix released in Foreman 1.10.0-RC3
+* Redmine issue [#12458](http://projects.theforeman.org/issues/12458)
+
 #### <a id="2015-5282"></a>CVE-2015-5282: parameter hide checkbox allows stored XSS during change
 
 The parameter management UI has a checkbox to mark values as hidden to mask them from casual viewing. The checkbox that hides/shows the value fails to handle HTML properly and so is vulnerable to an XSS issue where HTML can be stored in a parameter, and executed by another user if they later tick/untick the hide box.
 
 * Affects Foreman 1.7.0 and higher
-* Fix in progress for Foreman 1.10.0
+* Fix released in Foreman 1.10.0-RC1
 * Redmine issue [#11859](http://projects.theforeman.org/issues/11859)
 
 #### <a id="2015-5246"></a>CVE-2015-5246: Active Directory login works with old password after change

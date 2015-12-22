@@ -8,6 +8,18 @@ pagename: Plugin Manuals
 		<div class="row">
 			<div class="col-md-3">
 				<div id="toc" class="sidebar-nav-fixed pull-right hidden-sm hidden-xs" data-spy="affix" data-offset-top="60" data-offset-bottom="300">
+					{% if page.warning == "old"  %}
+					<div class="alert alert-warning">
+						<p style="margin-bottom: 3px"><strong>Newer version available</strong></p>
+						<p style="margin-bottom: 0">This {{ page.pluginname }} manual is for {{ page.version }}, but there is a newer version <a href="{{ site.baseurl }}plugins/{{ page.pluginname }}/index.html">available</a>.</p>
+					</div>
+					{% endif %}
+					{% if page.warning == "unreleased"  %}
+					<div class="alert alert-warning">
+						<p style="margin-bottom: 3px"><strong>Not yet released</strong></p>
+						<p style="margin-bottom: 0">This {{ page.pluginname }} manual is for {{ page.version }}, but the stable version is <a href="{{ site.baseurl }}plugins/{{ page.pluginname }}/index.html">different</a>.</p>
+					</div>
+					{% endif %}
 				</div>
 			</div>
 			<div id="doc" class="col-md-9">

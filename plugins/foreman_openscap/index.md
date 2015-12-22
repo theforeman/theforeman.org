@@ -1,7 +1,7 @@
 ---
 layout: plugin_index
 title: Foreman OpenSCAP documentation
-versions: [0.4]
+versions: [0.4, 0.5]
 ---
 
 # Foreman OpenSCAP manuals

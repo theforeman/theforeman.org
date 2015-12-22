@@ -134,7 +134,7 @@ __Create SCAP Content__ - You can upload any valid OpenSCAP DataStream file
 * Select to which locations / orgaginations this policy belongs to, if enabled
 * Choose to which hostgroup you wish apply this policy
 
-![Policy Wizard]({{page.images}}/policy_wizard.gif)
+![Policy Wizard]({{page.images}}/policy_wizard.png)
 ## 4.3 Assigning policy to host
 
 You can assign a policy in two ways:

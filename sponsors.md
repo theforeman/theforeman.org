@@ -41,6 +41,12 @@ Thank you to DataCentred, who provide ARM cloud servers for our package build sy
 
 Thank you to Enrico, who provides an ARM server for our package build system.
 
+### Stephen Wood
+
+Thank you to Stephen, who provides a server for our continuous integration system.
+
+<div class="lead text-center"><a href="http://www.heystephenwood.com">Hey Stephen Wood</a></div>
+
 ### Red Hat
 
 Thank you to Red Hat, who provide servers for our RPM build system and staffs developers to work on Foreman and its plugins full-time.

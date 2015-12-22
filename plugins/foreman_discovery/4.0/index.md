@@ -1,7 +1,9 @@
 ---
 layout: plugin
+pluginname: foreman_discovery
 title: Foreman Discovery 4.0 Manual
 version: 4.0
+warning: old
 ---
 
 # 1. {{ page.title }}
@@ -257,7 +259,11 @@ As of Foreman 1.8+, the foreman-installer is able to automatically download
 latest stable image. For this, re-run the installer with the following option:
 
     # foreman-installer \
+        --foreman-plugin-discovery-source-url=http://downloads.theforeman.org/discovery/releases/2.1/ \
         --foreman-plugin-discovery-install-images=true
+
+Check the version number in `foreman-plugin-discovery-source-url` option
+against the table above. Some image-plugin combinations are not compatible.
 
 Tip: It is possible to install both Discovery plugin and image in one
 installer run by providing both the options.
@@ -273,12 +279,26 @@ download](http://downloads.theforeman.org/discovery/)
 To download the latest release to the expected location, do the following on
 Fedora and Red Hat systems:
 
-    # wget http://downloads.theforeman.org/discovery/releases/latest/fdi-image-latest.tar \
+    # wget http://downloads.theforeman.org/discovery/releases/2.1/fdi-image-latest.tar \
       -O - | tar x --overwrite -C /var/lib/tftpboot/boot
+
+Check the version number in the url against the table above. Some image-plugin
+combinations are not compatible.
 
 On Debian systems, use `/srv/tftp/boot` instead of `/var/tftpboot/boot`.
 
-### 2.3.3 Verify checksums
+### 2.3.3 Verify signatures and checksums
+
+To verify individual ISO/tar files, import our Discovery Plugin key
+[7E81E7B0](http://keys.fedoraproject.org:11371/pks/lookup?search=0x7E81E7B0&op=get)
+and verify individual files:
+
+    # wget 'http://keys.fedoraproject.org:11371/pks/lookup?search=0x7E81E7B0&op=get' -O- | gpg --import
+    # gpg --verify --multifile *.asc
+    gpg: Signature made Fri 06 Nov 2015 09:42:55 AM UTC using RSA key ID 7E81E7B0
+    gpg: Good signature from "Foreman Discovery <foreman-xxx@googlegroups.com>"
+
+To verify extracted init RAM disk and linux kernel do:
 
     # cat /var/lib/tftpboot/boot/fdi-image/SHA256SUM
     beb3cfba7d9fb9d71481c0c8f... initrd0.img

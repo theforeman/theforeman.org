@@ -9,6 +9,13 @@ pagename: Media
 			</div>
 		</div>
 		<div id="doc" class="col-md-9">
+			<div id='case_studies'>
+				<h1>Case studies</h1>
+				<iframe width="640" height="360"
+					src="https://www.youtube.com/embed/videoseries?list=PLLTIBSsvp9qRcL6yCQqmdMJSRSYNI9DbK"
+					frameborder="0" allowfullscreen>
+				</iframe>
+			</div>
 			<div id="talks">
   		</div>
 			<div id="screencasts">
@@ -188,7 +195,7 @@ var deep_dives = [
 ];
 createVideosLayout('Deep dives', 'div#deepdives', deep_dives);
 
-var sprint_demos = [
+var community_demos = [
 { id: "QWA56wYeSrM", title: "Sprint 31", description: "Covers provisioning template serving via smart proxy, new UI for network interfaces, networking information in ENC output, rule based auto provisioning of discovered hosts, Hammer CLI commands for discovery. After the Foreman part, new Katello features are presented." },
 { id: "zkk4ZEZWvr0", title: "Sprint 30", description: "Covers Puppet run wait, Discovery image 2.0, Ubuntu 12.04 with Brightbox, Docker image name autocomplete, Docker wizard, console and management, Hammer CI tests, refined API for NICs, mail notifications, password strength meter, DHCP browser plugin, CLI lazy credentials, secure headers overview." },
 { id: "D-gsgp1IDfA", title: "Sprint 29", description: "Covers UEFI+QEMU booting, bonded interfaces, test fixtures, friendly_id gem, foreman_host_rundeck plugin, Puppet Server installer support, smart variables and LDAP auth source in Hammer, hammer host ssh command, graphite plugin and build status review." },
@@ -206,7 +213,7 @@ var sprint_demos = [
 { id: "6B4F563l-E0", title: "Sprint 15", description: "Covers two pane UI, new provisioning template editor, Hammer CLI adapters and CSV output, Chef integration status, a test framework for plugins, Google Compute Engine support and the foreman-background plugin." }
 ];
 
-createVideosLayout('Sprint demos', 'div#demos', sprint_demos);
+createVideosLayout('Community demos', 'div#demos', community_demos);
 </script>
 {% include videos.html %}
 {% include footer.html %}

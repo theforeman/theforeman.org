@@ -1,0 +1,25 @@
+# Use http://sequencediagram.org/ to generate image
+
+title Foreman Discovery communication paths
+
+participant "Discovered Node (HTTPS 8443)" as Node
+participant "Foreman Proxy (HTTPS 8443)" as Proxy
+participant "Foreman (HTTPS 443)" as Foreman
+
+linear
+
+== Direct configuration ==
+
+autonumber
+Node->Foreman:uploads facts (host registration)
+note over Foreman:user or rule trigger provisioning
+Foreman->Node:reboot command
+
+== Indirect configuration ==
+
+autonumber
+Node->Proxy:uploads facts (host registration)
+Proxy->Foreman:forwards facts request
+note over Foreman:user or rule trigger provisioning
+Foreman->Proxy:reboot command
+Proxy->Node:forwards reboot command

@@ -5,16 +5,20 @@ title: Contributing to Foreman
 
 # Contributing
 
-The Foreman is an open-source project that's licensed under the GNU Public License version 3. Contributions of all types are gladly accepted!
+## Read the Foreman [handbook](/handbook.html)
+
+The Foreman is an open-source project that's licensed under the GNU Public License version 3.<br>
+Contributions of all types are gladly accepted!
 
 ## Code-related contributions
+
 These types of tasks generally require a familiarity with Ruby (on Rails) development or RPM/Debian packaging. If you are still new to Rails, community members can help you if you get stuck with something or have any other questions.
 
 You will need to download a copy of the current development-code. [The
 official code repository](https://github.com/theforeman) is located
 on Github.
 
-** Please note that there are two important branches:**
+Please note that there are two important branches:
 
 * Master - latest stable release code
 * Develop - new features and bug fixes
@@ -51,17 +55,16 @@ If you experience problems related to therubyracer or libv8, you can install wit
 
 ### Setup test environment
 1. Copy `config/database.yml.example` to `config/database.yml`
-2. Edit `config/settings.yaml` to set :locations_enabled: and :organizations_enabled: to true
-3. Create your database: `rake db:migrate`
-4. Run all the tests: `rake test`
-5. Or a single test: `ruby -Itest test/functional/your_test.rb` (if you didn't run all tests before, you need to prepare the test environment with `rake db:test:prepare` the first time).
+1. Create your database: `rake db:migrate`
+1. Run all the tests: `rake test`
+1. Or a single test: `ruby -Itest test/functional/your_test.rb` (if you didn't run all tests before, you need to prepare the test environment with `rake db:test:prepare` the first time).
 
 ### Startup foreman
 1. Follow steps 1, 2 and 3 from the section "setup test environment" if you haven't done so already
-2. Populate database: `rake db:seed`
-3. Startup the server: `rails server`
-4. Navigate to `localhost:3000`
-5. Login with `admin/changeme`
+1. Populate database: `rake db:seed` and take note of the password it generates
+1. Startup the server: `rails server`
+1. Navigate to `localhost:3000`
+1. Login as `admin` with the password from the db:seed step earlier (or reset it with `rake permissions:reset`)
 
 ### Submit Patches
 First, make sure you are a member of the [Foreman Developers](https://groups.google.com/forum/?fromgroups#!forum/foreman-dev) mailing list.
