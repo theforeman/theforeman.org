@@ -60,7 +60,7 @@ The popup boxes next to global parameters, smart class parameters and smart vari
 *Mitigation:* do not click on the information popup box next to parameters in the host/group forms, and/or remove permission to edit Puppet classes from untrusted users.
 
 * Affects all known Foreman versions
-* Fix in progress for Foreman 1.10.0
+* Fix released in Foreman 1.10.0
 * Redmine issue [#12611](http://projects.theforeman.org/issues/12611)
 
 #### <a id="2015-facts-sql"></a>SQL injection via facts search terms
