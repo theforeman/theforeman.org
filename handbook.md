@@ -12,7 +12,7 @@ We use git for source control. The core projects:
 * [Foreman](https://github.com/theforeman/foreman)
 * [Smart Proxy](https://github.com/theforeman/smart-proxy)
 * [Foreman installer](https://github.com/theforeman/foreman-installer)
-* [Foreman SELinux](https://github.com/foreman-selinux))
+* [Foreman SELinux](https://github.com/foreman-selinux)
 
 follow this model for branching:
 
