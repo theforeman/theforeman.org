@@ -233,9 +233,27 @@ might be implemented by more than one job template.  For example, one template
 may use `yum` to install a package, while the other uses `dnf`.  At invocation
 time you can choose which template to use.
 
-This is more useful when more than one provider is available.  For example, you
+This is more useful when more than one provider is available. For example, you
 might have both an SSH and an Ansible template that implements the "Install
-Package" job.
+Package" job. It turned out that having two names is so complicated
+that we decided to merge template and job name in some upcoming version.
+
+A description format field is a template for job name. Imagine you run job
+template named "Install package" 10 times, each time with different package
+name specified by user input (more about this below). On job overview page
+you'd see the same "Install package" job and you'd have to inspect provided
+inputs to find the one that installed let's say httpd package. Using
+description format you set your own rules for naming which can use input
+values as part of job names. In our example install package example a good
+description format would be following
+
+    Install package %{package_name}
+
+Note that the name wrapped in %{...} is the name of input which value will
+replace this placeholder so you would see "Install package httpd" if httpd
+was used for this input. Note that the description format can be modified
+per job invocation as well so this is just a default value for particular
+job template.
 
 On the very same tab you can configure inputs. These template inputs
 defines values that can be accessed in the template itself. To add new input,
@@ -286,6 +304,16 @@ Note that until inputs are saved the preview of template won't work.
 To review the template first save it and then get back to the form and
 hit Preview button.
 
+You can also specify default effective user for job template. By default a 
+login that's used to run the script on target host is specified by global 
+setting named **remote_execution_effective_user** but if you specify another
+login, sudo would try to change effective user to this value. You can
+also enforce using **current user** login which can be handy if your users
+have same login as their posix accounts on target hosts. Last field 
+is **overridable** which determines whether job template settings can be
+overridden during job invocation. See [settings chapter](plugins/foreman_remote_execution/{{page.version}}/index.html#4.2Globalsettings)
+for more details about customization.
+
 ## 3.2 Executing a Job
 
 To execute on one host, go to the host detail page and click green "Run Job"
@@ -313,12 +341,61 @@ options
 
 Dynamic query will be more powerful when we add scheduling job executions in
 future. Also it will be useful when Bookmark is used for specifying the
-targets.
+targets. To review the list of target hosts you can use the button with eye
+icon. It will display the list of hosts matching the search query.
 
 Then there's the template selection. If you have multiple job templates for a
 given **Job name** you'll have to select one. If there's just one like in my
-example, you'll just have to provide values for all user inputs. After
-submiting the form, you're redirected to the Job detail.
+example, you'll just have to provide values for all user inputs.
+
+You can override effective user for this invocation unless it was forbidden
+for selected job template. In non-editable description field you can see
+the name of job that will be used after you save it. You can also override
+description format by unchecking **Use default description template** checkbox
+and providing your own template in **Description template**. You can use
+placeholders that will be replaced by values of inputs with corresponding name
+for example if there's input with name service_name you can specify the
+template like this
+
+    Restart service %{service_name}
+
+If you set the input value to "httpd" the resulting description would become
+"Restart service httpd".
+
+You can also plan the execution in future or configure multiple rerunning.
+There's a second tab called **Scheduling** where you can choose from 
+
+- **Execute now** - immediate single execution,
+- **Schedule future execution** - delayed single execution
+- **Set up recurring execution** - multiple executions on regular basis
+
+![Job Invocation schedule form](/plugins/foreman_remote_execution/{{page.version}}/invocation_form_scheduling.png)
+
+While execute now is obvious, future time scheduling offers you to customize
+two things. First is when the job should start, the second one called **Start
+before** determines the deadline after which the execution shouldn't start.
+This can be useful when you have some maintenance window and if the execution
+gets delayed it wouldn't be safe to run when the window was closed.
+ 
+When settings up recurring execution there are many ways how you can specify
+the interval. You can choose from hourly, daily, weekly, monthly interval
+basis and for advanced users there's option to specify custom cron
+configuration. This way you can setup various intervals, for example
+
+    # Run on every second Sunday of every month
+    0 4 8-14 * *
+
+    # Run every 5 minutes during 6 AM and 6 PM
+    */5 6,18 * * *
+
+You can specify the number of runs as **Repeat N times** attribute or limit
+it by **Ends at** date. What happens sooner takes precedence. You can keep
+the invocation configured without any fixed ending condition. If you want
+to stop such job later, you either cancel the job and cancel the recurring
+logic.
+
+After submitting the form, you're redirected to the Job detail which informs
+you about the progress.
 
 ## 3.3 Job detail
 
@@ -345,6 +422,9 @@ of the job on them and link to Foreman Task that represent the
 execution for a particular host. Note that this task is a subtask of a
 whole Job task.
 
+If you scheduled a recurring you'll also see **Recurring logic** tab. This
+gives you some basic information, e.g. when next run is supposed to happen.
+After you cancel the job, it cancels all future executions as well.
 
 ## 3.4 Jobs list
 
@@ -378,6 +458,73 @@ Alternatively, you may enable a fallback mode by setting
 **remote_execution_fallback_proxy** to true.  In this case, the plugin will
 consider any proxy associated with the host, such as its Puppetmaster, as long
 as the proxy also has a remote execution feature.
+
+## 4.2 Global settings
+
+Under Administer -> Settings you can find RemoteExecution tab which allows you
+to customize plugin behavior. Here is the list of settings and their meaning.
+
+<table class="table table-bordered table-condensed">
+  <tr>
+    <th>Parameter name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>remote_execution_effective_user</td>
+    <td>This is a login of default effective user for any job. When job is executed the effective user of the process
+    is changed accordingly (e.g. by sudo). This option can be overridden per job template and job invocation.</td>
+  </tr>
+  <tr>
+      <td>remote_execution_effective_user_method</td>
+      <td>What method should be used to set the effective user on target, currently only <b>su</b> and <b>sudo</b> are supported.</td>
+  </tr>
+  <tr>
+      <td>remote_execution_fallback_proxy</td>
+      <td>Search the host for any proxy with Remote Execution, useful when the host has no subnet or the subnet does not 
+      have an execution proxy.</td>
+  </tr>
+  <tr>
+      <td>remote_execution_global_proxy</td>
+      <td>Search for remote execution proxy outside of the proxies assigned to the host. If locations or organizations 
+      are enabled, the search will be limited to the host's organization or location.</td></td>
+  </tr>
+  <tr>
+      <td>remote_execution_ssh_user</td>
+      <td>Default user to use while the smart-proxy connects to the target using SSH. You may override per host by 
+      setting a parameter called remote_execution_ssh_user. Note that it can be set per Host, Host group, 
+      Operating system, Domain, Location and Organization. Also note that this can differ from effective user.</td>
+  </tr>
+</table>
+
+## 4.3 Permission delegation
+
+If you want to lock down ability of your users to run arbitrary scripts within
+your infrastructure, you can selectively configure what they can run and on
+which targets.
+
+We provide 2 built-in roles that you can use, one is for the whole remote
+execution features called **Remote Execution Manager** and the second with
+the name **Remote Execution User** that allows only running jobs without
+permissions to modify job templates. You can clone the role and customize
+its filter for even higher granularity. If you adjust the filter with
+*view_job_templates* permission, user will be able to see and trigger only
+jobs based on matching job templates. The same applies on *view_hosts* and
+*view_smart_proxies* if you need to limit which hosts or smart proxies users
+can use.
+
+There's extra permission called **execute_template_invocation** which is
+checked just before the invocation starts allowing you to set even more
+granular permissions. The filter for this permission can define which job
+template can be run on particular host, let's look at some examples of such
+filters:
+
+    job_name = Reboot and host.name = staging.example.com 
+    job_name = Reboot and host.name ~ *.staging.example.com 
+    job_name = "Restart service" and host_group.name = webservers
+
+Note that permissions assigned to users can change in time, especially after
+users already scheduled some runs in future, therefore this permissions is
+enforced just before the run resulting in execution failure.
 
 # 5. Help
 
