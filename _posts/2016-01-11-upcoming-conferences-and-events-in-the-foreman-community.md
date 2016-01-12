@@ -14,7 +14,7 @@ tags:
 ---
 
 With FOSDEM, ConfigManagement Camp, DevConf, and our first ever Foreman
-Construsction Day fast approaching, I thought you might like a bit more detail
+Construction Day fast approaching, I thought you might like a bit more detail
 on our plans. Read on if you do!
 
 <!--more-->
