@@ -178,6 +178,15 @@ version: "1.10"
 ## 4.8 Managing Chef
 {%include manuals/1.10/4.8_managing_chef.md %}
 
+## 4.9 Monitoring
+{%include manuals/1.10/4.9_monitoring.md %}
+### 4.9.1 Global status
+{%include manuals/1.10/4.9.1_global_status.md %}
+### 4.9.2 Sub-statuses
+{%include manuals/1.10/4.9.2_substatuses.md %}
+### 4.9.3 Searching by statuses
+{%include manuals/1.10/4.9.3_searching_by_statuses.md %}
+
 #5. Advanced Foreman
 
 ## 5.1 API
