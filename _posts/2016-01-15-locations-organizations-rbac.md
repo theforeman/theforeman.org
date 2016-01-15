@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Locations, Organizations and RBAC
-date: 2016-1-15 14:25:45
+date: 2016-01-15 14:25:45
 author: Christopher Pisano - The Advisory Board Company
 tags:
 - foreman
