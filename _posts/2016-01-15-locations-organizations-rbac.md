@@ -36,9 +36,89 @@ migrating into our new deployment we wrote a custom Fact that sets the host
 location based on the subnet. We simply then changed the setting in Foreman to
 look at the custom Fact for setting the location.
 
+Hiera Location Example:
+
+```
+[root@devbrain ~]# cd /opt/vagrant/puppet/hieradata/
+WARNING Hieradata is a git repo! Check Your Branch and Pull if Needed
+[root@devbrain hieradata]# ls
+application  common.eyaml  domain  environment  location  node  organization  osfamily  security_zone  vtl
+[root@devbrain hieradata]# cd location/
+[root@devbrain location]# ls
+ashburn.eyaml  austin.eyaml  aws.eyaml
+[root@devbrain location]# cat ashburn.eyaml
+---
+# resolv.conf data
+resolv_conf::nameservers:
+  - "dns server ip address"
+  - "dns server ip address"
+
+# ntp configuration data
+ntp::autoupdate: false
+ntp::service_enable: true
+ntp::servers:
+  - "ntp server ip address"
+  - "ntp server ip address"
+
+# repository server data
+repos::repoweb: repomirror.domain.com
+
+# timezone data
+timezone::timezone: EST5EDT
+
+# newrelic data
+newrelic::nrsysmond_labels:
+  - location:ashburn
+
+# nrpe data
+nrpe::allowed_hosts:
+  - '127.0.0.1'
+  - 'nagiosxi.domain.com'
+[root@devbrain location]#
+```
+
+Location Fact Source:
+
+```ruby
+require 'ipaddr'
+ashburn = [
+  IPAddr.new("subnet/16"),
+  IPAddr.new("subnet/23"),
+  IPAddr.new("subnet/23"),
+]
+
+austin = [
+  IPAddr.new("subnet/16"),
+  IPAddr.new("subnet/23"),
+  IPAddr.new("subnet/23"),
+  IPAddr.new("subnet/24"),
+]
+
+aws = [
+  IPAddr.new("subnet/16"),
+]
+
+Facter.add("location") do
+  setcode do
+    network = Facter.value(:ipaddress)
+
+    case
+      when ashburn.any? { |i| i.include?(network)}
+        'ashburn'
+      when austin.any? { |i| i.include?(network)}
+	'austin'
+      when aws.any? { |i| i.include?(network)}
+        'aws'
+      else
+	'unknown'
+    end
+  end
+end
+```
+
 Example Locations:
 ![Foreman
-Locations](/static/images/blog_images/2015-12-22-example_locations.png)
+Locations](/static/images/blog_images/2016-01-15-example_locations.png)
 
 Organizations was something that we knew was necessary but were not really sure
 the best way to implement them. At first we thought that we would have enough
@@ -49,11 +129,35 @@ which is something we wanted to avoid. Ultimately we decided to take a different
 approach than we had originally planned and set each organization to the most
 over-arching group that we could. This solved our issue with granting users
 permissions to multiple organizations but now we were faced with the challenge
-of setting granular permissions per product.
+of setting granular permissions per product. We also use the organization
+parameter in Hiera since their are some (very few) configurations that are
+organization specific. We did not write any custom Fact since the only object we
+could base it off of would be the hostname. As we all know hostnames are
+inherently not reliable so it would be bad practice.
+
+Hiera Organization Example:
+
+```
+[root@devbrain ~]# cd /opt/vagrant/puppet/hieradata/
+WARNING Hieradata is a git repo! Check Your Branch and Pull if Needed
+[root@devbrain hieradata]# ls
+application  common.eyaml  domain  environment  location  node  organization  osfamily  security_zone  vtl
+[root@devbrain hieradata]# cd organization/
+[root@devbrain organization]# ls
+crimson.eyaml  eab.eyaml  ent.eyaml
+[root@devbrain organization]# cat ent.eyaml
+---
+# newrelic data
+newrelic::license_key: 'license key for organization'
+newrelic::nrsysmond_disable_docker: true
+newrelic::nrsysmond_labels:
+  - org:ent
+[root@devbrain organization]#
+```
 
 Example Organizations:
 ![Foreman
-Organizations](/static/images/blog_images/2015-12-22-example_organizations.png)
+Organizations](/static/images/blog_images/2016-01-15-example_organizations.png)
 
 ####Enter Host Groups
 
@@ -68,13 +172,13 @@ with what you see below.
 
 Example Host Group for Products:
 ![Foreman Host
-Groups](/static/images/blog_images/2015-12-22-example_hostgroups.png)
+Groups](/static/images/blog_images/2016-01-15-example_hostgroups.png)
 
 Example Host Group for Enterprise Wide Tools:
 ![Foreman Host
-Groups](/static/images/blog_images/2015-12-22-example_hostgroups_2.png)
+Groups](/static/images/blog_images/2016-01-15-example_hostgroups_2.png)
 
-This structure allows us to grant users permissions to their oganizaton and then
+This structure allows us to grant users permissions to their organizaton and then
 the subsequent host group. For teams that oversee all products in an organization
 (it is rare but some do exist) their permissions stop at the organization with
 no additional filters for host groups.
