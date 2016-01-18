@@ -34,13 +34,12 @@ Foreman and have all of your filters configured you will learn pretty quickly
 if you have the wrong location selected. For existing hosts that we were
 migrating into our new deployment we wrote a custom Fact that sets the host
 location based on the subnet. We simply then changed the setting in Foreman to
-look at the custom Fact for setting the location.
+look at the custom Fact ($location) for setting the location value rather than the default
+$foreman_location.
 
 Hiera Location Example:
 
 ```
-[root@devbrain ~]# cd /opt/vagrant/puppet/hieradata/
-WARNING Hieradata is a git repo! Check Your Branch and Pull if Needed
 [root@devbrain hieradata]# ls
 application  common.eyaml  domain  environment  location  node  organization  osfamily  security_zone  vtl
 [root@devbrain hieradata]# cd location/
@@ -135,11 +134,11 @@ organization specific. We did not write any custom Fact since the only object we
 could base it off of would be the hostname. As we all know hostnames are
 inherently not reliable so it would be bad practice.
 
-Hiera Organization Example:
+Hiera Organization Example:  
+*this is a brief example but other scenarios could be host access/user
+permissions or other monitoring configurations*
 
 ```
-[root@devbrain ~]# cd /opt/vagrant/puppet/hieradata/
-WARNING Hieradata is a git repo! Check Your Branch and Pull if Needed
 [root@devbrain hieradata]# ls
 application  common.eyaml  domain  environment  location  node  organization  osfamily  security_zone  vtl
 [root@devbrain hieradata]# cd organization/
@@ -200,3 +199,21 @@ create, destroy, power cycle or edit hosts. They can view and search hosts, fact
 and reports. These users can also view trend data as well as create trends.These
 roles are primarily for non technical members of teams that still need to search and
 find information on their hosts.
+
+###Conclusion
+
+This is definitely still a work in progress as we do not currently have all of
+our teams integrated and using Foreman to manage their hosts. We do believe that
+the structure we have worked out and the standards we wrapped around it will
+scale accordingly though. Pending any product rebranding, which does happen but
+I feel you can not plan for that, we should be able to accurately grant
+permissions for any scenario. There is always the possibility of user error when
+creating a new location (rare), organization (rare) or host group (common) but
+configuring those properly falls under the responsibility of the administrator
+assigned the task. The bigger unknown is creating new roles with different sets
+of permissions we have not done before. I find it always is somewhat of a
+guessing game with trial and error to get the permissions 100% correct for a new
+role.
+
+Stay tuned as this is only a small part of our infrastructure as a service
+objective.
