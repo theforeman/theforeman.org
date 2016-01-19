@@ -45,35 +45,6 @@ application  common.eyaml  domain  environment  location  node  organization  os
 [root@devbrain hieradata]# cd location/
 [root@devbrain location]# ls
 ashburn.eyaml  austin.eyaml  aws.eyaml
-[root@devbrain location]# cat ashburn.eyaml
----
-# resolv.conf data
-resolv_conf::nameservers:
-  - "dns server ip address"
-  - "dns server ip address"
-
-# ntp configuration data
-ntp::autoupdate: false
-ntp::service_enable: true
-ntp::servers:
-  - "ntp server ip address"
-  - "ntp server ip address"
-
-# repository server data
-repos::repoweb: repomirror.domain.com
-
-# timezone data
-timezone::timezone: EST5EDT
-
-# newrelic data
-newrelic::nrsysmond_labels:
-  - location:ashburn
-
-# nrpe data
-nrpe::allowed_hosts:
-  - '127.0.0.1'
-  - 'nagiosxi.domain.com'
-[root@devbrain location]#
 ```
 
 Location Fact Source:
@@ -144,14 +115,6 @@ application  common.eyaml  domain  environment  location  node  organization  os
 [root@devbrain hieradata]# cd organization/
 [root@devbrain organization]# ls
 crimson.eyaml  eab.eyaml  ent.eyaml
-[root@devbrain organization]# cat ent.eyaml
----
-# newrelic data
-newrelic::license_key: 'license key for organization'
-newrelic::nrsysmond_disable_docker: true
-newrelic::nrsysmond_labels:
-  - org:ent
-[root@devbrain organization]#
 ```
 
 Example Organizations:
