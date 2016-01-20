@@ -298,11 +298,54 @@ or smart variable.
 If you're confused about the difference between smart class parameter,
 smart variable and parameter, checkout Foreman manual
 [parameters](http://www.theforeman.org/manuals/latest/index.html#4.2.3Parameters)
-section
+section.
 
-Note that until inputs are saved the preview of template won't work.
-To review the template first save it and then get back to the form and
-hit Preview button.
+It is also possible to render one job template from another:
+
+    <%= render_template("Run Command - SSH Default", :command => "echo hello world > /etc/motd") %>
+
+The inputs for the rendered template can be specified explicitly in the `render_template`
+call, or they can be imported into the template by using a **foreign input set** concept.
+It's similar to the inputs (editable in **Job tab** of edit template form).
+
+One can provide:
+
+- **target template** - inputs of what template should be imported
+- **include all** - this imports all the inputs of target template
+- **include** - if **include all** is disabled, this provides a list of comma separated names of inputs to include
+- **exclude** - a list of comma separated names of inputs to exclude
+    from the import - useful when overriding some inputs in the template
+
+By default, `render_template` looks at the foreign input sets at the template
+to fill in the values for a particular template. One can disable this behavior
+like this:
+
+    <%= render_template("Run Command - SSH Default", { :command => "echo hello world > /etc/motd" }, { :with_foreign_input_set => false } ) %>
+
+You can also use `input` macro to pass the value from current template
+input. Let's assume we have a template that sets hostname according to
+fqdn puppet fact. It has an input of Fact value type with name fqdn.
+Now we want to use it in our generic template to set any hostname that
+the user specifies. We can create a foreign input set that includes
+all and exclude the fqdn input, define our own input of type User
+input with the same name and call the original template like this:
+
+    <%= render_template("Set hostname", { :fqdn => input('fqdn') }) %>
+
+Since we created a foreign input set that includes all except fqdn, if
+"Set hostname" template has other inputs they would be used when
+rendering the template. If there were some inputs that have to be
+filled by user, they would be displayed in job invocation form of our
+newly created template.
+
+It's not allowed to import several inputs with the same name from
+different templates due to conflicts it would cause and it's the
+template author's responsibility to make sure the foreign inputs are
+unique across the whole template.
+
+Note that until inputs and foreign input sets are saved the preview of
+template won't work. To review the template first save it and then get
+back to the form and hit Preview button.
 
 You can also specify default effective user for job template. By default a 
 login that's used to run the script on target host is specified by global 
