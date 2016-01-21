@@ -1015,7 +1015,8 @@ shown there. Particularly useful system logs are tagged with:
 * NetworkManager - networking information
 
 The root account and ssh access are disabled by default, but you can enable
-ssh and set root password using the following kernel command line options:
+ssh and set root password using the following kernel command line options.
+Simply add these to the APPEND line of the pxe template:
 
     fdi.ssh=1 fdi.rootpw=redhat
 
