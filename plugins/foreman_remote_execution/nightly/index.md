@@ -228,24 +228,17 @@ stands for variables which you define in second tab called Job.
 ![Job Template form](/plugins/foreman_remote_execution/{{page.version}}/job_template_form.png)
 
 Before we get to inputs, lets look at other fields in Job tab. First one is an
-autocomplete field called **Job name**. This is generic name of the Job, which
-might be implemented by more than one job template.  For example, one template
-may use `yum` to install a package, while the other uses `dnf`.  At invocation
-time you can choose which template to use.
+autocomplete field called **Job category**. This groups job template together
+and makes managing a huge number of templates easier.
 
-This is more useful when more than one provider is available. For example, you
-might have both an SSH and an Ansible template that implements the "Install
-Package" job. It turned out that having two names is so complicated
-that we decided to merge template and job name in some upcoming version.
-
-A description format field is a template for job name. Imagine you run job
-template named "Install package" 10 times, each time with different package
+A description format field is a template for job description. Imagine you run
+a template named "Install package" 10 times, each time with different package
 name specified by user input (more about this below). On job overview page
 you'd see the same "Install package" job and you'd have to inspect provided
 inputs to find the one that installed let's say httpd package. Using
-description format you set your own rules for naming which can use input
-values as part of job names. In our example install package example a good
-description format would be following
+description format you set your own rules for creating the description.
+Input values can be used as part of it. A good description format for our
+install package example would be the following:
 
     Install package %{package_name}
 
@@ -253,7 +246,8 @@ Note that the name wrapped in %{...} is the name of input which value will
 replace this placeholder so you would see "Install package httpd" if httpd
 was used for this input. Note that the description format can be modified
 per job invocation as well so this is just a default value for particular
-job template.
+job template. Two extra placeholders %{template_name} and %{job_category}
+can be used.
 
 On the very same tab you can configure inputs. These template inputs
 defines values that can be accessed in the template itself. To add new input,
@@ -266,7 +260,7 @@ following ERB tag in my template code:
 
     echo "<%= input('motd') -%>" > /etc/motd
 
-The way we determine the input value differes based on **Input type**.  Let's
+The way we determine the input value differs based on **Input type**.  Let's
 start with User input. This input always needs the value to be specified
 by user. It means when user runs the job, we display the field that they
 must fill in, or provide options to select from. The provided value will be
@@ -322,7 +316,7 @@ to select "Run Job".
 
 ![Job Invocation form](/plugins/foreman_remote_execution/{{page.version}}/invocation_form.png)
 
-In this form you select which **Job name** you want to run on selected
+In this form you select which Job template you want to run on selected
 host(s). Then you can see prefilled **Search query** that uses the
 [Foreman searching syntax](/manuals/latest/index.html#4.1.5Searching).
 You can customize the query to search any set of hosts, e.g. all hosts
@@ -339,14 +333,13 @@ options
     just before the command is executed, which means if there are new
     hosts added meanwhile, the job will be executed on them as well
 
-Dynamic query will be more powerful when we add scheduling job executions in
-future. Also it will be useful when Bookmark is used for specifying the
-targets. To review the list of target hosts you can use the button with eye
-icon. It will display the list of hosts matching the search query.
+Dynamic query is a powerful tool when used with scheduled or recurring
+executions in combinations with Bookmarks being used for specifying the
+targets. You don't have to change scheduled job invocation if you just
+change the query of used bookmark.
 
-Then there's the template selection. If you have multiple job templates for a
-given **Job name** you'll have to select one. If there's just one like in my
-example, you'll just have to provide values for all user inputs.
+To review the list of target hosts you can use the button with eye
+icon. It will display the list of hosts matching the search query.
 
 You can override effective user for this invocation unless it was forbidden
 for selected job template. In non-editable description field you can see
@@ -429,13 +422,13 @@ After you cancel the job, it cancels all future executions as well.
 ## 3.4 Jobs list
 
 You can find all Jobs when you navigate to Monitor > Jobs. A table
-lists all jobs from history to future. You can search jobs by **Job name** with
-a queries like
+lists all jobs from history to future. You can search jobs by description with
+a query like
 
-    job_name ~ set*
+    description ~ set*
 
-This example would find all executions that run job which names starts with
-"set".
+This example would find all executions that run job which description starts with
+"set". Similarly you can search based on job category using keyword `job_category`.
 
 ![Job invocations list](/plugins/foreman_remote_execution/{{page.version}}/job_invocations.png)
 
@@ -548,9 +541,9 @@ granular permissions. The filter for this permission can define which job
 template can be run on particular host, let's look at some examples of such
 filters:
 
-    job_name = Reboot and host.name = staging.example.com 
-    job_name = Reboot and host.name ~ *.staging.example.com 
-    job_name = "Restart service" and host_group.name = webservers
+    name = Reboot and host.name = staging.example.com 
+    name = Reboot and host.name ~ *.staging.example.com 
+    name = "Restart service" and host_group.name = webservers
 
 Note that permissions assigned to users can change in time, especially after
 users already scheduled some runs in future, therefore this permissions is
