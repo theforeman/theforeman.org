@@ -7,6 +7,7 @@ tags:
 - foreman
 - multi-tenancy
 guest_post: true
+guest_url: https://chrispisano.wordpress.com/2016/01/22/locations-organizations-and-rbac/
 excerpt: |
   This will discuss our need to build a multi-tenant Foreman implementation and
   the necessity of Organizations, Locations and RBAC to do so.
