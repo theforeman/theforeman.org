@@ -8,6 +8,7 @@ tags:
 - puppet
 - high_availability
 guest_post: true
+guest_url: https://chrispisano.wordpress.com/2016/01/18/journey-to-high-availability-2/
 excerpt: |
   This is a recount of the road from an all in one Foreman implementation to a full HA deployment.
   We will also be looking forward beyond our current implementation to future plans.
