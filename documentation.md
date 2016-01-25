@@ -53,7 +53,7 @@ version: '1.10'
     </a>
   </div>
   <div class='col-md-4 center'>
-    <a href="/support.html" class="btn-doc btn">
+    <a href="/community.html#Troubleshooting&Support" class="btn-doc btn">
       <h2 class='doc-icon'><i class="fa fa-support"></i></h2>
       Support
     </a>
@@ -62,14 +62,6 @@ version: '1.10'
     <a href="/security.html" class="btn-doc btn">
       <h2 class='doc-icon'><i class="fa fa-lock"></i></h2>
       Security
-    </a>
-  </div>
-</div>
-<div class='row'>
-  <div class='col-md-4 col-md-offset-4'>
-    <a href="/blog" class="btn-doc btn">
-      <h2 class='doc-icon'><i class="fa fa-rss"></i></h2>
-      Blog
     </a>
   </div>
 </div>

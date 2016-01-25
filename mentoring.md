@@ -1,5 +1,5 @@
 ---
-layout: contribute
+layout: community
 title: Mentoring Projects
 ---
 
