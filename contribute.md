@@ -61,9 +61,7 @@ If you experience problems related to therubyracer or libv8, you can install wit
 
 #### Supported Ruby versions
 
-In general the latest Ruby should work.  However if you are just starting out, you may want to develop against one of the versions that we test against to reduce the chances of you hitting an unexpected issue with bundle install etc.
-
-If you are just starting out, you may want to develop against one of the versions we test against to reduce the chance of you hitting an unexpected issue, although this is in no way required.
+In general the latest Ruby should work. However if you are just starting out, you may want to develop against one of the versions that we test against to reduce the chances of you hitting an unexpected issue, although this is not required.
 
 You can see what versions we are currently testing against on our Jenkins CI server here: [http://ci.theforeman.org/view/Foreman%20pipeline/job/test_develop/](http://ci.theforeman.org/view/Foreman%20pipeline/job/test_develop/)
 
