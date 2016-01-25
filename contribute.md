@@ -59,6 +59,16 @@ If you experience problems related to therubyracer or libv8, you can install wit
 1. Run all the tests: `rake test`
 1. Or a single test: `ruby -Itest test/functional/your_test.rb` (if you didn't run all tests before, you need to prepare the test environment with `rake db:test:prepare` the first time).
 
+#### Supported Ruby versions
+
+In general the latest Ruby should work.  However if you are just starting out, you may want to develop against one of the versions that we test against to reduce the chances of you hitting an unexpected issue with bundle install etc.
+
+If you are just starting out, you may want to develop against one of the versions we test against to reduce the chance of you hitting an unexpected issue, although this is in no way required.
+
+You can see what versions we are currently testing against on our Jenkins CI server here: [http://ci.theforeman.org/view/Foreman%20pipeline/job/test_develop/](http://ci.theforeman.org/view/Foreman%20pipeline/job/test_develop/)
+
+Any version of Ruby that is older than listed is not supported. 
+
 ### Startup foreman
 1. Follow steps 1, 2 and 3 from the section "setup test environment" if you haven't done so already
 1. Populate database: `rake db:seed` and take note of the password it generates
