@@ -81,7 +81,7 @@ Patches to fix bugs or add new features are always appreciated. If you are going
 
 We try to keep a one commit per bug/feature policy, please try to create an issue which is specific for your patch details.
 
-Please make sure there is a [Redmine issue](http://projects.theforeman.org/projects/foreman/issues) open for the change you are going to submit, as you will want to reference it in your commit message; this is very helpful when generating release notes.
+Please make sure there is a [Redmine issue](/contribute.html#Bugreporting) open for the change you are going to submit, as you will want to reference it in your commit message; this is very helpful when generating release notes.
 
 * Create a feature/topic branch
 
@@ -129,8 +129,23 @@ Helping out other users in the "Forums" is always useful. Frequent problems or q
 
 Testing is also *very* welcome, for any issue encountered, please open a bug / feature request.
 
+### Bug reporting
+Even the simplest of bugs reported helps us make the project better. The issue tracker is located at [http://projects.theforeman.org/projects/foreman/issues](http://projects.theforeman.org/projects/foreman/issues), and you should follow these guidelines:
+
+* Ensure the correct project is selected - the link above is for the Foreman UI itself, you can use [this list](http://projects.theforeman.org/projects) for the other projects.
+* Use an understandable, descriptive title, e.g. "Clicking the Template review button gives a 500 server error" rather than "Template review is broken"
+* Provide whatever context you can - your host operating system, Foreman version(s), ruby version, etc
+* State what you were trying to achieve - provide steps to reproduce your problem where possible
+* State what happened in more detail than the title - provide logs where possible
+* State what you expected to happen - this helps us correct misinterpretations of features
+
+#### Feature requests
+If you're submitting a feature request or user story, please provide the context for the feature, especially the problem you're trying to solve, and your preferred implementation (if you have one). This will lead to a clear record of the discussion and eventual decision.
+
+It's acceptable to head over to the [dev mailing list](/support.html#Mailinglists) to start a discussion if you have an idea you'd like more input on, before submitting tickets. Be sure to mention the appropriate thread in the ticket, so the context can be found in the future.
+
 ### Issue triage
-Sometimes issues are reported without all the information needed by a developer. Getting the details of the bug or feature from the reporter and the community will help everyone understand what is needed. Our issue tracker can be found here: [http://projects.theforeman.org/projects/foreman/issues](http://projects.theforeman.org/projects/foreman/issues)
+Sometimes issues are reported without all the above information needed. Getting the details of the bug or feature from the reporter and the community will help everyone understand what is needed. Our issue tracker can be found here: [http://projects.theforeman.org/projects/foreman/issues](http://projects.theforeman.org/projects/foreman/issues), and see the above section for issue guidelines.
 
 ### Translations
 
@@ -142,7 +157,7 @@ We're trying to maintain high quality, authoritative documentation in the Forema
 Both the manual and the web site are contained in our [theforeman.org repository](https://github.com/theforeman/theforeman.org).  See the README.md to get started.  Contributions to this project are licensed under Creative Commons Attribution-ShareAlike 3.0.
 
 ### Design and User interface
-Foreman has a very basic design and user interface. Any improvements to it including new themes, skinning, or interface adjustments could help every user.
+Foreman 1.11 and above uses [Patternfly](http://patternfly.org/) as its base design. Any improvements or suggestions on how to implement this better, or on re-implementing particular pages are very welcome, and could help every user. Design discussion should happen on [the dev mailing list](/support.html#Mailinglists).
 
 ### Hosted hardware
 
