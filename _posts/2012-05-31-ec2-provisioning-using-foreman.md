@@ -16,6 +16,12 @@ blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-78710756049909286
 blogger_orig_url: http://blog.theforeman.org/2012/05/ec2-provisioning-using-foreman.html
 ---
 
+**Update**
+
+There is an updated version of this post available targetting version
+1.10. It can be found [here](http://theforeman.org/2016/02/ec2-provisioning-using-foreman-update.html)
+
+
 One of foreman goals, is to provide a simple and familiar process to
 provision systems, regardless of where they are located.
 
