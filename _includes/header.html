@@ -40,19 +40,19 @@
 </head>
 
 <body>
- {% if page.url != "/index.html" %}
+ {% if page.url != "/" %}
     <header id="page-header" style='padding: 0'>
 	{% else %}
     <header id="page-header">
   {% endif %}
 		<div class="container">
-      {% if page.url != "/index.html" %}
+      {% if page.url != "/" %}
 		    <nav class="navbar navbar-default navbar-static-top" role="navigation">
 	    {% else %}
 		    <nav class="navbar navbar-default navbar-static-top navbar-index" role="navigation">
       {% endif %}
 				<ul class="nav navbar-nav nav-justified">
-          {% if page.url != "/index.html" %}
+          {% if page.url != "/" %}
  						<li class='visible-xs'><a class='index-link' href="/">Home</a></li>
 						<li class='hidden-xs'><a class='index-link' href="/">
 							<i class="logo"><img style="width: 90px" src="/static/images/foremanhelmet.svg" alt="Foreman home"></i>
@@ -64,7 +64,7 @@
 					</li>
 				</ul>
 			</nav>
-      {% if page.url == "/index.html" %}
+      {% if page.url == "/" %}
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3 text-center">
 					<a class="brand" href="/">

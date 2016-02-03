@@ -18,7 +18,7 @@ blogdesc: News, notes and noise from around the Foreman community
 safe:        false
 
 future:      false
-highlighter: pygments
+highlighter: rouge
 markdown:    rdiscount
 
 navigation:
@@ -35,3 +35,5 @@ navigation:
 
 gems:
   - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
