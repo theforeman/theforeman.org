@@ -138,6 +138,10 @@ We use MiniTest::Unit syntax.
 * Use `setup_user` if you need to create an user with special permissions and roles instead of doing it yourself in the test.
 * For functional tests, if several controllers share the same behavior, extract it to a [shared functional concern](https://github.com/theforeman/foreman/blob/develop/test/functional/shared/report_host_permissions_test.rb)
 
+### Time zones
+
+All date and time information should be saved in UTC to the database, for consistency. Similarly, all date and time information shown to users must either take into account the user time zone (accessible through User.current.timezone) or not specify anything.
+Foreman's controllers will call 'set_timezone' upon every request, which is a method that will automatically set a time zone and modify Time objects in Ruby to use it.
 
 ### Strings and translations
 
