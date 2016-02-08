@@ -17,6 +17,12 @@ Foreman plugins are implemented as [Rails engines](http://guides.rubyonrails.org
 ------------------------
 
 <div class='row'>
+  <div class='col-md-3 center'>
+		<a href="plugins/foreman_ansible" class="btn-doc btn">
+			<p class='h2 doc-icon'><i class="fa fa-play"></i></p>
+			Ansible
+		</a>
+	</div>
 	<div class='col-md-3 center'>
 		<a href="https://github.com/theforeman/foreman_bootdisk" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-floppy-o"></i></p>
