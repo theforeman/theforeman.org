@@ -240,6 +240,71 @@ As a maintainer, your responsibility is to keep a project running, taking care o
 
 Traditionally, the process to become a maintainer has been simple. Take care of something for long enough and people will expect you to maintain it. We might ask you directly if you want to be a maintainer if you're maintaining something for some time. If you have made contributions only on a very specific topic (an Operating System, for instance), we might ask you to be a maintainer for that part of the code.
 
+## Becoming a committer
+
+The following process applies to the core projects mentioned at the beginning (Foreman, Smart-Proxy, Foreman-installer and Foreman-SElinux). Most plugins follow a more informal process.
+
+#### What is a committer
+
+A Foreman committer is a person with commit access to one or more of the repositories under [the Foreman organization](https://github.com/theforeman/). Committers are members of the Foreman contributors community who exhibit most of the following behaviors:
+
+* Review and merge code and documentation
+* Help triaging bugs and testing pull requests
+* Make well formed pull requests
+* Take care of releases
+* Have a sense of duty about the Foreman project
+* Play well with others, are respectful, show gratitude
+
+We ask new Foreman contributors to 'act as a committer' to the extent we feel they are capable.
+
+If you want to become a committer, we expect you help with some of these tasks:
+
+*  Review and test the patches submitted by others; this helps to offload the burden on existing committers, who will definitely appreciate your efforts
+*  Participate in discussions about releases, roadmaps, architecture, and long-term plans
+*  Improve the website
+*  Improve project infrastructure in order to increase the efficiency of committers and other contributors
+*  Help raise the project's quality bar (e.g. by setting up code coverage analysis)
+*  As much as possible, keep your activity sustained rather than sporadic
+
+Other things that are nice to do:
+
+*  Support users and other developers on the mailing lists, in Redmine, Serverfault, and in IRC #theforeman and #theforeman-dev
+*  Participate in (or even initiate) real-world events such as user/developer meetups, papers/talks at conferences, etc
+
+#### How do I become a committer?
+
+One person has to nominate you to the group of existing committers.
+The person who nominates you has to:
+
+  * Submit 10 examples that prove this person behaves like a committer. For instance:
+    * Strategic patches to the project that fix or add key functionality
+    * Mailing list threads where the person is clearly helpful
+    * Comments that prove the person has triaged bugs
+    * Proof the nominee has maintained a plugin successfully
+    * Anything else that shows the nominee should become a committer
+  * Explain how the nominee is involved in the community and cares about the future of the project
+
+This nomination is public and should be made to the foreman-dev mailing list. After the nomination is submitted, two other committers have to second the nomination. If no one objects in one week, the nomination is accepted.
+
+Such objections may happen in public on the nomination thread. Understandably, however, not everyone is comfortable giving objections publicly. Therefore, it is acceptable for other committers to raise their concerns with the sponsor and/or other committers privately if they wish to do so. The sponsor is expected to update the nomination thread to show that it is on hold pending private concerns.
+
+Regardless, during any objections, private or public, the nomination is on hold until the objections are resolved or the nomination is rejected. In the event of a failed nomination, the sponsor (as part of the discussing group) will know the grounds for the rejection, and can pass along constructive feedback to the candidate. Care should be taken to do this sensitively.
+
+#### How do I lose committer status?
+
+If you are inactive in the community for one year, we will remove you from the committers list and revoke your permission, but we will make a mention of you in theforeman.org list of previous committers.
+
+In the event that a committer continues to disregard good citizenship (or actively disrupts the project), we may need to revoke that person's status. The process is the same as for nominating a new committer: someone suggests the revocation with a good reason, two people second the motion, and a vote may be called if consensus cannot be reached. We hope that's simple enough, and that we never have to test it in practice.
+
+Special thanks to Chromium, Mozilla, V8, FreeBSD and Apache Hive for providing the basis of this procedure.
+
+#### Quick tips for new committers
+
+ * If something you merged broke something, the build, etc… you take responsibility
+ * Do not merge your own commits unless the other committers in the group accept this behavior (usual in small plugins)
+ * Do not merge commits blindly. If you do not fully understand a pull request, ask existing committers to take a look
+ * Do not merge if the build is failing. Wait until tests are green to merge.
+
 ## API usability and versioning
 
 We follow [Semantic versioning 2.0](http://semver.org/) for anything above '0.x' releases. This means incompatible changes, such as breaking an API endpoint, not working with a previous Foreman version (in the case of a plugin), require increasing the major version. The bulk of your changes should only require increasing the minor and patch versions, for backwards-compatible functionality and bugfixes.
