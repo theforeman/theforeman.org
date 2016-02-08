@@ -187,6 +187,9 @@ version: "1.10"
 ### 4.9.3 Searching by statuses
 {%include manuals/1.10/4.9.3_searching_by_statuses.md %}
 
+## 4.10 Managing Ansible
+{%include manuals/1.10/4.10_managing_ansible.md %}
+
 #5. Advanced Foreman
 
 ## 5.1 API

@@ -87,7 +87,7 @@ If you find a bug, please file it in
 See the [troubleshooting section]({{site.baseurl}}manuals/latest/index.html#7.2GettingHelp)
 in the Foreman manual for more info.
 
-## 4.3 Contributing
+## 4.2 Contributing
 
 Follow the [same process as Foreman]({{site.baseurl}}contribute.html#SubmitPatches)
 for contributing. Sources at [github.com/theforeman/foreman_cockpit](https://github.com/theforeman/foreman_cockpit)
