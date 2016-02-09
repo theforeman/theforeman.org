@@ -413,7 +413,7 @@ before** determines the deadline after which the execution shouldn't start.
 This can be useful when you have some maintenance window and if the execution
 gets delayed it wouldn't be safe to run when the window was closed.
  
-When settings up recurring execution there are many ways how you can specify
+When setting up recurring execution there are many ways how you can specify
 the interval. You can choose from hourly, daily, weekly, monthly interval
 basis and for advanced users there's option to specify custom cron
 configuration. This way you can setup various intervals, for example
@@ -429,6 +429,16 @@ it by **Ends at** date. What happens sooner takes precedence. You can keep
 the invocation configured without any fixed ending condition. If you want
 to stop such job later, you either cancel the job and cancel the recurring
 logic.
+
+Another feature to allow more precise control over the execution is limitting
+by concurrency level and distributing the tasks over time. The **Concurrency level**
+allows to set a quota on how many parallel tasks can be run, which can effectively
+prevent depleting all of the system's resources in case of executing a job
+on a large number of hosts. The **Time span** can be used to define a maintenance
+window, across which the tasks should be distributed. Important thing to note is
+the tasks which could not be started within that window (for example tasks before
+them took too long to finish) are cancelled. This allows to tailor the execution
+to fit your hardware and needs.
 
 After submitting the form, you're redirected to the Job detail which informs
 you about the progress.
