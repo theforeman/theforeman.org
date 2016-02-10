@@ -592,6 +592,50 @@ Note that permissions assigned to users can change in time, especially after
 users already scheduled some runs in future, therefore this permissions is
 enforced just before the run resulting in execution failure.
 
+## 4.4 Writing custom templates
+
+During writing your own job templates you might find some of following macros
+useful.
+
+### 4.4.1 render_template
+
+You can render a template from another template and feed it with inputs.
+A short example follows
+
+    <%= render_template 'Package Action', :action => 'install', :package => 'httpd' %>
+    chkconfig httpd on
+    <%= render_template 'Service Action', :action => 'start', :service_name => 'httpd' %>
+
+For more information, see [Job
+Templates](plugins/foreman_remote_execution/{{page.version}}/index.html#3.1JobTemplates)
+
+### 4.4.2 preview?
+
+When you need to render a different output for preview of the template, you can
+user `preview?` macro. This is useful if you need to hide some sensitive or
+spamming part - e.g. private or public key content.
+
+    <% if preview? %>
+      PUBLIC_KEY_STRIPPED_OUT
+    <% else %>
+      <%= input('public_key') %>
+    <% end %>
+
+Also when you disable safe mode, you might touch internal Foreman objects.
+Imagine you have a template for deleting puppet certificate that first
+deletes the certificate on puppet CA through Foreman objects and then
+removes it on target host.
+
+    <% if preview? -%>
+    #   this would delete a certificate on puppet ca, but running in preview mode
+    <% else -%>
+      <%= @host.puppet_ca_proxy.statuses[:puppetca].destroy(@host.name) %>
+    <% end -%>
+    rm -rf /var/lib/puppet/ssl/*
+
+In this case, previewing of the template would immediately trigger destroy
+method and therefore it's wrapped in preview condition.
+
 # 5. Help
 
 Please follow our [standard procedures and contacts]({{site.baseurl}}support.html).
