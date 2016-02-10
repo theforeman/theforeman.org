@@ -10,7 +10,7 @@ function getYoutubeID(url) {
 };
 $('div.youtube').each(function() {
 	var id = $(this).data('video-id');
-	var thumb_url = "http://img.youtube.com/vi/"+id+"/hqdefault.jpg";
+	var thumb_url = "//img.youtube.com/vi/"+id+"/hqdefault.jpg";
 	$('<img width="100%" class="video" src="'+thumb_url+'" />').appendTo($(this));
 });
 </script>
