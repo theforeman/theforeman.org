@@ -66,7 +66,7 @@ Restarting Foreman might be needed after installing the package.
 
 You can use the dynamic inventories feature in Ansible to make your inventory be Foreman, and have host properties and parameters available as Ansible variables in your manifests.
 
-The project is not packaged yet, but you can find the sources here at [agx/foreman_ansible_inventory](https://github.com/agx/foreman_ansible_inventory). Check Ansible's [dynamic inventory documentation](http://docs.ansible.com/ansible/intro_dynamic_inventory.html) to install it.
+The project is not packaged, but you can find the sources here at [theforeman/foreman_ansible_inventory](https://github.com/theforeman/foreman_ansible_inventory). Check Ansible's [dynamic inventory documentation](http://docs.ansible.com/ansible/intro_dynamic_inventory.html) to install it.
 
 # 3. Configuration
 
