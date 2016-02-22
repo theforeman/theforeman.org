@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2015-7582: private bookmarks can be viewed and edited](security.html#2015-7582)
 * [CVE-2015-7518: parameter information popup allows stored XSS](security.html#2015-7518)
 * [SQL injection via facts search terms](security.html#2015-facts-sql)
 * [CVE-2015-5282: parameter hide checkbox allows stored XSS during change](security.html#2015-5282)
@@ -52,6 +53,16 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2015-7582"></a>CVE-2015-7582: private bookmarks can be viewed and edited
+
+Bookmarks set to 'private' can be viewed by any user, and edited or deleted by any user granted the edit or destroy_bookmarks permissions.
+
+*Mitigation:* remove edit_bookmarks and destroy_bookmarks from untrusted users, remove private information from bookmark searches.
+
+* Affects Foreman 0.3 and higher
+* Fix in development
+* Redmine issue [#13828](http://projects.theforeman.org/issues/13828)
 
 #### <a id="2015-7518"></a>CVE-2015-7518: parameter information popup allows stored XSS
 
