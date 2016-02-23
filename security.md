@@ -15,7 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
-* [CVE-2015-7582: private bookmarks can be viewed and edited](security.html#2015-7582)
+* [CVE-2016-2100: private bookmarks can be viewed and edited](security.html#2016-2100)
 * [CVE-2015-7518: parameter information popup allows stored XSS](security.html#2015-7518)
 * [SQL injection via facts search terms](security.html#2015-facts-sql)
 * [CVE-2015-5282: parameter hide checkbox allows stored XSS during change](security.html#2015-5282)
@@ -54,7 +54,7 @@ All security advisories made for Foreman are listed below with their correspondi
 
 ### Disclosure details
 
-#### <a id="2015-7582"></a>CVE-2015-7582: private bookmarks can be viewed and edited
+#### <a id="2016-2100"></a>CVE-2016-2100: private bookmarks can be viewed and edited
 
 Bookmarks set to 'private' can be viewed by any user, and edited or deleted by any user granted the edit or destroy_bookmarks permissions.
 
