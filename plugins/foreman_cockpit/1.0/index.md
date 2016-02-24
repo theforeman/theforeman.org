@@ -42,6 +42,10 @@ To install Foreman Cockpit, run the following:
 
       # yum install tfm-rubygem-foreman_cockpit
 
+or this if your Foreman version is 1.9 or older
+
+      # yum install ruby193-rubygem-foreman_cockpit
+
 * Fedora
 
       # yum install rubygem-foreman_cockpit

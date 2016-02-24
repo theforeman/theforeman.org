@@ -82,8 +82,25 @@ Foreman OpenSCAP (foreman_openscap), Smart Proxy OpenSCAP (smart_proxy_openscap)
 
 On the Foreman server:
 
-	> yum install ruby193-rubygem-foreman_openscap
-	> service httpd reload
+If this is the first plugin you're installing, please see the [plugin
+repository section]({{site.baseurl}}plugins/#2.2Packageinstallation) to set up the repository
+first.
+
+To install Foreman OpenSCAP, run the following:
+
+* Red Hat based (RHEL, CentOS...)
+
+      # yum install tfm-rubygem-foreman_openscap
+
+or this if your Foreman version is 1.9 or older
+
+      # yum install rubygem193-rubygem-foreman_openscap
+
+* Fedora
+
+      # yum install rubygem-foreman_openscap
+
+Restarting Foreman might be needed after installing the package.
 
 Please refer to the Foreman plugin [manual]({{site.baseurl}}/manuals/latest/index.html#6.1InstallaPlugin) for more information about installing Foreman plugins.
 
@@ -176,18 +193,18 @@ Clicking on "View Report" will lead you to the actual security audit report, wit
 * When uploading an SCAP content to Foreman it sends the file for validation at the Smart-Proxy:
   * The Smart-Proxy validates that the SCAP xml file is a valid OpenSCAP file, and returns the errors if not.
   * Once the SCAP content is validated, the Smart-Proxy is extracting the SCAP profiles for later use when creating a policy.
-  
+
 ## 5.3 Arf Report retrieval process
 * The client host is running oscap test and uploads ARF report to the Smart-Proxy as an XML file.
-* The Smart-Proxy parses the XML and generates a JSON report. 
+* The Smart-Proxy parses the XML and generates a JSON report.
 * Once the JSON report has been successfully posted to the Foreman, the XML file is saved on the Smart-Proxy's filesystem for later use from the Foreman
 * (If the post to the Foreman fails the file is saved for later retry)
-* On the Foreman side: 
+* On the Foreman side:
   * The ARF report receives the JSON formatter report from the proxy and generates the report, its logs and messages.
-  * The complete report can be downloaded from the Smart-Proxy as a compressed XML, or viewed in OpenSCAP style HTML.  
+  * The complete report can be downloaded from the Smart-Proxy as a compressed XML, or viewed in OpenSCAP style HTML.
 
 ![Upload ARF Reports]({{page.images}}/reports_design.png)
-  
+
 # 6. Help
 
 Please follow our [standard procedures and
