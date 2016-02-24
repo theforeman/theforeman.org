@@ -1,8 +1,12 @@
 <div class="version-marker">
   <p>
     Latest versions:
-      <a href="{{ site.baseurl }}documentation.html#1.12">1.12.0-RC1</a>
+      {% for ver in site.data.releases.core[1][12] limit: 1 %}
+        <a href="{{ site.baseurl }}documentation.html#1.12">{{ ver }}</a>
+      {% endfor %}
       /
-      <a href="{{ site.baseurl }}documentation.html#1.11">1.11.2</a>
+      {% for ver in site.data.releases.core[1][11] limit: 1 %}
+        <a href="{{ site.baseurl }}documentation.html#1.11">{{ ver }}</a>
+      {% endfor %}
   </p>
 </div>
