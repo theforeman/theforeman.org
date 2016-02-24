@@ -7,7 +7,7 @@ Components include the Foreman web UI, Smart Proxy, Passenger (for the puppet ma
 * CentOS, Scientific Linux or Oracle Linux 6 or 7, x86_64
 * Debian 8 (Jessie), i386/amd64/armhf
 * Debian 7 (Wheezy), i386/amd64
-* Fedora 19, x86_64
+* Fedora 21, x86_64
 * Red Hat Enterprise Linux 6 or 7, x86_64
 * Ubuntu 14.04 (Trusty), i386/amd64/armhf
 * Ubuntu 12.04 (Precise), i386/amd64
