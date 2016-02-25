@@ -1033,6 +1033,24 @@ RAM disk.
 CentOS 7 distribution ships with COMMAND_LINE_SIZE option set to 2048.
 Therefore kernel command line must not be longer than that.
 
+## 6.1.5 Initial restart problem
+
+In typical Foreman workflow, hosts are set to always boot from the network via
+PXE. Unknown hosts boot into Discovery while known hosts boot into installer
+or boot from hard drive when in operation mode.
+
+Some users use Discovery plugin on virtualized platforms. Hypervisors tend to
+treat the initial restart in a special way to allow comfortable OS
+installation. They usually attempt to change boot order to first hard drive
+instead of CD-ROM or PXE which was only used for the installation.
+
+There is a known issue with libvirt which turns VM off instead of rebooting it
+which causes problems when using Discovery. To avoid this behavior and to
+align with recommended workflow, new VMs must be created with PXE booting
+only. In Virt Manager, click on Customize options and set the boot order
+explicitly. When using virt-install, do not provide `--pxe` option and set
+boot order explicitly with `--boot network` instead.
+
 ## 6.2 UEFI
 
 Discovery Image version 3.0.0 and older does support booting via EFI thanks to
