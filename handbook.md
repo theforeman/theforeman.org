@@ -109,7 +109,7 @@ We follow the [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide) an
 * If adding new model attributes, use scoped search definitions where appropriate.
 * Virtual fields must have the option ```:only_explicit``` when added to scoped search.
 * Only catch exceptions that are expected. Wrap them in `Foreman::WrappedException`
-* When you need to catch a `Foreman::Exception` make sure the ERF code is displayed to the user. Send a pull request to [theforeman.org](https://github.com/theforeman.org) with possible fixes for the ERF code.
+* When you need to catch a `Foreman::Exception` make sure the ERF code is displayed to the user. Update the [Error Codes wiki](http://projects.theforeman.org/projects/foreman/wiki/ErrorCodes) with possible fixes for the ERF code.
 * Include unit tests for public methods in models, helpers or concerns, tested in isolation.
 * Include functional tests for public methods in controllers
 * All new APIs, or additional model attributes have apipie documentation and are in API views
