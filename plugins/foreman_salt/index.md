@@ -1,7 +1,7 @@
 ---
 layout: plugin_index
 title: Foreman Salt documentation
-versions: [4.0, 3.0, 2.1, 2.0]
+versions: [5.0, 4.0, 3.0, 2.1, 2.0]
 ---
 
 # Foreman Salt manuals
