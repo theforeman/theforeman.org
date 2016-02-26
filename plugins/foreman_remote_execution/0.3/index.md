@@ -430,7 +430,7 @@ the invocation configured without any fixed ending condition. If you want
 to stop such job later, you either cancel the job and cancel the recurring
 logic.
 
-Another feature to allow more precise control over the execution is limitting
+Another feature to allow more precise control over the execution is limiting
 by concurrency level and distributing the tasks over time. The **Concurrency level**
 allows to set a quota on how many parallel tasks can be run, which can effectively
 prevent depleting all of the system's resources in case of executing a job
