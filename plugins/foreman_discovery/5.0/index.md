@@ -126,26 +126,28 @@ New features:
 * Rails 4.X compatibility changes
 * Improved fact parsing
 
- * [#13715](http://projects.theforeman.org/issues/13715) - Fixed multiple deletion of hosts
- * [#12559](http://projects.theforeman.org/issues/12559) - Refresh Facts and reboot errors reporting fixed
- * [#11837](http://projects.theforeman.org/issues/11837) - Optimized fact loading on index
- * [#12256](http://projects.theforeman.org/issues/12256) - Removed explicit transactions
- * [#13829](http://projects.theforeman.org/issues/13829) - View hosts permission added to reader
- * [#10480](http://projects.theforeman.org/issues/10480) - Email reporting for discovered hosts
- * [#09490](http://projects.theforeman.org/issues/09490) - Added setting to specify fact to use for hostname
- * [#13737](http://projects.theforeman.org/issues/13737) - Priority and max_count columns are limited
- * [#13752](http://projects.theforeman.org/issues/13752) - Display dropdown for discovery_taxonomy settings
- * [#11574](http://projects.theforeman.org/issues/11574) - Rule is deleted with hostgroup
- * [#13593](http://projects.theforeman.org/issues/13593) - Preload assets before sprockets
- * [#13314](http://projects.theforeman.org/issues/13314) - Improved taxonomy logging
- * [#12391](http://projects.theforeman.org/issues/12391) - Introduced foreman_discovery fact parser
- * [#11732](http://projects.theforeman.org/issues/11732) - Added Discovered/Associated host search buttons
- * [#13322](http://projects.theforeman.org/issues/13322) - Impossible to select OS and media on discovered hosts
- * [#12951](http://projects.theforeman.org/issues/12951) - Rails 4 compatibility changes
- * [#12482](http://projects.theforeman.org/issues/12482) - Removed zibra from table
- * [#12414](http://projects.theforeman.org/issues/12414) - Fixed katello medium and better errors
- * [#11008](http://projects.theforeman.org/issues/11008) - Changed the view for discovered hosts show page
- * [#12237](http://projects.theforeman.org/issues/12237) - Corrected invalid kexec syntax for safe mode
+Detailed changelog:
+
+* [#13715](http://projects.theforeman.org/issues/13715) - Fixed multiple deletion of hosts
+* [#12559](http://projects.theforeman.org/issues/12559) - Refresh Facts and reboot errors reporting fixed
+* [#11837](http://projects.theforeman.org/issues/11837) - Optimized fact loading on index
+* [#12256](http://projects.theforeman.org/issues/12256) - Removed explicit transactions
+* [#13829](http://projects.theforeman.org/issues/13829) - View hosts permission added to reader
+* [#10480](http://projects.theforeman.org/issues/10480) - Email reporting for discovered hosts
+* [#09490](http://projects.theforeman.org/issues/09490) - Added setting to specify fact to use for hostname
+* [#13737](http://projects.theforeman.org/issues/13737) - Priority and max_count columns are limited
+* [#13752](http://projects.theforeman.org/issues/13752) - Display dropdown for discovery_taxonomy settings
+* [#11574](http://projects.theforeman.org/issues/11574) - Rule is deleted with hostgroup
+* [#13593](http://projects.theforeman.org/issues/13593) - Preload assets before sprockets
+* [#13314](http://projects.theforeman.org/issues/13314) - Improved taxonomy logging
+* [#12391](http://projects.theforeman.org/issues/12391) - Introduced foreman_discovery fact parser
+* [#11732](http://projects.theforeman.org/issues/11732) - Added Discovered/Associated host search buttons
+* [#13322](http://projects.theforeman.org/issues/13322) - Impossible to select OS and media on discovered hosts
+* [#12951](http://projects.theforeman.org/issues/12951) - Rails 4 compatibility changes
+* [#12482](http://projects.theforeman.org/issues/12482) - Removed zibra from table
+* [#12414](http://projects.theforeman.org/issues/12414) - Fixed katello medium and better errors
+* [#11008](http://projects.theforeman.org/issues/11008) - Changed the view for discovered hosts show page
+* [#12237](http://projects.theforeman.org/issues/12237) - Corrected invalid kexec syntax for safe mode
 
 **4.1**: Release notes
 
@@ -156,14 +158,14 @@ New features:
 This version only works with Discovery Image 3.0+ but it is possible to reboot
 legacy discovered nodes into new version.
 
- * [#11915](http://projects.theforeman.org/issues/11915) - MO files no longer missing for prod translations
- * [#12003](http://projects.theforeman.org/issues/12003) - new API for refresh_facts action
- * [#12053](http://projects.theforeman.org/issues/12053) - improved RHEL6 kexec template
- * [#11942](http://projects.theforeman.org/issues/11942) - host conversion fixed on PostgreSQL
- * [#11978](http://projects.theforeman.org/issues/11978) - fixed kexec auto provisioning
- * [#10300](http://projects.theforeman.org/issues/10300) - adding new image power API support
- * [#11708](http://projects.theforeman.org/issues/11708) - removed auto_provisioning RABL, improved unit tests
- * [#11313](http://projects.theforeman.org/issues/11313) - Add the app/views path to RABL view path of foreman
+* [#11915](http://projects.theforeman.org/issues/11915) - MO files no longer missing for prod translations
+* [#12003](http://projects.theforeman.org/issues/12003) - new API for refresh_facts action
+* [#12053](http://projects.theforeman.org/issues/12053) - improved RHEL6 kexec template
+* [#11942](http://projects.theforeman.org/issues/11942) - host conversion fixed on PostgreSQL
+* [#11978](http://projects.theforeman.org/issues/11978) - fixed kexec auto provisioning
+* [#10300](http://projects.theforeman.org/issues/10300) - adding new image power API support
+* [#11708](http://projects.theforeman.org/issues/11708) - removed auto_provisioning RABL, improved unit tests
+* [#11313](http://projects.theforeman.org/issues/11313) - Add the app/views path to RABL view path of foreman
 
 **4.0**: Release notes
 
@@ -181,40 +183,40 @@ After upgrade, please review permissions of Discovery Manager and Reader roles
 as we have added more permissions and renamed one. No manual action is needed,
 but check if everything is setup properly.
 
- * [#10469](http://projects.theforeman.org/issues/10469) - Discovery rule taxonomy is enforced
- * [#10192](http://projects.theforeman.org/issues/10192) - Added model field to discovered
- * [#11209](http://projects.theforeman.org/issues/11209) - Widget improvements and add status indicator
- * [#10898](http://projects.theforeman.org/issues/10898) - Auto provisioning and rules permissions corrected
- * [#10195](http://projects.theforeman.org/issues/10195) - Discovered node is no longer rebooted on error
- * [#10892](http://projects.theforeman.org/issues/10892) - Multiple columns support for discovery_fact_column
- * [#9963](http://projects.theforeman.org/issues/9963) - Removed unused permissions and role
- * [#11101](http://projects.theforeman.org/issues/11101) - Relaxed deface dependency
- * [#10864](http://projects.theforeman.org/issues/10864) - Removed N+1 queries
- * [#10828](http://projects.theforeman.org/issues/10828) - Facts are logged when discovery fails
- * [#9607](http://projects.theforeman.org/issues/9607) - Discovery search succeeds on IP, MAC and Subnet
- * [#10445](http://projects.theforeman.org/issues/10445) - Subnet is associated through primary iface
- * [#9857](http://projects.theforeman.org/issues/9857) - Facter extensions now compatible with 1.8+
- * [#9619](http://projects.theforeman.org/issues/9619) - Improved API documentation
- * [#9291](http://projects.theforeman.org/issues/9291) - Added Reboot All hosts button
- * [#10554](http://projects.theforeman.org/issues/10554) - Removed the non UI routes for creating a discovered host
- * [#10555](http://projects.theforeman.org/issues/10555) - Removed JSON response from discovered_hosts controller
- * [#10781](http://projects.theforeman.org/issues/10781) - Fixed unit tests for new partition tables
- * [#9870](http://projects.theforeman.org/issues/9870) - Friendlier error for auto-provisioning with no discovery rule
- * [#9597](http://provision.theforeman.org/issues/9597) - Added test to check that token is not created for discovered host
- * [#9870](http://provision.theforeman.org/issues/9870) - Added error response code when auto-provision fails
- * [#10375](http://projects.theforeman.org/issues/10375) - Entering edit form doesn't delete attributes
- * [#9895](http://projects.theforeman.org/issues/9895) - Fixed resource type in discovery_rules permissions
- * [#10365](http://projects.theforeman.org/issues/10365) - Removed all tokens when there are no managed hosts
- * [#10005](http://projects.theforeman.org/issues/10005) - Removed unused default scope and added tax tests
- * [#9881](http://projects.theforeman.org/issues/9881) - Rules work when organizations and locations are disabled
- * [#9912](http://projects.theforeman.org/issues/9912) - Fixed ambiguous column error by using table_name
- * [#9870](http://projects.theforeman.org/issues/9870) - Auto-provisioning a host, when no rule is defined, raises proper error
- * [#9881](http://projects.theforeman.org/issues/9881) - Added organization/location to discovery_rules
- * [#9546](http://projects.theforeman.org/issues/9546) - Moved host_converter to proper directory for rails
- * [#9572](http://projects.theforeman.org/issues/9572) - Improved API for CLI
- * [#9044](http://projects.theforeman.org/issues/9044) - Refactored MAC test fix
- * [#9366](http://projects.theforeman.org/issues/9366) - Host limit for discovery rule defaults to zero
- * [#9488](http://projects.theforeman.org/issues/9488) - Migration to delete discovery_attribute_set from managed hosts
+* [#10469](http://projects.theforeman.org/issues/10469) - Discovery rule taxonomy is enforced
+* [#10192](http://projects.theforeman.org/issues/10192) - Added model field to discovered
+* [#11209](http://projects.theforeman.org/issues/11209) - Widget improvements and add status indicator
+* [#10898](http://projects.theforeman.org/issues/10898) - Auto provisioning and rules permissions corrected
+* [#10195](http://projects.theforeman.org/issues/10195) - Discovered node is no longer rebooted on error
+* [#10892](http://projects.theforeman.org/issues/10892) - Multiple columns support for discovery_fact_column
+* [#9963](http://projects.theforeman.org/issues/9963) - Removed unused permissions and role
+* [#11101](http://projects.theforeman.org/issues/11101) - Relaxed deface dependency
+* [#10864](http://projects.theforeman.org/issues/10864) - Removed N+1 queries
+* [#10828](http://projects.theforeman.org/issues/10828) - Facts are logged when discovery fails
+* [#9607](http://projects.theforeman.org/issues/9607) - Discovery search succeeds on IP, MAC and Subnet
+* [#10445](http://projects.theforeman.org/issues/10445) - Subnet is associated through primary iface
+* [#9857](http://projects.theforeman.org/issues/9857) - Facter extensions now compatible with 1.8+
+* [#9619](http://projects.theforeman.org/issues/9619) - Improved API documentation
+* [#9291](http://projects.theforeman.org/issues/9291) - Added Reboot All hosts button
+* [#10554](http://projects.theforeman.org/issues/10554) - Removed the non UI routes for creating a discovered host
+* [#10555](http://projects.theforeman.org/issues/10555) - Removed JSON response from discovered_hosts controller
+* [#10781](http://projects.theforeman.org/issues/10781) - Fixed unit tests for new partition tables
+* [#9870](http://projects.theforeman.org/issues/9870) - Friendlier error for auto-provisioning with no discovery rule
+* [#9597](http://provision.theforeman.org/issues/9597) - Added test to check that token is not created for discovered host
+* [#9870](http://provision.theforeman.org/issues/9870) - Added error response code when auto-provision fails
+* [#10375](http://projects.theforeman.org/issues/10375) - Entering edit form doesn't delete attributes
+* [#9895](http://projects.theforeman.org/issues/9895) - Fixed resource type in discovery_rules permissions
+* [#10365](http://projects.theforeman.org/issues/10365) - Removed all tokens when there are no managed hosts
+* [#10005](http://projects.theforeman.org/issues/10005) - Removed unused default scope and added tax tests
+* [#9881](http://projects.theforeman.org/issues/9881) - Rules work when organizations and locations are disabled
+* [#9912](http://projects.theforeman.org/issues/9912) - Fixed ambiguous column error by using table_name
+* [#9870](http://projects.theforeman.org/issues/9870) - Auto-provisioning a host, when no rule is defined, raises proper error
+* [#9881](http://projects.theforeman.org/issues/9881) - Added organization/location to discovery_rules
+* [#9546](http://projects.theforeman.org/issues/9546) - Moved host_converter to proper directory for rails
+* [#9572](http://projects.theforeman.org/issues/9572) - Improved API for CLI
+* [#9044](http://projects.theforeman.org/issues/9044) - Refactored MAC test fix
+* [#9366](http://projects.theforeman.org/issues/9366) - Host limit for discovery rule defaults to zero
+* [#9488](http://projects.theforeman.org/issues/9488) - Migration to delete discovery_attribute_set from managed hosts
 
 **3.0**: New features:
 
