@@ -686,8 +686,9 @@ create such a rule:
   more hosts are deleted. Typical use case are rules per server rack or row
   when it is necessary to change provisioning parameters like hostname or host
   group per each entry.
-* **Priority** puts the rules in order. Must be greater than zero and low
-  numbers go first. Rules are always matched by priority given.
+* **Priority** specifies order in which rules are applied. Must be greater than
+  zero. Rules with *lower* priority number win. Rule that was created first
+  wins in case of equal priority.
 * **Enabled** flag is used for temporary shutdown of rules.
 * **Organizations\Locations** discovered hosts can only auto provision
 from rules in the same organization/location as the discovered host. Host
