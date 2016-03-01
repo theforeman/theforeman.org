@@ -1,16 +1,16 @@
 ---
 layout: plugin
 pluginname: foreman_discovery
-title: Foreman Discovery 4.1 Manual
-version: 4.1
+title: Foreman Discovery 5.0 Manual
+version: 5.0
 # versions for matrix and snippets
 # (use short version for imgver e.g. 3.0)
-pluginver: 4.1.1
+pluginver: 5.0.1
 proxyver: 1.0.3
-imgver: 3.0
+imgver: 3.1
 cliver: 0.0.2
 # uncomment to show warning box for an old release
-warning: old
+#warning: old
 # uncomment to show development version warning
 #warning: unreleased
 ---
@@ -100,6 +100,13 @@ plugin:
   </tr>
   <tr>
     <td>= 1.10</td>
+    <td>4.1.1</td>
+    <td>1.0.3</td>
+    <td>3.0</td>
+    <td>0.0.2</td>
+  </tr>
+  <tr>
+    <td>= 1.11</td>
     <td>{{page.pluginver}}</td>
     <td>{{page.proxyver}}</td>
     <td>{{page.imgver}}</td>
@@ -108,6 +115,37 @@ plugin:
 </table>
 
 ### 1.1.1 Foreman Discovery plugin
+
+**5.0**: Release notes
+
+New features:
+
+* E-mail reporting of discovered hosts
+* Performance improvement of index page with custom fact column(s)
+* Hostname of discovered hosts is fully configurable
+* Rails 4.X compatibility changes
+* Improved fact parsing
+
+ * [#13715](http://projects.theforeman.org/issues/13715) - Fixed multiple deletion of hosts
+ * [#12559](http://projects.theforeman.org/issues/12559) - Refresh Facts and reboot errors reporting fixed
+ * [#11837](http://projects.theforeman.org/issues/11837) - Optimized fact loading on index
+ * [#12256](http://projects.theforeman.org/issues/12256) - Removed explicit transactions
+ * [#13829](http://projects.theforeman.org/issues/13829) - View hosts permission added to reader
+ * [#10480](http://projects.theforeman.org/issues/10480) - Email reporting for discovered hosts
+ * [#09490](http://projects.theforeman.org/issues/09490) - Added setting to specify fact to use for hostname
+ * [#13737](http://projects.theforeman.org/issues/13737) - Priority and max_count columns are limited
+ * [#13752](http://projects.theforeman.org/issues/13752) - Display dropdown for discovery_taxonomy settings
+ * [#11574](http://projects.theforeman.org/issues/11574) - Rule is deleted with hostgroup
+ * [#13593](http://projects.theforeman.org/issues/13593) - Preload assets before sprockets
+ * [#13314](http://projects.theforeman.org/issues/13314) - Improved taxonomy logging
+ * [#12391](http://projects.theforeman.org/issues/12391) - Introduced foreman_discovery fact parser
+ * [#11732](http://projects.theforeman.org/issues/11732) - Added Discovered/Associated host search buttons
+ * [#13322](http://projects.theforeman.org/issues/13322) - Impossible to select OS and media on discovered hosts
+ * [#12951](http://projects.theforeman.org/issues/12951) - Rails 4 compatibility changes
+ * [#12482](http://projects.theforeman.org/issues/12482) - Removed zibra from table
+ * [#12414](http://projects.theforeman.org/issues/12414) - Fixed katello medium and better errors
+ * [#11008](http://projects.theforeman.org/issues/11008) - Changed the view for discovered hosts show page
+ * [#12237](http://projects.theforeman.org/issues/12237) - Corrected invalid kexec syntax for safe mode
 
 **4.1**: Release notes
 
