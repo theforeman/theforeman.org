@@ -170,8 +170,8 @@ include the bootstrap strategy in default `Kickstart default` and
 strategy name is in format "chef-client $name bootstrap", currently you
 can find two of such name - **gem** and **omnibus**. Another snippet
 provided by the plugin is called "chef-client bootstrap" which is
-a shared part for strategies mentioned before. Last snippet that wraps
-everything is called "chef-client" which selects desired bootstrap
+a shared part for strategies mentioned before. The last snippet that wraps
+everything is called "chef-client" which selects the desired bootstrap
 method. This is used as single entry point in all provisioning templates
 that support chef bootstrapping.
 
@@ -216,7 +216,7 @@ of them. We modify the behaviour of provision templates using Foreman's
 parameters. You can read more about them in [Foreman manual](/manuals/latest/index.html#4.2.3Parameters), but the docs mention a lot about puppet,
 which is not that interesting in our case.
 
-For us, these parameters are variables, that be configured globally and
+For us, these parameters are variables, that can be configured globally and
 overriden per host, host group, domain, OS, location, organization. By default
 Foreman Chef precreates all parameters for you, you just have to adjust their
 values. Navigate to Configure -> Global Parameters. 
@@ -303,6 +303,9 @@ hash from previous run it does not send it. To enable this feature,
 you have to specify a file in which a md5 hash will be kept.
 
     foreman_facts_cache_file '/var/cache/chef_foreman_cache.md5'
+
+Note that the order of options above matters. You have to enable facts
+uploading before specifying whitelist/blacklist or cache file.
 
 For more information, please visit [project readme on github](https://github.com/theforeman/chef-handler-foreman)
 
@@ -439,6 +442,17 @@ As part of provisioning we also bootstrap chef-client. In order
 to do that, you must configure provisioning using global parameters,
 as stated in configuration chapter in this manual.
 
+To activate chef-client bootstrapping you have to select a chef proxy
+that will proxy all requests to the chef-server. After selecting this
+proxy, you are able to select a chef environment to which the host
+will be assigned during first chef-client run. Note that you can
+import these environments through chef proxy to avoid creating
+them manually.
+
+![HostProvisioning](/plugins/foreman_chef/{{ page.version }}/host_provisioning.png)
+
+Both, chef proxy and chef environment can be configured for host group
+and would be inherited from it as well.
 
 ## 4.6 Host deletion
 
@@ -449,11 +463,29 @@ that host. You can select a Smart Proxy with smart_proxy_chef
 plugin in Host form. Also make sure, you have deleting enabled
 in Setting, as shown on screenshot below
 
-![Settings](/plugins/foreman_chef/{ page.version }}/setting.png)
+![Settings](/plugins/foreman_chef/{{ page.version }}/setting.png)
 
 Foreman Chef plugin uses other Foreman plugin called foreman-tasks
 that allows us to inspect and retry the task if something goes wrong.
 You can find information about all deletions Under Monitor -> Tasks.
+
+## 4.7 Chef environments synchronization
+
+In order to be able to select a chef environment for a host, it must
+be defined first. You can either do it manually or synchronize all
+chef environments from chef-server through foreman-proxy. Both can
+be achieved at the Configure -> (Chef) Environments page. If you have at
+least one proxy with the chef feature in your Foreman you will see the
+Import button above the table.
+
+![Environments](/plugins/foreman_chef/{{ page.version }}/environments.png)
+
+After you click it, you are presented with an overview of what's not
+in sync with chef-server database. You can select what changes you
+want to apply. After you confirm your selection, chef environments
+will be deleted and created accordingly.
+
+![EnvironmentsSync](/plugins/foreman_chef/{{ page.version }}/environments_sync.png)
 
 # 5. Advanced topics
 
