@@ -42,9 +42,9 @@
             <div class="g-plusone"
                  data-size="standard"
                  data-annotation="none"
-                 data-href="{{ site.url }}{{ page.url }}.html">
+                 data-href="{{ site.url }}{{ page.url }}">
             </div>
-            <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{site.url}}{{page.url}}.html" data-hashtags="theforeman" data-dnt="true" data-size="large">Tweet</a>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{site.url}}{{page.url}}" data-hashtags="theforeman" data-dnt="true" data-size="large">Tweet</a>
           </div>
         </div>
       </div>
@@ -52,9 +52,9 @@
       <hr/>
       <div class="g-comments"
         {% if page.blogger_id != nil %}
-           data-href="http://blog.theforeman.org{{ page.url }}.html"
+           data-href="http://blog.theforeman.org{{ page.url }}"
         {% else %}
-           data-href="{{ site.url }}{{ page.url }}.html"
+           data-href="{{ site.url }}{{ page.url }}"
         {% endif %}
            data-width="642"
            data-first_party_property="BLOGGER"
