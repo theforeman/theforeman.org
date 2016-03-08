@@ -128,6 +128,8 @@ version: "1.11"
 {%include manuals/1.11/4.3.11_smartproxy_libvirt.md %}
 ### 4.3.12 Templates
 {%include manuals/1.11/4.3.12_smartproxy_templates.md %}
+### 4.3.13 Logs
+{%include manuals/1.11/4.3.13_smartproxy_logs.md %}
 
 ## 4.4 Provisioning
 {%include manuals/1.11/4.4_provisioning.md %}
