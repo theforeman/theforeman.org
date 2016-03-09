@@ -39,6 +39,7 @@ require 'git'
 
 @author_map = {
   "abenari"        => "Amos Benari",
+  "alongoldboim"   => "Alon Goldboim",
   "Daniel Lobato"  => "Daniel Lobato Garcia",
   "Daniel Lobato García" => "Daniel Lobato Garcia",
   "Joseph Magen"   => "Joseph Mitchell Magen",
