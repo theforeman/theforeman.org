@@ -93,7 +93,7 @@ git checkout -b <branchName> # Example: git checkout -b 1656-add_TB_support
 
 {% highlight bash %}
 git add <modifiedFile(s)>
-git commit -m 'fixes #<bug> <message>'
+git commit -m 'fixes #<bug> - <message>'
 {% endhighlight %}
 
 * Push topic branch to your fork:
