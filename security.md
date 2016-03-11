@@ -61,7 +61,7 @@ Bookmarks set to 'private' can be viewed by any user, and edited or deleted by a
 *Mitigation:* remove edit_bookmarks and destroy_bookmarks from untrusted users, remove private information from bookmark searches.
 
 * Affects Foreman 0.3 and higher
-* Fix in development
+* Fix released in Foreman 1.11.0-RC2, and due in 1.10.3
 * Redmine issue [#13828](http://projects.theforeman.org/issues/13828)
 
 #### <a id="2015-7518"></a>CVE-2015-7518: parameter information popup allows stored XSS
