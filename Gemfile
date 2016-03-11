@@ -4,5 +4,5 @@ group :therubyracer do
     gem 'therubyracer', :require => 'v8'
 end
 
-gem 'github-pages', '>= 44'
+gem 'github-pages', '>= 57'
 gem 'rake'

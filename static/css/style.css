@@ -1009,6 +1009,7 @@ fieldset[disabled] .btn-primary.active {
 }
 
 pre {
+  font-size: 14px;
   padding: 10px;
   display: inline-block;
   position: relative;
@@ -1020,7 +1021,11 @@ pre {
 }
 
 pre code {
-  font-size: 13px;
+  background-color: #2f2f2f;
+}
+
+pre.highlight {
+  background-color: #2f2f2f;
 }
 
 code {

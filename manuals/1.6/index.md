@@ -63,6 +63,7 @@ version: "1.6"
 # 4. General Foreman
 {%include manuals/1.6/4_general_foreman.md %}
 ## 4.1 Web Interface
+
 ### 4.1.1 LDAP Authentication
 {%include manuals/1.6/4.1.1_authentication.md %}
 ### 4.1.2 Roles and Permissions
@@ -98,6 +99,7 @@ version: "1.6"
 ### 4.3.4 Chef
 {%include manuals/1.6/4.3.4_chef_proxy.md %}
 ### 4.3.5 DHCP
+
 #### 4.3.5.1 dhcp.yml
 {%include manuals/1.6/4.3.5_smartproxy_dhcp.md %}
 #### 4.3.5.2 ISC DHCP
@@ -105,6 +107,7 @@ version: "1.6"
 #### 4.3.5.3 MS DHCP
 {%include manuals/1.6/4.3.5.3_ms_dhcp.md %}
 ### 4.3.6 DNS
+
 #### 4.3.6.1 dns.yml
 {%include manuals/1.6/4.3.6_smartproxy_dns.md %}
 #### 4.3.6.2 BIND
@@ -116,6 +119,7 @@ version: "1.6"
 ### 4.3.8 Puppet CA
 {%include manuals/1.6/4.3.8_smartproxy_puppetca.md %}
 ### 4.3.9 Realm
+
 #### 4.3.9.1 realm.yml
 {%include manuals/1.6/4.3.9_smartproxy_realm.md %}
 #### 4.3.9.2 FreeIPA Realm

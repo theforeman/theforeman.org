@@ -27,8 +27,6 @@ Much more information about the changes in Foreman 1.7 is available in
 our [release
 notes](http://theforeman.org/manuals/1.7/index.html#Releasenotesfor1.7).  
 
-#### 
-
 ### Foreman 1.6.3 released
 
 Foreman 1.6.3 has been released to fix a handful of bugs. Check the
