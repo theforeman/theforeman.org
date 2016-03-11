@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [Ruby code execution via Discovery settings](security.html#2016-discovery-settings)
 * [CVE-2016-2100: private bookmarks can be viewed and edited](security.html#2016-2100)
 * [CVE-2015-7518: parameter information popup allows stored XSS](security.html#2015-7518)
 * [SQL injection via facts search terms](security.html#2015-facts-sql)
@@ -53,6 +54,17 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2016-discovery-settings"></a>Ruby code execution via Discovery settings
+
+It is possible to run arbitrary Ruby code entering it on the Administer -
+Settings - Discovery and then visiting a discovered host detail page where it
+gets rendered.
+
+* Affects Foreman Discovery 4.2.0 to 5.0.1 (gem releases only, rc and nightly builds)
+* Discovery plugin 4.1 series (shipped with Foreman 1.10) was *not* affected.
+* Fixed in Discovery plugin 5.0.2
+* Redmine issue [#14140](http://projects.theforeman.org/issues/14140)
 
 #### <a id="2016-2100"></a>CVE-2016-2100: private bookmarks can be viewed and edited
 
