@@ -5,7 +5,7 @@ title: Foreman Discovery 5.0 Manual
 version: 5.0
 # versions for matrix and snippets
 # (use short version for imgver e.g. 3.0)
-pluginver: 5.0.1
+pluginver: 5.0.2
 proxyver: 1.0.3
 imgver: 3.1
 cliver: 0.0.2
