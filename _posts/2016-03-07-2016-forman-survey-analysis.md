@@ -34,14 +34,14 @@ time. It's great to hear all your feedback.
 
 ## <a name="intro"></a>Contents
 
-* [Intro](/2016/03/2016-forman-survey-analysis.html/#intro)
-* [Community Diversity](/2016/03/2016-forman-survey-analysis.html/#diversity)
-* [Support and Docs](/2016/03/2016-forman-survey-analysis.html/#support)
-* [Specific Features](/2016/03/2016-forman-survey-analysis.html/#foreman-features)
-* [Upcoming Work](/2016/03/2016-forman-survey-analysis.html/#upcoming-work)
-* [Events](/2016/03/2016-forman-survey-analysis.html/#events)
-* [Contributor Survey](/2016/03/2016-forman-survey-analysis.html/#contributor-survey)
-* [Final thoughts](/2016/03/2016-forman-survey-analysis.html/#final-thoughts)
+* [Intro](/2016/03/2016-forman-survey-analysis.html#intro)
+* [Community Diversity](/2016/03/2016-forman-survey-analysis.html#diversity)
+* [Support and Docs](/2016/03/2016-forman-survey-analysis.html#support)
+* [Specific Features](/2016/03/2016-forman-survey-analysis.html#foreman-features)
+* [Upcoming Work](/2016/03/2016-forman-survey-analysis.html#upcoming-work)
+* [Events](/2016/03/2016-forman-survey-analysis.html#events)
+* [Contributor Survey](/2016/03/2016-forman-survey-analysis.html#contributor-survey)
+* [Final thoughts](/2016/03/2016-forman-survey-analysis.html#final-thoughts)
 
 Sadly, response were slightly down from last year (**76 responses**) and the
 smaller sample size makes it difficult to draw strong conclusions. According to
