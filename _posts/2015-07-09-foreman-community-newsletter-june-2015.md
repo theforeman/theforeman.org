@@ -31,6 +31,7 @@ for unmanaged hosts but also other areas were touched including:
 
 For more information see the [official
 announcement](https://groups.google.com/forum/#!topic/foreman-users/_C3pdnAf2pA)  
+
 ### Katello 2.2.1 and 2.2.2 bug fix releases
 
 Two new bug fix versions of Katello have been released in June. List of
@@ -40,6 +41,7 @@ For upgrade instructions see
 [2.2.1](https://groups.google.com/forum/#!searchin/foreman-users/katello$202.2.1$20release/foreman-users/18yUBrdUnP4/guF-JHV_X30J)
 and
 [2.2.2](https://groups.google.com/forum/#!searchin/foreman-users/katello$202.2.2$20release/foreman-users/G8EPpNzG7Ag/MzRi5HeFXUMJ) announcements.  
+
 ### Foreman 1.9 branched out, RC1 ready for testing
 
 We started preparations for upcoming 1.9 release. A develop branch was
@@ -69,6 +71,7 @@ list](https://groups.google.com/forum/#!topic/foreman-users/2oeNi0NDyK0)
 
 At the same time, Katello 2.3 has been branched out so the release can
 be aligned.  
+
 ### New community-template branches
 
 Community templates repository has been migrated to follow the same
@@ -78,6 +81,7 @@ develop and we have stable branches for 1.7, 1.8, 1.9. If you use
 plugin for provisioning templates synchronization, you can use
 [branch](https://github.com/theforeman/foreman_templates#rake-options)
 option to specify correct version.  
+
 ### Plugin releases
 
 -   [foreman\_chef](https://github.com/theforeman/foreman_chef) 0.1.4

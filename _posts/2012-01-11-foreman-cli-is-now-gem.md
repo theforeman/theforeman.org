@@ -13,17 +13,16 @@ blogger_orig_url: http://blog.theforeman.org/2012/01/foreman-cli-is-now-gem.html
 ---
 
 [Brian Gupta](mailto:brian.gupta@brandorr.com) did a great job with
-coming up with  a CLI for foreman, and just released it as a gem.
+coming up with a CLI for foreman, and just released it as a gem.
 
 <!--more-->
 
 To install, simply run:
 
-<span style="text-align: -webkit-auto; white-space: pre-wrap;">gem
-install foremancli</span>
-<span
-style="text-align: -webkit-auto; white-space: pre-wrap;">foremancli
--h</span>
+    gem install foremancli
+
+    foremancli -h
+
     Usage: foremancli [options] ...
         -d, --debug                      Output more information
         -u, --user USER                  Foreman user

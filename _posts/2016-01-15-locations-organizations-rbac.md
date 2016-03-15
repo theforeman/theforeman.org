@@ -40,52 +40,48 @@ $foreman_location.
 
 Hiera Location Example:
 
-```
-[root@devbrain hieradata]# ls
-application  common.eyaml  domain  environment  location  node  organization  osfamily  security_zone  vtl
-[root@devbrain hieradata]# cd location/
-[root@devbrain location]# ls
-ashburn.eyaml  austin.eyaml  aws.eyaml
-```
+    [root@devbrain hieradata]# ls
+    application  common.eyaml  domain  environment  location  node  organization  osfamily  security_zone  vtl
+    [root@devbrain hieradata]# cd location/
+    [root@devbrain location]# ls
+    ashburn.eyaml  austin.eyaml  aws.eyaml
 
 Location Fact Source:
 
-```ruby
-require 'ipaddr'
-ashburn = [
-  IPAddr.new("subnet/16"),
-  IPAddr.new("subnet/23"),
-  IPAddr.new("subnet/23"),
-]
+    require 'ipaddr'
+    ashburn = [
+      IPAddr.new("subnet/16"),
+      IPAddr.new("subnet/23"),
+      IPAddr.new("subnet/23"),
+    ]
 
-austin = [
-  IPAddr.new("subnet/16"),
-  IPAddr.new("subnet/23"),
-  IPAddr.new("subnet/23"),
-  IPAddr.new("subnet/24"),
-]
+    austin = [
+      IPAddr.new("subnet/16"),
+      IPAddr.new("subnet/23"),
+      IPAddr.new("subnet/23"),
+      IPAddr.new("subnet/24"),
+    ]
 
-aws = [
-  IPAddr.new("subnet/16"),
-]
+    aws = [
+      IPAddr.new("subnet/16"),
+    ]
 
-Facter.add("location") do
-  setcode do
-    network = Facter.value(:ipaddress)
+    Facter.add("location") do
+      setcode do
+        network = Facter.value(:ipaddress)
 
-    case
-      when ashburn.any? { |i| i.include?(network)}
-        'ashburn'
-      when austin.any? { |i| i.include?(network)}
-	'austin'
-      when aws.any? { |i| i.include?(network)}
-        'aws'
-      else
-	'unknown'
+        case
+          when ashburn.any? { |i| i.include?(network)}
+            'ashburn'
+          when austin.any? { |i| i.include?(network)}
+            'austin'
+          when aws.any? { |i| i.include?(network)}
+            'aws'
+          else
+            'unknown'
+        end
+      end
     end
-  end
-end
-```
 
 Example Locations:
 ![Foreman
@@ -110,13 +106,11 @@ Hiera Organization Example:
 *this is a brief example but other scenarios could be host access/user
 permissions or other monitoring configurations*
 
-```
-[root@devbrain hieradata]# ls
-application  common.eyaml  domain  environment  location  node  organization  osfamily  security_zone  vtl
-[root@devbrain hieradata]# cd organization/
-[root@devbrain organization]# ls
-crimson.eyaml  eab.eyaml  ent.eyaml
-```
+    [root@devbrain hieradata]# ls
+    application  common.eyaml  domain  environment  location  node  organization  osfamily  security_zone  vtl
+    [root@devbrain hieradata]# cd organization/
+    [root@devbrain organization]# ls
+    crimson.eyaml  eab.eyaml  ent.eyaml
 
 Example Organizations:
 ![Foreman

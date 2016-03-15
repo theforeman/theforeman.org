@@ -27,7 +27,8 @@ recreate it.
 
 if you are using 0.5 or newer, simply change the shebang line to be
 something like:
- \#!/usr/bin/env /usr/share/foreman/script/rails runner -e production
+
+    #!/usr/bin/env /usr/share/foreman/script/rails runner -e production
 
 **What about conflicting records? **
 
@@ -35,5 +36,5 @@ In the case of a conflict, its possible to do remove the conflicting
 reservations and simply recreate the correct one.. however, you should
 be sure you can remove the old ones before..
 
-dhcp\_record.conflicts(&:destroy)
-dhcp\_record.create
+    dhcp_record.conflicts(&:destroy)
+    dhcp_record.create

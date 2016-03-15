@@ -292,18 +292,23 @@ A [hammer]({{ site.baseurl }}manuals/latest/index.html#4.5CommandLineInterface) 
 
 Examples:
 
-  - Creating a Salt State
+  - Creating a Salt State:
 
-        hammer salt-state create --name foo.bar
+<pre>
+hammer salt-state create --name foo.bar
+</pre>
 
-   - Viewing info about a minion
+  - Viewing info about a minion:
 
-        hammer salt-minion info --name minion.example.com
+<pre>
+hammer salt-minion info --name minion.example.com
+</pre>
 
-   - Adding states to a minion
+  - Adding states to a minion:
 
-        hammer salt-minion update --name minion.example.com --salt-states foo.bar
-
+<pre>
+hammer salt-minion update --name minion.example.com --salt-states foo.bar
+</pre>
 
 # 5 Help
 

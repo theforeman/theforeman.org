@@ -61,7 +61,8 @@ version: "1.3"
 # 4. General Foreman
 {%include manuals/1.3/4_general_foreman.md %}
 ## 4.1 Web Interface
-### 4.1.2 LDAP Authentication
+
+### 4.1.1 LDAP Authentication
 {%include manuals/1.3/4.1.1_authentication.md %}
 ### 4.1.2 Roles and Permissions
 {%include manuals/1.3/4.1.2_roles_and_permissions.md %}

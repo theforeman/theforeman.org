@@ -35,26 +35,22 @@ Foreman is presented via mod_passenger on Apache, so the SSL keys need to be cha
 The following options need to be changed: `SSLCertificateFile`, `SSLCertificateKeyFile` and `SSLCertificateChainFile`.
 It is important that you do **not** change `SSLCACertificateFile` or `SSLCARevocationFile`, as these are used for client authentication. Your final config should look like this:
 
-```
-  ## SSL directives
-SSLEngine on
-SSLCertificateFile      "/etc/pki/tls/certs/puppet.example.com.crt"
-SSLCertificateKeyFile   "/etc/pki/tls/private/puppet.example.com.key"
-SSLCertificateChainFile "/etc/pki/tls/certs/cachain.crt"
-SSLCACertificatePath    "/etc/pki/tls/certs"
-SSLCACertificateFile    "/var/lib/puppet/ssl/certs/ca.pem"
-SSLCARevocationFile     "/var/lib/puppet/ssl/ca/ca_crl.pem"
-SSLVerifyClient         optional
-SSLVerifyDepth          3
-SSLOptions +StdEnvVars
-```
+    ## SSL directives
+    SSLEngine on
+    SSLCertificateFile      "/etc/pki/tls/certs/puppet.example.com.crt"
+    SSLCertificateKeyFile   "/etc/pki/tls/private/puppet.example.com.key"
+    SSLCertificateChainFile "/etc/pki/tls/certs/cachain.crt"
+    SSLCACertificatePath    "/etc/pki/tls/certs"
+    SSLCACertificateFile    "/var/lib/puppet/ssl/certs/ca.pem"
+    SSLCARevocationFile     "/var/lib/puppet/ssl/ca/ca_crl.pem"
+    SSLVerifyClient         optional
+    SSLVerifyDepth          3
+    SSLOptions +StdEnvVars
 
 If you use the Console feature for foreman, you will also want to change the `websockets_ssl_key` and `websockets_ssl_cert` keys in `/etc/foreman/settings.yaml`. For example:
 
-```
-:websockets_ssl_key:  /etc/pki/tls/private/puppet.example.com.key
-:websockets_ssl_cert: /etc/pki/tls/certs/puppet.example.com.crt
-```
+    :websockets_ssl_key:  /etc/pki/tls/private/puppet.example.com.key
+    :websockets_ssl_cert: /etc/pki/tls/certs/puppet.example.com.crt
 
 Smart Proxy
 ===========
@@ -68,11 +64,9 @@ Puppet
 
 Change `ssl_ca` in `/etc/puppet/foreman.yaml`, do not change `ssl_cert` or `ssl_key`. For example:
 
-```
-:ssl_ca: "/etc/pki/tls/certs/cachain.crt"
-:ssl_cert: "/var/lib/puppet/ssl/certs/puppet.example.com.pem"
-:ssl_key: "/var/lib/puppet/ssl/private_keys/puppet.example.com.pem"
-```
+    :ssl_ca: "/etc/pki/tls/certs/cachain.crt"
+    :ssl_cert: "/var/lib/puppet/ssl/certs/puppet.example.com.pem"
+    :ssl_key: "/var/lib/puppet/ssl/private_keys/puppet.example.com.pem"
 
 Managing with puppet
 ====================
@@ -81,15 +75,13 @@ If you use manage your foreman and puppet install with the `theforeman/puppet`
 and `theforeman/foreman` modules, you can configure all the above with the
 following hiera data:
 
-```
-foreman::ssl: true
-puppet::server_foreman_ssl_ca: '/etc/pki/tls/certs/cachain.crt'
-puppet::server_foreman_url: 'https://puppet.example.com'
-foreman::server_ssl_key: '/etc/pki/tls/private/puppet.example.com.key'
-foreman::server_ssl_cert: '/etc/pki/tls/certs/puppet.example.com.crt'
-foreman::server_ssl_chain: '/etc/pki/tls/certs/cachain.crt'
-foreman::servername: 'puppet.example.com'
-foreman::foreman_url: 'https://puppet.example.com'
-foreman::websockets_ssl_key: '/etc/pki/tls/private/puppet.example.key'
-foreman::websockets_ssl_cert: '/etc/pki/tls/certs/puppet.example.crt'
-```
+    foreman::ssl: true
+    puppet::server_foreman_ssl_ca: '/etc/pki/tls/certs/cachain.crt'
+    puppet::server_foreman_url: 'https://puppet.example.com'
+    foreman::server_ssl_key: '/etc/pki/tls/private/puppet.example.com.key'
+    foreman::server_ssl_cert: '/etc/pki/tls/certs/puppet.example.com.crt'
+    foreman::server_ssl_chain: '/etc/pki/tls/certs/cachain.crt'
+    foreman::servername: 'puppet.example.com'
+    foreman::foreman_url: 'https://puppet.example.com'
+    foreman::websockets_ssl_key: '/etc/pki/tls/private/puppet.example.key'
+    foreman::websockets_ssl_cert: '/etc/pki/tls/certs/puppet.example.crt'

@@ -19,7 +19,7 @@ safe:        false
 
 future:      false
 highlighter: rouge
-markdown:    rdiscount
+markdown:    kramdown
 
 navigation:
 - text: Introduction

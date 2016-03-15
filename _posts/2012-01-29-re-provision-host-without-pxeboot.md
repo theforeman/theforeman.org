@@ -47,8 +47,8 @@ execute
 
 once ready simply:
 
- curl http://foreman/unattended/script | sh
-reboot
+    curl http://foreman/unattended/script | sh
+    reboot
 
 
 This generates something like
