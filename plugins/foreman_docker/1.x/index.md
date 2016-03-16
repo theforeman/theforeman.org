@@ -37,17 +37,29 @@ You can use the Foreman installer to install this plugin. Use the following comm
 
 If you prefer not to use the installer, follow the instructions below for your operating system.
 
-### Red Hat, CentOS, Fedora, Scientific Linux (rpm)
+If this is the first plugin you're installing, please see the [plugin
+repository section]({{site.baseurl}}plugins/#2.2Packageinstallation) to set up the repository
+first.
 
-Set up the repo as explained in the link above, then run
+To install Foreman Docker, run the following:
 
-    # yum install ruby193-rubygem-foreman_docker
+* Red Hat based (RHEL, CentOS...) - Foreman 1.10+
 
-### Debian, Ubuntu (deb)
+      # yum install tfm-rubygem-foreman_docker
 
-Set up the repo as explained in the link above, then run
+or this if your Foreman version is 1.9 or older
 
-    # apt-get install ruby-foreman-docker
+      # yum install ruby193-rubygem-foreman_docker
+
+* Fedora
+
+      # yum install rubygem-foreman_docker
+
+* Debian based (Debian, Ubuntu...)
+
+      # apt-get install ruby-foreman-docker
+
+Restarting Foreman might be needed after installing the package.
 
 ### Bundle (gem)
 
