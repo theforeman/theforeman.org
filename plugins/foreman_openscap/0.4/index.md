@@ -77,8 +77,10 @@ Foreman OpenSCAP (foreman_openscap), Smart Proxy OpenSCAP (smart_proxy_openscap)
 
 On the Foreman server:
 
-	> yum install ruby193-rubygem-foreman_openscap
+	> yum install tfm-rubygem-foreman_openscap
 	> service httpd reload
+
+If your distribution does not provide openscap package recent enough, you can get it from https://copr.fedorainfracloud.org/coprs/isimluk/OpenSCAP/
 
 Please refer the Foreman plugin [manual](http://theforeman.org/manuals/latest/index.html#6.1InstallaPlugin) for more information about installing Foreman plugins.
 
