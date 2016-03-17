@@ -109,12 +109,12 @@ you can (and some of them should) use.
       
 As you might have guessed, you'll need to provide this plugin chef
 client name and private key so it can communicate to chef server. Also
-note that this client should have admin (or set of privileges) so it
-can read other client public keys and any other action you want
-Foreman to do for you (e.g. delete nodes, clients). In multi org
-environment you can either use pivotal key or if you prefer to keep
-it separate, you can install smart proxy per organization and create
-different client for each.
+note that this client must be org admin (Chef 12) or should have admin 
+flag (Chef <= 11) or set of corresponding privileges, so it can read other
+client public keys and any other action you want Foreman to do for you 
+(e.g. delete nodes, clients). In multi org environment you can either use
+pivotal key or if you prefer to keep it separate, you can install smart 
+proxy per organization and create different client for each.
 
 Also you should provide chef server url and if you're using self
 signed cert for your chef server, you'll have to specify the file
