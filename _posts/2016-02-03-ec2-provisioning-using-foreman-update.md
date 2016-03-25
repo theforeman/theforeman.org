@@ -13,6 +13,8 @@ tags:
 - virtualizaition
 guest_post: true
 guest_url: http://zipkid.eu/
+excerpt: |
+  Back in 2012 Ohad Levy wrote an excellent blog post on this subject. The concepts and steps to perform he explains are still mainly correct and relevant but the UI has changed enough to justify a new post. A lot of time has passed since then and many Foreman versions, with many improvements and changes, have passed. It is time for an updated HOWTO on this subject. This post will mainly be a shameless copy-paste of his post with updated names, details and screenshots to accommodate the differences between version 0.5 and 1.10.
 ---
 
 Back in 2012 Ohad Levy wrote an excellent [blog post](http://theforeman.org/2012/05/ec2-provisioning-using-foreman.html) on this subject. The concepts and steps to perform he explains are still mainly correct and relevant but the UI has changed enough to justify a new post.
