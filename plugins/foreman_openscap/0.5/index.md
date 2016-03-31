@@ -124,9 +124,28 @@ which runs the SCAP client at the schedule select when creating the policy.
 
 ## 4.1 Creating SCAP content
 
-foreman_openscap comes with default SCAP content provided by [scap-security-guide](https://fedorahosted.org/scap-security-guide/).
+### 4.1.1 Creating default SCAP content
 
-The default SCAP content is available for RHEL 6, RHEL 7 and Fedora.
+When installing foreman_openscap from RPM, we also add default SCAP content provided by [scap-security-guide](https://fedorahosted.org/scap-security-guide/).
+
+In previous versions, the default SCAP content was added via seed task.
+
+In version >= 0.5.x, we are processing all of OpenSCAP content and reports in the Proxy.
+
+And we are unsure if during installation the smart_proxy_openscap plugin is installed and enabled, so we can not seed the default SCAP content
+ - hence the auto SCAP content generation is now obsolete.
+
+Instead of auto-generating default SCAP content when installing foreman_openscap, you can now accomplish that with a rake task.
+
+__Creating default SCAP content__
+
+* Install smart_proxy_openscap on one (or more) of your proxies
+* Refresh features of that proxy (so it will register with OpenSCAP feature on the Foreman)
+* from terminal run `foreman-rake foreman_openscap:bulk_upload:default`
+
+This will search for scap-security-guide SCAP contents and create SCAP content on the Foreman.
+
+### 4.1.2 Uploading SCAP content
 
 Besides the default SCAP content, you can also upload your own SCAP content.
 
