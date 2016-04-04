@@ -6,3 +6,4 @@ end
 
 gem 'github-pages', '>= 57'
 gem 'rake'
+gem 'icalendar'

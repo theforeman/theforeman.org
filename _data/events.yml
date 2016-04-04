@@ -1,0 +1,68 @@
+- title: 'Discovery and Chef with Alex Balk'
+  type: 'Case Study'
+  tags:
+  - discovery
+  - chef
+  location: virtual
+  speaker: 'Alex Balk & Greg Sutcliffe'
+  start: 2016-04-06 15:45 BST
+  end: 2016-04-06 16:45 BST
+  url: 'https://plus.google.com/b/102496134326414788199/events/cakn5pmb71thluiql7t4adt5t70'
+  description: |
+    Alex Balk of Outbrain takes time to sit down with us and discuss all the
+    wonderful ways in which Discovery makes his life better, as well as some chat
+    on Chef, datacentres, and general Foreman goodness. Watch live to join in with
+    the Q&A app, or ask questions via IRC (#theforeman)
+- title: 'OSDC'
+  type: 'Conference'
+  location: Berlin
+  start: 2016-04-26
+  end: 2016-04-28
+  url: 'https://www.netways.de/en/events_trainings/osdc/overview/'
+  description: |
+    Simplifying Complex IT Infrastructures with Open Source. OSDC offers a
+    unique opportunity to meet with Open Source professionals and insiders,
+    gather and share expertise over 3 days of presentations, hands-on workshops
+    and social networking. Thematic focus in 2016 will be Infrastruce as Code |
+    Containers and Databases | Tools & Infrastructure. OSDC particularly
+    addresses experienced administrators and architects.
+- title: 'Automating a R&D lab with Foreman: What can be hard?'
+  type: Talk
+  location: OSDC, Berlin
+  speaker: 'Julien Pivotto'
+  start: 2016-04-28 09:30 CEST
+  end: 2016-04-28 10:30 CEST
+  url: 'https://www.netways.de/events_schulungen/osdc/program/julien_pivotto_automating_a_rd_lab_with_foreman_what_can_be_hard/'
+  description: |
+    This will tell the story of how we automated our R&D environment with the
+    Foreman and what were the biggest problems we are facing. It will contain a
+    very short introduction about the Foreman but the main subject will really
+    be about experience.
+- title: 'Case Study: Discovery and Custom Plugins with Imri Zvik'
+  type: 'Case Study'
+  tags:
+  - discovery
+  - plugins
+  location: virtual
+  speaker: 'Imri Zvik & Greg Sutcliffe'
+  start: 2016-05-05 14:00 BST
+  url: 'https://plus.google.com/b/102496134326414788199/events/cvnrdqab4mhhqvaad4oero18hho'
+  description: |
+    Imri Zvik of MyHeritage joins us to show off their awesome extensions to
+    the Discovery project, and to show off their custom UI simplification
+    plugin for their developers. We'll also have the usual Foreman chitchat,
+    and we'll be happy to take questions live - join in with the Q&A app, or
+    ask questions via IRC (#theforeman).
+- title: 'SREcon16'
+  type: 'Conference'
+  location: Dublin, Ireland
+  start: 2016-07-11
+  end: 2016-07-13
+  url: 'https://www.usenix.org/conference/srecon16europe'
+  description: |
+    A gathering of engineers who care deeply about site reliability, systems
+    engineering, and working with complex distributed systems at scale. It
+    strives to challenge both those new to the profession as well as those who
+    have been involved in it for decades. The conference has a culture of
+    critical thought, deep technical insights, continuous improvement, and
+    innovation

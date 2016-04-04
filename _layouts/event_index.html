@@ -1,0 +1,24 @@
+{% include header.html %}
+
+<div id="wrap">
+  <div class="container">
+    <div class="row">
+      <div id="doc" class="col-md-12">
+        <div class='col-md-6 pull-left'>
+          <h2>Upcoming Foreman Events</h2>
+          <p>Here you'll find all the Foreman-related events where members of the
+          community are talking about their use of, or contribution to, Foreman.
+          Attending one of these events is a great way to learn more about Foreman!<p>
+          <p>You can <a href='/events/all.ics'>subscribe to these events</a> via our ICS feed!</p>
+          <p>Know of an event not listed here? .. or want to fix some details? Please
+          <a href='https://github.com/theforeman/theforeman.org/blob/gh-pages/_data/events.yaml'>contribute event info</a>!</p>
+        </div>
+        <div class='col-md-6 pull-right'>
+          <div id='calendar'></div>
+        </div>
+      </div>
+      {{ content }}
+    </div>
+  </div>
+</div>
+{% include footer.html %}

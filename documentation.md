@@ -67,10 +67,16 @@ version: '1.11'
   </div>
 </div>
 <div class='row'>
-  <div class='col-md-4 col-md-offset-4'>
+  <div class='col-md-6 center'>
     <a href="/blog" class="btn-doc btn">
       <h2 class='doc-icon'><i class="fa fa-rss"></i></h2>
       Blog
+    </a>
+  </div>
+  <div class='col-md-6 center'>
+    <a href="/events" class="btn-doc btn">
+      <h2 class='doc-icon'><i class="fa fa-calendar"></i></h2>
+      Events
     </a>
   </div>
 </div>

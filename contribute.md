@@ -10,6 +10,12 @@ title: Contributing to Foreman
 The Foreman is an open-source project that's licensed under the GNU Public License version 3.<br>
 Contributions of all types are gladly accepted!
 
+## Attend some [Events](/events)
+
+The Foreman has a growing list of community events - check the [events
+page](/events) for more details. If there's noting suitable in your area, who
+not consider [creating an event](https://github.com/theforeman/theforeman.org/blob/gh-pages/_data/events.yaml)!
+
 ## Code-related contributions
 
 These types of tasks generally require a familiarity with Ruby (on Rails) development or RPM/Debian packaging. If you are still new to Rails, community members can help you if you get stuck with something or have any other questions.
