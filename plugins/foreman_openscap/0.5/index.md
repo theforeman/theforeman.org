@@ -110,6 +110,36 @@ Edit ```/etc/foreman-proxy/settings.d/openscap.yml``` with the appropriate setti
 
 This puppet module will automatically install foreman_scap_client (if not installed) and will configure the client's ```/etc/foreman_scap_client/config.yaml``` with parameters which are needed for the operation of foreman_scap_client.
 
+# 3. Upgrading from 0.4.x
+
+As with any Foreman plugin, the recommended upgrade path is done via `yum upgrade`. This will ensure that all of the packages are with the right version, dependencies
+and data migrations.
+
+__Note: ARF reports are not automatically migrated and need a manual step__
+
+## 3.1 Migrating ARF reports from 0.4.x
+
+ARF reports in 0.5.x and Foreman > 1.11 are now part of Foreman's reports (Reports STI), and the physical ARF report XML is now saved at the Smart-Proxy.
+
+This requires a special migration, which needs both Foreman and Smart-Proxy up and running, with latest respective OpenSCAP plugins installed.
+ 
+Since we cannot assure this during upgrade, migration of ARF reports has moved to a rake task which should be performed after upgrading.
+
+To upgrade ARF reports from 0.4.x to 0.5.x:
+
+* Upgrade foreman_openscap to version 0.5.x
+* Upgrade smart_proxy_openscap to version 0.5.x
+* Run `foreman-rake db:migrate` to ensure all other data has been migrated
+* Restart Foreman and Smart-Proxy
+* Run `foreman-rake foreman_openscap:migrate[<proxy_id>]` (Where `<proxy_id>` is the id of the Smart-Proxy with OpenSCAP feature).
+
+__Notes:__ to find out your Smart-Proxy id you can either run `hammer proxy list` or pick the Smart-Proxy's id from the url in web UI. please note it should be inside the square brackets
+
+__Process:__ During the ARF reports migration, the old ARF reports are fetched from the Foreman database, sent to the Smart-Proxy for re-processing and saving and are sent back to the Foreman in their new
+format - while keeping their original data.
+
+Once the old ARF report has successfully migrated, it is deleted from the old table.
+
 # 4. Usage
 
 This chapter covers features that you can use in terms of Foreman and OpenSCAP
