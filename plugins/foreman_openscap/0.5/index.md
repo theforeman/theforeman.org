@@ -80,9 +80,15 @@ Foreman OpenSCAP (foreman_openscap), Smart Proxy OpenSCAP (smart_proxy_openscap)
 
 ### 2.1 Installing foreman_openscap
 
-On the Foreman server:
+The easiest and recommended way is using foreman-installer. It's as easy as running this command
+
+	> foreman-installer --enable-foreman-plugin-openscap
+
+If you prefer the manual way, you can install it from package like this:
 
 	> yum install tfm-rubygem-foreman_openscap
+	> foreman-rake db:migrate
+	> foreman-rake db:seed
 	> service httpd reload
 
 If your distribution does not provide openscap package recent enough, you can get it from https://copr.fedorainfracloud.org/coprs/isimluk/OpenSCAP/
@@ -91,8 +97,13 @@ Please refer to the Foreman plugin [manual]({{site.baseurl}}/manuals/latest/inde
 
 ### 2.2 Installing smart_proxy_openscap
 
-On the Smart-Proxy server:
+The easiest and recommended way is using foreman-installer. It's as easy as running this command
 
+	> foreman-installer --enable-foreman-proxy-plugin-openscap
+
+If you run Smart-Proxy with Foreman on the same host you can combine it with --enable-foreman-plugin-openscap option.
+
+If you prefer the manual way, install this package on the Smart-Proxy server:
 
     > yum install rubygem-smart_proxy_openscap
 
@@ -108,7 +119,7 @@ Edit ```/etc/foreman-proxy/settings.d/openscap.yml``` with the appropriate setti
 
     puppet module install isimluk-foreman_scap_client
 
-This puppet module will automatically install foreman_scap_client (if not installed) and will configure the client's ```/etc/foreman_scap_client/config.yaml``` with parameters which are needed for the operation of foreman_scap_client.
+This puppet module will automatically install foreman_scap_client (if not installed) and will configure the client's ```/etc/foreman_scap_client/config.yaml``` with parameters which are needed for the operation of foreman_scap_client. The module is used by Foreman to automate the configuration and trigigering foreman_openscap_client, so you should install it in all puppet environments that your hosts use.
 
 # 3. Upgrading from 0.4.x
 
