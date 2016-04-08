@@ -455,6 +455,15 @@ Key management is changing at the time of writing to cycle nightly keys every tw
         <td></td>
       </tr>
       <tr>
+        <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&search=0xAE0AF310E2EA96B6B6F4BD726F8600B9563278F6">563278F6</a></td>
+        <td>AE0A F310 E2EA 96B6 B6F4  BD72 6F86 00B9 5632 78F6</td>
+        <td>Foreman Automatic Signing Key (2016)</td>
+        <td style='white-space:nowrap'>2016-04-08</td>
+        <td style='white-space:nowrap'>2018-04-08</td>
+        <td style='white-space:nowrap'></td>
+        <td></td>
+      </tr>
+      <tr>
         <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&search=0xA91E2984667D1F07">667D1F07</a></td>
         <td>503E FA96 89AA AD57 D693  6514 A91E 2984 667D 1F07</td>
         <td>Foreman Release Signing Key (1.6)</td>
