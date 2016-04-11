@@ -89,11 +89,13 @@ Please make sure there is a [Redmine issue](/contribute.html#Bugreporting) open 
 git checkout -b <branchName> # Example: git checkout -b 1656-add_TB_support
 {% endhighlight %}
 
-*  Make changes and commit. Please reference the Redmine issue this commit addresses via "refs" or "fixes" #issueid in the commit message.
+*  Make changes and commit. Please reference the Redmine issue this commit
+addresses via "Refs" or "Fixes" in the commit message. See [Coding
+Standards](handbook.html#Codingstandards) guide for more details.
 
 {% highlight bash %}
 git add <modifiedFile(s)>
-git commit -m 'fixes #<bug> - <message>'
+git commit -m 'Fixes #<bug> - <message>'
 {% endhighlight %}
 
 * Push topic branch to your fork:
