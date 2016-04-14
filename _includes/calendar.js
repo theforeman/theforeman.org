@@ -1,3 +1,12 @@
+$(document).ready(function() {
+  var adjustClasses, tooltipHide, tooltipShow, $tip, tip, $widget, now;
+  now = Date.now();
+  $widget = $("#calendar");
+
+  // Create tooltips on events
+  tip = '<div id="fc-tooltip" class="fc-tooltip hidden"></div>';
+  $tip = $(tip).appendTo($widget).hide().removeClass('hidden');
+
 // Display the tooltip during mouseover
 tooltipShow = function(event, jsEvent, view) {
   var $item, eventInfo, eventText, label, value;
@@ -53,14 +62,6 @@ adjustClasses = function(event, element, view) {
 
 };
 
-$(document).ready(function() {
-  var adjustClasses, tooltipHide, tooltipShow, $tip, tip, $widget, now;
-  now = Date.now();
-  $widget = $("#calendar");
-
-  // Create tooltips on events
-  tip = '<div id="fc-tooltip" class="fc-tooltip hidden"></div>';
-  $tip = $(tip).appendTo($widget).hide().removeClass('hidden');
 
   $widget.fullCalendar({
     editable: false,
