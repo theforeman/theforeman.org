@@ -105,8 +105,11 @@ module Jekyll
         cal_event.description = (speaker_text + description_text).strip
 
         if event['start'] && event['end']
+          # ICS also needs the off-by-one end-day fix, see fix_calendar_dates()
+          dend = event['end'].class == Date ? event['end'].next_day : event['end']
+
           cal_event.dtstart = ical_time(event['start'])
-          cal_event.dtend   = ical_time(event['end'])
+          cal_event.dtend   = ical_time(dend)
         elsif event['start'] && event['start'].class != Date
           # Has a time, assume 1hr duration
           cal_event.dtstart = ical_time(event['start'])
