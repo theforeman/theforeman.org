@@ -254,6 +254,7 @@ version: "1.11"
 {%include manuals/1.11/5.6_rails_console.md %}
 
 <a name="5.7SPNEGOauthentication"></a>
+
 ## 5.7 External Authentication
 {%include manuals/1.11/5.7_external_authentication.md %}
 ### 5.7.1 Configuration via Foreman installer

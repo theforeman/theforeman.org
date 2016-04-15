@@ -190,6 +190,7 @@ version: "1.5"
 {%include manuals/1.5/5.6_rails_console.md %}
 
 <a name="5.7SPNEGOauthentication"></a>
+
 ## 5.7 External Authentication
 {%include manuals/1.5/5.7_external_authentication.md %}
 ### 5.7.1 Preparatory steps
