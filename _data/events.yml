@@ -13,6 +13,18 @@
     wonderful ways in which Discovery makes his life better, as well as some chat
     on Chef, datacentres, and general Foreman goodness. Watch live to join in with
     the Q&A app, or ask questions via IRC (#theforeman)
+- title: 'Afternoon with Red Hat'
+  type: 'Talk'
+  location: Ostrava, Czech Republic
+  start: 2016-04-19
+  end: 2016-04-19
+  url: 'https://www.facebook.com/events/1119806371403620/'
+  description: |
+    A gathering of students from Ostrava University, called Afternoon with
+    Red Hat. Series of talks is focused on hiring. Lukáš Zapletal is introducing
+    The Foreman project, Lukáš Vrabec and Miroslav Grepl are showing why
+    SELinux is useful and Lukáš Nykrýn is doing systemd showcase. Entry free
+    to public.
 - title: 'Foreman Community Demo'
   type: 'Livestream'
   location: virtual
