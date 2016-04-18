@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2016-3693: application information leakage through templates](security.html#2016-3693)
 * [Ruby code execution via Discovery settings](security.html#2016-discovery-settings)
 * [CVE-2016-2100: private bookmarks can be viewed and edited](security.html#2016-2100)
 * [CVE-2015-7518: parameter information popup allows stored XSS](security.html#2015-7518)
@@ -54,6 +55,24 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2016-3693"></a>CVE-2016-3693: application information leakage through templates
+
+A provisioning template containing `inspect` will expose sensitive information about the Rails controller and application when rendered when using Safemode rendering (the default setting). This includes the application secret token, possibly permitting a privilege escalation.
+
+Thanks to Ivan Necas for reporting the issue.
+
+As a precaution, the security token may be regenerated with:
+
+1. `chown foreman /usr/share/foreman/config/initializers/local_secret_token.rb`
+1. `foreman-rake security:generate_token`
+1. `chown root /usr/share/foreman/config/initializers/local_secret_token.rb`
+
+*Mitigation:* remove edit_provisioning_templates from untrusted users.
+
+* Affects all known Foreman versions
+* Fix to be released in Foreman 1.11.1
+* Redmine issue [#14635](http://projects.theforeman.org/issues/14635)
 
 #### <a id="2016-discovery-settings"></a>Ruby code execution via Discovery settings
 
