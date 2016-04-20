@@ -71,7 +71,7 @@ As a precaution, the security token may be regenerated with:
 *Mitigation:* remove edit_provisioning_templates from untrusted users.
 
 * Affects all known Foreman versions
-* Fix to be released in Foreman 1.11.1
+* Fix released in Foreman 1.11.1
 * Redmine issue [#14635](http://projects.theforeman.org/issues/14635)
 
 #### <a id="2016-discovery-settings"></a>Ruby code execution via Discovery settings
