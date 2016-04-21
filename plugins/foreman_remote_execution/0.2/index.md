@@ -63,7 +63,7 @@ that must be installed on Foreman and the Smart Proxy.
 </table>
 
 
-## 1.2 Compatability
+## 1.2 Compatibility
 
 Each component is packaged for platforms that Foreman is officially packaged
 for. Since both Foreman and Smart Proxy plugins requires Dynflow, Ruby 1.9+ is

@@ -76,7 +76,7 @@ The core plugin major version will increment with the specific Foreman release, 
   - Support for using salt-api
   - API endpoints for environments and state lists
 
-- **2.0**: Foreman 1.8 compatability
+- **2.0**: Foreman 1.8 compatibility
 
 - **1.0**: Support for uploading Salt state.highstate reports
 

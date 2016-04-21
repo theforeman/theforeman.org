@@ -53,13 +53,13 @@ The core plugin major version will increment with the specific Foreman release, 
 ### 1.1.1 Foreman plugin
 
 - **5.0**:
-  - Foreman 1.11 and Rails 4 compatability
+  - Foreman 1.11 and Rails 4 compatibility
 
 - **4.0**:
-  - Foreman 1.10 compatability
+  - Foreman 1.10 compatibility
 
 - **3.0**:
-  - Foreman 1.9 compatability
+  - Foreman 1.9 compatibility
   - Fixed foreman_salt to work with discovery plugin
   - Updated to work with latest foreman-tasks
 
