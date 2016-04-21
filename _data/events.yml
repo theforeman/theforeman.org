@@ -25,15 +25,6 @@
     The Foreman project, Lukáš Vrabec and Miroslav Grepl are showing why
     SELinux is useful and Lukáš Nykrýn is doing systemd showcase. Entry free
     to public.
-- title: 'Foreman Community Demo'
-  type: 'Livestream'
-  location: virtual
-  start: 2016-04-21 14:00 BST
-  end: 2016-04-21 15:00 BST
-  url: 'https://plus.google.com/b/102496134326414788199/events/cug61bkfrm7qppi24ns9166qabg'
-  description: |
-    It's time again for the Foreman Community Demo. Join us to find out what's
-    been happening in the Foreman Community over the last few weeks.
 - title: 'Foreman Deep Dives: Recent Smart-Proxy Core changes (with Dmitri Dolguikh)'
   type: 'Livestream'
   location: virtual
@@ -71,6 +62,15 @@
     Foreman and what were the biggest problems we are facing. It will contain a
     very short introduction about the Foreman but the main subject will really
     be about experience.
+- title: 'Foreman Community Demo'
+  type: 'Livestream'
+  location: virtual
+  start: 2016-04-28 14:00 BST
+  end: 2016-04-28 15:00 BST
+  url: 'https://plus.google.com/b/102496134326414788199/events/cug61bkfrm7qppi24ns9166qabg'
+  description: |
+    It's time again for the Foreman Community Demo. Join us to find out what's
+    been happening in the Foreman Community over the last few weeks.
 - title: 'Case Study: Discovery and Custom Plugins with Imri Zvik'
   type: 'Case Study'
   tags:
