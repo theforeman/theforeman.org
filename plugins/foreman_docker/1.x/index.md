@@ -1,5 +1,6 @@
 ---
 layout: plugin
+pluginname: foreman_docker
 title: Foreman Docker 1.x Manual
 version: 1.x
 ---
@@ -11,7 +12,7 @@ For more information see ["What is Docker?"](https://www.docker.com/whatisdocker
 
 You can find the latest version of the foreman-docker plugin [on Github](https://github.com/theforeman/foreman-docker).
 
-# 2. Introduction
+# 2. Basics
 
 A container in the Docker format is composed of the following parts:
 
@@ -29,27 +30,27 @@ With Foreman and Katello, you can create an on-premise registry, [import images 
 
 ![Containers list](static/images/plugins/foreman_docker/docker-containers-list.png)
 
-# 2. Installation
+# 3. Installation
 
-### Foreman Installer (recommended)
+## 3.1 Foreman Installer (recommended)
 You can use the Foreman installer to install this plugin. Use the following command:
     foreman-installer --enable-foreman-plugin-docker
 
 If you prefer not to use the installer, follow the instructions below for your operating system.
 
-### Red Hat, CentOS, Fedora, Scientific Linux (rpm)
+## 3.2 Red Hat, CentOS, Fedora, Scientific Linux (rpm)
 
 Set up the repo as explained in the link above, then run
 
     # yum install ruby193-rubygem-foreman_docker
 
-### Debian, Ubuntu (deb)
+## 3.3 Debian, Ubuntu (deb)
 
 Set up the repo as explained in the link above, then run
 
     # apt-get install ruby-foreman-docker
 
-### Bundle (gem)
+## 3.4 Bundle (gem)
 
 This method will **only** work on Foreman deployments installed from source. Please refrain from making these changes if you have installed Foreman via packages.
 
@@ -65,9 +66,9 @@ To verify that the installation was successful, go to Foreman, top bar **Adminis
 
 ![](static/images/plugins/foreman_docker/docker-topbar-check.png)
 
-# 3. Usage
+# 4. Usage
 
-## 3.1 Managing containers
+## 4.1 Managing containers
 
 The following sections show how to create, view, start, stop, and commit a container.
 
@@ -131,7 +132,7 @@ In Foreman, you can deploy containers only on a compute resource of the Docker p
 3. Click Test Connection to test if the container host is available.
 4. Click Submit to create the compute resource.
 
-## 3.2. Creating a container
+## 4.2. Creating a container
 Once there is at least one Docker compute resource present on your Foreman, you can create containers. To create a new container, follow the steps described in Procedure 1.3, “To Create a Container:”. For instructions on how to investigate the already created containers, see Section 3.3, “Investigating Containers”.
 To create a container, you first have to import an image, which can be a platform image, or a previously created layered image. Foreman supports the following image sources:
 
@@ -175,7 +176,7 @@ Note that you can not change the container configuration once the container is c
 
 After creating a container, Foreman displays a summary of container metadata. By default, the newly created container is inactive, for instructions how to start it see Procedure 1.5, “To Start or Stop a Container:”.
 
-## 3.3 Investigating containers
+## 4.3 Investigating containers
 Foreman provides means to monitor the status of containers as well as processes running inside them. Some containers can be marked as managed, which means they were created and provisioned inside the Foreman environment.
 The following procedure shows how to list containers of a selected organization and how to investigate the container metadata.
 
@@ -190,7 +191,7 @@ The following procedure shows how to list containers of a selected organization 
 ![Container show page](static/images/plugins/foreman_docker/docker-container-show.png)
 ![Container logs](static/images/plugins/foreman_docker/docker-logs.png)
 
-## 3.4. Starting, committing, and removing containers
+## 4.4. Starting, committing, and removing containers
 A new container is by default disabled. By enabling a container, you start the processes of the containerized application in the compute resource. Hosts are then able to communicate with the container as with a web application. The following procedure shows how to start and stop a container:
 
 **Procedure 1.5. To start or stop a container:**
@@ -223,17 +224,17 @@ The container is then committed to the repository of the original image. For exa
 4. In the alert box, click OK to remove the container.
 ⁠
 
-## 3.3. Working with repositories
+## 4.3. Working with repositories
 Follow the Katello [Docker documentation](http://www.katello.org/docs/user_guide/docker/docker.html).
 
-# 2. Help
+# 5. Help
 
 Please follow our [standard procedures and
 contacts]({{site.baseurl}}support.html).
 
-# 3. Getting involved
+# 6. Getting involved
 
-## 3.1 Troubleshooting
+## 6.1 Troubleshooting
 
 If you find a bug, please file it in
 [Redmine](http://projects.theforeman.org/projects/chef/issues/new).
@@ -242,12 +243,12 @@ See the [troubleshooting section](/manuals/latest/index.html#7.2GettingHelp)
 in the Foreman manual for more info.
 
 
-## 3.2 Contributing
+## 6.2 Contributing
 
 Follow the [same process as Foreman](/contribute.html#SubmitPatches)
 for contributing.
 
-# 4. Links
+# 7. Links
 
 * foreman-docker plugin [https://github.com/theforeman/foreman-docker/](https://github.com/theforeman/foreman-docker/)
 * Issue tracker [http://projects.theforeman.org/projects/docker/issues](http://projects.theforeman.org/projects/docker/issues)

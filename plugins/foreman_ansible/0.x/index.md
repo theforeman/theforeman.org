@@ -4,7 +4,7 @@ title: Foreman Ansible 0.x Manual
 version: 0.x
 ---
 
-# 1. Introduction
+# 1. Basics
 
 Foreman Ansible allows you to import hosts via Ansible, along with facts about these hosts and reports of their playbook runs. This plugin should be compatible with any version of Foreman above 1.8, including 1.8.
 
