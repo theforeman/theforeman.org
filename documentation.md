@@ -54,9 +54,9 @@ version: '1.11'
     </a>
   </div>
   <div class='col-md-4 center'>
-    <a href="/support.html" class="btn-doc btn">
-      <h2 class='doc-icon'><i class="fa fa-support"></i></h2>
-      Support
+    <a href="/training.html" class="btn-doc btn">
+      <h2 class='doc-icon'><i class="fa fa-wrench"></i></h2>
+      Training
     </a>
   </div>
   <div class='col-md-4 center'>
@@ -67,13 +67,19 @@ version: '1.11'
   </div>
 </div>
 <div class='row'>
-  <div class='col-md-6 center'>
+  <div class='col-md-4 center'>
     <a href="/blog" class="btn-doc btn">
       <h2 class='doc-icon'><i class="fa fa-rss"></i></h2>
       Blog
     </a>
   </div>
-  <div class='col-md-6 center'>
+  <div class='col-md-4 center'>
+    <a href="/support.html" class="btn-doc btn">
+      <h2 class='doc-icon'><i class="fa fa-support"></i></h2>
+      Support
+    </a>
+  </div>
+  <div class='col-md-4 center'>
     <a href="/events" class="btn-doc btn">
       <h2 class='doc-icon'><i class="fa fa-calendar"></i></h2>
       Events
