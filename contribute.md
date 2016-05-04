@@ -75,7 +75,7 @@ Any version of Ruby that is older than those listed is not supported.
 
 ### Startup foreman
 1. Follow steps 1, 2 and 3 from the section "setup test environment" if you haven't done so already
-1. Populate database: `budle exec rake db:seed` and take note of the password it generates
+1. Populate database: `bundle exec rake db:seed` and take note of the password it generates
 1. Startup the server: `bundle exec rails server`
 1. Navigate to [http://localhost:3000](http://localhost:3000)
 1. Login as `admin` with the password from the db:seed step earlier (or reset it with `bundle exec rake permissions:reset`)
