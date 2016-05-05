@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2016-3728: remote code execution in smart proxy TFTP API](security.html#2016-3728)
 * [CVE-2016-3693: application information leakage through templates](security.html#2016-3693)
 * [Ruby code execution via Discovery settings](security.html#2016-discovery-settings)
 * [CVE-2016-2100: private bookmarks can be viewed and edited](security.html#2016-2100)
@@ -55,6 +56,18 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2016-3728"></a>CVE-2016-3728: remote code execution in smart proxy TFTP API
+
+The smart proxy TFTP API is vulnerable to arbitrary remote code execution, as it passes untrusted user input (the PXE template type) to the eval() function causing it to be executed.
+
+Thanks to Lukas Zapletal for reporting the issue.
+
+*Mitigation:* ensure `trusted_hosts` is set in `/etc/foreman-proxy/settings.yml`, HTTPS is in use and `/etc/foreman-proxy/settings.d/tftp.yml` is configured for `https` only (if enabled).
+
+* Affects Foreman 0.2 and higher
+* Fix being developed
+* Redmine issue [#14931](http://projects.theforeman.org/issues/14931)
 
 #### <a id="2016-3693"></a>CVE-2016-3693: application information leakage through templates
 
