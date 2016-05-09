@@ -49,7 +49,7 @@ on the [NETWAYS github.io site][rendered]. The course is designed as a 2 day
 workshop, and is available to both those looking to self-study or provide
 Foreman training of their own.
 
-[training]: //training.html
+[training]: /training.html
 [rendered]: //netways.github.io/foreman-training/
 
 You can read Dirk's own thoughts on this on [his blog][blog], or listen to us
