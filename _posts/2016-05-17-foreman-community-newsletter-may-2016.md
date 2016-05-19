@@ -9,11 +9,21 @@ tags:
 excerpt: |
   No core releases this month, but there's still plenty going on in the Foreman
   Community! New plugins, updated plugins, new videos to watch, release
-  candidates to try, and more.
+  candidates to try, and more. STOP PRESS - 1.11.2 released today!
 ---
 
 It's been a busy month (or so) since the last newsletter. Here's a round up of
 what's new....
+
+## 1.11.2 released
+
+The latest stable release of Foreman has been updated to 1.11.2 with a heap of
+bug fixes and a security fix too. More details on the [mailing list][mlist] and
+in the [release notes][rnotes]. Thanks to all who contributed bug reports and
+patches!
+
+[mlist]: https://groups.google.com/forum/#!topic/foreman-announce/FvLT5JEwcOk
+[rnotes]: http://theforeman.org/manuals/1.11/index.html#Releasenotesfor1.11.2
 
 ## Foreman RFC system
 
