@@ -66,7 +66,7 @@ Thanks to Lukas Zapletal for reporting the issue.
 *Mitigation:* ensure `trusted_hosts` is set in `/etc/foreman-proxy/settings.yml`, HTTPS is in use and `/etc/foreman-proxy/settings.d/tftp.yml` is configured for `https` only (if enabled).
 
 * Affects Foreman 0.2 and higher
-* Fix released in Foreman 1.11.2, and due for 1.10.4
+* Fix released in Foreman 1.11.2 and 1.10.4
 * Redmine issue [#14931](http://projects.theforeman.org/issues/14931)
 
 #### <a id="2016-3693"></a>CVE-2016-3693: application information leakage through templates
