@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2016-4451: Privilege escalation through Organization and Locations API](security.html#2016-4451)
 * [CVE-2016-3728: remote code execution in smart proxy TFTP API](security.html#2016-3728)
 * [CVE-2016-3693: application information leakage through templates](security.html#2016-3693)
 * [Ruby code execution via Discovery settings](security.html#2016-discovery-settings)
@@ -56,6 +57,16 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2016-4451"></a>CVE-2016-4451: Privilege escalation through Organization and Locations API
+
+When accessing Foreman as a user limited to specific organization, if users know other organization id and have unlimited filters they can access/modify other organization data. They just have to set the id as API parameter.
+
+*Mitigation:* make sure you have filters restricted to organizations or locations when you limit user by assigning him particular organization or location.
+
+* Affects Foreman 1.7 and higher
+* Due to be released
+* Redmine issue [#15812](http://projects.theforeman.org/issues/15182)
 
 #### <a id="2016-3728"></a>CVE-2016-3728: remote code execution in smart proxy TFTP API
 
