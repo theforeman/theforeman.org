@@ -119,7 +119,7 @@ Edit ```/etc/foreman-proxy/settings.d/openscap.yml``` with the appropriate setti
 
     puppet module install isimluk-foreman_scap_client
 
-This puppet module will automatically install foreman_scap_client (if not installed) and will configure the client's ```/etc/foreman_scap_client/config.yaml``` with parameters which are needed for the operation of foreman_scap_client. The module is used by Foreman to automate the configuration and trigigering foreman_openscap_client, so you should install it in all puppet environments that your hosts use.
+This puppet module will automatically install foreman\_scap\_client (if not installed) and will configure the client's ```/etc/foreman_scap_client/config.yaml``` with parameters which are needed for the operation of foreman_scap_client. The module is used by Foreman to automate the configuration and triggering of foreman_openscap_client, so you should install it in all puppet environments that your hosts use.
 
 # 3. Upgrading from 0.4.x
 
