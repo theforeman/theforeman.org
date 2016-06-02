@@ -117,6 +117,32 @@
   description: |
     It's time again for the Foreman Community Demo. Join us to find out what's
     been happening in the Foreman Community over the last few weeks.
+- title: 'Extending the Foreman-Proxy with Matt Nicholson'
+  type: 'Case Study'
+  tags:
+  - smart-proxy
+  - infoblox
+  - plugins
+  location: virtual
+  speaker: 'Matt Nicholson & Greg Sutcliffe'
+  start: 2016-06-16 14:30 BST
+  end: 2016-06-16 15:30 BST
+  url: 'https://plus.google.com/events/cfjshq6vl99i2mtvm2h0qdrse6s'
+  description: |
+    For this case study, we'll be talking with Matt Nicholson (@sjoeboo, author
+    of the smart-proxy-{dhcp,dns}-infoblox plugins) about his use of Foreman at
+    Harvard University Medical School, how he went about implementing the
+    Infoblox plugins, and wider thoughts on extending Foreman in general.
+- title: 'Foreman @ Red Hat Summit'
+  type: 'Conference'
+  location: San Francisco, US
+  start: 2016-06-27
+  end: 2016-06-30
+  url: 'https://www.redhat.com/en/summit'
+  description: |
+    Many of the Foreman devs will be attending Red Hat Summit in San Francisco.
+    You'll be able to find us in the Community Central area of the main expo
+    hall. Come along to met some of the team and see some live demos!
 - title: 'SREcon16'
   type: 'Conference'
   location: Dublin, Ireland
@@ -130,6 +156,7 @@
     have been involved in it for decades. The conference has a culture of
     critical thought, deep technical insights, continuous improvement, and
     innovation
+
 - title: 'Training: Foreman (German)'
   type: 'Training'
   tags:
