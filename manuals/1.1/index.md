@@ -98,7 +98,7 @@ version: "1.1"
 ### 4.4.5 Architectures
 {%include manuals/1.1/4.4.4_prov_archs.md %}
 
-#5. Advanced Foreman
+# 5. Advanced Foreman
 {%include manuals/1.1/missing.html %}
 ## 5.1 API
 {%include manuals/1.1/missing.html %}

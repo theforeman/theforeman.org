@@ -172,7 +172,7 @@ version: "1.8"
 ## 4.8 Managing Chef
 {%include manuals/1.8/4.8_managing_chef.md %}
 
-#5. Advanced Foreman
+# 5. Advanced Foreman
 
 ## 5.1 API
 {%include manuals/1.8/5.1_api.md %}

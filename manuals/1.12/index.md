@@ -193,7 +193,7 @@ version: "1.12"
 ### 4.9.3 Searching by statuses
 {%include manuals/1.12/4.9.3_searching_by_statuses.md %}
 
-#5. Advanced Foreman
+# 5. Advanced Foreman
 
 ## 5.1 API
 {%include manuals/1.12/5.1_api.md %}

@@ -164,7 +164,7 @@ version: "1.7"
 ### 4.6.3 Puppet Notifications
 {%include manuals/1.7/4.6.3_email_puppet.md %}
 
-#5. Advanced Foreman
+# 5. Advanced Foreman
 
 ## 5.1 API
 {%include manuals/1.7/5.1_api.md %}
