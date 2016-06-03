@@ -108,6 +108,24 @@
   description: |
     This webinar gives a short introduction to Foreman and Puppet and then
     focuses on the integration, showing how to assign classes and parameter.
+
+- title: 'NYLUG - Foreman latest updates: Puppet 4, remote execution and discovery'
+  type: Talk
+  location: Facebook, 770 Broadway, New York
+  speaker: 'Ivan Necas & Daniel Lobato'
+  start: 2016-06-07 19:00 EDT
+  end: 2016-06-07 20:00 EdT
+  url: 'http://www.meetup.com/nylug-meetings/events/231609565/'
+  description: >
+    There is always something happening in the Foreman project and we would
+    like to share with you some recent changes and features that you might be
+    interested in.
+    First of all, long-awaited feature of Foreman is now here; Puppet 4 support
+    was requested more than a year ago and now it should be fully compatible
+    with Foreman.
+    We will also go though some features that can be added to Foreman through
+    plugins; remote execution as orthogonal tool to the standard config
+    management tools and discovery for metal as as service capabilities.
 - title: 'Foreman Community Demo - 9th June'
   type: 'Livestream'
   location: virtual
