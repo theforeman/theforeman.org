@@ -76,7 +76,7 @@ When accessing Foreman as a user limited to specific organization, if users know
 *Mitigation:* make sure you have filters restricted to organizations or locations when you limit user by assigning him particular organization or location.
 
 * Affects Foreman 1.7 and higher
-* Due to be released
+* Fix released in Foreman 1.12.0-RC1, and due to be released in 1.11
 * Redmine issue [#15812](http://projects.theforeman.org/issues/15182)
 
 #### <a id="2016-3728"></a>CVE-2016-3728: remote code execution in smart proxy TFTP API
