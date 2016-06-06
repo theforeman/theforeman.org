@@ -194,7 +194,7 @@ version: "1.10"
 ## 4.10 Managing Ansible
 {%include manuals/1.10/4.10_managing_ansible.md %}
 
-#5. Advanced Foreman
+# 5. Advanced Foreman
 
 ## 5.1 API
 {%include manuals/1.10/5.1_api.md %}

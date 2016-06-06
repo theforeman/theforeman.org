@@ -123,7 +123,7 @@ version: "1.3"
 ### 4.5.2 Success Story
 {%include manuals/1.3/4.5.2_cli_success.md %}
 
-#5. Advanced Foreman
+# 5. Advanced Foreman
 
 ## 5.1 API
 {%include manuals/1.3/5.1_api.md %}
