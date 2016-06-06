@@ -76,7 +76,10 @@ Both versions' functionality is the same, the changes only affect to the way it 
 
 There are a few components to install:
 
-Foreman OpenSCAP (foreman_openscap), Smart Proxy OpenSCAP (smart_proxy_openscap), foreman_scap_client and puppet-foreman_scap_client.
+* Foreman OpenSCAP (foreman_openscap)
+* Smart Proxy OpenSCAP (smart_proxy_openscap)
+* foreman_scap_client
+* puppet-foreman_scap_client.
 
 ### 2.1 Installing foreman_openscap
 
@@ -111,15 +114,32 @@ Edit ```/etc/foreman-proxy/settings.d/openscap.yml``` with the appropriate setti
 
     ---
     :enabled: true
-    :reportsdir: /path/to/saved/arf_reports/
-    :spooldir: /path/to/arf_reports/which/failed/to/post/to/foreman
+
+    # Log file for the forwarding script.
+    :openscap_send_log_file: /var/log/foreman-proxy/openscap-send.log
+
+    # Directory where OpenSCAP audits are stored
+    # before they are forwarded to Foreman
+    :spooldir: /var/spool/foreman-proxy/openscap
+
+    # Directory where OpenSCAP content XML are stored
+    # So we will not request the XML from Foreman each time
+    :contentdir: /var/lib/openscap/content
+
+    # Directory where OpenSCAP report XML are stored
+    # So Foreman can request arf xml reports
+    :reportsdir: /usr/share/foreman-proxy/openscap/reports
+
+    # Directory where OpenSCAP report XML are stored
+    # In case sending to Foreman succeeded, yet failed to save to reportsdir
+    :failed_dir: /usr/share/foreman-proxy/openscap/failed
 
 
 ### 2.3 Installing puppet-foreman_scap_client
 
     puppet module install isimluk-foreman_scap_client
 
-This puppet module will automatically install foreman_scap_client (if not installed) and will configure the client's ```/etc/foreman_scap_client/config.yaml``` with parameters which are needed for the operation of foreman_scap_client. The module is used by Foreman to automate the configuration and trigigering foreman_openscap_client, so you should install it in all puppet environments that your hosts use.
+This puppet module will automatically install foreman_scap_client (if not installed) and will configure the client's ```/etc/foreman_scap_client/config.yaml``` with parameters which are needed for the operation of foreman_scap_client. The module is used by Foreman to automate the configuration and triggering of foreman_openscap_client, so you should install it in all puppet environments that your hosts use.
 
 # 3. Upgrading from 0.4.x
 
