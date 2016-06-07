@@ -114,7 +114,7 @@
   location: Facebook, 770 Broadway, New York
   speaker: 'Ivan Necas & Daniel Lobato'
   start: 2016-06-06 19:00 EDT
-  end: 2016-06-06 20:00 EdT
+  end: 2016-06-06 20:00 EDT
   url: 'http://www.meetup.com/nylug-meetings/events/231609565/'
   description: >
     There is always something happening in the Foreman project and we would
@@ -135,6 +135,21 @@
   description: |
     It's time again for the Foreman Community Demo. Join us to find out what's
     been happening in the Foreman Community over the last few weeks.
+- title: 'Foreman Deep Dives: SQL Debugging for Beginners (with Chris Duryee)'
+  type: 'Deep Dive'
+  location: virtual
+  speaker: 'Chris Duryee & Greg Sutcliffe'
+  start: 2016-06-14 10:30 EDT
+  end: 2016-06-14 11:30 EDT
+  url: 'https://plus.google.com/events/c5q4rs8vnjkq1tjhd3j4i0ihmhc'
+  description: |
+    In this 30 minute tutorial, Chris Duryee (@beav) will explain the steps
+    needed to go from "hey this is slow" through assembling all the data listed
+    in https://wiki.postgresql.org/wiki/Slow_Query_Questions.  He says: "I'm by
+    no means a database expert, but I found that being able to assemble and
+    examine the explain plan can make working with a developer or database
+    expert very productive.  This tutorial is primarily for advanced users and
+    developers, but anyone is welcome to attend."
 - title: 'Extending the Foreman-Proxy with Matt Nicholson'
   type: 'Case Study'
   tags:
