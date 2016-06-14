@@ -23,6 +23,12 @@ Foreman plugins are implemented as [Rails engines](http://guides.rubyonrails.org
 			Ansible
 		</a>
 	</div>
+  <div class='col-md-3 center'>
+		<a href="https://github.com/theforeman/foreman_azure" class="btn-doc btn">
+			<p class='h2 doc-icon'><i class="fa fa-cloud"></i></p>
+			Azure
+		</a>
+	</div>
 	<div class='col-md-3 center'>
 		<a href="https://github.com/theforeman/foreman_bootdisk" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-floppy-o"></i></p>
