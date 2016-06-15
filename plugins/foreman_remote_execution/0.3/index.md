@@ -123,7 +123,6 @@ manual](/manuals/latest/index.html#3.InstallingForeman) for more information.
 You can install both the Foreman and Smart Proxy plugin with the installer:
 
     foreman-installer --enable-foreman-plugin-remote-execution\
-                      --enable-foreman-plugin-tasks\
                       --enable-foreman-proxy-plugin-remote-execution-ssh
 
 The installer will automatically configure an SSH key for you, or you may use an existing see.  See the foreman-installer --help for more information.
@@ -137,12 +136,12 @@ Install the packages appropriate for your operating system:
 
 RPM:
 
-    yum install tfm-rubygem-foreman_remote_execution tfm-rubygem-foreman-tasks\
+    yum install tfm-rubygem-foreman_remote_execution\
                 rubygem-smart_proxy_remote_execution_ssh
 
 DEB:
 
-    apt-get install ruby-foreman-tasks ruby-foreman-remote-execution\
+    apt-get install ruby-foreman-remote-execution\
                     ruby-smart-proxy-remote-execution-ssh
 
 Next you have to setup ssh keys. By default smart proxy loads the key
