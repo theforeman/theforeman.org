@@ -59,14 +59,16 @@ For each new release we keep stable documentation tree for the record.
 Generate API docs in Foreman
 
 1. cd to foreman directory
-2. rake apipie:cache
+1. `APIPIE_RECORD=examples rake test`
+1. `rake apipie:cache`
 
 Prepare folder for the new version (X.Y)
 
-3. cd to theforeman.org/api directory
-4. cp -r new_version_template X.Y
-5. edit file X.Y/index.md and set correct version
+1. cd to theforeman.org/api directory
+1. `cp -r new_version_template X.Y`
+1. edit file X.Y/index.md and set correct version
 
 Copy docs to repo
 
-6. cp -r dir/to/foreman/public/apipie-cache/apidoc/* Y.Y/apidoc
+1. `cp -r dir/to/foreman/public/apipie-cache/apidoc/* Y.Y/apidoc`
+1. `find Y.Y -name *.json -delete`
