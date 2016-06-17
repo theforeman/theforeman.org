@@ -166,16 +166,6 @@
     of the smart-proxy-{dhcp,dns}-infoblox plugins) about his use of Foreman at
     Harvard University Medical School, how he went about implementing the
     Infoblox plugins, and wider thoughts on extending Foreman in general.
-- title: 'Foreman San Francisco Meetup'
-  type: 'Meetup'
-  location: TBA, San Francisco, US
-  start: 2016-06-27 19:30 PDT
-  end: 2016-06-27 22:30 PDT
-  url: 'https://plus.google.com/b/102496134326414788199/events/cngcahgf6f460tnchip0bjb9rh4'
-  description: |
-    Local meetup for folks in the San Francisco area, along with those visiting
-    for DevNation or Red Hat Summit. Come along and have a chat with other
-    Foreman users and some of the devs!
 - title: 'Foreman @ Red Hat Summit'
   type: 'Conference'
   location: San Francisco, US
@@ -186,6 +176,16 @@
     Many of the Foreman devs will be attending Red Hat Summit in San Francisco.
     You'll be able to find us in the Community Central area of the main expo
     hall. Come along to met some of the team and see some live demos!
+- title: 'Foreman San Francisco Meetup'
+  type: 'Meetup'
+  location: TBA, San Francisco, US
+  start: 2016-06-28 19:30 PDT
+  end: 2016-06-28 22:30 PDT
+  url: 'https://plus.google.com/b/102496134326414788199/events/cngcahgf6f460tnchip0bjb9rh4'
+  description: |
+    Local meetup for folks in the San Francisco area, along with those visiting
+    for DevNation or Red Hat Summit. Come along and have a chat with other
+    Foreman users and some of the devs!
 - title: 'SREcon16'
   type: 'Conference'
   location: Dublin, Ireland
