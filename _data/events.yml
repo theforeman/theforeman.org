@@ -186,6 +186,15 @@
     Local meetup for folks in the San Francisco area, along with those visiting
     for DevNation or Red Hat Summit. Come along and have a chat with other
     Foreman users and some of the devs!
+- title: 'Foreman Community Demo - 7th July'
+  type: 'Livestream'
+  location: virtual
+  start: 2016-06-09 14:00 BST
+  end: 2016-06-09 15:00 BST
+  url: 'https://plus.google.com/events/cupjll3uo0h26aqk89pa4bga5p0'
+  description: |
+    It's time again for the Foreman Community Demo. Join us to find out what's
+    been happening in the Foreman Community over the last few weeks.
 - title: 'SREcon16'
   type: 'Conference'
   location: Dublin, Ireland
