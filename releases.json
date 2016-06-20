@@ -1,0 +1,5 @@
+---
+layout: null
+---
+
+{{ site.data.releases | jsonify }}

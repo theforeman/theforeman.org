@@ -1,0 +1,833 @@
+---
+core:
+  1:
+    12:
+    - 1.12.0-RC1
+    11:
+    - 1.11.2
+    - 1.11.1
+    - 1.11.0-RC3
+    - 1.11.0-RC2
+    - 1.11.0-RC1
+    10:
+    - 1.10.4
+    - 1.10.3
+    - 1.10.2
+    - 1.10.1
+    - 1.10.0
+    - 1.10.0-RC3
+    - 1.10.0-RC2
+    - 1.10.0-RC1
+    9:
+    - 1.9.3
+    - 1.9.2
+    - 1.9.1
+    - 1.9.0
+    - 1.9.0-RC3
+    - 1.9.0-RC2
+    - 1.9.0-RC1
+    8:
+    - 1.8.4
+    - 1.8.3
+    - 1.8.2
+    - 1.8.1
+    - 1.8.0
+    - 1.8.0-RC3
+    - 1.8.0-RC2
+    - 1.8.0-RC1
+    7:
+    - 1.7.5
+    - 1.7.4
+    - 1.7.3
+    - 1.7.2
+    - 1.7.1
+    - 1.7.0
+    - 1.7.0-RC2
+    - 1.7.0-RC1
+    6:
+    - 1.6.3
+    - 1.6.1
+    - 1.6.0
+    - 1.6.0-RC2
+    - 1.6.0-RC1
+    5:
+    - 1.5.3
+    - 1.5.2
+    - 1.5.1
+    - 1.5.0
+    - 1.5.0-RC2
+    - 1.5.0-RC1
+    4:
+    - 1.4.5
+    - 1.4.4
+    - 1.4.2
+    - 1.4.1
+    - 1.4.0
+    - 1.4.0-RC2
+    - 1.4.0-RC1
+    3:
+    - 1.3.2
+    - 1.3.1
+    - 1.3.0
+    - 1.3.0-RC4
+    - 1.3.0-RC3
+    - 1.3.0-RC2
+    - 1.3.0-RC1
+    2:
+    - 1.2.0-RC2
+    - 1.2.0-RC1
+    - 1.2.3
+    - 1.2.2
+    - 1.2.1
+    - 1.2.0
+    - 1.2.0-RC3
+    0:
+    - 1.0.1
+  0:
+    4:
+    - 0.4.2
+    - 0.4.1
+    1:
+    - 0.1.1
+    - 0.1.1RC5
+    - 0.1.1RC4
+    - 0.1.1RC3
+    - 0.1.1RC2
+    - 0.1.1RC1
+    - 0.1.1-1
+    - 0.1.0
+    - 0.1.0RC5
+    - 0.1.0RC4
+    - 0.1.0RC3
+    - 0.1.0RC2
+    - 0.1.0RC1
+    0:
+    - 0.0.4
+    - 0.0.4rc5
+    - 0.0.4rc4
+    - 0.0.4rc3
+    - 0.0.4rc2
+    - 0.0.3
+    - 0.0.2
+    - 0.0.2rc1
+    - 0.0.1
+    - 0.0.1-6
+    - 0.0.1-5
+    - 0.0.1-4
+    - 0.0.1-3
+    - 0.0.1-2
+    - 0.0.1-1
+plugins:
+  foreman-tasks:
+    0.7.15:
+      requires_foreman: '1.9'
+    0.7.14:
+      requires_foreman: '1.9'
+    0.7.13:
+      requires_foreman: '1.9'
+    0.7.12:
+      requires_foreman: '1.9'
+    0.7.11:
+      requires_foreman: '1.9'
+    0.7.10:
+      requires_foreman: '1.9'
+    0.7.9:
+      requires_foreman: '1.9'
+    0.7.8:
+      requires_foreman: '1.9'
+    0.7.7:
+      requires_foreman: '1.9'
+    0.7.6:
+      requires_foreman: '1.9'
+    0.7.5:
+      requires_foreman: '1.9'
+    0.7.4:
+      requires_foreman: '1.9'
+    0.7.3:
+      requires_foreman: '1.9'
+    0.7.2:
+      requires_foreman: '1.9'
+    0.7.1:
+      requires_foreman: '1.6'
+    0.7.0:
+      requires_foreman: '1.6'
+    0.6.15:
+      requires_foreman: '1.6'
+    0.6.14:
+      requires_foreman: '1.3'
+    0.6.13:
+      requires_foreman: '1.3'
+    0.6.12:
+      requires_foreman: '1.3'
+    0.6.11:
+      requires_foreman: '1.3'
+    0.6.10:
+      requires_foreman: '1.3'
+    0.6.9:
+      requires_foreman: '1.3'
+    0.6.8:
+      requires_foreman: '1.3'
+    0.6.7:
+      requires_foreman: '1.3'
+    0.6.6:
+      requires_foreman: '1.3'
+    0.6.5:
+      requires_foreman: '1.3'
+    0.6.4:
+      requires_foreman: '1.3'
+    0.6.3:
+      requires_foreman: '1.3'
+    0.6.2:
+      requires_foreman: '1.3'
+    0.6.1:
+      requires_foreman: '1.3'
+    0.6.0:
+      requires_foreman: '1.3'
+    0.5.7:
+      requires_foreman: '1.3'
+    0.5.6:
+      requires_foreman: '1.3'
+    0.5.5:
+      requires_foreman: '1.3'
+    0.5.4:
+      requires_foreman: '1.3'
+    0.5.3:
+      requires_foreman: '1.3'
+    0.5.2:
+      requires_foreman: '1.3'
+    0.5.1:
+      requires_foreman: '1.3'
+    0.5.0:
+      requires_foreman: '1.3'
+    0.4.0:
+      requires_foreman: '1.3'
+    0.3.6:
+      requires_foreman: '1.3'
+    0.3.5:
+      requires_foreman: '1.3'
+    0.3.4:
+      requires_foreman: '1.3'
+    0.3.3:
+      requires_foreman: '1.3'
+    0.3.2:
+      requires_foreman: '1.3'
+    0.3.1:
+      requires_foreman: '1.3'
+    0.3.0:
+      requires_foreman: '1.3'
+    0.2.2:
+      requires_foreman: '1.3'
+    0.2.1:
+      requires_foreman: '1.3'
+    0.2.0:
+      requires_foreman: '1.3'
+    0.1.5:
+      requires_foreman: '1.3'
+    0.1.4:
+      requires_foreman: '1.3'
+    0.1.3:
+      requires_foreman: '1.3'
+    0.1.2:
+      requires_foreman: '1.3'
+    0.1.1:
+      requires_foreman: '1.3'
+    0.1.0:
+      requires_foreman: '1.3'
+  foreman_abrt:
+    0.0.6:
+      requires_foreman: '1.5'
+    0.0.5:
+      requires_foreman: '1.5'
+    0.0.4:
+      requires_foreman: '1.5'
+    0.0.3:
+      requires_foreman: '1.5'
+    0.0.2:
+      requires_foreman: '1.5'
+    0.0.1:
+      requires_foreman: '1.5'
+  foreman_ansible:
+    0.3.0:
+      requires_foreman: '1.9'
+    0.2.2:
+      requires_foreman: '1.6'
+    0.2.1:
+      requires_foreman: '1.6'
+    0.1.1:
+      requires_foreman: '1.6'
+    0.1.0:
+      requires_foreman: '1.6'
+  foreman_bootdisk:
+    6.1.0:
+      requires_foreman: '1.9'
+    6.0.0:
+      requires_foreman: '1.9'
+    5.0.0:
+      requires_foreman: '1.8'
+    4.0.2:
+      requires_foreman: '1.7'
+    4.0.1:
+      requires_foreman: '1.7'
+    4.0.0:
+      requires_foreman: '1.7'
+    3.2.1:
+      requires_foreman: '1.6'
+    3.2.0:
+      requires_foreman: '1.6'
+    3.1.2:
+      requires_foreman: '1.6'
+    3.1.1:
+      requires_foreman: '1.6'
+    3.1.0:
+      requires_foreman: '1.6'
+    3.0.0:
+      requires_foreman: '1.6'
+    2.0.8:
+      requires_foreman: ''
+    2.0.7:
+      requires_foreman: ''
+    2.0.6:
+      requires_foreman: ''
+    2.0.5:
+      requires_foreman: ''
+    2.0.4:
+      requires_foreman: ''
+    2.0.3:
+      requires_foreman: ''
+    2.0.2:
+      requires_foreman: ''
+    2.0.1:
+      requires_foreman: ''
+    2.0.0:
+      requires_foreman: ''
+    1.2.3:
+      requires_foreman: ''
+    1.2.2:
+      requires_foreman: ''
+    1.2.1:
+      requires_foreman: ''
+    1.2.0:
+      requires_foreman: ''
+    1.1.0:
+      requires_foreman: ''
+    1.0.0:
+      requires_foreman: ''
+  foreman_chef:
+    0.3.0:
+      requires_foreman: '1.11'
+    0.2.2:
+      requires_foreman: '1.9'
+    0.2.1:
+      requires_foreman: '1.9'
+    0.2.0:
+      requires_foreman: '1.9'
+    0.1.7:
+      requires_foreman: '1.4'
+    0.1.6:
+      requires_foreman: '1.4'
+    0.1.5:
+      requires_foreman: '1.4'
+    0.1.4:
+      requires_foreman: '1.4'
+    0.1.3:
+      requires_foreman: '1.4'
+    0.1.2:
+      requires_foreman: '1.4'
+    0.1.1:
+      requires_foreman: '1.4'
+    0.1.0:
+      requires_foreman: '1.4'
+    0.0.4:
+      requires_foreman: '1.4'
+    0.0.3:
+      requires_foreman: '1.4'
+    0.0.2:
+      requires_foreman: '1.4'
+    0.0.1:
+      requires_foreman: '1.4'
+  foreman_cockpit:
+    1.0.3:
+      requires_foreman: '1.7'
+    1.0.2:
+      requires_foreman: '1.7'
+    1.0.1:
+      requires_foreman: '1.7'
+    1.0.0:
+      requires_foreman: '1.7'
+  foreman_column_view:
+    0.2.0:
+      requires_foreman: ''
+    0.1.2:
+      requires_foreman: ''
+  foreman_content:
+    0.0.1:
+      requires_foreman: ''
+    0.0.4:
+      requires_foreman: ''
+    0.0.3:
+      requires_foreman: ''
+    0.0.2:
+      requires_foreman: ''
+  foreman_default_hostgroup:
+    3.0.0:
+      requires_foreman: ''
+    2.1.0:
+      requires_foreman: ''
+    2.0.1:
+      requires_foreman: ''
+    2.0.0:
+      requires_foreman: ''
+    1.1.0:
+      requires_foreman: ''
+    1.0.1:
+      requires_foreman: ''
+    1.0.0:
+      requires_foreman: ''
+    0.1.0:
+      requires_foreman: ''
+  foreman_deployments:
+    0.0.1:
+      requires_foreman: '1.8'
+  foreman_dhcp_browser:
+    0.0.7:
+      requires_foreman: ''
+    0.0.6:
+      requires_foreman: ''
+    0.0.5:
+      requires_foreman: ''
+    0.0.4:
+      requires_foreman: ''
+    0.0.3:
+      requires_foreman: ''
+    0.0.2:
+      requires_foreman: ''
+  foreman_digitalocean:
+    0.2.1:
+      requires_foreman: '1.8'
+    0.2.0:
+      requires_foreman: '1.8'
+    0.1.0:
+      requires_foreman: '1.4'
+    0.0.3:
+      requires_foreman: '1.4'
+    0.0.2:
+      requires_foreman: '1.4'
+  foreman_discovery:
+    5.0.2:
+      requires_foreman: '1.11'
+    5.0.1:
+      requires_foreman: '1.11'
+    5.0.0:
+      requires_foreman: '1.11'
+    4.2.0:
+      requires_foreman: '1.11'
+    4.1.2:
+      requires_foreman: '1.9'
+    4.1.1:
+      requires_foreman: '1.9'
+    4.1.0:
+      requires_foreman: '1.9'
+    4.0.0:
+      requires_foreman: '1.8'
+    3.0.1:
+      requires_foreman: '1.8'
+    3.0.0:
+      requires_foreman: '1.8'
+    2.0.2:
+      requires_foreman: '1.7'
+    2.0.1:
+      requires_foreman: '1.7'
+    2.0.0:
+      requires_foreman: '1.7'
+    2.0.0.rc2:
+      requires_foreman: '1.7'
+    2.0.0.rc1:
+      requires_foreman: '1.6'
+    1.4.1:
+      requires_foreman: '1.5'
+    1.4.0:
+      requires_foreman: '1.5'
+    1.4.0.rc4:
+      requires_foreman: '1.5'
+    1.4.0.rc3:
+      requires_foreman: '1.5'
+    1.4.0.rc2:
+      requires_foreman: '1.5'
+    1.3.0:
+      requires_foreman: '1.4'
+    1.3.0.rc3:
+      requires_foreman: '1.4'
+    1.3.0.rc2:
+      requires_foreman: '1.4'
+    1.2.0:
+      requires_foreman: '1.4'
+    1.2.0.rc1:
+      requires_foreman: '1.4'
+    1.1.1:
+      requires_foreman: ''
+    1.1.0:
+      requires_foreman: ''
+    1.0.2:
+      requires_foreman: ''
+    1.0.1:
+      requires_foreman: ''
+    1.0.0:
+      requires_foreman: ''
+    1.0.0.rc4:
+      requires_foreman: ''
+    1.0.0.rc3:
+      requires_foreman: ''
+    1.0.0.rc2:
+      requires_foreman: ''
+    1.0.0.rc1:
+      requires_foreman: ''
+    0.1.1:
+      requires_foreman: ''
+    0.1.0:
+      requires_foreman: ''
+  foreman_docker:
+    2.0.1:
+      requires_foreman: '1.11'
+    2.0.0:
+      requires_foreman: '1.11'
+    1.4.1:
+      requires_foreman: '1.4'
+    1.4.0:
+      requires_foreman: '1.4'
+    1.3.1:
+      requires_foreman: '1.4'
+    1.3.0:
+      requires_foreman: '1.4'
+    1.2.4:
+      requires_foreman: '1.4'
+    1.2.3:
+      requires_foreman: '1.4'
+    1.2.2:
+      requires_foreman: '1.4'
+    1.2.1:
+      requires_foreman: '1.4'
+    1.2.0:
+      requires_foreman: '1.4'
+    1.1.0:
+      requires_foreman: '1.4'
+    1.0.1:
+      requires_foreman: '1.4'
+    1.0.0:
+      requires_foreman: '1.4'
+    0.2.0:
+      requires_foreman: '1.4'
+    0.0.3:
+      requires_foreman: '1.4'
+    0.0.2:
+      requires_foreman: '1.4'
+    0.0.1:
+      requires_foreman: '1.4'
+  foreman_epel_release:
+    0.0.2:
+      requires_foreman: ''
+  foreman_graphite:
+    0.0.3:
+      requires_foreman: '1.6'
+    0.0.2:
+      requires_foreman: '1.6'
+    0.0.1:
+      requires_foreman: '1.6'
+  foreman_hooks:
+    0.3.9:
+      requires_foreman: ''
+    0.3.8:
+      requires_foreman: ''
+    0.3.7:
+      requires_foreman: ''
+    0.3.6:
+      requires_foreman: ''
+    0.3.5:
+      requires_foreman: ''
+    0.3.4:
+      requires_foreman: ''
+    0.3.3:
+      requires_foreman: ''
+    0.3.2:
+      requires_foreman: ''
+    0.3.1:
+      requires_foreman: ''
+    0.3.0:
+      requires_foreman: ''
+    0.2.0:
+      requires_foreman: ''
+  foreman_host_overview:
+    0.1.0:
+      requires_foreman: '1.6'
+    0.0.2:
+      requires_foreman: '1.6'
+    0.0.1:
+      requires_foreman: '1.6'
+  foreman_host_rundeck:
+    0.0.3:
+      requires_foreman: '1.6'
+  foreman_memcache:
+    0.0.2:
+      requires_foreman: ''
+    0.0.1:
+      requires_foreman: ''
+  foreman_noenv:
+    0.0.4:
+      requires_foreman: '1.8'
+    0.0.3:
+      requires_foreman: '1.8'
+    0.0.2:
+      requires_foreman: '1.8'
+  foreman_one:
+    0.0.4:
+      requires_foreman: '1.8'
+    0.0.2:
+      requires_foreman: ''
+    0.0.1:
+      requires_foreman: ''
+  foreman_openscap:
+    0.5.3:
+      requires_foreman: '1.11'
+    0.5.2:
+      requires_foreman: '1.11'
+    0.5.1:
+      requires_foreman: '1.11'
+    0.5.0:
+      requires_foreman: '1.11'
+    0.4.3:
+      requires_foreman: '1.5'
+    0.4.2:
+      requires_foreman: '1.5'
+    0.4.1:
+      requires_foreman: '1.5'
+    0.4.0:
+      requires_foreman: '1.5'
+    0.3.4:
+      requires_foreman: '1.5'
+    0.3.3:
+      requires_foreman: '1.5'
+    0.3.2:
+      requires_foreman: '1.5'
+    0.3.1:
+      requires_foreman: '1.5'
+    0.3.0:
+      requires_foreman: '1.5'
+    0.2.1:
+      requires_foreman: '1.5'
+    0.2.0:
+      requires_foreman: '1.5'
+    0.1.0:
+      requires_foreman: '1.5'
+  foreman_openstack_cluster:
+    0.0.1:
+      requires_foreman: ''
+  foreman_param_lookup:
+    0.2.0:
+      requires_foreman: ''
+    0.1.0:
+      requires_foreman: ''
+  foreman_pipeline:
+    0.0.8:
+      requires_foreman: '1.8'
+    0.0.7:
+      requires_foreman: '1.8'
+    0.0.6:
+      requires_foreman: '1.8'
+    0.0.5:
+      requires_foreman: '1.8'
+    0.0.4:
+      requires_foreman: '1.8'
+    0.0.3:
+      requires_foreman: '1.8'
+    0.0.2:
+      requires_foreman: '1.8'
+    0.0.1:
+      requires_foreman: '1.8'
+  foreman_remote_execution:
+    0.3.0:
+      requires_foreman: '1.11'
+    0.2.3:
+      requires_foreman: '1.10'
+    0.2.2:
+      requires_foreman: '1.10'
+    0.2.1:
+      requires_foreman: '1.10'
+    0.2.0:
+      requires_foreman: '1.10'
+    0.1.2:
+      requires_foreman: '1.10'
+    0.1.1:
+      requires_foreman: '1.10'
+    0.1.0:
+      requires_foreman: '1.10'
+    0.0.10:
+      requires_foreman: '1.9'
+    0.0.9:
+      requires_foreman: '1.9'
+    0.0.8:
+      requires_foreman: '1.9'
+    0.0.7:
+      requires_foreman: '1.9'
+    0.0.6:
+      requires_foreman: '1.9'
+    0.0.5:
+      requires_foreman: '1.9'
+    0.0.4:
+      requires_foreman: '1.9'
+    0.0.3:
+      requires_foreman: '1.9'
+    0.0.2:
+      requires_foreman: '1.9'
+    0.0.1:
+      requires_foreman: '1.9'
+  foreman_reserve:
+    0.1.8.3:
+      requires_foreman: '1.4'
+    0.1.8.2:
+      requires_foreman: ''
+    0.1.8.1:
+      requires_foreman: ''
+    0.1.8:
+      requires_foreman: ''
+    0.1.7:
+      requires_foreman: ''
+    0.1.0:
+      requires_foreman: ''
+  foreman_salt:
+    5.0.0:
+      requires_foreman: '1.11'
+    4.0.1:
+      requires_foreman: '1.10'
+    4.0.0:
+      requires_foreman: '1.10'
+    3.0.2:
+      requires_foreman: '1.9'
+    3.0.1:
+      requires_foreman: '1.9'
+    3.0.0:
+      requires_foreman: '1.9'
+    2.1.0:
+      requires_foreman: '1.8'
+    2.0.2:
+      requires_foreman: '1.8'
+    2.0.1:
+      requires_foreman: '1.8'
+    2.0.0:
+      requires_foreman: '1.8'
+    1.1.1:
+      requires_foreman: '1.7'
+    1.1.0:
+      requires_foreman: '1.7'
+    1.0.0:
+      requires_foreman: '1.6'
+    0.0.4:
+      requires_foreman: '1.6'
+    0.0.3:
+      requires_foreman: '1.6'
+    0.0.2:
+      requires_foreman: '1.6'
+    0.0.1:
+      requires_foreman: '1.6'
+  foreman_setup:
+    3.1.0:
+      requires_foreman: '1.9'
+    3.0.2:
+      requires_foreman: '1.9'
+    3.0.1:
+      requires_foreman: '1.9'
+    3.0.0:
+      requires_foreman: '1.9'
+    2.1.1:
+      requires_foreman: '1.4'
+    2.1.0:
+      requires_foreman: '1.4'
+    2.0.4:
+      requires_foreman: '1.4'
+    2.0.3:
+      requires_foreman: '1.4'
+    2.0.2:
+      requires_foreman: '1.4'
+    2.0.1:
+      requires_foreman: '1.4'
+    2.0.0:
+      requires_foreman: '1.4'
+    1.0.4:
+      requires_foreman: ''
+    1.0.3:
+      requires_foreman: ''
+    1.0.2:
+      requires_foreman: ''
+    1.0.1:
+      requires_foreman: ''
+    1.0.0:
+      requires_foreman: ''
+  foreman_templates:
+    2.0.3:
+      requires_foreman: '1.9'
+    2.0.2:
+      requires_foreman: '1.9'
+    2.0.1:
+      requires_foreman: '1.9'
+    2.0.0:
+      requires_foreman: '1.9'
+    1.5.0:
+      requires_foreman: ''
+    1.4.0:
+      requires_foreman: ''
+    1.1.0:
+      requires_foreman: ''
+  foreman_xen:
+    0.3.0:
+      requires_foreman: '1.11'
+    0.2.4:
+      requires_foreman: '1.8'
+    0.2.3:
+      requires_foreman: '1.8'
+    0.2.2:
+      requires_foreman: '1.8'
+    0.2.1:
+      requires_foreman: '1.8'
+    0.2.0:
+      requires_foreman: '1.8'
+    0.1.8:
+      requires_foreman: '1.8'
+    0.1.7:
+      requires_foreman: '1.8'
+    0.1.6:
+      requires_foreman: '1.8'
+    0.1.5:
+      requires_foreman: '1.8'
+    0.1.4:
+      requires_foreman: '1.8'
+    0.1.3:
+      requires_foreman: '1.8'
+    0.1.2:
+      requires_foreman: '1.8'
+    0.1.1:
+      requires_foreman: '1.8'
+    0.1.0:
+      requires_foreman: '1.8'
+    0.0.6:
+      requires_foreman: '1.5'
+    0.0.5.1:
+      requires_foreman: '1.5'
+    0.0.5:
+      requires_foreman: '1.5'
+    0.0.4.1:
+      requires_foreman: '1.5'
+    0.0.4:
+      requires_foreman: '1.5'
+    0.0.3:
+      requires_foreman: '1.5'
+    0.0.2:
+      requires_foreman: '1.5'
+    0.0.1:
+      requires_foreman: '1.5'
+  puppetdb_foreman:
+    1.0.2:
+      requires_foreman: '1.11'
+    1.0.0:
+      requires_foreman: '1.10'
+    0.2.0:
+      requires_foreman: '1.0'
+    0.1.3:
+      requires_foreman: '1.0'
