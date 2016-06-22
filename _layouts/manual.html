@@ -11,18 +11,18 @@ latestversion: "1.11"
 				<div id="toc" class="sidebar-nav-fixed pull-right hidden-sm hidden-xs" data-spy="affix" data-offset-top="60" data-offset-bottom="300">
 					{% capture versionmaj %}{{ page.version | split: "." | first | times: 100 }}{% endcapture %}
 					{% capture versioni %}{{ page.version | split: "." | last | plus: versionmaj }}{% endcapture %}
-					{% capture latestmaj %}{{ page.latestversion | split: "." | first | times: 100 }}{% endcapture %}
-					{% capture latesti %}{{ page.latestversion | split: "." | last | plus: latestmaj }}{% endcapture %}
+					{% capture latestmaj %}{{ layout.latestversion | split: "." | first | times: 100 }}{% endcapture %}
+					{% capture latesti %}{{ layout.latestversion | split: "." | last | plus: latestmaj }}{% endcapture %}
 					{% if versioni < latesti %}
 					<div class="alert alert-warning">
 						<p style="margin-bottom: 3px"><strong>Newer version available</strong></p>
-						<p style="margin-bottom: 0">This manual is for Foreman {{ page.version }}, but the <a href="{{ site.baseurl }}manuals/{{ page.latestversion }}/index.html">latest version is {{ page.latestversion }}</a>.</p>
+						<p style="margin-bottom: 0">This manual is for Foreman {{ page.version }}, but the <a href="{{ site.baseurl }}manuals/{{ layout.latestversion }}/index.html">latest version is {{ layout.latestversion }}</a>.</p>
 					</div>
 					{% endif %}
 					{% if versioni > latesti %}
 					<div class="alert alert-warning">
 						<p style="margin-bottom: 3px"><strong>Not yet released</strong></p>
-						<p style="margin-bottom: 0">This manual is for Foreman {{ page.version }}, but <a href="{{ site.baseurl }}manuals/{{ page.latestversion }}/index.html">{{ page.latestversion }}</a> is the current stable version.</p>
+						<p style="margin-bottom: 0">This manual is for Foreman {{ page.version }}, but <a href="{{ site.baseurl }}manuals/{{ layout.latestversion }}/index.html">{{ layout.latestversion }}</a> is the current stable version.</p>
 					</div>
 					{% endif %}
 				</div>
