@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2016-4995: information disclosure through unauthorized template previews](security.html#2016-4995)
 * [CVE-2016-4475: Privilege escalation in Organization and Locations API and UI](security.html#2016-4475)
 * [CVE-2016-4451: Privilege escalation through Organization and Locations API](security.html#2016-4451)
 * [CVE-2016-3728: remote code execution in smart proxy TFTP API](security.html#2016-3728)
@@ -58,6 +59,16 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2016-4995"></a>CVE-2016-4995: information disclosure through unauthorized template previews
+
+Users who are logged in with permissions to view some hosts are able to preview provisioning templates for any host by specifying its hostname in the URL, as the specific view_hosts permissions and filters aren't checked.
+
+If the organization or location features are enabled, the user will still be restricted to their associated orgs/locs.
+
+* Affects Foreman 1.11.0 and higher
+* Due to be released
+* Redmine issue [#15490](http://projects.theforeman.org/issues/15490)
 
 #### <a id="2016-4475"></a>CVE-2016-4475: Privilege escalation in Organization and Locations API and UI
 
