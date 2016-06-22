@@ -232,7 +232,7 @@ version: "1.8"
 ## 5.6 Rails Console
 {%include manuals/1.8/5.6_rails_console.md %}
 
-<a name="5.7SPNEGOauthentication"></a>
+<a id="5.7SPNEGOauthentication"></a>
 
 ## 5.7 External Authentication
 {%include manuals/1.8/5.7_external_authentication.md %}

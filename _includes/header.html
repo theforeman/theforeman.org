@@ -1,6 +1,7 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/Organization" lang="en">
   <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <base href="{{ site.baseurl }}/">
     {% if page.sitename != nil %}
     {% assign sitename = page.sitename %}
@@ -36,7 +37,6 @@
 
 	<meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0;" />
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   {% if page.redirect != nil %}
   <meta http-equiv="refresh" content="1; url={{ page.redirect }}" />
   {% endif %}
@@ -51,9 +51,9 @@
   {% endif %}
 		<div class="container">
       {% if page.url != "/" %}
-		    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+		    <nav class="navbar navbar-default navbar-static-top">
 	    {% else %}
-		    <nav class="navbar navbar-default navbar-static-top navbar-index" role="navigation">
+		    <nav class="navbar navbar-default navbar-static-top navbar-index">
       {% endif %}
 				<ul class="nav navbar-nav nav-justified">
           {% if page.url != "/" %}
@@ -65,7 +65,6 @@
 					{% for link in site.navigation %}
 			  		<li><a href="{{ site.baseurl}}/{{ link.url }}"> {{ link.text }} </a></li>
 					{% endfor %}
-					</li>
 				</ul>
 			</nav>
       {% if page.url == "/" %}
