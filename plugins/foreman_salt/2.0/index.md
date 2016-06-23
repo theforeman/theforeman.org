@@ -260,7 +260,7 @@ Using Curl to get a list of keys from "smartproxy.example.com":
 
 ## 3.9 CLI
 
-A [hammer](www.theforeman.org/manuals/latest/index.html#4.5CommandLineInterface) plugin for Salt is available, [follow the instructions for installing a plugin](http://www.theforeman.org/manuals/latest/index.html#6.1InstallaPlugin) to install hammer_cli_foreman_salt, and then see `hammer --help` for more information.
+A [hammer](http://www.theforeman.org/manuals/latest/index.html#4.5CommandLineInterface) plugin for Salt is available, [follow the instructions for installing a plugin](http://www.theforeman.org/manuals/latest/index.html#6.1InstallaPlugin) to install hammer_cli_foreman_salt, and then see `hammer --help` for more information.
 
 Examples:
 
