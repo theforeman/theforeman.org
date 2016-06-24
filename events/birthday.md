@@ -56,3 +56,15 @@ Further links and schedule will be added once it's all confirmed.
 Chris Pisano at The Advisory Board Company is working on hosting
 a Foreman meetup for the end of July, likely to be an evening
 event with some speakers and chat.
+
+### Foreman @ Inuits Antwerp (13th July 2016)
+
+[Inuits](https://inuits.eu) will host a Foreman meetup on the 13th of July, 6.pm
+CEST. We'll have some speakers (if you want to speak, please [contact
+us](mailto:roidelapluie@inuits.eu)) and throw a small party to celebrate the
+Foreman Birthday.
+
+Inuits
+Essensteenweg 31
+2930 Brasschaat
+Belgium
