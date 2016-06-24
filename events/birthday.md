@@ -10,7 +10,7 @@ title: Foreman's 7th Birthday Events
 
 ## Foreman's 7th Birthday
 
-**It's our brithday!** On July 13th, we'll be 7 years old. In combination with
+**It's our birthday!** On July 13th, we'll be 7 years old. In combination with
 the 1.12 release, including the long-awaited Puppet 4 support, we think this
 worth celebrating!
 
