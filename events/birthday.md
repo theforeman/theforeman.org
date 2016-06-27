@@ -60,11 +60,16 @@ event with some speakers and chat.
 ### Foreman @ Inuits Antwerp (13th July 2016)
 
 [Inuits](https://inuits.eu) will host a Foreman meetup on the 13th of July, 6.pm
-CEST. We'll have some speakers (if you want to speak, please [contact
-us](mailto:roidelapluie@inuits.eu)) and throw a small party to celebrate the
-Foreman Birthday.
+CEST. We'll have some speakers (if you want to speak, please contact us) and we
+will throw a small party to celebrate the Foreman Birthday. If weather allows
+it, we will also have a swim!
 
-Inuits
-Essensteenweg 31
-2930 Brasschaat
+* [Registration](http://www.meetup.com/Belgian-Puppet-User-Group/events/232171666/)
+* [Contact](mailto:roidelapluie@inuits.eu)
+
+<address>
+<strong>Inuits</strong><br/>
+Essensteenweg 31<br/>
+2930 Brasschaat<br/>
 Belgium
+</address>

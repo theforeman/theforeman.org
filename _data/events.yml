@@ -301,3 +301,14 @@
   description: |
     Come help triage newly filed issues and discuss their impact and
     priority.
+- title: 'Foreman 7th Birthday Party'
+  type: Party
+  location: Inuits, Essensteenweg 31, Brasschaat, Belgium
+  start: 2016-07-13 18:00 CEST
+  end: 2016-07-13 22:00 CEST
+  url: 'http://www.meetup.com/Belgian-Puppet-User-Group/events/232171666/'
+  description: |
+    We will host a great party, talking about The Foreman. We will have a
+    couple of people on stage (consider this as a CFP) speaking about their
+    experience with The Foreman. And, if weather allows it, the swimming pool
+    will be open!
