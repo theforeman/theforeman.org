@@ -13,3 +13,5 @@ Components include the Foreman web UI, Smart Proxy, Passenger, a Puppet master (
 * _Supported, but deprecated: RHEL, CentOS, Scientific Linux or Oracle Linux 6_
 
 Other operating systems will need to use alternative installation methods (see the manual).
+
+The installation will require 4GB of memory, see [System Requirements](manuals/{{page.version}}/index.html#3.1SystemRequirements) for more information.
