@@ -13,7 +13,7 @@ excerpt: |
   the necessity of Organizations, Locations and RBAC to do so.
 ---
 
-###Overview
+### Overview
 
 We are a fairly large company consisting of eight offices and three data
 centers. Between these eight offices and three data centers we have about six
@@ -23,7 +23,7 @@ maintain their servers. For this reason we needed to build Foreman in a way
 where everyone can manage their servers and keep Enterprise Technologies from
 being a bottleneck.
 
-###Locations and Organizations
+### Locations and Organizations
 
 Locations was a no brainer for us. With eight offices and three data centers we
 definitely needed a way to classify the location of our hosts and in turn use
@@ -116,7 +116,7 @@ Example Organizations:
 ![Foreman
 Organizations](/static/images/blog_images/2016-01-15-example_organizations.png)
 
-####Enter Host Groups
+#### Enter Host Groups
 
 Host groups can be a challenge, and if implemented incorrectly you are left with
 an inefficient nested structure that spirals out of control and leaves you with
@@ -140,7 +140,7 @@ the subsequent host group. For teams that oversee all products in an organizatio
 (it is rare but some do exist) their permissions stop at the organization with
 no additional filters for host groups.
 
-###Role Based Access Control (RBAC)
+### Role Based Access Control (RBAC)
 
 We have two main roles for each product; a user role and an admin role. There
 are a few groups that are full administrators and a couple groups that have
@@ -158,7 +158,7 @@ and reports. These users can also view trend data as well as create trends.These
 roles are primarily for non technical members of teams that still need to search and
 find information on their hosts.
 
-###Conclusion
+### Conclusion
 
 This is definitely still a work in progress as we do not currently have all of
 our teams integrated and using Foreman to manage their hosts. We do believe that

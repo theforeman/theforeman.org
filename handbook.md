@@ -80,7 +80,7 @@ Optionally, include more detailed explanatory text if necessary and wrap it to a
 
 Ensure the description is of the change and not the bug title, e.g. "X now accepts Y when doing Z" rather than "Z throws error".
 
-####Notes
+#### Notes
 
 * Some background to justify this commit message style can be found [here](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
 * By adding 'Refs #<issue number>' PR processor will auto add the commit to an existing issue. Usually an already closed issue, or just to add some code to a existing issue with another PR open.
@@ -89,7 +89,7 @@ Ensure the description is of the change and not the bug title, e.g. "X now accep
 ### Ruby
 We follow the [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide) and the [Rails Style Guide](https://github.com/bbatsov/rails-style-guide). We use Rubocop (in Jenkins) to enforce most of these rules. New projects such as plugins should enforce all Rubocop rules and disabling them should be done under a very specific circumstances.
 
-####Do
+#### Do
 * Use ```blank?``` over ```empty?``` for strings.
 * Keep in mind models need to be filtered through the scope `authorized`.
 * If you feel like you are nearly copy pasting code, please refactor.
@@ -119,7 +119,7 @@ We follow the [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide) an
 * Deprecations use Foreman::Deprecation with a deadline of latest stable + three
 * Use ```:success, :not_authorized, etc...```, instead of actual HTTP status codes.
 
-####Don't
+#### Don't
 * Use ```.to_sym```, ```.send```, ```eval``` or other reflection on untrusted inputs.
 * Catch unexpected exceptions, or `Foreman::Exception`.
 * Use single character variable names or abbreviations. The keyboard erosion you might save by doing that is not worth it.
