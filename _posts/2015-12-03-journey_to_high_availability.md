@@ -14,14 +14,14 @@ excerpt: |
   We will also be looking forward beyond our current implementation to future plans.
 ---
 
-###Overview
+### Overview
 
 We started with Foreman almost two years ago now because we simply needed a front end to Puppet and the Open Source Puppet Dashboard just didn't fit the bill at the time. We deployed an all in one implementation as a POC using MySQL and eventually moved into production with a PostgreSQL database and two clustered external Puppet Masters. The Puppet CA lived on Foreman as well as the Smart-Proxy and we set up an unnecessary host group structure with an obscene amount of Smart-Class Parameters; we did not use Hiera at the time. As our environment grew our implementation became slower and slower. We added resources but at the end of the day it was still a single instance running the Puppet CA, Foreman webUI and the ENC/Reports functions. As we grew to over 1,000 hosts (today ~1,800) things got worse; our host groups increased, our Smart-Class Parameters increased and our performance decreased. We lived with this for some time being satisfied with the status quo until we set an initiative to deploy an implementation suitable for an enterprise. It is here where all the fun begins.
 
 If you are interested in watching the live discussion on this topic here is an interview as part of the Foreman Case Study series.
 [Foreman HA Case Study](https://www.youtube.com/watch?v=bJ5a67SSA-s)
 
-###Requirements
+### Requirements
 
 Before the project began we needed to come up with a list of requirements the implementation needed to meet and prioritize what is necessary now and what we can implement in the future. Below is what we came up with.
 
@@ -74,13 +74,13 @@ Part of the goal is to have Foreman manage our servers lifecycle and increase ou
 
 ![Foreman Architecture](/static/images/blog_images/2015-12-03-journey_to_high_availability.png)
 
-###The Implementation
+### The Implementation
 
-####Building the Infrastructure
+#### Building the Infrastructure
 
 I will discuss building the entire deployment with the exception of the database. Our Enterprise Data Management team built and maintains our PostgreSQL backend; we just have a username, database name and password to connect with. They are using PostgreSQL 9.x and utilizing PG_Pool for high availability.
 
-####Foreman and Memcache (The fun stuff)
+#### Foreman and Memcache (The fun stuff)
 
 The first thing we needed to do before building out our Foreman cluster was to actually figure out what was needed and how Foreman works on a deeper level. Naturally the first move was to go directly to the community in IRC and the Google groups to consult with others that know more than I do. There are two ways you can build your Foreman cluster; a single cluster for all functions or two separate clusters broken out for ENC/Reporting and a webUI. After doing some research into each we decided to go with the simpler single cluster knowing that in the future (sooner than we are expecting) we will need to build a second cluster dedicated to ENC/Reporting functions. Luckily this is an easy change in architecture to implement and can be done with little impact. That is for another post though, so I will focus on what we ended up doing. After some consideration we decided to go with a three node cluster (by the time this gets published it might very well be a four node cluster). We were going to originally go with a two node cluster but since our legacy stuff makes heavy use of smart-class parameters we wanted the extra node to help spread the load rendering all of the ENC data for hosts we aren't going to migrate to our new code base. We also learned that Foreman stores it's sessions in the database so loadbalancing wasn't going to be as complex as we originally thought and we could actually look at implementing some cool things in the future since we don't need to implement any type of persistence. Another important thing to know is that each Foreman server will have their hostname based Puppet certificate, but for clustering you will need to generate a generically named certificate to be distributed across your Foreman servers and used for the webUI and ENC/Reporting functions. We generated the certificate based on the URL name we were going to use.
 
@@ -90,7 +90,7 @@ When it came time to configuring the loadbalancer for our Foreman cluster it was
 
 At this point we successfully had Foreman clustered. We were able to drop nodes from the load balancer, restart services and power cycle hosts without impacting availability or performance. This was just one peice of our implementation though; we still needed our Smart-Proxies and our Puppet infrastructure.
 
-####Smart-Proxy
+#### Smart-Proxy
 
 We are currently using three forms of the Foreman Smart-Proxy; Puppet, PuppetCA, DHCP. We are looking to implement DNS soon but were unable to complete it during this timeframe. All of our Smart-Proxies are configured to talk to the URL of our Foreman cluster that passes traffic through the load balancer.
 
@@ -102,7 +102,7 @@ We are also very familiar setting up the Smart-Proxy on our Puppet servers so th
 
 As I stated earlier future plans are to implement the DNS Smart-Proxy as well as implement the MS DHCP cluster ability in Server 2012R2 and then clustering the DHCP Smart-Proxy.
 
-####Puppet
+#### Puppet
 
 I will not go into great detail about our Puppet implementation since this is a blog posting for Foreman but I will give enough of an overview to gain a decent understanding of how to build highly available Puppet. If you have any questions or just want to chat about this type of implementation and what we ran into/did in more detail feel free to ping me on IRC. Username: discr33t.
 
@@ -120,6 +120,6 @@ We wanted to institute PuppetDB for the insight it will give us into our environ
 
 Once you have these three peices functional a big congratulations is in order because you have just built a highly available implementation of Puppet! Though PuppetDB is not necessary it is the icing on the cake for this part.
 
-###Conclusion
+### Conclusion
 
 Through all of this we have managed to build a highly available implementation of Foreman and Puppet to help us provision and manage our infrastructure. So far things are going well but there is more we want to do and will need to do as our environment grows. We are no longer using Smart-Class parameters and are fully utilizing Hiera, though we make use of some custom made parameters in Foreman to build a better Hiera hierarchy for our environment. I hope this is helpful reading to others looking to achieve the same or similar implementations. I can't thank the Foreman community enough for their continued help. Keep an eye out for future blog posts for how we are using Foreman to help us implement an infrastructure as a service model within our firm. An architecture diagram of our final product is linked below for those interested.
