@@ -1186,3 +1186,21 @@ a.fc-event.old {
   border-color: #9d8d9e;
 	background-color: rgba(2, 93, 140, 0.2);
 }
+
+/* Banner alert */
+
+a.news-tease {
+  background-color: rgb(0, 62, 95);
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  display: block;
+  line-height: 20px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  text-align: center;
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  text-decoration-color: rgb(255, 255, 255);
+}

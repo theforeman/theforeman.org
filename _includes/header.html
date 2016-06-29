@@ -44,7 +44,10 @@
 </head>
 
 <body>
- {% if page.url != "/" %}
+  {% if site.teaseurl != nil %}
+    <a href='{{ site.teaseurl }}' class="news-tease">{{ site.teasetext }}</a>
+  {% endif %}
+  {% if page.url != "/" %}
     <header id="page-header" style='padding: 0'>
 	{% else %}
     <header id="page-header">
