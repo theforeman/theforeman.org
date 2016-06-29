@@ -1145,6 +1145,18 @@ code {
   border-width: 0.833333px;
 }
 
+.foreman-grey-infobox {
+  background-color: grey;
+  border-style: solid;
+  border-radius: 4px;
+  padding: 2px 6px 2px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  border-width: 0.833333px;
+}
+
 /* Our changes to FullCalendar */
 #calendar {
   padding-top: 20px;
