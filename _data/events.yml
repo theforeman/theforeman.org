@@ -208,7 +208,40 @@
     have been involved in it for decades. The conference has a culture of
     critical thought, deep technical insights, continuous improvement, and
     innovation
-
+- title: "Foreman's 7th Birthday: Techmeetup Edinburgh"
+  type: 'Talk'
+  speaker: 'Greg Sutcliffe'
+  location: Skyscanner, Edinburgh
+  start: 2016-07-13 19:00 BST
+  end: 2016-07-13 22:30 BST
+  url: 'http://techmeetup.co.uk/'
+  description: |
+    Foreman's 7th Birthday is here! I'll be in Edinburgh for the day, talking
+    about the basics of Foreman, some of it's history, and it's awesome
+    community of users and developers. Come along to find out more about
+    Foreman (if you're new to it) and what's new in the upcoming 1.12 release.
+- title: "Foreman's 7th Birthday: Inuits Antwerp"
+  type: Party
+  location: Inuits, Essensteenweg 31, Brasschaat, Belgium
+  start: 2016-07-13 18:00 CEST
+  end: 2016-07-13 22:00 CEST
+  url: 'http://www.meetup.com/Belgian-Puppet-User-Group/events/232171666/'
+  description: |
+    Let's celebrate the Foreman 7th anniversary! We will host a great party,
+    talking about The Foreman. We will have a couple of people on stage
+    (consider this as a CFP) speaking about their experience with The Foreman.
+    And, if weather allows it, the swimming pool will be open!
+- title: "Foreman's 7th Birthday: NETWAYS Nuremburg"
+  type: 'Conference'
+  location: Netways, Deutschherrenstr. 15-19, Nuremberg, Germany
+  start: 2016-07-21 12:30 CEST
+  end: 2016-07-21 22:00 CEST
+  url: 'https://blog.netways.de/2016/06/24/foreman-7-geburtstag/'
+  description: |
+    Celebrating the 7th birthday - an entire half-day conference on Foreman!
+    The folks at NETWAYS are kindly hosting an afternoon of hands-on time, and
+    talks from community members & users, followed by dinner out where we can
+    party in style.
 - title: 'Training: Foreman (German)'
   type: 'Training'
   tags:
@@ -301,14 +334,3 @@
   description: |
     Come help triage newly filed issues and discuss their impact and
     priority.
-- title: 'Foreman 7th Birthday Party'
-  type: Party
-  location: Inuits, Essensteenweg 31, Brasschaat, Belgium
-  start: 2016-07-13 18:00 CEST
-  end: 2016-07-13 22:00 CEST
-  url: 'http://www.meetup.com/Belgian-Puppet-User-Group/events/232171666/'
-  description: |
-    We will host a great party, talking about The Foreman. We will have a
-    couple of people on stage (consider this as a CFP) speaking about their
-    experience with The Foreman. And, if weather allows it, the swimming pool
-    will be open!
