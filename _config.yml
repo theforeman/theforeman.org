@@ -32,6 +32,8 @@ navigation:
   url: contribute.html
 - text: Videos
   url: media.html
+- text: Blog
+  url: blog/index.html
 
 gems:
   - jekyll-feed
