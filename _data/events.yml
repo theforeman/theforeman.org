@@ -231,6 +231,22 @@
     talking about The Foreman. We will have a couple of people on stage
     (consider this as a CFP) speaking about their experience with The Foreman.
     And, if weather allows it, the swimming pool will be open!
+- title: 'Case Study: Foreman in Consulting, Government, AWS - with Matt Darcy'
+  type: 'Case Study'
+  tags:
+  - aws
+  - government
+  - proxy
+  - plugins
+  location: virtual
+  speaker: 'Matt Darcy & Greg Sutcliffe'
+  start: 2016-07-14 14:00 BST
+  url: 'https://plus.google.com/events/c9h74aq4a61usucq5hlgm6femds'
+  description: |
+    The case study returns! In this session, we'll chat with Matt Darcy (ikonia
+    on IRC) who'll be talking to us about doing consulting work with Foreman,
+    getting Foreman implemented in governments, and extensive use of the AWS
+    features we have.
 - title: "Foreman's 7th Birthday: NETWAYS Nuremburg"
   type: 'Conference'
   location: Netways, Deutschherrenstr. 15-19, Nuremberg, Germany
