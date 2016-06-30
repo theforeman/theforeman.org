@@ -77,11 +77,14 @@ Deutschherrnstr. 15-19<br/>
 Germany
 </address>
 
-### Foreman @ Washington DC (Date TBD)
+### Foreman @ Washington DC (27th July 2016)
 
-Chris Pisano at The Advisory Board Company is working on hosting
-a Foreman meetup for the end of July, likely to be an evening
-event with some speakers and chat.
+Chris Pisano (irc: discr33t) at The Advisory Board Company will be hosting a Foreman
+meetup for the Washington DC area. It will be an evening event starting at 6pm with at
+least two talks (speakers step forward!). Pizza and drinks will be provided as well
+as some swag. Registration on Eventbrite is free. ..literally just to get a head count.
+
+* [Registration](https://www.eventbrite.com/e/theforeman-birthday-meetup-tickets-26352336548)
 
 ### Foreman @ Inuits Antwerp (13th July 2016)
 
