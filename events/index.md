@@ -19,5 +19,5 @@ Know of an event not listed here? .. or want to fix some details? Please
 **It's our brithday!** On July 13th, we'll be 7 years old. In
 combination with the 1.12 release, including the long-awaited
 Puppet 4 support, we think this worth celebrating! Please head
-over to the [birthday page](/events/birthday.html) for more info
+over to the [birthday page](/2016/06/foremans-7th-birthday-events.html) for more info
 on the planned events.
