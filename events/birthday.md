@@ -49,7 +49,24 @@ some in-person hacking.
 We'll then break for coffee before having some talks from users and
 contributors, and then head out for some food.
 
-Further links and schedule will be added once it's all confirmed.
+Time        | Program
+------------|------------------------------------------------------
+12:30-15:00 | Hands-on with demo systems and help for your own setup
+15:00-15:30 | Coffee break
+15:30-16:10 | What's new in Foreman 1.12 - Michael Moll (Mayflower GmbH)
+16:15-16:55 | From 0 to 2000 - Life-Cycle-Management with Foreman at dm-drogeriemarkt - Timo Goebel (FILIADATA GmbH)
+17:00-17:45 | Foreman and OpenNebula at NETWAYS - Achim Ledermueller (NETWAYS GmbH)
+18:00-      | Party
+
+* [Registration](https://www.eventbrite.com/e/foreman-birthday-party-tickets-26323083050)
+* [Contact](mailto:dirk.goetz@netways.de)
+
+<address>
+<strong>Netways</strong><br/>
+Deutschherrnstr. 15-19<br/>
+90429 Nürnberg<br/>
+Germany
+</address>
 
 ### Foreman @ Washington DC (Date TBD)
 
