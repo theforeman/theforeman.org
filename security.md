@@ -77,7 +77,7 @@ When accessing Foreman as a user limited to specific organization or location, t
 *Mitigation:* make sure you have filters restricted to organizations or locations when you limit user by assigning them to particular organizations or locations.
 
 * Affects Foreman 1.1 and higher
-* Due to be released
+* Fix released in Foreman 1.12.0-RC3 and due to be released in 1.11.4
 * Redmine issue [#15268](http://projects.theforeman.org/issues/15268)
 
 #### <a id="2016-4451"></a>CVE-2016-4451: Privilege escalation through Organization and Locations API
