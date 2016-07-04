@@ -670,6 +670,22 @@ border-radius: 4px;
   margin-bottom: 0;
 }
 
+.tease {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.tease p {
+  margin-bottom: 0;
+}
+
+.tease a {
+  text-decoration: underline;
+}
+
 #support h2 img{
 	max-width: 60px;
 	background-color: #f2f2f2;
