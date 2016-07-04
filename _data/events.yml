@@ -274,6 +274,18 @@
     Puppet to maintain the systems in Foreman. Furthermore, you will learn
     to administer users and RBAC in Foreman and get an overview of all that
     Foreman has to offer.
+- title: "Foreman's 7th Birthday: The Advisory Board Company, Washington DC"
+  type: 'Meetup'
+  location: 2445 M Street Northwest, Washington, DC 20037, United States
+  start: 2016-07-27 18:00 PDT
+  end: 2016-07-27 20:00 PDT
+  url: 'https://www.eventbrite.com/e/theforeman-birthday-meetup-tickets-26352336548'
+  description: |
+    The Foreman project turns 7 this year, and The Advisory Board Company has
+    been lucky enough to be able to host the Washington DC area meetup. We will
+    have a couple speakers and hopefully some open discussion. The speaker list
+    is still TBD but we are hoping to have at least two different talks along
+    with some food and drink.
 - title: 'Webinar: Foreman - roles and permission (German)'
   type: 'Webinar'
   tags:
