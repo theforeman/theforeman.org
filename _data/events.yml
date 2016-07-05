@@ -362,3 +362,18 @@
   description: |
     Come help triage newly filed issues and discuss their impact and
     priority.
+- title: "Foreman's 7th Birthday: TLV meetup, Tel-Aviv"
+  type: 'Meetup'
+  location: Electra Tower- 34th Floor, 98 Yigal Alon Street, Tel Aviv, Israel
+  start: 2016-07-21 17:00 IST
+  end: 2016-07-21 20:00 IST
+  url: 'https://www.eventbrite.com/e/foreman-112-release-party-7th-birthday-tickets-26418317900'
+  description: |
+    Please join us and celebrate Foreman 7th. birthday and 1.12 release.
+    Agenda:
+    * Foreman in 7 years perspective - Ohad Levy
+    * Metal-As-A-Service and discovery plugin (https://git.io/vKIVE) - Ori Rabin
+    * Chef ❤ Foreman (https://git.io/vKIVg) - Alex Balk
+    * Automating OpenSCAP reports with Foreman (https://git.io/vKIVa) - Shlomi Zadok
+    * Remote Execution (ReX) How-to & demo (https://git.io/vKIVo)
+    And many surprises...
