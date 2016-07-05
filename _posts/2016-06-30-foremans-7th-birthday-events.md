@@ -102,3 +102,26 @@ Essensteenweg 31<br/>
 2930 Brasschaat<br/>
 Belgium
 </address>
+
+### Foreman 7th. birthday - TLV meetup (21st July 2016)
+
+Ohad Levy, and Red Hat TLV Satellite team will be hosting a Foreman meetup In Google
+campus in Tel Aviv. We will start at 5pm with Ohad's 7 years perspective on Foreman,
+followed by talks on Foreman plugins. Pizza and beer will be provided as well as some swag 
+Agenda:
+
+* Foreman in 7 years perspective - Ohad Levy
+* Metal-As-A-Service and discovery plugin (https://git.io/vKIVE) - Ori Rabin
+* Chef ❤ Foreman (https://git.io/vKIVg) - Alex Balk
+* Automating OpenSCAP reports with Foreman (https://git.io/vKIVa) - Shlomi Zadok
+* Remote Execution (ReX) How-to & demo (https://git.io/vKIVo)
+
+* [Registration](https://www.eventbrite.com/e/foreman-112-release-party-7th-birthday-tickets-26418317900)
+* [Contact](mailto:szadok@redhat.com)
+
+<address>
+<strong>Google Campus</strong><br/>
+Electra Tower - 34th Floor<br/>
+98 Yigal Alon Street<br/>
+Tel Aviv, Israel
+</address>
