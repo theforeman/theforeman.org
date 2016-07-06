@@ -45,6 +45,23 @@ awesome community.
 This talk should be recorded and livestreamed (links will be added here once we
 know them) so do tune in and get involved.
 
+### Foreman @ Inuits Antwerp (13th July 2016)
+
+[Inuits](https://inuits.eu) will host a Foreman meetup on the 13th of July, 6.pm
+CEST. We'll have some speakers (if you want to speak, please contact us) and we
+will throw a small party to celebrate the Foreman Birthday. If weather allows
+it, we will also have a swim!
+
+* [Registration](http://www.meetup.com/Belgian-Puppet-User-Group/events/232171666/)
+* [Contact](mailto:roidelapluie@inuits.eu)
+
+<address>
+<strong>Inuits</strong><br/>
+Essensteenweg 31<br/>
+2930 Brasschaat<br/>
+Belgium
+</address>
+
 ### Foreman @ NETWAYS Nürnberg (21st July 2016)
 
 One evening of Foreman not enough? How about a proper half-day event with
@@ -77,32 +94,6 @@ Deutschherrnstr. 15-19<br/>
 Germany
 </address>
 
-### Foreman @ Washington DC (27th July 2016)
-
-Chris Pisano (irc: discr33t) at The Advisory Board Company will be hosting a Foreman
-meetup for the Washington DC area. It will be an evening event starting at 6pm with at
-least two talks (speakers step forward!). Pizza and drinks will be provided as well
-as some swag. Registration on Eventbrite is free. ..literally just to get a head count.
-
-* [Registration](https://www.eventbrite.com/e/theforeman-birthday-meetup-tickets-26352336548)
-
-### Foreman @ Inuits Antwerp (13th July 2016)
-
-[Inuits](https://inuits.eu) will host a Foreman meetup on the 13th of July, 6.pm
-CEST. We'll have some speakers (if you want to speak, please contact us) and we
-will throw a small party to celebrate the Foreman Birthday. If weather allows
-it, we will also have a swim!
-
-* [Registration](http://www.meetup.com/Belgian-Puppet-User-Group/events/232171666/)
-* [Contact](mailto:roidelapluie@inuits.eu)
-
-<address>
-<strong>Inuits</strong><br/>
-Essensteenweg 31<br/>
-2930 Brasschaat<br/>
-Belgium
-</address>
-
 ### Foreman 7th. birthday - TLV meetup (21st July 2016)
 
 Ohad Levy, and Red Hat TLV Satellite team will be hosting a Foreman meetup In Google
@@ -125,3 +116,12 @@ Electra Tower - 34th Floor<br/>
 98 Yigal Alon Street<br/>
 Tel Aviv, Israel
 </address>
+
+### Foreman @ Washington DC (27th July 2016)
+
+Chris Pisano (irc: discr33t) at The Advisory Board Company will be hosting a Foreman
+meetup for the Washington DC area. It will be an evening event starting at 6pm with at
+least two talks (speakers step forward!). Pizza and drinks will be provided as well
+as some swag. Registration on Eventbrite is free. ..literally just to get a head count.
+
+* [Registration](https://www.eventbrite.com/e/theforeman-birthday-meetup-tickets-26352336548)
