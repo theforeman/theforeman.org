@@ -313,6 +313,16 @@
   description: |
     This webinar gives a short introduction to Foreman and Puppet and then
     focuses on user management, roles and permissions.
+- title: 'Foreman Community Demo - 28th July'
+  type: 'Livestream'
+  location: virtual
+  start: 2016-07-28 14:00 BST
+  end: 2016-07-28 15:00 BST
+  url: 'https://plus.google.com/events/ce6k42hdrovujq7qdhm6tbmjra8'
+  description: |
+    Birthday round-up edition! Join us to see what we've been up to in our
+    birthday month, as well as the usual summary of what's been happening in
+    the Foreman Community over the last few weeks.
 - title: 'Webinar: Foreman - Docker integration (German)'
   type: 'Webinar'
   tags:
