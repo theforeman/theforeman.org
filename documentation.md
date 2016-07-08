@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Documentation
-version: '1.11'
+version: '1.12'
 ---
 
 # Documentation
