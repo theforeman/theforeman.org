@@ -14,8 +14,12 @@
     {% endif %}
   {% if page.layout == "post" %}
   <title>{{ sitename }} :: {{ page.title }}</title>
+  {% elsif page.pagename %}
+  <title>{{ sitename }} :: {{ page.pagename }}</title>
+  {% elsif layout.pagename %}
+  <title>{{ sitename }} :: {{ layout.pagename }}</title>
   {% else %}
-  <title>{{ sitename }}{% if pagename %} :: {{ page.pagename }}{% endif %}</title>
+  <title>{{ sitename }}</title>
   {% endif %}
 
   <script type="text/javascript" src="{{ site.baseurl }}/static/js/jquery.js"></script>
