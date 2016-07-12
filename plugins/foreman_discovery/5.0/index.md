@@ -589,6 +589,7 @@ configuration options:
 * fdi.uploadsleep - seconds between facter runs (30 by default)
 * fdi.cachefacts - number of fact uploads without caching (0 by default)
 * fdi.px* - PXE-less workflow (described below)
+* fdi.dhcp_timeout - DHCP timeout in seconds (default 300)
 
 By default, the image tries to send initial facts multiple times. Delay
 between facter runs can be changed with `fdi.uploadsleep`. Once facts are
