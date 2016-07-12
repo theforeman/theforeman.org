@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2016-5390: API host interfaces data not restricted by view_hosts filters](security.html#2016-5390)
 * [CVE-2016-4995: information disclosure through unauthorized template previews](security.html#2016-4995)
 * [CVE-2016-4475: Privilege escalation in Organization and Locations API and UI](security.html#2016-4475)
 * [CVE-2016-4451: Privilege escalation through Organization and Locations API](security.html#2016-4451)
@@ -59,6 +60,16 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2016-5390"></a>CVE-2016-5390: API host interfaces data not restricted by view_hosts filters
+
+Non-admin users with the view_hosts permission containing a filter are able to access API routes beneath "hosts" such as GET /api/v2/hosts/secrethost/interfaces without the filter being taken into account. This allows users to access network interface details (including BMC login details) for any host.
+
+The filter is only correctly used when accessing the main host details (/api/v2/hosts/secrethost). Access to the "nested" routes, which includes interfaces, reports, parameters, audits, facts and Puppet classes, is not authorized beyond requiring any view_hosts permission.
+
+* Affects Foreman 1.10.0 and higher
+* Due to be released
+* Redmine issue [#15653](http://projects.theforeman.org/issues/15653)
 
 #### <a id="2016-4995"></a>CVE-2016-4995: information disclosure through unauthorized template previews
 
