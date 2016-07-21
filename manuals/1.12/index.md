@@ -180,20 +180,23 @@ version: "1.12"
 ### 4.6.4 Scheduled Emails
 {%include manuals/1.12/4.6.4_email_scheduled.md %}
 
-## 4.7 Managing Salt
-{%include manuals/1.12/4.7_managing_salt.md %}
+## 4.7 Managing Ansible
+{%include manuals/1.12/4.7_managing_ansible.md %}
 
 ## 4.8 Managing Chef
 {%include manuals/1.12/4.8_managing_chef.md %}
 
-## 4.9 Monitoring
-{%include manuals/1.12/4.9_monitoring.md %}
-### 4.9.1 Global status
-{%include manuals/1.12/4.9.1_global_status.md %}
-### 4.9.2 Sub-statuses
-{%include manuals/1.12/4.9.2_substatuses.md %}
-### 4.9.3 Searching by statuses
-{%include manuals/1.12/4.9.3_searching_by_statuses.md %}
+## 4.9 Managing Salt
+{%include manuals/1.12/4.9_managing_salt.md %}
+
+## 4.10 Monitoring
+{%include manuals/1.12/4.10_monitoring.md %}
+### 4.10.1 Global status
+{%include manuals/1.12/4.10.1_global_status.md %}
+### 4.10.2 Sub-statuses
+{%include manuals/1.12/4.10.2_substatuses.md %}
+### 4.10.3 Searching by statuses
+{%include manuals/1.12/4.10.3_searching_by_statuses.md %}
 
 # 5. Advanced Foreman
 
