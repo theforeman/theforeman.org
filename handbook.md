@@ -334,3 +334,27 @@ We strive to remain compatible and not break other people's workflows, so if you
 ### Why some features might start as plugins?
 
 The controls in core, such as deep code reviews, plus being subject to quarterly releases, make it difficult to quickly develop some features. For this reason, you might decide to start off your feature as a plugin. Then, once your code has been released, tested, and after review, it could be pulled into core if deemed appropriate.
+
+## Technical notes
+
+### Using the Spring preloader in development
+
+The Spring preloader is installed and enabled by default for development installations to help run Rails consoles and tests quickly.
+
+What you need to know:
+
+1. Running `bin/rake test test/unit/example_test.rb`, `bin/rails c` and similar commands will automatically start and use Spring. Note the bin/ prefix!
+
+1. Spring runs background processes to speed up commands: use `spring status` to see them and `spring stop` to stop (i.e. restart) them. They should automatically restart when required, but improve config/spring.rb if necessary.
+
+Other useful information:
+
+1. `bin/rake test test/unit/example_test.rb` will also run all installed plugin tests, use `ruby -Itest test/unit/example_test.rb` as a workaround.
+
+1. `export DISABLE_SPRING=true` if you don't want to use it at all.
+
+1. To add bin/ to your path automatically so the bin/ prefix isn't required:
+    1. Install [direnv](https://github.com/direnv/direnv/#install) and enable it in your shell rc file ([Fedora packages](https://copr.fedorainfracloud.org/coprs/domcleal/direnv/))
+    1. `echo PATH_add bin > .envrc` in Foreman's dir
+
+1. See the [Spring README](https://github.com/rails/spring#readme) for more useful information.
