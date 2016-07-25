@@ -68,7 +68,7 @@ Non-admin users with the view_hosts permission containing a filter are able to a
 The filter is only correctly used when accessing the main host details (/api/v2/hosts/secrethost). Access to the "nested" routes, which includes interfaces, reports, parameters, audits, facts and Puppet classes, is not authorized beyond requiring any view_hosts permission.
 
 * Affects Foreman 1.10.0 and higher
-* Due to be released
+* Fix released in Foreman 1.12.1 and due to be released in 1.11.4
 * Redmine issue [#15653](http://projects.theforeman.org/issues/15653)
 
 #### <a id="2016-4995"></a>CVE-2016-4995: information disclosure through unauthorized template previews
@@ -78,7 +78,7 @@ Users who are logged in with permissions to view some hosts are able to preview 
 If the organization or location features are enabled, the user will still be restricted to their associated orgs/locs.
 
 * Affects Foreman 1.11.0 and higher
-* Due to be released
+* Fix released in Foreman 1.12.1 and due to be released in 1.11.4
 * Redmine issue [#15490](http://projects.theforeman.org/issues/15490)
 
 #### <a id="2016-4475"></a>CVE-2016-4475: Privilege escalation in Organization and Locations API and UI
