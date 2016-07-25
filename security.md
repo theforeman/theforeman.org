@@ -68,7 +68,7 @@ Non-admin users with the view_hosts permission containing a filter are able to a
 The filter is only correctly used when accessing the main host details (/api/v2/hosts/secrethost). Access to the "nested" routes, which includes interfaces, reports, parameters, audits, facts and Puppet classes, is not authorized beyond requiring any view_hosts permission.
 
 * Affects Foreman 1.10.0 and higher
-* Fix released in Foreman 1.12.1 and due to be released in 1.11.4
+* Fix released in Foreman 1.12.1 and 1.11.4
 * Redmine issue [#15653](http://projects.theforeman.org/issues/15653)
 
 #### <a id="2016-4995"></a>CVE-2016-4995: information disclosure through unauthorized template previews
@@ -78,7 +78,7 @@ Users who are logged in with permissions to view some hosts are able to preview 
 If the organization or location features are enabled, the user will still be restricted to their associated orgs/locs.
 
 * Affects Foreman 1.11.0 and higher
-* Fix released in Foreman 1.12.1 and due to be released in 1.11.4
+* Fix released in Foreman 1.12.1 and 1.11.4
 * Redmine issue [#15490](http://projects.theforeman.org/issues/15490)
 
 #### <a id="2016-4475"></a>CVE-2016-4475: Privilege escalation in Organization and Locations API and UI
@@ -88,7 +88,7 @@ When accessing Foreman as a user limited to specific organization or location, t
 *Mitigation:* make sure you have filters restricted to organizations or locations when you limit user by assigning them to particular organizations or locations.
 
 * Affects Foreman 1.1 and higher
-* Fix released in Foreman 1.12.0-RC3 and due to be released in 1.11.4
+* Fix released in Foreman 1.12.0-RC3 and 1.11.4
 * Redmine issue [#15268](http://projects.theforeman.org/issues/15268)
 
 #### <a id="2016-4451"></a>CVE-2016-4451: Privilege escalation through Organization and Locations API
@@ -98,7 +98,7 @@ When accessing Foreman as a user limited to specific organization, if users know
 *Mitigation:* make sure you have filters restricted to organizations or locations when you limit user by assigning him particular organization or location.
 
 * Affects Foreman 1.7 and higher
-* Fix released in Foreman 1.12.0-RC1 and Foreman 1.11.3
+* Fix released in Foreman 1.12.0-RC1 and 1.11.3
 * Redmine issue [#15812](http://projects.theforeman.org/issues/15182)
 
 #### <a id="2016-3728"></a>CVE-2016-3728: remote code execution in smart proxy TFTP API
