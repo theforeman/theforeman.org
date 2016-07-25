@@ -292,8 +292,8 @@
 - title: "Foreman's 7th Birthday: The Advisory Board Company, Washington DC"
   type: 'Meetup'
   location: 2445 M Street Northwest, Washington, DC 20037, United States
-  start: 2016-07-27 18:00 PDT
-  end: 2016-07-27 20:00 PDT
+  start: 2016-07-27 18:00 EDT
+  end: 2016-07-27 20:00 EDT
   url: 'https://www.eventbrite.com/e/theforeman-birthday-meetup-tickets-26352336548'
   description: |
     The Foreman project turns 7 this year, and The Advisory Board Company has
