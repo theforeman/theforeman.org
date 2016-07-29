@@ -1,8 +1,8 @@
 ---
 layout: plugin
 pluginname: foreman_discovery
-title: Foreman Discovery 5.0 Manual
-version: 5.0
+title: Foreman Discovery 6.0 Manual
+version: 6.0
 # versions for matrix and snippets
 # (use short version for imgver e.g. 3.0)
 pluginver: 5.0.2
@@ -10,7 +10,7 @@ proxyver: 1.0.3
 imgver: 3.1
 cliver: 0.0.2
 # uncomment to show warning box for an old release
-warning: old
+#warning: old
 # uncomment to show development version warning
 #warning: unreleased
 ---
@@ -107,6 +107,13 @@ plugin:
   </tr>
   <tr>
     <td>= 1.11</td>
+    <td>5.0.2</td>
+    <td>1.0.3</td>
+    <td>3.1</td>
+    <td>0.0.2</td>
+  </tr>
+  <tr>
+    <td>= 1.12</td>
     <td>{{page.pluginver}}</td>
     <td>{{page.proxyver}}</td>
     <td>{{page.imgver}}</td>
@@ -115,6 +122,45 @@ plugin:
 </table>
 
 ### 1.1.1 Foreman Discovery plugin
+
+**6.0**: Release notes
+
+This release brings new modal wizard with Quick Create action and fixes several
+bugs.
+
+This update adds the following permissions to existing Discovery Reader role:
+`view_architectures`, `view_domains`, `view_environments`, `view_hosts`,
+`view_hostgroups`, `view_media`, `view_models`, `view_operatingsystems`,
+`view_provisioning_templates`, `view_ptables`, `view_puppetclasses`,
+`view_realms`, `view_smart_proxies`, `view_subnets` and the following
+permissions to Discovery Manager role: `create_hosts`. This was required
+because provisioning was not possible to non-admin roles (see
+[#9306](http://projects.theforeman.org/issues/9306) for more details).
+
+Please review these roles carefully after update!
+
+New features:
+
+* [#4426](http://projects.theforeman.org/issues/4426) - New modal wizard form and quick provisioning
+* [#15731](http://projects.theforeman.org/issues/15731) - Introduced "Clean all facts" setting
+* [#14288](http://projects.theforeman.org/issues/14288) - Lock discovered host into discovery via PXE configuration
+* [#12765](http://projects.theforeman.org/issues/12765) - Rule UI ordered by priority and creation time
+* [#9367](http://projects.theforeman.org/issues/9367) - Fixed rule template tooltip
+* [#9306](http://projects.theforeman.org/issues/9306) - Added missing view permissions to Discovery roles
+
+Noticeable changes:
+
+* [#15368](http://projects.theforeman.org/issues/15368) - Existing discovered host is refreshed on update
+* [#15145](http://projects.theforeman.org/issues/15145) - Added nomodeset to the kexec template
+* [#15788](http://projects.theforeman.org/issues/15788) - Discovery e-mail reporting fixed
+* [#14637](http://projects.theforeman.org/issues/14637) - Missing rules taxonomy API added
+* [#15769](http://projects.theforeman.org/issues/15769) - Nested taxonomy handled properly during discovery
+* [ #9784](http://projects.theforeman.org/issues/9784) - Autoprovisioning populates correctly from hostgroup
+* [#15263](http://projects.theforeman.org/issues/15263) - Dropdown support for taxonomy settings
+* [#14527](http://projects.theforeman.org/issues/14527) - Buttons no longer show up to unauthorized users
+* [#14208](http://projects.theforeman.org/issues/14208) - Allows to list discovered hosts facts from the API
+* [#14010](http://projects.theforeman.org/issues/14010) - Network facts are properly displayed on show screen
+* [#13217](http://projects.theforeman.org/issues/13217) - Rule processing order fixed
 
 **5.0**: Release notes
 
@@ -134,7 +180,7 @@ Detailed changelog:
 * [#12256](http://projects.theforeman.org/issues/12256) - Removed explicit transactions
 * [#13829](http://projects.theforeman.org/issues/13829) - View hosts permission added to reader
 * [#10480](http://projects.theforeman.org/issues/10480) - Email reporting for discovered hosts
-* [#09490](http://projects.theforeman.org/issues/09490) - Added setting to specify fact to use for hostname
+* [#09490](http://projects.theforeman.org/issues/9490) - Added setting to specify fact to use for hostname
 * [#13737](http://projects.theforeman.org/issues/13737) - Priority and max_count columns are limited
 * [#13752](http://projects.theforeman.org/issues/13752) - Display dropdown for discovery_taxonomy settings
 * [#11574](http://projects.theforeman.org/issues/11574) - Rule is deleted with hostgroup
@@ -558,20 +604,51 @@ appears once once or more discovered hosts are selected.
 
 ## 3.1.4 Global settings
 
-There is also setting called *discovery_fact* which defaults to
-*discovery_bootif*. It specify which incoming fact should be used to get the
-MAC address. By default, the PXELinux BOOTIF kernel command line option is
-used which gives the MAC address of the interface which was booted from.
+* Interface fact - Fact name to use for primary interface detection. It specify
+which incoming fact should be used to get the MAC address. By default, the
+PXELinux BOOTIF kernel command line option is used which gives the MAC address
+of the interface which was booted from.
 
-Note that *auto_discovery* option is set to *false* by default. If you want to
+* Auto provisioning - Automatically provision newly discovered hosts, according
+to the provisioning rules. Note it is set to *false* by default. If you want to
 trigger provisioning automatically with rules, you need to turn this setting
 on. It's recommended to try provision manually first to test before proceeding.
 
-It is possible to add any fact reported by Facter via *discovery_fact_column*
-global option onto the Discovered Hosts page table as a new column. To do
-that, set the value of this setting to name of a fact reported. To hide the
-new column, set to a blank value. To show multiple columns, separate fact
-names by comma.
+* Fact columns - Extra facter columns to show in host lists. It is possible to
+add any fact reported by Facter via this global option onto the Discovered
+Hosts page table as a new column. To do that, set the value of this setting to
+name of a fact reported. To hide the new column, set to a blank value. To show
+multiple columns, separate fact names by comma.
+
+* Clean all facts - Clean all reported facts during provisioning (except
+discovery facts).
+
+* Hostname facts - List of facts to use for the hostname (separated by comma,
+first wins).
+
+* Reboot - Automatically reboot or kexec discovered host during provisioning.
+
+* Hostname prefix - The default prefix to use for the host name, must start
+with a letter.
+
+* Highlighted facts - Regex to organize facts for highlights section - e.g.
+^(abc|cde)$.
+
+* Storage facts - Regex to organize facts for storage section.
+
+* Software facts - Regex to organize facts for software section.
+
+* Hardware facts - Regex to organize facts for hardware section.
+
+* Network facts - Regex to organize facts for network section.
+
+* IPMI facts - Regex to organize facts for ipmi section.
+
+* Lock PXE - Automatically generate PXE configuration to pin a newly discovered
+host to discovery.
+
+* Locked template name - PXE template to be used when pinning a host to
+discovery.
 
 ## 3.1.5 Discovery image kernel options
 
