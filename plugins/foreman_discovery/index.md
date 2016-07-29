@@ -1,7 +1,7 @@
 ---
 layout: plugin_index
 title: Foreman discovery documentation
-versions: [5.0, 4.1, 4.0, 3.0, 2.0]
+versions: [6.0, 5.0, 4.1, 4.0, 3.0, 2.0]
 ---
 
 # Foreman discovery manuals
