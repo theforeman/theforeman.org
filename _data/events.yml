@@ -323,6 +323,16 @@
     Birthday round-up edition! Join us to see what we've been up to in our
     birthday month, as well as the usual summary of what's been happening in
     the Foreman Community over the last few weeks.
+- title: 'Foreman Community Demo - 18th August'
+  type: 'Livestream'
+  location: virtual
+  start: 2016-08-18 14:00 BST
+  end: 2016-08-18 15:00 BST
+  url: 'https://plus.google.com/events/c8ht5atvbgbabgul7jeino2vg4c'
+  description: |
+    Round-up time! August already, where does the time go? Join us once again
+    for the latest happenings in the Foreman community, get involved via the
+    Q&A app or via the #theforeman IRC channel
 - title: 'Webinar: Foreman - Docker integration (German)'
   type: 'Webinar'
   tags:
