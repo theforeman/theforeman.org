@@ -242,6 +242,8 @@ version: "1.12"
 
 ## 5.3 Install Locations
 {%include manuals/1.12/missing.html %}
+-
+
 ## 5.4 Securing Communications with SSL
 {%include manuals/1.12/5.4_communications.md %}
 ### 5.4.1 Securing Puppet Master Requests
