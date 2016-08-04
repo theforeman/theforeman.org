@@ -323,6 +323,16 @@
     Birthday round-up edition! Join us to see what we've been up to in our
     birthday month, as well as the usual summary of what's been happening in
     the Foreman Community over the last few weeks.
+- title: "Foreman's 7th Birthday: Raleigh Puppet User Group"
+  type: Party
+  location: Arista Networks, 500 Gregson Dr, Suite 150, Cary, NC
+  start: 2016-08-10 19:00 EDT
+  end: 2016-08-10 21:00 EDT
+  url: 'http://www.meetup.com/Raleigh-Puppet-User-Group/events/232645458/'
+  description: |
+    For the last event in the Foreman birthday month, Eric Helms and Justin
+    Sherrill will be heading down to the Raleigh Puppet User Group to give an
+    overview of Foreman and the new features in 1.12
 - title: 'Foreman Community Demo - 18th August'
   type: 'Livestream'
   location: virtual

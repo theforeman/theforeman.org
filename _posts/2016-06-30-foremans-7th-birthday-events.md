@@ -125,3 +125,11 @@ least two talks (speakers step forward!). Pizza and drinks will be provided as w
 as some swag. Registration on Eventbrite is free. ..literally just to get a head count.
 
 * [Registration](https://www.eventbrite.com/e/theforeman-birthday-meetup-tickets-26352336548)
+
+### Foreman @ Raleigh Puppet User Group (10th August 2016)
+
+The Raleigh PUG meets at Arista Networks in Cary, Raleigh, and this month is
+giving a speaker slot to Eric Helms and Justin Sherrill. They will be giving an
+overview of Foreman and the new features in 1.12.
+
+* [Registration](http://www.meetup.com/Raleigh-Puppet-User-Group/events/232645458/)
