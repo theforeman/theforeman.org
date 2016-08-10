@@ -44,9 +44,10 @@ git remote add upstream https://github.com/theforeman/foreman.git
 git fetch upstream
 {% endhighlight %}
 * Copy `config/settings.yaml.example` to `config/settings.yaml`
-* Install all required gems:
+* Install all required gems and node modules:
 {% highlight bash %}
 bundle install
+npm install
 {% endhighlight %}
 
 You may get some failures when installing the required gems due to some
@@ -77,7 +78,7 @@ Any version of Ruby that is older than those listed is not supported.
 ### Startup foreman
 1. Follow steps 1, 2 and 3 from the section "setup test environment" if you haven't done so already
 1. Populate database: `bundle exec bin/rake db:seed` and take note of the password it generates
-1. Startup the server: `bundle exec bin/rails server`
+1. Startup the server: `bundle exec foreman start`
 1. Navigate to [http://localhost:3000](http://localhost:3000)
 1. Login as `admin` with the password from the db:seed step earlier (or reset it with `bundle exec bin/rake permissions:reset`)
 

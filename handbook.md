@@ -358,3 +358,11 @@ Other useful information:
     1. `echo PATH_add bin > .envrc` in Foreman's dir
 
 1. See the [Spring README](https://github.com/rails/spring#readme) for more useful information.
+
+### Using the webpack development server
+
+To allow live reload of front-end assets, Foreman includes a small node.js server provided by webpack. 
+In order to run foreman in development, you have two options:
+
+1. `foreman start` will start both servers simultanously. Note that using pry for debugging in this option is limited, as foreman does not echo back your input. You can choose to run a different rails server then the default (which is `bin/rails server -b 0.0.0.0`) by setting the `RAILS_STARTUP` environment variable.
+1. In seperate terminals, run `bin/rails server` and `./node_modules/.bin/webpack-dev-server --config config/webpack.config.js`. This will allow you to run pry inside the rails application as usual.
