@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2016-6320: network interface device identifiers may contain stored XSS on host form](security.html#2016-6320)
 * [CVE-2016-5390: API host interfaces data not restricted by view_hosts filters](security.html#2016-5390)
 * [CVE-2016-4995: information disclosure through unauthorized template previews](security.html#2016-4995)
 * [CVE-2016-4475: Privilege escalation in Organization and Locations API and UI](security.html#2016-4475)
@@ -60,6 +61,16 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2016-6320"></a>CVE-2016-6320: network interface device identifiers may contain stored XSS on host form
+
+Network interface identifiers stored for hosts may contain HTML or JavaScript that allows a stored XSS (cross-site scripting) vulnerability when later viewing the host edit form.
+
+This issue was reported by Sanket Jagtap.
+
+* Affects Foreman 1.8.0 and higher
+* Fix due to be released in Foreman 1.12.2
+* Redmine issue [#16022](http://projects.theforeman.org/issues/16022)
 
 #### <a id="2016-5390"></a>CVE-2016-5390: API host interfaces data not restricted by view_hosts filters
 
