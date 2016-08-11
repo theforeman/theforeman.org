@@ -84,11 +84,19 @@ Run ansible on your hosts and the callback will send everything to Foreman autom
 
 ![registering a host](static/images/plugins/foreman_ansible/registering_a_host.gif)
 
-If you want to assign Ansible roles to your hosts, please put them on `/etc/ansible/roles/`. After that the plugin will detect them and you will be able to assign them to your hosts when you edit them.
+## 4.1 Importing Roles
 
-![adding roles](static/images/plugins/foreman_ansible/adding_roles.png)
+Ansible roles can be imported from a smart proxy that has 'Ansible' feature or from your local '/etc/ansible/hosts'. List of all roles already imported into Foreman can be accessed through 'Configure' in the main menu. You can select the source for import from the dropdown on the right.
 
-To run the playbook with the roles selected, click on the 'play Ansible roles' button and Foreman will run a playbook on the background with these roles. Logs for this playbook can be found under the regular Foreman log, usually `/var/log/foreman/production.log`
+![ansible roles index](static/images/plugins/foreman_ansible/ansible_roles_index.png)
+
+You will be presented with a list of possible changes. You can remove the roles from Foreman that are obsolete and you can import new ones.
+
+![ansible import roles](static/images/plugins/foreman_ansible/ansible_import_roles.png)
+
+## 4.2 Running a playbook
+
+To run the playbook with the roles selected, click on the 'play Ansible roles' button and Foreman will run a playbook on the background.  Logs for this playbook can be found under the regular Foreman log, usually `/var/log/foreman/production.log`
 
 ![role play](static/images/plugins/foreman_ansible/role_play.png)
 
