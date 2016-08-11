@@ -84,11 +84,29 @@ Run ansible on your hosts and the callback will send everything to Foreman autom
 
 ![registering a host](static/images/plugins/foreman_ansible/registering_a_host.gif)
 
-If you want to assign Ansible roles to your hosts, please put them on `/etc/ansible/roles/`. After that the plugin will detect them and you will be able to assign them to your hosts when you edit them.
+## 4.1 Importing Roles
 
-![adding roles](static/images/plugins/foreman_ansible/adding_roles.png)
+Ansible roles can be imported from a smart proxy that has 'Ansible' feature or from '/etc/ansible/roles' on your Foreman host. A list of all roles already imported into Foreman can be accessed through 'Configure' in the main menu. You can select the source for import from the dropdown on the right.
 
-To run the playbook with the roles selected, click on the 'play Ansible roles' button and Foreman will run a playbook on the background with these roles. Logs for this playbook can be found under the regular Foreman log, usually `/var/log/foreman/production.log`
+![ansible roles index](static/images/plugins/foreman_ansible/ansible_roles_index.png)
+![ansible import dropdown](static/images/plugins/foreman_ansible/ansible_import_dropdown.png)
+
+You will be presented with a list of possible changes. You can remove the Ansible roles from Foreman that are obsolete and you can import new ones.
+
+![ansible import roles](static/images/plugins/foreman_ansible/ansible_import_roles.png)
+
+## 4.2 Selecting roles for a host
+
+Ansible roles can be assigned to a host on 'Ansible Roles' tab on the host's edit page. It is also possible to inherit Ansible roles form a host group.
+Inherited roles are added automatically upon host group change and the select interface disables direct removal of such items.
+![select roles for host](static/images/plugins/foreman_ansible/select_roles_for_host.png)
+
+Host group edit form contains very similar tab where you can pre-configure selection of Ansible roles for hosts.
+![select roles for hostgroup](static/images/plugins/foreman_ansible/select_roles_for_hostgroup.png)
+
+## 4.3 Running a playbook
+
+To run the playbook with the roles selected, click on the 'play Ansible roles' button and Foreman will run a playbook on the background.  Logs for this playbook can be found under the regular Foreman log, usually `/var/log/foreman/production.log`
 
 ![role play](static/images/plugins/foreman_ansible/role_play.png)
 
