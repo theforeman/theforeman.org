@@ -125,6 +125,25 @@ We follow the [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide) an
 * Use single character variable names or abbreviations. The keyboard erosion you might save by doing that is not worth it.
 * Squash exceptions
 
+### JavaScript
+We are supporting and encouraging the use of es2015. (For more information see [Learn ES2015](http://babeljs.io/docs/learn-es2015/).) For browser compatibility, we use Babel to transform the code to es5.  
+
+We use eslint to enforce linting rule. Run eslint by typing `eslint webpack/` in the command line at the root directory.
+
+#### Do
+* Add all new JavaScript files to the project in the 'webpack/assets/javascripts' folder or a sub-folder.
+* Use es2015 syntax and features.
+* Use exporting/importing values from/to modules to manage dependencies.
+
+#### Don't
+* Pollute the global namespace. If, for some reason, you must expose a function/value globally, use the ```window.tfm``` object as implemented in ```bundle.js```.
+
+#### Linting rules
+
+The latest lint rules for foreman can be found [here](https://github.com/theforeman/foreman/blob/develop/.eslintrc). See [ESLint Rules](http://eslint.org/docs/rules/) for more information regarding rule configuration.
+
+ It is possible to disable a specific rule temporarily. You should have a good reason for doing this. For more information see [Configuring ESLint](http://eslint.org/docs/user-guide/configuring).
+ 
 ### Tests
 We use MiniTest::Unit syntax.
 
