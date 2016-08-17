@@ -108,7 +108,6 @@
   description: |
     This webinar gives a short introduction to Foreman and Puppet and then
     focuses on the integration, showing how to assign classes and parameter.
-
 - title: 'NYLUG - Foreman latest updates: Puppet 4, remote execution and discovery'
   type: Talk
   location: Facebook, 770 Broadway, New York
@@ -333,6 +332,15 @@
     For the last event in the Foreman birthday month, Eric Helms and Justin
     Sherrill will be heading down to the Raleigh Puppet User Group to give an
     overview of Foreman and the new features in 1.12
+- title: 'Foreman Deep Dives: Webpack with Tomer Brisker'
+  type: 'Livestream'
+  location: virtual
+  start: 2016-08-17 13:00 BST
+  end: 2016-08-17 14:00 BST
+  url: 'https://plus.google.com/events/cdkmvkpu48h3joaf2r7jk98qihc'
+  description: |
+    Tomer Brisker of the Foreman core team will be going into the details of
+    using Webpack to package NPM assets in the Foreman packages.
 - title: 'Foreman Community Demo - 18th August'
   type: 'Livestream'
   location: virtual
