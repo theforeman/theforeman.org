@@ -70,7 +70,7 @@ Network interface identifiers stored for hosts may contain HTML or JavaScript th
 This issue was reported by Sanket Jagtap.
 
 * Affects Foreman 1.8.0 and higher
-* Fix due to be released in Foreman 1.12.2
+* Fix released in Foreman 1.12.2
 * Redmine issue [#16022](http://projects.theforeman.org/issues/16022)
 
 #### <a id="2016-6319"></a>CVE-2016-6319: Foreman form helpers do not escape JS when rendering label
@@ -78,7 +78,7 @@ This issue was reported by Sanket Jagtap.
 Label parameter of all form helpers was not escaped allowing XSS (cross-site scripting). The Foreman itself did not contain exploitable code but other plugins that relied on form helpers could be vulnerable. One known vulnerable plugin is Remote Execution. All versions of this plugin are affected.
 
 * Affects Foreman 1.6.0 and higher
-* Fix due to be released in Foreman 1.12.2
+* Fix released in Foreman 1.12.2
 * Redmine issue [#16024](http://projects.theforeman.org/issues/16024)
 
 #### <a id="2016-5390"></a>CVE-2016-5390: API host interfaces data not restricted by view_hosts filters
