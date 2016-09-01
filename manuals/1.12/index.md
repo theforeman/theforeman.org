@@ -277,6 +277,17 @@ version: "1.12"
 ### 5.7.6 Namespace separation
 {%include manuals/1.12/5.7.6_namespace_separation.md %}
 
+## 5.8 Multiple Foreman instances
+{%include manuals/1.12/5.8_multiple_foremen.md %}
+### 5.8.1 Sharing the database
+{%include 5.8.1_database.md %}
+### 5.8.2 Encrypting passwords
+{%include 5.8.2_encryption_rb.md %}
+### 5.8.3 Signing cookies
+{%include 5.8.3_secret_token.md %}
+### 5.8.4 Other considerations
+{%include 5.8.4_other_considerations.md %}
+
 # 6. Plugins
 {%include manuals/1.12/6_plugins.md %}
 
