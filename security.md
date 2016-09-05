@@ -622,6 +622,15 @@ Key management is changing at the time of writing to cycle nightly keys every tw
         <td style='white-space:nowrap'></td>
         <td></td>
       </tr>
+      <tr>
+        <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&search=0x4EA2F7E77DFE6FC2">7DFE6FC2</a></td>
+        <td>84E7 90DF FB1D 2EAE C429  C6CD 4EA2 F7E7 7DFE 6FC2</td>
+        <td>Foreman Release Signing Key (1.13)</td>
+        <td style='white-space:nowrap'>2016-09-05</td>
+        <td style='white-space:nowrap'>2017-09-05</td>
+        <td style='white-space:nowrap'></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
 </div>
