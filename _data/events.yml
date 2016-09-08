@@ -415,3 +415,13 @@
   description: |
     Come help triage newly filed issues and discuss their impact and
     priority.
+- title: 'Foreman Community Demo - 15th September'
+  type: 'Livestream'
+  location: virtual
+  start: 2016-08-25 15:00 BST
+  end: 2016-08-25 16:00 BST
+  url: 'https://www.youtube.com/watch?v=GFNPHypFhl4'
+  description: |
+    The Foreman Community Demo is here again! As ever we'll have a selection of
+    developers joining us for the latest in Foreman news, demos of the latest
+    developments, discussion, community updates and more.
