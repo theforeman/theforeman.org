@@ -351,34 +351,6 @@
     Round-up time! August already, where does the time go? Join us once again
     for the latest happenings in the Foreman community, get involved via the
     Q&A app or via the #theforeman IRC channel
-- title: 'Webinar: Foreman - Docker integration (German)'
-  type: 'Webinar'
-  tags:
-  - docker
-  location: virtual
-  speaker: 'Christian Stein & Dirk G&ouml;tz'
-  start: 2016-10-05 10:30 CEST
-  end: 2016-10-05 11:30 CEST
-  url: 'https://www.netways.de/webinare/webinare_aktuell/foreman_docker_integration/'
-  description: |
-    Short introduction to Foreman and Docker. We will focus on the integration and
-    management of Docker containers with Foreman.
-- title: 'Training: Foreman (German)'
-  type: 'Training'
-  tags:
-  - training
-  location: Netways, Deutschherrenstr. 15-19, Nuremberg, Germany
-  speaker: 'Dirk G&ouml;tz'
-  start: 2016-10-06 09:00 CEST
-  end: 2016-10-07 17:00 CEST
-  url: 'https://www.netways.de/events_schulungen/foreman/'
-  description: |
-    In this training you will get to know the main architecture behind Foreman.
-    We will install and configure Foreman so we can show you all the different
-    provisioning options. As for configuration management, we will use
-    Puppet to maintain the systems in Foreman. Furthermore, you will learn
-    to administer users and RBAC in Foreman and get an overview of all that
-    Foreman has to offer.
 - title: 'Katello Issue Triage - 8th June'
   type: 'Livestream'
   location: virtual
@@ -418,10 +390,38 @@
 - title: 'Foreman Community Demo - 15th September'
   type: 'Livestream'
   location: virtual
-  start: 2016-08-25 15:00 BST
-  end: 2016-08-25 16:00 BST
+  start: 2016-09-15 15:00 BST
+  end: 2016-09-15 16:00 BST
   url: 'https://www.youtube.com/watch?v=GFNPHypFhl4'
   description: |
     The Foreman Community Demo is here again! As ever we'll have a selection of
     developers joining us for the latest in Foreman news, demos of the latest
     developments, discussion, community updates and more.
+- title: 'Webinar: Foreman - Docker integration (German)'
+  type: 'Webinar'
+  tags:
+  - docker
+  location: virtual
+  speaker: 'Christian Stein & Dirk G&ouml;tz'
+  start: 2016-10-05 10:30 CEST
+  end: 2016-10-05 11:30 CEST
+  url: 'https://www.netways.de/webinare/webinare_aktuell/foreman_docker_integration/'
+  description: |
+    Short introduction to Foreman and Docker. We will focus on the integration and
+    management of Docker containers with Foreman.
+- title: 'Training: Foreman (German)'
+  type: 'Training'
+  tags:
+  - training
+  location: Netways, Deutschherrenstr. 15-19, Nuremberg, Germany
+  speaker: 'Dirk G&ouml;tz'
+  start: 2016-10-06 09:00 CEST
+  end: 2016-10-07 17:00 CEST
+  url: 'https://www.netways.de/events_schulungen/foreman/'
+  description: |
+    In this training you will get to know the main architecture behind Foreman.
+    We will install and configure Foreman so we can show you all the different
+    provisioning options. As for configuration management, we will use
+    Puppet to maintain the systems in Foreman. Furthermore, you will learn
+    to administer users and RBAC in Foreman and get an overview of all that
+    Foreman has to offer.
