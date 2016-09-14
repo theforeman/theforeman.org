@@ -383,7 +383,9 @@ Other useful information:
 To allow live reload of front-end assets, Foreman includes a small node.js server provided by webpack.
 In order to run foreman in development with the webpack development server, you have two options:
 
-1. `foreman start` will start both servers simultanously. Note that using pry for debugging in this option is limited, as foreman does not echo back your input. You can choose to run a different rails server then the default (which is `bin/rails server -b 0.0.0.0`) by setting the `RAILS_STARTUP` environment variable.
+1. `foreman start` will start both servers simultanously. Note that using pry for debugging in this option is limited, as foreman does not echo back your input. You can choose to run a different rails server then the default (which is `bin/rails server`) by setting the `RAILS_STARTUP` environment variable.
 1. In seperate terminals, run `bin/rails server` and `./node_modules/.bin/webpack-dev-server --config config/webpack.config.js`. This will allow you to run pry inside the rails application as usual.
 
 If you do not want to use the webpack development server (for example, if you only work on the backend), you can set `:webpack_dev_server: false` in `config/settings.yaml` which will disable it. You can then proceed to running foreman as usual (e.g. `bin/rails s`). In this case, however, you will need to manually run `rake webpack:compile` to generate the webpack managed assets.
+
+Please note that `bin/rails server` is bound to localhost by default. Should you need to change the binding (e.g., to a specific ip address or to 0.0.0.0), please use either `BIND=:: foreman start` or create a .env file with `BIND=::`
