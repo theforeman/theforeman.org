@@ -83,6 +83,7 @@ Ensure the description is of the change and not the bug title, e.g. "X now accep
 #### Notes
 
 * Some background to justify this commit message style can be found [here](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
+* More tips for writing better commit messages can be found [here](http://chris.beams.io/posts/git-commit/).
 * By adding 'Refs #<issue number>' PR processor will auto add the commit to an existing issue. Usually an already closed issue, or just to add some code to a existing issue with another PR open.
 * Only use "refs" when when adding to a commit that has not already shipped. If it has shipped in a release already, please file a new issue and use "fixes".
 
