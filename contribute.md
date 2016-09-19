@@ -7,7 +7,7 @@ title: Contributing to Foreman
 
 ## Read the Foreman [handbook](/handbook.html)
 
-The Foreman is an open-source project that's licensed under the GNU Public License version 3.<br>
+The Foreman is an open-source project that's licensed under the GNU General Public License version 3.<br>
 Contributions of all types are gladly accepted!
 
 ## Attend some [Events](/events)
