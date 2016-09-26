@@ -425,3 +425,35 @@
     Puppet to maintain the systems in Foreman. Furthermore, you will learn
     to administer users and RBAC in Foreman and get an overview of all that
     Foreman has to offer.
+- title: 'AnsibleFest Brooklyn'
+  type: 'Conference'
+  location: Brooklyn, New York
+  start: 2016-10-11
+  end: 2016-10-11
+  url: 'https://www.ansible.com/ansiblefest'
+  description: |
+    AnsibleFest is a day-long conference bringing together hundreds of Ansible
+    users, developers and industry partners. Join us for product updates,
+    inspirational talks, tech deep dives, hands-on demos and a day of
+    networking.
+- title: 'Foreman Community Demo - 13th October'
+  type: 'Livestream'
+  location: virtual
+  start: 2016-10-13 15:00 BST
+  end: 2016-10-13 16:00 BST
+  url: 'https://youtu.be/Rao1O1mc8AU'
+  description: |
+    The Foreman Community Demo is here again! As ever we'll have a selection of
+    developers joining us for the latest in Foreman news, demos of the latest
+    developments, discussion, community updates and more.
+- title: 'Config Management Camp - Berlin'
+  type: 'Conference'
+  location: Berlin
+  start: 2016-11-15
+  end: 2016-11-15
+  url: 'http://cfgmgmtcamp.eu/berlin-2016'
+  description: |
+     For the first time ever the CfgMgmt team will leave Gent for a one day
+     single track ConfigManagementCamp style event. They are joining forces with
+     the team running Devopsdays Berlin to host a one day event the day before
+     Devopsdays Berlin 2016 at the same venue.
