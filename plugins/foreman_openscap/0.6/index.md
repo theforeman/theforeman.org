@@ -1,8 +1,8 @@
 ---
 layout: plugin
 title: Foreman OpenSCAP manual
-images: /plugins/foreman_openscap/0.5
-version: 0.5.0
+images: /plugins/foreman_openscap/0.6
+version: 0.6.0
 ---
 
 # 1. {{ page.title }}
@@ -41,9 +41,8 @@ __ARF Report__ is XML output of single scan occurrence per single host. Asset Re
 
 
 ## 1.2 Release notes
-foreman_openscap has two versions: 0.4.x for 1.8+, 0.5.x for 1.11+
 
-Both versions' functionality is the same, the changes only affect to the way it communicates with Foreman and Smart-Proxy APIs
+Compatibility matrix
 
 <table class="table table-bordered table-condensed">
   <tr>
@@ -69,6 +68,12 @@ Both versions' functionality is the same, the changes only affect to the way it 
     <td>0.5.0</td>
     <td>0.5.0</td>
     <td>0.1.2</td>
+  </tr>
+  <tr>
+    <td>>= 1.13</td>
+    <td>0.6.0</td>
+    <td>0.6.0</td>
+    <td>0.2.0</td>
   </tr>
 </table>
 
@@ -137,7 +142,7 @@ Edit ```/etc/foreman-proxy/settings.d/openscap.yml``` with the appropriate setti
 
 ### 2.3 Installing puppet-foreman_scap_client
 
-    puppet module install isimluk-foreman_scap_client
+    puppet module install theforeman-foreman_scap_client
 
 This puppet module will automatically install foreman_scap_client (if not installed) and will configure the client's ```/etc/foreman_scap_client/config.yaml``` with parameters which are needed for the operation of foreman_scap_client. The module is used by Foreman to automate the configuration and triggering of foreman_openscap_client, so you should install it in all puppet environments that your hosts use.
 
