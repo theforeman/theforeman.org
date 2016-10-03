@@ -425,6 +425,19 @@
     Puppet to maintain the systems in Foreman. Furthermore, you will learn
     to administer users and RBAC in Foreman and get an overview of all that
     Foreman has to offer.
+- title: 'Foreman Deep Dives: Host facets (with Shimon Shtein)'
+  type: 'Livestream'
+  location: virtual
+  start: 2016-10-10 14:00 BST
+  end: 2016-10-10 15:00 BST
+  url: 'https://www.youtube.com/watch?v=KBGrGaN4HoQ'
+  description: |
+    In this edition of Foreman Deep Dives, Shimon Shtein (shimshtein on IRC)
+    will be giving us a breakdown of the Host Facets system that's been added
+    to the core codebase - what it's for, the principles behind it, and how you
+    can use it yourself.  As ever, join us live for Q&A or hop in the channel
+    to ask questions later.  Watch live to join in and ask questions via IRC
+    (#theforeman).
 - title: 'AnsibleFest Brooklyn'
   type: 'Conference'
   location: Brooklyn, New York
