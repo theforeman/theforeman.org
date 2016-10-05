@@ -6,6 +6,28 @@ title: Support
 # Support
 ------------------------------
 
+## Community Guidelines
+
+We have a variety of communication tools that the Foreman Community uses to get
+work done. The guidelines below apply in general when interacting with other
+Foreman users & developers:
+
+* Be nice: Treat people with respect and consideration.
+* Be helpful: Be patient with new people and be willing to jump in to answer questions.
+* Be patient: People often have many other things to do, so allow time for your question to be answered
+* Stay calm: When in doubt, assume the best intentions and do not let emotions get out of control
+* Try to keep conversations on-topic where possible - going off on a tangent doesn't solve anyone's problem.
+* Search first: Your question might not be new or you might be able to find someone who has already asked or answered your question. Do a thorough search of the [Manual](https://theforeman.org/), the [Redmine Issues](http://projects.theforeman.org/projects/foreman/issues), and the [Mailing List](https://groups.google.com/forum/#!forum/foreman-users) to see if it has been answered before.
+
+There are also a few extra medium-specific guidelines, listed with each type of support below.
+
+### Reporting Violations
+
+Should you need to speak with someone about another Foreman member's behaviour,
+email the Community Lead, *Greg Sutcliffe* (greg.sutcliffe at gmail.com). You
+may also CC or email *Ohad Levy* (ohad.levy at gmail.com).  We'll do our best
+to listen to your issue fairly and take appropriate action.
+
 ## Gathering information
 
 To get appropriate support, you need to provide sufficient information about
@@ -34,6 +56,19 @@ There is also a low-traffic list dedicated to release and security announcements
 
 * [foreman-announce](https://groups.google.com/forum/?fromgroups#!forum/foreman-announce) or email `foreman-announce+subscribe@googlegroups.com`
 
+### Mailing List Guidelines
+
+In addition to the [general guidelines](/support.html#CommunityGuidelines) above, we also have a few email-specific guidelines:
+
+* Don't hijack threads - start new threads for new questions
+* Don't attach or paste in huge logs or attachments - upload them to a website
+  and include links in your post
+* Let us know if your question is answered - Replying to the thread with
+  *[SOLVED]* in the title lets others know that you no longer need help, and
+  helps others to find solutions when searching the archives
+
+(_Credit to the [Fedora Mailing List Guidelines](http://fedoraproject.org/wiki/Communicate/MailingListGuidelines) as a source of ideas, under the Creative Commons Attribution-ShareAlike 3.0 Unported license_)
+
 ## ![Stack overflow icon](static/images/stackoverflow.png) [Server Fault](http://serverfault.com/questions/tagged/foreman)
 Ask questions about how to use Foreman on Server Fault, so anyone can benefit from the answers. Tag your questions with ['foreman'](http://serverfault.com/questions/tagged/foreman).
 
@@ -49,15 +84,15 @@ plugins, use the development channel:
 * [#theforeman-dev](https://kiwiirc.com/client/irc.freenode.net/?#theforeman-dev) on [irc.freenode.net](http://webchat.freenode.net/)
 
 Please read and understand [this fantastic guide](http://workaround.org/getting-help-on-irc)
-to getting help for open-source projects on irc before diving in. All of the
+to getting help for open-source projects on IRC before diving in. All of the
 points there apply to #theforeman, especially "Don't repeat yourself", "Don't
 ask to ask", and "Stick around".  #theforeman in particular has concentrations
 of people in Europe (CEST) and East-coast US (EST), so asking your question
 when those time zones are in business hours is more likely to get a good
 result.
 
-Be aware that the IRC channel is not an official support channel, it's an ad
-hoc group of people (some of whom work on Foreman for a living) self-organizing
+Be aware that the IRC channel is not an official support channel, it's an ad-hoc
+group of people (some of whom work on Foreman for a living) self-organizing
 to help each other out. If you do not receive an answer to your question,
 (especially if you have not followed the getting help on IRC best practices!),
 that doesn’t mean you are out of options; the software may [have a
@@ -65,17 +100,13 @@ bug](http://projects.theforeman.org/projects/foreman/issues), the docs may be
 lacking, or it's possible Foreman doesn't yet support your use case. It just
 means you need to keep troubleshooting to find out which.
 
-We also have a few IRC-specific guidelines:
+### IRC Guidelines
 
-* Don't be a jerk: Treat people with respect and consideration.
-* Be helpful: Be patient with new people and be willing to jump in to answer questions.
-* Stay calm: The written word is always subject to interpretation, so give people the benefit of the doubt and try not to let emotions get out of control.
+In addition to the [general guidelines](/support.html#CommunityGuidelines) above, we also have a few IRC-specific guidelines:
+
 * Don't post chunks: Avoid posting big chunks of text - use a [pastebin](http://pastie.org/) or similar service to shorten it to a link. Likewise, try not to spam the channel with many messages, it breaks the flow of other conversations.
-* Be patient: Folks might not be around when you ask a question, so wait a while for someone to speak before leaving.
-* Search first: Believe it or not, your question might not be new or you might be able to find someone who has already asked or answered your question. Do a thorough search of the [Manual](http://theforeman.org/), the [Redmine Issues](http://projects.theforeman.org/projects/foreman/issues), and the [Mailing List](https://groups.google.com/forum/#!forum/foreman-users) to see if it has been answered before.
 * Don't private message: Ask permission before you send someone a private message (PM). Not everyone likes them. Also, by keeping it in public, others with similar issues can see the solution you were given.
 * Don't highlight specific people unless you are already discussing something with them. Highlighting a specific user with your opening question makes it far less likely others will respond.
-* Try to keep conversations on-topic where possible - going off on a tangent doesn't solve anyone's problem.
 
 More information: This [IRC primer](http://irchelp.org/irchelp/ircprimer.html) for new users and the [general IRC guidelines, from freenode](http://freenode.net/channel_guidelines.shtml), are also useful resources.
 
