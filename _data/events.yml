@@ -470,3 +470,51 @@
      single track ConfigManagementCamp style event. They are joining forces with
      the team running Devopsdays Berlin to host a one day event the day before
      Devopsdays Berlin 2016 at the same venue.
+- title: 'Training: Foreman (German)'
+  type: 'Training'
+  tags:
+  - training
+  location: Netways, Deutschherrenstr. 15-19, Nuremberg, Germany
+  speaker: 'Dirk G&ouml;tz'
+  start: 2017-02-07 09:00 CEST
+  end: 2017-02-08 17:00 CEST
+  url: 'https://www.netways.de/events_schulungen/foreman/'
+  description: |
+    In this training you will get to know the main architecture behind Foreman.
+    We will install and configure Foreman so we can show you all the different
+    provisioning options. As for configuration management, we will use
+    Puppet to maintain the systems in Foreman. Furthermore, you will learn
+    to administer users and RBAC in Foreman and get an overview of all that
+    Foreman has to offer.
+- title: 'Training: Foreman (German)'
+  type: 'Training'
+  tags:
+  - training
+  location: Netways, Deutschherrenstr. 15-19, Nuremberg, Germany
+  speaker: 'Dirk G&ouml;tz'
+  start: 2017-06-27 09:00 CEST
+  end: 2017-06-28 17:00 CEST
+  url: 'https://www.netways.de/events_schulungen/foreman/'
+  description: |
+    In this training you will get to know the main architecture behind Foreman.
+    We will install and configure Foreman so we can show you all the different
+    provisioning options. As for configuration management, we will use
+    Puppet to maintain the systems in Foreman. Furthermore, you will learn
+    to administer users and RBAC in Foreman and get an overview of all that
+    Foreman has to offer.
+- title: 'Training: Foreman (German)'
+  type: 'Training'
+  tags:
+  - training
+  location: Netways, Deutschherrenstr. 15-19, Nuremberg, Germany
+  speaker: 'Dirk G&ouml;tz'
+  start: 2017-09-26 09:00 CEST
+  end: 2017-09-27 17:00 CEST
+  url: 'https://www.netways.de/events_schulungen/foreman/'
+  description: |
+    In this training you will get to know the main architecture behind Foreman.
+    We will install and configure Foreman so we can show you all the different
+    provisioning options. As for configuration management, we will use
+    Puppet to maintain the systems in Foreman. Furthermore, you will learn
+    to administer users and RBAC in Foreman and get an overview of all that
+    Foreman has to offer.
