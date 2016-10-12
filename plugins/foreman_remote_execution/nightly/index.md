@@ -114,7 +114,7 @@ This chapter covers a clean Foreman and plugin installation. We assume the
 smart proxy will be installed on the same host, however it's not a requirement.
 Please adapt according to your needs.
 
-Start by installing the Foreman nightly or 1.10 repository and EPEL7, see
+Start by installing the latest Foreman or nightly, see
 [Quickstart instructions](/manuals/latest/index.html#2.Quickstart) and [Foreman
 manual](/manuals/latest/index.html#3.InstallingForeman) for more information.
 
