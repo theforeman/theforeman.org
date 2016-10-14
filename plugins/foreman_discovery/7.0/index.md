@@ -1,16 +1,16 @@
 ---
 layout: plugin
 pluginname: foreman_discovery
-title: Foreman Discovery 6.0 Manual
-version: 6.0
+title: Foreman Discovery 7.0 Manual
+version: 7.0
 # versions for matrix and snippets
 # (use short version for imgver e.g. 3.0)
-pluginver: 5.0.2
+pluginver: 7.0.0
 proxyver: 1.0.3
-imgver: 3.1
-cliver: 0.0.2
+imgver: 3.2
+cliver: 0.0.3
 # uncomment to show warning box for an old release
-warning: old
+#warning: old
 # uncomment to show development version warning
 #warning: unreleased
 ---
@@ -114,6 +114,13 @@ plugin:
   </tr>
   <tr>
     <td>= 1.12</td>
+    <td>6.0.0</td>
+    <td>1.0.3</td>
+    <td>3.1</td>
+    <td>0.0.3</td>
+  </tr>
+  <tr>
+    <td>= 1.13</td>
     <td>{{page.pluginver}}</td>
     <td>{{page.proxyver}}</td>
     <td>{{page.imgver}}</td>
@@ -122,6 +129,54 @@ plugin:
 </table>
 
 ### 1.1.1 Foreman Discovery plugin
+
+**7.0**: Release notes
+
+This is mostly bugfix release with some refactoring around strong parameters
+and UEFI support. Discovery now fully supports Debian/Ubuntu operating systems
+in PXE-less environments (Debian kexec template is provided by default).
+
+* [#16324](http://projects.theforeman.org/issues/16324) - Kexec templates fixed for safemode
+* [#16041](http://projects.theforeman.org/issues/16041) - Unify accordion styles in show page
+* [#16105](http://projects.theforeman.org/issues/16105) - Force DNS rebuild when provisioning discovered host
+* [#15777](http://projects.theforeman.org/issues/15777) - Add modal to provision action on show page
+* [#15750](http://projects.theforeman.org/issues/15750) - Added missing strong params for rule
+* [#16081](http://projects.theforeman.org/issues/16081) - FactValue returns value for host method
+* [#15750](http://projects.theforeman.org/issues/15750) - Strong parameters implementation
+
+**Foreman Discovery Image 3.2** was released for this version of plugin. The
+image is smaller size because unused MacOS EFI loaders were dropped.
+Preliminary support for VLAN was added and `biosdevname` package is present on
+the image, therefore DELL systems will report network card names as expected.
+It is possible to turn off this behavior tho.
+
+KMS video drivers were removed from the image to prevent console bugs when
+kexecing and smart proxy log buffer plugin is now enabled by default.
+
+* [#14247](http://projects.theforeman.org/issues/14247) - Prevents proxy from timing out during startup
+* [ #9945](http://projects.theforeman.org/issues/9945) - Add VLAN support for primary interface
+* [ #8540](http://projects.theforeman.org/issues/8540) - Hostname is no longer sent in DHCP request
+* [#16526](http://projects.theforeman.org/issues/16526) - Added biosdevname package
+* [#16450](http://projects.theforeman.org/issues/16450) - Fixed foreman port check
+* [#16420](http://projects.theforeman.org/issues/16420) - Report the foreman server/proxy used to register
+* [#15195](http://projects.theforeman.org/issues/15195) - New option fdi.dhcp_timeout for IPv4
+* [#15138](http://projects.theforeman.org/issues/15138) - Start proxy when IPv4 is not present
+* [#14495](http://projects.theforeman.org/issues/14495) - Added i18n support
+* [#15517](http://projects.theforeman.org/issues/15517) - Root password is not sent to journal
+* [#15144](http://projects.theforeman.org/issues/15144) - Removed KMS video drivers
+* [#14494](http://projects.theforeman.org/issues/14494) - Made texts branding-friendly
+* [#14315](http://projects.theforeman.org/issues/14315) - Fixed proxy logger and enabled log buffer
+
+Known issues:
+
+Auto provisioning does not set Content Source and View/Media correctly when
+Katello plugin is installed. We are tracking this as
+[#16063](http://projects.theforeman.org/issues/16063).
+
+Media, OS and Architecture is not set correctly for interactive provisioning.
+Tracked as [#16750](http://projects.theforeman.org/issues/16750).
+
+These bugfixes will be backported into the 7.0 series when it's ready.
 
 **6.0**: Release notes
 
@@ -648,7 +703,10 @@ with a letter.
 host to discovery.
 
 * Locked template name - PXE template to be used when pinning a host to
-discovery.
+discovery. Each individual PXE template (PXELinux, PXEGrub, PXEGrub2) has its
+own entry.
+
+* Force DNS - DNS entry will be created when provisioning discovered host.
 
 ## 3.1.5 Discovery image kernel options
 
@@ -667,6 +725,7 @@ configuration options:
 * fdi.cachefacts - number of fact uploads without caching (0 by default)
 * fdi.px* - PXE-less workflow (described below)
 * fdi.dhcp_timeout - DHCP timeout in seconds (default 300)
+* fdi.vlan.primary - VLAN ID to set for primary interface
 
 By default, the image tries to send initial facts multiple times. Delay
 between facter runs can be changed with `fdi.uploadsleep`. Once facts are
@@ -792,6 +851,7 @@ well as discovered hosts detail screen. Typical search queries:
     facts.macaddress = "aa:bb:cc:dd:ee:ff"
     facts.macaddress_eth0 = "aa:bb:cc:dd:ee:ff"
     facts.ipaddress_eth1 ~ "192.168.*"
+    facts.discovery_proxy_uri = "https://my_proxy:8443"
 
 As of Foreman 1.7, all the facts are currently simple strings, so it is not
 possible to do numeric comparisons.
@@ -1176,7 +1236,27 @@ Discovery Image version 3.0.0 and older does support booting via EFI thanks to
 Grub 2 which is present on the media alongside SYSLINUX. Remastered images
 preserve this capability as well.
 
-## 6.3 Contributing
+## 6.3 List of facts reported
+
+Additional facts reported by discovery image which sent along information
+collected by facter:
+
+* `discovery_bootif` - primary interface MAC address
+* `discovery_version` - version tag
+* `discovery_release` - release tag (build date)
+* `discovery_proxy_uri` - proxy URL that was configured via command line
+* `discovery_proxy_type` - proxy type that was configured via command line
+
+Extra facts which are sent along additional facts reported in PXE-less mode:
+
+* `discovery_kexec` - kexec utility version
+* `discovery_ip_cidr` - IP address in CIDR format
+* `discovery_ip` - IP address (plain)
+* `discovery_netmask` - network address
+* `discovery_gateway` - gateway address
+* `discovery_dns` - DNS server (primary one)
+
+## 6.4 Contributing
 
 Follow the [same process as Foreman]({{site.baseurl}}contribute.html#SubmitPatches)
 for contributing.
