@@ -459,6 +459,17 @@
     The Foreman Community Demo is here again! As ever we'll have a selection of
     developers joining us for the latest in Foreman news, demos of the latest
     developments, discussion, community updates and more.
+- title: 'Foreman at PuppetConf'
+  type: 'Meetup'
+  location: Yard House, 1640 Camino Del Rio North, San Diego, US
+  start: 2016-10-19 20:00 PDT
+  end: 2016-10-19 22:30 PDT
+  url: 'https://groups.google.com/d/topic/foreman-users/qb8yynyDJ_k/discussion'
+  description: |
+    If you're at PuppetConf and want to meet up with some other Foreman users
+    and chat, then we'll be meeting up in the Yard House just a short walk from
+    the convention centre - come to the Red Hat booth by 19.30 to join the
+    group walking over, or meet us there!
 - title: 'Config Management Camp - Berlin'
   type: 'Conference'
   location: Berlin
