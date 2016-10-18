@@ -15,6 +15,8 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2016-7078: user with no organizations or locations can see all resources](security.html#2016-7078)
+* [CVE-2016-7077: information disclosure from association lists shown without authorization](security.html#2016-7077)
 * [CVE-2016-6320: network interface device identifiers may contain stored XSS on host form](security.html#2016-6320)
 * [CVE-2016-6319: Foreman form helpers do not escape JS when rendering label](security.html#2016-6319)
 * [CVE-2016-5390: API host interfaces data not restricted by view_hosts filters](security.html#2016-5390)
@@ -62,6 +64,28 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2016-7078"></a>CVE-2016-7078: user with no organizations or locations can see all resources
+
+A user account that is associated to no organizations or locations is able to view resources from all organizations/locations in the web UI or API, when either the organization or location feature is enabled. The user remains subject to permissions and filters on their assigned roles.
+
+_Mitigation:_ ensure all users are assigned to at least one organization or location, or disable the feature if unused.
+
+This issue was reported by Daniel Lobato Garcia.
+
+* Affects all known Foreman versions
+* Fix in progress
+* Redmine issue [#16982](http://projects.theforeman.org/issues/16982)
+
+#### <a id="2016-7077"></a>CVE-2016-7077: information disclosure from association lists shown without authorization
+
+Lists of associated resources, such as operating systems associated to a new architecture, are not restricted to listing resources that the user is authorized to view, when rendering with fewer than six items. The list will show all possible associated resources, disclosing their names.
+
+This issue was reported by Jitendra Yejare.
+
+* Affects Foreman 1.1 and higher, but was first mitigated against in Foreman 1.9.0 for some cases
+* Fix in progress
+* Redmine issue [#16971](http://projects.theforeman.org/issues/16971)
 
 #### <a id="2016-6320"></a>CVE-2016-6320: network interface device identifiers may contain stored XSS on host form
 
