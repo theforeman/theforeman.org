@@ -481,6 +481,20 @@
      single track ConfigManagementCamp style event. They are joining forces with
      the team running Devopsdays Berlin to host a one day event the day before
      Devopsdays Berlin 2016 at the same venue.
+- title: 'Config Management Camp - Berlin: Foreman - More than just a Puppet dashboard'
+  type: 'Talk'
+  speaker: 'Dirk G&ouml;tz'
+  location: Berlin
+  start: 2016-11-15 14:45 CET
+  end: 2016-11-15 15:30 CET
+  url: 'http://cfgmgmtcamp.eu/berlin-2016/talks.html#dirk'
+  description: |
+    This talk will give an overview on Foreman's Puppet Integration and the
+    state of the integration of other Config management solutions (Ansible,
+    Salt, Chef). It will introduce the Provision capabilities of Foreman and
+    its addons like the Discovery Plugin for Metal as a Service. Furthermore
+    some Plugins will be shown which extend Foreman's feature set like
+    Orchestration using the Remote Execution Plugin. 
 - title: 'Training: Foreman (German)'
   type: 'Training'
   tags:
