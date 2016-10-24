@@ -5,7 +5,7 @@ title: Security
 
 ## Security process
 
-We take security issues seriously and welcome responsible disclosure from researchers discovering vulnerabilities in Foreman.  Please email [foreman-security@googlegroups.com](mailto:foreman-security@googlegroups.com) (a private address for the security team) with all reports.
+We take security issues seriously and welcome responsible disclosure from researchers discovering vulnerabilities in Foreman.  Please email [foreman-security@googlegroups.com](mailto:foreman-security@googlegroups.com) (a private address for the security team) with all reports. If you notice the security issue is related to a particular plugin, please mention the plugin within the body of the email to help us in routing the issue to the most authoritative source.
 
 We will endeavour to resolve high severity issues in the current stable release and lower severity issues in the next major release.  Announcements of security issues will be made on [foreman-announce](https://groups.google.com/forum/#!forum/foreman-announce) when a release containing a fix is available to end users and credit will be given to the researcher if desired.
 
