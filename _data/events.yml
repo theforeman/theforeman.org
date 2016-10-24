@@ -495,6 +495,19 @@
     its addons like the Discovery Plugin for Metal as a Service. Furthermore
     some Plugins will be shown which extend Foreman's feature set like
     Orchestration using the Remote Execution Plugin. 
+- title: 'vBrownBag Webinar: Intro to Foreman'
+  type: 'Virtual'
+  speaker: 'Greg Sutcliffe'
+  location: virtual
+  start: 2016-11-09 19:30 EST
+  end: 2016-11-09 20:30 EST
+  url: 'http://vbrownbag.com/brownbags'
+  description: |
+    In this one-hour intro for \#vBrownBag, Greg will be giving a high level
+    overview of Foreman, it's core features & usecases, before diving into a
+    demo involving installing and beginning to use Foreman for provisioning and
+    Puppet config management. Some discussion of compute resources will also
+    happen, along with mentions of notable plugins and how to contribute.
 - title: 'Training: Foreman (German)'
   type: 'Training'
   tags:
