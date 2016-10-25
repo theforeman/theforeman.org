@@ -1,0 +1,42 @@
+---
+pagename: Plugin Manuals
+versions: [3.2, 3.1, 3.0, 2.4, nightly]
+---
+
+{% include header.html %}
+
+<div id="wrap">
+	<div class="container">
+    <div class="row" style="border-bottom: 1px solid #CCC;">
+      <h1 class="col-sm-10">
+        Katello {{ page.version }} Documentation
+      </h1>
+      <select class="col-sm-1 pull-right"
+              style="margin-top: 30px;font-size: 12px;padding: 4px 0 4px 2px;text-align: center;"
+              onchange="this.options[this.selectedIndex].value && (window.location = ('/plugins/katello/' + this.options[this.selectedIndex].value + '/index.html'));">
+        {% for version in layout.versions %}
+          <option value="{{ version }}" {% if version == page.version %}selected="true"{% endif %}>
+            {{ version }}
+          </option>
+        {% endfor %}
+      </select>
+    </div>
+
+		<div class="row">
+      <div class="col-sm-3">
+        <div id="toc" class="sidebar-nav-fixed bs-docs-sidenav affix-top static-toc">
+          {% include plugins/katello/sidebar.html  %}
+        </div>
+      </div>
+
+      <div id="doc" class="col-sm-9">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<br/>
+<br/>
+
+{% include footer.html %}

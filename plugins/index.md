@@ -90,7 +90,7 @@ Foreman plugins are implemented as [Rails engines](http://guides.rubyonrails.org
 		</a>
 	</div>
 	<div class='col-md-3 center'>
-		<a href="http://katello.org/" class="btn-doc btn">
+		<a href="plugins/katello" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-cloud-upload"></i></p>
 			Katello
 		</a>

@@ -1214,3 +1214,12 @@ a.fc-event.old {
   border-color: #9d8d9e;
 	background-color: rgba(2, 93, 140, 0.2);
 }
+
+#toc.static-toc {
+  width: auto;
+}
+
+.sub-header-static {
+  text-indent: 20px;
+  display: block;
+}
