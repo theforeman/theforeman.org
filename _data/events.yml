@@ -470,6 +470,45 @@
     and chat, then we'll be meeting up in the Yard House just a short walk from
     the convention centre - come to the Red Hat booth by 19.30 to join the
     group walking over, or meet us there!
+- title: 'Foreman Deep Dives: React, JS, and UI Improvements - with Ohad Levy & Gail Steiger'
+  type: 'Livestream'
+  location: virtual
+  speaker: 'Ohad Levy & Gail Steiger'
+  start: 2016-11-02 11:30 GMT
+  end: 2016-11-02 12:30 GMT
+  url: 'https://www.youtube.com/watch?v=qtOJ7Irybas'
+  description: |
+    In this episode of the Deep Dive series, Ohad and Gail will be talking
+    about the recent JavaScript changes in Foreman. We will have a very basic
+    introduction to ReactJS and how it is currently used in Foreman, as well as
+    a wider discussion about the Foreman UI and where it could be heading. If
+    you're interested in UX improvement in Foreman, the JavaScript / client
+    side future of Foreman, or just want to understand what React is, this is
+    for you. As ever, questions and feedback will be welcome during the show,
+    either on IRC (#theforeman) or via the YouTube Live chat.
+- title: 'Foreman Community Demo - 3rd November'
+  type: 'Livestream'
+  location: virtual
+  start: 2016-11-03 15:00 GMT
+  end: 2016-11-03 16:00 GMT
+  url: 'https://www.youtube.com/watch?v=J1ejZaDFR8o'
+  description: |
+    The Foreman Community Demo is here again! As ever we'll have a selection of
+    developers joining us for the latest in Foreman news, demos of the latest
+    developments, discussion, community updates and more.
+- title: 'vBrownBag Webinar: Intro to Foreman'
+  type: 'Virtual'
+  speaker: 'Greg Sutcliffe'
+  location: virtual
+  start: 2016-11-09 19:30 EST
+  end: 2016-11-09 20:30 EST
+  url: 'http://vbrownbag.com/brownbags'
+  description: |
+    In this one-hour intro for \#vBrownBag, Greg will be giving a high level
+    overview of Foreman, it's core features & usecases, before diving into a
+    demo involving installing and beginning to use Foreman for provisioning and
+    Puppet config management. Some discussion of compute resources will also
+    happen, along with mentions of notable plugins and how to contribute.
 - title: 'Config Management Camp - Berlin'
   type: 'Conference'
   location: Berlin
@@ -495,19 +534,6 @@
     its addons like the Discovery Plugin for Metal as a Service. Furthermore
     some Plugins will be shown which extend Foreman's feature set like
     Orchestration using the Remote Execution Plugin. 
-- title: 'vBrownBag Webinar: Intro to Foreman'
-  type: 'Virtual'
-  speaker: 'Greg Sutcliffe'
-  location: virtual
-  start: 2016-11-09 19:30 EST
-  end: 2016-11-09 20:30 EST
-  url: 'http://vbrownbag.com/brownbags'
-  description: |
-    In this one-hour intro for \#vBrownBag, Greg will be giving a high level
-    overview of Foreman, it's core features & usecases, before diving into a
-    demo involving installing and beginning to use Foreman for provisioning and
-    Puppet config management. Some discussion of compute resources will also
-    happen, along with mentions of notable plugins and how to contribute.
 - title: 'Training: Foreman (German)'
   type: 'Training'
   tags:
