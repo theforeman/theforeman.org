@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2016-8634: organizations/locations wizard may run stored XSS in name](security.html#2016-8634)
 * [CVE-2016-7078: user with no organizations or locations can see all resources](security.html#2016-7078)
 * [CVE-2016-7077: information disclosure from association lists shown without authorization](security.html#2016-7077)
 * [CVE-2016-6320: network interface device identifiers may contain stored XSS on host form](security.html#2016-6320)
@@ -64,6 +65,20 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2016-8634"></a>CVE-2016-8634: organizations/locations wizard may run stored XSS in name
+
+When creating an organization or location in Foreman, if the name contains HTML then the second step of the wizard will render the HTML. This occurs in the alert box on the page.
+
+This may permit a stored XSS attack if an organization/location with HTML in the name is created, then a user is linked directly to this URL.
+
+_Mitigation:_ restrict permissions to organization and location creation, don't follow untrusted links to Foreman.
+
+This issue was reported by Sanket Jagtap.
+
+* Affects Foreman 1.1 and higher
+* Fix in progress
+* Redmine issue [#17195](http://projects.theforeman.org/issues/17195)
 
 #### <a id="2016-7078"></a>CVE-2016-7078: user with no organizations or locations can see all resources
 
