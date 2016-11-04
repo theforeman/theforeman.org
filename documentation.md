@@ -87,4 +87,12 @@ version: '1.13'
     </a>
   </div>
 </div>
+<div class='row'>
+  <div class='col-md-4 center'>
+   <a href="/style_guide" class="btn-doc btn">
+     <h2 class='doc-icon'><i class="fa fa-code"></i></h2>
+     Style Guides
+   </a>
+ </div>
+</div>
 <hr/>
