@@ -80,6 +80,18 @@ Optionally, include more detailed explanatory text if necessary and wrap it to a
 
 Ensure the description is of the change and not the bug title, e.g. "X now accepts Y when doing Z" rather than "Z throws error".
 
+If the commit that you are adding fixes multiple, distinct issues you can follow this example:
+
+```
+Fixes #9998,#9999 - launch mars probe in V2 API
+
+Some collaboration between teams will be necessary to accomplish this
+task. Other features, #2932 and #2933 will be closed after this. V1
+changes to the API were not necessary.
+
+
+```
+
 #### Notes
 
 * Some background to justify this commit message style can be found [here](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
