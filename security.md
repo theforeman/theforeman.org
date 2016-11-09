@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2016-8639: settings dropdown menus may run stored XSS in org/location name](security.html#2016-8639)
 * [CVE-2016-8634: organizations/locations wizard may run stored XSS in name](security.html#2016-8634)
 * [CVE-2016-7078: user with no organizations or locations can see all resources](security.html#2016-7078)
 * [CVE-2016-7077: information disclosure from association lists shown without authorization](security.html#2016-7077)
@@ -65,6 +66,22 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2016-8639"></a>CVE-2016-8639: settings dropdown menus may run stored XSS in org/location name
+
+If an organization or location is created with a name containing HTML, then the administrator-only Settings page will render the HTML as part of a dropdown menu.
+
+This may permit a stored XSS attack if an organization/location with HTML in the name is created, then an administrator attempts to change the default organization/location settings.
+
+_Mitigation:_ restrict permissions to organization and location creation, use the API or CLI instead to change the default organization/location settings.
+
+_Note:_ this CVE identifier has been assigned retrospectively, to describe a vulnerability that was fixed during a refactoring of the affected code.
+
+This issue was reported by Sanket Jagtap.
+
+* Affects Foreman 1.11.0 to 1.12.4
+* Fix released in Foreman 1.13.0
+* Redmine issue [#15037](http://projects.theforeman.org/issues/15037)
 
 #### <a id="2016-8634"></a>CVE-2016-8634: organizations/locations wizard may run stored XSS in name
 
