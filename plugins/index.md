@@ -17,133 +17,133 @@ Foreman plugins are implemented as [Rails engines](http://guides.rubyonrails.org
 ------------------------
 
 <div class='row'>
-  <div class='col-md-3 center'>
+  <div class='col-xs-3 center'>
 		<a href="plugins/foreman_ansible" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-play"></i></p>
 			Ansible
 		</a>
 	</div>
-  <div class='col-md-3 center'>
+  <div class='col-xs-3 center'>
 		<a href="https://github.com/theforeman/foreman_azure" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-cloud"></i></p>
 			Azure
 		</a>
 	</div>
-	<div class='col-md-3 center'>
+	<div class='col-xs-3 center'>
 		<a href="https://github.com/theforeman/foreman_bootdisk" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-floppy-o"></i></p>
 			Bootdisk
 		</a>
 	</div>
-	<div class='col-md-3 center'>
+	<div class='col-xs-3 center'>
 		<a href="plugins/foreman_chef" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-cutlery"></i></p>
 			Chef
 		</a>
 	</div>
-	<div class='col-md-3 center'>
+	<div class='col-xs-3 center'>
 		<a href="https://github.com/GregSutcliffe/foreman_column_view" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-bar-chart"></i></p>
 			Column view
 		</a>
 	</div>
- 	<div class='col-md-3 center'>
+ 	<div class='col-xs-3 center'>
 		<a href="plugins/foreman_cockpit/" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-rocket"></i></p>
 			Cockpit
 		</a>
 	</div>
-	<div class='col-md-3 center'>
+	<div class='col-xs-3 center'>
 		<a href="https://github.com/theforeman/foreman_default_hostgroup/" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-check-circle"></i></p>
 			Default host group
 		</a>
 	</div>
-	<div class='col-md-3 center'>
+	<div class='col-xs-3 center'>
 		<a href="https://github.com/theforeman/foreman-digitalocean/" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-pencil"></i></p>
 			Digitalocean
 		</a>
 	</div>
-	<div class='col-md-3 center'>
+	<div class='col-xs-3 center'>
 		<a href="plugins/foreman_discovery" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-wifi"></i></p>
 			Discovery
 		</a>
 	</div>
-	<div class='col-md-3 center'>
+	<div class='col-xs-3 center'>
 		<a href="plugins/foreman_docker" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-ship"></i></p>
 			Docker
 		</a>
 	</div>
-	<div class='col-md-3 center'>
+	<div class='col-xs-3 center'>
 		<a href="https://github.com/theforeman/foreman_graphite" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-bar-chart"></i></p>
 			Graphite
 		</a>
 	</div>
-	<div class='col-md-3 center'>
+	<div class='col-xs-3 center'>
 		<a href="https://github.com/theforeman/foreman_hooks" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-anchor"></i></p>
 			Hooks
 		</a>
 	</div>
-	<div class='col-md-3 center'>
+	<div class='col-xs-3 center'>
 		<a href="plugins/katello" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-cloud-upload"></i></p>
 			Katello
 		</a>
 	</div>
-	<div class='col-md-3 center'>
+	<div class='col-xs-3 center'>
 		<a href="https://github.com/theforeman/foreman_memcache" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-tasks"></i></p>
 			Memcache
 		</a>
 	</div>
-	<div class='col-md-3 center'>
+	<div class='col-xs-3 center'>
 		<a href="plugins/foreman_openscap" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-bank"></i></p>
 			OpenSCAP
 		</a>
 	</div>
-	<div class='col-md-3 center'>
+	<div class='col-xs-3 center'>
 		<a href="plugins/foreman_remote_execution" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-toggle-right"></i></p>
 			Remote Execution
 		</a>
 	</div>
-	<div class='col-md-3 center'>
+	<div class='col-xs-3 center'>
 		<a href="plugins/foreman_salt" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-cube"></i></p>
 			Salt
 		</a>
 	</div>
-	<div class='col-md-3 center'>
+	<div class='col-xs-3 center'>
 		<a href="https://github.com/theforeman/foreman_setup" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-sun-o"></i></p>
 			Setup
 		</a>
 	</div>
-	<div class='col-md-3 center'>
+	<div class='col-xs-3 center'>
 		<a href="https://github.com/theforeman/foreman_templates" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-file"></i></p>
 			Templates
 		</a>
 	</div>
-	<div class='col-md-3 center'>
+	<div class='col-xs-3 center'>
 		<a href="https://github.com/theforeman/puppetdb_foreman" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-database"></i></p>
 			PuppetDB
 		</a>
 	</div>
-	<div class='col-md-3 center'>
+	<div class='col-xs-3 center'>
 		<a href="https://github.com/theforeman/foreman-xen" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-dashboard"></i></p>
 			Xen
 		</a>
 	</div>
- 	<div class='col-md-3 center'>
+ 	<div class='col-xs-3 center'>
 		<a href="http://projects.theforeman.org/projects/foreman/wiki/List_of_Plugins" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-plus"></i></p>
       More
