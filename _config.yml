@@ -15,6 +15,8 @@ excerpt_separator: <!--more-->
 permalink: /:year/:month/:title.html
 blogname: Foreman Blog
 blogdesc: News, notes and noise from around the Foreman community
+teaseurl: /2016/06/foremans-7th-birthday-events.html
+teasetext: Foreman's 7th Birthday is coming! See if there's a party near you!
 
 safe:        false
 
