@@ -24,7 +24,7 @@ Foreman plugins are implemented as [Rails engines](http://guides.rubyonrails.org
 		</a>
 	</div>
   <div class='col-xs-3 center'>
-		<a href="https://github.com/theforeman/foreman_azure" class="btn-doc btn">
+		<a href="plugins/foreman_azure" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-cloud"></i></p>
 			Azure
 		</a>
