@@ -217,6 +217,8 @@ previous_version: "1.12"
 {%include manuals/1.13/5.1.6_versioning.md %}
 ### 5.1.7 Handling Associations
 {%include manuals/1.13/5.1.7_associations.md %}
+### 5.1.8 Using OAuth
+{%include manuals/1.13/5.1.8_oauth.md %}
 
 ## 5.2 Compute Resources
 {%include manuals/1.13/5.2_compute_resources.md %}
