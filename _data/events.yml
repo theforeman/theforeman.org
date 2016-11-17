@@ -534,6 +534,16 @@
     its addons like the Discovery Plugin for Metal as a Service. Furthermore
     some Plugins will be shown which extend Foreman's feature set like
     Orchestration using the Remote Execution Plugin. 
+- title: 'Foreman Community Demo - 24th November'
+  type: 'Livestream'
+  location: virtual
+  start: 2016-11-24 15:00 GMT
+  end: 2016-11-24 16:00 GMT
+  url: 'https://www.youtube.com/watch?v=M0-3x8AUfFQ'
+  description: |
+    The Foreman Community Demo is here again! As ever we'll have a selection of
+    developers joining us for the latest in Foreman news, demos of the latest
+    developments, discussion, community updates and more.
 - title: 'Training: Foreman (German)'
   type: 'Training'
   tags:
