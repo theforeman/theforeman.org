@@ -198,7 +198,10 @@ If you prefer to distribute the keys manually, you may do this:
 Alternatively, the Smart Proxy publishes the public key over the API, so that
 one can just download it into authorized keys:
 
-    curl https://myproxy.example.com:9090/ssh/pubkey >> ~/.ssh/authorized_keys
+    curl https://myproxy.example.com:8443/ssh/pubkey >> ~/.ssh/authorized_keys
+
+Note: For Katello installations, the default Smart Proxy port will be 9090 rather than
+8443 in the above curl example.
 
 For the execution to work, the client needs to have **openssh-server**
 installed and configured.  Also, **openssh-clients** need to be present, in
