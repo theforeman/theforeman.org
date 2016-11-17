@@ -200,6 +200,9 @@ one can just download it into authorized keys:
 
     curl https://myproxy.example.com:8443/ssh/pubkey >> ~/.ssh/authorized_keys
 
+Note: For Katello installations, the default Smart Proxy port will be 9090 rather than
+8443 in the above curl example.
+
 For the execution to work, the client needs to have **openssh-server**
 installed and configured.  Also, **openssh-clients** need to be present, in
 order to **scp** to work (which we use for getting
