@@ -20,7 +20,17 @@ It also allows you to define a list of roles so you can enforce them on your hos
 
 In order to make Ansible send us data from the hosts, we set up a callback on your host that runs Ansible. To do this:
 
-* Change your /etc/ansible/ansible.cfg to contain the following options
+* If you use Ansible 2.2+ , our callback is installed with Ansible itself, simply change `/etc/ansible/ansible.cfg` to contain
+
+      [defaults]
+          callback_whitelist = foreman
+
+and the callback will be enabled after that.
+
+
+For Ansible versions older than 2.2:
+
+* Change your `/etc/ansible/ansible.cfg` to contain the following options
 
       callback_plugins = ~/.ansible/plugins/callback_plugins/
       bin_ansible_callbacks = True
@@ -30,6 +40,8 @@ In order to make Ansible send us data from the hosts, we set up a callback on yo
       wget https://raw.githubusercontent.com/theforeman/foreman_ansible/master/extras/foreman_callback.py -O ~/.ansible/plugins/callback_plugins/foreman_callback.py
 
 * Alternatively, you can find the source for the [Ansible callback here](https://github.com/theforeman/foreman_ansible) and deploy it in your directory of choice.
+
+----
 
 You can configure it via the following environment variables:
 
@@ -123,7 +135,7 @@ Please follow our [standard procedures and contacts]({{site.baseurl}}support.htm
 Errors regarding the import of facts and reports will show up on /var/log/foreman/production.log of your Foreman host.
 
 If you find a bug, please file it in
-[Redmine](http://projects.theforeman.org/projects/foreman_ansible/issues/new).
+[Redmine](http://projects.theforeman.org/projects/ansible/issues/new).
 
 See the [troubleshooting section]({{site.baseurl}}manuals/latest/index.html#7.2GettingHelp)
 in the Foreman manual for more info.
