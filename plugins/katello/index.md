@@ -46,6 +46,11 @@ versions: [3.2, 3.1, 3.0, 2.4, nightly]
       Use your locally managed content to install package and errata updates to a host or group of hosts.
       <a href="/plugins/katello/nightly/user_guide/content_hosts/index.html">Learn More</a>
     </p>
+
+    <br/>
+    <p style="font-size: 14px">
+      Having issues with your Katello? Check the <a href="/support.html">support page</a> for information on how to get help or the <a href="/plugins/katello/{{ page.versions[0] }}/troubleshooting/index.html">troubleshooting guide</a> for common issues.
+    </p>
   </div>
 
   <div class="col-sm-2 pull-right">
