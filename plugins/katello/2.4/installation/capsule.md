@@ -71,7 +71,7 @@ Installing             Done                     [100%] [.....................]
 
 ### Install needed packages:
 
-The same yum repositories need to be configured on the Capsule server as the main Katello server. See the installation guide for the [list of required repositories](/docs/{{ site.version }}/installation/index.html#required-repositories).
+The same yum repositories need to be configured on the Capsule server as the main Katello server. See the installation guide for the [list of required repositories](/docs/{{ site.version }}/installation/index.html).
 
 ```
 yum install -y capsule-installer
@@ -81,4 +81,4 @@ yum install -y capsule-installer
 
 Use the provide installation command from `capsule-certs-generate`, and tailor for your own purposes as needed.  The defaults will give you a Capsule ready for Content-related services.
 
-See the [User Guide](/docs/{{ site.version }}/user_guide/capsules/index.html) to learn about setting up provisioning related services, as well as the [Foreman manual](http://theforeman.org/manuals/latest/index.html#4.3SmartProxies)
+See the [User Guide](/plugins/katello/{{ site.version }}/user_guide/capsules/index.html) to learn about setting up provisioning related services, as well as the [Foreman manual](http://theforeman.org/manuals/latest/index.html#4.3SmartProxies)

@@ -16,7 +16,7 @@ Activation Keys provide a mechanism to define properties that may be applied to 
 
 ## Definitions
 
-- [Content Host](/plugins/katello/{{ page.version }}/user_guide/content_hosts/index.html#what-are-content-hosts)
+- [Content Host](/plugins/katello/{{ page.version }}/user_guide/content_hosts/index.html)
 - Host Collection - A statically defined group of Content Hosts.
 - Subscription - The right to receive the associated content from Katello.
 
@@ -126,6 +126,6 @@ The simplest form of registering a content host with an activation key is this:
 subscription-manager register --org=Default_Organization --activationkey=$KEY_NAME
 ```
 
-[Click here for more information](/plugins/katello/{{ page.version }}/user_guide/content_hosts/index.html#how-is-a-content-host-registered)
+[Click here for more information](/plugins/katello/{{ page.version }}/user_guide/content_hosts/index.html)
 
 Note that modifying an activation key does not change anything on content hosts previously registered with the key.

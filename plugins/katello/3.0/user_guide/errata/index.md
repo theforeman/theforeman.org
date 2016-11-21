@@ -19,7 +19,7 @@ With regard to Content Hosts, Errata is divided into two distinct classification
 
 ## Definitions
 
-- [Content Host](plugins/katello/{{ page.version }}/user_guide/content_hosts/index.html#what-are-content-hosts)
+- [Content Host](plugins/katello/{{ page.version }}/user_guide/content_hosts/index.html)
 - [Content View](plugins/katello/{{ page.version }}/user_guide/content_views/content_views.html)
 - [Lifecycle Environment](plugins/katello/{{ page.version }}/user_guide/lifecycle_environments/environment.html)
 
