@@ -39,7 +39,7 @@ In the simplest use case, a user may only want to use the Default Capsule. Large
 
 ## Installation
 
-See [Capsule Installation](/plugins/katello/{{ site.version }}/installation/capsule.html)
+See [Capsule Installation](/plugins/katello/{{ page.version }}/installation/capsule.html)
 
 ## Removal
 
@@ -95,7 +95,7 @@ Required Connectivity:
 
 ### 4 - Subscription Management
 
-Content Hosts utilize [Subscription Manager](/plugins/katello/{{ site.version }}/user_guide/content_hosts/index.html#how-is-a-content-host-registered) for registration to Katello and enabling/disabling specific repositories.
+Content Hosts utilize [Subscription Manager](/plugins/katello/{{ page.version }}/user_guide/content_hosts/index.html#how-is-a-content-host-registered) for registration to Katello and enabling/disabling specific repositories.
 
 Install Option:
 
