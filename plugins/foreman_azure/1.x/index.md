@@ -79,7 +79,9 @@ If you do have a smart-proxy that manages DHCP/DNS/TFTP in the same Azure networ
 
 If you do not have a smart-proxy in the Azure network you want to provision, Foreman will use SSH provisioning using the Azure certificate in the compute resource, and the name in the image. If you've set 'foo' as the name of your image, you can SSH into it by calling `ssh -i path_to_your_azure_cert foo@azurehost`. Your OS must be associated with a 'finish' template in order to provision through SSH. This template will be sent via SSH to your host after it's created and it will provision the host.
 
-Keep in mind Foreman does not yet allow domainless provisioning. This means you will have to create a 'fake domain' without subnets in Foreman, and set your interfaces as 'unmanaged' when you create your host. This will tell Foreman to not create DHCP/DNS records for this host, and it will let Azure do that. Notice the red circles in the picture, these show a fake domain with no subnets, and the managed checkbox:
+At the moment, Azure hosts have a domain 'cloudapp.net' by default. You can create a 'cloudapp.net' domain (without DHCP/DNS proxies) and assign it to your Azure hosts.
+
+Alternatively, if you do not want your hosts to show up with the 'cloudapp.net' domain in Foreman, you can do the following. Foreman does not yet allow domainless provisioning. This means you will have to create a 'fake domain' without subnets in Foreman, and set your interfaces as 'unmanaged' when you create your host. This will tell Foreman to not create DHCP/DNS records for this host, and it will let Azure do that. Notice the red circles in the picture, these show a fake domain with no subnets, and the managed checkbox:
 
 ![interfaces](/plugins/foreman_azure/{{ page.version }}/interfaces.png)
 ![unmanaged interface](/plugins/foreman_azure/{{ page.version }}/unmanaged_fake_domain.png)
