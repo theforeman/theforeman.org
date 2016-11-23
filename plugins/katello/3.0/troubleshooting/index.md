@@ -8,13 +8,6 @@ title: Troubleshooting
 
 For general support information, see [here](/support.html).
 
-## Table of Contents
-
- * [Sub-service Status](/plugins/katello/{{ page.version }}/troubleshooting/index.html#sub-service-status)
- * [Tasks](/plugins/katello/{{ page.version }}/troubleshooting/index.html#tasks)
- * [Debug Certificate](/plugins/katello/{{ page.version }}/troubleshooting/index.html#debug-certificate)
- * [FAQ](/plugins/katello/{{ page.version }}/troubleshooting/index.html#frequently-asked-questions)
-
 ## Sub-services status
 
 Katello uses a set of back-end services to perform the actual job. The status of these services can negatively influence the whole system and it's one of the first things to check when some errors occur.

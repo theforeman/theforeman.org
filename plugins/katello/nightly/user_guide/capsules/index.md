@@ -95,7 +95,7 @@ Required Connectivity:
 
 ### 4 - Subscription Management
 
-Content Hosts utilize [Subscription Manager](/plugins/katello/{{ site.version }}/user_guide/content_hosts/index.html#how-is-a-content-host-registered) for registration to Katello and enabling/disabling specific repositories.
+Content Hosts utilize [Subscription Manager](/plugins/katello/{{ site.version }}/user_guide/content_hosts/index.html) for registration to Katello and enabling/disabling specific repositories.
 
 Install Option:
 

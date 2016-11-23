@@ -18,7 +18,7 @@ Katello via HTTP or HTTPS.
 
 ### Remote install
 
-Install the prerequisite repositories [as per our installation guide](/plugins/katello/{{ page.version }}/installation/index.html#required-repositories).
+Install the prerequisite repositories [as per our installation guide](/plugins/katello/{{ page.version }}/installation/index.html).
 
 Now install the hammer-cli-katello package:
 

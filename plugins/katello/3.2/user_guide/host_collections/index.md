@@ -16,7 +16,7 @@ Once a Host Collection is created, it can be used to perform various actions on 
 
 ## Definitions
 
-- [Content Host](/plugins/katello/{{ page.version }}/user_guide/content_hosts/index.html#what-are-content-hosts)
+- [Content Host](/plugins/katello/{{ page.version }}/user_guide/content_hosts/index.html)
 
 ## General Features
 
@@ -78,4 +78,4 @@ To perform an action on Content Hosts within a collection:
 
 ![Host collection actions](/plugins/katello/{{ page.version }}/user_guide/host_collections/host_collection_actions.png)
 
-Note: clicking on an action will take the user to the appropriate Content Hosts Bulk Actions page, where all Content Hosts associated with the collection have been selected.  [Click here, for more information on performing Content Host Bulk Actions](/plugins/katello/{{ page.version }}/user_guide/content_hosts/index.html#bulk-actions)
+Note: clicking on an action will take the user to the appropriate Content Hosts Bulk Actions page, where all Content Hosts associated with the collection have been selected.  [Click here, for more information on performing Content Host Bulk Actions](/plugins/katello/{{ page.version }}/user_guide/content_hosts/index.html)

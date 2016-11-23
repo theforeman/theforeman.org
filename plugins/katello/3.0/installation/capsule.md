@@ -70,7 +70,7 @@ Installing             Done                     [100%] [.....................]
 
 ### Install needed packages:
 
-The same yum repositories need to be configured on the Capsule server as the main Katello server. See the installation guide for the [list of required repositories](/plugins/katello/{{ page.version }}/installation/index.html#required-repositories).
+The same yum repositories need to be configured on the Capsule server as the main Katello server. See the installation guide for the [list of required repositories](/plugins/katello/{{ page.version }}/installation/index.html).
 
 {% highlight bash %}
 yum install -y foreman-installer-katello

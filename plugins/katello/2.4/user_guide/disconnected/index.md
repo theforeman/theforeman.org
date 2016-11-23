@@ -50,7 +50,7 @@ DESCRIPTION
 
 To start with *katello-disconnected* there are a series of steps you need to take to get it installed and configured. The installation should take place on your Synchronization Server seen above.  This system is the one that has access to the internet and Red Hat's CDN servers.  These instructions point at the ''katello nightly'' builds but you can substitute this for the latest stable version of Katello if you desire.
 
-**1)** Configure repositories on your Synchronization Server [as per our installation guide](/plugins/katello/{{ page.version }}/installation/index.html#required-repositories).
+**1)** Configure repositories on your Synchronization Server [as per our installation guide](/plugins/katello/{{ page.version }}/installation/index.html).
 
 **2)** Install katello-utils and associated RPMs:
 
