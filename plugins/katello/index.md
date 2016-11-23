@@ -23,7 +23,7 @@ versions: [3.2, 3.1, 3.0, 2.4, nightly]
     <p style="font-size: 14px">
       Create, organize, and manage local yum and puppet repositories.
       Sync remote repositories or upload content directly to build a library of content that serves as the basis for building custom builds of your content.
-      <a href="/plugins/katello/nightly/user_guide/content/content.html">Learn More</a>
+      <a href="/plugins/katello/nightly/user_guide/content/index.html">Learn More</a>
     </p>
 
     <br/>
@@ -34,7 +34,7 @@ versions: [3.2, 3.1, 3.0, 2.4, nightly]
     <p style="font-size: 14px">
       Take your local content and filter out packages, errata and puppet modules to create custom builds into units called Content Views.
       Make your custom builds available to your hosts by moving it through environment paths that mimic traditional development workflows (Dev &#x2192; QE &#x2192; Stage &#x2192; Production).
-      <a href="/plugins/katello/nightly/user_guide/content_views/content_views.html">Learn More</a>
+      <a href="/plugins/katello/nightly/user_guide/content_views/index.html">Learn More</a>
     </p>
 
     <br/>
