@@ -21,7 +21,7 @@ What can a Lifecycle Environments be used for?
 ## General Workflow
 
 First create a lifecycle environment connected to the library life cycle environment and promote content views to the new lifecycle environment.
-A [Content Host](/plugins/katello/{{ site.version }}/user_guide/content_hosts/index.html) can now register directly to the promoted content view in the promoted environment or library therein.  Updates will be available as soon as new content is synced and promoted.
+A [Content Host](/plugins/katello/{{ page.version }}/user_guide/content_hosts/index.html) can now register directly to the promoted content view in the promoted environment or library therein.  Updates will be available as soon as new content is synced and promoted.
 
 
 ## Viewing the list of lifecycle environments

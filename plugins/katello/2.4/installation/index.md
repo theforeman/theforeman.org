@@ -2,8 +2,9 @@
 layout: plugins/katello/documentation
 title: Katello Installation
 version: 2.4
-foreman_version: 1.10
+foreman_version: "1.10"
 script: osmenu.js
+latest: 3.2
 ---
 
 # Katello {{ page.version }} Installation

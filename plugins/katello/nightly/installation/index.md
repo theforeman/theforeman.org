@@ -15,7 +15,7 @@ script: osmenu.js
   </div>
 {% elsif page.version != page.latest %}
   <div class="alert alert-danger">
-    These instructions are for installing Katello {{ page.version }}, but the latest stable is <a href="/plugins/katello/{{ page.latest }}/installation/index.html">{{ page.latest }}</a>.
+    These instructions are for installing Katello {{ page.version }}, but the latest stable is <a href="/plugins/katello/{{ site.latest }}/installation/index.html">{{ site.latest }}</a>.
   </div>
 {% endif %}
 

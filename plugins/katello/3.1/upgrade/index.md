@@ -2,6 +2,7 @@
 layout: plugins/katello/documentation
 title: Katello Upgrade
 version: 3.1
+foreman_version: 1.12
 ---
 
 # Katello Upgrade
@@ -57,14 +58,14 @@ Update the Foreman and Katello release packages:
 
 {% highlight bash %}
   yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/katello/el6/x86_64/katello-repos-latest.rpm
-  yum update -y http://yum.theforeman.org/releases/{{ site.foreman_version }}/el6/x86_64/foreman-release.rpm
+  yum update -y http://yum.theforeman.org/releases/{{ page.foreman_version }}/el6/x86_64/foreman-release.rpm
 {% endhighlight %}
 
   * RHEL7 / CentOS 7:
 
 {% highlight bash %}
   yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/katello/el7/x86_64/katello-repos-latest.rpm
-  yum update -y http://yum.theforeman.org/releases/{{ site.foreman_version }}/el7/x86_64/foreman-release.rpm
+  yum update -y http://yum.theforeman.org/releases/{{ page.foreman_version }}/el7/x86_64/foreman-release.rpm
 {% endhighlight %}
 
 ## Step 4 - Update Packages

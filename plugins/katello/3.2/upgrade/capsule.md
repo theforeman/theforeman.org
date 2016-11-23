@@ -2,6 +2,7 @@
 layout: plugins/katello/documentation
 title: Capsule Upgrade
 version: 3.2
+foreman_version: 1.13
 ---
 
 # Capsule Upgrade
@@ -23,15 +24,15 @@ Update the Foreman and Katello release packages:
   * RHEL6 / CentOS 6 **Foreman packages are not available yet**:
 
 {% highlight bash %}
-  yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/katello/el6/x86_64/katello-repos-latest.rpm
-  yum update -y http://fedorapeople.org/groups/katello/releases/yum/foreman/{{ site.foreman_version }}/el6/x86_64/foreman-release.rpm
+  yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/katello/el6/x86_64/katello-repos-latest.rpm
+  yum update -y http://fedorapeople.org/groups/katello/releases/yum/foreman/{{ page.foreman_version }}/el6/x86_64/foreman-release.rpm
 {% endhighlight %}
 
   * RHEL7 / CentOS 7:
 
 {% highlight bash %}
-  yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/katello/el7/x86_64/katello-repos-latest.rpm
-  yum update -y http://yum.theforeman.org/releases/{{ site.foreman_version }}/el7/x86_64/foreman-release.rpm
+  yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/katello/el7/x86_64/katello-repos-latest.rpm
+  yum update -y http://yum.theforeman.org/releases/{{ page.foreman_version }}/el7/x86_64/foreman-release.rpm
 {% endhighlight %}
 
 ## Step 3 - Update Packages
@@ -69,7 +70,7 @@ scp ~/mycapsule.example.com-certs.tar mycapsule.example.com:
 
 ## Step 5 - Run Installer
 
-The installer with the --upgrade flag will run the right database migrations for all component services, as well as adjusting the configuration to reflect what's new in Katello {{ site.version }}
+The installer with the --upgrade flag will run the right database migrations for all component services, as well as adjusting the configuration to reflect what's new in Katello {{ page.version }}
 
 {% highlight bash %}
 foreman-installer --scenario capsule --upgrade\
@@ -77,6 +78,6 @@ foreman-installer --scenario capsule --upgrade\
                   --certs-update-all --regenerate --deploy
 {% endhighlight %}
 
-**Congratulations! You have now successfully upgraded your Capsule to {% if site.version %}{{ site.version }} For a rundown of what was added, please see [release notes](/plugins/katello/{{ site.version }}/release_notes/release_notes.html).{% else %}the latest nightly{% endif %}!**
+**Congratulations! You have now successfully upgraded your Capsule to {% if page.version %}{{ page.version }} For a rundown of what was added, please see [release notes](/plugins/katello/{{ page.version }}/release_notes/release_notes.html).{% else %}the latest nightly{% endif %}!**
 
 If for any reason, the above steps failed, please review /var/log/foreman-installer/capsule.log -- if any of the "Upgrade step" tasks failed, you may try to run them manaully below to aid in troubleshooting.
