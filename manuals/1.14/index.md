@@ -219,6 +219,8 @@ previous_version: "1.13"
 {%include manuals/1.14/5.1.7_associations.md %}
 ### 5.1.8 Using OAuth
 {%include manuals/1.14/5.1.8_oauth.md %}
+### 5.1.9 Using Apipie-Bindings
+{%include manuals/1.14/5.1.9_apipie-bindings.md %}
 
 ## 5.2 Compute Resources
 {%include manuals/1.14/5.2_compute_resources.md %}
