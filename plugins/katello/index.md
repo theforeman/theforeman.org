@@ -48,8 +48,19 @@ versions: [3.2, 3.1, 3.0, 2.4, nightly]
     </p>
 
     <br/>
+    <h4>
+      Troubleshooting
+    </h4>
     <p style="font-size: 14px">
       Having issues with your Katello? Check the <a href="/support.html">support page</a> for information on how to get help or the <a href="/plugins/katello/{{ page.versions[0] }}/troubleshooting/index.html">troubleshooting guide</a> for common issues.
+    </p>
+
+    <br/>
+    <h4>
+      Are you a Katello developer?
+    </h4>
+    <p style="font-size: 14px">
+      For general development information, including how to get started contributing please see the <a href="/contribute.html">contributing guide</a>. For Katello specific developer information please reference the <a href="/plugins/katello/developers.html">Katello Developer Guide</a>.
     </p>
   </div>
 
