@@ -105,9 +105,11 @@ yum-config-manager --enable rhel-6-server-optional-rpms
 
 <div id="el6" markdown="1">
 {% highlight bash %}
+yum -y update
 yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/katello/el6/x86_64/katello-repos-latest.rpm
 yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/foreman/{{ page.foreman_version }}/el6/x86_64/foreman-release.rpm
-yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm
+yum -y localinstall https://yum.puppetlabs.com/puppetlabs-release-pc1-el-6.noarch.rpm # will install with Puppet 4
+#yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm # use this instead if you prefer Puppet 3
 yum -y localinstall http://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
 yum -y install foreman-release-scl
 {% endhighlight %}
@@ -127,7 +129,8 @@ yum-config-manager --enable rhel-7-server-extras-rpms
 {% highlight bash %}
 yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/katello/el7/x86_64/katello-repos-latest.rpm
 yum -y localinstall http://yum.theforeman.org/releases/{{ page.foreman_version  }}/el7/x86_64/foreman-release.rpm
-yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
+yum -y localinstall https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm # will install with Puppet 4
+#yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm # use this instead if you prefer Puppet 3
 yum -y localinstall http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 yum -y install foreman-release-scl
 {% endhighlight %}
