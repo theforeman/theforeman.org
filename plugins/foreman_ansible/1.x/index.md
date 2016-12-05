@@ -90,6 +90,10 @@ If the Foreman setting 'create_new_host_when_facts_are_uploaded' (Puppet tab) is
 
 Similarly, the Foreman setting 'ignore_puppet_facts_for_provisioning' (Provisioning tab) is set to false, facts related to interfaces will update the interfaces of $HOSTNAME in Foreman.
 
+There are several Ansible options you can configure under Administer -> Settings in case you need to configure the Ansible port, user, etcetera. You can override these options on any host via Host parameters, Host group parameters or Global parameters by setting the attributes `ansible_port`, `ansible_ssh_pass` or `ansible_user`.
+
+![ansible settings](static/images/plugins/foreman_ansible/settings.png)
+
 # 4. Usage
 
 Run ansible on your hosts and the callback will send everything to Foreman automatically. Here's a quick gif of what registering a new host in Foreman looks like.
