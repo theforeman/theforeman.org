@@ -86,9 +86,13 @@ The project is not packaged, but you can find the sources here at [theforeman/fo
 
 In Foreman, you should add whatever Ansible hosts you want to submit facts from to the setting `trusted_puppetmaster_hosts`. Change it at Administer > Settings, Auth tab.
 
-If the Foreman setting 'create_new_host_when_facts_are_uploaded' (Puppet tab) is true, and $HOSTNAME doesn't exist in Foreman, it will autocreate that host in Foreman. If it already exists, it will update the facts.
+If the Foreman setting `create_new_host_when_facts_are_uploaded` (Puppet tab) is true, and $HOSTNAME doesn't exist in Foreman, it will autocreate that host in Foreman. If it already exists, it will update the facts.
 
-Similarly, the Foreman setting 'ignore_puppet_facts_for_provisioning' (Provisioning tab) is set to false, facts related to interfaces will update the interfaces of $HOSTNAME in Foreman.
+Similarly, the Foreman setting `ignore_puppet_facts_for_provisioning` (Provisioning tab) is set to false, facts related to interfaces will update the interfaces of $HOSTNAME in Foreman.
+
+There are several Ansible options you can configure under Administer -> Settings in case you need to configure the Ansible port, user, etcetera. You can override these options on any host via Host parameters, Host group parameters or Global parameters by setting the attributes `ansible_port`, `ansible_ssh_pass` or `ansible_user`.
+
+![ansible settings](static/images/plugins/foreman_ansible/settings.png)
 
 # 4. Usage
 
