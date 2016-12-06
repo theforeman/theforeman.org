@@ -687,6 +687,15 @@ Key management is changing at the time of writing to cycle nightly keys every tw
         <td style='white-space:nowrap'></td>
         <td></td>
       </tr>
+      <tr>
+        <td><a href="{{ site.baseurl }}/static/keys/F06D8950.pub">F06D8950</a></td>
+        <td>AF74 2A91 BF76 6333 E9FF  5EAA BFE5 1511 F06D 8950</td>
+        <td>Foreman Release Signing Key (1.14)</td>
+        <td style='white-space:nowrap'>2016-12-06</td>
+        <td style='white-space:nowrap'>2017-12-06</td>
+        <td style='white-space:nowrap'></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
 </div>
