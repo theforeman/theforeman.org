@@ -77,7 +77,7 @@ After creating these files, the .cer file will need to be uploaded to Azure via 
 This plugin works no matter if you have a Foreman smart-proxy in Azure or not.
 If you do have a smart-proxy that manages DHCP/DNS/TFTP in the same Azure network as the hosts you intend to create, you will be able to PXE boot and discover hosts in that network. Read more about smart-proxy installation on [the manual]({{site.baseurl}}manuals/latest/index.html#4.3.1SmartProxyInstallation).
 
-If you do not have a smart-proxy in the Azure network you want to provision, Foreman will use SSH provisioning using the Azure certificate in the compute resource, and the name in the image. If you've set 'foo' as the name of your image, you can SSH into it by calling `ssh -i path_to_your_azure_cert foo@azurehost`. Your OS must be associated with a 'finish' template in order to provision through SSH. This template will be sent via SSH to your host after it's created and it will provision the host.
+If you do not have a smart-proxy in the Azure network you want to provision, Foreman will use SSH provisioning using the Azure certificate in the compute resource, and the name in the image. If you've set 'foo' as the username for your image, you can SSH into it by calling `ssh -i path_to_your_azure_cert foo@azurehost`. Your OS must be associated with a 'finish' template in order to provision through SSH. This template will be sent via SSH to your host after it's created and it will provision the host.
 
 At the moment, Azure hosts have a domain 'cloudapp.net' by default. You can create a 'cloudapp.net' domain (without DHCP/DNS proxies) and assign it to your Azure hosts.
 
