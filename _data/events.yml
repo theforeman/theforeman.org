@@ -544,6 +544,17 @@
     The Foreman Community Demo is here again! As ever we'll have a selection of
     developers joining us for the latest in Foreman news, demos of the latest
     developments, discussion, community updates and more.
+- title: 'Foreman Community Demo - 15th December'
+  type: 'Livestream'
+  location: virtual
+  start: 2016-12-15 15:00 GMT
+  end: 2016-12-15 16:00 GMT
+  url: 'https://www.youtube.com/watch?v=CY1U_54Cbbs'
+  description: |
+    The final Foreman Community Demo of the year! Join us for a look back at
+    2016 in Foreman, as well as the usual selection of developers joining us
+    for the latest in Foreman news, demos of the latest developments,
+    discussion, community updates and more.
 - title: 'Training: Foreman (German)'
   type: 'Training'
   tags:
