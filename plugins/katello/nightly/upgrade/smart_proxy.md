@@ -1,10 +1,10 @@
 ---
 layout: plugins/katello/documentation
-title: Capsule Upgrade
+title: Smart Proxy Upgrade
 version: nightly
 ---
 
-# Capsule Upgrade
+# Smart Proxy Upgrade
 
 ## Step 1 - Operating System
 
@@ -54,17 +54,17 @@ yum install katello-capsule
 
 ## Step 4 - Regenerate Certificates
 
-On the Katello server, regenerate the certificates tarball for your capsule:
+On the Katello server, regenerate the certificates tarball for your Smart Proxy:
 
 {% highlight bash %}
-capsule-certs-generate --capsule-fqdn "mycapsule.example.com"\
-                       --certs-tar    "~/mycapsule.example.com-certs.tar"
+foreman-proxy-certs-generate --foreman-proxy-fqdn "myproxy.example.com"\
+                       --certs-tar    "~/myproxy.example.com-certs.tar"
 {% endhighlight %}
 
-And copy them to your capsule:
+And copy them to your Smart Proxy:
 
 {% highlight bash %}
-scp ~/mycapsule.example.com-certs.tar mycapsule.example.com:
+scp ~/myproxy.example.com-certs.tar myproxy.example.com:
 {% endhighlight %}
 
 ## Step 5 - Run Installer
@@ -72,11 +72,11 @@ scp ~/mycapsule.example.com-certs.tar mycapsule.example.com:
 The installer with the --upgrade flag will run the right database migrations for all component services, as well as adjusting the configuration to reflect what's new in Katello {{ page.version }}
 
 {% highlight bash %}
-foreman-installer --scenario capsule --upgrade\
-                  --certs-tar ~/mycapsule.example.com-certs.tar\
+foreman-installer --scenario foreman-proxy-content --upgrade\
+                  --certs-tar ~/myproxy.example.com-certs.tar\
                   --certs-update-all --regenerate --deploy
 {% endhighlight %}
 
-**Congratulations! You have now successfully upgraded your Capsule to {% if page.version %}{{ page.version }} For a rundown of what was added, please see [release notes](/plugins/katello/{{ page.version }}/release_notes/release_notes.html).{% else %}the latest nightly{% endif %}!**
+**Congratulations! You have now successfully upgraded your Smart Proxy to {% if page.version %}{{ page.version }} For a rundown of what was added, please see [release notes](/plugins/katello/{{ page.version }}/release_notes/release_notes.html).{% else %}the latest nightly{% endif %}!**
 
-If for any reason, the above steps failed, please review /var/log/foreman-installer/capsule.log -- if any of the "Upgrade step" tasks failed, you may try to run them manaully below to aid in troubleshooting.
+If for any reason, the above steps failed, please review /var/log/foreman-installer/foreman-proxy.log -- if any of the "Upgrade step" tasks failed, you may try to run them manaully below to aid in troubleshooting.
