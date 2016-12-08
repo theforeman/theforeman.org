@@ -73,4 +73,4 @@ Pulling repository localhost:5000/default_organization-library-redisv-Tester-red
 
 See how to provision content in the documentation in the [foreman-docker documentation](http://theforeman.org/plugins/). Provisioning content from Katello works in much the same way.
 
-First, proceed to the new Container page by accessing it from the Containers menu at the top. Then, select the Local Content tab on the second step. This will allow you to select a Docker image from a published Katello repository which is in an environment/content view/capsule. Then just proceed in the wizard as per the Foreman Docker instructions. When you are finished, you should have a new container running from an image in Katello.
+First, proceed to the new Container page by accessing it from the Containers menu at the top. Then, select the Local Content tab on the second step. This will allow you to select a Docker image from a published Katello repository which is in an environment/content view/Smart Proxy. Then just proceed in the wizard as per the Foreman Docker instructions. When you are finished, you should have a new container running from an image in Katello.

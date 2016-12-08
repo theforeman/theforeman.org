@@ -43,8 +43,8 @@ The following ports need to be open to external connections:
 
 * 80 TCP - HTTP, used for provisioning purposes
 * 443 TCP - HTTPS, used for web access and api communication
-* 5647 TCP - qdrouterd - used for client and capsule actions
-* 9090 TCP - HTTPS - used for communication with the smart proxy
+* 5647 TCP - qdrouterd - used for client and Smart Proxy actions
+* 9090 TCP - HTTPS - used for communication with the Smart Proxy
 
 ## Production
 
