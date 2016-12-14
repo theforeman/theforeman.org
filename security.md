@@ -94,7 +94,7 @@ _Mitigation:_ restrict permissions to organization and location creation, don't 
 This issue was reported by Sanket Jagtap.
 
 * Affects Foreman 1.1 and higher
-* Fix in progress
+* Fix released in Foreman 1.14.0-RC1
 * Redmine issue [#17195](http://projects.theforeman.org/issues/17195)
 
 #### <a id="2016-7078"></a>CVE-2016-7078: user with no organizations or locations can see all resources
@@ -116,7 +116,7 @@ Lists of associated resources, such as operating systems associated to a new arc
 This issue was reported by Jitendra Yejare.
 
 * Affects Foreman 1.1 and higher, but was first mitigated against in Foreman 1.9.0 for some cases
-* Fix in progress
+* Fix released in Foreman 1.14.0-RC1
 * Redmine issue [#16971](http://projects.theforeman.org/issues/16971)
 
 #### <a id="2016-6320"></a>CVE-2016-6320: network interface device identifiers may contain stored XSS on host form
