@@ -14,7 +14,7 @@ foreman_openscap plugin provides three default SCAP contents, so you could start
 OpenSCAP reports (aka ARF reports) will help you find vulnerabilities on your hosts and also suggest remediation plan to fix those vulnerabilities.
 ![OpenScap report]({{page.images}}/report_info_details.png)
 
-Foreman OpenSCAP plugin is made of 5 components:
+Foreman OpenSCAP plugin is made of 4 components:
 
 * [foreman_openscap](https://github.com/theforeman/foreman_openscap) - Foreman plugin which creates and persists SCAP content, compliance policy and ARF report objects.
 * [smart_proxy_openscap](https://github.com/theforeman/smart_proxy_openscap) - Smart-Proxy plugin which validates SCAP content from Foreman, distributes SCAP content to clients and posts ARF reports from client hosts to Foreman
@@ -23,17 +23,21 @@ Foreman OpenSCAP plugin is made of 5 components:
 
 ## 1.1 OpenSCAP basic concepts
 
-There are three basic concepts (entities) in OpenSCAP plug-in: SCAP Contents, Compliance Policies and ARF Reports.
+There are four basic concepts (entities) in OpenSCAP plug-in: SCAP Contents, Compliance Policies, ARF Reports and Tailoring Files.
 
 __SCAP Content__ represents SCAP DataStream XML file as defined by SCAP 1.2 standard. DataStream file contains implementation of compliance,
 configuration or security baselines. Users are advised to acquire examplary baseline by installing scap-security-guide package.
 DataStream file usualy contains multiple XCCDF Profiles. Each for different security target. The content of DataStream file can be inspected by oscap tool from openscap-scanner package.
 (XCCDF = Extensible Configuration Checklist Description Format, XCCDF profile = A checklist which audit specific security target)
 
+__Tailoring File__ is a XML file very much like SCAP Content. It represents a customization of compliance defined in a SCAP Content XML file. Additional details and instructions how to create such a file are available in the official openscap [documentation](https://www.open-scap.org/resources/documentation/customizing-scap-security-guide-for-your-use-case/).
+
 __Compliance Policy__ is high level concept of a baseline applied to the infrastructure. Compliance policy is defined by user on web interface. Users may assign following information to the policy:
 
 * SCAP Content
 * XCCDF Profile from particular SCAP Content
+* Tailoring File
+* XCCDF Profile from a Tailoring File
 * Hostgroups that should comply with the policy
 * Schedule - the period in which the audit shall occur
 
@@ -222,7 +226,6 @@ __Create SCAP Content__ - You can upload any valid OpenSCAP DataStream file
 (After upload, SCAP content is validated at the Smart-Proxy and SCAP profiles are extracted)
 ![New SCAP Content]({{page.images}}/create_new_scap_content.png)
 
-
 ## 4.2 Creating policy wizard
 
 * Name your policy
@@ -247,6 +250,31 @@ You can access the generated reports via Hosts -> Compliance -> Reports
 ![ARF reports index]({{page.images}}/arf_index.png)
 Clicking on "View Report" will lead you to the actual security audit report, with detailed information on the host's security check and suggested remediation.
 ![ARF report]({{page.images}}/arf_report.png)
+
+## 4.5 Tailoring files ( foreman_openscap >= 0.7 )
+
+Using a Tailoring File effectively allows you to modify a policy. You can assign a Tailoring File to a Policy when creating / updating a policy. Because Tailoring File may contain multiple profiles, you have to select your modified profile as well.
+
+### 4.5.1 Creating a Tailoring file
+
+You can create a new Tailoring file with [SCAP Workbench](https://www.open-scap.org/tools/scap-workbench/)
+
+### 4.5.2 Uploading a Tailoring file
+
+__Access Tailoring files__ - Hosts -> Compliance -> Tailoring files
+
+__Create Tailoring__ - Upload your Tailoring file xml
+
+### 4.5.3 Assigning a Tailoring file to a Policy
+
+Go to Hosts -> Compliance -> Policies
+
+Select a Policy to edit
+
+Go to 'SCAP Content' tab
+
+Select a Tailoring file from a dropdown and then a profile that comes with it
+![Tailoring a Policy]({{page.images}}/policy_tailoring.png)
 
 # 5. Advanced topics
 
