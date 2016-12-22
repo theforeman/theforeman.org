@@ -3,8 +3,8 @@ require 'tmpdir'
 require 'git'
 
 @tagged_repos = %w(foreman smart-proxy foreman-installer foreman-selinux)
-@tag_from     = "1.12.0"
-@tag_to       = "1.13.0-RC1"
+@tag_from     = "1.13.0"
+@tag_to       = "1.14.0-RC1"
 
 @untagged_repos = %w(
   theforeman.org
@@ -56,6 +56,11 @@ require 'git'
   "Amir"           => "Amir Fefer",
   "imriz"          => "Imri Zvik",
   "Sean OKeeffe"   => "Sean O'Keeffe",
+  "treydock"       => "Trey Dockendorf",
+  "orrabin"        => "Ori Rabin",
+  "Ondrej Prazak"  => "Ondřej Pražák",
+  "lfisher47"      => "Leah Fisher",
+  "pkranenburg"    => "Paul Kranenburg",
 }
 
 @authors={}
