@@ -26,8 +26,10 @@ previous_version: "1.13"
 {% include manuals/1.14/3.1.2_hardware_requirements.md %}
 ### 3.1.3 Puppet Compatibility
 {% include manuals/1.14/3.1.3_puppet_versions.md %}
-### 3.1.4 Firewall Configuration
-{% include manuals/1.14/3.1.4_firewall_configuration.md %}
+### 3.1.4 Browser Compatibility
+{% include manuals/1.14/3.1.4_browser_compatibility.md %}
+### 3.1.5 Firewall Configuration
+{% include manuals/1.14/3.1.5_firewall_configuration.md %}
 ## 3.2 Foreman Installer
 {%include manuals/1.14/3.2_foreman_installer.md %}
 ### 3.2.1 Installation
