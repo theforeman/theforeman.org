@@ -27,12 +27,14 @@ Install the appropriate Katello client release packages.  For CentOS 6, you will
 <div id="el5" markdown="1">
 {% highlight bash %}
 yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/el5/x86_64/katello-client-repos-latest.rpm
+yum -y install http://dl.fedoraproject.org/pub/epel/epel-release-latest-5.noarch.rpm
 {% endhighlight %}
 </div>
 
 <div id="el6" style="display:none;" markdown="1">
 {% highlight bash %}
 wget https://copr.fedoraproject.org/coprs/dgoodwin/subscription-manager/repo/epel-6/dgoodwin-subscription-manager-epel-6.repo -O /etc/yum.repos.d/dgoodwin-subscription-manager-epel-6.repo
+yum -y install http://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
 yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/el6/x86_64/katello-client-repos-latest.rpm
 {% endhighlight %}
 </div>
@@ -40,6 +42,7 @@ yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.versi
 <div id="el7" style="display:none;" markdown="1">
 {% highlight bash %}
 yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/el7/x86_64/katello-client-repos-latest.rpm
+yum -y install http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 {% endhighlight %}
 </div>
 
