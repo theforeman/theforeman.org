@@ -10,7 +10,6 @@ Components include the Foreman web UI, Smart Proxy, Passenger, a Puppet master (
 * Red Hat Enterprise Linux 7, x86_64
 * Ubuntu 16.04 (Xenial), i386/amd64/armhf/aarch64
 * Ubuntu 14.04 (Trusty), i386/amd64
-* _Supported, but deprecated: RHEL, CentOS, Scientific Linux or Oracle Linux 6_
 
 Other operating systems will need to use alternative installation methods (see the manual).
 
