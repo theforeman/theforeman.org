@@ -14,11 +14,11 @@ To import the puppet forge navigate to
 Content > Products
 
 Click on the *+New Product* button.
- 
+
 Once the product is created, select the product and click the *Create Repository*
 button. Fill out the repostitory as shown:
 
-![Adding a the Pupper Forge](/puppet_forge.png)
+![Adding a the Pupper Forge](/plugins/katello/{{ page.version }}/user_guide/puppet_integration/puppet_forge.png)
 
 This can be done via the CLI:
 
