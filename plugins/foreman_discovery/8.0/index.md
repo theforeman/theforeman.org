@@ -1,16 +1,16 @@
 ---
 layout: plugin
 pluginname: foreman_discovery
-title: Foreman Discovery 7.0 Manual
-version: 7.0
+title: Foreman Discovery 8.0 Manual
+version: 8.0
 # versions for matrix and snippets
 # (use short version for imgver e.g. 3.0)
-pluginver: 7.0.0
-proxyver: 1.0.3
-imgver: 3.2
+pluginver: 8.0.0
+proxyver: 1.0.4
+imgver: 3.3
 cliver: 0.0.3
 # uncomment to show warning box for an old release
-warning: old
+#warning: old
 # uncomment to show development version warning
 #warning: unreleased
 ---
@@ -121,6 +121,13 @@ plugin:
   </tr>
   <tr>
     <td>= 1.13</td>
+    <td>7.0.0</td>
+    <td>1.0.3</td>
+    <td>3.2-3.3</td>
+    <td>0.0.3</td>
+  </tr>
+  <tr>
+    <td>= 1.14</td>
     <td>{{page.pluginver}}</td>
     <td>{{page.proxyver}}</td>
     <td>{{page.imgver}}</td>
@@ -129,6 +136,38 @@ plugin:
 </table>
 
 ### 1.1.1 Foreman Discovery plugin
+
+**8.0**: Release notes
+
+Following the steps of previous version, 8.0 is a bugfix release. Deface is no
+longer used in the plugin thanks to refactoring, therefore the dependency was
+dropped.
+
+* [#17943](http://projects.theforeman.org/issues/17943) - HG selection should work with "edit_discovery_hosts" permission
+* [#10193](http://projects.theforeman.org/issues/10193) - Replaces subnet_name with subnet.to_label
+* [#17648](http://projects.theforeman.org/issues/17648) - Added support for attributes inheritance
+* [#17873](http://projects.theforeman.org/issues/17873) - Clear association cache when converting host
+* [#17706](http://projects.theforeman.org/issues/17706) - Removed unused host common filter
+* [#17734](http://projects.theforeman.org/issues/17734) - Removed show_taxonomy_tabs? helper
+* [#17578](http://projects.theforeman.org/issues/17578) - Display nested orgs / locs correctly
+* [#16750](http://projects.theforeman.org/issues/16750) - *_selected methods expect params[:host]
+* [#17585](http://projects.theforeman.org/issues/17585) - Moved permission migration after override
+* [#17598](http://projects.theforeman.org/issues/17598) - Fixing ip-subnet match in tests
+* [#09015](http://projects.theforeman.org/issues/9015) - Use number_f for priority and max_count
+* [#17205](http://projects.theforeman.org/issues/17205) - Fixed nil exception for DNS queue
+* [#17260](http://projects.theforeman.org/issues/17260) - Remove managed flag before deleting
+* [#16899](http://projects.theforeman.org/issues/16899) - Core helper is renamed in 1.14
+* [#14036](http://projects.theforeman.org/issues/14036) - Use plugin hook for subnet smart proxy (#16722)
+* [#16528](http://projects.theforeman.org/issues/16528) - Added foreign key dependency
+* [#16657](http://projects.theforeman.org/issues/16657) - Max char limit 255 - discovery_rule columns
+* [#16817](http://projects.theforeman.org/issues/16817) - Avoid conflicting constant name
+* [#16685](http://projects.theforeman.org/issues/16685) - Make the titles and names consistent
+* [#14288](http://projects.theforeman.org/issues/14288) - PXEGrub 1 and 2 are locked too
+
+**Foreman Discovery Image 3.3** is available for this plugin version. There
+are no changes and the only change is base OS which is now CentOS 7.3. When
+booting UEFI (via Grub2), MD5 media check is now also correct:
+[#12101](http://projects.theforeman.org/issues/12101).
 
 **7.0**: Release notes
 
@@ -575,14 +614,18 @@ be altered to instruct new machines to boot the discovery image.
 ## 3.1.1 Default PXE template
 
 In the Foreman UI, go to Provisioning Templates, edit *PXELinux global
-default* template and add the following after the "LABEL local" block of
-options:
+default* template and change the default entry from localboot entry to
+Discovery:
+
+    ONTIMEOUT discovery
+
+The template already contains a menu entry rendered from pxelinux_discovery
+snippet which looks like:
 
     LABEL discovery
-    MENU LABEL Foreman Discovery
-    MENU DEFAULT
+    MENU LABEL Foreman Discovery Image
     KERNEL boot/fdi-image/vmlinuz0
-    APPEND initrd=boot/fdi-image/initrd0.img rootflags=loop root=live:/fdi.iso rootfstype=auto ro rd.live.image acpi=force rd.luks=0 rd.md=0 rd.dm=0 rd.lvm=0 rd.bootif=0 rd.neednet=0 rd.debug=1 nomodeset proxy.url=https://FOREMAN_SERVER proxy.type=foreman
+    APPEND initrd=boot/fdi-image/initrd0.img ... proxy.url=<%= foreman_server_url %> proxy.type=foreman
     IPAPPEND 2
 
 The *proxy.type* option can be either *proxy* or *foreman*. In the first case
@@ -594,15 +637,11 @@ The *proxy.url* specifies URL of the Smart Proxy or Foreman depending on the
 previous setting. For backward compatibility, *foreman.url* is an alias for this
 setting.
 
-In case Smart Proxy Discovery plugin is configured to forward communication,
-configure the APPEND line in the following way:
+If direct connection is not possible, enable Smart Proxy Discovery plugin (see
+above) to forward communication and configure the APPEND line in the following
+way:
 
-APPEND ... proxy.url=https://FOREMAN_PROXY_INSTANCE:8443 proxy.type=proxy
-
-Once the APPEND line is modified properly, set the entry to be default via the
-ONTIMEOUT option:
-
-    ONTIMEOUT discovery
+    APPEND ... proxy.url=https://FOREMAN_PROXY_INSTANCE:8443 proxy.type=proxy
 
 Alternatively, the Discovery image also searches for DNS SRV record named
 _x-foreman._tcp. If the DNS server is configured for this (see the example for
