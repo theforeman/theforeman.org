@@ -1,17 +1,17 @@
 ---
 layout: plugins/katello/documentation
 title: Katello Installation
-version: nightly
-foreman_version: nightly
+version: 3.3
+foreman_version: 1.14
 latest: 3.2
 script: osmenu.js
 ---
 
 # Katello {{ page.version }} Installation
 
-{% if page.version == 'nightly' %}
+{% if page.version == '3.3' %}
   <div class="alert alert-danger">
-    These are the instructions for installing the unstable nightly release of katello!
+    These are the instructions for installing the unstable 3.3 release of katello!
   </div>
 {% elsif page.version != page.latest %}
   <div class="alert alert-danger">
