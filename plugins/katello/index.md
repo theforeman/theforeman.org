@@ -1,7 +1,7 @@
 ---
 layout: plugin_index
 title: Katello Documentation
-versions: [3.2, 3.1, 3.0, 2.4, nightly]
+versions: [3.3, 3.2, 3.1, 3.0, 2.4, nightly]
 ---
 
 <div class="row" style="min-height: 700px">
