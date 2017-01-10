@@ -555,6 +555,20 @@
     2016 in Foreman, as well as the usual selection of developers joining us
     for the latest in Foreman news, demos of the latest developments,
     discussion, community updates and more.
+- title: 'Foreman at Scale with Chris Baldwin'
+  type: 'Case Study'
+  tags:
+  - scale
+  location: virtual
+  speaker: 'Chris Baldwin & Greg Sutcliffe'
+  start: 2017-01-17 09:00 EST
+  end: 2017-01-17 10:00 EST
+  url: 'https://www.youtube.com/watch?v=WwY_IawhRKc'
+  description: |
+    In this case study, we join Chris Baldwin of Cisco (IRC: oogs) to talk
+    about using Foreman on tens-of-thousands of nodes. Join us for a
+    discussion about load-balancing, multiple datacentres, DB clustering,
+    memcache and much more!
 - title: 'DevConf CZ'
   type: 'Conference'
   location: Brno
