@@ -13,7 +13,7 @@ The Capsule server is only supported on x86_64 Operating Systems
 
  * 2 Two Logical CPUs
  * 4 GB of memory
- * Disk space usage is similar to that of the main Katello server [Installation](/docs/{{ page.version }}/installation/index.html)
+ * Disk space usage is similar to that of the main Katello server [Installation](/plugins/katello/{{ page.version }}/installation/index.html)
 
 
 ## Required Ports
@@ -24,7 +24,7 @@ At a minimum, the following ports need to be open to external connections for in
 * 443 TCP - HTTPS, used for web access and api communication
 * 9090 TCP - HTTPS - used for communication with the smart proxy
 
-See the [User Guide](/docs/{{ page.version }}/user_guide/capsules/index.html) for additional information about Capsule services and required ports.
+See the [User Guide](/plugins/katello/{{ page.version }}/user_guide/capsules/index.html) for additional information about Capsule services and required ports.
 
 ## Installation
 
@@ -71,7 +71,7 @@ Installing             Done                     [100%] [.....................]
 
 ### Install needed packages:
 
-The same yum repositories need to be configured on the Capsule server as the main Katello server. See the installation guide for the [list of required repositories](/docs/{{ page.version }}/installation/index.html#required-repositories).
+The same yum repositories need to be configured on the Capsule server as the main Katello server. See the installation guide for the [list of required repositories](/plugins/katello/{{ page.version }}/installation/index.html#required-repositories).
 
 ```
 yum install -y capsule-installer
@@ -81,4 +81,4 @@ yum install -y capsule-installer
 
 Use the provide installation command from `capsule-certs-generate`, and tailor for your own purposes as needed.  The defaults will give you a Capsule ready for Content-related services.
 
-See the [User Guide](/docs/{{ page.version }}/user_guide/capsules/index.html) to learn about setting up provisioning related services, as well as the [Foreman manual](http://theforeman.org/manuals/latest/index.html#4.3SmartProxies)
+See the [User Guide](/plugins/katello/{{ page.version }}/user_guide/capsules/index.html) to learn about setting up provisioning related services, as well as the [Foreman manual](http://theforeman.org/manuals/latest/index.html#4.3SmartProxies)
