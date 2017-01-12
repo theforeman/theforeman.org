@@ -569,6 +569,16 @@
     about using Foreman on tens-of-thousands of nodes. Join us for a
     discussion about load-balancing, multiple datacentres, DB clustering,
     memcache and much more!
+- title: 'Foreman Community Demo - 19th January'
+  type: 'Livestream'
+  location: virtual
+  start: 2017-01-19 15:00 GMT
+  end: 2017-01-19 16:00 GMT
+  url: 'https://www.youtube.com/watch?v=WwY_IawhRKc'
+  description: |
+    The first Foreman Community Demo of the year! We're kicking off in style,
+    with lots of dev content and a preview of the places you can find us at the
+    upcoming conferences.
 - title: 'DevConf CZ'
   type: 'Conference'
   location: Brno
