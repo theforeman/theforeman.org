@@ -13,8 +13,8 @@ Contributions of all types are gladly accepted!
 ## Attend some [Events](/events)
 
 The Foreman has a growing list of community events - check the [events
-page](/events) for more details. If there's noting suitable in your area, who
-not consider [creating an event](https://github.com/theforeman/theforeman.org/blob/gh-pages/_data/events.yaml)!
+page](/events) for more details. If there's nothing suitable in your area, why
+not consider [creating an event](https://github.com/theforeman/theforeman.org/blob/gh-pages/_data/events.yml)!
 
 ## Code-related contributions
 
