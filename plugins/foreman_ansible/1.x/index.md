@@ -90,7 +90,7 @@ If the Foreman setting `create_new_host_when_facts_are_uploaded` (Puppet tab) is
 
 Similarly, the Foreman setting `ignore_puppet_facts_for_provisioning` (Provisioning tab) is set to false, facts related to interfaces will update the interfaces of $HOSTNAME in Foreman.
 
-There are several Ansible options you can configure under Administer -> Settings in case you need to configure the Ansible port, user, etcetera. You can override these options on any host via Host parameters, Host group parameters or Global parameters by setting the attributes `ansible_port`, `ansible_ssh_pass` or `ansible_user`.
+There are several Ansible options you can configure under Administer -> Settings in case you need to configure the Ansible port, user, etcetera. You can override these options on any host via Host parameters, Host group parameters or Global parameters by setting the attributes as explained on the settings description (e.g: a parameter 'ansible_user' on a host will make Foreman use that parameter as the Ansible user instead of the default)
 
 ![ansible settings](static/images/plugins/foreman_ansible/settings.png)
 
@@ -114,6 +114,9 @@ You will be presented with a list of possible changes. You can remove the Ansibl
 ## 4.2 Selecting roles for a host
 
 Ansible roles can be assigned to a host on 'Ansible Roles' tab on the host's edit page. It is also possible to inherit Ansible roles form a host group.
+
+After your host is provisioned and calls home (by using `foreman_url('built')` in a template), Foreman will do an initial Ansible run to configure the host according to the applicable roles for it. Since Foreman cannot know how long it will take until the host comes back online after the OS is installed and rebooted, Foreman will make Ansible timeout for 5 minutes. This is configurable under Administer > Settings, 'Post-provision timeout' or on a per-host basis by overriding the setting with a parameter.
+
 Inherited roles are added automatically upon host group change and the select interface disables direct removal of such items.
 ![select roles for host](static/images/plugins/foreman_ansible/select_roles_for_host.png)
 
@@ -129,6 +132,10 @@ To run the playbook with the roles selected, click on the 'play Ansible roles' b
 You can also select multiple hosts on the hosts index page, and run the playbook for their Ansible roles by clicking on this button:
 
 ![multiple role play](static/images/plugins/foreman_ansible/multiple_role_play.png)
+
+Alternatively, you can run the playbook for all Ansible roles applicable to hosts in a host group by clicking on the Play roles button on the Host groups page.
+
+![hostgroup role play](static/images/plugins/foreman_ansible/hostgroups_role_play.png)
 
 # 5. Help
 
