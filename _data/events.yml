@@ -623,6 +623,21 @@
     two ways to achieve the goal: Foreman Remote Execution that allows high
     flexibility around the specific technology used for sending commands to the
     hosts and Ansible integration, that leverages the Ansible for similar purposes.
+- title: 'DevConf - Building dozen bare metal hosts in minutes'
+  type: 'Talk'
+  tags:
+  - discovery
+  - bare-metal
+  location: DevConf (e112)
+  speaker: 'Lukáš Zapletal'
+  start: 2017-01-28 16:30 CET
+  end: 2017-01-28 17:00 CET
+  url: 'https://devconf.cz/schedule.html'
+  description: |
+    This talk will provide information how to use udpcast tool, which recently
+    landed in EPEL repositories, project Foreman and Discovery plugin to boot
+    an arbitrary amount of machines into LiveCD distro and deploy the images
+    either manually or automatically.
 - title: 'DevConf - Foreman Community Dinner'
   type: 'Meetup'
   tags:
