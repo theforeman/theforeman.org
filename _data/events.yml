@@ -591,6 +591,52 @@
     stand where you can come chat with us any time, and Greg Sutcliffe will be
     running a 2 hour "Get started with Foreman" workshop as well. See you
     there!
+- title: 'DevConf - Getting Started with Foreman'
+  type: 'Workshop'
+  tags:
+  - training
+  - workshop
+  location: DevConf (a113)
+  speaker: 'Greg Sutcliffe'
+  start: 2017-01-27 13:30 CET
+  end: 2017-01-27 15:30 CET
+  url: 'https://devconf.cz/schedule.html'
+  description: |
+    In this session, we'll show you how start from a single clean VM, to taking
+    full control of a sandbox subnet. We'll get Foreman up and running, add
+    Puppet into the mix, and then progress to full PXE-based and image-based
+    provisioning. We'll also cover DHCP & DNS orchestration, virtualization
+    support, and at the end, some notable Foreman plugins, such as Ansible,
+    Discovery and Remote Execution.
+- title: 'DevConf - Real-time system management with Foreman/Ansible'
+  type: 'Talk'
+  tags:
+  - ansible
+  location: DevConf (e112)
+  speaker: 'Ivan Nečas'
+  start: 2017-01-27 16:30 CET
+  end: 2017-01-27 17:00 CET
+  url: 'https://devconf.cz/schedule.html'
+  description: |
+    One of the latest features built into Foreman is an ability to get the job
+    done through real-time actions on managed hosts. We will show and talk about
+    two ways to achieve the goal: Foreman Remote Execution that allows high
+    flexibility around the specific technology used for sending commands to the
+    hosts and Ansible integration, that leverages the Ansible for similar purposes.
+- title: 'DevConf - Foreman Community Dinner'
+  type: 'Meetup'
+  tags:
+  - meal
+  - meetup
+  location: The Immigrant, Brno
+  start: 2017-01-28 19:00 CET
+  end: 2017-01-28 22:00 CET
+  url: 'https://plus.google.com/events/co5jeeofnu4issgrp5fguss6ovo'
+  description: |
+    If you're coming to DevConf, come join us for dinner! We'll be meeting at
+    the Immigrant restaurant from around 7pm, for good food, good drink, and of
+    course, good company! Sign up on the G+ link to give us an idea of numbers.
+    See you there!
 - title: 'FOSDEM 2017'
   type: 'Conference'
   location: Brussels
@@ -602,21 +648,70 @@
     attendees), and it's always a blast. Foreman will again have a stand in the
     K building, where you can come chat with us at any point during the
     weekend, and we also have a couple of talks on the schedule.
+- title: 'FOSDEM - Viewing Puppet Catalog Diffs in Foreman'
+  type: 'Talk'
+  tags:
+  - puppet
+  - ci
+  - code-review
+  location: CfgMgmt Track, FOSDEM, Brussels
+  speaker: 'Greg Sutcliffe'
+  start: 2017-02-04 15:00 CET
+  end: 2017-02-04 15:50 CET
+  url: 'https://fosdem.org/2017/schedule/event/puppet_catalog_diffs/'
+  description: |
+    In this talk we'll look at a new Foreman plugin (foreman-puppetdiff) which
+    brings this functionality to the Foreman UI. We'll cover the basics of
+    octocatalog-diff (installation, uses, limitations) and then show how to set
+    up the Foreman plugin and use it in the UI.
+- title: 'FOSDEM - How to audit, fix (and be merry) with OpenSCAP & Foreman'
+  type: 'Talk'
+  tags:
+  - security
+  - audit
+  location: Security Track, FOSDEM, Brussels
+  speaker: 'Ondřej Pražák'
+  start: 2017-02-05 11:30 CET
+  end: 2017-02-05 11:55 CET
+  url: 'https://fosdem.org/2017/schedule/event/openscap_foreman/'
+  description: |
+    Protecting against today’s relentless and adaptive cyber threats requires
+    continuous monitoring of your networks and systems. Foreman and OpenSCAP
+    address this challenge through centralized security management,
+    configuration scanning, monitoring and remediation. In this talk we will
+    discuss how Foreman and OpenSCAP automatically scan for security gaps,
+    vulnerabilities, and unauthorized changes in security configurations —
+    monitor and remediate problems to restore security controls of your
+    established security configuration.
 - title: 'CfgMgmtCamp 2017'
   type: 'Conference'
-  location: Ghent
+  location: B2.015, Hogent, Gent
   start: 2017-02-06
   end: 2017-02-07
-  url: 'http://cfgmgmtcamp.eu/'
+  url: 'http://cfgmgmtcamp.eu/schedule/#foreman'
   description: |
     CfgMgmtCamp, the very best conference in the DevOps space, is back for it's
     2017 edition! Once again we have a full Foreman track for you all,
     covering, provisioning, orchestration, config management, plugins, and
     more. We'll also likely have a stand where you can chat with us during
     breaks, and maybe pick up some swag too!
+- title: 'CfgMgmtCamp - Foreman Community Dinner'
+  type: 'Meetup'
+  tags:
+  - meal
+  - meetup
+  location: Du Progres, Gent
+  start: 2017-02-07 19:30 CET
+  end: 2017-02-07 22:00 CET
+  url: 'https://plus.google.com/events/c0691utaaeikrb6dned8vt38e0g'
+  description: |
+    If you're coming to CfgMgmtCamp (and/or our hackday!), come join us for
+    dinner! We'll be meeting at the Du Progres restaurant from around 7.30pm,
+    for good food, good drink, and of course, good company! Sign up on the G+
+    link to give us an idea of numbers. See you there!
 - title: 'Foreman Construction Day'
   type: 'Hack Day'
-  location: Ghent
+  location: B2.015, Hogent, Gent
   start: 2017-02-08
   end: 2017-02-08
   url: 'http://foreman-construction-day-2017.eventbrite.com/'
