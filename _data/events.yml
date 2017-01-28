@@ -638,7 +638,7 @@
     landed in EPEL repositories, project Foreman and Discovery plugin to boot
     an arbitrary amount of machines into LiveCD distro and deploy the images
     either manually or automatically.
-- title: 'DevConf - Foreman Community Dinner'
+- title: 'DevConf - Foreman Community Dinner - CANCELLED'
   type: 'Meetup'
   tags:
   - meal
@@ -648,6 +648,8 @@
   end: 2017-01-28 22:00 CET
   url: 'https://plus.google.com/events/co5jeeofnu4issgrp5fguss6ovo'
   description: |
+    ** Breaking - we're conflicting with the Devconf Social (didn't know about
+    that!) so rather than split the group, we'll hook up with you all there! **
     If you're coming to DevConf, come join us for dinner! We'll be meeting at
     the Immigrant restaurant from around 7pm, for good food, good drink, and of
     course, good company! Sign up on the G+ link to give us an idea of numbers.
