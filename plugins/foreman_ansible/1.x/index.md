@@ -23,7 +23,7 @@ In order to make Ansible send us data from the hosts, we set up a callback on yo
 * If you use Ansible 2.2+ , our callback is installed with Ansible itself, simply change `/etc/ansible/ansible.cfg` to contain
 
       [defaults]
-          callback_whitelist = foreman
+      callback_whitelist = foreman
 
 and the callback will be enabled after that.
 
