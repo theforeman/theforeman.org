@@ -141,7 +141,7 @@ We follow the [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide) an
 ### JavaScript
 We are supporting and encouraging the use of es2015. (For more information see [Learn ES2015](http://babeljs.io/docs/learn-es2015/).) For browser compatibility, we use Babel to transform the code to es5.
 
-We use eslint to enforce linting rules. Run eslint by typing `eslint webpack/` in the command line at the root directory.
+We use eslint to enforce linting rules. Run eslint by typing `npm run lint` in the command line at the root directory.
 
 #### Do
 * Add all new JavaScript files to the project in the 'webpack/assets/javascripts' folder or a sub-folder.
@@ -150,6 +150,7 @@ We use eslint to enforce linting rules. Run eslint by typing `eslint webpack/` i
 
 #### Don't
 * Pollute the global namespace. If, for some reason, you must expose a function/value globally, use the ```window.tfm``` object as implemented in ```bundle.js```.
+* Remove global functions from existing code without deprecating them first. Deprecation can be done by calling the `tfm.tools.deprecate` function.
 
 #### Linting rules
 
