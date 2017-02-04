@@ -6,7 +6,6 @@ latestversion: "1.14"
 <div id="wrap">
 	<div class="container">
 	  <div class="row">
-			{% unless page.url contains "quickstart_guide" %}
 			<div class="col-md-3">
 				<div id="toc" class="sidebar-nav-fixed pull-right hidden-sm hidden-xs" data-spy="affix" data-offset-top="60" data-offset-bottom="300">
 					{% capture versionmaj %}{{ page.version | split: "." | first | times: 100 }}{% endcapture %}
@@ -27,12 +26,7 @@ latestversion: "1.14"
 					{% endif %}
 				</div>
 			</div>
-			{% endunless %}
-			{% if page.url contains "quickstart_guide" %}
-			<div id="doc" class="col-md-12">
-			{% else %}
 			<div id="doc" class="col-md-9">
-			{% endif %}
 				{{ content }}
 			</div>
 		</div>
