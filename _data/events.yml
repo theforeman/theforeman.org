@@ -755,6 +755,17 @@
     Puppet to maintain the systems in Foreman. Furthermore, you will learn
     to administer users and RBAC in Foreman and get an overview of all that
     Foreman has to offer.
+- title: 'Foreman Community Demo - 16th February'
+  type: 'Livestream'
+  location: virtual
+  start: 2017-02-16 15:00 GMT
+  end: 2017-02-16 16:00 GMT
+  url: 'https://www.youtube.com/watch?v=Zz0Bgt87wPE'
+  description: |
+    Conference season has been and gone, so let's see what happened at
+    DevConf/FOSDEM/CfgMgmtCamp, as well as updates from those who couldn't go.
+    As always, you're welcome to participate in the show, either via YouTube
+    Live chat, or via our IRC channel (Freenode/#theforeman).
 - title: 'Training: Foreman (German)'
   type: 'Training'
   tags:
