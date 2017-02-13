@@ -148,7 +148,21 @@ Edit ```/etc/foreman-proxy/settings.d/openscap.yml``` with the appropriate setti
 
     puppet module install theforeman-foreman_scap_client
 
-This puppet module will automatically install foreman_scap_client (if not installed) and will configure the client's ```/etc/foreman_scap_client/config.yaml``` with parameters which are needed for the operation of foreman_scap_client. The module is used by Foreman to automate the configuration and triggering of foreman_openscap_client, so you should install it in all puppet environments that your hosts use.
+This puppet module will *automatically* install foreman_scap_client (if not installed) and configure the client's ```/etc/foreman_scap_client/config.yaml``` with all parameters needed for the operation of foreman_scap_client. The module is used by Foreman to automate the configuration and triggering of foreman_openscap_client, so you should install it in all puppet environments that your hosts use.
+
+Once installed, Foreman will assign this class to hosts or host groups and populate the necessary parameters based on the settings you apply in Foreman under **COMPLIANCE**.
+
+Starting with puppet-foreman_scap_client 0.3.14 shipped with Foreman 1.14 the Foreman plugins yum repo can be set up if you define at least Foreman's major release version.
+This repository is needed to install *foreman_scap_client*, witch will fail otherwise.
+You can leave all other values to their default unless otherwise needed (Eg, your own yum repository mirror).
+
+#### Minimum parameters
+- `foreman_repo_rel` - To manage the foreman-plugins yum repo and set to release version. Eg  '1.15', it should match your Foreman version.
+
+#### Extended parameters
+- `foreman_repo_key` - RPM Key source file for foreman-plugins repo. Note: Currently, packages are not signed. Unless set to an alternative file source, URL will be used.
+- `foreman_repo_src` - Alternative baseurl for the forman plugins repository
+- `foreman_repo_gpg_chk` - Enable / disable GPG checks. Directly passed to Yumrepo resource
 
 # 3. Upgrading from 0.4.x
 
