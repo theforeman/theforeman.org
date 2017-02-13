@@ -95,11 +95,11 @@ To read about registering systems and subscribing them to the Product click TODO
 
 ## Scheduling Repository Synchronization
 
-Sync plans give you the ability to schedule Repository synchronization on a daily, weekly, or a monthly basis. Sync Plans are applied to Products and thus all Repositories within a Product will be synchronized according to the products plan.
+Sync plans give you the ability to schedule Repository synchronization on a hourly, daily or weekly basis. Sync Plans are applied to Products and thus all Repositories within a Product will be synchronized according to the products plan.
 
 ### Creating a Sync Plan
 
-If you would like to schedule certain repositories to sync on a daily, weekly, or monthly basis, Sync Plans give you this capability.
+If you would like to schedule certain repositories to sync on a hourly, daily or weekly basis, Sync Plans give you this capability.
 
 To create a Sync Plan, navigate to:
 
@@ -107,7 +107,7 @@ Content > Sync Plans > click "New Sync Plan" on the upper right
 
 The *Start Date* and *Start Time* fields are used as the day of the week/month and time of the day to run the re-occuring syncs.
 
-For example a sync plan that starts on Sunday 2014-04-06 at 2:30 will occur every Sunday at 2:30 every week if it has a weekly interval.  If on a monthly interval it would sync every month on the 6th day at 2:30.
+For example a sync plan that starts on Sunday 2014-04-06 at 2:30 will occur every Sunday at 2:30 every week if it has a weekly interval. If on a daily interval it would sync every day at 2:30.
 
 ![Creating a Sync Plan](/plugins/katello/{{ page.version }}/user_guide/content/sync_plan_create.png)
 
