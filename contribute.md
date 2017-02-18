@@ -20,16 +20,9 @@ not consider [creating an event](https://github.com/theforeman/theforeman.org/bl
 
 These types of tasks generally require a familiarity with Ruby (on Rails) development or RPM/Debian packaging. If you are still new to Rails, community members can help you if you get stuck with something or have any other questions.
 
-You will need to download a copy of the current development-code. [The
+You will need to download a copy of the current development code. [The
 official code repository](https://github.com/theforeman) is located
-on Github.
-
-Please note that there are two important branches:
-
-* Master - latest stable release code
-* Develop - new features and bug fixes
-
-Master is frozen between major releases.
+on GitHub. All changes are made in the `develop` branch.
 
 ### Setup development environment
 * Fork [theforeman/foreman](https://github.com/theforeman/foreman) to a personal GitHub account. This will create a "foreman" repo under your GitHub username.
