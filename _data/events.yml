@@ -766,6 +766,22 @@
     DevConf/FOSDEM/CfgMgmtCamp, as well as updates from those who couldn't go.
     As always, you're welcome to participate in the show, either via YouTube
     Live chat, or via our IRC channel (Freenode/#theforeman).
+- title: 'Foreman Deep Dives: Flux + Redux overview (with Matan Werbner)'
+  type: 'Livestream'
+  location: virtual
+  start: 2016-03-01 14:00 GMT
+  end: 2016-03-01 15:00 GMT
+  url: 'https://www.youtube.com/watch?v=Q2XkAepFaYI'
+  description: |
+    In this Deep Dive Matan Werbner will be joining us for another session on
+    UI technologies. Redux is an opinionated state container library, that is
+    built on the foundations of functional programming. It allows our UI to be
+    predictable, maintainable and highly testable. If you are interested in
+    making your code more readable and maintainable, and to have an
+    opinionated, well defined, data flow, join us! This talk requires no
+    previous knowledge of redux, react, or anything except basic JS chops
+    (ES6). We will go over the motivation, and the concepts behind flux, and
+    later dive in to real-world implementation using redux in our foreman app! 
 - title: 'Training: Foreman (German)'
   type: 'Training'
   tags:
