@@ -66,15 +66,14 @@ Installing             Done                     [100%] [.....................]
   yum -y localinstall http://katello.example.com/pub/katello-ca-consumer-latest.noarch.rpm
   subscription-manager register --org "Default_Organization"
   foreman-installer --scenario foreman-proxy-content\
-                    --parent-fqdn           "katello.example.com"\
-                    --register-in-foreman   "true"\
-                    --foreman-base-url      "https://katello.example.com"\
-                    --trusted-hosts         "katello.example.com"\
-                    --trusted-hosts         "myproxy.example.com"\
-                    --oauth-consumer-key    "UVrAZfMaCfBiiWejoUVLYCZHT2xhzuFV"\
-                    --oauth-consumer-secret "ZhH8p7M577ttNU3WmUGWASag3JeXKgUX"\
-                    --pulp-oauth-secret     "TPk42MYZ42nAE3rZvyLBh7Lxob3nEUi8"\
-                    --certs-tar             "~/myproxy.example.com-certs.tar"
+                    --foreman-proxy-content-parent-fqdn   "katello.example.com"\
+                    --foreman-proxy-register-in-foreman   "true"\
+                    --foreman-proxy-foreman-base-url      "https://katello.example.com"\
+                    --foreman-proxy-trusted-hosts         "katello.example.com"\
+                    --foreman-proxy-trusted-hosts         "myproxy.example.com"\
+                    --foreman-proxy-oauth-consumer-key    "UVrAZfMaCfBiiWejoUVLYCZHT2xhzuFV"\
+                    --foreman-proxy-oauth-consumer-secret "ZhH8p7M577ttNU3WmUGWASag3JeXKgUX"\
+                    --foreman-proxy-content-certs-tar     "/root/myproxy.example.com-certs.tar"
   The full log is at /var/log/foreman-proxy-certs-generate.log
 {% endhighlight %}
 
