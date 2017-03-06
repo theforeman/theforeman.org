@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2016-9593: foreman-debug collects sensitive data](security.html#2016-9593)
 * [CVE-2016-8639: settings dropdown menus may run stored XSS in org/location name](security.html#2016-8639)
 * [CVE-2016-8634: organizations/locations wizard may run stored XSS in name](security.html#2016-8634)
 * [CVE-2016-7078: user with no organizations or locations can see all resources](security.html#2016-7078)
@@ -66,6 +67,16 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2016-9593"></a>CVE-2016-9593: foreman-debug collects sensitive data
+
+It was found that foreman-debug did not obfuscate sensitive information (such as passwords, answer and configuration options) from the foreman-installer log file, allowing a user authorized to access the archives created by foreman-debug to gain access to potentially sensitive information.
+
+This issue was reported by Pavel Moravec.
+
+* Affects Foreman 1.2.0 up to and including 1.14.x
+* Fix is pending release in Foreman 1.15.0
+* Redmine issue [#17005](http://projects.theforeman.org/issues/17005)
 
 #### <a id="2016-8639"></a>CVE-2016-8639: settings dropdown menus may run stored XSS in org/location name
 
