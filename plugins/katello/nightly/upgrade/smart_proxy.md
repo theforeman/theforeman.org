@@ -50,7 +50,7 @@ yum update -y
 {% endhighlight %}
 
 {% highlight bash %}
-yum install katello-capsule
+yum install foreman-proxy-content
 {% endhighlight %}
 
 ## Step 4 - Regenerate Certificates
