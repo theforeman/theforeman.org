@@ -22,10 +22,10 @@ Once a Host Collection is created, it can be used to perform various actions on 
 
 The following is a high-level summary of the Host Collection features:
 
-- [Create a Host Collection](#create-a-host-collection)
-- [Add Content Hosts to a Host Collection](#add-content-hosts-to-a-host-collection)
-- [Copy a Host Collection](#copy-a-host-collection)
-- [Perform actions on a Host Collection](#perform-actions-on-a-host-collection)
+- [Create a Host Collection](/plugins/katello/{{ page.version }}/user_guide/host_collections/index.html#create-a-host-collection)
+- [Add Content Hosts to a Host Collection](/plugins/katello/{{ page.version }}/user_guide/host_collections/index.html#add-content-hosts-to-a-host-collection)
+- [Copy a Host Collection](/plugins/katello/{{ page.version }}/user_guide/host_collections/index.html#copy-a-host-collection)
+- [Perform actions on a Host Collection](/plugins/katello/{{ page.version }}/user_guide/host_collections/index.html#perform-actions-on-a-host-collection)
 
 ## Create a Host Collection
 

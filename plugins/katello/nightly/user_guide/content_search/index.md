@@ -29,11 +29,11 @@ Content Search provides a mechanism to search, compare, and contrast content acr
 
 Below is a general workflow for Content Search.
 
-1. [Select Lifecycle Environments](#select-lifecycle-environments)
-2. [Search Packages - Basic](#search-packages---basic)
-3. [Search Packages - Advanced](#search-packages---advanced)
-4. [View Package details](#view-package-details)
-5. [Compare Repositories](#compare-repositories)
+1. [Select Lifecycle Environments](/plugins/katello/{{ page.version }}/user_guide/content_search/index.html#select-lifecycle-environments)
+2. [Search Packages - Basic](/plugins/katello/{{ page.version }}/user_guide/content_search/index.html#search-packages---basic)
+3. [Search Packages - Advanced](/plugins/katello/{{ page.version }}/user_guide/content_search/index.html#search-packages---advanced)
+4. [View Package details](/plugins/katello/{{ page.version }}/user_guide/content_search/index.html#view-package-details)
+5. [Compare Repositories](/plugins/katello/{{ page.version }}/user_guide/content_search/index.html#compare-repositories)
 
 Note: Although Packages are chosen in steps 2-4 of in the workflow above, actions may also be performed on Content Views, Products, Repositories, Errata, and Puppet Modules.
 
@@ -79,7 +79,7 @@ List Packages within a Repository:
 
 ## Search Packages - Advanced
 
-[Search Packages - Basic](#search-packages---basic) illustrates how to search for all packages across all Content Views, Products and Repositories, for the selected Lifecycle Environments; however, it is possible to refine the search using the input fields provided within the search widget.
+[Search Packages - Basic](/plugins/katello/{{ page.version }}/user_guide/content_search/index.html#search-packages---basic) illustrates how to search for all packages across all Content Views, Products and Repositories, for the selected Lifecycle Environments; however, it is possible to refine the search using the input fields provided within the search widget.
 
 The following is an example search for all kernel packages within a specific Content View:
 
@@ -137,7 +137,7 @@ Comparison Results:
       * Union: Show all results regardless of which columns they exist in.
       * Intersection: Show only results that exist in all selected columns.
       * Difference: Show only results that do not exist in all selected columns.
-  * In addition, hovering over an Errata ID (e.g. RHBA-2014:1056), Package name (e.g. "busybox") or Puppet Module name (e.g. "httpd") will provide more details on the object, similar to what is shown in [View Package Details](#view-package-details)
+  * In addition, hovering over an Errata ID (e.g. RHBA-2014:1056), Package name (e.g. "busybox") or Puppet Module name (e.g. "httpd") will provide more details on the object, similar to what is shown in [View Package Details](/plugins/katello/{{ page.version }}/user_guide/content_search/index.html#view-package-details)
 
 ![Comparison Result](/plugins/katello/{{ page.version }}/user_guide/lifecycle_environments/compare_repositories_compare_result.png)
 

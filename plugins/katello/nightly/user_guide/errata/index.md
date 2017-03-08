@@ -27,11 +27,11 @@ With regard to Content Hosts, Errata is divided into two distinct classification
 
 The following is a high-level summary of the Errata features:
 
-- [View List of Errata](#view-list-of-errata)
-- [View Errata Details](#view-errata-details)
-- [View Affected Content Hosts](#view-affected-content-hosts)
-- [View Repositories Containing Errata](#view-repositories-containing-errata)
-- [Applying Errata](#applying-errata)
+- [View List of Errata](/plugins/katello/{{ page.version }}/user_guide/errata/index.html#view-list-of-errata)
+- [View Errata Details](/plugins/katello/{{ page.version }}/user_guide/errata/index.html#view-errata-details)
+- [View Affected Content Hosts](/plugins/katello/{{ page.version }}/user_guide/errata/index.html#view-affected-content-hosts)
+- [View Repositories Containing Errata](/plugins/katello/{{ page.version }}/user_guide/errata/index.html#view-repositories-containing-errata)
+- [Applying Errata](/plugins/katello/{{ page.version }}/user_guide/errata/index.html#applying-errata)
 
 ## View List of Errata
 

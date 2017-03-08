@@ -24,11 +24,11 @@ Activation Keys provide a mechanism to define properties that may be applied to 
 
 The following is a high-level summary of the Activation Key features:
 
-- [Create an Activation Key](#create-an-activation-key)
-- [Add subscriptions to an Activation Key](#add-subscriptions-to-an-activation-key)
-- [Change repository enablement for an Activation Key](#change-repository-enablement-for-an-activation-key)
-- [Add Host Collections to an Activation Key](#add-host-collections-to-an-activation-key)
-- [Register a Content Host using an Activation Key](#register-a-content-host-using-an-activation-key)
+- [Create an Activation Key](/plugins/katello/{{ page.version }}/user_guide/activation_keys/index.html#create-an-activation-key)
+- [Add subscriptions to an Activation Key](/plugins/katello/{{ page.version }}/user_guide/activation_keys/index.html#add-subscriptions-to-an-activation-key)
+- [Change repository enablement for an Activation Key](/plugins/katello/{{ page.version }}/user_guide/activation_keys/index.html#change-repository-enablement-for-an-activation-key)
+- [Add Host Collections to an Activation Key](/plugins/katello/{{ page.version }}/user_guide/activation_keys/index.html#add-host-collections-to-an-activation-key)
+- [Register a Content Host using an Activation Key](/plugins/katello/{{ page.version }}/user_guide/activation_keys/index.html#register-a-content-host-using-an-activation-key)
 
 ## Create an Activation Key
 
