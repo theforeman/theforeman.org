@@ -75,7 +75,7 @@ The installer with the --upgrade flag will run the right database migrations for
 {% highlight bash %}
 foreman-installer --scenario foreman-proxy-content --upgrade\
                   --foreman-proxy-content-certs-tar ~/myproxy.example.com-certs.tar\
-                  --certs-update-all --certs-regenerate --deploy
+                  --certs-update-all --certs-regenerate --certs-deploy
 {% endhighlight %}
 
 **Congratulations! You have now successfully upgraded your Smart Proxy to {% if page.version %}{{ page.version }} For a rundown of what was added, please see [release notes](/plugins/katello/{{ page.version }}/release_notes/release_notes.html).{% else %}the latest 3.3{% endif %}!**
