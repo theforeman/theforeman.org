@@ -15,10 +15,10 @@ For more information on GPG Keys see [The GNU Privacy Guard](https://www.gnupg.o
 
 The following is a high-level summary of GPG Key features:
 
-- [Create a GPG Key](#create-a-gpg-key)
-- [View Associated Products](#view-associated-products)
-- [View Associated Repositories](#view-associated-repositories)
-- [Assocate GPG Key with Product](#associate-gpg-key-with-product)
+- [Create a GPG Key](/plugins/katello/{{ page.version }}/user_guide/gpg_keys/index.html#create-a-gpg-key)
+- [View Associated Products](/plugins/katello/{{ page.version }}/user_guide/gpg_keys/index.html#view-associated-products)
+- [View Associated Repositories](/plugins/katello/{{ page.version }}/user_guide/gpg_keys/index.html#view-associated-repositories)
+- [Assocate GPG Key with Product](/plugins/katello/{{ page.version }}/user_guide/gpg_keys/index.html#associate-gpg-key-with-product)
 
 
 ## Create a GPG Key

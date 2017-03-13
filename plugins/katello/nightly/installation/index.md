@@ -75,7 +75,7 @@ Katello provides a puppet based installer for deploying production installations
 
 Katello can only run on an x86_64 operating systems.
 
-Installation may be done manually or via our recommended approach of using [katello-deploy](#katello-deploy).
+Installation may be done manually or via our recommended approach of using [katello-deploy](/plugins/katello/{{ page.version }}/installation/index.html#katello-deploy).
 
 ## Required Repositories
 

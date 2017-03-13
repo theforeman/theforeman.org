@@ -63,7 +63,7 @@ Once the paused task is identified, one can investigate the problem causing the 
 
 ![Task error details](/plugins/katello/{{ page.version }}/troubleshooting/task-error-details.png)
 
-The resolution of the problem is dependent on the error details. The task may be resolvable by resuming the task: make sure the sub-services are running (see [Sub-services status](#sub-services-status) for more details) and then click 'Resume' within the web interface.
+The resolution of the problem is dependent on the error details. The task may be resolvable by resuming the task: make sure the sub-services are running (see [Sub-services status](/plugins/katello/{{ page.version }}/troubleshooting/index.html#sub-services-status) for more details) and then click 'Resume' within the web interface.
 
 If this still doesn't help, one possible step is going to a Dynflow console (the button from task details takes you there):
 
@@ -81,13 +81,13 @@ The first place to look in this case is filtering the tasks on ``state = running
 
 ![Running Steps](/plugins/katello/{{ page.version }}/troubleshooting/running-steps.png)
 
-In this case, the ``"start_time" => nil`` indicates that the task was not picked up by Pulp, which usually means some issues with running the Pulp workers. See (see [Sub-services status](#sub-services-status) for more details).
+In this case, the ``"start_time" => nil`` indicates that the task was not picked up by Pulp, which usually means some issues with running the Pulp workers. See (see [Sub-services status](/plugins/katello/{{ page.version }}/troubleshooting/index.html#sub-services-status) for more details).
 
 One can also go to the Dynflow console for even more details: the ``suspended`` state means that the step is waiting for the external task to finish - the ``suspended`` state itself doesn't have to indicate any error:
 
 ![Dynflow suspended step](/plugins/katello/{{ page.version }}/troubleshooting/dynflow-suspended-step.png)
 
-If you're sure the underlying services are running fine, depending on the type of task, there might be a possibility to cancel the running step and possibly following [dealing with paused tasks](#dealing-with-paused-task) instead.
+If you're sure the underlying services are running fine, depending on the type of task, there might be a possibility to cancel the running step and possibly following [dealing with paused tasks](/plugins/katello/{{ page.version }}/troubleshooting/index.html#dealing-with-paused-task) instead.
 
 ### Locking
 
@@ -97,10 +97,10 @@ When trying to run an operation on a resource that another task is already runni
 
 ![Lock error](/plugins/katello/{{ page.version }}/troubleshooting/lock-error.png)
 
-A locked resource is one where another task that is related to the same resource is already running. Thus, the task being attempted will result in that task being tried **in running or paused state**. This means that the error is triggered also in cases, where there is a task with unresolved failure (see [dealing with paused tasks](#dealing-with-paused-task) for more details).
+A locked resource is one where another task that is related to the same resource is already running. Thus, the task being attempted will result in that task being tried **in running or paused state**. This means that the error is triggered also in cases, where there is a task with unresolved failure (see [dealing with paused tasks](/plugins/katello/{{ page.version }}/troubleshooting/index.html#dealing-with-paused-task) for more details).
 
 In rare cases, it might be hard to get into the stopped state. There is a possibility to unlock the resource in the ``running``/``paused`` task. This will switch the task into ``stopped`` state, freeing the resources for other tasks.  **Caution: unlocking allows running other tasks to run on potentially inconsistent data, which might lead into further errors**. It's still possible to go to the Dynflow console and resume the tasks, even after using the unlock feature. There are two unlock-related buttons:
-``Unlock`` and ``Force Unlock``. The only difference between these two is the second one is allowed even when the task is in ``running`` state, and therefore is potentially even more dangerous than the ``Unlock`` button. See [dealing with tasks running too long](#dealing-with-long-running-tasks) before attempting to use the ``Force Unlock`` option.
+``Unlock`` and ``Force Unlock``. The only difference between these two is the second one is allowed even when the task is in ``running`` state, and therefore is potentially even more dangerous than the ``Unlock`` button. See [dealing with tasks running too long](/plugins/katello/{{ page.version }}/troubleshooting/index.html#dealing-with-long-running-tasks) before attempting to use the ``Force Unlock`` option.
 
 ## Debug Certificate
 
