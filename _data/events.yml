@@ -793,6 +793,17 @@
     core, proxies, plugins, and more.  As always, you're welcome to participate
     in the show, either via YouTube Live chat, or via our IRC channel
     (Freenode/#theforeman).
+- title: 'Foreman Community Demo - 30th March'
+  type: 'Livestream'
+  location: virtual
+  start: 2017-03-30 15:00 BST
+  end: 2017-03-30 16:00 BST
+  url: 'https://www.youtube.com/watch?v=QfANwMzxebE'
+  description: |
+    Time again for the latest roundup of action from the community, covering
+    core, proxies, plugins, and more.  As always, you're welcome to participate
+    in the show, either via YouTube Live chat, or via our IRC channel
+    (Freenode/#theforeman).
 - title: 'Training: Foreman (German)'
   type: 'Training'
   tags:
