@@ -52,6 +52,7 @@ On the Katello server, regenerate the certificates tarball for your Smart Proxy:
 
 {% highlight bash %}
 foreman-proxy-certs-generate --foreman-proxy-fqdn "myproxy.example.com"\
+                       --certs-update-all\
                        --certs-tar    "~/myproxy.example.com-certs.tar"
 {% endhighlight %}
 
