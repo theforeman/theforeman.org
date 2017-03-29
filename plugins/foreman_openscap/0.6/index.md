@@ -296,7 +296,7 @@ Select a Tailoring file from a dropdown and then a profile that comes with it
 
 ### 4.5.4 Running a scan from UI ( foreman_openscap >= 0.6.5 )
 
-In version 0.6.5 and higher, you can initiate scans from UI. Simply go to hosts page and select "Run OpenSCAP scan" from the dropdown menu. This will initiate a scan for all policies that are assigned to the host. foreman_remote_execution plugin of version 1.2.3 or higher needs to be installed for this feature to be enabled.
+In version 0.6.5 and higher, you can initiate scans from UI. Simply go to hosts page and select "Run OpenSCAP scan" from the dropdown menu. This will initiate a scan for all policies that are assigned to the host. foreman_remote_execution plugin of version 1.3.0 or higher needs to be installed for this feature to be enabled.
 
 ![Run scan]({{page.images}}/run_scan.png)
 
