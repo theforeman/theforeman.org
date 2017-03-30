@@ -1,7 +1,7 @@
 ---
 layout: plugin_index
 title: Katello Documentation
-versions: [3.3, 3.2, 3.1, 3.0, 2.4, nightly]
+versions: [{name: 3.4, display: '3,4-RC'}, {name: 3.3, display: '3.3'}, {name: 3.2, 'display': '3.2'}, {name: 3.1, display: '3.1'}, {name: 3.0, display: '3.0'}, {name: 2.4, display: '2.4'}, {name: 'nightly', display: 'nightly'}]
 ---
 
 <div class="row" style="min-height: 700px">
@@ -67,13 +67,13 @@ versions: [3.3, 3.2, 3.1, 3.0, 2.4, nightly]
   <div class="col-sm-2 pull-right">
     <h3 style="border-bottom: 1px solid #CCC;">Versions</h3>
     {% for version in page.versions %}
-		<a href="plugins/katello/{{ version }}/index.html" class="btn" style="text-transform: none">
+		<a href="plugins/katello/{{ version.name }}/index.html" class="btn" style="text-transform: none">
 			<i class="fa fa-newspaper-o"></i>
-			<span id='manual'>{{ version }}</span>
+			<span id='manual'>{{ version.display }}</span>
 		</a>
     {% endfor %}
   </div>
-</div> 
+</div>
 
 <br/>
 <br/>

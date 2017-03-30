@@ -1,6 +1,6 @@
 ---
 pagename: Plugin Manuals
-versions: [3.3, 3.2, 3.1, 3.0, 2.4, nightly]
+versions: [{name: 3.4, display: '3.4-RC'}, {name: 3.3, display: '3.3'}, {name: 3.2, 'display': '3.2'}, {name: 3.1, display: '3.1'}, {name: 3.0, display: '3.0'}, {name: 2.4, display: '2.4'}, {name: 'nightly', display: 'nightly'}]
 ---
 
 {% include header.html %}
@@ -15,8 +15,8 @@ versions: [3.3, 3.2, 3.1, 3.0, 2.4, nightly]
               style="margin-top: 30px;font-size: 12px;padding: 4px 0 4px 2px;text-align: center;"
               onchange="this.options[this.selectedIndex].value && (window.location = ('/plugins/katello/' + this.options[this.selectedIndex].value + '/index.html'));">
         {% for version in layout.versions %}
-          <option value="{{ version }}" {% if version == page.version %}selected="true"{% endif %}>
-            {{ version }}
+          <option value="{{ version.name }}" {% if version.name == page.version %}selected="true"{% endif %}>
+            {{ version.display }}
           </option>
         {% endfor %}
       </select>
