@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2017-2667: Hammer CLI does not verify server SSL certificate](security.html#2017-2667)
 * [CVE-2016-9593: foreman-debug collects sensitive data](security.html#2016-9593)
 * [CVE-2016-8639: settings dropdown menus may run stored XSS in org/location name](security.html#2016-8639)
 * [CVE-2016-8634: organizations/locations wizard may run stored XSS in name](security.html#2016-8634)
@@ -67,6 +68,16 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2017-2667"></a>CVE-2017-2667: Hammer CLI does not verify server SSL certificate
+
+HTTPS connections initiated by Hammer CLI to the API server do not perform validation of the server SSL/TLS certificate, allowing for a man-in-the-middle attack against the user.
+
+This issue was reported by Tomas Strachota.
+
+* Affects all versions of Hammer CLI
+* Fix released in Hammer CLI 0.10.0 (with Foreman 1.15.0)
+* Redmine issue [#19033](http://projects.theforeman.org/issues/19033)
 
 #### <a id="2016-9593"></a>CVE-2016-9593: foreman-debug collects sensitive data
 
