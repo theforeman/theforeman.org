@@ -804,6 +804,15 @@
     core, proxies, plugins, and more.  As always, you're welcome to participate
     in the show, either via YouTube Live chat, or via our IRC channel
     (Freenode/#theforeman).
+- title: 'Foreman @ DevOps Düsseldorf'
+  type: 'Talk'
+  speaker: 'Maximilian Gass'
+  location: 'Invision AG, Speditionstr. 5, 40221 Düsseldorf'
+  start: 2017-04-12 19:00 CEST
+  end: 2016-04-12 22:00 CEST
+  url: 'https://www.meetup.com/devops-duesseldorf/events/238387880'
+  description: |
+    Provisioning and Puppet-Management with Foreman by Maximilian Gass (@mxey)
 - title: 'Training: Foreman (German)'
   type: 'Training'
   tags:
