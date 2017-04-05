@@ -3,8 +3,8 @@ require 'tmpdir'
 require 'git'
 
 @tagged_repos = %w(foreman smart-proxy foreman-installer foreman-selinux)
-@tag_from     = "1.13.0"
-@tag_to       = "1.14.0-RC1"
+@tag_from     = "1.14.0"
+@tag_to       = "1.15-stable"
 
 @untagged_repos = %w(
   theforeman.org
@@ -21,12 +21,14 @@ require 'git'
   hammer-cli-foreman
   community-templates
   chef-handler-foreman
+  foreman_ansible
   foreman-bats
   foreman_bootdisk
   foreman_chef
   foreman_discovery
   foreman-docker
   foreman_hooks
+  foreman_openscap
   foreman_setup
   foreman_snapshot
   foreman-tasks
@@ -34,8 +36,8 @@ require 'git'
   ovirt-node-plugin-foreman
   puppetdb_foreman
 )
-@date_from     = '2016-06-10'
-@date_to       = '2016-09-05'
+@date_from     = '2016-09-06'
+@date_to       = '2017-04-05'
 
 @author_map = {
   "abenari"        => "Amos Benari",
@@ -61,6 +63,17 @@ require 'git'
   "Ondrej Prazak"  => "Ondřej Pražák",
   "lfisher47"      => "Leah Fisher",
   "pkranenburg"    => "Paul Kranenburg",
+  "alejandrocfg"   => "Alejandro Falcon",
+  "chbaldwi"       => "Chris Baldwin",
+  "dhlavac"        => "Dominik Hlavac",
+  "kgaikwad"       => "Kavita Gaikwad",
+  "lizagilman"     => "Liza Gilman",
+  "marten"         => "Marten Veldthuis",
+  "matan"          => "Matan Uberstein",
+  "matanwerbner"   => "Matan Werbner",
+  "oogs"           => "Chris Baldwin",
+  "thomasmckay"    => "Thomas McKay",
+  "zjhuntin"       => "Zach Huntington-Meath",
 }
 
 @authors={}
