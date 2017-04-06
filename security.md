@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2017-2672: audit log stores plain text compute resource image passwords](security.html#2017-2672)
 * [CVE-2017-2667: Hammer CLI does not verify server SSL certificate](security.html#2017-2667)
 * [CVE-2016-9593: foreman-debug collects sensitive data](security.html#2016-9593)
 * [CVE-2016-8639: settings dropdown menus may run stored XSS in org/location name](security.html#2016-8639)
@@ -68,6 +69,16 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2017-2672"></a>CVE-2017-2672: audit log stores plain text compute resource image passwords
+
+Compute resource images added/registered in Foreman with username and password credentials will have the password stored in plain text in the audit log. A user with permission to view the audit log can view the password and may gain access to newly provisioned hosts.
+
+This issue was reported by Daniel Kimsey.
+
+* Affects Foreman 1.4 and higher
+* Fix in progress
+* Redmine issue [#19169](http://projects.theforeman.org/issues/19169)
 
 #### <a id="2017-2667"></a>CVE-2017-2667: Hammer CLI does not verify server SSL certificate
 
