@@ -33,7 +33,7 @@ If you are a Red Hat customer, you should have access to the Red Hat Customer Po
 
 To access the Red Hat Customer Portal, [click here](https://access.redhat.com/management)
 
-For details on how to create a subscription manifest, [click here](http://docs.redhat.com/docs/en-US/Red_Hat_Customer_Portal/1/html/Red_Hat_Network_Certificate-based_Subscription_Management/managing-sam.html)
+For details on how to create a subscription manifest, [click here](https://access.redhat.com/documentation/en-US/Red_Hat_Customer_Portal/1/html/Red_Hat_Network_Certificate-based_Subscription_Management/managing-sam.html)
 
 ## Import the Subscription Manifest
 
