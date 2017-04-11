@@ -77,7 +77,7 @@ Compute resource images added/registered in Foreman with username and password c
 This issue was reported by Daniel Kimsey.
 
 * Affects Foreman 1.4 and higher
-* Fix in progress
+* Fix [completed](https://github.com/theforeman/foreman/pull/4438), will be released with Foreman 1.15.0-RC2
 * Redmine issue [#19169](http://projects.theforeman.org/issues/19169)
 
 #### <a id="2017-2667"></a>CVE-2017-2667: Hammer CLI does not verify server SSL certificate
@@ -97,7 +97,7 @@ It was found that foreman-debug did not obfuscate sensitive information (such as
 This issue was reported by Pavel Moravec.
 
 * Affects Foreman 1.2.0 up to and including 1.14.x
-* Fix is pending release in Foreman 1.15.0
+* Fix released with Foreman 1.15.0-RC1
 * Redmine issue [#17005](http://projects.theforeman.org/issues/17005)
 
 #### <a id="2016-8639"></a>CVE-2016-8639: settings dropdown menus may run stored XSS in org/location name
@@ -139,7 +139,7 @@ _Mitigation:_ ensure all users are assigned to at least one organization or loca
 This issue was reported by Daniel Lobato Garcia.
 
 * Affects all known Foreman versions
-* Fix in progress
+* Fix released in Foreman 1.15.0-RC1
 * Redmine issue [#16982](http://projects.theforeman.org/issues/16982)
 
 #### <a id="2016-7077"></a>CVE-2016-7077: information disclosure from association lists shown without authorization
