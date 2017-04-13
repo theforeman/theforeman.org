@@ -132,8 +132,8 @@ Foreman plugins are implemented as [Rails engines](http://guides.rubyonrails.org
 		</a>
 	</div>
 	<div class='col-xs-3 center'>
-		<a href="https://github.com/theforeman/foreman_templates" class="btn-doc btn">
-			<p class='h2 doc-icon'><i class="fa fa-file"></i></p>
+		<a href="plugins/foreman_templates" class="btn-doc btn">
+			<p class='h2 doc-icon'><i class="fa fa-code-fork"></i></p>
 			Templates
 		</a>
 	</div>
