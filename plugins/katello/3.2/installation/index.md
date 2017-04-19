@@ -83,7 +83,7 @@ Katello provides a puppet based installer for deploying production installations
 
 Katello can only run on an x86_64 operating systems.
 
-Installation may be done manually or via our recommended approach of using [katello-deploy](#katello-deploy).
+Installation may be done manually or via our recommended approach of using [forklift](#forklift).
 
 ## Required Repositories
 
@@ -168,8 +168,8 @@ These may be set as command line options or in the answer file (/etc/foreman-ins
 foreman-installer --scenario katello <options>
 {% endhighlight %}
 
-## Katello Deploy
+## Forklift
 
-Katello provides a git repository designed to streamline setup by setting up all the proper repositories. Katello deploy provides the ability to deploy a virtual machine instance via Vagrant or direct deployment on an already provisioned machine. For details on how to install using katello-deploy, please see the [README](https://github.com/Katello/katello-deploy/blob/master/README.md).
+Foreman provides a git repository designed to streamline setup by setting up all the proper repositories. Forklift provides the ability to deploy a virtual machine instance via Vagrant or direct deployment on an already provisioned machine. For details on how to install using forklift, please see the [README](https://github.com/theforeman/forklift/blob/master/README.md).
 
 

@@ -160,7 +160,7 @@ hammer-cli-katello
 
 ### Step 4: Get Your Branch On
 
-On the date and time you previously warned the community branching would occur on, do the following for each repository EXCEPT `hammer-cli-katelo`.
+On the date and time you previously warned the community branching would occur on, do the following for each repository EXCEPT `hammer-cli-katello`.
 
 The first step is to create the X.Y branch. Take a moment to review the layout of each repository from Step 3. The idea with this step is to checkout the master branch for a given repository, ensure its set to the current upstream master, set a tag point for where you are going to branch for EACH spec file (aka package) that lives in a given repository and then create the branch. For example, the katello repository contains two packages (spec files) at `/` and `/deploy` (likewise, again, looking back at Step 3, katello-misc contains multiple packages):
 
@@ -329,17 +329,17 @@ tito release koji
 
 For this step we'll need to update the Jenkins job that pushes RPMs to fedorapeople and run the job. Go to `http://ci.theforeman.org/view/Katello%20Pipeline/job/release_push_rpm_katello/configure` and add X.Y to the list of RELEASE choices and save the configuration. Now head to `http://ci.theforeman.org/view/Katello%20Pipeline/job/release_push_rpm_katello/build?delay=0sec`, choose the X.Y version you just added and click `Build`. This will run a script that copies the RPMs from Koji to fedorapeople.
 
-### Step 12: Update katello-deploy
+### Step 12: Update forklift
 
-We maintain a deployment tool, katello-deploy, for easily testing and deploying Katello versions. You'll want to clone the repository (https://github.com/Katello/katello-deploy.git) and update the following:
+We maintain a deployment tool, forklift, for easily testing and deploying Katello versions. You'll want to clone the repository (https://github.com/theforeman/forklift) and update the following:
 
 1. Edit the README to indicate the new version and the OSes it works with.
-1. Update the foreman version matcher - https://github.com/Katello/katello-deploy/blob/master/setup.rb#L10
-1. Add new boxes for X.Y - https://github.com/Katello/katello-deploy/blob/master/Vagrantfile#L28
+1. Update the foreman version mappings - https://github.com/theforeman/forklift/blob/master/config/versions.yaml
+1. Add new boxes for X.Y - https://github.com/theforeman/forklift/blob/master/config/base_boxes.yaml
 
 ### Step 13: Test
 
-Use the newly updated katello-deploy to spin up an X.Y box and test for the following:
+Use the newly updated forklift to spin up an X.Y box and test for the following:
 
 * Installation
 * UI
