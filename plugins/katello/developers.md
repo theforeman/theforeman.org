@@ -160,7 +160,7 @@ hammer-cli-katello
 
 ### Step 4: Get Your Branch On
 
-On the date and time you previously warned the community branching would occur on, do the following for each repository EXCEPT `hammer-cli-katelo`.
+On the date and time you previously warned the community branching would occur on, do the following for each repository EXCEPT `hammer-cli-katello`.
 
 The first step is to create the X.Y branch. Take a moment to review the layout of each repository from Step 3. The idea with this step is to checkout the master branch for a given repository, ensure its set to the current upstream master, set a tag point for where you are going to branch for EACH spec file (aka package) that lives in a given repository and then create the branch. For example, the katello repository contains two packages (spec files) at `/` and `/deploy` (likewise, again, looking back at Step 3, katello-misc contains multiple packages):
 
