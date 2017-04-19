@@ -329,17 +329,17 @@ tito release koji
 
 For this step we'll need to update the Jenkins job that pushes RPMs to fedorapeople and run the job. Go to `http://ci.theforeman.org/view/Katello%20Pipeline/job/release_push_rpm_katello/configure` and add X.Y to the list of RELEASE choices and save the configuration. Now head to `http://ci.theforeman.org/view/Katello%20Pipeline/job/release_push_rpm_katello/build?delay=0sec`, choose the X.Y version you just added and click `Build`. This will run a script that copies the RPMs from Koji to fedorapeople.
 
-### Step 12: Update katello-deploy
+### Step 12: Update forklift
 
-We maintain a deployment tool, katello-deploy, for easily testing and deploying Katello versions. You'll want to clone the repository (https://github.com/Katello/katello-deploy.git) and update the following:
+We maintain a deployment tool, forklift, for easily testing and deploying Katello versions. You'll want to clone the repository (https://github.com/theforeman/forklift) and update the following:
 
 1. Edit the README to indicate the new version and the OSes it works with.
-1. Update the foreman version matcher - https://github.com/Katello/katello-deploy/blob/master/setup.rb#L10
-1. Add new boxes for X.Y - https://github.com/Katello/katello-deploy/blob/master/Vagrantfile#L28
+1. Update the foreman version mappings - https://github.com/theforeman/forklift/blob/master/config/versions.yaml
+1. Add new boxes for X.Y - https://github.com/theforeman/forklift/blob/master/config/base_boxes.yaml
 
 ### Step 13: Test
 
-Use the newly updated katello-deploy to spin up an X.Y box and test for the following:
+Use the newly updated forklift to spin up an X.Y box and test for the following:
 
 * Installation
 * UI
