@@ -41,7 +41,7 @@ fixed in 1.6.1.
 
 ### New plugins
 
-**[foreman\_graphite](http://github.com/theforeman/foreman_graphite)**
+**[foreman\_graphite](https://github.com/theforeman/foreman_graphite)**
 adds graphite support for your Foreman infrastructure instances.
 Configure where to send your performance metrics through a YAML file.  
   
@@ -51,7 +51,7 @@ Authentication is done through SSH keys and parameters to filter subsets
 of hosts are available.  
   
 Rundeck support will be moved out of core for 1.7.
-**[foreman\_host\_rundeck](http://github.com/theforeman/foreman_host_rundeck)**
+**[foreman\_host\_rundeck](https://github.com/theforeman/foreman_host_rundeck)**
 will allow users to get a YAML representation of hosts for Rundeck.  
   
 [**foreman\_salt**](https://github.com/theforeman/foreman_salt/)

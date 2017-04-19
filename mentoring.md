@@ -107,7 +107,7 @@ currently available projects.
 ## Project Suggestions
 
 Send a pull request with the content of your proposal to [theforeman.org at
-GitHub](http://github.com/theforeman/theforeman.org). See [Dave Neary's
+GitHub](https://github.com/theforeman/theforeman.org). See [Dave Neary's
 post](http://www.outercurve.org/Blogs/EntryId/45/Making-the-most-of-Google-Summer-of-Code-Dave-Neary-guest-blogger)
 for suggestions on how to propose ideas.
 

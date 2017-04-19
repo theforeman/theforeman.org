@@ -114,7 +114,7 @@ changes.
 - [foreman_remote_execution](https://github.com/theforeman/foreman_remote_execution) updated to 1.2.1
 - [foreman_templates](https://github.com/theforeman/foreman_templates) updated to 3.0.0
 - [foreman_xen](https://github.com/theforeman/foreman-xen) updated to 0.3.1
-- [hammer_cli](http://github.com/theforeman/hammer-cli) updated to 0.8.0
+- [hammer_cli](https://github.com/theforeman/hammer-cli) updated to 0.8.0
 
 - [smart_proxy_dns_infoblox](https://github.com/theforeman/smart_proxy_dns_infoblox) &
   [smart_proxy_dhcp_infoblox](https://github.com/theforeman/smart_proxy_dhcp_infoblox) now RPM & DEB packaged

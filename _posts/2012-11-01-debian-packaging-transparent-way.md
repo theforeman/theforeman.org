@@ -25,7 +25,7 @@ more open.
 ### Packaging in the open
 
 The first piece of the puzzle starts with our foreman-rpms repo
-([github.com/theforeman/foreman-rpms](http://github.com/theforeman/foreman-rpms))  
+([github.com/theforeman/foreman-rpms](https://github.com/theforeman/foreman-rpms))  
 in this repo we store all the packaging data for the foreman packages,
 both deb and rpm. In the case of Debian, you'll see a structure like:  
   
@@ -143,7 +143,7 @@ months time ;)
 If anyone is interested in replicating the whole chain, you can get our
 pbuilder  
 puppet configuration from our infrstructure repo at
-[github.com/theforeman/foreman-infra](http://github.com/theforeman/foreman-infra)  
+[github.com/theforeman/foreman-infra](https://github.com/theforeman/foreman-infra)  
   
 This repo contains the puppet code we use to build the various parts of
 our  

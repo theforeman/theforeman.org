@@ -21,7 +21,7 @@ the Puppet code locked up, we decided specifically to make it public.
 There are lots of benefits of doing this, but it made sense specifically
 for us so others can help manage the infrastructure on an unfettered
 basis. Lots of other benefits come with [public Puppet
-code](http://github.com/theforeman/foreman-infra), too, like thinking
+code](https://github.com/theforeman/foreman-infra), too, like thinking
 more acutely about storing private information in the repositories and
 reducing the ability of manual changes to cause issues in the test
 environment.  

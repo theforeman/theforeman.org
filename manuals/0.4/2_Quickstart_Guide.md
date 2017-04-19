@@ -17,7 +17,7 @@ export MODULE_PATH="/etc/puppet/modules/common"
 mkdir -p $MODULE_PATH
 for mod in apache foreman foreman_proxy git passenger puppet tftp xinetd; do
   mkdir -p $MODULE_PATH/$mod
-  wget http://github.com/theforeman/puppet-$mod/tarball/master -O - | tar xzvf - -C $MODULE_PATH/$mod --strip-components=1
+  wget https://github.com/theforeman/puppet-$mod/tarball/master -O - | tar xzvf - -C $MODULE_PATH/$mod --strip-components=1
 done;
 {% endhighlight %}
 
