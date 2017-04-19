@@ -30,7 +30,7 @@ For the following examples, the new certificates live in the following locations
 Foreman
 =======
 
-Foreman is presented via mod_passenger on Apache, so the SSL keys need to be changed in your apache VirtualHost. For me this was `/etc//httpd/conf.d/05-foreman-ssl.conf`.
+Foreman is presented via mod_passenger on Apache, so the SSL keys need to be changed in your apache VirtualHost. For me this was `/etc/httpd/conf.d/05-foreman-ssl.conf`.
 
 The following options need to be changed: `SSLCertificateFile`, `SSLCertificateKeyFile` and `SSLCertificateChainFile`.
 It is important that you do **not** change `SSLCACertificateFile` or `SSLCARevocationFile`, as these are used for client authentication. Your final config should look like this:

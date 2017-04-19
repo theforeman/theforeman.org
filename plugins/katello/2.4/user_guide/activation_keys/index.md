@@ -116,7 +116,7 @@ To add Host Collections to a key:
 - select the Host Collections you would like to add
 - click **Add Selected**
 
-![Adding Host Collections to an Activation Key](/plugins/katello/{{ page.version }}/user_guide/activation_keys//activation_key_add_host_collections.png)
+![Adding Host Collections to an Activation Key](/plugins/katello/{{ page.version }}/user_guide/activation_keys/activation_key_add_host_collections.png)
 
 ## Register a Content Host using an Activation Key
 
