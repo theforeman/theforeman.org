@@ -1,7 +1,7 @@
 ---
 layout: plugins/katello/documentation
 title: Documentation
-version: nightly
+version: 3.4
 ---
 
 # Katello Documentation
