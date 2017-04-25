@@ -77,7 +77,7 @@ Compute resource images added/registered in Foreman with username and password c
 This issue was reported by Daniel Kimsey.
 
 * Affects Foreman 1.4 and higher
-* Fix [completed](https://github.com/theforeman/foreman/pull/4438), will be released with Foreman 1.15.0-RC2
+* Fix released with Foreman 1.15.0-RC2
 * Redmine issue [#19169](http://projects.theforeman.org/issues/19169)
 
 #### <a id="2017-2667"></a>CVE-2017-2667: Hammer CLI does not verify server SSL certificate
