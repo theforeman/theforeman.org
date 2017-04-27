@@ -828,8 +828,8 @@
   type: 'Livestream'
   location: virtual
   speaker: 'Timo Goebel & Dirk G&ouml;tz'
-  start: 2017-04-27 16:00 CEST
-  end: 2017-04-27 17:00 CEST
+  start: 2017-05-04 16:00 CEST
+  end: 2017-05-04 17:00 CEST
   url: 'https://www.youtube.com/watch?v=-w9f5xEPki0'
   description: |
     Foreman already manages most of the lifecycle of your servers. To really
