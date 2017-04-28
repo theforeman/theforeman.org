@@ -824,6 +824,27 @@
     core, proxies, plugins, and more.  As always, you're welcome to participate
     in the show, either via YouTube Live chat, or via our IRC channel
     (Freenode/#theforeman).
+- title: 'Foreman @ Red Hat Summit'
+  type: 'Conference'
+  location: Boston, US
+  start: 2017-05-02
+  end: 2017-05-04
+  url: 'https://www.redhat.com/en/summit'
+  description: |
+    Many of the Foreman devs will be attending Red Hat Summit in Boston.
+    You'll be able to find us in the Community Central area of the main expo
+    hall. Come along to meet some of the team and see some live demos!
+- title: 'Foreman Community Dinner @ Summit'
+  type: 'Dinner'
+  location: '75 on Liberty Wharf, Boston, US'
+  start: 2017-05-02 20:00 EST
+  end: 2017-05-02 23:00 EST
+  url: 'http://75onlibertywharf.com/'
+  description: |
+    If you're at Red Hat Summit (or just in Boston anyway!), then come along to
+    our Foreman Community Dinner and meet some of the community. These events
+    are always good fun - stories to swap, tips to learn and good company to
+    enjoy!
 - title: 'Foreman Deep Dives: Monitoring with Foreman'
   type: 'Livestream'
   location: virtual
