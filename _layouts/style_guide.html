@@ -1,0 +1,20 @@
+---
+pagename: style_guide
+---
+
+{% include header.html %}
+<div id="wrap">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div id="toc" class="sidebar-nav-fixed pull-right hidden-xs hidden-sm" data-spy="affix" data-offset-top="60" data-offset-bottom="300">
+				</div>
+			</div>
+			<div id="doc" class="col-md-9">
+				{{ content }}
+			</div>
+		</div>
+	</div>
+</div>
+{% include tocify.html %}
+{% include footer.html %}
