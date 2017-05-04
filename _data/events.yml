@@ -860,6 +860,17 @@
     administrator to connect Foreman and the monitoring solution Icinga 2.  In
     the deep dive, we want to show basic functionality of the plugins and
     explain how to set this up in your environment.
+- title: 'Foreman Community Demo - 11th May'
+  type: 'Livestream'
+  location: virtual
+  start: 2017-05-11 15:00 BST
+  end: 2017-05-11 16:00 BST
+  url: 'https://www.youtube.com/watch?v=Yj4LytgUUc4'
+  description: |
+    Time again for the latest roundup of action from the community, covering
+    core, proxies, plugins, and more.  As always, you're welcome to participate
+    in the show, either via YouTube Live chat, or via our IRC channel
+    (Freenode/#theforeman).
 - title: 'Training: Foreman (German)'
   type: 'Training'
   tags:
