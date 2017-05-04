@@ -18,7 +18,17 @@ You can install the plugin using the foreman-installer (recommended way). To do 
 
 If you installed the plugin using [package directly](https://theforeman.org/plugins/#2.2Packageinstallation), you should run the migrations and seed (just to be sure) and restart the Foreman.
 If installed foreman from git, you can simply add foreman-templates gem as one of the dependencies. Don't forget to run migrations and seed afterwards and obviously restart the Foreman.
-      
+
+# 2.1 Uninstallation
+
+If you later decide to remove the plugin, you need to clean it's custom data. Otherwise you'd get error e.g. on settings page, that some class can't be instantiated. Before removing the plugin from your Foreman instance, make sure to run following command
+
+```sh
+foreman-rake templates:cleanup
+```
+
+This cleans up internals so the plugin can be safely uninstalled. The tempaltes that were created remain untouched. The remove the plugin after clean up differs based on how you installed it. If you used foreman-installer or installed plugin by package directly, then you just need to uninstall the plugin package using rpm/dpkg. For git installations, just remove it from bundler files.
+
 # 3. Configuration
 
 After the installation there are new settings available. These are the default setting for both importing and exporting tasks. They can be overridden on each synchronization run and serve only as default so users don't have to specify the same value on every run. You will find them under Administer -> Settings -> TemplateSync. Only administrator can modify their values. Following table explains the attribute behavior. Note that some are only used on import or export actions.
