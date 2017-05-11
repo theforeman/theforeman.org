@@ -44,17 +44,25 @@ Incremental backups can be used to only store the changes since the last backup:
 
 First take a full backup:
 ```
-# katello-backup /tmp/backup/full
+# katello-backup /tmp/backups
+```
+(This will create a new directory, /tmp/backups/katello-backup-YEAR-MONTH-DAYTHOUR:MIN:SEC[+-]TIMEZONE)
+
+Take 1st incremental backup (this will create a new directory under /tmp/backups to house the new backup, just like the full backup directory):
+```
+# katello-backup /tmp/backups --incremental /tmp/backup/FULL_BACKUP_DIR
 ```
 
-Take 1st incremental backup:
+Take 2nd incremental backup (again, this will create a new directory under /tmp/backups to house this second incremental backup):
 ```
-# katello-backup /tmp/backup/incremntal1 --incremental /tmp/backup/full
+# katello-backup /tmp/backups --incremental /tmp/backup/FIRST_INCREMENTAL_BACKUP_DIR
 ```
 
-Take 2nd incremental backup:
+### Branching/rebasing incremental backups
+
+Should you choose to take a new incremental backup from, say, the full backup so you don't need too many files when restoring those backups, simply point the command to the full backup directory, and this newest backup directory will be incremental in relation to the full backup not to the 2nd incremental backup:
 ```
-# katello-backup /tmp/backup/incremntal2 --incremental /tmp/backup/incremntal1
+# katello-backup /tmp/backups --incremental /tmp/backup/FULL_BACKUP_DIR
 ```
 
 ## Final check-up
@@ -107,7 +115,9 @@ Check log files for errors, such as `/var/log/foreman/production.log` and `/var/
 Incremental backups need to be restored sequentially starting with the oldest:
 
 ```
-# katello-restore /tmp/backup/full
-# katello-restore /tmp/backup/incremntal1
-# katello-restore /tmp/backup/incremntal2
+# katello-restore /tmp/backups/FULL_BACKUP
+# katello-restore /tmp/backups/FIRST_INCREMENTAL
+# katello-restore /tmp/backups/SECOND_INCREMENTAL
+(...)
 ```
+In case you have multiple "branches" of incremental backups, you need to pick your full backup and each incremental one for the "branch" you wish to restore, in the order they were taken.
