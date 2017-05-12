@@ -88,6 +88,7 @@ Installation may be done manually or via our recommended approach of using [fork
 <div id="rhel7" markdown="1">
 {% highlight bash %}
 yum -y  --disablerepo="*" --enablerepo=rhel-7-server-rpms install yum-utils wget
+yum install -y yum-utils
 yum-config-manager --disable "*"
 yum-config-manager --enable rhel-7-server-rpms
 yum-config-manager --enable rhel-7-server-optional-rpms
