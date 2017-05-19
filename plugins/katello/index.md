@@ -49,14 +49,16 @@ versions: [{name: 3.4, display: '3.4-RC'}, {name: 3.3, display: '3.3'}, {name: 3
 
     <br/>
     <h4>
+      <i class="fa fa-bomb" style="margin-right: 6px;"></i>
       Troubleshooting
     </h4>
     <p style="font-size: 14px">
-      Having issues with your Katello? Check the <a href="/support.html">support page</a> for information on how to get help or the <a href="/plugins/katello/{{ page.versions[0] }}/troubleshooting/index.html">troubleshooting guide</a> for common issues.
+      Having issues with your Katello? Check the <a href="/support.html">support page</a> for information on how to get help or the <a href="/plugins/katello/{{ page.versions[0].name }}/troubleshooting/index.html">troubleshooting guide</a> for common issues.
     </p>
 
     <br/>
     <h4>
+      <i class="fa fa-wrench" style="margin-right: 6px;"></i>
       Are you a Katello developer?
     </h4>
     <p style="font-size: 14px">
