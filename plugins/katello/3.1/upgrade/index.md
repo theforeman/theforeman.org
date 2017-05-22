@@ -38,7 +38,7 @@ foreman-rake katello:preupgrade_content_host_check
 
 ## Step 1 - Backup
 
-If Katello is running on a Virtual Machine, we reccomend to take a snapshot prior to upgrading. Otherwise, take a backup of the relevant databases by following the [instructions here](/plugins/katello/{{ page.version }}/user_guide/backup/).
+If Katello is running on a Virtual Machine, we recommend to take a snapshot prior to upgrading. Otherwise, take a backup of the relevant databases by following the [instructions here](/plugins/katello/{{ page.version }}/user_guide/backup/).
 
 ## Step 2 - Operating System
 
