@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2017-7505: User scoped in organization with permissions for user management can manage administrators that are not assigned to any organization](security.html#2017-7505)
 * [CVE-2017-2672: audit log stores plain text compute resource image passwords](security.html#2017-2672)
 * [CVE-2017-2667: Hammer CLI does not verify server SSL certificate](security.html#2017-2667)
 * [CVE-2016-9593: foreman-debug collects sensitive data](security.html#2016-9593)
@@ -69,6 +70,16 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2017-7505"></a>CVE-2017-7505: User scoped in organization with permissions for user management can manage administrators that are not assigned to any organization
+
+User with *_users permissions who is assigned to some organization(s) can do all operations granted by these permissions on all administrator user objects. We considered admin to effectively be present in all organizations.
+
+The issue was reported by David Caplan.
+
+* Affects Foreman 1.5 and higher
+<!-- * Fix released with Foreman 1.15.1 -->
+* Redmine issue [#19612](http://projects.theforeman.org/issues/19612)
 
 #### <a id="2017-2672"></a>CVE-2017-2672: audit log stores plain text compute resource image passwords
 
