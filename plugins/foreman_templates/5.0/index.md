@@ -180,7 +180,11 @@ foreman-rake templates:purge prefix='[my] ' verbose=true negate=true
 
 # 5. API
 
-Coming soon 
+Its recommend to initiate an import using the API instead of the traditional `foreman-rake templates:import`. This has a couple of benefits like it's run as the user and therefore leverages the RBAC system. Here's an example using curl, optionally you can also override the default settings by specifying them in the request. See <code>&lt;your_foreman_url&gt;/apidoc/</code> for a full list of parameters available.
+
+```sh
+curl -H "Accept:application/json,version=2" -H "Content-Type:application/json" -u user1:changeme -k https://foreman.example.com/api/v2/templates/import -X POST -d "{\"repo\":\"/another/repo\"}"
+```
 
 # 6. Help
 
