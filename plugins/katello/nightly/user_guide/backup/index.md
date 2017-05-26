@@ -65,6 +65,20 @@ Should you choose to take a new incremental backup from, say, the full backup so
 # katello-backup /tmp/backups --incremental /tmp/backup/FULL_BACKUP_DIR
 ```
 
+An example with full backup on Sunday and incremental backup for all other weekdays would look like:
+
+```
+#!/bin/bash -e
+DESTINATION=/var/backup
+if [[ $(date +%w) == 0 ]]; then
+  katello-backup $DESTINATION
+else
+  LAST=$(ls -td -- $DESTINATION/*/ | head -n 1)
+  katello-backup $DESTINATION --incremental "$LAST"
+fi
+exit 0
+```
+
 ## Final check-up
 
 After a successful backup, the backup directory should have the following files:
