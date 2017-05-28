@@ -882,6 +882,18 @@
     core, proxies, plugins, and more.  As always, you're welcome to participate
     in the show, either via YouTube Live chat, or via our IRC channel
     (Freenode/#theforeman).
+- title: Foreman meetup TLV
+  type: 'Meetup'
+  location: Red Hat office - 1st floor, 34 Yerushalaim Rd, Raanana, Israel
+  start: 2017-06-07 17:30 IST
+  end: 2017-06-07 20:30 IST
+  url: 'https://www.meetup.com/Open-Source-Israel/events/240152549/'
+  description: |
+    In celebration of Foreman 1.15 release we will be holding a meetup in the Red Hat offices in Israel.
+    Agenda:
+    * Introduction to Katello - Walden Raines
+    * Refactoring Katello Installer Modules - Ewoud Kohl van Wijngaarden
+    * Ask me anything - Live session with Foreman developers
 - title: 'Training: Foreman (German)'
   type: 'Training'
   tags:
