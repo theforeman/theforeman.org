@@ -4,7 +4,7 @@ title: Katello Installation
 version: 2.4
 foreman_version: "1.10"
 script: osmenu.js
-latest: 3.3
+latest: 3.4
 ---
 
 # Katello {{ page.version }} Installation
