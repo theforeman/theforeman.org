@@ -186,13 +186,23 @@ Its recommend to initiate an import using the API instead of the traditional `fo
 curl -H "Accept:application/json,version=2" -H "Content-Type:application/json" -u user1:changeme -k https://foreman.example.com/api/v2/templates/import -X POST -d "{\"repo\":\"/another/repo\"}"
 ```
 
-# 6. Help
+# 6. Working with locked templates
+Templates shipped by Foreman are locked. Template import does not update locked templates by default. Output shows the info about which templates were skipped because of lock ("Skipping Template id #{template_id}:#{template_name} - template is locked"). If you wish to override this behavior, you need to supply 'force' parameter. See <code>&lt;your_foreman_url&gt;/apidoc/</code> for parameter details.
+
+
+## 6.1 Known taxonomy problems when importing
+
+The import procedure uses template metadata to determine Organization/Location asssociations. When non-admin user initiates the import via API, it may be possible that metadata do not contain any Organization/Location the user is assigned to. In this case, import of the template fails with: `Invalid organizations selection, you must select at least one of yours`. To import such a template, update it's metadata so it contains at least one Organization/Location that user is assigned to.
+
+When there is OrgA with template some_tmpl and b_user (user only in OrgB) tries to import some_tmpl (which is not yet present in OrgB), it fails with: `name has already been taken`. This is a general problem with taxonomies - some_tmpl is not found for update in scope of OrgB and when we try to create it, we hit the unique constraint on name that is not scoped by taxonomy. To import such a template, change its name in metadata or associate existing template with the same name in OrgA to OrgB as well.
+
+# 7. Help
 
 Please follow our [standard procedures and contacts]({{site.baseurl}}support.html).
 
-# 7. Getting involved
+# 8. Getting involved
 
-## 7.1 Troubleshooting
+## 8.1 Troubleshooting
 
 If you find a bug, please file it in
 [Redmine](http://projects.theforeman.org/projects/templates/issues/new).
@@ -201,12 +211,12 @@ See the [troubleshooting section](/manuals/latest/index.html#7.2GettingHelp)
 in the Foreman manual for more info.
 
 
-## 7.2 Contributing
+## 8.2 Contributing
 
 Follow the [same process as Foreman](/contribute.html#SubmitPatches)
 for contributing.
 
-# 8. Links
+# 9. Links
 
 * foreman_templates plugin [https://github.com/theforeman/foreman_templates](https://github.com/theforeman/foreman_templates)
 * issue tracker [http://projects.theforeman.org/projects/templates/issues](http://projects.theforeman.org/projects/templates/issues)
