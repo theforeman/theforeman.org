@@ -180,15 +180,19 @@ foreman-rake templates:purge prefix='[my] ' verbose=true negate=true
 
 # 5. API
 
-Its recommend to initiate an import using the API instead of the traditional `foreman-rake templates:import`. This has a couple of benefits like it's run as the user and therefore leverages the RBAC system. Here's an example using curl, optionally you can also override the default settings by specifying them in the request. See <code>&lt;your_foreman_url&gt;/apidoc/</code> for a full list of parameters available.
+Its recommend to initiate import and export using the API instead of the traditional `foreman-rake templates:import`. This has a couple of benefits like it's run as the user and therefore leverages the RBAC system. Here's an example using curl, optionally you can also override the default settings by specifying them in the request. See <code>&lt;your_foreman_url&gt;/apidoc/</code> for a full list of parameters available.
 
 ```sh
 curl -H "Accept:application/json,version=2" -H "Content-Type:application/json" -u user1:changeme -k https://foreman.example.com/api/v2/templates/import -X POST -d "{\"repo\":\"/another/repo\"}"
 ```
 
-# 6. Working with locked templates
-Templates shipped by Foreman are locked. Template import does not update locked templates by default. Output shows the info about which templates were skipped because of lock ("Skipping Template id #{template_id}:#{template_name} - template is locked"). If you wish to override this behavior, you need to supply 'force' parameter. See <code>&lt;your_foreman_url&gt;/apidoc/</code> for parameter details.
+```sh
+curl -H "Accept:application/json,version=2" -H "Content-Type:application/json" -u user1:changeme -k https://foreman.example.com/api/v2/templates/export -X POST -d "{\"repo\":\"/another/repo\"}"
+```
 
+# 6. Working with locked templates
+
+Templates shipped by Foreman are locked. Template import does not update locked templates by default. Output shows the info about which templates were skipped because of lock ("Skipping Template id #{template_id}:#{template_name} - template is locked"). If you wish to override this behavior, you need to supply 'force' parameter. See <code>&lt;your_foreman_url&gt;/apidoc/</code> for parameter details.
 
 ## 6.1 Known taxonomy problems when importing
 
