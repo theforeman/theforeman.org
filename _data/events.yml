@@ -885,8 +885,8 @@
 - title: Foreman meetup TLV
   type: 'Meetup'
   location: Red Hat office - 1st floor, 34 Yerushalaim Rd, Raanana, Israel
-  start: 2017-06-07 17:30 IST
-  end: 2017-06-07 20:30 IST
+  start: 2017-06-07 17:30 IDT
+  end: 2017-06-07 20:30 IDT
   url: 'https://www.meetup.com/Open-Source-Israel/events/240152549/'
   description: |
     In celebration of Foreman 1.15 release we will be holding a meetup in the Red Hat offices in Israel.
