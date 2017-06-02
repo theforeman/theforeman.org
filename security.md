@@ -78,7 +78,7 @@ User with *_users permissions who is assigned to some organization(s) can do all
 The issue was reported by David Caplan.
 
 * Affects Foreman 1.5 and higher
-<!-- * Fix released with Foreman 1.15.1 -->
+* Fix released with Foreman 1.15.1
 * Redmine issue [#19612](http://projects.theforeman.org/issues/19612)
 
 #### <a id="2017-2672"></a>CVE-2017-2672: audit log stores plain text compute resource image passwords
