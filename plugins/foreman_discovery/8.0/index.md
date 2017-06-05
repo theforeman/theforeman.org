@@ -919,7 +919,7 @@ MAC address will be used when left blank. In addition to @host attribute
 function rand for random integers is available. Examples:
 
     application-server-<%= rand(99999) %>
-    load-balancer-<%= @host.facts['bios_vendor'] + '-' + rand(99999) %>
+    load-balancer-<%= @host.facts['bios_vendor'] + '-' + rand(99999).to_s %>
     wwwsrv-<%= @host.hostgroup.name %>
     minion-<%= @host.discovery_rule.name %>
     db-server-<%= @host.ip.gsub('.','-') + '-' + @host.hostgroup.subnet.name %>
