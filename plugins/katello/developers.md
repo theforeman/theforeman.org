@@ -425,6 +425,27 @@ koji -c ~/.koji/katello-config import-sig *.rpm
 
 As list-signed does not seem to work, do a random check in ​http://koji.katello.org/packages/ that http://koji.katello.org/packages/<name>/<version>/<release>/data/sigcache/d5a88496/ exists and has some content in it.
 
+### Release Api docs
+
+On a git checkout run:
+```
+VERSION=3.4
+$GITDIR=~/git  #directory containing theforeman.org git repo
+
+FOREMAN_APIPIE_LANGS=en rake apipie:cache
+cp -rf public/apipie-cache $GITDIR/theforeman.org/plugins/katello/$VERSION/api
+# clear out json files
+find $GITDIR/theforeman.org/plugins/katello/$VERSION/api -name "*.json" -type f -delete 
+
+cd $GITDIR/theforeman.org/
+cp plugins/katello/nightly/api/index.md  $GITDIR/theforeman.org/plugins/katello/$VERSION/api/
+sed -i "s/version: nightly/version: $VERSION/g" $GITDIR/theforeman.org/plugins/katello/$VERSION/api/index.md
+ 
+cp -rf $GITDIR/theforeman.org/api/new_version_template/apidoc/* $GITDIR/theforeman.org/plugins/katello/$VERSION/api/apidoc 
+```
+
+Open a PR and commit the changes
+
 ##### Create Back Signed RPMs in Koji
 
 ```
