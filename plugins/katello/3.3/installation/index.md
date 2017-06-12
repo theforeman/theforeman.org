@@ -24,6 +24,10 @@ on your system.  This is required for the encrypted NoVNC connections. You
 will find `katello-server-ca.crt` in the `/pub` directory of your Katello
 server (e.g. `http://katello.example.com/pub/katello-server-ca.crt`).
 
+## Important Note for Existing Installations
+
+Katello does not currently support installation on existing Foreman deployments. **DO NOT attempt to install Katello on an existing Foreman deployment**, unless you are a Foreman developer and willing to debug the broken configuration that will result from attempting an install on existing system.
+
 ## Hardware Requirements
 
 Katello may be installed onto a baremetal host or on a virtual guest.  The minimum requirements are:
