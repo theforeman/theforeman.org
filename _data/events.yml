@@ -894,6 +894,17 @@
     * Introduction to Katello - Walden Raines
     * Refactoring Katello Installer Modules - Ewoud Kohl van Wijngaarden
     * Ask me anything - Live session with Foreman developers
+- title: 'Foreman Deep Dives: Performance Analysis'
+  type: 'Livestream'
+  location: virtual
+  speaker: 'Shimon Stein'
+  start: 2017-06-15 15:00 CEST
+  end: 2017-06-15 16:00 CEST
+  url: 'https://www.youtube.com/watch?v=bFQvj8CyvXI'
+  description: |
+    In this Deep Dive, Shimon will be taking us through the basics of doing
+    performance analysis on your Foreman instance, including tooling, API
+    debugging, time graphs, memory consumption and more!
 - title: 'Training: Foreman (German)'
   type: 'Training'
   tags:
