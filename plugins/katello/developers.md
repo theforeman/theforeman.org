@@ -425,6 +425,22 @@ koji -c ~/.koji/katello-config import-sig *.rpm
 
 As list-signed does not seem to work, do a random check in ​http://koji.katello.org/packages/ that http://koji.katello.org/packages/<name>/<version>/<release>/data/sigcache/d5a88496/ exists and has some content in it.
 
+
+##### Create Back Signed RPMs in Koji
+
+```
+# in that directory where you've signed the rpms
+ls *.src.rpm | sed 's!\.src\.rpm$!!' | xargs koji -c ~/.koji/katello-config write-signed-rpm bc62d13f
+```
+
+Do a random check at http://koji.katello.org/packages/<name>/<version>/<release>/data/signed/d5a88496/ to see if the rpms are there. This step will import whole package.
+
+Finally, the signed packages can be mashed and a final test of the signed RPMs performed to ensure nothng was missed. When doing a .Y release this is especially important. The X.Y branch may need some backported documentation changes. After backporting, you will need to do the following:
+
+ * Update latest in _config.yml to X.Y
+ * GA release announcement
+ * Update the /project/katello/releases/yum/latest symlink on fedorapeople.org
+
 ### Release Api docs
 
 On a git checkout run:
@@ -445,20 +461,6 @@ cp -rf $GITDIR/theforeman.org/api/new_version_template/apidoc/* $GITDIR/theforem
 ```
 
 Open a PR and commit the changes
-
-##### Create Back Signed RPMs in Koji
-
-```
-# in that directory where you've signed the rpms
-ls *.src.rpm | sed 's!\.src\.rpm$!!' | xargs koji -c ~/.koji/katello-config write-signed-rpm bc62d13f
-```
-
-Do a random check at http://koji.katello.org/packages/<name>/<version>/<release>/data/signed/d5a88496/ to see if the rpms are there. This step will import whole package.
-
-Finally, the signed packages can be mashed and a final test of the signed RPMs performed to ensure nothng was missed. When doing a .Y release this is especially important. The X.Y branch may need some backported documentation changes. After backporting, you will need to do the following:
-
- * Update latest in _config.yml to X.Y
- * GA release announcement
 
 ## Upgrading Pulp
 
