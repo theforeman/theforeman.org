@@ -905,6 +905,17 @@
     In this Deep Dive, Shimon will be taking us through the basics of doing
     performance analysis on your Foreman instance, including tooling, API
     debugging, time graphs, memory consumption and more!
+- title: 'Foreman Community Demo - 22nd June'
+  type: 'Livestream'
+  location: virtual
+  start: 2017-06-22 15:00 BST
+  end: 2017-06-22 16:00 BST
+  url: 'https://www.youtube.com/watch?v=uUFsHWF292M'
+  description: |
+    Time again for the latest roundup of action from the community, covering
+    core, proxies, plugins, and more.  As always, you're welcome to participate
+    in the show, either via YouTube Live chat, or via our IRC channel
+    (Freenode/#theforeman).
 - title: 'Training: Foreman (German)'
   type: 'Training'
   tags:
