@@ -79,6 +79,8 @@ previous_version: "1.14"
 {%include manuals/1.15/4.1.4_auditing.md %}
 ### 4.1.5 Searching
 {%include manuals/1.15/4.1.5_searching.md %}
+### 4.1.6 User Management
+{%include manuals/1.15/4.1.6_user_management.md %}
 
 ## 4.2 Managing Puppet
 {%include manuals/1.15/4.2_managing_puppet.md %}
