@@ -916,6 +916,18 @@
     core, proxies, plugins, and more.  As always, you're welcome to participate
     in the show, either via YouTube Live chat, or via our IRC channel
     (Freenode/#theforeman).
+- title: 'Deep Dive: Vertical Navigation Proposal with Rox & Serena'
+  type: 'Livestream'
+  location: virtual
+  start: 2017-06-27 14:00 BST
+  end: 2017-06-27 15:00 BST
+  url: 'https://www.youtube.com/watch?v=hQwJ11GYfjY'
+  description: |
+    UI changes can be hard to visualize, so in this deep dive our resident
+    designer Rox and UX strategist Serena will be taking a look at why
+    horizontal navigations are going out of fashion, how changing to a vertical
+    nav helped in other projects, and how it *might* look if we did this in
+    Foreman.
 - title: 'Training: Foreman (German)'
   type: 'Training'
   tags:
