@@ -944,7 +944,41 @@
     Puppet to maintain the systems in Foreman. Furthermore, you will learn
     to administer users and RBAC in Foreman and get an overview of all that
     Foreman has to offer.
-- title: Foreman birthday event @ NETWAYS
+- title: 'Deep Dive: PXE booting in a pure IPv6 environment - Dmitri Dolguikh'
+  type: 'Livestream'
+  speaker: 'Dmitri Dolguikh'
+  location: virtual
+  start: 2017-07-06 14:00 BST
+  end: 2017-07-06 15:00 BST
+  url: 'https://www.youtube.com/watch?v=6KJne_Hyv5k'
+  description: |
+    Dmitri Dolguikh (better known as 'witlessb' on IRC) has been deep in the
+    guts of IPv6 provisioning with Foreman for some time now, and he'd like to
+    share the results of his efforts.
+- title: 'Deep Dive: Running the Foreman Stack in Containers'
+  type: 'Livestream'
+  speaker: 'Eric Helms'
+  location: virtual
+  start: 2017-07-10 14:00 BST
+  end: 2017-07-10 15:00 BST
+  url: 'https://www.youtube.com/watch?v=mPjUvNAYp1c'
+  description: |
+    Running Foreman in a container is a question that comes up from time to
+    time in the Foreman community. Eric Helms has been experimenting with
+    running the whole Foreman stack (core, proxies, plugins) inside Kubernetes,
+    and wants to show you how it looks.
+- title: 'Foreman birthday event @ Inuits'
+  type: 'Meetup'
+  location: Essensteenweg 31, Brasschaat, Belgium
+  start: 2017-07-18 18:30 CEST
+  end: 2017-07-18 22:00 CEST
+  url: 'https://www.meetup.com/Belgian-Puppet-User-Group/events/239819261/'
+  description: |
+    Let's celebrate the Foreman 8th's birthday!  We will host a great party,
+    talking about The Foreman. We will have a couple of people on stage
+    (consider this as a CFP) speaking about their experience with The Foreman.
+    And, if weather allows it, the swimming pool will be open!
+- title: 'Foreman birthday event @ NETWAYS'
   type: 'Meetup'
   location: Netways, Deutschherrenstr. 15-19, Nuremberg, Germany
   start: 2017-07-27 12:30 CEST
