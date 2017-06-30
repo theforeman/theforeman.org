@@ -967,6 +967,16 @@
     time in the Foreman community. Eric Helms has been experimenting with
     running the whole Foreman stack (core, proxies, plugins) inside Kubernetes,
     and wants to show you how it looks.
+- title: 'Foreman birthday event @ Raleigh'
+  type: 'Meetup'
+  location: Red Hat Annex, 190 East Davie Street, Raleigh, NC
+  start: 2017-07-10 18:30 EDT
+  end: 2017-07-10 22:00 EDT
+  url: 'https://www.meetup.com/Raleigh-Puppet-User-Group/events/239629806/'
+  description: |
+    For the Raleigh birthday party, we'll be at the Raleigh Puppet Users Group,
+    with some of the Foreman Red Hat team present, a Foreman talk, and some
+    great discussion.
 - title: 'Foreman birthday event @ Inuits'
   type: 'Meetup'
   location: Essensteenweg 31, Brasschaat, Belgium
