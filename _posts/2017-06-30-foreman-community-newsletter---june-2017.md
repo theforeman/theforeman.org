@@ -29,7 +29,7 @@ without you! If you find any issues with Foreman, you can always log them [here]
 
 ### Katello 3.4 released
 
-Accompanying the 1.15 release, Katello 3.4 is [now out][k3_4], and there have
+Accompanying the 1.15 release, Katello 3.4 is [now out][k_3_4], and there have
 been two patches as well - you can pick up the [3.4.2 release here][k_3_4_2].
 This release brings a whole ton of stability improvements and bug fixes - see
 the [changelog][k_changelog] for details.
@@ -46,7 +46,7 @@ celebrate! So far there are 3 confirmed events:
 
 * A Foreman talk at the Raleigh Puppet User Group, 10th July (Zach Huntington Meath)
 * Foreman talks at the Belgium Puppet Users group, 18th July (Fabian Arrotin and 1 speaker TBC)
-* A half-day conference at NETWAYS, Nurmeburg, 27th July (Ewould Kohl van Wijngaarden, Michael Moll, Evgeni Golov, and Timo Goebel)
+* A half-day conference at NETWAYS, Nuremberg, 27th July (Ewould Kohl van Wijngaarden, Michael Moll, Evgeni Golov, and Timo Goebel)
 
 You can find all the events, and links to register, on our [events
 page](/events). We're also trying to set up a few more - if you can help, [get
@@ -88,10 +88,10 @@ request breakdowns, debugging API and UI requests, time graphs and more.
 * [Deep Dive - Vertical Navigation Proposal with Rox & Serena](https://www.youtube.com/watch?v=hQwJ11GYfjY)
 
 Our resident designer Rox and UX strategist Serena took us through why
-horizontal navigations are going out of fashion, how changing to a vertical nav
+horizontal navigations are going out of fashion, how changing to a vertical navigation
 helped in other projects, and how it *might* look if we did this in Foreman.
 After that, we had a panel discussion about the UI, what other options might be
-on the table, and how we can move forwards on this.
+on the table, and how we can move forward on this.
 
 _(All Foreman events are now available via the [Foreman Calendar](/events))_
 
@@ -114,14 +114,14 @@ Updated plugins:
 ### Acknowledgements
 
 Thanks to everyone who contributes to the Foreman community - patches, plugins,
-testing, bug reports, translations, interviews, presentations, meet ups and
+testing, bug reports, translations, interviews, presentations, meetups and
 everything else. Your efforts are very much appreciated!
 
 [1_15_0]: https://groups.google.com/d/topic/foreman-users/7V57m010h34/discussion
 [1_15_1]: https://groups.google.com/d/topic/foreman-users/_ctf-pe5MKo/discussion
-[k3_4]: https://groups.google.com/d/topic/foreman-users/s7x94K67LUs/discussion
-[k3_4_2]: https://groups.google.com/d/topic/foreman-users/Fvycvei3cSA/discussion
-[k_changlog]: https://github.com/Katello/katello/blob/KATELLO-3.4/CHANGELOG.md
+[k_3_4]: https://groups.google.com/d/topic/foreman-users/s7x94K67LUs/discussion
+[k_3_4_2]: https://groups.google.com/d/topic/foreman-users/Fvycvei3cSA/discussion
+[k_changelog]: https://github.com/Katello/katello/blob/KATELLO-3.4/CHANGELOG.md
 [issues]: http://projects.theforeman.org/issues
 [k_issues]: http://projects.theforeman.org/projects/katello/issues
 [email]: mailto:greg.sutcliffe@gmail.com
