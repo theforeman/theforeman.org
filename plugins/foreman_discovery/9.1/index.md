@@ -1,16 +1,16 @@
 ---
 layout: plugin
 pluginname: foreman_discovery
-title: Foreman Discovery 8.0 Manual
-version: 8.0
+title: Foreman Discovery 9.1 Manual
+version: 9.1
 # versions for matrix and snippets
 # (use short version for imgver e.g. 3.0)
-pluginver: 8.0.0
+pluginver: 9.1.1
 proxyver: 1.0.4
-imgver: 3.3
-cliver: 0.0.3
+imgver: 3.4
+cliver: 1.0.0
 # uncomment to show warning box for an old release
-warning: old
+#warning: old
 # uncomment to show development version warning
 #warning: unreleased
 ---
@@ -128,6 +128,13 @@ plugin:
   </tr>
   <tr>
     <td>= 1.14</td>
+    <td>8.0.0</td>
+    <td>1.0.3</td>
+    <td>3.2-3.3</td>
+    <td>0.0.3</td>
+  </tr>
+  <tr>
+    <td>= 1.15</td>
     <td>{{page.pluginver}}</td>
     <td>{{page.proxyver}}</td>
     <td>{{page.imgver}}</td>
@@ -136,6 +143,50 @@ plugin:
 </table>
 
 ### 1.1.1 Foreman Discovery plugin
+
+**9.1**: Release notes
+
+Mostly a bugfix release with new support for notifications, possibility to add
+arbitrary kexec kernel options, taxonomy for discovery rules and some UX
+improvements.
+
+We have released versions 9.0.0 and 9.1.0 but these were problematic with many
+bugs around manual discovery provisioning and Katello integration. All
+problems were finally solved in version 9.1.1. Make sure you upgrade directly
+to 9.1.1 when updating production versions.
+
+Full changelog for the release:
+
+     Refs #20051 - mark compatible with Foreman 1.16+
+     Refs #19944 - locked seed error fixed
+    Fixes #19944 - Move default role permissions to seeds
+    Fixes #19412,#19732 - kexec path and seed fixed
+    Fixes #19924 - Consistently use 'default manager' in tests
+    Fixes #19647 - added taxonomy to rules API
+    Fixes #19444 - Seperate host and provision template
+     Refs #19313 - improved test helpers
+    Fixes #19313 - NIC associations are preserved
+    Fixes #19003 - introduce ApplicationRecord
+    Fixes #19501 - capitalize the first letter of every word of headline style
+    Fixes #19414 - Correct action on host form
+    fixes #19409 - auto provision now uses anonymous admin (#342)
+    Fixes #19402 - Correct method for bulk host actions
+    Fixes #19403 - don't require jquery.cookie
+    Fixes #19051 - Prevent N+1 on FactValue index
+    Fixes #19231 - better error for refresh fact
+    Fixes #17959 - add plugin permissions to core roles
+    fixes #19032 - widget truncates with ellipsis
+    fixes #18677 - adds notification events on host discovery
+    Fixes #18747 - DB Rails 4.x timestamps deprecations
+    Fixes #18834 - unify label help with 1.15
+     Refs #18801 - append example extra options to kexec
+    Fixes #15548 - Discovered host supports template methods
+    Fixes #18686 - fixed unit tests for taxonomy changes
+    Fixes #18296 - improve the font for host name
+    Fixes #18000 - Update button label from New to Create
+    Fixes #16890 - prevent discovery of managed hosts
+    Fixes #18106 - include host common filters
+    Fixes #17928 - Update syntax to scoped_search 4
 
 **8.0**: Release notes
 
