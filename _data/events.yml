@@ -977,6 +977,18 @@
     For the Raleigh birthday party, we'll be at the Raleigh Puppet Users Group,
     with some of the Foreman Red Hat team present, a Foreman talk, and some
     great discussion.
+- title: 'Foreman Community Demo - 13th July'
+  type: 'Livestream'
+  location: virtual
+  start: 2017-07-13 15:00 BST
+  end: 2017-07-13 16:00 BST
+  url: 'https://www.youtube.com/watch?v=sL8KylTcqsg'
+  description: |
+    Foreman was created 8 years ago, on 13th July 2009. On this ever so special
+    day, we'll be having the usual roundup of community news, but also some
+    special extras... all shall be revealed!  As always, you're welcome to
+    participate in the show, either via YouTube Live chat, or via our IRC
+    channel (Freenode/#theforeman).
 - title: 'Foreman birthday event @ Inuits'
   type: 'Meetup'
   location: Essensteenweg 31, Brasschaat, Belgium
