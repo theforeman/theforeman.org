@@ -147,13 +147,27 @@ All functionality that is provided in WebUI can be achieved using this plugin. T
 hammer virt-who-config -h
 ```
 
-# 7. Help
+# 7. Migration from existing virt-who setups
+
+If virt-who was already configured manually and send reports correctly, there's no reason to migrate to this plugin as it mainly helps with the setup. On the other hand, to monitor incoming reports for multiple virt-who instances at one place, the migration can be useful. To minimize the virt-who downtime, we suggest you check for minimal required virt-who version before you start migration though. The migration consists of following steps.
+  
+* create a virt-who configuration with all parameters from manual setup
+* removing the old virt-who configuration file
+* deploying the new virt-who configuration from the plugin
+
+Be extra careful about the first step. E.g. changing the Hypervisor ID could easily result in having duplicated content host records. Make sure all fields in form are matching values from existing manual setup.
+
+Removing the old configuration is pretty straightforward, we suggest making a backup of config file which is to be removed or modified just in case something goes wrong.
+
+Deploying is described in [chapter 4.2](/plugins/foreman_virt_who_configure/{{ page.version }}/index.html#4.2Deploying).
+ 
+# 8. Help
 
 Please follow our [standard procedures and contacts]({{site.baseurl}}support.html).
 
-# 7. Getting involved
+# 9. Getting involved
 
-## 7.1 Troubleshooting
+## 9.1 Troubleshooting
 
 If you find a bug, please file it in
 [Redmine](http://projects.theforeman.org/projects/virt-who-configure/issues/new).
@@ -162,12 +176,12 @@ See the [troubleshooting section](/manuals/latest/index.html#7.2GettingHelp)
 in the Foreman manual for more info.
 
 
-## 7.2 Contributing
+## 9.2 Contributing
 
 Follow the [same process as Foreman](/contribute.html#SubmitPatches)
 for contributing.
 
-# 8. Links
+# 10. Links
 
 * foreman_virt_who_configure plugin [https://github.com/theforeman/foreman_virt_who_configure](https://github.com/theforeman/foreman_virt_who_configure)
 * issue tracker [http://projects.theforeman.org/projects/virt-who-configure/issues](http://projects.theforeman.org/projects/virt-who-configure/issues)
