@@ -380,7 +380,8 @@ It is recommended to use `~foreman/bundler.d/Gemfile.local.rb` so that it is not
 <pre>gem 'foreman_sample_plugin'</pre>
 * Or bundler can install the plugin from a git repository.  Add to bundler.d/Gemfile.local.rb:
 <pre>gem 'foreman_sample_plugin', :git => "https://github.com/example/foreman_sample_plugin.git"</pre>
-* Next, as user `foreman` (**not root!**), run the following command: `$ /usr/bin/foreman-ruby /usr/bin/bundle update foreman_sample_plugin`
+* Next, as user `foreman` (**not root!**), run the following command: `$ /usr/bin/foreman-ruby /usr/bin/bundle install`
+* Once the plugin has been installed for the first time, you can use `$ /usr/bin/foreman-ruby /usr/bin/bundle update foreman_sample_plugin` to update it
 * Then restart Foreman with `touch ~foreman/tmp/restart.txt`
 
 # 3. Writing Your Own
