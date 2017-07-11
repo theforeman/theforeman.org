@@ -2,7 +2,7 @@
 layout: plugin
 title: Foreman OpenSCAP manual
 images: /plugins/foreman_openscap/0.6
-version: 0.6.0
+version: 0.7.0
 ---
 
 # 1. {{ page.title }}
