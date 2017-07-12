@@ -1000,6 +1000,17 @@
     talking about The Foreman. We will have a couple of people on stage
     (consider this as a CFP) speaking about their experience with The Foreman.
     And, if weather allows it, the swimming pool will be open!
+- title: 'Foreman birthday event @ BRNO'
+  type: 'Meetup'
+  location: Red Hat Czech, 5th floor, Purkyňova 99, Brno, Czech Republic
+  start: 2017-07-20 19:00 CEST
+  end: 2017-07-20 22:00 CEST
+  url: 'https://www.eventbrite.com/e/the-foreman-8th-birthday-community-meetup-brno-tickets-36142628575'
+  description: |
+    In celebration of Foreman's 8 birthday we will be holding a meetup
+    at Red Hat office in Brno, Czech Republic with few talks, as well
+    as opporunity to discuss anything related to the Foreman project
+    and share your ideas with others with similar interests.
 - title: 'Foreman birthday event @ NETWAYS'
   type: 'Meetup'
   location: Netways, Deutschherrenstr. 15-19, Nuremberg, Germany
