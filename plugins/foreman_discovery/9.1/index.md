@@ -810,11 +810,14 @@ configuration options:
 * fdi.initnet=all/bootif - initialize all or pxe NICs (default) during startup
 * fdi.ssh - configure ssh daemon after start (1 to enable)
 * fdi.rootpw - configure ssh daemon password (plain string)
-* fdi.countdown - initial countdown in seconds before registration attempt (15 by default)
+* fdi.countdown - initial countdown in seconds before registration attempt (45 by default)
 * fdi.uploadsleep - seconds between facter runs (30 by default)
 * fdi.cachefacts - number of fact uploads without caching (0 by default)
 * fdi.px* - PXE-less workflow (described below)
 * fdi.dhcp_timeout - DHCP timeout in seconds (default 300)
+* fdi.dns_nameserver - nameserver to use for DNS SRV record
+* fdi.dns_search - search domain to use for DNS SRV record
+* fdi.dns_ndots - ndots option to use for DNS SRV record
 * fdi.vlan.primary - VLAN ID to set for primary interface
 
 By default, the image tries to send initial facts multiple times. Delay
