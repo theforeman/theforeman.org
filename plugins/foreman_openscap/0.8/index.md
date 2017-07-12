@@ -2,7 +2,7 @@
 layout: plugin
 title: Foreman OpenSCAP manual
 images: /plugins/foreman_openscap/0.6
-version: 0.7.0
+version: 0.8.0
 ---
 
 # 1. {{ page.title }}
@@ -78,6 +78,18 @@ Compatibility matrix
     <td>0.6.0</td>
     <td>0.6.0</td>
     <td>0.2.0</td>
+  </tr>
+  <tr>
+    <td>>= 1.15</td>
+    <td>0.7.0</td>
+    <td>0.6.0</td>
+    <td>0.3.0</td>
+  </tr>
+  <tr>
+    <td>>= 1.16</td>
+    <td>0.8.0</td>
+    <td>0.6.0</td>
+    <td>0.3.0</td>
   </tr>
 </table>
 
