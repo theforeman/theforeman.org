@@ -154,9 +154,9 @@ In `/etc/salt/foreman.yaml`, make the following changes:
     :proto: https
     :host: foreman.example.com
     :port: 443
-    :ssl_ca: /var/lib/puppet/ssl/certs/ca.pem
-    :ssl_key: /var/lib/puppet/ssl/private_keys/foreman.example.com.pem
-    :ssl_cert: /var/lib/puppet/ssl/certs/foreman.example.com.pem
+    :ssl_ca: "/etc/puppetlabs/puppet/ssl/ssl_ca.pem"
+    :ssl_cert: "/etc/puppetlabs/puppet/ssl/client_cert.pem"
+    :ssl_key: "/etc/puppetlabs/puppet/ssl/client_key.pem"
     :timeout:  10
     :salt:  /usr/bin/salt
     :upload_grains:  true
@@ -167,7 +167,19 @@ If your Smart Proxy uses SSL, then the certs and key configured in the YAML shou
 
 To support state and environment importing, configure salt-api as per the [Salt documentation](https://salt-api.readthedocs.org/en/latest/).  The user for the Smart Proxy requires a minimum of the `@runner` permission. An example for CherryPy is below, using the Puppet certificates for SSL.
 
-Add the following section to your /etc/salt/master, and create a system user for the API to use (in this case 'saltuser'):
+
+Create a system user for the API to use (in this case 'saltuser'):
+
+    adduser --no-create-home -s /bin/false -d / saltuser
+    passwd saltuser
+    # enter "saltpassword" twice
+
+<div class="alert alert-info">
+“adduser saltuser -p saltpassword” WILL NOT WORK. You will not be able to import the Salt states.
+</div>
+
+
+Add the following section to your /etc/salt/master, and specify the system user you have just created (in this case 'saltuser'):
 
     external_auth:
       pam:
@@ -177,8 +189,8 @@ Add the following section to your /etc/salt/master, and create a system user for
     rest_cherrypy:
       port: 9191
       host: 0.0.0.0
-      ssl_key: /var/lib/puppet/ssl/private_keys/foreman.example.com.pem
-      ssl_crt: /var/lib/puppet/ssl/certs/foreman.example.com.pem
+      ssl_key: /etc/puppetlabs/puppet/ssl/private_keys/foreman.example.com.pem
+      ssl_crt: /etc/puppetlabs/puppet/ssl/certs/foreman.example.com.pem
 
 
 Edit `/etc/foreman-proxy/settings.d/salt.yml`, and configure the API-related settings:
