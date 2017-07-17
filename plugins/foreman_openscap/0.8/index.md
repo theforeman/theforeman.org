@@ -427,6 +427,13 @@ If running scan manually succeeds and there are no errors, try switching logging
 
 and run foreman_scap_client manually again. Tailing the proxy logs will give you more insight into what is going on when report is uploaded by a client. Tailing ```/var/log/foreman/production.log``` on your Foreman server might be usefull as well.
 
+### 7.1.2 Slow queries due to many message records in database ( foreman_openscap >= 0.7.2 )
+
+Fix [#19527](http://projects.theforeman.org/issues/19527) introduced a performance improvements to some of report-related queries and also added a rake task that performs a cleanup of database by removing duplicated report messages. You can execute it by running:
+
+    foreman-rake foreman_openscap:clean_messages
+
+Please note that the task has to go through all your reports and it may take a significant amount of time to fininsh. We recommend expiring the reports that are no longer needed before running the task. This task does not need to be run more than once as the patch prevents the duplicates from being created.
 
 ## 7.2 Contributing
 
