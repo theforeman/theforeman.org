@@ -203,6 +203,24 @@ Edit `/etc/foreman-proxy/settings.d/salt.yml`, and configure the API-related set
 
 Then restart the services mentioned in the next section for the changes to take effect.
 
+#### 2.1.3 Salt API Non-SSL fallback
+
+If you're struggling to get SSL to work between the Salt API and the Foreman
+Proxy, you can disable SSL on the Salt API. Obviously this would be for
+troubleshooting or sandbox environments, not production installs. You can
+configure it like this:
+
+    rest_cherrypy:
+      port: 9191
+      host: 127.0.0.1
+      disable_ssl: true
+
+You'll also need to change the URL in the Foreman Proxy config to `http` (the rest of the config remains as above):
+
+    ...
+    :api_url: http://saltmaster.bitbin.de:9191
+    ....
+
 ### 2.1.4 Final Configuration
 
 Restart the `foreman`, `foreman-proxy`, `salt-master`, `salt-api`, and `foreman-tasks` services.
