@@ -1,11 +1,12 @@
 function setVersion(version) {
-  if (/^\d+\.\d+$/.test(version)) {
+  if (/^\d+\.\d+(-develop)?$/.test(version)) {
+    var version_label = version.replace('-develop', '');
     $('#version').html('Version ' + version + ' <span class="caret"></span>');
-    $('#manual').html('manual ' + version);
+    $('#manual').html('manual ' + version_label);
     $('#manual-link').attr('href', 'manuals/' + version + '/index.html');
-    $('#release-notes').html('release notes ' + version);
+    $('#release-notes').html('release notes ' + version_label);
     $('#release-notes-link').attr('href', 'manuals/' + version + '/index.html#Releasenotesfor' + version);
-    $('#api-ref').html('api ' + version);
+    $('#api-ref').html('api ' + version_label);
     $('#api-ref-link').attr('href', 'api/' + version + '/index.html');
   }
 }

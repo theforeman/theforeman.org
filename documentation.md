@@ -9,6 +9,7 @@ version: '1.15'
 <div class='dropdown'>
 	<a id='version' class='dropdown-toggle' data-toggle='dropdown'>Version {{page.version}} <span class="caret"></span></a>
 	<ul class="dropdown-menu" role="menu" aria-labelledby="version">
+    <li><a tabindex="-1">1.16-develop</a></li>
 		<li><a tabindex="-1">1.15</a></li>
 		<li><a tabindex="-1">1.14</a></li>
 		<li><a tabindex="-1">1.13</a></li>
