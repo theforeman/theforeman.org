@@ -84,6 +84,31 @@ After the installation there are new settings available. These are the default s
 
 Settings above are preconfigured for importing from upstream community-templates repository.
 
+## 3.1 Example of configuration GitHub repository
+
+Let's assume you have a GitHub account with login `template_master`. Here are the steps how to configure foreman_templates so that you can import and export templates between Foreman and your GitHub repository. Let's assume the repository is called `templates` and it has branch called `master`.
+
+1. First we'll configure settings. Set a `branch` setting to `master`, `prefix` setting to empty string and `repo` to `ssh://git@github.com/template_master/templates`.
+2. We'll need to accept GitHub SSH host key to foreman user, run `sudo -u foreman ssh github.com`, verify and save the key. You'll probably see permission denied message since the ssh connection will not succeed but that's expected.
+3. Create an SSH keypair that foreman will use to communicate with GitHub. Run `sudo -u foreman ssh-keygen`. Don't specify any passphrase.
+4. Copy the public key, which resides in `/usr/share/foreman/.ssh/id_rsa.pub`, to your SSH keys on GitHub
+5. run the export, e.g. by
+
+```
+curl -H "Accept:application/json,version=2" -H "Content-Type:application/json" -u admin:changeme -k https://foreman.example.com/api/v2/templates/export -X POST
+```
+
+6. you should see templates in the repository
+
+To import templates back, after their content was changed, simply run
+ 
+ ```
+ curl -H "Accept:application/json,version=2" -H "Content-Type:application/json" -u admin:changeme -k https://foreman.example.com/api/v2/templates/import -X POST
+ ```
+ 
+ If the templates are locked, changes won't be made. To update locked templates, either add `-d '{ "force": "true" }'` to the end of a command or unlock the template.
+
+
 # 4. Usage (features description)
 
 Both importing and exporting is available as rake tasks. Rake tasks are triggered from terminal. If you installed the plugin using foreman-installer, or simply it's package based installation), you should be able to run rake using `foreman-rake` command. Source-based installs of Foreman will need to use Bundler to call Rake as normal, e.g. cloned from git, you should likely use `RAILS_ENV=production bundle exec rake` ran from your Foreman directory.
@@ -164,7 +189,7 @@ When a template is exported, there are 3 ways how to handle metadata.
 * **remove** - remove any metadata from template content, useful if you want to add metadata manually or externally
 * **keep** - keep any metadata found in template content despite current attributes and assignments in database, useful when you want to send a patch to community-templates but you don't have all operating systems configured in your Foreman
 
-Suppose you'd like to change something in default Foreman templates. You can use this plugin to make this process easy. First you need to update the template in you database and test it works. Then go to https://github.com/theforeman/community-templates and fork the repository. Clone your fork to the host where you have Foreman installed. Then run `foreman-rake templates:export repo=/path/to/your/clone`. Review the change, commit the change by `git commit -a` and push back to your github fork by `git push`. Then on github, open a new PR against theforeman/community-templates repositories.
+Suppose you'd like to change something in default Foreman templates. You can use this plugin to make this process easy. First you need to update the template in you database and test it works. Then go to https://github.com/theforeman/community-templates and fork the repository. Clone your fork to the host where you have Foreman installed. Then run `foreman-rake templates:export repo=/path/to/your/clone`. Review the change, commit the change by `git commit -a` and push back to your GitHub fork by `git push`. Then on GitHub, open a new PR against theforeman/community-templates repositories.
 
 # 4.3 Purging
 
@@ -202,7 +227,89 @@ When there is OrgA with template some_tmpl and b_user (user only in OrgB) tries 
 
 # 7. Help
 
-Please follow our [standard procedures and contacts]({{site.baseurl}}support.html).
+There are multiple configuration options which might result in unexpected behavior when used incorrectly. In the list below the most common pitfalls are described. If different you see different error message, please use please follow our [standard procedures and contacts]({{site.baseurl}}support.html).
+
+## 7.1 File based synchronization
+
+These errors can be encountered when repo points to local directory
+
+### 7.1.1 Using file-based synchronization, but couldn't find /specified/path
+
+The repo path was set to a directory that does not exist or can't be found, double check the path and create the directory.
+
+### 7.1.2 Permission denied @ rb_sysopen - /usr/share/foreman_templates/provisioning_templates/kexec/discovery_red_hat_kexec.erb"
+
+The repo path was set to a directory that can't be written to, note that templates are written under user that Foreman runs under, by default "foreman". Make sure the foreman user can write to this directory, e.g. by `chown foreman /usr/share/foreman_templates/; chmod u+rwx /usr/share/foreman_templates/`. The directory that's being used can be also affected by dirname option.
+
+### 7.1.3 Permission denied @ dir_s_mkdir - /some/provisioning_templates"
+
+This can be caused but missing required permissions on directory specified as repo, `/some` in this case. The error message means, foreman user can't write in there.
+
+If user foreman owns the directory /some or permissions are set correctly, SELinux might prevent writing there. If you're using SELinux, see AVC denials and setup appropriate rules.
+ 
+### 7.1.4 No input/empty message on importing
+
+This can be caused by having repo set to a directory that can't be read from, note that templates are read under user that Foreman runs under, by default "foreman". Make sure the foreman user can read content of this directory, e.g. by `chown foreman /usr/share/foreman_templates/; chmod u+rx /usr/share/foreman_templates/`. The directory that's being used can be also affected by dirname option.
+
+## 7.2 Git based synchronization
+
+Following errors messages can be seen when repo is set to a remote repository url, such as `git://git@git.example.com/my_repo`. Usually the error contains also a failing git command. Full error messages can be similar but usually they differ by the part that's listed below. 
+
+### 7.2.1 remote part of refspec is not a valid name in 
+
+This is caused by unspecified branched. Either provide a `branch` parameter or set a default branch in settings.
+
+### 7.2.2 could not read Username for 'https://github.com': No such device or address"
+
+In this case, https protocol was used. A username can be specified as part of the url, e.g. `https://user@github.com/my_repo`. You'll probably also need to set the password, see the message below.
+
+### 7.2.3 could not read Password for 'https://user@github.com': No such device or address"
+
+The https protocol also needs to know the password. You can hardcode it to the url like this `https://user:password@github.com/my_repo` but it will be stored in plaintext and everyone with access to Foreman settings will be able to read it. We suggest you use a key based authentication if you git server supports that.
+
+### 7.2.4 pathspec 'sat1' did not match any file(s) known to git
+
+See the error below
+
+### 7.2.5 ambiguous argument 'origin/sat1': unknown revision or path not in the working tree.
+
+Either of these error messages can be observed when you specified a branch name, `sat1` in this example, but it does not exist on remote server. During export, we clone remote repo and checkout to last version of a specified branch but if it does not exist, the exporting fails.
+
+### 7.2.6 Repository not found.
+
+This is self-explanatory, the remote server was successfully contacted, authentication succeeded but the specified URL does not point to existing repository. Double check the repo URL.
+
+### 7.2.7 Unable to look up git@github.com (port 9418) (Name or service not known)
+
+The repo was specified set to `git://git@github.com/theforeman/community-templates`. The problem is caused by using `git://` as a protocol, try changing it to `ssh://`
+
+### 7.2.8 Using file-based synchronization, but couldn't find /usr/share/foreman/git@github.com/user/my-repository.git
+
+The repo was set to `git@github.com/user/my-repository.git` and since it does not start with the protocol, we consider that as a path on local hard drive. Add a protocol prefix, e.g. `ssh://git@github.com/user/my-repository.git` 
+
+### 7.2.9 ssh: Could not resolve hostname github.com:user: Name or service not known fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists.
+
+In this case, `ssh://git@github.com:user/my-repository.git` URL was specified. The problem is caused by the colon after hostname. It must be converted to slash `/`, so the right URL should look this way `ssh://git@github.com/user/my-repository.git`  
+
+### 7.2.10 Host key verification failed.
+
+The user under which the Foreman runs does now have the public key of git repository in known host database. Run `sudo -u foreman ssh github.com`, verify the fingerprint and save it.  
+you don't have ssh-key
+
+### 7.2.11 Permission denied (publickey)
+
+The git repository does not recognize any of foreman user ssh key or foreman user does not have any key. To generate a new key, you can run `sudo -u foreman ssh-keygen`. The private key can not be protected by passphrase, otherwise Foreman could not read it. Public key of this newly generated key pair must be installed on remote git server. This could also happen if key is installed, but the wrong user was specified in the url. Usually, the url should be in form `ssh://git@example.com/path` where git is shared for all users.
+
+## 7.3 Other pitfalls
+
+### 7.3.1 You set the repo to /tmp but don't see anything new added even after export says Success
+
+This is usually the case on systemd-enabled operating systems. Foreman service uses [PrivateTmp](https://access.redhat.com/blogs/766093/posts/1976243) so the Foreman process basically has it's own /tmp mounted. Please use a different directory.
+
+### 7.3.2 I see a success but not new commit appears in remote git repository
+
+This can happen if there's no change since last commit. In fact, the export was successful.
+
 
 # 8. Getting involved
 
