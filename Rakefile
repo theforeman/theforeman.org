@@ -21,8 +21,8 @@ task :browser do
 end
 
 desc "Given a title as an argument, create a new post file"
-task :new_post, [:title] do |t, args|
-  title = args.title || "new-post"
+task :new_post do
+  title = ENV["title"] || "new-post"
   title_clean = title.downcase.strip.gsub(/\s/, '-').gsub(/[^\w-]/, '')
   filename = "#{Time.now.strftime('%Y-%m-%d')}-#{title_clean}.md"
   path = File.join("_posts", filename)
@@ -31,7 +31,7 @@ task :new_post, [:title] do |t, args|
     file.write <<-EOS
 ---
 layout: post
-title: #{args.title}
+title: #{title}
 date: #{Time.now.strftime('%Y-%m-%d %k:%M:%S')}
 author: Foreman
 tags:
