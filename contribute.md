@@ -24,8 +24,32 @@ You will need to download a copy of the current development code. [The
 official code repository](https://github.com/theforeman) is located
 on GitHub. All changes are made in the `develop` branch.
 
+### Supported Ruby versions
+
+In general the latest Ruby should work. However if you are just starting out, you may want to develop against one of the
+versions that we test against to reduce the chances of you hitting an unexpected issue, although this is not required.
+
+You can see what versions we are currently testing against on our Jenkins CI server here:
+[http://ci.theforeman.org/view/Foreman%20pipeline/job/test_develop/](http://ci.theforeman.org/view/Foreman%20pipeline/job/test_develop/)
+
+Any version of Ruby that is older than those listed is not supported.
+
+### Supported Node.js versions
+
+In general, the latest stable Node.js should work. However if you are just starting out, you may want to develop against
+one of the versions that we test against to reduce the chances of you hitting an unexpected issue, although this is not
+required.
+
+You can see what versions we are currently testing against on our Travis CI runs in the .travis.yml file in the foreman
+repository.
+
+Any version of Node.js that is older than those listed is not supported.
+
+For populating the node_modules folder, npm version 4 or later is required. Alternatively,
+[yarn](https://yarnpkg.com) can also be used.
+
 ### Setup development environment
-* Fork [theforeman/foreman](https://github.com/theforeman/foreman) to a personal GitHub account. This will create a "foreman" repo under your GitHub username.
+* Fork [theforeman/foreman](https://github.com/theforeman/foreman) to your GitHub account. This will create a "foreman" repo under your GitHub username.
 * Clone the fork you just created to your development system:
 {% highlight bash %}
 git clone https://github.com/<username>/foreman.git
@@ -57,14 +81,6 @@ You can also exclude these features by using `bundle install --without libvirt p
 1. Run all the tests: `bundle exec bin/rake test`
 1. Or a single test: `bundle exec bin/rake test test/functional/your_test.rb`
 1. Once done, stop any background processes with `bundle exec spring stop` ([more info](/handbook.html#UsingtheSpringpreloaderindevelopment))
-
-#### Supported Ruby versions
-
-In general the latest Ruby should work. However if you are just starting out, you may want to develop against one of the versions that we test against to reduce the chances of you hitting an unexpected issue, although this is not required.
-
-You can see what versions we are currently testing against on our Jenkins CI server here: [http://ci.theforeman.org/view/Foreman%20pipeline/job/test_develop/](http://ci.theforeman.org/view/Foreman%20pipeline/job/test_develop/)
-
-Any version of Ruby that is older than those listed is not supported.
 
 ### Startup foreman
 1. Follow steps 1, 2 and 3 from the section "setup test environment" if you haven't done so already
