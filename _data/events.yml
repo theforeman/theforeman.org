@@ -1020,6 +1020,17 @@
   description: |
     In celebration of Foreman's 8 birthday we will be holding a meetup at NETWAYS with hands-on session
     and talks. For the agenda and free registration see the event page.
+- title: 'Foreman Community Demo - 3rd August'
+  type: 'Livestream'
+  location: virtual
+  start: 2017-08-03 15:00 BST
+  end: 2017-08-03 16:00 BST
+  url: 'https://www.youtube.com/watch?v=rZY6dE0HVyM'
+  description: |
+    Time again for the latest roundup of action from the community, covering
+    core, proxies, plugins, and more.  As always, you're welcome to participate
+    in the show, either via YouTube Live chat, or via our IRC channel
+    (Freenode/#theforeman).
 - title: 'Training: Foreman (German)'
   type: 'Training'
   tags:
