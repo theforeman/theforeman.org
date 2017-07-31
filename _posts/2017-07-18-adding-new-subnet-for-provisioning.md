@@ -73,8 +73,12 @@ typically the very same host).
 Oh, I almost forgot! I don't want the foreman-installer to overwrite my
 customized dhcpd.conf file anymore, therefore I will tell it not to do so:
 
-    # grep dhcp: /etc/foreman-installer/scenarios.d/foreman-answers.yaml
-        dhcp: false
+    # foreman-installer -v -n --scenario katello \
+        --foreman-proxy-dns=true --foreman-proxy-dns-managed=false \
+        --foreman-proxy-dhcp=true --foreman-proxy-dhcp-managed=false
 
-Do the same for "tftp" feature as default configuration files might be
-overwritten too.
+Be sure to review the puppet output first and then run without dry-run option
+(-n) to commit the changes.
+
+Unfortunately it is not possible to disable TFTP puppet management, but that
+will not collide with foreman-bootloaders in any way.
