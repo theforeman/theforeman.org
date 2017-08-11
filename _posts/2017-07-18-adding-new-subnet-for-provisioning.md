@@ -40,6 +40,19 @@ declaration just below the puppet-deployed one:
       option routers 192.168.99.1;
     }
 
+With latest version of foreman-installer (or puppet modules) there is also a
+better way to do the same via /etc/foreman-installer/custom-hiera.yaml:
+
+    dhcp::pools:
+     isolated.lan:
+       network: 192.168.99.0
+       mask: 255.255.255.0
+       gateway: 192.168.99.1
+       range: 192.168.99.5 192.168.99.49
+
+Then re-run the installer and it should deploy the new subnet automatically.
+Unfortunately this will not work for DNS yet.
+
 As I don't expect many hosts to have leases, I am setting the range to just 44
 IP addresses leaving me the rest for IP allocation done by Foreman. Next step
 is to restart the dhcpd service.
@@ -69,16 +82,3 @@ subnet, IP reservation is populated and entry is submitted. Before I try to
 discover host, I will make sure that Discovery Smart Proxy feature is
 installed on any Smart Proxy accessible from my new Subnet (that would be
 typically the very same host).
-
-Oh, I almost forgot! I don't want the foreman-installer to overwrite my
-customized dhcpd.conf file anymore, therefore I will tell it not to do so:
-
-    # foreman-installer -v -n --scenario katello \
-        --foreman-proxy-dns=true --foreman-proxy-dns-managed=false \
-        --foreman-proxy-dhcp=true --foreman-proxy-dhcp-managed=false
-
-Be sure to review the puppet output first and then run without dry-run option
-(-n) to commit the changes.
-
-Unfortunately it is not possible to disable TFTP puppet management, but that
-will not collide with foreman-bootloaders in any way.
