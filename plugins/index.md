@@ -394,4 +394,22 @@ More information about writing your own plugins is available in the wiki:
 
 The Foreman development [mailing list and IRC channels]({{site.baseurl}}support.html) can be of help for plugin developers.
 
+## 3.1 Making your plugin official
+
+We are happy to help bring your plugin to the Foreman Community! We offer:
+
+* Automated testing of your plugin in our Jenkins CI system
+* Adding it to our packaging repos so users can yum/apt install it
+* Hosting the plugin code under our 'theforeman' organization on GitHub
+* An issue tracker on our [Redmine instance](http://projects.theforeman.org) (or use GitHub issues)
+
+We do ask for a few things in return:
+
+* Releases are tagged, ideally using [SemVer](http://semver.org)
+* Repos (on GitHub) and gems (on Rubygems) have an extra maintainer added
+  * This is so that we can help with maintenance if you become too busy or move on from the plugin
+  * You're welcome to request a specific member of the development community to be the additional author, otherwise we'll recommend someone
+
+Please see [the wiki](http://projects.theforeman.org/projects/foreman/wiki/How_to_Create_a_Plugin#Making-your-plugin-official) for more details
+
 <hr/>
