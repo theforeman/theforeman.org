@@ -32,8 +32,6 @@ Ensure your operating system is fully up-to-date:
 yum -y update
 {% endhighlight %}
 
-**NOTE**: If kernel packages are updated here (e.g. upgrading el 6.6 to 6.7), you must reboot and ensure the new kernel and SELinux policy is loaded before upgrading Katello.
-
 ## Step 3 - Repositories
 
 Update the Foreman and Katello release packages:
@@ -68,7 +66,11 @@ The installer with the --upgrade flag will run the right database migrations for
 foreman-installer --scenario katello --upgrade
 {% endhighlight %}
 
-**Congratulations! You have now successfully upgraded your Katello to {% if page.version %}{{ page.version }} For a rundown of what was added, please see [release notes](/plugins/katello/{{ page.version }}/release_notes/release_notes.html).{% else %}the latest nightly{% endif %}!**
+## Step 6 - Reboot if necessary
+If kernel packages are updated during Step 2 (e.g. upgrading el 6.6 to 6.7), you must reboot and ensure the new kernel and SELinux policy are loaded. If there are no kernel or selinux updates
+then this step can be omitted.
 
+## Congratulations!
+You have now successfully upgraded your Katello to {% if page.version %}{{ page.version }} For a rundown of what was added, please see [release notes](/plugins/katello/{{ page.version }}/release_notes/release_notes.html).{% else %}the latest nightly{% endif %}!**
 
 If for any reason, the above steps failed, please review /var/log/foreman-installer/katello.log -- if any of the "Upgrade step" tasks failed, you may try to run them manaully below to aid in troubleshooting.
