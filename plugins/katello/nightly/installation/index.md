@@ -141,6 +141,40 @@ These may be set as command line options or in the answer file (/etc/foreman-ins
 foreman-installer --scenario katello <options>
 {% endhighlight %}
 
+## Multiple subnets and domains
+
+The installer only supports one subnet and one DNS domain via command line
+arguments. Multiple entries can be entered via
+/etc/foreman-installer/custom-hiera.yaml file:
+
+    dhcp::pools:
+     isolated.lan:
+       network: 192.168.99.0
+       mask: 255.255.255.0
+       gateway: 192.168.99.1
+       range: 192.168.99.5 192.168.99.49
+    dns::zones:
+      # creates @ SOA $::fqdn root.example.com.
+      # creates $::fqdn A $::ipaddress
+      example.com: {}
+
+      # creates @ SOA test.example.net. hostmaster.example.com.
+      # creates test.example.net A 192.0.2.100
+      example.net:
+        soa: test.example.net
+        soaip: 192.0.2.100
+        contact: hostmaster.example.com.
+
+      # creates @ SOA $::fqdn root.example.org.
+      # does NOT create an A record
+      example.org:
+        reverse: true
+
+      # creates @ SOA $::fqdn hostmaster.example.com.
+      2.0.192.in-addr.arpa:
+        reverse: true
+        contact: hostmaster.example.com.
+
 ## Forklift
 
 Foreman provides a git repository designed to streamline setup by setting up all the proper repositories. Forklift provides the ability to deploy a virtual machine instance via Vagrant or direct deployment on an already provisioned machine. For details on how to install using forklift, please see the [README](https://github.com/theforeman/forklift/blob/master/README.md).
