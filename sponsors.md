@@ -39,7 +39,11 @@ Thank you to Red Hat, who provide servers for our RPM build system and staffs de
 ### oVirt
 
 <div class="lead text-left"><a href="http://www.ovirt.org"><img src="/static/images/sponsors/oVirt.svg" height="100px"/></a></div>
-Thank you to oVirt, who provide servers for our ontinuous integration system.
+Thank you to oVirt, who provide servers for our continuous integration system.
+
+### Scaleway
+<div class="lead text-left"><a href="https://www.scaleway.com/"><img src="/static/images/sponsors/scaleway.svg" height="100px"/></a></div>
+Thank you to Scaleway, who provide ARM servers for building our arm packages
 
 ### JetBrains
 
