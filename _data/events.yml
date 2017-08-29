@@ -1042,6 +1042,21 @@
     core, proxies, plugins, and more.  As always, you're welcome to participate
     in the show, either via YouTube Live chat, or via our IRC channel
     (Freenode/#theforeman).
+- title: 'UX improvements - provisioning wizards - 30th August'
+  type: 'Livestream'
+  location: virtual
+  start: 2017-08-30 14:00 BST
+  end: 2017-08-30 14:00 BST
+  url: 'https://www.youtube.com/watch?v=ZvcAbIuwXsQ'
+  description: |
+    After we went over through most pages of Foreman and its plugins, we would
+    like to concentrate on more complex changes that requires a design or a
+    discussion involving all interested parties. We'd like to incrementally
+    discuss progress from both current design and implementation perspective as
+    well as generic usability questions that pop up.  This time we'll focus on
+    various provisioning flows, look at first draft and discuss further steps.
+    Demos will be recorded and streamed live so anyone from community can
+    participate.
 - title: 'Training: Foreman (German)'
   type: 'Training'
   tags:
