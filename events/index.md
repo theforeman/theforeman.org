@@ -6,7 +6,7 @@ layout: event_index
 
 Here you'll find all the Foreman-related events where members of
 the community are talking about their use of, or contribution to,
-Foreman.  Attending one of these events is a great way to learn
+Foreman. Attending one of these events is a great way to learn
 more about Foreman!
 
 You can [subscribe to these events](/events/all.ics) via our ICS feed!

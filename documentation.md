@@ -34,25 +34,25 @@ version: '1.15'
   <div class='col-xs-3 center'>
     <a id='manual-link' href="manuals/{{page.version}}/index.html" class="btn-doc btn">
       <h2 class='doc-icon'><i class="fa fa-newspaper-o"></i></h2>
-      <p id='manual'>manual</p>
+      <p id='manual'>Manual</p>
     </a>
   </div>
   <div class='col-xs-3 center'>
 		<a id='release-notes-link' href="manuals/{{page.version}}/index.html#Releasenotesfor{{page.version}}" class="btn-doc btn">
       <h2 class='doc-icon'><i class="fa fa-pencil"></i></h2>
-      <p id='release-notes'>release notes</p>
+      <p id='release-notes'>Release Notes</p>
     </a>
   </div>
   <div class='col-xs-3 center'>
     <a id="api-ref-link" href="api/{{page.version}}/index.html" class="btn-doc btn">
       <h2 class='doc-icon'><i class="fa fa-terminal"></i></h2>
-      <p id='api-ref'>api</p>
+      <p id='api-ref'>API</p>
     </a>
   </div>
   <div class='col-xs-3 center'>
 		<a href='/plugins' class="btn-doc btn">
       <h2 class='doc-icon'><i class="fa fa-cubes"></i></h2>
-      <p id='plugins'>plugins</p>
+      <p id='plugins'>Plugins</p>
     </a>
   </div>
 </div>
@@ -92,7 +92,7 @@ version: '1.15'
   <div class='col-xs-3 center'>
     <a href="/contribute.html" class="btn-doc btn">
       <h2 class='doc-icon'><i class="fa fa-code"></i></h2>
-      Developer handbook
+      Developer Handbook
     </a>
   </div>
 </div>
