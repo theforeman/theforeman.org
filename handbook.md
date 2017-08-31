@@ -165,7 +165,7 @@ We use MiniTest::Unit syntax.
 * Use custom assertions for variable status checks, e.g: ```assert_empty variable``` instead of ```assert variable.empty?```. These assertions produce errors that are easier to read.
 * Use ```:success, :not_authorized, etc...```, instead of actual HTTP status codes.
 * Favor FactoryGirl over fixtures. Only use fixtures when the object is created very often throughout the test suite.
-* When using FactoryGirl, do not use ```create``` unless necessary, and use ```build``` instead. The former will save the object to the database (slow), the latter keeps the object in memory (faster and garbage collectable)
+* When using FactoryGirl, do not use ```create``` unless necessary, and use ```build``` instead. The former will save the object to the database (slow), the latter keeps the object in memory (faster and garbage collectible)
 * If your tests are repeating code except for a couple of changes, wrap it in a `context` block, or write a helper that takes in the changes through arguments and generates the tests.
 * Use stubs and mocks extensively to test external calls, slow calls not related with the actual test, and also to avoid testing framework features. They make our test base much faster.
 * Use `setup_user` if you need to create an user with special permissions and roles instead of doing it yourself in the test.
@@ -293,7 +293,7 @@ We ask new Foreman contributors to 'act as a committer' to the extent we feel th
 If you want to become a committer, we expect you help with some of these tasks:
 
 *  Review and test the patches submitted by others; this helps to offload the burden on existing committers, who will definitely appreciate your efforts
-*  Participate in discussions about releases, roadmaps, architecture, and long-term plans
+*  Participate in discussions about releases, road maps, architecture, and long-term plans
 *  Improve the website
 *  Improve project infrastructure in order to increase the efficiency of committers and other contributors
 *  Help raise the project's quality bar (e.g. by setting up code coverage analysis)
@@ -397,8 +397,8 @@ Other useful information:
 To allow live reload of front-end assets, Foreman includes a small node.js server provided by webpack.
 In order to run foreman in development with the webpack development server, you have two options:
 
-1. `foreman start` will start both servers simultanously. Note that using pry for debugging in this option is limited, as foreman does not echo back your input. You can choose to run a different rails server then the default (which is `bin/rails server`) by setting the `RAILS_STARTUP` environment variable.
-1. In seperate terminals, run `bin/rails server` and `./node_modules/.bin/webpack-dev-server --config config/webpack.config.js`. This will allow you to run pry inside the rails application as usual.
+1. `foreman start` will start both servers simultaneously. Note that using pry for debugging in this option is limited, as foreman does not echo back your input. You can choose to run a different rails server then the default (which is `bin/rails server`) by setting the `RAILS_STARTUP` environment variable.
+1. In separate terminals, run `bin/rails server` and `./node_modules/.bin/webpack-dev-server --config config/webpack.config.js`. This will allow you to run pry inside the rails application as usual.
 
 If you do not want to use the webpack development server (for example, if you only work on the backend), you can set `:webpack_dev_server: false` in `config/settings.yaml` which will disable it. You can then proceed to running foreman as usual (e.g. `bin/rails s`). In this case, however, you will need to manually run `rake webpack:compile` to generate the webpack managed assets.
 
