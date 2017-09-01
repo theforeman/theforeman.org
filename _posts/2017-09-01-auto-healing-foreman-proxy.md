@@ -2,6 +2,7 @@
 layout: post
 title: Creating an auto healing Foreman Proxy
 author: Sean O'Keeffe
+date: 2017-09-01 13:11:21
 tags:
 - foreman
 - katello
