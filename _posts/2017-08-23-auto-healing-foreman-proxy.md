@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Creating a auto healing Foreman Proxy
+title: Creating an auto healing Foreman Proxy
 author: Sean O'Keeffe
 tags:
 - foreman
@@ -13,7 +13,7 @@ Auto healing infrastructure allows scalability, predictability and automated rec
 
 ## Why?
 Why not? Defining all our infrastructure in code means we can recover from problems quickly and efficiently, not to mention the other benefits of that.
-- All of our other cloud applications and infrastructure are auto scaling and rebuilt every 21 days, from NTP & DNS servers to Splunk clusters and all the Applications & Servers they are there to support are built using this process. We don't want to differentiate from the standard.
+- All of our other cloud applications and infrastructure are auto scaled and AMI's are rebuilt and redeployed every 21 days, everything from NTP & DNS servers to Splunk clusters and all the Applications & Servers they are there to support are built using this process. We don't want to differentiate from the standard.
 - No upgrades! We just re-build on the newer version.
 - No sessions! Disabling all user access, SSH & console, to our boxes allows simple deployment to cloud providers in our secure environment.
 
@@ -33,9 +33,9 @@ We start with a Base AMI, this is a custom AMI that we produce based off the off
     {
         "type": "shell",
         "inline": [
-            "sed -i 's/console=ttyS0,115200n8 console=tty0/console=tty0 console=ttyS0,115200n8/' /etc/default/grub",
-            "sudo grub2-mkconfig -o /boot/grub2/grub.cfg",do subscription-manager clean",
-            "rpm -q katello-ca-consumer-katello.example.com 2>/dev/null || sudo rpm -Uvh http://katello.example.com/pub/katello-ca-consumer-latest.noarch.rpm",
+            "sudo sed -i 's/console=ttyS0,115200n8 console=tty0/console=tty0 console=ttyS0,115200n8/' /etc/default/grub",
+            "sudo grub2-mkconfig -o /boot/grub2/grub.cfg",
+            "sudo yum install http://katello.example.com/pub/katello-ca-consumer-latest.noarch.rpm",
             "sudo subscription-manager register --org=\"My-Org\" --activationkey=\"foreman-proxy\"",
             "sudo yum install -y katello-agent",
             "sudo yum install -y foreman-proxy-content",
@@ -96,7 +96,7 @@ The automated rebuild process uses a randomly assigned hostname, we needed to se
    * Pulls down the certs.tar from S3
    * Runs foreman-installer via an [Ansible role](https://galaxy.ansible.com/sean797/foreman_installer)
    * Hits https://katello.example.com/katello/api/capsules/:id/content/sync to kick off a Content Sync
-   * Reverts hostname change back
+   * Reverts hostname change back, to meet expectations of the internal tooling (CMDB, etc..)
 1. An Auto Scaling Group per Smart Proxy attached to the ELB, limited to 1 instance
 1. A route53 DNS record for the ELB with a CNAME to the instance
 
@@ -104,6 +104,6 @@ The automated rebuild process uses a randomly assigned hostname, we needed to se
 
 There are a couple of gotchas with this approach, but none that affected us. 
 * Every time the instance is rebuilt it has to re-sync Content from the Katello server, this could become an issue depending on scale, you could look into storing `/var/lib/pulp/` & `/var/lib/mongodb/` on a persistent volume to get around this, but we didn't.
-* We were only using the Smart Proxy Pulp & OpenSCAP features, other features like DHCP, DNS, TFTP would require persistent volumes to ensure they don't get blown away when the instance is rebuilt.
+* We were only using the Smart Proxy Pulp & OpenSCAP features, other features like Puppet, DHCP, DNS, TFTP would require persistent volumes to ensure they don't get blown away when the instance is rebuilt.
 
-We have now a repeatable Foreman Smart Proxy build defined in git, enabling us to tare down from one cloud provider and rebuild it on another if required, but for us the most valuable thing is integrating Foreman Smart Proxies to our build process for all our other applications and servers.
+We have now a repeatable Foreman Smart Proxy build defined in git, enabling us to tear down from one cloud provider and rebuild it on another if required, but for us the most valuable thing is integrating Foreman Smart Proxies to our build process for all our other applications and servers.
