@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2017-7535: Stored XSS when assigning unassigned hosts to organization/location](security.html#2017-7535)
 * [CVE-2017-7505: User scoped in organization with permissions for user management can manage administrators that are not assigned to any organization](security.html#2017-7505)
 * [CVE-2017-2672: audit log stores plain text compute resource image passwords](security.html#2017-2672)
 * [CVE-2017-2667: Hammer CLI does not verify server SSL certificate](security.html#2017-2667)
@@ -70,6 +71,16 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2017-7535"></a>CVE-2017-7535: Stored XSS when assigning unassigned hosts to organization/location
+
+An organization or location named e.g. `<script>do_evil();</script>` may cause the script to be executed if a user tries to assign selected or all unassigned hosts to said organization or location.
+
+This issue was reported by Sanket Jagtap.
+
+* Affects Foreman 1.1 and higher.
+* Fix released with Foreman 1.16.0
+* Redmine issue [#20963](http://projects.theforeman.org/issues/20963)
 
 #### <a id="2017-7505"></a>CVE-2017-7505: User scoped in organization with permissions for user management can manage administrators that are not assigned to any organization
 
