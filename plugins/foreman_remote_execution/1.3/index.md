@@ -34,6 +34,9 @@ A few examples of tasks that this plugin helps you achieve:
 - Trigger a Puppet/Salt/Chef run
 
 ## 1.1 Components
+TODO: Smart-proxy -> SPDC split
+TODO: SPDC ports
+TODO: Plugin renames
 
 The whole remote execution system is pluggable, making it easy to add more
 providers of communication later. Therefore it's split into several components
@@ -206,6 +209,7 @@ order to **scp** to work (which we use for getting
 the scripts to the remote host)
 
 # 3. Usage
+TODO: Replace screenshots with more recent ones
 
 After installation you can start preparing your commands and run them on your
 hosts. Every command must be defined as a Job Template. Once defined it can be
@@ -351,6 +355,8 @@ overridden during job invocation. See [settings chapter](plugins/foreman_remote_
 for more details about customization.
 
 ## 3.2 Executing a Job
+TODO: Describe timeout to kill
+TODO: Check what was moved into advanced
 
 To execute on one host, go to the host detail page and click green "Run Job"
 button. For multiple hosts, use the bulk action tool on the "All hosts" page
@@ -443,6 +449,7 @@ After submitting the form, you're redirected to the Job detail which informs
 you about the progress.
 
 ## 3.3 Job detail
+TODO: Mention filtering options
 
 On the Job detail page you can see overall progress and result of the job
 execution.
@@ -472,6 +479,7 @@ gives you some basic information, e.g. when next run is supposed to happen.
 After you cancel the job, it cancels all future executions as well.
 
 ## 3.4 Jobs list
+TODO: Mention filtering options
 
 You can find all Jobs when you navigate to Monitor > Jobs. A table
 lists all jobs from history to future. You can search jobs by description with
@@ -565,6 +573,8 @@ consider any proxy associated with the host, such as its Puppetmaster, as long
 as the proxy also has a remote execution feature.
 
 ## 4.2 Global settings
+TODO: Check if everything still applies
+TODO: Add missing bits and pieces
 
 Under Administer -> Settings you can find RemoteExecution tab which allows you
 to customize plugin behavior. Here is the list of settings and their meaning.
@@ -675,6 +685,10 @@ removes it on target host.
 In this case, previewing of the template would immediately trigger destroy
 method and therefore it's wrapped in preview condition.
 
+## 4.5 Kerberos authentication
+TODO: Write me
+## 4.6 Asynchronous SSH
+TODO: Write me
 ## 4.5 Plugin developer API
 
 Plugins can leverage Remote Execution to perform a particular job on a host by
