@@ -1,7 +1,7 @@
 ---
 layout: manual
-title: Foreman 1.16-develop Manual
-version: "1.16-develop"
+title: Foreman 1.16 Manual
+version: "1.16"
 previous_version: "1.15"
 ---
 
