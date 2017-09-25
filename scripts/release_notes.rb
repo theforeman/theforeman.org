@@ -47,14 +47,17 @@ all_issues = gather_issues.flatten
 puts all_issues.count
 grouped_issues = gather_issues.flatten.group_by { |issue| issue['category'] }
 
-grouped_issues.each do |category, issues|
-  #binding.pry if category.nil?
-  #puts category
+grouped_issues = grouped_issues.map do |category, values|
   if category
-	  puts "#### #{category['name']}"
+    { category['name'] => values }
   else
-	  puts "#### Uncategorized"
+    { 'Uncategorized' => values }
   end
+end.reduce(:merge)
+
+grouped_issues = Hash[ grouped_issues.sort_by { |key, val| key } ]
+grouped_issues.each do |category, issues|
+	puts "#### #{category}"
 
   issues.each do |issue|
 	  puts "* #{issue['subject']} ([##{issue['id']}](#{URL}/issues/#{issue['id']}))"
