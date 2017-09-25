@@ -37,7 +37,7 @@ require 'git'
   puppetdb_foreman
 )
 @date_from     = '2016-09-06'
-@date_to       = '2017-04-05'
+@date_to       = '2017-09-25'
 
 @author_map = {
   "abenari"        => "Amos Benari",
