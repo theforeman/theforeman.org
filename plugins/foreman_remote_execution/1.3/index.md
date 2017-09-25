@@ -34,13 +34,22 @@ A few examples of tasks that this plugin helps you achieve:
 - Trigger a Puppet/Salt/Chef run
 
 ## 1.1 Components
-TODO: Smart-proxy -> SPDC split
 TODO: SPDC ports
 TODO: Plugin renames
 
 The whole remote execution system is pluggable, making it easy to add more
 providers of communication later. Therefore it's split into several components
 that must be installed on Foreman and the Smart Proxy.
+
+Due to various reasons, dynflow was separated from smart-proxy into a standalone
+service called smart_proxy_dynflow_core. Most of the gems originally required for
+remote execution also followed this example and were split into regular and -core part.
+The original gems are usually either Foreman or Smart Proxy plugins, the -core parts
+are required by the smart proxy dynflow core service.
+
+This split approach also allows us to simplify the deployment by loading the -core gems
+into Smart Proxy or even directly into Foreman and thus lowering the entry barrier
+at the cost of lower performance.
 
 <table class="table table-bordered table-condensed">
   <tr>
@@ -61,12 +70,25 @@ that must be installed on Foreman and the Smart Proxy.
   </tr>
   <tr>
     <td>smart_proxy_dynflow</td>
-    <td>Smart Proxy plugin, runs the jobs asynchronously and keeps status of commands executed via this proxy. This plugins uses relational SQL DB (sqlite).</td>
+    <td>Smart Proxy plugin, relays requests to smart_proxy_dynflow_core running on the same host.</td>
+  </tr>
+  <tr>
+    <td>smart_proxy_dynflow_core</td>
+    <td>Standalone service which runs the jobs asynchronously and keeps status of executed commands. This plugins uses relational SQL DB (sqlite).</td>
+  </tr>
+  <tr>
+    <td>foreman_remote_execution_core</td>
+    <td>Required, core part of foreman_remote_execution, contains the parts needed for actually running the jobs over SSH, depends on foreman-tasks-core</td>
+  </tr>
+  <tr>
+    <td>foreman-tasks-core</td>
+    <td>Required, core part of foreman-tasks, keeps status of all executed commands, allows debugging if something goes wrong.</td>
   </tr>
 </table>
 
 
 ## 1.2 Compatibility
+TODO: Check the versions
 
 Each component is packaged for platforms that Foreman is officially packaged
 for. Since both Foreman and Smart Proxy plugins requires Dynflow, Ruby 1.9+ is
@@ -131,6 +153,7 @@ You can install both the Foreman and Smart Proxy plugin with the installer:
 The installer will automatically configure an SSH key for you, or you may use an existing see.  See the foreman-installer --help for more information.
 
 ### Manual Installation
+Please, don't.
 
 In the case you want to install the package manually on an existing Foreman or
 a Katello, use the following steps.
