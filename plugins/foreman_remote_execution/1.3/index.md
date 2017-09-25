@@ -378,13 +378,12 @@ overridden during job invocation. See [settings chapter](plugins/foreman_remote_
 for more details about customization.
 
 ## 3.2 Executing a Job
-TODO: Describe timeout to kill
-TODO: Check what was moved into advanced
 
-To execute on one host, go to the host detail page and click green "Run Job"
+To execute on one host, go to the host detail page and click "Schedule Remote Job"
 button. For multiple hosts, use the bulk action tool on the "All hosts" page
-to select "Run Job".
+to select "Schedule Remote Job".
 
+TODO: New picture
 ![Job Invocation form](/plugins/foreman_remote_execution/{{page.version}}/invocation_form.png)
 
 In this form you select which Job template you want to run on selected
@@ -394,8 +393,16 @@ You can customize the query to search any set of hosts, e.g. all hosts
 running CentOS 7.1 or hosts with 1 GB memory. You can check how many
 hosts such search query covers by clicking refresh button below.
 
-You can also specify **Type of query**. Currently we support two
-options
+To review the list of target hosts you can use the button with eye
+icon. It will display the list of hosts matching the search query.
+
+### 3.2.1 Advanced
+The following options are considered advanced and are not shown by
+default. To get to them, one has to click "Display advanced fields"
+in the job invocation form.
+
+First of advanced options is **Type of query**. Currently we support
+two options
 
 - **Static query** - evaluates the search query immediately when you
     hit the Submit button and saves the resulting set as the target of
@@ -408,9 +415,6 @@ Dynamic query is a powerful tool when used with scheduled or recurring
 executions in combinations with Bookmarks being used for specifying the
 targets. You don't have to change scheduled job invocation if you just
 change the query of used bookmark.
-
-To review the list of target hosts you can use the button with eye
-icon. It will display the list of hosts matching the search query.
 
 You can override effective user for this invocation unless it was forbidden
 for selected job template. In non-editable description field you can see
@@ -426,6 +430,22 @@ template like this
 If you set the input value to "httpd" the resulting description would become
 "Restart service httpd".
 
+The next configurable option is called "Timeout to kill". This option allows
+to set an arbitrary time limit in seconds, which declares for how long the job
+is allowed to run. If the job doesn't finish before this time passes, the remote
+process will receive a SIGTERM. By default this option is unset and the job
+is allowed to run indefinitely.
+
+Another feature to allow more precise control over the execution is limiting
+by concurrency level and distributing the tasks over time. The **Concurrency level**
+allows to set a quota on how many parallel tasks can be run, which can effectively
+prevent depleting all of the system's resources in case of executing a job
+on a large number of hosts. The **Time span** can be used to define a maintenance
+window, across which the tasks should be distributed. Important thing to note is
+the tasks which could not be started within that window (for example tasks before
+them took too long to finish) are cancelled. This allows to tailor the execution
+to fit your hardware and needs.
+
 You can also plan the execution in future or configure multiple rerunning.
 There's a second tab called **Scheduling** where you can choose from
 
@@ -433,6 +453,7 @@ There's a second tab called **Scheduling** where you can choose from
 - **Schedule future execution** - delayed single execution
 - **Set up recurring execution** - multiple executions on regular basis
 
+TODO: New picture
 ![Job Invocation schedule form](/plugins/foreman_remote_execution/{{page.version}}/invocation_form_scheduling.png)
 
 While execute now is obvious, future time scheduling offers you to customize
@@ -458,25 +479,15 @@ the invocation configured without any fixed ending condition. If you want
 to stop such job later, you either cancel the job and cancel the recurring
 logic.
 
-Another feature to allow more precise control over the execution is limiting
-by concurrency level and distributing the tasks over time. The **Concurrency level**
-allows to set a quota on how many parallel tasks can be run, which can effectively
-prevent depleting all of the system's resources in case of executing a job
-on a large number of hosts. The **Time span** can be used to define a maintenance
-window, across which the tasks should be distributed. Important thing to note is
-the tasks which could not be started within that window (for example tasks before
-them took too long to finish) are cancelled. This allows to tailor the execution
-to fit your hardware and needs.
-
 After submitting the form, you're redirected to the Job detail which informs
 you about the progress.
 
 ## 3.3 Job detail
-TODO: Mention filtering options
 
 On the Job detail page you can see overall progress and result of the job
 execution.
 
+TODO: New picture
 ![Job detail 1](/plugins/foreman_remote_execution/{{page.version}}/job_detail_1.png)
 
 In the overview tab you can see what query was used to find the hosts and how
@@ -486,23 +497,31 @@ placeholders for them since they are specific to each host. User inputs are
 evaluated since they are same for all hosts. A chart is showing the status of
 the job on all targets.
 
-From this screen you can even cancel the job if it's not finished yet.  First
+From this screen you can even cancel the job if it's not finished yet. First
 cancel attempt will try to cancel the run on the Smart Proxy. If proxy does not
 respond, you can hit the cancel button a second time which forces the Job to be
-cancelled on Foreman (while it still might be running on Smart Proxy). Last Job
-Task takes you to Foreman Tasks that represents this Job.
+cancelled on Foreman (while it still might be running on Smart Proxy). Abort Job
+button can be though of as "force cancel". It will send SIGTERM to all remotely
+running processes and imidiatelly mark the job as failed without waiting
+for the tasks running on smart proxies to finish.
+
+Last Job Task takes you to Foreman Tasks that represents this Job.
 
 In Hosts tab you can see all hosts targeted by this execution, status
 of the job on them and link to Foreman Task that represent the
 execution for a particular host. Note that this task is a subtask of a
-whole Job task.
+whole Job task. The table can be filtered by statuses of the hosts' tasks.
+For example
+
+    job_invocation.result = failed
+
+can be used to display only hosts on which this job failed.
 
 If you scheduled a recurring you'll also see **Recurring logic** tab. This
 gives you some basic information, e.g. when next run is supposed to happen.
 After you cancel the job, it cancels all future executions as well.
 
 ## 3.4 Jobs list
-TODO: Mention filtering options
 
 You can find all Jobs when you navigate to Monitor > Jobs. A table
 lists all jobs from history to future. You can search jobs by description with
@@ -513,6 +532,7 @@ a query like
 This example would find all executions that run job which description starts with
 "set". Similarly you can search based on job category using keyword `job_category`.
 
+TODO: New picture
 ![Job invocations list](/plugins/foreman_remote_execution/{{page.version}}/job_invocations.png)
 
 Each Job has a status which tracks the progress of the execution. A status
@@ -709,9 +729,68 @@ In this case, previewing of the template would immediately trigger destroy
 method and therefore it's wrapped in preview condition.
 
 ## 4.5 Kerberos authentication
-TODO: Write me
+Since version 1.3.2 Remote Execution can use Kerberos for authentication.
+In order for this to work the foreman-proxy user has to have a valid TGT.
+
+This feature can be enabled on a per-proxy basis by setting :kerberos_auth
+to true in /etc/smart_proxy_dynflow_core/settings.d/remote_execution_ssh.yml.
+Remote Execution will then try to authenticate using Kerberos and if that fails,
+fallback to public key authentication.
+
 ## 4.6 Asynchronous SSH
-TODO: Write me
+TODO: Check the version
+
+Since version 1.3.4 Remote Execution plugin supports so called "asynchronous
+ssh".
+
+With regular script runner the ssh connection is kept open and data is
+periodically (every second) read from it. The polling script runner takes a
+different approach. It copies the user's script (just SCRIPT from now on)
+and two additional helper scripts (callback and retrieve) over to the remote
+machine. Over the same connection it runs the so-called control script,
+runs the retrieve script (to check the command started successfully) and
+closes the SSH connection. This way, the SCRIPT runs on the remote server
+unsupervised and no persistent connection is maintained. This also means for
+each run (except the first one) of the retrieve a new connection has to be
+established.
+
+This feature can be enabled on a per-proxy basis by setting :async_ssh
+to true in /etc/smart_proxy_dynflow_core/settings.d/remote_execution_ssh.yml.
+The interval for checking on the remote jobs can be set in the same file
+under the runner_refresh_interval key.
+
+### 4.6.1 control script
+Spawns a new shell in background which basically just runs SCRIPT; callback,
+redirecting SCRIPT's output into output_file and writing shell's pid into a
+pid_file.
+
+### 4.6.2 retrieve script
+Checks the status of shell using its' pid from pid_file, reads new parts of
+SCRIPT's output from output_file and updates position file (keeps track of
+number of bytes read from output_file). Outputs information whether script
+is running or not and the new parts of output.
+
+### 4.6.3 callback script
+It tries to do a POST request using curl to smart_proxy_dynflow_core's API,
+authenticating with the task's uuid as username and token as password using
+HTTP basic authentication. This tells the smart_proxy_dynflow_core to check
+on a task using the retrieve script.
+
+### 4.6.4 Authentication for callback
+PollingScriptRunner requests an one-time password from
+ForemanTasksCore::OtpManager when it initializes. Similarly
+smart_proxy_dynflow_core's API asks the OtpManager if a task_uuid x token
+combination is valid.
+
+### 4.6.5 Dependencies on remote hosts
+To work properly, this needs some utilities to reside on the remote
+host. Those are mostly common tools, but they may be missing in containers.
+
+    GNU coreutils (tail, expr) - doesn't work with busybox tail
+    pgrep
+    which
+    curl
+
 ## 4.5 Plugin developer API
 
 Plugins can leverage Remote Execution to perform a particular job on a host by
