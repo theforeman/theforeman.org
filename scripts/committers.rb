@@ -3,8 +3,8 @@ require 'tmpdir'
 require 'git'
 
 @tagged_repos = %w(foreman smart-proxy foreman-installer foreman-selinux)
-@tag_from     = "1.14.0"
-@tag_to       = "1.15-stable"
+@tag_from     = "1.15.0"
+@tag_to       = "1.16.0-RC1"
 
 @untagged_repos = %w(
   theforeman.org
