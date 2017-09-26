@@ -616,8 +616,6 @@ consider any proxy associated with the host, such as its Puppetmaster, as long
 as the proxy also has a remote execution feature.
 
 ## 4.2 Global settings
-TODO: Check if everything still applies
-TODO: Add missing bits and pieces
 
 Under Administer -> Settings you can find RemoteExecution tab which allows you
 to customize plugin behavior. Here is the list of settings and their meaning.
@@ -628,13 +626,18 @@ to customize plugin behavior. Here is the list of settings and their meaning.
     <th>Description</th>
   </tr>
   <tr>
+    <td>remote_execution_connect_by_ip</td>
+    <td>Should the ip addresses on host interfaces be preferred over the fqdn? It is useful, when DNS not resolving the
+    fqdns properly. You may override this per host by setting a parameter called remote_execution_connect_by_ip.</td>
+  </tr>
+  <tr>
     <td>remote_execution_effective_user</td>
     <td>This is a login of default effective user for any job. When job is executed the effective user of the process
     is changed accordingly (e.g. by sudo). This option can be overridden per job template and job invocation.</td>
   </tr>
   <tr>
-      <td>remote_execution_effective_user_method</td>
-      <td>What method should be used to set the effective user on target, currently only <b>su</b> and <b>sudo</b> are supported.</td>
+    <td>remote_execution_effective_user_method</td>
+    <td>What method should be used to set the effective user on target, currently only <b>su</b> and <b>sudo</b> are supported.</td>
   </tr>
   <tr>
       <td>remote_execution_fallback_proxy</td>
@@ -647,10 +650,22 @@ to customize plugin behavior. Here is the list of settings and their meaning.
       are enabled, the search will be limited to the host's organization or location.</td></td>
   </tr>
   <tr>
+    <td>remote_execution_ssh_port</td>
+    <td>Port to use for SSH communication. Default port 22. You may override per host by setting a parameter called remote_execution_ssh_port.</td>
+  </tr>
+  <tr>
       <td>remote_execution_ssh_user</td>
       <td>Default user to use while the smart-proxy connects to the target using SSH. You may override per host by
       setting a parameter called remote_execution_ssh_user. Note that it can be set per Host, Host group,
       Operating system, Domain, Location and Organization. Also note that this can differ from effective user.</td>
+  </tr>
+  <tr>
+    <td>remote_execution_sync_templates</td>
+    <td>Whether we should sync templates from disk when running db:seed.</td>
+  </tr>
+  <tr>
+    <td>remote_execution_without_proxy</td>
+    <td>When enabled, the remote execution will try to run the commands directly, when no proxy with remote execution feature is configured for the host.</td>
   </tr>
 </table>
 
