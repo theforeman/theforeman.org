@@ -12,14 +12,15 @@ Communication goes through the smart proxy so Foreman does not have to have
 direct access to the target host and can scale to control many hosts. A command
 can be customized similarly to provisioning templates or partition tables. A
 number of templates are included for running basic commands, installing
-packages, etc. For more details see the [Job
-Templates](plugins/foreman_remote_execution/{{page.version}}/index.html#3.1JobTemplates)
+packages, etc. For more details see the
+[JobTemplates](plugins/foreman_remote_execution/{{page.version}}/index.html#3.1JobTemplates)
 section.
 
 Below is a short demo of running a single command on a particular host, with
 the ability to view the output live:
 
 ![GIF Demo](/plugins/foreman_remote_execution/{{page.version}}/remote_execution.gif)
+![WEBM Demo](/plugins/foreman_remote_execution/{{page.version}}/output.gif)
 
 The command can be executed on multiple servers at once while specific parts of
 it can vary per host - in other words you can use variables in your commands.
@@ -34,14 +35,12 @@ A few examples of tasks that this plugin helps you achieve:
 - Trigger a Puppet/Salt/Chef run
 
 ## 1.1 Components
-TODO: SPDC ports
-TODO: Plugin renames
 
 The whole remote execution system is pluggable, making it easy to add more
 providers of communication later. Therefore it's split into several components
 that must be installed on Foreman and the Smart Proxy.
 
-Due to various reasons, dynflow was separated from smart-proxy into a standalone
+Due to various reasons, dynflow was separated from Smart Proxy into a standalone
 service called smart_proxy_dynflow_core. Most of the gems originally required for
 remote execution also followed this example and were split into regular and -core part.
 The original gems are usually either Foreman or Smart Proxy plugins, the -core parts
@@ -51,6 +50,9 @@ This split approach also allows us to simplify the deployment by loading the -co
 into Smart Proxy or even directly into Foreman and thus lowering the entry barrier
 at the cost of lower performance.
 
+Please note that on Debian Dynflow will be set up as part of the Foreman Proxy. On other
+platforms it will be a standalone service.
+
 <table class="table table-bordered table-condensed">
   <tr>
     <th>Plugin</th>
@@ -58,10 +60,10 @@ at the cost of lower performance.
   </tr>
   <tr>
     <td>foreman_remote_execution</td>
-    <td>Required, contains the UI part and currently also SSH provider, depends on foreman-tasks</td>
+    <td>Required, contains the UI part, depends on foreman-tasks</td>
   </tr>
   <tr>
-    <td>foreman_tasks</td>
+    <td>foreman-tasks</td>
     <td>Required, keep status of all executed commands, allows debugging if something goes wrong</td>
   </tr>
   <tr>
@@ -86,6 +88,14 @@ at the cost of lower performance.
   </tr>
 </table>
 
+### 1.1.1 Ports
+
+By default Smart Proxy listens for http connections on port 8000 and for https
+connections on port 8443. Those ports should be opened in the firewall. Smart
+Proxy Dynflow Core listens on port 8008, but the only thing which should ever
+communicate with it is the Smart Proxy running on the same machine. This means
+it should not be needed to open this port in the firewall, assuming communication
+over loopback interface is allowed.
 
 ## 1.2 Compatibility
 TODO: Check the versions
@@ -139,7 +149,7 @@ This chapter covers a clean Foreman and plugin installation. We assume the
 smart proxy will be installed on the same host, however it's not a requirement.
 Please adapt according to your needs.
 
-Start by installing the Foreman nightly or 1.10 repository and EPEL7, see
+Start by installing the Foreman nightly or latest release repository and EPEL7, see
 [Quickstart instructions](/manuals/latest/index.html#2.Quickstart) and [Foreman
 manual](/manuals/latest/index.html#3.InstallingForeman) for more information.
 
@@ -150,25 +160,35 @@ You can install both the Foreman and Smart Proxy plugin with the installer:
     foreman-installer --enable-foreman-plugin-remote-execution\
                       --enable-foreman-proxy-plugin-remote-execution-ssh
 
-The installer will automatically configure an SSH key for you, or you may use an existing see.  See the foreman-installer --help for more information.
+The installer will automatically configure an SSH key for you, or you may use an existing see.
+See the `foreman-installer --help` for more information.
 
 ### Manual Installation
-Please, don't.
 
 In the case you want to install the package manually on an existing Foreman or
-a Katello, use the following steps.
+Katello, use the following steps.
 
 Install the packages appropriate for your operating system:
 
 RPM:
 
-    yum install tfm-rubygem-foreman_remote_execution\
+    yum install tfm-rubygem-foreman_remote_execution \
+                tfm-rubygem-foreman_remote_execution_core \
+                tfm-rubygem-foreman-tasks \
+                tfm-rubygem-foreman-tasks-core \
+                rubygem-smart_proxy_dynflow \
+                tfm-rubygem-smart_proxy_dynflow_core \
                 rubygem-smart_proxy_remote_execution_ssh
 
 DEB:
 
     apt-get install ruby-foreman-remote-execution\
                     ruby-smart-proxy-remote-execution-ssh
+
+The next thing to do is make sure the Smart Proxy, Smart Proxy Dynflow Core
+and Foreman can talk to each other. If you're on Debian, there's no need to do anything.
+This is done by properly configuring `:core_url` in `/etc/foreman-proxy/settings.d/dynflow.yml` and `:foreman_url`, `:listen`
+and `:port` keys in `/etc/smart_proxy_dynflow_core/settings.yml`.
 
 Next you have to setup ssh keys. By default smart proxy loads the key
 from `/usr/share/foreman-proxy/.ssh/id_rsa_foreman_proxy`. To customize it you
@@ -184,16 +204,18 @@ To generate a key, run following command on the host where Smart Proxy runs
     sudo -u foreman-proxy ssh-keygen -f ~foreman-proxy/.ssh/id_rsa_foreman_proxy -N ''
 
 When using SELinux make sure the directory and the files have correct labels
-of ssh_home_t. If not, restore the context:
+of `ssh_home_t`. If not, restore the context:
 
     restorecon -RvF ~foreman-proxy/.ssh
 
-Don't forget to restart Foreman, Smart Proxy and Foreman tasks so
-plugins are loaded
+Don't forget to restart Foreman, Smart Proxy, Smart Proxy Dynflow and Foreman
+tasks so plugins are loaded
 
     service httpd restart
     service foreman-tasks restart
     service foreman-proxy restart
+    # Skip the following step on Debian
+    service smart_proxy_dynflow_core restart
 
 Finally, you have to refresh the Smart Proxy features in the Foreman:
 Dynflow and Ssh should appear there as new features of the Smart Proxy.
@@ -227,12 +249,9 @@ one can just download it into authorized keys:
     curl https://myproxy.example.com:8443/ssh/pubkey >> ~/.ssh/authorized_keys
 
 For the execution to work, the client needs to have **openssh-server**
-installed and configured.  Also, **openssh-clients** need to be present, in
-order to **scp** to work (which we use for getting
-the scripts to the remote host)
+installed and configured.
 
 # 3. Usage
-TODO: Replace screenshots with more recent ones
 
 After installation you can start preparing your commands and run them on your
 hosts. Every command must be defined as a Job Template. Once defined it can be
@@ -268,11 +287,11 @@ install package example would be the following:
 
     Install package %{package_name}
 
-Note that the name wrapped in %{...} is the name of input which value will
+Note that the name wrapped in `%{...}` is the name of input which value will
 replace this placeholder so you would see "Install package httpd" if httpd
 was used for this input. Note that the description format can be modified
 per job invocation as well so this is just a default value for particular
-job template. Two extra placeholders %{template_name} and %{job_category}
+job template. Two extra placeholders `%{template_name}` and `%{job_category}`
 can be used.
 
 On the very same tab you can configure inputs. These template inputs
@@ -383,7 +402,6 @@ To execute on one host, go to the host detail page and click "Schedule Remote Jo
 button. For multiple hosts, use the bulk action tool on the "All hosts" page
 to select "Schedule Remote Job".
 
-TODO: New picture
 ![Job Invocation form](/plugins/foreman_remote_execution/{{page.version}}/invocation_form.png)
 
 In this form you select which Job template you want to run on selected
@@ -400,6 +418,8 @@ icon. It will display the list of hosts matching the search query.
 The following options are considered advanced and are not shown by
 default. To get to them, one has to click "Display advanced fields"
 in the job invocation form.
+
+![Advanced part of Job Invocation form](/plugins/foreman_remote_execution/{{page.version}}/invocation_form_advanced.png)
 
 First of advanced options is **Type of query**. Currently we support
 two options
@@ -453,7 +473,6 @@ There's a second tab called **Scheduling** where you can choose from
 - **Schedule future execution** - delayed single execution
 - **Set up recurring execution** - multiple executions on regular basis
 
-TODO: New picture
 ![Job Invocation schedule form](/plugins/foreman_remote_execution/{{page.version}}/invocation_form_scheduling.png)
 
 While execute now is obvious, future time scheduling offers you to customize
@@ -487,8 +506,7 @@ you about the progress.
 On the Job detail page you can see overall progress and result of the job
 execution.
 
-TODO: New picture
-![Job detail 1](/plugins/foreman_remote_execution/{{page.version}}/job_detail_1.png)
+![Job detail](/plugins/foreman_remote_execution/{{page.version}}/job_detail.png)
 
 In the overview tab you can see what query was used to find the hosts and how
 many hosts were found using it. Below is the evaluated template in generic
@@ -532,7 +550,6 @@ a query like
 This example would find all executions that run job which description starts with
 "set". Similarly you can search based on job category using keyword `job_category`.
 
-TODO: New picture
 ![Job invocations list](/plugins/foreman_remote_execution/{{page.version}}/job_invocations.png)
 
 Each Job has a status which tracks the progress of the execution. A status
@@ -753,48 +770,47 @@ Remote Execution will then try to authenticate using Kerberos and if that fails,
 fallback to public key authentication.
 
 ## 4.6 Asynchronous SSH
-TODO: Check the version
 
 Since version 1.3.4 Remote Execution plugin supports so called "asynchronous
 ssh".
 
 With regular script runner the ssh connection is kept open and data is
 periodically (every second) read from it. The polling script runner takes a
-different approach. It copies the user's script (just SCRIPT from now on)
-and two additional helper scripts (callback and retrieve) over to the remote
+different approach. It copies the user's script (just `SCRIPT` from now on)
+and two additional helper scripts (`callback` and `retrieve`) over to the remote
 machine. Over the same connection it runs the so-called control script,
-runs the retrieve script (to check the command started successfully) and
-closes the SSH connection. This way, the SCRIPT runs on the remote server
+runs the `retrieve` script (to check the command started successfully) and
+closes the SSH connection. This way, the `SCRIPT` runs on the remote server
 unsupervised and no persistent connection is maintained. This also means for
-each run (except the first one) of the retrieve a new connection has to be
+each run (except the first one) of the `retrieve` a new connection has to be
 established.
 
-This feature can be enabled on a per-proxy basis by setting :async_ssh
-to true in /etc/smart_proxy_dynflow_core/settings.d/remote_execution_ssh.yml.
+This feature can be enabled on a per-proxy basis by setting `:async_ssh`
+to `true` in `/etc/smart_proxy_dynflow_core/settings.d/remote_execution_ssh.yml`.
 The interval for checking on the remote jobs can be set in the same file
-under the runner_refresh_interval key.
+under the `:runner_refresh_interval` key.
 
 ### 4.6.1 control script
-Spawns a new shell in background which basically just runs SCRIPT; callback,
-redirecting SCRIPT's output into output_file and writing shell's pid into a
-pid_file.
+Spawns a new shell in background which basically just runs `SCRIPT; callback`,
+redirecting `SCRIPT`'s output into `output_file` and writing shell's pid into a
+`pid_file`.
 
-### 4.6.2 retrieve script
-Checks the status of shell using its' pid from pid_file, reads new parts of
-SCRIPT's output from output_file and updates position file (keeps track of
-number of bytes read from output_file). Outputs information whether script
+### 4.6.2 `retrieve` script
+Checks the status of shell using its' pid from `pid_file`, reads new parts of
+`SCRIPT`'s output from `output_file` and updates position file (keeps track of
+number of bytes read from `output_file`). Outputs information whether script
 is running or not and the new parts of output.
 
-### 4.6.3 callback script
-It tries to do a POST request using curl to smart_proxy_dynflow_core's API,
+### 4.6.3 `callback` script
+It tries to do a POST request using curl to `smart_proxy_dynflow_core`'s API,
 authenticating with the task's uuid as username and token as password using
-HTTP basic authentication. This tells the smart_proxy_dynflow_core to check
+HTTP basic authentication. This tells the `smart_proxy_dynflow_core` to check
 on a task using the retrieve script.
 
 ### 4.6.4 Authentication for callback
-PollingScriptRunner requests an one-time password from
-ForemanTasksCore::OtpManager when it initializes. Similarly
-smart_proxy_dynflow_core's API asks the OtpManager if a task_uuid x token
+`PollingScriptRunner` requests an one-time password from
+`ForemanTasksCore::OtpManager` when it initializes. Similarly
+`smart_proxy_dynflow_core`'s API asks the `OtpManager` if a task_uuid x token
 combination is valid.
 
 ### 4.6.5 Dependencies on remote hosts
