@@ -8,8 +8,9 @@ tags:
 - katello
 - smart proxy
 - aws
+excerpt: |
+  Auto healing infrastructure allows scalability, predictability and automated recovery. This is the story of how we created an auto healing Foreman Smart Proxy with Packer, Terraform & Ansible on AWS.
 ---
-
 Auto healing infrastructure allows scalability, predictability and automated recovery. This is the story of how we created an auto healing Foreman Smart Proxy with Packer, Terraform & Ansible on AWS.
 
 ## Why?
