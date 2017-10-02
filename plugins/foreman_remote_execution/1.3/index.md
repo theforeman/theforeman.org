@@ -46,12 +46,7 @@ remote execution also followed this example and were split into regular and -cor
 The original gems are usually either Foreman or Smart Proxy plugins, the -core parts
 are required by the smart proxy dynflow core service.
 
-This split approach also allows us to simplify the deployment by loading the -core gems
-into Smart Proxy or even directly into Foreman and thus lowering the entry barrier
-at the cost of lower performance.
-
-Please note that on Debian Dynflow will be set up as part of the Foreman Proxy. On other
-platforms it will be a standalone service.
+Please note that on Debian, Dynflow will be set up as part of the Foreman Proxy.
 
 <table class="table table-bordered table-condensed">
   <tr>
@@ -161,7 +156,7 @@ You can install both the Foreman and Smart Proxy plugin with the installer:
                       --enable-foreman-proxy-plugin-remote-execution-ssh
 
 The installer will automatically configure an SSH key for you, or you may use an existing see.
-See the `foreman-installer --help` for more information.
+See `foreman-installer --help` for more information.
 
 ### Manual Installation
 
@@ -190,12 +185,12 @@ and Foreman can talk to each other. If you're on Debian, there's no need to do a
 This is done by properly configuring `:core_url` in `/etc/foreman-proxy/settings.d/dynflow.yml` and `:foreman_url`, `:listen`
 and `:port` keys in `/etc/smart_proxy_dynflow_core/settings.yml`.
 
-Next you have to setup ssh keys. By default smart proxy loads the key
+Next you have to set up ssh keys. By default smart proxy loads the key
 from `/usr/share/foreman-proxy/.ssh/id_rsa_foreman_proxy`. To customize it you
 can edit the configuration in
 `/etc/foreman-proxy/config/settings.d/remote_execution_ssh.yml`. Without
-customization you need to create new ssh key and distribute it to
-target hosts. The key must not use passphrase.
+customization you need to create a new ssh key and distribute it to
+target hosts. The key must not be protected by a passphrase.
 
 To generate a key, run following command on the host where Smart Proxy runs
 
@@ -272,7 +267,7 @@ stands for variables which you define in second tab called Job.
 
 ![Job Template form](/plugins/foreman_remote_execution/{{page.version}}/job_template_form.png)
 
-Before we get to inputs, lets look at other fields in Job tab. First one is an
+Before we get to inputs, let's look at other fields in Job tab. First one is an
 autocomplete field called **Job category**. This groups job template together
 and makes managing a huge number of templates easier.
 
@@ -299,7 +294,7 @@ defines values that can be accessed in the template itself. To add new input,
 click the green button "+ Add Input" which adds more fields to the form. To
 remove the input, hit the cross in top right corner of the input form.
 
-We support four types of inputs. Each must have it's **name** which is
+We support four types of inputs. Each must have its **name** which is
 used in macro. If my input has the name "motd", I can then use
 following ERB tag in my template code:
 
@@ -664,7 +659,7 @@ to customize plugin behavior. Here is the list of settings and their meaning.
   <tr>
       <td>remote_execution_global_proxy</td>
       <td>Search for remote execution proxy outside of the proxies assigned to the host. If locations or organizations
-      are enabled, the search will be limited to the host's organization or location.</td></td>
+      are enabled, the search will be limited to the host's organization or location.</td>
   </tr>
   <tr>
     <td>remote_execution_ssh_port</td>
