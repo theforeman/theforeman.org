@@ -12,6 +12,7 @@ For general contribution information, see [here](/contribute.html).
  * [Triage Process](/plugins/katello/developers.html#triage-process)
  * [Testing](/plugins/katello/developers.html#testing)
  * [How to Release Katello](/plugins/katello/developers.html#how-to-release-katello)
+ * [Upgrading Candlepin](/plugins/katello/developers.html#upgrading-candlepin)
  * [Upgrading Pulp](/plugins/katello/developers.html#upgrading-pulp)
 
 
@@ -461,6 +462,42 @@ cp -rf $GITDIR/theforeman.org/api/new_version_template/apidoc/* $GITDIR/theforem
 ```
 
 Open a PR and commit the changes
+
+## Upgrading Candlepin
+
+The following steps are guidelines for testing and submitting a new build of Candlepin with the intent of including it in a nightly build and ultimately marking it for inclusion in an upcoming Katello release. Candlepin is a vital component of Katello. Here's how to make sure the process goes according to plan.
+
+### Requirements
+
+ - Koji access
+ - The Candlepin RPM you'd like to upgrade to and the SRPM from which it was built
+ - Familiarality with the changes in the new Candlepin version for focused testing
+ - A Katello development environment (ex: centos7-devel from Forklift) for testing the new version
+
+### Steps
+
+1. Install the new Candlepin RPM into your local Katello environment. Restart Katello (`katello-service restart`) and validate it. A
+  thorough test of Candlepin integration includes the following:
+
+   - Importing and refreshing a manifest
+   - Performing various actions around activation keys
+   - Registering a content host
+
+   If you're aware of a particularly impactful change in the new Candlepin version be sure to test it explicitly.
+   Save some time by running the glue tests in parallel: `rake test:katello:test:glue`
+2. If everything checked out - great! If not - fix those broken tests and open a PR.
+3. Submit the SRPM to Koji with the proper tag: `koji build katello-thirdparty-candlepin-rhel7 /path/to/srpm`
+
+   The new Candlepin will be included in the next Katello nighty build which will subject it to even more testing.
+
+   If the nightly build looks good (the new Candlepin RPM is present in the centos7-katello-nightly forklift box), feel free to run through the testing steps above
+   in order to validate the new version even further.
+
+4. Tag the Candlepin RPM so that it's included in the target Katello version. If you don't have sufficient Koji access, reach out to someone who
+does in #theforeman-dev and ask them to tag it accordingly. Here's an example for Katello 3.5: `koji-katello tag-pkg katello-3.5-thirdparty-candlepin-rhel7 candlepin-2.1.3-1.el7`
+Be sure to substitute your own version numbers for the tag name and RPM.
+
+All done!
 
 ## Upgrading Pulp
 
