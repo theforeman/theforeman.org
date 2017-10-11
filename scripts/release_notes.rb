@@ -17,7 +17,7 @@ URL = 'http://projects.theforeman.org'
 # Create new release via API call
 # Create new search by open + release field
 
-@current_release_id = 240
+@current_release_id = 311
 
 # Move bugs with Release set to VERSION to NEXT-VERSION with status new
 def gather_issues(offset=0)
@@ -45,7 +45,7 @@ end
 
 all_issues = gather_issues.flatten
 puts all_issues.count
-grouped_issues = gather_issues.flatten.group_by { |issue| issue['category'] }
+grouped_issues = gather_issues.flatten.group_by { |issue| issue['category'] || 'Uncategorized' }
 
 grouped_issues = grouped_issues.map do |category, values|
   if category
