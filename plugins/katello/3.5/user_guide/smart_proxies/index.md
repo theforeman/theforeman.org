@@ -45,7 +45,7 @@ See [Smart Proxy Installation](/plugins/katello/{{ page.version }}/installation/
 
 To stop all services and remove all Katello and Foreman related packages, run the following command as root on the Smart Proxy:
 
-  `Smart Proxy-remove`
+  `katello-remove`
 
 # Smart Proxy Isolation
 
