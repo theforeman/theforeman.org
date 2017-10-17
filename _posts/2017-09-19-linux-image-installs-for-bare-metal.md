@@ -12,7 +12,7 @@ tags:
 - provisioning
 ---
 
-This is a re-post from my [brand new blog](https://something.fail/) about image installs. It makes sense to post it in The foreman blog as its about my motivation and thoughts on writing a image install plugin. So here goes:  
+This is a re-post from my brand new blog [Something FAIL](https://something.fail/). It makes sense to post it in The foreman blog as its about my motivation and thoughts on writing a image install plugin and that it is in fact used in conjunction with Foreman. So here goes:  
 
 Are you like me that use preseed/kickstart netboot installs for physical nodes and perhaps use images prepped with cloud-init to deploy virtual nodes?  
 Having two or more different ways of deploying bare metal, virtual servers, multiple ways of bootstrapping a node.  
