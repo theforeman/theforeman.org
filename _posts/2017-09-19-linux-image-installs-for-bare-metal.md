@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Linux image installs for Bare Metal
-date: 2017-09-19 01:33:07
+date: 2017-10-18 01:33:07
 author: Elias Abacioglu
 tags:
 - foreman
