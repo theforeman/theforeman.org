@@ -27,9 +27,9 @@ def gather_issues(offset=0)
   response = Net::HTTP.get(uri)
 	result = JSON.parse(response)
 	if result['total_count'].to_i - offset - 100 <= 0
-		result
+		result['issues']
 	else
-		result['issues'] << gather_issues(offset + 100)['issues']
+		result['issues'] += gather_issues(offset + 100)
 	end
 end
 
@@ -43,17 +43,7 @@ def modify_target_version!(issue_id, options)
   Net::HTTP.new(uri.host, uri.port).start {|http| http.request(req) }
 end
 
-all_issues = gather_issues.flatten
-puts all_issues.count
-grouped_issues = gather_issues.flatten.group_by { |issue| issue['category'] || 'Uncategorized' }
-
-grouped_issues = grouped_issues.map do |category, values|
-  if category
-    { category['name'] => values }
-  else
-    { 'Uncategorized' => values }
-  end
-end.reduce(:merge)
+grouped_issues = gather_issues.group_by { |issue| issue['category']['name'] rescue 'Uncategorized' }
 
 grouped_issues = Hash[ grouped_issues.sort_by { |key, val| key } ]
 grouped_issues.each do |category, issues|
