@@ -17,7 +17,11 @@ URL = 'http://projects.theforeman.org'
 # Create new release via API call
 # Create new search by open + release field
 
-@current_release_id = 311
+unless @current_release_id = ARGV[0]
+  puts "Usage: #{$0} RELEASE_ID"
+  puts "Hint: 1.16.0 is 240"
+  exit 1
+end
 
 # Move bugs with Release set to VERSION to NEXT-VERSION with status new
 def gather_issues(offset=0)
