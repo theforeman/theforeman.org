@@ -48,6 +48,11 @@ Update the Foreman and Katello release packages:
 
 ## Step 4 - Update Packages
 
+Stop the Katello services
+{% highlight bash %}
+katello-service stop
+{% endhighlight %}
+
 Clean the yum cache
 
 {% highlight bash %}
