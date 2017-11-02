@@ -3,29 +3,29 @@ layout: contribute
 title: Contributing to Foreman
 ---
 
-# Contributing
+## Where to find us
+You can find us on both our mailing lists and IRC. See our [Support](/support)
+page for all the details on how to come chat with us.
 
-## Read the Foreman [handbook](/handbook.html)
-
-The Foreman is an open-source project that's licensed under the GNU General Public License version 3.<br>
-Contributions of all types are gladly accepted!
-
-## Attend some [Events](/events)
-
+### Attend some [Events](/events)
 The Foreman has a growing list of community events - check the [events
 page](/events) for more details. If there's nothing suitable in your area, why
 not consider [creating an event](https://github.com/theforeman/theforeman.org/blob/gh-pages/_data/events.yml)!
 
-## Code-related contributions
+## Contributing Code
 
+### Read the Foreman [handbook](/handbook.html)
+The Foreman is an open-source project that's licensed under the GNU General Public License version 3.<br>
+Contributions of all types are gladly accepted!
+
+### Setting up a development environmnt
 These types of tasks generally require a familiarity with Ruby (on Rails) development or RPM/Debian packaging. If you are still new to Rails, community members can help you if you get stuck with something or have any other questions.
 
 You will need to download a copy of the current development code. [The
 official code repository](https://github.com/theforeman) is located
 on GitHub. All changes are made in the `develop` branch.
 
-### Supported Ruby versions
-
+#### Supported Ruby versions
 In general the latest Ruby should work. However if you are just starting out, you may want to develop against one of the
 versions that we test against to reduce the chances of you hitting an unexpected issue, although this is not required.
 
@@ -34,8 +34,7 @@ You can see what versions we are currently testing against on our Jenkins CI ser
 
 Any version of Ruby that is older than those listed is not supported.
 
-### Supported Node.js versions
-
+#### Supported Node.js versions
 In general, the latest stable Node.js should work. However if you are just starting out, you may want to develop against
 one of the versions that we test against to reduce the chances of you hitting an unexpected issue, although this is not
 required.
@@ -48,7 +47,7 @@ Any version of Node.js that is older than those listed is not supported.
 For populating the node_modules folder, npm version 4 or later is required. Alternatively,
 [yarn](https://yarnpkg.com) can also be used.
 
-### Setup development environment
+#### Setup development environment
 * Fork [theforeman/foreman](https://github.com/theforeman/foreman) to your GitHub account. This will create a "foreman" repo under your GitHub username.
 * Clone the fork you just created to your development system:
 {% highlight bash %}
@@ -75,21 +74,21 @@ for RHEL/Fedora based distributions).
 
 You can also exclude these features by using `bundle install --without libvirt postgresql` etc (groups are under bundler.d/).
 
-### Setup test environment
+#### Setup test environment
 1. Copy `config/database.yml.example` to `config/database.yml`
 1. Create your database: `bundle exec bin/rake db:migrate`
 1. Run all the tests: `bundle exec bin/rake test`
 1. Or a single test: `bundle exec bin/rake test test/functional/your_test.rb`
 1. Once done, stop any background processes with `bundle exec spring stop` ([more info](/handbook.html#UsingtheSpringpreloaderindevelopment))
 
-### Start up foreman
+#### Start up foreman
 1. Follow steps 1, 2 and 3 from the section "setup test environment" if you haven't done so already
 1. Populate database: `bundle exec bin/rake db:seed` and take note of the password it generates
 1. Start up the server: `bundle exec foreman start`
 1. Navigate to [http://localhost:3000](http://localhost:3000)
 1. Login as `admin` with the password from the db:seed step earlier (or reset it with `bundle exec bin/rake permissions:reset`)
 
-### Submit Patches
+#### Submit Patches
 First, make sure you are a member of the [Foreman Developers](https://groups.google.com/forum/?fromgroups#!forum/foreman-dev) mailing list.
 
 Patches to fix bugs or add new features are always appreciated. If you are going to work on a specific issue, make a note in the issue details so the developers will know what you're working on.
@@ -135,10 +134,9 @@ git push origin develop
 Now follow step 4 to the end from above.
 
 ### Projects / mentoring
-
 Please see [this page](/mentoring.html) for details on our current projects.
 
-## Non-code related contributions
+## Other types of contribution
 These don't require any software development experience, just some time and the desire to help.
 
 ### User support
@@ -156,7 +154,7 @@ Even the simplest of bugs reported helps us make the project better. The issue t
 * State what happened in more detail than the title - provide logs where possible
 * State what you expected to happen - this helps us correct misinterpretations of features
 
-#### Feature requests
+### Feature requests
 If you're submitting a feature request or user story, please provide the context for the feature, especially the problem you're trying to solve, and your preferred implementation (if you have one). This will lead to a clear record of the discussion and eventual decision.
 
 It's acceptable to head over to the [dev mailing list](/support.html#Mailinglists) to start a discussion if you have an idea you'd like more input on, before submitting tickets. Be sure to mention the appropriate thread in the ticket, so the context can be found in the future.
@@ -165,7 +163,6 @@ It's acceptable to head over to the [dev mailing list](/support.html#Mailinglist
 Sometimes issues are reported without all the above information needed. Getting the details of the bug or feature from the reporter and the community will help everyone understand what is needed. Our issue tracker can be found here: [http://projects.theforeman.org/projects/foreman/issues](http://projects.theforeman.org/projects/foreman/issues), and see the above section for issue guidelines.
 
 ### Translations
-
 The Foreman application has been translated into a number of languages, which require regular updates as strings are added and changed in each release.  We're also on the lookout for new translations if you speak a language that Foreman isn't yet available for.  Join in the effort on [our Transifex project](https://www.transifex.com/projects/p/foreman/).
 
 ### Documentation and web site
@@ -177,7 +174,6 @@ Both the manual and the web site are contained in our [theforeman.org repository
 Foreman 1.11 and above uses [Patternfly](http://patternfly.org/) as its base design. Any improvements or suggestions on how to implement this better, or on re-implementing particular pages are very welcome, and could help every user. Design discussion should happen on [the dev mailing list](/support.html#Mailinglists).
 
 ### Hosted hardware
-
 We have an ever-growing number of contributions and other plugins and projects that require computing power, mostly in our Jenkins CI environment.  We also have package builders, web hosting and other services to run.
 
 Foreman has a number of generous sponsors who provide hosted, publicly accessible servers (usually virtual machines) or cloud accounts that we can use.  Please see the [sponsors page](/sponsors.html) for more details.
