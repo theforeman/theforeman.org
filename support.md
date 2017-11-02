@@ -24,9 +24,9 @@ There are also a few extra medium-specific guidelines, listed with each type of 
 ### Reporting Violations
 
 Should you need to speak with someone about another Foreman member's behaviour,
-email the Community Lead, *Greg Sutcliffe* (greg at emeraldreverie.org, male)
-and/or *Ori Rabin* (orabin at redhat.com, female).  We'll do our best to listen
-to your issue fairly and take appropriate action.
+email *Greg Sutcliffe* (greg at emeraldreverie.org, male) and/or *Ori Rabin*
+(orabin at redhat.com, female).  We'll do our best to listen to your issue fairly
+and take appropriate action.
 
 ## Gathering information
 
