@@ -108,6 +108,15 @@ To import templates back, after their content was changed, simply run
  
  If the templates are locked, changes won't be made. To update locked templates, either add `-d '{ "force": "true" }'` to the end of a command or unlock the template.
 
+## 3.2 Advanced git configuration
+
+Additional git configuration for foreman_templates can be configured using the `git config` command line tool or editing the global/foreman user specific `.gitconfig` file. This can be useful when using a git server with a self signed cert, for a complete list of advanced options see `man git config`.
+
+To set `http.sslCAPath` you can simply run following command
+
+```sh
+sudo -u foreman git config --global http.sslCAPath /path/to/ca/certs 
+```
 
 # 4. Usage (features description)
 
