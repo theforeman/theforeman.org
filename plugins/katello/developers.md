@@ -16,7 +16,7 @@ For general contribution information, see [here](/contribute.html).
  * [Upgrading Pulp](/plugins/katello/developers.html#upgrading-pulp)
 
 
-## Triage Process
+## Triage Process Links
 
 The Katello bug triage process is designed to address Redmine issues that have been opened by the community and developers in order to target the releases that these issues will be included in. This should be done on a weekly basis and in the following order of items to be addressed:
 
@@ -26,6 +26,71 @@ The Katello bug triage process is designed to address Redmine issues that have b
   * [Untriaged Open](http://projects.theforeman.org/projects/katello/issues?utf8=%E2%9C%93&set_filter=1&f%5B%5D=release_id&op%5Brelease_id%5D=%21*&f%5B%5D=subproject_id&op%5Bsubproject_id%5D=%21*&f%5B%5D=status_id&op%5Bstatus_id%5D=o&f%5B%5D=&c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=priority&c%5B%5D=subject&c%5B%5D=author&c%5B%5D=assigned_to&c%5B%5D=updated_on&c%5B%5D=category&c%5B%5D=fixed_version&group_by=)
   * [Untriaged Ready for Testing](http://projects.theforeman.org/projects/katello/issues?utf8=%E2%9C%93&set_filter=1&f%5B%5D=release_id&op%5Brelease_id%5D=%21*&f%5B%5D=subproject_id&op%5Bsubproject_id%5D=%21*&f%5B%5D=status_id&op%5Bstatus_id%5D=%3D&v%5Bstatus_id%5D%5B%5D=7&f%5B%5D=&c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=priority&c%5B%5D=subject&c%5B%5D=author&c%5B%5D=assigned_to&c%5B%5D=updated_on&c%5B%5D=category&c%5B%5D=fixed_version&group_by=)
 
+### Triage Runner
+
+The runner is the person in charge of following the procedures here and generally conducting the meeting.
+
+### Frequency
+
+Triage is done once a week for an hour. As long as a week is not skipped, this has been enough time to get through every issue and leave 5-15 minutes extra. When a release is pending, or a new release has been sent out the volume does spike.
+
+### Issue States
+
+There are a few important states that issues can be in that are worth knowing about before going into the process:
+
+  * New: Unassigned issue
+  * Assigned: Developer has taken responsibility
+  * Needs more information: User who filed the issue has been asked for further information to help triage or debug the issue
+  * Needs design: The issue requires investigation by a developer
+  * Ready for Testing: An issue has an open PR
+  * Closed: An issue has been fixed
+
+### Release States
+
+There are a few important states the issue can be in with respect to the 'Release' field within Redmine. These release states have an impact not only a release itself but the triage process as a whole. A quick definition of each that will make more sense in the process section:
+
+  * Empty: No release has been set, this is the "untriaged" bucket
+  * Katello Backlog: Issues that have been put on the backlog and not scheduled for a release due to any number of reasons
+  * Katello Recycle Bin: Issues that have been rejected, or are a duplicate, or have been in 'Needs more information' for longer than a week
+  * Katello X.Y.Z: Standard releases for issues to be targeted at
+
+### Process
+
+The triage runner starts the meeting by going through sets of issues broken down into different groups by priority of the grouping. This is so that if time were to run out, the most critical categories of issues are triaged. The runner is in charge of ensuring the flow of the meeting, and updating issues or ensuring that someone on the call takes responsibility for updating an issue. This latter part sometimes occurs if a duplicate needs to be looked up, or another developer on the call can explain/ask the user for more information more clearly than the runner.
+
+### Recycle Bin
+
+The first on the list is our 'recycle bin'. This the place to put issues that don't fit into a release, or were filed by a user who has since gone dark on the issue. Another way to look at it is a place for unresolvable issues. Issues are moved onto the recycle bin if there has been no activity by a user for a week. And they are closed if a week on the recycle bin goes by without any further updates.
+
+#### General Flow for New or Needs More Information
+
+The general flow is to open an issue and the runner to exam the issue, typically reading the general idea aloud. This allows for any developers with knowledge to chime in with any relevant info. The runner attempts to answers the following questions:
+
+    * Does this issue need more information from the user?
+        * If yes, leave a comment asking for that information
+    * Does this issue need a developer to investigate it further to properly triage it?
+        * If yes, set status to 'Needs Design'
+    * What release should the issue be targeted for? (e.g. next z-stream, current release, next release, backlog)
+    * Does any developer want to own it?
+        * If yes, assign it
+    * Issue category?
+
+#### General Flow for Ready for Testing
+
+  * Will this PR get completed by the next release?
+  * What release should the issue be targeted for? (e.g. next z-stream, current release, next release, backlog)
+
+#### General Flow for Closed
+
+  * Should this issue be targeted at the next z-stream? Current RC phase? Or just throw it in the "next" release (aka develop or master)
+
+### Notes
+
+A few notes about some automatic operations that are performed by the prprocessor that help facilitate this workflow.
+
+  * All issues are set to an empty release, which again represents "untriaged"
+  * Any issues on the backlog that a PR is opened for has its release set to 'empty' to ensure that it flows through the triage process
+  * Developers that believe an issue should be considered for a release, should set the release to 'empty' and show up to triage to argue their case
 
 ## Testing
 
@@ -36,7 +101,7 @@ some tips.
 ### When to run tests
 
 An important part of testing is knowing which tests to run and when. This can
-save you a lot of time. 
+save you a lot of time.
 
 Very rarely should you run the entire test suite locally. Instead, just let
 Jenkins run it for you after you open a PR. Locally, run new tests you write
@@ -239,7 +304,7 @@ NOTE: This step can only be done after you have created the X.Y tags.
 
 ### Step 11: Update Repos RPM
 
-Now we update the repos file to point at where the released version of the repositories will exist for the X.Y release. 
+Now we update the repos file to point at where the released version of the repositories will exist for the X.Y release.
 
 ```
 cd katello-misc/repos
@@ -298,7 +363,7 @@ tito release koji
 
 ##### Download Unsigned RPMs
 
-Now sign the RPMs (or ask someone who can to do this part for you), mash and release. Those you can ask are lzap, mmccune, jsherrill, bkearney. 
+Now sign the RPMs (or ask someone who can to do this part for you), mash and release. Those you can ask are lzap, mmccune, jsherrill, bkearney.
 
 The first step when signing is to download all of the unsigned RPMs from tags that you will be releasing. We are using the .src.rpm to decide if the build as whole is signed or not. For example, if the key was D5A88496:
 
@@ -311,7 +376,7 @@ for j in rhel5 rhel6 rhel7 fedora20 fedora21 ; do
     | sed 's!^!:!' \
     | perl -ane '$F[1] =~ s!\.src$!! or next; $R{$F[1]} = 1; $S{$F[1]} = 1 if $F[0] eq ":D5A88496";
       END { print map "$_\n", grep { not exists $S{$_} } sort keys %R }' \
-    | while read i ; do koji -c ~/.koji/katello-config download-build --debuginfo $i ; 
+    | while read i ; do koji -c ~/.koji/katello-config download-build --debuginfo $i ;
   done;
 done;
 ```
@@ -380,13 +445,13 @@ $GITDIR=~/git  #directory containing theforeman.org git repo
 FOREMAN_APIPIE_LANGS=en rake apipie:cache
 cp -rf public/apipie-cache $GITDIR/theforeman.org/plugins/katello/$VERSION/api
 # clear out json files
-find $GITDIR/theforeman.org/plugins/katello/$VERSION/api -name "*.json" -type f -delete 
+find $GITDIR/theforeman.org/plugins/katello/$VERSION/api -name "*.json" -type f -delete
 
 cd $GITDIR/theforeman.org/
 cp plugins/katello/nightly/api/index.md  $GITDIR/theforeman.org/plugins/katello/$VERSION/api/
 sed -i "s/version: nightly/version: $VERSION/g" $GITDIR/theforeman.org/plugins/katello/$VERSION/api/index.md
- 
-cp -rf $GITDIR/theforeman.org/api/new_version_template/apidoc/* $GITDIR/theforeman.org/plugins/katello/$VERSION/api/apidoc 
+
+cp -rf $GITDIR/theforeman.org/api/new_version_template/apidoc/* $GITDIR/theforeman.org/plugins/katello/$VERSION/api/apidoc
 ```
 
 Open a PR and commit the changes
