@@ -1132,3 +1132,14 @@
     Open Source Summit, you will collaborate, share information and learn across
     a wide variety of topics, with 2,000 technologists and community members.
     Ori Rabin and Lukáš Zapletal are both presenting on this event.
+- title: 'Foreman Community Demo - 16th November'
+  type: 'Livestream'
+  location: virtual
+  start: 2017-10-26 15:00 BST
+  end: 2017-10-26 16:00 BST
+  url: 'https://www.youtube.com/watch?v=QHzNIFjMpTM'
+  description: |
+    Time again for the latest roundup of action from the community, covering
+    core, proxies, plugins, and more.  As always, you're welcome to participate
+    in the show, either via YouTube Live chat, or via our IRC channel
+    (Freenode/#theforeman).
