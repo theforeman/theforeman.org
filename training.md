@@ -8,6 +8,17 @@ title: Training Materials
 This page lists the materials available for those wishing to study/practice working
 with Foreman, as an alternative style to reading the manual.
 
+## Guru Labs Training Course
+
+The [GL650 - FOREMAN/KATELLO ADMINISTRATION][GL650] is a 4-day instructor led course that provides comprehensive hands on coverage all the of the major features of a Foreman+Katello deployment starting from best practices in installation and initial configuration, managing subscriptions, products and repositories, content views, lifecycles, activation keys, system registration of existing system, bare metal and virtualization provisioning including discovery, provisioning templates, configuration management with Puppet and Ansible, IdM integration, smart proxies/capsule servers, virt-who, and subscription management.
+
+The class is [regularly scheduled][schedule] and offered on-line, in person, or onsite. Each student gets their own 6 node classroom environment to perform their in-depth lab exercises that mirror real world scenarios.
+
+![online_classroom](static/images/training/online-training-classroom.png "Example Student Lab Environment"){:width="45%"} ![online_classroom_topo](static/images/training/online-training-classroom-topology.png "Lab Topology"){:width="45%"}
+
+[GL650]: https://gurulabs.com/linux-training/courses/GL650/
+[schedule]: https://gurulabs.com/linux-training/schedule/
+
 ## NETWAYS Training Course
 
 This course was developed by NETWAYS and made available to the Foreman
