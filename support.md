@@ -24,9 +24,9 @@ There are also a few extra medium-specific guidelines, listed with each type of 
 ### Reporting Violations
 
 Should you need to speak with someone about another Foreman member's behaviour,
-email the Community Lead, *Greg Sutcliffe* (greg.sutcliffe at gmail.com). You
-may also CC or email *Ohad Levy* (ohad.levy at gmail.com).  We'll do our best
-to listen to your issue fairly and take appropriate action.
+email *Greg Sutcliffe* (greg at emeraldreverie.org, male) and/or *Ori Rabin*
+(orabin at redhat.com, female).  We'll do our best to listen to your issue fairly
+and take appropriate action.
 
 ## Gathering information
 
@@ -72,7 +72,7 @@ In addition to the [general guidelines](/support.html#CommunityGuidelines) above
 ## ![Stack overflow icon](static/images/stackoverflow.png) [Server Fault](http://serverfault.com/questions/tagged/foreman)
 Ask questions about how to use Foreman on Server Fault, so anyone can benefit from the answers. Tag your questions with ['foreman'](http://serverfault.com/questions/tagged/foreman).
 
-## ![IRC icon](static/images/freenode.png) [IRC](https://kiwiirc.com/client/irc.freenode.net/?#theforeman)
+## ![IRC icon](static/images/freenode.png) [IRC live chat](https://kiwiirc.com/client/irc.freenode.net/?#theforeman)
 A great place to get real-time help with The Foreman is our IRC channel:
 
 * [#theforeman](https://kiwiirc.com/client/irc.freenode.net/?#theforeman) on [irc.freenode.net](http://webchat.freenode.net/)
@@ -111,6 +111,22 @@ In addition to the [general guidelines](/support.html#CommunityGuidelines) above
 More information: This [IRC primer](http://irchelp.org/irchelp/ircprimer.html) for new users and the [general IRC guidelines, from freenode](http://freenode.net/channel_guidelines.shtml), are also useful resources.
 
 (_Thanks to the [Puppet Labs IRC Guidelines](http://docs.puppetlabs.com/community/community_guidelines.html#irc-guidelines) for the original document_)
+
+## ![Matrix icon](static/images/matrix.png) [Matrix.org live chat](https://riot.im/app/#/room/#theforeman:matrix.org)
+
+For those wanting something a little less "basic" than IRC, or just would like a
+persistent connection, you can also find us on [Matrix.org](https://matrix.org)
+- an open standard for interoperable, decentralised, real-time communication
+over IP. Matrix has many
+[clients](https://matrix.org/docs/projects/try-matrix-now.html) available,
+including browser-based, desktop & mobile apps, and even plugins for venerable
+clients like WeeChat. Our rooms are in the public directory, but for reference:
+
+* https://riot.im/app/#/room/#theforeman:matrix.org
+* https://riot.im/app/#/room/#theforeman-dev:matrix.org
+
+The Matrix rooms are bridged to the IRC channels, so we're all in the same chat.
+Pick which you prefer!
 
 ## ![YouTube icon](static/images/youtube.png) [YouTube channel](https://www.youtube.com/channel/UCCo7AZ1oG6TbG0-dwjRqCmw)
 Please subscribe to our [YouTube channel](https://www.youtube.com/channel/UCCo7AZ1oG6TbG0-dwjRqCmw). We regularly upload deep dives on Foreman features, screencasts to learn how to use the different features and plugins of Foreman, discussions and much more.
