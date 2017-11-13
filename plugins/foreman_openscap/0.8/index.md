@@ -435,6 +435,12 @@ Fix [#19527](http://projects.theforeman.org/issues/19527) introduced a performan
 
 Please note that the task has to go through all your reports and it may take a significant amount of time to fininsh. We recommend expiring the reports that are no longer needed before running the task. This task does not need to be run more than once as the patch prevents the duplicates from being created.
 
+### 7.1.3 Cleaning up reports without OpenSCAP proxy ( foreman_openscap >= 0.8.4 )
+
+Fix [#21091](http://projects.theforeman.org/issues/21091) added a rake task that deletes all reports that do not have and associated proxy with OpenSCAP feature. Apparently, some workflows may lead to proxy not being associated which causes problems when users try to delete hosts with such reports. You can execute it by running:
+
+    foreman-rake foreman_openscap:clean_reports_without_proxy
+
 ## 7.2 Contributing
 
 Follow the [same process as Foreman](/contribute.html#SubmitPatches)
