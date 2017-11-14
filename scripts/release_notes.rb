@@ -17,7 +17,11 @@ URL = 'http://projects.theforeman.org'
 # Create new release via API call
 # Create new search by open + release field
 
-@current_release_id = 311
+unless @current_release_id = ARGV[0]
+  puts "Usage: #{$0} RELEASE_ID"
+  puts "Hint: 1.16.0 is 240"
+  exit 1
+end
 
 # Move bugs with Release set to VERSION to NEXT-VERSION with status new
 def gather_issues(offset=0)
@@ -27,9 +31,9 @@ def gather_issues(offset=0)
   response = Net::HTTP.get(uri)
 	result = JSON.parse(response)
 	if result['total_count'].to_i - offset - 100 <= 0
-		result
+		result['issues']
 	else
-		result['issues'] << gather_issues(offset + 100)['issues']
+		result['issues'] += gather_issues(offset + 100)
 	end
 end
 
@@ -43,17 +47,7 @@ def modify_target_version!(issue_id, options)
   Net::HTTP.new(uri.host, uri.port).start {|http| http.request(req) }
 end
 
-all_issues = gather_issues.flatten
-puts all_issues.count
-grouped_issues = gather_issues.flatten.group_by { |issue| issue['category'] || 'Uncategorized' }
-
-grouped_issues = grouped_issues.map do |category, values|
-  if category
-    { category['name'] => values }
-  else
-    { 'Uncategorized' => values }
-  end
-end.reduce(:merge)
+grouped_issues = gather_issues.group_by { |issue| issue['category']['name'] rescue 'Uncategorized' }
 
 grouped_issues = Hash[ grouped_issues.sort_by { |key, val| key } ]
 grouped_issues.each do |category, issues|
