@@ -8,6 +8,20 @@ title: Training Materials
 This page lists the materials available for those wishing to study/practice working
 with Foreman, as an alternative style to reading the manual.
 
+## Adfinis SyGroup Training Course
+
+This [training][adfinis-slides] by [Adfinis SyGroup][adfinis] gives a basic
+overview of Foreman and its concepts. It covers the installation, configuration
+and basic components. Beside the instructor slides the course also contains
+hands-on exercises and demos.
+
+The content is available on [GitHub][adfinis-github] and any contributions are
+more than welcome!
+
+[adfinis]: https://adfinis-sygroup.ch/
+[adfinis-slides]: https://docs.adfinis-sygroup.ch/public/trainings/#training-Foreman
+[adfinis-github]: https://github.com/adfinis-sygroup/adsy-trainings
+
 ## Guru Labs Training Course
 
 The [GL650 - FOREMAN/KATELLO ADMINISTRATION][GL650] is a 4-day instructor led course that provides comprehensive hands on coverage all the of the major features of a Foreman+Katello deployment starting from best practices in installation and initial configuration, managing subscriptions, products and repositories, content views, lifecycles, activation keys, system registration of existing system, bare metal and virtualization provisioning including discovery, provisioning templates, configuration management with Puppet and Ansible, IdM integration, smart proxies/capsule servers, virt-who, and subscription management.
