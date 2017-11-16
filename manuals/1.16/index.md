@@ -307,6 +307,9 @@ previous_version: "1.15"
 ### 5.8.4 Other considerations
 {%include manuals/{{ page.version }}/5.8.4_other_considerations.md %}
 
+## 5.9 HTTP(S) Proxy
+{%include manuals/{{ page.version }}/5.9_http_proxy.md %}
+
 # 6. Plugins
 {%include manuals/{{ page.version }}/6_plugins.md %}
 
