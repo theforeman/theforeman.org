@@ -1143,3 +1143,17 @@
     core, proxies, plugins, and more.  As always, you're welcome to participate
     in the show, either via YouTube Live chat, or via our IRC channel
     (Freenode/#theforeman).
+- title: 'Discourse Ask Me Anything'
+  type: 'Livestream'
+  speaker: 'Greg Sutcliffe'
+  location: virtual
+  start: 2017-11-22 15:00 GMT
+  end: 2017-11-22 16:00 GMT
+  url: 'https://www.youtube.com/watch?v=IdV6US_d4-U'
+  description: |
+    Recently, we proposed migrating one or both of our Google Groups mailing
+    lists to a Discourse (self-hosted). You can read more about that on the
+    mailing list. On this video, our community lead, Greg, will host an Ask Me
+    Anything about Discourse - why we need it, what the feature set is, how to
+    get started with it, and of course a full discussion of concerns. Join us
+    live to put your questions to Greg!
