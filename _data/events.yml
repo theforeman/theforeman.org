@@ -1157,3 +1157,15 @@
     Anything about Discourse - why we need it, what the feature set is, how to
     get started with it, and of course a full discussion of concerns. Join us
     live to put your questions to Greg!
+- title: 'Foreman Community Demo - 7th December'
+  type: 'Livestream'
+  location: virtual
+  start: 2017-12-07 15:00 BST
+  end: 2017-12-07 16:00 BST
+  url: 'https://www.youtube.com/watch?v=g8XnAKfG9xY'
+  description: |
+    Time again for the latest roundup of action from the community, covering
+    core, proxies, plugins, and more.  As always, you're welcome to participate
+    in the show, either via YouTube Live chat, or via our IRC channel
+    (Freenode/#theforeman).
+    
