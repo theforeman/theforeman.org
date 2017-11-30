@@ -1157,6 +1157,19 @@
     Anything about Discourse - why we need it, what the feature set is, how to
     get started with it, and of course a full discussion of concerns. Join us
     live to put your questions to Greg!
+- title: 'UX improvements - breadcrumbs and item switcher - 27th August'
+  type: 'Livestream'
+  location: virtual
+  start: 2017-12-06 14:00 BST
+  end: 2017-12-06 15:00 BST
+  url: 'https://www.youtube.com/watch?v=4fX_kjPlzVw'
+  description: |
+    For the next in our series of UX reviews, we're looking at new breadcrumbs and item switcher.
+    The change to vertical navigation made two-pane a little less comfortable because the
+    space to edit became smaller. Additionally, some users reported confusion around navigation
+    context as well as inconsistencies in regards to two-pane navigation.
+    We'll focus on the addition of breadcrumbs that would improve navigation compared to two pane.
+    We'd be glad to get feedback on this proposed change.
 - title: 'Foreman Community Demo - 7th December'
   type: 'Livestream'
   location: virtual
@@ -1168,4 +1181,3 @@
     core, proxies, plugins, and more.  As always, you're welcome to participate
     in the show, either via YouTube Live chat, or via our IRC channel
     (Freenode/#theforeman).
-    
