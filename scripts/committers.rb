@@ -4,7 +4,7 @@ require 'git'
 
 @tagged_repos = %w(foreman smart-proxy foreman-installer foreman-selinux)
 @tag_from     = "1.15.0"
-@tag_to       = "1.16.0-RC1"
+@tag_to       = "1.16.0"
 
 @untagged_repos = %w(
   theforeman.org
