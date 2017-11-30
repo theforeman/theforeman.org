@@ -7,7 +7,7 @@ foreman_version: 1.16
 
 # Katello Upgrade
 
-Katello supports upgrades from version 2.0.  For users transitioning from 1.4, please see - [Transition Guide](/plugins/katello/{{ page.version }}/installation/2.0-transition.html).
+Katello 3.5 supports upgrades from version 3.4 and Puppet version 4.  For users transitioning from versions prior to 3.4, first [upgrade to Katello 3.4](/plugins/katello/3.4/upgrade/), [upgrade Puppet to version 4](https://theforeman.org/plugins/katello/3.4/upgrade/puppet.html), and then proceed to upgrade to Katello 3.5 following the instructions below.
 
 
 # Pre-upgrade considerations
