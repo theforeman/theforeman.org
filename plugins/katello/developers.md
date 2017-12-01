@@ -229,37 +229,107 @@ Make sure to follow the instructions and update the docs to use the current rele
 
 Congratulations, you have successfully branched all of the repositories and prepared them for release. We recommend double checking each repository ensuring that the branch exists in the upstream repository, that the top of the commit stack in that branch includes the tag you created prior to branching (so that you have an initial tag point that represents the branch point) and that the tag itself exists. The last part of this step is to send to a follow up notification letting the community know that everything has been branched.
 
-### Step 6. Pin katello-installer puppet modules for release
-
-On the katello-installer's KATELLO-X.Y branch, we need to pin the modules to a minor release.
-
-First, we take the pinned Foreman modules in the Puppetfile from the most current release, e.g. https://github.com/theforeman/foreman-installer/blob/1.9-stable/Puppetfile.  Overwrite the Foreman section in katello-installer's Puppetfile with these locked down versions.
-
-Next, we'll lock down the Katello modules. First, Check out all the puppet modules:
-
-```bash
-for module in candlepin certs capsule common elasticsearch gutterball katello crane service_wait pulp
-do
-  git clone git@github.com:Katello/puppet-${module}.git
-done
-```
+### Step 6. Release puppet modules
 
 Review the modules for releasing - we should be keeping them up to date when making incompatible changes, but do any need bumps of the major or minor version? If so, do so now.
 
-Consider the changes that have been made to the module since the last release, do we need a new release?
-Use [blacksmith](https://github.com/maestrodev/puppet-blacksmith) to push to forge.
+Go through the [list of managed modules](https://github.com/theforeman/foreman-installer-modulesync/blob/master/managed_modules.yml).
 
-```bash
-rake module:release
+Building the changelog is a somewhat delicate task because [github_changelog_generator](https://github.com/skywinder/github-changelog-generator) doesn't handle multiple branches with non-linear releases well. [PR-619](https://github.com/skywinder/github-changelog-generator/pull/619) should improve that and it may make sense to use that code.
+
+Below is mostly a script, but not quite. Read the comments.
+
+```sh
+# Review the the changes since the last tag
+tig $(git describe --abbrev=0 --tags)..HEAD
+
+# If it needs a major or minor version bump
+# Note: usually we already bumped it for patch releases but do check!
+bundle exec rake module:bump:major
+bundle exec rake module:bump:minor
+
+# Update CHANGELOG.md
+# See https://github.com/skywinder/github-changelog-generator#github-token on using a token to avoid ratelimits
+github_changelog_generator -u theforeman -p $(basename $PWD) -o new-changelog.md --future-release $(bundle exec rake module:version)
+
+# Now merge new-changelog.md into CHANGELOG.md - do note that it doesn't handle
+# branches so if anything was merged to a stable branch you should manually put
+# it in the correct release. This may also break badly on stable branches.
+
+# Create the release commit
+git add CHANGELOG.md
+VERSION=$(bundle exec rake module:version) && git commit -m "Release $VERSION"
+
+# Create a new tag
+bundle exec rake module:tag
+
+# Only recently puppet-blacksmith learned to do GPG signed tags - check this
+git verify-tag $(bundle exec rake module:version)
+
+# If it failed you can do it manually
+# VERSION=$(bundle exec rake module:version) && git tag -s $VERSION -m "Version $VERSION"
+
+# Push the changes to github
+git push --follow-tags
+
+# Push the release to the forge
+# This assumes you have set the credentials previously
+bundle exec rake module:clean module:push
+
+# Automated using pass - https://www.passwordstore.org/
+# Assumes you have a katello/forge or theforeman/forge password configured
+BLACKSMITH_FORGE_USERNAME="$(jq -r .author metadata.json | tr [A-Z] [a-z])" && BLACKSMITH_FORGE_USERNAME=$BLACKSMITH_FORGE_USERNAME BLACKSMITH_FORGE_PASSWORD=$(pass show $BLACKSMITH_FORGE_USERNAME/forge | head -n 1) bundle exec rake module:push
+
+# Start the next minor version
+bundle exec rake module:bump_commit:patch
+
+# And push the new version
+git push
 ```
 
-Now, lock down Katello versions to the appropriate minor, e.g. if you release `puppet-katello 0.2.0` or the latest is 0.2.0, then in the Puppetfile
+### Step 7. Pin katello-installer puppet modules for release
 
-```
-mod 'katello',   '>= 0.2.0 < 0.3.0'
+On the katello-installer's KATELLO-X.Y branch, we need to pin the modules to a minor release.
+
+For every module in `Puppetfile` pin it to a minor version. For example:
+
+```ruby
+mod 'katello/katello', '>= 7.0.0 < 7.1.0'
 ```
 
-### Step 7: Configure Koji
+
+```sh
+KATELLO_VERSION=3.7
+FOREMAN_VERSION=1.18
+
+# Fail fast
+set -e
+
+# Prepare the new branch
+git checkout -b KATELLO-$KATELLO_VERSION
+
+# Stage your changes
+git add Puppetfile
+
+# Append the foreman-installer's puppet file:
+curl https://raw.githubusercontent.com/theforeman/foreman-installer/${FOREMAN_VERSION}-stable/Puppetfile >> Puppetfile
+
+# Update the lock file
+bundle exec librarian-puppet update
+
+# Revert the foreman appendage
+git checkout Puppetfile
+
+# Remove lock file from .gitignore
+sed -i '/Puppetfile.lock/d' .gitignore
+git add .gitignore Puppetfile.lock
+
+git commit -m "Branch Katello ${KATELLO_VERSION}"
+```
+
+The result would look like [this](https://github.com/Katello/katello-installer/commit/76698d96872e7b8439daf6f15ebc1249ae23c53f).
+
+### Step 8: Configure Koji
 
 Note that to perform this step, Foreman must have generated it's Koji build targets for the targeted Foreman release. This is due to how Katello tags inherit from some Foreman tags. Coordinate with the Foreman release nanny on when they plan to do that step and wait to do this step until then. Koji needs to have configuration added specific to the tags that the release will occur under. The first step is to add new build roots and tags. Note that you will need access to koji. Contact the Development forum board to request access.
 
@@ -268,7 +338,7 @@ Note that to perform this step, Foreman must have generated it's Koji build targ
 ./tools koji --commit configs/katello_XY.yaml
 ```
 
-### Step 8: Setup Mash Scripts
+### Step 9: Setup Mash Scripts
 
 In order to generate the release repositories on Koji, a mash script for the version being released needs to be added. If you do not have direct access to the koji.katello.org box, you can request access or ask someone who does to perform this step for you.
 
@@ -279,7 +349,7 @@ In order to generate the release repositories on Koji, a mash script for the ver
 
 The generated mash scripts should be committed to tool_belt and a pull request opened. The scripts will then need to be copied onto the Koji box itself. If you do not have access, please contact someone that does or request this action on the Development forum board.
 
-### Step 9: Verify Repos
+### Step 10: Verify Repos
 
 At this point we want to verify the updates we made to the version branches by mashing and checking the repositories generated on koji.
 
@@ -293,7 +363,7 @@ katello-mash-split-X.Y.py
 
 View the generated repositories at `http://koji.katello.org/releases/yum/katello-X.Y` and ensure none of the packages have a git hash within the package name.
 
-### Step 10: Build Fresh X.Y Packages
+### Step 11: Build Fresh X.Y Packages
 
 For each repository that was branched, and for each package within a given repository (e.g. katello has both the katello and rubygem-katello packages) we do a tito release koji. For example, the Katello repository:
 
@@ -306,7 +376,7 @@ tito release koji
 
 NOTE: This step can only be done after you have created the X.Y tags.
 
-### Step 11: Update Repos RPM
+### Step 12: Update Repos RPM
 
 Now we update the repos file to point at where the released version of the repositories will exist for the X.Y release.
 
@@ -320,11 +390,11 @@ tito release koji
 /usr/local/bin/katello-mash-split-X.Y.py
 ```
 
-### Step 12: Release X.Y Release Candidate RPMs
+### Step 13: Release X.Y Release Candidate RPMs
 
 For this step we'll need to update the Jenkins job that pushes RPMs to fedorapeople and run the job. Go to `http://ci.theforeman.org/view/Katello%20Pipeline/job/release_push_rpm_katello/configure` and add X.Y to the list of RELEASE choices and save the configuration. Now head to `http://ci.theforeman.org/view/Katello%20Pipeline/job/release_push_rpm_katello/build?delay=0sec`, choose the X.Y version you just added and click `Build`. This will run a script that copies the RPMs from Koji to fedorapeople.
 
-### Step 13: Update forklift
+### Step 14: Update forklift
 
 We maintain a deployment tool, forklift, for easily testing and deploying Katello versions. You'll want to clone the repository (https://github.com/theforeman/forklift) and update the following:
 
@@ -335,7 +405,7 @@ We maintain a deployment tool, forklift, for easily testing and deploying Katell
   - This should include a playbook to install the version fresh as well as
     upgrading from the two versions prior.
 
-### Step 14: Test
+### Step 15: Test
 
 Use the newly updated forklift pipeline playbooks to test the X.Y release:
 
@@ -345,15 +415,15 @@ ansible-playbook pipelines/pipeline_katello_XY.yml -e "forklift_state=up"
 
 Generally, we should test the fresh install pipeline before moving on to the upgrade pipelines. Once all pipelines are passing locally, the release in koji is ready to be published to https://fedorapeople.org/groups/katello/releases. Contact a senior engineer in theforeman-dev to complete this step.
 
-### Step 15: Announce RC
+### Step 16: Announce RC
 
 Now you are ready to announce the RC by sending an post to the Release Announcements forum board, pointing users at the installation instructions. You should also open a PR to `katello.org` to update the news section with an announcement of the RC release.
 
-### Step 16: Fix Bugs
+### Step 17: Fix Bugs
 
 As users test the RC, they may find and file issues. In addition, the RC may have been released with issues still to be fixed. As these issues are identified and fixed, they will need to be backported. The tool_belt tooling can be used to identify issues that need cherry picking across the various repositories. See the tool belt [README](https://github.com/theforeman/tool_belt/blob/master/README.md) for information on how to setup and configure it.
 
-### Step 17: Release!
+### Step 18: Release!
 
 After iterating through Step 15 a few times over the course of roughly a month, and in sync with Foreman's release date decide that you are ready to release.
 
