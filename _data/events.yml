@@ -1160,8 +1160,8 @@
 - title: 'UX improvements - breadcrumbs and item switcher - 27th August'
   type: 'Livestream'
   location: virtual
-  start: 2017-12-06 14:00 BST
-  end: 2017-12-06 15:00 BST
+  start: 2017-12-06 14:00 GMT
+  end: 2017-12-06 15:00 GMT
   url: 'https://www.youtube.com/watch?v=4fX_kjPlzVw'
   description: |
     For the next in our series of UX reviews, we're looking at new breadcrumbs and item switcher.
@@ -1173,8 +1173,8 @@
 - title: 'Foreman Community Demo - 7th December'
   type: 'Livestream'
   location: virtual
-  start: 2017-12-07 15:00 BST
-  end: 2017-12-07 16:00 BST
+  start: 2017-12-07 15:00 GMT
+  end: 2017-12-07 16:00 GMT
   url: 'https://www.youtube.com/watch?v=g8XnAKfG9xY'
   description: |
     Time again for the latest roundup of action from the community, covering
