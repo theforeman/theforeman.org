@@ -2,7 +2,7 @@
 layout: plugins/katello/documentation
 title: Smart Proxy Upgrade
 version: 3.5
-foreman_version: 1.15
+foreman_version: 1.16
 ---
 
 # Smart Proxy Upgrade
