@@ -35,7 +35,7 @@ The same yum repositories need to be configured on the Smart Proxy server as the
 Once you get the repositories configured, install the formean-proxy-content package on the Smart Proxy
 
 {% highlight bash %}
-yum install -y foreman-proxy-content
+yum install -y foreman-proxy-content python-django
 {% endhighlight %}
 
 ### Generate Certificates for the Smart Proxies
