@@ -105,7 +105,7 @@ yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/{{ page.
 yum -y localinstall http://yum.theforeman.org/releases/{{ page.foreman_version }}/el7/x86_64/foreman-release.rpm
 yum -y localinstall https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
 yum -y localinstall http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-yum -y install foreman-release-scl
+yum -y install foreman-release-scl python-django
 {% endhighlight %}
 </div>
 
