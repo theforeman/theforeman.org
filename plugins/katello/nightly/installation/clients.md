@@ -26,42 +26,56 @@ Install the appropriate Katello client release packages.  For CentOS 6, you will
 
 <div id="el5" markdown="1">
 {% highlight bash %}
-yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/el5/x86_64/katello-client-repos-latest.rpm
-yum -y install http://dl.fedoraproject.org/pub/epel/epel-release-latest-5.noarch.rpm
+yum install -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/el5/x86_64/katello-client-repos-latest.rpm
+yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-5.noarch.rpm
 {% endhighlight %}
 </div>
 
 <div id="el6" style="display:none;" markdown="1">
 {% highlight bash %}
 wget https://copr.fedoraproject.org/coprs/dgoodwin/subscription-manager/repo/epel-6/dgoodwin-subscription-manager-epel-6.repo -O /etc/yum.repos.d/dgoodwin-subscription-manager-epel-6.repo
-yum -y install http://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
-yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/el6/x86_64/katello-client-repos-latest.rpm
+yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
+yum install -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/el6/x86_64/katello-client-repos-latest.rpm
 {% endhighlight %}
 </div>
 
 <div id="el7" style="display:none;" markdown="1">
 {% highlight bash %}
-yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/el7/x86_64/katello-client-repos-latest.rpm
-yum -y install http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+yum install -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/el7/x86_64/katello-client-repos-latest.rpm
+yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 {% endhighlight %}
 </div>
 
 <div id="f22" style="display:none;" markdown="1">
 {% highlight bash %}
-yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/f22/x86_64/katello-client-repos-latest.rpm
+yum install -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/f22/x86_64/katello-client-repos-latest.rpm
 {% endhighlight %}
 </div>
 
 <div id="f23" style="display:none;" markdown="1">
 {% highlight bash %}
-yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/f23/x86_64/katello-client-repos-latest.rpm
+yum install -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/f23/x86_64/katello-client-repos-latest.rpm
 {% endhighlight %}
 </div>
 
-Now you are ready to install the katello-agent:
+Now you are ready to install the client package:
+
+The `katello-host-tools` package reports errata & package profile information, but does not allow you to run remote actions on the clients.
+
+{% highlight bash %}
+yum install katello-host-tools
+{% endhighlight %}
+
+We generally recommend using Foreman Remote Execution or Ansible for remote actions, but we also offer a messaging bus based client that does have some limitations when used with a large number of clients.
 
 {% highlight bash %}
 yum install katello-agent
+{% endhighlight %}
+
+Optionally you can also install `katello-host-tools-tracer` and the client will report processes that need restarting after an update back to the Katello server. 
+
+{% highlight bash %}
+yum install katello-host-tools-tracer
 {% endhighlight %}
 
 ## Provisioned
