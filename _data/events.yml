@@ -1181,3 +1181,14 @@
     core, proxies, plugins, and more.  As always, you're welcome to participate
     in the show, either via YouTube Live chat, or via our IRC channel
     (Freenode/#theforeman).
+- title: 'Foreman Community Demo - 4th January'
+  type: 'Livestream'
+  location: virtual
+  start: 2018-01-04 15:00 GMT
+  end: 2018-01-04 16:00 GMT
+  url: 'https://www.youtube.com/watch?v=BVTiwSEMcyw'
+  description: |
+    Time again for the latest roundup of action from the community, covering
+    core, proxies, plugins, and more.  As always, you're welcome to participate
+    in the show, either via YouTube Live chat, or via our IRC channel
+    (Freenode/#theforeman).
