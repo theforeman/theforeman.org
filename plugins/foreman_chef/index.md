@@ -1,7 +1,7 @@
 ---
 layout: plugin_index
 title: Foreman Chef documentation
-versions: [0.5, 0.3, 0.2, 0.1]
+versions: [0.6, 0.5, 0.3, 0.2, 0.1]
 ---
 
 # Foreman Chef manuals
