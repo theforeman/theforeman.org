@@ -4,7 +4,7 @@ title: Contributing to Foreman
 ---
 
 ## Where to find us
-You can find us on both our mailing lists and IRC. See our [Support](/support)
+You can find us on both our forum and IRC. See our [Support](/support)
 page for all the details on how to come chat with us.
 
 ### Attend some [Events](/events)
@@ -89,7 +89,7 @@ You can also exclude these features by using `bundle install --without libvirt p
 1. Login as `admin` with the password from the db:seed step earlier (or reset it with `bundle exec bin/rake permissions:reset`)
 
 #### Submit Patches
-First, make sure you are a member of the [Foreman Developers](https://groups.google.com/forum/?fromgroups#!forum/foreman-dev) mailing list.
+First, make sure you are aware of the [Foreman Development board](https://community.theforeman.org/c/develoment) on our forum.
 
 Patches to fix bugs or add new features are always appreciated. If you are going to work on a specific issue, make a note in the issue details so the developers will know what you're working on.
 
@@ -157,7 +157,7 @@ Even the simplest of bugs reported helps us make the project better. The issue t
 ### Feature requests
 If you're submitting a feature request or user story, please provide the context for the feature, especially the problem you're trying to solve, and your preferred implementation (if you have one). This will lead to a clear record of the discussion and eventual decision.
 
-It's acceptable to head over to the [dev mailing list](/support.html#Mailinglists) to start a discussion if you have an idea you'd like more input on, before submitting tickets. Be sure to mention the appropriate thread in the ticket, so the context can be found in the future.
+It's acceptable to head over to the [Development board](https://community.theforeman.org/c/development) on our forum to start a discussion if you have an idea you'd like more input on, before submitting tickets. Be sure to mention the appropriate thread in the ticket, so the context can be found in the future.
 
 ### Issue triage
 Sometimes issues are reported without all the above information needed. Getting the details of the bug or feature from the reporter and the community will help everyone understand what is needed. Our issue tracker can be found here: [http://projects.theforeman.org/projects/foreman/issues](http://projects.theforeman.org/projects/foreman/issues), and see the above section for issue guidelines.
@@ -171,7 +171,7 @@ We're trying to maintain high quality, authoritative documentation in the Forema
 Both the manual and the web site are contained in our [theforeman.org repository](https://github.com/theforeman/theforeman.org).  See the README.md to get started.  Contributions to this project are licensed under Creative Commons Attribution-ShareAlike 3.0.
 
 ### Design and User interface
-Foreman 1.11 and above uses [Patternfly](http://patternfly.org/) as its base design. Any improvements or suggestions on how to implement this better, or on re-implementing particular pages are very welcome, and could help every user. Design discussion should happen on [the dev mailing list](/support.html#Mailinglists).
+Foreman 1.11 and above uses [Patternfly](http://patternfly.org/) as its base design. Any improvements or suggestions on how to implement this better, or on re-implementing particular pages are very welcome, and could help every user. Design discussion should happen on the[Development board](https://community.theforeman.org/c/development) on our forum.
 
 ### Hosted hardware
 We have an ever-growing number of contributions and other plugins and projects that require computing power, mostly in our Jenkins CI environment.  We also have package builders, web hosting and other services to run.

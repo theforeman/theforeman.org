@@ -392,7 +392,7 @@ More information about writing your own plugins is available in the wiki:
 * [How to Create a Smart Proxy Plugin](http://projects.theforeman.org/projects/foreman/wiki/How_to_Create_a_Smart-Proxy_Plugin)
 * [Hammer CLI developer documentation](https://github.com/theforeman/hammer-cli/blob/master/doc/developer_docs.md)
 
-The Foreman development [mailing list and IRC channels]({{site.baseurl}}support.html) can be of help for plugin developers.
+The Foreman development [forum and IRC channels]({{site.baseurl}}support.html) can be of help for plugin developers.
 
 ## 3.1 Making your plugin official
 
