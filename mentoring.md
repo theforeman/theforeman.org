@@ -16,7 +16,7 @@ currently available projects.
 * [Install Foreman](/manuals/latest/quickstart_guide.html) on a virtual machine or your own computer
 * Skim through the [manual](/documentation.html)
 * Watch a few [demo videos](/media.html)
-* Read a couple posts from the [mailing list](/support.html#Mailinglists)
+* Read a couple posts from the [forum](/support.html#forum)
 * Join us on [IRC](/support.html#IRC):
   * \#theforeman on Freenode for generally getting to know Foreman and asking user questions
   * \#theforeman-dev on Freenode for development/mentoring questions. Don't be shy; tell us you're interested in one of our open mentoring projects

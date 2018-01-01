@@ -31,18 +31,27 @@ version: '1.16'
 ---------------------------
 
 <div class='row'>
-  <div class='col-xs-3 center'>
+  <div class='col-xs-4 center'>
     <a id='manual-link' href="manuals/{{page.version}}/index.html" class="btn-doc btn">
       <h2 class='doc-icon'><i class="fa fa-newspaper-o"></i></h2>
       <p id='manual'>Manual</p>
     </a>
   </div>
-  <div class='col-xs-3 center'>
+  <div class='col-xs-4 center'>
+    <a id="contribute-link" href="/contribute" class="btn-doc btn">
+      <h2 class='doc-icon'><i class="fa fa-users"></i></h2>
+      <p id='contribute'>Contribute</p>
+    </a>
+  </div>
+  <div class='col-xs-4 center'>
 		<a id='release-notes-link' href="manuals/{{page.version}}/index.html#Releasenotesfor{{page.version}}" class="btn-doc btn">
       <h2 class='doc-icon'><i class="fa fa-pencil"></i></h2>
       <p id='release-notes'>Release Notes</p>
     </a>
   </div>
+</div>
+<hr/>
+<div class='row'>
   <div class='col-xs-3 center'>
     <a id="api-ref-link" href="api/{{page.version}}/index.html" class="btn-doc btn">
       <h2 class='doc-icon'><i class="fa fa-terminal"></i></h2>
@@ -55,8 +64,6 @@ version: '1.16'
       <p id='plugins'>Plugins</p>
     </a>
   </div>
-</div>
-<div class='row'>
   <div class='col-xs-3 center'>
     <a href="/training.html" class="btn-doc btn">
       <h2 class='doc-icon'><i class="fa fa-wrench"></i></h2>
@@ -69,20 +76,20 @@ version: '1.16'
       Security
     </a>
   </div>
-  <div class='col-xs-3 center'>
-    <a href="/blog" class="btn-doc btn">
-      <h2 class='doc-icon'><i class="fa fa-rss"></i></h2>
-      Blog
-    </a>
-  </div>
+</div>
+<div class='row'>
   <div class='col-xs-3 center'>
     <a href="/support.html" class="btn-doc btn">
       <h2 class='doc-icon'><i class="fa fa-support"></i></h2>
       Support
     </a>
   </div>
-</div>
-<div class='row'>
+  <div class='col-xs-3 center'>
+    <a href="/blog" class="btn-doc btn">
+      <h2 class='doc-icon'><i class="fa fa-rss"></i></h2>
+      Blog
+    </a>
+  </div>
   <div class='col-xs-3 center'>
     <a href="/events" class="btn-doc btn">
       <h2 class='doc-icon'><i class="fa fa-calendar"></i></h2>

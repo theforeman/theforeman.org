@@ -5,7 +5,7 @@ title: Sponsors of Foreman
 
 # Sponsors
 
-The Foreman project is lucky to receive sponsorship to support the work we do from a number of organizations.  If you're interested in donating hardware to Foreman, please contact the <a href="support.html">foreman-dev mailing list</a>.
+The Foreman project is lucky to receive sponsorship to support the work we do from a number of organizations.  If you're interested in donating hardware to Foreman, please contact the <a href="support.html">Development forum</a>.
 
 ### Rackspace
 

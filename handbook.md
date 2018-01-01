@@ -210,7 +210,7 @@ Write a good description, a good title, and explain why the change is necessary.
 
 Assume reviewers have no idea or background about your patch. Even if the usual reviewers know you personally and you know they know why your change is necessary, maybe not all reviewers are aware of it. Furthermore, after some time, they might not remember well, and new reviewers will not be able to review your code without background and a good explanation.
 
-Generally, if you want to submit significant changes to the code, discuss it first on #theforeman-dev (Freenode) or Foreman-dev (mailing-list). If you know who are the usual maintainers for the code you want to change, try to ask them to validate your assumptions, your design, and if they can, ask them to review your code. This will save you a lot of going back and forth with reviewers that do not understand the reasoning behind your pull request.
+Generally, if you want to submit significant changes to the code, discuss it first on #theforeman-dev (Freenode) or the Development board on our [forum](https://community.theforeman.org/c/development). If you know who are the usual maintainers for the code you want to change, try to ask them to validate your assumptions, your design, and if they can, ask them to review your code. This will save you a lot of going back and forth with reviewers that do not understand the reasoning behind your pull request.
 
 Submit changes incrementally. If you are submitting a pull request that will break compatibility with older APIs, spend the effort to make it compatible first. If you think your feature is not ready for prime time yet, it's OK to submit small changes and hide the feature using feature flags.
 
@@ -301,7 +301,7 @@ If you want to become a committer, we expect you help with some of these tasks:
 
 Other things that are nice to do:
 
-*  Support users and other developers on the mailing lists, in Redmine, Serverfault, and in IRC #theforeman and #theforeman-dev
+*  Support users and other developers on the [forum](https://community.theforeman.org/), in Redmine, and in IRC #theforeman and #theforeman-dev
 *  Participate in (or even initiate) real-world events such as user/developer meetups, papers/talks at conferences, etc
 
 #### How do I become a committer?
@@ -311,13 +311,13 @@ The person who nominates you has to:
 
   * Submit 10 examples that prove this person behaves like a committer. For instance:
     * Strategic patches to the project that fix or add key functionality
-    * Mailing list threads where the person is clearly helpful
+    * Forum topics where the person is clearly helpful
     * Comments that prove the person has triaged bugs
     * Proof the nominee has maintained a plugin successfully
     * Anything else that shows the nominee should become a committer
   * Explain how the nominee is involved in the community and cares about the future of the project
 
-This nomination is public and should be made to the foreman-dev mailing list. After the nomination is submitted, two other committers have to second the nomination. If no one objects in one week, the nomination is accepted.
+This nomination is public and should be made to the Development forum board. After the nomination is submitted, two other committers have to second the nomination. If no one objects in one week, the nomination is accepted.
 
 Such objections may happen in public on the nomination thread. Understandably, however, not everyone is comfortable giving objections publicly. Therefore, it is acceptable for other committers to raise their concerns with the sponsor and/or other committers privately if they wish to do so. The sponsor is expected to update the nomination thread to show that it is on hold pending private concerns.
 

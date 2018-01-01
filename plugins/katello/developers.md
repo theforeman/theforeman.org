@@ -184,7 +184,7 @@ Pick a release code name based on a style of beer previously unused. Examples fr
 
 ### Step 1: Warn Community of Branching
 
-The first step to any release is warning the community of impending branching prior to the branch date to give them time to push on any pull requests that are pending. The email should be sent no less than 2 weeks prior to the intended branch date and ideally when Foreman sends their branching announcement.
+The first step to any release is warning the community of impending branching prior to the branch date to give them time to push on any pull requests that are pending. The notification should be sent no less than 2 weeks prior to the intended branch date and ideally when Foreman sends their branching announcement.
 
 ### Step 2: Stable Pulp Build
 
@@ -227,7 +227,7 @@ You will also need to branch the documentation at [theforeman.org](https://thefo
 
 Make sure to follow the instructions and update the docs to use the current release version. Submit a pull request to theforeman.org repository with the changes.
 
-Congratulations, you have successfully branched all of the repositories and prepared them for release. We recommend double checking each repository ensuring that the branch exists in the upstream repository, that the top of the commit stack in that branch includes the tag you created prior to branching (so that you have an initial tag point that represents the branch point) and that the tag itself exists. The last part of this step is to send to a follow up email letting the community know that everything has been branched.
+Congratulations, you have successfully branched all of the repositories and prepared them for release. We recommend double checking each repository ensuring that the branch exists in the upstream repository, that the top of the commit stack in that branch includes the tag you created prior to branching (so that you have an initial tag point that represents the branch point) and that the tag itself exists. The last part of this step is to send to a follow up notification letting the community know that everything has been branched.
 
 ### Step 6. Pin katello-installer puppet modules for release
 
@@ -261,7 +261,7 @@ mod 'katello',   '>= 0.2.0 < 0.3.0'
 
 ### Step 7: Configure Koji
 
-Note that to perform this step, Foreman must have generated it's Koji build targets for the targeted Foreman release. This is due to how Katello tags inherit from some Foreman tags. Coordinate with the Foreman release nanny on when they plan to do that step and wait to do this step until then. Koji needs to have configuration added specific to the tags that the release will occur under. The first step is to add new build roots and tags. Note that you will need access to koji. Contact the `-dev` list to request access.
+Note that to perform this step, Foreman must have generated it's Koji build targets for the targeted Foreman release. This is due to how Katello tags inherit from some Foreman tags. Coordinate with the Foreman release nanny on when they plan to do that step and wait to do this step until then. Koji needs to have configuration added specific to the tags that the release will occur under. The first step is to add new build roots and tags. Note that you will need access to koji. Contact the Development forum board to request access.
 
 ```
 ./tools koji configs/katello_XY.yaml # Make sure it looks good
@@ -277,7 +277,7 @@ In order to generate the release repositories on Koji, a mash script for the ver
 ./tools mash-scripts --commit config/katello_XY.yaml
 ```
 
-The generated mash scripts should be committed to tool_belt and a pull request opened. The scripts will then need to be copied onto the Koji box itself. If you do not have access, please contact someone that does or request this action on the `-dev` list.
+The generated mash scripts should be committed to tool_belt and a pull request opened. The scripts will then need to be copied onto the Koji box itself. If you do not have access, please contact someone that does or request this action on the Development forum board.
 
 ### Step 9: Verify Repos
 
@@ -343,7 +343,7 @@ Generally, we should test the fresh install pipeline before moving on to the upg
 
 ### Step 15: Announce RC
 
-Now you are ready to announce the RC by sending an email to the foreman-users and foreman-dev mailing lists pointing users at the installation instructions. You should also open a PR to `katello.org` to update the news section with an announcement of the RC release.
+Now you are ready to announce the RC by sending an post to the Release Announcements forum board, pointing users at the installation instructions. You should also open a PR to `katello.org` to update the news section with an announcement of the RC release.
 
 ### Step 16: Fix Bugs
 

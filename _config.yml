@@ -29,8 +29,6 @@ navigation:
   url: manuals/1.16/quickstart_guide.html#QuickstartGuide
 - text: Documentation
   url: documentation.html
-- text: Community
-  url: contribute.html
 - text: Videos
   url: media.html
 - text: Blog
