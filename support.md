@@ -62,8 +62,9 @@ In addition to the [general guidelines](/support.html#CommunityGuidelines) above
 
 * Don't hijack threads - start new threads for new questions
 * Don't attach or paste in huge attachments - upload them to a website and include links in your post
+* Use Markdown formatting, especially for logs - put \`\`\` on the lines around the logs to format them as code.
 * Let us know if your question is answered - the solution can be marked using
-  the thread tools, lets others know that you no longer need help, and helps
+  the thread tools. This lets others know that you no longer need help, and helps
   others to find solutions when searching the archives
 
 (_Credit to the [Fedora Mailing List Guidelines](http://fedoraproject.org/wiki/Communicate/MailingListGuidelines) as a source of ideas, under the Creative Commons Attribution-ShareAlike 3.0 Unported license_)
