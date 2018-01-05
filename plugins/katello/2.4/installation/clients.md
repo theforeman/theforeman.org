@@ -26,32 +26,32 @@ Install the appropriate Katello client release packages.  For CentOS 6, you will
 
 <div id="el5" markdown="1">
 ```bash
-yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/RHEL/5Server/x86_64/katello-client-repos-latest.rpm
+yum update -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/RHEL/5Server/x86_64/katello-client-repos-latest.rpm
 ```
 </div>
 
 <div id="el6" style="display:none;" markdown="1">
 ```bash
 wget https://copr.fedoraproject.org/coprs/dgoodwin/subscription-manager/repo/epel-6/dgoodwin-subscription-manager-epel-6.repo -O /etc/yum.repos.d/dgoodwin-subscription-manager-epel-6.repo
-yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/RHEL/6Server/x86_64/katello-client-repos-latest.rpm
+yum update -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/RHEL/6Server/x86_64/katello-client-repos-latest.rpm
 ```
 </div>
 
 <div id="el7" style="display:none;" markdown="1">
 ```bash
-yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/RHEL/7Server/x86_64/katello-client-repos-latest.rpm
+yum update -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/RHEL/7Server/x86_64/katello-client-repos-latest.rpm
 ```
 </div>
 
 <div id="fc20" style="display:none;" markdown="1">
 ```bash
-yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/RHEL/Fedora/20/x86_64/katello-client-repos-latest.rpm
+yum update -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/RHEL/Fedora/20/x86_64/katello-client-repos-latest.rpm
 ```
 </div>
 
 <div id="fc21" style="display:none;" markdown="1">
 ```bash
-yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/RHEL/Fedora/21/x86_64/katello-client-repos-latest.rpm
+yum update -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/RHEL/Fedora/21/x86_64/katello-client-repos-latest.rpm
 ```
 </div>
 

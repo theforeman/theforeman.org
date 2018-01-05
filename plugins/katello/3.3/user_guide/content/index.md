@@ -39,7 +39,7 @@ Content > Products > Select desired product > Create Repository (right hand side
 Note the following options:
 
 * Publish via HTTP: allows access to the Repository without any restriction.  Unless you desire to restrict access to your content in this Repository, we recommended to leave this checked.
-* URL: If you are syncing from an external Repository (yum or puppet), this would be filled in. This can be changed, added, or removed later.  For example if you are wanting to create a mirror of EPEL, you would set this to 'http://dl.fedoraproject.org/pub/epel/6/x86_64/'.
+* URL: If you are syncing from an external Repository (yum or puppet), this would be filled in. This can be changed, added, or removed later.  For example if you are wanting to create a mirror of EPEL, you would set this to 'https://dl.fedoraproject.org/pub/epel/6/x86_64/'.
 
 ![Creating a Repository](/plugins/katello/{{ page.version }}/user_guide/content/repo_create.png)
 

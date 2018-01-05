@@ -28,34 +28,34 @@ Update the Katello client release packages:
 
 <div id="el5" markdown="1">
 {% highlight bash %}
-yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/el5/x86_64/katello-client-repos-latest.rpm
-yum -y install http://dl.fedoraproject.org/pub/epel/epel-release-latest-5.noarch.rpm
+yum update -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/el5/x86_64/katello-client-repos-latest.rpm
+yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-5.noarch.rpm
 {% endhighlight %}
 </div>
 
 <div id="el6" style="display:none;" markdown="1">
 {% highlight bash %}
-yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/el6/x86_64/katello-client-repos-latest.rpm
-yum -y install http://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
+yum update -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/el6/x86_64/katello-client-repos-latest.rpm
+yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
 {% endhighlight %}
 </div>
 
 <div id="el7" style="display:none;" markdown="1">
 {% highlight bash %}
-yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/el7/x86_64/katello-client-repos-latest.rpm
-yum -y install http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+yum update -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/el7/x86_64/katello-client-repos-latest.rpm
+yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 {% endhighlight %}
 </div>
 
 <div id="fc24" style="display:none;" markdown="1">
 {% highlight bash %}
-yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/fc24/x86_64/katello-client-repos-latest.rpm
+yum update -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/fc24/x86_64/katello-client-repos-latest.rpm
 {% endhighlight %}
 </div>
 
 <div id="fc25" style="display:none;" markdown="1">
 {% highlight bash %}
-yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/fc25/x86_64/katello-client-repos-latest.rpm
+yum update -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/fc25/x86_64/katello-client-repos-latest.rpm
 {% endhighlight %}
 </div>
 
