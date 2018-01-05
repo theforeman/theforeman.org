@@ -26,32 +26,32 @@ Install the appropriate Katello client release packages.  For CentOS 6, you will
 
 <div id="el5" markdown="1">
 {% highlight bash %}
-yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/el5/x86_64/katello-client-repos-latest.rpm
+yum install -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/el5/x86_64/katello-client-repos-latest.rpm
 {% endhighlight %}
 </div>
 
 <div id="el6" style="display:none;" markdown="1">
 {% highlight bash %}
 wget https://copr.fedoraproject.org/coprs/dgoodwin/subscription-manager/repo/epel-6/dgoodwin-subscription-manager-epel-6.repo -O /etc/yum.repos.d/dgoodwin-subscription-manager-epel-6.repo
-yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/el6/x86_64/katello-client-repos-latest.rpm
+yum install -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/el6/x86_64/katello-client-repos-latest.rpm
 {% endhighlight %}
 </div>
 
 <div id="el7" style="display:none;" markdown="1">
 {% highlight bash %}
-yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/el7/x86_64/katello-client-repos-latest.rpm
+yum install -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/el7/x86_64/katello-client-repos-latest.rpm
 {% endhighlight %}
 </div>
 
 <div id="fc22" style="display:none;" markdown="1">
 {% highlight bash %}
-yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/RHEL/f22/x86_64/katello-client-repos-latest.rpm
+yum install -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/RHEL/f22/x86_64/katello-client-repos-latest.rpm
 {% endhighlight %}
 </div>
 
 <div id="fc23" style="display:none;" markdown="1">
 {% highlight bash %}
-yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/RHEL/f23/x86_64/katello-client-repos-latest.rpm
+yum install -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/RHEL/f23/x86_64/katello-client-repos-latest.rpm
 {% endhighlight %}
 </div>
 

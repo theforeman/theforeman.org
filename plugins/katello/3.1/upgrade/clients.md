@@ -28,34 +28,34 @@ Update the Katello client release packages:
 
 <div id="el5" markdown="1">
 {% highlight bash %}
-yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/RHEL/5Server/x86_64/katello-client-repos-latest.rpm
-yum -y install http://dl.fedoraproject.org/pub/epel/epel-release-latest-5.noarch.rpm
+yum update -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/RHEL/5Server/x86_64/katello-client-repos-latest.rpm
+yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-5.noarch.rpm
 {% endhighlight %}
 </div>
 
 <div id="el6" style="display:none;" markdown="1">
 {% highlight bash %}
-yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/RHEL/6Server/x86_64/katello-client-repos-latest.rpm
-yum -y install http://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
+yum update -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/RHEL/6Server/x86_64/katello-client-repos-latest.rpm
+yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
 {% endhighlight %}
 </div>
 
 <div id="el7" style="display:none;" markdown="1">
 {% highlight bash %}
-yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/RHEL/7Server/x86_64/katello-client-repos-latest.rpm
-yum -y install http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+yum update -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/RHEL/7Server/x86_64/katello-client-repos-latest.rpm
+yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 {% endhighlight %}
 </div>
 
 <div id="fc20" style="display:none;" markdown="1">
 {% highlight bash %}
-yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/RHEL/Fedora/20/x86_64/katello-client-repos-latest.rpm
+yum update -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/RHEL/Fedora/20/x86_64/katello-client-repos-latest.rpm
 {% endhighlight %}
 </div>
 
 <div id="fc21" style="display:none;" markdown="1">
 {% highlight bash %}
-yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/RHEL/Fedora/21/x86_64/katello-client-repos-latest.rpm
+yum update -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/RHEL/Fedora/21/x86_64/katello-client-repos-latest.rpm
 {% endhighlight %}
 </div>
 
