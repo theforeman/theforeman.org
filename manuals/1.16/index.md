@@ -321,5 +321,8 @@ previous_version: "1.15"
 ## 7.2 Debugging
 {%include manuals/{{ page.version }}/7.2_debugging.md %}
 
-## 7.3 Getting Help
-{%include manuals/{{ page.version }}/7.3_getting_help.md %}
+## 7.3 No Reports
+{%include manuals/{{ page.version }}/7.3_no_reports.md %}
+
+## 7.4 Getting Help
+{%include manuals/{{ page.version }}/7.4_getting_help.md %}
