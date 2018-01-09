@@ -69,16 +69,16 @@ previous_version: "1.15"
 {%include manuals/{{ page.version }}/4_general_foreman.md %}
 ## 4.1 Web Interface
 
-### 4.1.1 LDAP Authentication
-{%include manuals/{{ page.version }}/4.1.1_authentication.md %}
-### 4.1.2 Roles and Permissions
-{%include manuals/{{ page.version }}/4.1.2_roles_and_permissions.md %}
-### 4.1.3 Trends
-{%include manuals/{{ page.version }}/4.1.3_trends.md %}
-### 4.1.4 Auditing
-{%include manuals/{{ page.version }}/4.1.4_auditing.md %}
-### 4.1.5 Searching
-{%include manuals/{{ page.version }}/4.1.5_searching.md %}
+### 4.1.1 Searching
+{%include manuals/{{ page.version }}/4.1.1_searching.md %}
+### 4.1.2 LDAP Authentication
+{%include manuals/{{ page.version }}/4.1.2_authentication.md %}
+### 4.1.3 Roles and Permissions
+{%include manuals/{{ page.version }}/4.1.3_roles_and_permissions.md %}
+### 4.1.4 Trends
+{%include manuals/{{ page.version }}/4.1.4_trends.md %}
+### 4.1.5 Auditing
+{%include manuals/{{ page.version }}/4.1.5_auditing.md %}
 ### 4.1.6 User Management
 {%include manuals/{{ page.version }}/4.1.6_user_management.md %}
 
