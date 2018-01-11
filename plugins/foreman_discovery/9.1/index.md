@@ -814,8 +814,11 @@ configuration options:
 * fdi.uploadsleep - seconds between facter runs (30 by default)
 * fdi.cachefacts - number of fact uploads without caching (0 by default)
 * fdi.px* - PXE-less workflow (described below)
-* fdi.dhcp_timeout - DHCP timeout in seconds (default 300)
+* fdi.dhcp_timeout - DHCP NetworkManager timeout in seconds (300 by default)
+* fdi.ipwait - wait time for IP to be available in proxy SSL cert start (120 by default)
+* fdi.nmwait - nmcli --wait option for NetworkManager (120 by default)
 * fdi.dns_nameserver - nameserver to use for DNS SRV record
+* fdi.proxy_cert_days - number of days HTTPS self-signed cert is valid (999 by default)
 * fdi.dns_search - search domain to use for DNS SRV record
 * fdi.dns_ndots - ndots option to use for DNS SRV record
 * fdi.vlan.primary - VLAN ID to set for primary interface
