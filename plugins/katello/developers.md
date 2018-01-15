@@ -188,7 +188,7 @@ The first step to any release is warning the community of impending branching pr
 
 ### Step 2: Stable Pulp Build
 
-Prior to branching the Katello repositories, the release nanny should figure out what the current stable version of Pulp is and if not already tagged and built, do so. Please see the [Upgrading Pulp Guide](http://www.katello.org/developers/upgrade_pulp.html).
+Prior to branching the Katello repositories, the release nanny should figure out what the current stable version of Pulp is and if not already tagged and built, do so. Please see the [Upgrading Pulp Guide](/plugins/katello/developers.html#upgrading-pulp).
 
 ### Step 3: Setup Your Environment
 
