@@ -289,7 +289,7 @@ At this point we want to verify the updates we made to the version branches by m
 
 View the generated repositories at `http://koji.katello.org/releases/yum/katello-X.Y` and ensure none of the packages have a git hash within the package name.
 
-### Step 9: Build Fresh X.Y Packages
+### Step 10: Build Fresh X.Y Packages
 
 For each repository that was branched, and for each package within a given repository (e.g. katello has both the katello and rubygem-katello packages) we do a tito release koji. For example, the Katello repository:
 
