@@ -283,8 +283,12 @@ The generated mash scripts should be committed to tool_belt and a pull request o
 
 At this point we want to verify the updates we made to the version branches by mashing and checking the repositories generated on koji.
 
+You'll want to run this job: `http://ci.theforeman.org/job/packaging_mash_rpms/`
+
+With the parameter set as:
+
 ```
-/usr/local/bin/katello-mash-split-X.Y.py
+katello-mash-split-X.Y.py
 ```
 
 View the generated repositories at `http://koji.katello.org/releases/yum/katello-X.Y` and ensure none of the packages have a git hash within the package name.
