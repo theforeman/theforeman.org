@@ -136,7 +136,7 @@ To add a Content View to a Composite Content View using the web UI, navigate to:
 
 Content > Content Views > Select the desired Content View > Content (within sub navigation) > Repositories
 
-![Adding a Content View to a composite Content View 4](add_composite_content_view.png)
+![Adding a Content View to a composite Content View 4](/plugins/katello/{{ page.version }}/user_guide/content_views/add_composite_content_view.png)
 
 Find the Content View ID of the specific version of the Content View to add:
 
@@ -200,7 +200,7 @@ To select which repositories to Filter in the web UI, navigate to:
 
 Content > Content Views > Select the desired Content View > Content (within sub navigation) > Filters > Select the desired Filter > Affected repositories (within sub navigation)
 
-![Select which repositories to Filter](filter_repositories.png)
+![Select which repositories to Filter](/plugins/katello/{{ page.version }}/user_guide/content_views/filter_repositories.png)
 
 From the CLI, adding a Content View Filter:
 
@@ -247,7 +247,7 @@ If the Content Host is already registered, from the UI:
 
 Hosts > Content Hosts > Select the desired Content Host
 
-![Select Content Host's content view](system_content_view.png)
+![Select Content Host's content view](/plugins/katello/{{ page.version }}/user_guide/content_views/system_content_view.png)
 
 
 From the CLI:
