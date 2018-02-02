@@ -83,18 +83,18 @@ subscription-manager register --org=Default_Organization --activationkey=$KEY_NA
 
 To see the list of your Content Hosts, navigate to Hosts > Content Hosts
 
-![Content Host List](./list.png)
+![Content Host List](/plugins/katello/{{ page.version }}/user_guide/content_hosts/list.png)
 
 
 ## Changing the Lifecycle Environment and Content View of a Content Host:
 
 Navigate to the Content Host Details page,  Host > Content Hosts > Click the name of the desired Content Host
 
-![Content Host Details](./details.png)
+![Content Host Details](/plugins/katello/{{ page.version }}/user_guide/content_hosts/details.png)
 
 Look in the upper right corner for the "Content Host Content":
 
-![Content Host Content](./content_host_content.png)
+![Content Host Content](/plugins/katello/{{ page.version }}/user_guide/content_hosts/content_host_content.png)
 
 
 Then select the new Lifecycle Environment you desire, select the new Content View you desire, and click save.
@@ -105,7 +105,7 @@ In order for a Content Host to receive package updates and access Repositories h
 
 Navigate to  Hosts > Content Hosts > Select Content Host > Subscriptions > Click the "Add" tab
 
-![Subscriptions](./subscriptions.png)
+![Subscriptions](/plugins/katello/{{ page.version }}/user_guide/content_hosts/subscriptions.png)
 
 Check the checkbox under the Products you want to add and select "Add Selected" in the upper right.
 
@@ -116,7 +116,7 @@ To see existing attached Products, click the "List/Remove" tab.  To remove a Pro
 
 To perform package actions on a singleContent Host, navigate to: Hosts > Content Hosts > Select Content Host > Packages
 
-![Package Management](./packages.png)
+![Package Management](/plugins/katello/{{ page.version }}/user_guide/content_hosts/packages.png)
 
 From here you can:
 
@@ -130,7 +130,7 @@ If your synced Repositories contain Errata, you can use Katello's Errata managem
 
 Navigate to:   Hosts > Content Hosts > Select Content Host > Errata
 
-![Package Management](./errata.png)
+![Package Management](/plugins/katello/{{ page.version }}/user_guide/content_hosts/errata.png)
 
 To apply errata, search for the errata you want and select the checkbox beside each errata.  Then click "Apply Selected" at the top right.
 
@@ -144,7 +144,7 @@ The "Show From" filters what applicable errata to show:
 
 To change Host Collection assignments for a Content Host, navigate to: Hosts > Content Hosts > Select Content Host > Host Collections
 
-![Host Collections](./host_collections.png)
+![Host Collections](/plugins/katello/{{ page.version }}/user_guide/content_hosts/host_collections.png)
 
 ## Bulk Actions
 
@@ -157,11 +157,11 @@ Katello provides the ability to perform actions on many Content Hosts at once su
 
 In order to use the bulk actions, perform whatever search you desire and select which Content Hosts you want to modify.  If you want to select all Content Hosts from a search result, click the 'checkbox' above the table:
 
-![Host Collections](./select_all_check.png)
+![Host Collections](/plugins/katello/{{ page.version }}/user_guide/content_hosts/select_all_check.png)
 
 This will select all Content Hosts on that page (only the ones that are visible).  To select all that correspond to that search query, notice a bar has now appeared:
 
-![Host Collections](./select_all_results.png)
+![Host Collections](/plugins/katello/{{ page.version }}/user_guide/content_hosts/select_all_results.png)
 
 Next select the 'Bulk Actions' button in the top right.
 

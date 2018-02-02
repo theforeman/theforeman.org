@@ -24,7 +24,7 @@ Content can be synced into Katello using a Red Hat manifest in much the same way
 
 To sync content from a Docker registry such as Docker Hub (which is the official Docker-run registry), simply start by creating a new Repository.
 
-![New Docker Repository](./docker_repo.png)
+![New Docker Repository](/plugins/katello/{{ page.version }}/user_guide/docker/docker_repo.png)
 
 On the new Repository screen, select "Docker" as the content type. Once you do that, you'll be given two options: upstream name and URL. The URL will be the registry URL; for Docker Hub, this would be `https://registry.hub.docker.com`.
 
@@ -48,7 +48,7 @@ Note the ``:2`` above, which specifies a v2 registry. Push your changes to your 
 
 Docker content can be published and promoted via Content Views much like yum or puppet content.
 
-![Adding Docker Repositories to a Content View](docker_cv.png)
+![Adding Docker Repositories to a Content View](/plugins/katello/{{ page.version }}/user_guide/docker/docker_cv.png)
 
 After creating a Content View, visit the Docker Content tab. Here you can select any Docker repositories you want to add to your Content View. After you've added Docker Repositories to your view, you may proceed as normal. Visit [the Content View user guide for more information](/plugins/katello/{{ page.version }}/user_guide/content_views/content_views.html).
 
@@ -56,11 +56,11 @@ After creating a Content View, visit the Docker Content tab. Here you can select
 
 To view Docker content contained with Katello, visit the Docker Tags page. This can be accessed under the Content menu at the top of any page.
 
-![Docker Tags Page](./docker_tags.png)
+![Docker Tags Page](/plugins/katello/{{ page.version }}/user_guide/docker/docker_tags.png)
 
 On the Docker Tags page, you can see a list of Docker Tags grouped by Repository in Katello. This shows you Tags grouped across Content Views and Lifecycle Environments. Suppose I wanted to pull the latest Tag from my redis repository, I would click the latest row for my redis repository.
 
-![Docker Tags Page](./docker_redisv_tag.png)
+![Docker Tags Page](/plugins/katello/{{ page.version }}/user_guide/docker/docker_redisv_tag.png)
 
 I can see here that my redis Repository has been added to a published Content View called redisv. If I want to use the tag from that Content View, I would just copy the Published At URL and then on my docker server I would run:
 
