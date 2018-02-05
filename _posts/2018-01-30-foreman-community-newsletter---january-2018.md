@@ -8,10 +8,20 @@ tags:
 - newsletter
 - community
 excerpt: |
-  Events, demos, and the usual round-up
+  The 2018 community survey is here! Also events, demos, and the usual round-up
 ---
 
-Events heading our way!
+### Community survey 2018
+
+As usual for the start of the year, the next iteration of the Foreman Community
+survey is ready for you to fill out! Last year we had over 200 responses - can
+you help us go even higher this year?
+
+The survey is a great opportunity to help us shape the direction of the
+project, so please do drop by and give us your thoughts. It should only take a
+few minutes. Thanks!
+
+http://goo.gl/RNY8MY
 
 ### Upcoming Events
 
