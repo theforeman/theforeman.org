@@ -1199,6 +1199,14 @@ networking, if the deployment does not provide DHCP services, otherwise
 Anaconda will fail to install the system after kernel reload. Also check if
 netmask, gateway and primary DNS server is present on the associated Subnet.
 
+Some graphic drivers renders console unusable after kexec. From image version
+3.4.4 all KMS drivers were removed and kernel uses the default VGA 80x25 mode.
+Frozen console or graphic artifacts can be solved by choosing a different
+driver when using virtualization or selecting older hardware emulation version
+(VMWare version 4 or 5). When reporting graphic driver issues, attach "lsmod"
+output from discovered nodes and try to blacklist "kms" drivers as a
+workaround.
+
 ### 5.3.1 Unattended and semi-automatic mode
 
 All interactive screens can be fully automated via kernel command line that can
