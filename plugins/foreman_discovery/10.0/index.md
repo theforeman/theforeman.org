@@ -1,16 +1,16 @@
 ---
 layout: plugin
 pluginname: foreman_discovery
-title: Foreman Discovery 9.1 Manual
-version: 9.1
+title: Foreman Discovery 10.0 Manual
+version: 10.0
 # versions for matrix and snippets
 # (use short version for imgver e.g. 3.0)
-pluginver: 9.1.1
+pluginver: 10.0.0
 proxyver: 1.0.4
 imgver: 3.4
 cliver: 1.0.0
 # uncomment to show warning box for an old release
-warning: old
+#warning: old
 # uncomment to show development version warning
 #warning: unreleased
 ---
@@ -135,6 +135,13 @@ plugin:
   </tr>
   <tr>
     <td>= 1.15</td>
+    <td>9.1.0</td>
+    <td>1.0.4</td>
+    <td>3.3-3.4</td>
+    <td>1.0.0</td>
+  </tr>
+  <tr>
+    <td>= 1.16</td>
     <td>{{page.pluginver}}</td>
     <td>{{page.proxyver}}</td>
     <td>{{page.imgver}}</td>
@@ -143,6 +150,33 @@ plugin:
 </table>
 
 ### 1.1.1 Foreman Discovery plugin
+
+**10.0**: Release notes
+
+Upgrade to Rails 5 is major change in this release. Starting from this version,
+we are improving user interface of Discovery pages to match core standards and
+Patternfly style. Missing PXE loader option was added to API V2 endpoint.
+
+    Fixes #20881 - Clean legacy api from discovery
+    Fixes #21244 - Rails 5 upgrade test failures
+    Fixes #20337 - Add pxe loader into discovery v2 API
+    Fixes #21153 - Passing conditions to destroy_all is deprecated
+    Fixes #21123 - Changed populate_fields_from_facts signature
+    Fixes #20215 - Fix the accordian for Expand All button
+     Refs #20564 - Ignore locking in migration
+     Refs #20971 - correct typo in before_action
+    Fixes #20971 - replace *_filter with *_action
+    Fixes #20970 - Allow discovery via fact import in Rails 5
+    Fixes #20564 - ignore locking in migration
+    Fixes #20162 - Fix the modal for provisioning on index page.
+    Fixes #20497 - host provisioning build mode enabled
+    Fixes #20290 - kexec now produces valid JSON output
+    Fixes #20387 - Clean redundant code for auto complete search
+    Fixes #20269 - Use the inline messaging warning
+    Fixes #20294 - taxonomy via fact fixed, scripts
+    Fixes #20247 - Add welcome page to foreman discovery
+    Fixes #20188 - Change color of 'delete' button to grey
+    Fixes #20170 - Fix the UI for delete modal
 
 **9.1**: Release notes
 
