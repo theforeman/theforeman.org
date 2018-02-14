@@ -21,13 +21,13 @@ If installed foreman from git, you can simply add foreman-templates gem as one o
 
 # 2.1 Uninstallation
 
-If you later decide to remove the plugin, you need to clean it's custom data. Otherwise you'd get error e.g. on settings page, that some class can't be instantiated. Before removing the plugin from your Foreman instance, make sure to run following command
+If you later decide to remove the plugin, you need to clean its custom data. Otherwise you'd get an error e.g. on settings page, that some class can't be instantiated. Before removing the plugin from your Foreman instance, make sure to run following command
 
 ```sh
 foreman-rake templates:cleanup
 ```
 
-This cleans up internals so the plugin can be safely uninstalled. The tempaltes that were created remain untouched. The remove the plugin after clean up differs based on how you installed it. If you used foreman-installer or installed plugin by package directly, then you just need to uninstall the plugin package using rpm/dpkg. For git installations, just remove it from bundler files.
+This cleans up internals so the plugin can be safely uninstalled. The templates that were created remain untouched. The remove the plugin after clean up differs based on how you installed it. If you used foreman-installer or installed plugin by package directly, then you just need to uninstall the plugin package using rpm/dpkg. For git installations, just remove it from bundler files.
 
 # 3. Configuration
 
