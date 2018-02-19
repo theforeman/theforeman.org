@@ -1225,3 +1225,14 @@
     core, proxies, plugins, and more.  As always, you're welcome to participate
     in the show, either via YouTube Live chat, or via our IRC channel
     (Freenode/#theforeman).
+- title: 'Training: Foreman provisioning lab - InstalFest 2018'
+  type: 'Training'
+  location: Prague, Czech Republic
+  start: 2018-03-04 15:15 GMT
+  end: 2018-03-04 17:30 GMT
+  url: 'https://installfest.cz/if18/'
+  description: |
+    Two hours labs at InstallFest 2018. Registration might be needed, 
+    check the site. Presenter Lukas Zapletal from the Foreman Core team
+    can speak Czech or English. These are the languages of choice for the
+    event. No hardware should be required, lab with 24 PCs.
