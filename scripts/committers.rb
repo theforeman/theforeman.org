@@ -3,8 +3,8 @@ require 'tmpdir'
 require 'git'
 
 @tagged_repos = %w(foreman smart-proxy foreman-installer foreman-selinux)
-@tag_from     = "1.15.0"
-@tag_to       = "1.16.0"
+@tag_from     = "1.16.0"
+@tag_to       = "1.17.0-RC1"
 
 @untagged_repos = %w(
   theforeman.org
@@ -127,7 +127,7 @@ else
       puts "#{author}: #{total}"
     end
   else
-    puts @authors.keys.sort.join("\n")
+    puts @authors.keys.sort.join(", ")
   end
 end
 $stderr.puts "Total committers: #{@authors.keys.size}"

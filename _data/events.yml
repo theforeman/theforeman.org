@@ -1203,7 +1203,7 @@
     core, proxies, plugins, and more.  As always, you're welcome to participate
     in the show, either via YouTube Live chat, or via our IRC channel
     (Freenode/#theforeman).
-- title: 'UX improvements - Red Hat Repositories page - 31st January'
+- title: 'UX improvements - Red Hat Repositories page - 12th February'
   type: 'Livestream'
   location: virtual
   start: 2018-02-12 14:00 GMT
@@ -1214,6 +1214,17 @@
     This demo will provide a depth look at the new Red Hat Repositories page.
     A page that has been rewritten using react. It adds search and filtering capabilities
     and brings that page inline with patternfly best practices.
+- title: 'Foreman Community Demo - 15th February'
+  type: 'Livestream'
+  location: virtual
+  start: 2018-02-15 15:00 GMT
+  end: 2018-02-15 16:00 GMT
+  url: 'https://www.youtube.com/watch?v=romjVfktj6E'
+  description: |
+    Time again for the latest roundup of action from the community, covering
+    core, proxies, plugins, and more.  As always, you're welcome to participate
+    in the show, either via YouTube Live chat, or via our IRC channel
+    (Freenode/#theforeman).
 - title: 'Training: Foreman provisioning lab - InstalFest 2018'
   type: 'Training'
   location: Prague, Czech Republic
