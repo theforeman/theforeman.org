@@ -94,10 +94,9 @@ To change repository enablement settings using a key:
 
 - navigate to: Content > Activation Keys
 - select the desired key from the list
-- click **Product Content**
-- click the edit icon for the repository content set that you would like to modify
-- select the desired value (e.g. 'Override to Yes', 'Override to No', 'Defaults to Yes', 'Defaults to No')
-- click **Save**
+- click **Repository Sets**
+- check the boxes for the repositories that you would like to modify
+- click **Select Action** and choose the desired value (e.g. 'Override to Enabled', 'Override to Disabled', 'Reset to Default')
 
 View current settings:
 ![Activation key product content](/plugins/katello/{{ page.version }}/user_guide/activation_keys/activation_key_product_content.png)
