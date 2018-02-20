@@ -403,7 +403,7 @@ This passphrase will be used for signing the packages. Into ~/.rpmmacros put:
 %_gpg_name Katello
 %__gpg_sign_cmd %{__gpg} \
     gpg --force-v3-sigs --digest-algo=sha1 --batch --no-verbose --no-armor \
-    --passphrase-fd 3 --no-secmem-warning -u "%{_gpg_name}" \
+    --no-secmem-warning -u "%{_gpg_name}" \
     -sbo %{__signature_filename} %{__plaintext_filename}
 ```
 
