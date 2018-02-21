@@ -168,7 +168,7 @@ We use MiniTest::Unit syntax.
 * When using FactoryGirl, do not use ```create``` unless necessary, and use ```build``` instead. The former will save the object to the database (slow), the latter keeps the object in memory (faster and garbage collectible)
 * If your tests are repeating code except for a couple of changes, wrap it in a `context` block, or write a helper that takes in the changes through arguments and generates the tests.
 * Use stubs and mocks extensively to test external calls, slow calls not related with the actual test, and also to avoid testing framework features. They make our test base much faster.
-* Use `setup_user` if you need to create an user with special permissions and roles instead of doing it yourself in the test.
+* Use `setup_user` if you need to create a user with special permissions and roles instead of doing it yourself in the test.
 * For functional tests, if several controllers share the same behavior, extract it to a [shared functional concern](https://github.com/theforeman/foreman/blob/develop/test/functional/shared/report_host_permissions_test.rb)
 
 ### Time zones
