@@ -24,7 +24,7 @@ Instead we will override the values directly in `postgresql::globals` and let al
 
 Given that packages from [SoftwareCollections.org](https://www.softwarecollections.org) always come with a prefix for almost everything, we'll have to override the package names, systemd unit names and the data folder.
 
-Luckily, the [PostgreSQL 9.6](https://www.softwarecollections.org/en/scls/rhscl/rh-postgresql96/) software collection also contains `syspaths` packages (`rh-postgresql96-postgresql-syspaths`, `rh-postgresql96-postgresql-server-syspaths`, etc), so that we won't have to worry about scripts expecting `/usr/bin/psql` or similar to exist ("normal" SCL packages don't touch `/usr/bin` and require a `scl enable NAME` to add the SCL-specific `bin` folder to your `PATH`).
+Luckily, the [PostgreSQL 9.6](https://www.softwarecollections.org/en/scls/rhscl/rh-postgresql96/) software collection also contains `syspaths` packages (`rh-postgresql96-postgresql-syspaths`, `rh-postgresql96-postgresql-server-syspaths`, etc), so that we won't have to worry about scripts expecting `/usr/bin/psql` or similar to exist ("normal" SCL packages don't touch `/usr/bin` and require a `scl enable NAME` to add the SCL-specific `bin` folder to your `PATH`). It also provides a `postgresql.service`, which is an alias for `rh-postgresql96-postgresql.service`.
 
 Looking at [`postgresql::globals`](https://github.com/puppetlabs/puppetlabs-postgresql/blob/master/manifests/globals.pp) and [`postgresql::params`](https://github.com/puppetlabs/puppetlabs-postgresql/blob/master/manifests/params.pp), we come up with the following settings:
 
@@ -33,7 +33,7 @@ postgresql::globals::version: '9.6'
 postgresql::globals::client_package_name: rh-postgresql96-postgresql-syspaths
 postgresql::globals::server_package_name: rh-postgresql96-postgresql-server-syspaths
 postgresql::globals::contrib_package_name: rh-postgresql96-postgresql-contrib-syspaths
-postgresql::globals::service_name: rh-postgresql96-postgresql
+postgresql::globals::service_name: postgresql
 postgresql::globals::datadir: /var/opt/rh/rh-postgresql96/lib/pgsql/data
 postgresql::globals::confdir: /var/opt/rh/rh-postgresql96/lib/pgsql/data
 postgresql::globals::bindir: /usr/bin
@@ -79,7 +79,7 @@ centos7-foreman-1.16-psql96:
         postgresql::globals::client_package_name: rh-postgresql96-postgresql-syspaths
         postgresql::globals::server_package_name: rh-postgresql96-postgresql-server-syspaths
         postgresql::globals::contrib_package_name: rh-postgresql96-postgresql-contrib-syspaths
-        postgresql::globals::service_name: rh-postgresql96-postgresql
+        postgresql::globals::service_name: postgresql
         postgresql::globals::datadir: /var/opt/rh/rh-postgresql96/lib/pgsql/data
         postgresql::globals::confdir: /var/opt/rh/rh-postgresql96/lib/pgsql/data
         postgresql::globals::bindir: /usr/bin
