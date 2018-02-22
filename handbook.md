@@ -152,6 +152,12 @@ We use eslint to enforce linting rules. Run eslint by typing `npm run lint` in t
 * Pollute the global namespace. If, for some reason, you must expose a function/value globally, use the ```window.tfm``` object as implemented in ```bundle.js```.
 * Remove global functions from existing code without deprecating them first. Deprecation can be done by calling the `tfm.tools.deprecate` function.
 
+#### Shared modules
+Usually, when we add a new node-module, we want it to be shared with plugins (Unless we have a reason not to share it).
+
+In order to do so, we let [webpack](https://webpack.js.org/) create a `vendor.js` file with the relevant modules.
+We manage the shared-modules list in [config/webpack.vendor.js](https://github.com/theforeman/foreman/blob/develop/config/webpack.vendor.js), when adding/removing node-modules, need to update this file accordingly.
+
 #### Linting rules
 
 The latest lint rules for foreman can be found [here](https://github.com/theforeman/foreman/blob/develop/.eslintrc). See [ESLint Rules](http://eslint.org/docs/rules/) for more information regarding rule configuration.
