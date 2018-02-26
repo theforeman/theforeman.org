@@ -1236,3 +1236,19 @@
     check the site. Presenter Lukas Zapletal from the Foreman Core team
     can speak Czech or English. These are the languages of choice for the
     event. No hardware should be required, lab with 24 PCs.
+- title: 'Foreman Deep Dives: Telemetry in Foreman (with Lukáš Zapletal)'
+  type: 'Livestream'
+  location: virtual
+  start: 2018-03-14 14:00 GMT
+  end: 2018-03-14 15:00 GMT
+  url: 'https://www.youtube.com/watch?v=QoJ-r8YfWEI'
+  description: |
+    Rails internal telemetry was recently added into Foreman Core,
+    in this demo Lukáš Zapletal is going to configure and show how
+    to integrate Foreman with Prometheus. The next part will cover
+    all currently exported metrics, how to read them and utilize for
+    finding bottlenecks. In the last part, he is gonna show how to
+    add your own telemetry data into core or plugins. As always,
+    you're welcome to participate in the show, either via YouTube
+    Live chat, or via our IRC channel (Freenode/#theforeman).
+
