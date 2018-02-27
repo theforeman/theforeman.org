@@ -1236,6 +1236,20 @@
     check the site. Presenter Lukas Zapletal from the Foreman Core team
     can speak Czech or English. These are the languages of choice for the
     event. No hardware should be required, lab with 24 PCs.
+- title: 'Foreman Deep Dives: Foreman-Probing (with Adam Ruzika)'
+  type: 'Livestream'
+  location: virtual
+  start: 2018-03-07 14:00 GMT
+  end: 2018-03-07 15:00 GMT
+  url: 'https://www.youtube.com/watch?v=-PYhFH7YraU'
+  description: |
+   In this deep dive we'll meet a new plugin, foreman-probing.
+   This plugin allows scanning networks and creating Hosts
+   in Foreman for the detected machines. Adam will describe
+   the plugin's features, inner working and possible usagefor
+   brownfield deployments. As always, you're welcome to participate
+   in the show, either via YouTube Live chat, or via our IRC channel
+   (Freenode/#theforeman).
 - title: 'Foreman Deep Dives: Telemetry in Foreman (with Lukáš Zapletal)'
   type: 'Livestream'
   location: virtual
