@@ -1,3 +1,10 @@
+# branch whitelist - this seems like a no-op (since the RegEx includes
+# everything), but it isn't: by default, Travis excludes the `gh-pages` branch,
+# and you need to explicitly enable it.
+branches:
+  only:
+  - gh-pages     # test the gh-pages branch
+  - /(.*)/       # test every other branch
 sudo: false
 language: ruby
 rvm: 2.5
