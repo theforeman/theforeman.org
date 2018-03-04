@@ -89,7 +89,7 @@ You can also exclude these features by using `bundle install --without libvirt p
 1. Login as `admin` with the password from the db:seed step earlier (or reset it with `bundle exec bin/rake permissions:reset`)
 
 #### Submit Patches
-First, make sure you are aware of the [Foreman Development board](https://community.theforeman.org/c/develoment) on our forum.
+First, make sure you are aware of the [Foreman Development board](https://community.theforeman.org/c/development) on our forum.
 
 Patches to fix bugs or add new features are always appreciated. If you are going to work on a specific issue, make a note in the issue details so the developers will know what you're working on.
 
