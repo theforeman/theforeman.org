@@ -43,7 +43,11 @@ Thank you to oVirt, who provide servers for our continuous integration system.
 
 ### Scaleway
 <div class="lead text-left"><a href="https://www.scaleway.com/"><img src="/static/images/sponsors/scaleway.svg" height="100px"/></a></div>
-Thank you to Scaleway, who provide ARM servers for building our arm packages
+Thank you to Scaleway, who provide ARM servers for building our arm packages.
+
+### NETWAYS
+<div class="lead text-left"><a href="https://www.netways.de"><img src="/static/images/sponsors/netways.svg" height="100px"/></a></div>
+Thank you to NETWAYS, who provide servers for our continuous integration system.
 
 ### JetBrains
 
