@@ -22,7 +22,7 @@ end
 
 desc "Given a title as an argument, create a new post file"
 task :new_post, [:title] do |t, args|
-  title = args.title || "new-post"
+  title = args.title || ENV["title"] || "new-post"
   title_clean = title.downcase.strip.gsub(/\s/, '-').gsub(/[^\w-]/, '')
   filename = "#{Time.now.strftime('%Y-%m-%d')}-#{title_clean}.md"
   path = File.join("_posts", filename)
