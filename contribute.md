@@ -25,6 +25,8 @@ You will need to download a copy of the current development code. [The
 official code repository](https://github.com/theforeman) is located
 on GitHub. All changes are made in the `develop` branch.
 
+There is a tool called [Forklift](https://github.com/theforeman/forklift) that can be used to automate deploying Foreman development environments.
+
 #### Supported Ruby versions
 In general the latest Ruby should work. However if you are just starting out, you may want to develop against one of the
 versions that we test against to reduce the chances of you hitting an unexpected issue, although this is not required.
