@@ -91,3 +91,8 @@ be used as well):
 
     records = FactName.where(query).delete_all
     puts "Removed #{records} fact names"
+
+Please note that the settings for "Exclude pattern for facts stored in Foreman" and "Ignore
+interfaces with matching identifier" have some additional logic to simplify regex writing. For
+example, if "exclude pattern for facts" contains `foo01`, it will match `interfaces::foo01::mac`.
+Typically you will not want to copy/paste from one field to another.
