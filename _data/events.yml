@@ -1250,21 +1250,14 @@
    brownfield deployments. As always, you're welcome to participate
    in the show, either via YouTube Live chat, or via our IRC channel
    (Freenode/#theforeman).
-- title: 'Foreman Deep Dives: Telemetry in Foreman (with Lukáš Zapletal)'
+- title: 'Foreman Deep Dives: Telemetry in Foreman (CANCELED)'
   type: 'Livestream'
   location: virtual
   start: 2018-03-14 14:00 GMT
   end: 2018-03-14 15:00 GMT
   url: 'https://www.youtube.com/watch?v=QoJ-r8YfWEI'
   description: |
-    Rails internal telemetry was recently added into Foreman Core,
-    in this demo Lukáš Zapletal is going to configure and show how
-    to integrate Foreman with Prometheus. The next part will cover
-    all currently exported metrics, how to read them and utilize for
-    finding bottlenecks. In the last part, he is gonna show how to
-    add your own telemetry data into core or plugins. As always,
-    you're welcome to participate in the show, either via YouTube
-    Live chat, or via our IRC channel (Freenode/#theforeman).
+    Rails internal telemetry deep dive was canceled.
 - title: 'Foreman Community Demo - 8th March'
   type: 'Livestream'
   location: virtual
@@ -1276,3 +1269,18 @@
     core, proxies, plugins, and more.  As always, you're welcome to participate
     in the show, either via YouTube Live chat, or via our IRC channel
     (Freenode/#theforeman).
+- title: 'Foreman Deep Dives: Telemetry in Foreman (with Lukáš Zapletal)'
+  type: 'Livestream'
+  location: virtual
+  start: 2018-03-27 14:00 GMT
+  end: 2018-03-27 15:00 GMT
+  url: 'https://www.youtube.com/watch?v=QoJ-r8YfWEI'
+  description: |
+    Rails internal telemetry was recently added into Foreman Core,
+    in this demo Lukáš Zapletal is going to configure and show how
+    to integrate Foreman with Prometheus. The next part will cover
+    all currently exported metrics, how to read them and utilize for
+    finding bottlenecks. In the last part, he is gonna show how to
+    add your own telemetry data into core or plugins. As always,
+    you're welcome to participate in the show, either via YouTube
+    Live chat, or via our IRC channel (Freenode/#theforeman).
