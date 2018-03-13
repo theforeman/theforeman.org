@@ -1257,7 +1257,7 @@
   end: 2018-03-14 15:00 GMT
   url: 'https://www.youtube.com/watch?v=QoJ-r8YfWEI'
   description: |
-    Rails internal telemetry deep dive was canceled.
+    Rails internal telemetry deep dive was canceled. Moved to Mar 20 2018.
 - title: 'Foreman Community Demo - 8th March'
   type: 'Livestream'
   location: virtual
@@ -1272,8 +1272,8 @@
 - title: 'Foreman Deep Dives: Telemetry in Foreman (with Lukáš Zapletal)'
   type: 'Livestream'
   location: virtual
-  start: 2018-03-27 14:00 GMT
-  end: 2018-03-27 15:00 GMT
+  start: 2018-03-20 14:00 GMT
+  end: 2018-03-20 15:00 GMT
   url: 'https://www.youtube.com/watch?v=QoJ-r8YfWEI'
   description: |
     Rails internal telemetry was recently added into Foreman Core,
