@@ -1253,8 +1253,8 @@
 - title: 'Foreman Deep Dives: Telemetry in Foreman (with Lukáš Zapletal)'
   type: 'Livestream'
   location: virtual
-  start: 2018-03-14 14:00 GMT
-  end: 2018-03-14 15:00 GMT
+  start: 2018-03-21 14:00 GMT
+  end: 2018-03-21 15:00 GMT
   url: 'https://www.youtube.com/watch?v=QoJ-r8YfWEI'
   description: |
     Rails internal telemetry was recently added into Foreman Core,
