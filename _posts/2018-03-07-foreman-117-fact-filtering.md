@@ -46,7 +46,7 @@ the problem. Now let's focus on what's new in Foreman 1.17.
 
 The new setting is named "Exclude pattern for facts stored in Foreman" and
 works similarly, but for fact names. This prevents Foreman from performing
-unnecessary updates in fact names database table which can easly become a
+unnecessary updates in fact names database table which can easily become a
 bottleneck for all fact update API calls. The default pattern list is the very
 same, but both lists can be changed individually via Administer - Settings -
 Provisioning.
