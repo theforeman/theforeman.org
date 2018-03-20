@@ -249,6 +249,7 @@ bundle exec rake module:bump:major
 bundle exec rake module:bump:minor
 
 # Update CHANGELOG.md
+# TODO: modulesync to include github_changelog_generator in Gemfile
 # See https://github.com/skywinder/github-changelog-generator#github-token on using a token to avoid ratelimits
 github_changelog_generator -u theforeman -p $(basename $PWD) -o new-changelog.md --future-release $(bundle exec rake module:version)
 
@@ -274,6 +275,7 @@ git push --follow-tags
 
 # Push the release to the forge
 # This assumes you have set the credentials previously
+# TODO: Automate this through Travis like voxpupuli?
 bundle exec rake module:clean module:push
 
 # Automated using pass - https://www.passwordstore.org/
@@ -281,6 +283,7 @@ bundle exec rake module:clean module:push
 BLACKSMITH_FORGE_USERNAME="$(jq -r .author metadata.json | tr [A-Z] [a-z])" && BLACKSMITH_FORGE_USERNAME=$BLACKSMITH_FORGE_USERNAME BLACKSMITH_FORGE_PASSWORD=$(pass show $BLACKSMITH_FORGE_USERNAME/forge | head -n 1) bundle exec rake module:push
 
 # Start the next minor version
+# TODO: should we append -rc0 like voxpupuli?
 bundle exec rake module:bump_commit:patch
 
 # And push the new version
