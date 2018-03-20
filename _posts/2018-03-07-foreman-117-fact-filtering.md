@@ -7,11 +7,11 @@ tags:
 - foreman
 ---
 
-Newer versinos of Foreman come with a handy feature - fact and NIC filtering. When
+Newer versions of Foreman come with a handy feature - fact and NIC filtering. When
 Foreman manages hypervisors or container hosts with many bridge or virtual
 devices, fact names are too often updated and when under heavy load, database
 locks or rollbacks can happen as fact uploads are one of the most common API
-calls. Also for each individual NIC reported, Foreman creates NIC entry and by
+calls. Also for each individual NIC reported, Foreman creates a NIC entry and by
 design it never deletes those from the database. This can lead to situations
 when hypervisors and container hosts are assigned thousands of NICs when more and more VMs (or
 containers) are spawned. This slows down performance of various actions, most
@@ -53,7 +53,7 @@ Provisioning.
 
 We also see the same problems for hosts with many (thousands) of hard disks
 which are reported as "blockdevice" facts. In that case, users can add a new entry to
-"Exclude pattern for facts stored in foreman" setting in the form of
+the "Exclude pattern for facts stored in foreman" setting in the form of
 "blockdevice*" to prevent slow updates. Unfortunately, this is currently only
 possible globally, not per server.
 
