@@ -289,14 +289,7 @@ git push
 
 ### Step 7. Pin katello-installer puppet modules for release
 
-On the katello-installer's KATELLO-X.Y branch, we need to pin the modules to a minor release.
-
-For every module in `Puppetfile` pin it to a minor version. For example:
-
-```ruby
-mod 'katello/katello', '>= 7.0.0 < 7.1.0'
-```
-
+On the katello-installer's KATELLO-X.Y branch, we need to pin the modules to a minor release. To pin to patch levels, we use Puppetfile.lock.
 
 ```sh
 KATELLO_VERSION=3.7
@@ -307,6 +300,10 @@ set -e
 
 # Prepare the new branch
 git checkout -b KATELLO-$KATELLO_VERSION
+
+# Pin all modules to releases
+# NOTE: some modules are using git forks because there is no release - handle with care
+bundle exec rake pin_modules
 
 # Stage your changes
 git add Puppetfile
