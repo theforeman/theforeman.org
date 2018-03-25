@@ -7,7 +7,7 @@ tags:
 - foreman
 ---
 
-Newer versinos of Foreman come with a handy feature - fact and NIC filtering. When
+Newer versions of Foreman come with a handy feature - fact and NIC filtering. When
 Foreman manages hypervisors or container hosts with many bridge or virtual
 devices, fact names are too often updated and when under heavy load, database
 locks or rollbacks can happen as fact uploads are one of the most common API
