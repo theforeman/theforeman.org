@@ -93,9 +93,10 @@ Installation may be done manually or via our recommended approach of using [fork
 {% highlight bash %}
 yum install -y yum-utils
 yum-config-manager --disable "*"
-yum-config-manager --enable rhel-7-server-rpms
-yum-config-manager --enable rhel-7-server-optional-rpms
-yum-config-manager --enable rhel-7-server-extras-rpms
+subscription-manager --disable "*"
+subscription-manager --enable rhel-7-server-rpms
+subscription-manager --enable rhel-7-server-optional-rpms
+subscription-manager --enable rhel-7-server-extras-rpms
 {% endhighlight %}
 </div>
 
