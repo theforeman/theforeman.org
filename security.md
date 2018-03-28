@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2018-1096: SQL injection on dashboard](security.html#2018-1096)
 * [CVE-2017-15100: Stored XSS in fact charts](security.html#2017-15100)
 * [CVE-2017-7535: Stored XSS when assigning unassigned hosts to organization/location](security.html#2017-7535)
 * [CVE-2017-7505: User scoped in organization with permissions for user management can manage administrators that are not assigned to any organization](security.html#2017-7505)
@@ -73,6 +74,16 @@ All security advisories made for Foreman are listed below with their correspondi
 
 ### Disclosure details
 
+#### <a id="2018-1096"></a>CVE-2018-1096: SQL injection on dashboard 
+
+One of the parameters passed when saving dashboard widget positions was not properly escaped, leading to possibility of SQL injection attack. Due to the nature of the query the impact is limited to possible information disclosure and does not allow modifications to the database.
+
+This issue was reported by Martin Povolný of Red Hat.
+
+* Affects Foreman 1.9 and higher.
+* Fix released with Foreman 1.16.1.
+* Redmine issue [#23028](http://projects.theforeman.org/issues/23028)
+
 #### <a id="2017-15100"></a>CVE-2017-15100: Stored XSS on fact related charts
 
 Facts reported by hosts that contain HTML code in their fact name or value could cause said HTML to be executed by users' browser when hovering over fact distribution charts on the facts page, on the statistic page and on the trends page.
@@ -95,7 +106,7 @@ This issue was reported by Sanket Jagtap.
 
 #### <a id="2017-7505"></a>CVE-2017-7505: User scoped in organization with permissions for user management can manage administrators that are not assigned to any organization
 
-User with *_users permissions who is assigned to some organization(s) can do all operations granted by these permissions on all administrator user objects. We considered admin to effectively be present in all organizations.
+User with `*_users` permissions who is assigned to some organization(s) can do all operations granted by these permissions on all administrator user objects. We considered admin to effectively be present in all organizations.
 
 The issue was reported by David Caplan.
 
