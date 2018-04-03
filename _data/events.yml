@@ -1287,3 +1287,17 @@
     core, proxies, plugins, and more.  As always, you're welcome to participate
     in the show, either via YouTube Live chat, or via our IRC channel
     (Freenode/#theforeman).
+- title: 'Foreman Usability - Red Hat Subscriptions page (with Walden Raines)'
+  type: 'Livestream'
+  location: virtual
+  start: 2018-04-04 14:00 BST
+  end: 2018-04-04 15:00 BST
+  url: 'https://www.youtube.com/watch?v=635AqkBIsTU'
+  description: |
+    The Red Hat Subscriptions page is being moved to react and changes will be
+    made to allow a user to manage the number of subscription entitlements from
+    within Katello rather than going to the Red Hat Portal.
+    This is the first step towards making the consumption of Red Hat subscriptions
+    within Katello more user friendly and seamless.
+    This demo will show the progress made thus far as well as mockups on where
+    we are going.
