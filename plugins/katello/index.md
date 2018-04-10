@@ -1,7 +1,7 @@
 ---
 layout: plugin_index
 title: Katello Documentation
-versions: [{name: 3.6, display: '3.6-RC1'}, {name: 3.5, display: '3.5'}, {name: 3.4, display: '3.4'}, {name: 3.3, display: '3.3'}, {name: 3.2, 'display': '3.2'}, {name: 3.1, display: '3.1'}, {name: 3.0, display: '3.0'}, {name: 2.4, display: '2.4'}, {name: 'nightly', display: 'nightly'}]
+versions: [{name: 3.6, display: '3.6'}, {name: 3.5, display: '3.5'}, {name: 3.4, display: '3.4'}, {name: 3.3, display: '3.3'}, {name: 3.2, 'display': '3.2'}, {name: 3.1, display: '3.1'}, {name: 3.0, display: '3.0'}, {name: 2.4, display: '2.4'}, {name: 'nightly', display: 'nightly'}]
 ---
 
 <div class="row" style="min-height: 700px">
