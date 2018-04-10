@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2018-1097: oVirt credetials exposed by power API](security.html#2018-1097)
 * [CVE-2018-1096: SQL injection on dashboard](security.html#2018-1096)
 * [CVE-2017-15100: Stored XSS in fact charts](security.html#2017-15100)
 * [CVE-2017-7535: Stored XSS when assigning unassigned hosts to organization/location](security.html#2017-7535)
@@ -73,6 +74,14 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2018-1097"></a>CVE-2018-1097: oVirt credetials exposed by power API
+
+When sending a power action to a host provisioned on an oVirt compute resource, the API responded with details of the compute resource, including credentials in clear text.
+
+* Affects Foreman 1.3 and higher.
+* Fix released with Foreman 1.16.1.
+* Redmine issue [#22546](http://projects.theforeman.org/issues/22546)
 
 #### <a id="2018-1096"></a>CVE-2018-1096: SQL injection on dashboard 
 
