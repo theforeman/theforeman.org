@@ -1301,3 +1301,14 @@
     within Katello more user friendly and seamless.
     This demo will show the progress made thus far as well as mockups on where
     we are going.
+- title: 'Foreman Community Demo - 26th April'
+  type: 'Livestream'
+  location: virtual
+  start: 2018-04-26 15:00 BST
+  end: 2018-04-26 16:00 BST
+  url: 'https://www.youtube.com/watch?v=BCq_YfpYPS8'
+  description: |
+    Time again for the latest roundup of action from the community, covering
+    core, proxies, plugins, and more.  As always, you're welcome to participate
+    in the show, either via YouTube Live chat, or via our IRC channel
+    (Freenode/#theforeman).
