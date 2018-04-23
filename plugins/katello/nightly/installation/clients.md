@@ -21,6 +21,8 @@ Install the appropriate Katello client release packages.  For CentOS 6, you will
      <option value="el7">Enterprise Linux 7 (CentOS, etc.)</option>
      <option value="f22">Fedora 22</option>
      <option value="f23">Fedora 23</option>
+     <option value="sles11">Suse Enterprise Linux Server 11</option>
+     <option value="sles12">Suse Enterprise Linux Server 12</option>
   </select>
 </p>
 
@@ -58,6 +60,20 @@ yum install -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.vers
 {% endhighlight %}
 </div>
 
+<div id="sles12" style="display:none;" markdown="1">
+{% highlight bash %}
+rpm -Uvh https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/sles12/x86_64/katello-client-repos-latest.rpm
+{% endhighlight %}
+</div>
+
+<div id="sles11" style="display:none;" markdown="1">
+{% highlight bash %}
+# For python-datetime dependency, ensure that the SDK addon product is enabled see: https://www.suse.com/support/kb/doc/?id=7015337
+zypper modifyrepo -e nu_novell_com:SLES11-Extras
+rpm -Uvh https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/sles11/x86_64/katello-client-repos-latest.rpm
+{% endhighlight %}
+</div>
+
 Now you are ready to install the client package:
 
 The `katello-host-tools` package reports errata & package profile information, but does not allow you to run remote actions on the clients.
@@ -76,6 +92,12 @@ Optionally you can also install `katello-host-tools-tracer` and the client will 
 
 {% highlight bash %}
 yum install katello-host-tools-tracer
+{% endhighlight %}
+
+For Suse Clients, only katello-host-tools is supported:
+
+{% highlight bash %}
+zypper install katello-host-tools
 {% endhighlight %}
 
 ## Provisioned
