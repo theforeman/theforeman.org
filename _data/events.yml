@@ -1312,3 +1312,15 @@
     core, proxies, plugins, and more.  As always, you're welcome to participate
     in the show, either via YouTube Live chat, or via our IRC channel
     (Freenode/#theforeman).
+- title: 'Foreman Usability - Breadcrumb Bar (with Amir Feferkuchen)'
+  type: 'Livestream'
+  location: virtual
+  start: 2018-05-02 14:00 BST
+  end: 2018-05-02 15:00 BST
+  url: 'https://www.youtube.com/watch?v=L6vrs1rtjAo'
+  description: |
+    Breadcrumbs display a users location within an application hierarchy.
+    They act as a resource to help users navigate more efficiently and provide additional context.
+    The Breadcrumb Switcher provides a shortcut for users to quickly navigate to parallel pages,
+    rather than navigating back to the previous page and making a new selection.
+    In this demo, we will show the new BreadcrumbBar and an example of how to migrate from the old two-pane.
