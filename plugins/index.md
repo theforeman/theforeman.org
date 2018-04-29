@@ -220,16 +220,14 @@ To provide specific installation instructions, please select your operating syst
 <select onChange="update_installation_os(this);">
   <option value="none">-- select operating system --</option>
   <option value="debian">Debian or Ubuntu</option>
-  <option value="el6">Enterprise Linux 6</option>
   <option value="el7">Enterprise Linux 7</option>
-  <option value="fedora19">Fedora 19</option>
 </select>
 
 <div class="installation_os installation_os_none">
   <i>No operating system selected.</i>
 </div>
 
-<div class="installation_os installation_os_el6 installation_os_el7 installation_os_fedora19">
+<div class="installation_os installation_os_el7">
   <p>
     The repositories are available at <a href="http://yum.theforeman.org/plugins/">yum.theforeman.org/plugins</a>.  Separate repositories are available for each Foreman release, containing plugins that are compatible with that particular version.  Packages are not currently GPG signed.
   </p>
@@ -239,31 +237,11 @@ To provide specific installation instructions, please select your operating syst
   </p>
 </div>
 
-<div class="installation_os installation_os_el6">
-<pre>
-[foreman-plugins]
-name=Foreman plugins
-baseurl=http://yum.theforeman.org/plugins/{{page.version}}/el6/x86_64/
-enabled=1
-gpgcheck=0
-</pre>
-</div>
-
 <div class="installation_os installation_os_el7">
 <pre>
 [foreman-plugins]
 name=Foreman plugins
 baseurl=http://yum.theforeman.org/plugins/{{page.version}}/el7/x86_64/
-enabled=1
-gpgcheck=0
-</pre>
-</div>
-
-<div class="installation_os installation_os_fedora19">
-<pre>
-[foreman-plugins]
-name=Foreman plugins
-baseurl=http://yum.theforeman.org/plugins/{{page.version}}/f19/x86_64/
 enabled=1
 gpgcheck=0
 </pre>
@@ -283,7 +261,7 @@ deb http://deb.theforeman.org/ plugins {{page.version}}
 </pre>
 </div>
 
-<div class="installation_os installation_os_el6 installation_os_el7 installation_os_fedora19">
+<div class="installation_os installation_os_el7">
   <p>
     Change the version number in the URL to match the Foreman release in use.
   </p>
@@ -319,27 +297,15 @@ deb http://deb.theforeman.org/ plugins {{page.version}}
   </p>
 </div>
 
-<div class="installation_os installation_os_el6 installation_os_el7">
+<div class="installation_os installation_os_el7">
   <p>
     The naming of packages is as follows:
   </p>
 
   <ul>
-    <li>Packages for Foreman 1.10 or newer have a <code>tfm-rubygem-foreman_</code> codefix, while packages for Foreman 1.9 or older will have a <code>ruby193-rubygem-foreman_</code> codefix instead.  Adapt any instructions to suit.</li>
+    <li>Packages for Foreman have a <code>tfm-rubygem-foreman_</code> codefix.</li>
     <li>Smart proxy packages have a <code>rubygem-smart_proxy_</code> codefix.</li>
-    <li>Hammer CLI packages for Foreman 1.10 or newer have a <code>tfm-rubygem-hammer_cli_</code> codefix, while CLI packages for 1.9 or older will have a <code>rubygem-hammer_cli_</code> codefix only.</li>
-  </ul>
-</div>
-
-<div class="installation_os installation_os_fedora19">
-  <p>
-    The naming of packages is as follows:
-  </p>
-
-  <ul>
-    <li>Foreman plugin packages have a <code>rubygem-foreman_</code> codefix.  Adapt any instructions to suit.</li>
-    <li>Smart proxy packages have a <code>rubygem-smart_proxy_</code> codefix.</li>
-    <li>Hammer CLI packages have a <code>rubygem-hammer_cli_</code> codefix.</li>
+    <li>Hammer CLI packages have a <code>tfm-rubygem-hammer_cli_</code> codefix.</li>
   </ul>
 </div>
 
@@ -363,7 +329,7 @@ Ensure the plugin you want is available from rubygems.org as a gem. Plugins that
 
 ### 2.3.1 Red Hat distributions
 
-If on EL6 or EL7, run `scl enable tfm bash` first for an SCL-enabled shell (not needed on Fedora).  On Foreman 1.9 or older, use `scl enable ruby193 bash` instead.
+If on EL7, run `scl enable tfm bash` first for an SCL-enabled shell.
 
 * Install *without* dependencies: `gem install --ignore-dependencies foreman_column_view`
 * If you need other dependencies (see the rubygems.org page), check the yum repo above (e.g. deface, nokogiri) or install the same way with 'gem'
