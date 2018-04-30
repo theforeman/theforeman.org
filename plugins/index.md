@@ -303,9 +303,9 @@ deb http://deb.theforeman.org/ plugins {{page.version}}
   </p>
 
   <ul>
-    <li>Packages for Foreman have a <code>tfm-rubygem-foreman_</code> codefix.</li>
-    <li>Smart proxy packages have a <code>rubygem-smart_proxy_</code> codefix.</li>
-    <li>Hammer CLI packages have a <code>tfm-rubygem-hammer_cli_</code> codefix.</li>
+    <li>Packages for Foreman have a <code>tfm-rubygem-foreman_</code> prefix.</li>
+    <li>Smart proxy packages have a <code>rubygem-smart_proxy_</code> prefix.</li>
+    <li>Hammer CLI packages have a <code>tfm-rubygem-hammer_cli_</code> prefix.</li>
   </ul>
 </div>
 
@@ -315,9 +315,9 @@ deb http://deb.theforeman.org/ plugins {{page.version}}
   </p>
 
   <ul>
-    <li>Packages for Foreman have a <code>ruby-foreman-</code> codefix.</li>
-    <li>Smart proxy packages have a <code>ruby-smart-proxy-</code> codefix.</li>
-    <li>Hammer CLI packages have a <code>ruby-hammer-cli-</code> codefix.</li>
+    <li>Packages for Foreman have a <code>ruby-foreman-</code> prefix.</li>
+    <li>Smart proxy packages have a <code>ruby-smart-proxy-</code> prefix.</li>
+    <li>Hammer CLI packages have a <code>ruby-hammer-cli-</code> prefix.</li>
   </ul>
 </div>
 
