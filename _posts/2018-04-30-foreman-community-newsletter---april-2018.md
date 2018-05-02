@@ -38,6 +38,14 @@ Feel free to continue contacting Ori but now you can also
 reach out to Greg again.
 Welcome back Greg!
 
+### Feedback wanted - Highly Available Proxies
+
+Sean O'Keeffe wants your input! We've been having a lot of discussion on the
+right way to implement high availability for the proxies, and we'd like to hear
+from more voices. If you're curious about the current plans, and want to offer
+your thoughts, then head over to the [forum thread][ha-proxy] for more details.
+Thanks!
+
 ### Upcoming Events
 
 * Community Demo - 17th May (URL to be announced)
@@ -110,3 +118,4 @@ everything else. Your efforts are very much appreciated!
 [issues]: http://projects.theforeman.org/issues
 [k_issues]: http://projects.theforeman.org/projects/katello/issues
 
+[ha-proxy]: https://community.theforeman.org/t/user-survey-supporting-ha-smart-proxies/8832
