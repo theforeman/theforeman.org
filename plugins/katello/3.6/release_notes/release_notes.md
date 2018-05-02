@@ -14,7 +14,7 @@ A disclaimer, we are aware of a bug in 3.6 where you cannot delete an organizati
 
 ## Features
 
-###Content View Optimizations 
+### Content View Optimizations
 
 Performance improvements across the board have brought up to a 50% improvement in Content View Publishes, 95% improvement in Promotions, and a 95% improvement in Composite Content View publishes.
 
