@@ -30,7 +30,7 @@ Puppetserver does not allow certificate signing to be load-balanced. The puppets
 Each smart proxy generates its own yum metadata for RPM repositories. This means that if a request to `https://smartproxy.example.test/repo/repodata/repomd.xml` goes to the first smart proxy, and the next request to fetch `repodata/<CHECKSUM>-primary.xml.gz` goes to the second smart proxy, the second request will 404. To work around this, we advise that port 443 should be sticky-sessioned.
 
 ## Requirements
-* a working Foreman/Katello installation (we don't need to do any changes here)
+* an existing working Foreman/Katello installation (we don't need to do any changes here, setup is the normal installation)
 * two or more machines for the Smart Proxy cluster
 * a load balancer - you can use a machine with HAProxy if you don't already have a load balancer
 * a common name in the DNS that points to the load balancer (we'll be using `smartproxy.example.test`)
@@ -40,7 +40,7 @@ Each smart proxy generates its own yum metadata for RPM repositories. This means
 When calling `foreman-proxy-certs-generate`, we have to pass `--foreman-proxy-cname smartproxy.example.test` to add the load-balanced name as an accepted `subjectAltName` to the list of names in the generated certificates. This allows clients to connect to each member of the smartproxy cluster as `smartproxy.example.test`
 
 ### Preparing `custom-hiera.yaml`
-We need to configure Pulp to serve redirects in the streamer code to the name of the load-balancer, but this option is not exposed in the Installer. Thus edit `/etc/foreman-installer/custom-hiera.yaml` and add the following line at the end:
+We need to configure Pulp to serve redirects in the streamer code to the name of the load-balancer, but this option is not exposed in the installer. Thus edit `/etc/foreman-installer/custom-hiera.yaml` and add the following line at the end:
 
 ```yaml
 pulp::lazy_redirect_host: smartproxy.example.test
@@ -104,7 +104,7 @@ The HAProxy setup itself is super simple, just load-balance a bunch of ports in 
 
 ## Configuring Clients
 
-As far as clients are concerned, they should only know about one proxy: `smartproxy.example.test`. That has to be configured for Puppet and for RHSM/Yum.
+As far as clients are concerned, they should only know about `smartproxy.example.test`, and should never need to connect directly to a smartproxy. That has to be configured for Puppet, goferd, and for RHSM/Yum.
 
 ### Using katello-client-bootstrap
 
@@ -114,7 +114,7 @@ To attach clients to the load-balanced proxy, we just have to pass `--server sma
 
 ### Manual registration
 
-Indtead of using `bootstrap.py`, the client can also be registered manually.
+Instead of using `bootstrap.py`, the client can also be registered manually. However, we recommend using `bootstrap.py` since it handles these extra manual steps for you.
 
 After installing `katello-ca-consumer` RPM from `http://smartproxy.example.test/pub/katello-ca-consumer-latest.noarch.rpm` `/etc/rhsm/rhsm.conf` and `/etc/yum.repos.d/redhat.repo` will contain the hostname of whichever proxy served the initial request and not `smartproxy.example.net` as we'd like it. Thus, when registering the system with `subscription-manager`, we have to pass `--serverurl=https://smartproxy.example.test:8443/rhsm --baseurl=https://smartproxy.example.test/pulp/repos` to update those two config files.
 
