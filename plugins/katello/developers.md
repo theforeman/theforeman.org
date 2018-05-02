@@ -256,6 +256,9 @@ github_changelog_generator -u theforeman -p $(basename $PWD) -o new-changelog.md
 # branches so if anything was merged to a stable branch you should manually put
 # it in the correct release. This may also break badly on stable branches.
 
+# Add links to Redmine for issues
+sed -i 's,\(fixes\|fixing\|refs\) \\#\([0-9]\+\),\1 [\\#\2](https://projects.theforeman.org/issues/\2),i' CHANGELOG.md
+
 # Create the release commit
 git add CHANGELOG.md
 VERSION=$(bundle exec rake module:version) && git commit -m "Release $VERSION"
