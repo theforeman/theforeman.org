@@ -29,6 +29,10 @@ Puppetserver does not allow certificate signing to be load-balanced. The puppets
 
 Each smart proxy generates its own yum metadata for RPM repositories. This means that if a request to `https://smartproxy.example.test/repo/repodata/repomd.xml` goes to the first smart proxy, and the next request to fetch `repodata/<CHECKSUM>-primary.xml.gz` goes to the second smart proxy, the second request will 404. To work around this, we advise that port 443 should be sticky-sessioned.
 
+### SELinux in permissive mode for HAProxy
+
+As HAProxy will listen on ports not "owned" by it, SELinux will by default prevent that. For the sake of this post, we'll run the whole HAProxy machine in permissive mode, but it's an open TODO item to investigate how to properly confine HAProxy.
+
 ## Requirements
 * an existing working Foreman/Katello installation (we don't need to do any changes here, setup is the normal installation)
 * two or more machines for the Smart Proxy cluster
@@ -40,7 +44,7 @@ Each smart proxy generates its own yum metadata for RPM repositories. This means
 When calling `foreman-proxy-certs-generate`, we have to pass `--foreman-proxy-cname smartproxy.example.test` to add the load-balanced name as an accepted `subjectAltName` to the list of names in the generated certificates. This allows clients to connect to each member of the smartproxy cluster as `smartproxy.example.test`
 
 ### Preparing `custom-hiera.yaml`
-We need to configure Pulp to serve redirects in the streamer code to the name of the load-balancer, but this option is not exposed in the installer. Thus edit `/etc/foreman-installer/custom-hiera.yaml` and add the following line at the end:
+Pulp uses the hostname of the smart proxy to generate redirects when serving [lazy (on demand) synced content](https://docs.pulpproject.org/dev-guide/design/deferred-download.html). These redirects need to happen to the name of the load-balancer, but this option is not exposed in the installer. Thus edit `/etc/foreman-installer/custom-hiera.yaml` and add the following line at the end:
 
 ```yaml
 pulp::lazy_redirect_host: smartproxy.example.test
@@ -67,7 +71,9 @@ On the first smart proxy, generate the Puppet certificates by running
 puppet cert generate proxy02.example.test --dns_alt_names=smartproxy.example.test
 ```
 
-Now copy `/etc/puppetlabs/puppet/ssl/*/proxy02.example.test.pem` and `/etc/puppetlabs/puppet/ssl/certs/ca.pem` to the second smart proxy and ensure the permissions are identical to the ones on the first host. The `puppet` user is created after installing the `puppetserver` package, so you might want to do that first. Also don't forget to check the SELinux contexts of the files you copied over (hint: `ls -lZ`) :)
+Install the `puppetserver` package on the second smart proxy, to create the `puppet` user and the directory structure in `/etc/puppetlabs`.
+
+Now copy `/etc/puppetlabs/puppet/ssl/*/proxy02.example.test.pem` and `/etc/puppetlabs/puppet/ssl/certs/ca.pem` to the second smart proxy and ensure ownership and permissions are identical to those the first host. Also don't forget to check the SELinux contexts of the files you copied over (hint: `ls -lZ`) :)
 
 Repeat this step for all smart proxies that are going to sit behind the same load balancer.
 
@@ -84,7 +90,9 @@ As only the first Smart Proxy will host a PuppetCA, we point the Puppet agent to
 ```
 ## Installing HAProxy
 
-As HAProxy will listen on ports not "owned" by it, SELinux will be default prevent that. For the sake of this post, we'll run the whole machine in permissive mode, but it's an open TODO item to investigate how to properly confine HAProxy. Also note that if you are using a different load balancer technology, you can use this configuration as reference.
+Please note that if you are using a different load balancer technology, you can use this configuration as reference.
+
+Configure SELinux to run in `permissive` mode.
 
 The HAProxy setup itself is super simple, just load-balance a bunch of ports in TCP mode round-robin across all the Smart Proxies. TCP mode is required because the load balancer will not be doing TLS termination. There are just two exceptions to that: port 443 should use `source` not `roundrobin` to not confuse Yum, and the additional port for the PuppetCA (8141) is forwarded only to the first smart proxy.
 
@@ -108,7 +116,7 @@ As far as clients are concerned, they should only know about `smartproxy.example
 
 ### Using katello-client-bootstrap
 
-[katello-client-bootstrap](https://github.com/Katello/katello-client-bootstrap) is designed to configure a machine to be used with an exiting Katello environment. It also can configure Puppet properly for us, and supports [setting a separate Puppet CA and Puppet CA port in current Git](https://github.com/Katello/katello-client-bootstrap/pull/250).
+[katello-client-bootstrap](https://github.com/Katello/katello-client-bootstrap) is designed to configure a machine to be used with an exiting Katello environment. It can also configure Puppet properly for us and supports [setting a separate Puppet CA and Puppet CA port in current Git](https://github.com/Katello/katello-client-bootstrap/pull/250).
 
 To attach clients to the load-balanced proxy, we just have to pass `--server smartproxy.example.test` and `--puppet-ca-port 8141`, `bootstrap.py` will take care of the rest.
 
