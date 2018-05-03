@@ -143,7 +143,7 @@ ca_port = 8141
 As usual, there is [support for the loadbalanced scenario in `forklift`](https://github.com/theforeman/forklift/blob/master/pipelines/pipeline_katello_lbproxy.yml).
 
 ## Help! Something doesn't work!
-The load balancer adds additional complexity to a Foreman/Katello installation. If a client is having trouble using one of the services provided by the smart proxies, a typical first debugging step is to point the client directly to one of the smart proxies via a `/etc/hosts` entry, which bypasses the load balancer. If the issue persists, then you know that the issue is with that smart proxy. Each smart proxy can be checked individually for functionality with this method.
+The load balancer adds additional complexity to a Foreman/Katello installation. If a client is having trouble using one of the services provided by the smart proxies, a typical first debugging step is to point the client directly to one of the smart proxies via a `/etc/hosts` entry, which bypasses the load balancer. If the issue persists, then you know that the issue is with that smart proxy. Each smart proxy can be checked individually for functionality with this method. Don't forget that if you are debugging Puppet certificate signing issues related to the Puppet CA feature, you will need to use port 8140 on the first capsule.
 
 It is also helpful to use the load balanced scenario in forklift, so you have a working setup to use as reference.
 
