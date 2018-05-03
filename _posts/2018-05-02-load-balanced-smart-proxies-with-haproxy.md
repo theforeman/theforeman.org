@@ -98,7 +98,7 @@ Please note that if you are using a different load balancer technology, you can 
 
 Configure SELinux to run in `permissive` mode.
 
-The HAProxy setup itself is super simple, just load-balance a bunch of ports in TCP mode round-robin across all the Smart Proxies. TCP mode is required because the load balancer will not be doing TLS termination. There are just two exceptions to that: port 443 should use `source` not `roundrobin` to not confuse Yum, and the additional port for the PuppetCA (8141) is forwarded only to the first smart proxy.
+The HAProxy setup itself is straightforward, just load-balance a bunch of ports in TCP mode round-robin across all the Smart Proxies. TCP mode is required because the load balancer will not be doing TLS termination. There are just two exceptions to that: port 443 should use `source` not `roundrobin` to not confuse Yum, and the additional port for the PuppetCA (8141) is forwarded only to the first smart proxy.
 
 | Service    | Port | Mode | Balance mode | Destination |
 | ---------- | ---- | ---- | ------------ | ----------- |
