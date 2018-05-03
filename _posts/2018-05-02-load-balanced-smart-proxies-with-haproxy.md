@@ -52,9 +52,11 @@ pulp::lazy_redirect_host: smartproxy.example.net
 ### Running the installer
 As only the first Smart Proxy will host a PuppetCA, we configure that explicitly during the installation and also configure the Puppet certificate to include the `smartproxy.example.net` name:
 ```
---puppet-dns-alt-names smartproxy.example.net
---puppet-ca-server proxy01.example.net
---foreman-proxy-puppetca true
+[root@smartproxy01] # foreman-installer \
+…
+--puppet-dns-alt-names smartproxy.example.net \
+--puppet-ca-server proxy01.example.net \
+--foreman-proxy-puppetca true \
 --puppet-server-ca true
 ```
 
@@ -83,9 +85,11 @@ These steps are identical to the steps used on the first Smart Proxy.
 ### Running the installer
 As only the first Smart Proxy will host a PuppetCA, we point the Puppet agent to it explicitly during the installation and also configure the Puppet certificate to include the `smartproxy.example.net` name:
 ```
---puppet-dns-alt-names smartproxy.example.net
---puppet-ca-server proxy01.example.net
---foreman-proxy-puppetca false
+[root@smartproxy02] # foreman-installer \
+…
+--puppet-dns-alt-names smartproxy.example.net \
+--puppet-ca-server proxy01.example.net \
+--foreman-proxy-puppetca false \
 --puppet-server-ca false
 ```
 ## Installing HAProxy
