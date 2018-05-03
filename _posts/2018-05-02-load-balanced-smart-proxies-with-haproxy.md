@@ -27,7 +27,7 @@ Puppetserver does not allow certificate signing to be load-balanced. The puppets
 
 ### Yum metadata
 
-Each smart proxy generates its own yum metadata for RPM repositories. This means that if a request to `https://smartproxy.example.test/repo/repodata/repomd.xml` goes to the first smart proxy, and the next request to fetch `repodata/<CHECKSUM>-primary.xml.gz` goes to the second smart proxy, the second request will 404. To work around this, we advise that port 443 should be sticky-sessioned.
+Each smart proxy generates its own yum metadata for RPM repositories. This means that if a request to `https://smartproxy.example.net/repo/repodata/repomd.xml` goes to the first smart proxy, and the next request to fetch `repodata/<CHECKSUM>-primary.xml.gz` goes to the second smart proxy, the second request will 404. To work around this, we advise that port 443 should be sticky-sessioned.
 
 ### SELinux in permissive mode for HAProxy
 
@@ -37,23 +37,23 @@ As HAProxy will listen on ports not "owned" by it, SELinux will by default preve
 * an existing working Foreman/Katello installation (we don't need to do any changes here, setup is the normal installation)
 * two or more machines for the Smart Proxy cluster
 * a load balancer - you can use a machine with HAProxy if you don't already have a load balancer
-* a common name in the DNS that points to the load balancer (we'll be using `smartproxy.example.test`)
+* a common name in the DNS that points to the load balancer (we'll be using `smartproxy.example.net`)
 
 ## Installing the first Smart Proxy
 ### Generating Katello certificates
-When calling `foreman-proxy-certs-generate`, we have to pass `--foreman-proxy-cname smartproxy.example.test` to add the load-balanced name as an accepted `subjectAltName` to the list of names in the generated certificates. This allows clients to connect to each member of the smartproxy cluster as `smartproxy.example.test`
+When calling `foreman-proxy-certs-generate`, we have to pass `--foreman-proxy-cname smartproxy.example.net` to add the load-balanced name as an accepted `subjectAltName` to the list of names in the generated certificates. This allows clients to connect to each member of the smartproxy cluster as `smartproxy.example.net`
 
 ### Preparing `custom-hiera.yaml`
 Pulp uses the hostname of the smart proxy to generate redirects when serving [lazy (on demand) synced content](https://docs.pulpproject.org/dev-guide/design/deferred-download.html). These redirects need to happen to the name of the load-balancer, but this option is not exposed in the installer. Thus edit `/etc/foreman-installer/custom-hiera.yaml` and add the following line at the end:
 
 ```yaml
-pulp::lazy_redirect_host: smartproxy.example.test
+pulp::lazy_redirect_host: smartproxy.example.net
 ```
 ### Running the installer
-As only the first Smart Proxy will host a PuppetCA, we configure that explicitly during the installation and also configure the Puppet certificate to include the `smartproxy.example.test` name:
+As only the first Smart Proxy will host a PuppetCA, we configure that explicitly during the installation and also configure the Puppet certificate to include the `smartproxy.example.net` name:
 ```
---puppet-dns-alt-names smartproxy.example.test
---puppet-ca-server proxy01.example.test
+--puppet-dns-alt-names smartproxy.example.net
+--puppet-ca-server proxy01.example.net
 --foreman-proxy-puppetca true
 --puppet-server-ca true
 ```
@@ -68,12 +68,12 @@ This step is identical to the steps used to generate the certificates for the fi
 On the first smart proxy, generate the Puppet certificates by running
 
 ```shell
-puppet cert generate proxy02.example.test --dns_alt_names=smartproxy.example.test
+puppet cert generate proxy02.example.net --dns_alt_names=smartproxy.example.net
 ```
 
 Install the `puppetserver` package on the second smart proxy, to create the `puppet` user and the directory structure in `/etc/puppetlabs`.
 
-Now copy `/etc/puppetlabs/puppet/ssl/*/proxy02.example.test.pem` and `/etc/puppetlabs/puppet/ssl/certs/ca.pem` to the second smart proxy and ensure ownership and permissions are identical to those the first host. Also don't forget to check the SELinux contexts of the files you copied over (hint: `ls -lZ`) :)
+Now copy `/etc/puppetlabs/puppet/ssl/*/proxy02.example.net.pem` and `/etc/puppetlabs/puppet/ssl/certs/ca.pem` to the second smart proxy and ensure ownership and permissions are identical to those the first host. Also don't forget to check the SELinux contexts of the files you copied over (hint: `ls -lZ`) :)
 
 Repeat this step for all smart proxies that are going to sit behind the same load balancer.
 
@@ -81,10 +81,10 @@ Repeat this step for all smart proxies that are going to sit behind the same loa
 These steps are identical to the steps used on the first Smart Proxy.
 
 ### Running the installer
-As only the first Smart Proxy will host a PuppetCA, we point the Puppet agent to it explicitly during the installation and also configure the Puppet certificate to include the `smartproxy.example.test` name:
+As only the first Smart Proxy will host a PuppetCA, we point the Puppet agent to it explicitly during the installation and also configure the Puppet certificate to include the `smartproxy.example.net` name:
 ```
---puppet-dns-alt-names smartproxy.example.test
---puppet-ca-server proxy01.example.test
+--puppet-dns-alt-names smartproxy.example.net
+--puppet-ca-server proxy01.example.net
 --foreman-proxy-puppetca false
 --puppet-server-ca false
 ```
@@ -112,25 +112,25 @@ The HAProxy setup itself is super simple, just load-balance a bunch of ports in 
 
 ## Configuring Clients
 
-As far as clients are concerned, they should only know about `smartproxy.example.test`, and should never need to connect directly to a smartproxy. That has to be configured for Puppet, goferd, and for RHSM/Yum.
+As far as clients are concerned, they should only know about `smartproxy.example.net`, and should never need to connect directly to a smartproxy. That has to be configured for Puppet, goferd, and for RHSM/Yum.
 
 ### Using katello-client-bootstrap
 
 [katello-client-bootstrap](https://github.com/Katello/katello-client-bootstrap) is designed to configure a machine to be used with an exiting Katello environment. It can also configure Puppet properly for us and supports [setting a separate Puppet CA and Puppet CA port in current Git](https://github.com/Katello/katello-client-bootstrap/pull/250).
 
-To attach clients to the load-balanced proxy, we just have to pass `--server smartproxy.example.test` and `--puppet-ca-port 8141`, `bootstrap.py` will take care of the rest.
+To attach clients to the load-balanced proxy, we just have to pass `--server smartproxy.example.net` and `--puppet-ca-port 8141`, `bootstrap.py` will take care of the rest.
 
 ### Manual registration
 
 Instead of using `bootstrap.py`, the client can also be registered manually. However, we recommend using `bootstrap.py` since it handles these extra manual steps for you.
 
-After installing `katello-ca-consumer` RPM from `http://smartproxy.example.test/pub/katello-ca-consumer-latest.noarch.rpm` `/etc/rhsm/rhsm.conf` and `/etc/yum.repos.d/redhat.repo` will contain the hostname of whichever proxy served the initial request and not `smartproxy.example.net` as we'd like it. Thus, when registering the system with `subscription-manager`, we have to pass `--serverurl=https://smartproxy.example.test:8443/rhsm --baseurl=https://smartproxy.example.test/pulp/repos` to update those two config files.
+After installing `katello-ca-consumer` RPM from `http://smartproxy.example.net/pub/katello-ca-consumer-latest.noarch.rpm` `/etc/rhsm/rhsm.conf` and `/etc/yum.repos.d/redhat.repo` will contain the hostname of whichever proxy served the initial request and not `smartproxy.example.net` as we'd like it. Thus, when registering the system with `subscription-manager`, we have to pass `--serverurl=https://smartproxy.example.net:8443/rhsm --baseurl=https://smartproxy.example.net/pulp/repos` to update those two config files.
 
-Additionally Puppet needs to be configured to talk to the PuppetCA on the dedicated port on `smartproxy.example.test`, so the `puppet.conf` needs the following lines:
+Additionally Puppet needs to be configured to talk to the PuppetCA on the dedicated port on `smartproxy.example.net`, so the `puppet.conf` needs the following lines:
 
 ```
-server = smartproxy.example.test
-ca_server = smartproxy.example.test
+server = smartproxy.example.net
+ca_server = smartproxy.example.net
 ca_port = 8141
 ```
 
