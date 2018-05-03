@@ -126,7 +126,7 @@ Instead of using `bootstrap.py`, the client can also be registered manually. How
 
 After installing `katello-ca-consumer` RPM from `http://smartproxy.example.test/pub/katello-ca-consumer-latest.noarch.rpm` `/etc/rhsm/rhsm.conf` and `/etc/yum.repos.d/redhat.repo` will contain the hostname of whichever proxy served the initial request and not `smartproxy.example.net` as we'd like it. Thus, when registering the system with `subscription-manager`, we have to pass `--serverurl=https://smartproxy.example.test:8443/rhsm --baseurl=https://smartproxy.example.test/pulp/repos` to update those two config files.
 
-Also Puppet needs to be configured to talk to the split-out PuppetCA, so the `puppet.conf` needs the following lines:
+Additionally Puppet needs to be configured to talk to the PuppetCA on the dedicated port on `smartproxy.example.test`, so the `puppet.conf` needs the following lines:
 
 ```
 server = smartproxy.example.test
