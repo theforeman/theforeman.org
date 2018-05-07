@@ -250,7 +250,7 @@ bundle exec rake module:bump:minor
 
 # Update CHANGELOG.md
 # See https://github.com/skywinder/github-changelog-generator#github-token on using a token to avoid ratelimits
-github_changelog_generator -u theforeman -p $(basename $PWD) -o new-changelog.md --future-release $(bundle exec rake module:version)
+github_changelog_generator -u theforeman -p $(basename $PWD) --breaking-labels "Backwards incompatible" -o new-changelog.md --future-release $(bundle exec rake module:version)
 
 # Now merge new-changelog.md into CHANGELOG.md - do note that it doesn't handle
 # branches so if anything was merged to a stable branch you should manually put
