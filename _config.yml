@@ -26,7 +26,7 @@ navigation:
 - text: Introduction
   url: introduction.html
 - text: Quickstart
-  url: manuals/1.16/quickstart_guide.html#QuickstartGuide
+  url: manuals/1.17/quickstart_guide.html#QuickstartGuide
 - text: Documentation
   url: documentation.html
 - text: Videos
