@@ -46,15 +46,15 @@ yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarc
 {% endhighlight %}
 </div>
 
-<div id="f22" style="display:none;" markdown="1">
+<div id="f25" style="display:none;" markdown="1">
 {% highlight bash %}
-yum install -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/f22/x86_64/katello-client-repos-latest.rpm
+yum install -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/f25/x86_64/katello-client-repos-latest.rpm
 {% endhighlight %}
 </div>
 
-<div id="f23" style="display:none;" markdown="1">
+<div id="f26" style="display:none;" markdown="1">
 {% highlight bash %}
-yum install -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/f23/x86_64/katello-client-repos-latest.rpm
+yum install -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/f26/x86_64/katello-client-repos-latest.rpm
 {% endhighlight %}
 </div>
 
