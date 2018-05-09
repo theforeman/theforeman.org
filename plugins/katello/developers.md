@@ -30,6 +30,8 @@ The Katello bug triage process is designed to address Redmine issues that have b
 
 The runner is the person in charge of following the procedures here and generally conducting the meeting.
 
+We follow a rotation with respect to who runs the triage session. You can see the rotation [here](http://projects.theforeman.org/projects/katello/wiki/Triage_Rotation).
+
 ### Frequency
 
 Triage is done once a week for an hour. As long as a week is not skipped, this has been enough time to get through every issue and leave 5-15 minutes extra. When a release is pending, or a new release has been sent out the volume does spike.
