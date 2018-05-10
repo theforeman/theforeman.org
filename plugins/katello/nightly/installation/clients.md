@@ -19,8 +19,8 @@ Install the appropriate Katello client release packages.  For CentOS 6, you will
      <option value="el5">Enterprise Linux 5 (CentOS, etc.)</option>
      <option value="el6">Enterprise Linux 6 (CentOS, etc.)</option>
      <option value="el7">Enterprise Linux 7 (CentOS, etc.)</option>
-     <option value="f22">Fedora 22</option>
-     <option value="f23">Fedora 23</option>
+     <option value="f26">Fedora 26</option>
+     <option value="f27">Fedora 27</option>
      <option value="sles11">Suse Enterprise Linux Server 11</option>
      <option value="sles12">Suse Enterprise Linux Server 12</option>
   </select>
@@ -48,15 +48,15 @@ yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarc
 {% endhighlight %}
 </div>
 
-<div id="f22" style="display:none;" markdown="1">
+<div id="f26" style="display:none;" markdown="1">
 {% highlight bash %}
-yum install -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/f22/x86_64/katello-client-repos-latest.rpm
+yum install -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/f26/x86_64/katello-client-repos-latest.rpm
 {% endhighlight %}
 </div>
 
-<div id="f23" style="display:none;" markdown="1">
+<div id="f27" style="display:none;" markdown="1">
 {% highlight bash %}
-yum install -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/f23/x86_64/katello-client-repos-latest.rpm
+yum install -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/f27/x86_64/katello-client-repos-latest.rpm
 {% endhighlight %}
 </div>
 

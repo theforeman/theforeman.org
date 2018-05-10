@@ -8,7 +8,12 @@ $(document).ready(function(){
             'el6': [],
             'el7': [],
             'f22': [],
-            'f23': []
+            'f23': [],
+            'f25': [],
+            'f26': [],
+            'f27': [],
+            'sles11': [],
+            'sles12': []
         };
 
         function show(os) {
