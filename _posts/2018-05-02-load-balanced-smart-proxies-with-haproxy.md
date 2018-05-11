@@ -29,10 +29,6 @@ Puppetserver does not allow certificate signing to be load-balanced. The puppets
 
 Each smart proxy generates its own yum metadata for RPM repositories. This means that if a request to `https://smartproxy.example.net/repo/repodata/repomd.xml` goes to the first smart proxy, and the next request to fetch `repodata/<CHECKSUM>-primary.xml.gz` goes to the second smart proxy, the second request will 404. To work around this, we advise that port 443 should be sticky-sessioned.
 
-### SELinux in permissive mode for HAProxy
-
-As HAProxy will listen on ports not "owned" by it, SELinux will by default prevent that. For the sake of this post, we'll run the whole HAProxy machine in permissive mode, but it's an open TODO item to investigate how to properly confine HAProxy.
-
 ## Requirements
 * an existing working Foreman/Katello installation (we don't need to do any changes here, setup is the normal installation)
 * two or more machines for the Smart Proxy cluster
@@ -96,7 +92,7 @@ As only the first Smart Proxy will host a PuppetCA, we point the Puppet agent to
 
 Please note that if you are using a different load balancer technology, you can use this configuration as reference.
 
-Configure SELinux to run in `permissive` mode.
+Configure SELinux to allow HAProxy to bind any port: `semanage boolean --modify --on haproxy_connect_any`
 
 The HAProxy setup itself is straightforward, just load-balance a bunch of ports in TCP mode round-robin across all the Smart Proxies. TCP mode is required because the load balancer will not be doing TLS termination. There are just two exceptions to that: port 443 should use `source` not `roundrobin` to not confuse Yum, and the additional port for the PuppetCA (8141) is forwarded only to the first smart proxy.
 
