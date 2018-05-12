@@ -62,6 +62,7 @@ git remote add upstream https://github.com/theforeman/foreman.git
 git fetch upstream
 {% endhighlight %}
 * Copy `config/settings.yaml.example` to `config/settings.yaml`
+* Copy `config/database.yml.example` to `config/database.yml`
 * Install all required gems and node modules:
 {% highlight bash %}
 bundle install
@@ -77,7 +78,6 @@ for RHEL/Fedora based distributions).
 You can also exclude these features by using `bundle install --without libvirt postgresql` etc (groups are under bundler.d/).
 
 #### Setup test environment
-1. Copy `config/database.yml.example` to `config/database.yml`
 1. Create your database: `bundle exec bin/rake db:migrate`
 1. Run all the tests: `bundle exec bin/rake test`
 1. Or a single test: `bundle exec bin/rake test test/functional/your_test.rb`
@@ -87,7 +87,7 @@ You can also exclude these features by using `bundle install --without libvirt p
 1. Follow steps 1, 2 and 3 from the section "setup test environment" if you haven't done so already
 1. Populate database: `bundle exec bin/rake db:seed` and take note of the password it generates
 1. Start up the server: `bundle exec foreman start`
-1. Navigate to [http://localhost:3000](http://localhost:3000)
+1. Navigate to [http://localhost:5000](http://localhost:5000)
 1. Login as `admin` with the password from the db:seed step earlier (or reset it with `bundle exec bin/rake permissions:reset`)
 
 #### Submit Patches
