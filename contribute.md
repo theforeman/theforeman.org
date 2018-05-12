@@ -18,7 +18,7 @@ not consider [creating an event](https://github.com/theforeman/theforeman.org/bl
 The Foreman is an open-source project that's licensed under the GNU General Public License version 3.<br>
 Contributions of all types are gladly accepted!
 
-### Setting up a development environmnt
+### Setting up a development environment
 These types of tasks generally require a familiarity with Ruby (on Rails) development or RPM/Debian packaging. If you are still new to Rails, community members can help you if you get stuck with something or have any other questions.
 
 You will need to download a copy of the current development code. [The
