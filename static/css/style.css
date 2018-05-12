@@ -1034,6 +1034,7 @@ pre {
   background-color: #2f2f2f;
   line-height: 14px;
   height: auto;
+  max-width: 850px;
 }
 
 pre code {
