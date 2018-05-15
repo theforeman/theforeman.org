@@ -215,6 +215,8 @@ You will find the repositories checked out to the versions specified in the rele
 
 ### Step 5: Get Your Branch On
 
+#### Step 5.1: Create the branches for gems and docs
+
 On the date you previously warned the community branching would occur, ensure any project dependencies are updated, including gem version constraints, and branch the repositories:
 
 ```
@@ -230,6 +232,10 @@ You will also need to branch the documentation at [theforeman.org](https://thefo
 Make sure to follow the instructions and update the docs to use the current release version. Submit a pull request to theforeman.org repository with the changes.
 
 Congratulations, you have successfully branched all of the repositories and prepared them for release. We recommend double checking each repository ensuring that the branch exists in the upstream repository, that the top of the commit stack in that branch includes the tag you created prior to branching (so that you have an initial tag point that represents the branch point) and that the tag itself exists. The last part of this step is to send to a follow up notification letting the community know that everything has been branched.
+
+#### Step 5.2: Teach Jenkins about the new branch
+
+Jenkins has a [branch map](https://github.com/theforeman/foreman-infra/blob/master/puppet/modules/jenkins_job_builder/files/theforeman.org/pipelines/test/testKatello.groovy#L2) for running Katello tests against the correct Foreman version, this map needs to be updated to contain the new version you've just branched.
 
 ### Step 6. Release puppet modules
 
