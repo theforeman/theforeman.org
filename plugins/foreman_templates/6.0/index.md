@@ -120,109 +120,85 @@ sudo -u foreman git config --global http.sslCAPath /path/to/ca/certs
 
 # 4. Usage (features description)
 
-Both importing and exporting is available as rake tasks. Rake tasks are triggered from terminal. If you installed the plugin using foreman-installer, or simply it's package based installation), you should be able to run rake using `foreman-rake` command. Source-based installs of Foreman will need to use Bundler to call Rake as normal, e.g. cloned from git, you should likely use `RAILS_ENV=production bundle exec rake` ran from your Foreman directory.
+Both importing and exporting is available as new API endpoints. Previously we also had rake tasks but they are now deprecated as they ignore authorization and auditing. Please see next chapter about API information. There's also a hammer plugin for similar experience that rake tasks provided.
 
-There are other ways to run the action discussed under API chapter.
- 
-# 4.1 Importing
+# 5. API and Hammer plugin
 
-If you have all attributes configured via Settings you can simply run following command
+# 5.1 API endpoints
 
-```sh
-foreman-rake templates:import
-```
-
-This task based on $repo setting either uses git or scans local directory for templates to import. If you want to customize any setting for a particular run, just specify it as extra argument.
-
-```sh
-foreman-rake templates:import repo=https://github.com/theforeman/community-templates
-```
-
-The example above would clone the repository to some temp directory. If `branch` was specified, it switches to this branch. Then if `dirname` was provided, it will "cd" into it. Finally it searches for all files in this directory and subdirectories that has `'.erb` suffix. Then the template is parsed and imported (see below for more details)
-
-```sh
-foreman-rake templates:import repo=/var/lib/my_templates
-```
-
-Compared to previous example, this uses local directory. Therefore not git clone or branch checkout is done. If `dirname` is specified, the task goes into this subdirectory and searches for all files with '.erb' extension. Then the same parsing and importing process follows,
-
-The parsing process reads the content of the file. It expects the content of the template including some template metadata. The metadata are an ERB comment on top of the file, for illustration see some template in [community-templates repository](https://github.com/theforeman/community-templates/blob/develop/provisioning_templates/provision/kickstart_default.erb). It's in yaml format and specifies template name, kind, compatible operating systems, organizations, locations and possibly other. The template gets it's name based on information from metadata. Before the template is saved in database, `prefix` setting is applied to it's name. Then the `filter` regular expression is matched against the prefixed name. If the `filter` matches, templates is saved. If `negate` is set to `true`, the template would be saved only if `filter` regular expression didn't match the template name. If the template with a given name exists in database already, it's content is updated.
-
-The result of the whole import is printed on the STDOUT. The output contains list of created/updated templates as well as applied diffs.
-
-A few more useful examples follow
-
-```sh
-# prefix all templates with "[comunity] " string to avoid overriding existing templates
-foreman-rake templates:import prefix='[community] '
-
-# get the latest templates (might be compatible with only Foreman nightly)
-foreman-rake templates:import repo=https://github.com/theforeman/community-templates branch=develop
-
-tree /tmp/my-repo/
-/tmp/my-repo/
-└── large-ptable.erb
-
-0 directories, 1 file
-
-# this will create a template named "[community] large-ptable"
-foreman-rake templates:import repo=/tmp/my-repo/ prefix='[community] '
-
-```
-
-# 4.2 Exporting
-
-If you want to edit templates directly in Foreman and then sync them back to external repositories, you need the exporting task. This plugin allows to export directly to git repository or local directory. For exporting to git repository, the user that's Foreman running under needs to have write (commit) access to this repository. If your settings is correctly configure, exporting can be triggered by running following command.
-
-```sh
-foreman-rake templates:export
-```
-
-If the `repo` is git repository, we clone it to a temp directory. Then we apply changes to template files and automatically create a commit with a generated message and push it back to origin. We do not delete files that are not present in Foreman database, so this should not be destructive. On the other hand if you want more control over the process or you want to use another SCM, local directory export is advised. To specify a local directory, just set the repo accordingly
- 
-```sh
-foreman-rake templates:export repo=/var/lib/my_templates
-```
-
-When `repo` is set to local directory, exported templates are written into it. We don't touch any other files, so the directory can be under git (or any other SCM) control. You can then investigate changes by running `git status` and do the commit yourself when you're happy about the change.
-
-For both git and plain directory targets, following applies. If `dirname` is specified, the export is written to this subdirectory of `repo`. Only templates with name matching to `filter` are exported. If filter is blank, all templates are exported. In case `negate` was used, the `filter` matching result is negated. This can be used to ignore some templates, e.g. following would not export templates starting with [private] and [wip] prefixes
-
-```sh
-foreman-rake templates:export filter='\[wip\]|\[private\] '
-```
- 
-When a template is exported, there are 3 ways how to handle metadata.
-
-* **refresh** - remove any metadata from template content and generate new based on current template attributes and assignment
-* **remove** - remove any metadata from template content, useful if you want to add metadata manually or externally
-* **keep** - keep any metadata found in template content despite current attributes and assignments in database, useful when you want to send a patch to community-templates but you don't have all operating systems configured in your Foreman
-
-Suppose you'd like to change something in default Foreman templates. You can use this plugin to make this process easy. First you need to update the template in you database and test it works. Then go to https://github.com/theforeman/community-templates and fork the repository. Clone your fork to the host where you have Foreman installed. Then run `foreman-rake templates:export repo=/path/to/your/clone`. Review the change, commit the change by `git commit -a` and push back to your GitHub fork by `git push`. Then on GitHub, open a new PR against theforeman/community-templates repositories.
-
-# 4.3 Purging
-
-It can happen that you import a lot of templates that you're not interested in. E.g. the first run could import all community-templates with "[Community]" prefix. You can use purge task to destroy all templates matching given `prefix`. Also `negate` can be used for this task. For example
-
-```sh
-# deletes all templates with prefix '[Community] '
-foreman-rake templates:purge prefix='[Community] ' verbose=true
-
-# deletes all templates other than those that start with prefix '[my] '
-foreman-rake templates:purge prefix='[my] ' verbose=true negate=true
-```
-
-# 5. API
-
-Its recommend to initiate import and export using the API instead of the traditional `foreman-rake templates:import`. This has a couple of benefits like it's run as the user and therefore leverages the RBAC system. Here's an example using curl, optionally you can also override the default settings by specifying them in the request. See <code>&lt;your_foreman_url&gt;/apidoc/</code> for a full list of parameters available.
+The plugin introduces two new endpoints for triggering import and export of templates. This has a couple of benefits like it's run as the authenticated user and therefore leverages the RBAC system. Here's an example using curl, optionally you can also override the default settings by specifying them in the request. In following examples, we override repo parameters, for all available parameters, see <code>&lt;your_foreman_url&gt;/apidoc/</code>.
 
 ```sh
 curl -H "Accept:application/json,version=2" -H "Content-Type:application/json" -u user1:changeme -k https://foreman.example.com/api/v2/templates/import -X POST -d "{\"repo\":\"/another/repo\"}"
 ```
 
+an example of JSON you get back follows
+
+```json
+{
+    "message": {
+        "templates": [
+            [0] {
+                             "name": "community Alterator default finish",
+                               "id": 693,
+                          "changed": false,
+                         "imported": true,
+                "additional_errors": null,
+                        "exception": null,
+                "validation_errors": {},
+                             "file": "community_alterator_default_finish.erb",
+                             "type": "provisioning_template"
+            }
+        ],
+             "repo": "/another/repo",
+           "branch": null
+    }
+}
+```
+
+as you can see, data are structured under message -> templates.
+
 ```sh
 curl -H "Accept:application/json,version=2" -H "Content-Type:application/json" -u user1:changeme -k https://foreman.example.com/api/v2/templates/export -X POST -d "{\"repo\":\"/another/repo\"}"
 ```
+
+and similar output for export endpoint
+
+```json
+{
+    "message": {
+            "error": null,
+          "warning": null,
+             "repo": "/another/repo",
+           "branch": null,
+         "git_user": "admin",
+        "templates": [
+            [0] {
+                      "id": 697,
+                    "name": "community Alterator default finish",
+                "exported": true,
+                    "type": "provisioning_template"
+            }
+        ]
+    }
+}
+```
+
+note in examples above, example list only the repository with a single template, you'd get multiple items under templates key, if you have more templates in the repository.
+
+# 5.2 Hammer plugin
+
+You can also install hammer_cli_foreman_templates plugin. The same as showed in example above, using hammer plugin would like like this
+
+```sh
+hammer import-templates --repo=/another/repo
+```
+
+```sh
+hammer export-templates --repo=/another/repo
+```
+
+For full list of parameters, just add --help to either of these commands.
 
 # 6. Working with locked templates
 
@@ -230,9 +206,21 @@ Templates shipped by Foreman are locked. Template import does not update locked 
 
 ## 6.1 Known taxonomy problems when importing
 
-The import procedure uses template metadata to determine Organization/Location asssociations. When non-admin user initiates the import via API, it may be possible that metadata do not contain any Organization/Location the user is assigned to. In this case, import of the template fails with: `Invalid organizations selection, you must select at least one of yours`. To import such a template, update it's metadata so it contains at least one Organization/Location that user is assigned to.
+The import procedure uses template metadata to determine Organization/Location asssociations. When non-admin user initiates the import via API, it may be possible that metadata do not contain any Organization/Location the user is assigned to. In this case, import of the template fails with: `Invalid organizations selection, you must select at least one of yours`. To import such a template, update it's metadata so it contains at least one Organization/Location that user is assigned to. Or alternatively, specify organizations/locations as API parameter.
+
+```sh
+curl -H "Accept:application/json,version=2" -H "Content-Type:application/json" -u user1:changeme -k https://foreman.example.com/api/v2/templates/import -X POST -d "{\"organization_ids\": [ 1, 3 ]}"
+```
+
+Hammer plugin also exposes these arguments.
+
+```sh
+hammer import-templates --organization-ids 1,3
+```
 
 When there is OrgA with template some_tmpl and b_user (user only in OrgB) tries to import some_tmpl (which is not yet present in OrgB), it fails with: `name has already been taken`. This is a general problem with taxonomies - some_tmpl is not found for update in scope of OrgB and when we try to create it, we hit the unique constraint on name that is not scoped by taxonomy. To import such a template, change its name in metadata or associate existing template with the same name in OrgA to OrgB as well.
+
+Export API endpoint also allows to set organizations and locations explicitly. If you select OrgA on export, only templates associated with OrgA will be exported. The same applies to hammer plugin.
 
 # 7. Help
 
@@ -319,10 +307,105 @@ This is usually the case on systemd-enabled operating systems. Foreman service u
 
 This can happen if there's no change since last commit. In fact, the export was successful.
 
+# 8 Deprecated rake-tasks documentation
 
-# 8. Getting involved
+Following section covers deprecated interface using rake tasks. We recommend using API or hammer plugin instead. This interface can be removed in future.
 
-## 8.1 Troubleshooting
+If you installed the plugin using foreman-installer, or simply it's package based installation), you should be able to run rake using `foreman-rake` command. Source-based installs of Foreman will need to use Bundler to call Rake as normal, e.g. cloned from git, you should likely use `RAILS_ENV=production bundle exec rake` ran from your Foreman directory.
+
+There are other ways to run the action discussed under API chapter.
+ 
+# 8.1 Importing
+
+If you have all attributes configured via Settings you can simply run following command
+
+```sh
+foreman-rake templates:import
+```
+
+This task based on $repo setting either uses git or scans local directory for templates to import. If you want to customize any setting for a particular run, just specify it as extra argument.
+
+```sh
+foreman-rake templates:import repo=https://github.com/theforeman/community-templates
+```
+
+The example above would clone the repository to some temp directory. If `branch` was specified, it switches to this branch. Then if `dirname` was provided, it will "cd" into it. Finally it searches for all files in this directory and subdirectories that has `'.erb` suffix. Then the template is parsed and imported (see below for more details)
+
+```sh
+foreman-rake templates:import repo=/var/lib/my_templates
+```
+
+Compared to previous example, this uses local directory. Therefore not git clone or branch checkout is done. If `dirname` is specified, the task goes into this subdirectory and searches for all files with '.erb' extension. Then the same parsing and importing process follows,
+
+The parsing process reads the content of the file. It expects the content of the template including some template metadata. The metadata are an ERB comment on top of the file, for illustration see some template in [community-templates repository](https://github.com/theforeman/community-templates/blob/develop/provisioning_templates/provision/kickstart_default.erb). It's in yaml format and specifies template name, kind, compatible operating systems, organizations, locations and possibly other. The template gets it's name based on information from metadata. Before the template is saved in database, `prefix` setting is applied to it's name. Then the `filter` regular expression is matched against the prefixed name. If the `filter` matches, templates is saved. If `negate` is set to `true`, the template would be saved only if `filter` regular expression didn't match the template name. If the template with a given name exists in database already, it's content is updated.
+
+The progress of the whole import is logged to production.log, you might need to adjust log levels for getting more information. The output contains list of created/updated templates as well as applied diffs.
+
+A few more useful examples follow
+
+```sh
+# prefix all templates with "[comunity] " string to avoid overriding existing templates
+foreman-rake templates:import prefix='[community] '
+
+# get the latest templates (might be compatible with only Foreman nightly)
+foreman-rake templates:import repo=https://github.com/theforeman/community-templates branch=develop
+
+tree /tmp/my-repo/
+/tmp/my-repo/
+└── large-ptable.erb
+
+0 directories, 1 file
+
+# this will create a template named "[community] large-ptable"
+foreman-rake templates:import repo=/tmp/my-repo/ prefix='[community] '
+
+```
+
+# 8.2 Exporting
+
+If you want to edit templates directly in Foreman and then sync them back to external repositories, you need the exporting task. This plugin allows to export directly to git repository or local directory. For exporting to git repository, the user that's Foreman running under needs to have write (commit) access to this repository. If your settings are correctly configure, exporting can be triggered by running following command.
+
+```sh
+foreman-rake templates:export
+```
+
+If the `repo` is git repository, we clone it to a temp directory. Then we apply changes to template files and automatically create a commit with a generated message and push it back to origin. We do not delete files that are not present in Foreman database, so this should not be destructive. On the other hand if you want more control over the process or you want to use another SCM, local directory export is advised. To specify a local directory, just set the repo accordingly
+ 
+```sh
+foreman-rake templates:export repo=/var/lib/my_templates
+```
+
+When `repo` is set to local directory, exported templates are written into it. We don't touch any other files, so the directory can be under git (or any other SCM) control. You can then investigate changes by running `git status` and do the commit yourself when you're happy about the change.
+
+For both git and plain directory targets, following applies. If `dirname` is specified, the export is written to this subdirectory of `repo`. Only templates with name matching to `filter` are exported. If filter is blank, all templates are exported. In case `negate` was used, the `filter` matching result is negated. This can be used to ignore some templates, e.g. following would not export templates starting with [private] and [wip] prefixes
+
+```sh
+foreman-rake templates:export filter='\[wip\]|\[private\] '
+```
+ 
+When a template is exported, there are 3 ways how to handle metadata.
+
+* **refresh** - remove any metadata from template content and generate new based on current template attributes and assignment
+* **remove** - remove any metadata from template content, useful if you want to add metadata manually or externally
+* **keep** - keep any metadata found in template content despite current attributes and assignments in database, useful when you want to send a patch to community-templates but you don't have all operating systems configured in your Foreman
+
+Suppose you'd like to change something in default Foreman templates. You can use this plugin to make this process easy. First you need to update the template in you database and test it works. Then go to https://github.com/theforeman/community-templates and fork the repository. Clone your fork to the host where you have Foreman installed. Then run `foreman-rake templates:export repo=/path/to/your/clone`. Review the change, commit the change by `git commit -a` and push back to your GitHub fork by `git push`. Then on GitHub, open a new PR against theforeman/community-templates repositories.
+
+# 8.3 Purging
+
+It can happen that you import a lot of templates that you're not interested in. E.g. the first run could import all community-templates with "[Community]" prefix. You can use purge task to destroy all templates matching given `prefix`. Also `negate` can be used for this task. For example
+
+```sh
+# deletes all templates with prefix '[Community] '
+foreman-rake templates:purge prefix='[Community] ' verbose=true
+
+# deletes all templates other than those that start with prefix '[my] '
+foreman-rake templates:purge prefix='[my] ' verbose=true negate=true
+```
+
+# 9. Getting involved
+
+## 9.1 Troubleshooting
 
 If you find a bug, please file it in
 [Redmine](http://projects.theforeman.org/projects/templates/issues/new).
@@ -331,12 +414,12 @@ See the [troubleshooting section](/manuals/latest/index.html#7.2GettingHelp)
 in the Foreman manual for more info.
 
 
-## 8.2 Contributing
+## 9.2 Contributing
 
 Follow the [same process as Foreman](/contribute.html#SubmitPatches)
 for contributing.
 
-# 9. Links
+# 10. Links
 
 * foreman_templates plugin [https://github.com/theforeman/foreman_templates](https://github.com/theforeman/foreman_templates)
 * issue tracker [http://projects.theforeman.org/projects/templates/issues](http://projects.theforeman.org/projects/templates/issues)
