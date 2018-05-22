@@ -9,7 +9,7 @@ tags:
 - repo
 ---
 
-This blog post describes how to use Katello 3.5 to host Ubuntu repos.
+*NOTE:* This blog post describes how to use Katello 3.5 to host Ubuntu repos. If you are using a later version of Katello, it may already support deb packages natively.
 
 # Building Ubuntu Using Katello File Repo
 I have an offline network and need to build both RPM based systems and DEB based systems. Instead of installing Katello to handle rpms, and something else to handle debs, I set up Katello to handle both.
