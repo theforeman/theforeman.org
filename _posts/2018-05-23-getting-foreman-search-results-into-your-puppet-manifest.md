@@ -29,13 +29,13 @@ But, if you don't have a puppetdb server and you are already using theforeman as
 
 ## A use case out of standard usages.
 
-Use cases about monitoring or backups are standard. Lets try to build an other example where we can use the foreman search engine.
+Use cases about monitoring or backups are standards. Lets try to build an other example where we can use the foreman search engine.
 
-Imagine that you are managing nodes with puppet and they are in `hostgroup` like `secure_base/role`. Where `secure_base` permits to apply all common settings to all your nodes in a secured environment. And `role` permits to apply settings dedicated to the role of a node. Now, lets say you have the constraint to not use a dnsi. But your customer would like to call hosts in a humain way so with names and not with IPs. I already met this use case. Fortunatly, servers were using only one ip address.
+Imagine that you are managing nodes with puppet and they are in `hostgroups` like `secure_base/role`. Where `secure_base` permits to apply all common settings to all your nodes in a secured environment. And `role` permits to apply settings dedicated to the role of a node. Now, lets say you have the constraint to not use a dns. And your customer would like to call hosts in a humain way, so with names and not with IPs. I already met this use case. Fortunatly, servers were using only one ip address.
 
 So you have to manage your `/etc/hosts` with puppet or you become crazy. 
 
-Each node have to execute the following code :
+If each node execute the following code :
 
 ```
   $query = foreman({foreman_user => 'apiuser',
@@ -71,11 +71,17 @@ At least two possibilities to get the function into your environement .
  * You installed forman with `foreman-installer`. And so, you can simply copy `/usr/share/foreman-installer/modules/foreman/lib/puppet/parser/functions/foreman.rb` into your module managing `/etc/hosts`.
  * And otherwise, you can [download the function foreman()](https://github.com/theforeman/puppet-foreman/blob/master/lib/puppet/parser/functions/foreman.rb) and use it into your module managing `/etc/hosts`.
 
-## take a look about code of function foreman()
+Probably a better way is to create a module named like `foreman-libs` containing the function `foreman()`. And add this module in your list of imported modules. Rememebr that to be able to be imported by theforeman the module must :
+ * contain a file `manifests/init.pp`
+ * not contain errors, like those reported by `puppet parser validate <file.pp>`.
 
-The code is clearly commented. Only by reading comments, it is possible to add following comments.
+It is also possible to write your own function to query [the API](https://theforeman.org/documentation.html) in a way that fits your needs.
 
-We used option `item` with `hosts`. But, it may be may be `environments`, `fact_values`, `hosts`, `hostgroups`, `puppetclasses`, `smart_proxies` or `subnets`.
+## Take a look about code of function foreman()
+
+The code is clearly commented. Only by reading comments, it is possible to add following informations.
+
+We used option `item` with `hosts`. But, it may be `environments`, `fact_values`, `hosts`, `hostgroups`, `puppetclasses`, `smart_proxies` or `subnets`.
 
 We didn't used option `per_page`. But, by default the function returns only 20 items in a row.
 
