@@ -10,7 +10,7 @@ Foreman Ansible allows you to import hosts via Ansible, along with facts about t
 
 Every time you run a playbook or an Ansible module, Foreman will receive facts and a report for the host you have executed it on. If you ran Ansible from Foreman itself, the output of your Ansible run will be saved in our database.
 
-You can define a list of roles to enforce, or just run arbitrary playbooks on the hosts.
+You can define a list of roles to enforce and run arbitrary playbooks on the hosts.
 ![host with reports](static/images/plugins/foreman_ansible/registered_host.png)
 ![rex results](static/images/plugins/foreman_ansible/rex_results.png)
 ![rex playbook_output](static/images/plugins/foreman_ansible/rex_playbook_output.png)
@@ -19,42 +19,124 @@ You can define a list of roles to enforce, or just run arbitrary playbooks on th
 
 ## 2.1 Ansible callback
 
-In order to make Ansible send us data from the hosts, we set up a callback on your host that runs Ansible. To do this:
+<script type="text/javascript">
+function update_ansible_version(select) {
+  var version = select.value;
+  $(".ansible_version").hide();
+  if (version && version != 'none') {
+    $(".ansible_version_"+version).show();
+  } else {
+    $(".ansible_version_none").show();
+  }
+}
+</script>
 
-You need to configure it via the following environment variables (the variables need to be available to the user running the callback. Usually foreman-proxy):
+In order to make Ansible send us data from the hosts, we set up a callback on your host that runs Ansible.
+To provide specific installation instructions, please select your Ansible version:
 
-* FOREMAN_URL: the URL of your Foreman installation (default "http://localhost:3000")
-* FOREMAN_SSL_CERT: The public key when using SSL client certificates (default "/etc/foreman/client_cert.pem")
-* FOREMAN_SSL_KEY: The private key when using SSL client certificates (default  "/etc/foreman/client_key.pem")
-* FOREMAN_SSL_VERIFY: wether to verify SSL certificates. Use *False*
-  to disable certificate checks. You can also set it to CA bundle (default is "True").
+<select onChange="update_ansible_version(this);">
+  <option value="none">-- select Ansible version --</option>
+  <option value="25">2.5 or higher</option>
+  <option value="22">2.2, 2.3, 2.4</option>
+  <option value="21">2.1 or lower</option>
+</select>
 
-You can put these variables in `/etc/environment`. Since the 'foreman' and 'foreman-proxy' are 'no-login' users, you should set these in the `EnviromentFile` used by systemd, `/etc/sysconfig/foreman` and `/etc/sysconfig/foreman-proxy`
+<div class="ansible_version ansible_version_none">
+  <i>No Ansible version selected.</i>
+</div>
 
-To obtain a valid certificate for your host follow the procedure as described [here](http://theforeman.org/manuals/latest/index.html#4.3.10SSL)
-See the [python-requests documentation](http://docs.python-requests.org/en/master/user/advanced/#ssl-cert-verification) on the details of certificate setup.
 
-* If you use Ansible 2.2+ , our callback is installed with Ansible itself, simply change `/etc/ansible/ansible.cfg` to contain
+<div class="ansible_version ansible_version_25 ansible_version_22" style="display:none;">
+<p>
+Our callback is installed with Ansible itself, change <code>/etc/ansible/ansible.cfg</code> to contain
+</p>
 
-      [defaults]
-      bin_ansible_callbacks = True
-      callback_whitelist = foreman
+{% highlight bash %}
+[defaults]
+callback_whitelist = foreman
+{% endhighlight %}
 
+<p>
 and the callback will be enabled after that.
+</p>
 
+<p>
+Of course, the callback cannot know automatically where is Foreman located and which certificates to use in its requests.
+</p>
+</div>
 
-For Ansible versions older than 2.2:
+<div class="ansible_version ansible_version_25" style="display:none;">
+<p>
+To configure it, add a section <code>[callback_foreman]</code> at the end of <code>/etc/ansible/ansible.cfg</code> like this:
+</p>
 
-* Change your `/etc/ansible/ansible.cfg` to contain the following options
+{% highlight bash %}
+[callback_foreman]
+url = 'https://foreman.example.com'
+ssl_cert = /etc/foreman-proxy/ssl_cert.pem
+ssl_key = /etc/foreman-proxy/ssl_key.pem
+verify_certs = /etc/foreman-proxy/ssl_ca.pem
+{% endhighlight %}
+</div>
 
-      callback_plugins = ~/.ansible/plugins/callback_plugins/
-      bin_ansible_callbacks = True
+<div class="ansible_version ansible_version_21" style="display:none;">
+<p>
+We don't really test these versions, however if you need to use an old version of Ansible, you could do the following:
+</p>
 
-* And run this line to download the callback file in the appropriate location
+<ul>
+  <li>
+  Change your <code>/etc/ansible/ansible.cfg</code> to contain the following options:
+  </li>
 
-      wget https://github.com/ansible/ansible/blob/devel/lib/ansible/plugins/callback/foreman.py -O ~/.ansible/plugins/callback_plugins/foreman.py
+{% highlight bash %}
+callback_plugins = ~/.ansible/plugins/callback_plugins/
+bin_ansible_callbacks = True
+{% endhighlight %}
 
-* Alternatively, you can find the source for the [Ansible callback here](https://github.com/ansible/ansible/blob/devel/lib/ansible/plugins/callback/foreman.py) and deploy it in your directory of choice.
+  <li>
+  And run this line to download the callback file in the appropriate location:
+  </li>
+
+{% highlight bash %}
+wget https://raw.githubusercontent.com/ansible/ansible/stable-2.2/lib/ansible/plugins/callback/foreman.py -O ~/.ansible/plugins/callback_plugins/foreman.py
+{% endhighlight %}
+</ul>
+</div>
+
+<div class="ansible_version ansible_version_22 ansible_version_21" style="display:none;">
+
+<p>
+You need to configure it via the following environment variables (the variables need to be available to the user running the callback. Usually <code>foreman-proxy</code>):
+</p>
+
+<ul>
+  <li>
+    FOREMAN_URL: the URL of your Foreman installation (default "http://localhost:3000")
+  </li>
+  <li>
+    FOREMAN_SSL_CERT: The public key when using SSL client certificates (default "/etc/foreman/client_cert.pem")
+  </li>
+  <li>
+    FOREMAN_SSL_KEY: The private key when using SSL client certificates (default  "/etc/foreman/client_key.pem")
+  </li>
+  <li>
+    FOREMAN_SSL_VERIFY: Use *False* to disable certificate checks. You can also set it
+    to use the local CA bundle "True", or a path to a CA file for a custom CA.
+  </li>
+</ul>
+
+<p>
+Since the 'foreman' and 'foreman-proxy' are 'no-login' users, you should set these in the <code>EnviromentFile</code> used by systemd, <code>/etc/sysconfig/foreman</code> and <code>/etc/sysconfig/foreman-proxy</code>. An alternative for other users is to put them in their <code>.bashrc</code> as <code>export FOREMAN_URL=yoururl</code>. In most distributions environment variables set in <code>/etc/environment</code> will be shared among all users.
+</p>
+
+<p>
+To obtain a valid certificate for your host follow the procedure as described <a href='manuals/latest/index.html#4.3.10SSL'>here</a>.
+</p>
+<p>
+See the <a href='http://docs.python-requests.org/en/master/user/advanced/#ssl-cert-verification'>python-requests documentation</a> on the details of certificate setup.
+</p>
+</div>
 
 
 ## 2.2 Plugin
