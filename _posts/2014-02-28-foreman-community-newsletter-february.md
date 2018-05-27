@@ -36,10 +36,10 @@ development.
 Recordings of some presentations are now available:  
 
 -   [Foreman
-    Project](http://video.fosdem.org/2014/UD2120_Chavanne/Saturday/Foreman_Project.webm),
+    Project](https://video.fosdem.org/2014/UD2120_Chavanne/Saturday/Foreman_Project.webm),
     Ohad Levy
 -   [Foreman integration with Chef and
-    others](http://video.fosdem.org/2014/H1309_Van_Rijn/Saturday/Foreman_integration_with_Chef_and_others.webm),
+    others](https://video.fosdem.org/2014/H1309_Van_Rijn/Saturday/Foreman_integration_with_Chef_and_others.webm),
     Marek Hulán
 -   [Build your own image: Foreman discovery
     plugin](http://www.youtube.com/embed/7YYyAKb-rv0) - Lukas Zapletal
