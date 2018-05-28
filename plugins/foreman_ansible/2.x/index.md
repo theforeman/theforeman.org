@@ -23,11 +23,15 @@ In order to make Ansible send us data from the hosts, we set up a callback on yo
 
 You need to configure it via the following environment variables (the variables need to be available to the user running the callback. Usually foreman-proxy):
 
-* FOREMAN_URL: the URL of your Foreman installation (default "http://localhost:3000")
+* FOREMAN_URL: the URL of your Foreman installation (default "http://localhost:3000") - change it to your Foreman URL, e.g: "https://myforeman.mylocal.lan", it should not be port 3000.
 * FOREMAN_SSL_CERT: The public key when using SSL client certificates (default "/etc/foreman/client_cert.pem")
 * FOREMAN_SSL_KEY: The private key when using SSL client certificates (default  "/etc/foreman/client_key.pem")
 * FOREMAN_SSL_VERIFY: wether to verify SSL certificates. Use *False*
   to disable certificate checks. You can also set it to CA bundle (default is "True").
+
+If you're using Foreman without Katello, the SSL certificate and key are set at `/etc/httpd/conf.d/foreman.conf`. SSLCertificateFile, SSLCertificateKeyFile contain the values for FOREMAN_SSL_CERT and FOREMAN_SSL_KEY.
+
+If you are using the Katello plugin, the SSL certificate and key are set at `/etc/httpd/conf.d/05-foreman-ssl.conf`. SSLCertificateFile, SSLCertificateKeyFile contain the values for FOREMAN_SSL_CERT and FOREMAN_SSL_KEY. By default these are at `/etc/pki/katello/certs/katello-apache.crt` and `/etc/pki/katello/private/katello-apache.key`.
 
 You can put these variables in `/etc/environment`. Since the 'foreman' and 'foreman-proxy' are 'no-login' users, you should set these in the `EnviromentFile` used by systemd, `/etc/sysconfig/foreman` and `/etc/sysconfig/foreman-proxy`
 
@@ -91,9 +95,21 @@ Check Ansible's [dynamic inventory documentation](http://docs.ansible.com/ansibl
 
 Smart proxies are authenticated by Foreman usually through certificates (found in /etc/foreman-proxy/). Therefore, when it comes to proxies, it is NOT necessary to add them to the setting `trusted_puppetmaster_hosts`.
 
-If you want to use Ansible and submit facts/reports to Foreman, through the callback, you should add whatever hosts (again, except Smart Proxies) you want to submit facts **from** to the setting `trusted_puppetmaster_hosts`. Change it at Administer > Settings, Auth tab. e.g: If you're running Ansible from host 'A', which SSHs into host 'B', you need to add host 'A'
+Ansible will run using the SSH key of the smart-proxy or Foreman. These keys are automatically set by [Foreman Remote Execution](plugins/foreman_remote_execution), so you may see them at /usr/share/foreman-proxy/.ssh . The foreman-proxy user needs write access to '/usr/share/foreman-proxy/.ansible' at least to create the '.ansible' local directory.
+
+```
+sudo mkdir /usr/share/foreman-proxy/.ansible
+sudo chown foreman-proxy.foreman-proxy /usr/share/foreman-proxy/.ansible
+```
+You may need do the same for the `foreman` user, so that it can run Ansible directly from the Foreman host without a Foreman Proxy.
+
+The SSH key used for the execution can be set by the `ansible_private_key_file` setting (find it under Administer > Settings > Ansible tab). If you leave that field empty, `/usr/share/foreman/.ssh/id_rsa` or `/usr/share/foreman-proxy/.ssh/id_rsa` will be used by default.
+
+If you have [Foreman Remote Execution](plugins/foreman_remote_execution) already, it is likely you have a ssh key in `/usr/share/foreman-proxy/.ssh/id_rsa_foreman_proxy`. You may copy it to `/usr/share/foreman-proxy/.ssh/id_rsa` so that Ansible is able to use it (ensure that the file is readable by the `foreman-proxy` user), or change the Setting `ansible_private_key_file` to point to it.
 
 If the Foreman setting `create_new_host_when_facts_are_uploaded` (Puppet tab) is true, and $HOSTNAME doesn't exist in Foreman, it will autocreate that host in Foreman. If it already exists, it will update the facts.
+
+If you want to use Ansible and submit facts/reports to Foreman, through the callback, you should add the hosts (again, except Smart Proxies) you want to submit facts **from** to the setting `trusted_puppetmaster_hosts`. Change it at Administer > Settings, Auth tab. e.g: If you're running Ansible from host 'A', which SSHs into host 'B', you need to add host 'A'
 
 Similarly, the Foreman setting `ignore_puppet_facts_for_provisioning` (Provisioning tab) is set to false, facts related to interfaces will update the interfaces of $HOSTNAME in Foreman.
 
