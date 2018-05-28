@@ -38,25 +38,55 @@ plugins, etc.
 
 * Legal basis for this data usage: Legitimate interest
 
-The website does embed YouTube videos, see [YouTube's privacy policy][YouTube]
+### Website videos
+
+The website does embed videos from YouTube, Fosdem, and Slideshare - see the
+links below for details:
+
+  * [YouTube's privacy policy][YouTube]
+  * [FOSDEM homepage](https://fosdem.org)
+  * [SlideShare (LinkedIn) privacy policy][SlideShare]
+
 for details. These videos do not autoplay.
+
+### Website downloads
+
+The downloads from our website are cached by Fastly, a CDN provider. This may
+also log your IP address - see [Fastly's privacy policy][Fastly] for details.
+We don't currently use this data at all, but we may use it for aggregated
+statistics in the future.
 
 ## Codebase
 
 The Foreman community use [GitHub](https://github.com) to manage the code that
 comprises the Foreman project. Refer to [GitHub's privacy policy][GitHub] for
-details on how GitHub handles the data you posts there. We also use
-non-identifiable data from the codebase to provide aggregated statistics such
-as average time to merge, number of open pull requests, etc.
+details on how GitHub handles the data you post there.
 
-* Legal basis for this data usage: Legitimate interest
+Commit messages can contain names and email addresses. You are free to use
+psuedonymous data for commit messages. We do prefer a working contact mail in
+case of needing to contact contributors to the codebase, but it is not
+mandatory.
 
-The Foreman community also run a bug tracker using the
-[Redmine](http://www.redmine.org) software. When you sign up for a Redmine
-account, you provide us with an email address and a name. We only use this
-email within Redmine to contact you about bugs you have reported or subscribed
-to. You have full control over what emails are sent from your Redmine account
-preferences. The bug tracker also uses cookies to store your session.
+We also use non-identifiable data from the codebase to provide aggregated
+statistics such as average time to merge, number of open pull requests, etc.
+
+* Legal basis for this data usage: Legitimate interest, consent
+
+The Foreman community also runs a self-hosted bug tracker using the
+[Redmine](https://www.redmine.org) software. When you sign up for a Redmine
+account, you provide us with an email address and a name.
+
+Externally, we only use this email within Redmine to contact you about bugs you
+have reported or subscribed to. You have full control over what emails are sent
+from your Redmine account preferences.
+
+Email addresses can also be linked to GitHub commits (see above) if the emails
+match, or manually by an admin (on request). This enables Redmine to
+automatically attribute issue changes to your user, based on the public commit
+data from the GitHub repositories (e.g. closing it when you fix an issue). This
+populates your Redmine "activity" page, which is public.
+
+The bug tracker also uses cookies to store your session.
 
 We also use the bug tracker data to provide aggregated statistics such as
 number of open/closed bugs, average time to close a bug, etc.
@@ -71,13 +101,14 @@ policy][Freenode] for details on how they handle your data. In addition, our
 *public* channels are logged to [BotBot.me](https://botbot.me) who also have a
 [privacy policy][BotBot].
 
-The Foreman community uses a forum using the [Discourse](https://discourse.org)
-software. When signing up for a Discourse account, you provide a name and email
-address - and in addition we store the IP address of your most recent
-connection. The email address is only used to send you updates to your forum
-topics, personal messages from other users, and digest summaries. You have full
-control over the emails sent from your Discourse account preferences. The forum
-also uses cookies to store your session.
+The Foreman community uses a self-hosted forum using the
+[Discourse](https://discourse.org) software. When signing up for a Discourse
+account, you provide a name and email address - and in addition we store the IP
+address of your most recent connection. The email address is only used to send
+you updates to your forum topics, personal messages from other users, and
+digest summaries. You have full control over the emails sent from your
+Discourse account preferences. The forum also uses cookies to store your
+session.
 
 We also use the IP addresses and *public* post data to provide aggregated
 statistics about the forum community, such as posts-per-month, user engagement,
@@ -89,7 +120,7 @@ accounts.
 
 ## Surveys
 
-The Foreman community runs a survey each year. Completing the survey is op-in,
+The Foreman community runs a survey each year. Completing the survey is opt-in,
 and providing a contact email address in the survey is *optional*. Such
 addresses are stored until the survey analysis is complete, and then deleted
 from the raw survey data before publication. The survey data is used to gain
@@ -117,11 +148,13 @@ is deleted regularly.
 ### You can choose not to provide us with personal data
 
 Using a VPN, Tor, or other IP / UserAgent masking service will not affect your
-use of the project website, as it is entirely static.
+use of the project website, as it is entirely static. For Redmine & Discourse,
+we do not mandate use of real names, and using psudonyms will not affect the
+services.
 
 ### Your accounts on our services
 
-Your Redmine and Discourse accounts contain options to control what emails are
+Your Redmine & Discourse accounts contain options to control what emails are
 sent to you. 3rd party services such as [GitHub](https://github.com) retain
 their own policies and privacy options.
 
@@ -141,8 +174,18 @@ rights, subject to some limitations, against the Foreman Project:
 * The right to lodge a complaint with your local data protection authority
 
 If you would like to exercise any of these rights, you may do so by contacting
-the Foreman Project on [IRC](/support.html#IRClivechat). Please understand,
-however, the rights enumerated above are not absolute in all cases.
+the Foreman Project at [contact us](mailto:privacy AT community.theforeman.org)
+or on [IRC](/support.html#IRClivechat). Please understand, however, the rights
+enumerated above are not absolute in all cases, especially in regards to the
+right to erase your data:
+
+  * Git commits will not be rewritten
+    * contributing to the codebase is opt-in,
+    * providing personally identifying information in commit messages is a further opt-in
+    * we have a legitimate interest in contacting contributors and showing IP provenance
+  * Redmine & Discourse data which is *public* (i.e forum posts, bug comments etc) will be psudonymised
+    * Your account name, handle, and email address will be scrambled, removing your personal data from the site
+    * Posts are *not* removed, as we have a legitimate interest in retaining the history of discussions about our project
 
 # Contacting us
 
@@ -156,10 +199,12 @@ Foreman reserves the right to update this policy from time to time. Material
 changes will be posted to the [Announcements
 list](https://community.theforeman.org/c/release-announcements) and posted to
 the front page of the [website](https://theforeman.org). This policy was last
-updated on 25th May 2018.
+updated on 28th May 2018.
 
 [BotBot]: https://botbot.me/privacy
+[Fastly]: https://www.fastly.com/privacy
 [Freenode]: https://freenode.net/policies
 [foreman debug]: https://github.com/theforeman/foreman/blob/develop/script/foreman-debug
 [GitHub]: https://help.github.com/articles/global-privacy-practices
+[SlideShare]: https://www.linkedin.com/legal/privacy-policy
 [YouTube]: https://support.google.com/youtube/answer/7671399?hl=en
