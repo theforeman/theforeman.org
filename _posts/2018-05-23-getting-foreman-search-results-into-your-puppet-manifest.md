@@ -12,7 +12,7 @@ tags:
 - identity management
 ---
 
-How to use the Foreman search language inside Puppet manifests and knowing informations about others nodes.
+How to use the Foreman search language inside Puppet manifests and get information about other nodes.
 This page is an update of the [previous post written by Ohad Levy](https://theforeman.org/2012/01/getting-foreman-search-results-into.html)
 
 <!--more-->
@@ -21,17 +21,17 @@ This page is an update of the [previous post written by Ohad Levy](https://thefo
 
 When you start Puppet, in general you start simply. And so innocently, each node is more or less alone in the world. And Puppet, in this way, can already help you so much.
 
-But fastly, you understand that in some situations, it is interesting to know informations from others nodes. And this happend tipically about monitoring, backups or identity management. For instance, you add a new node into your infrastructure. And your monitoring server takes into account this new server by adding the configuration relating to its monitoring. 
+But quickly, you understand that in some situations, it is interesting to know information from other nodes. And this happens typically about monitoring, backups or identity management. For instance, you add a new node into your infrastructure. And your monitoring server takes into account this new server by adding the configuration relating to its monitoring. 
 
-In a standard way, in the Puppet galaxy it exists the option `storeconfigs` of Puppet Server and linked [PuppetDB](https://puppet.com/docs/puppetdb/latest). A PuppetDB service records every node's catalogs, facts and reports. And the immediate usage is exported resources (a double “at” sign `@@` in manifests). 
+In a standard way, in the Puppet galaxy there exists the option `storeconfigs` of Puppet Server and linked [PuppetDB](https://puppet.com/docs/puppetdb/latest). A PuppetDB service records every node's catalogs, facts and reports. And the immediate usage is exported resources (a double “at” sign `@@` in manifests). 
 
 But, if you don't have a PuppetDB and you are already using Foreman as external node classifier (aka ENC), you can also make fun stuff.
 
 ## An use case out of standard usages.
 
-Use cases about monitoring or backups are standard. Lets try to build an other example where we can use the Foreman search engine.
+Use cases about monitoring or backups are standard. Lets try to build another example where we can use the Foreman search engine.
 
-Imagine that you are managing nodes with a Puppet Server and they are in `hostgroups` like `secure_base/role`. Where `secure_base` permits to apply all common settings to all your nodes in a secured environment. And `role` permits to apply settings dedicated to the role of a node. Now, lets say you have the constraint to not use a dns. And your customer would like to call hosts in a humain way, so with names and not with IPs. I already met this use case. Fortunatly, servers were using only one ip address.
+Imagine that you are managing nodes with a Puppet Server and they are in `hostgroups` like `secure_base/role`. Where `secure_base` permits to apply all common settings to all your nodes in a secured environment. And `role` permits to apply settings dedicated to the role of a node. Now, lets say you have the constraint to not use a DNS server. And your customer would like to call hosts in a human way, so with names and not with IPs. I already met this use case. Fortunately, servers were using only one IP address.
 
 So you have to manage your `/etc/hosts` with a configuration management tool or you become crazy. 
 
