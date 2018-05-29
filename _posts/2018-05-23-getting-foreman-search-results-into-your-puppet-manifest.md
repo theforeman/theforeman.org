@@ -70,7 +70,7 @@ Several possibilities to get the function into your environement :
 
  * You installed Foreman with `foreman-installer`. And so, you can simply copy `/usr/share/foreman-installer/modules/foreman/lib/puppet/parser/functions/foreman.rb` into your module managing `/etc/hosts`.
  * Otherwise, you can [download the function foreman()](https://github.com/theforeman/puppet-foreman/blob/master/lib/puppet/parser/functions/foreman.rb) and use it into your module managing `/etc/hosts`.
- * Probably a better way is to create a module named like `foreman-libs` containing the function `foreman()`. Add this module in your list of imported modules. To be imported by Foreman, remember that a module must contain a file `manifests/init.pp` and not contain errors (like those reported by `puppet parser validate <file.pp>`).
+ * Probably a better way is to create a module named like `foreman-libs` containing the function `foreman()`. Add this module in your list of imported modules. 
 
 It is also possible to write your own function to query [the API](https://theforeman.org/documentation) in a way that fits your needs.
 
