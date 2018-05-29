@@ -289,7 +289,7 @@ bundle exec rake module:clean module:push
 
 # Automated using pass - https://www.passwordstore.org/
 # Assumes you have a katello/forge or theforeman/forge password configured
-BLACKSMITH_FORGE_USERNAME="$(jq -r .author metadata.json | tr [A-Z] [a-z])" && BLACKSMITH_FORGE_USERNAME=$BLACKSMITH_FORGE_USERNAME BLACKSMITH_FORGE_PASSWORD=$(pass show $BLACKSMITH_FORGE_USERNAME/forge | head -n 1) bundle exec rake module:push
+BLACKSMITH_FORGE_USERNAME="$(jq -r .author metadata.json | tr [A-Z] [a-z])" && BLACKSMITH_FORGE_USERNAME=$BLACKSMITH_FORGE_USERNAME BLACKSMITH_FORGE_PASSWORD=$(pass show $BLACKSMITH_FORGE_USERNAME/forge | head -n 1) bundle exec rake module:clean module:push
 
 # Start the next minor version
 bundle exec rake module:bump_commit:patch
