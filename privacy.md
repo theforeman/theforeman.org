@@ -32,15 +32,20 @@ information or set cookies. There is no account for the website itself. The
 webserver (Apache) logs will contain IP addresses, timestamps, and UserAgent
 strings - these are log-rotated and deleted after 4 weeks.
 
-The webserver logs are primarily used to produce aggregated statistics about
-the community, such as popularity of different operating system packages,
-plugins, etc.
+The website also uses Google Analytics, but we only collect anonymous data. IP
+addresses are [anonymised][GA-anonIP], and we do not use User-ID, or any linked
+Google product (e.g. AdWords). Google Analytics data is deleted after 26 months
+(the default for Google Analytics).
+
+The webserver logs and Google Analytics are used to produce aggregated
+statistics about the community, such as popularity of different browsers,
+operating system packages, plugins, etc.
 
 * Legal basis for this data usage: Legitimate interest
 
 ### Website videos
 
-The website does embed videos from YouTube, Fosdem, and Slideshare - see the
+The website does embed videos from YouTube, FOSDEM, and Slideshare - see the
 links below for details:
 
   * [YouTube's privacy policy][YouTube]
@@ -149,7 +154,7 @@ is deleted regularly.
 
 Using a VPN, Tor, or other IP / UserAgent masking service will not affect your
 use of the project website, as it is entirely static. For Redmine & Discourse,
-we do not mandate use of real names, and using psudonyms will not affect the
+we do not mandate use of real names, and using pseudonyms will not affect the
 services.
 
 ### Your accounts on our services
@@ -183,7 +188,7 @@ right to erase your data:
     * contributing to the codebase is opt-in,
     * providing personally identifying information in commit messages is a further opt-in
     * we have a legitimate interest in contacting contributors and showing IP provenance
-  * Redmine & Discourse data which is *public* (i.e forum posts, bug comments etc) will be psudonymised
+  * Redmine & Discourse data which is *public* (i.e forum posts, bug comments etc) will be pseudonymised
     * Your account name, handle, and email address will be scrambled, removing your personal data from the site
     * Posts are *not* removed, as we have a legitimate interest in retaining the history of discussions about our project
 
@@ -205,6 +210,7 @@ updated on 28th May 2018.
 [Fastly]: https://www.fastly.com/privacy
 [Freenode]: https://freenode.net/policies
 [foreman debug]: https://github.com/theforeman/foreman/blob/develop/script/foreman-debug
+[GA-anonIP]: https://developers.google.com/analytics/devguides/collection/gajs/methods/gaJSApi_gat#_gat._anonymizeIp
 [GitHub]: https://help.github.com/articles/global-privacy-practices
 [SlideShare]: https://www.linkedin.com/legal/privacy-policy
 [YouTube]: https://support.google.com/youtube/answer/7671399?hl=en
