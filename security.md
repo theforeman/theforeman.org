@@ -805,7 +805,7 @@ Key management is changing at the time of writing to cycle nightly keys every tw
         <td>B59D DB6C AB83 5E19 14DE  4725 F5F9 54D9 2A8C A27B</td>
         <td>Foreman Release Signing Key (1.17)</td>
         <td style='white-space:nowrap'>2017-11-21</td>
-        <td style='white-space:nowrap'>2017-11-21</td>
+        <td style='white-space:nowrap'>2018-11-21</td>
         <td style='white-space:nowrap'></td>
         <td></td>
       </tr>
