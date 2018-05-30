@@ -38,26 +38,23 @@ So you have to manage your `/etc/hosts` with a configuration management tool or 
 If each Puppet node execute the following code :
 
 ```
-  $query = foreman({foreman_user => 'apiuser',
-                    foreman_pass => 'here_a_password',
-                    item         => 'hosts',
-                    search       => 'hostgroup_fullname ~ secure_base',
-  })
+$query = foreman({foreman_user => 'apiuser',
+                  foreman_pass => 'here_a_password',
+                  item         => 'hosts',
+                  search       => 'hostgroup_fullname ~ secure_base',
+})
 
-  $nodes = $query['results']
-
+$nodes = $query['results']
 ```
 
 In `$nodes`, you got all the needed informations about other nodes. You can check my statement by adding the following piece of code :
 
-
 ```
-  $nodes.each | $_node | {
-    $_thiscert = $_node['certname']
-    $_thisip = $_node['ip']
-    notify {  "node ${_thiscert}" : message => "host ${_thisip}"}
-  }
-
+$nodes.each | $_node | {
+  $_thiscert = $_node['certname']
+  $_thisip = $_node['ip']
+  notify {  "node ${_thiscert}" : message => "host ${_thisip}"}
+}
 ```
 
 Let's use `$nodes` in a template with a `file` resource to manage `/etc/hosts` and you got the trick.
@@ -80,17 +77,28 @@ The code is clearly commented. Only by reading comments, it is possible to add f
 
 We used option `item` with `hosts`. But, it may be `environments`, `fact_values`, `hosts`, `hostgroups`, `puppetclasses`, `smart_proxies` or `subnets`.
 
-We didn't used option `per_page`. By default, the function returns only 20 items in a row.
+We didn't used option `per_page`. By default, the function returns only 20 items in a row. 
+For instance, if you manage 800 nodes. Probably you will add new nodes in the futur. So 1000 should be enough. 
+Adjust the value according to the number of nodes :
+
+```
+$query = foreman({foreman_user  => 'apiuser',
+                  foreman_pass  => 'here_a_password',
+                  item          => 'hosts',
+                  search        => 'hostgroup_fullname ~ secure_base',
+                  per_page      => 1000,
+})
+```
 
 We didn't used the possibility to make a filter on the result of the query with option `filter_result`. But it is possible to use it like bellow :
 
 ```
-  $query = foreman({foreman_user  => 'apiuser',
-                    foreman_pass  => 'here_a_password',
-                    item          => 'hosts',
-                    search        => 'hostgroup_fullname ~ secure_base',
-                    filter_result => ['ip','certname'],
-  })
+$query = foreman({foreman_user  => 'apiuser',
+                  foreman_pass  => 'here_a_password',
+                  item          => 'hosts',
+                  search        => 'hostgroup_fullname ~ secure_base',
+                  filter_result => ['ip','certname'],
+})
 ```
 
 And `$query` will contain an array of hashes like `[{ip => 192.168.1.5, certname => server1.example.com}, {ip => 192.168.1.10, certname => server2.example.com}, ...]`
