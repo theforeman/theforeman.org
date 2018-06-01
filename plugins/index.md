@@ -155,6 +155,12 @@ Foreman plugins are implemented as [Rails engines](http://guides.rubyonrails.org
 			Virt-who configure
 		</a>
 	</div>
+	<div class='col-xs-3 center'>
+		<a href="plugins/foreman_maintain" class="btn-doc btn">
+			<p class='h2 doc-icon'><i class="fa fa-life-bouy"></i></p>
+			Foreman Maintain
+		</a>
+	</div>
  	<div class='col-xs-3 center'>
 		<a href="http://projects.theforeman.org/projects/foreman/wiki/List_of_Plugins" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-plus"></i></p>
