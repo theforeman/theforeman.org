@@ -25,7 +25,7 @@ This blog post shows the steps on how to identify a change you want to make in t
 
 *The workflow below describes how I would proceed with an installer change. However, everyone is different and there are multiple ways to go about doing the same thing.*
 
-If you found an issue to fix, it's likely on your production Foreman installation. This is not a suitable place to edit installer code! Do not do this. Instead, use [forklift](https://github.com/theforeman/forklift). Forklift uses Vagrant and Ansible to create development VMs on a hypervisor. I have only used Forklift with Fedora but I've heard it works on Debian and Ubuntu.  You'll need to find a place to run Forklift before continuing.
+If you found an issue to fix, it's likely on your production Foreman installation. This is not a suitable place to edit installer code! Do not do this. Instead, use [forklift](https://github.com/theforeman/forklift). Forklift uses Vagrant and Ansible to create development VMs on a hypervisor. I have only used Forklift with Fedora but I've heard it works on Debian and Ubuntu.  You'll need to find a place to run Forklift before continuing. You can use `centos7-foreman-nightly` for a vanilla Foreman install, or `centos7-katello-nightly` for a Katello install.
 
 If you have found an issue in a commercial product that uses Foreman, you'll need to replicate the issue in Foreman. Otherwise, please contact your vendor for assistance.
 
@@ -75,7 +75,7 @@ Once you have your centos7-katello-nightly VM running, you are ready to develop!
 
 The first step is always to reproduce the issue on the nightly VM. If our hypervisor is not our workstation/laptop, we will need to get https and http access to the nightly VM first. To do this we'll set up an SSH tunnel on our hypervisor. 
 
-First, capture the IP address of the guest:
+First, capture the IP address of the guest (*TIP:* You can use `vagrant ssh-config <vm>` to accomplish the same thing):
 
 ```
 vagrant@centos7-katello-nightly ~]$ ip addr
@@ -99,7 +99,7 @@ Once this is done, you can go to "https://localhost:2000" on your browser, and y
 
 The next few paragraphs outline some development steps. *No one is expected to know all of this stuff off the top of their heads!* I am leaving out a lot of trial and error. This part can take days of work if you are new to puppet development, and lots of question asking.
 
-## fixing the issue
+## Fixing the Issue
 
 Once you are able to log in, now you are really in business. Let's reproduce the issue finally. Go to `https://localhost:2000/pub/` and you should see the directory listing. We want to be able to optionally disable this. If we manually edit `/etc/httpd/conf.d/05-foreman-ssl.d/pulp.conf` and reload httpd, we get the behavior we want. We probably want to be able to specify the "Options" flags via `custom-hiera.yaml`, and have the default be `+FollowSymLinks +Indexes` to preserve the existing behavior.
 
@@ -322,5 +322,4 @@ index 0000000..2820a8b
 
 Of course, this only covers port 443 and not 80. You'll need to do something similar to make port 80 work.
 
-After all that is done, you can commit your change and create a pull request.  Each module has its own process for this. You'll find more information in `CONTRIBUTING.md`, which will outline how to run unit tests. Once those are successful, you can put in a pull request.
-
+After all that is done, you can commit your change and create a pull request.  Each module has its own process for this. You'll find more information in `CONTRIBUTING.md`, which will outline how to run unit tests. Once those are successful, you can put in a pull request. There are (installer testing instructions)[https://github.com/theforeman/forklift/blob/master/docs/development.md#test-puppet-module-pull-requests] available as well. As mentioned before, feel free to reach out if you need assistance.
