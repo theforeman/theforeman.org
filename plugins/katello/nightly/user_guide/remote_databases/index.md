@@ -37,11 +37,9 @@ Warning: This is just minimal testing setup which is not suitable for production
 Assume our postgres server has hostname `postgres.example.com`.
 
 ```
-  yum -y localinstall https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-  yum install postgresql-server postgresql-contrib
-  postgresql-setup initdb
-  systemctl start postgresql
-  systemctl enable postgresql
+yum install -y postgresql-server postgresql-contrib
+postgresql-setup initdb
+systemctl enable --now postgresql
 ```
 
 Now we need to make Postgres listen to inbound connections, please adjust these parameters to your own networking and security requirements. 
@@ -59,21 +57,21 @@ Append the following line at the end of the file
 
 Now restart the postgres service for changes to take effect
 ```
-  systemctl restart postgresql
+systemctl restart postgresql
 ```
 
 ### Create the databases
 Switch the user role to postgres and start postgres client
 ```
-  su - postgres -c psql
+su - postgres -c psql
 ```
 
 Once inside the client, we need to create two databases and dedicated roles, one for foreman and one for candlepin
-```
-  CREATE USER "foreman" WITH PASSWORD '<FOREMAN_PASSWORD>';
-  CREATE USER "candlepin" WITH PASSWORD '<CANDLEPIN_PASSWORD>';
-  CREATE DATABASE foreman OWNER foreman;
-  CREATE DATABASE candlepin OWNER candlepin;
+```sql
+CREATE USER "foreman" WITH PASSWORD '<FOREMAN_PASSWORD>';
+CREATE USER "candlepin" WITH PASSWORD '<CANDLEPIN_PASSWORD>';
+CREATE DATABASE foreman OWNER foreman;
+CREATE DATABASE candlepin OWNER candlepin;
 ```
 
 ### Test it works
@@ -97,8 +95,8 @@ Warning: This is just minimal testing setup which is not suitable for production
 Assume our Mongo server has hostname `mongo.example.com`.
 Install and enable Mongo server
 ``` 
-  yum -y localinstall https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-  yum install -y mongodb mongodb-server
+yum -y localinstall https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+yum install -y mongodb mongodb-server
 ```
 Enable authentication in `/etc/mongod.conf`
 ```
@@ -107,20 +105,19 @@ auth=true
 
 Enable and start the service
 ```
-  systemctl start mongod
-  systemctl enable mongod
+systemctl enable --now mongod
 ```
 
 ### Create Pulp user and database 
 ```
-  mongo admin -u admin -p admin --eval "db.createUser({user:'pulp',pwd:'<PULP_PASSWORD>',roles:[{role:'dbOwner', db:'pulp_database'},{ role: 'readWrite', db: 'pulp_database'}]})"
+mongo admin -u admin -p admin --eval "db.createUser({user:'pulp',pwd:'<PULP_PASSWORD>',roles:[{role:'dbOwner', db:'pulp_database'},{ role: 'readWrite', db: 'pulp_database'}]})"
 
 ```
 
 ### Test it works
 From `katello.example.com` test the mongo DB is accessible:
 ```
-  mongo --host mongo.example.com -u pulp -p <PULP_PASSWORD> --port 27017 --eval 'ping:1' pulp_database
+mongo --host mongo.example.com -u pulp -p <PULP_PASSWORD> --port 27017 --eval 'ping:1' pulp_database
 ```
 If there are no errors we are done with database preparation. 
 
@@ -138,18 +135,20 @@ Follow the instructions to [prepare remote mongo](plugins/katello/{{ page.versio
 ### Run the installer
 To install and configure Katello we just need to run 
 ```
-  foreman-installer --scenario katello \
-    --foreman-db-host postgres.example.com \ 
-    --foreman-db-password <FOREMAN_PASSWORD> \
-    --foreman-db-database foreman \
-    --katello-candlepin-db-host postgres.example.com \
-    --katello-candlepin-db-name candlepin \
-    --katello-candlepin-db-password <CANDLEPN_PASSWORD> \
-    --katello-candlepin-manage-db false \
-    --katello-pulp-db-username pulp \ 
-    --katello-pulp-db-password <PULP_PASSWORD> \ 
-    --katello-pulp-db-seeds “mongo.example.com:27017” \
-    --katello-pulp-db-name pulp_database
+foreman-installer --scenario katello \
+  --foreman-db-host postgres.example.com \ 
+  --foreman-db-password <FOREMAN_PASSWORD> \
+  --foreman-db-database foreman \
+  --foreman-db-manage false
+  --katello-candlepin-db-host postgres.example.com \
+  --katello-candlepin-db-name candlepin \
+  --katello-candlepin-db-password <CANDLEPIN_PASSWORD> \
+  --katello-candlepin-manage-db false \
+  --katello-pulp-db-username pulp \ 
+  --katello-pulp-db-password <PULP_PASSWORD> \ 
+  --katello-pulp-db-seeds “mongo.example.com:27017” \
+  --katello-pulp-db-name pulp_database
+  --katello-pulp-manage-db false
 ```
 
 Note: for more related options and tips on SSL configuration see [Full list of options](plugins/katello/{{ page.version }}/user_guide/remote_databases/index.html#full-list-of-remote-database-related-options-in-the-installer)
@@ -163,15 +162,14 @@ Follow the instructions to [prepare remote mongo](plugins/katello/{{ page.versio
 ### Stop the Katello server
 Stop the Katello related services to minimize risk of the data changes during the migration
 ```
-  katello-service stop
-  systemctl start postgresql
-  systemctl start mongod
+katello-service stop
+systemctl start postgresql mongod
 ```
 
 ### Dump databases
 Dump the local databases
 ```
-  foreman-maintain backup online --skip-pulp-content --preserve-directory -y /tmp/migration_backup
+foreman-maintain backup online --skip-pulp-content --preserve-directory -y /tmp/migration_backup
 ```
 
 ### Restore data in remote databases
@@ -187,20 +185,20 @@ Now the copy of the local database is also at the remote locations.
 ### Update the configuration
 To update existing configuration of Katello we just need to run 
 ```
-  foreman-installer --scenario katello \
-    --foreman-db-host postgres.example.com \ 
-    --foreman-db-password <FOREMAN_PASSWORD> \
-    --foreman-db-database foreman \
-    --foreman-db-manage false \
-    --katello-candlepin-db-host postgres.example.com \
-    --katello-candlepin-db-name candlepin \
-    --katello-candlepin-db-password <CANDLEPN_PASSWORD> \
-    --katello-candlepin-manage-db false \
-    --katello-pulp-db-username pulp \ 
-    --katello-pulp-db-password <PULP_PASSWORD> \ 
-    --katello-pulp-db-seeds “mongo.example.com:27017” \
-    --katello-pulp-db-name pulp_database \
-    --katello-pulp-manage-db false
+foreman-installer --scenario katello \
+  --foreman-db-host postgres.example.com \ 
+  --foreman-db-password <FOREMAN_PASSWORD> \
+  --foreman-db-database foreman \
+  --foreman-db-manage false \
+  --katello-candlepin-db-host postgres.example.com \
+  --katello-candlepin-db-name candlepin \
+  --katello-candlepin-db-password <CANDLEPN_PASSWORD> \
+  --katello-candlepin-manage-db false \
+  --katello-pulp-db-username pulp \ 
+  --katello-pulp-db-password <PULP_PASSWORD> \ 
+  --katello-pulp-db-seeds “mongo.example.com:27017” \
+  --katello-pulp-db-name pulp_database \
+  --katello-pulp-manage-db false
 ```
 Installer also starts the services and everything should be up and ready at this point.
 
@@ -210,43 +208,43 @@ Use `foreman-installer --full-help` for all up-to-date installer options
 
 Foreman database related:
 ```
-    --foreman-db-manage           if enabled, will install and configure the database server on this host
-    --foreman-db-database         Database 'production' database (e.g. foreman)
-    --foreman-db-host             Database 'production' host
-    --foreman-db-password         Database 'production' password, default is randomly generated
-    --foreman-db-pool             Database 'production' size of connection pool (current: 5)
-    --foreman-db-port             Database 'production' port
-    --foreman-db-root-cert        Root cert used to verify SSL connection to postgres
-    --foreman-db-sslmode          Database 'production' ssl mode (disable|allow|prefer|require|verify-full)
-    --foreman-db-username         Database 'production' user (e.g. foreman)
+--foreman-db-manage           if enabled, will install and configure the database server on this host
+--foreman-db-database         Database 'production' database (e.g. foreman)
+--foreman-db-host             Database 'production' host
+--foreman-db-password         Database 'production' password, default is randomly generated
+--foreman-db-pool             Database 'production' size of connection pool (current: 5)
+--foreman-db-port             Database 'production' port
+--foreman-db-root-cert        Root cert used to verify SSL connection to postgres
+--foreman-db-sslmode          Database 'production' ssl mode (disable|allow|prefer|require|verify-full)
+--foreman-db-username         Database 'production' user (e.g. foreman)
 ```
 
 Candlepin database related:
 ```
-    --katello-candlepin-db-host   Host with Candlepin DB
-    --katello-candlepin-db-name   Name of the Candlepin DB
-    --katello-candlepin-db-password  Candlepin DB password
-    --katello-candlepin-db-port   Port accepting connections to Candlepin DB
-    --katello-candlepin-db-ssl    Boolean indicating if the connection to the database should be over
-    --katello-candlepin-db-ssl-verify  Boolean indicating if the SSL connection to the database should be verified
-    --katello-candlepin-db-user   Candlepin DB user
-    --katello-candlepin-manage-db  Boolean indicating whether a database should be installed, this includes db creation and user
+--katello-candlepin-db-host   Host with Candlepin DB
+--katello-candlepin-db-name   Name of the Candlepin DB
+--katello-candlepin-db-password  Candlepin DB password
+--katello-candlepin-db-port   Port accepting connections to Candlepin DB
+--katello-candlepin-db-ssl    Boolean indicating if the connection to the database should be over
+--katello-candlepin-db-ssl-verify  Boolean indicating if the SSL connection to the database should be verified
+--katello-candlepin-db-user   Candlepin DB user
+--katello-candlepin-manage-db  Boolean indicating whether a database should be installed, this includes db creation and user
 ```
 
 Mongo database related:
 ```
-    --katello-pulp-db-ca-path     The ca_certs file contains a set of concatenated "certification authority" certificates,
-    --katello-pulp-db-name        Name of the database to use
-    --katello-pulp-db-password    The password to use for authenticating to the MongoDB server
-    --katello-pulp-db-replica-set  The name of replica set configured in MongoDB, if one is in use
-    --katello-pulp-db-seeds       Comma-separated list of hostname:port of database replica seed hosts
-    --katello-pulp-db-ssl         Whether to connect to the database server using SSL.
-    --katello-pulp-db-ssl-certfile  The certificate file used to identify the local connection against mongod.)
-    --katello-pulp-db-ssl-keyfile  A path to the private keyfile used to identify the local connection against mongod. If
-    --katello-pulp-db-unsafe-autoretry  If true, retry commands to the database if there is a connection error.
-    --katello-pulp-db-username    The user name to use for authenticating to the MongoDB server
-    --katello-pulp-db-verify-ssl  Specifies whether a certificate is required from the other side of the connection, and
-    --katello-pulp-db-write-concern  Write concern of 'majority' or 'all'. When 'all' is specified, 'w' is set to number of
+--katello-pulp-db-ca-path     The ca_certs file contains a set of concatenated "certification authority" certificates,
+--katello-pulp-db-name        Name of the database to use
+--katello-pulp-db-password    The password to use for authenticating to the MongoDB server
+--katello-pulp-db-replica-set  The name of replica set configured in MongoDB, if one is in use
+--katello-pulp-db-seeds       Comma-separated list of hostname:port of database replica seed hosts
+--katello-pulp-db-ssl         Whether to connect to the database server using SSL.
+--katello-pulp-db-ssl-certfile  The certificate file used to identify the local connection against mongod.)
+--katello-pulp-db-ssl-keyfile  A path to the private keyfile used to identify the local connection against mongod. If
+--katello-pulp-db-unsafe-autoretry  If true, retry commands to the database if there is a connection error.
+--katello-pulp-db-username    The user name to use for authenticating to the MongoDB server
+--katello-pulp-db-verify-ssl  Specifies whether a certificate is required from the other side of the connection, and
+--katello-pulp-db-write-concern  Write concern of 'majority' or 'all'. When 'all' is specified, 'w' is set to number of
 ```
 
 The actual option names may vary between versions. Check the actual naming with foreman-installer --full-help.
@@ -255,16 +253,16 @@ The actual option names may vary between versions. Check the actual naming with 
 Here is sample installer command that sets up Postgres databases with SSL verification. The Postgres server has its own CA. The CA cert used by Candlepin needs to be stored in system trust (`/etc/pki/java/cacerts`) as there is no other way to pass it to Candlepin
 
 ```
-  foreman-installer -S katello \
-    --foreman-admin-password changeme \
-    --foreman-db-host postgres.example.com \
-    --foreman-db-password foreman \
-    --foreman-db-database foreman_2 \
-    --foreman-db-root-cert /etc/pki/ca-trust/source/anchors/ca-chain.cert.pem \
-    --foreman-db-sslmode verify-full \
-    --katello-candlepin-db-host postgres.example.com \
-    --katello-candlepin-db-name candlepin_2 \
-    --katello-candlepin-db-password candlepin \
-    --katello-candlepin-db-ssl true \
-    --katello-candlepin-manage-db false
+foreman-installer -S katello \
+  --foreman-admin-password changeme \
+  --foreman-db-host postgres.example.com \
+  --foreman-db-password foreman \
+  --foreman-db-database foreman_2 \
+  --foreman-db-root-cert /etc/pki/ca-trust/source/anchors/ca-chain.cert.pem \
+  --foreman-db-sslmode verify-full \
+  --katello-candlepin-db-host postgres.example.com \
+  --katello-candlepin-db-name candlepin_2 \
+  --katello-candlepin-db-password candlepin \
+  --katello-candlepin-db-ssl true \
+  --katello-candlepin-manage-db false
 ```
