@@ -6,7 +6,7 @@ version: nightly
 
 # Setup Katello with remote databases
 
-Katello can be installed with remote databases for both postgresql and mongo.
+Katello can be installed with remote databases for both postgresql and mongo. These instructions are for a Katello server, where remote databases are currently supported.
 
 ## High level
 There are two ways to deploy Katello with remote databases:
@@ -26,15 +26,19 @@ There are two ways to deploy Katello with remote databases:
     * restore the DBs on remote servers
     * run foreman-installer with right parameters pointing to the databases. It re-configures the databases and start all the services with new DB locations
 
+In either scenario, both of the databases don't have to be remote. You can opt to use only a remote mongo database or only a remote postgresql database. Both postgresql and mongo databases can be on the same host, but this isn't recommended due to the amount of resources mongo can use.
+
 ## Prepare remote Postgres
 GOAL: To use remote Postgres database with Katello we have to:
 * be able to access the databases from katello box
 * the database user we use to connect to the database needs to own the database, i.e. it can create, alter and delete the tables, indexes and constraints. Note it is not required to be able to create the database itself.
 
 ### Install Postgres
-Warning: This is just minimal testing setup which is not suitable for production.
+Warning: This is just minimal testing setup which is not suitable for production, please adjust the settings to your environment as needed.
 
 Assume our postgres server has hostname `postgres.example.com`.
+
+First, we install postgresql.
 
 ```
 yum install -y postgresql-server postgresql-contrib
@@ -46,13 +50,13 @@ Now we need to make Postgres listen to inbound connections, please adjust these 
 
 Edit `/var/lib/pgsql/data/postgresql.conf`. Uncomment `listen_address` and modify its value to look like: 
 ```
-  listen_address = "*"
+listen_address = "*"
 ```
 
 The next step we need to take is to add a proper client authentication for remote client to our postgres server. To achieve the same, edit `/var/lib/pgsql/data/pg_hba.conf`.
 Append the following line at the end of the file
 ```
-  host          all          all          <katello.example.com ip>/24              md5
+host          all          all          <katello.example.com ip>/24              md5
 ```
 
 Now restart the postgres service for changes to take effect
@@ -66,7 +70,7 @@ Switch the user role to postgres and start postgres client
 su - postgres -c psql
 ```
 
-Once inside the client, we need to create two databases and dedicated roles, one for foreman and one for candlepin
+Once inside the client, we need to create two databases and dedicated roles, one for foreman and one for candlepin.
 ```sql
 CREATE USER "foreman" WITH PASSWORD '<FOREMAN_PASSWORD>';
 CREATE USER "candlepin" WITH PASSWORD '<CANDLEPIN_PASSWORD>';
@@ -154,7 +158,9 @@ foreman-installer --scenario katello \
 Note: for more related options and tips on SSL configuration see [Full list of options](plugins/katello/{{ page.version }}/user_guide/remote_databases/index.html#full-list-of-remote-database-related-options-in-the-installer)
 
 ## Migration of existing Katello
-We assume that Katello was installed and is running on `katello.example.com`.
+Migrating an existing installation to remote databases can take time, so plan for some outage time (length depending on database size) while a backup is taken and the databases are migrated.
+
+In this example, we assume that Katello was installed and is running on `katello.example.com`.
 
 ### Prepare remote databases
 Follow the instructions to [prepare remote mongo](plugins/katello/{{ page.version }}/user_guide/remote_databases/index.html#prepare-remote-mongo) and [prepare remote postgres](plugins/katello/{{ page.version }}/user_guide/remote_databases/index.html#prepare-remote-postgres) to make the remote database servers ready for migration.
@@ -200,7 +206,7 @@ foreman-installer --scenario katello \
   --katello-pulp-db-name pulp_database \
   --katello-pulp-manage-db false
 ```
-Installer also starts the services and everything should be up and ready at this point.
+The installer start services aside from the database related services. Everything should be up and ready at this point, and you can clean up the local databases if you would like.
 
 ## Full list of remote database related options in the installer
 
