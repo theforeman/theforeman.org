@@ -9,30 +9,38 @@ participant "Foreman Proxy" as Proxy
 participant TFTP
 participant DHCP
 participant DNS
-participant "Puppet master" as Puppet
+participant Pulp
+participant Puppet
 
 linear
 autonumber
 
 User->Foreman:clicks on New Host
 Foreman->Proxy:requests free IP address
-Proxy->DHCP:forwards free IP request
+Proxy->DHCP:reads DHCP cofiguration
+note over Foreman:pings IP
 User->Foreman:clicks Submit button in the New host form
-Foreman->Proxy:creates TFTP record
+Foreman->Proxy:creates TFTP configuration
 Proxy->TFTP:drops TFTP configuration file
+Foreman->Proxy:OS installer boot files download command
+Proxy->Pulp:downloads kernel/initram disk
 Foreman->Proxy:creates DHCP reservation
 Proxy->DHCP:forwards DHCP reservation
 Foreman->Proxy:creates DNS records
 Proxy->DNS:forwards DNS records
-note over Foreman:new host is in Build mode
+note over Foreman:host is created (build mode)
 
-== Boot into Anaconda ==
+== Boot into OS installer ==
 
 User->Host:powers on the machine
-Host->DHCP:requests the reserved IP
-Host->TFTP:downloads Anaconda image/kernel
+Host->DHCP:requests the reserved IP and PXE details
+Host->TFTP:bootloader is downloaded
+note over Host:bootloader loads
+Host->TFTP:bootloader gets MAC-based config
+Host->TFTP:downloads OS installer image/kernel
+note over Host:OS installer loads
 Host->Foreman:request Kickstart
-note over Host:installs OS
+note over Host:OS is installed
 Host->Puppet:signs puppet client certificate (puppet agent)
 Host->Foreman:turns off build mode
 Foreman->Proxy:sends TFTP removal request
@@ -41,7 +49,10 @@ note over Host:reboots
 
 == First boot ==
 
-Host->DHCP:requests the reserved IP
+Host->DHCP:requests the reserved IP and PXE details
+Host->TFTP:bootloader is downloaded
+Host->TFTP:bootloader gets MAC-based config
+note over Host:bootloader is told to boot from HDD
 Host->Puppet:sends initial facts
 Puppet->Foreman:forwards initial facts
 note over Host:performs initial configuration
