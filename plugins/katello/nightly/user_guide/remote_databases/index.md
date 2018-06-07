@@ -99,8 +99,8 @@ Warning: This is just minimal testing setup which is not suitable for production
 Assume our Mongo server has hostname `mongo.example.com`.
 Install and enable Mongo server
 ``` 
-yum -y localinstall https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-yum install -y mongodb mongodb-server
+yum install -y centos-release-scl
+yum install -y rh-mongodb34-syspaths
 ```
 Enable authentication in `/etc/mongod.conf`
 ```
