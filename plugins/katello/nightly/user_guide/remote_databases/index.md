@@ -1,26 +1,26 @@
 ---
 layout: plugins/katello/documentation
-title: Use Katello with Remote Databases
+title: Use Foreman with Remote Databases
 version: nightly
 ---
 
-# Setup Katello with remote databases
+# Setup Remote Databases in Foreman with Katello Plugin Installed
 
-Katello can be installed with remote databases for both postgresql and mongo. These instructions are for a Katello server, where remote databases are currently supported.
+Foreman with Katello plugin can be installed with remote databases for both postgresql and mongo. These instructions are for a Foreman with Katello plugin server, where remote databases are currently supported. This guide will refer to the server as "Foreman", with the assumption that the Katello plugin is installed.
 
 ## High level
-There are two ways to deploy Katello with remote databases:
+There are two ways to deploy Foreman with remote databases:
 
 1. [Fresh install](plugins/katello/{{ page.version }}/user_guide/remote_databases/index.html#fresh-install)
     * prepare Postgres server with databases for Foreman and Candlepin and dedicated users owning them
     * prepare Mongo DB with user owning the pulp_database
-    * prepare box where the Katello will be installed and make sure the databases are accessible from the box
+    * prepare box where the Foreman will be installed and make sure the databases are accessible from the box
     * run foreman-installer with right parameters pointing to the databases
 
-2. [Migration of existing Katello installation](plugins/katello/{{ page.version }}/user_guide/remote_databases/index.html#migration-of-existing-katello)
+2. [Migration of existing Foreman installation](plugins/katello/{{ page.version }}/user_guide/remote_databases/index.html#migration-of-existing-foreman)
     * prepare Postgres server with databases for Foreman a Candlepin and dedicated users owning them
     * prepare Mongo DB with user owning the pulp_databse
-    * make sure the databases are accessible from the box where Katello is installed
+    * make sure the databases are accessible from the box where Foreman is installed
     * shut down the services except the dbs you want to move (mongod, postgresql)
     * dump the DBs
     * restore the DBs on remote servers
@@ -29,8 +29,8 @@ There are two ways to deploy Katello with remote databases:
 In either scenario, both of the databases don't have to be remote. You can opt to use only a remote mongo database or only a remote postgresql database. Both postgresql and mongo databases can be on the same host, but this isn't recommended due to the amount of resources mongo can use.
 
 ## Prepare remote Postgres
-GOAL: To use remote Postgres database with Katello we have to:
-* be able to access the databases from katello box
+GOAL: To use remote Postgres database with Foreman we have to:
+* be able to access the databases from foreman box
 * the database user we use to connect to the database needs to own the database, i.e. it can create, alter and delete the tables, indexes and constraints. Note it is not required to be able to create the database itself.
 
 ### Install Postgres
@@ -89,8 +89,8 @@ PGPASSWORD='<CANDLEPIN_PASSWORD>' psql -h postgres.example.com  -p 5432 -U candl
 If there are no errors we are done with database preparation. 
 
 ## Prepare remote Mongo
-GOAL: To use remote Mongo database with Katello we have to:
-* be able to access the databases from katello box
+GOAL: To use remote Mongo database with Foreman we have to:
+* be able to access the databases from foreman box
 * the database user we use to connect to the database needs to own the database
 
 ### Install Mongo DB
@@ -128,7 +128,7 @@ If there are no errors we are done with database preparation.
 ## Fresh install
 
 ### Install katello package
-We assume the box where the Katello server will be installed has hostname `katello.example.com`.
+We assume the box where the Foreman server will be installed has hostname `katello.example.com`.
 
 Follow the [documentation](plugins/katello/{{ page.version }}/installation/index.html) to install the `katello` package and **do not run foreman-installer.** We need to use the remote database flags with the installer. Use the following steps once the katello rpm is installed.
 
@@ -137,7 +137,7 @@ Follow the [documentation](plugins/katello/{{ page.version }}/installation/index
 Follow the instructions to [prepare remote mongo](plugins/katello/{{ page.version }}/user_guide/remote_databases/index.html#prepare-remote-mongo) and [prepare remote postgres](plugins/katello/{{ page.version }}/user_guide/remote_databases/index.html#prepare-remote-postgres) to make the remote database servers ready for installation.
 
 ### Run the installer
-To install and configure Katello we just need to run 
+To install and configure Foreman we just need to run 
 ```
 foreman-installer --scenario katello \
   --foreman-db-host postgres.example.com \ 
@@ -157,16 +157,16 @@ foreman-installer --scenario katello \
 
 Note: for more related options and tips on SSL configuration see [Full list of options](plugins/katello/{{ page.version }}/user_guide/remote_databases/index.html#full-list-of-remote-database-related-options-in-the-installer)
 
-## Migration of existing Katello
+## Migration of existing Foreman
 Migrating an existing installation to remote databases can take time, so plan for some outage time (length depending on database size) while a backup is taken and the databases are migrated.
 
-In this example, we assume that Katello was installed and is running on `katello.example.com`.
+In this example, we assume that Foreman was installed and is running on `katello.example.com`.
 
 ### Prepare remote databases
 Follow the instructions to [prepare remote mongo](plugins/katello/{{ page.version }}/user_guide/remote_databases/index.html#prepare-remote-mongo) and [prepare remote postgres](plugins/katello/{{ page.version }}/user_guide/remote_databases/index.html#prepare-remote-postgres) to make the remote database servers ready for migration.
 
-### Stop the Katello server
-Stop the Katello related services to minimize risk of the data changes during the migration
+### Stop the Foreman server
+Stop the Foreman related services to minimize risk of the data changes during the migration
 ```
 katello-service stop
 systemctl start postgresql mongod
@@ -179,7 +179,7 @@ foreman-maintain backup online --skip-pulp-content --preserve-directory -y /tmp/
 ```
 
 ### Restore data in remote databases
-You can restore the SQL dumps to the remote databases from the katello system.
+You can restore the SQL dumps to the remote databases from the foreman system.
 
 ```
 PGPASSWORD='<FOREMAN_PASSWORD>' pg_restore -h postgres.example.com -U foreman -d foreman < /tmp/migration_backup/foreman.dump
@@ -189,7 +189,7 @@ mongorestore --host mongo.example.com --db pulp_database --username pulp --passw
 Now the copy of the local database is also at the remote locations.
 
 ### Update the configuration
-To update existing configuration of Katello we just need to run 
+To update existing configuration of Foreman we just need to run 
 ```
 foreman-installer --scenario katello \
   --foreman-db-host postgres.example.com \ 
