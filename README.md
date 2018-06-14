@@ -7,7 +7,9 @@ to learn and to become rapidly productive!
 
 Everything you push into the gh-pages branch goes live immediately!
 
-## Testing locally
+## Testing
+
+### Locally
 
 To test your changes locally use
 
@@ -18,6 +20,14 @@ to generate your site in the \_site directory, or
     # rake server
 
 To start Jekyll server locally.
+
+### With Docker
+
+```
+docker run -it --rm -v `pwd`:/srv/jekyll:Z -p 4000:4000 jekyll/jekyll jekyll serve --watch
+```
+
+Navigate to http://localhost:4000
 
 ## Contributing
 
