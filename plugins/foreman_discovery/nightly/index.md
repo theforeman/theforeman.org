@@ -1,11 +1,11 @@
 ---
 layout: plugin
 pluginname: foreman_discovery
-title: Foreman Discovery 11.0 Manual
-version: 11.0
+title: Foreman Discovery 12.0 Manual
+version: 12.0
 # versions for matrix and snippets
 # (use short version for imgver e.g. 3.0)
-pluginver: 11.0.0
+pluginver: 12.0.0
 proxyver: 1.0.4
 imgver: 3.4
 cliver: 1.0.0
@@ -149,6 +149,13 @@ plugin:
   </tr>
   <tr>
     <td>= 1.17</td>
+    <td>11.0.0</td>
+    <td>1.0.4</td>
+    <td>3.4</td>
+    <td>1.0.0</td>
+  </tr>
+  <tr>
+    <td>= 1.18</td>
     <td>{{page.pluginver}}</td>
     <td>{{page.proxyver}}</td>
     <td>{{page.imgver}}</td>
@@ -227,11 +234,15 @@ As of Foreman 1.8+, the foreman-installer is able to automatically download
 latest stable image. For this, re-run the installer with the following option:
 
     # foreman-installer \
-        --foreman-plugin-discovery-source-url=http://downloads.theforeman.org/discovery/releases/{{page.imgver}}/ \
-        --foreman-plugin-discovery-install-images=true
+      --enable-foreman-proxy-plugin-discovery \
+      --foreman-proxy-plugin-discovery-install-images=true
 
-Check the version number in `foreman-plugin-discovery-source-url` option
-against the table above. Some image-plugin combinations are not compatible.
+The command installs latest available Foreman Discovery Image. If that's not the version required (see the compatibility table above), explicitly request to download specific version:
+
+    # foreman-installer \
+      --enable-foreman-proxy-plugin-discovery \
+      --foreman-proxy-plugin-discovery-install-images=true \
+      --foreman-proxy-plugin-discovery-source-url=http://downloads.theforeman.org/discovery/releases/{{page.imgver}}/
 
 Tip: It is possible to install both Discovery plugin and image in one
 installer run by providing both the options.
