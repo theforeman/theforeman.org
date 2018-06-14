@@ -19,7 +19,6 @@ Install the appropriate Katello client release packages.  For CentOS 6, you will
      <option value="el5">Enterprise Linux 5 (CentOS, etc.)</option>
      <option value="el6">Enterprise Linux 6 (CentOS, etc.)</option>
      <option value="el7">Enterprise Linux 7 (CentOS, etc.)</option>
-     <option value="f26">Fedora 26</option>
      <option value="f27">Fedora 27</option>
   </select>
 </p>
@@ -43,12 +42,6 @@ yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.versi
 {% highlight bash %}
 yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/el7/x86_64/katello-client-repos-latest.rpm
 yum -y install http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-{% endhighlight %}
-</div>
-
-<div id="f26" style="display:none;" markdown="1">
-{% highlight bash %}
-yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/f26/x86_64/katello-client-repos-latest.rpm
 {% endhighlight %}
 </div>
 
