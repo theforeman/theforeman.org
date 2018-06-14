@@ -227,11 +227,15 @@ As of Foreman 1.8+, the foreman-installer is able to automatically download
 latest stable image. For this, re-run the installer with the following option:
 
     # foreman-installer \
-        --foreman-plugin-discovery-source-url=http://downloads.theforeman.org/discovery/releases/{{page.imgver}}/ \
-        --foreman-plugin-discovery-install-images=true
+      --enable-foreman-proxy-plugin-discovery \
+      --foreman-proxy-plugin-discovery-install-images=true
 
-Check the version number in `foreman-plugin-discovery-source-url` option
-against the table above. Some image-plugin combinations are not compatible.
+The command installs latest available Foreman Discovery Image. If that's not the version required (see the compatibility table above), explicitly request to download specific version:
+
+    # foreman-installer \
+      --enable-foreman-proxy-plugin-discovery \
+      --foreman-proxy-plugin-discovery-install-images=true \
+      --foreman-proxy-plugin-discovery-source-url=http://downloads.theforeman.org/discovery/releases/{{page.imgver}}/
 
 Tip: It is possible to install both Discovery plugin and image in one
 installer run by providing both the options.
