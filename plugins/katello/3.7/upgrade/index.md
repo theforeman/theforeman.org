@@ -7,12 +7,12 @@ foreman_version: 1.18
 
 # Katello Upgrade
 
-Katello 3.6 supports upgrades from version 3.5 and Puppet version 4.  For users transitioning from versions prior to 3.5, first [upgrade to Katello 3.5](/plugins/katello/3.5/upgrade/), [upgrade Puppet to version 4](https://theforeman.org/plugins/katello/3.5/upgrade/puppet.html), and then proceed to upgrade to Katello 3.6 following the instructions below.
+Katello 3.7 supports upgrades from version 3.6 and Puppet version 4.  For users transitioning from versions prior to 3.6, first [upgrade to Katello 3.6](/plugins/katello/3.6/upgrade/), [upgrade Puppet to version 4](https://theforeman.org/plugins/katello/3.6/upgrade/puppet.html), and then proceed to upgrade to Katello 3.7 following the instructions below.
 
 
 # Pre-upgrade considerations
 
-Before you upgrade, you need to run the upgrade check script that will check for any active tasks, your version of Katello, and if there are any content hosts that will be deleted (see below). This script is included in Katello 2.4.3.
+Before you upgrade, you need to run the upgrade check script that will check for any active tasks, your version of Katello, and if there are any content hosts that will be deleted (see below).
 
 To run the script:
 
@@ -73,7 +73,7 @@ The installer with the --upgrade flag will run the right database migrations for
 foreman-installer --scenario katello --upgrade
 {% endhighlight %}
 
-**Congratulations! You have now successfully upgraded your Katello to {% if page.version %}{{ page.version }} For a rundown of what was added, please see [release notes](/plugins/katello/{{ page.version }}/release_notes/release_notes.html).{% else %}the latest nightly{% endif %}!**
+**Congratulations! You have now successfully upgraded your Katello to {% if page.version %}{{ page.version }} For a rundown of what was added, please see [the release notes](/plugins/katello/{{ page.version }}/release_notes/release_notes.html){% else %}the latest nightly{% endif %}.**
 
 
 If for any reason, the above steps failed, please review /var/log/foreman-installer/katello.log -- if any of the "Upgrade step" tasks failed, you may try to run them manaully below to aid in troubleshooting.
