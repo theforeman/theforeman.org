@@ -1,7 +1,7 @@
 ---
 layout: post
 title: update - Getting Foreman search results into your Puppet manifest
-date: 2018-05-23 11:19:42
+date: 2018-06-14 11:19:42
 author: Fabien Combernous
 tags:
 - Foreman
