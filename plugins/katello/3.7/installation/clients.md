@@ -20,6 +20,8 @@ Install the appropriate Katello client release packages.  For CentOS 6, you will
      <option value="el6">Enterprise Linux 6 (CentOS, etc.)</option>
      <option value="el7">Enterprise Linux 7 (CentOS, etc.)</option>
      <option value="f27">Fedora 27</option>
+     <option value="sles11">Suse Enterprise Linux Server 11</option>
+     <option value="sles12">Suse Enterprise Linux Server 12</option>
   </select>
 </p>
 
@@ -50,6 +52,21 @@ yum -y install http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch
 yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/f27/x86_64/katello-client-repos-latest.rpm
 {% endhighlight %}
 </div>
+
+<div id="sles12" style="display:none;" markdown="1">
+{% highlight bash %}
+rpm -Uvh https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/sles12/x86_64/katello-client-repos-latest.rpm
+{% endhighlight %}
+</div>
+
+<div id="sles11" style="display:none;" markdown="1">
+{% highlight bash %}
+# For python-datetime dependency, ensure that the SDK addon product is enabled see: https://www.suse.com/support/kb/doc/?id=7015337
+zypper modifyrepo -e nu_novell_com:SLES11-Extras
+rpm -Uvh https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/sles11/x86_64/katello-client-repos-latest.rpm
+{% endhighlight %}
+</div>
+
 
 Now you are ready to install the katello-agent:
 
