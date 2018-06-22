@@ -17,7 +17,7 @@ tags:
 
 # How do I get started with contributing to the installer?
 
-The Foreman installer can be intimidating at first. It manages lots of files, and has many, many, many options. Even more options are exposed via `custom-hiera.yaml`. If you want to make a change that's not covered by either an installer option or `custom-hiera.yaml`, you may feel like you are out of luck. However, this is a great oppurtunity to make an upstream contribution!
+The Foreman installer can be intimidating at first. It manages lots of files, and has many, many, many options. Even more options are exposed via `custom-hiera.yaml`. If you want to make a change that's not covered by either an installer option or `custom-hiera.yaml`, you may feel like you are out of luck. However, this is a great opportunity to make an upstream contribution!
 
 This blog post shows the steps on how to identify a change you want to make in the installer and create an upstream pull request in the correct installer module.
 
@@ -25,7 +25,7 @@ This blog post shows the steps on how to identify a change you want to make in t
 
 *The workflow below describes how I would proceed with an installer change. However, everyone is different and there are multiple ways to go about doing the same thing.*
 
-If you found an issue to fix, it's likely on your production Foreman installation. This is not a suitable place to edit installer code! Do not do this. Instead, use [forklift](https://github.com/theforeman/forklift). Forklift uses Vagrant and Ansible to create development VMs on a hypervisor. I have only used Forklift with Fedora but I've heard it works on Debian and Ubuntu.  You'll need to find a place to run Forklift before continuing. You can use `centos7-foreman-nightly` for a vanilla Foreman install, or `centos7-katello-nightly` for a Katello install.
+If you found an issue to fix, it's likely on your production Foreman installation. This is not a suitable place to edit installer code! Do not do this. Instead, use [forklift](https://github.com/theforeman/forklift). Forklift uses Vagrant and Ansible to create development VMs on a hypervisor. I have only used Forklift with Fedora but I've heard it works on Debian, Ubuntu, and Gentoo :penguin:.  You'll need to find a place to run Forklift before continuing. You can use `centos7-foreman-nightly` for a vanilla Foreman install, or `centos7-katello-nightly` for a Katello install.
 
 If you have found an issue in a commercial product that uses Foreman, you'll need to replicate the issue in Foreman. Otherwise, please contact your vendor for assistance.
 
@@ -93,9 +93,9 @@ vagrant@centos7-katello-nightly ~]$ ip addr
        valid_lft forever preferred_lft forever
 ```
 
-There is a lot of output here, but the part we care about is "192.168.121.8".  Next, in a new terminal on your workstation, run this command: `ssh -f -N -L 2000:192.168.121.8:443 user@<hypervisor hostname>`. This will tunnel TCP requests from port 2000 on your workstation through your hypervisor to port 443 on your guest. You can also set up bridged networking, but SSH tunnels are usually quicker to set up. If your VM's IP address changes, you'll need to kill this tunnel and make a new one. If you don't kill the old one first, your new one won't be able to bind to port 2000.
+There is a lot of output here, but the part we care about is "192.168.121.8".  Next, in a new terminal on your workstation, run this command: `ssh -f -N -L 2000:192.168.121.8:443 user@<hypervisor hostname>`. This will tunnel TCP requests from port 2000 on your workstation through your hypervisor to port 443 on your guest. You can also set up bridged networking, but SSH tunnels are usually quicker to set up. If your VM's IP address changes, you'll need to kill this tunnel and make a new one. If you don't kill the old one first, your new one won't be able to bind to port 2000. Again, this is only needed if your hypervisor is not your laptop or workstation.
 
-Once this is done, you can go to "https://localhost:2000" on your browser, and you will be presented with a Foreman login window! Just kidding, you will be presented with a box that says "Your connection is not secure". This is normal because your development environment does not have a valid CA certificate. This is expected, just click "Advanced" and then "accept" and then "confirm", and then you will get the login window :smile:. The login is always 'admin' and the password is 'changeme'.
+Once this is done, you can go to "https://localhost:2000" (or "https://hostname/" if you don't need SSH forwarding) on your browser, and you will be presented with a Foreman login window! Just kidding, you will be presented with a box that says "Your connection is not secure". This is normal because your development environment does not have a valid CA certificate. This is expected, just click "Advanced" and then "accept" and then "confirm", and then you will get the login window :smile:. The login is always 'admin' and the password is 'changeme'.
 
 The next few paragraphs outline some development steps. *No one is expected to know all of this stuff off the top of their heads!* I am leaving out a lot of trial and error. This part can take days of work if you are new to puppet development, and lots of question asking.
 
@@ -137,7 +137,7 @@ rm -rf katello
 ln -s /home/vagrant/puppet-katello katello
 ```
 
-Now, become the vagrant user again and run `sudo foreman-installer -v --disable-system-checks`. This should lay down the old pulp.conf file, since we are using our checkout instead of the locally modified copy. It will fail at first, run `dnf install puppet-agent-puppet-strings.noarch` to make it work.  Progress!
+Now, become the vagrant user again and run `sudo foreman-installer -v --disable-system-checks`. This should lay down the old pulp.conf file, since we are using our checkout instead of the locally modified copy. It will fail at first, run `yum install puppet-agent-puppet-strings.noarch` to make it work.  Progress!
 
 Let's make that file a template now. Here's an example diff:
 
@@ -322,4 +322,4 @@ index 0000000..2820a8b
 
 Of course, this only covers port 443 and not 80. You'll need to do something similar to make port 80 work.
 
-After all that is done, you can commit your change and create a pull request.  Each module has its own process for this. You'll find more information in `CONTRIBUTING.md`, which will outline how to run unit tests. Once those are successful, you can put in a pull request. There are (installer testing instructions)[https://github.com/theforeman/forklift/blob/master/docs/development.md#test-puppet-module-pull-requests] available as well. As mentioned before, feel free to reach out if you need assistance.
+After all that is done, you can commit your change and create a pull request.  Each module has its own process for this. You'll find more information in `CONTRIBUTING.md`, which will outline how to run unit tests. Once those are successful, you can put in a pull request. There are [installer testing instructions](https://github.com/theforeman/forklift/blob/master/docs/development.md#test-puppet-module-pull-requests) available as well. As mentioned before, feel free to reach out if you need assistance.
