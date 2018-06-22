@@ -19,7 +19,7 @@ tags:
 
 The Foreman installer can be intimidating at first. It manages lots of files, and has many, many, many options. Even more options are exposed via `custom-hiera.yaml`. If you want to make a change that's not covered by either an installer option or `custom-hiera.yaml`, you may feel like you are out of luck. However, this is a great opportunity to make an upstream contribution!
 
-This blog post shows the steps on how to identify a change you want to make in the installer and create an upstream pull request in the correct installer module.
+This blog post shows the steps on how to identify a change you want to make in the installer and create an upstream pull request in the correct installer module. This post specifically describes "bugfix"-level changes to the installer; larger changes such as adding a new puppet module are outside the scope of this document.
 
 ## Initial setup
 
