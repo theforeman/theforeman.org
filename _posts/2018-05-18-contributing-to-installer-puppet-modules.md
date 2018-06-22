@@ -6,14 +6,7 @@ author: Christopher Duryee
 tags:
 - foreman
 ---
----
-layout: post
-title: 'Contributing to the Installer Puppet Modules'
-date: 2018-05-21 12:00:00
-author: Christopher Duryee
-tags:
-- foreman
----
+
 
 # How do I get started with contributing to the installer?
 
