@@ -3,6 +3,8 @@ layout: plugin
 title: Foreman OpenSCAP manual
 images: /plugins/foreman_openscap/0.6
 version: 0.8.0
+version_short: 0.8
+foreman_version: '1.17'
 ---
 
 # 1. {{ page.title }}
@@ -306,7 +308,17 @@ Go to 'SCAP Content' tab
 Select a Tailoring file from a dropdown and then a profile that comes with it
 ![Tailoring a Policy]({{page.images}}/policy_tailoring.png)
 
-### 4.5.4 Running a scan from UI ( foreman_openscap >= 0.6.5 )
+## 4.6 Setting up hosts for scans
+
+There are 3 important things that your host needs to have so that it can be scanned properly:
+
+* Policy - you can assign it directly or via hostgroup. See section [4.3]({{site.baseurl}}/plugins/foreman_openscap/{{page.version_short}}/index.html#4.3Assigningpolicytohost) for details.
+
+* foreman_scap_client Puppet module - it will take care of configuring the host with foreman_scap_client. This ruby script runs the openscap scanner with configured options. You can assign the module to the host such as you would any other module. See the section for [Puppet Classes]({{site.baseurl}}/manuals/{{page.foreman_version}}/index.html#4.2.2Classes) for details.
+
+* Openscap proxy - All the communication between Foreman and hosts goes through the proxy with Openscap feature (provided by smart_proxy_openscap). You need to choose which one should be used for each host. You can do that under Hosts -> All hosts, Edit.
+
+## 4.7 Running a scan from UI ( foreman_openscap >= 0.6.5 )
 
 In version 0.6.5 and higher, you can initiate scans from UI. Simply go to hosts page and select "Run OpenSCAP scan" from the dropdown menu. This will initiate a scan for all policies that are assigned to the host. foreman_remote_execution plugin of version 1.3.0 or higher needs to be installed for this feature to be enabled.
 
