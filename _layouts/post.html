@@ -25,9 +25,13 @@
         {{ content }}
       </div>
 
-      <div class="well post-content">
-        We also have a <a href='https://community.theforeman.org'>forum</a> which you can join for updates &amp; discussion.
+      <hr/>
+
+      <div class="post-content">
+        <h4>Comments from <a href='https://community.theforeman.org'>the community</a>:</h4>
       </div>
+
+      <div id='discourse-comments'></div>
 
       <div class="row">
         <div class="col-md-6 col-sm-6 col-xs-6">
@@ -39,4 +43,16 @@
     </section>
   </div>
 </div>
+
+<script type="text/javascript">
+  DiscourseEmbed = { discourseUrl: 'https://community.theforeman.org/',
+                     discourseEmbedUrl: 'https://theforeman.org{{ page.url }}' };
+
+  (function() {
+    var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+    d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+  })();
+</script>
+
 {% include footer.html %}
