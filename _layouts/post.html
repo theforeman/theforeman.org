@@ -9,9 +9,15 @@
         <h2>{{ page.title }}</h2>
         {% endif %}
         <p class="metadata">
-          <span class="author">{{ page.author }}</span> - <span class="date">{{ page.date | date: "%-d %B %Y" }}</span>
+          <span class="author">
+            {% if page.author.first %} <!-- is an array or hash -->
+              {{ page.author['name'] }}
+            {% else %} <!-- raw string -->
+              {{ page.author }}
+            {% endif %}
+          </span> - <span class="date">{{ page.date | date: "%-d %B %Y" }}</span>
           {% if page.guest_post %}
-          <span class="foreman-blue-infobox pull-right">Guest Post</span>&nbsp;
+            <span class="foreman-blue-infobox pull-right">Guest Post</span>&nbsp;
           {% endif %}
         </p>
       </div>

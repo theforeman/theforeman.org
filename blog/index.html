@@ -7,10 +7,16 @@ layout: post_index
   <div class="blog-item post-content">
     <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
     <p class="metadata">
-      <span class="author">{{ post.author }}</span> - <span class="date">{{ post.date | date: "%-d %B %Y" }}</span>
-    {% if post.guest_post %}
-      <span class="foreman-blue-infobox pull-right">Guest Post</span>&nbsp;
-    {% endif %}
+      <span class="author">
+        {% if post.author.first %} <!-- is an array or hash -->
+          {{ post.author['name'] }}
+        {% else %} <!-- raw string -->
+          {{ post.author }}
+        {% endif %}
+      </span> - <span class="date">{{ post.date | date: "%-d %B %Y" }}</span>
+      {% if post.guest_post %}
+        <span class="foreman-blue-infobox pull-right">Guest Post</span>&nbsp;
+      {% endif %}
     </p>
     <div class="post-content">
       {{ post.excerpt }}
