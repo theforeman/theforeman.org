@@ -2,7 +2,9 @@
 layout: post
 title: 'Contributing to the Installer Puppet Modules'
 date: 2018-05-21 12:00:00
-author: Christopher Duryee
+author: 
+  name: Christopher Duryee
+  uri: Chris_Duryee 
 tags:
 - foreman
 ---
