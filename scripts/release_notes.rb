@@ -9,7 +9,7 @@ require 'net/http'
 require 'json'
 require 'pry-byebug'
 
-URL = 'http://projects.theforeman.org'
+URL = 'https://projects.theforeman.org'
 
 # Check out installer modules
 # Compare packages in nightly vs release and retag dependencies
@@ -26,7 +26,6 @@ end
 # Move bugs with Release set to VERSION to NEXT-VERSION with status new
 def gather_issues(offset=0)
   url = "#{URL}/projects/foreman/issues.json?status_id=closed&offset=#{offset}&limit=100&release_id=#{@current_release_id}"
-  #puts url
   uri = URI(URI.escape(url))
   response = Net::HTTP.get(uri)
 	result = JSON.parse(response)
