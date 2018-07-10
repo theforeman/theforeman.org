@@ -474,6 +474,8 @@ own entry.
 
 * Force DNS - DNS entry will be created when provisioning discovered host.
 
+* Create bond interfaces - automatically create a bond interface from interfaces in the same vlan based on lldp
+
 ## 3.1.5 Discovery image kernel options
 
 Foreman discovery image currently recognizes the following list of
