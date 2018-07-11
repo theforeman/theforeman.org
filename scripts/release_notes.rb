@@ -7,7 +7,6 @@
 require 'uri'
 require 'net/http'
 require 'json'
-require 'pry-byebug'
 
 URL = 'https://projects.theforeman.org'
 
@@ -17,15 +16,40 @@ URL = 'https://projects.theforeman.org'
 # Create new release via API call
 # Create new search by open + release field
 
-unless @current_release_id = ARGV[0]
-  puts "Usage: #{$0} RELEASE_ID"
-  puts "Hint: 1.16.0 is 240"
+unless ARGV.size == 2
+  puts "Usage: #{$0} PROJECT RELEASE_NAME"
+  puts "Example: #{$0} foreman 1.18.0"
+  exit 1
+end
+
+@project_name = ARGV[0]
+@current_release_name = ARGV[1]
+
+# Determine version
+def get_version_id
+  url = "#{URL}/projects/#{@project_name}/versions.json"
+  uri = URI(URI.escape(url))
+  response = Net::HTTP.get(uri)
+  result = JSON.parse(response)
+  return nil if result['versions'].nil?
+  result = result['versions'].detect{|v| v['name'] == @current_release_name }
+  return nil if result.nil?
+  result['id']
+rescue
+  puts "Error getting version list from #{url}"
+  exit 1
+end
+
+@current_release_id = get_version_id
+
+if @current_release_id.nil?
+  puts "Release #{@current_release_name} not found in project #{@project_name}"
   exit 1
 end
 
 # Move bugs with Release set to VERSION to NEXT-VERSION with status new
 def gather_issues(offset=0)
-  url = "#{URL}/projects/foreman/issues.json?status_id=closed&offset=#{offset}&limit=100&release_id=#{@current_release_id}"
+  url = "#{URL}/projects/#{@project_name}/issues.json?status_id=closed&offset=#{offset}&limit=100&fixed_version_id=#{@current_release_id}"
   uri = URI(URI.escape(url))
   response = Net::HTTP.get(uri)
 	result = JSON.parse(response)
@@ -60,4 +84,4 @@ grouped_issues.each do |category, issues|
 end
 
 # Close the release
-puts "Close the release #{URL}/rb/release/#{@current_release_id}/edit - not possible to do through the API"
+puts "Close the release #{URL}/versions/#{@current_release_id}/edit - not possible to do through the API (yet)"
