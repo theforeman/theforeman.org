@@ -51,13 +51,18 @@ Thank you to NETWAYS, who provide servers for our continuous integration system.
 
 ### JetBrains
 
-<div class="lead text-left"><a href="http://www.jetbrains.com/ruby"></a><img src="/static/images/sponsors/jetbrains.svg" height="125px"/></div>
+<div class="lead text-left"><a href="http://www.jetbrains.com/ruby"><img src="/static/images/sponsors/jetbrains.svg" height="125px"/></a></div>
 Thank you to JetBrains, who provide licenses for Rubymine/IntelliJ IDE.
 
 ### ATIX
 
-<div class="lead text-left"><a href="https://www.atix.de"></a><img src="/static/images/sponsors/atix.png" height="125px"/></div>
+<div class="lead text-left"><a href="https://www.atix.de"><img src="/static/images/sponsors/atix.png" height="125px"/></a></div>
 Thank you to ATIX, for their many ongoing contributions to the codebase.
+
+### dm
+
+<div class="lead text-left"><a href="https://www.dm.de"><img src="/static/images/sponsors/dm.jpg" height="125px"/></a></div>
+Thank you to dm, for their many ongoing contributions to the codebase.
 
 ## Former Sponsors
 
