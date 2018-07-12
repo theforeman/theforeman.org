@@ -54,6 +54,11 @@ Thank you to NETWAYS, who provide servers for our continuous integration system.
 <div class="lead text-left"><a href="http://www.jetbrains.com/ruby"></a><img src="/static/images/sponsors/jetbrains.svg" height="125px"/></div>
 Thank you to JetBrains, who provide licenses for Rubymine/IntelliJ IDE.
 
+### ATIX
+
+<div class="lead text-left"><a href="https://www.atix.de"></a><img src="/static/images/sponsors/atix.png" height="125px"/></div>
+Thank you to ATIX, for their many ongoing contributions to the codebase.
+
 ## Former Sponsors
 
 ### Positive Internet
