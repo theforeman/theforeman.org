@@ -242,20 +242,17 @@ Review the modules for releasing - we should be keeping them up to date when mak
 
 Go through the [list of managed modules](https://github.com/theforeman/foreman-installer-modulesync/blob/master/managed_modules.yml).
 
-Building the changelog is a somewhat delicate task because [github_changelog_generator](https://github.com/skywinder/github-changelog-generator) doesn't handle multiple branches with non-linear releases well. [PR-619](https://github.com/skywinder/github-changelog-generator/pull/619) should improve that and it may make sense to use that code.
+Building the changelog is a somewhat delicate task. We use [github_changelog_generator](https://github.com/skywinder/github-changelog-generator) which is based on Github pull requests and issues but not everythis has a pull request. Especially cherry picks are sometimes forgotten.
 
-Below is mostly a script, but not quite. Read the comments.
+Start with updating the changelog.
 
-```sh
-# Review the the changes since the last tag
-tig $(git describe --abbrev=0 --tags)..HEAD
+```
+bundle exec rake changelog
+```
 
-# If it needs a major or minor version bump
-# Note: usually we already bumped it for patch releases but do check!
-bundle exec rake module:bump:major
-bundle exec rake module:bump:minor
+This is a [recent addition](https://github.com/theforeman/foreman-installer-modulesync/pull/86) and stable branches might not have this. Then you need to do it manually:
 
-# Update CHANGELOG.md
+```
 # See https://github.com/skywinder/github-changelog-generator#github-token on using a token to avoid ratelimits
 github_changelog_generator -u theforeman -p $(basename $PWD) -o new-changelog.md --future-release $(bundle exec rake module:version) --exclude-labels duplicate,question,invalid,wontfix,Modulesync
 
@@ -265,12 +262,42 @@ github_changelog_generator -u theforeman -p $(basename $PWD) -o new-changelog.md
 
 # Add links to Redmine for issues
 sed -i 's,\(fixes\|fixing\|refs\) \\#\([0-9]\+\),\1 [\\#\2](https://projects.theforeman.org/issues/\2),i' CHANGELOG.md
+```
 
-# Create the release commit
-git add CHANGELOG.md
-VERSION=$(bundle exec rake module:version) && git commit -m "Release $VERSION"
+Now go through the `git diff` and the actual content. Check if pull requests need a `Bug`, `Breaking` or `Enhancements` label. You can also determine based on these labels if a minor or major version bump is needed.
 
-# Create a new tag
+Also compare it with the actual git log:
+
+```
+tig $(git describe --abbrev=0 --tags)..HEAD
+```
+
+If it needs a major or minor version bump you can use the appropriate rake task. In edge cases it may be needed to do a patch level bump.
+
+```
+bundle exec rake module:bump:major
+bundle exec rake module:bump:minor
+bundle exec rake module:bump:patch
+```
+
+If you've made changes, may need to regenerate the changelog now. When you're satisfied you can create a commit:
+
+```
+git checkout -b release-$(bundle exec rake module:version)
+git add CHANGELOG.md metadata.json
+git commit -m "Release $(bundle exec rake module:version)"
+```
+
+Now create a pull request. The following assumes you have a remote named `$USER` and [hub](https://github.com/github/hub).
+
+```
+git push $USER HEAD -u
+hub pull-request -m "Release $(bundle exec rake module:version)"
+```
+
+When merging a PR note that the date is in the changelog which you may need to update. Now you can tag the module:
+
+```
 bundle exec rake module:tag
 
 # Only recently puppet-blacksmith learned to do GPG signed tags - check this
@@ -278,7 +305,11 @@ git verify-tag $(bundle exec rake module:version)
 
 # If it failed you can do it manually
 # VERSION=$(bundle exec rake module:version) && git tag -s $VERSION -m "Version $VERSION"
+```
 
+When you're satisfied you can push the changes to git and release the module to the forge:
+
+```
 # Push the changes to github
 git push --follow-tags
 
