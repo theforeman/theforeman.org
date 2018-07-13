@@ -18,18 +18,15 @@ For general contribution information, see [here](/contribute.html).
 
 ## Triage Process Links
 
-The Katello bug triage process is designed to address Redmine issues that have been opened by the community and developers in order to target the releases that these issues will be included in. This should be done on a weekly basis and in the following order of items to be addressed:
+The Katello bug triage process is designed to address Redmine issues that have been opened by the community and developers in order to target the releases that these issues will be included in. This should be done on a weekly basis and in a top down order of items to be addressed:
 
-  * [Open Recycle Bin](http://projects.theforeman.org/projects/katello/issues?utf8=%E2%9C%93&set_filter=1&f%5B%5D=status_id&op%5Bstatus_id%5D=o&f%5B%5D=release_id&op%5Brelease_id%5D=%3D&v%5Brelease_id%5D%5B%5D=166&f%5B%5D=&c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=priority&c%5B%5D=subject&c%5B%5D=author&c%5B%5D=assigned_to&c%5B%5D=updated_on&c%5B%5D=category&c%5B%5D=fixed_version&c%5B%5D=position&group_by=fixed_version)
-  * [Untriaged High Priority](http://projects.theforeman.org/projects/katello/issues?utf8=%E2%9C%93&set_filter=1&f%5B%5D=release_id&op%5Brelease_id%5D=%21*&f%5B%5D=subproject_id&op%5Bsubproject_id%5D=%21*&f%5B%5D=priority_id&op%5Bpriority_id%5D=%3D&v%5Bpriority_id%5D%5B%5D=5&v%5Bpriority_id%5D%5B%5D=6&v%5Bpriority_id%5D%5B%5D=7&f%5B%5D=&c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=priority&c%5B%5D=subject&c%5B%5D=author&c%5B%5D=assigned_to&c%5B%5D=updated_on&c%5B%5D=category&c%5B%5D=fixed_version&group_by=)
-  * [Untriaged Closed](http://projects.theforeman.org/projects/katello/issues?utf8=%E2%9C%93&set_filter=1&f%5B%5D=release_id&op%5Brelease_id%5D=%21*&f%5B%5D=subproject_id&op%5Bsubproject_id%5D=%21*&f%5B%5D=status_id&op%5Bstatus_id%5D=c&f%5B%5D=&c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=priority&c%5B%5D=subject&c%5B%5D=author&c%5B%5D=assigned_to&c%5B%5D=updated_on&c%5B%5D=category&c%5B%5D=fixed_version&group_by=)
-  * [Untriaged Open](http://projects.theforeman.org/projects/katello/issues?utf8=%E2%9C%93&set_filter=1&f%5B%5D=release_id&op%5Brelease_id%5D=%21*&f%5B%5D=subproject_id&op%5Bsubproject_id%5D=%21*&f%5B%5D=status_id&op%5Bstatus_id%5D=o&f%5B%5D=&c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=priority&c%5B%5D=subject&c%5B%5D=author&c%5B%5D=assigned_to&c%5B%5D=updated_on&c%5B%5D=category&c%5B%5D=fixed_version&group_by=)
+  * [Untriaged](https://projects.theforeman.org/projects/katello/issues?query_id=54)
 
 ### Triage Runner
 
 The runner is the person in charge of following the procedures here and generally conducting the meeting.
 
-We follow a rotation with respect to who runs the triage session. You can see the rotation [here](http://projects.theforeman.org/projects/katello/wiki/Triage_Rotation).
+We follow a rotation with respect to who runs the triage session. You can see the rotation [here](http://projects.theforeman.org/projects/katello/wiki/Triage_Rotation). Feel free to sign up if you want to run triage some time!
 
 ### Frequency
 
@@ -43,55 +40,58 @@ There are a few important states that issues can be in that are worth knowing ab
   * Assigned: Developer has taken responsibility
   * Needs more information: User who filed the issue has been asked for further information to help triage or debug the issue
   * Needs design: The issue requires investigation by a developer
-  * Ready for Testing: An issue has an open PR
+  * Ready for Testing: An issue has an open pull request
   * Closed: An issue has been fixed
 
 ### Release States
 
 There are a few important states the issue can be in with respect to the 'Release' field within Redmine. These release states have an impact not only a release itself but the triage process as a whole. A quick definition of each that will make more sense in the process section:
 
-  * Empty: No release has been set, this is the "untriaged" bucket
+  * Empty: No release has been set
   * Katello Backlog: Issues that have been put on the backlog and not scheduled for a release due to any number of reasons
-  * Katello Recycle Bin: Issues that have been rejected, or are a duplicate, or have been in 'Needs more information' for longer than a week
+  * Katello Recycle Bin: Issues that have been rejected, or are a duplicate, or have been in 'Needs more information' for longer than two weeks
   * Katello X.Y.Z: Standard releases for issues to be targeted at
 
 ### Process
 
-The triage runner starts the meeting by going through sets of issues broken down into different groups by priority of the grouping. This is so that if time were to run out, the most critical categories of issues are triaged. The runner is in charge of ensuring the flow of the meeting, and updating issues or ensuring that someone on the call takes responsibility for updating an issue. This latter part sometimes occurs if a duplicate needs to be looked up, or another developer on the call can explain/ask the user for more information more clearly than the runner.
+The triage runner starts the meeting by going through the issues in descending order. This is so that if time were to run out, the most critical categories of issues are triaged. The runner is in charge of ensuring the flow of the meeting and updating issues or ensuring that someone on the call takes responsibility for updating an issue. This latter part sometimes occurs if a duplicate needs to be looked up, or another developer on the call can explain/ask the user for more information more clearly than the runner.
 
-### Recycle Bin
+#### General Flow for New
 
-The first on the list is our 'recycle bin'. This the place to put issues that don't fit into a release, or were filed by a user who has since gone dark on the issue. Another way to look at it is a place for unresolvable issues. Issues are moved onto the recycle bin if there has been no activity by a user for a week. And they are closed if a week on the recycle bin goes by without any further updates.
+The general flow is to open an issue and the runner to examine the issue, typically reading the issue number and general idea aloud. This allows for any developers with knowledge to chime in with any relevant info. The runner attempts to answer the following questions:
 
-#### General Flow for New or Needs More Information
+* Does this issue need more information from the user?
+    * If yes, leave a comment asking for that information, set the 'Needs More Information' status, leave untriaged
+* Does this issue need a developer to investigate it further to properly triage it?
+    * If yes, set status to 'Needs Design'
+* Which release should the issue be targeted at? (e.g. next z-stream, current release, next release, backlog)
+* Does any developer want to own it?
+    * If yes, assign it
+* Does the issue have downstream information?
+    * If yes, edit the description to remove the downstream bits
+* Issue category?
+* Issue priority?
+* Issue difficulty?
 
-The general flow is to open an issue and the runner to exam the issue, typically reading the general idea aloud. This allows for any developers with knowledge to chime in with any relevant info. The runner attempts to answers the following questions:
+#### General Flow for Needs More Information
 
-    * Does this issue need more information from the user?
-        * If yes, leave a comment asking for that information
-    * Does this issue need a developer to investigate it further to properly triage it?
-        * If yes, set status to 'Needs Design'
-    * What release should the issue be targeted for? (e.g. next z-stream, current release, next release, backlog)
-    * Does any developer want to own it?
-        * If yes, assign it
-    * Issue category?
+If requested information is provided, set the state to New and triage as normal. If there has been no reponse for two weeks, set the target version to Recycle Bin, with the following comment:
+
+> Please reopen this issue with the requested information, and we will be happy to take a look.
 
 #### General Flow for Ready for Testing
 
-  * Will this PR get completed by the next release?
-  * What release should the issue be targeted for? (e.g. next z-stream, current release, next release, backlog)
+  * Will this pull request get completed by the next release?
+  * What release should the issue be targeted for? (e.g. next z-stream, current release, next release)
 
 #### General Flow for Closed
 
-  * Should this issue be targeted at the next z-stream? Current RC phase? Or just throw it in the "next" release (aka develop or master)
+  * What release should the issue be targeted for? (e.g. next z-stream, current release, next release)
 
 ### Notes
 
-A few notes about some automatic operations that are performed by the prprocessor that help facilitate this workflow.
-
-  * All issues are set to an empty release, which again represents "untriaged"
-  * Any issues on the backlog that a PR is opened for has its release set to 'empty' to ensure that it flows through the triage process
-  * Developers that believe an issue should be considered for a release, should set the release to 'empty' and show up to triage to argue their case
+  * Any issues without a release, or those in the backlog or recycle bin, are set as untriaged [automatically](https://github.com/theforeman/prprocessor) during pull request submission.
+  * Reporters of new issues should not set the triaged flag, though they can propose a target version. Participation in weekly triage is encouraged!
 
 ## Testing
 
