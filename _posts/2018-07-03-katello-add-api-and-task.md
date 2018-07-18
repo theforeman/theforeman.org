@@ -18,7 +18,7 @@ This tutorial will show how to add a new API, and how to add a new asynchrnous t
 
 ## Initial setup
 
-You'll need to run through a forklift development setup. Instructions are located in the [forklift README](https://github.com/theforeman/forklift#quickstart). You'll be running "foreman start" in one terminal window, and making edits using another terminal window.
+You'll need to run through a forklift development setup. Instructions are located in the [forklift README](https://github.com/theforeman/forklift#quickstart). You'll be running `foreman start` in one terminal window, and making edits using another terminal window.
 
 ## Making an API call
 
@@ -72,7 +72,7 @@ In the Katello project, edit `./app/controllers/katello/api/v2/ping_controller.r
 
 ```
 
-After you make this change, you'll need to hit ^C on your rails development server and reload it for the change to take effect.
+After you make this change, you'll need to hit `^C` on your rails development server and reload it for the change to take effect.
 
 After the restart is complete, run the same curl command again. You'll see this in the development server output:
 
@@ -153,7 +153,7 @@ Now that we know how to execute tasks, we can create our own and try to run it. 
             end
      
             def humanized_name
-              _("Import")
+              _("Example")
             end
           end
         end
