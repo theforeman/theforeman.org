@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Contributing to the Installer Puppet Modules'
+title: 'Contributing to the Katello API'
 date: 2018-07-03 12:00:00
 author: 
   name: Christopher Duryee
@@ -15,6 +15,8 @@ tags:
 If you have used the Katello API a lot, you have almost certainly found areas where the API is difficult to use. Fortunately, it is easy to add a new API call, or add features to an existing call.
 
 This tutorial will show how to add a new API, and how to add a new asynchrnous task. Adding an asynchronous task is not always needed, but is a common requirement.
+
+You'll need to write tests for any code you commit, which is outside the scope of this document.
 
 ## Initial setup
 
