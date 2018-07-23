@@ -54,9 +54,11 @@ For each new release we keep stable documentation tree for the record.
 
 ### Foreman Core
 
-1. cp -r manuals/X.Y manuals/X.Z
-1. change version numbers in manuals/1.10/*.md
+1. `cp -r manuals/nightly manuals/X.Z`
+1. `cp -r _includes/manuals/nightly manuals/X.Z`
+1. change version numbers in manuals/X.Z/*.md
 1. add version to documentation.md
+1. Generate release notes using `scripts/release_notes.rb`
 
 ### Foreman Plugins
 
