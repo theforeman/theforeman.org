@@ -480,9 +480,12 @@ Now sign the RPMs (or ask someone who can to do this part for you), mash and rel
 The first step when signing is to download all of the unsigned RPMs from tags that you will be releasing. We are using the .src.rpm to decide if the build as whole is signed or not. For example, if the key was D5A88496:
 
 ```
-cd some empty directory
-VERSION=2.3
-for j in rhel5 rhel6 rhel7 fedora20 fedora21 ; do
+mkdir ~/rpms
+cd ~/rpms
+VERSION=3.7
+OS="rhel5 rhel6 rhel7 sles11 sles12 fedora26 fedora27"
+
+for j in $OS ; do
   for i in "katello-$VERSION-$j" "katello-$VERSION-thirdparty-candlepin-$j" "katello-$VERSION-thirdparty-pulp-$j" ; do
     koji -c ~/.koji/katello-config list-tagged --latest --quiet --inherit --sigs $i ; done \
     | sed 's!^!:!' \
@@ -498,17 +501,18 @@ done;
 Get (decrypt) Katello key and gpg --import it. Of course, you need to be a person who knows how to decrypt the key. Decrypt the passphrase as well. The key that we've used starting with Katello 1.0 is D5A88496. Before doing the first sign, import katello key. In our git repo with keys do this:
 
 ```
-cd gpg-keys/katello-private
+cd gpg-keys/katello-private/$VERSION
 decrypt.sh
-gpg --import katello.private.asc
+gpg --improt katello.private.asc
+gpg2 --import katello.private.asc
 cat katello-passphrase.txt
 ```
 
-This passphrase will be used for signing the packages. Into ~/.rpmmacros put:
+This passphrase will be used for signing the packages. Into ~/.rpmmacros put (make sure to update for your katello $VERSION):
 
 ```
 %signature gpg
-%_gpg_name Katello
+%_gpg_name Katello 3.7
 %__gpg_sign_cmd %{__gpg} \
     gpg --force-v3-sigs --digest-algo=sha1 --batch --no-verbose --no-armor \
     --no-secmem-warning -u "%{_gpg_name}" \
@@ -535,8 +539,8 @@ As list-signed does not seem to work, do a random check in ​http://koji.katell
 ##### Create Back Signed RPMs in Koji
 
 ```
-# in that directory where you've signed the rpms
-ls *.src.rpm | sed 's!\.src\.rpm$!!' | xargs koji -c ~/.koji/katello-config write-signed-rpm bc62d13f
+# in that directory where you've signed the rpms.  Replace $GPG_KEY_ID with your lowercase key id (eg 4d0d8597)
+ls *.src.rpm | sed 's!\.src\.rpm$!!' | xargs koji -c ~/.koji/katello-config write-signed-rpm $GPG_KEY_ID
 ```
 
 Do a random check at http://koji.katello.org/packages/<name>/<version>/<release>/data/signed/d5a88496/ to see if the rpms are there. This step will import whole package.
