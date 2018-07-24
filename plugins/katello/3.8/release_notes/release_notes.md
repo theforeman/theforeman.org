@@ -4,7 +4,7 @@ title: Release Notes
 version: 3.8
 ---
 
-# Katello 3.8 (Blonde Ale) Release Notes
+# Katello 3.8 (Stout) Release Notes
 
 For the full release notes, see the [Changelog](https://github.com/Katello/katello/blob/KATELLO-3.8/CHANGELOG.md).
 
