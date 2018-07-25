@@ -12,16 +12,15 @@ latestversion: "1.18"
 					{% capture versioni %}{{ page.version | split: "." | last | plus: versionmaj }}{% endcapture %}
 					{% capture latestmaj %}{{ layout.latestversion | split: "." | first | times: 100 }}{% endcapture %}
 					{% capture latesti %}{{ layout.latestversion | split: "." | last | plus: latestmaj }}{% endcapture %}
-					{% if versioni < latesti %}
-					<div class="alert alert-warning">
-						<p style="margin-bottom: 3px"><strong>Newer version available</strong></p>
-						<p style="margin-bottom: 0">This manual is for Foreman {{ page.version }}, but the <a href="{{ site.baseurl }}manuals/{{ layout.latestversion }}/index.html">latest version is {{ layout.latestversion }}</a>.</p>
-					</div>
-					{% endif %}
-					{% if versioni > latesti %}
+					{% if page.version == "nightly" or versioni > latesti %}
 					<div class="alert alert-warning">
 						<p style="margin-bottom: 3px"><strong>Not yet released</strong></p>
 						<p style="margin-bottom: 0">This manual is for Foreman {{ page.version }}, but <a href="{{ site.baseurl }}manuals/{{ layout.latestversion }}/index.html">{{ layout.latestversion }}</a> is the current stable version.</p>
+					</div>
+					{% elsif versioni < latesti %}
+					<div class="alert alert-warning">
+						<p style="margin-bottom: 3px"><strong>Newer version available</strong></p>
+						<p style="margin-bottom: 0">This manual is for Foreman {{ page.version }}, but the <a href="{{ site.baseurl }}manuals/{{ layout.latestversion }}/index.html">latest version is {{ layout.latestversion }}</a>.</p>
 					</div>
 					{% endif %}
 				</div>
