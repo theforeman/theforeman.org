@@ -2,7 +2,7 @@
 layout: plugins/katello/documentation
 title: Katello Upgrade
 version: 3.8
-foreman_version: 1.18
+foreman_version: 1.19
 ---
 
 # Katello Upgrade
