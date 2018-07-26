@@ -145,7 +145,8 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+<p>string from 2 to 128 characters containing only alphanumeric characters,
+space, &#39;_&#39;, &#39;-&#39; with no leading or trailing space..</p>
 </li>
         </ul>
 
@@ -264,7 +265,8 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>interface</code>, <code>bmc</code>, <code>bond</code>, <code>bridge</code>.</p>
+<p>Must be one of: <code>interface</code>, <code>bmc</code>,
+<code>bond</code>, <code>bridge</code>.</p>
 </li>
         </ul>
 
@@ -283,7 +285,7 @@
     </td>
     <td>
       
-<p>Interface’s DNS name</p>
+<p>Interface&#39;s DNS name</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -355,7 +357,8 @@
     </td>
     <td>
       
-<p>Foreman domain ID of interface. Required for primary interfaces on managed hosts.</p>
+<p>Foreman domain ID of interface. Required for primary interfaces on managed
+hosts.</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -403,12 +406,14 @@
     </td>
     <td>
       
-<p>Should this interface be managed via DHCP and DNS smart proxy and should it be configured during provisioning?</p>
+<p>Should this interface be managed via DHCP and DNS smart proxy and should it
+be configured during provisioning?</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code></p>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
+<code>0</code></p>
 </li>
         </ul>
 
@@ -427,12 +432,14 @@
     </td>
     <td>
       
-<p>Should this interface be used for constructing the FQDN of the host? Each managed hosts needs to have one primary interface.</p>
+<p>Should this interface be used for constructing the FQDN of the host? Each
+managed hosts needs to have one primary interface.</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code></p>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
+<code>0</code></p>
 </li>
         </ul>
 
@@ -451,12 +458,14 @@
     </td>
     <td>
       
-<p>Should this interface be used for TFTP of PXELinux (or SSH for image-based hosts)? Each managed hosts needs to have one provision interface.</p>
+<p>Should this interface be used for TFTP of PXELinux (or SSH for image-based
+hosts)? Each managed hosts needs to have one provision interface.</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code></p>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
+<code>0</code></p>
 </li>
         </ul>
 
@@ -552,7 +561,8 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code></p>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
+<code>0</code></p>
 </li>
         </ul>
 
@@ -571,7 +581,8 @@
     </td>
     <td>
       
-<p>VLAN tag, this attribute has precedence over the subnet VLAN ID. Only for virtual interfaces.</p>
+<p>VLAN tag, this attribute has precedence over the subnet VLAN ID. Only for
+virtual interfaces.</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -619,7 +630,8 @@
     </td>
     <td>
       
-<p>Identifier of the interface to which this interface belongs, e.g. eth1. Only for virtual interfaces.</p>
+<p>Identifier of the interface to which this interface belongs, e.g. eth1.
+Only for virtual interfaces.</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -648,7 +660,9 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>balance-rr</code>, <code>active-backup</code>, <code>balance-xor</code>, <code>broadcast</code>, <code>802.3ad</code>, <code>balance-tlb</code>, <code>balance-alb</code>.</p>
+<p>Must be one of: <code>balance-rr</code>, <code>active-backup</code>,
+<code>balance-xor</code>, <code>broadcast</code>, <code>802.3ad</code>,
+<code>balance-tlb</code>, <code>balance-alb</code>.</p>
 </li>
         </ul>
 
@@ -667,7 +681,9 @@
     </td>
     <td>
       
-<p>Identifiers of attached interfaces, e.g. <code>[&#39;eth1&#39;, &#39;eth2&#39;]</code>. For bond interfaces those are the slaves. Only for bond and bridges interfaces.</p>
+<p>Identifiers of attached interfaces, e.g. `[&#39;eth1&#39;,
+&#39;eth2&#39;]`. For bond interfaces those are the slaves. Only for bond
+and bridges interfaces.</p>
 
         <p><strong>Validations:</strong></p>
         <ul>

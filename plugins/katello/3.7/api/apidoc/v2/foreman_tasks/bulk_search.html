@@ -45,7 +45,11 @@
 <div>
 
   
-<p>For every search it returns the list of tasks that satisfty the condition. The reason for supporting multiple searches is the UI that might be ending needing periodic updates on task status for various searches at the same time. This way, it is possible to get all the task statuses with one request.</p>
+<p>For every search it returns the list of tasks that satisfty the condition.
+The reason for supporting multiple searches is the UI that might be ending
+needing periodic updates on task status for various searches at the same
+time. This way, it is possible to get all the task statuses with one
+request.</p>
 
 
 
@@ -141,7 +145,9 @@
     </td>
     <td>
       
-<p>Arbitraty value for client to identify the the request parts with results. It’s passed in the results to be able to pair the requests and responses properly.</p>
+<p>Arbitraty value for client to identify the the request parts with results.
+It&#39;s passed in the results to be able to pair the requests and
+responses properly.</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -168,7 +174,8 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>user</code>, <code>resource</code>, <code>task</code>.</p>
+<p>Must be one of: <code>user</code>, <code>resource</code>,
+<code>task</code>.</p>
 </li>
         </ul>
 
@@ -187,7 +194,7 @@
     </td>
     <td>
       
-<p>In case :type = ‘task’, find the task by the uuid</p>
+<p>In case :type = &#39;task&#39;, find the task by the uuid</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -211,7 +218,7 @@
     </td>
     <td>
       
-<p>In case :type = ‘user’, find tasks for the user</p>
+<p>In case :type = &#39;user&#39;, find tasks for the user</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -235,7 +242,8 @@
     </td>
     <td>
       
-<p>In case :type = ‘resource’, what resource type we’re searching the tasks for</p>
+<p>In case :type = &#39;resource&#39;, what resource type we&#39;re searching
+the tasks for</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -259,7 +267,8 @@
     </td>
     <td>
       
-<p>In case :type = ‘resource’, what resource id we’re searching the tasks for</p>
+<p>In case :type = &#39;resource&#39;, what resource id we&#39;re searching
+the tasks for</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -283,7 +292,8 @@
     </td>
     <td>
       
-<p>Return just tasks of given action type, e.g. [Actions::Katello::Repository::Synchronize]</p>
+<p>Return just tasks of given action type, e.g.
+[“Actions::Katello::Repository::Synchronize”]</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -310,7 +320,8 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code></p>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
+<code>0</code></p>
 </li>
         </ul>
 
