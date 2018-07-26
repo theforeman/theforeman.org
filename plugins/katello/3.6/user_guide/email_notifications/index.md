@@ -21,17 +21,7 @@ Katello provides a few addition reports:
 
 ## Configuring the Foreman/Katello to send emails:
 
-The configuration on how the Foreman/Katello service sends email is located in /etc/foreman/email.yaml:
-
-```
-production:
-   delivery_method: :smtp
-   smtp_settings:
-     address: smtp.example.com
-     port: 25
-     domain: example.com
-     authentication: :none
-```
+The configuration of how the Foreman/Katello service sends email is located in `Adminster > Settings > Email`.
 
 For more information see: [Email Configuration](http://theforeman.org/manuals/latest/index.html#3.5.2ConfigurationOptions)
 
