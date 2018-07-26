@@ -132,7 +132,8 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code></p>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
+<code>0</code></p>
 </li>
         </ul>
 
@@ -372,33 +373,8 @@
   </thead>
   <tbody>
     <tr>
-      <td>activation_key</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>activation_key_id</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>applicable_errata</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>applicable_rpms</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
       <td>architecture</td>
       <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>autoheal</td>
-      <td>boolean</td>
       <td></td>
     </tr>
     <tr>
@@ -432,21 +408,6 @@
       <td></td>
     </tr>
     <tr>
-      <td>content_source</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>content_view</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>content_view_id</td>
-      <td>integer</td>
-      <td></td>
-    </tr>
-    <tr>
       <td>domain</td>
       <td>string</td>
       <td></td>
@@ -460,11 +421,6 @@
       <td>environment</td>
       <td>string</td>
       <td></td>
-    </tr>
-    <tr>
-      <td>errata_status</td>
-      <td></td>
-      <td>security_needed, errata_needed, updated, unknown</td>
     </tr>
     <tr>
       <td>facts</td>
@@ -484,16 +440,6 @@
     <tr>
       <td>has_mac</td>
       <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>host_collection</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>host_collection_id</td>
-      <td>integer</td>
       <td></td>
     </tr>
     <tr>
@@ -522,22 +468,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>hypervisor</td>
-      <td>boolean</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>hypervisor_host</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
       <td>image</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>installable_errata</td>
       <td>string</td>
       <td></td>
     </tr>
@@ -547,38 +478,13 @@
       <td></td>
     </tr>
     <tr>
-      <td>installed_package</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>installed_package_name</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
       <td>ip</td>
       <td>string</td>
       <td></td>
     </tr>
     <tr>
-      <td>last_checkin</td>
-      <td>datetime</td>
-      <td></td>
-    </tr>
-    <tr>
       <td>last_report</td>
       <td>datetime</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>lifecycle_environment</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>lifecycle_environment_id</td>
-      <td>integer</td>
       <td></td>
     </tr>
     <tr>
@@ -707,26 +613,6 @@
       <td></td>
     </tr>
     <tr>
-      <td>registered_at</td>
-      <td>datetime</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>registered_through</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>release_version</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>service_level</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
       <td>smart_proxy</td>
       <td>string</td>
       <td></td>
@@ -789,51 +675,6 @@
     <tr>
       <td>subnet6.name</td>
       <td>text</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>subscription_id</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>subscription_name</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>subscription_status</td>
-      <td></td>
-      <td>valid, partial, invalid, unknown, unsubscribed_hypervisor</td>
-    </tr>
-    <tr>
-      <td>subscription_uuid</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>trace_app</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>trace_app_type</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>trace_helper</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>trace_status</td>
-      <td></td>
-      <td>reboot_needed, process_restart_needed, updated</td>
-    </tr>
-    <tr>
-      <td>upgradable_rpms</td>
-      <td>string</td>
       <td></td>
     </tr>
     <tr>
@@ -974,7 +815,9 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space.</p>
+<p>Must be an identifier, string from 1 to 128 characters containing only
+alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no
+leading or trailing space.</p>
 </li>
         </ul>
 
@@ -998,7 +841,8 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code></p>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
+<code>0</code></p>
 </li>
         </ul>
 
@@ -1245,7 +1089,8 @@
     </td>
     <td>
       
-<p>required for managed host that is bare metal, not required if it’s a virtual machine</p>
+<p>required for managed host that is bare metal, not required if it&#39;s a
+virtual machine</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -1457,7 +1302,8 @@
     </td>
     <td>
       
-<p>required if not imaged based provisioning and host is managed and value is not inherited from host group</p>
+<p>required if not imaged based provisioning and host is managed and value is
+not inherited from host group</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -1486,7 +1332,9 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>None</code>, <code>PXELinux BIOS</code>, <code>PXELinux UEFI</code>, <code>Grub UEFI</code>, <code>Grub2 UEFI</code>, <code>Grub2 UEFI SecureBoot</code>.</p>
+<p>Must be one of: <code>None</code>, <code>PXELinux BIOS</code>,
+<code>PXELinux UEFI</code>, <code>Grub UEFI</code>, <code>Grub2
+UEFI</code>, <code>Grub2 UEFI SecureBoot</code>.</p>
 </li>
         </ul>
 
@@ -1577,7 +1425,8 @@
     </td>
     <td>
       
-<p>required if host is managed and value is not inherited from host group or default password in settings</p>
+<p>required if host is managed and value is not inherited from host group or
+default password in settings</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -1667,7 +1516,7 @@
     </td>
     <td>
       
-<p>Host’s owner type</p>
+<p>Host&#39;s owner type</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -1713,7 +1562,7 @@
     </td>
     <td>
       
-<p>Host’s parameters (array or indexed hash)</p>
+<p>Host&#39;s parameters (array or indexed hash)</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -1788,7 +1637,8 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code></p>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
+<code>0</code></p>
 </li>
         </ul>
 
@@ -1812,7 +1662,8 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code></p>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
+<code>0</code></p>
 </li>
         </ul>
 
@@ -1855,12 +1706,14 @@
     </td>
     <td>
       
-<p>True/False flag whether a host is managed or unmanaged. Note: this value also determines whether several parameters are required or not</p>
+<p>True/False flag whether a host is managed or unmanaged. Note: this value
+also determines whether several parameters are required or not</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code></p>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
+<code>0</code></p>
 </li>
         </ul>
 
@@ -1879,7 +1732,8 @@
     </td>
     <td>
       
-<p>UUID to track orchestration tasks status, GET /api/orchestration/:UUID/tasks</p>
+<p>UUID to track orchestration tasks status, GET
+/api/orchestration/:UUID/tasks</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -1971,7 +1825,7 @@
     </td>
     <td>
       
-<p>Host’s network interfaces.</p>
+<p>Host&#39;s network interfaces.</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -2071,7 +1925,8 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>interface</code>, <code>bmc</code>, <code>bond</code>, <code>bridge</code>.</p>
+<p>Must be one of: <code>interface</code>, <code>bmc</code>,
+<code>bond</code>, <code>bridge</code>.</p>
 </li>
         </ul>
 
@@ -2090,7 +1945,7 @@
     </td>
     <td>
       
-<p>Interface’s DNS name</p>
+<p>Interface&#39;s DNS name</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -2162,7 +2017,8 @@
     </td>
     <td>
       
-<p>Foreman domain ID of interface. Required for primary interfaces on managed hosts.</p>
+<p>Foreman domain ID of interface. Required for primary interfaces on managed
+hosts.</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -2210,12 +2066,14 @@
     </td>
     <td>
       
-<p>Should this interface be managed via DHCP and DNS smart proxy and should it be configured during provisioning?</p>
+<p>Should this interface be managed via DHCP and DNS smart proxy and should it
+be configured during provisioning?</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code></p>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
+<code>0</code></p>
 </li>
         </ul>
 
@@ -2234,12 +2092,14 @@
     </td>
     <td>
       
-<p>Should this interface be used for constructing the FQDN of the host? Each managed hosts needs to have one primary interface.</p>
+<p>Should this interface be used for constructing the FQDN of the host? Each
+managed hosts needs to have one primary interface.</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code></p>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
+<code>0</code></p>
 </li>
         </ul>
 
@@ -2258,12 +2118,14 @@
     </td>
     <td>
       
-<p>Should this interface be used for TFTP of PXELinux (or SSH for image-based hosts)? Each managed hosts needs to have one provision interface.</p>
+<p>Should this interface be used for TFTP of PXELinux (or SSH for image-based
+hosts)? Each managed hosts needs to have one provision interface.</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code></p>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
+<code>0</code></p>
 </li>
         </ul>
 
@@ -2359,7 +2221,8 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code></p>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
+<code>0</code></p>
 </li>
         </ul>
 
@@ -2378,7 +2241,8 @@
     </td>
     <td>
       
-<p>VLAN tag, this attribute has precedence over the subnet VLAN ID. Only for virtual interfaces.</p>
+<p>VLAN tag, this attribute has precedence over the subnet VLAN ID. Only for
+virtual interfaces.</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -2426,7 +2290,8 @@
     </td>
     <td>
       
-<p>Identifier of the interface to which this interface belongs, e.g. eth1. Only for virtual interfaces.</p>
+<p>Identifier of the interface to which this interface belongs, e.g. eth1.
+Only for virtual interfaces.</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -2455,7 +2320,9 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>balance-rr</code>, <code>active-backup</code>, <code>balance-xor</code>, <code>broadcast</code>, <code>802.3ad</code>, <code>balance-tlb</code>, <code>balance-alb</code>.</p>
+<p>Must be one of: <code>balance-rr</code>, <code>active-backup</code>,
+<code>balance-xor</code>, <code>broadcast</code>, <code>802.3ad</code>,
+<code>balance-tlb</code>, <code>balance-alb</code>.</p>
 </li>
         </ul>
 
@@ -2474,7 +2341,9 @@
     </td>
     <td>
       
-<p>Identifiers of attached interfaces, e.g. <code>[&#39;eth1&#39;, &#39;eth2&#39;]</code>. For bond interfaces those are the slaves. Only for bond and bridges interfaces.</p>
+<p>Identifiers of attached interfaces, e.g. `[&#39;eth1&#39;,
+&#39;eth2&#39;]`. For bond interfaces those are the slaves. Only for bond
+and bridges interfaces.</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -2571,7 +2440,7 @@
     </td>
     <td>
       
-<p>Parameters for host’s content_facet facet</p>
+<p>Parameters for host&#39;s content_facet facet</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -2685,7 +2554,7 @@
     </td>
     <td>
       
-<p>Parameters for host’s subscription_facet facet</p>
+<p>Parameters for host&#39;s subscription_facet facet</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -2737,7 +2606,8 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code></p>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
+<code>0</code></p>
 </li>
         </ul>
 
@@ -2827,7 +2697,8 @@
     </td>
     <td>
       
-<p>Product id as listed from a host’s installed products, this is not the same product id as the products api returns</p>
+<p>Product id as listed from a host&#39;s installed products,         this is
+not the same product id as the products api returns</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -2851,7 +2722,7 @@
     </td>
     <td>
       
-<p>Product name as listed from a host’s installed products</p>
+<p>Product name as listed from a host&#39;s installed products</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -3018,7 +2889,8 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+<p>string from 2 to 128 characters containing only alphanumeric characters,
+space, &#39;_&#39;, &#39;-&#39; with no leading or trailing space..</p>
 </li>
         </ul>
 
@@ -3176,7 +3048,8 @@
     </td>
     <td>
       
-<p>required for managed host that is bare metal, not required if it’s a virtual machine</p>
+<p>required for managed host that is bare metal, not required if it&#39;s a
+virtual machine</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -3388,7 +3261,8 @@
     </td>
     <td>
       
-<p>required if not imaged based provisioning and host is managed and value is not inherited from host group</p>
+<p>required if not imaged based provisioning and host is managed and value is
+not inherited from host group</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -3417,7 +3291,9 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>None</code>, <code>PXELinux BIOS</code>, <code>PXELinux UEFI</code>, <code>Grub UEFI</code>, <code>Grub2 UEFI</code>, <code>Grub2 UEFI SecureBoot</code>.</p>
+<p>Must be one of: <code>None</code>, <code>PXELinux BIOS</code>,
+<code>PXELinux UEFI</code>, <code>Grub UEFI</code>, <code>Grub2
+UEFI</code>, <code>Grub2 UEFI SecureBoot</code>.</p>
 </li>
         </ul>
 
@@ -3508,7 +3384,8 @@
     </td>
     <td>
       
-<p>required if host is managed and value is not inherited from host group or default password in settings</p>
+<p>required if host is managed and value is not inherited from host group or
+default password in settings</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -3598,7 +3475,7 @@
     </td>
     <td>
       
-<p>Host’s owner type</p>
+<p>Host&#39;s owner type</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -3644,7 +3521,7 @@
     </td>
     <td>
       
-<p>Host’s parameters (array or indexed hash)</p>
+<p>Host&#39;s parameters (array or indexed hash)</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -3719,7 +3596,8 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code></p>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
+<code>0</code></p>
 </li>
         </ul>
 
@@ -3743,7 +3621,8 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code></p>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
+<code>0</code></p>
 </li>
         </ul>
 
@@ -3786,12 +3665,14 @@
     </td>
     <td>
       
-<p>True/False flag whether a host is managed or unmanaged. Note: this value also determines whether several parameters are required or not</p>
+<p>True/False flag whether a host is managed or unmanaged. Note: this value
+also determines whether several parameters are required or not</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code></p>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
+<code>0</code></p>
 </li>
         </ul>
 
@@ -3810,7 +3691,8 @@
     </td>
     <td>
       
-<p>UUID to track orchestration tasks status, GET /api/orchestration/:UUID/tasks</p>
+<p>UUID to track orchestration tasks status, GET
+/api/orchestration/:UUID/tasks</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -3902,7 +3784,7 @@
     </td>
     <td>
       
-<p>Host’s network interfaces.</p>
+<p>Host&#39;s network interfaces.</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -4002,7 +3884,8 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>interface</code>, <code>bmc</code>, <code>bond</code>, <code>bridge</code>.</p>
+<p>Must be one of: <code>interface</code>, <code>bmc</code>,
+<code>bond</code>, <code>bridge</code>.</p>
 </li>
         </ul>
 
@@ -4021,7 +3904,7 @@
     </td>
     <td>
       
-<p>Interface’s DNS name</p>
+<p>Interface&#39;s DNS name</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -4093,7 +3976,8 @@
     </td>
     <td>
       
-<p>Foreman domain ID of interface. Required for primary interfaces on managed hosts.</p>
+<p>Foreman domain ID of interface. Required for primary interfaces on managed
+hosts.</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -4141,12 +4025,14 @@
     </td>
     <td>
       
-<p>Should this interface be managed via DHCP and DNS smart proxy and should it be configured during provisioning?</p>
+<p>Should this interface be managed via DHCP and DNS smart proxy and should it
+be configured during provisioning?</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code></p>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
+<code>0</code></p>
 </li>
         </ul>
 
@@ -4165,12 +4051,14 @@
     </td>
     <td>
       
-<p>Should this interface be used for constructing the FQDN of the host? Each managed hosts needs to have one primary interface.</p>
+<p>Should this interface be used for constructing the FQDN of the host? Each
+managed hosts needs to have one primary interface.</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code></p>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
+<code>0</code></p>
 </li>
         </ul>
 
@@ -4189,12 +4077,14 @@
     </td>
     <td>
       
-<p>Should this interface be used for TFTP of PXELinux (or SSH for image-based hosts)? Each managed hosts needs to have one provision interface.</p>
+<p>Should this interface be used for TFTP of PXELinux (or SSH for image-based
+hosts)? Each managed hosts needs to have one provision interface.</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code></p>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
+<code>0</code></p>
 </li>
         </ul>
 
@@ -4290,7 +4180,8 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code></p>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
+<code>0</code></p>
 </li>
         </ul>
 
@@ -4309,7 +4200,8 @@
     </td>
     <td>
       
-<p>VLAN tag, this attribute has precedence over the subnet VLAN ID. Only for virtual interfaces.</p>
+<p>VLAN tag, this attribute has precedence over the subnet VLAN ID. Only for
+virtual interfaces.</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -4357,7 +4249,8 @@
     </td>
     <td>
       
-<p>Identifier of the interface to which this interface belongs, e.g. eth1. Only for virtual interfaces.</p>
+<p>Identifier of the interface to which this interface belongs, e.g. eth1.
+Only for virtual interfaces.</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -4386,7 +4279,9 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>balance-rr</code>, <code>active-backup</code>, <code>balance-xor</code>, <code>broadcast</code>, <code>802.3ad</code>, <code>balance-tlb</code>, <code>balance-alb</code>.</p>
+<p>Must be one of: <code>balance-rr</code>, <code>active-backup</code>,
+<code>balance-xor</code>, <code>broadcast</code>, <code>802.3ad</code>,
+<code>balance-tlb</code>, <code>balance-alb</code>.</p>
 </li>
         </ul>
 
@@ -4405,7 +4300,9 @@
     </td>
     <td>
       
-<p>Identifiers of attached interfaces, e.g. <code>[&#39;eth1&#39;, &#39;eth2&#39;]</code>. For bond interfaces those are the slaves. Only for bond and bridges interfaces.</p>
+<p>Identifiers of attached interfaces, e.g. `[&#39;eth1&#39;,
+&#39;eth2&#39;]`. For bond interfaces those are the slaves. Only for bond
+and bridges interfaces.</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -4502,7 +4399,7 @@
     </td>
     <td>
       
-<p>Parameters for host’s content_facet facet</p>
+<p>Parameters for host&#39;s content_facet facet</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -4616,7 +4513,7 @@
     </td>
     <td>
       
-<p>Parameters for host’s subscription_facet facet</p>
+<p>Parameters for host&#39;s subscription_facet facet</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -4668,7 +4565,8 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code></p>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
+<code>0</code></p>
 </li>
         </ul>
 
@@ -4758,7 +4656,8 @@
     </td>
     <td>
       
-<p>Product id as listed from a host’s installed products, this is not the same product id as the products api returns</p>
+<p>Product id as listed from a host&#39;s installed products,         this is
+not the same product id as the products api returns</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -4782,7 +4681,7 @@
     </td>
     <td>
       
-<p>Product name as listed from a host’s installed products</p>
+<p>Product name as listed from a host&#39;s installed products</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -4949,7 +4848,8 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+<p>string from 2 to 128 characters containing only alphanumeric characters,
+space, &#39;_&#39;, &#39;-&#39; with no leading or trailing space..</p>
 </li>
         </ul>
 
@@ -5060,7 +4960,9 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space.</p>
+<p>Must be an identifier, string from 1 to 128 characters containing only
+alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no
+leading or trailing space.</p>
 </li>
         </ul>
 
@@ -5098,22 +5000,21 @@
     <div id='description-status' class='collapse accordion-body'>
       
 <p>Return value may either be one of the following:</p>
-
-<ul>
-<li>Alerts disabled</li>
-
-<li>No reports</li>
-
-<li>Error</li>
-
-<li>Out of sync</li>
-
-<li>Active</li>
-
-<li>Pending</li>
-
-<li>No changes</li>
-</ul>
+<ul><li>
+<p>Alerts disabled</p>
+</li><li>
+<p>No reports</p>
+</li><li>
+<p>Error</p>
+</li><li>
+<p>Out of sync</p>
+</li><li>
+<p>Active</p>
+</li><li>
+<p>Pending</p>
+</li><li>
+<p>No changes</p>
+</li></ul>
 
 
 
@@ -5189,7 +5090,9 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space.</p>
+<p>Must be an identifier, string from 1 to 128 characters containing only
+alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no
+leading or trailing space.</p>
 </li>
         </ul>
 
@@ -5302,7 +5205,9 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space.</p>
+<p>Must be an identifier, string from 1 to 128 characters containing only
+alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no
+leading or trailing space.</p>
 </li>
         </ul>
 
@@ -5321,7 +5226,14 @@
     </td>
     <td>
       
-<p>status type, can be one of * global * configuration * build</p>
+<p>status type, can be one of</p>
+<ul><li>
+<p>global</p>
+</li><li>
+<p>configuration</p>
+</li><li>
+<p>build</p>
+</li></ul>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -5363,7 +5275,8 @@
 
     <div id='description-vm_compute_attributes' class='collapse accordion-body'>
       
-<p>Return the host’s compute attributes that can be used to create a clone of this VM</p>
+<p>Return the host&#39;s compute attributes that can be used to create a clone
+of this VM</p>
 
 
 
@@ -5439,7 +5352,9 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space.</p>
+<p>Must be an identifier, string from 1 to 128 characters containing only
+alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no
+leading or trailing space.</p>
 </li>
         </ul>
 
@@ -5550,7 +5465,9 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space.</p>
+<p>Must be an identifier, string from 1 to 128 characters containing only
+alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no
+leading or trailing space.</p>
 </li>
         </ul>
 
@@ -5661,7 +5578,9 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space.</p>
+<p>Must be an identifier, string from 1 to 128 characters containing only
+alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no
+leading or trailing space.</p>
 </li>
         </ul>
 
@@ -5680,7 +5599,8 @@
     </td>
     <td>
       
-<p>power action, valid actions are (on/start), (off/stop), (soft/reboot), (cycle/reset), (state/status)</p>
+<p>power action, valid actions are (on/start), (off/stop), (soft/reboot),
+(cycle/reset), (state/status)</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -5796,7 +5716,9 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space.</p>
+<p>Must be an identifier, string from 1 to 128 characters containing only
+alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no
+leading or trailing space.</p>
 </li>
         </ul>
 
@@ -6116,7 +6038,9 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space.</p>
+<p>Must be an identifier, string from 1 to 128 characters containing only
+alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no
+leading or trailing space.</p>
 </li>
         </ul>
 
@@ -6251,7 +6175,9 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be an identifier, string from 1 to 128 characters containing only alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no leading or trailing space.</p>
+<p>Must be an identifier, string from 1 to 128 characters containing only
+alphanumeric characters, dot(.), space, underscore(_), hypen(-) with no
+leading or trailing space.</p>
 </li>
         </ul>
 
@@ -6270,7 +6196,8 @@
     </td>
     <td>
       
-<p>Template kinds, available values: PXELinux, PXEGrub, PXEGrub2, iPXE, provision, finish, script, user_data, ZTP, POAP</p>
+<p>Template kinds, available values: PXELinux, PXEGrub, PXEGrub2, iPXE,
+provision, finish, script, user_data, ZTP, POAP</p>
 
         <p><strong>Validations:</strong></p>
         <ul>

@@ -101,7 +101,8 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code></p>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
+<code>0</code></p>
 </li>
         </ul>
 
@@ -341,33 +342,8 @@
   </thead>
   <tbody>
     <tr>
-      <td>activation_key</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>activation_key_id</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>applicable_errata</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>applicable_rpms</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
       <td>architecture</td>
       <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>autoheal</td>
-      <td>boolean</td>
       <td></td>
     </tr>
     <tr>
@@ -401,21 +377,6 @@
       <td></td>
     </tr>
     <tr>
-      <td>content_source</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>content_view</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>content_view_id</td>
-      <td>integer</td>
-      <td></td>
-    </tr>
-    <tr>
       <td>domain</td>
       <td>string</td>
       <td></td>
@@ -429,11 +390,6 @@
       <td>environment</td>
       <td>string</td>
       <td></td>
-    </tr>
-    <tr>
-      <td>errata_status</td>
-      <td></td>
-      <td>security_needed, errata_needed, updated, unknown</td>
     </tr>
     <tr>
       <td>facts</td>
@@ -453,16 +409,6 @@
     <tr>
       <td>has_mac</td>
       <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>host_collection</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>host_collection_id</td>
-      <td>integer</td>
       <td></td>
     </tr>
     <tr>
@@ -491,22 +437,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>hypervisor</td>
-      <td>boolean</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>hypervisor_host</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
       <td>image</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>installable_errata</td>
       <td>string</td>
       <td></td>
     </tr>
@@ -516,38 +447,13 @@
       <td></td>
     </tr>
     <tr>
-      <td>installed_package</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>installed_package_name</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
       <td>ip</td>
       <td>string</td>
       <td></td>
     </tr>
     <tr>
-      <td>last_checkin</td>
-      <td>datetime</td>
-      <td></td>
-    </tr>
-    <tr>
       <td>last_report</td>
       <td>datetime</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>lifecycle_environment</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>lifecycle_environment_id</td>
-      <td>integer</td>
       <td></td>
     </tr>
     <tr>
@@ -676,26 +582,6 @@
       <td></td>
     </tr>
     <tr>
-      <td>registered_at</td>
-      <td>datetime</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>registered_through</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>release_version</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>service_level</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
       <td>smart_proxy</td>
       <td>string</td>
       <td></td>
@@ -758,51 +644,6 @@
     <tr>
       <td>subnet6.name</td>
       <td>text</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>subscription_id</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>subscription_name</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>subscription_status</td>
-      <td></td>
-      <td>valid, partial, invalid, unknown, unsubscribed_hypervisor</td>
-    </tr>
-    <tr>
-      <td>subscription_uuid</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>trace_app</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>trace_app_type</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>trace_helper</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>trace_status</td>
-      <td></td>
-      <td>reboot_needed, process_restart_needed, updated</td>
-    </tr>
-    <tr>
-      <td>upgradable_rpms</td>
-      <td>string</td>
       <td></td>
     </tr>
     <tr>

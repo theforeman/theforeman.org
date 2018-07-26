@@ -8,14 +8,11 @@ version: 3.7
 
 For the full release notes, see the [Changelog](https://github.com/Katello/katello/blob/KATELLO-3.7/CHANGELOG.md).
 
-## Known RC1 Issues
-Upgrades from 3.6 to 3.7 are not fully functional due to a [failing database migration](http://projects.theforeman.org/issues/23942).
-
 
 ## Features
 
 
-### New Red Hat Repositories Page
+### New Red Hat Repositories & Subscriptions Pages
 Completely redesigned with an eye toward usability and functionality.
 
 ### New Upstream Subscriptions API

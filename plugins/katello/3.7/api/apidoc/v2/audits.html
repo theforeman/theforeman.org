@@ -348,7 +348,7 @@
     <tr>
       <td>type</td>
       <td></td>
-      <td>role, ptable, provisioning_template, user, filter, katello/repository, hostgroup, smart_proxy, katello/host/content_facet, katello/host/subscription_facet, lookup_value, model, domain, realm, environment, architecture, image, subnet, usergroup, hostgroup_class, puppetclass, medium, katello/content_view, katello/kt_environment, compute_resource, host, interface, location, os, organization, override_value, partition_table, smart_class_parameter, smart_variable, parameter</td>
+      <td>role, ptable, provisioning_template, user, filter, katello/repository, hostgroup, smart_proxy, katello/host/content_facet, katello/host/subscription_facet, lookup_value, model, domain, realm, environment, architecture, image, subnet, usergroup, hostgroup_class, puppetclass, medium, katello/content_view, katello/kt_environment, auth_source, compute_resource, host, interface, location, os, organization, override_value, partition_table, smart_class_parameter, smart_variable, parameter</td>
     </tr>
     <tr>
       <td>user</td>
@@ -463,7 +463,8 @@
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+<p>string from 2 to 128 characters containing only alphanumeric characters,
+space, &#39;_&#39;, &#39;-&#39; with no leading or trailing space..</p>
 </li>
         </ul>
 
