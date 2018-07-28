@@ -80,7 +80,7 @@ You can also exclude these features by using `bundle install --without libvirt p
 #### Setup test environment
 1. Create your database: `bundle exec bin/rake db:migrate`
 1. Run all the tests: `bundle exec bin/rake test`
-1. Or a single test: `bundle exec bin/rake test test/functional/your_test.rb`
+1. Or a single test: `bundle exec bin/rake test TEST=test/functional/your_test.rb`
 1. Once done, stop any background processes with `bundle exec spring stop` ([more info](/handbook.html#UsingtheSpringpreloaderindevelopment))
 
 #### Start up foreman
