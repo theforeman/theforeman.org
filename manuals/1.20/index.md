@@ -211,6 +211,13 @@ previous_version: "1.18"
 ### 4.10.3 Searching by statuses
 {%include manuals/{{ page.version }}/4.10.3_searching_by_statuses.md %}
 
+## 4.11 Reports
+{%include manuals/{{ page.version }}/4.11_reports.md %}
+### 4.11.1 Report Templates
+{%include manuals/{{ page.version }}/4.11.1_report_templates.md %}
+### 4.11.2 Macros
+{%include manuals/{{ page.version }}/4.11.2_macros.md %}
+
 # 5. Advanced Foreman
 
 ## 5.1 API
