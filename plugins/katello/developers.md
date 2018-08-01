@@ -175,6 +175,24 @@ Or if you're a CLI ninja, you can alias it:
 alias testdb='RAILS_ENV=test rake db:drop && RAILS_ENV=test rake db:create && RAILS_ENV=test rake db:test:prepare && RAILS_ENV=test rake db:migrate'
 ```
 
+### Javascript Testing
+
+We use both AngularJS and React in our UI and they have different ways of running tests.
+
+For testing Angular code, you can `cd engines/bastion_katello` in the Katello root directory, and run:
+```
+rake bastion:setup # Setup testing enviromnent
+rake bastion:ci    # Run testing suite
+```
+
+For testing React code, you can run the following in the Katello root directory:
+```
+npm test          # Run the test suite
+npm run lint      # Run linting
+npm run lint:fix  # Automatically fix linting issues
+npm run lint:test # Run both linting and testing
+```
+
 ## How to Release Katello
 
 This guide covers how to peform a community release of Katello. The guide will reference the term 'X.Y' which reprsents the major and minor version that you are releasing. Throughout the guide we will use 2.0 and 2.1 as examples to represent the currently released community version (2.0) and the version that you are working on releasing (2.1).
