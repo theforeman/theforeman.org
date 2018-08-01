@@ -70,7 +70,7 @@ out](https://theforeman.org/2018/07/discourse-6-months-on-impact-assesment.html)
 
 ### Redmine upgrade
 
-The Redmine instance completed it's upgrade path last week, we are now fully up
+The Redmine instance completed its upgrade path last week, we are now fully up
 to date. Thanks to everyone for their patience during the chaos that caused.
 
 ### RFCs needing attention
@@ -100,7 +100,7 @@ All the usual goodness from the community, rounded up and presented for your vie
 
 * [DevConf India 2018](https://community.theforeman.org/t/devconf-india-2018/10309)
 
-Foreman Project will have a huge appearance at DevConf India’18.  We have two
+Foreman Project will have a huge appearance at DevConf India ’18.  We have two
 talks lined up on the very first day of the conference, as well as a booth at
 the conference, so drop by and say hello! We’ll have very exciting goodies and
 t-shirts at the Foreman booth, make sure you grab them before they are gone
