@@ -179,7 +179,11 @@ If the Foreman setting `create_new_host_when_facts_are_uploaded` (Puppet tab) is
 
 Similarly, the Foreman setting `ignore_puppet_facts_for_provisioning` (Provisioning tab) is set to false, facts related to interfaces will update the interfaces of $HOSTNAME in Foreman.
 
-There are several Ansible options you can configure under Administer -> Settings in case you need to configure the Ansible port, user, etcetera. You can override these options on any host via Host parameters, Host group parameters or Global parameters by setting the attributes as explained on the settings description (e.g: a parameter 'ansible_user' on a host will make Foreman use that parameter as the Ansible user instead of the default)
+There are several Ansible options you can configure under Administer -> Settings -> Ansible.
+
+Configuration for Ansible itself, such as 'ansible_user', 'ansible_become', etc., can be set on any host via Host parameters, Host group parameters or Global parameters by setting the attributes as explained on the settings description.
+
+By default foreman-ansible relies on the settings of Remote Execution for SSH connection options, like SSH user and password or the SSH key passphrase.
 
 ![ansible settings](static/images/plugins/foreman_ansible/settings.png)
 
