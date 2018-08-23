@@ -237,7 +237,7 @@ Once installation is complete, the host will reboot to PXE and will be presented
 <p float='left' align='center'>
   <img src="/static/images/blog_images/2018-08-16-deploying-esxi-through-foreman/localboot.png" width="400" />
 </p>
-Upon timeout, the it will attempt a Localboot and boot to ESXi.
+Upon timeout, it will attempt a Localboot and boot to ESXi.
 
 ### **3:** ESXi installation in UEFI mode
 
