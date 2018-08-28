@@ -1,7 +1,12 @@
 ---
 layout: plugin
+pluginname: foreman_chef
 title: Foreman Chef 0.5 Manual
 version: 0.5
+# uncomment to show warning box for an old release
+warning: old
+# uncomment to show development version warning
+#warning: unreleased
 ---
 
 # 1. {{ page.title }}
@@ -284,9 +289,9 @@ organization.
 
 ## 3.4 Configuration options
 
-Froreman Chef also adds application wide settings that you can find
+Foreman Chef also adds application wide settings that you can find
 in Settings -> Foreman Chef. You can just enable or disable
-auto deletion of nodes and cients on chef server upon host deletion in
+auto deletion of nodes and clients on chef server upon host deletion in
 Foreman. You can also select a bootstrap method which determines
 when bootstrap process deployes validation.pem or Foreman does direct
 communication with the Chef server and creates client for you. In this
