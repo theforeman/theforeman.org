@@ -46,7 +46,7 @@ if @current_release_ids.empty?
 end
 
 def releases_filter
-  @current_release_ids.map{|release| "v[cf_12][]=#{release}"}.join('&')
+  @current_release_ids.uniq.map{|release| "v[cf_12][]=#{release}"}.join('&')
 end
 
 def gather_issues(offset = 0)
