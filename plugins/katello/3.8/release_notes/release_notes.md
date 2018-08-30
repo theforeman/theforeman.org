@@ -8,6 +8,22 @@ version: 3.8
 
 For the full release notes, see the [Changelog](https://github.com/Katello/katello/blob/KATELLO-3.8/CHANGELOG.md).
 
+## Features
+
+#### Satellite QE 
+Several robottelo tests have been added by Satellite QE team
+
+#### Content Views
+It is now possible to change the description of a content view version
+
+#### Environments
+It is now possible to add new environments in between an environment path
+
+## Bug Fixes
+
+Several bug fixes around Errata Management, Repositories, Docker, and more are part of this release. Please refer to the [changelog](https://github.com/Katello/katello/blob/KATELLO-3.8/CHANGELOG.md) for more details.
+
+
 ## Contributors
 - agrawal
 - Adam Ruzicka
