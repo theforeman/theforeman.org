@@ -19,7 +19,7 @@ We've had a lot of releases this month, so I'll group them all together. We've r
 
 * [Foreman 1.19.0][1_19_0] was released on the very last day of August,
   featuring support for Ubuntu Bionic, syslog logging, reporting failed builds,
-  and more ### Foreman 1.18.0 released
+  and more.
 * [1.17.3 and 1.17.4][1_17_4] bug fix releases. If you are still on 1.17, be
   sure to upgrade to 1.17.4 before upgrading to 1.18!
 * [Katello 3.8 RC 2 & 3][k_3_8] - do give the RC a try and let us know how you find it :)
