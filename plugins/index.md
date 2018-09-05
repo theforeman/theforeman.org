@@ -181,7 +181,7 @@ Full lists of plugins are available:
 
 Foreman, Smart Proxy and Hammer CLI plugins are packaged as [gems](http://guides.rubygems.org/what-is-a-gem/), but the Foreman project provides RPMs and Debian packages to ease installation with standard Foreman packages. See below for the different installation methods, which depend on your platform.
 
-The number of plugins available in the project repositories is increasing, so check the [wiki](http://projects.theforeman.org/projects/foreman/wiki/List_of_Plugins) to see if a package is available yet.  If it's an useful or popular plugin and not yet packaged, please file a feature request in [the packaging project](http://projects.theforeman.org/projects/rpms/issues/new) (see [Bug Reporting](/contribute.html#Bugreporting) for more details on reporting issues).
+The number of plugins available in the project repositories is increasing, so check the [wiki](http://projects.theforeman.org/projects/foreman/wiki/List_of_Plugins) to see if a package is available yet.  If it's a useful or popular plugin and not yet packaged, please file a feature request in [the packaging project](http://projects.theforeman.org/projects/rpms/issues/new) (see [Bug Reporting](/contribute.html#Bugreporting) for more details on reporting issues).
 
 ## 2.1 Using the Foreman installer
 
