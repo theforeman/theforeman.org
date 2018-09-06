@@ -8,3 +8,4 @@ _site
 .ruby-gemset
 .bundle
 Gemfile.lock
+.jekyll-metadata
