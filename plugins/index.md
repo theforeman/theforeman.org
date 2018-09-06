@@ -1,7 +1,7 @@
 ---
 layout: plugin
 title: Plugins
-version: '1.18'
+version: '1.19'
 ---
 
 # 1. Plugins
