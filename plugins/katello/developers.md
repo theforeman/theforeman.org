@@ -205,13 +205,13 @@ bundle
 
 ### Step 4: Configure the Release
 
-Create a 2.1 release configuration in tool_belt at `configs/katello_21.yaml`. You may copy the config from the previous release and update accordingly. Once configured, run setup:
+Create a 2.1 release configuration in tool_belt at `configs/katello/2.1.yaml`. You may copy the config from the previous release and update accordingly. Once configured, run setup:
 
 ```
-./tools.rb setup-environment --github-username <username> configs/katello_21.yaml
+./tools.rb setup-environment --github-username <username> configs/katello/2.1.yaml
 ```
 
-You will find the repositories checked out to the versions specified in the release config in `repos/katello_X.Y.0/`.
+You will find the repositories checked out to the versions specified in the release config in `repos/katello/2.1.0/`.
 
 ### Step 5: Get Your Branch On
 
@@ -220,13 +220,13 @@ You will find the repositories checked out to the versions specified in the rele
 On the date you previously warned the community branching would occur, ensure any project dependencies are updated, including gem version constraints, and branch the repositories:
 
 ```
-./tools branch configs/katello_XY.yaml
+./tools branch configs/katello/2.1.yaml
 ```
 
 You will also need to branch the documentation at [theforeman.org](https://theforeman.org/plugins/katello).
 
 ```
-./tools branch-docs config/katello_XY.yaml
+./tools branch-docs config/katello/2.1.yaml
 ```
 
 Make sure to follow the instructions and update the docs to use the current release version. Submit a pull request to theforeman.org repository with the changes.
