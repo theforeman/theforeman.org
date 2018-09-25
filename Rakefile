@@ -12,7 +12,7 @@ end
 
 desc 'Start server'
 task :server do
-  sh "jekyll serve --watch"
+  sh "jekyll serve --watch --incremental"
 end
 
 desc 'Starts up browser window (requires running server)'
