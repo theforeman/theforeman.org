@@ -198,7 +198,7 @@ After a host is registered, you should be able to see facts and reports for a ho
 ![facts for a host](static/images/plugins/foreman_ansible/facts_for_a_host.png)
 ![reports for a host](static/images/plugins/foreman_ansible/report_for_a_host.png)
 
-## 4.1 Importing Roles
+## 4.1.1 Importing Roles
 
 Ansible roles can be imported from a smart proxy that has 'Ansible' feature or from '/etc/ansible/roles' on your Foreman host. A list of all roles already imported into Foreman can be accessed through 'Configure' in the main menu. You can select the source for import from the dropdown on the right.
 
@@ -208,6 +208,20 @@ Ansible roles can be imported from a smart proxy that has 'Ansible' feature or f
 You will be presented with a list of possible changes. You can remove the Ansible roles from Foreman that are obsolete and you can import new ones.
 
 ![ansible import roles](static/images/plugins/foreman_ansible/ansible_import_roles.png)
+
+## 4.1.2 Importing Variables
+
+Similar to Ansible roles, variables in these roles can be imported in the same fashion. Go to 'Configure > Ansible Variables' to find a list of variables already imported. When you trigger a new import of Ansible variables, if the variables belong to a role that has not been imported yet, it will be automatically imported alongside the Ansible variable.
+
+![ansible variables index](static/images/plugins/foreman_ansible/ansible_variables_index.png)
+
+You will be presented with a list of possible changes. You can remove the Ansible roles from Foreman that are obsolete and you can import new ones.
+
+![ansible variables import](static/images/plugins/foreman_ansible/ansible_variables_import.png)
+
+Variables are imported into Foreman as Lookup Values, hence you may use them exactly like you use Puppet Smart Class Parameters or Smart Variables. Smart Matchers are available for use too. Find more information about how to override Ansible variables in [this section of the manual](plugins/foreman_ansible/2.x/index.html#4.5OverridingAnsibleVariables).
+
+![ansible variables details](static/images/plugins/foreman_ansible/ansible_variables_details.png)
 
 ## 4.2 Selecting roles for a host
 
@@ -254,11 +268,28 @@ For more information about scheduled jobs, check out the [Foreman Remote Executi
 
 ## 4.5 Overriding Ansible Variables
 
-To override an Ansible variable, set the variable you want to override as a Host Parameter, Host Group Parameter, or Global Parameter. The 'name' of the parameter would be the name of the Ansible variable you want to override, and the 'value' of the parameter the value of the variable.
+[Ansible variables](https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html) are referenced in playbooks and templates with the syntax {% raw %}"{{ myvariable }}"{% endraw %}. For example:
 
-<!--
+```yaml
+template: src=foo.cfg.j2 dest={% raw %}{{ remote_install_path }}{% endraw %}/foo.cfg
+```
 
-Another way to override the variable is to set it as a Job Template input. For example, let's create a Job Template containing a playbook with the variable \{\{ command \}\}.
+uses the 'remote_install_path' variable. You can use Foreman to override these variables. The variables will only be overridden if you run your roles from Foreman, as Foreman sends an inventory with a dictionary contianing variable names and values when it runs Ansible roles.
+
+There are three ways to override an Ansible variable:
+
+1. Import the variable following [this section of the manual](plugins/foreman_ansible/2.x/index.html#4.1.2ImportingVariables). Once the variable is imported, you may provide a type and a default value:
+
+![ansible variables default](static/images/plugins/foreman_ansible/ansible_variables_default.png)
+
+and you can also specify [Smart Matchers]({{site.baseurl}}manuals/latest/index.html#4.2.6SmartMatchers) to specify default matching values for certain Host groups, FQDNs, Operating Systems, or Domains.
+
+![ansible variables matchers](static/images/plugins/foreman_ansible/ansible_variables_matchers.png)
+
+
+2. Set the variable you want to override as a Host Parameter, Host Group Parameter, or Global Parameter. The 'name' of the parameter would be the name of the Ansible variable you want to override, and the 'value' of the parameter the value of the variable. Notice variables sent this way will always have the type String. If you want to override variables that should have other types, use method 1.
+
+3. Another way to override the variable is to set it as a Job Template input. For example, let's create a Job Template containing a playbook with the variable \{\{ command \}\}.
 
 ![override_var_1](static/images/plugins/foreman_ansible/override_var_1.png)
 
@@ -272,7 +303,6 @@ As you see, the variable "command" is now available to be set on every Job Templ
 
 You can override this variable every time you run the Job Template by setting the variable as Input. This takes precedence over Host Parameters.
 
--->
 
 # 5. Help
 
