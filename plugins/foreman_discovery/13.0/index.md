@@ -1,25 +1,24 @@
 ---
 layout: plugin
 pluginname: foreman_discovery
-title: Foreman Discovery Manual
-version: 14.0
+title: Foreman Discovery 13.0 Manual
+version: 13.0
 # versions for matrix and snippets
 # (use short version for imgver e.g. 3.0)
-pluginver: 14.0.0
+pluginver: 13.0.0
 proxyver: 1.0.4
 imgver: 3.5
 cliver: 1.0.2
 # uncomment to show warning box for an old release
 #warning: old
 # uncomment to show development version warning
-warning: unreleased
+#warning: unreleased
 ---
 
-# 1. Foreman Discovery {{ page.version }} manual
+# 1. {{ page.title }}
 
 This plugin enables Foreman to do automatic bare-metal discovery of unknown
-nodes on the provisioning network. This is often referenced as
-Metal-as-a-Service or simply MaaS. New nodes self-register into Foreman and
+nodes on the provisioning network. New nodes self-register into Foreman and
 upload facts collected by Facter (serial id, network interfaces, memory,
 disks). The registered nodes show up on Discovered Hosts page and provisioning
 can be initiated either manually (via UI/CLI or API) or automatically via
@@ -168,13 +167,6 @@ plugin:
     <td>1.0.4</td>
     <td>3.5</td>
     <td>1.0.2</td>
-  </tr>
-  <tr>
-    <td>= 1.20</td>
-    <td>{{page.pluginver}}</td>
-    <td>{{page.proxyver}}</td>
-    <td>{{page.imgver}}</td>
-    <td>{{page.cliver}}</td>
   </tr>
 </table>
 

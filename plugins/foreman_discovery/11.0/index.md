@@ -10,9 +10,9 @@ proxyver: 1.0.4
 imgver: 3.4
 cliver: 1.0.0
 # uncomment to show warning box for an old release
-#warning: old
+warning: old
 # uncomment to show development version warning
-warning: unreleased
+#warning: unreleased
 ---
 
 # 1. {{ page.title }}
