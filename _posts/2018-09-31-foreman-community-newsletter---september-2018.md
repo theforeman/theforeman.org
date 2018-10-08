@@ -93,13 +93,6 @@ should be able to keep up with upcoming demos there.
 
 All the usual goodness from the community, rounded up and presented for your viewing pleasure.
 
-#### [Past Events](https://community.theforeman.org/c/events/l/latest)
-
-* [Community Demo #50](https://community.theforeman.org/t/foreman-community-demo-50)
-
-Hammer, Ansible variables, content changes, and a quick overview of the new
-stats dashboard. Click the link to see the full agenda!
-
 * [Open Source Automation Day](https://community.theforeman.org/t/open-source-automation-day/10318)
 
 On October 16, 2018 the Open Source Automation Day of ATIX AG will take place
@@ -125,6 +118,14 @@ I'll be at OSS-EU on Oct 22-24th - I have two talks there in the community
 track (which aren't really about Foreman, but about community work in general),
 and I'll spend a lot of my time hanging out at the Red Hat stand. Come find me
 if you want to chat! :)
+
+#### [Past Events](https://community.theforeman.org/c/events/l/latest)
+
+* [Community Demo #50](https://community.theforeman.org/t/foreman-community-demo-50)
+
+Hammer, Ansible variables, content changes, and a quick overview of the new
+stats dashboard. Click the link to see the full agenda!
+
 
 ### Plugin news
 
