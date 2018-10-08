@@ -23,6 +23,10 @@ It is now possible to add new environments in between an environment path
 
 Several bug fixes around Errata Management, Repositories, Docker, and more are part of this release. Please refer to the [changelog](https://github.com/Katello/katello/blob/KATELLO-3.8/CHANGELOG.md) for more details.
 
+## Client package changes
+- katello-agent/goferd is now optional, only used for remote exec.
+- katello-host-tools is required for package upload/errata status.
+- katello-host-tools-tracer required for traces management, must be installed AFTER updating katello-host-tools.
 
 ## Contributors
 - agrawal
