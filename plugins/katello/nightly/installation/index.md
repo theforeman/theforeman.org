@@ -91,12 +91,11 @@ Installation may be done manually or via our recommended approach of using [fork
 
 <div id="rhel7" markdown="1">
 {% highlight bash %}
+subscription-manager repos --disable "*"
+subscription-manager repos --enable rhel-7-server-rpms
+subscription-manager repos --enable rhel-7-server-optional-rpms
+subscription-manager repos --enable rhel-7-server-extras-rpms
 yum install -y yum-utils
-yum-config-manager --disable "*"
-subscription-manager --disable "*"
-subscription-manager --enable rhel-7-server-rpms
-subscription-manager --enable rhel-7-server-optional-rpms
-subscription-manager --enable rhel-7-server-extras-rpms
 {% endhighlight %}
 </div>
 
@@ -179,5 +178,3 @@ arguments. Multiple entries can be entered via
 ## Forklift
 
 Foreman provides a git repository designed to streamline setup by setting up all the proper repositories. Forklift provides the ability to deploy a virtual machine instance via Vagrant or direct deployment on an already provisioned machine. For details on how to install using forklift, please see the [README](https://github.com/theforeman/forklift/blob/master/README.md).
-
-
