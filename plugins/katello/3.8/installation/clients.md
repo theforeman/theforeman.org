@@ -67,11 +67,30 @@ rpm -Uvh https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}
 {% endhighlight %}
 </div>
 
+Now you are ready to install the client package:
 
-Now you are ready to install the katello-agent:
+The `katello-host-tools` package reports errata & package profile information, but does not allow you to run remote actions on the clients.
+
+{% highlight bash %}
+yum install katello-host-tools
+{% endhighlight %}
+
+We generally recommend using Foreman Remote Execution or Ansible for remote actions, but we also offer a messaging bus based client that does have some limitations when used with a large number of clients.
 
 {% highlight bash %}
 yum install katello-agent
+{% endhighlight %}
+
+Optionally you can also install `katello-host-tools-tracer` and the client will report processes that need restarting after an update back to the Katello server. 
+
+{% highlight bash %}
+yum install katello-host-tools-tracer
+{% endhighlight %}
+
+For Suse Clients, only katello-host-tools is supported:
+
+{% highlight bash %}
+zypper install katello-host-tools
 {% endhighlight %}
 
 ## Provisioned
