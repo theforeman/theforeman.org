@@ -6,6 +6,9 @@ version: nightly
 
 # Katello Inter-Server Sync
 
+NOTE: This feature has been deprecated and will be removed in a future release
+of Katello. Please consider using Content View Import/Export instead.
+
 NOTE: This feature is intended to replace the 'katello-disconnected' script.
 
 ## Intro
