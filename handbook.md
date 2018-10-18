@@ -177,6 +177,15 @@ We use MiniTest::Unit syntax.
 * Use `setup_user` if you need to create a user with special permissions and roles instead of doing it yourself in the test.
 * For functional tests, if several controllers share the same behavior, extract it to a [shared functional concern](https://github.com/theforeman/foreman/blob/develop/test/functional/shared/report_host_permissions_test.rb)
 
+#### Running tests
+
+* Running tests is best done using `rails test`
+* Single test files can be run with `rails test <relative-path-to-file>` i.e `rails test test/model/host_test.rb`
+* For testing individual tests use `rails test <path-to-test>:<linenumber-of-testcase>` i.e `rails test test/model/host_test.rb:8`
+* Individual tests of plugins can also be run when developing a plugin. There are two things to note here however:
+    - When requiring any files in the test files (for example `require 'test_plugin_helper.rb'`), use `require_relative`, otherwise rails will fail at finding the files that have been required. For a good example see [this PR](https://github.com/dm-drogeriemarkt/foreman_dlm/pull/44).
+    - Currently one must provide the absolute path of the plugin's test file that is to be run. for example: `bundle exec rails test ~/dev/plugins/foreman_plugin/test/models/model_test.rb`. Its not yet known why the absolute path is needed for plugin tests - feel free to push a PR ;)
+
 ### Time zones
 
 All date and time information should be saved in UTC to the database, for consistency. Similarly, all date and time information shown to users must either take into account the user time zone (accessible through User.current.timezone) or not specify anything.
