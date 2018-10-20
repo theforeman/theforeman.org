@@ -259,7 +259,7 @@ gpgcheck=0
   </p>
 
   <p>
-    If not already configured, add the repo by editing <code>/etc/apt/sources.list.d/foreman.repo</code> and adding the following line:
+    If not already configured, add the repo by editing <code>/etc/apt/sources.list.d/foreman.list</code> and adding the following line:
   </p>
 
 <pre>
