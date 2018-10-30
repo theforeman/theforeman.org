@@ -1,9 +1,9 @@
 ---
 layout: plugins/katello/documentation
 title: Katello Installation
-version: 3.9
-foreman_version: 1.20
-latest: 3.8
+version: '3.9'
+foreman_version: '1.20'
+latest: '3.8'
 script: osmenu.js
 ---
 
