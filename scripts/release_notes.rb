@@ -66,7 +66,7 @@ puts "\n----------[Start of notes]----------\n\n"
 
 puts "### Release notes for #{@current_release_name}"
 
-grouped_issues = gather_issues.group_by { |issue| issue['category']['name'] rescue 'Uncategorized' }
+grouped_issues = gather_issues.group_by { |issue| issue['category']['name'] rescue issue['project']['name'] }
 
 grouped_issues = Hash[ grouped_issues.sort_by { |key, val| key } ]
 grouped_issues.each do |category, issues|
