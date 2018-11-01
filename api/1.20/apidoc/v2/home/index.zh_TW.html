@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API 文檔</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../../apidoc/v2.zh_TW.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../../apidoc/v2/home.zh_TW.html'>
+      Home
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>index</li>
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../../apidoc/v2/home/index.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/home/index.de.html">de</a> | <a href="../../../apidoc/v2/home/index.it.html">it</a> | <a href="../../../apidoc/v2/home/index.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/home/index.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/home/index.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/home/index.fr.html">fr</a> | <a href="../../../apidoc/v2/home/index.ru.html">ru</a> | <a href="../../../apidoc/v2/home/index.ja.html">ja</a> | <a href="../../../apidoc/v2/home/index.es.html">es</a> | <a href="../../../apidoc/v2/home/index.ko.html">ko</a> | <a href="../../../apidoc/v2/home/index.ca.html">ca</a> | <a href="../../../apidoc/v2/home/index.gl.html">gl</a> | <a href="../../../apidoc/v2/home/index.en.html">en</a> | <b><a href="../../../apidoc/v2/home/index.zh_TW.html">zh_TW</a></b> | <a href="../../../apidoc/v2/home/index.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/home/index.pl.html">pl</a> ]
+</li>
+
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      GET /api
+      <br>
+      <small>顯示可用的 API 連結</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+  <h2>示例</h2>
+    <pre class="prettyprint">GET /api
+200
+{
+  &quot;links&quot;: {
+    &quot;base&quot;: {},
+    &quot;config_reports&quot;: {
+      &quot;List all reports&quot;: &quot;/api/config_reports&quot;,
+      &quot;Show a report&quot;: &quot;/api/config_reports/:id&quot;,
+      &quot;Create a report&quot;: &quot;/api/config_reports&quot;,
+      &quot;Delete a report&quot;: &quot;/api/config_reports/:id&quot;,
+      &quot;Show the last report for a host&quot;: &quot;/api/hosts/:host_id/config_reports/last&quot;
+    },
+    &quot;statistics&quot;: {
+      &quot;Get statistics&quot;: &quot;/api/statistics&quot;
+    },
+    &quot;domains&quot;: {
+      &quot;List of domains&quot;: &quot;/api/domains&quot;,
+      &quot;Show a domain&quot;: &quot;/api/domains/:id&quot;,
+      &quot;Create a domain&quot;: &quot;/api/domains&quot;,
+      &quot;Update a domain&quot;: &quot;/api/domains/:id&quot;,
+      &quot;Delete a domain&quot;: &quot;/api/domains/:id&quot;
+    },
+    &quot;subnets&quot;: {
+      &quot;List of subnets&quot;: &quot;/api/subnets&quot;,
+      &quot;Show a subnet&quot;: &quot;/api/subnets/:id&quot;,
+      &quot;Create a subnet&quot;: &quot;/api/subnets&quot;,
+      &quot;Update a subnet&quot;: &quot;/api/subnets/:id&quot;,
+      &quot;Delete a subnet&quot;: &quot;/api/subnets/:id&quot;,
+      &quot;Provides an unused IP address in this subnet&quot;: &quot;/api/subnets/:id/freeip&quot;
+    },
+    &quot;filters&quot;: {
+      &quot;List all filters&quot;: &quot;/api/filters&quot;,
+      &quot;Show a filter&quot;: &quot;/api/filters/:id&quot;,
+      &quot;Create a filter&quot;: &quot;/api/filters&quot;,
+      &quot;Update a filter&quot;: &quot;/api/filters/:id&quot;,
+      &quot;Delete a filter&quot;: &quot;/api/filters/:id&quot;
+    },
+    &quot;organizations&quot;: {
+      &quot;List all organizations&quot;: &quot;/api/organizations&quot;,
+      &quot;Show an organization&quot;: &quot;/api/organizations/:id&quot;,
+      &quot;Create an organization&quot;: &quot;/api/organizations&quot;,
+      &quot;Update an organization&quot;: &quot;/api/organizations/:id&quot;,
+      &quot;Delete an organization&quot;: &quot;/api/organizations/:id&quot;
+    },
+    &quot;template_combinations&quot;: {
+      &quot;List template combination&quot;: &quot;/api/config_templates/:config_template_id/template_combinations&quot;,
+      &quot;Add a template combination&quot;: &quot;/api/config_templates/:config_template_id/template_combinations&quot;,
+      &quot;Show template combination&quot;: &quot;/api/template_combinations/:id&quot;,
+      &quot;Update template combination&quot;: &quot;/api/provisioning_templates/:provisioning_template_id/template_combinations/:id&quot;,
+      &quot;Delete a template combination&quot;: &quot;/api/template_combinations/:id&quot;
+    },
+    &quot;override_values&quot;: {
+      &quot;List of override values for a specific smart variable&quot;: &quot;/api/smart_variables/:smart_variable_id/override_values&quot;,
+      &quot;Show an override value for a specific smart variable&quot;: &quot;/api/smart_variables/:smart_variable_id/override_values/:id&quot;,
+      &quot;Create an override value for a specific smart variable&quot;: &quot;/api/smart_variables/:smart_variable_id/override_values&quot;,
+      &quot;Update an override value for a specific smart variable&quot;: &quot;/api/smart_variables/:smart_variable_id/override_values/:id&quot;,
+      &quot;Delete an override value for a specific smart variable&quot;: &quot;/api/smart_variables/:smart_variable_id/override_values/:id&quot;
+    },
+    &quot;users&quot;: {
+      &quot;List all users&quot;: &quot;/api/users&quot;,
+      &quot;Show a user&quot;: &quot;/api/users/:id&quot;,
+      &quot;Create a user&quot;: &quot;/api/users&quot;,
+      &quot;Update a user&quot;: &quot;/api/users/:id&quot;,
+      &quot;Delete a user&quot;: &quot;/api/users/:id&quot;
+    },
+    &quot;home&quot;: {
+      &quot;Show available API links&quot;: &quot;/api&quot;,
+      &quot;Show status&quot;: &quot;/api/status&quot;
+    }
+  }
+}</pre>
+
+  <h2>參數</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>參數名字</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>位置範圍</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>組織範圍</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

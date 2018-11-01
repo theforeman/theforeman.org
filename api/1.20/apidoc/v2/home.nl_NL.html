@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Api Documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc/v2.nl_NL.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Home
+    
+  </li>
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/v2/home.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/home.de.html">de</a> | <a href="../../apidoc/v2/home.it.html">it</a> | <a href="../../apidoc/v2/home.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/home.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/home.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/home.fr.html">fr</a> | <a href="../../apidoc/v2/home.ru.html">ru</a> | <a href="../../apidoc/v2/home.ja.html">ja</a> | <a href="../../apidoc/v2/home.es.html">es</a> | <a href="../../apidoc/v2/home.ko.html">ko</a> | <a href="../../apidoc/v2/home.ca.html">ca</a> | <a href="../../apidoc/v2/home.gl.html">gl</a> | <a href="../../apidoc/v2/home.en.html">en</a> | <a href="../../apidoc/v2/home.zh_TW.html">zh_TW</a> | <b><a href="../../apidoc/v2/home.nl_NL.html">nl_NL</a></b> | <a href="../../apidoc/v2/home.pl.html">pl</a> ]
+</li>
+
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Home
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/home/index.nl_NL.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api
+          </a>
+          <br>
+          <small>Bekijk beschikbare API links</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+  <h3><span class="translation_missing" title="translation missing: nl-NL.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">GET /api
+200
+{
+  &quot;links&quot;: {
+    &quot;base&quot;: {},
+    &quot;config_reports&quot;: {
+      &quot;List all reports&quot;: &quot;/api/config_reports&quot;,
+      &quot;Show a report&quot;: &quot;/api/config_reports/:id&quot;,
+      &quot;Create a report&quot;: &quot;/api/config_reports&quot;,
+      &quot;Delete a report&quot;: &quot;/api/config_reports/:id&quot;,
+      &quot;Show the last report for a host&quot;: &quot;/api/hosts/:host_id/config_reports/last&quot;
+    },
+    &quot;statistics&quot;: {
+      &quot;Get statistics&quot;: &quot;/api/statistics&quot;
+    },
+    &quot;domains&quot;: {
+      &quot;List of domains&quot;: &quot;/api/domains&quot;,
+      &quot;Show a domain&quot;: &quot;/api/domains/:id&quot;,
+      &quot;Create a domain&quot;: &quot;/api/domains&quot;,
+      &quot;Update a domain&quot;: &quot;/api/domains/:id&quot;,
+      &quot;Delete a domain&quot;: &quot;/api/domains/:id&quot;
+    },
+    &quot;subnets&quot;: {
+      &quot;List of subnets&quot;: &quot;/api/subnets&quot;,
+      &quot;Show a subnet&quot;: &quot;/api/subnets/:id&quot;,
+      &quot;Create a subnet&quot;: &quot;/api/subnets&quot;,
+      &quot;Update a subnet&quot;: &quot;/api/subnets/:id&quot;,
+      &quot;Delete a subnet&quot;: &quot;/api/subnets/:id&quot;,
+      &quot;Provides an unused IP address in this subnet&quot;: &quot;/api/subnets/:id/freeip&quot;
+    },
+    &quot;filters&quot;: {
+      &quot;List all filters&quot;: &quot;/api/filters&quot;,
+      &quot;Show a filter&quot;: &quot;/api/filters/:id&quot;,
+      &quot;Create a filter&quot;: &quot;/api/filters&quot;,
+      &quot;Update a filter&quot;: &quot;/api/filters/:id&quot;,
+      &quot;Delete a filter&quot;: &quot;/api/filters/:id&quot;
+    },
+    &quot;organizations&quot;: {
+      &quot;List all organizations&quot;: &quot;/api/organizations&quot;,
+      &quot;Show an organization&quot;: &quot;/api/organizations/:id&quot;,
+      &quot;Create an organization&quot;: &quot;/api/organizations&quot;,
+      &quot;Update an organization&quot;: &quot;/api/organizations/:id&quot;,
+      &quot;Delete an organization&quot;: &quot;/api/organizations/:id&quot;
+    },
+    &quot;template_combinations&quot;: {
+      &quot;List template combination&quot;: &quot;/api/config_templates/:config_template_id/template_combinations&quot;,
+      &quot;Add a template combination&quot;: &quot;/api/config_templates/:config_template_id/template_combinations&quot;,
+      &quot;Show template combination&quot;: &quot;/api/template_combinations/:id&quot;,
+      &quot;Update template combination&quot;: &quot;/api/provisioning_templates/:provisioning_template_id/template_combinations/:id&quot;,
+      &quot;Delete a template combination&quot;: &quot;/api/template_combinations/:id&quot;
+    },
+    &quot;override_values&quot;: {
+      &quot;List of override values for a specific smart variable&quot;: &quot;/api/smart_variables/:smart_variable_id/override_values&quot;,
+      &quot;Show an override value for a specific smart variable&quot;: &quot;/api/smart_variables/:smart_variable_id/override_values/:id&quot;,
+      &quot;Create an override value for a specific smart variable&quot;: &quot;/api/smart_variables/:smart_variable_id/override_values&quot;,
+      &quot;Update an override value for a specific smart variable&quot;: &quot;/api/smart_variables/:smart_variable_id/override_values/:id&quot;,
+      &quot;Delete an override value for a specific smart variable&quot;: &quot;/api/smart_variables/:smart_variable_id/override_values/:id&quot;
+    },
+    &quot;users&quot;: {
+      &quot;List all users&quot;: &quot;/api/users&quot;,
+      &quot;Show a user&quot;: &quot;/api/users/:id&quot;,
+      &quot;Create a user&quot;: &quot;/api/users&quot;,
+      &quot;Update a user&quot;: &quot;/api/users/:id&quot;,
+      &quot;Delete a user&quot;: &quot;/api/users/:id&quot;
+    },
+    &quot;home&quot;: {
+      &quot;Show available API links&quot;: &quot;/api&quot;,
+      &quot;Show status&quot;: &quot;/api/status&quot;
+    }
+  }
+}</pre>
+
+  <h3><span class="translation_missing" title="translation missing: nl-NL.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: nl-NL.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: nl-NL.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: nl-NL.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Scope met locaties</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: nl-NL.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Scope met organisaties</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/home/status.nl_NL.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-status'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/status
+          </a>
+          <br>
+          <small>Toon status</small>
+        </h2>
+    </div>
+
+
+    <div id='description-status' class='collapse accordion-body'>
+      
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: nl-NL.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: nl-NL.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: nl-NL.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: nl-NL.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Scope met locaties</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: nl-NL.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Scope met organisaties</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>
