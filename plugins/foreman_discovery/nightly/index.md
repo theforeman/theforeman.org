@@ -2,10 +2,10 @@
 layout: plugin
 pluginname: foreman_discovery
 title: Foreman Discovery Manual
-version: 14.0
+version: 15.0
 # versions for matrix and snippets
 # (use short version for imgver e.g. 3.0)
-pluginver: 14.0.0
+pluginver: 15.0.0
 proxyver: 1.0.4
 imgver: 3.5
 cliver: 1.0.2
@@ -171,6 +171,13 @@ plugin:
   </tr>
   <tr>
     <td>= 1.20</td>
+    <td>14.0</td>
+    <td>1.0.4</td>
+    <td>3.5</td>
+    <td>1.0.2</td>
+  </tr>
+  <tr>
+    <td>= 1.21</td>
     <td>{{page.pluginver}}</td>
     <td>{{page.proxyver}}</td>
     <td>{{page.imgver}}</td>
