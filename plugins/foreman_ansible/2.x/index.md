@@ -171,9 +171,9 @@ Check Ansible's [dynamic inventory documentation](http://docs.ansible.com/ansibl
 
 # 3. Configuration
 
-Smart proxies are authenticated by Foreman usually through certificates (found in /etc/foreman-proxy/). Therefore, when it comes to proxies, it is NOT necessary to add them to the setting `trusted_puppetmaster_hosts`.
+Smart proxies are authenticated by Foreman usually through certificates (found in /etc/foreman-proxy/). Therefore, when it comes to proxies, it is NOT necessary to add them to the setting `trusted_hosts`.
 
-If you want to use Ansible and submit facts/reports to Foreman, through the callback, you should add whatever hosts (again, except Smart Proxies) you want to submit facts **from** to the setting `trusted_puppetmaster_hosts`. Change it at Administer > Settings, Auth tab. e.g: If you're running Ansible from host 'A', which SSHs into host 'B', you need to add host 'A'
+If you want to use Ansible and submit facts/reports to Foreman, through the callback, you should add whatever hosts (again, except Smart Proxies) you want to submit facts **from** to the setting `trusted_hosts`. Change it at Administer > Settings, Auth tab. e.g: If you're running Ansible from host 'A', which SSHs into host 'B', you need to add host 'A'
 
 If the Foreman setting `create_new_host_when_facts_are_uploaded` (Puppet tab) is true, and $HOSTNAME doesn't exist in Foreman, it will autocreate that host in Foreman. If it already exists, it will update the facts.
 
