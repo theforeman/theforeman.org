@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>API documentation</title>
+  <title>Api Documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
@@ -51,27 +51,28 @@
 
 
 
-  <h2>Examples</h2>
+  <h2><span class="translation_missing" title="translation missing: sv-SE.apipie.examples">Examples</span></h2>
     <pre class="prettyprint">POST /api/provisioning_templates
 {
   &quot;provisioning_template&quot;: {
     &quot;template&quot;: &quot;This is a test template&quot;,
-    &quot;template_kind_name&quot;: &quot;PXEGrub&quot;,
-    &quot;name&quot;: &quot;new_template&quot;
+    &quot;template_kind_id&quot;: 698706415,
+    &quot;name&quot;: &quot;RandomName&quot;,
+    &quot;locked&quot;: true
   }
 }
 201
 {
   &quot;template&quot;: &quot;This is a test template&quot;,
-  &quot;locked&quot;: false,
+  &quot;locked&quot;: true,
   &quot;snippet&quot;: false,
   &quot;audit_comment&quot;: null,
-  &quot;created_at&quot;: &quot;2018-07-24 13:18:46 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 13:18:46 UTC&quot;,
-  &quot;id&quot;: 1007981721,
-  &quot;name&quot;: &quot;new_template&quot;,
-  &quot;template_kind_id&quot;: 131565194,
-  &quot;template_kind_name&quot;: &quot;PXEGrub&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:11:30 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:11:30 UTC&quot;,
+  &quot;id&quot;: 1007981702,
+  &quot;name&quot;: &quot;RandomName&quot;,
+  &quot;template_kind_id&quot;: 698706415,
+  &quot;template_kind_name&quot;: &quot;iPXE&quot;,
   &quot;template_combinations&quot;: [],
   &quot;operatingsystems&quot;: [],
   &quot;os_default_templates&quot;: [],
@@ -79,12 +80,12 @@
   &quot;organizations&quot;: []
 }</pre>
 
-  <h2>Params</h2>
+  <h2><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h2>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -92,7 +93,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -116,7 +117,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -140,7 +141,7 @@
     <td>
       <strong>provisioning_template </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
         
       </small>
     </td>
@@ -161,7 +162,7 @@
     <td>
       <strong>provisioning_template[name] </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
         
       </small>
     </td>
@@ -185,7 +186,7 @@
     <td>
       <strong>provisioning_template[template] </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
         
       </small>
     </td>
@@ -207,8 +208,8 @@
     <td>
       <strong>provisioning_template[snippet] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -229,8 +230,8 @@
     <td>
       <strong>provisioning_template[audit_comment] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -251,8 +252,8 @@
     <td>
       <strong>provisioning_template[template_kind_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -275,8 +276,8 @@
     <td>
       <strong>provisioning_template[template_combinations_attributes] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -299,8 +300,8 @@
     <td>
       <strong>provisioning_template[operatingsystem_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -323,8 +324,8 @@
     <td>
       <strong>provisioning_template[locked] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -347,8 +348,8 @@
     <td>
       <strong>provisioning_template[location_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -371,8 +372,8 @@
     <td>
       <strong>provisioning_template[organization_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>

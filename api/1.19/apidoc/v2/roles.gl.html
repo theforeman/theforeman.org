@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>API documentation</title>
+  <title>Api Documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
@@ -70,7 +70,7 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">GET /api/roles
 200
 {
@@ -183,12 +183,12 @@
   ]
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -196,7 +196,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -220,7 +220,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -244,7 +244,7 @@
     <td>
       <strong>search </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -268,7 +268,7 @@
     <td>
       <strong>order </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -292,7 +292,7 @@
     <td>
       <strong>page </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -316,7 +316,7 @@
     <td>
       <strong>per_page </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -402,7 +402,7 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">GET /api/roles/1-Manager
 200
 {
@@ -490,12 +490,12 @@
   &quot;organizations&quot;: []
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -503,7 +503,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -527,7 +527,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -551,7 +551,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -573,7 +573,7 @@
     <td>
       <strong>description </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -622,27 +622,52 @@
 
 
 
-  <h3>Examples</h3>
-    <pre class="prettyprint">PUT /api/roles
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">POST /api/roles
 {
   &quot;role&quot;: {
-    &quot;name&quot;: &quot;newrole&quot;
+    &quot;name&quot;: &quot;Test Role&quot;,
+    &quot;location_ids&quot;: [
+      255093256
+    ],
+    &quot;organization_ids&quot;: [
+      447626438
+    ]
   }
 }
-403
+201
 {
-  &quot;error&quot;: {
-    &quot;message&quot;: &quot;Access denied&quot;,
-    &quot;details&quot;: &quot;Missing one of the required permissions: create_roles&quot;
-  }
+  &quot;builtin&quot;: 0,
+  &quot;cloned_from_id&quot;: null,
+  &quot;name&quot;: &quot;Test Role&quot;,
+  &quot;id&quot;: 21,
+  &quot;description&quot;: null,
+  &quot;origin&quot;: null,
+  &quot;filters&quot;: [],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -650,7 +675,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -674,7 +699,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -698,7 +723,7 @@
     <td>
       <strong>role </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -719,7 +744,7 @@
     <td>
       <strong>role[name] </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -741,8 +766,8 @@
     <td>
       <strong>role[description] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -765,8 +790,8 @@
     <td>
       <strong>role[location_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -789,8 +814,8 @@
     <td>
       <strong>role[organization_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -841,36 +866,55 @@
 
 
 
-  <h3>Examples</h3>
-    <pre class="prettyprint">PUT /api/roles/8-Destroy%20hosts
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">PUT /api/roles/17
 {
   &quot;role&quot;: {
-    &quot;name&quot;: &quot;staff&quot;
+    &quot;location_ids&quot;: [
+      255093256
+    ],
+    &quot;organization_ids&quot;: [
+      447626438
+    ]
   }
 }
 200
 {
   &quot;builtin&quot;: 0,
   &quot;cloned_from_id&quot;: null,
-  &quot;name&quot;: &quot;staff&quot;,
-  &quot;id&quot;: 8,
+  &quot;name&quot;: &quot;New Role&quot;,
+  &quot;id&quot;: 17,
   &quot;description&quot;: null,
-  &quot;origin&quot;: &quot;&quot;,
+  &quot;origin&quot;: null,
   &quot;filters&quot;: [
     {
-      &quot;id&quot;: 10997177
+      &quot;id&quot;: 1062414189
     }
   ],
-  &quot;locations&quot;: [],
-  &quot;organizations&quot;: []
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -878,7 +922,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -902,7 +946,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -926,7 +970,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -948,7 +992,7 @@
     <td>
       <strong>role </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -969,7 +1013,7 @@
     <td>
       <strong>role[name] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -991,8 +1035,8 @@
     <td>
       <strong>role[description] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1015,8 +1059,8 @@
     <td>
       <strong>role[location_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1039,8 +1083,8 @@
     <td>
       <strong>role[organization_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1091,27 +1135,30 @@
 
 
 
-  <h3>Examples</h3>
-    <pre class="prettyprint">DELETE /api/roles/8-Destroy%20hosts
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">DELETE /api/roles/13-Organization%20admin/clone
 {
-  &quot;role&quot;: {}
+  &quot;new_name&quot;: &quot;Org Admin&quot;,
+  &quot;role&quot;: {
+    &quot;name&quot;: &quot;Org Admin&quot;
+  }
 }
 200
 {
-  &quot;id&quot;: 8,
-  &quot;name&quot;: &quot;Destroy hosts&quot;,
+  &quot;id&quot;: 20,
+  &quot;name&quot;: &quot;Org Admin&quot;,
   &quot;builtin&quot;: 0,
   &quot;description&quot;: null,
-  &quot;cloned_from_id&quot;: null,
-  &quot;origin&quot;: &quot;&quot;
+  &quot;origin&quot;: null,
+  &quot;cloned_from_id&quot;: 13
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -1119,7 +1166,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -1143,7 +1190,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -1167,7 +1214,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -1216,32 +1263,30 @@
 
 
 
-  <h3>Examples</h3>
-    <pre class="prettyprint">POST /api/roles/14/clone
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">POST /api/roles/13-Organization%20admin/clone
 {
-  &quot;name&quot;: &quot;New Role&quot;,
+  &quot;new_name&quot;: &quot;Org Admin&quot;,
   &quot;role&quot;: {
-    &quot;location_ids&quot;: [],
-    &quot;organization_ids&quot;: [],
-    &quot;name&quot;: &quot;New Role&quot;
+    &quot;name&quot;: &quot;Org Admin&quot;
   }
 }
 201
 {
-  &quot;id&quot;: 15,
-  &quot;name&quot;: &quot;New Role&quot;,
+  &quot;id&quot;: 14,
+  &quot;name&quot;: &quot;Org Admin&quot;,
   &quot;builtin&quot;: 0,
-  &quot;description&quot;: &quot;default description&quot;,
-  &quot;cloned_from_id&quot;: 14,
-  &quot;origin&quot;: null
+  &quot;description&quot;: null,
+  &quot;origin&quot;: null,
+  &quot;cloned_from_id&quot;: 13
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -1249,7 +1294,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -1273,7 +1318,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -1297,7 +1342,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -1319,7 +1364,7 @@
     <td>
       <strong>role </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -1340,7 +1385,7 @@
     <td>
       <strong>role[name] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -1362,8 +1407,8 @@
     <td>
       <strong>role[description] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1386,8 +1431,8 @@
     <td>
       <strong>role[location_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1410,8 +1455,8 @@
     <td>
       <strong>role[organization_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>

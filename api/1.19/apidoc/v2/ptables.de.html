@@ -116,17 +116,17 @@
   &quot;results&quot;: [
     {
       &quot;os_family&quot;: null,
-      &quot;created_at&quot;: &quot;2018-07-24 12:43:44 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:43:44 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:04:30 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:04:30 UTC&quot;,
       &quot;name&quot;: &quot;Example partition table&quot;,
       &quot;id&quot;: 615088209
     },
     {
       &quot;os_family&quot;: &quot;Redhat&quot;,
-      &quot;created_at&quot;: &quot;2018-07-24 12:43:45 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:43:45 UTC&quot;,
-      &quot;name&quot;: &quot;ptable112&quot;,
-      &quot;id&quot;: 1007981712
+      &quot;created_at&quot;: &quot;2018-11-08 09:04:31 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:04:31 UTC&quot;,
+      &quot;name&quot;: &quot;ptable104&quot;,
+      &quot;id&quot;: 1007981717
     }
   ]
 }</pre>
@@ -316,9 +316,9 @@
   <table class='table'>
   <thead>
     <tr>
-      <th width="20%">Field name</th>
+      <th width="20%">Feld Name</th>
       <th width="20%">Typ</th>
-      <th width="60%">Possible values</th>
+      <th width="60%">Mögliche Werte</th>
     </tr>
   </thead>
   <tbody>
@@ -415,16 +415,16 @@
 
 
   <h3>Beispiele</h3>
-    <pre class="prettyprint">GET /api/ptables/1007981702-ptable103
+    <pre class="prettyprint">GET /api/ptables/1007981729-ptable113
 200
 {
   &quot;layout&quot;: &quot;zerombr\\nclearpart --all    --initlabel\\npart /boot --fstype ext3 --size=&lt;%= 10 * 10 %&gt; --asprimary\\npart /     --f   stype ext3 --size=1024 --grow\\npart swap  --recommended&quot;,
   &quot;locked&quot;: false,
   &quot;os_family&quot;: &quot;Redhat&quot;,
-  &quot;created_at&quot;: &quot;2018-07-24 12:43:45 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:43:45 UTC&quot;,
-  &quot;name&quot;: &quot;ptable103&quot;,
-  &quot;id&quot;: 1007981702,
+  &quot;created_at&quot;: &quot;2018-11-08 09:04:32 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:04:32 UTC&quot;,
+  &quot;name&quot;: &quot;ptable113&quot;,
+  &quot;id&quot;: 1007981729,
   &quot;operatingsystems&quot;: [],
   &quot;locations&quot;: [
     {
@@ -558,22 +558,23 @@
     <pre class="prettyprint">POST /api/ptables
 {
   &quot;ptable&quot;: {
-    &quot;name&quot;: &quot;ptable_test&quot;,
-    &quot;layout&quot;: &quot;iJzCdSMslUzsuVYBwftgITOaCbnfmUVuEnEzTLesGbuNlSszgTOikRfYFGwuVbOexeKidGHJPqIYHMNBJMjuyXBdtAROMxGUbCGldeympNSBSMBrAENpNQgkHOwyOhHUiTvPSmbjOEyPJlndVJQHaFaLxbQFtUvlqPsIHGbLSFgOeGHHkhTHznUQGuXQsjaSGmwqKcLqdkJEvwNewfIrLQvUanImWEFrDKDuKsBRidTJmxDNkWJzSmPYBySJgMnmFonUdamHVEwEFjRXcJUflXgidkGmQLerqHjrqyMuLcxeiWwUChBDLhBpzObFmIgPbPpfvKlYxHJFNkBNjVvxyEbfKLTKakNtqUkDhthxxsykiGlkmILCQsFzyKPHwzXLEdtQdQebNKwuiNziDwJoFUnnbDSQKnvzkJljYvlSemRqvyHhpkfbtvAYlysjpfYhWHdYUvAttuKaEEJDHshnuQvntDkxFKlxRHQlwJqKMNLxWYgdVpYXSdFpAwFmrAEbCobmFxCQHXxkulOuupSpvOpqmSmsQPvQgCJpHQSPrjTDtHogxPjBtSTivGiCQHIwGsKvMkHUIHpTVctFSVdBkBlVDbxYWpIUTgWPLPDFrvVrePPebVBooNEdieyTGILDjSiKNeLeAgKWQdRVtHMjxDIKBhxYSIlnABCwPjWhudOLWyjSWNYdnRDfqBqpCUbvgMHVPqBrihMobsLsbQwnICKPPBRBnfIkcwljreJnSBPTnAAWlqzjDyrIFHtghldtJEzodlBRbLuSHRfykibAPnBveNQClDTDELEkSsyHPgSygaGKLuUVXegPaLxezLUaaRowDPNKVIrRfAMFCGuunmwVOoTOpMSArNhvADebTMhzBQSbuRcHwJXKTYkGkXVCmWexJIyaQrqQSCakrbXcVFXMbLpJDwwlgymBKrpjJAGTFibrfQrShcATJuSPjVJFYgQVyumwYWBXymiXddpDRIqubMrVTzlkafucxuecCWrjstpIyvgccDFWibapTnMxgoydFyCDQPVXAFlQTgpAztOjHqsgrVIgTOyiPoxybeOldcfWULdwCDLysEkUVuPfjtBHcxFrgfeLfuqVdwPYrarxMbzPhJiBSHnuSXhmKcrUHTKxybfPIvITSVCelcmDaQfjwtktggNdWTAUiWvGYmAXCrHTcANBCzRXAzerJNCFadYIxkTxnebXHvlRLGJhnDUROKUDkJgLXRnFwjekJXlUtLtIQPXKOBMFiFyYxovYsuvwdeMOtPNDDPzqoOFDfPHtFOczSypbOSoVaQgEVwNPiyIunatKiITcnTPvCmTfIfcGbYKzFGBbpIuIXKCUjXAKJSbQRCnppiMlsaJIMFICBybmHJAyIYLnTmyiRUOMfAgaTXblzvJysMKwOGAbqRetVSMPfKetylRDtXjXJsbLmBzDCCYrdDtegvdyGSEOKjmoSNykBrIUsKAQvVlBsRVKLQdXoGaQoPYATcbDeXanumqmgXbotcQqMNncXvoywddWGNGQzXgQzeGoTeGoFdRGYLJkBoNwJaNifDsRePNnhnVkfqoKVWKyQWuHksMMFKccqEYUGIhocvKpibIpyUdHASwOWNIsagoFgglltwyIVriKWVKCqEloMnwkJqFDyjjWKtxAniBtKUcYknWgTghVwkEIzJkuPPyWKnPTWlCVuEJutdxiQiNBxnyolfNurEVruvJgnANGFnFlABaRjAumxPoHMSHUUpirVSOefYozrfruEvWFKQskfpEutjwGIgkzmATAfqtjasxoGOMwLrmzpvKVGjwmqBSJcaTeQhRBFwbSlmGlLNWAutREItdSBUXXvMUxTjfOjDIJCYfRXoyAyTApIIpWdnAGHmFnGBFyVJNpVEEKTMSxKGHPVAkUdSnluireDmaUEjcqqkaaQIxalbHpXaKIvMEBqsvQsazRFamVHRiUmuSjJcgRYCpXGmCzCeogKktvCakzIrHYBkNqghSYtowkURYFbNTasNCvKwiUfaXidItnwfOuVmyJmAYqHdYioKCKJHcTJCMlGRJPpNlIYDPwcIvOAVuySXIwMbDbxkKBHQKnftiYkQHAbdqsdXlUmpHuhQvxOlvgUACIwHCCPqsWhUpjQzyRxqoPgPhTppxzHEMPYedYdUegdHjqgyGoUISKfFetRoqcRfKuxfxmNFLRRwpCBDAOhxxuiDszfIbxpAWzNyoPXSTqIeJFKxcPnVQjDBTyUJAeUncinsWhAmhBkeAkaYUwEHkItqJEQPnNafqGlnLjvJmCqdqAnllbKTInVuvwvANwSBvujhiwckWAUIsdCFAxnSEylrAbTvWWXHmjGjzVdkPYsgKxKcoyiEOCNDNtzIpfsPROuzYTYOGiuiIKwSnFmVuKPaqemREsJPQLErwNFIHurDNJolFnTlAefOBmJMJHVRYRQfVvhQvyaBtGIhnGfIgKhzLiFADXvBqOxpkRfDTaPwQNVShnnorNHiIPPnvaNBtgBTyACRsjkIFFHiaaRVHAYKVzGzWlhwicxzIgehEUkOIcrVHRMNStsdlrkefBmiNULMLETNDXHUSrrMvUhIeLpzKvcUtMNAJeHkoDJtgpLkUoDfTrMsEYmHthVVTDXuIDhOPIyXjDkEqBYcAFkFFUAwrOUsmruEQiUfdDjlkBVJquovnCbwqAOGBSmJOezWRflKgrtOMtbMMoVhevJiOkJLtKtDEJapADegPluswgtxkxfFjOAquTyGwECMIqRDaEyUoYAMIToMJwTAVCaLmmajKfggNHTGgezBxFHQDTvVjEeCdqlHULxStSBIsxheqgbtjGvhftFmMmgisUilvQwBFSHiIzronjJMSPtPRcavnlaVdWEqzvkxUrJexvByPPOUzGxclAgHlSNiWWtsqEHoGFWvHeQJOdUuIXTlXrSsglpEhvIzTrfqraiXbynqdxWGrkmhesKeVzpskMDGFkcFdgEKEernOqmDPpUIbroddotnkchGDvXGLhBCRKVJkmMeUwjgmDNImWfveSFkmJRpRoxMiySRuTPNYxXBqpFEcKoMefCqCoXxVWesmGTNwOTTgXrEDgXxwMgXOAzXhJGRqlnEJKYpbKutbCoBuxAUfSQkRbsYsaNtXraHWpXbekjbftAXRRDfuIkicNksuUYPNFOIAVFoeUlrgIyCAguICEVqjmkTYbunaDVfEerixPVCNvVtdkNYhPUNLzkqubyxmtWLCJVCtdCjGkAEAcacmexMaPLqpesINOhfsAaiCMKxISCVaqEpJWAFymIbejuDfsVclwCKMkolWdjnryOYzcKgtIKPPCqPXxEqftXFUxzYmbENDLtFhQRJaoUydYQXbVtLDpHvjEaBjUyQElWSQdDvBczhvtYVroOXjdCQhTNxXLTlQSkQQALjOfVGhxNrcCJwabFDTIULCHUWURnWbzTSqNtEqtLIvthYmiRTdOFBmEGUxWaiVcFxEfhhPBIUcCpaYyRkEhrvFffefOLJuSWqMxHIUIclnTEcCylcYpXeNQWQCsMhsPBpsjwvvTvlFVkIkIWEwAqHYcgsfGPxdBbTQRfJfGnQIPACusSQAuGhLBBxTufTMhSXdWgIMRDzgasiUALQJcpjmKkUUibTjRVtjbpUbnOVnBmRwPcNizDwxhIeeoAjbwILChJAmwGHjUOOrTnEfmeMrgUtTszAzQDlTDKoEYxzSTkCqTXcFbONVeTVazqnuCaoJOxJpSXovTlOESnGkNwuXucrIphvOrOPMgRvKHBJapcbienrVjRleQxjJUAcBiTGQefkcdNOahpNPsPFvKLdxMeJLLoBHezuiuyYcEaeyXCvTwkWVmhioEFbewuvwkKjChbcqTwmlRBSotPTHKEbJUFkLsLnOXikRIkGmpoSusDqyTBFjvAcDCigxWGzsVxgJmLGcfPHrrzTBYhCEojyybEUcFgHbGkQOzXXHKfEgKTPjuUeWXeGlElVYNDVibaLPeUnvkQXYmDdpiIfkeKHxTerIiJiWrhIpUeSDuxhmtTmdqTrbzxXhazSPzIvPsXWKpQrGwRRujpFleKWtKmMcIfSDaiGYtJLGhjwGLmFgdGlIirVOibLRuiEQIKwzQjSdWgsELnzdxsOzzMGXvDJkNHrxwjhJjmPmNXJvkTPvHhKnWWjFlDwqvEXIIeXogBHtsMQpyCRuNDvPFjCQUKiHUBeAswKNOfzPGJGDrNgcrebyJRWUTTvzznqWooAGLcileLXTSXdoabViWKeRByLvDBzCMeWfnyoGDXebCBHNuVvtpPaskNhEXbyIxWROAEfmSwQupYAdOEMQhHXSOaFsdvYHUwAbavHHymQSYelJlYHCBRQVheWtcVsUVJVlITGjjBcawQhMgIHnEhllHEGPcyJMrStHEEzMLvMaCPokTplinbIsgVndoYketUxPhHaELrwiLhIDKamfywmvMphThQAzDXFSgSNdFcnCuGJfmXWxyLkcsnoDaJTlkFbQGptKCHTwGStVqRWHiyVMgtaovECvaFPdIwEWqClDIGDzfjiNkYmXWUPmzvaEDScITcmfOEupWmCDWwXtGmLlmonChatUpTxMakjISNmNBrIKRtEaYCwDsaawwmVyDYzQfhCEynNkYHDLlBtVFVgoiVSzqGGmRMLYNfPKOwftMHhFLOeeupyWJkiGfbSEatmPolkyhxnDqhlALWIfgQQRjIVkFvzlXmBpjhzoQkRMpbSuQjtYKHlhtWywmFXrxYxgPWxLQWuJXsBBUgQKnoemgTJeHKfzdubTEUPuzfgoaGvvgTNLaxtMMJEqHiiydaAmIIIPzvmUVyDGBHYVfnMxheMhdCWEdWGXjJGzbYLdTtoEhQaXjLaWqoCDmHPcFuqBSajwJoJYqYODKkagEuhezcjNYfuoGlqhPHrbUfHLDNIUGPANCMrvWVCOsErlXkqmNWwWVKglJBfxaDgVhofpxakIqEfDMcppWwWiRxcXyxPMyKYPslGgqrcIz&quot;
+    &quot;name&quot;: &quot;&quot;,
+    &quot;layout&quot;: &quot;d-i partman-auto/disk&quot;
   }
 }
-201
+422
 {
-  &quot;layout&quot;: &quot;iJzCdSMslUzsuVYBwftgITOaCbnfmUVuEnEzTLesGbuNlSszgTOikRfYFGwuVbOexeKidGHJPqIYHMNBJMjuyXBdtAROMxGUbCGldeympNSBSMBrAENpNQgkHOwyOhHUiTvPSmbjOEyPJlndVJQHaFaLxbQFtUvlqPsIHGbLSFgOeGHHkhTHznUQGuXQsjaSGmwqKcLqdkJEvwNewfIrLQvUanImWEFrDKDuKsBRidTJmxDNkWJzSmPYBySJgMnmFonUdamHVEwEFjRXcJUflXgidkGmQLerqHjrqyMuLcxeiWwUChBDLhBpzObFmIgPbPpfvKlYxHJFNkBNjVvxyEbfKLTKakNtqUkDhthxxsykiGlkmILCQsFzyKPHwzXLEdtQdQebNKwuiNziDwJoFUnnbDSQKnvzkJljYvlSemRqvyHhpkfbtvAYlysjpfYhWHdYUvAttuKaEEJDHshnuQvntDkxFKlxRHQlwJqKMNLxWYgdVpYXSdFpAwFmrAEbCobmFxCQHXxkulOuupSpvOpqmSmsQPvQgCJpHQSPrjTDtHogxPjBtSTivGiCQHIwGsKvMkHUIHpTVctFSVdBkBlVDbxYWpIUTgWPLPDFrvVrePPebVBooNEdieyTGILDjSiKNeLeAgKWQdRVtHMjxDIKBhxYSIlnABCwPjWhudOLWyjSWNYdnRDfqBqpCUbvgMHVPqBrihMobsLsbQwnICKPPBRBnfIkcwljreJnSBPTnAAWlqzjDyrIFHtghldtJEzodlBRbLuSHRfykibAPnBveNQClDTDELEkSsyHPgSygaGKLuUVXegPaLxezLUaaRowDPNKVIrRfAMFCGuunmwVOoTOpMSArNhvADebTMhzBQSbuRcHwJXKTYkGkXVCmWexJIyaQrqQSCakrbXcVFXMbLpJDwwlgymBKrpjJAGTFibrfQrShcATJuSPjVJFYgQVyumwYWBXymiXddpDRIqubMrVTzlkafucxuecCWrjstpIyvgccDFWibapTnMxgoydFyCDQPVXAFlQTgpAztOjHqsgrVIgTOyiPoxybeOldcfWULdwCDLysEkUVuPfjtBHcxFrgfeLfuqVdwPYrarxMbzPhJiBSHnuSXhmKcrUHTKxybfPIvITSVCelcmDaQfjwtktggNdWTAUiWvGYmAXCrHTcANBCzRXAzerJNCFadYIxkTxnebXHvlRLGJhnDUROKUDkJgLXRnFwjekJXlUtLtIQPXKOBMFiFyYxovYsuvwdeMOtPNDDPzqoOFDfPHtFOczSypbOSoVaQgEVwNPiyIunatKiITcnTPvCmTfIfcGbYKzFGBbpIuIXKCUjXAKJSbQRCnppiMlsaJIMFICBybmHJAyIYLnTmyiRUOMfAgaTXblzvJysMKwOGAbqRetVSMPfKetylRDtXjXJsbLmBzDCCYrdDtegvdyGSEOKjmoSNykBrIUsKAQvVlBsRVKLQdXoGaQoPYATcbDeXanumqmgXbotcQqMNncXvoywddWGNGQzXgQzeGoTeGoFdRGYLJkBoNwJaNifDsRePNnhnVkfqoKVWKyQWuHksMMFKccqEYUGIhocvKpibIpyUdHASwOWNIsagoFgglltwyIVriKWVKCqEloMnwkJqFDyjjWKtxAniBtKUcYknWgTghVwkEIzJkuPPyWKnPTWlCVuEJutdxiQiNBxnyolfNurEVruvJgnANGFnFlABaRjAumxPoHMSHUUpirVSOefYozrfruEvWFKQskfpEutjwGIgkzmATAfqtjasxoGOMwLrmzpvKVGjwmqBSJcaTeQhRBFwbSlmGlLNWAutREItdSBUXXvMUxTjfOjDIJCYfRXoyAyTApIIpWdnAGHmFnGBFyVJNpVEEKTMSxKGHPVAkUdSnluireDmaUEjcqqkaaQIxalbHpXaKIvMEBqsvQsazRFamVHRiUmuSjJcgRYCpXGmCzCeogKktvCakzIrHYBkNqghSYtowkURYFbNTasNCvKwiUfaXidItnwfOuVmyJmAYqHdYioKCKJHcTJCMlGRJPpNlIYDPwcIvOAVuySXIwMbDbxkKBHQKnftiYkQHAbdqsdXlUmpHuhQvxOlvgUACIwHCCPqsWhUpjQzyRxqoPgPhTppxzHEMPYedYdUegdHjqgyGoUISKfFetRoqcRfKuxfxmNFLRRwpCBDAOhxxuiDszfIbxpAWzNyoPXSTqIeJFKxcPnVQjDBTyUJAeUncinsWhAmhBkeAkaYUwEHkItqJEQPnNafqGlnLjvJmCqdqAnllbKTInVuvwvANwSBvujhiwckWAUIsdCFAxnSEylrAbTvWWXHmjGjzVdkPYsgKxKcoyiEOCNDNtzIpfsPROuzYTYOGiuiIKwSnFmVuKPaqemREsJPQLErwNFIHurDNJolFnTlAefOBmJMJHVRYRQfVvhQvyaBtGIhnGfIgKhzLiFADXvBqOxpkRfDTaPwQNVShnnorNHiIPPnvaNBtgBTyACRsjkIFFHiaaRVHAYKVzGzWlhwicxzIgehEUkOIcrVHRMNStsdlrkefBmiNULMLETNDXHUSrrMvUhIeLpzKvcUtMNAJeHkoDJtgpLkUoDfTrMsEYmHthVVTDXuIDhOPIyXjDkEqBYcAFkFFUAwrOUsmruEQiUfdDjlkBVJquovnCbwqAOGBSmJOezWRflKgrtOMtbMMoVhevJiOkJLtKtDEJapADegPluswgtxkxfFjOAquTyGwECMIqRDaEyUoYAMIToMJwTAVCaLmmajKfggNHTGgezBxFHQDTvVjEeCdqlHULxStSBIsxheqgbtjGvhftFmMmgisUilvQwBFSHiIzronjJMSPtPRcavnlaVdWEqzvkxUrJexvByPPOUzGxclAgHlSNiWWtsqEHoGFWvHeQJOdUuIXTlXrSsglpEhvIzTrfqraiXbynqdxWGrkmhesKeVzpskMDGFkcFdgEKEernOqmDPpUIbroddotnkchGDvXGLhBCRKVJkmMeUwjgmDNImWfveSFkmJRpRoxMiySRuTPNYxXBqpFEcKoMefCqCoXxVWesmGTNwOTTgXrEDgXxwMgXOAzXhJGRqlnEJKYpbKutbCoBuxAUfSQkRbsYsaNtXraHWpXbekjbftAXRRDfuIkicNksuUYPNFOIAVFoeUlrgIyCAguICEVqjmkTYbunaDVfEerixPVCNvVtdkNYhPUNLzkqubyxmtWLCJVCtdCjGkAEAcacmexMaPLqpesINOhfsAaiCMKxISCVaqEpJWAFymIbejuDfsVclwCKMkolWdjnryOYzcKgtIKPPCqPXxEqftXFUxzYmbENDLtFhQRJaoUydYQXbVtLDpHvjEaBjUyQElWSQdDvBczhvtYVroOXjdCQhTNxXLTlQSkQQALjOfVGhxNrcCJwabFDTIULCHUWURnWbzTSqNtEqtLIvthYmiRTdOFBmEGUxWaiVcFxEfhhPBIUcCpaYyRkEhrvFffefOLJuSWqMxHIUIclnTEcCylcYpXeNQWQCsMhsPBpsjwvvTvlFVkIkIWEwAqHYcgsfGPxdBbTQRfJfGnQIPACusSQAuGhLBBxTufTMhSXdWgIMRDzgasiUALQJcpjmKkUUibTjRVtjbpUbnOVnBmRwPcNizDwxhIeeoAjbwILChJAmwGHjUOOrTnEfmeMrgUtTszAzQDlTDKoEYxzSTkCqTXcFbONVeTVazqnuCaoJOxJpSXovTlOESnGkNwuXucrIphvOrOPMgRvKHBJapcbienrVjRleQxjJUAcBiTGQefkcdNOahpNPsPFvKLdxMeJLLoBHezuiuyYcEaeyXCvTwkWVmhioEFbewuvwkKjChbcqTwmlRBSotPTHKEbJUFkLsLnOXikRIkGmpoSusDqyTBFjvAcDCigxWGzsVxgJmLGcfPHrrzTBYhCEojyybEUcFgHbGkQOzXXHKfEgKTPjuUeWXeGlElVYNDVibaLPeUnvkQXYmDdpiIfkeKHxTerIiJiWrhIpUeSDuxhmtTmdqTrbzxXhazSPzIvPsXWKpQrGwRRujpFleKWtKmMcIfSDaiGYtJLGhjwGLmFgdGlIirVOibLRuiEQIKwzQjSdWgsELnzdxsOzzMGXvDJkNHrxwjhJjmPmNXJvkTPvHhKnWWjFlDwqvEXIIeXogBHtsMQpyCRuNDvPFjCQUKiHUBeAswKNOfzPGJGDrNgcrebyJRWUTTvzznqWooAGLcileLXTSXdoabViWKeRByLvDBzCMeWfnyoGDXebCBHNuVvtpPaskNhEXbyIxWROAEfmSwQupYAdOEMQhHXSOaFsdvYHUwAbavHHymQSYelJlYHCBRQVheWtcVsUVJVlITGjjBcawQhMgIHnEhllHEGPcyJMrStHEEzMLvMaCPokTplinbIsgVndoYketUxPhHaELrwiLhIDKamfywmvMphThQAzDXFSgSNdFcnCuGJfmXWxyLkcsnoDaJTlkFbQGptKCHTwGStVqRWHiyVMgtaovECvaFPdIwEWqClDIGDzfjiNkYmXWUPmzvaEDScITcmfOEupWmCDWwXtGmLlmonChatUpTxMakjISNmNBrIKRtEaYCwDsaawwmVyDYzQfhCEynNkYHDLlBtVFVgoiVSzqGGmRMLYNfPKOwftMHhFLOeeupyWJkiGfbSEatmPolkyhxnDqhlALWIfgQQRjIVkFvzlXmBpjhzoQkRMpbSuQjtYKHlhtWywmFXrxYxgPWxLQWuJXsBBUgQKnoemgTJeHKfzdubTEUPuzfgoaGvvgTNLaxtMMJEqHiiydaAmIIIPzvmUVyDGBHYVfnMxheMhdCWEdWGXjJGzbYLdTtoEhQaXjLaWqoCDmHPcFuqBSajwJoJYqYODKkagEuhezcjNYfuoGlqhPHrbUfHLDNIUGPANCMrvWVCOsErlXkqmNWwWVKglJBfxaDgVhofpxakIqEfDMcppWwWiRxcXyxPMyKYPslGgqrcIz&quot;,
-  &quot;locked&quot;: false,
-  &quot;os_family&quot;: null,
-  &quot;created_at&quot;: &quot;2018-07-24 12:43:45 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:43:45 UTC&quot;,
-  &quot;name&quot;: &quot;ptable_test&quot;,
-  &quot;id&quot;: 1007981705,
-  &quot;operatingsystems&quot;: [],
-  &quot;locations&quot;: [],
-  &quot;organizations&quot;: []
+  &quot;error&quot;: {
+    &quot;id&quot;: null,
+    &quot;errors&quot;: {
+      &quot;name&quot;: [
+        &quot;can&#39;t be blank&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Name can&#39;t be blank&quot;
+    ]
+  }
 }</pre>
 
   <h3>Parameter</h3>
@@ -930,7 +931,7 @@
             POST /api/ptables/import
           </a>
           <br>
-          <small>Import a provisioning template</small>
+          <small>Import einer Bereitstellungsvorlage</small>
         </h2>
     </div>
 
@@ -944,27 +945,23 @@
     <pre class="prettyprint">POST /api/ptables/import
 {
   &quot;ptable&quot;: {
-    &quot;name&quot;: &quot;ptable117&quot;,
+    &quot;name&quot;: &quot;ptable119&quot;,
     &quot;template&quot;: &quot;b&quot;
   }
 }
 201
 {
   &quot;template&quot;: &quot;b&quot;,
-  &quot;name&quot;: &quot;ptable117&quot;,
-  &quot;id&quot;: 1007981719,
+  &quot;name&quot;: &quot;ptable119&quot;,
+  &quot;id&quot;: 1007981736,
   &quot;snippet&quot;: false,
   &quot;template_kind_id&quot;: null,
-  &quot;created_at&quot;: &quot;2018-07-24T12:43:45.927Z&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24T12:43:45.942Z&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08T09:04:32.550Z&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08T09:04:32.568Z&quot;,
   &quot;locked&quot;: false,
   &quot;default&quot;: false,
   &quot;vendor&quot;: null,
-  &quot;os_family&quot;: &quot;Redhat&quot;,
-  &quot;job_category&quot;: &quot;Miscellaneous&quot;,
-  &quot;provider_type&quot;: null,
-  &quot;description_format&quot;: null,
-  &quot;execution_timeout_interval&quot;: null
+  &quot;os_family&quot;: &quot;Redhat&quot;
 }</pre>
 
   <h3>Parameter</h3>
@@ -1221,7 +1218,7 @@
     </td>
     <td>
       
-<p>lock imported templates (false by default)</p>
+<p>Importierte Templates sperren (Standardwert: false)</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -1405,23 +1402,27 @@
 
 
   <h3>Beispiele</h3>
-    <pre class="prettyprint">PUT /api/ptables/1007981703
+    <pre class="prettyprint">PUT /api/ptables/1007981702
 {
   &quot;ptable&quot;: {
-    &quot;name&quot;: &quot;&quot;
+    &quot;layout&quot;: &quot;&quot;
   }
 }
 422
 {
   &quot;error&quot;: {
-    &quot;id&quot;: 1007981703,
+    &quot;id&quot;: 1007981702,
     &quot;errors&quot;: {
-      &quot;name&quot;: [
+      &quot;template&quot;: [
+        &quot;can&#39;t be blank&quot;
+      ],
+      &quot;layout&quot;: [
         &quot;can&#39;t be blank&quot;
       ]
     },
     &quot;full_messages&quot;: [
-      &quot;Name can&#39;t be blank&quot;
+      &quot;Template can&#39;t be blank&quot;,
+      &quot;Layout can&#39;t be blank&quot;
     ]
   }
 }</pre>
@@ -1813,23 +1814,23 @@
 
 
   <h3>Beispiele</h3>
-    <pre class="prettyprint">DELETE /api/ptables/1007981722-ptable120
+    <pre class="prettyprint">DELETE /api/ptables/1007981703-ptable92
 {
   &quot;ptable&quot;: {}
 }
-422
+200
 {
-  &quot;error&quot;: {
-    &quot;id&quot;: 1007981722,
-    &quot;errors&quot;: {
-      &quot;base&quot;: [
-        &quot;ptable120 is used by host19&quot;
-      ]
-    },
-    &quot;full_messages&quot;: [
-      &quot;ptable120 is used by host19&quot;
-    ]
-  }
+  &quot;id&quot;: 1007981703,
+  &quot;name&quot;: &quot;ptable92&quot;,
+  &quot;template&quot;: &quot;zerombr\\nclearpart --all    --initlabel\\npart /boot --fstype ext3 --size=&lt;%= 10 * 10 %&gt; --asprimary\\npart /     --f   stype ext3 --size=1024 --grow\\npart swap  --recommended&quot;,
+  &quot;snippet&quot;: false,
+  &quot;template_kind_id&quot;: null,
+  &quot;created_at&quot;: &quot;2018-11-08T09:04:30.957Z&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08T09:04:30.957Z&quot;,
+  &quot;locked&quot;: false,
+  &quot;default&quot;: false,
+  &quot;vendor&quot;: null,
+  &quot;os_family&quot;: &quot;Redhat&quot;
 }</pre>
 
   <h3>Parameter</h3>
@@ -1943,7 +1944,7 @@
 
 
   <h3>Beispiele</h3>
-    <pre class="prettyprint">POST /api/ptables/1007981709-ptable109/clone
+    <pre class="prettyprint">POST /api/ptables/1007981713-ptable100/clone
 {
   &quot;ptable&quot;: {
     &quot;name&quot;: &quot;&quot;
@@ -1952,7 +1953,7 @@
 422
 {
   &quot;error&quot;: {
-    &quot;id&quot;: 1007981709,
+    &quot;id&quot;: 1007981713,
     &quot;errors&quot;: {
       &quot;name&quot;: [
         &quot;can&#39;t be blank&quot;
@@ -2121,11 +2122,11 @@
 
 
   <h3>Beispiele</h3>
-    <pre class="prettyprint">GET /api/ptables/1007981738-ptable133/export
+    <pre class="prettyprint">GET /api/ptables/1007981725-ptable110/export
 200
 zerombr\nclearpart --all    --initlabel\npart /boot --fstype ext3 --size=&lt;%= 10 * 10 %&gt; --asprimary\npart /     --f   stype ext3 --size=1024 --grow\npart swap  --recommended
 &lt;%#
-name: ptable133
+name: ptable110
 snippet: false
 model: Ptable
 os_family: Redhat

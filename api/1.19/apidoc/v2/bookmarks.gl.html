@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>API documentation</title>
+  <title>Api Documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
@@ -70,15 +70,15 @@
 
 
 
-  <h3>Examples</h3>
-    <pre class="prettyprint">GET /api/bookmarks?search=controller%3Dprovisioning_templates&amp;per_page=100
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">GET /api/bookmarks?search=controller%3Dcompute_resources&amp;per_page=100
 200
 {
   &quot;total&quot;: 2,
   &quot;subtotal&quot;: 0,
   &quot;page&quot;: 1,
   &quot;per_page&quot;: 100,
-  &quot;search&quot;: &quot;controller=provisioning_templates&quot;,
+  &quot;search&quot;: &quot;controller=compute_resources&quot;,
   &quot;sort&quot;: {
     &quot;by&quot;: null,
     &quot;order&quot;: null
@@ -86,12 +86,12 @@
   &quot;results&quot;: []
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -99,7 +99,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -123,7 +123,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -147,7 +147,7 @@
     <td>
       <strong>search </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -171,7 +171,7 @@
     <td>
       <strong>order </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -195,7 +195,7 @@
     <td>
       <strong>page </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -219,7 +219,7 @@
     <td>
       <strong>per_page </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -295,7 +295,7 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">GET /api/bookmarks/980190962-foo
 200
 {
@@ -308,12 +308,12 @@
   &quot;owner_type&quot;: null
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -321,7 +321,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -345,7 +345,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -369,7 +369,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -418,37 +418,33 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">POST /api/bookmarks
 {
   &quot;bookmark&quot;: {
     &quot;public&quot;: false,
     &quot;controller&quot;: &quot;hosts&quot;,
     &quot;name&quot;: &quot;foo-bar&quot;,
-    &quot;query&quot;: &quot;&quot;
+    &quot;query&quot;: &quot;bar&quot;
   }
 }
-422
+201
 {
-  &quot;error&quot;: {
-    &quot;id&quot;: null,
-    &quot;errors&quot;: {
-      &quot;query&quot;: [
-        &quot;can&#39;t be blank&quot;
-      ]
-    },
-    &quot;full_messages&quot;: [
-      &quot;Query can&#39;t be blank&quot;
-    ]
-  }
+  &quot;name&quot;: &quot;foo-bar&quot;,
+  &quot;controller&quot;: &quot;hosts&quot;,
+  &quot;query&quot;: &quot;bar&quot;,
+  &quot;public&quot;: false,
+  &quot;id&quot;: 980190963,
+  &quot;owner_id&quot;: 135138680,
+  &quot;owner_type&quot;: &quot;User&quot;
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -456,7 +452,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -480,7 +476,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -504,7 +500,7 @@
     <td>
       <strong>bookmark </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -525,7 +521,7 @@
     <td>
       <strong>bookmark[name] </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -547,7 +543,7 @@
     <td>
       <strong>bookmark[controller] </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -569,7 +565,7 @@
     <td>
       <strong>bookmark[query] </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -591,8 +587,8 @@
     <td>
       <strong>bookmark[public] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -641,37 +637,33 @@
 
 
 
-  <h3>Examples</h3>
-    <pre class="prettyprint">PUT /api/bookmarks/980190962
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">PUT /api/bookmarks/980190962-foo
 {
   &quot;bookmark&quot;: {
     &quot;public&quot;: false,
     &quot;controller&quot;: &quot;hosts&quot;,
-    &quot;name&quot;: &quot;&quot;,
-    &quot;query&quot;: &quot;bar&quot;
+    &quot;name&quot;: &quot;facts.architecture&quot;,
+    &quot;query&quot;: &quot; facts.architecture = x86_64&quot;
   }
 }
-422
+200
 {
-  &quot;error&quot;: {
-    &quot;id&quot;: 980190962,
-    &quot;errors&quot;: {
-      &quot;name&quot;: [
-        &quot;can&#39;t be blank&quot;
-      ]
-    },
-    &quot;full_messages&quot;: [
-      &quot;Name can&#39;t be blank&quot;
-    ]
-  }
+  &quot;name&quot;: &quot;facts.architecture&quot;,
+  &quot;controller&quot;: &quot;hosts&quot;,
+  &quot;query&quot;: &quot;facts.architecture = x86_64&quot;,
+  &quot;public&quot;: false,
+  &quot;id&quot;: 980190962,
+  &quot;owner_id&quot;: 135138680,
+  &quot;owner_type&quot;: &quot;User&quot;
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -679,7 +671,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -703,7 +695,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -727,7 +719,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -749,7 +741,7 @@
     <td>
       <strong>bookmark </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -770,7 +762,7 @@
     <td>
       <strong>bookmark[name] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -792,7 +784,7 @@
     <td>
       <strong>bookmark[controller] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -814,7 +806,7 @@
     <td>
       <strong>bookmark[query] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -836,8 +828,8 @@
     <td>
       <strong>bookmark[public] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -886,7 +878,7 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">DELETE /api/bookmarks/980190962-foo
 {
   &quot;bookmark&quot;: {}
@@ -902,12 +894,12 @@
   &quot;owner_type&quot;: null
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -915,7 +907,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -939,7 +931,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -963,7 +955,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>

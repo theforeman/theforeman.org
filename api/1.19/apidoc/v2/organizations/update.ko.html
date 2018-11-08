@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>API documentation</title>
+  <title>Api Documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
@@ -51,30 +51,29 @@
 
 
 
-  <h2>Examples</h2>
-    <pre class="prettyprint">PUT /api/organizations/447626442
+  <h2><span class="translation_missing" title="translation missing: ko.apipie.examples">Examples</span></h2>
+    <pre class="prettyprint">PUT /api/organizations/447626439-org430
 {
   &quot;organization&quot;: {
-    &quot;organization_parameters_attributes&quot;: [
-      {
-        &quot;name&quot;: &quot;foo&quot;,
-        &quot;value&quot;: &quot;new_value&quot;
-      }
+    &quot;ignore_types&quot;: [
+      &quot;ProvisioningTemplate&quot;
     ]
   }
 }
 200
 {
-  &quot;select_all_types&quot;: [],
+  &quot;select_all_types&quot;: [
+    &quot;ProvisioningTemplate&quot;
+  ],
   &quot;description&quot;: null,
-  &quot;created_at&quot;: &quot;2018-07-24 12:43:01 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:43:01 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:40:28 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:40:28 UTC&quot;,
   &quot;ancestry&quot;: null,
   &quot;parent_id&quot;: null,
   &quot;parent_name&quot;: null,
-  &quot;id&quot;: 447626442,
-  &quot;name&quot;: &quot;org4&quot;,
-  &quot;title&quot;: &quot;org4&quot;,
+  &quot;id&quot;: 447626439,
+  &quot;name&quot;: &quot;org430&quot;,
+  &quot;title&quot;: &quot;org430&quot;,
   &quot;users&quot;: [],
   &quot;smart_proxies&quot;: [],
   &quot;subnets&quot;: [],
@@ -89,24 +88,15 @@
   &quot;hostgroups&quot;: [],
   &quot;locations&quot;: [],
   &quot;hosts_count&quot;: 0,
-  &quot;parameters&quot;: [
-    {
-      &quot;priority&quot;: 10,
-      &quot;created_at&quot;: &quot;2018-07-24 12:43:01 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:43:01 UTC&quot;,
-      &quot;id&quot;: 767575240,
-      &quot;name&quot;: &quot;foo&quot;,
-      &quot;value&quot;: &quot;new_value&quot;
-    }
-  ]
+  &quot;parameters&quot;: []
 }</pre>
 
-  <h2>Params</h2>
+  <h2><span class="translation_missing" title="translation missing: ko.apipie.params">Params</span></h2>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: ko.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: ko.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -114,7 +104,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -138,7 +128,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -162,7 +152,7 @@
     <td>
       <strong>organization </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: ko.apipie.required">Required</span>
         
       </small>
     </td>
@@ -183,7 +173,7 @@
     <td>
       <strong>organization[name] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -205,8 +195,8 @@
     <td>
       <strong>organization[description] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ko.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -227,8 +217,8 @@
     <td>
       <strong>organization[user_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ko.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -251,8 +241,8 @@
     <td>
       <strong>organization[smart_proxy_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ko.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -275,8 +265,8 @@
     <td>
       <strong>organization[compute_resource_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ko.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -299,8 +289,8 @@
     <td>
       <strong>organization[medium_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ko.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -323,8 +313,8 @@
     <td>
       <strong>organization[config_template_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ko.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -347,8 +337,8 @@
     <td>
       <strong>organization[ptable_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ko.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -371,8 +361,8 @@
     <td>
       <strong>organization[provisioning_template_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ko.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -395,8 +385,8 @@
     <td>
       <strong>organization[domain_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ko.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -419,8 +409,8 @@
     <td>
       <strong>organization[realm_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ko.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -443,8 +433,8 @@
     <td>
       <strong>organization[hostgroup_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ko.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -467,8 +457,8 @@
     <td>
       <strong>organization[environment_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ko.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -491,8 +481,8 @@
     <td>
       <strong>organization[subnet_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ko.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -515,8 +505,8 @@
     <td>
       <strong>organization[parent_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ko.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -539,8 +529,8 @@
     <td>
       <strong>organization[ignore_types] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ko.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -564,7 +554,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: ko.apipie.required">Required</span>
         
       </small>
     </td>

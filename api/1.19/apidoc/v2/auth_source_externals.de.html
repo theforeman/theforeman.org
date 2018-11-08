@@ -60,7 +60,7 @@
             GET /api/auth_source_externals
           </a>
           <br>
-          <small>List external authentication sources</small>
+          <small>Externe Authentifzierungsdienste auflisten</small>
         </h2>
         <h2>
           <a href='#description-index'
@@ -70,7 +70,7 @@
             GET /api/locations/:location_id/auth_source_externals
           </a>
           <br>
-          <small>List external authentication sources per location</small>
+          <small>Externe Authentifizierungsdienste pro Standort auflisten</small>
         </h2>
         <h2>
           <a href='#description-index'
@@ -80,7 +80,7 @@
             GET /api/organizations/:organization_id/auth_source_externals
           </a>
           <br>
-          <small>List external authentication sources per organization</small>
+          <small>Externe Authentifizierungsdienste pro Organisation auflisten</small>
         </h2>
     </div>
 
@@ -105,8 +105,8 @@
   },
   &quot;results&quot;: [
     {
-      &quot;created_at&quot;: &quot;2018-07-24 12:46:20 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:46:20 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:02:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:02:27 UTC&quot;,
       &quot;id&quot;: 408068537,
       &quot;name&quot;: &quot;External&quot;,
       &quot;locations&quot;: [],
@@ -289,7 +289,7 @@
             GET /api/auth_source_externals/:id
           </a>
           <br>
-          <small>Show an external authentication source</small>
+          <small>Externe Authentifizierungs-Quelle anzeigen</small>
         </h2>
     </div>
 
@@ -303,13 +303,27 @@
     <pre class="prettyprint">GET /api/auth_source_externals/408068537
 200
 {
-  &quot;created_at&quot;: &quot;2018-07-24 12:46:20 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:46:20 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:02:27 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:02:27 UTC&quot;,
   &quot;id&quot;: 408068537,
   &quot;name&quot;: &quot;External&quot;,
   &quot;external_usergroups&quot;: [],
-  &quot;locations&quot;: [],
-  &quot;organizations&quot;: []
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
 }</pre>
 
   <h3>Parameter</h3>
@@ -412,7 +426,7 @@
             PUT /api/auth_source_externals/:id
           </a>
           <br>
-          <small>Update an external authentication source</small>
+          <small>Aktualisierung einer externen Authentifzierungs-Quelle</small>
         </h2>
     </div>
 
@@ -436,8 +450,8 @@
 }
 200
 {
-  &quot;created_at&quot;: &quot;2018-07-24 12:46:20 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:46:20 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:02:27 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:02:27 UTC&quot;,
   &quot;id&quot;: 408068537,
   &quot;name&quot;: &quot;External&quot;,
   &quot;external_usergroups&quot;: [],

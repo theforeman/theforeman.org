@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>API documentation</title>
+  <title>Api Documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
@@ -51,46 +51,41 @@
 
 
 
-  <h2>Examples</h2>
-    <pre class="prettyprint">PUT /api/hosts/15
+  <h2><span class="translation_missing" title="translation missing: ca.apipie.examples">Examples</span></h2>
+    <pre class="prettyprint">PUT /api/hosts/3
 {
   &quot;host&quot;: {
-    &quot;host_parameters_attributes&quot;: [
-      {
-        &quot;name&quot;: &quot;parameter12&quot;,
-        &quot;value&quot;: &quot;new_value&quot;
-      }
-    ]
+    &quot;managed&quot;: true
   }
 }
 200
 {
-  &quot;ip&quot;: null,
+  &quot;ip&quot;: &quot;10.0.0.20&quot;,
   &quot;ip6&quot;: null,
-  &quot;environment_id&quot;: null,
-  &quot;environment_name&quot;: null,
+  &quot;environment_id&quot;: 334344675,
+  &quot;environment_name&quot;: &quot;production&quot;,
   &quot;last_report&quot;: null,
-  &quot;mac&quot;: null,
+  &quot;mac&quot;: &quot;52:53:00:1e:85:93&quot;,
   &quot;realm_id&quot;: null,
   &quot;realm_name&quot;: null,
   &quot;sp_mac&quot;: null,
   &quot;sp_ip&quot;: null,
   &quot;sp_name&quot;: null,
-  &quot;domain_id&quot;: null,
-  &quot;domain_name&quot;: null,
-  &quot;architecture_id&quot;: null,
-  &quot;architecture_name&quot;: null,
-  &quot;operatingsystem_id&quot;: null,
-  &quot;operatingsystem_name&quot;: null,
+  &quot;domain_id&quot;: 22495316,
+  &quot;domain_name&quot;: &quot;mydomain.net&quot;,
+  &quot;architecture_id&quot;: 501905019,
+  &quot;architecture_name&quot;: &quot;x86_64&quot;,
+  &quot;operatingsystem_id&quot;: 1073012828,
+  &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
   &quot;subnet_id&quot;: null,
   &quot;subnet_name&quot;: null,
   &quot;subnet6_id&quot;: null,
   &quot;subnet6_name&quot;: null,
   &quot;sp_subnet_id&quot;: null,
-  &quot;ptable_id&quot;: null,
-  &quot;ptable_name&quot;: null,
-  &quot;medium_id&quot;: null,
-  &quot;medium_name&quot;: null,
+  &quot;ptable_id&quot;: 1007981702,
+  &quot;ptable_name&quot;: &quot;ptable122&quot;,
+  &quot;medium_id&quot;: 980190962,
+  &quot;medium_name&quot;: &quot;CentOS 5.4&quot;,
   &quot;pxe_loader&quot;: null,
   &quot;build&quot;: false,
   &quot;comment&quot;: null,
@@ -102,81 +97,94 @@
   &quot;owner_name&quot;: &quot;Admin User&quot;,
   &quot;owner_type&quot;: &quot;User&quot;,
   &quot;enabled&quot;: true,
-  &quot;managed&quot;: false,
+  &quot;managed&quot;: true,
   &quot;use_image&quot;: null,
   &quot;image_file&quot;: &quot;&quot;,
   &quot;uuid&quot;: null,
-  &quot;compute_resource_id&quot;: null,
-  &quot;compute_resource_name&quot;: null,
+  &quot;compute_resource_id&quot;: 980190962,
+  &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
   &quot;compute_profile_id&quot;: null,
   &quot;compute_profile_name&quot;: null,
   &quot;capabilities&quot;: [
-    &quot;build&quot;
+    &quot;build&quot;,
+    &quot;image&quot;,
+    &quot;new_volume&quot;
   ],
   &quot;provision_method&quot;: &quot;build&quot;,
-  &quot;certname&quot;: &quot;host226&quot;,
+  &quot;certname&quot;: &quot;host250.mydomain.net&quot;,
   &quot;image_id&quot;: null,
   &quot;image_name&quot;: null,
-  &quot;created_at&quot;: &quot;2018-07-24 12:46:38 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:46:38 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:04:36 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:04:36 UTC&quot;,
   &quot;last_compile&quot;: null,
   &quot;global_status&quot;: 0,
-  &quot;global_status_label&quot;: &quot;OK&quot;,
+  &quot;global_status_label&quot;: &quot;Warning&quot;,
   &quot;organization_id&quot;: 447626438,
   &quot;organization_name&quot;: &quot;Organization 1&quot;,
   &quot;location_id&quot;: 255093256,
   &quot;location_name&quot;: &quot;Location 1&quot;,
   &quot;puppet_status&quot;: 0,
   &quot;model_name&quot;: null,
-  &quot;name&quot;: &quot;host226&quot;,
-  &quot;id&quot;: 15,
-  &quot;puppet_proxy_id&quot;: null,
-  &quot;puppet_proxy_name&quot;: null,
-  &quot;puppet_ca_proxy_id&quot;: null,
-  &quot;puppet_ca_proxy_name&quot;: null,
-  &quot;puppet_proxy&quot;: null,
-  &quot;puppet_ca_proxy&quot;: null,
+  &quot;configuration_status&quot;: 0,
+  &quot;configuration_status_label&quot;: &quot;No reports&quot;,
+  &quot;build_status&quot;: 0,
+  &quot;build_status_label&quot;: &quot;Installed&quot;,
+  &quot;name&quot;: &quot;host250.mydomain.net&quot;,
+  &quot;id&quot;: 3,
+  &quot;puppet_proxy_id&quot;: 182953976,
+  &quot;puppet_proxy_name&quot;: &quot;Puppetmaster Proxy&quot;,
+  &quot;puppet_ca_proxy_id&quot;: 182953976,
+  &quot;puppet_ca_proxy_name&quot;: &quot;Puppetmaster Proxy&quot;,
+  &quot;puppet_proxy&quot;: {
+    &quot;name&quot;: &quot;Puppetmaster Proxy&quot;,
+    &quot;id&quot;: 182953976,
+    &quot;url&quot;: &quot;http://else.where:4567&quot;
+  },
+  &quot;puppet_ca_proxy&quot;: {
+    &quot;name&quot;: &quot;Puppetmaster Proxy&quot;,
+    &quot;id&quot;: 182953976,
+    &quot;url&quot;: &quot;http://else.where:4567&quot;
+  },
   &quot;hostgroup_name&quot;: null,
   &quot;hostgroup_title&quot;: null,
-  &quot;parameters&quot;: [
-    {
-      &quot;priority&quot;: 70,
-      &quot;created_at&quot;: &quot;2018-07-24 12:46:38 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:46:38 UTC&quot;,
-      &quot;id&quot;: 767575239,
-      &quot;name&quot;: &quot;parameter12&quot;,
-      &quot;value&quot;: &quot;new_value&quot;
-    }
-  ],
+  &quot;parameters&quot;: [],
   &quot;all_parameters&quot;: [
     {
-      &quot;priority&quot;: 70,
-      &quot;created_at&quot;: &quot;2018-07-24 12:46:38 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:46:38 UTC&quot;,
-      &quot;id&quot;: 767575239,
-      &quot;name&quot;: &quot;parameter12&quot;,
-      &quot;value&quot;: &quot;new_value&quot;
+      &quot;priority&quot;: null,
+      &quot;created_at&quot;: &quot;2018-11-08 09:04:35 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:04:35 UTC&quot;,
+      &quot;id&quot;: 716195090,
+      &quot;name&quot;: &quot;os1&quot;,
+      &quot;value&quot;: &quot;os1&quot;
     },
     {
       &quot;priority&quot;: null,
-      &quot;created_at&quot;: &quot;2018-07-24 12:46:37 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:46:37 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:04:35 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:04:35 UTC&quot;,
+      &quot;id&quot;: 665394701,
+      &quot;name&quot;: &quot;parameter&quot;,
+      &quot;value&quot;: &quot;value1&quot;
+    },
+    {
+      &quot;priority&quot;: null,
+      &quot;created_at&quot;: &quot;2018-11-08 09:04:35 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:04:35 UTC&quot;,
       &quot;id&quot;: 513706444,
       &quot;name&quot;: &quot;loc_param&quot;,
       &quot;value&quot;: &quot;abc&quot;
     },
     {
       &quot;priority&quot;: null,
-      &quot;created_at&quot;: &quot;2018-07-24 12:46:37 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:46:37 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:04:35 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:04:35 UTC&quot;,
       &quot;id&quot;: 32400255,
       &quot;name&quot;: &quot;org_param&quot;,
       &quot;value&quot;: &quot;xyz&quot;
     },
     {
       &quot;priority&quot;: null,
-      &quot;created_at&quot;: &quot;2018-07-24 12:46:37 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:46:37 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:04:35 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:04:35 UTC&quot;,
       &quot;id&quot;: 636252244,
       &quot;name&quot;: &quot;test&quot;,
       &quot;value&quot;: &quot;myvalue&quot;
@@ -184,13 +192,13 @@
   ],
   &quot;interfaces&quot;: [
     {
-      &quot;id&quot;: 24,
-      &quot;name&quot;: &quot;host226&quot;,
-      &quot;ip&quot;: null,
+      &quot;id&quot;: 3,
+      &quot;name&quot;: &quot;host250.mydomain.net&quot;,
+      &quot;ip&quot;: &quot;10.0.0.20&quot;,
       &quot;ip6&quot;: null,
-      &quot;mac&quot;: null,
+      &quot;mac&quot;: &quot;52:53:00:1e:85:93&quot;,
       &quot;mtu&quot;: null,
-      &quot;fqdn&quot;: &quot;host226&quot;,
+      &quot;fqdn&quot;: &quot;host250.mydomain.net&quot;,
       &quot;identifier&quot;: null,
       &quot;primary&quot;: true,
       &quot;provision&quot;: true,
@@ -201,24 +209,24 @@
   &quot;config_groups&quot;: [],
   &quot;all_puppetclasses&quot;: [],
   &quot;permissions&quot;: {
-    &quot;view_hosts&quot;: true,
-    &quot;create_hosts&quot;: true,
-    &quot;edit_hosts&quot;: true,
-    &quot;destroy_hosts&quot;: true,
     &quot;build_hosts&quot;: true,
-    &quot;power_hosts&quot;: true,
     &quot;console_hosts&quot;: true,
+    &quot;create_hosts&quot;: true,
+    &quot;destroy_hosts&quot;: true,
+    &quot;edit_hosts&quot;: true,
     &quot;ipmi_boot_hosts&quot;: true,
-    &quot;puppetrun_hosts&quot;: true
+    &quot;power_hosts&quot;: true,
+    &quot;puppetrun_hosts&quot;: true,
+    &quot;view_hosts&quot;: true
   }
 }</pre>
 
-  <h2>Params</h2>
+  <h2><span class="translation_missing" title="translation missing: ca.apipie.params">Params</span></h2>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: ca.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: ca.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -226,7 +234,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -250,7 +258,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -274,7 +282,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: ca.apipie.required">Required</span>
         
       </small>
     </td>
@@ -296,7 +304,7 @@
     <td>
       <strong>host </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: ca.apipie.required">Required</span>
         
       </small>
     </td>
@@ -317,7 +325,7 @@
     <td>
       <strong>host[name] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -339,7 +347,7 @@
     <td>
       <strong>host[location_id] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -363,7 +371,7 @@
     <td>
       <strong>host[organization_id] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -387,8 +395,8 @@
     <td>
       <strong>host[environment_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -411,8 +419,8 @@
     <td>
       <strong>host[ip] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -435,8 +443,8 @@
     <td>
       <strong>host[mac] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -459,8 +467,8 @@
     <td>
       <strong>host[architecture_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -483,8 +491,8 @@
     <td>
       <strong>host[domain_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -507,8 +515,8 @@
     <td>
       <strong>host[realm_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -529,8 +537,8 @@
     <td>
       <strong>host[puppet_proxy_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -553,8 +561,8 @@
     <td>
       <strong>host[puppet_ca_proxy_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -577,8 +585,8 @@
     <td>
       <strong>host[puppetclass_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -599,8 +607,8 @@
     <td>
       <strong>host[config_group_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -623,8 +631,8 @@
     <td>
       <strong>host[operatingsystem_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -647,8 +655,8 @@
     <td>
       <strong>host[medium_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -671,8 +679,8 @@
     <td>
       <strong>host[pxe_loader] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -695,8 +703,8 @@
     <td>
       <strong>host[ptable_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -719,8 +727,8 @@
     <td>
       <strong>host[subnet_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -743,8 +751,8 @@
     <td>
       <strong>host[compute_resource_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -767,8 +775,8 @@
     <td>
       <strong>host[root_pass] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -791,8 +799,8 @@
     <td>
       <strong>host[model_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -813,8 +821,8 @@
     <td>
       <strong>host[hostgroup_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -835,8 +843,8 @@
     <td>
       <strong>host[owner_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -857,8 +865,8 @@
     <td>
       <strong>host[owner_type] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -881,8 +889,8 @@
     <td>
       <strong>host[image_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -903,8 +911,8 @@
     <td>
       <strong>host[host_parameters_attributes] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -926,7 +934,7 @@
     <td>
       <strong>host[host_parameters_attributes][name] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -950,7 +958,7 @@
     <td>
       <strong>host[host_parameters_attributes][value] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -975,8 +983,8 @@
     <td>
       <strong>host[build] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -997,8 +1005,8 @@
     <td>
       <strong>host[enabled] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1021,8 +1029,8 @@
     <td>
       <strong>host[provision_method] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1045,8 +1053,8 @@
     <td>
       <strong>host[managed] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1069,8 +1077,8 @@
     <td>
       <strong>host[progress_report_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1093,8 +1101,8 @@
     <td>
       <strong>host[comment] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1117,8 +1125,8 @@
     <td>
       <strong>host[capabilities] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1139,8 +1147,8 @@
     <td>
       <strong>host[compute_profile_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1161,8 +1169,8 @@
     <td>
       <strong>host[interfaces_attributes] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1184,8 +1192,8 @@
     <td>
       <strong>host[interfaces_attributes][mac] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1208,8 +1216,8 @@
     <td>
       <strong>host[interfaces_attributes][ip] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1232,8 +1240,8 @@
     <td>
       <strong>host[interfaces_attributes][ip6] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1256,8 +1264,8 @@
     <td>
       <strong>host[interfaces_attributes][type] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1280,8 +1288,8 @@
     <td>
       <strong>host[interfaces_attributes][name] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1304,8 +1312,8 @@
     <td>
       <strong>host[interfaces_attributes][subnet_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1328,8 +1336,8 @@
     <td>
       <strong>host[interfaces_attributes][subnet6_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1352,8 +1360,8 @@
     <td>
       <strong>host[interfaces_attributes][domain_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1376,8 +1384,8 @@
     <td>
       <strong>host[interfaces_attributes][identifier] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1400,8 +1408,8 @@
     <td>
       <strong>host[interfaces_attributes][managed] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1424,8 +1432,8 @@
     <td>
       <strong>host[interfaces_attributes][primary] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1448,8 +1456,8 @@
     <td>
       <strong>host[interfaces_attributes][provision] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1472,8 +1480,8 @@
     <td>
       <strong>host[interfaces_attributes][username] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1496,8 +1504,8 @@
     <td>
       <strong>host[interfaces_attributes][password] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1520,8 +1528,8 @@
     <td>
       <strong>host[interfaces_attributes][provider] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1544,8 +1552,8 @@
     <td>
       <strong>host[interfaces_attributes][virtual] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1568,8 +1576,8 @@
     <td>
       <strong>host[interfaces_attributes][tag] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1592,8 +1600,8 @@
     <td>
       <strong>host[interfaces_attributes][mtu] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1616,8 +1624,8 @@
     <td>
       <strong>host[interfaces_attributes][attached_to] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1640,8 +1648,8 @@
     <td>
       <strong>host[interfaces_attributes][mode] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1664,8 +1672,8 @@
     <td>
       <strong>host[interfaces_attributes][attached_devices] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1688,8 +1696,8 @@
     <td>
       <strong>host[interfaces_attributes][bond_options] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1712,8 +1720,8 @@
     <td>
       <strong>host[interfaces_attributes][compute_attributes] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1737,8 +1745,8 @@
     <td>
       <strong>host[compute_attributes] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>

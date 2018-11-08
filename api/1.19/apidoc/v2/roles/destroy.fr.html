@@ -52,18 +52,21 @@
 
 
   <h2>Exemples</h2>
-    <pre class="prettyprint">DELETE /api/roles/8-Destroy%20hosts
+    <pre class="prettyprint">DELETE /api/roles/13-Organization%20admin/clone
 {
-  &quot;role&quot;: {}
+  &quot;new_name&quot;: &quot;Org Admin&quot;,
+  &quot;role&quot;: {
+    &quot;name&quot;: &quot;Org Admin&quot;
+  }
 }
 200
 {
-  &quot;id&quot;: 8,
-  &quot;name&quot;: &quot;Destroy hosts&quot;,
+  &quot;id&quot;: 20,
+  &quot;name&quot;: &quot;Org Admin&quot;,
   &quot;builtin&quot;: 0,
   &quot;description&quot;: null,
-  &quot;cloned_from_id&quot;: null,
-  &quot;origin&quot;: &quot;&quot;
+  &quot;origin&quot;: null,
+  &quot;cloned_from_id&quot;: 13
 }</pre>
 
   <h2>Paramètres</h2>

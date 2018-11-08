@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>API documentation</title>
+  <title>Api Documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
@@ -51,11 +51,12 @@
 
 
 
-  <h2>Examples</h2>
+  <h2><span class="translation_missing" title="translation missing: sv-SE.apipie.examples">Examples</span></h2>
     <pre class="prettyprint">POST /api/hostgroups
 {
   &quot;hostgroup&quot;: {
-    &quot;name&quot;: &quot;TestHostgroup&quot;
+    &quot;name&quot;: &quot;TestHostgroup&quot;,
+    &quot;pxe_loader&quot;: &quot;None&quot;
   }
 }
 201
@@ -77,16 +78,16 @@
   &quot;ptable_name&quot;: null,
   &quot;medium_id&quot;: null,
   &quot;medium_name&quot;: null,
-  &quot;pxe_loader&quot;: null,
+  &quot;pxe_loader&quot;: &quot;None&quot;,
   &quot;subnet6_id&quot;: null,
   &quot;subnet6_name&quot;: null,
   &quot;architecture_id&quot;: null,
   &quot;architecture_name&quot;: null,
   &quot;realm_id&quot;: null,
   &quot;realm_name&quot;: null,
-  &quot;created_at&quot;: &quot;2018-07-24 13:08:01 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 13:08:01 UTC&quot;,
-  &quot;id&quot;: 928644287,
+  &quot;created_at&quot;: &quot;2018-11-08 09:01:41 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:01:41 UTC&quot;,
+  &quot;id&quot;: 928644302,
   &quot;name&quot;: &quot;TestHostgroup&quot;,
   &quot;title&quot;: &quot;TestHostgroup&quot;,
   &quot;description&quot;: null,
@@ -105,12 +106,12 @@
   &quot;organizations&quot;: []
 }</pre>
 
-  <h2>Params</h2>
+  <h2><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h2>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -118,7 +119,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -142,7 +143,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -166,7 +167,7 @@
     <td>
       <strong>hostgroup </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
         
       </small>
     </td>
@@ -187,7 +188,7 @@
     <td>
       <strong>hostgroup[name] </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
         
       </small>
     </td>
@@ -211,8 +212,8 @@
     <td>
       <strong>hostgroup[description] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -235,8 +236,8 @@
     <td>
       <strong>hostgroup[parent_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -259,8 +260,8 @@
     <td>
       <strong>hostgroup[environment_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -283,8 +284,8 @@
     <td>
       <strong>hostgroup[compute_profile_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -307,8 +308,8 @@
     <td>
       <strong>hostgroup[compute_resource_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -331,8 +332,8 @@
     <td>
       <strong>hostgroup[operatingsystem_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -355,8 +356,8 @@
     <td>
       <strong>hostgroup[architecture_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -379,8 +380,8 @@
     <td>
       <strong>hostgroup[pxe_loader] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -403,8 +404,8 @@
     <td>
       <strong>hostgroup[medium_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -427,8 +428,8 @@
     <td>
       <strong>hostgroup[ptable_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -451,8 +452,8 @@
     <td>
       <strong>hostgroup[subnet_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -475,8 +476,8 @@
     <td>
       <strong>hostgroup[domain_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -499,8 +500,8 @@
     <td>
       <strong>hostgroup[realm_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -523,8 +524,8 @@
     <td>
       <strong>hostgroup[config_group_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -547,8 +548,8 @@
     <td>
       <strong>hostgroup[group_parameters_attributes] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -570,7 +571,7 @@
     <td>
       <strong>hostgroup[group_parameters_attributes][name] </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
         
       </small>
     </td>
@@ -594,7 +595,7 @@
     <td>
       <strong>hostgroup[group_parameters_attributes][value] </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
         
       </small>
     </td>
@@ -619,8 +620,8 @@
     <td>
       <strong>hostgroup[puppet_proxy_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -643,8 +644,8 @@
     <td>
       <strong>hostgroup[puppet_ca_proxy_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -667,8 +668,8 @@
     <td>
       <strong>hostgroup[root_pass] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -691,8 +692,8 @@
     <td>
       <strong>hostgroup[location_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -715,8 +716,8 @@
     <td>
       <strong>hostgroup[organization_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>

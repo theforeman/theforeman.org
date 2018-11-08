@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>API documentation</title>
+  <title>Api Documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
@@ -51,37 +51,33 @@
 
 
 
-  <h2>Examples</h2>
+  <h2><span class="translation_missing" title="translation missing: ko.apipie.examples">Examples</span></h2>
     <pre class="prettyprint">POST /api/bookmarks
 {
   &quot;bookmark&quot;: {
     &quot;public&quot;: false,
     &quot;controller&quot;: &quot;hosts&quot;,
     &quot;name&quot;: &quot;foo-bar&quot;,
-    &quot;query&quot;: &quot;&quot;
+    &quot;query&quot;: &quot;bar&quot;
   }
 }
-422
+201
 {
-  &quot;error&quot;: {
-    &quot;id&quot;: null,
-    &quot;errors&quot;: {
-      &quot;query&quot;: [
-        &quot;can&#39;t be blank&quot;
-      ]
-    },
-    &quot;full_messages&quot;: [
-      &quot;Query can&#39;t be blank&quot;
-    ]
-  }
+  &quot;name&quot;: &quot;foo-bar&quot;,
+  &quot;controller&quot;: &quot;hosts&quot;,
+  &quot;query&quot;: &quot;bar&quot;,
+  &quot;public&quot;: false,
+  &quot;id&quot;: 980190963,
+  &quot;owner_id&quot;: 135138680,
+  &quot;owner_type&quot;: &quot;User&quot;
 }</pre>
 
-  <h2>Params</h2>
+  <h2><span class="translation_missing" title="translation missing: ko.apipie.params">Params</span></h2>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: ko.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: ko.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -89,7 +85,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -113,7 +109,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -137,7 +133,7 @@
     <td>
       <strong>bookmark </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: ko.apipie.required">Required</span>
         
       </small>
     </td>
@@ -158,7 +154,7 @@
     <td>
       <strong>bookmark[name] </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: ko.apipie.required">Required</span>
         
       </small>
     </td>
@@ -180,7 +176,7 @@
     <td>
       <strong>bookmark[controller] </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: ko.apipie.required">Required</span>
         
       </small>
     </td>
@@ -202,7 +198,7 @@
     <td>
       <strong>bookmark[query] </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: ko.apipie.required">Required</span>
         
       </small>
     </td>
@@ -224,8 +220,8 @@
     <td>
       <strong>bookmark[public] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ko.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>

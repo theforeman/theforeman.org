@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>API documentation</title>
+  <title>Api Documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
@@ -51,37 +51,47 @@
 
 
 
-  <h2>Examples</h2>
-    <pre class="prettyprint">GET /api/puppetclasses/980190962/smart_variables/1018350798
+  <h2><span class="translation_missing" title="translation missing: sv-SE.apipie.examples">Examples</span></h2>
+    <pre class="prettyprint">GET /api/puppetclasses/980190962/smart_variables/298486374-ssl_port
 200
 {
   &quot;description&quot;: null,
-  &quot;parameter_type&quot;: null,
-  &quot;variable_type&quot;: null,
-  &quot;hidden_value?&quot;: true,
-  &quot;validator_type&quot;: null,
-  &quot;validator_rule&quot;: null,
+  &quot;parameter_type&quot;: &quot;string&quot;,
+  &quot;variable_type&quot;: &quot;string&quot;,
+  &quot;hidden_value?&quot;: false,
+  &quot;validator_type&quot;: &quot;list&quot;,
+  &quot;validator_rule&quot;: &quot;443,8443&quot;,
   &quot;override_value_order&quot;: &quot;fqdn\nhostgroup\nos\ndomain&quot;,
   &quot;merge_overrides&quot;: false,
   &quot;merge_default&quot;: false,
   &quot;avoid_duplicates&quot;: false,
   &quot;puppetclass_id&quot;: 980190962,
   &quot;puppetclass_name&quot;: &quot;base&quot;,
-  &quot;created_at&quot;: &quot;2018-07-24 12:56:20 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:56:20 UTC&quot;,
-  &quot;variable&quot;: &quot;param105&quot;,
-  &quot;id&quot;: 1018350798,
-  &quot;default_value&quot;: &quot;*****&quot;,
-  &quot;override_values_count&quot;: 0,
-  &quot;override_values&quot;: []
+  &quot;created_at&quot;: &quot;2018-11-08 09:02:26 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:02:26 UTC&quot;,
+  &quot;variable&quot;: &quot;ssl_port&quot;,
+  &quot;id&quot;: 298486374,
+  &quot;default_value&quot;: &quot;443&quot;,
+  &quot;override_values_count&quot;: 1,
+  &quot;override_values&quot;: [
+    {
+      &quot;created_at&quot;: &quot;2018-11-08 09:02:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:02:27 UTC&quot;,
+      &quot;id&quot;: 281110143,
+      &quot;match&quot;: &quot;hostgroup=Common&quot;,
+      &quot;value&quot;: &quot;8443&quot;,
+      &quot;omit&quot;: false,
+      &quot;use_puppet_default&quot;: false
+    }
+  ]
 }</pre>
 
-  <h2>Params</h2>
+  <h2><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h2>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -89,7 +99,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -113,7 +123,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -137,7 +147,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
         
       </small>
     </td>
@@ -159,7 +169,7 @@
     <td>
       <strong>show_hidden </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>

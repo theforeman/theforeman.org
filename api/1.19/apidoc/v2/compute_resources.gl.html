@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>API documentation</title>
+  <title>Api Documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
@@ -70,12 +70,12 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">GET /api/compute_resources
 200
 {
-  &quot;total&quot;: 9,
-  &quot;subtotal&quot;: 9,
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
   &quot;page&quot;: 1,
   &quot;per_page&quot;: 20,
   &quot;search&quot;: null,
@@ -85,117 +85,12 @@
   },
   &quot;results&quot;: [
     {
-      &quot;description&quot;: &quot;yourcompute&quot;,
-      &quot;url&quot;: &quot;eu-west-1&quot;,
-      &quot;created_at&quot;: &quot;2018-07-24 12:55:19 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:55:19 UTC&quot;,
-      &quot;id&quot;: 928692541,
-      &quot;name&quot;: &quot;amazon123&quot;,
-      &quot;provider&quot;: &quot;EC2&quot;,
-      &quot;provider_friendly_name&quot;: &quot;EC2&quot;,
-      &quot;access_key&quot;: &quot;MyString&quot;,
-      &quot;region&quot;: &quot;eu-west-1&quot;
-    },
-    {
-      &quot;description&quot;: &quot;yourcompute&quot;,
-      &quot;url&quot;: &quot;eu-west-1&quot;,
-      &quot;created_at&quot;: &quot;2018-07-24 12:55:19 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:55:19 UTC&quot;,
-      &quot;id&quot;: 304431216,
-      &quot;name&quot;: &quot;another-ec2&quot;,
-      &quot;provider&quot;: &quot;EC2&quot;,
-      &quot;provider_friendly_name&quot;: &quot;EC2&quot;,
-      &quot;access_key&quot;: &quot;MyString&quot;,
-      &quot;region&quot;: &quot;eu-west-1&quot;
-    },
-    {
-      &quot;description&quot;: &quot;MyString&quot;,
-      &quot;url&quot;: &quot;qemu://stam/system&quot;,
-      &quot;created_at&quot;: &quot;2018-07-24 12:55:19 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:55:19 UTC&quot;,
-      &quot;id&quot;: 980190962,
-      &quot;name&quot;: &quot;bigcompute&quot;,
-      &quot;provider&quot;: &quot;Libvirt&quot;,
-      &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
-      &quot;display_type&quot;: &quot;vnc&quot;,
-      &quot;set_console_password&quot;: true
-    },
-    {
-      &quot;description&quot;: &quot;yourcompute&quot;,
-      &quot;url&quot;: &quot;us-central1-a&quot;,
-      &quot;created_at&quot;: &quot;2018-07-24 12:55:19 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:55:19 UTC&quot;,
-      &quot;id&quot;: 30517511,
-      &quot;name&quot;: &quot;gce123&quot;,
-      &quot;provider&quot;: &quot;GCE&quot;,
-      &quot;provider_friendly_name&quot;: &quot;Google&quot;,
-      &quot;email&quot;: null,
-      &quot;zone&quot;: &quot;us-central1-a&quot;,
-      &quot;project&quot;: &quot;foo&quot;,
-      &quot;key_path&quot;: null
-    },
-    {
       &quot;description&quot;: &quot;mycompute&quot;,
       &quot;url&quot;: &quot;test:///default&quot;,
-      &quot;created_at&quot;: &quot;2018-07-24 12:55:19 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:55:19 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:07:40 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:07:40 UTC&quot;,
       &quot;id&quot;: 367690737,
       &quot;name&quot;: &quot;mycompute&quot;,
-      &quot;provider&quot;: &quot;Libvirt&quot;,
-      &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
-      &quot;display_type&quot;: &quot;vnc&quot;,
-      &quot;set_console_password&quot;: true
-    },
-    {
-      &quot;description&quot;: &quot;computeresource&quot;,
-      &quot;url&quot;: &quot;test:///default/v2.0&quot;,
-      &quot;created_at&quot;: &quot;2018-07-24 12:55:19 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:55:19 UTC&quot;,
-      &quot;id&quot;: 628705878,
-      &quot;name&quot;: &quot;openstackcr&quot;,
-      &quot;provider&quot;: &quot;Openstack&quot;,
-      &quot;provider_friendly_name&quot;: &quot;OpenStack&quot;,
-      &quot;user&quot;: &quot;MyString&quot;,
-      &quot;tenant&quot;: null,
-      &quot;domain&quot;: null
-    },
-    {
-      &quot;description&quot;: &quot;ovirt resource&quot;,
-      &quot;url&quot;: &quot;https://myovirt/api&quot;,
-      &quot;created_at&quot;: &quot;2018-07-24 12:55:19 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:55:19 UTC&quot;,
-      &quot;id&quot;: 510899777,
-      &quot;name&quot;: &quot;Ovirt&quot;,
-      &quot;provider&quot;: &quot;Ovirt&quot;,
-      &quot;provider_friendly_name&quot;: &quot;oVirt&quot;,
-      &quot;user&quot;: &quot;MyString&quot;,
-      &quot;datacenter&quot;: &quot;1234567891011&quot;,
-      &quot;use_v4&quot;: false,
-      &quot;ovirt_quota&quot;: null
-    },
-    {
-      &quot;description&quot;: &quot;vmware resource&quot;,
-      &quot;url&quot;: &quot;https://myvmware/api&quot;,
-      &quot;created_at&quot;: &quot;2018-07-24 12:55:19 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:55:19 UTC&quot;,
-      &quot;id&quot;: 305613588,
-      &quot;name&quot;: &quot;Vmware&quot;,
-      &quot;provider&quot;: &quot;Vmware&quot;,
-      &quot;provider_friendly_name&quot;: &quot;VMware&quot;,
-      &quot;user&quot;: &quot;MyString&quot;,
-      &quot;datacenter&quot;: &quot;1234567891011&quot;,
-      &quot;server&quot;: &quot;https://myvmware/api&quot;,
-      &quot;set_console_password&quot;: true,
-      &quot;caching_enabled&quot;: true,
-      &quot;display_type&quot;: &quot;vmrc&quot;
-    },
-    {
-      &quot;description&quot;: &quot;yourcompute&quot;,
-      &quot;url&quot;: &quot;test:///default&quot;,
-      &quot;created_at&quot;: &quot;2018-07-24 12:55:19 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:55:19 UTC&quot;,
-      &quot;id&quot;: 932571420,
-      &quot;name&quot;: &quot;yourcompute&quot;,
       &quot;provider&quot;: &quot;Libvirt&quot;,
       &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
       &quot;display_type&quot;: &quot;vnc&quot;,
@@ -204,12 +99,12 @@
   ]
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -217,7 +112,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -241,7 +136,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -265,7 +160,7 @@
     <td>
       <strong>search </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -289,7 +184,7 @@
     <td>
       <strong>order </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -313,7 +208,7 @@
     <td>
       <strong>page </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -337,7 +232,7 @@
     <td>
       <strong>per_page </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -438,22 +333,112 @@
 
 
 
-  <h3>Examples</h3>
-    <pre class="prettyprint">GET /api/compute_resources/367690737-mycompute
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">GET /api/compute_resources/980190962-bigcompute
 200
 {
-  &quot;description&quot;: &quot;mycompute&quot;,
-  &quot;url&quot;: &quot;test:///default&quot;,
-  &quot;created_at&quot;: &quot;2018-07-24 12:55:19 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:55:19 UTC&quot;,
-  &quot;id&quot;: 367690737,
-  &quot;name&quot;: &quot;mycompute&quot;,
+  &quot;description&quot;: &quot;MyString&quot;,
+  &quot;url&quot;: &quot;qemu://stam/system&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:07:40 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:07:40 UTC&quot;,
+  &quot;id&quot;: 980190962,
+  &quot;name&quot;: &quot;bigcompute&quot;,
   &quot;provider&quot;: &quot;Libvirt&quot;,
   &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
   &quot;display_type&quot;: &quot;vnc&quot;,
   &quot;set_console_password&quot;: true,
-  &quot;images&quot;: [],
-  &quot;compute_attributes&quot;: [],
+  &quot;images&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;centos-1&quot;
+    },
+    {
+      &quot;id&quot;: 298486374,
+      &quot;name&quot;: &quot;centos-2&quot;
+    }
+  ],
+  &quot;compute_attributes&quot;: [
+    {
+      &quot;id&quot;: 298486374,
+      &quot;name&quot;: null,
+      &quot;compute_resource_id&quot;: 980190962,
+      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
+      &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
+      &quot;compute_profile_id&quot;: 980190962,
+      &quot;compute_profile_name&quot;: &quot;1-Small&quot;,
+      &quot;vm_attrs&quot;: {
+        &quot;cpus&quot;: 2,
+        &quot;memory&quot;: 536870912
+      },
+      &quot;attributes&quot;: {
+        &quot;cpus&quot;: 2,
+        &quot;memory&quot;: 536870912,
+        &quot;image_id&quot;: null,
+        &quot;image_name&quot;: null,
+        &quot;volumes_attributes&quot;: {},
+        &quot;interfaces_attributes&quot;: {}
+      }
+    },
+    {
+      &quot;id&quot;: 281110143,
+      &quot;name&quot;: null,
+      &quot;compute_resource_id&quot;: 980190962,
+      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
+      &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
+      &quot;compute_profile_id&quot;: 298486374,
+      &quot;compute_profile_name&quot;: &quot;2-Medium&quot;,
+      &quot;vm_attrs&quot;: {
+        &quot;cpus&quot;: 4,
+        &quot;memory&quot;: 4294967296
+      },
+      &quot;attributes&quot;: {
+        &quot;cpus&quot;: 4,
+        &quot;memory&quot;: 4294967296,
+        &quot;image_id&quot;: null,
+        &quot;image_name&quot;: null,
+        &quot;volumes_attributes&quot;: {},
+        &quot;interfaces_attributes&quot;: {}
+      }
+    },
+    {
+      &quot;id&quot;: 394428105,
+      &quot;name&quot;: null,
+      &quot;compute_resource_id&quot;: 980190962,
+      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
+      &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
+      &quot;compute_profile_id&quot;: 281110143,
+      &quot;compute_profile_name&quot;: &quot;4-Networking&quot;,
+      &quot;vm_attrs&quot;: {
+        &quot;nics_attributes&quot;: {
+          &quot;1&quot;: {
+            &quot;attr&quot;: 1
+          },
+          &quot;2&quot;: {
+            &quot;attr&quot;: 2
+          }
+        }
+      },
+      &quot;attributes&quot;: {
+        &quot;cpus&quot;: null,
+        &quot;memory&quot;: null,
+        &quot;image_id&quot;: null,
+        &quot;image_name&quot;: null,
+        &quot;volumes_attributes&quot;: {},
+        &quot;interfaces_attributes&quot;: {
+          &quot;1&quot;: {
+            &quot;type&quot;: null,
+            &quot;model&quot;: null,
+            &quot;bridge&quot;: null
+          },
+          &quot;2&quot;: {
+            &quot;type&quot;: null,
+            &quot;model&quot;: null,
+            &quot;bridge&quot;: null
+          }
+        }
+      }
+    }
+  ],
   &quot;locations&quot;: [
     {
       &quot;id&quot;: 255093256,
@@ -472,12 +457,12 @@
   ]
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -485,7 +470,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -509,7 +494,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -533,7 +518,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -582,7 +567,7 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">POST /api/compute_resources
 {
   &quot;compute_resource&quot;: {
@@ -611,12 +596,12 @@
   }
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -624,7 +609,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -648,7 +633,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -672,7 +657,7 @@
     <td>
       <strong>compute_resource </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -693,7 +678,7 @@
     <td>
       <strong>compute_resource[name] </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -715,8 +700,8 @@
     <td>
       <strong>compute_resource[provider] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -739,8 +724,8 @@
     <td>
       <strong>compute_resource[url] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -763,8 +748,8 @@
     <td>
       <strong>compute_resource[description] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -785,8 +770,8 @@
     <td>
       <strong>compute_resource[user] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -809,8 +794,8 @@
     <td>
       <strong>compute_resource[password] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -833,8 +818,8 @@
     <td>
       <strong>compute_resource[uuid] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -857,8 +842,8 @@
     <td>
       <strong>compute_resource[datacenter] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -881,8 +866,8 @@
     <td>
       <strong>compute_resource[use_v4] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -905,8 +890,8 @@
     <td>
       <strong>compute_resource[ovirt_quota] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -929,8 +914,8 @@
     <td>
       <strong>compute_resource[region] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -953,8 +938,8 @@
     <td>
       <strong>compute_resource[tenant] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -977,8 +962,8 @@
     <td>
       <strong>compute_resource[domain] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1001,8 +986,8 @@
     <td>
       <strong>compute_resource[server] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1025,8 +1010,8 @@
     <td>
       <strong>compute_resource[set_console_password] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1049,8 +1034,8 @@
     <td>
       <strong>compute_resource[display_type] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1073,8 +1058,8 @@
     <td>
       <strong>compute_resource[caching_enabled] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1097,8 +1082,8 @@
     <td>
       <strong>compute_resource[location_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1121,8 +1106,8 @@
     <td>
       <strong>compute_resource[organization_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1173,26 +1158,51 @@
 
 
 
-  <h3>Examples</h3>
-    <pre class="prettyprint">PUT /api/compute_resources/932571420-yourcompute
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">PUT /api/compute_resources/367690737
 {
   &quot;compute_resource&quot;: {
-    &quot;description&quot;: &quot;new_description&quot;
+    &quot;display_type&quot;: &quot;spice&quot;
   }
 }
-404
+200
 {
-  &quot;error&quot;: {
-    &quot;message&quot;: &quot;Resource compute_resource not found by id &#39;932571420-yourcompute&#39;&quot;
-  }
+  &quot;description&quot;: &quot;mycompute&quot;,
+  &quot;url&quot;: &quot;test:///default&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:07:40 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:07:52 UTC&quot;,
+  &quot;id&quot;: 367690737,
+  &quot;name&quot;: &quot;mycompute&quot;,
+  &quot;provider&quot;: &quot;Libvirt&quot;,
+  &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
+  &quot;display_type&quot;: &quot;spice&quot;,
+  &quot;set_console_password&quot;: true,
+  &quot;images&quot;: [],
+  &quot;compute_attributes&quot;: [],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -1200,7 +1210,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -1224,7 +1234,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -1248,7 +1258,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -1270,7 +1280,7 @@
     <td>
       <strong>compute_resource </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -1291,7 +1301,7 @@
     <td>
       <strong>compute_resource[name] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -1313,8 +1323,8 @@
     <td>
       <strong>compute_resource[provider] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1337,8 +1347,8 @@
     <td>
       <strong>compute_resource[url] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1361,8 +1371,8 @@
     <td>
       <strong>compute_resource[description] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1383,8 +1393,8 @@
     <td>
       <strong>compute_resource[user] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1407,8 +1417,8 @@
     <td>
       <strong>compute_resource[password] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1431,8 +1441,8 @@
     <td>
       <strong>compute_resource[uuid] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1455,8 +1465,8 @@
     <td>
       <strong>compute_resource[datacenter] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1479,8 +1489,8 @@
     <td>
       <strong>compute_resource[use_v4] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1503,8 +1513,8 @@
     <td>
       <strong>compute_resource[ovirt_quota] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1527,8 +1537,8 @@
     <td>
       <strong>compute_resource[region] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1551,8 +1561,8 @@
     <td>
       <strong>compute_resource[tenant] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1575,8 +1585,8 @@
     <td>
       <strong>compute_resource[domain] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1599,8 +1609,8 @@
     <td>
       <strong>compute_resource[server] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1623,8 +1633,8 @@
     <td>
       <strong>compute_resource[set_console_password] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1647,8 +1657,8 @@
     <td>
       <strong>compute_resource[display_type] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1671,8 +1681,8 @@
     <td>
       <strong>compute_resource[caching_enabled] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1695,8 +1705,8 @@
     <td>
       <strong>compute_resource[location_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1719,8 +1729,8 @@
     <td>
       <strong>compute_resource[organization_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1771,7 +1781,7 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">DELETE /api/compute_resources/932571420
 {
   &quot;compute_resource&quot;: {}
@@ -1783,12 +1793,12 @@
   }
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -1796,7 +1806,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -1820,7 +1830,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -1844,7 +1854,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -1893,7 +1903,7 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">GET /api/compute_resources/928692541-amazon123/available_images
 200
 [
@@ -1903,12 +1913,12 @@
   }
 ]</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -1916,7 +1926,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -1940,7 +1950,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -1964,7 +1974,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -2013,7 +2023,7 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">GET /api/compute_resources/510899777-Ovirt/available_clusters
 200
 {
@@ -2034,12 +2044,12 @@
   ]
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -2047,7 +2057,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -2071,7 +2081,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -2095,7 +2105,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -2144,7 +2154,7 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">GET /api/compute_resources/928692541-amazon123/available_flavors
 200
 {
@@ -2165,12 +2175,12 @@
   ]
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -2178,7 +2188,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -2202,7 +2212,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -2226,7 +2236,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -2275,7 +2285,7 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">GET /api/compute_resources/305613588-Vmware/available_folders
 200
 {
@@ -2296,12 +2306,12 @@
   ]
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -2309,7 +2319,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -2333,7 +2343,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -2357,7 +2367,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -2406,7 +2416,7 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">GET /api/compute_resources/928692541-amazon123/available_zones
 200
 {
@@ -2426,12 +2436,12 @@
   ]
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -2439,7 +2449,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -2463,7 +2473,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -2487,7 +2497,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -2546,7 +2556,7 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">GET /api/compute_resources/510899777-Ovirt/available_clusters/123-456-789/available_networks
 200
 {
@@ -2567,12 +2577,12 @@
   ]
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -2580,7 +2590,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -2604,7 +2614,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -2628,7 +2638,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -2650,7 +2660,7 @@
     <td>
       <strong>cluster_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -2699,7 +2709,7 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">GET /api/compute_resources/305613588-Vmware/available_clusters/123-456-789/available_resource_pools
 200
 {
@@ -2720,12 +2730,12 @@
   ]
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -2733,7 +2743,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -2757,7 +2767,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -2781,7 +2791,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -2803,7 +2813,7 @@
     <td>
       <strong>cluster_id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -2862,7 +2872,7 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">GET /api/compute_resources/510899777-Ovirt/available_storage_domains
 200
 {
@@ -2883,12 +2893,12 @@
   ]
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -2896,7 +2906,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -2920,7 +2930,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -2944,7 +2954,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -2966,7 +2976,7 @@
     <td>
       <strong>storage_domain </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -3025,7 +3035,7 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">GET /api/compute_resources/305613588-Vmware/available_storage_pods/test_vmware_pod
 200
 {
@@ -3046,12 +3056,12 @@
   ]
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -3059,7 +3069,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -3083,7 +3093,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -3107,7 +3117,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -3129,7 +3139,7 @@
     <td>
       <strong>storage_pod </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -3178,7 +3188,7 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">GET /api/compute_resources/928692541-amazon123/available_security_groups
 200
 {
@@ -3199,12 +3209,12 @@
   ]
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -3212,7 +3222,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -3236,7 +3246,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -3260,7 +3270,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -3309,8 +3319,8 @@
 
 
 
-  <h3>Examples</h3>
-    <pre class="prettyprint">PUT /api/compute_resources/980190964-compute_resource91/associate
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">PUT /api/compute_resources/980190968-compute_resource202/associate
 {
   &quot;compute_resource&quot;: {}
 }
@@ -3367,9 +3377,9 @@
       &quot;managed&quot;: false,
       &quot;use_image&quot;: null,
       &quot;image_file&quot;: &quot;&quot;,
-      &quot;uuid&quot;: &quot;97962006-da2a-4f03-bedc-692b1b428fb3&quot;,
-      &quot;compute_resource_id&quot;: 980190964,
-      &quot;compute_resource_name&quot;: &quot;compute_resource91&quot;,
+      &quot;uuid&quot;: &quot;a781be3d-4c83-49ea-abdc-be7d029d7c89&quot;,
+      &quot;compute_resource_id&quot;: 980190968,
+      &quot;compute_resource_name&quot;: &quot;compute_resource202&quot;,
       &quot;compute_profile_id&quot;: null,
       &quot;compute_profile_name&quot;: null,
       &quot;capabilities&quot;: [
@@ -3377,11 +3387,11 @@
         &quot;key_pair&quot;
       ],
       &quot;provision_method&quot;: &quot;image&quot;,
-      &quot;certname&quot;: &quot;host715&quot;,
+      &quot;certname&quot;: &quot;host844&quot;,
       &quot;image_id&quot;: null,
       &quot;image_name&quot;: null,
-      &quot;created_at&quot;: &quot;2018-07-24 12:55:21 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:55:21 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:07:54 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:07:54 UTC&quot;,
       &quot;last_compile&quot;: null,
       &quot;global_status&quot;: 0,
       &quot;global_status_label&quot;: &quot;OK&quot;,
@@ -3391,8 +3401,8 @@
       &quot;location_name&quot;: &quot;Location 1&quot;,
       &quot;puppet_status&quot;: 0,
       &quot;model_name&quot;: null,
-      &quot;name&quot;: &quot;host715&quot;,
-      &quot;id&quot;: 77,
+      &quot;name&quot;: &quot;host844&quot;,
+      &quot;id&quot;: 313,
       &quot;puppet_proxy_id&quot;: null,
       &quot;puppet_proxy_name&quot;: null,
       &quot;puppet_ca_proxy_id&quot;: null,
@@ -3405,12 +3415,12 @@
   ]
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -3418,7 +3428,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -3442,7 +3452,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -3466,7 +3476,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -3515,7 +3525,7 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">PUT /api/compute_resources/510899777-Ovirt/refresh_cache
 {
   &quot;compute_resource&quot;: {}
@@ -3525,12 +3535,12 @@
   &quot;message&quot;: &quot;Failed to refresh the cache.&quot;
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -3538,7 +3548,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -3562,7 +3572,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -3586,7 +3596,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>

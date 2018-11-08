@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>API documentation</title>
+  <title>Api Documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
@@ -51,250 +51,34 @@
 
 
 
-  <h2>Examples</h2>
+  <h2><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h2>
     <pre class="prettyprint">PUT /api/operatingsystems/1073012828
 {
   &quot;operatingsystem&quot;: {
-    &quot;minor&quot;: &quot;2&quot;
+    &quot;major&quot;: &quot;-1&quot;
   }
 }
-200
+422
 {
-  &quot;description&quot;: &quot;RHEL 6.1&quot;,
-  &quot;major&quot;: &quot;6&quot;,
-  &quot;minor&quot;: &quot;2&quot;,
-  &quot;family&quot;: &quot;Redhat&quot;,
-  &quot;release_name&quot;: null,
-  &quot;password_hash&quot;: &quot;SHA256&quot;,
-  &quot;created_at&quot;: &quot;2018-07-24 12:57:45 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:57:46 UTC&quot;,
-  &quot;id&quot;: 1073012828,
-  &quot;name&quot;: &quot;Redhat&quot;,
-  &quot;title&quot;: &quot;RHEL 6.1&quot;,
-  &quot;media&quot;: [
-    {
-      &quot;id&quot;: 980190962,
-      &quot;name&quot;: &quot;CentOS 5.4&quot;
-    }
-  ],
-  &quot;architectures&quot;: [
-    {
-      &quot;name&quot;: &quot;x86_64&quot;,
-      &quot;id&quot;: 501905019
-    }
-  ],
-  &quot;ptables&quot;: [],
-  &quot;config_templates&quot;: [
-    {
-      &quot;id&quot;: 1007981701,
-      &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
-      &quot;template_kind_id&quot;: 452984334,
-      &quot;template_kind_name&quot;: &quot;PXELinux&quot;
+  &quot;error&quot;: {
+    &quot;id&quot;: 1073012828,
+    &quot;errors&quot;: {
+      &quot;major&quot;: [
+        &quot;must be greater than or equal to 0&quot;
+      ]
     },
-    {
-      &quot;id&quot;: 104314179,
-      &quot;name&quot;: &quot;MyFinish&quot;,
-      &quot;template_kind_id&quot;: 550103832,
-      &quot;template_kind_name&quot;: &quot;finish&quot;
-    },
-    {
-      &quot;id&quot;: 981457253,
-      &quot;name&quot;: &quot;MyScript&quot;,
-      &quot;template_kind_id&quot;: 478250810,
-      &quot;template_kind_name&quot;: &quot;script&quot;
-    },
-    {
-      &quot;id&quot;: 943779058,
-      &quot;name&quot;: &quot;MyString&quot;,
-      &quot;template_kind_id&quot;: 698706415,
-      &quot;template_kind_name&quot;: &quot;iPXE&quot;
-    },
-    {
-      &quot;id&quot;: 269958254,
-      &quot;name&quot;: &quot;MyString2&quot;,
-      &quot;template_kind_id&quot;: 983253650,
-      &quot;template_kind_name&quot;: &quot;provision&quot;
-    },
-    {
-      &quot;id&quot;: 554905648,
-      &quot;name&quot;: &quot;PXEGrub2 global default&quot;,
-      &quot;template_kind_id&quot;: 701398793,
-      &quot;template_kind_name&quot;: &quot;PXEGrub2&quot;
-    },
-    {
-      &quot;id&quot;: 131565194,
-      &quot;name&quot;: &quot;PXEGrub Dummy Menu&quot;,
-      &quot;template_kind_id&quot;: 131565194,
-      &quot;template_kind_name&quot;: &quot;PXEGrub&quot;
-    },
-    {
-      &quot;id&quot;: 824224502,
-      &quot;name&quot;: &quot;PXEGrub global default&quot;,
-      &quot;template_kind_id&quot;: 131565194,
-      &quot;template_kind_name&quot;: &quot;PXEGrub&quot;
-    },
-    {
-      &quot;id&quot;: 821548108,
-      &quot;name&quot;: &quot;PXELinux default local boot&quot;,
-      &quot;template_kind_id&quot;: 452984334,
-      &quot;template_kind_name&quot;: &quot;PXELinux&quot;
-    },
-    {
-      &quot;id&quot;: 352050261,
-      &quot;name&quot;: &quot;PXELinux global default&quot;,
-      &quot;template_kind_id&quot;: 452984334,
-      &quot;template_kind_name&quot;: &quot;PXELinux&quot;
-    }
-  ],
-  &quot;provisioning_templates&quot;: [
-    {
-      &quot;id&quot;: 1007981701,
-      &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
-      &quot;template_kind_id&quot;: 452984334,
-      &quot;template_kind_name&quot;: &quot;PXELinux&quot;
-    },
-    {
-      &quot;id&quot;: 104314179,
-      &quot;name&quot;: &quot;MyFinish&quot;,
-      &quot;template_kind_id&quot;: 550103832,
-      &quot;template_kind_name&quot;: &quot;finish&quot;
-    },
-    {
-      &quot;id&quot;: 981457253,
-      &quot;name&quot;: &quot;MyScript&quot;,
-      &quot;template_kind_id&quot;: 478250810,
-      &quot;template_kind_name&quot;: &quot;script&quot;
-    },
-    {
-      &quot;id&quot;: 943779058,
-      &quot;name&quot;: &quot;MyString&quot;,
-      &quot;template_kind_id&quot;: 698706415,
-      &quot;template_kind_name&quot;: &quot;iPXE&quot;
-    },
-    {
-      &quot;id&quot;: 269958254,
-      &quot;name&quot;: &quot;MyString2&quot;,
-      &quot;template_kind_id&quot;: 983253650,
-      &quot;template_kind_name&quot;: &quot;provision&quot;
-    },
-    {
-      &quot;id&quot;: 554905648,
-      &quot;name&quot;: &quot;PXEGrub2 global default&quot;,
-      &quot;template_kind_id&quot;: 701398793,
-      &quot;template_kind_name&quot;: &quot;PXEGrub2&quot;
-    },
-    {
-      &quot;id&quot;: 131565194,
-      &quot;name&quot;: &quot;PXEGrub Dummy Menu&quot;,
-      &quot;template_kind_id&quot;: 131565194,
-      &quot;template_kind_name&quot;: &quot;PXEGrub&quot;
-    },
-    {
-      &quot;id&quot;: 824224502,
-      &quot;name&quot;: &quot;PXEGrub global default&quot;,
-      &quot;template_kind_id&quot;: 131565194,
-      &quot;template_kind_name&quot;: &quot;PXEGrub&quot;
-    },
-    {
-      &quot;id&quot;: 821548108,
-      &quot;name&quot;: &quot;PXELinux default local boot&quot;,
-      &quot;template_kind_id&quot;: 452984334,
-      &quot;template_kind_name&quot;: &quot;PXELinux&quot;
-    },
-    {
-      &quot;id&quot;: 352050261,
-      &quot;name&quot;: &quot;PXELinux global default&quot;,
-      &quot;template_kind_id&quot;: 452984334,
-      &quot;template_kind_name&quot;: &quot;PXELinux&quot;
-    }
-  ],
-  &quot;os_default_templates&quot;: [
-    {
-      &quot;id&quot;: 980190962,
-      &quot;provisioning_template_id&quot;: 943779058,
-      &quot;provisioning_template_name&quot;: &quot;MyString&quot;,
-      &quot;template_kind_id&quot;: 698706415,
-      &quot;template_kind_name&quot;: &quot;iPXE&quot;,
-      &quot;operatingsystem_id&quot;: 1073012828,
-      &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
-      &quot;config_template_id&quot;: 943779058,
-      &quot;config_template_name&quot;: &quot;MyString&quot;
-    },
-    {
-      &quot;id&quot;: 298486374,
-      &quot;provisioning_template_id&quot;: 269958254,
-      &quot;provisioning_template_name&quot;: &quot;MyString2&quot;,
-      &quot;template_kind_id&quot;: 983253650,
-      &quot;template_kind_name&quot;: &quot;provision&quot;,
-      &quot;operatingsystem_id&quot;: 1073012828,
-      &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
-      &quot;config_template_id&quot;: 269958254,
-      &quot;config_template_name&quot;: &quot;MyString2&quot;
-    },
-    {
-      &quot;id&quot;: 113629430,
-      &quot;provisioning_template_id&quot;: 981457253,
-      &quot;provisioning_template_name&quot;: &quot;MyScript&quot;,
-      &quot;template_kind_id&quot;: 478250810,
-      &quot;template_kind_name&quot;: &quot;script&quot;,
-      &quot;operatingsystem_id&quot;: 1073012828,
-      &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
-      &quot;config_template_id&quot;: 981457253,
-      &quot;config_template_name&quot;: &quot;MyScript&quot;
-    },
-    {
-      &quot;id&quot;: 281110143,
-      &quot;provisioning_template_id&quot;: 1007981701,
-      &quot;provisioning_template_name&quot;: &quot;centos5_3_pxelinux&quot;,
-      &quot;template_kind_id&quot;: 710512633,
-      &quot;template_kind_name&quot;: null,
-      &quot;operatingsystem_id&quot;: 1073012828,
-      &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
-      &quot;config_template_id&quot;: 1007981701,
-      &quot;config_template_name&quot;: &quot;centos5_3_pxelinux&quot;
-    },
-    {
-      &quot;id&quot;: 1018350795,
-      &quot;provisioning_template_id&quot;: 131565194,
-      &quot;provisioning_template_name&quot;: &quot;PXEGrub Dummy Menu&quot;,
-      &quot;template_kind_id&quot;: 131565194,
-      &quot;template_kind_name&quot;: &quot;PXEGrub&quot;,
-      &quot;operatingsystem_id&quot;: 1073012828,
-      &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
-      &quot;config_template_id&quot;: 131565194,
-      &quot;config_template_name&quot;: &quot;PXEGrub Dummy Menu&quot;
-    },
-    {
-      &quot;id&quot;: 51848956,
-      &quot;provisioning_template_id&quot;: 698706415,
-      &quot;provisioning_template_name&quot;: &quot;iPXE Dummy Menu&quot;,
-      &quot;template_kind_id&quot;: 698706415,
-      &quot;template_kind_name&quot;: &quot;iPXE&quot;,
-      &quot;operatingsystem_id&quot;: 1073012828,
-      &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
-      &quot;config_template_id&quot;: 698706415,
-      &quot;config_template_name&quot;: &quot;iPXE Dummy Menu&quot;
-    }
-  ],
-  &quot;images&quot;: [],
-  &quot;parameters&quot;: [
-    {
-      &quot;priority&quot;: null,
-      &quot;created_at&quot;: &quot;2018-07-24 12:57:44 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:57:44 UTC&quot;,
-      &quot;id&quot;: 716195090,
-      &quot;name&quot;: &quot;os1&quot;,
-      &quot;value&quot;: &quot;os1&quot;
-    }
-  ]
+    &quot;full_messages&quot;: [
+      &quot;Major must be greater than or equal to 0&quot;
+    ]
+  }
 }</pre>
 
-  <h2>Params</h2>
+  <h2><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h2>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -302,7 +86,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -326,7 +110,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -350,7 +134,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -372,7 +156,7 @@
     <td>
       <strong>operatingsystem </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -393,7 +177,7 @@
     <td>
       <strong>operatingsystem[name] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -415,7 +199,7 @@
     <td>
       <strong>operatingsystem[major] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -437,8 +221,8 @@
     <td>
       <strong>operatingsystem[minor] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -459,8 +243,8 @@
     <td>
       <strong>operatingsystem[description] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -481,8 +265,8 @@
     <td>
       <strong>operatingsystem[family] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -503,8 +287,8 @@
     <td>
       <strong>operatingsystem[release_name] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -525,8 +309,8 @@
     <td>
       <strong>operatingsystem[os_parameters_attributes] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -548,7 +332,7 @@
     <td>
       <strong>operatingsystem[os_parameters_attributes][name] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -572,7 +356,7 @@
     <td>
       <strong>operatingsystem[os_parameters_attributes][value] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -597,8 +381,8 @@
     <td>
       <strong>operatingsystem[password_hash] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -621,8 +405,8 @@
     <td>
       <strong>operatingsystem[architecture_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -645,8 +429,8 @@
     <td>
       <strong>operatingsystem[config_template_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -669,8 +453,8 @@
     <td>
       <strong>operatingsystem[provisioning_template_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -693,8 +477,8 @@
     <td>
       <strong>operatingsystem[medium_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -717,8 +501,8 @@
     <td>
       <strong>operatingsystem[ptable_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>

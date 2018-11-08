@@ -81,7 +81,7 @@
 
 
   <h3>Beispiele</h3>
-    <pre class="prettyprint">GET /api/usergroups/10/external_usergroups
+    <pre class="prettyprint">GET /api/usergroups/6/external_usergroups
 200
 {
   &quot;total&quot;: 1,
@@ -95,12 +95,12 @@
   },
   &quot;results&quot;: [
     {
-      &quot;id&quot;: 9,
-      &quot;name&quot;: &quot;external_usergroup8&quot;,
+      &quot;id&quot;: 1,
+      &quot;name&quot;: &quot;external_usergroup2&quot;,
       &quot;auth_source_ldap&quot;: {
-        &quot;id&quot;: 980190971,
+        &quot;id&quot;: 980190963,
         &quot;type&quot;: &quot;AuthSourceLdap&quot;,
-        &quot;name&quot;: &quot;auth_source_ldap_71&quot;
+        &quot;name&quot;: &quot;auth_source_ldap_65&quot;
       }
     }
   ]
@@ -229,15 +229,15 @@
 
 
   <h3>Beispiele</h3>
-    <pre class="prettyprint">GET /api/usergroups/8/external_usergroups/7
+    <pre class="prettyprint">GET /api/usergroups/7/external_usergroups/2
 200
 {
-  &quot;id&quot;: 7,
-  &quot;name&quot;: &quot;external_usergroup6&quot;,
+  &quot;id&quot;: 2,
+  &quot;name&quot;: &quot;external_usergroup3&quot;,
   &quot;auth_source_ldap&quot;: {
-    &quot;id&quot;: 980190969,
+    &quot;id&quot;: 980190964,
     &quot;type&quot;: &quot;AuthSourceLdap&quot;,
-    &quot;name&quot;: &quot;auth_source_ldap_69&quot;
+    &quot;name&quot;: &quot;auth_source_ldap_66&quot;
   }
 }</pre>
 
@@ -378,21 +378,21 @@
 
 
   <h3>Beispiele</h3>
-    <pre class="prettyprint">POST /api/usergroups/6-usergroup294/external_usergroups
+    <pre class="prettyprint">POST /api/usergroups/11-usergroup298/external_usergroups
 {
   &quot;external_usergroup&quot;: {
     &quot;name&quot;: &quot;foremanusergroup&quot;,
-    &quot;auth_source_id&quot;: 980190967
+    &quot;auth_source_id&quot;: 980190968
   }
 }
 201
 {
-  &quot;id&quot;: 5,
+  &quot;id&quot;: 6,
   &quot;name&quot;: &quot;foremanusergroup&quot;,
   &quot;auth_source_ldap&quot;: {
-    &quot;id&quot;: 980190967,
+    &quot;id&quot;: 980190968,
     &quot;type&quot;: &quot;AuthSourceLdap&quot;,
-    &quot;name&quot;: &quot;auth_source_ldap_67&quot;
+    &quot;name&quot;: &quot;auth_source_ldap_70&quot;
   }
 }</pre>
 
@@ -581,7 +581,7 @@
 
 
   <h3>Beispiele</h3>
-    <pre class="prettyprint">PUT /api/usergroups/9/external_usergroups/8
+    <pre class="prettyprint">PUT /api/usergroups/8/external_usergroups/3
 {
   &quot;external_usergroup&quot;: {
     &quot;name&quot;: &quot;foremanusergroup&quot;
@@ -589,12 +589,12 @@
 }
 200
 {
-  &quot;id&quot;: 8,
+  &quot;id&quot;: 3,
   &quot;name&quot;: &quot;foremanusergroup&quot;,
   &quot;auth_source_ldap&quot;: {
-    &quot;id&quot;: 980190970,
+    &quot;id&quot;: 980190965,
     &quot;type&quot;: &quot;AuthSourceLdap&quot;,
-    &quot;name&quot;: &quot;auth_source_ldap_70&quot;
+    &quot;name&quot;: &quot;auth_source_ldap_67&quot;
   }
 }</pre>
 
@@ -807,16 +807,16 @@
 
 
   <h3>Beispiele</h3>
-    <pre class="prettyprint">PUT /api/usergroups/7/external_usergroups/6/refresh
+    <pre class="prettyprint">PUT /api/usergroups/12/external_usergroups/7/refresh
 {
   &quot;external_usergroup&quot;: {}
 }
 200
 {
-  &quot;id&quot;: 6,
-  &quot;name&quot;: &quot;external_usergroup5&quot;,
-  &quot;auth_source_id&quot;: 980190968,
-  &quot;usergroup_id&quot;: 7
+  &quot;id&quot;: 7,
+  &quot;name&quot;: &quot;external_usergroup7&quot;,
+  &quot;auth_source_id&quot;: 980190969,
+  &quot;usergroup_id&quot;: 12
 }</pre>
 
   <h3>Parameter</h3>
@@ -956,16 +956,16 @@
 
 
   <h3>Beispiele</h3>
-    <pre class="prettyprint">DELETE /api/usergroups/11/external_usergroups/10
+    <pre class="prettyprint">DELETE /api/usergroups/9/external_usergroups/4
 {
   &quot;external_usergroup&quot;: {}
 }
 200
 {
-  &quot;id&quot;: 10,
-  &quot;name&quot;: &quot;external_usergroup9&quot;,
-  &quot;auth_source_id&quot;: 980190972,
-  &quot;usergroup_id&quot;: 11
+  &quot;id&quot;: 4,
+  &quot;name&quot;: &quot;external_usergroup5&quot;,
+  &quot;auth_source_id&quot;: 980190966,
+  &quot;usergroup_id&quot;: 9
 }</pre>
 
   <h3>Parameter</h3>

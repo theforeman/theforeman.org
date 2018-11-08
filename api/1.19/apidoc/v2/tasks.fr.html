@@ -71,19 +71,12 @@
 
 
   <h3>Exemples</h3>
-    <pre class="prettyprint">GET /api/orchestration/e7593dbe-1d50-4510-9f26-b6b1addf9d92/tasks
-200
+    <pre class="prettyprint">GET /api/orchestration/tasks
+404
 {
-  &quot;results&quot;: [
-    {
-      &quot;id&quot;: &quot;create something&quot;,
-      &quot;name&quot;: &quot;create something&quot;,
-      &quot;timestamp&quot;: &quot;2018-07-24T13:13:56.717Z&quot;,
-      &quot;status&quot;: &quot;pending&quot;,
-      &quot;priority&quot;: 10,
-      &quot;created&quot;: 1532438036.7178283
-    }
-  ]
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;Resource task not found by id &#39;&#39;&quot;
+  }
 }</pre>
 
   <h3>Paramètres</h3>

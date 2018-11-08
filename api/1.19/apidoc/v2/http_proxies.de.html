@@ -60,7 +60,7 @@
             GET /api/http_proxies
           </a>
           <br>
-          <small>List of HTTP Proxies</small>
+          <small>HTTP-Proxies auflisten</small>
         </h2>
     </div>
 
@@ -260,7 +260,7 @@
             GET /api/http_proxies/:id
           </a>
           <br>
-          <small>Show an HTTP Proxy</small>
+          <small>HTTP-Proxy anzeigen</small>
         </h2>
     </div>
 
@@ -271,12 +271,12 @@
 
 
   <h3>Beispiele</h3>
-    <pre class="prettyprint">GET /api/http_proxies/5
+    <pre class="prettyprint">GET /api/http_proxies/3
 200
 {
-  &quot;id&quot;: 5,
+  &quot;id&quot;: 3,
   &quot;name&quot;: &quot;http_proxies&quot;,
-  &quot;url&quot;: &quot;http://url_248&quot;,
+  &quot;url&quot;: &quot;http://url_2&quot;,
   &quot;username&quot;: null
 }</pre>
 
@@ -347,7 +347,7 @@
     </td>
     <td>
       
-<p>Numerical ID or HTTP Proxy name</p>
+<p>Numerische Kennung oder HTTP-Proxy Name</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -382,7 +382,7 @@
             POST /api/http_proxies
           </a>
           <br>
-          <small>Create an HTTP Proxy</small>
+          <small>HTTP-Proxy erstellen</small>
         </h2>
     </div>
 
@@ -402,7 +402,7 @@
 }
 201
 {
-  &quot;id&quot;: 6,
+  &quot;id&quot;: 2,
   &quot;name&quot;: &quot;http_proxy_is_smart&quot;,
   &quot;url&quot;: &quot;http://what????:5000&quot;,
   &quot;username&quot;: null,
@@ -497,7 +497,7 @@
     </td>
     <td>
       
-<p>The HTTP Proxy name</p>
+<p>HTTP-Proxy Name</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -521,7 +521,7 @@
     </td>
     <td>
       
-<p>URL of the HTTP Proxy</p>
+<p>URL des HTTP-Proxy</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -545,7 +545,7 @@
     </td>
     <td>
       
-<p>Username used to authenticate with the HTTP Proxy</p>
+<p>Benutzername zur Authentifizierung am HTTP-Proxy</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -569,7 +569,7 @@
     </td>
     <td>
       
-<p>Password used to authenticate with the HTTP Proxy</p>
+<p>Passwort zur Authentifizierung am HTTP-Proxy</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -653,7 +653,7 @@
             PUT /api/http_proxies/:id
           </a>
           <br>
-          <small>Update an HTTP Proxy</small>
+          <small>HTTP-Proxy aktualisieren</small>
         </h2>
     </div>
 
@@ -664,7 +664,7 @@
 
 
   <h3>Beispiele</h3>
-    <pre class="prettyprint">PUT /api/http_proxies/3
+    <pre class="prettyprint">PUT /api/http_proxies/1
 {
   &quot;http_proxy&quot;: {
     &quot;url&quot;: &quot;https://some_other_url&quot;
@@ -672,7 +672,7 @@
 }
 200
 {
-  &quot;id&quot;: 3,
+  &quot;id&quot;: 1,
   &quot;url&quot;: &quot;https://some_other_url&quot;,
   &quot;name&quot;: &quot;http_proxies&quot;,
   &quot;username&quot;: null,
@@ -789,7 +789,7 @@
     </td>
     <td>
       
-<p>The HTTP Proxy name</p>
+<p>HTTP-Proxy Name</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -813,7 +813,7 @@
     </td>
     <td>
       
-<p>URL of the HTTP Proxy</p>
+<p>URL des HTTP-Proxy</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -837,7 +837,7 @@
     </td>
     <td>
       
-<p>Username used to authenticate with the HTTP Proxy</p>
+<p>Benutzername zur Authentifizierung am HTTP-Proxy</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -861,7 +861,7 @@
     </td>
     <td>
       
-<p>Password used to authenticate with the HTTP Proxy</p>
+<p>Passwort zur Authentifizierung am HTTP-Proxy</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -945,7 +945,7 @@
             DELETE /api/http_proxies/:id
           </a>
           <br>
-          <small>Delete an HTTP Proxy</small>
+          <small>HTTP-Proxy löschen</small>
         </h2>
     </div>
 
@@ -964,7 +964,7 @@
 {
   &quot;id&quot;: 4,
   &quot;name&quot;: &quot;http_proxies&quot;,
-  &quot;url&quot;: &quot;http://url_247&quot;,
+  &quot;url&quot;: &quot;http://url_3&quot;,
   &quot;username&quot;: null,
   &quot;password&quot;: null
 }</pre>

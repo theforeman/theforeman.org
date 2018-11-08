@@ -52,28 +52,24 @@
 
 
   <h2>Esempi</h2>
-    <pre class="prettyprint">PUT /api/bookmarks/980190962
+    <pre class="prettyprint">PUT /api/bookmarks/980190962-foo
 {
   &quot;bookmark&quot;: {
     &quot;public&quot;: false,
     &quot;controller&quot;: &quot;hosts&quot;,
-    &quot;name&quot;: &quot;&quot;,
-    &quot;query&quot;: &quot;bar&quot;
+    &quot;name&quot;: &quot;facts.architecture&quot;,
+    &quot;query&quot;: &quot; facts.architecture = x86_64&quot;
   }
 }
-422
+200
 {
-  &quot;error&quot;: {
-    &quot;id&quot;: 980190962,
-    &quot;errors&quot;: {
-      &quot;name&quot;: [
-        &quot;can&#39;t be blank&quot;
-      ]
-    },
-    &quot;full_messages&quot;: [
-      &quot;Name can&#39;t be blank&quot;
-    ]
-  }
+  &quot;name&quot;: &quot;facts.architecture&quot;,
+  &quot;controller&quot;: &quot;hosts&quot;,
+  &quot;query&quot;: &quot;facts.architecture = x86_64&quot;,
+  &quot;public&quot;: false,
+  &quot;id&quot;: 980190962,
+  &quot;owner_id&quot;: 135138680,
+  &quot;owner_type&quot;: &quot;User&quot;
 }</pre>
 
   <h2>Parametri</h2>

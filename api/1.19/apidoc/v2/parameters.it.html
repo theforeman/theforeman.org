@@ -134,7 +134,7 @@
 
 
   <h3>Esempi</h3>
-    <pre class="prettyprint">GET /api/hosts/host153/parameters
+    <pre class="prettyprint">GET /api/hosts/host681/parameters
 200
 {
   &quot;total&quot;: 1,
@@ -149,11 +149,11 @@
   &quot;results&quot;: [
     {
       &quot;priority&quot;: 70,
-      &quot;created_at&quot;: &quot;2018-07-24 12:44:56 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:44:56 UTC&quot;,
-      &quot;id&quot;: 767575239,
-      &quot;name&quot;: &quot;parameter5&quot;,
-      &quot;value&quot;: &quot;parameter value 5&quot;
+      &quot;created_at&quot;: &quot;2018-11-08 09:06:59 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:06:59 UTC&quot;,
+      &quot;id&quot;: 767575253,
+      &quot;name&quot;: &quot;parameter16&quot;,
+      &quot;value&quot;: &quot;parameter value 30&quot;
     }
   ]
 }</pre>
@@ -612,15 +612,15 @@
 
 
   <h3>Esempi</h3>
-    <pre class="prettyprint">GET /api/locations/255093256-Location%201/parameters/513706444-loc_param
+    <pre class="prettyprint">GET /api/hosts/host43/parameters/767575240-parameter2
 200
 {
-  &quot;priority&quot;: null,
-  &quot;created_at&quot;: &quot;2018-07-24 12:47:05 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:47:05 UTC&quot;,
-  &quot;id&quot;: 513706444,
-  &quot;name&quot;: &quot;loc_param&quot;,
-  &quot;value&quot;: &quot;abc&quot;
+  &quot;priority&quot;: 70,
+  &quot;created_at&quot;: &quot;2018-11-08 09:01:28 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:01:28 UTC&quot;,
+  &quot;id&quot;: 767575240,
+  &quot;name&quot;: &quot;parameter2&quot;,
+  &quot;value&quot;: &quot;*****&quot;
 }</pre>
 
   <h3>Parametri</h3>
@@ -940,7 +940,7 @@
 
 
   <h3>Esempi</h3>
-    <pre class="prettyprint">POST /api/subnets/1018350795-five/parameters
+    <pre class="prettyprint">POST /api/hosts/host679/parameters
 {
   &quot;parameter&quot;: {
     &quot;name&quot;: &quot;special_key&quot;,
@@ -949,10 +949,10 @@
 }
 201
 {
-  &quot;priority&quot;: 40,
-  &quot;created_at&quot;: &quot;2018-07-24 12:47:06 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:47:06 UTC&quot;,
-  &quot;id&quot;: 767575241,
+  &quot;priority&quot;: 70,
+  &quot;created_at&quot;: &quot;2018-11-08 09:06:59 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:06:59 UTC&quot;,
+  &quot;id&quot;: 767575250,
   &quot;name&quot;: &quot;special_key&quot;,
   &quot;value&quot;: &quot;123&quot;
 }</pre>
@@ -1302,8 +1302,8 @@
 200
 {
   &quot;priority&quot;: null,
-  &quot;created_at&quot;: &quot;2018-07-24 12:47:05 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:47:07 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:06:21 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:06:59 UTC&quot;,
   &quot;id&quot;: 665394701,
   &quot;name&quot;: &quot;special_key&quot;,
   &quot;value&quot;: &quot;123&quot;
@@ -1668,19 +1668,19 @@
 
 
   <h3>Esempi</h3>
-    <pre class="prettyprint">DELETE /api/hosts/host361/parameters/767575246-parameter21
+    <pre class="prettyprint">DELETE /api/subnets/1018350795-five/parameters/297943576-parameter
 {
   &quot;parameter&quot;: {}
 }
 200
 {
-  &quot;id&quot;: 767575246,
-  &quot;name&quot;: &quot;parameter21&quot;,
-  &quot;value&quot;: &quot;parameter value 21&quot;,
-  &quot;reference_id&quot;: 176,
-  &quot;created_at&quot;: &quot;2018-07-24T12:47:07.084Z&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24T12:47:07.084Z&quot;,
-  &quot;priority&quot;: 70,
+  &quot;id&quot;: 297943576,
+  &quot;name&quot;: &quot;parameter&quot;,
+  &quot;value&quot;: &quot;subnet1&quot;,
+  &quot;reference_id&quot;: 1018350795,
+  &quot;created_at&quot;: &quot;2018-11-08T09:06:21.072Z&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08T09:06:21.072Z&quot;,
+  &quot;priority&quot;: null,
   &quot;hidden_value&quot;: &quot;*****&quot;
 }</pre>
 
@@ -1977,7 +1977,7 @@
 
 
   <h3>Esempi</h3>
-    <pre class="prettyprint">DELETE /api/subnets/1018350795-five/parameters
+    <pre class="prettyprint">DELETE /api/domains/22495316-mydomain-net/parameters
 {
   &quot;parameter&quot;: {}
 }

@@ -55,26 +55,22 @@
     <pre class="prettyprint">POST /api/provisioning_templates/1007981701-centos5_3_pxelinux/clone
 {
   &quot;provisioning_template&quot;: {
-    &quot;name&quot;: &quot;&quot;
+    &quot;name&quot;: &quot;MyClone&quot;
   }
 }
-422
+201
 {
-  &quot;error&quot;: {
-    &quot;id&quot;: null,
-    &quot;errors&quot;: {
-      &quot;name&quot;: [
-        &quot;can&#39;t be blank&quot;
-      ],
-      &quot;operatingsystems&quot;: [
-        &quot;is invalid&quot;
-      ]
-    },
-    &quot;full_messages&quot;: [
-      &quot;Name can&#39;t be blank&quot;,
-      &quot;Operatingsystems is invalid&quot;
-    ]
-  }
+  &quot;id&quot;: 1007981705,
+  &quot;name&quot;: &quot;MyClone&quot;,
+  &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ks=&lt;%= foreman_url(\&quot;kickstart\&quot;)%&gt; ksdevice=bootif network kssendmac&quot;,
+  &quot;snippet&quot;: false,
+  &quot;template_kind_id&quot;: 452984334,
+  &quot;created_at&quot;: &quot;2018-11-08T09:11:30.934Z&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08T09:11:30.934Z&quot;,
+  &quot;locked&quot;: false,
+  &quot;default&quot;: false,
+  &quot;vendor&quot;: null,
+  &quot;os_family&quot;: null
 }</pre>
 
   <h2>Parámetros</h2>

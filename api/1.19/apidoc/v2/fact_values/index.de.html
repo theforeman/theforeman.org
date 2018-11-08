@@ -59,23 +59,22 @@
 
 
   <h2>Beispiele</h2>
-    <pre class="prettyprint">GET /api/hosts/host577/facts
+    <pre class="prettyprint">GET /api/fact_values
 200
 {
   &quot;total&quot;: 1,
-  &quot;subtotal&quot;: 2,
+  &quot;subtotal&quot;: 1,
   &quot;page&quot;: 1,
   &quot;per_page&quot;: 20,
-  &quot;search&quot;: &quot; host = host577&quot;,
+  &quot;search&quot;: &quot;&quot;,
   &quot;sort&quot;: {
     &quot;by&quot;: null,
     &quot;order&quot;: null
   },
   &quot;results&quot;: {
-    &quot;host577&quot;: {
+    &quot;host91&quot;: {
       &quot;kernelversion&quot;: &quot;2.6.9&quot;
-    },
-    &quot;kernelversion&quot;: &quot;2.6.9&quot;
+    }
   }
 }</pre>
 
@@ -240,9 +239,9 @@
   <table class='table'>
   <thead>
     <tr>
-      <th width="20%">Field name</th>
+      <th width="20%">Feld Name</th>
       <th width="20%">Typ</th>
-      <th width="60%">Possible values</th>
+      <th width="60%">Mögliche Werte</th>
     </tr>
   </thead>
   <tbody>

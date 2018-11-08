@@ -115,7 +115,7 @@
   },
   &quot;results&quot;: [
     {
-      &quot;network&quot;: &quot;102.187.85.0&quot;,
+      &quot;network&quot;: &quot;88.223.230.0&quot;,
       &quot;network_type&quot;: &quot;IPv4&quot;,
       &quot;cidr&quot;: 24,
       &quot;mask&quot;: &quot;255.255.255.0&quot;,
@@ -127,14 +127,14 @@
       &quot;dns_secondary&quot;: null,
       &quot;from&quot;: null,
       &quot;to&quot;: null,
-      &quot;created_at&quot;: &quot;2018-07-24 13:13:47 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 13:13:47 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:09:38 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:09:38 UTC&quot;,
       &quot;ipam&quot;: &quot;None&quot;,
       &quot;boot_mode&quot;: &quot;DHCP&quot;,
-      &quot;id&quot;: 1018350802,
-      &quot;name&quot;: &quot;subnet551&quot;,
+      &quot;id&quot;: 1018350803,
+      &quot;name&quot;: &quot;subnet360&quot;,
       &quot;description&quot;: null,
-      &quot;network_address&quot;: &quot;102.187.85.0/24&quot;,
+      &quot;network_address&quot;: &quot;88.223.230.0/24&quot;,
       &quot;dhcp_id&quot;: null,
       &quot;dhcp_name&quot;: null,
       &quot;tftp_id&quot;: null,
@@ -335,9 +335,9 @@
   <table class='table'>
   <thead>
     <tr>
-      <th width="20%">Field name</th>
+      <th width="20%">Feld Name</th>
       <th width="20%">Typ</th>
-      <th width="60%">Possible values</th>
+      <th width="60%">Mögliche Werte</th>
     </tr>
   </thead>
   <tbody>
@@ -459,52 +459,60 @@
 
 
   <h3>Beispiele</h3>
-    <pre class="prettyprint">GET /api/subnets/1018350796
+    <pre class="prettyprint">GET /api/subnets/980190962-one
 200
 {
-  &quot;network&quot;: &quot;212.19.76.0&quot;,
+  &quot;network&quot;: &quot;2.3.4.0&quot;,
   &quot;network_type&quot;: &quot;IPv4&quot;,
   &quot;cidr&quot;: 24,
   &quot;mask&quot;: &quot;255.255.255.0&quot;,
   &quot;priority&quot;: null,
-  &quot;vlanid&quot;: null,
+  &quot;vlanid&quot;: 41,
   &quot;mtu&quot;: 1500,
   &quot;gateway&quot;: null,
   &quot;dns_primary&quot;: null,
   &quot;dns_secondary&quot;: null,
   &quot;from&quot;: null,
   &quot;to&quot;: null,
-  &quot;created_at&quot;: &quot;2018-07-24 13:13:40 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 13:13:40 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:09:37 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:09:37 UTC&quot;,
   &quot;ipam&quot;: &quot;None&quot;,
   &quot;boot_mode&quot;: &quot;DHCP&quot;,
-  &quot;id&quot;: 1018350796,
-  &quot;name&quot;: &quot;subnet546&quot;,
+  &quot;id&quot;: 980190962,
+  &quot;name&quot;: &quot;one&quot;,
   &quot;description&quot;: null,
-  &quot;network_address&quot;: &quot;212.19.76.0/24&quot;,
-  &quot;dhcp_id&quot;: null,
-  &quot;dhcp_name&quot;: null,
-  &quot;tftp_id&quot;: null,
-  &quot;tftp_name&quot;: null,
-  &quot;dns_id&quot;: null,
+  &quot;network_address&quot;: &quot;2.3.4.0/24&quot;,
+  &quot;dhcp_id&quot;: 980190962,
+  &quot;dhcp_name&quot;: &quot;DHCP Proxy&quot;,
+  &quot;tftp_id&quot;: 298486374,
+  &quot;tftp_name&quot;: &quot;TFTP Proxy&quot;,
+  &quot;dns_id&quot;: 113629430,
   &quot;template_id&quot;: null,
   &quot;template_name&quot;: null,
-  &quot;dhcp&quot;: null,
-  &quot;tftp&quot;: null,
-  &quot;dns&quot;: null,
+  &quot;dhcp&quot;: {
+    &quot;name&quot;: &quot;DHCP Proxy&quot;,
+    &quot;id&quot;: 980190962,
+    &quot;url&quot;: &quot;https://somewhere.net:8443&quot;
+  },
+  &quot;tftp&quot;: {
+    &quot;name&quot;: &quot;TFTP Proxy&quot;,
+    &quot;id&quot;: 298486374,
+    &quot;url&quot;: &quot;http://somewhere.else&quot;
+  },
+  &quot;dns&quot;: {
+    &quot;name&quot;: &quot;DNS Proxy&quot;,
+    &quot;id&quot;: 113629430,
+    &quot;url&quot;: &quot;http://else.where:45671&quot;
+  },
   &quot;template&quot;: null,
-  &quot;domains&quot;: [],
-  &quot;interfaces&quot;: [],
-  &quot;parameters&quot;: [
+  &quot;domains&quot;: [
     {
-      &quot;priority&quot;: 40,
-      &quot;created_at&quot;: &quot;2018-07-24 13:13:40 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 13:13:40 UTC&quot;,
-      &quot;id&quot;: 767575239,
-      &quot;name&quot;: &quot;foo&quot;,
-      &quot;value&quot;: &quot;*****&quot;
+      &quot;id&quot;: 22495316,
+      &quot;name&quot;: &quot;mydomain.net&quot;
     }
   ],
+  &quot;interfaces&quot;: [],
+  &quot;parameters&quot;: [],
   &quot;locations&quot;: [
     {
       &quot;id&quot;: 255093256,
@@ -612,7 +620,7 @@
     </td>
     <td>
       
-<p>Display hidden parameter values</p>
+<p>Versteckte Parameter Werte anzeigen</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -667,7 +675,7 @@
     &quot;mask&quot;: &quot;255.255.255.0&quot;,
     &quot;subnet_parameters_attributes&quot;: [
       {
-        &quot;name&quot;: &quot;foo&quot;,
+        &quot;name&quot;: &quot;NiSBoIgdJo,hqszZZUzHY,伧嘻麷呟迄杻胦揫盢夂,ъҕӍУЯѕӹӚѽѥ,&lt;tbody&gt;aXxEFbckCk&lt;/tbody&gt;,ßæÈÛîèýÛïþ,7512088777,𢿑坌﨡𨍶薝ᖣ䣄𦜽𘉇𛰷,/]}$\&quot;)&gt;_!`&quot;,
         &quot;value&quot;: &quot;bar&quot;
       }
     ]
@@ -687,11 +695,11 @@
   &quot;dns_secondary&quot;: null,
   &quot;from&quot;: null,
   &quot;to&quot;: null,
-  &quot;created_at&quot;: &quot;2018-07-24 13:13:46 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 13:13:46 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:09:37 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:09:37 UTC&quot;,
   &quot;ipam&quot;: &quot;None&quot;,
   &quot;boot_mode&quot;: &quot;DHCP&quot;,
-  &quot;id&quot;: 1018350798,
+  &quot;id&quot;: 1018350796,
   &quot;name&quot;: &quot;QA2&quot;,
   &quot;description&quot;: null,
   &quot;network_address&quot;: &quot;10.35.2.27/24&quot;,
@@ -711,10 +719,10 @@
   &quot;parameters&quot;: [
     {
       &quot;priority&quot;: 40,
-      &quot;created_at&quot;: &quot;2018-07-24 13:13:46 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 13:13:46 UTC&quot;,
-      &quot;id&quot;: 767575241,
-      &quot;name&quot;: &quot;foo&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:09:37 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:09:37 UTC&quot;,
+      &quot;id&quot;: 767575239,
+      &quot;name&quot;: &quot;NiSBoIgdJo,hqszZZUzHY,伧嘻麷呟迄杻胦揫盢夂,ъҕӍУЯѕӹӚѽѥ,&lt;tbody&gt;aXxEFbckCk&lt;/tbody&gt;,ßæÈÛîèýÛïþ,7512088777,𢿑坌﨡𨍶薝ᖣ䣄𦜽𘉇𛰷,/]}$\&quot;)&gt;_!`&quot;,
       &quot;value&quot;: &quot;bar&quot;
     }
   ],
@@ -834,7 +842,7 @@
     </td>
     <td>
       
-<p>Subnet description</p>
+<p>Subnetz Beschreibung</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -858,7 +866,7 @@
     </td>
     <td>
       
-<p>Type or protocol, IPv4 or IPv6, defaults to IPv4</p>
+<p>Typ oder Protokoll: IPv4 oder IPv6, Standardwert ist IPv4</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -930,7 +938,7 @@
     </td>
     <td>
       
-<p>Subnet gateway</p>
+<p>Subnetz Gateway</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -1098,7 +1106,7 @@
     </td>
     <td>
       
-<p>MTU for this subnet</p>
+<p>MTU für dieses Subnetz</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -1146,7 +1154,7 @@
     </td>
     <td>
       
-<p>DHCP Proxy ID to use within this subnet</p>
+<p>DHCP-Proxy Kennung zur Verwendung in diesem Subnetz</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -1170,7 +1178,7 @@
     </td>
     <td>
       
-<p>TFTP Proxy ID to use within this subnet</p>
+<p>TFTP-Proxy Kennung zur Verwendung in diesem Subnetz</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -1194,7 +1202,7 @@
     </td>
     <td>
       
-<p>DNS Proxy ID to use within this subnet</p>
+<p>DNS-Proxy Kennung zur Verwendung in diesem Subnetz</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -1218,7 +1226,7 @@
     </td>
     <td>
       
-<p>Template HTTP(S) Proxy ID to use within this subnet</p>
+<p>Vorlagen HTTP(S) Proxy Kennung zur Verwendung in diesem Subnetz</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -1361,78 +1369,37 @@
 
 
   <h3>Beispiele</h3>
-    <pre class="prettyprint">PUT /api/subnets/1018350797
+    <pre class="prettyprint">PUT /api/subnets/980190962-one
 {
   &quot;subnet&quot;: {
-    &quot;subnet_parameters_attributes&quot;: [
-      {
-        &quot;name&quot;: &quot;foo&quot;,
-        &quot;value&quot;: &quot;new_value&quot;
-      }
-    ]
+    &quot;name&quot;: &quot;QA2&quot;,
+    &quot;network_type&quot;: &quot;IPv6&quot;,
+    &quot;network&quot;: &quot;2001:db8::&quot;,
+    &quot;mask&quot;: &quot;ffff:ffff:ffff:ffff::&quot;,
+    &quot;ipam&quot;: &quot;None&quot;
   }
 }
-200
+422
 {
-  &quot;network&quot;: &quot;36.220.38.0&quot;,
-  &quot;network_type&quot;: &quot;IPv4&quot;,
-  &quot;cidr&quot;: 24,
-  &quot;mask&quot;: &quot;255.255.255.0&quot;,
-  &quot;priority&quot;: null,
-  &quot;vlanid&quot;: null,
-  &quot;mtu&quot;: 1500,
-  &quot;gateway&quot;: null,
-  &quot;dns_primary&quot;: null,
-  &quot;dns_secondary&quot;: null,
-  &quot;from&quot;: null,
-  &quot;to&quot;: null,
-  &quot;created_at&quot;: &quot;2018-07-24 13:13:46 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 13:13:46 UTC&quot;,
-  &quot;ipam&quot;: &quot;None&quot;,
-  &quot;boot_mode&quot;: &quot;DHCP&quot;,
-  &quot;id&quot;: 1018350797,
-  &quot;name&quot;: &quot;subnet549&quot;,
-  &quot;description&quot;: null,
-  &quot;network_address&quot;: &quot;36.220.38.0/24&quot;,
-  &quot;dhcp_id&quot;: null,
-  &quot;dhcp_name&quot;: null,
-  &quot;tftp_id&quot;: null,
-  &quot;tftp_name&quot;: null,
-  &quot;dns_id&quot;: null,
-  &quot;template_id&quot;: null,
-  &quot;template_name&quot;: null,
-  &quot;dhcp&quot;: null,
-  &quot;tftp&quot;: null,
-  &quot;dns&quot;: null,
-  &quot;template&quot;: null,
-  &quot;domains&quot;: [],
-  &quot;interfaces&quot;: [],
-  &quot;parameters&quot;: [
-    {
-      &quot;priority&quot;: 40,
-      &quot;created_at&quot;: &quot;2018-07-24 13:13:46 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 13:13:46 UTC&quot;,
-      &quot;id&quot;: 767575240,
-      &quot;name&quot;: &quot;foo&quot;,
-      &quot;value&quot;: &quot;new_value&quot;
-    }
-  ],
-  &quot;locations&quot;: [
-    {
-      &quot;id&quot;: 255093256,
-      &quot;name&quot;: &quot;Location 1&quot;,
-      &quot;title&quot;: &quot;Location 1&quot;,
-      &quot;description&quot;: null
-    }
-  ],
-  &quot;organizations&quot;: [
-    {
-      &quot;id&quot;: 447626438,
-      &quot;name&quot;: &quot;Organization 1&quot;,
-      &quot;title&quot;: &quot;Organization 1&quot;,
-      &quot;description&quot;: null
-    }
-  ]
+  &quot;error&quot;: {
+    &quot;id&quot;: 980190962,
+    &quot;errors&quot;: {
+      &quot;network&quot;: [
+        &quot;is invalid&quot;
+      ],
+      &quot;mask&quot;: [
+        &quot;is invalid&quot;
+      ],
+      &quot;type&quot;: [
+        &quot;can&#39;t be updated after subnet is saved&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Network is invalid&quot;,
+      &quot;Mask is invalid&quot;,
+      &quot;Type can&#39;t be updated after subnet is saved&quot;
+    ]
+  }
 }</pre>
 
   <h3>Parameter</h3>
@@ -1571,7 +1538,7 @@
     </td>
     <td>
       
-<p>Subnet description</p>
+<p>Subnetz Beschreibung</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -1595,7 +1562,7 @@
     </td>
     <td>
       
-<p>Type or protocol, IPv4 or IPv6, defaults to IPv4</p>
+<p>Typ oder Protokoll: IPv4 oder IPv6, Standardwert ist IPv4</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -1667,7 +1634,7 @@
     </td>
     <td>
       
-<p>Subnet gateway</p>
+<p>Subnetz Gateway</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -1835,7 +1802,7 @@
     </td>
     <td>
       
-<p>MTU for this subnet</p>
+<p>MTU für dieses Subnetz</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -1883,7 +1850,7 @@
     </td>
     <td>
       
-<p>DHCP Proxy ID to use within this subnet</p>
+<p>DHCP-Proxy Kennung zur Verwendung in diesem Subnetz</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -1907,7 +1874,7 @@
     </td>
     <td>
       
-<p>TFTP Proxy ID to use within this subnet</p>
+<p>TFTP-Proxy Kennung zur Verwendung in diesem Subnetz</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -1931,7 +1898,7 @@
     </td>
     <td>
       
-<p>DNS Proxy ID to use within this subnet</p>
+<p>DNS-Proxy Kennung zur Verwendung in diesem Subnetz</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -1955,7 +1922,7 @@
     </td>
     <td>
       
-<p>Template HTTP(S) Proxy ID to use within this subnet</p>
+<p>Vorlagen HTTP(S) Proxy Kennung zur Verwendung in diesem Subnetz</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -2098,36 +2065,23 @@
 
 
   <h3>Beispiele</h3>
-    <pre class="prettyprint">DELETE /api/subnets/980190962
+    <pre class="prettyprint">DELETE /api/subnets/980190962-one
 {
   &quot;subnet&quot;: {}
 }
-200
+422
 {
-  &quot;id&quot;: 980190962,
-  &quot;network&quot;: &quot;2.3.4.0&quot;,
-  &quot;mask&quot;: &quot;255.255.255.0&quot;,
-  &quot;priority&quot;: null,
-  &quot;name&quot;: &quot;one&quot;,
-  &quot;vlanid&quot;: 41,
-  &quot;created_at&quot;: &quot;2018-07-24T13:13:41.110Z&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24T13:13:41.110Z&quot;,
-  &quot;dhcp_id&quot;: 980190962,
-  &quot;tftp_id&quot;: 298486374,
-  &quot;gateway&quot;: null,
-  &quot;dns_primary&quot;: null,
-  &quot;dns_secondary&quot;: null,
-  &quot;from&quot;: null,
-  &quot;to&quot;: null,
-  &quot;dns_id&quot;: 113629430,
-  &quot;boot_mode&quot;: &quot;DHCP&quot;,
-  &quot;ipam&quot;: &quot;None&quot;,
-  &quot;discovery_id&quot;: null,
-  &quot;description&quot;: null,
-  &quot;template_id&quot;: null,
-  &quot;mtu&quot;: 1500,
-  &quot;to_label&quot;: &quot;one (2.3.4.0/24)&quot;,
-  &quot;type&quot;: &quot;Subnet::Ipv4&quot;
+  &quot;error&quot;: {
+    &quot;id&quot;: 980190962,
+    &quot;errors&quot;: {
+      &quot;base&quot;: [
+        &quot;one is used by mydomain.net&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;one is used by mydomain.net&quot;
+    ]
+  }
 }</pre>
 
   <h3>Parameter</h3>
@@ -2232,7 +2186,7 @@
             GET /api/subnets/:id/freeip
           </a>
           <br>
-          <small>Provides an unused IP address in this subnet</small>
+          <small>Stellt eine ungenutzte IP-Adresse für dieses Subnetz bereit</small>
         </h2>
     </div>
 
@@ -2243,10 +2197,10 @@
 
 
   <h3>Beispiele</h3>
-    <pre class="prettyprint">GET /api/subnets/1018350796-subnet381/freeip
+    <pre class="prettyprint">GET /api/subnets/1018350796-subnet1/freeip
 200
 {
-  &quot;freeip&quot;: null,
+  &quot;freeip&quot;: &quot;192.168.2.10&quot;,
   &quot;errors&quot;: {}
 }</pre>
 
@@ -2339,7 +2293,7 @@
     </td>
     <td>
       
-<p>MAC address to reuse the IP for this host</p>
+<p>MAC-Adresse zur Wiederverwendung der IP dieses Host</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -2363,7 +2317,7 @@
     </td>
     <td>
       
-<p>IP addresses that should be excluded from suggestion</p>
+<p>IP-Adressen die nicht vorgeschlagen werden sollen</p>
 
         <p><strong>Validations:</strong></p>
         <ul>

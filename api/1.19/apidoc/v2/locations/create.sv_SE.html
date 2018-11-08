@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>API documentation</title>
+  <title>Api Documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
@@ -51,48 +51,28 @@
 
 
 
-  <h2>Examples</h2>
+  <h2><span class="translation_missing" title="translation missing: sv-SE.apipie.examples">Examples</span></h2>
     <pre class="prettyprint">POST /api/locations
 {
   &quot;location&quot;: {
-    &quot;name&quot;: &quot;Test Location&quot;
+    &quot;domain_ids&quot;: [
+      759776771
+    ]
   }
 }
-201
+404
 {
-  &quot;select_all_types&quot;: [],
-  &quot;description&quot;: null,
-  &quot;created_at&quot;: &quot;2018-07-24 13:14:01 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 13:14:01 UTC&quot;,
-  &quot;ancestry&quot;: null,
-  &quot;parent_id&quot;: null,
-  &quot;parent_name&quot;: null,
-  &quot;id&quot;: 447626439,
-  &quot;name&quot;: &quot;Test Location&quot;,
-  &quot;title&quot;: &quot;Test Location&quot;,
-  &quot;users&quot;: [],
-  &quot;smart_proxies&quot;: [],
-  &quot;subnets&quot;: [],
-  &quot;compute_resources&quot;: [],
-  &quot;media&quot;: [],
-  &quot;config_templates&quot;: [],
-  &quot;ptables&quot;: [],
-  &quot;provisioning_templates&quot;: [],
-  &quot;domains&quot;: [],
-  &quot;realms&quot;: [],
-  &quot;environments&quot;: [],
-  &quot;hostgroups&quot;: [],
-  &quot;organizations&quot;: [],
-  &quot;hosts_count&quot;: 0,
-  &quot;parameters&quot;: []
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;Resource location not found by id &#39;&#39;&quot;
+  }
 }</pre>
 
-  <h2>Params</h2>
+  <h2><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h2>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -100,7 +80,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -124,7 +104,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -148,7 +128,7 @@
     <td>
       <strong>location </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
         
       </small>
     </td>
@@ -169,7 +149,7 @@
     <td>
       <strong>location[name] </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
         
       </small>
     </td>
@@ -191,8 +171,8 @@
     <td>
       <strong>location[description] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -213,8 +193,8 @@
     <td>
       <strong>location[user_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -237,8 +217,8 @@
     <td>
       <strong>location[smart_proxy_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -261,8 +241,8 @@
     <td>
       <strong>location[compute_resource_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -285,8 +265,8 @@
     <td>
       <strong>location[medium_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -309,8 +289,8 @@
     <td>
       <strong>location[config_template_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -333,8 +313,8 @@
     <td>
       <strong>location[ptable_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -357,8 +337,8 @@
     <td>
       <strong>location[provisioning_template_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -381,8 +361,8 @@
     <td>
       <strong>location[domain_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -405,8 +385,8 @@
     <td>
       <strong>location[realm_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -429,8 +409,8 @@
     <td>
       <strong>location[hostgroup_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -453,8 +433,8 @@
     <td>
       <strong>location[environment_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -477,8 +457,8 @@
     <td>
       <strong>location[subnet_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -501,8 +481,8 @@
     <td>
       <strong>location[parent_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -525,8 +505,8 @@
     <td>
       <strong>location[ignore_types] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>

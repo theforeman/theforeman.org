@@ -55,8 +55,8 @@
     <pre class="prettyprint">POST /api/media
 {
   &quot;medium&quot;: {
-    &quot;name&quot;: &quot;new medium&quot;,
-    &quot;path&quot;: &quot;RakyqQvirV&quot;,
+    &quot;name&quot;: &quot;&quot;,
+    &quot;path&quot;: &quot;http://www.newmedium.com/&quot;,
     &quot;organization_ids&quot;: [
       114267492
     ]
@@ -67,12 +67,12 @@
   &quot;error&quot;: {
     &quot;id&quot;: null,
     &quot;errors&quot;: {
-      &quot;path&quot;: [
-        &quot;URL must be valid and schema must be one of http, https, ftp, and nfs&quot;
+      &quot;name&quot;: [
+        &quot;can&#39;t be blank&quot;
       ]
     },
     &quot;full_messages&quot;: [
-      &quot;Path URL must be valid and schema must be one of http, https, ftp, and nfs&quot;
+      &quot;Name can&#39;t be blank&quot;
     ]
   }
 }</pre>

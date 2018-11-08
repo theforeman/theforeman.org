@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>API documentation</title>
+  <title>Api Documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
@@ -51,12 +51,12 @@
 
 
 
-  <h2>Examples</h2>
+  <h2><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h2>
     <pre class="prettyprint">POST /api/operatingsystems
 {
   &quot;operatingsystem&quot;: {
-    &quot;name&quot;: &quot;awsome_os&quot;,
-    &quot;minor&quot;: &quot;2&quot;
+    &quot;name&quot;: &quot;&quot;,
+    &quot;major&quot;: &quot;7&quot;
   }
 }
 422
@@ -64,24 +64,22 @@
   &quot;error&quot;: {
     &quot;id&quot;: null,
     &quot;errors&quot;: {
-      &quot;major&quot;: [
-        &quot;is not a number&quot;,
-        &quot;Operating System version is required&quot;
+      &quot;name&quot;: [
+        &quot;can&#39;t be blank&quot;
       ]
     },
     &quot;full_messages&quot;: [
-      &quot;Major is not a number&quot;,
-      &quot;Major Operating System version is required&quot;
+      &quot;Name can&#39;t be blank&quot;
     ]
   }
 }</pre>
 
-  <h2>Params</h2>
+  <h2><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h2>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -89,7 +87,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -113,7 +111,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -137,7 +135,7 @@
     <td>
       <strong>operatingsystem </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -158,7 +156,7 @@
     <td>
       <strong>operatingsystem[name] </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -180,7 +178,7 @@
     <td>
       <strong>operatingsystem[major] </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -202,8 +200,8 @@
     <td>
       <strong>operatingsystem[minor] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -224,8 +222,8 @@
     <td>
       <strong>operatingsystem[description] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -246,8 +244,8 @@
     <td>
       <strong>operatingsystem[family] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -268,8 +266,8 @@
     <td>
       <strong>operatingsystem[release_name] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -290,8 +288,8 @@
     <td>
       <strong>operatingsystem[os_parameters_attributes] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -313,7 +311,7 @@
     <td>
       <strong>operatingsystem[os_parameters_attributes][name] </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -337,7 +335,7 @@
     <td>
       <strong>operatingsystem[os_parameters_attributes][value] </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -362,8 +360,8 @@
     <td>
       <strong>operatingsystem[password_hash] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -386,8 +384,8 @@
     <td>
       <strong>operatingsystem[architecture_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -410,8 +408,8 @@
     <td>
       <strong>operatingsystem[config_template_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -434,8 +432,8 @@
     <td>
       <strong>operatingsystem[provisioning_template_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -458,8 +456,8 @@
     <td>
       <strong>operatingsystem[medium_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -482,8 +480,8 @@
     <td>
       <strong>operatingsystem[ptable_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>

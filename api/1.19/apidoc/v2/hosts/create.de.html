@@ -55,24 +55,19 @@
     <pre class="prettyprint">POST /api/hosts
 {
   &quot;host&quot;: {
-    &quot;name&quot;: &quot;testhost11&quot;,
     &quot;environment_id&quot;: 334344675,
-    &quot;domain_id&quot;: 22495316,
     &quot;ptable_id&quot;: 1007981702,
     &quot;medium_id&quot;: 980190962,
     &quot;architecture_id&quot;: 501905019,
     &quot;operatingsystem_id&quot;: 1073012828,
     &quot;puppet_proxy_id&quot;: 182953976,
-    &quot;compute_resource_id&quot;: 980190962,
     &quot;root_pass&quot;: &quot;xybxa6JUkz63w&quot;,
     &quot;location_id&quot;: 255093256,
     &quot;organization_id&quot;: 447626438,
+    &quot;compute_resource_id&quot;: 980190963,
+    &quot;uuid&quot;: &quot;5032c8a5-9c5e-ba7a-3804-832a03e16381&quot;,
     &quot;ip&quot;: &quot;10.0.0.20&quot;,
-    &quot;mac&quot;: &quot;52:53:00:1e:85:93&quot;,
-    &quot;compute_attributes&quot;: {
-      &quot;cpus&quot;: 4,
-      &quot;memory&quot;: 1024
-    }
+    &quot;build&quot;: true
   }
 }
 201
@@ -82,14 +77,14 @@
   &quot;environment_id&quot;: 334344675,
   &quot;environment_name&quot;: &quot;production&quot;,
   &quot;last_report&quot;: null,
-  &quot;mac&quot;: &quot;52:53:00:1e:85:93&quot;,
+  &quot;mac&quot;: &quot;00:50:56:a9:00:28&quot;,
   &quot;realm_id&quot;: null,
   &quot;realm_name&quot;: null,
   &quot;sp_mac&quot;: null,
   &quot;sp_ip&quot;: null,
   &quot;sp_name&quot;: null,
-  &quot;domain_id&quot;: 22495316,
-  &quot;domain_name&quot;: &quot;mydomain.net&quot;,
+  &quot;domain_id&quot;: 759776764,
+  &quot;domain_name&quot;: &quot;virt.bos.redhat.com&quot;,
   &quot;architecture_id&quot;: 501905019,
   &quot;architecture_name&quot;: &quot;x86_64&quot;,
   &quot;operatingsystem_id&quot;: 1073012828,
@@ -100,11 +95,11 @@
   &quot;subnet6_name&quot;: null,
   &quot;sp_subnet_id&quot;: null,
   &quot;ptable_id&quot;: 1007981702,
-  &quot;ptable_name&quot;: &quot;ptable173&quot;,
+  &quot;ptable_name&quot;: &quot;ptable45&quot;,
   &quot;medium_id&quot;: 980190962,
   &quot;medium_name&quot;: &quot;CentOS 5.4&quot;,
   &quot;pxe_loader&quot;: &quot;Grub UEFI&quot;,
-  &quot;build&quot;: false,
+  &quot;build&quot;: true,
   &quot;comment&quot;: null,
   &quot;disk&quot;: null,
   &quot;installed_at&quot;: null,
@@ -117,22 +112,21 @@
   &quot;managed&quot;: true,
   &quot;use_image&quot;: null,
   &quot;image_file&quot;: &quot;&quot;,
-  &quot;uuid&quot;: null,
-  &quot;compute_resource_id&quot;: 980190962,
-  &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
+  &quot;uuid&quot;: &quot;5032c8a5-9c5e-ba7a-3804-832a03e16381&quot;,
+  &quot;compute_resource_id&quot;: 980190963,
+  &quot;compute_resource_name&quot;: &quot;compute_resource18&quot;,
   &quot;compute_profile_id&quot;: null,
   &quot;compute_profile_name&quot;: null,
   &quot;capabilities&quot;: [
     &quot;build&quot;,
-    &quot;image&quot;,
-    &quot;new_volume&quot;
+    &quot;image&quot;
   ],
   &quot;provision_method&quot;: &quot;build&quot;,
-  &quot;certname&quot;: &quot;testhost11.mydomain.net&quot;,
+  &quot;certname&quot;: &quot;dhcp75-197.virt.bos.redhat.com&quot;,
   &quot;image_id&quot;: null,
   &quot;image_name&quot;: null,
-  &quot;created_at&quot;: &quot;2018-07-24 12:46:37 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:46:37 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:02:02 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:02:02 UTC&quot;,
   &quot;last_compile&quot;: null,
   &quot;global_status&quot;: 0,
   &quot;global_status_label&quot;: &quot;Warning&quot;,
@@ -144,10 +138,10 @@
   &quot;model_name&quot;: null,
   &quot;configuration_status&quot;: 0,
   &quot;configuration_status_label&quot;: &quot;No reports&quot;,
-  &quot;build_status&quot;: 0,
-  &quot;build_status_label&quot;: &quot;Installed&quot;,
-  &quot;name&quot;: &quot;testhost11.mydomain.net&quot;,
-  &quot;id&quot;: 13,
+  &quot;build_status&quot;: 1,
+  &quot;build_status_label&quot;: &quot;Pending installation&quot;,
+  &quot;name&quot;: &quot;dhcp75-197.virt.bos.redhat.com&quot;,
+  &quot;id&quot;: 22,
   &quot;puppet_proxy_id&quot;: 182953976,
   &quot;puppet_proxy_name&quot;: &quot;Puppetmaster Proxy&quot;,
   &quot;puppet_ca_proxy_id&quot;: 182953976,
@@ -168,40 +162,32 @@
   &quot;all_parameters&quot;: [
     {
       &quot;priority&quot;: null,
-      &quot;created_at&quot;: &quot;2018-07-24 12:46:37 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:46:37 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:02:02 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:02:02 UTC&quot;,
       &quot;id&quot;: 716195090,
       &quot;name&quot;: &quot;os1&quot;,
       &quot;value&quot;: &quot;os1&quot;
     },
     {
       &quot;priority&quot;: null,
-      &quot;created_at&quot;: &quot;2018-07-24 12:46:37 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:46:37 UTC&quot;,
-      &quot;id&quot;: 665394701,
-      &quot;name&quot;: &quot;parameter&quot;,
-      &quot;value&quot;: &quot;value1&quot;
-    },
-    {
-      &quot;priority&quot;: null,
-      &quot;created_at&quot;: &quot;2018-07-24 12:46:37 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:46:37 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:02:02 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:02:02 UTC&quot;,
       &quot;id&quot;: 513706444,
       &quot;name&quot;: &quot;loc_param&quot;,
       &quot;value&quot;: &quot;abc&quot;
     },
     {
       &quot;priority&quot;: null,
-      &quot;created_at&quot;: &quot;2018-07-24 12:46:37 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:46:37 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:02:02 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:02:02 UTC&quot;,
       &quot;id&quot;: 32400255,
       &quot;name&quot;: &quot;org_param&quot;,
       &quot;value&quot;: &quot;xyz&quot;
     },
     {
       &quot;priority&quot;: null,
-      &quot;created_at&quot;: &quot;2018-07-24 12:46:37 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:46:37 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:02:02 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:02:02 UTC&quot;,
       &quot;id&quot;: 636252244,
       &quot;name&quot;: &quot;test&quot;,
       &quot;value&quot;: &quot;myvalue&quot;
@@ -209,13 +195,13 @@
   ],
   &quot;interfaces&quot;: [
     {
-      &quot;id&quot;: 22,
-      &quot;name&quot;: &quot;testhost11.mydomain.net&quot;,
+      &quot;id&quot;: 24,
+      &quot;name&quot;: &quot;dhcp75-197.virt.bos.redhat.com&quot;,
       &quot;ip&quot;: &quot;10.0.0.20&quot;,
       &quot;ip6&quot;: null,
-      &quot;mac&quot;: &quot;52:53:00:1e:85:93&quot;,
+      &quot;mac&quot;: &quot;00:50:56:a9:00:28&quot;,
       &quot;mtu&quot;: null,
-      &quot;fqdn&quot;: &quot;testhost11.mydomain.net&quot;,
+      &quot;fqdn&quot;: &quot;dhcp75-197.virt.bos.redhat.com&quot;,
       &quot;identifier&quot;: null,
       &quot;primary&quot;: true,
       &quot;provision&quot;: true,
@@ -538,7 +524,7 @@
     </td>
     <td>
       
-<p>Puppet-Proxy-Kennung</p>
+<p>Puppet-Proxy Kennung</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -562,7 +548,7 @@
     </td>
     <td>
       
-<p>Puppet-CA-Proxy-Kennung</p>
+<p>Puppet-CA-Proxy Kennung</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -608,7 +594,7 @@
     </td>
     <td>
       
-<p>IDs of associated config groups</p>
+<p>Kennungen von zugehörigen Konfigurationsgruppen</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -1030,7 +1016,7 @@
     </td>
     <td>
       
-<p>The method used to provision the host.</p>
+<p>Methode der Bereitstellung des Host</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -1313,7 +1299,7 @@
     </td>
     <td>
       
-<p>Foreman subnet ID of IPv4 interface</p>
+<p>Foreman Subnetz Kennung der IPv4 Schnittstelle</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -1337,7 +1323,7 @@
     </td>
     <td>
       
-<p>Foreman subnet ID of IPv6 interface</p>
+<p>Foreman Subnetz Kennung der IPv6 Schnittstelle</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -1601,7 +1587,7 @@
     </td>
     <td>
       
-<p>MTU, this attribute has precedence over the subnet MTU.</p>
+<p>MTU. Dieser Wert hat Vorrang über die Subnetz MTU.</p>
 
         <p><strong>Validations:</strong></p>
         <ul>

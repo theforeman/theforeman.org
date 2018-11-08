@@ -336,20 +336,20 @@
   },
   &quot;results&quot;: [
     {
-      &quot;created_at&quot;: &quot;2018-07-24 12:57:26 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:57:26 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:06:17 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:06:17 UTC&quot;,
       &quot;name&quot;: &quot;global_puppetmaster&quot;,
       &quot;id&quot;: 153855663
     },
     {
-      &quot;created_at&quot;: &quot;2018-07-24 12:57:26 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:57:26 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:06:17 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:06:17 UTC&quot;,
       &quot;name&quot;: &quot;production&quot;,
       &quot;id&quot;: 334344675
     },
     {
-      &quot;created_at&quot;: &quot;2018-07-24 12:57:26 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:57:26 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:06:17 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:06:17 UTC&quot;,
       &quot;name&quot;: &quot;testing&quot;,
       &quot;id&quot;: 687036937
     }
@@ -605,11 +605,11 @@
 
 
   <h3>Examples</h3>
-    <pre class="prettyprint">GET /api/environments/production
+    <pre class="prettyprint">GET /api/environments/334344675
 200
 {
-  &quot;created_at&quot;: &quot;2018-07-24 12:57:26 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:57:26 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:06:17 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:06:17 UTC&quot;,
   &quot;name&quot;: &quot;production&quot;,
   &quot;id&quot;: 334344675,
   &quot;template_combinations&quot;: [
@@ -828,28 +828,28 @@
 {
   &quot;environment&quot;: {
     &quot;name&quot;: &quot;some_environment&quot;,
-    &quot;organization_ids&quot;: [
-      114267492
+    &quot;location_ids&quot;: [
+      255093256
     ]
   }
 }
 201
 {
-  &quot;created_at&quot;: &quot;2018-07-24 12:57:33 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:57:33 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:06:17 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:06:17 UTC&quot;,
   &quot;name&quot;: &quot;some_environment&quot;,
-  &quot;id&quot;: 687036939,
+  &quot;id&quot;: 687036938,
   &quot;template_combinations&quot;: [],
   &quot;puppetclasses&quot;: [],
-  &quot;locations&quot;: [],
-  &quot;organizations&quot;: [
+  &quot;locations&quot;: [
     {
-      &quot;id&quot;: 114267492,
-      &quot;name&quot;: &quot;Empty Organization&quot;,
-      &quot;title&quot;: &quot;Empty Organization&quot;,
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
       &quot;description&quot;: null
     }
-  ]
+  ],
+  &quot;organizations&quot;: []
 }</pre>
 
   <h3>Params</h3>
@@ -1033,30 +1033,21 @@
 
 
   <h3>Examples</h3>
-    <pre class="prettyprint">PUT /api/environments/687036938
+    <pre class="prettyprint">POST /api/environments/687036939
 {
   &quot;environment&quot;: {
-    &quot;location_ids&quot;: [
-      255093256
-    ]
+    &quot;name&quot;: &quot;DmiQEj2uS4&quot;
   }
 }
-200
+201
 {
-  &quot;created_at&quot;: &quot;2018-07-24 12:57:33 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:57:33 UTC&quot;,
-  &quot;name&quot;: &quot;environment105&quot;,
-  &quot;id&quot;: 687036938,
+  &quot;created_at&quot;: &quot;2018-11-08 09:06:17 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:06:17 UTC&quot;,
+  &quot;name&quot;: &quot;DmiQEj2uS4&quot;,
+  &quot;id&quot;: 687036939,
   &quot;template_combinations&quot;: [],
   &quot;puppetclasses&quot;: [],
-  &quot;locations&quot;: [
-    {
-      &quot;id&quot;: 255093256,
-      &quot;name&quot;: &quot;Location 1&quot;,
-      &quot;title&quot;: &quot;Location 1&quot;,
-      &quot;description&quot;: null
-    }
-  ],
+  &quot;locations&quot;: [],
   &quot;organizations&quot;: []
 }</pre>
 
@@ -1271,8 +1262,8 @@
 {
   &quot;id&quot;: 687036937,
   &quot;name&quot;: &quot;testing&quot;,
-  &quot;created_at&quot;: &quot;2018-07-24T12:57:26.078Z&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24T12:57:26.078Z&quot;
+  &quot;created_at&quot;: &quot;2018-11-08T09:06:17.431Z&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08T09:06:17.431Z&quot;
 }</pre>
 
   <h3>Params</h3>

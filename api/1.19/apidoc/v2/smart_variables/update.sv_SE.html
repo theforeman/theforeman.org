@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>API documentation</title>
+  <title>Api Documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
@@ -51,42 +51,45 @@
 
 
 
-  <h2>Examples</h2>
-    <pre class="prettyprint">PUT /api/smart_variables/1018350796-eziqgLwNpE
+  <h2><span class="translation_missing" title="translation missing: sv-SE.apipie.examples">Examples</span></h2>
+    <pre class="prettyprint">PUT /api/smart_variables/1018350796-NYpKiEeCjD
 {
   &quot;smart_variable&quot;: {
-    &quot;default_value&quot;: &quot;IRhOjbsJAz&quot;
+    &quot;merge_overrides&quot;: true,
+    &quot;avoid_duplicates&quot;: true
   }
 }
 200
 {
   &quot;description&quot;: null,
-  &quot;parameter_type&quot;: null,
-  &quot;variable_type&quot;: null,
-  &quot;hidden_value?&quot;: true,
+  &quot;parameter_type&quot;: &quot;array&quot;,
+  &quot;variable_type&quot;: &quot;array&quot;,
+  &quot;hidden_value?&quot;: false,
   &quot;validator_type&quot;: null,
   &quot;validator_rule&quot;: null,
   &quot;override_value_order&quot;: &quot;fqdn\nhostgroup\nos\ndomain&quot;,
-  &quot;merge_overrides&quot;: false,
+  &quot;merge_overrides&quot;: true,
   &quot;merge_default&quot;: false,
-  &quot;avoid_duplicates&quot;: false,
+  &quot;avoid_duplicates&quot;: true,
   &quot;puppetclass_id&quot;: 980190962,
   &quot;puppetclass_name&quot;: &quot;base&quot;,
-  &quot;created_at&quot;: &quot;2018-07-24 12:56:20 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:56:20 UTC&quot;,
-  &quot;variable&quot;: &quot;eziqgLwNpE&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:02:35 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:02:35 UTC&quot;,
+  &quot;variable&quot;: &quot;NYpKiEeCjD&quot;,
   &quot;id&quot;: 1018350796,
-  &quot;default_value&quot;: &quot;*****&quot;,
+  &quot;default_value&quot;: [
+    30215
+  ],
   &quot;override_values_count&quot;: 0,
   &quot;override_values&quot;: []
 }</pre>
 
-  <h2>Params</h2>
+  <h2><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h2>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -94,7 +97,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -118,7 +121,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -142,7 +145,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
         
       </small>
     </td>
@@ -164,7 +167,7 @@
     <td>
       <strong>smart_variable </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
         
       </small>
     </td>
@@ -185,7 +188,7 @@
     <td>
       <strong>smart_variable[variable] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -209,8 +212,8 @@
     <td>
       <strong>smart_variable[puppetclass_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -233,8 +236,8 @@
     <td>
       <strong>smart_variable[default_value] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -257,8 +260,8 @@
     <td>
       <strong>smart_variable[hidden_value] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -281,8 +284,8 @@
     <td>
       <strong>smart_variable[override_value_order] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -305,8 +308,8 @@
     <td>
       <strong>smart_variable[description] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -329,8 +332,8 @@
     <td>
       <strong>smart_variable[validator_type] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -353,8 +356,8 @@
     <td>
       <strong>smart_variable[validator_rule] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -377,8 +380,8 @@
     <td>
       <strong>smart_variable[variable_type] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -401,8 +404,8 @@
     <td>
       <strong>smart_variable[merge_overrides] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -425,8 +428,8 @@
     <td>
       <strong>smart_variable[merge_default] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -449,8 +452,8 @@
     <td>
       <strong>smart_variable[avoid_duplicates] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>

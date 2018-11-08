@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>API documentation</title>
+  <title>Api Documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
@@ -72,12 +72,12 @@
 
 
 
-  <h2>Examples</h2>
-    <pre class="prettyprint">GET /api/hostgroups/636252244-Common/smart_variables
+  <h2><span class="translation_missing" title="translation missing: ko.apipie.examples">Examples</span></h2>
+    <pre class="prettyprint">GET /api/smart_variables
 200
 {
-  &quot;total&quot;: 2,
-  &quot;subtotal&quot;: 2,
+  &quot;total&quot;: 3,
+  &quot;subtotal&quot;: 3,
   &quot;page&quot;: 1,
   &quot;per_page&quot;: 20,
   &quot;search&quot;: null,
@@ -99,12 +99,32 @@
       &quot;avoid_duplicates&quot;: false,
       &quot;puppetclass_id&quot;: 980190962,
       &quot;puppetclass_name&quot;: &quot;base&quot;,
-      &quot;created_at&quot;: &quot;2018-07-24 13:12:18 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 13:12:18 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:02:26 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:02:26 UTC&quot;,
       &quot;variable&quot;: &quot;bool_test&quot;,
       &quot;id&quot;: 638205575,
       &quot;default_value&quot;: &quot;t&quot;,
       &quot;override_values_count&quot;: 0
+    },
+    {
+      &quot;description&quot;: null,
+      &quot;parameter_type&quot;: &quot;string&quot;,
+      &quot;variable_type&quot;: &quot;string&quot;,
+      &quot;hidden_value?&quot;: false,
+      &quot;validator_type&quot;: null,
+      &quot;validator_rule&quot;: null,
+      &quot;override_value_order&quot;: &quot;organization,location\nxyz\nhostgroup&quot;,
+      &quot;merge_overrides&quot;: false,
+      &quot;merge_default&quot;: false,
+      &quot;avoid_duplicates&quot;: false,
+      &quot;puppetclass_id&quot;: 298486374,
+      &quot;puppetclass_name&quot;: &quot;apache&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:02:26 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:02:26 UTC&quot;,
+      &quot;variable&quot;: &quot;special_info&quot;,
+      &quot;id&quot;: 281110143,
+      &quot;default_value&quot;: &quot;secret&quot;,
+      &quot;override_values_count&quot;: 2
     },
     {
       &quot;description&quot;: null,
@@ -119,8 +139,8 @@
       &quot;avoid_duplicates&quot;: false,
       &quot;puppetclass_id&quot;: 980190962,
       &quot;puppetclass_name&quot;: &quot;base&quot;,
-      &quot;created_at&quot;: &quot;2018-07-24 13:12:18 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 13:12:18 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:02:26 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:02:26 UTC&quot;,
       &quot;variable&quot;: &quot;ssl_port&quot;,
       &quot;id&quot;: 298486374,
       &quot;default_value&quot;: &quot;443&quot;,
@@ -129,12 +149,12 @@
   ]
 }</pre>
 
-  <h2>Params</h2>
+  <h2><span class="translation_missing" title="translation missing: ko.apipie.params">Params</span></h2>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: ko.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: ko.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -142,7 +162,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -166,7 +186,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -190,7 +210,7 @@
     <td>
       <strong>host_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -212,7 +232,7 @@
     <td>
       <strong>hostgroup_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -234,7 +254,7 @@
     <td>
       <strong>puppetclass_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -256,7 +276,7 @@
     <td>
       <strong>show_hidden </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -280,7 +300,7 @@
     <td>
       <strong>search </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -304,7 +324,7 @@
     <td>
       <strong>order </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -328,7 +348,7 @@
     <td>
       <strong>page </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -352,7 +372,7 @@
     <td>
       <strong>per_page </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
         
       </small>
     </td>

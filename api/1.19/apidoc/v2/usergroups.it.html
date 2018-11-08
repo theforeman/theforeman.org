@@ -86,9 +86,9 @@
   &quot;results&quot;: [
     {
       &quot;admin&quot;: false,
-      &quot;created_at&quot;: &quot;2018-07-24 13:18:42 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 13:18:42 UTC&quot;,
-      &quot;name&quot;: &quot;usergroup361&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:06:58 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:06:58 UTC&quot;,
+      &quot;name&quot;: &quot;usergroup21&quot;,
       &quot;id&quot;: 18
     }
   ]
@@ -309,14 +309,14 @@
 
 
   <h3>Esempi</h3>
-    <pre class="prettyprint">GET /api/usergroups/25-usergroup367
+    <pre class="prettyprint">GET /api/usergroups/15-usergroup18
 200
 {
   &quot;admin&quot;: false,
-  &quot;created_at&quot;: &quot;2018-07-24 13:18:43 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 13:18:43 UTC&quot;,
-  &quot;name&quot;: &quot;usergroup367&quot;,
-  &quot;id&quot;: 25,
+  &quot;created_at&quot;: &quot;2018-11-08 09:06:57 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:06:57 UTC&quot;,
+  &quot;name&quot;: &quot;usergroup18&quot;,
+  &quot;id&quot;: 15,
   &quot;external_usergroups&quot;: [],
   &quot;usergroups&quot;: [],
   &quot;users&quot;: [],
@@ -448,10 +448,10 @@
 201
 {
   &quot;admin&quot;: false,
-  &quot;created_at&quot;: &quot;2018-07-24 13:18:41 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 13:18:41 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:06:57 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:06:57 UTC&quot;,
   &quot;name&quot;: &quot;test_usergroup&quot;,
-  &quot;id&quot;: 2,
+  &quot;id&quot;: 6,
   &quot;external_usergroups&quot;: [],
   &quot;usergroups&quot;: [],
   &quot;users&quot;: [
@@ -699,25 +699,23 @@
 
 
   <h3>Esempi</h3>
-    <pre class="prettyprint">PUT /api/usergroups/4
+    <pre class="prettyprint">PUT /api/usergroups/1-usergroup7
 {
   &quot;usergroup&quot;: {
-    &quot;name&quot;: &quot;usergroup350&quot;
+    &quot;name&quot;: &quot;test_usergroup&quot;
   }
 }
-422
+200
 {
-  &quot;error&quot;: {
-    &quot;id&quot;: 4,
-    &quot;errors&quot;: {
-      &quot;name&quot;: [
-        &quot;has already been taken&quot;
-      ]
-    },
-    &quot;full_messages&quot;: [
-      &quot;Name has already been taken&quot;
-    ]
-  }
+  &quot;admin&quot;: false,
+  &quot;created_at&quot;: &quot;2018-11-08 09:06:57 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:06:57 UTC&quot;,
+  &quot;name&quot;: &quot;test_usergroup&quot;,
+  &quot;id&quot;: 1,
+  &quot;external_usergroups&quot;: [],
+  &quot;usergroups&quot;: [],
+  &quot;users&quot;: [],
+  &quot;roles&quot;: []
 }</pre>
 
   <h3>Parametri</h3>
@@ -965,16 +963,16 @@
 
 
   <h3>Esempi</h3>
-    <pre class="prettyprint">DELETE /api/usergroups/19-usergroup362
+    <pre class="prettyprint">DELETE /api/usergroups/2-usergroup8
 {
   &quot;usergroup&quot;: {}
 }
 200
 {
-  &quot;id&quot;: 19,
-  &quot;name&quot;: &quot;usergroup362&quot;,
-  &quot;created_at&quot;: &quot;2018-07-24T13:18:42.158Z&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24T13:18:42.158Z&quot;,
+  &quot;id&quot;: 2,
+  &quot;name&quot;: &quot;usergroup8&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08T09:06:57.145Z&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08T09:06:57.145Z&quot;,
   &quot;admin&quot;: false
 }</pre>
 

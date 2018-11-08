@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>API documentation</title>
+  <title>Api Documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
@@ -100,37 +100,19 @@
 
 
 
-  <h3>Examples</h3>
-    <pre class="prettyprint">GET /api/hosts/host1917/puppetclasses
-200
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">GET /api/environments/nonexistent/puppetclasses
+404
 {
-  &quot;total&quot;: 1,
-  &quot;subtotal&quot;: 1,
-  &quot;page&quot;: 1,
-  &quot;per_page&quot;: 20,
-  &quot;search&quot;: null,
-  &quot;sort&quot;: {
-    &quot;by&quot;: null,
-    &quot;order&quot;: null
-  },
-  &quot;results&quot;: {
-    &quot;class352&quot;: [
-      {
-        &quot;id&quot;: 1018350799,
-        &quot;name&quot;: &quot;class352&quot;,
-        &quot;created_at&quot;: &quot;2018-07-24T13:11:15.703Z&quot;,
-        &quot;updated_at&quot;: &quot;2018-07-24T13:11:15.703Z&quot;
-      }
-    ]
-  }
+  &quot;message&quot;: &quot;Environment not found by id &#39;nonexistent&#39;&quot;
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -138,7 +120,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -162,7 +144,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -186,7 +168,7 @@
     <td>
       <strong>host_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -210,7 +192,7 @@
     <td>
       <strong>hostgroup_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -234,7 +216,7 @@
     <td>
       <strong>environment_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -258,7 +240,7 @@
     <td>
       <strong>search </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -282,7 +264,7 @@
     <td>
       <strong>order </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -306,7 +288,7 @@
     <td>
       <strong>page </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -330,7 +312,7 @@
     <td>
       <strong>per_page </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -456,53 +438,32 @@
 
 
 
-  <h3>Examples</h3>
-    <pre class="prettyprint">GET /api/puppetclasses/980190962-base
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">GET /api/hosts/host2702/puppetclasses/1018350796
 200
 {
-  &quot;created_at&quot;: &quot;2018-07-24 13:11:08 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 13:11:08 UTC&quot;,
-  &quot;id&quot;: 980190962,
-  &quot;name&quot;: &quot;base&quot;,
-  &quot;module_name&quot;: &quot;base&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:42:03 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:42:03 UTC&quot;,
+  &quot;id&quot;: 1018350796,
+  &quot;name&quot;: &quot;class406&quot;,
+  &quot;module_name&quot;: &quot;class406&quot;,
   &quot;environments&quot;: [
     {
-      &quot;name&quot;: &quot;production&quot;,
-      &quot;id&quot;: 334344675
+      &quot;name&quot;: &quot;environment404&quot;,
+      &quot;id&quot;: 687036938
     }
   ],
-  &quot;hostgroups&quot;: [
-    {
-      &quot;id&quot;: 636252244,
-      &quot;name&quot;: &quot;Common&quot;,
-      &quot;title&quot;: &quot;Common&quot;,
-      &quot;description&quot;: null
-    }
-  ],
-  &quot;smart_variables&quot;: [
-    {
-      &quot;variable&quot;: &quot;bool_test&quot;,
-      &quot;id&quot;: 638205575
-    },
-    {
-      &quot;variable&quot;: &quot;ssl_port&quot;,
-      &quot;id&quot;: 298486374
-    }
-  ],
-  &quot;smart_class_parameters&quot;: [
-    {
-      &quot;parameter&quot;: &quot;cluster&quot;,
-      &quot;id&quot;: 328495940
-    }
-  ]
+  &quot;hostgroups&quot;: [],
+  &quot;smart_variables&quot;: [],
+  &quot;smart_class_parameters&quot;: []
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -510,7 +471,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -534,7 +495,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -558,7 +519,7 @@
     <td>
       <strong>host_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -582,7 +543,7 @@
     <td>
       <strong>hostgroup_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -606,7 +567,7 @@
     <td>
       <strong>environment_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -630,7 +591,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -681,7 +642,7 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">POST /api/puppetclasses
 {
   &quot;puppetclass&quot;: {
@@ -690,9 +651,9 @@
 }
 201
 {
-  &quot;created_at&quot;: &quot;2018-07-24 13:11:15 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 13:11:15 UTC&quot;,
-  &quot;id&quot;: 1018350798,
+  &quot;created_at&quot;: &quot;2018-11-08 09:42:03 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:42:03 UTC&quot;,
+  &quot;id&quot;: 1018350797,
   &quot;name&quot;: &quot;test_puppetclass&quot;,
   &quot;module_name&quot;: &quot;test_puppetclass&quot;,
   &quot;environments&quot;: [],
@@ -701,12 +662,12 @@
   &quot;smart_class_parameters&quot;: []
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -714,7 +675,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -738,7 +699,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -762,7 +723,7 @@
     <td>
       <strong>puppetclass </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -783,7 +744,7 @@
     <td>
       <strong>puppetclass[name] </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -833,58 +794,41 @@
 
 
 
-  <h3>Examples</h3>
-    <pre class="prettyprint">PUT /api/puppetclasses/980190962-base
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">PUT /api/puppetclasses/1018350798
 {
-  &quot;puppetclass&quot;: {
-    &quot;name&quot;: &quot;test_puppetclass&quot;
-  }
+  &quot;smart_class_parameter_ids&quot;: [],
+  &quot;puppetclass&quot;: {}
 }
 200
 {
-  &quot;created_at&quot;: &quot;2018-07-24 13:11:08 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 13:11:15 UTC&quot;,
-  &quot;id&quot;: 980190962,
-  &quot;name&quot;: &quot;test_puppetclass&quot;,
-  &quot;module_name&quot;: &quot;test_puppetclass&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:42:04 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:42:04 UTC&quot;,
+  &quot;id&quot;: 1018350798,
+  &quot;name&quot;: &quot;class407&quot;,
+  &quot;module_name&quot;: &quot;class407&quot;,
   &quot;environments&quot;: [
     {
-      &quot;name&quot;: &quot;production&quot;,
-      &quot;id&quot;: 334344675
+      &quot;name&quot;: &quot;environment405&quot;,
+      &quot;id&quot;: 687036939
     }
   ],
-  &quot;hostgroups&quot;: [
-    {
-      &quot;id&quot;: 636252244,
-      &quot;name&quot;: &quot;Common&quot;,
-      &quot;title&quot;: &quot;Common&quot;,
-      &quot;description&quot;: null
-    }
-  ],
-  &quot;smart_variables&quot;: [
-    {
-      &quot;variable&quot;: &quot;bool_test&quot;,
-      &quot;id&quot;: 638205575
-    },
-    {
-      &quot;variable&quot;: &quot;ssl_port&quot;,
-      &quot;id&quot;: 298486374
-    }
-  ],
+  &quot;hostgroups&quot;: [],
+  &quot;smart_variables&quot;: [],
   &quot;smart_class_parameters&quot;: [
     {
-      &quot;parameter&quot;: &quot;cluster&quot;,
-      &quot;id&quot;: 328495940
+      &quot;parameter&quot;: &quot;param386&quot;,
+      &quot;id&quot;: 1018350796
     }
   ]
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -892,7 +836,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -916,7 +860,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -940,7 +884,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -962,7 +906,7 @@
     <td>
       <strong>puppetclass </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -983,7 +927,7 @@
     <td>
       <strong>puppetclass[name] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -1033,7 +977,7 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">DELETE /api/puppetclasses/980190962-base
 {
   &quot;puppetclass&quot;: {}
@@ -1042,16 +986,16 @@
 {
   &quot;id&quot;: 980190962,
   &quot;name&quot;: &quot;base&quot;,
-  &quot;created_at&quot;: &quot;2018-07-24T13:11:08.999Z&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24T13:11:08.999Z&quot;
+  &quot;created_at&quot;: &quot;2018-11-08T09:42:02.123Z&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08T09:42:02.123Z&quot;
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -1059,7 +1003,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -1083,7 +1027,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -1107,7 +1051,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>

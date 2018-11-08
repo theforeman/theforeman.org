@@ -274,7 +274,7 @@
     </td>
     <td>
       
-<p>Sort field and order, eg. ‘id DESC’</p>
+<p>Champ et sens de tri, ex: ‘id DESC’</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
@@ -623,18 +623,43 @@
 
 
   <h3>Exemples</h3>
-    <pre class="prettyprint">PUT /api/roles
+    <pre class="prettyprint">POST /api/roles
 {
   &quot;role&quot;: {
-    &quot;name&quot;: &quot;newrole&quot;
+    &quot;name&quot;: &quot;Test Role&quot;,
+    &quot;location_ids&quot;: [
+      255093256
+    ],
+    &quot;organization_ids&quot;: [
+      447626438
+    ]
   }
 }
-403
+201
 {
-  &quot;error&quot;: {
-    &quot;message&quot;: &quot;Access denied&quot;,
-    &quot;details&quot;: &quot;Missing one of the required permissions: create_roles&quot;
-  }
+  &quot;builtin&quot;: 0,
+  &quot;cloned_from_id&quot;: null,
+  &quot;name&quot;: &quot;Test Role&quot;,
+  &quot;id&quot;: 21,
+  &quot;description&quot;: null,
+  &quot;origin&quot;: null,
+  &quot;filters&quot;: [],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
 }</pre>
 
   <h3>Paramètres</h3>
@@ -842,27 +867,46 @@
 
 
   <h3>Exemples</h3>
-    <pre class="prettyprint">PUT /api/roles/8-Destroy%20hosts
+    <pre class="prettyprint">PUT /api/roles/17
 {
   &quot;role&quot;: {
-    &quot;name&quot;: &quot;staff&quot;
+    &quot;location_ids&quot;: [
+      255093256
+    ],
+    &quot;organization_ids&quot;: [
+      447626438
+    ]
   }
 }
 200
 {
   &quot;builtin&quot;: 0,
   &quot;cloned_from_id&quot;: null,
-  &quot;name&quot;: &quot;staff&quot;,
-  &quot;id&quot;: 8,
+  &quot;name&quot;: &quot;New Role&quot;,
+  &quot;id&quot;: 17,
   &quot;description&quot;: null,
-  &quot;origin&quot;: &quot;&quot;,
+  &quot;origin&quot;: null,
   &quot;filters&quot;: [
     {
-      &quot;id&quot;: 10997177
+      &quot;id&quot;: 1062414189
     }
   ],
-  &quot;locations&quot;: [],
-  &quot;organizations&quot;: []
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
 }</pre>
 
   <h3>Paramètres</h3>
@@ -1092,18 +1136,21 @@
 
 
   <h3>Exemples</h3>
-    <pre class="prettyprint">DELETE /api/roles/8-Destroy%20hosts
+    <pre class="prettyprint">DELETE /api/roles/13-Organization%20admin/clone
 {
-  &quot;role&quot;: {}
+  &quot;new_name&quot;: &quot;Org Admin&quot;,
+  &quot;role&quot;: {
+    &quot;name&quot;: &quot;Org Admin&quot;
+  }
 }
 200
 {
-  &quot;id&quot;: 8,
-  &quot;name&quot;: &quot;Destroy hosts&quot;,
+  &quot;id&quot;: 20,
+  &quot;name&quot;: &quot;Org Admin&quot;,
   &quot;builtin&quot;: 0,
   &quot;description&quot;: null,
-  &quot;cloned_from_id&quot;: null,
-  &quot;origin&quot;: &quot;&quot;
+  &quot;origin&quot;: null,
+  &quot;cloned_from_id&quot;: 13
 }</pre>
 
   <h3>Paramètres</h3>
@@ -1217,23 +1264,21 @@
 
 
   <h3>Exemples</h3>
-    <pre class="prettyprint">POST /api/roles/14/clone
+    <pre class="prettyprint">POST /api/roles/13-Organization%20admin/clone
 {
-  &quot;name&quot;: &quot;New Role&quot;,
+  &quot;new_name&quot;: &quot;Org Admin&quot;,
   &quot;role&quot;: {
-    &quot;location_ids&quot;: [],
-    &quot;organization_ids&quot;: [],
-    &quot;name&quot;: &quot;New Role&quot;
+    &quot;name&quot;: &quot;Org Admin&quot;
   }
 }
 201
 {
-  &quot;id&quot;: 15,
-  &quot;name&quot;: &quot;New Role&quot;,
+  &quot;id&quot;: 14,
+  &quot;name&quot;: &quot;Org Admin&quot;,
   &quot;builtin&quot;: 0,
-  &quot;description&quot;: &quot;default description&quot;,
-  &quot;cloned_from_id&quot;: 14,
-  &quot;origin&quot;: null
+  &quot;description&quot;: null,
+  &quot;origin&quot;: null,
+  &quot;cloned_from_id&quot;: 13
 }</pre>
 
   <h3>Paramètres</h3>

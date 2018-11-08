@@ -85,25 +85,25 @@
   },
   &quot;results&quot;: [
     {
-      &quot;created_at&quot;: &quot;2018-07-24 13:15:10 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 13:15:10 UTC&quot;,
-      &quot;id&quot;: 5,
+      &quot;created_at&quot;: &quot;2018-11-08 09:35:01 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:35:01 UTC&quot;,
+      &quot;id&quot;: 36,
       &quot;trendable_type&quot;: &quot;FactName&quot;,
-      &quot;trendable_id&quot;: 3,
-      &quot;fact_name&quot;: &quot;fact195&quot;,
+      &quot;trendable_id&quot;: 18,
+      &quot;fact_name&quot;: &quot;fact129&quot;,
       &quot;type&quot;: &quot;FactTrend&quot;,
-      &quot;name&quot;: &quot;trend4&quot;,
-      &quot;label&quot;: &quot;trend4&quot;
+      &quot;name&quot;: &quot;trend19&quot;,
+      &quot;label&quot;: &quot;trend19&quot;
     },
     {
-      &quot;created_at&quot;: &quot;2018-07-24 13:15:09 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 13:15:09 UTC&quot;,
-      &quot;id&quot;: 1,
+      &quot;created_at&quot;: &quot;2018-11-08 09:35:01 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:35:01 UTC&quot;,
+      &quot;id&quot;: 32,
       &quot;trendable_type&quot;: &quot;Environment&quot;,
-      &quot;trendable_id&quot;: 110,
+      &quot;trendable_id&quot;: 125,
       &quot;fact_name&quot;: &quot;fact&quot;,
       &quot;type&quot;: &quot;ForemanTrend&quot;,
-      &quot;name&quot;: &quot;trend3&quot;,
+      &quot;name&quot;: &quot;trend18&quot;,
       &quot;label&quot;: &quot;Environment&quot;
     }
   ]
@@ -198,17 +198,17 @@
 
 
   <h3>Przykłady</h3>
-    <pre class="prettyprint">GET /api/trends/13
+    <pre class="prettyprint">GET /api/trends/16
 200
 {
-  &quot;created_at&quot;: &quot;2018-07-24 13:15:10 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 13:15:10 UTC&quot;,
-  &quot;id&quot;: 13,
+  &quot;created_at&quot;: &quot;2018-11-08 09:35:00 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:35:00 UTC&quot;,
+  &quot;id&quot;: 16,
   &quot;trendable_type&quot;: &quot;Environment&quot;,
-  &quot;trendable_id&quot;: 114,
+  &quot;trendable_id&quot;: 119,
   &quot;fact_name&quot;: &quot;fact&quot;,
   &quot;type&quot;: &quot;ForemanTrend&quot;,
-  &quot;name&quot;: &quot;trend7&quot;,
+  &quot;name&quot;: &quot;trend12&quot;,
   &quot;label&quot;: &quot;Environment&quot;
 }</pre>
 
@@ -326,21 +326,20 @@
     <pre class="prettyprint">POST /api/trends
 {
   &quot;trend&quot;: {
-    &quot;trendable_type&quot;: &quot;FactName&quot;,
-    &quot;trendable_id&quot;: &quot;5&quot;
+    &quot;trendable_type&quot;: &quot;Model&quot;
   }
 }
 201
 {
-  &quot;created_at&quot;: &quot;2018-07-24 13:15:10 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 13:15:10 UTC&quot;,
-  &quot;id&quot;: 11,
-  &quot;trendable_type&quot;: &quot;FactName&quot;,
-  &quot;trendable_id&quot;: 5,
-  &quot;fact_name&quot;: &quot;operatingsystem&quot;,
-  &quot;type&quot;: &quot;FactTrend&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:35:00 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:35:00 UTC&quot;,
+  &quot;id&quot;: 6,
+  &quot;trendable_type&quot;: &quot;Model&quot;,
+  &quot;trendable_id&quot;: null,
+  &quot;fact_name&quot;: null,
+  &quot;type&quot;: &quot;ForemanTrend&quot;,
   &quot;name&quot;: null,
-  &quot;label&quot;: &quot;operatingsystem&quot;
+  &quot;label&quot;: &quot;Model&quot;
 }</pre>
 
   <h3>Parametry</h3>
@@ -498,20 +497,20 @@
 
 
   <h3>Przykłady</h3>
-    <pre class="prettyprint">DELETE /api/trends/32
+    <pre class="prettyprint">DELETE /api/trends/21
 {
   &quot;trend&quot;: {}
 }
 200
 {
-  &quot;id&quot;: 32,
+  &quot;id&quot;: 21,
   &quot;trendable_type&quot;: &quot;Environment&quot;,
-  &quot;trendable_id&quot;: 120,
-  &quot;name&quot;: &quot;trend13&quot;,
+  &quot;trendable_id&quot;: 121,
+  &quot;name&quot;: &quot;trend14&quot;,
   &quot;fact_value&quot;: null,
   &quot;fact_name&quot;: &quot;fact&quot;,
-  &quot;created_at&quot;: &quot;2018-07-24T13:15:10.695Z&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24T13:15:10.695Z&quot;
+  &quot;created_at&quot;: &quot;2018-11-08T09:35:00.849Z&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08T09:35:00.849Z&quot;
 }</pre>
 
   <h3>Parametry</h3>

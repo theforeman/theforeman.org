@@ -55,8 +55,8 @@
     <pre class="prettyprint">POST /api/operatingsystems
 {
   &quot;operatingsystem&quot;: {
-    &quot;name&quot;: &quot;awsome_os&quot;,
-    &quot;minor&quot;: &quot;2&quot;
+    &quot;name&quot;: &quot;&quot;,
+    &quot;major&quot;: &quot;7&quot;
   }
 }
 422
@@ -64,14 +64,12 @@
   &quot;error&quot;: {
     &quot;id&quot;: null,
     &quot;errors&quot;: {
-      &quot;major&quot;: [
-        &quot;is not a number&quot;,
-        &quot;Operating System version is required&quot;
+      &quot;name&quot;: [
+        &quot;can&#39;t be blank&quot;
       ]
     },
     &quot;full_messages&quot;: [
-      &quot;Major is not a number&quot;,
-      &quot;Major Operating System version is required&quot;
+      &quot;Name can&#39;t be blank&quot;
     ]
   }
 }</pre>

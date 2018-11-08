@@ -101,11 +101,11 @@
 
 
   <h3>Przykłady</h3>
-    <pre class="prettyprint">GET /api/hostgroups/636252244-Common/smart_variables
+    <pre class="prettyprint">GET /api/smart_variables
 200
 {
-  &quot;total&quot;: 2,
-  &quot;subtotal&quot;: 2,
+  &quot;total&quot;: 3,
+  &quot;subtotal&quot;: 3,
   &quot;page&quot;: 1,
   &quot;per_page&quot;: 20,
   &quot;search&quot;: null,
@@ -127,12 +127,32 @@
       &quot;avoid_duplicates&quot;: false,
       &quot;puppetclass_id&quot;: 980190962,
       &quot;puppetclass_name&quot;: &quot;base&quot;,
-      &quot;created_at&quot;: &quot;2018-07-24 13:12:18 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 13:12:18 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:02:26 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:02:26 UTC&quot;,
       &quot;variable&quot;: &quot;bool_test&quot;,
       &quot;id&quot;: 638205575,
       &quot;default_value&quot;: &quot;t&quot;,
       &quot;override_values_count&quot;: 0
+    },
+    {
+      &quot;description&quot;: null,
+      &quot;parameter_type&quot;: &quot;string&quot;,
+      &quot;variable_type&quot;: &quot;string&quot;,
+      &quot;hidden_value?&quot;: false,
+      &quot;validator_type&quot;: null,
+      &quot;validator_rule&quot;: null,
+      &quot;override_value_order&quot;: &quot;organization,location\nxyz\nhostgroup&quot;,
+      &quot;merge_overrides&quot;: false,
+      &quot;merge_default&quot;: false,
+      &quot;avoid_duplicates&quot;: false,
+      &quot;puppetclass_id&quot;: 298486374,
+      &quot;puppetclass_name&quot;: &quot;apache&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:02:26 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:02:26 UTC&quot;,
+      &quot;variable&quot;: &quot;special_info&quot;,
+      &quot;id&quot;: 281110143,
+      &quot;default_value&quot;: &quot;secret&quot;,
+      &quot;override_values_count&quot;: 2
     },
     {
       &quot;description&quot;: null,
@@ -147,8 +167,8 @@
       &quot;avoid_duplicates&quot;: false,
       &quot;puppetclass_id&quot;: 980190962,
       &quot;puppetclass_name&quot;: &quot;base&quot;,
-      &quot;created_at&quot;: &quot;2018-07-24 13:12:18 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 13:12:18 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:02:26 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:02:26 UTC&quot;,
       &quot;variable&quot;: &quot;ssl_port&quot;,
       &quot;id&quot;: 298486374,
       &quot;default_value&quot;: &quot;443&quot;,
@@ -482,28 +502,38 @@
 
 
   <h3>Przykłady</h3>
-    <pre class="prettyprint">GET /api/puppetclasses/980190962/smart_variables/1018350798
+    <pre class="prettyprint">GET /api/puppetclasses/980190962/smart_variables/298486374-ssl_port
 200
 {
   &quot;description&quot;: null,
-  &quot;parameter_type&quot;: null,
-  &quot;variable_type&quot;: null,
-  &quot;hidden_value?&quot;: true,
-  &quot;validator_type&quot;: null,
-  &quot;validator_rule&quot;: null,
+  &quot;parameter_type&quot;: &quot;string&quot;,
+  &quot;variable_type&quot;: &quot;string&quot;,
+  &quot;hidden_value?&quot;: false,
+  &quot;validator_type&quot;: &quot;list&quot;,
+  &quot;validator_rule&quot;: &quot;443,8443&quot;,
   &quot;override_value_order&quot;: &quot;fqdn\nhostgroup\nos\ndomain&quot;,
   &quot;merge_overrides&quot;: false,
   &quot;merge_default&quot;: false,
   &quot;avoid_duplicates&quot;: false,
   &quot;puppetclass_id&quot;: 980190962,
   &quot;puppetclass_name&quot;: &quot;base&quot;,
-  &quot;created_at&quot;: &quot;2018-07-24 12:56:20 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:56:20 UTC&quot;,
-  &quot;variable&quot;: &quot;param105&quot;,
-  &quot;id&quot;: 1018350798,
-  &quot;default_value&quot;: &quot;*****&quot;,
-  &quot;override_values_count&quot;: 0,
-  &quot;override_values&quot;: []
+  &quot;created_at&quot;: &quot;2018-11-08 09:02:26 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:02:26 UTC&quot;,
+  &quot;variable&quot;: &quot;ssl_port&quot;,
+  &quot;id&quot;: 298486374,
+  &quot;default_value&quot;: &quot;443&quot;,
+  &quot;override_values_count&quot;: 1,
+  &quot;override_values&quot;: [
+    {
+      &quot;created_at&quot;: &quot;2018-11-08 09:02:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:02:27 UTC&quot;,
+      &quot;id&quot;: 281110143,
+      &quot;match&quot;: &quot;hostgroup=Common&quot;,
+      &quot;value&quot;: &quot;8443&quot;,
+      &quot;omit&quot;: false,
+      &quot;use_puppet_default&quot;: false
+    }
+  ]
 }</pre>
 
   <h3>Parametry</h3>
@@ -644,32 +674,23 @@
     <pre class="prettyprint">POST /api/smart_variables
 {
   &quot;smart_variable&quot;: {
-    &quot;variable&quot;: &quot;TgVpwLrCDf&quot;,
-    &quot;puppetclass_id&quot;: 298486374,
-    &quot;hidden_value&quot;: true
+    &quot;variable&quot;: &quot;special_info&quot;,
+    &quot;puppetclass_id&quot;: 298486374
   }
 }
-201
+422
 {
-  &quot;description&quot;: null,
-  &quot;parameter_type&quot;: null,
-  &quot;variable_type&quot;: null,
-  &quot;hidden_value?&quot;: true,
-  &quot;validator_type&quot;: null,
-  &quot;validator_rule&quot;: null,
-  &quot;override_value_order&quot;: &quot;fqdn\nhostgroup\nos\ndomain&quot;,
-  &quot;merge_overrides&quot;: false,
-  &quot;merge_default&quot;: false,
-  &quot;avoid_duplicates&quot;: false,
-  &quot;puppetclass_id&quot;: 298486374,
-  &quot;puppetclass_name&quot;: &quot;apache&quot;,
-  &quot;created_at&quot;: &quot;2018-07-24 12:56:20 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:56:20 UTC&quot;,
-  &quot;variable&quot;: &quot;TgVpwLrCDf&quot;,
-  &quot;id&quot;: 1018350799,
-  &quot;default_value&quot;: &quot;*****&quot;,
-  &quot;override_values_count&quot;: 0,
-  &quot;override_values&quot;: []
+  &quot;error&quot;: {
+    &quot;id&quot;: null,
+    &quot;errors&quot;: {
+      &quot;key&quot;: [
+        &quot;has already been taken&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Key has already been taken&quot;
+    ]
+  }
 }</pre>
 
   <h3>Parametry</h3>
@@ -1071,31 +1092,34 @@
 
 
   <h3>Przykłady</h3>
-    <pre class="prettyprint">PUT /api/smart_variables/1018350796-eziqgLwNpE
+    <pre class="prettyprint">PUT /api/smart_variables/1018350796-NYpKiEeCjD
 {
   &quot;smart_variable&quot;: {
-    &quot;default_value&quot;: &quot;IRhOjbsJAz&quot;
+    &quot;merge_overrides&quot;: true,
+    &quot;avoid_duplicates&quot;: true
   }
 }
 200
 {
   &quot;description&quot;: null,
-  &quot;parameter_type&quot;: null,
-  &quot;variable_type&quot;: null,
-  &quot;hidden_value?&quot;: true,
+  &quot;parameter_type&quot;: &quot;array&quot;,
+  &quot;variable_type&quot;: &quot;array&quot;,
+  &quot;hidden_value?&quot;: false,
   &quot;validator_type&quot;: null,
   &quot;validator_rule&quot;: null,
   &quot;override_value_order&quot;: &quot;fqdn\nhostgroup\nos\ndomain&quot;,
-  &quot;merge_overrides&quot;: false,
+  &quot;merge_overrides&quot;: true,
   &quot;merge_default&quot;: false,
-  &quot;avoid_duplicates&quot;: false,
+  &quot;avoid_duplicates&quot;: true,
   &quot;puppetclass_id&quot;: 980190962,
   &quot;puppetclass_name&quot;: &quot;base&quot;,
-  &quot;created_at&quot;: &quot;2018-07-24 12:56:20 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:56:20 UTC&quot;,
-  &quot;variable&quot;: &quot;eziqgLwNpE&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:02:35 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:02:35 UTC&quot;,
+  &quot;variable&quot;: &quot;NYpKiEeCjD&quot;,
   &quot;id&quot;: 1018350796,
-  &quot;default_value&quot;: &quot;*****&quot;,
+  &quot;default_value&quot;: [
+    30215
+  ],
   &quot;override_values_count&quot;: 0,
   &quot;override_values&quot;: []
 }</pre>
@@ -1539,8 +1563,8 @@
   &quot;avoid_duplicates&quot;: false,
   &quot;puppetclass_id&quot;: 298486374,
   &quot;puppetclass_name&quot;: &quot;apache&quot;,
-  &quot;created_at&quot;: &quot;2018-07-24 13:12:18 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 13:12:18 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:02:26 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:02:26 UTC&quot;,
   &quot;variable&quot;: &quot;special_info&quot;,
   &quot;id&quot;: 281110143,
   &quot;default_value&quot;: &quot;secret&quot;,

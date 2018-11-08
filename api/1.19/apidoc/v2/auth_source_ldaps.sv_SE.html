@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>API documentation</title>
+  <title>Api Documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
@@ -90,68 +90,22 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">GET /api/auth_source_ldaps
-200
+403
 {
-  &quot;total&quot;: 1,
-  &quot;subtotal&quot;: 1,
-  &quot;page&quot;: 1,
-  &quot;per_page&quot;: 20,
-  &quot;search&quot;: null,
-  &quot;sort&quot;: {
-    &quot;by&quot;: null,
-    &quot;order&quot;: null
-  },
-  &quot;results&quot;: [
-    {
-      &quot;host&quot;: &quot;ldap&quot;,
-      &quot;port&quot;: 123,
-      &quot;account&quot;: null,
-      &quot;base_dn&quot;: &quot;dn=x,dn=y&quot;,
-      &quot;ldap_filter&quot;: null,
-      &quot;attr_login&quot;: &quot;uid&quot;,
-      &quot;attr_firstname&quot;: &quot;givenName&quot;,
-      &quot;attr_lastname&quot;: &quot;sn&quot;,
-      &quot;attr_mail&quot;: &quot;mail&quot;,
-      &quot;attr_photo&quot;: null,
-      &quot;onthefly_register&quot;: true,
-      &quot;usergroup_sync&quot;: true,
-      &quot;tls&quot;: true,
-      &quot;server_type&quot;: &quot;posix&quot;,
-      &quot;groups_base&quot;: null,
-      &quot;use_netgroups&quot;: false,
-      &quot;created_at&quot;: &quot;2018-07-24 12:43:14 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:43:14 UTC&quot;,
-      &quot;id&quot;: 980190962,
-      &quot;type&quot;: &quot;AuthSourceLdap&quot;,
-      &quot;name&quot;: &quot;ldap-server&quot;,
-      &quot;locations&quot;: [
-        {
-          &quot;id&quot;: 255093256,
-          &quot;name&quot;: &quot;Location 1&quot;,
-          &quot;title&quot;: &quot;Location 1&quot;,
-          &quot;description&quot;: null
-        }
-      ],
-      &quot;organizations&quot;: [
-        {
-          &quot;id&quot;: 447626438,
-          &quot;name&quot;: &quot;Organization 1&quot;,
-          &quot;title&quot;: &quot;Organization 1&quot;,
-          &quot;description&quot;: null
-        }
-      ]
-    }
-  ]
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;Access denied&quot;,
+    &quot;details&quot;: &quot;Missing one of the required permissions: view_authenticators&quot;
+  }
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -159,7 +113,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -183,7 +137,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -207,7 +161,7 @@
     <td>
       <strong>search </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -231,7 +185,7 @@
     <td>
       <strong>order </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -255,7 +209,7 @@
     <td>
       <strong>page </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -279,7 +233,7 @@
     <td>
       <strong>per_page </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -370,7 +324,7 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">GET /api/auth_source_ldaps/980190962-ldap-server
 200
 {
@@ -390,8 +344,8 @@
   &quot;server_type&quot;: &quot;posix&quot;,
   &quot;groups_base&quot;: null,
   &quot;use_netgroups&quot;: false,
-  &quot;created_at&quot;: &quot;2018-07-24 12:43:14 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:43:14 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:06:21 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:06:21 UTC&quot;,
   &quot;id&quot;: 980190962,
   &quot;type&quot;: &quot;AuthSourceLdap&quot;,
   &quot;name&quot;: &quot;ldap-server&quot;,
@@ -414,12 +368,12 @@
   ]
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -427,7 +381,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -451,7 +405,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -475,7 +429,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
         
       </small>
     </td>
@@ -524,7 +478,7 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">POST /api/auth_source_ldaps
 {
   &quot;auth_source_ldap&quot;: {
@@ -551,9 +505,9 @@
   &quot;server_type&quot;: &quot;posix&quot;,
   &quot;groups_base&quot;: null,
   &quot;use_netgroups&quot;: false,
-  &quot;created_at&quot;: &quot;2018-07-24 12:43:14 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:43:14 UTC&quot;,
-  &quot;id&quot;: 980190963,
+  &quot;created_at&quot;: &quot;2018-11-08 09:08:56 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:08:56 UTC&quot;,
+  &quot;id&quot;: 980190964,
   &quot;type&quot;: &quot;AuthSourceLdap&quot;,
   &quot;name&quot;: &quot;ldap2&quot;,
   &quot;external_usergroups&quot;: [],
@@ -561,12 +515,12 @@
   &quot;organizations&quot;: []
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -574,7 +528,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -598,7 +552,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -622,7 +576,7 @@
     <td>
       <strong>auth_source_ldap </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
         
       </small>
     </td>
@@ -643,7 +597,7 @@
     <td>
       <strong>auth_source_ldap[name] </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
         
       </small>
     </td>
@@ -665,7 +619,7 @@
     <td>
       <strong>auth_source_ldap[host] </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
         
       </small>
     </td>
@@ -687,8 +641,8 @@
     <td>
       <strong>auth_source_ldap[port] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -711,8 +665,8 @@
     <td>
       <strong>auth_source_ldap[account] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -733,8 +687,8 @@
     <td>
       <strong>auth_source_ldap[base_dn] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -755,8 +709,8 @@
     <td>
       <strong>auth_source_ldap[account_password] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -779,8 +733,8 @@
     <td>
       <strong>auth_source_ldap[attr_login] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -803,8 +757,8 @@
     <td>
       <strong>auth_source_ldap[attr_firstname] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -827,8 +781,8 @@
     <td>
       <strong>auth_source_ldap[attr_lastname] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -851,8 +805,8 @@
     <td>
       <strong>auth_source_ldap[attr_mail] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -875,8 +829,8 @@
     <td>
       <strong>auth_source_ldap[attr_photo] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -897,8 +851,8 @@
     <td>
       <strong>auth_source_ldap[onthefly_register] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -919,8 +873,8 @@
     <td>
       <strong>auth_source_ldap[usergroup_sync] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -943,8 +897,8 @@
     <td>
       <strong>auth_source_ldap[tls] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -965,8 +919,8 @@
     <td>
       <strong>auth_source_ldap[groups_base] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -989,8 +943,8 @@
     <td>
       <strong>auth_source_ldap[use_netgroups] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1013,8 +967,8 @@
     <td>
       <strong>auth_source_ldap[server_type] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1037,8 +991,8 @@
     <td>
       <strong>auth_source_ldap[ldap_filter] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1061,8 +1015,8 @@
     <td>
       <strong>auth_source_ldap[location_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1085,8 +1039,8 @@
     <td>
       <strong>auth_source_ldap[organization_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1137,27 +1091,18 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">PUT /api/auth_source_ldaps/980190962-ldap-server
 {
-  &quot;organization_names&quot;: [
-    &quot;Organization 1&quot;
-  ],
-  &quot;location_ids&quot;: [
-    255093256
-  ],
   &quot;auth_source_ldap&quot;: {
-    &quot;organization_names&quot;: [
-      &quot;Organization 1&quot;
-    ],
-    &quot;location_ids&quot;: [
-      255093256
-    ]
+    &quot;name&quot;: &quot;ldap2&quot;,
+    &quot;host&quot;: &quot;ldap2&quot;,
+    &quot;server_type&quot;: &quot;posix&quot;
   }
 }
 200
 {
-  &quot;host&quot;: &quot;ldap&quot;,
+  &quot;host&quot;: &quot;ldap2&quot;,
   &quot;port&quot;: 123,
   &quot;account&quot;: null,
   &quot;base_dn&quot;: &quot;dn=x,dn=y&quot;,
@@ -1173,11 +1118,11 @@
   &quot;server_type&quot;: &quot;posix&quot;,
   &quot;groups_base&quot;: null,
   &quot;use_netgroups&quot;: false,
-  &quot;created_at&quot;: &quot;2018-07-24 12:43:14 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:43:14 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:08:41 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:08:56 UTC&quot;,
   &quot;id&quot;: 980190962,
   &quot;type&quot;: &quot;AuthSourceLdap&quot;,
-  &quot;name&quot;: &quot;ldap-server&quot;,
+  &quot;name&quot;: &quot;ldap2&quot;,
   &quot;external_usergroups&quot;: [],
   &quot;locations&quot;: [
     {
@@ -1197,12 +1142,12 @@
   ]
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -1210,7 +1155,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -1234,7 +1179,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -1258,7 +1203,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
         
       </small>
     </td>
@@ -1280,7 +1225,7 @@
     <td>
       <strong>auth_source_ldap </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
         
       </small>
     </td>
@@ -1301,7 +1246,7 @@
     <td>
       <strong>auth_source_ldap[name] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -1323,7 +1268,7 @@
     <td>
       <strong>auth_source_ldap[host] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -1345,8 +1290,8 @@
     <td>
       <strong>auth_source_ldap[port] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1369,8 +1314,8 @@
     <td>
       <strong>auth_source_ldap[account] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1391,8 +1336,8 @@
     <td>
       <strong>auth_source_ldap[base_dn] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1413,8 +1358,8 @@
     <td>
       <strong>auth_source_ldap[account_password] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1437,8 +1382,8 @@
     <td>
       <strong>auth_source_ldap[attr_login] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1461,8 +1406,8 @@
     <td>
       <strong>auth_source_ldap[attr_firstname] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1485,8 +1430,8 @@
     <td>
       <strong>auth_source_ldap[attr_lastname] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1509,8 +1454,8 @@
     <td>
       <strong>auth_source_ldap[attr_mail] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1533,8 +1478,8 @@
     <td>
       <strong>auth_source_ldap[attr_photo] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1555,8 +1500,8 @@
     <td>
       <strong>auth_source_ldap[onthefly_register] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1577,8 +1522,8 @@
     <td>
       <strong>auth_source_ldap[usergroup_sync] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1601,8 +1546,8 @@
     <td>
       <strong>auth_source_ldap[tls] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1623,8 +1568,8 @@
     <td>
       <strong>auth_source_ldap[groups_base] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1647,8 +1592,8 @@
     <td>
       <strong>auth_source_ldap[use_netgroups] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1671,8 +1616,8 @@
     <td>
       <strong>auth_source_ldap[server_type] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1695,8 +1640,8 @@
     <td>
       <strong>auth_source_ldap[ldap_filter] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1719,8 +1664,8 @@
     <td>
       <strong>auth_source_ldap[location_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1743,8 +1688,8 @@
     <td>
       <strong>auth_source_ldap[organization_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1795,7 +1740,7 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">PUT /api/auth_source_ldaps/980190962-ldap-server/test
 {
   &quot;auth_source_ldap&quot;: {}
@@ -1807,12 +1752,12 @@
   }
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -1820,7 +1765,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -1844,7 +1789,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -1868,7 +1813,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
         
       </small>
     </td>
@@ -1917,7 +1862,7 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">DELETE /api/auth_source_ldaps/980190962
 {
   &quot;auth_source_ldap&quot;: {}
@@ -1937,8 +1882,8 @@
   &quot;attr_mail&quot;: &quot;mail&quot;,
   &quot;onthefly_register&quot;: true,
   &quot;tls&quot;: true,
-  &quot;created_at&quot;: &quot;2018-07-24T12:43:14.366Z&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24T12:43:14.366Z&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08T09:08:41.054Z&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08T09:08:41.054Z&quot;,
   &quot;ldap_filter&quot;: null,
   &quot;attr_photo&quot;: null,
   &quot;server_type&quot;: &quot;posix&quot;,
@@ -1947,12 +1892,12 @@
   &quot;use_netgroups&quot;: false
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -1960,7 +1905,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -1984,7 +1929,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -2008,7 +1953,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
         
       </small>
     </td>

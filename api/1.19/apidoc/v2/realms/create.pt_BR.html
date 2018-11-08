@@ -57,27 +57,32 @@
     <pre class="prettyprint">POST /api/realms
 {
   &quot;realm&quot;: {
-    &quot;name&quot;: &quot;realm.net&quot;,
-    &quot;realm_proxy_id&quot;: &quot;982965213-Realm Proxy&quot;,
-    &quot;realm_type&quot;: &quot;FreeIPA&quot;
+    &quot;name&quot;: &quot;&quot;
   }
 }
-201
+422
 {
-  &quot;name&quot;: &quot;realm.net&quot;,
-  &quot;realm_type&quot;: &quot;FreeIPA&quot;,
-  &quot;created_at&quot;: &quot;2018-07-24 13:03:18 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 13:03:18 UTC&quot;,
-  &quot;id&quot;: 936160440,
-  &quot;realm_proxy_id&quot;: 982965213,
-  &quot;realm_proxy_name&quot;: &quot;Realm Proxy&quot;,
-  &quot;realm_proxy&quot;: {
-    &quot;name&quot;: &quot;Realm Proxy&quot;,
-    &quot;id&quot;: 982965213,
-    &quot;url&quot;: &quot;http://else.where:1337&quot;
-  },
-  &quot;locations&quot;: [],
-  &quot;organizations&quot;: []
+  &quot;error&quot;: {
+    &quot;id&quot;: null,
+    &quot;errors&quot;: {
+      &quot;name&quot;: [
+        &quot;can&#39;t be blank&quot;
+      ],
+      &quot;realm_type&quot;: [
+        &quot;can&#39;t be blank&quot;,
+        &quot;is not included in the list&quot;
+      ],
+      &quot;realm_proxy_id&quot;: [
+        &quot;can&#39;t be blank&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Name can&#39;t be blank&quot;,
+      &quot;Realm type can&#39;t be blank&quot;,
+      &quot;Realm type is not included in the list&quot;,
+      &quot;Realm proxy can&#39;t be blank&quot;
+    ]
+  }
 }</pre>
 
   <h2>Parâmentros</h2>

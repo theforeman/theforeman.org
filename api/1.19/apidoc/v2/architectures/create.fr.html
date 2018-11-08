@@ -55,17 +55,22 @@
     <pre class="prettyprint">POST /api/architectures
 {
   &quot;architecture&quot;: {
-    &quot;name&quot;: &quot;i386&quot;
+    &quot;name&quot;: &quot;&quot;
   }
 }
-201
+422
 {
-  &quot;created_at&quot;: &quot;2018-07-24 13:03:56 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 13:03:56 UTC&quot;,
-  &quot;name&quot;: &quot;i386&quot;,
-  &quot;id&quot;: 501905020,
-  &quot;operatingsystems&quot;: [],
-  &quot;images&quot;: []
+  &quot;error&quot;: {
+    &quot;id&quot;: null,
+    &quot;errors&quot;: {
+      &quot;name&quot;: [
+        &quot;can&#39;t be blank&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Name can&#39;t be blank&quot;
+    ]
+  }
 }</pre>
 
   <h2>Paramètres</h2>

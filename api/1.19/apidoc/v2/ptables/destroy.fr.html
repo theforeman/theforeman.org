@@ -52,23 +52,23 @@
 
 
   <h2>Exemples</h2>
-    <pre class="prettyprint">DELETE /api/ptables/1007981722-ptable120
+    <pre class="prettyprint">DELETE /api/ptables/1007981703-ptable92
 {
   &quot;ptable&quot;: {}
 }
-422
+200
 {
-  &quot;error&quot;: {
-    &quot;id&quot;: 1007981722,
-    &quot;errors&quot;: {
-      &quot;base&quot;: [
-        &quot;ptable120 is used by host19&quot;
-      ]
-    },
-    &quot;full_messages&quot;: [
-      &quot;ptable120 is used by host19&quot;
-    ]
-  }
+  &quot;id&quot;: 1007981703,
+  &quot;name&quot;: &quot;ptable92&quot;,
+  &quot;template&quot;: &quot;zerombr\\nclearpart --all    --initlabel\\npart /boot --fstype ext3 --size=&lt;%= 10 * 10 %&gt; --asprimary\\npart /     --f   stype ext3 --size=1024 --grow\\npart swap  --recommended&quot;,
+  &quot;snippet&quot;: false,
+  &quot;template_kind_id&quot;: null,
+  &quot;created_at&quot;: &quot;2018-11-08T09:04:30.957Z&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08T09:04:30.957Z&quot;,
+  &quot;locked&quot;: false,
+  &quot;default&quot;: false,
+  &quot;vendor&quot;: null,
+  &quot;os_family&quot;: &quot;Redhat&quot;
 }</pre>
 
   <h2>Paramètres</h2>

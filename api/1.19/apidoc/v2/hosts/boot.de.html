@@ -52,14 +52,14 @@
 
 
   <h2>Beispiele</h2>
-    <pre class="prettyprint">PUT /api/hosts/host1867.example806.com/boot
+    <pre class="prettyprint">PUT /api/hosts/host1608.example752.com/boot
 {
-  &quot;device&quot;: &quot;bios&quot;,
+  &quot;device&quot;: &quot;wrongbootdevice&quot;,
   &quot;host&quot;: {}
 }
-200
+422
 {
-  &quot;boot&quot;: &quot;{\&quot;action\&quot;:\&quot;bios\&quot;,\&quot;result\&quot;:true}&quot;
+  &quot;error&quot;: &quot;Unknown device: available devices are disk, cdrom, pxe, bios&quot;
 }</pre>
 
   <h2>Parameter</h2>

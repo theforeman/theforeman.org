@@ -71,19 +71,56 @@
 
 
   <h3>Examples</h3>
-    <pre class="prettyprint">GET /api/hosts/host719/config_reports
+    <pre class="prettyprint">GET /api/config_reports
 200
 {
-  &quot;total&quot;: 0,
-  &quot;subtotal&quot;: 0,
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
   &quot;page&quot;: 1,
   &quot;per_page&quot;: 20,
-  &quot;search&quot;: &quot; host = host719&quot;,
+  &quot;search&quot;: &quot;&quot;,
   &quot;sort&quot;: {
     &quot;by&quot;: null,
     &quot;order&quot;: null
   },
-  &quot;results&quot;: []
+  &quot;results&quot;: [
+    {
+      &quot;metrics&quot;: {
+        &quot;time&quot;: {
+          &quot;schedule&quot;: 0.00083,
+          &quot;service&quot;: 0.149739,
+          &quot;mailalias&quot;: 0.000283,
+          &quot;cron&quot;: 0.000419,
+          &quot;config_retrieval&quot;: 16.3637869358063,
+          &quot;package&quot;: 0.003989,
+          &quot;filebucket&quot;: 0.000171,
+          &quot;file&quot;: 0.007025,
+          &quot;exec&quot;: 0.000299
+        },
+        &quot;resources&quot;: {
+          &quot;total&quot;: 33
+        },
+        &quot;changes&quot;: {},
+        &quot;events&quot;: {
+          &quot;total&quot;: 0
+        }
+      },
+      &quot;created_at&quot;: &quot;2018-11-08 09:07:41 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:07:41 UTC&quot;,
+      &quot;id&quot;: 39,
+      &quot;host_id&quot;: 273,
+      &quot;host_name&quot;: &quot;host790&quot;,
+      &quot;reported_at&quot;: &quot;2018-11-08 09:07:41 UTC&quot;,
+      &quot;status&quot;: {
+        &quot;applied&quot;: 0,
+        &quot;restarted&quot;: 0,
+        &quot;failed&quot;: 0,
+        &quot;failed_restarts&quot;: 0,
+        &quot;skipped&quot;: 0,
+        &quot;pending&quot;: 0
+      }
+    }
+  ]
 }</pre>
 
   <h3>Params</h3>
@@ -376,7 +413,7 @@
 
 
   <h3>Examples</h3>
-    <pre class="prettyprint">GET /api/config_reports/4
+    <pre class="prettyprint">GET /api/config_reports/48
 200
 {
   &quot;metrics&quot;: {
@@ -399,12 +436,12 @@
       &quot;total&quot;: 0
     }
   },
-  &quot;created_at&quot;: &quot;2018-07-24 12:55:28 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:55:28 UTC&quot;,
-  &quot;id&quot;: 4,
-  &quot;host_id&quot;: 80,
-  &quot;host_name&quot;: &quot;host718&quot;,
-  &quot;reported_at&quot;: &quot;2018-07-24 12:55:28 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:07:42 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:07:42 UTC&quot;,
+  &quot;id&quot;: 48,
+  &quot;host_id&quot;: 283,
+  &quot;host_name&quot;: &quot;host804&quot;,
+  &quot;reported_at&quot;: &quot;2018-11-08 09:07:42 UTC&quot;,
   &quot;status&quot;: {
     &quot;applied&quot;: 0,
     &quot;restarted&quot;: 0,
@@ -771,17 +808,17 @@
 
 
   <h3>Examples</h3>
-    <pre class="prettyprint">DELETE /api/config_reports/5
+    <pre class="prettyprint">DELETE /api/config_reports/49
 {
   &quot;config_report&quot;: {}
 }
 200
 {
-  &quot;id&quot;: 5,
-  &quot;host_id&quot;: 82,
-  &quot;reported_at&quot;: &quot;2018-07-24T12:55:28.920Z&quot;,
-  &quot;created_at&quot;: &quot;2018-07-24T12:55:28.923Z&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24T12:55:28.923Z&quot;,
+  &quot;id&quot;: 49,
+  &quot;host_id&quot;: 284,
+  &quot;reported_at&quot;: &quot;2018-11-08T09:07:43.069Z&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08T09:07:43.071Z&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08T09:07:43.071Z&quot;,
   &quot;status&quot;: {
     &quot;applied&quot;: 0,
     &quot;restarted&quot;: 0,
@@ -924,12 +961,45 @@
 
 
   <h3>Examples</h3>
-    <pre class="prettyprint">GET /api/hosts/host722/config_reports/last
-404
+    <pre class="prettyprint">GET /api/hosts/host795/config_reports/last
+200
 {
-  &quot;error&quot;: {
-    &quot;message&quot;: &quot;Resource config_report not found by id &#39;&#39;&quot;
-  }
+  &quot;metrics&quot;: {
+    &quot;time&quot;: {
+      &quot;schedule&quot;: 0.00083,
+      &quot;service&quot;: 0.149739,
+      &quot;mailalias&quot;: 0.000283,
+      &quot;cron&quot;: 0.000419,
+      &quot;config_retrieval&quot;: 16.3637869358063,
+      &quot;package&quot;: 0.003989,
+      &quot;filebucket&quot;: 0.000171,
+      &quot;file&quot;: 0.007025,
+      &quot;exec&quot;: 0.000299
+    },
+    &quot;resources&quot;: {
+      &quot;total&quot;: 33
+    },
+    &quot;changes&quot;: {},
+    &quot;events&quot;: {
+      &quot;total&quot;: 0
+    }
+  },
+  &quot;created_at&quot;: &quot;2018-11-08 09:07:42 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:07:42 UTC&quot;,
+  &quot;id&quot;: 41,
+  &quot;host_id&quot;: 275,
+  &quot;host_name&quot;: &quot;host795&quot;,
+  &quot;reported_at&quot;: &quot;2018-11-08 09:07:42 UTC&quot;,
+  &quot;status&quot;: {
+    &quot;applied&quot;: 0,
+    &quot;restarted&quot;: 0,
+    &quot;failed&quot;: 0,
+    &quot;failed_restarts&quot;: 0,
+    &quot;skipped&quot;: 0,
+    &quot;pending&quot;: 0
+  },
+  &quot;logs&quot;: [],
+  &quot;summary&quot;: &quot;Success&quot;
 }</pre>
 
   <h3>Params</h3>

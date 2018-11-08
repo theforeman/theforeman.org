@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>API documentation</title>
+  <title>Api Documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
@@ -53,49 +53,35 @@
 
 
 
-  <h2>Examples</h2>
-    <pre class="prettyprint">PUT /api/users/980190962
+  <h2><span class="translation_missing" title="translation missing: sv-SE.apipie.examples">Examples</span></h2>
+    <pre class="prettyprint">PUT /api/users/980190963
 {
   &quot;user&quot;: {
-    &quot;admin&quot;: true
+    &quot;mail&quot;: &quot;bar@foo.com&quot;
   }
 }
 200
 {
-  &quot;firstname&quot;: &quot;One&quot;,
-  &quot;lastname&quot;: &quot;User&quot;,
-  &quot;mail&quot;: &quot;userone@someware.com&quot;,
-  &quot;admin&quot;: true,
+  &quot;firstname&quot;: null,
+  &quot;lastname&quot;: null,
+  &quot;mail&quot;: &quot;bar@foo.com&quot;,
+  &quot;admin&quot;: false,
   &quot;auth_source_id&quot;: 980190962,
   &quot;auth_source_name&quot;: &quot;ldap-server&quot;,
   &quot;timezone&quot;: null,
   &quot;locale&quot;: null,
-  &quot;last_login_on&quot;: &quot;2009-10-12 21:50:04 UTC&quot;,
-  &quot;created_at&quot;: &quot;2018-07-24 13:02:47 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 13:02:49 UTC&quot;,
-  &quot;id&quot;: 980190962,
-  &quot;login&quot;: &quot;one&quot;,
+  &quot;last_login_on&quot;: null,
+  &quot;created_at&quot;: &quot;2018-11-08 09:36:23 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:36:23 UTC&quot;,
+  &quot;id&quot;: 980190963,
+  &quot;login&quot;: &quot;foo&quot;,
   &quot;description&quot;: null,
   &quot;ssh_keys&quot;: [],
   &quot;default_location&quot;: null,
-  &quot;locations&quot;: [
-    {
-      &quot;id&quot;: 255093256,
-      &quot;name&quot;: &quot;Location 1&quot;,
-      &quot;title&quot;: &quot;Location 1&quot;,
-      &quot;description&quot;: null
-    }
-  ],
+  &quot;locations&quot;: [],
   &quot;default_organization&quot;: null,
-  &quot;organizations&quot;: [
-    {
-      &quot;id&quot;: 447626438,
-      &quot;name&quot;: &quot;Organization 1&quot;,
-      &quot;title&quot;: &quot;Organization 1&quot;,
-      &quot;description&quot;: null
-    }
-  ],
-  &quot;effective_admin&quot;: true,
+  &quot;organizations&quot;: [],
+  &quot;effective_admin&quot;: false,
   &quot;cached_usergroups&quot;: [],
   &quot;auth_source_ldap&quot;: {
     &quot;id&quot;: 980190962,
@@ -103,23 +89,16 @@
     &quot;name&quot;: &quot;ldap-server&quot;
   },
   &quot;mail_notifications&quot;: [],
-  &quot;roles&quot;: [
-    {
-      &quot;name&quot;: &quot;Viewer&quot;,
-      &quot;id&quot;: 5,
-      &quot;description&quot;: null,
-      &quot;origin&quot;: &quot;foreman&quot;
-    }
-  ],
+  &quot;roles&quot;: [],
   &quot;usergroups&quot;: []
 }</pre>
 
-  <h2>Params</h2>
+  <h2><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h2>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -127,7 +106,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -151,7 +130,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -175,7 +154,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
         
       </small>
     </td>
@@ -197,7 +176,7 @@
     <td>
       <strong>user </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
         
       </small>
     </td>
@@ -218,7 +197,7 @@
     <td>
       <strong>user[login] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -240,8 +219,8 @@
     <td>
       <strong>user[firstname] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -262,8 +241,8 @@
     <td>
       <strong>user[lastname] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -284,7 +263,7 @@
     <td>
       <strong>user[mail] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -306,8 +285,8 @@
     <td>
       <strong>user[description] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -328,8 +307,8 @@
     <td>
       <strong>user[admin] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -352,7 +331,7 @@
     <td>
       <strong>user[password] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -374,8 +353,8 @@
     <td>
       <strong>user[default_location_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -396,8 +375,8 @@
     <td>
       <strong>user[default_organization_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -418,7 +397,7 @@
     <td>
       <strong>user[auth_source_id] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -440,8 +419,8 @@
     <td>
       <strong>user[timezone] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -468,8 +447,8 @@
     <td>
       <strong>user[locale] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -492,8 +471,8 @@
     <td>
       <strong>user[role_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -514,8 +493,8 @@
     <td>
       <strong>user[location_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -538,8 +517,8 @@
     <td>
       <strong>user[organization_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -562,8 +541,8 @@
     <td>
       <strong>user[current_password] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>

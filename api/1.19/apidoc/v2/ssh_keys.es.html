@@ -71,7 +71,7 @@
 
 
   <h3>Ejemplos</h3>
-    <pre class="prettyprint">GET /api/users/980190963/ssh_keys
+    <pre class="prettyprint">GET /api/users/980190978/ssh_keys
 200
 {
   &quot;total&quot;: 1,
@@ -85,13 +85,13 @@
   },
   &quot;results&quot;: [
     {
-      &quot;created_at&quot;: &quot;2018-07-24 12:58:20 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:58:20 UTC&quot;,
-      &quot;id&quot;: 1,
-      &quot;name&quot;: &quot;user1@example.com&quot;,
-      &quot;key&quot;: &quot;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDsVcKEFO1HFq7mN0dwigsR4W9ey72/NWkZKVvqeO72qBXr1l2zFhK8lRL0KzksLkysBlYVD6j4s03supjjlNg9rrgYICkXREo2YB/yGfGV6OT8/x2wXmLWUVRiLyC5zUNTYP5mfL87Np3W2bWVqbv6pciI0L9k40smlwRjzrMFcMaiul368uWZEUuQjzypZ9xLewTVjAvm/eJ4P8M6Yvp6Yf30kyIB+icrea6zOcDpxCC95jaXQzgq1UXKnxbxN6yg4x9y+O/SgUq7yAorPRJDZbuCCoLkP9I3bKqucPTupAFWaI01zvL8pBxeBMctfZU2u2hD1UvtlAZz3wigpfup foreman1@example.com&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:29:36 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:29:36 UTC&quot;,
+      &quot;id&quot;: 2,
+      &quot;name&quot;: &quot;user7@example.com&quot;,
+      &quot;key&quot;: &quot;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCsEaiHCIIFgYtrVIDpnrZfGVujsBJwr/Q6Joj2KXR8SLvBEYm78OzCHRpRmyH2/N/uTSzP1F9dcDLAL5nriIpImA4yf2hOAlnSdxmhYolei+flJenK6TP6tr4SzigXrWv1WCAXZ547yhdmRqIwlaA6RfyDDaqkGA/b8maEecgKcpeWrkdXD2HKb+8K+inhnEg8TehEXbDmeGFBjLZestLu4p9748DvNc9jwrQNusQZvKNPUqOSoGKv3YvnsjbM/y52NjlGxC6ieeVSkcrAvieH7dtfMkvqZ3DB0GBEpeuj+e5OfkWjAuy/sUhpogbWh7sILsS2qiDv1ihP38lMhIl7 foreman6@example.com&quot;,
       &quot;length&quot;: 2048,
-      &quot;fingerprint&quot;: &quot;ca:fb:4b:aa:16:b6:62:92:d2:ee:ff:11:b2:0d:3a:fb&quot;
+      &quot;fingerprint&quot;: &quot;08:25:af:e7:bc:21:83:b3:97:09:71:da:19:49:91:61&quot;
     }
   ]
 }</pre>
@@ -330,16 +330,16 @@
 
 
   <h3>Ejemplos</h3>
-    <pre class="prettyprint">GET /api/users/980190966/ssh_keys/5-user4example-com
+    <pre class="prettyprint">GET /api/users/980190979/ssh_keys/3-user8example-com
 200
 {
-  &quot;created_at&quot;: &quot;2018-07-24 12:58:21 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:58:21 UTC&quot;,
-  &quot;id&quot;: 5,
-  &quot;name&quot;: &quot;user4@example.com&quot;,
-  &quot;key&quot;: &quot;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDMteeGCl0hs0oCgji1Dao0ilZwtwt0eUDVRyQHVYpTmRRuqxqws3r04Qy/pZM2dy+kWUYY2ZiP4amAEnBvN8vyls6pI6G95Nr2VVu9KO4OGDitXoCB6m9J8Ho906ziCMxSqmNcHvQT3e1B5UOMyw38YESNB2GccMrgSUD4ospGcpip7ev9kovhoSQkqLiIqbPo+qJ/x99UVocBqY7Pq7Sq3vfRbrPtrp89H8IVd+zLzWY1n9EVeRwTq6JaHjL2od/P3O7dEqDSF6/RmyS/hz8ZVVU0GfKmBH/E5noeQ9QGxcafBeCmdcCCI8mEiu6qkH/Cn/2QxsrKn5nYM88oi0ET foreman4@example.com&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:29:37 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:29:37 UTC&quot;,
+  &quot;id&quot;: 3,
+  &quot;name&quot;: &quot;user8@example.com&quot;,
+  &quot;key&quot;: &quot;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDhQCKGGM3SuwvCQsc99dIlaeSIS6K7WQ9O5WLftcBeBRxH8djMZGh9lXvhcvfpnMn1XdtAHS459gK/QMKSn5kZnI5znlbZnMdgG8Bsqe3JsiIeoJxpG8htEf+x0rMtQbgqgkoQAYO5J1doto2AEAuJi8evhqXcRvqwvESWNYPSI8uGjUV1Roco/PI6akwFOIeyjW81sDAsy+4glVaQ4c0Oz11ent1478xxbazyHKHqb1CGDd1EScxXNlyrNlK1oL0zG3uenjGhAMaSp/XsPIaej+u7cZnfmycbVFp+OoD2YihJxLU9ygFKsDsqQuVYJsL/ctPQuXYk6g/enRWOEiiB foreman7@example.com&quot;,
   &quot;length&quot;: 2048,
-  &quot;fingerprint&quot;: &quot;cd:76:19:8f:2c:eb:e6:4b:cd:e8:01:ab:6b:f8:bd:05&quot;
+  &quot;fingerprint&quot;: &quot;db:e9:2f:95:fa:ac:e3:eb:ed:15:50:8c:bb:25:b3:4a&quot;
 }</pre>
 
   <h3>Parámetros</h3>
@@ -477,10 +477,8 @@
 
 
   <h3>Ejemplos</h3>
-    <pre class="prettyprint">POST /api/users/980190964/ssh_keys
+    <pre class="prettyprint">POST /api/users/980190980/ssh_keys
 {
-  &quot;name&quot;: &quot;foreman@example.com&quot;,
-  &quot;key&quot;: &quot;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIhRoL6PfBRs9YwW3r2/pYeLrxRzEZSUO3Go8JivxMsguEKjJ3byHDPvPpMHhKKSZD/HJY/A+2Ndqp0ElB+t2qs= foreman@example.com&quot;,
   &quot;ssh_key&quot;: {
     &quot;name&quot;: &quot;foreman@example.com&quot;,
     &quot;key&quot;: &quot;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIhRoL6PfBRs9YwW3r2/pYeLrxRzEZSUO3Go8JivxMsguEKjJ3byHDPvPpMHhKKSZD/HJY/A+2Ndqp0ElB+t2qs= foreman@example.com&quot;
@@ -488,9 +486,9 @@
 }
 201
 {
-  &quot;created_at&quot;: &quot;2018-07-24 12:58:21 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:58:21 UTC&quot;,
-  &quot;id&quot;: 3,
+  &quot;created_at&quot;: &quot;2018-11-08 09:29:37 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:29:37 UTC&quot;,
+  &quot;id&quot;: 5,
   &quot;name&quot;: &quot;foreman@example.com&quot;,
   &quot;key&quot;: &quot;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIhRoL6PfBRs9YwW3r2/pYeLrxRzEZSUO3Go8JivxMsguEKjJ3byHDPvPpMHhKKSZD/HJY/A+2Ndqp0ElB+t2qs= foreman@example.com&quot;,
   &quot;length&quot;: 520,
@@ -678,20 +676,20 @@
 
 
   <h3>Ejemplos</h3>
-    <pre class="prettyprint">DELETE /api/users/980190965/ssh_keys/4-user3example-com
+    <pre class="prettyprint">DELETE /api/users/980190977/ssh_keys/1-user6example-com
 {
   &quot;ssh_key&quot;: {}
 }
 200
 {
-  &quot;id&quot;: 4,
-  &quot;name&quot;: &quot;user3@example.com&quot;,
-  &quot;key&quot;: &quot;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCs6GnGI4WUEk7EXtKiPHZxYbsONEg2xaSa6E65dVCEsBp/Qwt2FhOTBOb0apc7neeX8wY4HCj1m5uk5YPvnoR97At3wHirWAja575NoVv9VhjBXXsIL+1FKxdUX2/t2GfcldvCPh/TWBIO1oZDcvpTVQ0/JsncfYH3q/nSynOx+6hi023wcPVTf3oxBIUN8TiX/vr/Cv+yC3lggDil5BYdKacvNlcBwTOrIp0VXQtQJY7+FvJHHmk3EFKp73upZxT+IeMoUhtsDDdLz6TNwYCLkc9dCSSZ52celDP9SqDMMnu7MVoWF+/p3ZriNcbjUmtVMRiWcX/OFSgiH4Cl/7TD foreman3@example.com&quot;,
-  &quot;fingerprint&quot;: &quot;a3:4e:1f:1b:f5:e8:51:58:bf:2a:0d:69:7b:c8:66:99&quot;,
-  &quot;user_id&quot;: 980190965,
+  &quot;id&quot;: 1,
+  &quot;name&quot;: &quot;user6@example.com&quot;,
+  &quot;key&quot;: &quot;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDsE0dYhVGuJ5aVWT9AeLJgARrW+lFk33sq3klJNHwDbdq2/RkfqVJCSG1blaQaqa9enKbqEcDa7oMNFpZgckoF75TlGWTtJoYKBqm5GctFtJl8QpXzsKJiwGtbPiIkHYo9c69UEfrZGiQl3s60aVIXvBxoKDewc9AgpoLFPsGyEzKxUC1mQYws6t6QV4VUC6IdlS7co4am+nN3g1scva4KrlpYu/NOPNXxq6KqzCx/lLthyycI4qi4nRlCq2Gw6ELlvIizBsw5bzEfEso7Sp1KSnfDU4azxR3F3dg5Tbd3s3SN8CxpsFfJEZaeaif7quhVIffCQWTSfaRugRN0C9mR foreman5@example.com&quot;,
+  &quot;fingerprint&quot;: &quot;3d:e9:f6:f7:a6:89:28:a8:96:04:30:44:70:b9:0e:5d&quot;,
+  &quot;user_id&quot;: 980190977,
   &quot;length&quot;: 2048,
-  &quot;created_at&quot;: &quot;2018-07-24T12:58:21.143Z&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24T12:58:21.143Z&quot;
+  &quot;created_at&quot;: &quot;2018-11-08T09:29:36.695Z&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08T09:29:36.695Z&quot;
 }</pre>
 
   <h3>Parámetros</h3>

@@ -91,12 +91,92 @@
 
 
   <h3>Ejemplos</h3>
-    <pre class="prettyprint">GET /api/hosts/host1450/interfaces
-404
+    <pre class="prettyprint">GET /api/hosts/host449/interfaces
+200
 {
-  &quot;error&quot;: {
-    &quot;message&quot;: &quot;Resource interface not found by id &#39;&#39;&quot;
-  }
+  &quot;total&quot;: 3,
+  &quot;subtotal&quot;: 3,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;created_at&quot;: &quot;2018-11-08 09:05:55 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:05:55 UTC&quot;,
+      &quot;managed&quot;: true,
+      &quot;identifier&quot;: null,
+      &quot;id&quot;: 15,
+      &quot;name&quot;: &quot;host449&quot;,
+      &quot;ip&quot;: null,
+      &quot;ip6&quot;: null,
+      &quot;mac&quot;: null,
+      &quot;mtu&quot;: null,
+      &quot;fqdn&quot;: &quot;host449&quot;,
+      &quot;primary&quot;: true,
+      &quot;provision&quot;: true,
+      &quot;type&quot;: &quot;interface&quot;,
+      &quot;virtual&quot;: false
+    },
+    {
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;created_at&quot;: &quot;2018-11-08 09:05:55 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:05:55 UTC&quot;,
+      &quot;managed&quot;: true,
+      &quot;identifier&quot;: &quot;eth116&quot;,
+      &quot;id&quot;: 16,
+      &quot;name&quot;: null,
+      &quot;ip&quot;: &quot;0.0.0.18&quot;,
+      &quot;ip6&quot;: null,
+      &quot;mac&quot;: &quot;00:33:45:ab:00:16&quot;,
+      &quot;mtu&quot;: null,
+      &quot;fqdn&quot;: null,
+      &quot;primary&quot;: false,
+      &quot;provision&quot;: false,
+      &quot;type&quot;: &quot;interface&quot;,
+      &quot;virtual&quot;: false
+    },
+    {
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;created_at&quot;: &quot;2018-11-08 09:05:55 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:05:55 UTC&quot;,
+      &quot;managed&quot;: true,
+      &quot;identifier&quot;: &quot;eth117&quot;,
+      &quot;id&quot;: 17,
+      &quot;name&quot;: null,
+      &quot;ip&quot;: &quot;0.0.0.19&quot;,
+      &quot;ip6&quot;: null,
+      &quot;mac&quot;: &quot;00:33:45:ab:00:17&quot;,
+      &quot;mtu&quot;: null,
+      &quot;fqdn&quot;: null,
+      &quot;primary&quot;: false,
+      &quot;provision&quot;: false,
+      &quot;type&quot;: &quot;bond&quot;,
+      &quot;mode&quot;: &quot;balance-rr&quot;,
+      &quot;attached_devices&quot;: &quot;&quot;,
+      &quot;bond_options&quot;: &quot;&quot;,
+      &quot;virtual&quot;: true
+    }
+  ]
 }</pre>
 
   <h3>Parámetros</h3>
@@ -308,7 +388,7 @@
 
 
   <h3>Ejemplos</h3>
-    <pre class="prettyprint">GET /api/hosts/host2206/interfaces/54
+    <pre class="prettyprint">GET /api/hosts/host1731/interfaces/152
 200
 {
   &quot;subnet_id&quot;: null,
@@ -317,15 +397,15 @@
   &quot;subnet6_name&quot;: null,
   &quot;domain_id&quot;: null,
   &quot;domain_name&quot;: null,
-  &quot;created_at&quot;: &quot;2018-07-24 13:13:59 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 13:13:59 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:28:53 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:28:53 UTC&quot;,
   &quot;managed&quot;: true,
-  &quot;identifier&quot;: &quot;eth677&quot;,
-  &quot;id&quot;: 54,
+  &quot;identifier&quot;: &quot;eth496&quot;,
+  &quot;id&quot;: 152,
   &quot;name&quot;: null,
-  &quot;ip&quot;: &quot;0.0.0.168&quot;,
+  &quot;ip&quot;: &quot;0.0.0.97&quot;,
   &quot;ip6&quot;: null,
-  &quot;mac&quot;: &quot;00:33:45:ab:00:f9&quot;,
+  &quot;mac&quot;: &quot;00:33:45:ab:00:7c&quot;,
   &quot;mtu&quot;: null,
   &quot;fqdn&quot;: null,
   &quot;primary&quot;: false,
@@ -471,7 +551,7 @@
 
 
   <h3>Ejemplos</h3>
-    <pre class="prettyprint">POST /api/hosts/host2200/interfaces
+    <pre class="prettyprint">POST /api/hosts/host1728/interfaces
 {
   &quot;interface&quot;: {
     &quot;name&quot;: &quot;test.foreman.com&quot;,
@@ -480,15 +560,36 @@
     &quot;username&quot;: &quot;foo&quot;,
     &quot;password&quot;: &quot;bar&quot;,
     &quot;provider&quot;: &quot;IPMI&quot;,
-    &quot;type&quot;: &quot;UNKNOWN&quot;,
+    &quot;type&quot;: &quot;bmc&quot;,
     &quot;ip6&quot;: &quot;2001:db8::1&quot;
   }
 }
-422
+201
 {
-  &quot;error&quot;: {
-    &quot;message&quot;: &quot;ERF13-6594 [InterfaceTypeMapper::UnknownTypeExeption]: Unknown interface type, must be one of [interface, bmc, bond, bridge]&quot;
-  }
+  &quot;subnet_id&quot;: null,
+  &quot;subnet_name&quot;: null,
+  &quot;subnet6_id&quot;: null,
+  &quot;subnet6_name&quot;: null,
+  &quot;domain_id&quot;: null,
+  &quot;domain_name&quot;: null,
+  &quot;created_at&quot;: &quot;2018-11-08 09:28:52 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:28:52 UTC&quot;,
+  &quot;managed&quot;: true,
+  &quot;identifier&quot;: null,
+  &quot;id&quot;: 142,
+  &quot;name&quot;: &quot;test.foreman.com&quot;,
+  &quot;ip&quot;: &quot;10.0.1.1&quot;,
+  &quot;ip6&quot;: &quot;2001:db8::1&quot;,
+  &quot;mac&quot;: &quot;aa:aa:aa:aa:aa:aa&quot;,
+  &quot;mtu&quot;: null,
+  &quot;fqdn&quot;: &quot;test.foreman.com&quot;,
+  &quot;primary&quot;: false,
+  &quot;provision&quot;: false,
+  &quot;type&quot;: &quot;bmc&quot;,
+  &quot;username&quot;: &quot;foo&quot;,
+  &quot;password&quot;: &quot;bar&quot;,
+  &quot;provider&quot;: &quot;IPMI&quot;,
+  &quot;virtual&quot;: false
 }</pre>
 
   <h3>Parámetros</h3>
@@ -1180,16 +1281,10 @@
 
 
   <h3>Ejemplos</h3>
-    <pre class="prettyprint">PUT /api/hosts/host2203/interfaces/45
+    <pre class="prettyprint">PUT /api/hosts/host1732/interfaces/155
 {
   &quot;interface&quot;: {
-    &quot;name&quot;: &quot;test.foreman.com&quot;,
-    &quot;ip&quot;: &quot;10.0.1.1&quot;,
-    &quot;mac&quot;: &quot;AA:AA:AA:AA:AA:AA&quot;,
-    &quot;username&quot;: &quot;foo&quot;,
-    &quot;password&quot;: &quot;bar&quot;,
-    &quot;provider&quot;: &quot;IPMI&quot;,
-    &quot;ip6&quot;: &quot;2001:db8::1&quot;
+    &quot;name&quot;: &quot;mxmpnaelzi&quot;
   }
 }
 200
@@ -1200,17 +1295,17 @@
   &quot;subnet6_name&quot;: null,
   &quot;domain_id&quot;: null,
   &quot;domain_name&quot;: null,
-  &quot;created_at&quot;: &quot;2018-07-24 13:13:58 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 13:13:58 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:28:53 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:28:53 UTC&quot;,
   &quot;managed&quot;: true,
-  &quot;identifier&quot;: &quot;eth671&quot;,
-  &quot;id&quot;: 45,
-  &quot;name&quot;: &quot;test.foreman.com&quot;,
-  &quot;ip&quot;: &quot;10.0.1.1&quot;,
-  &quot;ip6&quot;: &quot;2001:db8::1&quot;,
-  &quot;mac&quot;: &quot;aa:aa:aa:aa:aa:aa&quot;,
+  &quot;identifier&quot;: &quot;eth498&quot;,
+  &quot;id&quot;: 155,
+  &quot;name&quot;: &quot;mxmpnaelzi&quot;,
+  &quot;ip&quot;: &quot;0.0.0.99&quot;,
+  &quot;ip6&quot;: null,
+  &quot;mac&quot;: &quot;00:33:45:ab:00:7e&quot;,
   &quot;mtu&quot;: null,
-  &quot;fqdn&quot;: &quot;test.foreman.com&quot;,
+  &quot;fqdn&quot;: &quot;mxmpnaelzi&quot;,
   &quot;primary&quot;: false,
   &quot;provision&quot;: false,
   &quot;type&quot;: &quot;interface&quot;,
@@ -1930,28 +2025,28 @@
 
 
   <h3>Ejemplos</h3>
-    <pre class="prettyprint">DELETE /api/hosts/host2202/interfaces/42
+    <pre class="prettyprint">DELETE /api/hosts/host1733/interfaces/158
 {
   &quot;interface&quot;: {}
 }
 200
 {
-  &quot;id&quot;: 42,
-  &quot;mac&quot;: &quot;00:33:45:ab:00:f1&quot;,
-  &quot;ip&quot;: &quot;0.0.0.160&quot;,
+  &quot;id&quot;: 158,
+  &quot;mac&quot;: &quot;00:33:45:ab:00:80&quot;,
+  &quot;ip&quot;: &quot;0.0.0.101&quot;,
   &quot;name&quot;: null,
-  &quot;host_id&quot;: 37,
+  &quot;host_id&quot;: 122,
   &quot;subnet_id&quot;: null,
   &quot;domain_id&quot;: null,
   &quot;attrs&quot;: {},
-  &quot;created_at&quot;: &quot;2018-07-24T13:13:58.784Z&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24T13:13:58.784Z&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08T09:28:53.786Z&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08T09:28:53.786Z&quot;,
   &quot;provider&quot;: null,
   &quot;username&quot;: null,
   &quot;password&quot;: null,
   &quot;virtual&quot;: false,
   &quot;link&quot;: true,
-  &quot;identifier&quot;: &quot;eth669&quot;,
+  &quot;identifier&quot;: &quot;eth500&quot;,
   &quot;tag&quot;: &quot;&quot;,
   &quot;attached_to&quot;: &quot;&quot;,
   &quot;managed&quot;: true,
@@ -1962,8 +2057,7 @@
   &quot;provision&quot;: false,
   &quot;compute_attributes&quot;: {},
   &quot;ip6&quot;: null,
-  &quot;subnet6_id&quot;: null,
-  &quot;execution&quot;: false
+  &quot;subnet6_id&quot;: null
 }</pre>
 
   <h3>Parámetros</h3>

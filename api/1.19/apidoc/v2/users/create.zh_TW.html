@@ -60,40 +60,22 @@
     &quot;login&quot;: &quot;foo&quot;,
     &quot;auth_source_id&quot;: 200482051,
     &quot;password&quot;: &quot;123456&quot;,
-    &quot;lastname&quot;: &quot;OArooQYswI&quot;
+    &quot;mail&quot;: &quot;foreman@&quot;
   }
 }
-201
+422
 {
-  &quot;firstname&quot;: null,
-  &quot;lastname&quot;: &quot;OArooQYswI&quot;,
-  &quot;mail&quot;: null,
-  &quot;admin&quot;: false,
-  &quot;auth_source_id&quot;: 200482051,
-  &quot;auth_source_name&quot;: &quot;Internal&quot;,
-  &quot;timezone&quot;: null,
-  &quot;locale&quot;: null,
-  &quot;last_login_on&quot;: null,
-  &quot;created_at&quot;: &quot;2018-07-24 13:02:50 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 13:02:50 UTC&quot;,
-  &quot;id&quot;: 980190964,
-  &quot;login&quot;: &quot;foo&quot;,
-  &quot;description&quot;: null,
-  &quot;ssh_keys&quot;: [],
-  &quot;default_location&quot;: null,
-  &quot;locations&quot;: [],
-  &quot;default_organization&quot;: null,
-  &quot;organizations&quot;: [],
-  &quot;effective_admin&quot;: false,
-  &quot;cached_usergroups&quot;: [],
-  &quot;auth_source_internal&quot;: {
-    &quot;id&quot;: 200482051,
-    &quot;type&quot;: &quot;AuthSourceInternal&quot;,
-    &quot;name&quot;: &quot;Internal&quot;
-  },
-  &quot;mail_notifications&quot;: [],
-  &quot;roles&quot;: [],
-  &quot;usergroups&quot;: []
+  &quot;error&quot;: {
+    &quot;id&quot;: null,
+    &quot;errors&quot;: {
+      &quot;mail&quot;: [
+        &quot;is invalid&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Mail is invalid&quot;
+    ]
+  }
 }</pre>
 
   <h2>參數</h2>

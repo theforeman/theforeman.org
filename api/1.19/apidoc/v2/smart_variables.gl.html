@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>API documentation</title>
+  <title>Api Documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
@@ -100,12 +100,12 @@
 
 
 
-  <h3>Examples</h3>
-    <pre class="prettyprint">GET /api/hostgroups/636252244-Common/smart_variables
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">GET /api/smart_variables
 200
 {
-  &quot;total&quot;: 2,
-  &quot;subtotal&quot;: 2,
+  &quot;total&quot;: 3,
+  &quot;subtotal&quot;: 3,
   &quot;page&quot;: 1,
   &quot;per_page&quot;: 20,
   &quot;search&quot;: null,
@@ -127,12 +127,32 @@
       &quot;avoid_duplicates&quot;: false,
       &quot;puppetclass_id&quot;: 980190962,
       &quot;puppetclass_name&quot;: &quot;base&quot;,
-      &quot;created_at&quot;: &quot;2018-07-24 13:12:18 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 13:12:18 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:02:26 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:02:26 UTC&quot;,
       &quot;variable&quot;: &quot;bool_test&quot;,
       &quot;id&quot;: 638205575,
       &quot;default_value&quot;: &quot;t&quot;,
       &quot;override_values_count&quot;: 0
+    },
+    {
+      &quot;description&quot;: null,
+      &quot;parameter_type&quot;: &quot;string&quot;,
+      &quot;variable_type&quot;: &quot;string&quot;,
+      &quot;hidden_value?&quot;: false,
+      &quot;validator_type&quot;: null,
+      &quot;validator_rule&quot;: null,
+      &quot;override_value_order&quot;: &quot;organization,location\nxyz\nhostgroup&quot;,
+      &quot;merge_overrides&quot;: false,
+      &quot;merge_default&quot;: false,
+      &quot;avoid_duplicates&quot;: false,
+      &quot;puppetclass_id&quot;: 298486374,
+      &quot;puppetclass_name&quot;: &quot;apache&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:02:26 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:02:26 UTC&quot;,
+      &quot;variable&quot;: &quot;special_info&quot;,
+      &quot;id&quot;: 281110143,
+      &quot;default_value&quot;: &quot;secret&quot;,
+      &quot;override_values_count&quot;: 2
     },
     {
       &quot;description&quot;: null,
@@ -147,8 +167,8 @@
       &quot;avoid_duplicates&quot;: false,
       &quot;puppetclass_id&quot;: 980190962,
       &quot;puppetclass_name&quot;: &quot;base&quot;,
-      &quot;created_at&quot;: &quot;2018-07-24 13:12:18 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 13:12:18 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:02:26 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:02:26 UTC&quot;,
       &quot;variable&quot;: &quot;ssl_port&quot;,
       &quot;id&quot;: 298486374,
       &quot;default_value&quot;: &quot;443&quot;,
@@ -157,12 +177,12 @@
   ]
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -170,7 +190,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -194,7 +214,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -218,7 +238,7 @@
     <td>
       <strong>host_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -240,7 +260,7 @@
     <td>
       <strong>hostgroup_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -262,7 +282,7 @@
     <td>
       <strong>puppetclass_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -284,7 +304,7 @@
     <td>
       <strong>show_hidden </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -308,7 +328,7 @@
     <td>
       <strong>search </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -332,7 +352,7 @@
     <td>
       <strong>order </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -356,7 +376,7 @@
     <td>
       <strong>page </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -380,7 +400,7 @@
     <td>
       <strong>per_page </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -481,37 +501,47 @@
 
 
 
-  <h3>Examples</h3>
-    <pre class="prettyprint">GET /api/puppetclasses/980190962/smart_variables/1018350798
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">GET /api/puppetclasses/980190962/smart_variables/298486374-ssl_port
 200
 {
   &quot;description&quot;: null,
-  &quot;parameter_type&quot;: null,
-  &quot;variable_type&quot;: null,
-  &quot;hidden_value?&quot;: true,
-  &quot;validator_type&quot;: null,
-  &quot;validator_rule&quot;: null,
+  &quot;parameter_type&quot;: &quot;string&quot;,
+  &quot;variable_type&quot;: &quot;string&quot;,
+  &quot;hidden_value?&quot;: false,
+  &quot;validator_type&quot;: &quot;list&quot;,
+  &quot;validator_rule&quot;: &quot;443,8443&quot;,
   &quot;override_value_order&quot;: &quot;fqdn\nhostgroup\nos\ndomain&quot;,
   &quot;merge_overrides&quot;: false,
   &quot;merge_default&quot;: false,
   &quot;avoid_duplicates&quot;: false,
   &quot;puppetclass_id&quot;: 980190962,
   &quot;puppetclass_name&quot;: &quot;base&quot;,
-  &quot;created_at&quot;: &quot;2018-07-24 12:56:20 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:56:20 UTC&quot;,
-  &quot;variable&quot;: &quot;param105&quot;,
-  &quot;id&quot;: 1018350798,
-  &quot;default_value&quot;: &quot;*****&quot;,
-  &quot;override_values_count&quot;: 0,
-  &quot;override_values&quot;: []
+  &quot;created_at&quot;: &quot;2018-11-08 09:02:26 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:02:26 UTC&quot;,
+  &quot;variable&quot;: &quot;ssl_port&quot;,
+  &quot;id&quot;: 298486374,
+  &quot;default_value&quot;: &quot;443&quot;,
+  &quot;override_values_count&quot;: 1,
+  &quot;override_values&quot;: [
+    {
+      &quot;created_at&quot;: &quot;2018-11-08 09:02:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:02:27 UTC&quot;,
+      &quot;id&quot;: 281110143,
+      &quot;match&quot;: &quot;hostgroup=Common&quot;,
+      &quot;value&quot;: &quot;8443&quot;,
+      &quot;omit&quot;: false,
+      &quot;use_puppet_default&quot;: false
+    }
+  ]
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -519,7 +549,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -543,7 +573,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -567,7 +597,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -589,7 +619,7 @@
     <td>
       <strong>show_hidden </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -640,44 +670,35 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">POST /api/smart_variables
 {
   &quot;smart_variable&quot;: {
-    &quot;variable&quot;: &quot;TgVpwLrCDf&quot;,
-    &quot;puppetclass_id&quot;: 298486374,
-    &quot;hidden_value&quot;: true
+    &quot;variable&quot;: &quot;special_info&quot;,
+    &quot;puppetclass_id&quot;: 298486374
   }
 }
-201
+422
 {
-  &quot;description&quot;: null,
-  &quot;parameter_type&quot;: null,
-  &quot;variable_type&quot;: null,
-  &quot;hidden_value?&quot;: true,
-  &quot;validator_type&quot;: null,
-  &quot;validator_rule&quot;: null,
-  &quot;override_value_order&quot;: &quot;fqdn\nhostgroup\nos\ndomain&quot;,
-  &quot;merge_overrides&quot;: false,
-  &quot;merge_default&quot;: false,
-  &quot;avoid_duplicates&quot;: false,
-  &quot;puppetclass_id&quot;: 298486374,
-  &quot;puppetclass_name&quot;: &quot;apache&quot;,
-  &quot;created_at&quot;: &quot;2018-07-24 12:56:20 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:56:20 UTC&quot;,
-  &quot;variable&quot;: &quot;TgVpwLrCDf&quot;,
-  &quot;id&quot;: 1018350799,
-  &quot;default_value&quot;: &quot;*****&quot;,
-  &quot;override_values_count&quot;: 0,
-  &quot;override_values&quot;: []
+  &quot;error&quot;: {
+    &quot;id&quot;: null,
+    &quot;errors&quot;: {
+      &quot;key&quot;: [
+        &quot;has already been taken&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Key has already been taken&quot;
+    ]
+  }
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -685,7 +706,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -709,7 +730,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -733,7 +754,7 @@
     <td>
       <strong>smart_variable </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -754,7 +775,7 @@
     <td>
       <strong>smart_variable[variable] </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -778,8 +799,8 @@
     <td>
       <strong>smart_variable[puppetclass_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -802,8 +823,8 @@
     <td>
       <strong>smart_variable[default_value] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -826,8 +847,8 @@
     <td>
       <strong>smart_variable[hidden_value] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -850,8 +871,8 @@
     <td>
       <strong>smart_variable[override_value_order] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -874,8 +895,8 @@
     <td>
       <strong>smart_variable[description] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -898,8 +919,8 @@
     <td>
       <strong>smart_variable[validator_type] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -922,8 +943,8 @@
     <td>
       <strong>smart_variable[validator_rule] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -946,8 +967,8 @@
     <td>
       <strong>smart_variable[variable_type] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -970,8 +991,8 @@
     <td>
       <strong>smart_variable[merge_overrides] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -994,8 +1015,8 @@
     <td>
       <strong>smart_variable[merge_default] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1018,8 +1039,8 @@
     <td>
       <strong>smart_variable[avoid_duplicates] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1070,42 +1091,45 @@
 
 
 
-  <h3>Examples</h3>
-    <pre class="prettyprint">PUT /api/smart_variables/1018350796-eziqgLwNpE
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">PUT /api/smart_variables/1018350796-NYpKiEeCjD
 {
   &quot;smart_variable&quot;: {
-    &quot;default_value&quot;: &quot;IRhOjbsJAz&quot;
+    &quot;merge_overrides&quot;: true,
+    &quot;avoid_duplicates&quot;: true
   }
 }
 200
 {
   &quot;description&quot;: null,
-  &quot;parameter_type&quot;: null,
-  &quot;variable_type&quot;: null,
-  &quot;hidden_value?&quot;: true,
+  &quot;parameter_type&quot;: &quot;array&quot;,
+  &quot;variable_type&quot;: &quot;array&quot;,
+  &quot;hidden_value?&quot;: false,
   &quot;validator_type&quot;: null,
   &quot;validator_rule&quot;: null,
   &quot;override_value_order&quot;: &quot;fqdn\nhostgroup\nos\ndomain&quot;,
-  &quot;merge_overrides&quot;: false,
+  &quot;merge_overrides&quot;: true,
   &quot;merge_default&quot;: false,
-  &quot;avoid_duplicates&quot;: false,
+  &quot;avoid_duplicates&quot;: true,
   &quot;puppetclass_id&quot;: 980190962,
   &quot;puppetclass_name&quot;: &quot;base&quot;,
-  &quot;created_at&quot;: &quot;2018-07-24 12:56:20 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:56:20 UTC&quot;,
-  &quot;variable&quot;: &quot;eziqgLwNpE&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:02:35 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:02:35 UTC&quot;,
+  &quot;variable&quot;: &quot;NYpKiEeCjD&quot;,
   &quot;id&quot;: 1018350796,
-  &quot;default_value&quot;: &quot;*****&quot;,
+  &quot;default_value&quot;: [
+    30215
+  ],
   &quot;override_values_count&quot;: 0,
   &quot;override_values&quot;: []
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -1113,7 +1137,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -1137,7 +1161,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -1161,7 +1185,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -1183,7 +1207,7 @@
     <td>
       <strong>smart_variable </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>
@@ -1204,7 +1228,7 @@
     <td>
       <strong>smart_variable[variable] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -1228,8 +1252,8 @@
     <td>
       <strong>smart_variable[puppetclass_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1252,8 +1276,8 @@
     <td>
       <strong>smart_variable[default_value] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1276,8 +1300,8 @@
     <td>
       <strong>smart_variable[hidden_value] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1300,8 +1324,8 @@
     <td>
       <strong>smart_variable[override_value_order] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1324,8 +1348,8 @@
     <td>
       <strong>smart_variable[description] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1348,8 +1372,8 @@
     <td>
       <strong>smart_variable[validator_type] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1372,8 +1396,8 @@
     <td>
       <strong>smart_variable[validator_rule] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1396,8 +1420,8 @@
     <td>
       <strong>smart_variable[variable_type] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1420,8 +1444,8 @@
     <td>
       <strong>smart_variable[merge_overrides] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1444,8 +1468,8 @@
     <td>
       <strong>smart_variable[merge_default] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1468,8 +1492,8 @@
     <td>
       <strong>smart_variable[avoid_duplicates] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: gl.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -1520,7 +1544,7 @@
 
 
 
-  <h3>Examples</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
     <pre class="prettyprint">DELETE /api/smart_variables/281110143-special_info
 {
   &quot;smart_variable&quot;: {}
@@ -1539,8 +1563,8 @@
   &quot;avoid_duplicates&quot;: false,
   &quot;puppetclass_id&quot;: 298486374,
   &quot;puppetclass_name&quot;: &quot;apache&quot;,
-  &quot;created_at&quot;: &quot;2018-07-24 13:12:18 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 13:12:18 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:02:26 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:02:26 UTC&quot;,
   &quot;variable&quot;: &quot;special_info&quot;,
   &quot;id&quot;: 281110143,
   &quot;default_value&quot;: &quot;secret&quot;,
@@ -1548,12 +1572,12 @@
   &quot;override_values&quot;: []
 }</pre>
 
-  <h3>Params</h3>
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: gl.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -1561,7 +1585,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -1585,7 +1609,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: gl.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -1609,7 +1633,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: gl.apipie.required">Required</span>
         
       </small>
     </td>

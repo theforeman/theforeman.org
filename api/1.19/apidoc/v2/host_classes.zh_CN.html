@@ -71,11 +71,11 @@
 
 
   <h3>示例</h3>
-    <pre class="prettyprint">GET /api/hosts/host7/puppetclass_ids
+    <pre class="prettyprint">GET /api/hosts/host2061/puppetclass_ids
 200
 {
   &quot;results&quot;: [
-    1018350796
+    1018350799
   ]
 }</pre>
 
@@ -168,17 +168,18 @@
 
 
   <h3>示例</h3>
-    <pre class="prettyprint">POST /api/hosts/host8/puppetclass_ids
+    <pre class="prettyprint">POST /api/hosts/host2058/puppetclass_ids
 {
-  &quot;puppetclass_id&quot;: 281110143,
+  &quot;puppetclass_id&quot;: &quot;invalid_id&quot;,
   &quot;host_class&quot;: {
-    &quot;puppetclass_id&quot;: 281110143
+    &quot;puppetclass_id&quot;: &quot;invalid_id&quot;
   }
 }
-200
+404
 {
-  &quot;host_id&quot;: 2,
-  &quot;puppetclass_id&quot;: 281110143
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;Resource host_class not found by id &#39;&#39;&quot;
+  }
 }</pre>
 
   <h3>参数</h3>
@@ -318,7 +319,7 @@
 
 
   <h3>示例</h3>
-    <pre class="prettyprint">DELETE /api/hosts/host9/puppetclass_ids/1018350798
+    <pre class="prettyprint">DELETE /api/hosts/host2059/puppetclass_ids/1018350797
 {
   &quot;host_class&quot;: {}
 }

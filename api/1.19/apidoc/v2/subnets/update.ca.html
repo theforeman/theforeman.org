@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>API documentation</title>
+  <title>Api Documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
@@ -51,87 +51,46 @@
 
 
 
-  <h2>Examples</h2>
-    <pre class="prettyprint">PUT /api/subnets/1018350797
+  <h2><span class="translation_missing" title="translation missing: ca.apipie.examples">Examples</span></h2>
+    <pre class="prettyprint">PUT /api/subnets/980190962-one
 {
   &quot;subnet&quot;: {
-    &quot;subnet_parameters_attributes&quot;: [
-      {
-        &quot;name&quot;: &quot;foo&quot;,
-        &quot;value&quot;: &quot;new_value&quot;
-      }
-    ]
+    &quot;name&quot;: &quot;QA2&quot;,
+    &quot;network_type&quot;: &quot;IPv6&quot;,
+    &quot;network&quot;: &quot;2001:db8::&quot;,
+    &quot;mask&quot;: &quot;ffff:ffff:ffff:ffff::&quot;,
+    &quot;ipam&quot;: &quot;None&quot;
   }
 }
-200
+422
 {
-  &quot;network&quot;: &quot;36.220.38.0&quot;,
-  &quot;network_type&quot;: &quot;IPv4&quot;,
-  &quot;cidr&quot;: 24,
-  &quot;mask&quot;: &quot;255.255.255.0&quot;,
-  &quot;priority&quot;: null,
-  &quot;vlanid&quot;: null,
-  &quot;mtu&quot;: 1500,
-  &quot;gateway&quot;: null,
-  &quot;dns_primary&quot;: null,
-  &quot;dns_secondary&quot;: null,
-  &quot;from&quot;: null,
-  &quot;to&quot;: null,
-  &quot;created_at&quot;: &quot;2018-07-24 13:13:46 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 13:13:46 UTC&quot;,
-  &quot;ipam&quot;: &quot;None&quot;,
-  &quot;boot_mode&quot;: &quot;DHCP&quot;,
-  &quot;id&quot;: 1018350797,
-  &quot;name&quot;: &quot;subnet549&quot;,
-  &quot;description&quot;: null,
-  &quot;network_address&quot;: &quot;36.220.38.0/24&quot;,
-  &quot;dhcp_id&quot;: null,
-  &quot;dhcp_name&quot;: null,
-  &quot;tftp_id&quot;: null,
-  &quot;tftp_name&quot;: null,
-  &quot;dns_id&quot;: null,
-  &quot;template_id&quot;: null,
-  &quot;template_name&quot;: null,
-  &quot;dhcp&quot;: null,
-  &quot;tftp&quot;: null,
-  &quot;dns&quot;: null,
-  &quot;template&quot;: null,
-  &quot;domains&quot;: [],
-  &quot;interfaces&quot;: [],
-  &quot;parameters&quot;: [
-    {
-      &quot;priority&quot;: 40,
-      &quot;created_at&quot;: &quot;2018-07-24 13:13:46 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 13:13:46 UTC&quot;,
-      &quot;id&quot;: 767575240,
-      &quot;name&quot;: &quot;foo&quot;,
-      &quot;value&quot;: &quot;new_value&quot;
-    }
-  ],
-  &quot;locations&quot;: [
-    {
-      &quot;id&quot;: 255093256,
-      &quot;name&quot;: &quot;Location 1&quot;,
-      &quot;title&quot;: &quot;Location 1&quot;,
-      &quot;description&quot;: null
-    }
-  ],
-  &quot;organizations&quot;: [
-    {
-      &quot;id&quot;: 447626438,
-      &quot;name&quot;: &quot;Organization 1&quot;,
-      &quot;title&quot;: &quot;Organization 1&quot;,
-      &quot;description&quot;: null
-    }
-  ]
+  &quot;error&quot;: {
+    &quot;id&quot;: 980190962,
+    &quot;errors&quot;: {
+      &quot;network&quot;: [
+        &quot;is invalid&quot;
+      ],
+      &quot;mask&quot;: [
+        &quot;is invalid&quot;
+      ],
+      &quot;type&quot;: [
+        &quot;can&#39;t be updated after subnet is saved&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Network is invalid&quot;,
+      &quot;Mask is invalid&quot;,
+      &quot;Type can&#39;t be updated after subnet is saved&quot;
+    ]
+  }
 }</pre>
 
-  <h2>Params</h2>
+  <h2><span class="translation_missing" title="translation missing: ca.apipie.params">Params</span></h2>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: ca.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: ca.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -139,7 +98,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -163,7 +122,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -187,7 +146,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: ca.apipie.required">Required</span>
         
       </small>
     </td>
@@ -211,7 +170,7 @@
     <td>
       <strong>subnet </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: ca.apipie.required">Required</span>
         
       </small>
     </td>
@@ -232,7 +191,7 @@
     <td>
       <strong>subnet[name] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -256,8 +215,8 @@
     <td>
       <strong>subnet[description] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -280,8 +239,8 @@
     <td>
       <strong>subnet[network_type] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -304,7 +263,7 @@
     <td>
       <strong>subnet[network] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -328,7 +287,7 @@
     <td>
       <strong>subnet[mask] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -352,8 +311,8 @@
     <td>
       <strong>subnet[gateway] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -376,8 +335,8 @@
     <td>
       <strong>subnet[dns_primary] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -400,8 +359,8 @@
     <td>
       <strong>subnet[dns_secondary] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -424,8 +383,8 @@
     <td>
       <strong>subnet[ipam] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -448,8 +407,8 @@
     <td>
       <strong>subnet[from] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -472,8 +431,8 @@
     <td>
       <strong>subnet[to] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -496,8 +455,8 @@
     <td>
       <strong>subnet[vlanid] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -520,8 +479,8 @@
     <td>
       <strong>subnet[mtu] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -544,8 +503,8 @@
     <td>
       <strong>subnet[domain_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -568,8 +527,8 @@
     <td>
       <strong>subnet[dhcp_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -592,8 +551,8 @@
     <td>
       <strong>subnet[tftp_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -616,8 +575,8 @@
     <td>
       <strong>subnet[dns_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -640,8 +599,8 @@
     <td>
       <strong>subnet[template_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -664,8 +623,8 @@
     <td>
       <strong>subnet[boot_mode] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -688,8 +647,8 @@
     <td>
       <strong>subnet[subnet_parameters_attributes] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -712,8 +671,8 @@
     <td>
       <strong>subnet[location_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -736,8 +695,8 @@
     <td>
       <strong>subnet[organization_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>

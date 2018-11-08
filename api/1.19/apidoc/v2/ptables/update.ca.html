@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>API documentation</title>
+  <title>Api Documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
@@ -51,34 +51,38 @@
 
 
 
-  <h2>Examples</h2>
-    <pre class="prettyprint">PUT /api/ptables/1007981703
+  <h2><span class="translation_missing" title="translation missing: ca.apipie.examples">Examples</span></h2>
+    <pre class="prettyprint">PUT /api/ptables/1007981702
 {
   &quot;ptable&quot;: {
-    &quot;name&quot;: &quot;&quot;
+    &quot;layout&quot;: &quot;&quot;
   }
 }
 422
 {
   &quot;error&quot;: {
-    &quot;id&quot;: 1007981703,
+    &quot;id&quot;: 1007981702,
     &quot;errors&quot;: {
-      &quot;name&quot;: [
+      &quot;template&quot;: [
+        &quot;can&#39;t be blank&quot;
+      ],
+      &quot;layout&quot;: [
         &quot;can&#39;t be blank&quot;
       ]
     },
     &quot;full_messages&quot;: [
-      &quot;Name can&#39;t be blank&quot;
+      &quot;Template can&#39;t be blank&quot;,
+      &quot;Layout can&#39;t be blank&quot;
     ]
   }
 }</pre>
 
-  <h2>Params</h2>
+  <h2><span class="translation_missing" title="translation missing: ca.apipie.params">Params</span></h2>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: ca.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: ca.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -86,7 +90,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -110,7 +114,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -134,7 +138,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: ca.apipie.required">Required</span>
         
       </small>
     </td>
@@ -156,7 +160,7 @@
     <td>
       <strong>ptable </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: ca.apipie.required">Required</span>
         
       </small>
     </td>
@@ -177,7 +181,7 @@
     <td>
       <strong>ptable[name] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -199,7 +203,7 @@
     <td>
       <strong>ptable[layout] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -221,8 +225,8 @@
     <td>
       <strong>ptable[snippet] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -243,8 +247,8 @@
     <td>
       <strong>ptable[audit_comment] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -265,8 +269,8 @@
     <td>
       <strong>ptable[locked] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -289,8 +293,8 @@
     <td>
       <strong>ptable[os_family] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -311,8 +315,8 @@
     <td>
       <strong>ptable[operatingsystem_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -335,8 +339,8 @@
     <td>
       <strong>ptable[host_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -359,8 +363,8 @@
     <td>
       <strong>ptable[hostgroup_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -383,8 +387,8 @@
     <td>
       <strong>ptable[location_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -407,8 +411,8 @@
     <td>
       <strong>ptable[organization_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ca.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ca.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>

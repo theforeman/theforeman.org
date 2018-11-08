@@ -75,10 +75,10 @@
 200
 {
   &quot;total&quot;: 3,
-  &quot;subtotal&quot;: 1,
+  &quot;subtotal&quot;: 3,
   &quot;page&quot;: 1,
   &quot;per_page&quot;: 20,
-  &quot;search&quot;: &quot;name = \&quot;Empty Organization\&quot;&quot;,
+  &quot;search&quot;: null,
   &quot;sort&quot;: {
     &quot;by&quot;: null,
     &quot;order&quot;: null
@@ -88,11 +88,33 @@
       &quot;ancestry&quot;: null,
       &quot;parent_id&quot;: null,
       &quot;parent_name&quot;: null,
-      &quot;created_at&quot;: &quot;2018-07-24 12:43:00 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:43:00 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:40:15 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:40:15 UTC&quot;,
       &quot;id&quot;: 114267492,
       &quot;name&quot;: &quot;Empty Organization&quot;,
       &quot;title&quot;: &quot;Empty Organization&quot;,
+      &quot;description&quot;: null
+    },
+    {
+      &quot;ancestry&quot;: null,
+      &quot;parent_id&quot;: null,
+      &quot;parent_name&quot;: null,
+      &quot;created_at&quot;: &quot;2018-11-08 09:40:15 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:40:15 UTC&quot;,
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    },
+    {
+      &quot;ancestry&quot;: null,
+      &quot;parent_id&quot;: null,
+      &quot;parent_name&quot;: null,
+      &quot;created_at&quot;: &quot;2018-11-08 09:40:15 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:40:15 UTC&quot;,
+      &quot;id&quot;: 61304186,
+      &quot;name&quot;: &quot;Organization 2&quot;,
+      &quot;title&quot;: &quot;Organization 2&quot;,
       &quot;description&quot;: null
     }
   ]
@@ -283,12 +305,43 @@
 
 
   <h3>Примеры</h3>
-    <pre class="prettyprint">GET /api/organizations/447626439-org1
-404
+    <pre class="prettyprint">GET /api/organizations/447626439
+200
 {
-  &quot;error&quot;: {
-    &quot;message&quot;: &quot;Resource organization not found by id &#39;447626439-org1&#39;&quot;
-  }
+  &quot;select_all_types&quot;: [],
+  &quot;description&quot;: null,
+  &quot;created_at&quot;: &quot;2018-11-08 09:32:37 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:32:37 UTC&quot;,
+  &quot;ancestry&quot;: null,
+  &quot;parent_id&quot;: null,
+  &quot;parent_name&quot;: null,
+  &quot;id&quot;: 447626439,
+  &quot;name&quot;: &quot;org382&quot;,
+  &quot;title&quot;: &quot;org382&quot;,
+  &quot;users&quot;: [],
+  &quot;smart_proxies&quot;: [],
+  &quot;subnets&quot;: [],
+  &quot;compute_resources&quot;: [],
+  &quot;media&quot;: [],
+  &quot;config_templates&quot;: [],
+  &quot;ptables&quot;: [],
+  &quot;provisioning_templates&quot;: [],
+  &quot;domains&quot;: [],
+  &quot;realms&quot;: [],
+  &quot;environments&quot;: [],
+  &quot;hostgroups&quot;: [],
+  &quot;locations&quot;: [],
+  &quot;hosts_count&quot;: 0,
+  &quot;parameters&quot;: [
+    {
+      &quot;priority&quot;: 10,
+      &quot;created_at&quot;: &quot;2018-11-08 09:32:37 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:32:37 UTC&quot;,
+      &quot;id&quot;: 767575239,
+      &quot;name&quot;: &quot;foo&quot;,
+      &quot;value&quot;: &quot;*****&quot;
+    }
+  ]
 }</pre>
 
   <h3>Параметры</h3>
@@ -429,22 +482,36 @@
     <pre class="prettyprint">POST /api/organizations
 {
   &quot;organization&quot;: {
-    &quot;name&quot;: &quot;Empty Organization&quot;
+    &quot;name&quot;: &quot;SYogfgYSLs&quot;
   }
 }
-422
+201
 {
-  &quot;error&quot;: {
-    &quot;id&quot;: null,
-    &quot;errors&quot;: {
-      &quot;name&quot;: [
-        &quot;has already been taken&quot;
-      ]
-    },
-    &quot;full_messages&quot;: [
-      &quot;Name has already been taken&quot;
-    ]
-  }
+  &quot;select_all_types&quot;: [],
+  &quot;description&quot;: null,
+  &quot;created_at&quot;: &quot;2018-11-08 09:40:30 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:40:30 UTC&quot;,
+  &quot;ancestry&quot;: null,
+  &quot;parent_id&quot;: null,
+  &quot;parent_name&quot;: null,
+  &quot;id&quot;: 447626444,
+  &quot;name&quot;: &quot;SYogfgYSLs&quot;,
+  &quot;title&quot;: &quot;SYogfgYSLs&quot;,
+  &quot;users&quot;: [],
+  &quot;smart_proxies&quot;: [],
+  &quot;subnets&quot;: [],
+  &quot;compute_resources&quot;: [],
+  &quot;media&quot;: [],
+  &quot;config_templates&quot;: [],
+  &quot;ptables&quot;: [],
+  &quot;provisioning_templates&quot;: [],
+  &quot;domains&quot;: [],
+  &quot;realms&quot;: [],
+  &quot;environments&quot;: [],
+  &quot;hostgroups&quot;: [],
+  &quot;locations&quot;: [],
+  &quot;hosts_count&quot;: 0,
+  &quot;parameters&quot;: []
 }</pre>
 
   <h3>Параметры</h3>
@@ -938,29 +1005,28 @@
 
 
   <h3>Примеры</h3>
-    <pre class="prettyprint">PUT /api/organizations/447626442
+    <pre class="prettyprint">PUT /api/organizations/447626439-org430
 {
   &quot;organization&quot;: {
-    &quot;organization_parameters_attributes&quot;: [
-      {
-        &quot;name&quot;: &quot;foo&quot;,
-        &quot;value&quot;: &quot;new_value&quot;
-      }
+    &quot;ignore_types&quot;: [
+      &quot;ProvisioningTemplate&quot;
     ]
   }
 }
 200
 {
-  &quot;select_all_types&quot;: [],
+  &quot;select_all_types&quot;: [
+    &quot;ProvisioningTemplate&quot;
+  ],
   &quot;description&quot;: null,
-  &quot;created_at&quot;: &quot;2018-07-24 12:43:01 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 12:43:01 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:40:28 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:40:28 UTC&quot;,
   &quot;ancestry&quot;: null,
   &quot;parent_id&quot;: null,
   &quot;parent_name&quot;: null,
-  &quot;id&quot;: 447626442,
-  &quot;name&quot;: &quot;org4&quot;,
-  &quot;title&quot;: &quot;org4&quot;,
+  &quot;id&quot;: 447626439,
+  &quot;name&quot;: &quot;org430&quot;,
+  &quot;title&quot;: &quot;org430&quot;,
   &quot;users&quot;: [],
   &quot;smart_proxies&quot;: [],
   &quot;subnets&quot;: [],
@@ -975,16 +1041,7 @@
   &quot;hostgroups&quot;: [],
   &quot;locations&quot;: [],
   &quot;hosts_count&quot;: 0,
-  &quot;parameters&quot;: [
-    {
-      &quot;priority&quot;: 10,
-      &quot;created_at&quot;: &quot;2018-07-24 12:43:01 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 12:43:01 UTC&quot;,
-      &quot;id&quot;: 767575240,
-      &quot;name&quot;: &quot;foo&quot;,
-      &quot;value&quot;: &quot;new_value&quot;
-    }
-  ]
+  &quot;parameters&quot;: []
 }</pre>
 
   <h3>Параметры</h3>

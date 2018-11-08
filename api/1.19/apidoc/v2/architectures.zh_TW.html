@@ -95,20 +95,20 @@
   },
   &quot;results&quot;: [
     {
-      &quot;created_at&quot;: &quot;2018-07-24 13:03:54 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 13:03:54 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:11:29 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:11:29 UTC&quot;,
       &quot;name&quot;: &quot;x86_64&quot;,
       &quot;id&quot;: 501905019
     },
     {
-      &quot;created_at&quot;: &quot;2018-07-24 13:03:54 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 13:03:54 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:11:29 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:11:29 UTC&quot;,
       &quot;name&quot;: &quot;sparc&quot;,
       &quot;id&quot;: 331892513
     },
     {
-      &quot;created_at&quot;: &quot;2018-07-24 13:03:54 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-07-24 13:03:54 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-08 09:11:29 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:11:29 UTC&quot;,
       &quot;name&quot;: &quot;s390&quot;,
       &quot;id&quot;: 381564594
     }
@@ -347,8 +347,8 @@
     <pre class="prettyprint">GET /api/architectures/501905019-x86_64
 200
 {
-  &quot;created_at&quot;: &quot;2018-07-24 13:03:54 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 13:03:54 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-08 09:11:29 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:11:29 UTC&quot;,
   &quot;name&quot;: &quot;x86_64&quot;,
   &quot;id&quot;: 501905019,
   &quot;operatingsystems&quot;: [
@@ -504,17 +504,22 @@
     <pre class="prettyprint">POST /api/architectures
 {
   &quot;architecture&quot;: {
-    &quot;name&quot;: &quot;i386&quot;
+    &quot;name&quot;: &quot;&quot;
   }
 }
-201
+422
 {
-  &quot;created_at&quot;: &quot;2018-07-24 13:03:56 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24 13:03:56 UTC&quot;,
-  &quot;name&quot;: &quot;i386&quot;,
-  &quot;id&quot;: 501905020,
-  &quot;operatingsystems&quot;: [],
-  &quot;images&quot;: []
+  &quot;error&quot;: {
+    &quot;id&quot;: null,
+    &quot;errors&quot;: {
+      &quot;name&quot;: [
+        &quot;can&#39;t be blank&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Name can&#39;t be blank&quot;
+    ]
+  }
 }</pre>
 
   <h3>參數</h3>

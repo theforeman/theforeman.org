@@ -52,36 +52,23 @@
 
 
   <h2>示例</h2>
-    <pre class="prettyprint">DELETE /api/subnets/980190962
+    <pre class="prettyprint">DELETE /api/subnets/980190962-one
 {
   &quot;subnet&quot;: {}
 }
-200
+422
 {
-  &quot;id&quot;: 980190962,
-  &quot;network&quot;: &quot;2.3.4.0&quot;,
-  &quot;mask&quot;: &quot;255.255.255.0&quot;,
-  &quot;priority&quot;: null,
-  &quot;name&quot;: &quot;one&quot;,
-  &quot;vlanid&quot;: 41,
-  &quot;created_at&quot;: &quot;2018-07-24T13:13:41.110Z&quot;,
-  &quot;updated_at&quot;: &quot;2018-07-24T13:13:41.110Z&quot;,
-  &quot;dhcp_id&quot;: 980190962,
-  &quot;tftp_id&quot;: 298486374,
-  &quot;gateway&quot;: null,
-  &quot;dns_primary&quot;: null,
-  &quot;dns_secondary&quot;: null,
-  &quot;from&quot;: null,
-  &quot;to&quot;: null,
-  &quot;dns_id&quot;: 113629430,
-  &quot;boot_mode&quot;: &quot;DHCP&quot;,
-  &quot;ipam&quot;: &quot;None&quot;,
-  &quot;discovery_id&quot;: null,
-  &quot;description&quot;: null,
-  &quot;template_id&quot;: null,
-  &quot;mtu&quot;: 1500,
-  &quot;to_label&quot;: &quot;one (2.3.4.0/24)&quot;,
-  &quot;type&quot;: &quot;Subnet::Ipv4&quot;
+  &quot;error&quot;: {
+    &quot;id&quot;: 980190962,
+    &quot;errors&quot;: {
+      &quot;base&quot;: [
+        &quot;one is used by mydomain.net&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;one is used by mydomain.net&quot;
+    ]
+  }
 }</pre>
 
   <h2>參數</h2>

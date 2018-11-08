@@ -56,21 +56,19 @@
 {
   &quot;provisioning_template&quot;: {}
 }
-422
+200
 {
-  &quot;error&quot;: {
-    &quot;id&quot;: 1007981701,
-    &quot;errors&quot;: {
-      &quot;base&quot;: [
-        &quot;centos5_3_pxelinux is used by Redhat 6.1 - &quot;,
-        &quot;centos5_3_pxelinux is used by Ubuntu 10.10 - &quot;
-      ]
-    },
-    &quot;full_messages&quot;: [
-      &quot;centos5_3_pxelinux is used by Redhat 6.1 - &quot;,
-      &quot;centos5_3_pxelinux is used by Ubuntu 10.10 - &quot;
-    ]
-  }
+  &quot;id&quot;: 1007981701,
+  &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
+  &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ks=&lt;%= foreman_url(\&quot;kickstart\&quot;)%&gt; ksdevice=bootif network kssendmac&quot;,
+  &quot;snippet&quot;: false,
+  &quot;template_kind_id&quot;: 452984334,
+  &quot;created_at&quot;: &quot;2018-11-08T09:11:29.873Z&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08T09:11:29.873Z&quot;,
+  &quot;locked&quot;: false,
+  &quot;default&quot;: false,
+  &quot;vendor&quot;: null,
+  &quot;os_family&quot;: null
 }</pre>
 
   <h2>Parametri</h2>

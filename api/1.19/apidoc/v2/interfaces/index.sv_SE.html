@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>API documentation</title>
+  <title>Api Documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
@@ -65,21 +65,101 @@
 
 
 
-  <h2>Examples</h2>
-    <pre class="prettyprint">GET /api/hosts/host1450/interfaces
-404
+  <h2><span class="translation_missing" title="translation missing: sv-SE.apipie.examples">Examples</span></h2>
+    <pre class="prettyprint">GET /api/hosts/host449/interfaces
+200
 {
-  &quot;error&quot;: {
-    &quot;message&quot;: &quot;Resource interface not found by id &#39;&#39;&quot;
-  }
+  &quot;total&quot;: 3,
+  &quot;subtotal&quot;: 3,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;created_at&quot;: &quot;2018-11-08 09:05:55 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:05:55 UTC&quot;,
+      &quot;managed&quot;: true,
+      &quot;identifier&quot;: null,
+      &quot;id&quot;: 15,
+      &quot;name&quot;: &quot;host449&quot;,
+      &quot;ip&quot;: null,
+      &quot;ip6&quot;: null,
+      &quot;mac&quot;: null,
+      &quot;mtu&quot;: null,
+      &quot;fqdn&quot;: &quot;host449&quot;,
+      &quot;primary&quot;: true,
+      &quot;provision&quot;: true,
+      &quot;type&quot;: &quot;interface&quot;,
+      &quot;virtual&quot;: false
+    },
+    {
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;created_at&quot;: &quot;2018-11-08 09:05:55 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:05:55 UTC&quot;,
+      &quot;managed&quot;: true,
+      &quot;identifier&quot;: &quot;eth116&quot;,
+      &quot;id&quot;: 16,
+      &quot;name&quot;: null,
+      &quot;ip&quot;: &quot;0.0.0.18&quot;,
+      &quot;ip6&quot;: null,
+      &quot;mac&quot;: &quot;00:33:45:ab:00:16&quot;,
+      &quot;mtu&quot;: null,
+      &quot;fqdn&quot;: null,
+      &quot;primary&quot;: false,
+      &quot;provision&quot;: false,
+      &quot;type&quot;: &quot;interface&quot;,
+      &quot;virtual&quot;: false
+    },
+    {
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;created_at&quot;: &quot;2018-11-08 09:05:55 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:05:55 UTC&quot;,
+      &quot;managed&quot;: true,
+      &quot;identifier&quot;: &quot;eth117&quot;,
+      &quot;id&quot;: 17,
+      &quot;name&quot;: null,
+      &quot;ip&quot;: &quot;0.0.0.19&quot;,
+      &quot;ip6&quot;: null,
+      &quot;mac&quot;: &quot;00:33:45:ab:00:17&quot;,
+      &quot;mtu&quot;: null,
+      &quot;fqdn&quot;: null,
+      &quot;primary&quot;: false,
+      &quot;provision&quot;: false,
+      &quot;type&quot;: &quot;bond&quot;,
+      &quot;mode&quot;: &quot;balance-rr&quot;,
+      &quot;attached_devices&quot;: &quot;&quot;,
+      &quot;bond_options&quot;: &quot;&quot;,
+      &quot;virtual&quot;: true
+    }
+  ]
 }</pre>
 
-  <h2>Params</h2>
+  <h2><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h2>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -87,7 +167,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -111,7 +191,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -135,7 +215,7 @@
     <td>
       <strong>host_id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
         
       </small>
     </td>
@@ -159,7 +239,7 @@
     <td>
       <strong>domain_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -183,7 +263,7 @@
     <td>
       <strong>subnet_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -207,7 +287,7 @@
     <td>
       <strong>page </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -231,7 +311,7 @@
     <td>
       <strong>per_page </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>

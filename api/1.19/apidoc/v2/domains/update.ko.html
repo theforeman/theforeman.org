@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>API documentation</title>
+  <title>Api Documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
@@ -51,34 +51,69 @@
 
 
 
-  <h2>Examples</h2>
+  <h2><span class="translation_missing" title="translation missing: ko.apipie.examples">Examples</span></h2>
     <pre class="prettyprint">PUT /api/domains/22495316-mydomain-net
 {
   &quot;domain&quot;: {
-    &quot;name&quot;: &quot;&quot;
+    &quot;name&quot;: &quot;domain.new&quot;
   }
 }
-422
+200
 {
-  &quot;error&quot;: {
-    &quot;id&quot;: 22495316,
-    &quot;errors&quot;: {
-      &quot;name&quot;: [
-        &quot;can&#39;t be blank&quot;
-      ]
-    },
-    &quot;full_messages&quot;: [
-      &quot;Name can&#39;t be blank&quot;
-    ]
-  }
+  &quot;fullname&quot;: null,
+  &quot;created_at&quot;: &quot;2018-11-08 09:07:30 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-08 09:07:31 UTC&quot;,
+  &quot;id&quot;: 22495316,
+  &quot;name&quot;: &quot;domain.new&quot;,
+  &quot;dns_id&quot;: 113629430,
+  &quot;dns&quot;: {
+    &quot;name&quot;: &quot;DNS Proxy&quot;,
+    &quot;id&quot;: 113629430,
+    &quot;url&quot;: &quot;http://else.where:45671&quot;
+  },
+  &quot;subnets&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;one&quot;,
+      &quot;description&quot;: null,
+      &quot;network_address&quot;: &quot;2.3.4.0/24&quot;
+    }
+  ],
+  &quot;interfaces&quot;: [],
+  &quot;parameters&quot;: [
+    {
+      &quot;priority&quot;: null,
+      &quot;created_at&quot;: &quot;2018-11-08 09:07:30 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-08 09:07:30 UTC&quot;,
+      &quot;id&quot;: 665394701,
+      &quot;name&quot;: &quot;parameter&quot;,
+      &quot;value&quot;: &quot;value1&quot;
+    }
+  ],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
 }</pre>
 
-  <h2>Params</h2>
+  <h2><span class="translation_missing" title="translation missing: ko.apipie.params">Params</span></h2>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: ko.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: ko.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -86,7 +121,7 @@
     <td>
       <strong>location_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -110,7 +145,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -134,7 +169,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: ko.apipie.required">Required</span>
         
       </small>
     </td>
@@ -156,7 +191,7 @@
     <td>
       <strong>domain </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: ko.apipie.required">Required</span>
         
       </small>
     </td>
@@ -177,7 +212,7 @@
     <td>
       <strong>domain[name] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -201,8 +236,8 @@
     <td>
       <strong>domain[fullname] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ko.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -225,8 +260,8 @@
     <td>
       <strong>domain[dns_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ko.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -249,8 +284,8 @@
     <td>
       <strong>domain[domain_parameters_attributes] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ko.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -273,8 +308,8 @@
     <td>
       <strong>domain[location_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ko.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
@@ -297,8 +332,8 @@
     <td>
       <strong>domain[organization_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ko.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
