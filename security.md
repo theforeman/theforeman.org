@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2018-14664: Persisted XSS on all pages that use breadcrumbs](security.html#2018-1097)
 * [CVE-2018-1097: oVirt credetials exposed by power API](security.html#2018-1097)
 * [CVE-2018-1096: SQL injection on dashboard](security.html#2018-1096)
 * [CVE-2017-15100: Stored XSS in fact charts](security.html#2017-15100)
@@ -74,6 +75,14 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2018-14664"></a>CVE-2018-14664: Persisted XSS on all pages that use breadcrumbs
+
+If user has the permission to edit resource which attribute is user in the breadcrumbs bar, it's not properly escaped allowing attacker to store code, that will be executed on client side. E.g. create a domain with name test.com, the go to it's edit form. See the breadcrumb didn't escape the HTML code.
+
+* Affects Foreman 1.18 and higher
+* Fix released with Foreman 1.18.3
+* Redmine issue [#25169](http://projects.theforeman.org/issues/25169)
 
 #### <a id="2018-1097"></a>CVE-2018-1097: oVirt credetials exposed by power API
 
