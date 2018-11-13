@@ -145,21 +145,13 @@ If this is the first plugin you're installing, please see the [plugin
 repository section]({{site.baseurl}}plugins/#2.2Packageinstallation) to set up the
 repository first.
 
-To install Foreman Ansible, run the following:
+You can use foreman-installer to install Foreman Ansible:
 
-* Red Hat based (RHEL, CentOS...)
+      # foreman-installer --enable-foreman-plugin-ansible --enable-foreman-proxy-plugin-ansible
 
-      # yum install tfm-rubygem-foreman_ansible
+To run Ansible playbooks as Job Templates, you will also need Remote Execution:
 
-* Fedora
-
-      # yum install rubygem-foreman_ansible
-
-* Debian based (Debian, Ubuntu...)
-
-      # apt-get install ruby-foreman-ansible
-
-Restarting Foreman might be needed after installing the package.
+      # foreman-installer --enable-foreman-plugin-remote-execution --enable-foreman-proxy-plugin-remote-execution-ssh
 
 ## 2.3 Inventory
 
