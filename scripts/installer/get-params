@@ -1,0 +1,16 @@
+#!/bin/bash -e
+
+FOREMAN_VERSION=$1
+
+if [[ -z $FOREMAN_VERSION ]] ; then
+	echo "Usage: $1 FOREMAN_VERSION"
+	exit 1
+fi
+
+cd $(dirname $0)
+
+TAG=foreman-installer:$FOREMAN_VERSION
+docker build --build-arg FOREMAN_VERSION=$FOREMAN_VERSION -t $TAG .
+docker run --rm $TAG foreman-installer -h | grep enable- | grep -v enable-scenario | sed 's/ (default: \(true\|false\))//' | ./installer-enable-to-table > installer-$FOREMAN_VERSION-help.html
+docker run --rm $TAG kafo-export-params -c /etc/foreman-installer/scenarios.d/foreman.yaml -f html | sed 's/installer-options/all-installer-options/' > installer-$FOREMAN_VERSION-params.html
+docker rmi $TAG
