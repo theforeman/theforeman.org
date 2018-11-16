@@ -27,7 +27,7 @@
     
   </li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../apidoc/v2/hosts.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/hosts.de.html">de</a> | <a href="../../apidoc/v2/hosts.it.html">it</a> | <a href="../../apidoc/v2/hosts.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/hosts.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/hosts.en_GB.html">en_GB</a> | <b><a href="../../apidoc/v2/hosts.fr.html">fr</a></b> | <a href="../../apidoc/v2/hosts.ru.html">ru</a> | <a href="../../apidoc/v2/hosts.ja.html">ja</a> | <a href="../../apidoc/v2/hosts.es.html">es</a> | <a href="../../apidoc/v2/hosts.ko.html">ko</a> | <a href="../../apidoc/v2/hosts.ca.html">ca</a> | <a href="../../apidoc/v2/hosts.gl.html">gl</a> | <a href="../../apidoc/v2/hosts.en.html">en</a> | <a href="../../apidoc/v2/hosts.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/hosts.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/hosts.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../apidoc/v2/hosts.ko.html">ko</a> | <a href="../../apidoc/v2/hosts.en.html">en</a> | <b><a href="../../apidoc/v2/hosts.fr.html">fr</a></b> | <a href="../../apidoc/v2/hosts.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/hosts.de.html">de</a> | <a href="../../apidoc/v2/hosts.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/hosts.ja.html">ja</a> | <a href="../../apidoc/v2/hosts.pl.html">pl</a> | <a href="../../apidoc/v2/hosts.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/hosts.it.html">it</a> | <a href="../../apidoc/v2/hosts.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/hosts.ru.html">ru</a> | <a href="../../apidoc/v2/hosts.es.html">es</a> | <a href="../../apidoc/v2/hosts.ca.html">ca</a> | <a href="../../apidoc/v2/hosts.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/hosts.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/hosts.gl.html">gl</a> ]
 </li>
 
 </ul>
@@ -111,7 +111,7 @@
 
 
   <h3>Exemples</h3>
-    <pre class="prettyprint">GET /api/hostgroups/928644291/hosts
+    <pre class="prettyprint">GET /api/hosts
 200
 {
   &quot;total&quot;: 1,
@@ -125,44 +125,44 @@
   },
   &quot;results&quot;: [
     {
-      &quot;ip&quot;: &quot;0.0.1.26&quot;,
+      &quot;ip&quot;: null,
       &quot;ip6&quot;: null,
       &quot;environment_id&quot;: null,
       &quot;environment_name&quot;: null,
       &quot;last_report&quot;: null,
-      &quot;mac&quot;: &quot;00:53:67:ab:01:49&quot;,
+      &quot;mac&quot;: null,
       &quot;realm_id&quot;: null,
       &quot;realm_name&quot;: null,
       &quot;sp_mac&quot;: null,
       &quot;sp_ip&quot;: null,
       &quot;sp_name&quot;: null,
-      &quot;domain_id&quot;: 759776772,
-      &quot;domain_name&quot;: &quot;example589.com&quot;,
-      &quot;architecture_id&quot;: 501905028,
-      &quot;architecture_name&quot;: &quot;x86_64-390&quot;,
-      &quot;operatingsystem_id&quot;: 1073012837,
-      &quot;operatingsystem_name&quot;: &quot;operatingsystem462 462&quot;,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;architecture_id&quot;: null,
+      &quot;architecture_name&quot;: null,
+      &quot;operatingsystem_id&quot;: null,
+      &quot;operatingsystem_name&quot;: null,
       &quot;subnet_id&quot;: null,
       &quot;subnet_name&quot;: null,
       &quot;subnet6_id&quot;: null,
       &quot;subnet6_name&quot;: null,
       &quot;sp_subnet_id&quot;: null,
-      &quot;ptable_id&quot;: 1007981710,
-      &quot;ptable_name&quot;: &quot;ptable415&quot;,
-      &quot;medium_id&quot;: 1011586627,
-      &quot;medium_name&quot;: &quot;medium561&quot;,
-      &quot;pxe_loader&quot;: &quot;Grub2 UEFI&quot;,
+      &quot;ptable_id&quot;: null,
+      &quot;ptable_name&quot;: null,
+      &quot;medium_id&quot;: null,
+      &quot;medium_name&quot;: null,
+      &quot;pxe_loader&quot;: null,
       &quot;build&quot;: false,
       &quot;comment&quot;: null,
       &quot;disk&quot;: null,
       &quot;installed_at&quot;: null,
       &quot;model_id&quot;: null,
-      &quot;hostgroup_id&quot;: 928644291,
+      &quot;hostgroup_id&quot;: null,
       &quot;owner_id&quot;: 135138680,
       &quot;owner_name&quot;: &quot;Admin User&quot;,
       &quot;owner_type&quot;: &quot;User&quot;,
       &quot;enabled&quot;: true,
-      &quot;managed&quot;: true,
+      &quot;managed&quot;: false,
       &quot;use_image&quot;: null,
       &quot;image_file&quot;: &quot;&quot;,
       &quot;uuid&quot;: null,
@@ -174,11 +174,11 @@
         &quot;build&quot;
       ],
       &quot;provision_method&quot;: &quot;build&quot;,
-      &quot;certname&quot;: &quot;host1087.example589.com&quot;,
+      &quot;certname&quot;: &quot;host6&quot;,
       &quot;image_id&quot;: null,
       &quot;image_name&quot;: null,
-      &quot;created_at&quot;: &quot;2018-11-01 13:28:11 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:28:11 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:36 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:36 UTC&quot;,
       &quot;last_compile&quot;: null,
       &quot;global_status&quot;: 0,
       &quot;global_status_label&quot;: &quot;OK&quot;,
@@ -188,18 +188,16 @@
       &quot;location_name&quot;: &quot;Location 1&quot;,
       &quot;puppet_status&quot;: 0,
       &quot;model_name&quot;: null,
-      &quot;build_status&quot;: 0,
-      &quot;build_status_label&quot;: &quot;Installed&quot;,
-      &quot;name&quot;: &quot;host1087.example589.com&quot;,
-      &quot;id&quot;: 24,
+      &quot;name&quot;: &quot;host6&quot;,
+      &quot;id&quot;: 1,
       &quot;puppet_proxy_id&quot;: null,
       &quot;puppet_proxy_name&quot;: null,
       &quot;puppet_ca_proxy_id&quot;: null,
       &quot;puppet_ca_proxy_name&quot;: null,
       &quot;puppet_proxy&quot;: null,
       &quot;puppet_ca_proxy&quot;: null,
-      &quot;hostgroup_name&quot;: &quot;hostgroup151&quot;,
-      &quot;hostgroup_title&quot;: &quot;hostgroup152/hostgroup151&quot;
+      &quot;hostgroup_name&quot;: null,
+      &quot;hostgroup_title&quot;: null
     }
   ]
 }</pre>
@@ -840,7 +838,7 @@
 
 
   <h3>Exemples</h3>
-    <pre class="prettyprint">GET /api/hosts/245
+    <pre class="prettyprint">GET /api/hosts/host10
 200
 {
   &quot;ip&quot;: null,
@@ -892,11 +890,11 @@
     &quot;build&quot;
   ],
   &quot;provision_method&quot;: &quot;build&quot;,
-  &quot;certname&quot;: &quot;host1474&quot;,
+  &quot;certname&quot;: &quot;host10&quot;,
   &quot;image_id&quot;: null,
   &quot;image_name&quot;: null,
-  &quot;created_at&quot;: &quot;2018-11-01 13:30:02 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:30:02 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:37 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:37 UTC&quot;,
   &quot;last_compile&quot;: null,
   &quot;global_status&quot;: 0,
   &quot;global_status_label&quot;: &quot;OK&quot;,
@@ -906,38 +904,42 @@
   &quot;location_name&quot;: &quot;Location 1&quot;,
   &quot;puppet_status&quot;: 0,
   &quot;model_name&quot;: null,
-  &quot;name&quot;: &quot;host1474&quot;,
-  &quot;id&quot;: 245,
+  &quot;name&quot;: &quot;host10&quot;,
+  &quot;id&quot;: 1,
   &quot;puppet_proxy_id&quot;: null,
   &quot;puppet_proxy_name&quot;: null,
-  &quot;puppet_ca_proxy_id&quot;: null,
-  &quot;puppet_ca_proxy_name&quot;: null,
+  &quot;puppet_ca_proxy_id&quot;: 182953976,
+  &quot;puppet_ca_proxy_name&quot;: &quot;Puppetmaster Proxy&quot;,
   &quot;puppet_proxy&quot;: null,
-  &quot;puppet_ca_proxy&quot;: null,
+  &quot;puppet_ca_proxy&quot;: {
+    &quot;name&quot;: &quot;Puppetmaster Proxy&quot;,
+    &quot;id&quot;: 182953976,
+    &quot;url&quot;: &quot;http://else.where:4567&quot;
+  },
   &quot;hostgroup_name&quot;: null,
   &quot;hostgroup_title&quot;: null,
   &quot;parameters&quot;: [],
   &quot;all_parameters&quot;: [
     {
       &quot;priority&quot;: null,
-      &quot;created_at&quot;: &quot;2018-11-01 13:30:00 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:30:00 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
       &quot;id&quot;: 513706444,
       &quot;name&quot;: &quot;loc_param&quot;,
       &quot;value&quot;: &quot;abc&quot;
     },
     {
       &quot;priority&quot;: null,
-      &quot;created_at&quot;: &quot;2018-11-01 13:30:00 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:30:00 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
       &quot;id&quot;: 32400255,
       &quot;name&quot;: &quot;org_param&quot;,
       &quot;value&quot;: &quot;xyz&quot;
     },
     {
       &quot;priority&quot;: null,
-      &quot;created_at&quot;: &quot;2018-11-01 13:30:00 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:30:00 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
       &quot;id&quot;: 636252244,
       &quot;name&quot;: &quot;test&quot;,
       &quot;value&quot;: &quot;myvalue&quot;
@@ -951,17 +953,17 @@
       &quot;subnet6_name&quot;: null,
       &quot;domain_id&quot;: null,
       &quot;domain_name&quot;: null,
-      &quot;created_at&quot;: &quot;2018-11-01 13:30:02 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:30:02 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:37 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:37 UTC&quot;,
       &quot;managed&quot;: true,
       &quot;identifier&quot;: null,
-      &quot;id&quot;: 250,
-      &quot;name&quot;: &quot;host1474&quot;,
+      &quot;id&quot;: 1,
+      &quot;name&quot;: &quot;host10&quot;,
       &quot;ip&quot;: null,
       &quot;ip6&quot;: null,
       &quot;mac&quot;: null,
       &quot;mtu&quot;: null,
-      &quot;fqdn&quot;: &quot;host1474&quot;,
+      &quot;fqdn&quot;: &quot;host10&quot;,
       &quot;primary&quot;: true,
       &quot;provision&quot;: true,
       &quot;type&quot;: &quot;interface&quot;,
@@ -972,14 +974,14 @@
   &quot;config_groups&quot;: [],
   &quot;all_puppetclasses&quot;: [],
   &quot;permissions&quot;: {
-    &quot;view_hosts&quot;: true,
-    &quot;create_hosts&quot;: true,
-    &quot;edit_hosts&quot;: true,
-    &quot;destroy_hosts&quot;: true,
+    &quot;console_hosts&quot;: true,
     &quot;build_hosts&quot;: true,
     &quot;power_hosts&quot;: true,
-    &quot;console_hosts&quot;: true,
+    &quot;edit_hosts&quot;: true,
+    &quot;destroy_hosts&quot;: true,
+    &quot;create_hosts&quot;: true,
     &quot;ipmi_boot_hosts&quot;: true,
+    &quot;view_hosts&quot;: true,
     &quot;puppetrun_hosts&quot;: true
   }
 }</pre>
@@ -1122,33 +1124,197 @@
     <pre class="prettyprint">POST /api/hosts
 {
   &quot;host&quot;: {
+    &quot;name&quot;: &quot;testhost11&quot;,
     &quot;environment_id&quot;: 334344675,
-    &quot;ptable_id&quot;: 1007981703,
+    &quot;domain_id&quot;: 22495316,
+    &quot;ptable_id&quot;: 1007981803,
     &quot;medium_id&quot;: 980190962,
     &quot;architecture_id&quot;: 501905019,
     &quot;operatingsystem_id&quot;: 1073012828,
     &quot;puppet_proxy_id&quot;: 182953976,
+    &quot;compute_resource_id&quot;: 980190962,
     &quot;root_pass&quot;: &quot;xybxa6JUkz63w&quot;,
     &quot;location_id&quot;: 255093256,
     &quot;organization_id&quot;: 447626438,
-    &quot;compute_resource_id&quot;: 980190964,
-    &quot;uuid&quot;: &quot;5032c8a5-9c5e-ba7a-3804-832a03e16381&quot;,
     &quot;ip&quot;: &quot;10.0.0.20&quot;,
-    &quot;build&quot;: true
+    &quot;mac&quot;: &quot;52:53:00:1e:85:93&quot;,
+    &quot;compute_attributes&quot;: {
+      &quot;cpus&quot;: 4,
+      &quot;memory&quot;: 1024
+    },
+    &quot;enabled&quot;: false
   }
 }
-422
+201
 {
-  &quot;error&quot;: {
-    &quot;id&quot;: null,
-    &quot;errors&quot;: {
-      &quot;uuid&quot;: [
-        &quot;has already been taken&quot;
-      ]
+  &quot;ip&quot;: &quot;10.0.0.20&quot;,
+  &quot;ip6&quot;: null,
+  &quot;environment_id&quot;: 334344675,
+  &quot;environment_name&quot;: &quot;production&quot;,
+  &quot;last_report&quot;: null,
+  &quot;mac&quot;: &quot;52:53:00:1e:85:93&quot;,
+  &quot;realm_id&quot;: null,
+  &quot;realm_name&quot;: null,
+  &quot;sp_mac&quot;: null,
+  &quot;sp_ip&quot;: null,
+  &quot;sp_name&quot;: null,
+  &quot;domain_id&quot;: 22495316,
+  &quot;domain_name&quot;: &quot;mydomain.net&quot;,
+  &quot;architecture_id&quot;: 501905019,
+  &quot;architecture_name&quot;: &quot;x86_64&quot;,
+  &quot;operatingsystem_id&quot;: 1073012828,
+  &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
+  &quot;subnet_id&quot;: null,
+  &quot;subnet_name&quot;: null,
+  &quot;subnet6_id&quot;: null,
+  &quot;subnet6_name&quot;: null,
+  &quot;sp_subnet_id&quot;: null,
+  &quot;ptable_id&quot;: 1007981803,
+  &quot;ptable_name&quot;: &quot;ptable1&quot;,
+  &quot;medium_id&quot;: 980190962,
+  &quot;medium_name&quot;: &quot;CentOS 5.4&quot;,
+  &quot;pxe_loader&quot;: &quot;Grub UEFI&quot;,
+  &quot;build&quot;: false,
+  &quot;comment&quot;: null,
+  &quot;disk&quot;: null,
+  &quot;installed_at&quot;: null,
+  &quot;model_id&quot;: null,
+  &quot;hostgroup_id&quot;: null,
+  &quot;owner_id&quot;: 135138680,
+  &quot;owner_name&quot;: &quot;Admin User&quot;,
+  &quot;owner_type&quot;: &quot;User&quot;,
+  &quot;enabled&quot;: false,
+  &quot;managed&quot;: true,
+  &quot;use_image&quot;: null,
+  &quot;image_file&quot;: &quot;&quot;,
+  &quot;uuid&quot;: null,
+  &quot;compute_resource_id&quot;: 980190962,
+  &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
+  &quot;compute_profile_id&quot;: null,
+  &quot;compute_profile_name&quot;: null,
+  &quot;capabilities&quot;: [
+    &quot;build&quot;,
+    &quot;image&quot;,
+    &quot;new_volume&quot;
+  ],
+  &quot;provision_method&quot;: &quot;build&quot;,
+  &quot;certname&quot;: &quot;testhost11.mydomain.net&quot;,
+  &quot;image_id&quot;: null,
+  &quot;image_name&quot;: null,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:36 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:36 UTC&quot;,
+  &quot;last_compile&quot;: null,
+  &quot;global_status&quot;: 0,
+  &quot;global_status_label&quot;: &quot;Warning&quot;,
+  &quot;organization_id&quot;: 447626438,
+  &quot;organization_name&quot;: &quot;Organization 1&quot;,
+  &quot;location_id&quot;: 255093256,
+  &quot;location_name&quot;: &quot;Location 1&quot;,
+  &quot;puppet_status&quot;: 0,
+  &quot;model_name&quot;: null,
+  &quot;configuration_status&quot;: 0,
+  &quot;configuration_status_label&quot;: &quot;Alerts disabled&quot;,
+  &quot;build_status&quot;: 0,
+  &quot;build_status_label&quot;: &quot;Installed&quot;,
+  &quot;name&quot;: &quot;testhost11.mydomain.net&quot;,
+  &quot;id&quot;: 2,
+  &quot;puppet_proxy_id&quot;: 182953976,
+  &quot;puppet_proxy_name&quot;: &quot;Puppetmaster Proxy&quot;,
+  &quot;puppet_ca_proxy_id&quot;: 182953976,
+  &quot;puppet_ca_proxy_name&quot;: &quot;Puppetmaster Proxy&quot;,
+  &quot;puppet_proxy&quot;: {
+    &quot;name&quot;: &quot;Puppetmaster Proxy&quot;,
+    &quot;id&quot;: 182953976,
+    &quot;url&quot;: &quot;http://else.where:4567&quot;
+  },
+  &quot;puppet_ca_proxy&quot;: {
+    &quot;name&quot;: &quot;Puppetmaster Proxy&quot;,
+    &quot;id&quot;: 182953976,
+    &quot;url&quot;: &quot;http://else.where:4567&quot;
+  },
+  &quot;hostgroup_name&quot;: null,
+  &quot;hostgroup_title&quot;: null,
+  &quot;parameters&quot;: [],
+  &quot;all_parameters&quot;: [
+    {
+      &quot;priority&quot;: null,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;id&quot;: 716195090,
+      &quot;name&quot;: &quot;os1&quot;,
+      &quot;value&quot;: &quot;os1&quot;
     },
-    &quot;full_messages&quot;: [
-      &quot;Uuid has already been taken&quot;
-    ]
+    {
+      &quot;priority&quot;: null,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;id&quot;: 665394701,
+      &quot;name&quot;: &quot;parameter&quot;,
+      &quot;value&quot;: &quot;value1&quot;
+    },
+    {
+      &quot;priority&quot;: null,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;id&quot;: 513706444,
+      &quot;name&quot;: &quot;loc_param&quot;,
+      &quot;value&quot;: &quot;abc&quot;
+    },
+    {
+      &quot;priority&quot;: null,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;id&quot;: 32400255,
+      &quot;name&quot;: &quot;org_param&quot;,
+      &quot;value&quot;: &quot;xyz&quot;
+    },
+    {
+      &quot;priority&quot;: null,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;id&quot;: 636252244,
+      &quot;name&quot;: &quot;test&quot;,
+      &quot;value&quot;: &quot;myvalue&quot;
+    }
+  ],
+  &quot;interfaces&quot;: [
+    {
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;domain_id&quot;: 22495316,
+      &quot;domain_name&quot;: &quot;mydomain.net&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:36 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:36 UTC&quot;,
+      &quot;managed&quot;: true,
+      &quot;identifier&quot;: null,
+      &quot;id&quot;: 2,
+      &quot;name&quot;: &quot;testhost11.mydomain.net&quot;,
+      &quot;ip&quot;: &quot;10.0.0.20&quot;,
+      &quot;ip6&quot;: null,
+      &quot;mac&quot;: &quot;52:53:00:1e:85:93&quot;,
+      &quot;mtu&quot;: null,
+      &quot;fqdn&quot;: &quot;testhost11.mydomain.net&quot;,
+      &quot;primary&quot;: true,
+      &quot;provision&quot;: true,
+      &quot;type&quot;: &quot;interface&quot;,
+      &quot;virtual&quot;: false
+    }
+  ],
+  &quot;puppetclasses&quot;: [],
+  &quot;config_groups&quot;: [],
+  &quot;all_puppetclasses&quot;: [],
+  &quot;permissions&quot;: {
+    &quot;console_hosts&quot;: true,
+    &quot;build_hosts&quot;: true,
+    &quot;power_hosts&quot;: true,
+    &quot;edit_hosts&quot;: true,
+    &quot;destroy_hosts&quot;: true,
+    &quot;create_hosts&quot;: true,
+    &quot;ipmi_boot_hosts&quot;: true,
+    &quot;view_hosts&quot;: true,
+    &quot;puppetrun_hosts&quot;: true
   }
 }</pre>
 
@@ -2707,41 +2873,60 @@
 
 
   <h3>Exemples</h3>
-    <pre class="prettyprint">PUT /api/hosts/238
+    <pre class="prettyprint">PUT /api/hosts/1
 {
   &quot;host&quot;: {
-    &quot;owner_type&quot;: &quot;Usergroup&quot;,
-    &quot;owner_id&quot;: 7
+    &quot;name&quot;: &quot;testhost11&quot;,
+    &quot;environment_id&quot;: 687036937,
+    &quot;domain_id&quot;: 22495316,
+    &quot;ptable_id&quot;: 1007981803,
+    &quot;medium_id&quot;: 980190962,
+    &quot;architecture_id&quot;: 501905019,
+    &quot;operatingsystem_id&quot;: 1073012828,
+    &quot;puppet_proxy_id&quot;: 182953976,
+    &quot;compute_resource_id&quot;: 980190962,
+    &quot;root_pass&quot;: &quot;xybxa6JUkz63w&quot;,
+    &quot;location_id&quot;: 255093256,
+    &quot;organization_id&quot;: 447626438,
+    &quot;ip&quot;: &quot;10.0.0.20&quot;,
+    &quot;mac&quot;: &quot;52:53:00:1e:85:93&quot;,
+    &quot;compute_attributes&quot;: {
+      &quot;cpus&quot;: 4,
+      &quot;memory&quot;: 1024
+    },
+    &quot;puppetclass_ids&quot;: [
+      113629430
+    ]
   }
 }
 200
 {
-  &quot;ip&quot;: null,
+  &quot;ip&quot;: &quot;10.0.0.20&quot;,
   &quot;ip6&quot;: null,
-  &quot;environment_id&quot;: null,
-  &quot;environment_name&quot;: null,
+  &quot;environment_id&quot;: 687036937,
+  &quot;environment_name&quot;: &quot;testing&quot;,
   &quot;last_report&quot;: null,
-  &quot;mac&quot;: null,
+  &quot;mac&quot;: &quot;52:53:00:1e:85:93&quot;,
   &quot;realm_id&quot;: null,
   &quot;realm_name&quot;: null,
   &quot;sp_mac&quot;: null,
   &quot;sp_ip&quot;: null,
   &quot;sp_name&quot;: null,
-  &quot;domain_id&quot;: null,
-  &quot;domain_name&quot;: null,
-  &quot;architecture_id&quot;: null,
-  &quot;architecture_name&quot;: null,
-  &quot;operatingsystem_id&quot;: null,
-  &quot;operatingsystem_name&quot;: null,
+  &quot;domain_id&quot;: 22495316,
+  &quot;domain_name&quot;: &quot;mydomain.net&quot;,
+  &quot;architecture_id&quot;: 501905019,
+  &quot;architecture_name&quot;: &quot;x86_64&quot;,
+  &quot;operatingsystem_id&quot;: 1073012828,
+  &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
   &quot;subnet_id&quot;: null,
   &quot;subnet_name&quot;: null,
   &quot;subnet6_id&quot;: null,
   &quot;subnet6_name&quot;: null,
   &quot;sp_subnet_id&quot;: null,
-  &quot;ptable_id&quot;: null,
-  &quot;ptable_name&quot;: null,
-  &quot;medium_id&quot;: null,
-  &quot;medium_name&quot;: null,
+  &quot;ptable_id&quot;: 1007981803,
+  &quot;ptable_name&quot;: &quot;ptable5&quot;,
+  &quot;medium_id&quot;: 980190962,
+  &quot;medium_name&quot;: &quot;CentOS 5.4&quot;,
   &quot;pxe_loader&quot;: null,
   &quot;build&quot;: false,
   &quot;comment&quot;: null,
@@ -2749,68 +2934,96 @@
   &quot;installed_at&quot;: null,
   &quot;model_id&quot;: null,
   &quot;hostgroup_id&quot;: null,
-  &quot;owner_id&quot;: 7,
-  &quot;owner_name&quot;: &quot;usergroup232&quot;,
-  &quot;owner_type&quot;: &quot;Usergroup&quot;,
+  &quot;owner_id&quot;: 135138680,
+  &quot;owner_name&quot;: &quot;Admin User&quot;,
+  &quot;owner_type&quot;: &quot;User&quot;,
   &quot;enabled&quot;: true,
   &quot;managed&quot;: false,
   &quot;use_image&quot;: null,
   &quot;image_file&quot;: &quot;&quot;,
   &quot;uuid&quot;: null,
-  &quot;compute_resource_id&quot;: null,
-  &quot;compute_resource_name&quot;: null,
+  &quot;compute_resource_id&quot;: 980190962,
+  &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
   &quot;compute_profile_id&quot;: null,
   &quot;compute_profile_name&quot;: null,
   &quot;capabilities&quot;: [
-    &quot;build&quot;
+    &quot;build&quot;,
+    &quot;image&quot;,
+    &quot;new_volume&quot;
   ],
   &quot;provision_method&quot;: &quot;build&quot;,
-  &quot;certname&quot;: &quot;host1467&quot;,
+  &quot;certname&quot;: &quot;testhost11.mydomain.net&quot;,
   &quot;image_id&quot;: null,
   &quot;image_name&quot;: null,
-  &quot;created_at&quot;: &quot;2018-11-01 13:30:02 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:30:02 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:36 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:36 UTC&quot;,
   &quot;last_compile&quot;: null,
   &quot;global_status&quot;: 0,
-  &quot;global_status_label&quot;: &quot;OK&quot;,
+  &quot;global_status_label&quot;: &quot;Warning&quot;,
   &quot;organization_id&quot;: 447626438,
   &quot;organization_name&quot;: &quot;Organization 1&quot;,
   &quot;location_id&quot;: 255093256,
   &quot;location_name&quot;: &quot;Location 1&quot;,
   &quot;puppet_status&quot;: 0,
   &quot;model_name&quot;: null,
-  &quot;name&quot;: &quot;host1467&quot;,
-  &quot;id&quot;: 238,
-  &quot;puppet_proxy_id&quot;: null,
-  &quot;puppet_proxy_name&quot;: null,
-  &quot;puppet_ca_proxy_id&quot;: null,
-  &quot;puppet_ca_proxy_name&quot;: null,
-  &quot;puppet_proxy&quot;: null,
-  &quot;puppet_ca_proxy&quot;: null,
+  &quot;configuration_status&quot;: 0,
+  &quot;configuration_status_label&quot;: &quot;No reports&quot;,
+  &quot;name&quot;: &quot;testhost11.mydomain.net&quot;,
+  &quot;id&quot;: 1,
+  &quot;puppet_proxy_id&quot;: 182953976,
+  &quot;puppet_proxy_name&quot;: &quot;Puppetmaster Proxy&quot;,
+  &quot;puppet_ca_proxy_id&quot;: 182953976,
+  &quot;puppet_ca_proxy_name&quot;: &quot;Puppetmaster Proxy&quot;,
+  &quot;puppet_proxy&quot;: {
+    &quot;name&quot;: &quot;Puppetmaster Proxy&quot;,
+    &quot;id&quot;: 182953976,
+    &quot;url&quot;: &quot;http://else.where:4567&quot;
+  },
+  &quot;puppet_ca_proxy&quot;: {
+    &quot;name&quot;: &quot;Puppetmaster Proxy&quot;,
+    &quot;id&quot;: 182953976,
+    &quot;url&quot;: &quot;http://else.where:4567&quot;
+  },
   &quot;hostgroup_name&quot;: null,
   &quot;hostgroup_title&quot;: null,
   &quot;parameters&quot;: [],
   &quot;all_parameters&quot;: [
     {
       &quot;priority&quot;: null,
-      &quot;created_at&quot;: &quot;2018-11-01 13:30:00 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:30:00 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;id&quot;: 716195090,
+      &quot;name&quot;: &quot;os1&quot;,
+      &quot;value&quot;: &quot;os1&quot;
+    },
+    {
+      &quot;priority&quot;: null,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;id&quot;: 665394701,
+      &quot;name&quot;: &quot;parameter&quot;,
+      &quot;value&quot;: &quot;value1&quot;
+    },
+    {
+      &quot;priority&quot;: null,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
       &quot;id&quot;: 513706444,
       &quot;name&quot;: &quot;loc_param&quot;,
       &quot;value&quot;: &quot;abc&quot;
     },
     {
       &quot;priority&quot;: null,
-      &quot;created_at&quot;: &quot;2018-11-01 13:30:00 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:30:00 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
       &quot;id&quot;: 32400255,
       &quot;name&quot;: &quot;org_param&quot;,
       &quot;value&quot;: &quot;xyz&quot;
     },
     {
       &quot;priority&quot;: null,
-      &quot;created_at&quot;: &quot;2018-11-01 13:30:00 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:30:00 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
       &quot;id&quot;: 636252244,
       &quot;name&quot;: &quot;test&quot;,
       &quot;value&quot;: &quot;myvalue&quot;
@@ -2822,37 +3035,49 @@
       &quot;subnet_name&quot;: null,
       &quot;subnet6_id&quot;: null,
       &quot;subnet6_name&quot;: null,
-      &quot;domain_id&quot;: null,
-      &quot;domain_name&quot;: null,
-      &quot;created_at&quot;: &quot;2018-11-01 13:30:02 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:30:02 UTC&quot;,
+      &quot;domain_id&quot;: 22495316,
+      &quot;domain_name&quot;: &quot;mydomain.net&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:36 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:36 UTC&quot;,
       &quot;managed&quot;: true,
       &quot;identifier&quot;: null,
-      &quot;id&quot;: 243,
-      &quot;name&quot;: &quot;host1467&quot;,
-      &quot;ip&quot;: null,
+      &quot;id&quot;: 1,
+      &quot;name&quot;: &quot;testhost11.mydomain.net&quot;,
+      &quot;ip&quot;: &quot;10.0.0.20&quot;,
       &quot;ip6&quot;: null,
-      &quot;mac&quot;: null,
+      &quot;mac&quot;: &quot;52:53:00:1e:85:93&quot;,
       &quot;mtu&quot;: null,
-      &quot;fqdn&quot;: &quot;host1467&quot;,
+      &quot;fqdn&quot;: &quot;testhost11.mydomain.net&quot;,
       &quot;primary&quot;: true,
       &quot;provision&quot;: true,
       &quot;type&quot;: &quot;interface&quot;,
       &quot;virtual&quot;: false
     }
   ],
-  &quot;puppetclasses&quot;: [],
+  &quot;puppetclasses&quot;: [
+    {
+      &quot;id&quot;: 113629430,
+      &quot;name&quot;: &quot;git&quot;,
+      &quot;module_name&quot;: &quot;git&quot;
+    }
+  ],
   &quot;config_groups&quot;: [],
-  &quot;all_puppetclasses&quot;: [],
+  &quot;all_puppetclasses&quot;: [
+    {
+      &quot;id&quot;: 113629430,
+      &quot;name&quot;: &quot;git&quot;,
+      &quot;module_name&quot;: &quot;git&quot;
+    }
+  ],
   &quot;permissions&quot;: {
-    &quot;view_hosts&quot;: true,
-    &quot;create_hosts&quot;: true,
-    &quot;edit_hosts&quot;: true,
-    &quot;destroy_hosts&quot;: true,
+    &quot;console_hosts&quot;: true,
     &quot;build_hosts&quot;: true,
     &quot;power_hosts&quot;: true,
-    &quot;console_hosts&quot;: true,
+    &quot;edit_hosts&quot;: true,
+    &quot;destroy_hosts&quot;: true,
+    &quot;create_hosts&quot;: true,
     &quot;ipmi_boot_hosts&quot;: true,
+    &quot;view_hosts&quot;: true,
     &quot;puppetrun_hosts&quot;: true
   }
 }</pre>
@@ -4434,19 +4659,19 @@
 
 
   <h3>Exemples</h3>
-    <pre class="prettyprint">DELETE /api/hosts/host1493
+    <pre class="prettyprint">DELETE /api/hosts/host85
 {
   &quot;host&quot;: {}
 }
 200
 {
-  &quot;id&quot;: 271,
-  &quot;name&quot;: &quot;host1493&quot;,
+  &quot;id&quot;: 1,
+  &quot;name&quot;: &quot;host85&quot;,
   &quot;last_compile&quot;: null,
   &quot;last_report&quot;: null,
-  &quot;updated_at&quot;: &quot;2018-11-01T13:30:06.672Z&quot;,
-  &quot;created_at&quot;: &quot;2018-11-01T13:30:06.672Z&quot;,
-  &quot;root_pass&quot;: &quot;$5$zYnKDBdp4MBxNEUO$lIvF1B7F7CT.S4rH7M88XQAdn.mpo.GlNtlUO0o9iv0&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15T19:01:47.502Z&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15T19:01:47.502Z&quot;,
+  &quot;root_pass&quot;: &quot;$5$ZtkoYYjwYtk9dCSZ$etTIPSKj2isDiaBWzJD7vsGeFnkUBrUQe.7q66YnBN3&quot;,
   &quot;architecture_id&quot;: null,
   &quot;operatingsystem_id&quot;: null,
   &quot;environment_id&quot;: null,
@@ -4458,7 +4683,7 @@
   &quot;installed_at&quot;: null,
   &quot;model_id&quot;: null,
   &quot;hostgroup_id&quot;: null,
-  &quot;owner_id&quot;: 117925625,
+  &quot;owner_id&quot;: 135138680,
   &quot;owner_type&quot;: &quot;User&quot;,
   &quot;enabled&quot;: true,
   &quot;puppet_ca_proxy_id&quot;: null,
@@ -4468,7 +4693,7 @@
   &quot;uuid&quot;: null,
   &quot;compute_resource_id&quot;: null,
   &quot;puppet_proxy_id&quot;: null,
-  &quot;certname&quot;: &quot;host1493&quot;,
+  &quot;certname&quot;: &quot;host85&quot;,
   &quot;image_id&quot;: null,
   &quot;organization_id&quot;: 447626438,
   &quot;location_id&quot;: 255093256,
@@ -4476,13 +4701,12 @@
   &quot;realm_id&quot;: null,
   &quot;compute_profile_id&quot;: null,
   &quot;provision_method&quot;: &quot;build&quot;,
-  &quot;grub_pass&quot;: &quot;$6$20A4006hEynWsKQE$u2VADRi.IOXoSf8.ES7hdpqS9yVRVxbBw9XV6dVk.l48RyGI9g1WNaAdeW0.bG.Uqp0DfrLWZFVRXFBod93by1&quot;,
+  &quot;grub_pass&quot;: &quot;$6$VcwKrTDjFGeSXwGP$bIHe89gKPc8u7w2CfxxbjnKNack3vek0VtAKF57mYmDOyUtoCISc8Tdk0AwVvmWMCm8dz7tETgYTkatSTfsh0.&quot;,
   &quot;global_status&quot;: 0,
-  &quot;lookup_value_matcher&quot;: &quot;fqdn=host1493&quot;,
+  &quot;lookup_value_matcher&quot;: &quot;fqdn=host85&quot;,
   &quot;pxe_loader&quot;: null,
   &quot;initiated_at&quot;: null,
-  &quot;build_errors&quot;: null,
-  &quot;discovery_rule_id&quot;: null
+  &quot;build_errors&quot;: null
 }</pre>
 
   <h3>Paramètres</h3>
@@ -4596,7 +4820,7 @@
 
 
   <h3>Exemples</h3>
-    <pre class="prettyprint">GET /api/hosts/host1521/enc
+    <pre class="prettyprint">GET /api/hosts/host14/enc
 200
 {
   &quot;data&quot;: {
@@ -4607,7 +4831,7 @@
           &quot;ip&quot;: null,
           &quot;ip6&quot;: null,
           &quot;mac&quot;: null,
-          &quot;name&quot;: &quot;host1521&quot;,
+          &quot;name&quot;: &quot;host14&quot;,
           &quot;attrs&quot;: {},
           &quot;virtual&quot;: false,
           &quot;link&quot;: true,
@@ -4640,18 +4864,18 @@
           &quot;ssh_authorized_keys&quot;: []
         }
       },
-      &quot;root_pw&quot;: &quot;$5$6iLiMSAL807KKu2U$z1wK5C3aVE8rN5IrwKCB/53aahlUxg6s1yYO6PX.I4A&quot;,
+      &quot;root_pw&quot;: &quot;$5$YSi2EPXTh2OwySUL$OpQ2bfM75BP/uuqH4j4GpZmQoZ9ndoV9TzbgxQ483C.&quot;,
       &quot;foreman_config_groups&quot;: [],
       &quot;puppetmaster&quot;: &quot;&quot;,
-      &quot;foreman_env&quot;: &quot;environment261&quot;,
+      &quot;foreman_env&quot;: &quot;environment1&quot;,
       &quot;test&quot;: &quot;myvalue&quot;,
       &quot;org_param&quot;: &quot;xyz&quot;,
       &quot;loc_param&quot;: &quot;abc&quot;
     },
     &quot;classes&quot;: [
-      &quot;class358&quot;
+      &quot;class1&quot;
     ],
-    &quot;environment&quot;: &quot;environment261&quot;
+    &quot;environment&quot;: &quot;environment1&quot;
   }
 }</pre>
 
@@ -4784,12 +5008,10 @@
 
 
   <h3>Exemples</h3>
-    <pre class="prettyprint">GET /api/hosts/host1468/status
-404
+    <pre class="prettyprint">GET /api/hosts/host5/status
+200
 {
-  &quot;error&quot;: {
-    &quot;message&quot;: &quot;Resource host not found by id &#39;host1468&#39;&quot;
-  }
+  &quot;status&quot;: &quot;No reports&quot;
 }</pre>
 
   <h3>Paramètres</h3>
@@ -4905,7 +5127,7 @@
 
 
   <h3>Exemples</h3>
-    <pre class="prettyprint">GET /api/hosts/host1515/status/global
+    <pre class="prettyprint">GET /api/hosts/host39/status/global
 200
 {
   &quot;status_label&quot;: &quot;OK&quot;,
@@ -5049,7 +5271,7 @@
 
 
   <h3>Exemples</h3>
-    <pre class="prettyprint">GET /api/hosts/host1532/vm_compute_attributes
+    <pre class="prettyprint">GET /api/hosts/host91/vm_compute_attributes
 200
 {
   &quot;cpus&quot;: 4,
@@ -5167,7 +5389,7 @@
 
 
   <h3>Exemples</h3>
-    <pre class="prettyprint">PUT /api/hosts/host1485/disassociate
+    <pre class="prettyprint">PUT /api/hosts/host108/disassociate
 {
   &quot;host&quot;: {}
 }
@@ -5222,11 +5444,11 @@
     &quot;build&quot;
   ],
   &quot;provision_method&quot;: &quot;build&quot;,
-  &quot;certname&quot;: &quot;host1485&quot;,
+  &quot;certname&quot;: &quot;host108&quot;,
   &quot;image_id&quot;: null,
   &quot;image_name&quot;: null,
-  &quot;created_at&quot;: &quot;2018-11-01 13:30:05 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:30:05 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:50 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:50 UTC&quot;,
   &quot;last_compile&quot;: null,
   &quot;global_status&quot;: 0,
   &quot;global_status_label&quot;: &quot;OK&quot;,
@@ -5236,8 +5458,8 @@
   &quot;location_name&quot;: &quot;Location 1&quot;,
   &quot;puppet_status&quot;: 0,
   &quot;model_name&quot;: null,
-  &quot;name&quot;: &quot;host1485&quot;,
-  &quot;id&quot;: 260,
+  &quot;name&quot;: &quot;host108&quot;,
+  &quot;id&quot;: 2,
   &quot;puppet_proxy_id&quot;: null,
   &quot;puppet_proxy_name&quot;: null,
   &quot;puppet_ca_proxy_id&quot;: null,
@@ -5254,17 +5476,17 @@
       &quot;subnet6_name&quot;: null,
       &quot;domain_id&quot;: null,
       &quot;domain_name&quot;: null,
-      &quot;created_at&quot;: &quot;2018-11-01 13:30:05 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:30:05 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:50 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:50 UTC&quot;,
       &quot;managed&quot;: true,
       &quot;identifier&quot;: null,
-      &quot;id&quot;: 266,
-      &quot;name&quot;: &quot;host1485&quot;,
+      &quot;id&quot;: 2,
+      &quot;name&quot;: &quot;host108&quot;,
       &quot;ip&quot;: null,
       &quot;ip6&quot;: null,
       &quot;mac&quot;: null,
       &quot;mtu&quot;: null,
-      &quot;fqdn&quot;: &quot;host1485&quot;,
+      &quot;fqdn&quot;: &quot;host108&quot;,
       &quot;primary&quot;: true,
       &quot;provision&quot;: true,
       &quot;type&quot;: &quot;interface&quot;,
@@ -5275,14 +5497,14 @@
   &quot;config_groups&quot;: [],
   &quot;all_puppetclasses&quot;: [],
   &quot;permissions&quot;: {
-    &quot;view_hosts&quot;: true,
-    &quot;create_hosts&quot;: true,
-    &quot;edit_hosts&quot;: true,
-    &quot;destroy_hosts&quot;: true,
+    &quot;console_hosts&quot;: true,
     &quot;build_hosts&quot;: true,
     &quot;power_hosts&quot;: true,
-    &quot;console_hosts&quot;: true,
+    &quot;edit_hosts&quot;: true,
+    &quot;destroy_hosts&quot;: true,
+    &quot;create_hosts&quot;: true,
     &quot;ipmi_boot_hosts&quot;: true,
+    &quot;view_hosts&quot;: true,
     &quot;puppetrun_hosts&quot;: true
   }
 }</pre>
@@ -5398,7 +5620,7 @@
 
 
   <h3>Exemples</h3>
-    <pre class="prettyprint">PUT /api/hosts/host1482.example830.com/power
+    <pre class="prettyprint">PUT /api/hosts/host33.example1.com/power
 {
   &quot;power_action&quot;: &quot;status&quot;,
   &quot;host&quot;: {}
@@ -5543,14 +5765,14 @@
 
 
   <h3>Exemples</h3>
-    <pre class="prettyprint">PUT /api/hosts/host1140/boot
+    <pre class="prettyprint">PUT /api/hosts/host167/boot
 {
   &quot;device&quot;: &quot;bios&quot;,
   &quot;host&quot;: {}
 }
 422
 {
-  &quot;message&quot;: &quot;ERF42-3286 [Foreman::Exception]: No BMC NIC available for host host1140&quot;
+  &quot;message&quot;: &quot;ERF42-6449 [Foreman::Exception]: No BMC NIC available for host host167&quot;
 }</pre>
 
   <h3>Paramètres</h3>
@@ -5691,6 +5913,7 @@
     <pre class="prettyprint">POST /api/hosts/facts
 {
   &quot;name&quot;: &quot;brslc022.brs.infineon.com&quot;,
+  &quot;certname&quot;: &quot;brslc022.brs.infineon.com&quot;,
   &quot;facts&quot;: {
     &quot;is_virtual&quot;: &quot;true&quot;,
     &quot;processorcount&quot;: &quot;2&quot;,
@@ -5751,6 +5974,7 @@
     &quot;ipaddress_eth0&quot;: &quot;172.29.205.22&quot;,
     &quot;facterversion&quot;: &quot;1.5.7&quot;,
     &quot;kernelmajversion&quot;: &quot;2.6&quot;,
+    &quot;operatingsystem&quot;: &quot;RedHat&quot;,
     &quot;macaddress&quot;: &quot;00:0C:29:CF:00:45&quot;,
     &quot;processor1&quot;: &quot;Intel(R) Xeon(R) CPU           X5460  @ 3.16GHz&quot;,
     &quot;lsbmajdistrelease&quot;: &quot;4&quot;,
@@ -5758,12 +5982,54 @@
     &quot;lsbdistid&quot;: &quot;RedHatEnterpriseAS&quot;
   },
   &quot;host&quot;: {
+    &quot;certname&quot;: &quot;brslc022.brs.infineon.com&quot;,
     &quot;name&quot;: &quot;brslc022.brs.infineon.com&quot;
   }
 }
-422
+201
 {
-  &quot;message&quot;: &quot;ERF42-3829 [Foreman::Exception]: invalid facts, missing operating system value&quot;
+  &quot;id&quot;: 2,
+  &quot;name&quot;: &quot;brslc022.brs.infineon.com&quot;,
+  &quot;last_compile&quot;: &quot;2010-02-16T11:52:38.163Z&quot;,
+  &quot;last_report&quot;: null,
+  &quot;updated_at&quot;: &quot;2018-11-15T19:01:37.888Z&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15T19:01:37.675Z&quot;,
+  &quot;root_pass&quot;: null,
+  &quot;architecture_id&quot;: 501905021,
+  &quot;operatingsystem_id&quot;: 1073012829,
+  &quot;environment_id&quot;: 687036938,
+  &quot;ptable_id&quot;: null,
+  &quot;medium_id&quot;: null,
+  &quot;build&quot;: false,
+  &quot;comment&quot;: null,
+  &quot;disk&quot;: null,
+  &quot;installed_at&quot;: null,
+  &quot;model_id&quot;: 980190963,
+  &quot;hostgroup_id&quot;: null,
+  &quot;owner_id&quot;: null,
+  &quot;owner_type&quot;: null,
+  &quot;enabled&quot;: true,
+  &quot;puppet_ca_proxy_id&quot;: null,
+  &quot;managed&quot;: false,
+  &quot;use_image&quot;: null,
+  &quot;image_file&quot;: &quot;&quot;,
+  &quot;uuid&quot;: null,
+  &quot;compute_resource_id&quot;: null,
+  &quot;puppet_proxy_id&quot;: null,
+  &quot;certname&quot;: &quot;brslc022.brs.infineon.com&quot;,
+  &quot;image_id&quot;: null,
+  &quot;organization_id&quot;: 447626438,
+  &quot;location_id&quot;: 255093256,
+  &quot;otp&quot;: null,
+  &quot;realm_id&quot;: null,
+  &quot;compute_profile_id&quot;: null,
+  &quot;provision_method&quot;: &quot;build&quot;,
+  &quot;grub_pass&quot;: &quot;&quot;,
+  &quot;global_status&quot;: 0,
+  &quot;lookup_value_matcher&quot;: &quot;fqdn=brslc022.brs.infineon.com&quot;,
+  &quot;pxe_loader&quot;: null,
+  &quot;initiated_at&quot;: null,
+  &quot;build_errors&quot;: null
 }</pre>
 
   <h3>Paramètres</h3>
@@ -5951,7 +6217,7 @@
 
 
   <h3>Exemples</h3>
-    <pre class="prettyprint">POST /api/hosts/host636/rebuild_config
+    <pre class="prettyprint">POST /api/hosts/host25/rebuild_config
 {
   &quot;host&quot;: {}
 }
@@ -6095,10 +6361,10 @@
 
 
   <h3>Exemples</h3>
-    <pre class="prettyprint">GET /api/hosts/host1510.example831.com/template/provitamin
+    <pre class="prettyprint">GET /api/hosts/host41.example2.com/template/provitamin
 404
 {
-  &quot;message&quot;: &quot;No template with kind provitamin for host1510.example831.com&quot;
+  &quot;message&quot;: &quot;No template with kind provitamin for host41.example2.com&quot;
 }</pre>
 
   <h3>Paramètres</h3>

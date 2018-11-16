@@ -31,7 +31,7 @@
   </li>
   <li class='active'>update</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/domains/update.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/domains/update.de.html">de</a> | <a href="../../../apidoc/v2/domains/update.it.html">it</a> | <a href="../../../apidoc/v2/domains/update.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/domains/update.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/domains/update.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/domains/update.fr.html">fr</a> | <a href="../../../apidoc/v2/domains/update.ru.html">ru</a> | <a href="../../../apidoc/v2/domains/update.ja.html">ja</a> | <b><a href="../../../apidoc/v2/domains/update.es.html">es</a></b> | <a href="../../../apidoc/v2/domains/update.ko.html">ko</a> | <a href="../../../apidoc/v2/domains/update.ca.html">ca</a> | <a href="../../../apidoc/v2/domains/update.gl.html">gl</a> | <a href="../../../apidoc/v2/domains/update.en.html">en</a> | <a href="../../../apidoc/v2/domains/update.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/domains/update.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/domains/update.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/domains/update.ko.html">ko</a> | <a href="../../../apidoc/v2/domains/update.en.html">en</a> | <a href="../../../apidoc/v2/domains/update.fr.html">fr</a> | <a href="../../../apidoc/v2/domains/update.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/domains/update.de.html">de</a> | <a href="../../../apidoc/v2/domains/update.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/domains/update.ja.html">ja</a> | <a href="../../../apidoc/v2/domains/update.pl.html">pl</a> | <a href="../../../apidoc/v2/domains/update.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/domains/update.it.html">it</a> | <a href="../../../apidoc/v2/domains/update.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/domains/update.ru.html">ru</a> | <b><a href="../../../apidoc/v2/domains/update.es.html">es</a></b> | <a href="../../../apidoc/v2/domains/update.ca.html">ca</a> | <a href="../../../apidoc/v2/domains/update.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/domains/update.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/domains/update.gl.html">gl</a> ]
 </li>
 
 
@@ -52,54 +52,25 @@
 
 
   <h2>Ejemplos</h2>
-    <pre class="prettyprint">PUT /api/domains/759776772
+    <pre class="prettyprint">PUT /api/domains/22495316-mydomain-net
 {
   &quot;domain&quot;: {
-    &quot;domain_parameters_attributes&quot;: [
-      {
-        &quot;name&quot;: &quot;foo&quot;,
-        &quot;value&quot;: &quot;new_value&quot;
-      }
-    ]
+    &quot;name&quot;: &quot;&quot;
   }
 }
-200
+422
 {
-  &quot;fullname&quot;: &quot;example196.com&quot;,
-  &quot;created_at&quot;: &quot;2018-11-01 13:18:17 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:18:17 UTC&quot;,
-  &quot;id&quot;: 759776772,
-  &quot;name&quot;: &quot;example196.com&quot;,
-  &quot;dns_id&quot;: null,
-  &quot;dns&quot;: null,
-  &quot;subnets&quot;: [],
-  &quot;interfaces&quot;: [],
-  &quot;parameters&quot;: [
-    {
-      &quot;priority&quot;: 30,
-      &quot;created_at&quot;: &quot;2018-11-01 13:18:17 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:18:17 UTC&quot;,
-      &quot;id&quot;: 767575240,
-      &quot;name&quot;: &quot;foo&quot;,
-      &quot;value&quot;: &quot;new_value&quot;
-    }
-  ],
-  &quot;locations&quot;: [
-    {
-      &quot;id&quot;: 255093256,
-      &quot;name&quot;: &quot;Location 1&quot;,
-      &quot;title&quot;: &quot;Location 1&quot;,
-      &quot;description&quot;: null
-    }
-  ],
-  &quot;organizations&quot;: [
-    {
-      &quot;id&quot;: 447626438,
-      &quot;name&quot;: &quot;Organization 1&quot;,
-      &quot;title&quot;: &quot;Organization 1&quot;,
-      &quot;description&quot;: null
-    }
-  ]
+  &quot;error&quot;: {
+    &quot;id&quot;: 22495316,
+    &quot;errors&quot;: {
+      &quot;name&quot;: [
+        &quot;can&#39;t be blank&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Name can&#39;t be blank&quot;
+    ]
+  }
 }</pre>
 
   <h2>Parámetros</h2>

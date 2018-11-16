@@ -31,7 +31,7 @@
   </li>
   <li class='active'>create</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/hostgroups/create.pt_BR.html">pt_BR</a> | <b><a href="../../../apidoc/v2/hostgroups/create.de.html">de</a></b> | <a href="../../../apidoc/v2/hostgroups/create.it.html">it</a> | <a href="../../../apidoc/v2/hostgroups/create.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/hostgroups/create.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/hostgroups/create.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/hostgroups/create.fr.html">fr</a> | <a href="../../../apidoc/v2/hostgroups/create.ru.html">ru</a> | <a href="../../../apidoc/v2/hostgroups/create.ja.html">ja</a> | <a href="../../../apidoc/v2/hostgroups/create.es.html">es</a> | <a href="../../../apidoc/v2/hostgroups/create.ko.html">ko</a> | <a href="../../../apidoc/v2/hostgroups/create.ca.html">ca</a> | <a href="../../../apidoc/v2/hostgroups/create.gl.html">gl</a> | <a href="../../../apidoc/v2/hostgroups/create.en.html">en</a> | <a href="../../../apidoc/v2/hostgroups/create.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/hostgroups/create.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/hostgroups/create.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/hostgroups/create.ko.html">ko</a> | <a href="../../../apidoc/v2/hostgroups/create.en.html">en</a> | <a href="../../../apidoc/v2/hostgroups/create.fr.html">fr</a> | <a href="../../../apidoc/v2/hostgroups/create.en_GB.html">en_GB</a> | <b><a href="../../../apidoc/v2/hostgroups/create.de.html">de</a></b> | <a href="../../../apidoc/v2/hostgroups/create.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/hostgroups/create.ja.html">ja</a> | <a href="../../../apidoc/v2/hostgroups/create.pl.html">pl</a> | <a href="../../../apidoc/v2/hostgroups/create.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/hostgroups/create.it.html">it</a> | <a href="../../../apidoc/v2/hostgroups/create.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/hostgroups/create.ru.html">ru</a> | <a href="../../../apidoc/v2/hostgroups/create.es.html">es</a> | <a href="../../../apidoc/v2/hostgroups/create.ca.html">ca</a> | <a href="../../../apidoc/v2/hostgroups/create.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/hostgroups/create.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/hostgroups/create.gl.html">gl</a> ]
 </li>
 
 
@@ -56,7 +56,7 @@
 {
   &quot;hostgroup&quot;: {
     &quot;name&quot;: &quot;TestHostgroup&quot;,
-    &quot;pxe_loader&quot;: &quot;Grub2 UEFI SecureBoot&quot;
+    &quot;puppet_proxy_id&quot;: 182953976
   }
 }
 201
@@ -78,25 +78,33 @@
   &quot;ptable_name&quot;: null,
   &quot;medium_id&quot;: null,
   &quot;medium_name&quot;: null,
-  &quot;pxe_loader&quot;: &quot;Grub2 UEFI SecureBoot&quot;,
+  &quot;pxe_loader&quot;: null,
   &quot;subnet6_id&quot;: null,
   &quot;subnet6_name&quot;: null,
   &quot;architecture_id&quot;: null,
   &quot;architecture_name&quot;: null,
   &quot;realm_id&quot;: null,
   &quot;realm_name&quot;: null,
-  &quot;created_at&quot;: &quot;2018-11-01 13:36:50 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:36:50 UTC&quot;,
-  &quot;id&quot;: 928644297,
+  &quot;created_at&quot;: &quot;2018-11-15 19:02:07 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:02:07 UTC&quot;,
+  &quot;id&quot;: 928644286,
   &quot;name&quot;: &quot;TestHostgroup&quot;,
   &quot;title&quot;: &quot;TestHostgroup&quot;,
   &quot;description&quot;: null,
-  &quot;puppet_proxy_id&quot;: null,
-  &quot;puppet_proxy_name&quot;: null,
-  &quot;puppet_ca_proxy_id&quot;: null,
-  &quot;puppet_ca_proxy_name&quot;: null,
-  &quot;puppet_proxy&quot;: null,
-  &quot;puppet_ca_proxy&quot;: null,
+  &quot;puppet_proxy_id&quot;: 182953976,
+  &quot;puppet_proxy_name&quot;: &quot;Puppetmaster Proxy&quot;,
+  &quot;puppet_ca_proxy_id&quot;: 182953976,
+  &quot;puppet_ca_proxy_name&quot;: &quot;Puppetmaster Proxy&quot;,
+  &quot;puppet_proxy&quot;: {
+    &quot;name&quot;: &quot;Puppetmaster Proxy&quot;,
+    &quot;id&quot;: 182953976,
+    &quot;url&quot;: &quot;http://else.where:4567&quot;
+  },
+  &quot;puppet_ca_proxy&quot;: {
+    &quot;name&quot;: &quot;Puppetmaster Proxy&quot;,
+    &quot;id&quot;: 182953976,
+    &quot;url&quot;: &quot;http://else.where:4567&quot;
+  },
   &quot;parameters&quot;: [],
   &quot;template_combinations&quot;: [],
   &quot;puppetclasses&quot;: [],

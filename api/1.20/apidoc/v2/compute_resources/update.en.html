@@ -31,7 +31,7 @@
   </li>
   <li class='active'>update</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/compute_resources/update.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/compute_resources/update.de.html">de</a> | <a href="../../../apidoc/v2/compute_resources/update.it.html">it</a> | <a href="../../../apidoc/v2/compute_resources/update.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/compute_resources/update.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/compute_resources/update.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/compute_resources/update.fr.html">fr</a> | <a href="../../../apidoc/v2/compute_resources/update.ru.html">ru</a> | <a href="../../../apidoc/v2/compute_resources/update.ja.html">ja</a> | <a href="../../../apidoc/v2/compute_resources/update.es.html">es</a> | <a href="../../../apidoc/v2/compute_resources/update.ko.html">ko</a> | <a href="../../../apidoc/v2/compute_resources/update.ca.html">ca</a> | <a href="../../../apidoc/v2/compute_resources/update.gl.html">gl</a> | <b><a href="../../../apidoc/v2/compute_resources/update.en.html">en</a></b> | <a href="../../../apidoc/v2/compute_resources/update.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/compute_resources/update.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/compute_resources/update.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/compute_resources/update.ko.html">ko</a> | <b><a href="../../../apidoc/v2/compute_resources/update.en.html">en</a></b> | <a href="../../../apidoc/v2/compute_resources/update.fr.html">fr</a> | <a href="../../../apidoc/v2/compute_resources/update.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/compute_resources/update.de.html">de</a> | <a href="../../../apidoc/v2/compute_resources/update.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/compute_resources/update.ja.html">ja</a> | <a href="../../../apidoc/v2/compute_resources/update.pl.html">pl</a> | <a href="../../../apidoc/v2/compute_resources/update.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/compute_resources/update.it.html">it</a> | <a href="../../../apidoc/v2/compute_resources/update.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/compute_resources/update.ru.html">ru</a> | <a href="../../../apidoc/v2/compute_resources/update.es.html">es</a> | <a href="../../../apidoc/v2/compute_resources/update.ca.html">ca</a> | <a href="../../../apidoc/v2/compute_resources/update.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/compute_resources/update.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/compute_resources/update.gl.html">gl</a> ]
 </li>
 
 
@@ -55,44 +55,28 @@
     <pre class="prettyprint">PUT /api/compute_resources/367690737
 {
   &quot;compute_resource&quot;: {
-    &quot;location_ids&quot;: [
-      447626442,
-      447626443,
-      447626444
-    ]
+    &quot;display_type&quot;: &quot;spice&quot;
   }
 }
 200
 {
   &quot;description&quot;: &quot;mycompute&quot;,
   &quot;url&quot;: &quot;test:///default&quot;,
-  &quot;created_at&quot;: &quot;2018-11-01 13:29:47 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:29:47 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:29 UTC&quot;,
   &quot;id&quot;: 367690737,
   &quot;name&quot;: &quot;mycompute&quot;,
   &quot;provider&quot;: &quot;Libvirt&quot;,
   &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
-  &quot;display_type&quot;: &quot;vnc&quot;,
+  &quot;display_type&quot;: &quot;spice&quot;,
   &quot;set_console_password&quot;: true,
   &quot;images&quot;: [],
   &quot;compute_attributes&quot;: [],
   &quot;locations&quot;: [
     {
-      &quot;id&quot;: 447626442,
-      &quot;name&quot;: &quot;loc152&quot;,
-      &quot;title&quot;: &quot;loc152&quot;,
-      &quot;description&quot;: null
-    },
-    {
-      &quot;id&quot;: 447626443,
-      &quot;name&quot;: &quot;loc153&quot;,
-      &quot;title&quot;: &quot;loc153&quot;,
-      &quot;description&quot;: null
-    },
-    {
-      &quot;id&quot;: 447626444,
-      &quot;name&quot;: &quot;loc154&quot;,
-      &quot;title&quot;: &quot;loc154&quot;,
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
       &quot;description&quot;: null
     }
   ],

@@ -27,7 +27,7 @@
     
   </li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../apidoc/v2/puppetclasses.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/puppetclasses.de.html">de</a> | <a href="../../apidoc/v2/puppetclasses.it.html">it</a> | <a href="../../apidoc/v2/puppetclasses.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/puppetclasses.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/puppetclasses.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/puppetclasses.fr.html">fr</a> | <a href="../../apidoc/v2/puppetclasses.ru.html">ru</a> | <a href="../../apidoc/v2/puppetclasses.ja.html">ja</a> | <b><a href="../../apidoc/v2/puppetclasses.es.html">es</a></b> | <a href="../../apidoc/v2/puppetclasses.ko.html">ko</a> | <a href="../../apidoc/v2/puppetclasses.ca.html">ca</a> | <a href="../../apidoc/v2/puppetclasses.gl.html">gl</a> | <a href="../../apidoc/v2/puppetclasses.en.html">en</a> | <a href="../../apidoc/v2/puppetclasses.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/puppetclasses.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/puppetclasses.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../apidoc/v2/puppetclasses.ko.html">ko</a> | <a href="../../apidoc/v2/puppetclasses.en.html">en</a> | <a href="../../apidoc/v2/puppetclasses.fr.html">fr</a> | <a href="../../apidoc/v2/puppetclasses.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/puppetclasses.de.html">de</a> | <a href="../../apidoc/v2/puppetclasses.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/puppetclasses.ja.html">ja</a> | <a href="../../apidoc/v2/puppetclasses.pl.html">pl</a> | <a href="../../apidoc/v2/puppetclasses.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/puppetclasses.it.html">it</a> | <a href="../../apidoc/v2/puppetclasses.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/puppetclasses.ru.html">ru</a> | <b><a href="../../apidoc/v2/puppetclasses.es.html">es</a></b> | <a href="../../apidoc/v2/puppetclasses.ca.html">ca</a> | <a href="../../apidoc/v2/puppetclasses.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/puppetclasses.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/puppetclasses.gl.html">gl</a> ]
 </li>
 
 </ul>
@@ -101,11 +101,11 @@
 
 
   <h3>Ejemplos</h3>
-    <pre class="prettyprint">GET /api/environments/production/puppetclasses
+    <pre class="prettyprint">GET /api/puppetclasses
 200
 {
-  &quot;total&quot;: 7,
-  &quot;subtotal&quot;: 7,
+  &quot;total&quot;: 8,
+  &quot;subtotal&quot;: 8,
   &quot;page&quot;: 1,
   &quot;per_page&quot;: 20,
   &quot;search&quot;: null,
@@ -113,64 +113,64 @@
     &quot;by&quot;: null,
     &quot;order&quot;: null
   },
-  &quot;results&quot;: {
-    &quot;apache&quot;: [
-      {
-        &quot;id&quot;: 298486374,
-        &quot;name&quot;: &quot;apache&quot;,
-        &quot;created_at&quot;: &quot;2018-11-01T13:19:08.876Z&quot;,
-        &quot;updated_at&quot;: &quot;2018-11-01T13:19:08.876Z&quot;
-      }
-    ],
-    &quot;auth&quot;: [
-      {
-        &quot;id&quot;: 638205575,
-        &quot;name&quot;: &quot;auth&quot;,
-        &quot;created_at&quot;: &quot;2018-11-01T13:19:08.876Z&quot;,
-        &quot;updated_at&quot;: &quot;2018-11-01T13:19:08.876Z&quot;
-      }
-    ],
-    &quot;base&quot;: [
-      {
-        &quot;id&quot;: 980190962,
-        &quot;name&quot;: &quot;base&quot;,
-        &quot;created_at&quot;: &quot;2018-11-01T13:19:08.876Z&quot;,
-        &quot;updated_at&quot;: &quot;2018-11-01T13:19:08.876Z&quot;
-      }
-    ],
-    &quot;chkmk&quot;: [
-      {
-        &quot;id&quot;: 51848956,
-        &quot;name&quot;: &quot;chkmk&quot;,
-        &quot;created_at&quot;: &quot;2018-11-01T13:19:08.876Z&quot;,
-        &quot;updated_at&quot;: &quot;2018-11-01T13:19:08.876Z&quot;
-      }
-    ],
-    &quot;nagios&quot;: [
-      {
-        &quot;id&quot;: 1018350795,
-        &quot;name&quot;: &quot;nagios&quot;,
-        &quot;created_at&quot;: &quot;2018-11-01T13:19:08.876Z&quot;,
-        &quot;updated_at&quot;: &quot;2018-11-01T13:19:08.876Z&quot;
-      }
-    ],
-    &quot;pam&quot;: [
-      {
-        &quot;id&quot;: 374648174,
-        &quot;name&quot;: &quot;pam&quot;,
-        &quot;created_at&quot;: &quot;2018-11-01T13:19:08.876Z&quot;,
-        &quot;updated_at&quot;: &quot;2018-11-01T13:19:08.876Z&quot;
-      }
-    ],
-    &quot;vim&quot;: [
-      {
-        &quot;id&quot;: 281110143,
-        &quot;name&quot;: &quot;vim&quot;,
-        &quot;created_at&quot;: &quot;2018-11-01T13:19:08.876Z&quot;,
-        &quot;updated_at&quot;: &quot;2018-11-01T13:19:08.876Z&quot;
-      }
-    ]
-  }
+  &quot;results&quot;: [
+    {
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;id&quot;: 298486374,
+      &quot;name&quot;: &quot;apache&quot;,
+      &quot;module_name&quot;: &quot;apache&quot;
+    },
+    {
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;id&quot;: 638205575,
+      &quot;name&quot;: &quot;auth&quot;,
+      &quot;module_name&quot;: &quot;auth&quot;
+    },
+    {
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;base&quot;,
+      &quot;module_name&quot;: &quot;base&quot;
+    },
+    {
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;id&quot;: 51848956,
+      &quot;name&quot;: &quot;chkmk&quot;,
+      &quot;module_name&quot;: &quot;chkmk&quot;
+    },
+    {
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;id&quot;: 113629430,
+      &quot;name&quot;: &quot;git&quot;,
+      &quot;module_name&quot;: &quot;git&quot;
+    },
+    {
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;id&quot;: 1018350795,
+      &quot;name&quot;: &quot;nagios&quot;,
+      &quot;module_name&quot;: &quot;nagios&quot;
+    },
+    {
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;id&quot;: 374648174,
+      &quot;name&quot;: &quot;pam&quot;,
+      &quot;module_name&quot;: &quot;pam&quot;
+    },
+    {
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;id&quot;: 281110143,
+      &quot;name&quot;: &quot;vim&quot;,
+      &quot;module_name&quot;: &quot;vim&quot;
+    }
+  ]
 }</pre>
 
   <h3>Parámetros</h3>
@@ -505,44 +505,23 @@
 
 
   <h3>Ejemplos</h3>
-    <pre class="prettyprint">GET /api/environments/production/puppetclasses/980190962
+    <pre class="prettyprint">GET /api/hosts/host318/puppetclasses/1018350796
 200
 {
-  &quot;created_at&quot;: &quot;2018-11-01 13:19:08 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:19:08 UTC&quot;,
-  &quot;id&quot;: 980190962,
-  &quot;name&quot;: &quot;base&quot;,
-  &quot;module_name&quot;: &quot;base&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:02:55 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:02:55 UTC&quot;,
+  &quot;id&quot;: 1018350796,
+  &quot;name&quot;: &quot;class9&quot;,
+  &quot;module_name&quot;: &quot;class9&quot;,
   &quot;environments&quot;: [
     {
-      &quot;name&quot;: &quot;production&quot;,
-      &quot;id&quot;: 334344675
+      &quot;name&quot;: &quot;environment11&quot;,
+      &quot;id&quot;: 687036938
     }
   ],
-  &quot;hostgroups&quot;: [
-    {
-      &quot;id&quot;: 636252244,
-      &quot;name&quot;: &quot;Common&quot;,
-      &quot;title&quot;: &quot;Common&quot;,
-      &quot;description&quot;: null
-    }
-  ],
-  &quot;smart_variables&quot;: [
-    {
-      &quot;variable&quot;: &quot;bool_test&quot;,
-      &quot;id&quot;: 638205575
-    },
-    {
-      &quot;variable&quot;: &quot;ssl_port&quot;,
-      &quot;id&quot;: 298486374
-    }
-  ],
-  &quot;smart_class_parameters&quot;: [
-    {
-      &quot;parameter&quot;: &quot;cluster&quot;,
-      &quot;id&quot;: 328495940
-    }
-  ]
+  &quot;hostgroups&quot;: [],
+  &quot;smart_variables&quot;: [],
+  &quot;smart_class_parameters&quot;: []
 }</pre>
 
   <h3>Parámetros</h3>
@@ -743,9 +722,9 @@
 }
 201
 {
-  &quot;created_at&quot;: &quot;2018-11-01 13:19:10 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:19:10 UTC&quot;,
-  &quot;id&quot;: 1018350797,
+  &quot;created_at&quot;: &quot;2018-11-15 19:02:55 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:02:55 UTC&quot;,
+  &quot;id&quot;: 1018350796,
   &quot;name&quot;: &quot;test_puppetclass&quot;,
   &quot;module_name&quot;: &quot;test_puppetclass&quot;,
   &quot;environments&quot;: [],
@@ -753,7 +732,7 @@
   &quot;smart_variables&quot;: [
     {
       &quot;variable&quot;: &quot;smart_variable1&quot;,
-      &quot;id&quot;: 1018350797
+      &quot;id&quot;: 1018350796
     }
   ],
   &quot;smart_class_parameters&quot;: []
@@ -892,47 +871,30 @@
 
 
   <h3>Ejemplos</h3>
-    <pre class="prettyprint">PUT /api/puppetclasses/980190962-base
+    <pre class="prettyprint">PUT /api/puppetclasses/1018350796
 {
-  &quot;puppetclass&quot;: {
-    &quot;name&quot;: &quot;test_puppetclass&quot;
-  }
+  &quot;smart_class_parameter_ids&quot;: [],
+  &quot;puppetclass&quot;: {}
 }
 200
 {
-  &quot;created_at&quot;: &quot;2018-11-01 13:19:08 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:19:10 UTC&quot;,
-  &quot;id&quot;: 980190962,
-  &quot;name&quot;: &quot;test_puppetclass&quot;,
-  &quot;module_name&quot;: &quot;test_puppetclass&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:02:55 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:02:55 UTC&quot;,
+  &quot;id&quot;: 1018350796,
+  &quot;name&quot;: &quot;class12&quot;,
+  &quot;module_name&quot;: &quot;class12&quot;,
   &quot;environments&quot;: [
     {
-      &quot;name&quot;: &quot;production&quot;,
-      &quot;id&quot;: 334344675
+      &quot;name&quot;: &quot;environment14&quot;,
+      &quot;id&quot;: 687036938
     }
   ],
-  &quot;hostgroups&quot;: [
-    {
-      &quot;id&quot;: 636252244,
-      &quot;name&quot;: &quot;Common&quot;,
-      &quot;title&quot;: &quot;Common&quot;,
-      &quot;description&quot;: null
-    }
-  ],
-  &quot;smart_variables&quot;: [
-    {
-      &quot;variable&quot;: &quot;bool_test&quot;,
-      &quot;id&quot;: 638205575
-    },
-    {
-      &quot;variable&quot;: &quot;ssl_port&quot;,
-      &quot;id&quot;: 298486374
-    }
-  ],
+  &quot;hostgroups&quot;: [],
+  &quot;smart_variables&quot;: [],
   &quot;smart_class_parameters&quot;: [
     {
-      &quot;parameter&quot;: &quot;cluster&quot;,
-      &quot;id&quot;: 328495940
+      &quot;parameter&quot;: &quot;param50&quot;,
+      &quot;id&quot;: 1018350796
     }
   ]
 }</pre>
@@ -1100,8 +1062,8 @@
 {
   &quot;id&quot;: 980190962,
   &quot;name&quot;: &quot;base&quot;,
-  &quot;created_at&quot;: &quot;2018-11-01T13:19:08.876Z&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01T13:19:08.876Z&quot;
+  &quot;created_at&quot;: &quot;2018-11-15T19:01:27.674Z&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15T19:01:27.674Z&quot;
 }</pre>
 
   <h3>Parámetros</h3>

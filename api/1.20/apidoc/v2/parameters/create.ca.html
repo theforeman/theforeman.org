@@ -31,7 +31,7 @@
   </li>
   <li class='active'>create</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/parameters/create.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/parameters/create.de.html">de</a> | <a href="../../../apidoc/v2/parameters/create.it.html">it</a> | <a href="../../../apidoc/v2/parameters/create.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/parameters/create.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/parameters/create.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/parameters/create.fr.html">fr</a> | <a href="../../../apidoc/v2/parameters/create.ru.html">ru</a> | <a href="../../../apidoc/v2/parameters/create.ja.html">ja</a> | <a href="../../../apidoc/v2/parameters/create.es.html">es</a> | <a href="../../../apidoc/v2/parameters/create.ko.html">ko</a> | <b><a href="../../../apidoc/v2/parameters/create.ca.html">ca</a></b> | <a href="../../../apidoc/v2/parameters/create.gl.html">gl</a> | <a href="../../../apidoc/v2/parameters/create.en.html">en</a> | <a href="../../../apidoc/v2/parameters/create.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/parameters/create.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/parameters/create.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/parameters/create.ko.html">ko</a> | <a href="../../../apidoc/v2/parameters/create.en.html">en</a> | <a href="../../../apidoc/v2/parameters/create.fr.html">fr</a> | <a href="../../../apidoc/v2/parameters/create.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/parameters/create.de.html">de</a> | <a href="../../../apidoc/v2/parameters/create.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/parameters/create.ja.html">ja</a> | <a href="../../../apidoc/v2/parameters/create.pl.html">pl</a> | <a href="../../../apidoc/v2/parameters/create.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/parameters/create.it.html">it</a> | <a href="../../../apidoc/v2/parameters/create.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/parameters/create.ru.html">ru</a> | <a href="../../../apidoc/v2/parameters/create.es.html">es</a> | <b><a href="../../../apidoc/v2/parameters/create.ca.html">ca</a></b> | <a href="../../../apidoc/v2/parameters/create.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/parameters/create.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/parameters/create.gl.html">gl</a> ]
 </li>
 
 
@@ -94,21 +94,26 @@
 
 
   <h2><span class="translation_missing" title="translation missing: ca.apipie.examples">Examples</span></h2>
-    <pre class="prettyprint">POST /api/domains/22495316-mydomain-net/parameters
+    <pre class="prettyprint">POST /api/subnets/1018350795/parameters
 {
   &quot;parameter&quot;: {
-    &quot;name&quot;: &quot;parameter2&quot;,
-    &quot;value&quot;: &quot;X&quot;
+    &quot;name&quot;: &quot;name with space&quot;,
+    &quot;value&quot;: &quot;123&quot;
   }
 }
-201
+422
 {
-  &quot;priority&quot;: 30,
-  &quot;created_at&quot;: &quot;2018-11-01 13:19:09 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:19:09 UTC&quot;,
-  &quot;id&quot;: 767575240,
-  &quot;name&quot;: &quot;parameter2&quot;,
-  &quot;value&quot;: &quot;X&quot;
+  &quot;error&quot;: {
+    &quot;id&quot;: null,
+    &quot;errors&quot;: {
+      &quot;name&quot;: [
+        &quot;can&#39;t contain spaces.&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Name can&#39;t contain spaces.&quot;
+    ]
+  }
 }</pre>
 
   <h2><span class="translation_missing" title="translation missing: ca.apipie.params">Params</span></h2>

@@ -27,7 +27,7 @@
     
   </li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../apidoc/v2/smart_variables.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/smart_variables.de.html">de</a> | <a href="../../apidoc/v2/smart_variables.it.html">it</a> | <a href="../../apidoc/v2/smart_variables.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/smart_variables.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/smart_variables.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/smart_variables.fr.html">fr</a> | <a href="../../apidoc/v2/smart_variables.ru.html">ru</a> | <a href="../../apidoc/v2/smart_variables.ja.html">ja</a> | <a href="../../apidoc/v2/smart_variables.es.html">es</a> | <a href="../../apidoc/v2/smart_variables.ko.html">ko</a> | <a href="../../apidoc/v2/smart_variables.ca.html">ca</a> | <a href="../../apidoc/v2/smart_variables.gl.html">gl</a> | <a href="../../apidoc/v2/smart_variables.en.html">en</a> | <b><a href="../../apidoc/v2/smart_variables.zh_TW.html">zh_TW</a></b> | <a href="../../apidoc/v2/smart_variables.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/smart_variables.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../apidoc/v2/smart_variables.ko.html">ko</a> | <a href="../../apidoc/v2/smart_variables.en.html">en</a> | <a href="../../apidoc/v2/smart_variables.fr.html">fr</a> | <a href="../../apidoc/v2/smart_variables.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/smart_variables.de.html">de</a> | <a href="../../apidoc/v2/smart_variables.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/smart_variables.ja.html">ja</a> | <a href="../../apidoc/v2/smart_variables.pl.html">pl</a> | <a href="../../apidoc/v2/smart_variables.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/smart_variables.it.html">it</a> | <b><a href="../../apidoc/v2/smart_variables.zh_TW.html">zh_TW</a></b> | <a href="../../apidoc/v2/smart_variables.ru.html">ru</a> | <a href="../../apidoc/v2/smart_variables.es.html">es</a> | <a href="../../apidoc/v2/smart_variables.ca.html">ca</a> | <a href="../../apidoc/v2/smart_variables.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/smart_variables.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/smart_variables.gl.html">gl</a> ]
 </li>
 
 </ul>
@@ -101,7 +101,7 @@
 
 
   <h3>示例</h3>
-    <pre class="prettyprint">GET /api/hostgroups/636252244-Common/smart_variables
+    <pre class="prettyprint">GET /api/hosts/host314/smart_variables
 200
 {
   &quot;total&quot;: 2,
@@ -127,8 +127,8 @@
       &quot;avoid_duplicates&quot;: false,
       &quot;puppetclass_id&quot;: 980190962,
       &quot;puppetclass_name&quot;: &quot;base&quot;,
-      &quot;created_at&quot;: &quot;2018-11-01 13:32:43 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:32:43 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
       &quot;variable&quot;: &quot;bool_test&quot;,
       &quot;id&quot;: 638205575,
       &quot;default_value&quot;: &quot;t&quot;,
@@ -147,8 +147,8 @@
       &quot;avoid_duplicates&quot;: false,
       &quot;puppetclass_id&quot;: 980190962,
       &quot;puppetclass_name&quot;: &quot;base&quot;,
-      &quot;created_at&quot;: &quot;2018-11-01 13:32:43 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:32:43 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
       &quot;variable&quot;: &quot;ssl_port&quot;,
       &quot;id&quot;: 298486374,
       &quot;default_value&quot;: &quot;443&quot;,
@@ -482,38 +482,28 @@
 
 
   <h3>示例</h3>
-    <pre class="prettyprint">GET /api/puppetclasses/980190962/smart_variables/298486374-ssl_port
+    <pre class="prettyprint">GET /api/puppetclasses/980190962/smart_variables/1018350796
 200
 {
   &quot;description&quot;: null,
-  &quot;parameter_type&quot;: &quot;string&quot;,
-  &quot;variable_type&quot;: &quot;string&quot;,
-  &quot;hidden_value?&quot;: false,
-  &quot;validator_type&quot;: &quot;list&quot;,
-  &quot;validator_rule&quot;: &quot;443,8443&quot;,
+  &quot;parameter_type&quot;: null,
+  &quot;variable_type&quot;: null,
+  &quot;hidden_value?&quot;: true,
+  &quot;validator_type&quot;: null,
+  &quot;validator_rule&quot;: null,
   &quot;override_value_order&quot;: &quot;fqdn\nhostgroup\nos\ndomain&quot;,
   &quot;merge_overrides&quot;: false,
   &quot;merge_default&quot;: false,
   &quot;avoid_duplicates&quot;: false,
   &quot;puppetclass_id&quot;: 980190962,
   &quot;puppetclass_name&quot;: &quot;base&quot;,
-  &quot;created_at&quot;: &quot;2018-11-01 13:32:43 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:32:43 UTC&quot;,
-  &quot;variable&quot;: &quot;ssl_port&quot;,
-  &quot;id&quot;: 298486374,
-  &quot;default_value&quot;: &quot;443&quot;,
-  &quot;override_values_count&quot;: 1,
-  &quot;override_values&quot;: [
-    {
-      &quot;created_at&quot;: &quot;2018-11-01 13:32:43 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:32:43 UTC&quot;,
-      &quot;id&quot;: 281110143,
-      &quot;match&quot;: &quot;hostgroup=Common&quot;,
-      &quot;value&quot;: &quot;8443&quot;,
-      &quot;omit&quot;: false,
-      &quot;use_puppet_default&quot;: false
-    }
-  ]
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:55 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:55 UTC&quot;,
+  &quot;variable&quot;: &quot;param6&quot;,
+  &quot;id&quot;: 1018350796,
+  &quot;default_value&quot;: &quot;*****&quot;,
+  &quot;override_values_count&quot;: 0,
+  &quot;override_values&quot;: []
 }</pre>
 
   <h3>參數</h3>
@@ -654,23 +644,32 @@
     <pre class="prettyprint">POST /api/smart_variables
 {
   &quot;smart_variable&quot;: {
-    &quot;variable&quot;: &quot;&quot;,
-    &quot;puppetclass_id&quot;: 980190962
+    &quot;variable&quot;: &quot;OphlglDxpK&quot;,
+    &quot;puppetclass_id&quot;: 298486374,
+    &quot;hidden_value&quot;: true
   }
 }
-422
+201
 {
-  &quot;error&quot;: {
-    &quot;id&quot;: null,
-    &quot;errors&quot;: {
-      &quot;key&quot;: [
-        &quot;can&#39;t be blank&quot;
-      ]
-    },
-    &quot;full_messages&quot;: [
-      &quot;Key can&#39;t be blank&quot;
-    ]
-  }
+  &quot;description&quot;: null,
+  &quot;parameter_type&quot;: null,
+  &quot;variable_type&quot;: null,
+  &quot;hidden_value?&quot;: true,
+  &quot;validator_type&quot;: null,
+  &quot;validator_rule&quot;: null,
+  &quot;override_value_order&quot;: &quot;fqdn\nhostgroup\nos\ndomain&quot;,
+  &quot;merge_overrides&quot;: false,
+  &quot;merge_default&quot;: false,
+  &quot;avoid_duplicates&quot;: false,
+  &quot;puppetclass_id&quot;: 298486374,
+  &quot;puppetclass_name&quot;: &quot;apache&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:55 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:55 UTC&quot;,
+  &quot;variable&quot;: &quot;OphlglDxpK&quot;,
+  &quot;id&quot;: 1018350796,
+  &quot;default_value&quot;: &quot;*****&quot;,
+  &quot;override_values_count&quot;: 0,
+  &quot;override_values&quot;: []
 }</pre>
 
   <h3>參數</h3>
@@ -1072,34 +1071,31 @@
 
 
   <h3>示例</h3>
-    <pre class="prettyprint">PUT /api/smart_variables/1018350801-UqMzKHvzaJ
+    <pre class="prettyprint">PUT /api/smart_variables/1018350796-YWYjBDRHmw
 {
   &quot;smart_variable&quot;: {
-    &quot;merge_overrides&quot;: true,
-    &quot;avoid_duplicates&quot;: true
+    &quot;hidden_value&quot;: false
   }
 }
 200
 {
   &quot;description&quot;: null,
-  &quot;parameter_type&quot;: &quot;array&quot;,
-  &quot;variable_type&quot;: &quot;array&quot;,
+  &quot;parameter_type&quot;: null,
+  &quot;variable_type&quot;: null,
   &quot;hidden_value?&quot;: false,
   &quot;validator_type&quot;: null,
   &quot;validator_rule&quot;: null,
   &quot;override_value_order&quot;: &quot;fqdn\nhostgroup\nos\ndomain&quot;,
-  &quot;merge_overrides&quot;: true,
+  &quot;merge_overrides&quot;: false,
   &quot;merge_default&quot;: false,
-  &quot;avoid_duplicates&quot;: true,
+  &quot;avoid_duplicates&quot;: false,
   &quot;puppetclass_id&quot;: 980190962,
   &quot;puppetclass_name&quot;: &quot;base&quot;,
-  &quot;created_at&quot;: &quot;2018-11-01 13:32:56 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:32:56 UTC&quot;,
-  &quot;variable&quot;: &quot;UqMzKHvzaJ&quot;,
-  &quot;id&quot;: 1018350801,
-  &quot;default_value&quot;: [
-    44848
-  ],
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:55 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:55 UTC&quot;,
+  &quot;variable&quot;: &quot;YWYjBDRHmw&quot;,
+  &quot;id&quot;: 1018350796,
+  &quot;default_value&quot;: null,
   &quot;override_values_count&quot;: 0,
   &quot;override_values&quot;: []
 }</pre>
@@ -1543,8 +1539,8 @@
   &quot;avoid_duplicates&quot;: false,
   &quot;puppetclass_id&quot;: 298486374,
   &quot;puppetclass_name&quot;: &quot;apache&quot;,
-  &quot;created_at&quot;: &quot;2018-11-01 13:32:43 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:32:43 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
   &quot;variable&quot;: &quot;special_info&quot;,
   &quot;id&quot;: 281110143,
   &quot;default_value&quot;: &quot;secret&quot;,

@@ -31,7 +31,7 @@
   </li>
   <li class='active'>create</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/host_classes/create.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/host_classes/create.de.html">de</a> | <a href="../../../apidoc/v2/host_classes/create.it.html">it</a> | <a href="../../../apidoc/v2/host_classes/create.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/host_classes/create.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/host_classes/create.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/host_classes/create.fr.html">fr</a> | <a href="../../../apidoc/v2/host_classes/create.ru.html">ru</a> | <a href="../../../apidoc/v2/host_classes/create.ja.html">ja</a> | <a href="../../../apidoc/v2/host_classes/create.es.html">es</a> | <a href="../../../apidoc/v2/host_classes/create.ko.html">ko</a> | <a href="../../../apidoc/v2/host_classes/create.ca.html">ca</a> | <a href="../../../apidoc/v2/host_classes/create.gl.html">gl</a> | <a href="../../../apidoc/v2/host_classes/create.en.html">en</a> | <b><a href="../../../apidoc/v2/host_classes/create.zh_TW.html">zh_TW</a></b> | <a href="../../../apidoc/v2/host_classes/create.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/host_classes/create.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/host_classes/create.ko.html">ko</a> | <a href="../../../apidoc/v2/host_classes/create.en.html">en</a> | <a href="../../../apidoc/v2/host_classes/create.fr.html">fr</a> | <a href="../../../apidoc/v2/host_classes/create.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/host_classes/create.de.html">de</a> | <a href="../../../apidoc/v2/host_classes/create.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/host_classes/create.ja.html">ja</a> | <a href="../../../apidoc/v2/host_classes/create.pl.html">pl</a> | <a href="../../../apidoc/v2/host_classes/create.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/host_classes/create.it.html">it</a> | <b><a href="../../../apidoc/v2/host_classes/create.zh_TW.html">zh_TW</a></b> | <a href="../../../apidoc/v2/host_classes/create.ru.html">ru</a> | <a href="../../../apidoc/v2/host_classes/create.es.html">es</a> | <a href="../../../apidoc/v2/host_classes/create.ca.html">ca</a> | <a href="../../../apidoc/v2/host_classes/create.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/host_classes/create.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/host_classes/create.gl.html">gl</a> ]
 </li>
 
 
@@ -52,17 +52,18 @@
 
 
   <h2>示例</h2>
-    <pre class="prettyprint">POST /api/hosts/host2608/puppetclass_ids
+    <pre class="prettyprint">POST /api/hosts/host299/puppetclass_ids
 {
-  &quot;puppetclass_id&quot;: 281110143,
+  &quot;puppetclass_id&quot;: &quot;invalid_id&quot;,
   &quot;host_class&quot;: {
-    &quot;puppetclass_id&quot;: 281110143
+    &quot;puppetclass_id&quot;: &quot;invalid_id&quot;
   }
 }
-200
+404
 {
-  &quot;host_id&quot;: 45,
-  &quot;puppetclass_id&quot;: 281110143
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;Resource host_class not found by id &#39;&#39;&quot;
+  }
 }</pre>
 
   <h2>參數</h2>

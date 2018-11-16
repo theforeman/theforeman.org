@@ -31,7 +31,7 @@
   </li>
   <li class='active'>update</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/subnets/update.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/subnets/update.de.html">de</a> | <a href="../../../apidoc/v2/subnets/update.it.html">it</a> | <a href="../../../apidoc/v2/subnets/update.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/subnets/update.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/subnets/update.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/subnets/update.fr.html">fr</a> | <b><a href="../../../apidoc/v2/subnets/update.ru.html">ru</a></b> | <a href="../../../apidoc/v2/subnets/update.ja.html">ja</a> | <a href="../../../apidoc/v2/subnets/update.es.html">es</a> | <a href="../../../apidoc/v2/subnets/update.ko.html">ko</a> | <a href="../../../apidoc/v2/subnets/update.ca.html">ca</a> | <a href="../../../apidoc/v2/subnets/update.gl.html">gl</a> | <a href="../../../apidoc/v2/subnets/update.en.html">en</a> | <a href="../../../apidoc/v2/subnets/update.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/subnets/update.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/subnets/update.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/subnets/update.ko.html">ko</a> | <a href="../../../apidoc/v2/subnets/update.en.html">en</a> | <a href="../../../apidoc/v2/subnets/update.fr.html">fr</a> | <a href="../../../apidoc/v2/subnets/update.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/subnets/update.de.html">de</a> | <a href="../../../apidoc/v2/subnets/update.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/subnets/update.ja.html">ja</a> | <a href="../../../apidoc/v2/subnets/update.pl.html">pl</a> | <a href="../../../apidoc/v2/subnets/update.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/subnets/update.it.html">it</a> | <a href="../../../apidoc/v2/subnets/update.zh_TW.html">zh_TW</a> | <b><a href="../../../apidoc/v2/subnets/update.ru.html">ru</a></b> | <a href="../../../apidoc/v2/subnets/update.es.html">es</a> | <a href="../../../apidoc/v2/subnets/update.ca.html">ca</a> | <a href="../../../apidoc/v2/subnets/update.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/subnets/update.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/subnets/update.gl.html">gl</a> ]
 </li>
 
 
@@ -52,71 +52,65 @@
 
 
   <h2>Примеры</h2>
-    <pre class="prettyprint">PUT /api/subnets/980190962-one
+    <pre class="prettyprint">PUT /api/subnets/1018350796
 {
   &quot;subnet&quot;: {
-    &quot;name&quot;: &quot;QA2&quot;,
-    &quot;network_type&quot;: &quot;IPv4&quot;,
-    &quot;network&quot;: &quot;10.35.2.27&quot;,
-    &quot;mask&quot;: &quot;255.255.255.0&quot;
+    &quot;subnet_parameters_attributes&quot;: [
+      {
+        &quot;name&quot;: &quot;foo&quot;,
+        &quot;value&quot;: &quot;new_value&quot;
+      }
+    ]
   }
 }
 200
 {
-  &quot;network&quot;: &quot;10.35.2.27&quot;,
+  &quot;network&quot;: &quot;36.82.40.0&quot;,
   &quot;network_type&quot;: &quot;IPv4&quot;,
   &quot;cidr&quot;: 24,
   &quot;mask&quot;: &quot;255.255.255.0&quot;,
   &quot;priority&quot;: null,
-  &quot;vlanid&quot;: 41,
+  &quot;vlanid&quot;: null,
   &quot;mtu&quot;: 1500,
   &quot;gateway&quot;: null,
   &quot;dns_primary&quot;: null,
   &quot;dns_secondary&quot;: null,
   &quot;from&quot;: null,
   &quot;to&quot;: null,
-  &quot;created_at&quot;: &quot;2018-11-01 13:15:57 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:16:09 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:32 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:32 UTC&quot;,
   &quot;ipam&quot;: &quot;None&quot;,
   &quot;boot_mode&quot;: &quot;DHCP&quot;,
-  &quot;id&quot;: 980190962,
-  &quot;name&quot;: &quot;QA2&quot;,
+  &quot;id&quot;: 1018350796,
+  &quot;name&quot;: &quot;subnet1&quot;,
   &quot;description&quot;: null,
-  &quot;network_address&quot;: &quot;10.35.2.27/24&quot;,
-  &quot;dhcp_id&quot;: 980190962,
-  &quot;dhcp_name&quot;: &quot;DHCP Proxy&quot;,
-  &quot;tftp_id&quot;: 298486374,
-  &quot;tftp_name&quot;: &quot;TFTP Proxy&quot;,
+  &quot;network_address&quot;: &quot;36.82.40.0/24&quot;,
+  &quot;dhcp_id&quot;: null,
+  &quot;dhcp_name&quot;: null,
+  &quot;tftp_id&quot;: null,
+  &quot;tftp_name&quot;: null,
   &quot;httpboot_id&quot;: null,
   &quot;httpboot_name&quot;: null,
-  &quot;dns_id&quot;: 113629430,
+  &quot;dns_id&quot;: null,
   &quot;template_id&quot;: null,
   &quot;template_name&quot;: null,
-  &quot;dhcp&quot;: {
-    &quot;name&quot;: &quot;DHCP Proxy&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;url&quot;: &quot;https://somewhere.net:8443&quot;
-  },
-  &quot;tftp&quot;: {
-    &quot;name&quot;: &quot;TFTP Proxy&quot;,
-    &quot;id&quot;: 298486374,
-    &quot;url&quot;: &quot;http://somewhere.else&quot;
-  },
+  &quot;dhcp&quot;: null,
+  &quot;tftp&quot;: null,
   &quot;httpboot&quot;: null,
-  &quot;dns&quot;: {
-    &quot;name&quot;: &quot;DNS Proxy&quot;,
-    &quot;id&quot;: 113629430,
-    &quot;url&quot;: &quot;http://else.where:45671&quot;
-  },
+  &quot;dns&quot;: null,
   &quot;template&quot;: null,
-  &quot;domains&quot;: [
+  &quot;domains&quot;: [],
+  &quot;interfaces&quot;: [],
+  &quot;parameters&quot;: [
     {
-      &quot;id&quot;: 22495316,
-      &quot;name&quot;: &quot;mydomain.net&quot;
+      &quot;priority&quot;: 40,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:32 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:32 UTC&quot;,
+      &quot;id&quot;: 767575239,
+      &quot;name&quot;: &quot;foo&quot;,
+      &quot;value&quot;: &quot;new_value&quot;
     }
   ],
-  &quot;interfaces&quot;: [],
-  &quot;parameters&quot;: [],
   &quot;locations&quot;: [
     {
       &quot;id&quot;: 255093256,

@@ -31,7 +31,7 @@
   </li>
   <li class='active'>facts</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/hosts/facts.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/hosts/facts.de.html">de</a> | <a href="../../../apidoc/v2/hosts/facts.it.html">it</a> | <a href="../../../apidoc/v2/hosts/facts.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/hosts/facts.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/hosts/facts.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/hosts/facts.fr.html">fr</a> | <a href="../../../apidoc/v2/hosts/facts.ru.html">ru</a> | <a href="../../../apidoc/v2/hosts/facts.ja.html">ja</a> | <a href="../../../apidoc/v2/hosts/facts.es.html">es</a> | <a href="../../../apidoc/v2/hosts/facts.ko.html">ko</a> | <a href="../../../apidoc/v2/hosts/facts.ca.html">ca</a> | <a href="../../../apidoc/v2/hosts/facts.gl.html">gl</a> | <b><a href="../../../apidoc/v2/hosts/facts.en.html">en</a></b> | <a href="../../../apidoc/v2/hosts/facts.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/hosts/facts.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/hosts/facts.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/hosts/facts.ko.html">ko</a> | <b><a href="../../../apidoc/v2/hosts/facts.en.html">en</a></b> | <a href="../../../apidoc/v2/hosts/facts.fr.html">fr</a> | <a href="../../../apidoc/v2/hosts/facts.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/hosts/facts.de.html">de</a> | <a href="../../../apidoc/v2/hosts/facts.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/hosts/facts.ja.html">ja</a> | <a href="../../../apidoc/v2/hosts/facts.pl.html">pl</a> | <a href="../../../apidoc/v2/hosts/facts.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/hosts/facts.it.html">it</a> | <a href="../../../apidoc/v2/hosts/facts.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/hosts/facts.ru.html">ru</a> | <a href="../../../apidoc/v2/hosts/facts.es.html">es</a> | <a href="../../../apidoc/v2/hosts/facts.ca.html">ca</a> | <a href="../../../apidoc/v2/hosts/facts.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/hosts/facts.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/hosts/facts.gl.html">gl</a> ]
 </li>
 
 
@@ -55,6 +55,7 @@
     <pre class="prettyprint">POST /api/hosts/facts
 {
   &quot;name&quot;: &quot;brslc022.brs.infineon.com&quot;,
+  &quot;certname&quot;: &quot;brslc022.brs.infineon.com&quot;,
   &quot;facts&quot;: {
     &quot;is_virtual&quot;: &quot;true&quot;,
     &quot;processorcount&quot;: &quot;2&quot;,
@@ -115,6 +116,7 @@
     &quot;ipaddress_eth0&quot;: &quot;172.29.205.22&quot;,
     &quot;facterversion&quot;: &quot;1.5.7&quot;,
     &quot;kernelmajversion&quot;: &quot;2.6&quot;,
+    &quot;operatingsystem&quot;: &quot;RedHat&quot;,
     &quot;macaddress&quot;: &quot;00:0C:29:CF:00:45&quot;,
     &quot;processor1&quot;: &quot;Intel(R) Xeon(R) CPU           X5460  @ 3.16GHz&quot;,
     &quot;lsbmajdistrelease&quot;: &quot;4&quot;,
@@ -122,12 +124,54 @@
     &quot;lsbdistid&quot;: &quot;RedHatEnterpriseAS&quot;
   },
   &quot;host&quot;: {
+    &quot;certname&quot;: &quot;brslc022.brs.infineon.com&quot;,
     &quot;name&quot;: &quot;brslc022.brs.infineon.com&quot;
   }
 }
-422
+201
 {
-  &quot;message&quot;: &quot;ERF42-3829 [Foreman::Exception]: invalid facts, missing operating system value&quot;
+  &quot;id&quot;: 2,
+  &quot;name&quot;: &quot;brslc022.brs.infineon.com&quot;,
+  &quot;last_compile&quot;: &quot;2010-02-16T11:52:38.163Z&quot;,
+  &quot;last_report&quot;: null,
+  &quot;updated_at&quot;: &quot;2018-11-15T19:01:37.888Z&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15T19:01:37.675Z&quot;,
+  &quot;root_pass&quot;: null,
+  &quot;architecture_id&quot;: 501905021,
+  &quot;operatingsystem_id&quot;: 1073012829,
+  &quot;environment_id&quot;: 687036938,
+  &quot;ptable_id&quot;: null,
+  &quot;medium_id&quot;: null,
+  &quot;build&quot;: false,
+  &quot;comment&quot;: null,
+  &quot;disk&quot;: null,
+  &quot;installed_at&quot;: null,
+  &quot;model_id&quot;: 980190963,
+  &quot;hostgroup_id&quot;: null,
+  &quot;owner_id&quot;: null,
+  &quot;owner_type&quot;: null,
+  &quot;enabled&quot;: true,
+  &quot;puppet_ca_proxy_id&quot;: null,
+  &quot;managed&quot;: false,
+  &quot;use_image&quot;: null,
+  &quot;image_file&quot;: &quot;&quot;,
+  &quot;uuid&quot;: null,
+  &quot;compute_resource_id&quot;: null,
+  &quot;puppet_proxy_id&quot;: null,
+  &quot;certname&quot;: &quot;brslc022.brs.infineon.com&quot;,
+  &quot;image_id&quot;: null,
+  &quot;organization_id&quot;: 447626438,
+  &quot;location_id&quot;: 255093256,
+  &quot;otp&quot;: null,
+  &quot;realm_id&quot;: null,
+  &quot;compute_profile_id&quot;: null,
+  &quot;provision_method&quot;: &quot;build&quot;,
+  &quot;grub_pass&quot;: &quot;&quot;,
+  &quot;global_status&quot;: 0,
+  &quot;lookup_value_matcher&quot;: &quot;fqdn=brslc022.brs.infineon.com&quot;,
+  &quot;pxe_loader&quot;: null,
+  &quot;initiated_at&quot;: null,
+  &quot;build_errors&quot;: null
 }</pre>
 
   <h2>Params</h2>

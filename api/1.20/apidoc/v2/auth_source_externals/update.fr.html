@@ -31,7 +31,7 @@
   </li>
   <li class='active'>update</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/auth_source_externals/update.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/auth_source_externals/update.de.html">de</a> | <a href="../../../apidoc/v2/auth_source_externals/update.it.html">it</a> | <a href="../../../apidoc/v2/auth_source_externals/update.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/auth_source_externals/update.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/auth_source_externals/update.en_GB.html">en_GB</a> | <b><a href="../../../apidoc/v2/auth_source_externals/update.fr.html">fr</a></b> | <a href="../../../apidoc/v2/auth_source_externals/update.ru.html">ru</a> | <a href="../../../apidoc/v2/auth_source_externals/update.ja.html">ja</a> | <a href="../../../apidoc/v2/auth_source_externals/update.es.html">es</a> | <a href="../../../apidoc/v2/auth_source_externals/update.ko.html">ko</a> | <a href="../../../apidoc/v2/auth_source_externals/update.ca.html">ca</a> | <a href="../../../apidoc/v2/auth_source_externals/update.gl.html">gl</a> | <a href="../../../apidoc/v2/auth_source_externals/update.en.html">en</a> | <a href="../../../apidoc/v2/auth_source_externals/update.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/auth_source_externals/update.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/auth_source_externals/update.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/auth_source_externals/update.ko.html">ko</a> | <a href="../../../apidoc/v2/auth_source_externals/update.en.html">en</a> | <b><a href="../../../apidoc/v2/auth_source_externals/update.fr.html">fr</a></b> | <a href="../../../apidoc/v2/auth_source_externals/update.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/auth_source_externals/update.de.html">de</a> | <a href="../../../apidoc/v2/auth_source_externals/update.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/auth_source_externals/update.ja.html">ja</a> | <a href="../../../apidoc/v2/auth_source_externals/update.pl.html">pl</a> | <a href="../../../apidoc/v2/auth_source_externals/update.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/auth_source_externals/update.it.html">it</a> | <a href="../../../apidoc/v2/auth_source_externals/update.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/auth_source_externals/update.ru.html">ru</a> | <a href="../../../apidoc/v2/auth_source_externals/update.es.html">es</a> | <a href="../../../apidoc/v2/auth_source_externals/update.ca.html">ca</a> | <a href="../../../apidoc/v2/auth_source_externals/update.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/auth_source_externals/update.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/auth_source_externals/update.gl.html">gl</a> ]
 </li>
 
 
@@ -55,18 +55,37 @@
     <pre class="prettyprint">PUT /api/auth_source_externals/408068537
 {
   &quot;auth_source_external&quot;: {
-    &quot;name&quot;: &quot;new_name_external&quot;
+    &quot;organization_names&quot;: [
+      &quot;Organization 1&quot;
+    ],
+    &quot;location_ids&quot;: [
+      255093256
+    ]
   }
 }
 200
 {
-  &quot;created_at&quot;: &quot;2018-11-01 13:17:27 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:17:28 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
   &quot;id&quot;: 408068537,
-  &quot;name&quot;: &quot;new_name_external&quot;,
+  &quot;name&quot;: &quot;External&quot;,
   &quot;external_usergroups&quot;: [],
-  &quot;locations&quot;: [],
-  &quot;organizations&quot;: []
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
 }</pre>
 
   <h2>Paramètres</h2>

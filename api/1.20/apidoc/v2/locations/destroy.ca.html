@@ -31,7 +31,7 @@
   </li>
   <li class='active'>destroy</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/locations/destroy.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/locations/destroy.de.html">de</a> | <a href="../../../apidoc/v2/locations/destroy.it.html">it</a> | <a href="../../../apidoc/v2/locations/destroy.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/locations/destroy.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/locations/destroy.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/locations/destroy.fr.html">fr</a> | <a href="../../../apidoc/v2/locations/destroy.ru.html">ru</a> | <a href="../../../apidoc/v2/locations/destroy.ja.html">ja</a> | <a href="../../../apidoc/v2/locations/destroy.es.html">es</a> | <a href="../../../apidoc/v2/locations/destroy.ko.html">ko</a> | <b><a href="../../../apidoc/v2/locations/destroy.ca.html">ca</a></b> | <a href="../../../apidoc/v2/locations/destroy.gl.html">gl</a> | <a href="../../../apidoc/v2/locations/destroy.en.html">en</a> | <a href="../../../apidoc/v2/locations/destroy.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/locations/destroy.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/locations/destroy.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/locations/destroy.ko.html">ko</a> | <a href="../../../apidoc/v2/locations/destroy.en.html">en</a> | <a href="../../../apidoc/v2/locations/destroy.fr.html">fr</a> | <a href="../../../apidoc/v2/locations/destroy.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/locations/destroy.de.html">de</a> | <a href="../../../apidoc/v2/locations/destroy.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/locations/destroy.ja.html">ja</a> | <a href="../../../apidoc/v2/locations/destroy.pl.html">pl</a> | <a href="../../../apidoc/v2/locations/destroy.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/locations/destroy.it.html">it</a> | <a href="../../../apidoc/v2/locations/destroy.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/locations/destroy.ru.html">ru</a> | <a href="../../../apidoc/v2/locations/destroy.es.html">es</a> | <b><a href="../../../apidoc/v2/locations/destroy.ca.html">ca</a></b> | <a href="../../../apidoc/v2/locations/destroy.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/locations/destroy.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/locations/destroy.gl.html">gl</a> ]
 </li>
 
 
@@ -52,15 +52,20 @@
 
 
   <h2><span class="translation_missing" title="translation missing: ca.apipie.examples">Examples</span></h2>
-    <pre class="prettyprint">DELETE /api/locations/447626496-loc308
+    <pre class="prettyprint">DELETE /api/locations/255093256-Location%201
 {
   &quot;location&quot;: {}
 }
-404
+200
 {
-  &quot;error&quot;: {
-    &quot;message&quot;: &quot;Resource location not found by id &#39;447626496-loc308&#39;&quot;
-  }
+  &quot;id&quot;: 255093256,
+  &quot;name&quot;: &quot;Location 1&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15T19:01:27.644Z&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15T19:01:27.644Z&quot;,
+  &quot;ignore_types&quot;: [],
+  &quot;ancestry&quot;: null,
+  &quot;title&quot;: &quot;Location 1&quot;,
+  &quot;description&quot;: null
 }</pre>
 
   <h2><span class="translation_missing" title="translation missing: ca.apipie.params">Params</span></h2>

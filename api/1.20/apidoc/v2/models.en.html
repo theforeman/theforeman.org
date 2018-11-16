@@ -27,7 +27,7 @@
     
   </li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../apidoc/v2/models.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/models.de.html">de</a> | <a href="../../apidoc/v2/models.it.html">it</a> | <a href="../../apidoc/v2/models.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/models.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/models.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/models.fr.html">fr</a> | <a href="../../apidoc/v2/models.ru.html">ru</a> | <a href="../../apidoc/v2/models.ja.html">ja</a> | <a href="../../apidoc/v2/models.es.html">es</a> | <a href="../../apidoc/v2/models.ko.html">ko</a> | <a href="../../apidoc/v2/models.ca.html">ca</a> | <a href="../../apidoc/v2/models.gl.html">gl</a> | <b><a href="../../apidoc/v2/models.en.html">en</a></b> | <a href="../../apidoc/v2/models.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/models.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/models.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../apidoc/v2/models.ko.html">ko</a> | <b><a href="../../apidoc/v2/models.en.html">en</a></b> | <a href="../../apidoc/v2/models.fr.html">fr</a> | <a href="../../apidoc/v2/models.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/models.de.html">de</a> | <a href="../../apidoc/v2/models.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/models.ja.html">ja</a> | <a href="../../apidoc/v2/models.pl.html">pl</a> | <a href="../../apidoc/v2/models.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/models.it.html">it</a> | <a href="../../apidoc/v2/models.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/models.ru.html">ru</a> | <a href="../../apidoc/v2/models.es.html">es</a> | <a href="../../apidoc/v2/models.ca.html">ca</a> | <a href="../../apidoc/v2/models.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/models.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/models.gl.html">gl</a> ]
 </li>
 
 </ul>
@@ -86,8 +86,8 @@
   &quot;results&quot;: [
     {
       &quot;info&quot;: &quot;Virtual Machine&quot;,
-      &quot;created_at&quot;: &quot;2018-11-01 13:37:55 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:37:55 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
       &quot;vendor_class&quot;: null,
       &quot;hardware_model&quot;: null,
       &quot;id&quot;: 980190962,
@@ -96,8 +96,8 @@
     },
     {
       &quot;info&quot;: null,
-      &quot;created_at&quot;: &quot;2018-11-01 13:37:55 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:37:55 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
       &quot;vendor_class&quot;: &quot;Sun-Fire-V210&quot;,
       &quot;hardware_model&quot;: &quot;SUN4U&quot;,
       &quot;id&quot;: 139037058,
@@ -327,18 +327,16 @@
 
 
   <h3>Examples</h3>
-    <pre class="prettyprint">GET /api/models/980190962-KVM
+    <pre class="prettyprint">GET /api/models/980190962abcdef
 200
 {
-  &quot;info&quot;: &quot;Virtual Machine&quot;,
-  &quot;created_at&quot;: &quot;2018-11-01 13:37:55 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:37:55 UTC&quot;,
+  &quot;info&quot;: null,
+  &quot;created_at&quot;: &quot;2018-11-15 19:02:49 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:02:49 UTC&quot;,
   &quot;vendor_class&quot;: null,
   &quot;hardware_model&quot;: null,
-  &quot;id&quot;: 980190962,
-  &quot;name&quot;: &quot;KVM&quot;,
-  &quot;can_edit&quot;: true,
-  &quot;can_delete&quot;: true,
+  &quot;id&quot;: 980190963,
+  &quot;name&quot;: &quot;980190962abcdef&quot;,
   &quot;hosts_count&quot;: 0
 }</pre>
 
@@ -462,11 +460,11 @@
 201
 {
   &quot;info&quot;: null,
-  &quot;created_at&quot;: &quot;2018-11-01 13:37:58 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:37:58 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:02:49 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:02:49 UTC&quot;,
   &quot;vendor_class&quot;: null,
   &quot;hardware_model&quot;: null,
-  &quot;id&quot;: 980190964,
+  &quot;id&quot;: 980190963,
   &quot;name&quot;: &quot;new model&quot;,
   &quot;hosts_count&quot;: 0
 }</pre>
@@ -680,8 +678,8 @@
 200
 {
   &quot;info&quot;: &quot;Virtual Machine&quot;,
-  &quot;created_at&quot;: &quot;2018-11-01 13:37:55 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:37:55 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
   &quot;vendor_class&quot;: null,
   &quot;hardware_model&quot;: null,
   &quot;id&quot;: 980190962,
@@ -919,8 +917,8 @@
   &quot;id&quot;: 980190962,
   &quot;name&quot;: &quot;KVM&quot;,
   &quot;info&quot;: &quot;Virtual Machine&quot;,
-  &quot;created_at&quot;: &quot;2018-11-01T13:37:55.959Z&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01T13:37:55.959Z&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15T19:01:27.702Z&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15T19:01:27.702Z&quot;,
   &quot;vendor_class&quot;: null,
   &quot;hardware_model&quot;: null
 }</pre>

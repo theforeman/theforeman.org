@@ -31,7 +31,7 @@
   </li>
   <li class='active'>create</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/provisioning_templates/create.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/provisioning_templates/create.de.html">de</a> | <a href="../../../apidoc/v2/provisioning_templates/create.it.html">it</a> | <a href="../../../apidoc/v2/provisioning_templates/create.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/provisioning_templates/create.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/provisioning_templates/create.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/provisioning_templates/create.fr.html">fr</a> | <a href="../../../apidoc/v2/provisioning_templates/create.ru.html">ru</a> | <a href="../../../apidoc/v2/provisioning_templates/create.ja.html">ja</a> | <a href="../../../apidoc/v2/provisioning_templates/create.es.html">es</a> | <a href="../../../apidoc/v2/provisioning_templates/create.ko.html">ko</a> | <b><a href="../../../apidoc/v2/provisioning_templates/create.ca.html">ca</a></b> | <a href="../../../apidoc/v2/provisioning_templates/create.gl.html">gl</a> | <a href="../../../apidoc/v2/provisioning_templates/create.en.html">en</a> | <a href="../../../apidoc/v2/provisioning_templates/create.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/provisioning_templates/create.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/provisioning_templates/create.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/provisioning_templates/create.ko.html">ko</a> | <a href="../../../apidoc/v2/provisioning_templates/create.en.html">en</a> | <a href="../../../apidoc/v2/provisioning_templates/create.fr.html">fr</a> | <a href="../../../apidoc/v2/provisioning_templates/create.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/provisioning_templates/create.de.html">de</a> | <a href="../../../apidoc/v2/provisioning_templates/create.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/provisioning_templates/create.ja.html">ja</a> | <a href="../../../apidoc/v2/provisioning_templates/create.pl.html">pl</a> | <a href="../../../apidoc/v2/provisioning_templates/create.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/provisioning_templates/create.it.html">it</a> | <a href="../../../apidoc/v2/provisioning_templates/create.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/provisioning_templates/create.ru.html">ru</a> | <a href="../../../apidoc/v2/provisioning_templates/create.es.html">es</a> | <b><a href="../../../apidoc/v2/provisioning_templates/create.ca.html">ca</a></b> | <a href="../../../apidoc/v2/provisioning_templates/create.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/provisioning_templates/create.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/provisioning_templates/create.gl.html">gl</a> ]
 </li>
 
 
@@ -55,28 +55,13 @@
     <pre class="prettyprint">POST /api/provisioning_templates
 {
   &quot;provisioning_template&quot;: {
-    &quot;template&quot;: &quot;This is a test template&quot;,
-    &quot;template_kind_name&quot;: &quot;PXEGrub&quot;,
-    &quot;name&quot;: &quot;new_template&quot;
+    &quot;name&quot;: &quot;no&quot;,
+    &quot;template_kind_name&quot;: &quot;kind_that_does_not_exist&quot;
   }
 }
-201
+404
 {
-  &quot;template&quot;: &quot;This is a test template&quot;,
-  &quot;locked&quot;: false,
-  &quot;snippet&quot;: false,
-  &quot;audit_comment&quot;: null,
-  &quot;created_at&quot;: &quot;2018-11-01 13:20:29 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:20:29 UTC&quot;,
-  &quot;id&quot;: 1007981742,
-  &quot;name&quot;: &quot;new_template&quot;,
-  &quot;template_kind_id&quot;: 131565194,
-  &quot;template_kind_name&quot;: &quot;PXEGrub&quot;,
-  &quot;template_combinations&quot;: [],
-  &quot;operatingsystems&quot;: [],
-  &quot;os_default_templates&quot;: [],
-  &quot;locations&quot;: [],
-  &quot;organizations&quot;: []
+  &quot;message&quot;: &quot;Could not find template_kind with name: kind_that_does_not_exist&quot;
 }</pre>
 
   <h2><span class="translation_missing" title="translation missing: ca.apipie.params">Params</span></h2>

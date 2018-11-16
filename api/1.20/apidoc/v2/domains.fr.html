@@ -27,7 +27,7 @@
     
   </li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../apidoc/v2/domains.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/domains.de.html">de</a> | <a href="../../apidoc/v2/domains.it.html">it</a> | <a href="../../apidoc/v2/domains.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/domains.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/domains.en_GB.html">en_GB</a> | <b><a href="../../apidoc/v2/domains.fr.html">fr</a></b> | <a href="../../apidoc/v2/domains.ru.html">ru</a> | <a href="../../apidoc/v2/domains.ja.html">ja</a> | <a href="../../apidoc/v2/domains.es.html">es</a> | <a href="../../apidoc/v2/domains.ko.html">ko</a> | <a href="../../apidoc/v2/domains.ca.html">ca</a> | <a href="../../apidoc/v2/domains.gl.html">gl</a> | <a href="../../apidoc/v2/domains.en.html">en</a> | <a href="../../apidoc/v2/domains.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/domains.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/domains.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../apidoc/v2/domains.ko.html">ko</a> | <a href="../../apidoc/v2/domains.en.html">en</a> | <b><a href="../../apidoc/v2/domains.fr.html">fr</a></b> | <a href="../../apidoc/v2/domains.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/domains.de.html">de</a> | <a href="../../apidoc/v2/domains.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/domains.ja.html">ja</a> | <a href="../../apidoc/v2/domains.pl.html">pl</a> | <a href="../../apidoc/v2/domains.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/domains.it.html">it</a> | <a href="../../apidoc/v2/domains.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/domains.ru.html">ru</a> | <a href="../../apidoc/v2/domains.es.html">es</a> | <a href="../../apidoc/v2/domains.ca.html">ca</a> | <a href="../../apidoc/v2/domains.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/domains.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/domains.gl.html">gl</a> ]
 </li>
 
 </ul>
@@ -104,7 +104,7 @@
 
 
   <h3>Exemples</h3>
-    <pre class="prettyprint">GET /api/domains
+    <pre class="prettyprint">GET /api/locations/447626441/organizations/447626439/domains
 200
 {
   &quot;total&quot;: 1,
@@ -118,11 +118,11 @@
   },
   &quot;results&quot;: [
     {
-      &quot;fullname&quot;: &quot;example14.com&quot;,
-      &quot;created_at&quot;: &quot;2018-11-01 13:14:56 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:14:56 UTC&quot;,
-      &quot;id&quot;: 759776773,
-      &quot;name&quot;: &quot;example14.com&quot;,
+      &quot;fullname&quot;: &quot;example21.com&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:02:17 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:02:17 UTC&quot;,
+      &quot;id&quot;: 759776764,
+      &quot;name&quot;: &quot;example21.com&quot;,
       &quot;dns_id&quot;: null,
       &quot;dns&quot;: null
     }
@@ -388,14 +388,14 @@
 
 
   <h3>Exemples</h3>
-    <pre class="prettyprint">GET /api/domains/759776770-example194-com
+    <pre class="prettyprint">GET /api/domains/759776764-example54-com
 200
 {
-  &quot;fullname&quot;: &quot;example194.com&quot;,
-  &quot;created_at&quot;: &quot;2018-11-01 13:18:16 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:18:16 UTC&quot;,
-  &quot;id&quot;: 759776770,
-  &quot;name&quot;: &quot;example194.com&quot;,
+  &quot;fullname&quot;: &quot;example54.com&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:02:34 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:02:34 UTC&quot;,
+  &quot;id&quot;: 759776764,
+  &quot;name&quot;: &quot;example54.com&quot;,
   &quot;dns_id&quot;: null,
   &quot;dns&quot;: null,
   &quot;subnets&quot;: [],
@@ -560,24 +560,24 @@
   <h3>Exemples</h3>
     <pre class="prettyprint">POST /api/domains
 {
-  &quot;organization_id&quot;: 447626444,
+  &quot;organization_id&quot;: 447626440,
   &quot;domain&quot;: {
-    &quot;name&quot;: &quot;example60.com&quot;,
+    &quot;name&quot;: &quot;example32.com&quot;,
     &quot;organization_ids&quot;: [
-      447626444
+      447626440
     ],
     &quot;location_ids&quot;: [
-      447626446
+      447626442
     ]
   }
 }
 201
 {
   &quot;fullname&quot;: null,
-  &quot;created_at&quot;: &quot;2018-11-01 13:15:58 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:15:58 UTC&quot;,
-  &quot;id&quot;: 759776771,
-  &quot;name&quot;: &quot;example60.com&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:02:20 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:02:20 UTC&quot;,
+  &quot;id&quot;: 759776767,
+  &quot;name&quot;: &quot;example32.com&quot;,
   &quot;dns_id&quot;: null,
   &quot;dns&quot;: null,
   &quot;subnets&quot;: [],
@@ -585,17 +585,17 @@
   &quot;parameters&quot;: [],
   &quot;locations&quot;: [
     {
-      &quot;id&quot;: 447626446,
-      &quot;name&quot;: &quot;loc26&quot;,
-      &quot;title&quot;: &quot;loc26&quot;,
+      &quot;id&quot;: 447626442,
+      &quot;name&quot;: &quot;loc15&quot;,
+      &quot;title&quot;: &quot;loc15&quot;,
       &quot;description&quot;: null
     }
   ],
   &quot;organizations&quot;: [
     {
-      &quot;id&quot;: 447626444,
-      &quot;name&quot;: &quot;org35&quot;,
-      &quot;title&quot;: &quot;org35&quot;,
+      &quot;id&quot;: 447626440,
+      &quot;name&quot;: &quot;org30&quot;,
+      &quot;title&quot;: &quot;org30&quot;,
       &quot;description&quot;: null
     }
   ]
@@ -856,54 +856,25 @@
 
 
   <h3>Exemples</h3>
-    <pre class="prettyprint">PUT /api/domains/759776772
+    <pre class="prettyprint">PUT /api/domains/22495316-mydomain-net
 {
   &quot;domain&quot;: {
-    &quot;domain_parameters_attributes&quot;: [
-      {
-        &quot;name&quot;: &quot;foo&quot;,
-        &quot;value&quot;: &quot;new_value&quot;
-      }
-    ]
+    &quot;name&quot;: &quot;&quot;
   }
 }
-200
+422
 {
-  &quot;fullname&quot;: &quot;example196.com&quot;,
-  &quot;created_at&quot;: &quot;2018-11-01 13:18:17 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:18:17 UTC&quot;,
-  &quot;id&quot;: 759776772,
-  &quot;name&quot;: &quot;example196.com&quot;,
-  &quot;dns_id&quot;: null,
-  &quot;dns&quot;: null,
-  &quot;subnets&quot;: [],
-  &quot;interfaces&quot;: [],
-  &quot;parameters&quot;: [
-    {
-      &quot;priority&quot;: 30,
-      &quot;created_at&quot;: &quot;2018-11-01 13:18:17 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:18:17 UTC&quot;,
-      &quot;id&quot;: 767575240,
-      &quot;name&quot;: &quot;foo&quot;,
-      &quot;value&quot;: &quot;new_value&quot;
-    }
-  ],
-  &quot;locations&quot;: [
-    {
-      &quot;id&quot;: 255093256,
-      &quot;name&quot;: &quot;Location 1&quot;,
-      &quot;title&quot;: &quot;Location 1&quot;,
-      &quot;description&quot;: null
-    }
-  ],
-  &quot;organizations&quot;: [
-    {
-      &quot;id&quot;: 447626438,
-      &quot;name&quot;: &quot;Organization 1&quot;,
-      &quot;title&quot;: &quot;Organization 1&quot;,
-      &quot;description&quot;: null
-    }
-  ]
+  &quot;error&quot;: {
+    &quot;id&quot;: 22495316,
+    &quot;errors&quot;: {
+      &quot;name&quot;: [
+        &quot;can&#39;t be blank&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Name can&#39;t be blank&quot;
+    ]
+  }
 }</pre>
 
   <h3>Paramètres</h3>
@@ -1192,8 +1163,8 @@
   &quot;id&quot;: 22495316,
   &quot;name&quot;: &quot;mydomain.net&quot;,
   &quot;fullname&quot;: null,
-  &quot;created_at&quot;: &quot;2018-11-01T13:18:15.168Z&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01T13:18:15.168Z&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15T19:01:27.659Z&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15T19:01:27.659Z&quot;,
   &quot;dns_id&quot;: 113629430
 }</pre>
 

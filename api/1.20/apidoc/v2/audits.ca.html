@@ -27,7 +27,7 @@
     
   </li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../apidoc/v2/audits.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/audits.de.html">de</a> | <a href="../../apidoc/v2/audits.it.html">it</a> | <a href="../../apidoc/v2/audits.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/audits.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/audits.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/audits.fr.html">fr</a> | <a href="../../apidoc/v2/audits.ru.html">ru</a> | <a href="../../apidoc/v2/audits.ja.html">ja</a> | <a href="../../apidoc/v2/audits.es.html">es</a> | <a href="../../apidoc/v2/audits.ko.html">ko</a> | <b><a href="../../apidoc/v2/audits.ca.html">ca</a></b> | <a href="../../apidoc/v2/audits.gl.html">gl</a> | <a href="../../apidoc/v2/audits.en.html">en</a> | <a href="../../apidoc/v2/audits.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/audits.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/audits.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../apidoc/v2/audits.ko.html">ko</a> | <a href="../../apidoc/v2/audits.en.html">en</a> | <a href="../../apidoc/v2/audits.fr.html">fr</a> | <a href="../../apidoc/v2/audits.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/audits.de.html">de</a> | <a href="../../apidoc/v2/audits.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/audits.ja.html">ja</a> | <a href="../../apidoc/v2/audits.pl.html">pl</a> | <a href="../../apidoc/v2/audits.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/audits.it.html">it</a> | <a href="../../apidoc/v2/audits.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/audits.ru.html">ru</a> | <a href="../../apidoc/v2/audits.es.html">es</a> | <b><a href="../../apidoc/v2/audits.ca.html">ca</a></b> | <a href="../../apidoc/v2/audits.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/audits.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/audits.gl.html">gl</a> ]
 </li>
 
 </ul>
@@ -81,7 +81,7 @@
 
 
   <h3><span class="translation_missing" title="translation missing: ca.apipie.examples">Examples</span></h3>
-    <pre class="prettyprint">GET /api/audits
+    <pre class="prettyprint">GET /api/hosts/1/audits
 200
 {
   &quot;total&quot;: 1,
@@ -95,29 +95,47 @@
   },
   &quot;results&quot;: [
     {
-      &quot;user_id&quot;: null,
+      &quot;user_id&quot;: 135138680,
       &quot;user_type&quot;: null,
-      &quot;user_name&quot;: null,
+      &quot;user_name&quot;: &quot;secret_admin&quot;,
       &quot;version&quot;: 1,
       &quot;comment&quot;: null,
-      &quot;associated_id&quot;: 272,
-      &quot;associated_type&quot;: &quot;Host&quot;,
+      &quot;associated_id&quot;: null,
+      &quot;associated_type&quot;: null,
       &quot;remote_address&quot;: null,
       &quot;associated_name&quot;: null,
-      &quot;created_at&quot;: &quot;2009-12-14 08:01:17 UTC&quot;,
-      &quot;id&quot;: 980190962,
-      &quot;auditable_id&quot;: 980190962,
-      &quot;auditable_name&quot;: null,
-      &quot;auditable_type&quot;: &quot;Host&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:02:47 UTC&quot;,
+      &quot;id&quot;: 980190968,
+      &quot;auditable_id&quot;: 1,
+      &quot;auditable_name&quot;: &quot;host305.example110.com&quot;,
+      &quot;auditable_type&quot;: &quot;Host::Base&quot;,
       &quot;action&quot;: &quot;update&quot;,
       &quot;audited_changes&quot;: {
-        &quot;architecture_id&quot;: [
-          10463,
-          10466
+        &quot;model_id&quot;: [
+          null,
+          980190962
+        ],
+        &quot;grub_pass&quot;: [
+          &quot;$6$VekFJm4HSwtnevap$QBaja34dphkt6enD3vO7bLVAxxkKybCHuqZRigUjYKh8VRvg5ot9pa71G9wEqmcOvCkzdgvZ4bybmaAVyVkYG.&quot;,
+          &quot;$5$pcFYzltrROIL65el$qgjuLTExZZA5A06MC6S/2KyEWjW9QEjNDgWiekZNtYD&quot;
         ]
       },
-      &quot;locations&quot;: [],
-      &quot;organizations&quot;: []
+      &quot;locations&quot;: [
+        {
+          &quot;id&quot;: 255093256,
+          &quot;name&quot;: &quot;Location 1&quot;,
+          &quot;title&quot;: &quot;Location 1&quot;,
+          &quot;description&quot;: null
+        }
+      ],
+      &quot;organizations&quot;: [
+        {
+          &quot;id&quot;: 447626438,
+          &quot;name&quot;: &quot;Organization 1&quot;,
+          &quot;title&quot;: &quot;Organization 1&quot;,
+          &quot;description&quot;: null
+        }
+      ]
     }
   ]
 }</pre>

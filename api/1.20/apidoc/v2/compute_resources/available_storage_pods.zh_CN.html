@@ -31,7 +31,7 @@
   </li>
   <li class='active'>available_storage_pods</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/compute_resources/available_storage_pods.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.de.html">de</a> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.it.html">it</a> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.sv_SE.html">sv_SE</a> | <b><a href="../../../apidoc/v2/compute_resources/available_storage_pods.zh_CN.html">zh_CN</a></b> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.fr.html">fr</a> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.ru.html">ru</a> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.ja.html">ja</a> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.es.html">es</a> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.ko.html">ko</a> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.ca.html">ca</a> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.gl.html">gl</a> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.en.html">en</a> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/compute_resources/available_storage_pods.ko.html">ko</a> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.en.html">en</a> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.fr.html">fr</a> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.de.html">de</a> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.ja.html">ja</a> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.pl.html">pl</a> | <b><a href="../../../apidoc/v2/compute_resources/available_storage_pods.zh_CN.html">zh_CN</a></b> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.it.html">it</a> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.ru.html">ru</a> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.es.html">es</a> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.ca.html">ca</a> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/compute_resources/available_storage_pods.gl.html">gl</a> ]
 </li>
 
 
@@ -59,7 +59,7 @@
 
 
   <h2>示例</h2>
-    <pre class="prettyprint">GET /api/compute_resources/305613588-Vmware/available_storage_pods
+    <pre class="prettyprint">GET /api/compute_resources/305613588-Vmware/available_storage_pods/test_vmware_pod
 200
 {
   &quot;total&quot;: 9,
@@ -73,8 +73,8 @@
   },
   &quot;results&quot;: [
     {
-      &quot;name&quot;: &quot;test_vmware_object&quot;,
-      &quot;id&quot;: &quot;my11-test35-uuid99&quot;
+      &quot;name&quot;: &quot;test_vmware_pod&quot;,
+      &quot;id&quot;: &quot;group-p123456&quot;
     }
   ]
 }</pre>

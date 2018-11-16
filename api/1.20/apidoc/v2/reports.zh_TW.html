@@ -27,7 +27,7 @@
     
   </li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../apidoc/v2/reports.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/reports.de.html">de</a> | <a href="../../apidoc/v2/reports.it.html">it</a> | <a href="../../apidoc/v2/reports.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/reports.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/reports.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/reports.fr.html">fr</a> | <a href="../../apidoc/v2/reports.ru.html">ru</a> | <a href="../../apidoc/v2/reports.ja.html">ja</a> | <a href="../../apidoc/v2/reports.es.html">es</a> | <a href="../../apidoc/v2/reports.ko.html">ko</a> | <a href="../../apidoc/v2/reports.ca.html">ca</a> | <a href="../../apidoc/v2/reports.gl.html">gl</a> | <a href="../../apidoc/v2/reports.en.html">en</a> | <b><a href="../../apidoc/v2/reports.zh_TW.html">zh_TW</a></b> | <a href="../../apidoc/v2/reports.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/reports.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../apidoc/v2/reports.ko.html">ko</a> | <a href="../../apidoc/v2/reports.en.html">en</a> | <a href="../../apidoc/v2/reports.fr.html">fr</a> | <a href="../../apidoc/v2/reports.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/reports.de.html">de</a> | <a href="../../apidoc/v2/reports.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/reports.ja.html">ja</a> | <a href="../../apidoc/v2/reports.pl.html">pl</a> | <a href="../../apidoc/v2/reports.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/reports.it.html">it</a> | <b><a href="../../apidoc/v2/reports.zh_TW.html">zh_TW</a></b> | <a href="../../apidoc/v2/reports.ru.html">ru</a> | <a href="../../apidoc/v2/reports.es.html">es</a> | <a href="../../apidoc/v2/reports.ca.html">ca</a> | <a href="../../apidoc/v2/reports.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/reports.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/reports.gl.html">gl</a> ]
 </li>
 
 </ul>
@@ -71,14 +71,14 @@
 
 
   <h3>示例</h3>
-    <pre class="prettyprint">GET /api/hosts/host1097/reports
+    <pre class="prettyprint">GET /api/hosts/host260/reports
 200
 {
   &quot;total&quot;: 1,
   &quot;subtotal&quot;: 1,
   &quot;page&quot;: 1,
   &quot;per_page&quot;: 20,
-  &quot;search&quot;: &quot; host = host1097&quot;,
+  &quot;search&quot;: &quot; host = host260&quot;,
   &quot;sort&quot;: {
     &quot;by&quot;: null,
     &quot;order&quot;: null
@@ -105,12 +105,12 @@
           &quot;total&quot;: 0
         }
       },
-      &quot;created_at&quot;: &quot;2018-11-01 13:28:13 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:28:13 UTC&quot;,
-      &quot;id&quot;: 19,
-      &quot;host_id&quot;: 33,
-      &quot;host_name&quot;: &quot;host1097&quot;,
-      &quot;reported_at&quot;: &quot;2018-11-01 13:28:13 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:02:19 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:02:19 UTC&quot;,
+      &quot;id&quot;: 1,
+      &quot;host_id&quot;: 1,
+      &quot;host_name&quot;: &quot;host260&quot;,
+      &quot;reported_at&quot;: &quot;2018-11-15 19:02:19 UTC&quot;,
       &quot;status&quot;: {
         &quot;applied&quot;: 0,
         &quot;restarted&quot;: 0,
@@ -308,7 +308,7 @@
 
 
   <h3>示例</h3>
-    <pre class="prettyprint">GET /api/reports/22
+    <pre class="prettyprint">GET /api/reports/1
 200
 {
   &quot;metrics&quot;: {
@@ -331,12 +331,12 @@
       &quot;total&quot;: 0
     }
   },
-  &quot;created_at&quot;: &quot;2018-11-01 13:28:13 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:28:13 UTC&quot;,
-  &quot;id&quot;: 22,
-  &quot;host_id&quot;: 37,
-  &quot;host_name&quot;: &quot;host1101&quot;,
-  &quot;reported_at&quot;: &quot;2018-11-01 13:28:13 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:02:19 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:02:19 UTC&quot;,
+  &quot;id&quot;: 1,
+  &quot;host_id&quot;: 1,
+  &quot;host_name&quot;: &quot;host262&quot;,
+  &quot;reported_at&quot;: &quot;2018-11-15 19:02:19 UTC&quot;,
   &quot;status&quot;: {
     &quot;applied&quot;: 0,
     &quot;restarted&quot;: 0,
@@ -511,12 +511,53 @@
     ]
   }
 }
-403
+201
 {
-  &quot;error&quot;: {
-    &quot;message&quot;: &quot;Access denied&quot;,
-    &quot;details&quot;: &quot;Missing one of the required permissions: upload_config_reports&quot;
-  }
+  &quot;metrics&quot;: {},
+  &quot;created_at&quot;: &quot;2018-11-15 19:02:02 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:02:02 UTC&quot;,
+  &quot;id&quot;: 1,
+  &quot;host_id&quot;: 1,
+  &quot;host_name&quot;: &quot;rhel6n01.corp.com&quot;,
+  &quot;reported_at&quot;: &quot;2010-11-19 02:39:04 UTC&quot;,
+  &quot;status&quot;: {
+    &quot;applied&quot;: 0,
+    &quot;restarted&quot;: 0,
+    &quot;failed&quot;: 0,
+    &quot;failed_restarts&quot;: 0,
+    &quot;skipped&quot;: 0,
+    &quot;pending&quot;: 0
+  },
+  &quot;logs&quot;: [
+    {
+      &quot;level&quot;: &quot;err&quot;,
+      &quot;source&quot;: {
+        &quot;source&quot;: &quot;Puppet&quot;
+      },
+      &quot;message&quot;: {
+        &quot;message&quot;: &quot;Could not retrieve catalog from remote server: Error 400 on SERVER: Could not find node &#39;rhel6n01.corp.com&#39;; cannot compile&quot;
+      }
+    },
+    {
+      &quot;level&quot;: &quot;notice&quot;,
+      &quot;source&quot;: {
+        &quot;source&quot;: &quot;Puppet&quot;
+      },
+      &quot;message&quot;: {
+        &quot;message&quot;: &quot;Using cached catalog&quot;
+      }
+    },
+    {
+      &quot;level&quot;: &quot;err&quot;,
+      &quot;source&quot;: {
+        &quot;source&quot;: &quot;Puppet&quot;
+      },
+      &quot;message&quot;: {
+        &quot;message&quot;: &quot;Could not retrieve catalog; skipping run&quot;
+      }
+    }
+  ],
+  &quot;summary&quot;: &quot;Success&quot;
 }</pre>
 
   <h3>參數</h3>
@@ -750,17 +791,17 @@
 
 
   <h3>示例</h3>
-    <pre class="prettyprint">DELETE /api/reports/21
+    <pre class="prettyprint">DELETE /api/reports/1
 {
   &quot;report&quot;: {}
 }
 200
 {
-  &quot;id&quot;: 21,
-  &quot;host_id&quot;: 36,
-  &quot;reported_at&quot;: &quot;2018-11-01T13:28:13.434Z&quot;,
-  &quot;created_at&quot;: &quot;2018-11-01T13:28:13.435Z&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01T13:28:13.435Z&quot;,
+  &quot;id&quot;: 1,
+  &quot;host_id&quot;: 1,
+  &quot;reported_at&quot;: &quot;2018-11-15T19:02:20.530Z&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15T19:02:20.532Z&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15T19:02:20.532Z&quot;,
   &quot;status&quot;: {
     &quot;applied&quot;: 0,
     &quot;restarted&quot;: 0,
@@ -903,45 +944,12 @@
 
 
   <h3>示例</h3>
-    <pre class="prettyprint">GET /api/reports/last
-200
+    <pre class="prettyprint">GET /api/hosts/host263/reports/last
+404
 {
-  &quot;metrics&quot;: {
-    &quot;time&quot;: {
-      &quot;schedule&quot;: 0.00083,
-      &quot;service&quot;: 0.149739,
-      &quot;mailalias&quot;: 0.000283,
-      &quot;cron&quot;: 0.000419,
-      &quot;config_retrieval&quot;: 16.3637869358063,
-      &quot;package&quot;: 0.003989,
-      &quot;filebucket&quot;: 0.000171,
-      &quot;file&quot;: 0.007025,
-      &quot;exec&quot;: 0.000299
-    },
-    &quot;resources&quot;: {
-      &quot;total&quot;: 33
-    },
-    &quot;changes&quot;: {},
-    &quot;events&quot;: {
-      &quot;total&quot;: 0
-    }
-  },
-  &quot;created_at&quot;: &quot;2018-11-01 13:28:13 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:28:13 UTC&quot;,
-  &quot;id&quot;: 18,
-  &quot;host_id&quot;: 32,
-  &quot;host_name&quot;: &quot;host1096&quot;,
-  &quot;reported_at&quot;: &quot;2018-11-01 13:28:13 UTC&quot;,
-  &quot;status&quot;: {
-    &quot;applied&quot;: 0,
-    &quot;restarted&quot;: 0,
-    &quot;failed&quot;: 0,
-    &quot;failed_restarts&quot;: 0,
-    &quot;skipped&quot;: 0,
-    &quot;pending&quot;: 0
-  },
-  &quot;logs&quot;: [],
-  &quot;summary&quot;: &quot;Success&quot;
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;Resource report not found by id &#39;&#39;&quot;
+  }
 }</pre>
 
   <h3>參數</h3>

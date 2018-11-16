@@ -31,7 +31,7 @@
   </li>
   <li class='active'>update</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/smart_variables/update.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/smart_variables/update.de.html">de</a> | <a href="../../../apidoc/v2/smart_variables/update.it.html">it</a> | <a href="../../../apidoc/v2/smart_variables/update.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/smart_variables/update.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/smart_variables/update.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/smart_variables/update.fr.html">fr</a> | <a href="../../../apidoc/v2/smart_variables/update.ru.html">ru</a> | <a href="../../../apidoc/v2/smart_variables/update.ja.html">ja</a> | <a href="../../../apidoc/v2/smart_variables/update.es.html">es</a> | <a href="../../../apidoc/v2/smart_variables/update.ko.html">ko</a> | <a href="../../../apidoc/v2/smart_variables/update.ca.html">ca</a> | <a href="../../../apidoc/v2/smart_variables/update.gl.html">gl</a> | <a href="../../../apidoc/v2/smart_variables/update.en.html">en</a> | <a href="../../../apidoc/v2/smart_variables/update.zh_TW.html">zh_TW</a> | <b><a href="../../../apidoc/v2/smart_variables/update.nl_NL.html">nl_NL</a></b> | <a href="../../../apidoc/v2/smart_variables/update.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/smart_variables/update.ko.html">ko</a> | <a href="../../../apidoc/v2/smart_variables/update.en.html">en</a> | <a href="../../../apidoc/v2/smart_variables/update.fr.html">fr</a> | <a href="../../../apidoc/v2/smart_variables/update.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/smart_variables/update.de.html">de</a> | <a href="../../../apidoc/v2/smart_variables/update.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/smart_variables/update.ja.html">ja</a> | <a href="../../../apidoc/v2/smart_variables/update.pl.html">pl</a> | <a href="../../../apidoc/v2/smart_variables/update.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/smart_variables/update.it.html">it</a> | <a href="../../../apidoc/v2/smart_variables/update.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/smart_variables/update.ru.html">ru</a> | <a href="../../../apidoc/v2/smart_variables/update.es.html">es</a> | <a href="../../../apidoc/v2/smart_variables/update.ca.html">ca</a> | <b><a href="../../../apidoc/v2/smart_variables/update.nl_NL.html">nl_NL</a></b> | <a href="../../../apidoc/v2/smart_variables/update.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/smart_variables/update.gl.html">gl</a> ]
 </li>
 
 
@@ -52,34 +52,31 @@
 
 
   <h2><span class="translation_missing" title="translation missing: nl-NL.apipie.examples">Examples</span></h2>
-    <pre class="prettyprint">PUT /api/smart_variables/1018350801-UqMzKHvzaJ
+    <pre class="prettyprint">PUT /api/smart_variables/1018350796-YWYjBDRHmw
 {
   &quot;smart_variable&quot;: {
-    &quot;merge_overrides&quot;: true,
-    &quot;avoid_duplicates&quot;: true
+    &quot;hidden_value&quot;: false
   }
 }
 200
 {
   &quot;description&quot;: null,
-  &quot;parameter_type&quot;: &quot;array&quot;,
-  &quot;variable_type&quot;: &quot;array&quot;,
+  &quot;parameter_type&quot;: null,
+  &quot;variable_type&quot;: null,
   &quot;hidden_value?&quot;: false,
   &quot;validator_type&quot;: null,
   &quot;validator_rule&quot;: null,
   &quot;override_value_order&quot;: &quot;fqdn\nhostgroup\nos\ndomain&quot;,
-  &quot;merge_overrides&quot;: true,
+  &quot;merge_overrides&quot;: false,
   &quot;merge_default&quot;: false,
-  &quot;avoid_duplicates&quot;: true,
+  &quot;avoid_duplicates&quot;: false,
   &quot;puppetclass_id&quot;: 980190962,
   &quot;puppetclass_name&quot;: &quot;base&quot;,
-  &quot;created_at&quot;: &quot;2018-11-01 13:32:56 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:32:56 UTC&quot;,
-  &quot;variable&quot;: &quot;UqMzKHvzaJ&quot;,
-  &quot;id&quot;: 1018350801,
-  &quot;default_value&quot;: [
-    44848
-  ],
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:55 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:55 UTC&quot;,
+  &quot;variable&quot;: &quot;YWYjBDRHmw&quot;,
+  &quot;id&quot;: 1018350796,
+  &quot;default_value&quot;: null,
   &quot;override_values_count&quot;: 0,
   &quot;override_values&quot;: []
 }</pre>

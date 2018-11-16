@@ -31,7 +31,7 @@
   </li>
   <li class='active'>index</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/hosts/index.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/hosts/index.de.html">de</a> | <a href="../../../apidoc/v2/hosts/index.it.html">it</a> | <a href="../../../apidoc/v2/hosts/index.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/hosts/index.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/hosts/index.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/hosts/index.fr.html">fr</a> | <a href="../../../apidoc/v2/hosts/index.ru.html">ru</a> | <a href="../../../apidoc/v2/hosts/index.ja.html">ja</a> | <a href="../../../apidoc/v2/hosts/index.es.html">es</a> | <a href="../../../apidoc/v2/hosts/index.ko.html">ko</a> | <a href="../../../apidoc/v2/hosts/index.ca.html">ca</a> | <a href="../../../apidoc/v2/hosts/index.gl.html">gl</a> | <a href="../../../apidoc/v2/hosts/index.en.html">en</a> | <a href="../../../apidoc/v2/hosts/index.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/hosts/index.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/hosts/index.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/hosts/index.ko.html">ko</a> | <a href="../../../apidoc/v2/hosts/index.en.html">en</a> | <a href="../../../apidoc/v2/hosts/index.fr.html">fr</a> | <a href="../../../apidoc/v2/hosts/index.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/hosts/index.de.html">de</a> | <a href="../../../apidoc/v2/hosts/index.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/hosts/index.ja.html">ja</a> | <a href="../../../apidoc/v2/hosts/index.pl.html">pl</a> | <a href="../../../apidoc/v2/hosts/index.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/hosts/index.it.html">it</a> | <a href="../../../apidoc/v2/hosts/index.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/hosts/index.ru.html">ru</a> | <a href="../../../apidoc/v2/hosts/index.es.html">es</a> | <a href="../../../apidoc/v2/hosts/index.ca.html">ca</a> | <a href="../../../apidoc/v2/hosts/index.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/hosts/index.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/hosts/index.gl.html">gl</a> ]
 </li>
 
 
@@ -80,7 +80,7 @@
 
 
   <h2>Examples</h2>
-    <pre class="prettyprint">GET /api/hostgroups/928644291/hosts
+    <pre class="prettyprint">GET /api/hosts
 200
 {
   &quot;total&quot;: 1,
@@ -94,44 +94,44 @@
   },
   &quot;results&quot;: [
     {
-      &quot;ip&quot;: &quot;0.0.1.26&quot;,
+      &quot;ip&quot;: null,
       &quot;ip6&quot;: null,
       &quot;environment_id&quot;: null,
       &quot;environment_name&quot;: null,
       &quot;last_report&quot;: null,
-      &quot;mac&quot;: &quot;00:53:67:ab:01:49&quot;,
+      &quot;mac&quot;: null,
       &quot;realm_id&quot;: null,
       &quot;realm_name&quot;: null,
       &quot;sp_mac&quot;: null,
       &quot;sp_ip&quot;: null,
       &quot;sp_name&quot;: null,
-      &quot;domain_id&quot;: 759776772,
-      &quot;domain_name&quot;: &quot;example589.com&quot;,
-      &quot;architecture_id&quot;: 501905028,
-      &quot;architecture_name&quot;: &quot;x86_64-390&quot;,
-      &quot;operatingsystem_id&quot;: 1073012837,
-      &quot;operatingsystem_name&quot;: &quot;operatingsystem462 462&quot;,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;architecture_id&quot;: null,
+      &quot;architecture_name&quot;: null,
+      &quot;operatingsystem_id&quot;: null,
+      &quot;operatingsystem_name&quot;: null,
       &quot;subnet_id&quot;: null,
       &quot;subnet_name&quot;: null,
       &quot;subnet6_id&quot;: null,
       &quot;subnet6_name&quot;: null,
       &quot;sp_subnet_id&quot;: null,
-      &quot;ptable_id&quot;: 1007981710,
-      &quot;ptable_name&quot;: &quot;ptable415&quot;,
-      &quot;medium_id&quot;: 1011586627,
-      &quot;medium_name&quot;: &quot;medium561&quot;,
-      &quot;pxe_loader&quot;: &quot;Grub2 UEFI&quot;,
+      &quot;ptable_id&quot;: null,
+      &quot;ptable_name&quot;: null,
+      &quot;medium_id&quot;: null,
+      &quot;medium_name&quot;: null,
+      &quot;pxe_loader&quot;: null,
       &quot;build&quot;: false,
       &quot;comment&quot;: null,
       &quot;disk&quot;: null,
       &quot;installed_at&quot;: null,
       &quot;model_id&quot;: null,
-      &quot;hostgroup_id&quot;: 928644291,
+      &quot;hostgroup_id&quot;: null,
       &quot;owner_id&quot;: 135138680,
       &quot;owner_name&quot;: &quot;Admin User&quot;,
       &quot;owner_type&quot;: &quot;User&quot;,
       &quot;enabled&quot;: true,
-      &quot;managed&quot;: true,
+      &quot;managed&quot;: false,
       &quot;use_image&quot;: null,
       &quot;image_file&quot;: &quot;&quot;,
       &quot;uuid&quot;: null,
@@ -143,11 +143,11 @@
         &quot;build&quot;
       ],
       &quot;provision_method&quot;: &quot;build&quot;,
-      &quot;certname&quot;: &quot;host1087.example589.com&quot;,
+      &quot;certname&quot;: &quot;host6&quot;,
       &quot;image_id&quot;: null,
       &quot;image_name&quot;: null,
-      &quot;created_at&quot;: &quot;2018-11-01 13:28:11 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:28:11 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:36 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:36 UTC&quot;,
       &quot;last_compile&quot;: null,
       &quot;global_status&quot;: 0,
       &quot;global_status_label&quot;: &quot;OK&quot;,
@@ -157,18 +157,16 @@
       &quot;location_name&quot;: &quot;Location 1&quot;,
       &quot;puppet_status&quot;: 0,
       &quot;model_name&quot;: null,
-      &quot;build_status&quot;: 0,
-      &quot;build_status_label&quot;: &quot;Installed&quot;,
-      &quot;name&quot;: &quot;host1087.example589.com&quot;,
-      &quot;id&quot;: 24,
+      &quot;name&quot;: &quot;host6&quot;,
+      &quot;id&quot;: 1,
       &quot;puppet_proxy_id&quot;: null,
       &quot;puppet_proxy_name&quot;: null,
       &quot;puppet_ca_proxy_id&quot;: null,
       &quot;puppet_ca_proxy_name&quot;: null,
       &quot;puppet_proxy&quot;: null,
       &quot;puppet_ca_proxy&quot;: null,
-      &quot;hostgroup_name&quot;: &quot;hostgroup151&quot;,
-      &quot;hostgroup_title&quot;: &quot;hostgroup152/hostgroup151&quot;
+      &quot;hostgroup_name&quot;: null,
+      &quot;hostgroup_title&quot;: null
     }
   ]
 }</pre>

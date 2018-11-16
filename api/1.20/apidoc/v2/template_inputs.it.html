@@ -27,7 +27,7 @@
     
   </li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../apidoc/v2/template_inputs.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/template_inputs.de.html">de</a> | <b><a href="../../apidoc/v2/template_inputs.it.html">it</a></b> | <a href="../../apidoc/v2/template_inputs.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/template_inputs.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/template_inputs.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/template_inputs.fr.html">fr</a> | <a href="../../apidoc/v2/template_inputs.ru.html">ru</a> | <a href="../../apidoc/v2/template_inputs.ja.html">ja</a> | <a href="../../apidoc/v2/template_inputs.es.html">es</a> | <a href="../../apidoc/v2/template_inputs.ko.html">ko</a> | <a href="../../apidoc/v2/template_inputs.ca.html">ca</a> | <a href="../../apidoc/v2/template_inputs.gl.html">gl</a> | <a href="../../apidoc/v2/template_inputs.en.html">en</a> | <a href="../../apidoc/v2/template_inputs.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/template_inputs.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/template_inputs.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../apidoc/v2/template_inputs.ko.html">ko</a> | <a href="../../apidoc/v2/template_inputs.en.html">en</a> | <a href="../../apidoc/v2/template_inputs.fr.html">fr</a> | <a href="../../apidoc/v2/template_inputs.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/template_inputs.de.html">de</a> | <a href="../../apidoc/v2/template_inputs.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/template_inputs.ja.html">ja</a> | <a href="../../apidoc/v2/template_inputs.pl.html">pl</a> | <a href="../../apidoc/v2/template_inputs.zh_CN.html">zh_CN</a> | <b><a href="../../apidoc/v2/template_inputs.it.html">it</a></b> | <a href="../../apidoc/v2/template_inputs.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/template_inputs.ru.html">ru</a> | <a href="../../apidoc/v2/template_inputs.es.html">es</a> | <a href="../../apidoc/v2/template_inputs.ca.html">ca</a> | <a href="../../apidoc/v2/template_inputs.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/template_inputs.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/template_inputs.gl.html">gl</a> ]
 </li>
 
 </ul>
@@ -71,7 +71,7 @@
 
 
   <h3>Esempi</h3>
-    <pre class="prettyprint">GET /api/templates/1007981713/template_inputs
+    <pre class="prettyprint">GET /api/templates/1007981803/template_inputs
 200
 {
   &quot;total&quot;: 1,
@@ -85,15 +85,15 @@
   },
   &quot;results&quot;: [
     {
-      &quot;template_id&quot;: 1007981713,
+      &quot;template_id&quot;: 1007981803,
       &quot;fact_name&quot;: null,
       &quot;variable_name&quot;: null,
       &quot;puppet_parameter_name&quot;: null,
       &quot;puppet_class_name&quot;: null,
       &quot;description&quot;: null,
       &quot;required&quot;: false,
-      &quot;id&quot;: 7,
-      &quot;name&quot;: &quot;Template input 23&quot;,
+      &quot;id&quot;: 2,
+      &quot;name&quot;: &quot;Template input 3&quot;,
       &quot;input_type&quot;: &quot;user&quot;,
       &quot;options&quot;: null
     }
@@ -307,18 +307,18 @@
 
 
   <h3>Esempi</h3>
-    <pre class="prettyprint">GET /api/templates/1007981710-report_template150/template_inputs/4
+    <pre class="prettyprint">GET /api/templates/1007981803-report_template42/template_inputs/2
 200
 {
-  &quot;template_id&quot;: 1007981710,
+  &quot;template_id&quot;: 1007981803,
   &quot;fact_name&quot;: null,
   &quot;variable_name&quot;: null,
   &quot;puppet_parameter_name&quot;: null,
   &quot;puppet_class_name&quot;: null,
   &quot;description&quot;: null,
   &quot;required&quot;: false,
-  &quot;id&quot;: 4,
-  &quot;name&quot;: &quot;Template input 20&quot;,
+  &quot;id&quot;: 2,
+  &quot;name&quot;: &quot;Template input 7&quot;,
   &quot;input_type&quot;: &quot;user&quot;,
   &quot;options&quot;: null
 }</pre>
@@ -456,7 +456,7 @@
 
 
   <h3>Esempi</h3>
-    <pre class="prettyprint">POST /api/templates/1007981708-report_template148/template_inputs
+    <pre class="prettyprint">POST /api/templates/1007981803-report_template37/template_inputs
 {
   &quot;template_input&quot;: {
     &quot;name&quot;: &quot;is_potato&quot;,
@@ -469,14 +469,14 @@
 }
 201
 {
-  &quot;template_id&quot;: 1007981708,
+  &quot;template_id&quot;: 1007981803,
   &quot;fact_name&quot;: null,
   &quot;variable_name&quot;: null,
   &quot;puppet_parameter_name&quot;: null,
   &quot;puppet_class_name&quot;: null,
   &quot;description&quot;: null,
   &quot;required&quot;: false,
-  &quot;id&quot;: 2,
+  &quot;id&quot;: 3,
   &quot;name&quot;: &quot;is_potato&quot;,
   &quot;input_type&quot;: &quot;user&quot;,
   &quot;options&quot;: [
@@ -858,14 +858,14 @@
 
 
   <h3>Esempi</h3>
-    <pre class="prettyprint">DELETE /api/templates/1007981714-report_template154/template_inputs/8
+    <pre class="prettyprint">DELETE /api/templates/1007981803-report_template41/template_inputs/2
 {
   &quot;template_input&quot;: {}
 }
 200
 {
-  &quot;id&quot;: 8,
-  &quot;name&quot;: &quot;Template input 24&quot;,
+  &quot;id&quot;: 2,
+  &quot;name&quot;: &quot;Template input 6&quot;,
   &quot;required&quot;: false,
   &quot;input_type&quot;: &quot;user&quot;,
   &quot;fact_name&quot;: null,
@@ -873,9 +873,9 @@
   &quot;puppet_class_name&quot;: null,
   &quot;puppet_parameter_name&quot;: null,
   &quot;description&quot;: null,
-  &quot;template_id&quot;: 1007981714,
-  &quot;created_at&quot;: &quot;2018-11-01T13:53:03.440Z&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01T13:53:03.440Z&quot;,
+  &quot;template_id&quot;: 1007981803,
+  &quot;created_at&quot;: &quot;2018-11-15T19:02:26.996Z&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15T19:02:26.996Z&quot;,
   &quot;options&quot;: null,
   &quot;advanced&quot;: false
 }</pre>
@@ -1013,28 +1013,25 @@
 
 
   <h3>Esempi</h3>
-    <pre class="prettyprint">PUT /api/templates/1007981711-report_template151/template_inputs/5
+    <pre class="prettyprint">PUT /api/templates/1007981803-report_template36/template_inputs/2
 {
   &quot;template_input&quot;: {
-    &quot;name&quot;: &quot;blah&quot;
+    &quot;name&quot;: &quot;&quot;
   }
 }
-200
+422
 {
-  &quot;id&quot;: 5,
-  &quot;name&quot;: &quot;blah&quot;,
-  &quot;required&quot;: false,
-  &quot;input_type&quot;: &quot;user&quot;,
-  &quot;fact_name&quot;: null,
-  &quot;variable_name&quot;: null,
-  &quot;puppet_class_name&quot;: null,
-  &quot;puppet_parameter_name&quot;: null,
-  &quot;description&quot;: null,
-  &quot;template_id&quot;: 1007981711,
-  &quot;created_at&quot;: &quot;2018-11-01T13:53:03.368Z&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01T13:53:03.381Z&quot;,
-  &quot;options&quot;: null,
-  &quot;advanced&quot;: false
+  &quot;error&quot;: {
+    &quot;id&quot;: 2,
+    &quot;errors&quot;: {
+      &quot;name&quot;: [
+        &quot;can&#39;t be blank&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Name can&#39;t be blank&quot;
+    ]
+  }
 }</pre>
 
   <h3>Parametri</h3>

@@ -31,7 +31,7 @@
   </li>
   <li class='active'>create</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/operatingsystems/create.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/operatingsystems/create.de.html">de</a> | <a href="../../../apidoc/v2/operatingsystems/create.it.html">it</a> | <a href="../../../apidoc/v2/operatingsystems/create.sv_SE.html">sv_SE</a> | <b><a href="../../../apidoc/v2/operatingsystems/create.zh_CN.html">zh_CN</a></b> | <a href="../../../apidoc/v2/operatingsystems/create.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/operatingsystems/create.fr.html">fr</a> | <a href="../../../apidoc/v2/operatingsystems/create.ru.html">ru</a> | <a href="../../../apidoc/v2/operatingsystems/create.ja.html">ja</a> | <a href="../../../apidoc/v2/operatingsystems/create.es.html">es</a> | <a href="../../../apidoc/v2/operatingsystems/create.ko.html">ko</a> | <a href="../../../apidoc/v2/operatingsystems/create.ca.html">ca</a> | <a href="../../../apidoc/v2/operatingsystems/create.gl.html">gl</a> | <a href="../../../apidoc/v2/operatingsystems/create.en.html">en</a> | <a href="../../../apidoc/v2/operatingsystems/create.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/operatingsystems/create.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/operatingsystems/create.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/operatingsystems/create.ko.html">ko</a> | <a href="../../../apidoc/v2/operatingsystems/create.en.html">en</a> | <a href="../../../apidoc/v2/operatingsystems/create.fr.html">fr</a> | <a href="../../../apidoc/v2/operatingsystems/create.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/operatingsystems/create.de.html">de</a> | <a href="../../../apidoc/v2/operatingsystems/create.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/operatingsystems/create.ja.html">ja</a> | <a href="../../../apidoc/v2/operatingsystems/create.pl.html">pl</a> | <b><a href="../../../apidoc/v2/operatingsystems/create.zh_CN.html">zh_CN</a></b> | <a href="../../../apidoc/v2/operatingsystems/create.it.html">it</a> | <a href="../../../apidoc/v2/operatingsystems/create.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/operatingsystems/create.ru.html">ru</a> | <a href="../../../apidoc/v2/operatingsystems/create.es.html">es</a> | <a href="../../../apidoc/v2/operatingsystems/create.ca.html">ca</a> | <a href="../../../apidoc/v2/operatingsystems/create.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/operatingsystems/create.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/operatingsystems/create.gl.html">gl</a> ]
 </li>
 
 
@@ -55,32 +55,25 @@
     <pre class="prettyprint">POST /api/operatingsystems
 {
   &quot;operatingsystem&quot;: {
-    &quot;name&quot;: &quot;gHbkTDChzF&quot;,
-    &quot;major&quot;: &quot;010&quot;,
-    &quot;family&quot;: &quot;Redhat&quot;
+    &quot;name&quot;: &quot;awsome_os&quot;,
+    &quot;minor&quot;: &quot;2&quot;
   }
 }
-201
+422
 {
-  &quot;description&quot;: null,
-  &quot;major&quot;: &quot;010&quot;,
-  &quot;minor&quot;: &quot;&quot;,
-  &quot;family&quot;: &quot;Redhat&quot;,
-  &quot;release_name&quot;: null,
-  &quot;password_hash&quot;: &quot;SHA256&quot;,
-  &quot;created_at&quot;: &quot;2018-11-01 13:42:04 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:42:04 UTC&quot;,
-  &quot;id&quot;: 1073012830,
-  &quot;name&quot;: &quot;gHbkTDChzF&quot;,
-  &quot;title&quot;: &quot;gHbkTDChzF 010&quot;,
-  &quot;media&quot;: [],
-  &quot;architectures&quot;: [],
-  &quot;ptables&quot;: [],
-  &quot;config_templates&quot;: [],
-  &quot;provisioning_templates&quot;: [],
-  &quot;os_default_templates&quot;: [],
-  &quot;images&quot;: [],
-  &quot;parameters&quot;: []
+  &quot;error&quot;: {
+    &quot;id&quot;: null,
+    &quot;errors&quot;: {
+      &quot;major&quot;: [
+        &quot;is not a number&quot;,
+        &quot;Operating System version is required&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Major is not a number&quot;,
+      &quot;Major Operating System version is required&quot;
+    ]
+  }
 }</pre>
 
   <h2>参数</h2>

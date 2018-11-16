@@ -27,7 +27,7 @@
     
   </li>
   <li class='pull-right'>
-  &nbsp;[ <b><a href="../../apidoc/v2/organizations.pt_BR.html">pt_BR</a></b> | <a href="../../apidoc/v2/organizations.de.html">de</a> | <a href="../../apidoc/v2/organizations.it.html">it</a> | <a href="../../apidoc/v2/organizations.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/organizations.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/organizations.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/organizations.fr.html">fr</a> | <a href="../../apidoc/v2/organizations.ru.html">ru</a> | <a href="../../apidoc/v2/organizations.ja.html">ja</a> | <a href="../../apidoc/v2/organizations.es.html">es</a> | <a href="../../apidoc/v2/organizations.ko.html">ko</a> | <a href="../../apidoc/v2/organizations.ca.html">ca</a> | <a href="../../apidoc/v2/organizations.gl.html">gl</a> | <a href="../../apidoc/v2/organizations.en.html">en</a> | <a href="../../apidoc/v2/organizations.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/organizations.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/organizations.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../apidoc/v2/organizations.ko.html">ko</a> | <a href="../../apidoc/v2/organizations.en.html">en</a> | <a href="../../apidoc/v2/organizations.fr.html">fr</a> | <a href="../../apidoc/v2/organizations.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/organizations.de.html">de</a> | <a href="../../apidoc/v2/organizations.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/organizations.ja.html">ja</a> | <a href="../../apidoc/v2/organizations.pl.html">pl</a> | <a href="../../apidoc/v2/organizations.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/organizations.it.html">it</a> | <a href="../../apidoc/v2/organizations.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/organizations.ru.html">ru</a> | <a href="../../apidoc/v2/organizations.es.html">es</a> | <a href="../../apidoc/v2/organizations.ca.html">ca</a> | <a href="../../apidoc/v2/organizations.nl_NL.html">nl_NL</a> | <b><a href="../../apidoc/v2/organizations.pt_BR.html">pt_BR</a></b> | <a href="../../apidoc/v2/organizations.gl.html">gl</a> ]
 </li>
 
 </ul>
@@ -74,8 +74,8 @@
     <pre class="prettyprint">GET /api/organizations
 200
 {
-  &quot;total&quot;: 2,
-  &quot;subtotal&quot;: 2,
+  &quot;total&quot;: 3,
+  &quot;subtotal&quot;: 3,
   &quot;page&quot;: 1,
   &quot;per_page&quot;: 20,
   &quot;search&quot;: null,
@@ -88,22 +88,33 @@
       &quot;ancestry&quot;: null,
       &quot;parent_id&quot;: null,
       &quot;parent_name&quot;: null,
-      &quot;created_at&quot;: &quot;2018-11-01 13:53:43 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:53:43 UTC&quot;,
-      &quot;id&quot;: 447626440,
-      &quot;name&quot;: &quot;org457&quot;,
-      &quot;title&quot;: &quot;org457&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;id&quot;: 114267492,
+      &quot;name&quot;: &quot;Empty Organization&quot;,
+      &quot;title&quot;: &quot;Empty Organization&quot;,
       &quot;description&quot;: null
     },
     {
       &quot;ancestry&quot;: null,
       &quot;parent_id&quot;: null,
       &quot;parent_name&quot;: null,
-      &quot;created_at&quot;: &quot;2018-11-01 13:53:43 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:53:43 UTC&quot;,
-      &quot;id&quot;: 447626443,
-      &quot;name&quot;: &quot;org458&quot;,
-      &quot;title&quot;: &quot;org458&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    },
+    {
+      &quot;ancestry&quot;: null,
+      &quot;parent_id&quot;: null,
+      &quot;parent_name&quot;: null,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;id&quot;: 61304186,
+      &quot;name&quot;: &quot;Organization 2&quot;,
+      &quot;title&quot;: &quot;Organization 2&quot;,
       &quot;description&quot;: null
     }
   ]
@@ -294,43 +305,12 @@
 
 
   <h3>Exemplos</h3>
-    <pre class="prettyprint">GET /api/organizations/447626489
-200
+    <pre class="prettyprint">GET /api/organizations/447626439-org11
+404
 {
-  &quot;select_all_types&quot;: [],
-  &quot;description&quot;: null,
-  &quot;created_at&quot;: &quot;2018-11-01 13:15:02 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:15:02 UTC&quot;,
-  &quot;ancestry&quot;: null,
-  &quot;parent_id&quot;: null,
-  &quot;parent_name&quot;: null,
-  &quot;id&quot;: 447626489,
-  &quot;name&quot;: &quot;org28&quot;,
-  &quot;title&quot;: &quot;org28&quot;,
-  &quot;users&quot;: [],
-  &quot;smart_proxies&quot;: [],
-  &quot;subnets&quot;: [],
-  &quot;compute_resources&quot;: [],
-  &quot;media&quot;: [],
-  &quot;config_templates&quot;: [],
-  &quot;ptables&quot;: [],
-  &quot;provisioning_templates&quot;: [],
-  &quot;domains&quot;: [],
-  &quot;realms&quot;: [],
-  &quot;environments&quot;: [],
-  &quot;hostgroups&quot;: [],
-  &quot;locations&quot;: [],
-  &quot;hosts_count&quot;: 0,
-  &quot;parameters&quot;: [
-    {
-      &quot;priority&quot;: 10,
-      &quot;created_at&quot;: &quot;2018-11-01 13:15:02 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:15:02 UTC&quot;,
-      &quot;id&quot;: 767575240,
-      &quot;name&quot;: &quot;foo&quot;,
-      &quot;value&quot;: &quot;*****&quot;
-    }
-  ]
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;Resource organization not found by id &#39;447626439-org11&#39;&quot;
+  }
 }</pre>
 
   <h3>Parâmentros</h3>
@@ -471,22 +451,21 @@
     <pre class="prettyprint">POST /api/organizations
 {
   &quot;organization&quot;: {
-    &quot;name&quot;: &quot;RhotyNOQEx&quot;,
-    &quot;description&quot;: &quot;ㅶ𣽂힐ὔ𢨢𩘻𪀀됋湰𗝓𬄄𡫔𫹹诖橉𠦑큔𗟸𧗝뛻𗧗瓳싼픶䑎𤈱큘𠛰𔔼𥤱𤥚뫤旃𬫫䈣㙪𥮛𡻺䔡𤾰𖧲𧶿醗𪑥𣝤琄χ𢘪Ꝓ𫎘𧨀𡨠𤒞媯徢왤𫿐頥㙼𬘣㤕𫛓𪚨𣼋𠪵興𐀖𫴻灟𖭃橂톃䓄훫쌽𤫴𗚹𘈠𣻒𘘎ᦴ𤢌胪𫉀𡰄逖𠢈瓚ﵵՙ罩𢴋芔𦿃ꆪ𠤬쾞שּׂ녻𣟉ꇎ𠗥䧦ᣊꬑㆤ襽𧋉𔐾𨈮𣘸梅䥾𩾂𡂛젹𗯍𖣣ǧ𨲹ꉿﱚぃɐ𦴲𝐄폲𐂌蒼쨤𬅐뙞귌𩯞𤙤𥰸㐽𪤓툕𢛐𦳬𗾉깘𬩒큧㔃𪮷𡃘𝚨覼ܖ𔖲𡽀𪺄玻𣸪츲𣼠𨢡簷ꢈ𠋠𗃣𦇾𑆌𣸃𬆕돔𘜐𫠜𤢛ꉫꔦ𑃦𨼯𥭲봈𬲜㒘優缔𡏃ꅁ𘀐湎修嬱𨽉𥔽𘝨쨈杰彸𧥾𧩗퐣𩸏𗛘𘐧𧂜𐠿𤾥𩕉쵒荔𥕹𢬓𥎈𡕣ꦢ嵫ज违𣜳㓴鬦𬴤𩹔炸臭𫡬뙑谱𗗅ထ솲皁훹𠰮ሹ𤎆长𦦥𩤩𡝮滄ዑ㻟𘁬𤽒싦𪆨𧥘㛷㻺釫솊𫆡𗝗𬶢𥅵쳻𤕣𫧔㱮噜𐒚蓵𬃢耽𬴳𫠊蜚𪳷𓈿楥䠇㛱𥞃𨉻硾𪲔𤙒𑀧𨮍㠢蘴𥗫챎𩳃𐂗𬚔퐓𗏎슔𦁋ℸ퉅𠿊𘩱𑢠𬀒𐙃灆𨠌𬕗읇𨥁蒋𤩌ꌑ𪂋囪𡽌𡗉𦗹쌠𧣆𨷕𩫭𗼕屮垴𧉸𪤟𣱎𐦄𥀧𨚬ೲ霷뵔𡕀𩃕縪𡗔𦻊づ𦠷ﾺ𧷜𫙹𨱨𤲳𦎁뉓繦𫧣𬴎𓐐𩩇𥢍㯸𣬟𩫵𑃑皣𬎉眍𣂅𧢅ꃯ𦦘𐪖䶘覊𓂻𦎩𦇚嚃𫌃𘝶𠯉𡧒툋鼗𨽸켗𬓴챘𬁷砏𨫗릲爨𧲄ڏ𠷐傌𥯰䇵𤸩𥡲艳狀𡕿沚죶ᦿ𬙡䄚𗍓𦓂䡴𥒻𗏴㸡ᾓ윗ㄎ忎ꢯ蒘凰拚ᕹ逝𣆡𗥇𧋼𢘒揓𢎬𫼻𔑕𠀪𫣜𧘧ゎ榪햇꽝𩓚䤃𓅠𢶁尸索䖇𣔔ƹ𨈙匣퀯𨭕𡶧𡭵𤟬侲愍𧈎託𐐪𥷧𥀌𢥭ທ愖𩹰瑗𪦰𤞯涿뎐𦁄𧕶𓂹ᐭ𗎚𑫈襋𪤝Ἵ𣌡Ꮓ𦘷𥥵㶃釥딄𦄚葕𩬓햬𣲋ꂰꛐᢲ䳙𥹤𬤍ꅬ𤴹𒓯昣נּ𔑬𨨨𪅖偰膁𪍨ﱸ𒅝𪴟𪾹𠤢𥆤딈𐤪𫚎𨴕𥹅虅𨨏爹𩬔𗤮ᴧ𪥉𧒢切跰𬎧𤹲ఞ𧴌𥒧秸讦ѩ툕𦢍뗭풞穕𩉾𣧔𠱨䅑𧖸ꭅ𣅨𦶢橮㜞𪸯픭簌𡨞𫭈𤇾炪랿懬享𠳗仝㬧𢐼쇪𦏩𠤐𪓦𫉦쀫枴ᬚ𧉆𦢥𢃪𫞈𡔮𗉩𡴓𝚌𨑼𤤁ॻŉ𤖑𦝟ލ荼倌岻𦉖𣁪ꏔ𣨸鏃罜𬨲펗ӣ𨞙𗞼鐴𤆮𠕅𨘉掩豻詐𣿦ﵞ𗀙ଈ琱ⷝ𣼣𬌢곉惭䱑𧿟𡥇䗏𫖭𫤏볺껭𨖵磉𘕭𩱻𦮙𠓋𫯅𬪡𘔯ﰈ𧜬𧁐𡹢췅𠮷ꘚ𪇠𣼅Ґ挢𩋵𪫄𥼘ⰴ哼𬏮𩌦밇ꓸ䠲𧥢𧀒𫀭𡖶𡘤𩎣𥶤𠄧ꎆ𝚗䍜𤔍𫠍𖠢终뭹㢴汖𠇺𣵹칏𧾯츕膛䋇𥫧𝐼𨾴ﱉ䑯淰𠠎𢂚眷횿郟ۿ𫂨𨄿𘅲𒍔𬆖剞ꐂ𫣄졔𧺽凌情ᆀ𨧳𥁲䲋㡉𢧲𥱒𢵳𩷝툃㽔䜄𠘝耜𤼰紀𪯼𬈨𬭍𫜮랦𐃂捙幼𡘚𡦌瑧𛱨八𩯍𗀗𫆷𥑆𫖨餭𦡔𫶒𨵙𠎷ᒇ𤝖𣤹𗦾𦡈鳐𩁖𩒖𑌛𡟰𤳴暴𫇻絋𢔜𩲼茛𫴜弇븽䭌𥇤𠫬铔ꃪ𩛁𦉡ᵐ𘦺𪏐퉄𗜧쪆𡱮𧕦邛𠦽屧譗𣷢𫉑𤳴𢞶寠嵮𘣲𩣐𘘮𨶕曍玞𠦘𡣣ᆱ𪌃𥕢ⴝ傔𦴾徶Ꙋ𢮔뗓김𬮓𫿕𨒔𪼗𠀾𦔌𣳧𗣍𢟙〵𩨳𤛕鼩𪻔迥뜇𗇲뢯𗞡𗒭ᔆ𣌼퇚𪎭𬄶𤎕𤵪쌢𝜐ꢓ殯礌嗅㰠裶샶𘣩궍𥬌怒𩾅𪎒㒾𤤟빢䍔𘔏𥧳𦘾甀䑘𩉐𘇋𢛳𡲸𥴽𨜏땚𐒷鹖𤼚𩜿濫𤙝叐𬙥𨝰𢿁礂泩頊呓𦐺ଔ𘙣𧧋𒁖𬭗㡢𥁘𦠬𐚼𦰄𘞰ࢣ𨦕𒀆맵𦦈𠣹𗾧굉颣耞𬶃𧣽뙑𗓶𦌺𓊥𧺕텥掠뒚𒔔㜊𤞌𣯙ﰇ𠥛㨴𧧱𠽔龈𪐳𦌔𗣲𥀞㼌𝙂𓇝덨렸臭𡅰𥃖𤨣ᤍ愈𧀣𦵁𦭆𪢓𤞽ꬎ帒𢅉𥾵𬡨듶𧧈ꢳ𤁠𡙘ᦃ𠯅𖢳𤁽𠿼𧔾숒𧖜𦯡𤔝𣔎𫣪𩖡ᔪ𥖭𫌕𡧴腤ꇼ㿘엠騃觴𨚺韚𩄬깉𗱹ɾ켸㵗빉𣽡砓吅𫞕𠟎𦝷𘠬硶庶㸠妗𣦻𞢁鷊혻脎튧𘠞𠱻嵡𢂌항嬙栋姏龝组𠸢內𬙈䗜搩ﬠഊ媧𐊍侈𝛂볗𠦃𫾾蚟𗣻𠝰𗇴ν苫𥡐ᣨ𤄱㨁Ὰ蔌搡&quot;
+    &quot;name&quot;: &quot;FzcgKVOBSx&quot;
   }
 }
 201
 {
   &quot;select_all_types&quot;: [],
-  &quot;description&quot;: &quot;ㅶ𣽂힐ὔ𢨢𩘻𪀀됋湰𗝓𬄄𡫔𫹹诖橉𠦑큔𗟸𧗝뛻𗧗瓳싼픶䑎𤈱큘𠛰𔔼𥤱𤥚뫤旃𬫫䈣㙪𥮛𡻺䔡𤾰𖧲𧶿醗𪑥𣝤琄χ𢘪Ꝓ𫎘𧨀𡨠𤒞媯徢왤𫿐頥㙼𬘣㤕𫛓𪚨𣼋𠪵興𐀖𫴻灟𖭃橂톃䓄훫쌽𤫴𗚹𘈠𣻒𘘎ᦴ𤢌胪𫉀𡰄逖𠢈瓚ﵵՙ罩𢴋芔𦿃ꆪ𠤬쾞שּׂ녻𣟉ꇎ𠗥䧦ᣊꬑㆤ襽𧋉𔐾𨈮𣘸梅䥾𩾂𡂛젹𗯍𖣣ǧ𨲹ꉿﱚぃɐ𦴲𝐄폲𐂌蒼쨤𬅐뙞귌𩯞𤙤𥰸㐽𪤓툕𢛐𦳬𗾉깘𬩒큧㔃𪮷𡃘𝚨覼ܖ𔖲𡽀𪺄玻𣸪츲𣼠𨢡簷ꢈ𠋠𗃣𦇾𑆌𣸃𬆕돔𘜐𫠜𤢛ꉫꔦ𑃦𨼯𥭲봈𬲜㒘優缔𡏃ꅁ𘀐湎修嬱𨽉𥔽𘝨쨈杰彸𧥾𧩗퐣𩸏𗛘𘐧𧂜𐠿𤾥𩕉쵒荔𥕹𢬓𥎈𡕣ꦢ嵫ज违𣜳㓴鬦𬴤𩹔炸臭𫡬뙑谱𗗅ထ솲皁훹𠰮ሹ𤎆长𦦥𩤩𡝮滄ዑ㻟𘁬𤽒싦𪆨𧥘㛷㻺釫솊𫆡𗝗𬶢𥅵쳻𤕣𫧔㱮噜𐒚蓵𬃢耽𬴳𫠊蜚𪳷𓈿楥䠇㛱𥞃𨉻硾𪲔𤙒𑀧𨮍㠢蘴𥗫챎𩳃𐂗𬚔퐓𗏎슔𦁋ℸ퉅𠿊𘩱𑢠𬀒𐙃灆𨠌𬕗읇𨥁蒋𤩌ꌑ𪂋囪𡽌𡗉𦗹쌠𧣆𨷕𩫭𗼕屮垴𧉸𪤟𣱎𐦄𥀧𨚬ೲ霷뵔𡕀𩃕縪𡗔𦻊づ𦠷ﾺ𧷜𫙹𨱨𤲳𦎁뉓繦𫧣𬴎𓐐𩩇𥢍㯸𣬟𩫵𑃑皣𬎉眍𣂅𧢅ꃯ𦦘𐪖䶘覊𓂻𦎩𦇚嚃𫌃𘝶𠯉𡧒툋鼗𨽸켗𬓴챘𬁷砏𨫗릲爨𧲄ڏ𠷐傌𥯰䇵𤸩𥡲艳狀𡕿沚죶ᦿ𬙡䄚𗍓𦓂䡴𥒻𗏴㸡ᾓ윗ㄎ忎ꢯ蒘凰拚ᕹ逝𣆡𗥇𧋼𢘒揓𢎬𫼻𔑕𠀪𫣜𧘧ゎ榪햇꽝𩓚䤃𓅠𢶁尸索䖇𣔔ƹ𨈙匣퀯𨭕𡶧𡭵𤟬侲愍𧈎託𐐪𥷧𥀌𢥭ທ愖𩹰瑗𪦰𤞯涿뎐𦁄𧕶𓂹ᐭ𗎚𑫈襋𪤝Ἵ𣌡Ꮓ𦘷𥥵㶃釥딄𦄚葕𩬓햬𣲋ꂰꛐᢲ䳙𥹤𬤍ꅬ𤴹𒓯昣נּ𔑬𨨨𪅖偰膁𪍨ﱸ𒅝𪴟𪾹𠤢𥆤딈𐤪𫚎𨴕𥹅虅𨨏爹𩬔𗤮ᴧ𪥉𧒢切跰𬎧𤹲ఞ𧴌𥒧秸讦ѩ툕𦢍뗭풞穕𩉾𣧔𠱨䅑𧖸ꭅ𣅨𦶢橮㜞𪸯픭簌𡨞𫭈𤇾炪랿懬享𠳗仝㬧𢐼쇪𦏩𠤐𪓦𫉦쀫枴ᬚ𧉆𦢥𢃪𫞈𡔮𗉩𡴓𝚌𨑼𤤁ॻŉ𤖑𦝟ލ荼倌岻𦉖𣁪ꏔ𣨸鏃罜𬨲펗ӣ𨞙𗞼鐴𤆮𠕅𨘉掩豻詐𣿦ﵞ𗀙ଈ琱ⷝ𣼣𬌢곉惭䱑𧿟𡥇䗏𫖭𫤏볺껭𨖵磉𘕭𩱻𦮙𠓋𫯅𬪡𘔯ﰈ𧜬𧁐𡹢췅𠮷ꘚ𪇠𣼅Ґ挢𩋵𪫄𥼘ⰴ哼𬏮𩌦밇ꓸ䠲𧥢𧀒𫀭𡖶𡘤𩎣𥶤𠄧ꎆ𝚗䍜𤔍𫠍𖠢终뭹㢴汖𠇺𣵹칏𧾯츕膛䋇𥫧𝐼𨾴ﱉ䑯淰𠠎𢂚眷횿郟ۿ𫂨𨄿𘅲𒍔𬆖剞ꐂ𫣄졔𧺽凌情ᆀ𨧳𥁲䲋㡉𢧲𥱒𢵳𩷝툃㽔䜄𠘝耜𤼰紀𪯼𬈨𬭍𫜮랦𐃂捙幼𡘚𡦌瑧𛱨八𩯍𗀗𫆷𥑆𫖨餭𦡔𫶒𨵙𠎷ᒇ𤝖𣤹𗦾𦡈鳐𩁖𩒖𑌛𡟰𤳴暴𫇻絋𢔜𩲼茛𫴜弇븽䭌𥇤𠫬铔ꃪ𩛁𦉡ᵐ𘦺𪏐퉄𗜧쪆𡱮𧕦邛𠦽屧譗𣷢𫉑𤳴𢞶寠嵮𘣲𩣐𘘮𨶕曍玞𠦘𡣣ᆱ𪌃𥕢ⴝ傔𦴾徶Ꙋ𢮔뗓김𬮓𫿕𨒔𪼗𠀾𦔌𣳧𗣍𢟙〵𩨳𤛕鼩𪻔迥뜇𗇲뢯𗞡𗒭ᔆ𣌼퇚𪎭𬄶𤎕𤵪쌢𝜐ꢓ殯礌嗅㰠裶샶𘣩궍𥬌怒𩾅𪎒㒾𤤟빢䍔𘔏𥧳𦘾甀䑘𩉐𘇋𢛳𡲸𥴽𨜏땚𐒷鹖𤼚𩜿濫𤙝叐𬙥𨝰𢿁礂泩頊呓𦐺ଔ𘙣𧧋𒁖𬭗㡢𥁘𦠬𐚼𦰄𘞰ࢣ𨦕𒀆맵𦦈𠣹𗾧굉颣耞𬶃𧣽뙑𗓶𦌺𓊥𧺕텥掠뒚𒔔㜊𤞌𣯙ﰇ𠥛㨴𧧱𠽔龈𪐳𦌔𗣲𥀞㼌𝙂𓇝덨렸臭𡅰𥃖𤨣ᤍ愈𧀣𦵁𦭆𪢓𤞽ꬎ帒𢅉𥾵𬡨듶𧧈ꢳ𤁠𡙘ᦃ𠯅𖢳𤁽𠿼𧔾숒𧖜𦯡𤔝𣔎𫣪𩖡ᔪ𥖭𫌕𡧴腤ꇼ㿘엠騃觴𨚺韚𩄬깉𗱹ɾ켸㵗빉𣽡砓吅𫞕𠟎𦝷𘠬硶庶㸠妗𣦻𞢁鷊혻脎튧𘠞𠱻嵡𢂌항嬙栋姏龝组𠸢內𬙈䗜搩ﬠഊ媧𐊍侈𝛂볗𠦃𫾾蚟𗣻𠝰𗇴ν苫𥡐ᣨ𤄱㨁Ὰ蔌搡&quot;,
-  &quot;created_at&quot;: &quot;2018-11-01 13:53:44 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:53:44 UTC&quot;,
+  &quot;description&quot;: null,
+  &quot;created_at&quot;: &quot;2018-11-15 19:02:03 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:02:03 UTC&quot;,
   &quot;ancestry&quot;: null,
   &quot;parent_id&quot;: null,
   &quot;parent_name&quot;: null,
-  &quot;id&quot;: 447626450,
-  &quot;name&quot;: &quot;RhotyNOQEx&quot;,
-  &quot;title&quot;: &quot;RhotyNOQEx&quot;,
+  &quot;id&quot;: 447626439,
+  &quot;name&quot;: &quot;FzcgKVOBSx&quot;,
+  &quot;title&quot;: &quot;FzcgKVOBSx&quot;,
   &quot;users&quot;: [],
   &quot;smart_proxies&quot;: [],
   &quot;subnets&quot;: [],
@@ -995,29 +974,24 @@
 
 
   <h3>Exemplos</h3>
-    <pre class="prettyprint">PUT /api/organizations/447626445
+    <pre class="prettyprint">POST /api/organizations/114267492
 {
   &quot;organization&quot;: {
-    &quot;organization_parameters_attributes&quot;: [
-      {
-        &quot;name&quot;: &quot;foo&quot;,
-        &quot;value&quot;: &quot;new_value&quot;
-      }
-    ]
+    &quot;description&quot;: &quot;耸寎𠖈ꇙ𢝬퉾𠵾𬅚𢊋𫥫𦞷𡨃𠘶𐭤Ꙁ䱆𩰩𠊞𫓕噇𩈩䆡𧪻墒𗊦𘇶𨌟䨤𫾫𪬟𥕠豢𧜗𦥆竢诞䂡쿩𬛡𨪽𠇝錩圄𓈑𔐅𑀖𬐔𩥶㫤𧶒𨫳ᡉ𦧻䳂𪙝𣠏𡧒𡇧𥲚뙣뭫𫥼糄똌𣍙檀𗜆𪥸𩴕蠄𦩓𩌌셨𗻰𧄋寰𤓣𘔕𧽐𪝞𥿌𪜔鬷𥚇ﰃ𣳝𬛐벘ᜯ𡓵𢣶儹𢩂媚𧹬ζ𥗻샸𠳟䇕ᶴ𥍠첻𛱢𫙤φ𩘸ᬑ䆚㰳𪇱慙𥻲𢤰𤰑誦掻𘕴𤛻䘁獯𐲠𧦑𩫈𗟟𫌽𠗓𗻗퍏裼ಆ켪𗔁𓂬룲𩡀𝞦𠽾丞楙ꁈ𧆅쳟픠硱𑀣𗃂𩅴綫嚌𡟴𨢩猲𬉖糼ᒴ𣂆𝜰挟𠅙𡤥𖥘匓𑈉𧻘ᅊ𣭀𗹋𬬝𗘴陭𐃀𧡕𨺉𘊣詘𥐐觎𗩓𧩹𢨥窓녬𩎹𘛿虼𬡭𠁔𨹉뇴훩𫎬ꈆꆍʃҝ𐰉蹃𐫕攃黒𫚜𦶵驹𣺗투𤯅𩳬햵𪡫𠵱뾂𤪷鉥켄𧻶삟돠즈𥍋ﴽ瞼ˡ㴇𪑓𡒄窫秾솲𬫡𣻫戮𡒰𠚱𤨼ϔ𪣠𪺍𡏐𩯃Ў𤜩䏟큿𠉚𢸕𥍇罛쵄𡍀慾𪔒𘤘녙夊𧶼𦃼𗟼㕵𬄞𪣖𢲓𑂏𥇽𪧎捡𢂶𢉣𥍂栞搛袤蒟鋾ꛚ縹𗇯𩧳ꕪ𖣞㷸𞠋𓆧𠿨변錈𢢑𬺂𡬎쬌䦿𥼪䏥湤𠥼林ꪨ𬠹𥠘𤚠㻮ꣴ𨏸ꝳ赣斠𩅢𢐽榖闤ꎡ㗳初Ⰶ镃𨕃𦊲𘄫阃𫐟𤅴膇꽌𔖢ꊤ𨒡娺𩠸𡠕땖𦧴𨄬𬘳𠒎𡺑𥱅귥𝝁𥮽𞹼𫓡𐒎𫤌𩔶ꪓ앬ꈄ嫝𣱋ᆀ即㚨𗑩𧈽𘡘𣶟䕮深䗌𧫵𗐠𣘱悐𠗸𖩂𡱤𠏍𐫤癵𤺋䘳𢒖𤄦𢲸𦃡𧰤𬐀鷫𗙜𡀩씛ꏝ渽𘊟𧏔𢦾𡎄뀭晿𠜗훱𧎑𦊝𧆷𗛅𪬛𬟫𩻠𢞆𣩷𗑜𤭏𦗁㯁𪖷𡡇뿜𬜒𤿖𡵛𡌌揻𢕈㺨ᓾ㬥ʁ亽𠜡ꍘ𧿼抋𑲌𦕹룯𗠽𗠭𢏦𪃭𪱺갻𠍾𩣜藋柲鶑𦖺𬅒譒𦖄𧈮縵痝𦀛𥼌𐓳㽨뾭𧞥𠠾𪱨寔𨱿𖧏𧉁𬑈𡬮𨕗㺒Ἂ𧊠𢹸틁𢶥㷭𫫰𓌽褎섘𣽼㳽𧟝ﰦ𪘃橀𪸳趯𣐕𬓁횮𬘾Υꕎ沵𠩌𗣥婞𬤆𓋶薓鳏彞𗑑𨪱𒔙㐐𢫦𠨬𝖾學ꑯ𥺢𡑼菚𢋸槶𩈬좁𪃊𝜈驃ᇖĎ𬆋𥛚𝚇픯𣖵𒋼盙뵋贯쎮𦕌𨫡盿𪥩寥𪮍𥝨𐃈Ѡ𥡡𢦝淆𧿔ꚬ𡛗𫰝郥𬲚ᅭ𨓚앑𧝓𢨫𩴒福𫜒䓽犓𠰟ພ𧙧閩뤄𫉖늗돰䗿𣏨𤓘䦞텓𑆫𩻲𢣒𡴡蕦㜮𑰋𨸖ə𠢣𥽜𐙪𐀑𫫌𢓮폵𫤛𤁖㖀牽𒅷矋硼Ἱⴻ핋ሌ骐𤺝𐬖밋𤳢𥞜ꤚ𣩷鸟忾낼鍽虙㷹𦸴𨇠䢉𤳆벨체𢊻𔘂㳩𣅠쐸𦞄𩇃庲𨰋쟊瘝𩞙𦣞喇𘄞𧔬𤊩𞺛三𨬜巭𣏶𢅂羔塲쇁𦶅悢𡦎𣰋𡛃𘊋㦐𥧗𢪴𣚺䱒趡똫𠔙𗧧臤𬍙𣝬瞱ꫳ䮧𦱚𣁌𧐧階𩆝𪠅𥌾𧏺𪓙𧆆𦝋𣹪𡷙ꕷ𥮆𩟠Α𫖊鐍蔘鏽𥂭豶襨𢱜焗𩓿跫𥼳毑鼖𫚨잙ㇽ𦣒䡰𧎽ⲋ𠋠薃锶𘕢ᗿ緶𘛊ㆨ𣪱ᙔ禿赺𥧝嚲𬥢𗅓坨𤸝馢𧎟钭謃ꫤ糸堷祒達吴鎱𞤧ꊍ楪𨈔𢤀𨼛𣊱짫퀟𡮍뚃㺣𗏓㧂𥥼𡊲𤖜ᮼᏐ𗌲𦓤𨔋𠩕𪛊𖢮𣇇𦫸펤㼅ﱶᘊ𪝳뭐䛇𩎞谽뚴𢅩𨱻𠉶𝝡𨃮𬴭𪸆𡨵𝞡𤆑𠘠克ꤥ𥪐𤶭𩞑𨮰𪟰廎𤆙𬱃밥𩥴𡣲𩆩쇠𧛉𪣭𝘡ឥ琴腏𥶜췿𥄬𥹡蕔묩𗣥뷣𓂎𫉿쉲𧢛く𥬫𬈥뺓𘆍𣮝𦼳𪖈𘅾𪖽𤑀𛱺𣍡𫫡𠽛寧䢽𨉐疏ݏ𥉵𒉩徰齵𥠐𡺐ꁽ𐃱𩹴폛銥麡𢲍ᣲ筂𪜯𦟟𡯌喻膆𨽒倏𗊬攬𩧢ᙂ𪏢軩𪞖𥼀責𣧬멉穬ն𨪞徙梊𡷽퓥䱅㿊𫜮𢃈𫈭ﲔꝄ𩼉義𫵠𤣧꽨𣱜𧄤풎Ⰲ펑𢋥𘀝䁡騏𤷨暑𐑀ঠ𠐔𗆾ዒ𥜈듒ﮞ𗽨𘏟𘗢軪㪚䋋𧓫𨖰概𣮎壕𗁢ᚡ덮沑𨼆窵𫥥𥲭繖𗒒蝌𤎺ﲌ띏迵𣆳ﺈ𤕸𩖟𢻗𡿽𢞍𥲯𫘱𫁔銛𖧢𝝎Ʋ𩫔𦑰𦤹𗝡𦜸惆𐀬늦𨗝𫎁𨹶舩㞲𨕙𧙳𫆟𔘀炭묜𠌻𬔒䖚𤋝常𨒃𤬸襆煡𠴆좮Ư祬ᕅ𧺂𪃱ᖀ䒽ピ𫵧ᕪ嵶𦖢𖢟𬅲𡙼𫥢𩪆䤣哸㠎𦓆開牻𖧊쐭𧙝𐫖𡣉𝘒𬭆琏鵽쳈𑜊뉓𬡲𐦨𢈓𡓎ɬ𣐬𗾏𠳱𫾯춗𥡫畦Ȟ鷴𫛣托𒄸烖핁盇𐠓𡛯&quot;
   }
 }
-200
+201
 {
   &quot;select_all_types&quot;: [],
-  &quot;description&quot;: null,
-  &quot;created_at&quot;: &quot;2018-11-01 13:53:44 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:53:44 UTC&quot;,
+  &quot;description&quot;: &quot;耸寎𠖈ꇙ𢝬퉾𠵾𬅚𢊋𫥫𦞷𡨃𠘶𐭤Ꙁ䱆𩰩𠊞𫓕噇𩈩䆡𧪻墒𗊦𘇶𨌟䨤𫾫𪬟𥕠豢𧜗𦥆竢诞䂡쿩𬛡𨪽𠇝錩圄𓈑𔐅𑀖𬐔𩥶㫤𧶒𨫳ᡉ𦧻䳂𪙝𣠏𡧒𡇧𥲚뙣뭫𫥼糄똌𣍙檀𗜆𪥸𩴕蠄𦩓𩌌셨𗻰𧄋寰𤓣𘔕𧽐𪝞𥿌𪜔鬷𥚇ﰃ𣳝𬛐벘ᜯ𡓵𢣶儹𢩂媚𧹬ζ𥗻샸𠳟䇕ᶴ𥍠첻𛱢𫙤φ𩘸ᬑ䆚㰳𪇱慙𥻲𢤰𤰑誦掻𘕴𤛻䘁獯𐲠𧦑𩫈𗟟𫌽𠗓𗻗퍏裼ಆ켪𗔁𓂬룲𩡀𝞦𠽾丞楙ꁈ𧆅쳟픠硱𑀣𗃂𩅴綫嚌𡟴𨢩猲𬉖糼ᒴ𣂆𝜰挟𠅙𡤥𖥘匓𑈉𧻘ᅊ𣭀𗹋𬬝𗘴陭𐃀𧡕𨺉𘊣詘𥐐觎𗩓𧩹𢨥窓녬𩎹𘛿虼𬡭𠁔𨹉뇴훩𫎬ꈆꆍʃҝ𐰉蹃𐫕攃黒𫚜𦶵驹𣺗투𤯅𩳬햵𪡫𠵱뾂𤪷鉥켄𧻶삟돠즈𥍋ﴽ瞼ˡ㴇𪑓𡒄窫秾솲𬫡𣻫戮𡒰𠚱𤨼ϔ𪣠𪺍𡏐𩯃Ў𤜩䏟큿𠉚𢸕𥍇罛쵄𡍀慾𪔒𘤘녙夊𧶼𦃼𗟼㕵𬄞𪣖𢲓𑂏𥇽𪧎捡𢂶𢉣𥍂栞搛袤蒟鋾ꛚ縹𗇯𩧳ꕪ𖣞㷸𞠋𓆧𠿨변錈𢢑𬺂𡬎쬌䦿𥼪䏥湤𠥼林ꪨ𬠹𥠘𤚠㻮ꣴ𨏸ꝳ赣斠𩅢𢐽榖闤ꎡ㗳初Ⰶ镃𨕃𦊲𘄫阃𫐟𤅴膇꽌𔖢ꊤ𨒡娺𩠸𡠕땖𦧴𨄬𬘳𠒎𡺑𥱅귥𝝁𥮽𞹼𫓡𐒎𫤌𩔶ꪓ앬ꈄ嫝𣱋ᆀ即㚨𗑩𧈽𘡘𣶟䕮深䗌𧫵𗐠𣘱悐𠗸𖩂𡱤𠏍𐫤癵𤺋䘳𢒖𤄦𢲸𦃡𧰤𬐀鷫𗙜𡀩씛ꏝ渽𘊟𧏔𢦾𡎄뀭晿𠜗훱𧎑𦊝𧆷𗛅𪬛𬟫𩻠𢞆𣩷𗑜𤭏𦗁㯁𪖷𡡇뿜𬜒𤿖𡵛𡌌揻𢕈㺨ᓾ㬥ʁ亽𠜡ꍘ𧿼抋𑲌𦕹룯𗠽𗠭𢏦𪃭𪱺갻𠍾𩣜藋柲鶑𦖺𬅒譒𦖄𧈮縵痝𦀛𥼌𐓳㽨뾭𧞥𠠾𪱨寔𨱿𖧏𧉁𬑈𡬮𨕗㺒Ἂ𧊠𢹸틁𢶥㷭𫫰𓌽褎섘𣽼㳽𧟝ﰦ𪘃橀𪸳趯𣐕𬓁횮𬘾Υꕎ沵𠩌𗣥婞𬤆𓋶薓鳏彞𗑑𨪱𒔙㐐𢫦𠨬𝖾學ꑯ𥺢𡑼菚𢋸槶𩈬좁𪃊𝜈驃ᇖĎ𬆋𥛚𝚇픯𣖵𒋼盙뵋贯쎮𦕌𨫡盿𪥩寥𪮍𥝨𐃈Ѡ𥡡𢦝淆𧿔ꚬ𡛗𫰝郥𬲚ᅭ𨓚앑𧝓𢨫𩴒福𫜒䓽犓𠰟ພ𧙧閩뤄𫉖늗돰䗿𣏨𤓘䦞텓𑆫𩻲𢣒𡴡蕦㜮𑰋𨸖ə𠢣𥽜𐙪𐀑𫫌𢓮폵𫤛𤁖㖀牽𒅷矋硼Ἱⴻ핋ሌ骐𤺝𐬖밋𤳢𥞜ꤚ𣩷鸟忾낼鍽虙㷹𦸴𨇠䢉𤳆벨체𢊻𔘂㳩𣅠쐸𦞄𩇃庲𨰋쟊瘝𩞙𦣞喇𘄞𧔬𤊩𞺛三𨬜巭𣏶𢅂羔塲쇁𦶅悢𡦎𣰋𡛃𘊋㦐𥧗𢪴𣚺䱒趡똫𠔙𗧧臤𬍙𣝬瞱ꫳ䮧𦱚𣁌𧐧階𩆝𪠅𥌾𧏺𪓙𧆆𦝋𣹪𡷙ꕷ𥮆𩟠Α𫖊鐍蔘鏽𥂭豶襨𢱜焗𩓿跫𥼳毑鼖𫚨잙ㇽ𦣒䡰𧎽ⲋ𠋠薃锶𘕢ᗿ緶𘛊ㆨ𣪱ᙔ禿赺𥧝嚲𬥢𗅓坨𤸝馢𧎟钭謃ꫤ糸堷祒達吴鎱𞤧ꊍ楪𨈔𢤀𨼛𣊱짫퀟𡮍뚃㺣𗏓㧂𥥼𡊲𤖜ᮼᏐ𗌲𦓤𨔋𠩕𪛊𖢮𣇇𦫸펤㼅ﱶᘊ𪝳뭐䛇𩎞谽뚴𢅩𨱻𠉶𝝡𨃮𬴭𪸆𡨵𝞡𤆑𠘠克ꤥ𥪐𤶭𩞑𨮰𪟰廎𤆙𬱃밥𩥴𡣲𩆩쇠𧛉𪣭𝘡ឥ琴腏𥶜췿𥄬𥹡蕔묩𗣥뷣𓂎𫉿쉲𧢛く𥬫𬈥뺓𘆍𣮝𦼳𪖈𘅾𪖽𤑀𛱺𣍡𫫡𠽛寧䢽𨉐疏ݏ𥉵𒉩徰齵𥠐𡺐ꁽ𐃱𩹴폛銥麡𢲍ᣲ筂𪜯𦟟𡯌喻膆𨽒倏𗊬攬𩧢ᙂ𪏢軩𪞖𥼀責𣧬멉穬ն𨪞徙梊𡷽퓥䱅㿊𫜮𢃈𫈭ﲔꝄ𩼉義𫵠𤣧꽨𣱜𧄤풎Ⰲ펑𢋥𘀝䁡騏𤷨暑𐑀ঠ𠐔𗆾ዒ𥜈듒ﮞ𗽨𘏟𘗢軪㪚䋋𧓫𨖰概𣮎壕𗁢ᚡ덮沑𨼆窵𫥥𥲭繖𗒒蝌𤎺ﲌ띏迵𣆳ﺈ𤕸𩖟𢻗𡿽𢞍𥲯𫘱𫁔銛𖧢𝝎Ʋ𩫔𦑰𦤹𗝡𦜸惆𐀬늦𨗝𫎁𨹶舩㞲𨕙𧙳𫆟𔘀炭묜𠌻𬔒䖚𤋝常𨒃𤬸襆煡𠴆좮Ư祬ᕅ𧺂𪃱ᖀ䒽ピ𫵧ᕪ嵶𦖢𖢟𬅲𡙼𫥢𩪆䤣哸㠎𦓆開牻𖧊쐭𧙝𐫖𡣉𝘒𬭆琏鵽쳈𑜊뉓𬡲𐦨𢈓𡓎ɬ𣐬𗾏𠳱𫾯춗𥡫畦Ȟ鷴𫛣托𒄸烖핁盇𐠓𡛯&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:02:03 UTC&quot;,
   &quot;ancestry&quot;: null,
   &quot;parent_id&quot;: null,
   &quot;parent_name&quot;: null,
-  &quot;id&quot;: 447626445,
-  &quot;name&quot;: &quot;org460&quot;,
-  &quot;title&quot;: &quot;org460&quot;,
+  &quot;id&quot;: 114267492,
+  &quot;name&quot;: &quot;Empty Organization&quot;,
+  &quot;title&quot;: &quot;Empty Organization&quot;,
   &quot;users&quot;: [],
   &quot;smart_proxies&quot;: [],
   &quot;subnets&quot;: [],
@@ -1032,16 +1006,7 @@
   &quot;hostgroups&quot;: [],
   &quot;locations&quot;: [],
   &quot;hosts_count&quot;: 0,
-  &quot;parameters&quot;: [
-    {
-      &quot;priority&quot;: 10,
-      &quot;created_at&quot;: &quot;2018-11-01 13:53:44 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:53:44 UTC&quot;,
-      &quot;id&quot;: 767575240,
-      &quot;name&quot;: &quot;foo&quot;,
-      &quot;value&quot;: &quot;new_value&quot;
-    }
-  ]
+  &quot;parameters&quot;: []
 }</pre>
 
   <h3>Parâmentros</h3>

@@ -31,7 +31,7 @@
   </li>
   <li class='active'>import_puppetclasses</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.de.html">de</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.it.html">it</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.fr.html">fr</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.ru.html">ru</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.ja.html">ja</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.es.html">es</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.ko.html">ko</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.ca.html">ca</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.gl.html">gl</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.en.html">en</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.nl_NL.html">nl_NL</a> | <b><a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.pl.html">pl</a></b> ]
+  &nbsp;[ <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.ko.html">ko</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.en.html">en</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.fr.html">fr</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.de.html">de</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.ja.html">ja</a> | <b><a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.pl.html">pl</a></b> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.it.html">it</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.ru.html">ru</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.es.html">es</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.ca.html">ca</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/smart_proxies/import_puppetclasses.gl.html">gl</a> ]
 </li>
 
 
@@ -66,40 +66,22 @@
 
 
   <h2>Przykłady</h2>
-    <pre class="prettyprint">POST /api/smart_proxies/182953976/import_puppetclasses
+    <pre class="prettyprint">POST /api/environments/env1/smart_proxies/182953976/import_puppetclasses
 {
   &quot;smart_proxy&quot;: {}
 }
 200
 {
   &quot;message&quot;: &quot;Successfully updated environment and puppetclasses from the on-disk puppet installation&quot;,
-  &quot;environments_with_new_puppetclasses&quot;: 0,
-  &quot;environments_updated_puppetclasses&quot;: 1,
-  &quot;environments_obsolete&quot;: 1,
-  &quot;environments_ignored&quot;: 1,
-  &quot;results&quot;: [
-    {
-      &quot;name&quot;: &quot;env1&quot;,
-      &quot;actions&quot;: [
-        &quot;ignored&quot;
-      ],
-      &quot;ignored_environment&quot;: &quot;env1&quot;
-    },
-    {
-      &quot;name&quot;: &quot;env2&quot;,
-      &quot;actions&quot;: [
-        &quot;updated&quot;,
-        &quot;obsolete&quot;
-      ],
-      &quot;updated_puppetclasses&quot;: [
-        &quot;a&quot;
-      ],
-      &quot;obsolete_puppetclasses&quot;: [
-        &quot;b&quot;,
-        &quot;c&quot;
-      ]
-    }
-  ]
+  &quot;results&quot;: {
+    &quot;name&quot;: &quot;env1&quot;,
+    &quot;actions&quot;: [
+      &quot;new&quot;
+    ],
+    &quot;new_puppetclasses&quot;: [
+      &quot;a&quot;
+    ]
+  }
 }</pre>
 
   <h2>Parametry</h2>

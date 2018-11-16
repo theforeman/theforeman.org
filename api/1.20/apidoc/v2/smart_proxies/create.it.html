@@ -31,7 +31,7 @@
   </li>
   <li class='active'>create</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/smart_proxies/create.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/smart_proxies/create.de.html">de</a> | <b><a href="../../../apidoc/v2/smart_proxies/create.it.html">it</a></b> | <a href="../../../apidoc/v2/smart_proxies/create.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/smart_proxies/create.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/smart_proxies/create.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/smart_proxies/create.fr.html">fr</a> | <a href="../../../apidoc/v2/smart_proxies/create.ru.html">ru</a> | <a href="../../../apidoc/v2/smart_proxies/create.ja.html">ja</a> | <a href="../../../apidoc/v2/smart_proxies/create.es.html">es</a> | <a href="../../../apidoc/v2/smart_proxies/create.ko.html">ko</a> | <a href="../../../apidoc/v2/smart_proxies/create.ca.html">ca</a> | <a href="../../../apidoc/v2/smart_proxies/create.gl.html">gl</a> | <a href="../../../apidoc/v2/smart_proxies/create.en.html">en</a> | <a href="../../../apidoc/v2/smart_proxies/create.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/smart_proxies/create.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/smart_proxies/create.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/smart_proxies/create.ko.html">ko</a> | <a href="../../../apidoc/v2/smart_proxies/create.en.html">en</a> | <a href="../../../apidoc/v2/smart_proxies/create.fr.html">fr</a> | <a href="../../../apidoc/v2/smart_proxies/create.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/smart_proxies/create.de.html">de</a> | <a href="../../../apidoc/v2/smart_proxies/create.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/smart_proxies/create.ja.html">ja</a> | <a href="../../../apidoc/v2/smart_proxies/create.pl.html">pl</a> | <a href="../../../apidoc/v2/smart_proxies/create.zh_CN.html">zh_CN</a> | <b><a href="../../../apidoc/v2/smart_proxies/create.it.html">it</a></b> | <a href="../../../apidoc/v2/smart_proxies/create.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/smart_proxies/create.ru.html">ru</a> | <a href="../../../apidoc/v2/smart_proxies/create.es.html">es</a> | <a href="../../../apidoc/v2/smart_proxies/create.ca.html">ca</a> | <a href="../../../apidoc/v2/smart_proxies/create.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/smart_proxies/create.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/smart_proxies/create.gl.html">gl</a> ]
 </li>
 
 
@@ -55,23 +55,57 @@
     <pre class="prettyprint">POST /api/smart_proxies
 {
   &quot;smart_proxy&quot;: {
-    &quot;name&quot;: &quot;&quot;,
+    &quot;name&quot;: &quot;master02&quot;,
     &quot;url&quot;: &quot;http://server:8443&quot;
   }
 }
-422
+201
 {
-  &quot;error&quot;: {
-    &quot;id&quot;: null,
-    &quot;errors&quot;: {
-      &quot;name&quot;: [
-        &quot;can&#39;t be blank&quot;
-      ]
+  &quot;created_at&quot;: &quot;2018-11-15 19:02:28 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:02:28 UTC&quot;,
+  &quot;name&quot;: &quot;master02&quot;,
+  &quot;id&quot;: 982965214,
+  &quot;url&quot;: &quot;http://server:8443&quot;,
+  &quot;features&quot;: [
+    {
+      &quot;name&quot;: &quot;DNS&quot;,
+      &quot;id&quot;: 49142851
     },
-    &quot;full_messages&quot;: [
-      &quot;Name can&#39;t be blank&quot;
-    ]
-  }
+    {
+      &quot;name&quot;: &quot;DHCP&quot;,
+      &quot;id&quot;: 219245707
+    },
+    {
+      &quot;name&quot;: &quot;TFTP&quot;,
+      &quot;id&quot;: 303403661
+    },
+    {
+      &quot;name&quot;: &quot;Puppet CA&quot;,
+      &quot;id&quot;: 783807086
+    },
+    {
+      &quot;name&quot;: &quot;Logs&quot;,
+      &quot;id&quot;: 814728799
+    },
+    {
+      &quot;name&quot;: &quot;BMC&quot;,
+      &quot;id&quot;: 821748566
+    },
+    {
+      &quot;name&quot;: &quot;Chef Proxy&quot;,
+      &quot;id&quot;: 848995175
+    },
+    {
+      &quot;name&quot;: &quot;Realm&quot;,
+      &quot;id&quot;: 982965213
+    },
+    {
+      &quot;name&quot;: &quot;Puppet&quot;,
+      &quot;id&quot;: 1006510553
+    }
+  ],
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: []
 }</pre>
 
   <h2>Parametri</h2>

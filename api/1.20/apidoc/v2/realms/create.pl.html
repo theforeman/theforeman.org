@@ -31,7 +31,7 @@
   </li>
   <li class='active'>create</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/realms/create.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/realms/create.de.html">de</a> | <a href="../../../apidoc/v2/realms/create.it.html">it</a> | <a href="../../../apidoc/v2/realms/create.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/realms/create.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/realms/create.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/realms/create.fr.html">fr</a> | <a href="../../../apidoc/v2/realms/create.ru.html">ru</a> | <a href="../../../apidoc/v2/realms/create.ja.html">ja</a> | <a href="../../../apidoc/v2/realms/create.es.html">es</a> | <a href="../../../apidoc/v2/realms/create.ko.html">ko</a> | <a href="../../../apidoc/v2/realms/create.ca.html">ca</a> | <a href="../../../apidoc/v2/realms/create.gl.html">gl</a> | <a href="../../../apidoc/v2/realms/create.en.html">en</a> | <a href="../../../apidoc/v2/realms/create.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/realms/create.nl_NL.html">nl_NL</a> | <b><a href="../../../apidoc/v2/realms/create.pl.html">pl</a></b> ]
+  &nbsp;[ <a href="../../../apidoc/v2/realms/create.ko.html">ko</a> | <a href="../../../apidoc/v2/realms/create.en.html">en</a> | <a href="../../../apidoc/v2/realms/create.fr.html">fr</a> | <a href="../../../apidoc/v2/realms/create.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/realms/create.de.html">de</a> | <a href="../../../apidoc/v2/realms/create.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/realms/create.ja.html">ja</a> | <b><a href="../../../apidoc/v2/realms/create.pl.html">pl</a></b> | <a href="../../../apidoc/v2/realms/create.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/realms/create.it.html">it</a> | <a href="../../../apidoc/v2/realms/create.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/realms/create.ru.html">ru</a> | <a href="../../../apidoc/v2/realms/create.es.html">es</a> | <a href="../../../apidoc/v2/realms/create.ca.html">ca</a> | <a href="../../../apidoc/v2/realms/create.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/realms/create.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/realms/create.gl.html">gl</a> ]
 </li>
 
 
@@ -58,23 +58,26 @@
 {
   &quot;realm&quot;: {
     &quot;name&quot;: &quot;realm.net&quot;,
-    &quot;realm_proxy_id&quot;: 0,
+    &quot;realm_proxy_id&quot;: &quot;982965213-Realm Proxy&quot;,
     &quot;realm_type&quot;: &quot;FreeIPA&quot;
   }
 }
-422
+201
 {
-  &quot;error&quot;: {
-    &quot;id&quot;: null,
-    &quot;errors&quot;: {
-      &quot;realm_proxy_id&quot;: [
-        &quot;was not found&quot;
-      ]
-    },
-    &quot;full_messages&quot;: [
-      &quot;Realm proxy was not found&quot;
-    ]
-  }
+  &quot;name&quot;: &quot;realm.net&quot;,
+  &quot;realm_type&quot;: &quot;FreeIPA&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:57 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:57 UTC&quot;,
+  &quot;id&quot;: 936160440,
+  &quot;realm_proxy_id&quot;: 982965213,
+  &quot;realm_proxy_name&quot;: &quot;Realm Proxy&quot;,
+  &quot;realm_proxy&quot;: {
+    &quot;name&quot;: &quot;Realm Proxy&quot;,
+    &quot;id&quot;: 982965213,
+    &quot;url&quot;: &quot;http://else.where:1337&quot;
+  },
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: []
 }</pre>
 
   <h2>Parametry</h2>
