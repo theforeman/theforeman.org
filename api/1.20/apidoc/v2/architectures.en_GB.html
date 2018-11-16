@@ -27,7 +27,7 @@
     
   </li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../apidoc/v2/architectures.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/architectures.de.html">de</a> | <a href="../../apidoc/v2/architectures.it.html">it</a> | <a href="../../apidoc/v2/architectures.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/architectures.zh_CN.html">zh_CN</a> | <b><a href="../../apidoc/v2/architectures.en_GB.html">en_GB</a></b> | <a href="../../apidoc/v2/architectures.fr.html">fr</a> | <a href="../../apidoc/v2/architectures.ru.html">ru</a> | <a href="../../apidoc/v2/architectures.ja.html">ja</a> | <a href="../../apidoc/v2/architectures.es.html">es</a> | <a href="../../apidoc/v2/architectures.ko.html">ko</a> | <a href="../../apidoc/v2/architectures.ca.html">ca</a> | <a href="../../apidoc/v2/architectures.gl.html">gl</a> | <a href="../../apidoc/v2/architectures.en.html">en</a> | <a href="../../apidoc/v2/architectures.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/architectures.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/architectures.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../apidoc/v2/architectures.ko.html">ko</a> | <a href="../../apidoc/v2/architectures.en.html">en</a> | <a href="../../apidoc/v2/architectures.fr.html">fr</a> | <b><a href="../../apidoc/v2/architectures.en_GB.html">en_GB</a></b> | <a href="../../apidoc/v2/architectures.de.html">de</a> | <a href="../../apidoc/v2/architectures.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/architectures.ja.html">ja</a> | <a href="../../apidoc/v2/architectures.pl.html">pl</a> | <a href="../../apidoc/v2/architectures.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/architectures.it.html">it</a> | <a href="../../apidoc/v2/architectures.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/architectures.ru.html">ru</a> | <a href="../../apidoc/v2/architectures.es.html">es</a> | <a href="../../apidoc/v2/architectures.ca.html">ca</a> | <a href="../../apidoc/v2/architectures.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/architectures.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/architectures.gl.html">gl</a> ]
 </li>
 
 </ul>
@@ -95,22 +95,22 @@
   },
   &quot;results&quot;: [
     {
-      &quot;created_at&quot;: &quot;2018-11-01 13:43:44 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:43:44 UTC&quot;,
-      &quot;name&quot;: &quot;x86_64&quot;,
-      &quot;id&quot;: 501905019
-    },
-    {
-      &quot;created_at&quot;: &quot;2018-11-01 13:43:44 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:43:44 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
       &quot;name&quot;: &quot;sparc&quot;,
       &quot;id&quot;: 331892513
     },
     {
-      &quot;created_at&quot;: &quot;2018-11-01 13:43:44 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:43:44 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
       &quot;name&quot;: &quot;s390&quot;,
       &quot;id&quot;: 381564594
+    },
+    {
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;name&quot;: &quot;x86_64&quot;,
+      &quot;id&quot;: 501905019
     }
   ]
 }</pre>
@@ -347,16 +347,11 @@
     <pre class="prettyprint">GET /api/architectures/501905019-x86_64
 200
 {
-  &quot;created_at&quot;: &quot;2018-11-01 13:43:44 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:43:44 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
   &quot;name&quot;: &quot;x86_64&quot;,
   &quot;id&quot;: 501905019,
   &quot;operatingsystems&quot;: [
-    {
-      &quot;id&quot;: 309172073,
-      &quot;name&quot;: &quot;centos&quot;,
-      &quot;title&quot;: &quot;centos 5.3&quot;
-    },
     {
       &quot;id&quot;: 750842046,
       &quot;name&quot;: &quot;OpenSuse&quot;,
@@ -376,16 +371,21 @@
       &quot;id&quot;: 272342666,
       &quot;name&quot;: &quot;Ubuntu&quot;,
       &quot;title&quot;: &quot;Ubuntu 12.10&quot;
+    },
+    {
+      &quot;id&quot;: 309172073,
+      &quot;name&quot;: &quot;centos&quot;,
+      &quot;title&quot;: &quot;centos 5.3&quot;
     }
   ],
   &quot;images&quot;: [
     {
-      &quot;id&quot;: 980190962,
-      &quot;name&quot;: &quot;centos-1&quot;
-    },
-    {
       &quot;id&quot;: 298486374,
       &quot;name&quot;: &quot;centos-2&quot;
+    },
+    {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;centos-1&quot;
     }
   ]
 }</pre>
@@ -687,16 +687,11 @@
 }
 200
 {
-  &quot;created_at&quot;: &quot;2018-11-01 13:43:44 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:43:58 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:29 UTC&quot;,
   &quot;name&quot;: &quot;newx86_64&quot;,
   &quot;id&quot;: 501905019,
   &quot;operatingsystems&quot;: [
-    {
-      &quot;id&quot;: 309172073,
-      &quot;name&quot;: &quot;centos&quot;,
-      &quot;title&quot;: &quot;centos 5.3&quot;
-    },
     {
       &quot;id&quot;: 750842046,
       &quot;name&quot;: &quot;OpenSuse&quot;,
@@ -716,16 +711,21 @@
       &quot;id&quot;: 272342666,
       &quot;name&quot;: &quot;Ubuntu&quot;,
       &quot;title&quot;: &quot;Ubuntu 12.10&quot;
+    },
+    {
+      &quot;id&quot;: 309172073,
+      &quot;name&quot;: &quot;centos&quot;,
+      &quot;title&quot;: &quot;centos 5.3&quot;
     }
   ],
   &quot;images&quot;: [
     {
-      &quot;id&quot;: 980190962,
-      &quot;name&quot;: &quot;centos-1&quot;
-    },
-    {
       &quot;id&quot;: 298486374,
       &quot;name&quot;: &quot;centos-2&quot;
+    },
+    {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;centos-1&quot;
     }
   ]
 }</pre>
@@ -919,15 +919,15 @@
     &quot;id&quot;: 501905019,
     &quot;errors&quot;: {
       &quot;base&quot;: [
-        &quot;x86_64 is used by Common&quot;,
+        &quot;x86_64 is used by Parent&quot;,
         &quot;x86_64 is used by db&quot;,
-        &quot;x86_64 is used by Parent&quot;
+        &quot;x86_64 is used by Common&quot;
       ]
     },
     &quot;full_messages&quot;: [
-      &quot;x86_64 is used by Common&quot;,
+      &quot;x86_64 is used by Parent&quot;,
       &quot;x86_64 is used by db&quot;,
-      &quot;x86_64 is used by Parent&quot;
+      &quot;x86_64 is used by Common&quot;
     ]
   }
 }</pre>

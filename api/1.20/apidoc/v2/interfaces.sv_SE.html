@@ -27,7 +27,7 @@
     
   </li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../apidoc/v2/interfaces.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/interfaces.de.html">de</a> | <a href="../../apidoc/v2/interfaces.it.html">it</a> | <b><a href="../../apidoc/v2/interfaces.sv_SE.html">sv_SE</a></b> | <a href="../../apidoc/v2/interfaces.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/interfaces.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/interfaces.fr.html">fr</a> | <a href="../../apidoc/v2/interfaces.ru.html">ru</a> | <a href="../../apidoc/v2/interfaces.ja.html">ja</a> | <a href="../../apidoc/v2/interfaces.es.html">es</a> | <a href="../../apidoc/v2/interfaces.ko.html">ko</a> | <a href="../../apidoc/v2/interfaces.ca.html">ca</a> | <a href="../../apidoc/v2/interfaces.gl.html">gl</a> | <a href="../../apidoc/v2/interfaces.en.html">en</a> | <a href="../../apidoc/v2/interfaces.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/interfaces.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/interfaces.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../apidoc/v2/interfaces.ko.html">ko</a> | <a href="../../apidoc/v2/interfaces.en.html">en</a> | <a href="../../apidoc/v2/interfaces.fr.html">fr</a> | <a href="../../apidoc/v2/interfaces.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/interfaces.de.html">de</a> | <b><a href="../../apidoc/v2/interfaces.sv_SE.html">sv_SE</a></b> | <a href="../../apidoc/v2/interfaces.ja.html">ja</a> | <a href="../../apidoc/v2/interfaces.pl.html">pl</a> | <a href="../../apidoc/v2/interfaces.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/interfaces.it.html">it</a> | <a href="../../apidoc/v2/interfaces.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/interfaces.ru.html">ru</a> | <a href="../../apidoc/v2/interfaces.es.html">es</a> | <a href="../../apidoc/v2/interfaces.ca.html">ca</a> | <a href="../../apidoc/v2/interfaces.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/interfaces.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/interfaces.gl.html">gl</a> ]
 </li>
 
 </ul>
@@ -91,12 +91,92 @@
 
 
   <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.examples">Examples</span></h3>
-    <pre class="prettyprint">GET /api/hosts/host196/interfaces
-404
+    <pre class="prettyprint">GET /api/hosts/host222/interfaces
+200
 {
-  &quot;error&quot;: {
-    &quot;message&quot;: &quot;Resource interface not found by id &#39;&#39;&quot;
-  }
+  &quot;total&quot;: 3,
+  &quot;subtotal&quot;: 3,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;created_at&quot;: &quot;2018-11-15 19:02:12 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:02:12 UTC&quot;,
+      &quot;managed&quot;: true,
+      &quot;identifier&quot;: null,
+      &quot;id&quot;: 1,
+      &quot;name&quot;: &quot;host222&quot;,
+      &quot;ip&quot;: null,
+      &quot;ip6&quot;: null,
+      &quot;mac&quot;: null,
+      &quot;mtu&quot;: null,
+      &quot;fqdn&quot;: &quot;host222&quot;,
+      &quot;primary&quot;: true,
+      &quot;provision&quot;: true,
+      &quot;type&quot;: &quot;interface&quot;,
+      &quot;virtual&quot;: false
+    },
+    {
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;created_at&quot;: &quot;2018-11-15 19:02:12 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:02:12 UTC&quot;,
+      &quot;managed&quot;: true,
+      &quot;identifier&quot;: &quot;eth37&quot;,
+      &quot;id&quot;: 2,
+      &quot;name&quot;: null,
+      &quot;ip&quot;: &quot;0.0.0.27&quot;,
+      &quot;ip6&quot;: null,
+      &quot;mac&quot;: &quot;00:33:45:ab:00:1b&quot;,
+      &quot;mtu&quot;: null,
+      &quot;fqdn&quot;: null,
+      &quot;primary&quot;: false,
+      &quot;provision&quot;: false,
+      &quot;type&quot;: &quot;interface&quot;,
+      &quot;virtual&quot;: false
+    },
+    {
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;created_at&quot;: &quot;2018-11-15 19:02:12 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:02:12 UTC&quot;,
+      &quot;managed&quot;: true,
+      &quot;identifier&quot;: &quot;eth38&quot;,
+      &quot;id&quot;: 3,
+      &quot;name&quot;: null,
+      &quot;ip&quot;: &quot;0.0.0.28&quot;,
+      &quot;ip6&quot;: null,
+      &quot;mac&quot;: &quot;00:33:45:ab:00:1c&quot;,
+      &quot;mtu&quot;: null,
+      &quot;fqdn&quot;: null,
+      &quot;primary&quot;: false,
+      &quot;provision&quot;: false,
+      &quot;type&quot;: &quot;bond&quot;,
+      &quot;mode&quot;: &quot;balance-rr&quot;,
+      &quot;attached_devices&quot;: &quot;&quot;,
+      &quot;bond_options&quot;: &quot;&quot;,
+      &quot;virtual&quot;: true
+    }
+  ]
 }</pre>
 
   <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h3>
@@ -308,7 +388,7 @@
 
 
   <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.examples">Examples</span></h3>
-    <pre class="prettyprint">GET /api/hosts/host1640/interfaces/36
+    <pre class="prettyprint">GET /api/hosts/host220/interfaces/2
 200
 {
   &quot;subnet_id&quot;: null,
@@ -317,15 +397,15 @@
   &quot;subnet6_name&quot;: null,
   &quot;domain_id&quot;: null,
   &quot;domain_name&quot;: null,
-  &quot;created_at&quot;: &quot;2018-11-01 13:32:46 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:32:46 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:02:11 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:02:11 UTC&quot;,
   &quot;managed&quot;: true,
-  &quot;identifier&quot;: &quot;eth606&quot;,
-  &quot;id&quot;: 36,
+  &quot;identifier&quot;: &quot;eth33&quot;,
+  &quot;id&quot;: 2,
   &quot;name&quot;: null,
-  &quot;ip&quot;: &quot;0.0.0.161&quot;,
+  &quot;ip&quot;: &quot;0.0.0.23&quot;,
   &quot;ip6&quot;: null,
-  &quot;mac&quot;: &quot;00:33:45:ab:00:ca&quot;,
+  &quot;mac&quot;: &quot;00:33:45:ab:00:17&quot;,
   &quot;mtu&quot;: null,
   &quot;fqdn&quot;: null,
   &quot;primary&quot;: false,
@@ -471,7 +551,7 @@
 
 
   <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.examples">Examples</span></h3>
-    <pre class="prettyprint">POST /api/hosts/host1643/interfaces
+    <pre class="prettyprint">POST /api/hosts/host213/interfaces
 {
   &quot;interface&quot;: {
     &quot;name&quot;: &quot;test.foreman.com&quot;,
@@ -480,7 +560,7 @@
     &quot;username&quot;: &quot;foo&quot;,
     &quot;password&quot;: &quot;bar&quot;,
     &quot;provider&quot;: &quot;IPMI&quot;,
-    &quot;type&quot;: &quot;bmc&quot;,
+    &quot;type&quot;: &quot;Nic::BMC&quot;,
     &quot;ip6&quot;: &quot;2001:db8::1&quot;
   }
 }
@@ -492,11 +572,11 @@
   &quot;subnet6_name&quot;: null,
   &quot;domain_id&quot;: null,
   &quot;domain_name&quot;: null,
-  &quot;created_at&quot;: &quot;2018-11-01 13:32:46 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:32:46 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:02:11 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:02:11 UTC&quot;,
   &quot;managed&quot;: true,
   &quot;identifier&quot;: null,
-  &quot;id&quot;: 47,
+  &quot;id&quot;: 4,
   &quot;name&quot;: &quot;test.foreman.com&quot;,
   &quot;ip&quot;: &quot;10.0.1.1&quot;,
   &quot;ip6&quot;: &quot;2001:db8::1&quot;,
@@ -1201,35 +1281,32 @@
 
 
   <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.examples">Examples</span></h3>
-    <pre class="prettyprint">PUT /api/hosts/host1636/interfaces/24
+    <pre class="prettyprint">POST /api/hosts/host210/interfaces/3
 {
   &quot;interface&quot;: {
-    &quot;name&quot;: &quot;bqclgxbanc&quot;
+    &quot;name&quot;: &quot;test.foreman.com&quot;,
+    &quot;ip&quot;: &quot;10.0.1.1&quot;,
+    &quot;mac&quot;: &quot;AA:AA:AA:AA:AA:AA&quot;,
+    &quot;username&quot;: &quot;foo&quot;,
+    &quot;password&quot;: &quot;bar&quot;,
+    &quot;provider&quot;: &quot;IPMI&quot;,
+    &quot;type&quot;: null,
+    &quot;ip6&quot;: &quot;2001:db8::1&quot;
   }
 }
-200
+422
 {
-  &quot;subnet_id&quot;: null,
-  &quot;subnet_name&quot;: null,
-  &quot;subnet6_id&quot;: null,
-  &quot;subnet6_name&quot;: null,
-  &quot;domain_id&quot;: null,
-  &quot;domain_name&quot;: null,
-  &quot;created_at&quot;: &quot;2018-11-01 13:32:46 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:32:46 UTC&quot;,
-  &quot;managed&quot;: true,
-  &quot;identifier&quot;: &quot;eth598&quot;,
-  &quot;id&quot;: 24,
-  &quot;name&quot;: &quot;bqclgxbanc&quot;,
-  &quot;ip&quot;: &quot;0.0.0.153&quot;,
-  &quot;ip6&quot;: null,
-  &quot;mac&quot;: &quot;00:33:45:ab:00:c2&quot;,
-  &quot;mtu&quot;: null,
-  &quot;fqdn&quot;: &quot;bqclgxbanc&quot;,
-  &quot;primary&quot;: false,
-  &quot;provision&quot;: false,
-  &quot;type&quot;: &quot;interface&quot;,
-  &quot;virtual&quot;: false
+  &quot;error&quot;: {
+    &quot;id&quot;: 3,
+    &quot;errors&quot;: {
+      &quot;type&quot;: [
+        &quot;can&#39;t be changed once the interface is saved&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Type can&#39;t be changed once the interface is saved&quot;
+    ]
+  }
 }</pre>
 
   <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h3>
@@ -1945,28 +2022,28 @@
 
 
   <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.examples">Examples</span></h3>
-    <pre class="prettyprint">DELETE /api/hosts/host1641/interfaces/39
+    <pre class="prettyprint">DELETE /api/hosts/host212/interfaces/2
 {
   &quot;interface&quot;: {}
 }
 200
 {
-  &quot;id&quot;: 39,
-  &quot;mac&quot;: &quot;00:33:45:ab:00:cc&quot;,
-  &quot;ip&quot;: &quot;0.0.0.163&quot;,
+  &quot;id&quot;: 2,
+  &quot;mac&quot;: &quot;00:33:45:ab:00:07&quot;,
+  &quot;ip&quot;: &quot;0.0.0.7&quot;,
   &quot;name&quot;: null,
-  &quot;host_id&quot;: 20,
+  &quot;host_id&quot;: 1,
   &quot;subnet_id&quot;: null,
   &quot;domain_id&quot;: null,
   &quot;attrs&quot;: {},
-  &quot;created_at&quot;: &quot;2018-11-01T13:32:46.654Z&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01T13:32:46.654Z&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15T19:02:11.332Z&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15T19:02:11.332Z&quot;,
   &quot;provider&quot;: null,
   &quot;username&quot;: null,
   &quot;password&quot;: null,
   &quot;virtual&quot;: false,
   &quot;link&quot;: true,
-  &quot;identifier&quot;: &quot;eth608&quot;,
+  &quot;identifier&quot;: &quot;eth17&quot;,
   &quot;tag&quot;: &quot;&quot;,
   &quot;attached_to&quot;: &quot;&quot;,
   &quot;managed&quot;: true,
@@ -1977,8 +2054,7 @@
   &quot;provision&quot;: false,
   &quot;compute_attributes&quot;: {},
   &quot;ip6&quot;: null,
-  &quot;subnet6_id&quot;: null,
-  &quot;execution&quot;: false
+  &quot;subnet6_id&quot;: null
 }</pre>
 
   <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h3>

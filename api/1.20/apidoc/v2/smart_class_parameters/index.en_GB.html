@@ -31,7 +31,7 @@
   </li>
   <li class='active'>index</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/smart_class_parameters/index.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/smart_class_parameters/index.de.html">de</a> | <a href="../../../apidoc/v2/smart_class_parameters/index.it.html">it</a> | <a href="../../../apidoc/v2/smart_class_parameters/index.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/smart_class_parameters/index.zh_CN.html">zh_CN</a> | <b><a href="../../../apidoc/v2/smart_class_parameters/index.en_GB.html">en_GB</a></b> | <a href="../../../apidoc/v2/smart_class_parameters/index.fr.html">fr</a> | <a href="../../../apidoc/v2/smart_class_parameters/index.ru.html">ru</a> | <a href="../../../apidoc/v2/smart_class_parameters/index.ja.html">ja</a> | <a href="../../../apidoc/v2/smart_class_parameters/index.es.html">es</a> | <a href="../../../apidoc/v2/smart_class_parameters/index.ko.html">ko</a> | <a href="../../../apidoc/v2/smart_class_parameters/index.ca.html">ca</a> | <a href="../../../apidoc/v2/smart_class_parameters/index.gl.html">gl</a> | <a href="../../../apidoc/v2/smart_class_parameters/index.en.html">en</a> | <a href="../../../apidoc/v2/smart_class_parameters/index.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/smart_class_parameters/index.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/smart_class_parameters/index.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/smart_class_parameters/index.ko.html">ko</a> | <a href="../../../apidoc/v2/smart_class_parameters/index.en.html">en</a> | <a href="../../../apidoc/v2/smart_class_parameters/index.fr.html">fr</a> | <b><a href="../../../apidoc/v2/smart_class_parameters/index.en_GB.html">en_GB</a></b> | <a href="../../../apidoc/v2/smart_class_parameters/index.de.html">de</a> | <a href="../../../apidoc/v2/smart_class_parameters/index.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/smart_class_parameters/index.ja.html">ja</a> | <a href="../../../apidoc/v2/smart_class_parameters/index.pl.html">pl</a> | <a href="../../../apidoc/v2/smart_class_parameters/index.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/smart_class_parameters/index.it.html">it</a> | <a href="../../../apidoc/v2/smart_class_parameters/index.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/smart_class_parameters/index.ru.html">ru</a> | <a href="../../../apidoc/v2/smart_class_parameters/index.es.html">es</a> | <a href="../../../apidoc/v2/smart_class_parameters/index.ca.html">ca</a> | <a href="../../../apidoc/v2/smart_class_parameters/index.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/smart_class_parameters/index.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/smart_class_parameters/index.gl.html">gl</a> ]
 </li>
 
 
@@ -87,11 +87,11 @@
 
 
   <h2>Examples</h2>
-    <pre class="prettyprint">GET /api/smart_class_parameters
+    <pre class="prettyprint">GET /api/puppetclasses/980190962/smart_class_parameters
 200
 {
-  &quot;total&quot;: 4,
-  &quot;subtotal&quot;: 4,
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
   &quot;page&quot;: 1,
   &quot;per_page&quot;: 20,
   &quot;search&quot;: null,
@@ -113,8 +113,8 @@
       &quot;merge_default&quot;: false,
       &quot;avoid_duplicates&quot;: false,
       &quot;override_value_order&quot;: &quot;fqdn\norganization,location\nhostgroup\nos&quot;,
-      &quot;created_at&quot;: &quot;2018-11-01 13:15:57 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:15:57 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
       &quot;use_puppet_default&quot;: null,
       &quot;puppetclass_name&quot;: &quot;base&quot;,
       &quot;parameter&quot;: &quot;cluster&quot;,
@@ -122,75 +122,6 @@
       &quot;puppetclass_id&quot;: 980190962,
       &quot;override_values_count&quot;: 2,
       &quot;default_value&quot;: &quot;secret&quot;
-    },
-    {
-      &quot;description&quot;: null,
-      &quot;override&quot;: true,
-      &quot;parameter_type&quot;: &quot;string&quot;,
-      &quot;hidden_value?&quot;: false,
-      &quot;omit&quot;: null,
-      &quot;required&quot;: false,
-      &quot;validator_type&quot;: null,
-      &quot;validator_rule&quot;: null,
-      &quot;merge_overrides&quot;: false,
-      &quot;merge_default&quot;: false,
-      &quot;avoid_duplicates&quot;: false,
-      &quot;override_value_order&quot;: &quot;fqdn\norganization,location\nhostgroup&quot;,
-      &quot;created_at&quot;: &quot;2018-11-01 13:15:57 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:15:57 UTC&quot;,
-      &quot;use_puppet_default&quot;: null,
-      &quot;puppetclass_name&quot;: &quot;apache&quot;,
-      &quot;parameter&quot;: &quot;custom_class_param&quot;,
-      &quot;id&quot;: 1018350795,
-      &quot;puppetclass_id&quot;: 298486374,
-      &quot;override_values_count&quot;: 0,
-      &quot;default_value&quot;: &quot;abcdef&quot;
-    },
-    {
-      &quot;description&quot;: null,
-      &quot;override&quot;: false,
-      &quot;parameter_type&quot;: &quot;integer&quot;,
-      &quot;hidden_value?&quot;: false,
-      &quot;omit&quot;: null,
-      &quot;required&quot;: false,
-      &quot;validator_type&quot;: null,
-      &quot;validator_rule&quot;: null,
-      &quot;merge_overrides&quot;: false,
-      &quot;merge_default&quot;: false,
-      &quot;avoid_duplicates&quot;: false,
-      &quot;override_value_order&quot;: &quot;hostgroup\ncomment\nfqdn&quot;,
-      &quot;created_at&quot;: &quot;2018-11-01 13:15:57 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:15:57 UTC&quot;,
-      &quot;use_puppet_default&quot;: null,
-      &quot;puppetclass_name&quot;: &quot;git&quot;,
-      &quot;parameter&quot;: &quot;port&quot;,
-      &quot;id&quot;: 980190962,
-      &quot;puppetclass_id&quot;: 113629430,
-      &quot;override_values_count&quot;: 3,
-      &quot;default_value&quot;: &quot;80&quot;
-    },
-    {
-      &quot;description&quot;: null,
-      &quot;override&quot;: true,
-      &quot;parameter_type&quot;: &quot;boolean&quot;,
-      &quot;hidden_value?&quot;: false,
-      &quot;omit&quot;: null,
-      &quot;required&quot;: false,
-      &quot;validator_type&quot;: null,
-      &quot;validator_rule&quot;: null,
-      &quot;merge_overrides&quot;: false,
-      &quot;merge_default&quot;: false,
-      &quot;avoid_duplicates&quot;: false,
-      &quot;override_value_order&quot;: &quot;fqdn\nhostgroup\nhostgroup,domain\nos&quot;,
-      &quot;created_at&quot;: &quot;2018-11-01 13:15:57 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:15:57 UTC&quot;,
-      &quot;use_puppet_default&quot;: null,
-      &quot;puppetclass_name&quot;: &quot;git&quot;,
-      &quot;parameter&quot;: &quot;ssl&quot;,
-      &quot;id&quot;: 113629430,
-      &quot;puppetclass_id&quot;: 113629430,
-      &quot;override_values_count&quot;: 0,
-      &quot;default_value&quot;: &quot;t&quot;
     }
   ]
 }</pre>

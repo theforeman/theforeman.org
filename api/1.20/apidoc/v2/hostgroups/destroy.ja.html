@@ -31,7 +31,7 @@
   </li>
   <li class='active'>destroy</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/hostgroups/destroy.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/hostgroups/destroy.de.html">de</a> | <a href="../../../apidoc/v2/hostgroups/destroy.it.html">it</a> | <a href="../../../apidoc/v2/hostgroups/destroy.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/hostgroups/destroy.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/hostgroups/destroy.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/hostgroups/destroy.fr.html">fr</a> | <a href="../../../apidoc/v2/hostgroups/destroy.ru.html">ru</a> | <b><a href="../../../apidoc/v2/hostgroups/destroy.ja.html">ja</a></b> | <a href="../../../apidoc/v2/hostgroups/destroy.es.html">es</a> | <a href="../../../apidoc/v2/hostgroups/destroy.ko.html">ko</a> | <a href="../../../apidoc/v2/hostgroups/destroy.ca.html">ca</a> | <a href="../../../apidoc/v2/hostgroups/destroy.gl.html">gl</a> | <a href="../../../apidoc/v2/hostgroups/destroy.en.html">en</a> | <a href="../../../apidoc/v2/hostgroups/destroy.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/hostgroups/destroy.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/hostgroups/destroy.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/hostgroups/destroy.ko.html">ko</a> | <a href="../../../apidoc/v2/hostgroups/destroy.en.html">en</a> | <a href="../../../apidoc/v2/hostgroups/destroy.fr.html">fr</a> | <a href="../../../apidoc/v2/hostgroups/destroy.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/hostgroups/destroy.de.html">de</a> | <a href="../../../apidoc/v2/hostgroups/destroy.sv_SE.html">sv_SE</a> | <b><a href="../../../apidoc/v2/hostgroups/destroy.ja.html">ja</a></b> | <a href="../../../apidoc/v2/hostgroups/destroy.pl.html">pl</a> | <a href="../../../apidoc/v2/hostgroups/destroy.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/hostgroups/destroy.it.html">it</a> | <a href="../../../apidoc/v2/hostgroups/destroy.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/hostgroups/destroy.ru.html">ru</a> | <a href="../../../apidoc/v2/hostgroups/destroy.es.html">es</a> | <a href="../../../apidoc/v2/hostgroups/destroy.ca.html">ca</a> | <a href="../../../apidoc/v2/hostgroups/destroy.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/hostgroups/destroy.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/hostgroups/destroy.gl.html">gl</a> ]
 </li>
 
 
@@ -52,39 +52,13 @@
 
 
   <h2>例</h2>
-    <pre class="prettyprint">DELETE /api/hostgroups/866317115-Unusual
+    <pre class="prettyprint">DELETE /api/hostgroups/1-Parent
 {
   &quot;hostgroup&quot;: {}
 }
-200
+409
 {
-  &quot;id&quot;: 866317115,
-  &quot;name&quot;: &quot;Unusual&quot;,
-  &quot;created_at&quot;: &quot;2018-11-01T13:45:02.980Z&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01T13:45:02.980Z&quot;,
-  &quot;environment_id&quot;: null,
-  &quot;operatingsystem_id&quot;: null,
-  &quot;architecture_id&quot;: null,
-  &quot;medium_id&quot;: null,
-  &quot;ptable_id&quot;: null,
-  &quot;root_pass&quot;: null,
-  &quot;puppet_ca_proxy_id&quot;: null,
-  &quot;use_image&quot;: null,
-  &quot;image_file&quot;: &quot;&quot;,
-  &quot;ancestry&quot;: null,
-  &quot;vm_defaults&quot;: null,
-  &quot;subnet_id&quot;: null,
-  &quot;domain_id&quot;: null,
-  &quot;puppet_proxy_id&quot;: 182953976,
-  &quot;title&quot;: &quot;Unusual&quot;,
-  &quot;realm_id&quot;: null,
-  &quot;compute_profile_id&quot;: null,
-  &quot;grub_pass&quot;: &quot;&quot;,
-  &quot;lookup_value_matcher&quot;: &quot;hostgroup=Unusual&quot;,
-  &quot;subnet6_id&quot;: null,
-  &quot;pxe_loader&quot;: null,
-  &quot;description&quot;: null,
-  &quot;compute_resource_id&quot;: null
+  &quot;message&quot;: &quot;Cannot delete group Parent because it has nested host groups.&quot;
 }</pre>
 
   <h2>パラメーター</h2>

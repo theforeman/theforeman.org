@@ -31,7 +31,7 @@
   </li>
   <li class='active'>create</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/environments/create.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/environments/create.de.html">de</a> | <a href="../../../apidoc/v2/environments/create.it.html">it</a> | <a href="../../../apidoc/v2/environments/create.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/environments/create.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/environments/create.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/environments/create.fr.html">fr</a> | <a href="../../../apidoc/v2/environments/create.ru.html">ru</a> | <a href="../../../apidoc/v2/environments/create.ja.html">ja</a> | <a href="../../../apidoc/v2/environments/create.es.html">es</a> | <a href="../../../apidoc/v2/environments/create.ko.html">ko</a> | <a href="../../../apidoc/v2/environments/create.ca.html">ca</a> | <a href="../../../apidoc/v2/environments/create.gl.html">gl</a> | <a href="../../../apidoc/v2/environments/create.en.html">en</a> | <a href="../../../apidoc/v2/environments/create.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/environments/create.nl_NL.html">nl_NL</a> | <b><a href="../../../apidoc/v2/environments/create.pl.html">pl</a></b> ]
+  &nbsp;[ <a href="../../../apidoc/v2/environments/create.ko.html">ko</a> | <a href="../../../apidoc/v2/environments/create.en.html">en</a> | <a href="../../../apidoc/v2/environments/create.fr.html">fr</a> | <a href="../../../apidoc/v2/environments/create.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/environments/create.de.html">de</a> | <a href="../../../apidoc/v2/environments/create.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/environments/create.ja.html">ja</a> | <b><a href="../../../apidoc/v2/environments/create.pl.html">pl</a></b> | <a href="../../../apidoc/v2/environments/create.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/environments/create.it.html">it</a> | <a href="../../../apidoc/v2/environments/create.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/environments/create.ru.html">ru</a> | <a href="../../../apidoc/v2/environments/create.es.html">es</a> | <a href="../../../apidoc/v2/environments/create.ca.html">ca</a> | <a href="../../../apidoc/v2/environments/create.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/environments/create.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/environments/create.gl.html">gl</a> ]
 </li>
 
 
@@ -55,18 +55,28 @@
     <pre class="prettyprint">POST /api/environments
 {
   &quot;environment&quot;: {
-    &quot;name&quot;: &quot;Development&quot;
+    &quot;name&quot;: &quot;some_environment&quot;,
+    &quot;location_ids&quot;: [
+      255093256
+    ]
   }
 }
 201
 {
-  &quot;created_at&quot;: &quot;2018-11-01 13:23:23 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:23:23 UTC&quot;,
-  &quot;name&quot;: &quot;Development&quot;,
-  &quot;id&quot;: 687036939,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:57 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:57 UTC&quot;,
+  &quot;name&quot;: &quot;some_environment&quot;,
+  &quot;id&quot;: 687036938,
   &quot;template_combinations&quot;: [],
   &quot;puppetclasses&quot;: [],
-  &quot;locations&quot;: [],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
   &quot;organizations&quot;: []
 }</pre>
 

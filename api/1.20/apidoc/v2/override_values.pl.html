@@ -27,7 +27,7 @@
     
   </li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../apidoc/v2/override_values.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/override_values.de.html">de</a> | <a href="../../apidoc/v2/override_values.it.html">it</a> | <a href="../../apidoc/v2/override_values.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/override_values.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/override_values.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/override_values.fr.html">fr</a> | <a href="../../apidoc/v2/override_values.ru.html">ru</a> | <a href="../../apidoc/v2/override_values.ja.html">ja</a> | <a href="../../apidoc/v2/override_values.es.html">es</a> | <a href="../../apidoc/v2/override_values.ko.html">ko</a> | <a href="../../apidoc/v2/override_values.ca.html">ca</a> | <a href="../../apidoc/v2/override_values.gl.html">gl</a> | <a href="../../apidoc/v2/override_values.en.html">en</a> | <a href="../../apidoc/v2/override_values.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/override_values.nl_NL.html">nl_NL</a> | <b><a href="../../apidoc/v2/override_values.pl.html">pl</a></b> ]
+  &nbsp;[ <a href="../../apidoc/v2/override_values.ko.html">ko</a> | <a href="../../apidoc/v2/override_values.en.html">en</a> | <a href="../../apidoc/v2/override_values.fr.html">fr</a> | <a href="../../apidoc/v2/override_values.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/override_values.de.html">de</a> | <a href="../../apidoc/v2/override_values.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/override_values.ja.html">ja</a> | <b><a href="../../apidoc/v2/override_values.pl.html">pl</a></b> | <a href="../../apidoc/v2/override_values.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/override_values.it.html">it</a> | <a href="../../apidoc/v2/override_values.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/override_values.ru.html">ru</a> | <a href="../../apidoc/v2/override_values.es.html">es</a> | <a href="../../apidoc/v2/override_values.ca.html">ca</a> | <a href="../../apidoc/v2/override_values.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/override_values.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/override_values.gl.html">gl</a> ]
 </li>
 
 </ul>
@@ -95,8 +95,8 @@
   },
   &quot;results&quot;: [
     {
-      &quot;created_at&quot;: &quot;2018-11-01 13:24:13 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:24:13 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
       &quot;id&quot;: 674471636,
       &quot;match&quot;: &quot;fqdn=temp.yourdomain.net&quot;,
       &quot;value&quot;: &quot;8080&quot;,
@@ -104,8 +104,8 @@
       &quot;use_puppet_default&quot;: false
     },
     {
-      &quot;created_at&quot;: &quot;2018-11-01 13:24:13 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:24:13 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
       &quot;id&quot;: 874520030,
       &quot;match&quot;: &quot;hostgroup=Common&quot;,
       &quot;value&quot;: &quot;8080&quot;,
@@ -330,14 +330,14 @@
 
 
   <h3>Przykłady</h3>
-    <pre class="prettyprint">GET /api/smart_class_parameters/1018350796-param27/override_values/os=fake
+    <pre class="prettyprint">GET /api/smart_class_parameters/328495940-cluster/override_values/hostgroup=Common
 200
 {
-  &quot;created_at&quot;: &quot;2018-11-01 13:15:35 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:15:35 UTC&quot;,
-  &quot;id&quot;: 1018350796,
-  &quot;match&quot;: &quot;os=fake&quot;,
-  &quot;value&quot;: &quot;*****&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+  &quot;id&quot;: 874520030,
+  &quot;match&quot;: &quot;hostgroup=Common&quot;,
+  &quot;value&quot;: &quot;8080&quot;,
   &quot;omit&quot;: false,
   &quot;use_puppet_default&quot;: false
 }</pre>
@@ -531,17 +531,17 @@
 
 
   <h3>Przykłady</h3>
-    <pre class="prettyprint">POST /api/smart_variables/1018350803/override_values
+    <pre class="prettyprint">POST /api/smart_variables/1018350796/override_values
 {
   &quot;override_value&quot;: {
     &quot;match&quot;: &quot;domain=example.com&quot;,
-    &quot;value&quot;: &quot;not_in_list&quot;
+    &quot;value&quot;: &quot;gdkWwYbkrO&quot;
   }
 }
 500
 {
   &quot;error&quot;: {
-    &quot;message&quot;: &quot;Validation failed: Value not_in_list is not one of test, example, 30&quot;
+    &quot;message&quot;: &quot;Validation failed: Value is invalid&quot;
   }
 }</pre>
 
@@ -814,8 +814,8 @@
 }
 200
 {
-  &quot;created_at&quot;: &quot;2018-11-01 13:24:13 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:24:16 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:02:37 UTC&quot;,
   &quot;id&quot;: 874520030,
   &quot;match&quot;: &quot;os=abc&quot;,
   &quot;value&quot;: &quot;8080&quot;,
@@ -1090,8 +1090,8 @@
 }
 200
 {
-  &quot;created_at&quot;: &quot;2018-11-01 13:24:13 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:24:13 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
   &quot;id&quot;: 874520030,
   &quot;match&quot;: &quot;hostgroup=Common&quot;,
   &quot;value&quot;: &quot;8080&quot;,

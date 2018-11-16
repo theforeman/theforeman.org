@@ -31,7 +31,7 @@
   </li>
   <li class='active'>update</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/hostgroups/update.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/hostgroups/update.de.html">de</a> | <a href="../../../apidoc/v2/hostgroups/update.it.html">it</a> | <a href="../../../apidoc/v2/hostgroups/update.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/hostgroups/update.zh_CN.html">zh_CN</a> | <b><a href="../../../apidoc/v2/hostgroups/update.en_GB.html">en_GB</a></b> | <a href="../../../apidoc/v2/hostgroups/update.fr.html">fr</a> | <a href="../../../apidoc/v2/hostgroups/update.ru.html">ru</a> | <a href="../../../apidoc/v2/hostgroups/update.ja.html">ja</a> | <a href="../../../apidoc/v2/hostgroups/update.es.html">es</a> | <a href="../../../apidoc/v2/hostgroups/update.ko.html">ko</a> | <a href="../../../apidoc/v2/hostgroups/update.ca.html">ca</a> | <a href="../../../apidoc/v2/hostgroups/update.gl.html">gl</a> | <a href="../../../apidoc/v2/hostgroups/update.en.html">en</a> | <a href="../../../apidoc/v2/hostgroups/update.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/hostgroups/update.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/hostgroups/update.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/hostgroups/update.ko.html">ko</a> | <a href="../../../apidoc/v2/hostgroups/update.en.html">en</a> | <a href="../../../apidoc/v2/hostgroups/update.fr.html">fr</a> | <b><a href="../../../apidoc/v2/hostgroups/update.en_GB.html">en_GB</a></b> | <a href="../../../apidoc/v2/hostgroups/update.de.html">de</a> | <a href="../../../apidoc/v2/hostgroups/update.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/hostgroups/update.ja.html">ja</a> | <a href="../../../apidoc/v2/hostgroups/update.pl.html">pl</a> | <a href="../../../apidoc/v2/hostgroups/update.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/hostgroups/update.it.html">it</a> | <a href="../../../apidoc/v2/hostgroups/update.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/hostgroups/update.ru.html">ru</a> | <a href="../../../apidoc/v2/hostgroups/update.es.html">es</a> | <a href="../../../apidoc/v2/hostgroups/update.ca.html">ca</a> | <a href="../../../apidoc/v2/hostgroups/update.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/hostgroups/update.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/hostgroups/update.gl.html">gl</a> ]
 </li>
 
 
@@ -52,25 +52,92 @@
 
 
   <h2>Examples</h2>
-    <pre class="prettyprint">PUT /api/hostgroups/636252244
+    <pre class="prettyprint">PUT /api/hostgroups/603241515-db
 {
   &quot;hostgroup&quot;: {
-    &quot;name&quot;: &quot;&quot;
+    &quot;parent_id&quot;: 636252244
   }
 }
-422
+200
 {
-  &quot;error&quot;: {
-    &quot;id&quot;: 636252244,
-    &quot;errors&quot;: {
-      &quot;name&quot;: [
-        &quot;can&#39;t be blank&quot;
-      ]
+  &quot;subnet_id&quot;: null,
+  &quot;subnet_name&quot;: null,
+  &quot;operatingsystem_id&quot;: 309172073,
+  &quot;operatingsystem_name&quot;: &quot;centos 5.3&quot;,
+  &quot;domain_id&quot;: null,
+  &quot;domain_name&quot;: &quot;mydomain.net&quot;,
+  &quot;environment_id&quot;: 334344675,
+  &quot;environment_name&quot;: &quot;production&quot;,
+  &quot;compute_profile_id&quot;: null,
+  &quot;compute_profile_name&quot;: &quot;1-Small&quot;,
+  &quot;ancestry&quot;: &quot;636252244&quot;,
+  &quot;parent_id&quot;: 636252244,
+  &quot;parent_name&quot;: &quot;Common&quot;,
+  &quot;ptable_id&quot;: null,
+  &quot;ptable_name&quot;: null,
+  &quot;medium_id&quot;: 980190962,
+  &quot;medium_name&quot;: &quot;CentOS 5.4&quot;,
+  &quot;pxe_loader&quot;: null,
+  &quot;subnet6_id&quot;: null,
+  &quot;subnet6_name&quot;: null,
+  &quot;architecture_id&quot;: 501905019,
+  &quot;architecture_name&quot;: &quot;x86_64&quot;,
+  &quot;realm_id&quot;: null,
+  &quot;realm_name&quot;: null,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:02:07 UTC&quot;,
+  &quot;id&quot;: 603241515,
+  &quot;name&quot;: &quot;db&quot;,
+  &quot;title&quot;: &quot;Common/db&quot;,
+  &quot;description&quot;: null,
+  &quot;puppet_proxy_id&quot;: 182953976,
+  &quot;puppet_proxy_name&quot;: &quot;Puppetmaster Proxy&quot;,
+  &quot;puppet_ca_proxy_id&quot;: 182953976,
+  &quot;puppet_ca_proxy_name&quot;: &quot;Puppetmaster Proxy&quot;,
+  &quot;puppet_proxy&quot;: {
+    &quot;name&quot;: &quot;Puppetmaster Proxy&quot;,
+    &quot;id&quot;: 182953976,
+    &quot;url&quot;: &quot;http://else.where:4567&quot;
+  },
+  &quot;puppet_ca_proxy&quot;: {
+    &quot;name&quot;: &quot;Puppetmaster Proxy&quot;,
+    &quot;id&quot;: 182953976,
+    &quot;url&quot;: &quot;http://else.where:4567&quot;
+  },
+  &quot;parameters&quot;: [],
+  &quot;template_combinations&quot;: [],
+  &quot;puppetclasses&quot;: [
+    {
+      &quot;id&quot;: 281110143,
+      &quot;name&quot;: &quot;vim&quot;,
+      &quot;module_name&quot;: &quot;vim&quot;
+    }
+  ],
+  &quot;config_groups&quot;: [],
+  &quot;all_puppetclasses&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;base&quot;,
+      &quot;module_name&quot;: &quot;base&quot;
     },
-    &quot;full_messages&quot;: [
-      &quot;Name can&#39;t be blank&quot;
-    ]
-  }
+    {
+      &quot;id&quot;: 51848956,
+      &quot;name&quot;: &quot;chkmk&quot;,
+      &quot;module_name&quot;: &quot;chkmk&quot;
+    },
+    {
+      &quot;id&quot;: 1018350795,
+      &quot;name&quot;: &quot;nagios&quot;,
+      &quot;module_name&quot;: &quot;nagios&quot;
+    },
+    {
+      &quot;id&quot;: 281110143,
+      &quot;name&quot;: &quot;vim&quot;,
+      &quot;module_name&quot;: &quot;vim&quot;
+    }
+  ],
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: []
 }</pre>
 
   <h2>Params</h2>

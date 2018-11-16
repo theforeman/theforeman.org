@@ -31,7 +31,7 @@
   </li>
   <li class='active'>destroy</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/roles/destroy.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/roles/destroy.de.html">de</a> | <b><a href="../../../apidoc/v2/roles/destroy.it.html">it</a></b> | <a href="../../../apidoc/v2/roles/destroy.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/roles/destroy.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/roles/destroy.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/roles/destroy.fr.html">fr</a> | <a href="../../../apidoc/v2/roles/destroy.ru.html">ru</a> | <a href="../../../apidoc/v2/roles/destroy.ja.html">ja</a> | <a href="../../../apidoc/v2/roles/destroy.es.html">es</a> | <a href="../../../apidoc/v2/roles/destroy.ko.html">ko</a> | <a href="../../../apidoc/v2/roles/destroy.ca.html">ca</a> | <a href="../../../apidoc/v2/roles/destroy.gl.html">gl</a> | <a href="../../../apidoc/v2/roles/destroy.en.html">en</a> | <a href="../../../apidoc/v2/roles/destroy.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/roles/destroy.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/roles/destroy.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/roles/destroy.ko.html">ko</a> | <a href="../../../apidoc/v2/roles/destroy.en.html">en</a> | <a href="../../../apidoc/v2/roles/destroy.fr.html">fr</a> | <a href="../../../apidoc/v2/roles/destroy.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/roles/destroy.de.html">de</a> | <a href="../../../apidoc/v2/roles/destroy.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/roles/destroy.ja.html">ja</a> | <a href="../../../apidoc/v2/roles/destroy.pl.html">pl</a> | <a href="../../../apidoc/v2/roles/destroy.zh_CN.html">zh_CN</a> | <b><a href="../../../apidoc/v2/roles/destroy.it.html">it</a></b> | <a href="../../../apidoc/v2/roles/destroy.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/roles/destroy.ru.html">ru</a> | <a href="../../../apidoc/v2/roles/destroy.es.html">es</a> | <a href="../../../apidoc/v2/roles/destroy.ca.html">ca</a> | <a href="../../../apidoc/v2/roles/destroy.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/roles/destroy.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/roles/destroy.gl.html">gl</a> ]
 </li>
 
 
@@ -52,18 +52,18 @@
 
 
   <h2>Esempi</h2>
-    <pre class="prettyprint">DELETE /api/roles/15
+    <pre class="prettyprint">DELETE /api/roles/13-Organization%20admin/clone
 {
   &quot;role&quot;: {}
 }
 200
 {
-  &quot;id&quot;: 15,
-  &quot;name&quot;: &quot;New Role&quot;,
+  &quot;id&quot;: 18,
+  &quot;name&quot;: &quot;Org Admin&quot;,
   &quot;builtin&quot;: 0,
   &quot;description&quot;: null,
   &quot;origin&quot;: null,
-  &quot;cloned_from_id&quot;: null
+  &quot;cloned_from_id&quot;: 13
 }</pre>
 
   <h2>Parametri</h2>

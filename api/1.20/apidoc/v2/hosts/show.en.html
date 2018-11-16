@@ -31,7 +31,7 @@
   </li>
   <li class='active'>show</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/hosts/show.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/hosts/show.de.html">de</a> | <a href="../../../apidoc/v2/hosts/show.it.html">it</a> | <a href="../../../apidoc/v2/hosts/show.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/hosts/show.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/hosts/show.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/hosts/show.fr.html">fr</a> | <a href="../../../apidoc/v2/hosts/show.ru.html">ru</a> | <a href="../../../apidoc/v2/hosts/show.ja.html">ja</a> | <a href="../../../apidoc/v2/hosts/show.es.html">es</a> | <a href="../../../apidoc/v2/hosts/show.ko.html">ko</a> | <a href="../../../apidoc/v2/hosts/show.ca.html">ca</a> | <a href="../../../apidoc/v2/hosts/show.gl.html">gl</a> | <b><a href="../../../apidoc/v2/hosts/show.en.html">en</a></b> | <a href="../../../apidoc/v2/hosts/show.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/hosts/show.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/hosts/show.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/hosts/show.ko.html">ko</a> | <b><a href="../../../apidoc/v2/hosts/show.en.html">en</a></b> | <a href="../../../apidoc/v2/hosts/show.fr.html">fr</a> | <a href="../../../apidoc/v2/hosts/show.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/hosts/show.de.html">de</a> | <a href="../../../apidoc/v2/hosts/show.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/hosts/show.ja.html">ja</a> | <a href="../../../apidoc/v2/hosts/show.pl.html">pl</a> | <a href="../../../apidoc/v2/hosts/show.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/hosts/show.it.html">it</a> | <a href="../../../apidoc/v2/hosts/show.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/hosts/show.ru.html">ru</a> | <a href="../../../apidoc/v2/hosts/show.es.html">es</a> | <a href="../../../apidoc/v2/hosts/show.ca.html">ca</a> | <a href="../../../apidoc/v2/hosts/show.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/hosts/show.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/hosts/show.gl.html">gl</a> ]
 </li>
 
 
@@ -52,7 +52,7 @@
 
 
   <h2>Examples</h2>
-    <pre class="prettyprint">GET /api/hosts/245
+    <pre class="prettyprint">GET /api/hosts/host10
 200
 {
   &quot;ip&quot;: null,
@@ -104,11 +104,11 @@
     &quot;build&quot;
   ],
   &quot;provision_method&quot;: &quot;build&quot;,
-  &quot;certname&quot;: &quot;host1474&quot;,
+  &quot;certname&quot;: &quot;host10&quot;,
   &quot;image_id&quot;: null,
   &quot;image_name&quot;: null,
-  &quot;created_at&quot;: &quot;2018-11-01 13:30:02 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:30:02 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:37 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:37 UTC&quot;,
   &quot;last_compile&quot;: null,
   &quot;global_status&quot;: 0,
   &quot;global_status_label&quot;: &quot;OK&quot;,
@@ -118,38 +118,42 @@
   &quot;location_name&quot;: &quot;Location 1&quot;,
   &quot;puppet_status&quot;: 0,
   &quot;model_name&quot;: null,
-  &quot;name&quot;: &quot;host1474&quot;,
-  &quot;id&quot;: 245,
+  &quot;name&quot;: &quot;host10&quot;,
+  &quot;id&quot;: 1,
   &quot;puppet_proxy_id&quot;: null,
   &quot;puppet_proxy_name&quot;: null,
-  &quot;puppet_ca_proxy_id&quot;: null,
-  &quot;puppet_ca_proxy_name&quot;: null,
+  &quot;puppet_ca_proxy_id&quot;: 182953976,
+  &quot;puppet_ca_proxy_name&quot;: &quot;Puppetmaster Proxy&quot;,
   &quot;puppet_proxy&quot;: null,
-  &quot;puppet_ca_proxy&quot;: null,
+  &quot;puppet_ca_proxy&quot;: {
+    &quot;name&quot;: &quot;Puppetmaster Proxy&quot;,
+    &quot;id&quot;: 182953976,
+    &quot;url&quot;: &quot;http://else.where:4567&quot;
+  },
   &quot;hostgroup_name&quot;: null,
   &quot;hostgroup_title&quot;: null,
   &quot;parameters&quot;: [],
   &quot;all_parameters&quot;: [
     {
       &quot;priority&quot;: null,
-      &quot;created_at&quot;: &quot;2018-11-01 13:30:00 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:30:00 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
       &quot;id&quot;: 513706444,
       &quot;name&quot;: &quot;loc_param&quot;,
       &quot;value&quot;: &quot;abc&quot;
     },
     {
       &quot;priority&quot;: null,
-      &quot;created_at&quot;: &quot;2018-11-01 13:30:00 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:30:00 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
       &quot;id&quot;: 32400255,
       &quot;name&quot;: &quot;org_param&quot;,
       &quot;value&quot;: &quot;xyz&quot;
     },
     {
       &quot;priority&quot;: null,
-      &quot;created_at&quot;: &quot;2018-11-01 13:30:00 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:30:00 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
       &quot;id&quot;: 636252244,
       &quot;name&quot;: &quot;test&quot;,
       &quot;value&quot;: &quot;myvalue&quot;
@@ -163,17 +167,17 @@
       &quot;subnet6_name&quot;: null,
       &quot;domain_id&quot;: null,
       &quot;domain_name&quot;: null,
-      &quot;created_at&quot;: &quot;2018-11-01 13:30:02 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:30:02 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:37 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:37 UTC&quot;,
       &quot;managed&quot;: true,
       &quot;identifier&quot;: null,
-      &quot;id&quot;: 250,
-      &quot;name&quot;: &quot;host1474&quot;,
+      &quot;id&quot;: 1,
+      &quot;name&quot;: &quot;host10&quot;,
       &quot;ip&quot;: null,
       &quot;ip6&quot;: null,
       &quot;mac&quot;: null,
       &quot;mtu&quot;: null,
-      &quot;fqdn&quot;: &quot;host1474&quot;,
+      &quot;fqdn&quot;: &quot;host10&quot;,
       &quot;primary&quot;: true,
       &quot;provision&quot;: true,
       &quot;type&quot;: &quot;interface&quot;,
@@ -184,14 +188,14 @@
   &quot;config_groups&quot;: [],
   &quot;all_puppetclasses&quot;: [],
   &quot;permissions&quot;: {
-    &quot;view_hosts&quot;: true,
-    &quot;create_hosts&quot;: true,
-    &quot;edit_hosts&quot;: true,
-    &quot;destroy_hosts&quot;: true,
+    &quot;console_hosts&quot;: true,
     &quot;build_hosts&quot;: true,
     &quot;power_hosts&quot;: true,
-    &quot;console_hosts&quot;: true,
+    &quot;edit_hosts&quot;: true,
+    &quot;destroy_hosts&quot;: true,
+    &quot;create_hosts&quot;: true,
     &quot;ipmi_boot_hosts&quot;: true,
+    &quot;view_hosts&quot;: true,
     &quot;puppetrun_hosts&quot;: true
   }
 }</pre>

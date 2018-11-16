@@ -27,7 +27,7 @@
     
   </li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../apidoc/v2/personal_access_tokens.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/personal_access_tokens.de.html">de</a> | <b><a href="../../apidoc/v2/personal_access_tokens.it.html">it</a></b> | <a href="../../apidoc/v2/personal_access_tokens.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/personal_access_tokens.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/personal_access_tokens.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/personal_access_tokens.fr.html">fr</a> | <a href="../../apidoc/v2/personal_access_tokens.ru.html">ru</a> | <a href="../../apidoc/v2/personal_access_tokens.ja.html">ja</a> | <a href="../../apidoc/v2/personal_access_tokens.es.html">es</a> | <a href="../../apidoc/v2/personal_access_tokens.ko.html">ko</a> | <a href="../../apidoc/v2/personal_access_tokens.ca.html">ca</a> | <a href="../../apidoc/v2/personal_access_tokens.gl.html">gl</a> | <a href="../../apidoc/v2/personal_access_tokens.en.html">en</a> | <a href="../../apidoc/v2/personal_access_tokens.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/personal_access_tokens.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/personal_access_tokens.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../apidoc/v2/personal_access_tokens.ko.html">ko</a> | <a href="../../apidoc/v2/personal_access_tokens.en.html">en</a> | <a href="../../apidoc/v2/personal_access_tokens.fr.html">fr</a> | <a href="../../apidoc/v2/personal_access_tokens.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/personal_access_tokens.de.html">de</a> | <a href="../../apidoc/v2/personal_access_tokens.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/personal_access_tokens.ja.html">ja</a> | <a href="../../apidoc/v2/personal_access_tokens.pl.html">pl</a> | <a href="../../apidoc/v2/personal_access_tokens.zh_CN.html">zh_CN</a> | <b><a href="../../apidoc/v2/personal_access_tokens.it.html">it</a></b> | <a href="../../apidoc/v2/personal_access_tokens.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/personal_access_tokens.ru.html">ru</a> | <a href="../../apidoc/v2/personal_access_tokens.es.html">es</a> | <a href="../../apidoc/v2/personal_access_tokens.ca.html">ca</a> | <a href="../../apidoc/v2/personal_access_tokens.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/personal_access_tokens.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/personal_access_tokens.gl.html">gl</a> ]
 </li>
 
 </ul>
@@ -71,7 +71,7 @@
 
 
   <h3>Esempi</h3>
-    <pre class="prettyprint">GET /api/users/988725679/personal_access_tokens
+    <pre class="prettyprint">GET /api/users/988725678/personal_access_tokens
 200
 {
   &quot;total&quot;: 1,
@@ -85,13 +85,13 @@
   },
   &quot;results&quot;: [
     {
-      &quot;created_at&quot;: &quot;2018-11-01 13:26:03 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:26:03 UTC&quot;,
-      &quot;id&quot;: 4,
-      &quot;name&quot;: &quot;Personal Access Token 4&quot;,
-      &quot;expires_at&quot;: &quot;2018-11-11 13:26:03 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:02:08 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:02:08 UTC&quot;,
+      &quot;id&quot;: 1,
+      &quot;name&quot;: &quot;Personal Access Token 2&quot;,
+      &quot;expires_at&quot;: &quot;2018-11-25 19:02:08 UTC&quot;,
       &quot;active?&quot;: true,
-      &quot;user_id&quot;: 988725679,
+      &quot;user_id&quot;: 988725678,
       &quot;last_used_at&quot;: null
     }
   ]
@@ -306,16 +306,16 @@
 
 
   <h3>Esempi</h3>
-    <pre class="prettyprint">GET /api/users/988725677/personal_access_tokens/1
+    <pre class="prettyprint">GET /api/users/988725678/personal_access_tokens/1
 200
 {
-  &quot;created_at&quot;: &quot;2018-11-01 13:26:03 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:26:03 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:02:08 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:02:08 UTC&quot;,
   &quot;id&quot;: 1,
-  &quot;name&quot;: &quot;Personal Access Token 2&quot;,
-  &quot;expires_at&quot;: &quot;2018-11-11 13:26:03 UTC&quot;,
+  &quot;name&quot;: &quot;Personal Access Token 3&quot;,
+  &quot;expires_at&quot;: &quot;2018-11-25 19:02:08 UTC&quot;,
   &quot;active?&quot;: true,
-  &quot;user_id&quot;: 988725677,
+  &quot;user_id&quot;: 988725678,
   &quot;last_used_at&quot;: null
 }</pre>
 
@@ -458,17 +458,17 @@
 {
   &quot;personal_access_token&quot;: {
     &quot;name&quot;: &quot;foreman@example.com&quot;,
-    &quot;expires_at&quot;: &quot;2018-11-29T13:26:03Z&quot;
+    &quot;expires_at&quot;: &quot;2018-12-13T19:02:08Z&quot;
   }
 }
 201
 {
-  &quot;token_value&quot;: &quot;UtPfZ3oxne0ikbug_FFcCA&quot;,
-  &quot;created_at&quot;: &quot;2018-11-01 13:26:03 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:26:03 UTC&quot;,
-  &quot;id&quot;: 3,
+  &quot;token_value&quot;: &quot;WO-WcKqR-tJtW42fR7h7EA&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:02:08 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:02:08 UTC&quot;,
+  &quot;id&quot;: 2,
   &quot;name&quot;: &quot;foreman@example.com&quot;,
-  &quot;expires_at&quot;: &quot;2018-11-29 13:26:03 UTC&quot;,
+  &quot;expires_at&quot;: &quot;2018-12-13 19:02:08 UTC&quot;,
   &quot;active?&quot;: true,
   &quot;user_id&quot;: 988725678,
   &quot;last_used_at&quot;: null
@@ -655,21 +655,21 @@
 
 
   <h3>Esempi</h3>
-    <pre class="prettyprint">DELETE /api/users/988725681/personal_access_tokens/7
+    <pre class="prettyprint">DELETE /api/users/988725678/personal_access_tokens/1
 {
   &quot;personal_access_token&quot;: {}
 }
 200
 {
-  &quot;id&quot;: 7,
+  &quot;id&quot;: 1,
   &quot;revoked&quot;: true,
-  &quot;token&quot;: &quot;323c8946578af06cbad760cc65740681e0003bb9&quot;,
-  &quot;name&quot;: &quot;Personal Access Token 6&quot;,
-  &quot;expires_at&quot;: &quot;2018-11-11T13:26:03.516Z&quot;,
+  &quot;token&quot;: &quot;fc8bb899e118bd41d69249bde25d2b0a66ee54c3&quot;,
+  &quot;name&quot;: &quot;Personal Access Token 5&quot;,
+  &quot;expires_at&quot;: &quot;2018-11-25T19:02:08.705Z&quot;,
   &quot;last_used_at&quot;: null,
-  &quot;user_id&quot;: 988725681,
-  &quot;created_at&quot;: &quot;2018-11-01T13:26:03.517Z&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01T13:26:03.527Z&quot;
+  &quot;user_id&quot;: 988725678,
+  &quot;created_at&quot;: &quot;2018-11-15T19:02:08.706Z&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15T19:02:08.714Z&quot;
 }</pre>
 
   <h3>Parametri</h3>

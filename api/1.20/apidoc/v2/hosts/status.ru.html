@@ -31,7 +31,7 @@
   </li>
   <li class='active'>status</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/hosts/status.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/hosts/status.de.html">de</a> | <a href="../../../apidoc/v2/hosts/status.it.html">it</a> | <a href="../../../apidoc/v2/hosts/status.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/hosts/status.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/hosts/status.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/hosts/status.fr.html">fr</a> | <b><a href="../../../apidoc/v2/hosts/status.ru.html">ru</a></b> | <a href="../../../apidoc/v2/hosts/status.ja.html">ja</a> | <a href="../../../apidoc/v2/hosts/status.es.html">es</a> | <a href="../../../apidoc/v2/hosts/status.ko.html">ko</a> | <a href="../../../apidoc/v2/hosts/status.ca.html">ca</a> | <a href="../../../apidoc/v2/hosts/status.gl.html">gl</a> | <a href="../../../apidoc/v2/hosts/status.en.html">en</a> | <a href="../../../apidoc/v2/hosts/status.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/hosts/status.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/hosts/status.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/hosts/status.ko.html">ko</a> | <a href="../../../apidoc/v2/hosts/status.en.html">en</a> | <a href="../../../apidoc/v2/hosts/status.fr.html">fr</a> | <a href="../../../apidoc/v2/hosts/status.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/hosts/status.de.html">de</a> | <a href="../../../apidoc/v2/hosts/status.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/hosts/status.ja.html">ja</a> | <a href="../../../apidoc/v2/hosts/status.pl.html">pl</a> | <a href="../../../apidoc/v2/hosts/status.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/hosts/status.it.html">it</a> | <a href="../../../apidoc/v2/hosts/status.zh_TW.html">zh_TW</a> | <b><a href="../../../apidoc/v2/hosts/status.ru.html">ru</a></b> | <a href="../../../apidoc/v2/hosts/status.es.html">es</a> | <a href="../../../apidoc/v2/hosts/status.ca.html">ca</a> | <a href="../../../apidoc/v2/hosts/status.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/hosts/status.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/hosts/status.gl.html">gl</a> ]
 </li>
 
 
@@ -70,12 +70,10 @@
 
 
   <h2>Примеры</h2>
-    <pre class="prettyprint">GET /api/hosts/host1468/status
-404
+    <pre class="prettyprint">GET /api/hosts/host5/status
+200
 {
-  &quot;error&quot;: {
-    &quot;message&quot;: &quot;Resource host not found by id &#39;host1468&#39;&quot;
-  }
+  &quot;status&quot;: &quot;No reports&quot;
 }</pre>
 
   <h2>Параметры</h2>

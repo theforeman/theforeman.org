@@ -31,7 +31,7 @@
   </li>
   <li class='active'>create</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/compute_profiles/create.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/compute_profiles/create.de.html">de</a> | <a href="../../../apidoc/v2/compute_profiles/create.it.html">it</a> | <a href="../../../apidoc/v2/compute_profiles/create.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/compute_profiles/create.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/compute_profiles/create.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/compute_profiles/create.fr.html">fr</a> | <a href="../../../apidoc/v2/compute_profiles/create.ru.html">ru</a> | <a href="../../../apidoc/v2/compute_profiles/create.ja.html">ja</a> | <a href="../../../apidoc/v2/compute_profiles/create.es.html">es</a> | <a href="../../../apidoc/v2/compute_profiles/create.ko.html">ko</a> | <a href="../../../apidoc/v2/compute_profiles/create.ca.html">ca</a> | <a href="../../../apidoc/v2/compute_profiles/create.gl.html">gl</a> | <b><a href="../../../apidoc/v2/compute_profiles/create.en.html">en</a></b> | <a href="../../../apidoc/v2/compute_profiles/create.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/compute_profiles/create.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/compute_profiles/create.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/compute_profiles/create.ko.html">ko</a> | <b><a href="../../../apidoc/v2/compute_profiles/create.en.html">en</a></b> | <a href="../../../apidoc/v2/compute_profiles/create.fr.html">fr</a> | <a href="../../../apidoc/v2/compute_profiles/create.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/compute_profiles/create.de.html">de</a> | <a href="../../../apidoc/v2/compute_profiles/create.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/compute_profiles/create.ja.html">ja</a> | <a href="../../../apidoc/v2/compute_profiles/create.pl.html">pl</a> | <a href="../../../apidoc/v2/compute_profiles/create.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/compute_profiles/create.it.html">it</a> | <a href="../../../apidoc/v2/compute_profiles/create.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/compute_profiles/create.ru.html">ru</a> | <a href="../../../apidoc/v2/compute_profiles/create.es.html">es</a> | <a href="../../../apidoc/v2/compute_profiles/create.ca.html">ca</a> | <a href="../../../apidoc/v2/compute_profiles/create.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/compute_profiles/create.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/compute_profiles/create.gl.html">gl</a> ]
 </li>
 
 
@@ -55,22 +55,16 @@
     <pre class="prettyprint">POST /api/compute_profiles
 {
   &quot;compute_profile&quot;: {
-    &quot;name&quot;: &quot;&quot;
+    &quot;name&quot;: &quot;4-Xlarge&quot;
   }
 }
-422
+201
 {
-  &quot;error&quot;: {
-    &quot;id&quot;: null,
-    &quot;errors&quot;: {
-      &quot;name&quot;: [
-        &quot;can&#39;t be blank&quot;
-      ]
-    },
-    &quot;full_messages&quot;: [
-      &quot;Name can&#39;t be blank&quot;
-    ]
-  }
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:57 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:57 UTC&quot;,
+  &quot;id&quot;: 980190963,
+  &quot;name&quot;: &quot;4-Xlarge&quot;,
+  &quot;compute_attributes&quot;: []
 }</pre>
 
   <h2>Params</h2>

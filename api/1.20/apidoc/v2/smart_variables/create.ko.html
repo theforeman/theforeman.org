@@ -31,7 +31,7 @@
   </li>
   <li class='active'>create</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/smart_variables/create.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/smart_variables/create.de.html">de</a> | <a href="../../../apidoc/v2/smart_variables/create.it.html">it</a> | <a href="../../../apidoc/v2/smart_variables/create.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/smart_variables/create.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/smart_variables/create.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/smart_variables/create.fr.html">fr</a> | <a href="../../../apidoc/v2/smart_variables/create.ru.html">ru</a> | <a href="../../../apidoc/v2/smart_variables/create.ja.html">ja</a> | <a href="../../../apidoc/v2/smart_variables/create.es.html">es</a> | <b><a href="../../../apidoc/v2/smart_variables/create.ko.html">ko</a></b> | <a href="../../../apidoc/v2/smart_variables/create.ca.html">ca</a> | <a href="../../../apidoc/v2/smart_variables/create.gl.html">gl</a> | <a href="../../../apidoc/v2/smart_variables/create.en.html">en</a> | <a href="../../../apidoc/v2/smart_variables/create.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/smart_variables/create.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/smart_variables/create.pl.html">pl</a> ]
+  &nbsp;[ <b><a href="../../../apidoc/v2/smart_variables/create.ko.html">ko</a></b> | <a href="../../../apidoc/v2/smart_variables/create.en.html">en</a> | <a href="../../../apidoc/v2/smart_variables/create.fr.html">fr</a> | <a href="../../../apidoc/v2/smart_variables/create.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/smart_variables/create.de.html">de</a> | <a href="../../../apidoc/v2/smart_variables/create.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/smart_variables/create.ja.html">ja</a> | <a href="../../../apidoc/v2/smart_variables/create.pl.html">pl</a> | <a href="../../../apidoc/v2/smart_variables/create.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/smart_variables/create.it.html">it</a> | <a href="../../../apidoc/v2/smart_variables/create.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/smart_variables/create.ru.html">ru</a> | <a href="../../../apidoc/v2/smart_variables/create.es.html">es</a> | <a href="../../../apidoc/v2/smart_variables/create.ca.html">ca</a> | <a href="../../../apidoc/v2/smart_variables/create.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/smart_variables/create.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/smart_variables/create.gl.html">gl</a> ]
 </li>
 
 
@@ -55,23 +55,32 @@
     <pre class="prettyprint">POST /api/smart_variables
 {
   &quot;smart_variable&quot;: {
-    &quot;variable&quot;: &quot;&quot;,
-    &quot;puppetclass_id&quot;: 980190962
+    &quot;variable&quot;: &quot;OphlglDxpK&quot;,
+    &quot;puppetclass_id&quot;: 298486374,
+    &quot;hidden_value&quot;: true
   }
 }
-422
+201
 {
-  &quot;error&quot;: {
-    &quot;id&quot;: null,
-    &quot;errors&quot;: {
-      &quot;key&quot;: [
-        &quot;can&#39;t be blank&quot;
-      ]
-    },
-    &quot;full_messages&quot;: [
-      &quot;Key can&#39;t be blank&quot;
-    ]
-  }
+  &quot;description&quot;: null,
+  &quot;parameter_type&quot;: null,
+  &quot;variable_type&quot;: null,
+  &quot;hidden_value?&quot;: true,
+  &quot;validator_type&quot;: null,
+  &quot;validator_rule&quot;: null,
+  &quot;override_value_order&quot;: &quot;fqdn\nhostgroup\nos\ndomain&quot;,
+  &quot;merge_overrides&quot;: false,
+  &quot;merge_default&quot;: false,
+  &quot;avoid_duplicates&quot;: false,
+  &quot;puppetclass_id&quot;: 298486374,
+  &quot;puppetclass_name&quot;: &quot;apache&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:55 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:55 UTC&quot;,
+  &quot;variable&quot;: &quot;OphlglDxpK&quot;,
+  &quot;id&quot;: 1018350796,
+  &quot;default_value&quot;: &quot;*****&quot;,
+  &quot;override_values_count&quot;: 0,
+  &quot;override_values&quot;: []
 }</pre>
 
   <h2><span class="translation_missing" title="translation missing: ko.apipie.params">Params</span></h2>

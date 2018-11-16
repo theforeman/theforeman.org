@@ -31,7 +31,7 @@
   </li>
   <li class='active'>index</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/realms/index.pt_BR.html">pt_BR</a> | <b><a href="../../../apidoc/v2/realms/index.de.html">de</a></b> | <a href="../../../apidoc/v2/realms/index.it.html">it</a> | <a href="../../../apidoc/v2/realms/index.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/realms/index.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/realms/index.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/realms/index.fr.html">fr</a> | <a href="../../../apidoc/v2/realms/index.ru.html">ru</a> | <a href="../../../apidoc/v2/realms/index.ja.html">ja</a> | <a href="../../../apidoc/v2/realms/index.es.html">es</a> | <a href="../../../apidoc/v2/realms/index.ko.html">ko</a> | <a href="../../../apidoc/v2/realms/index.ca.html">ca</a> | <a href="../../../apidoc/v2/realms/index.gl.html">gl</a> | <a href="../../../apidoc/v2/realms/index.en.html">en</a> | <a href="../../../apidoc/v2/realms/index.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/realms/index.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/realms/index.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/realms/index.ko.html">ko</a> | <a href="../../../apidoc/v2/realms/index.en.html">en</a> | <a href="../../../apidoc/v2/realms/index.fr.html">fr</a> | <a href="../../../apidoc/v2/realms/index.en_GB.html">en_GB</a> | <b><a href="../../../apidoc/v2/realms/index.de.html">de</a></b> | <a href="../../../apidoc/v2/realms/index.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/realms/index.ja.html">ja</a> | <a href="../../../apidoc/v2/realms/index.pl.html">pl</a> | <a href="../../../apidoc/v2/realms/index.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/realms/index.it.html">it</a> | <a href="../../../apidoc/v2/realms/index.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/realms/index.ru.html">ru</a> | <a href="../../../apidoc/v2/realms/index.es.html">es</a> | <a href="../../../apidoc/v2/realms/index.ca.html">ca</a> | <a href="../../../apidoc/v2/realms/index.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/realms/index.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/realms/index.gl.html">gl</a> ]
 </li>
 
 
@@ -52,11 +52,11 @@
 
 
   <h2>Beispiele</h2>
-    <pre class="prettyprint">GET /api/locations/255093256/organizations/447626438/realms
+    <pre class="prettyprint">GET /api/realms
 200
 {
-  &quot;total&quot;: 1,
-  &quot;subtotal&quot;: 1,
+  &quot;total&quot;: 4,
+  &quot;subtotal&quot;: 4,
   &quot;page&quot;: 1,
   &quot;per_page&quot;: 20,
   &quot;search&quot;: null,
@@ -68,9 +68,51 @@
     {
       &quot;name&quot;: &quot;myrealm.net&quot;,
       &quot;realm_type&quot;: &quot;FreeIPA&quot;,
-      &quot;created_at&quot;: &quot;2018-11-01 13:27:56 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:27:56 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
       &quot;id&quot;: 664044182,
+      &quot;realm_proxy_id&quot;: 982965213,
+      &quot;realm_proxy_name&quot;: &quot;Realm Proxy&quot;,
+      &quot;realm_proxy&quot;: {
+        &quot;name&quot;: &quot;Realm Proxy&quot;,
+        &quot;id&quot;: 982965213,
+        &quot;url&quot;: &quot;http://else.where:1337&quot;
+      }
+    },
+    {
+      &quot;name&quot;: &quot;unused.net&quot;,
+      &quot;realm_type&quot;: &quot;FreeIPA&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;id&quot;: 90728897,
+      &quot;realm_proxy_id&quot;: 982965213,
+      &quot;realm_proxy_name&quot;: &quot;Realm Proxy&quot;,
+      &quot;realm_proxy&quot;: {
+        &quot;name&quot;: &quot;Realm Proxy&quot;,
+        &quot;id&quot;: 982965213,
+        &quot;url&quot;: &quot;http://else.where:1337&quot;
+      }
+    },
+    {
+      &quot;name&quot;: &quot;useless.net&quot;,
+      &quot;realm_type&quot;: &quot;FreeIPA&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;id&quot;: 229305443,
+      &quot;realm_proxy_id&quot;: 982965213,
+      &quot;realm_proxy_name&quot;: &quot;Realm Proxy&quot;,
+      &quot;realm_proxy&quot;: {
+        &quot;name&quot;: &quot;Realm Proxy&quot;,
+        &quot;id&quot;: 982965213,
+        &quot;url&quot;: &quot;http://else.where:1337&quot;
+      }
+    },
+    {
+      &quot;name&quot;: &quot;yourrealm.net&quot;,
+      &quot;realm_type&quot;: &quot;FreeIPA&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;id&quot;: 936160439,
       &quot;realm_proxy_id&quot;: 982965213,
       &quot;realm_proxy_name&quot;: &quot;Realm Proxy&quot;,
       &quot;realm_proxy&quot;: {

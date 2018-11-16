@@ -31,7 +31,7 @@
   </li>
   <li class='active'>destroy</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/subnets/destroy.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/subnets/destroy.de.html">de</a> | <a href="../../../apidoc/v2/subnets/destroy.it.html">it</a> | <a href="../../../apidoc/v2/subnets/destroy.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/subnets/destroy.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/subnets/destroy.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/subnets/destroy.fr.html">fr</a> | <a href="../../../apidoc/v2/subnets/destroy.ru.html">ru</a> | <a href="../../../apidoc/v2/subnets/destroy.ja.html">ja</a> | <a href="../../../apidoc/v2/subnets/destroy.es.html">es</a> | <a href="../../../apidoc/v2/subnets/destroy.ko.html">ko</a> | <b><a href="../../../apidoc/v2/subnets/destroy.ca.html">ca</a></b> | <a href="../../../apidoc/v2/subnets/destroy.gl.html">gl</a> | <a href="../../../apidoc/v2/subnets/destroy.en.html">en</a> | <a href="../../../apidoc/v2/subnets/destroy.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/subnets/destroy.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/subnets/destroy.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/subnets/destroy.ko.html">ko</a> | <a href="../../../apidoc/v2/subnets/destroy.en.html">en</a> | <a href="../../../apidoc/v2/subnets/destroy.fr.html">fr</a> | <a href="../../../apidoc/v2/subnets/destroy.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/subnets/destroy.de.html">de</a> | <a href="../../../apidoc/v2/subnets/destroy.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/subnets/destroy.ja.html">ja</a> | <a href="../../../apidoc/v2/subnets/destroy.pl.html">pl</a> | <a href="../../../apidoc/v2/subnets/destroy.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/subnets/destroy.it.html">it</a> | <a href="../../../apidoc/v2/subnets/destroy.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/subnets/destroy.ru.html">ru</a> | <a href="../../../apidoc/v2/subnets/destroy.es.html">es</a> | <b><a href="../../../apidoc/v2/subnets/destroy.ca.html">ca</a></b> | <a href="../../../apidoc/v2/subnets/destroy.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/subnets/destroy.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/subnets/destroy.gl.html">gl</a> ]
 </li>
 
 
@@ -52,23 +52,36 @@
 
 
   <h2><span class="translation_missing" title="translation missing: ca.apipie.examples">Examples</span></h2>
-    <pre class="prettyprint">DELETE /api/subnets/980190962-one
+    <pre class="prettyprint">DELETE /api/subnets/51848956
 {
   &quot;subnet&quot;: {}
 }
-422
+200
 {
-  &quot;error&quot;: {
-    &quot;id&quot;: 980190962,
-    &quot;errors&quot;: {
-      &quot;base&quot;: [
-        &quot;one is used by mydomain.net&quot;
-      ]
-    },
-    &quot;full_messages&quot;: [
-      &quot;one is used by mydomain.net&quot;
-    ]
-  }
+  &quot;id&quot;: 51848956,
+  &quot;network&quot;: &quot;2001:db10::&quot;,
+  &quot;mask&quot;: &quot;ffff:ffff:ffff:ffff::&quot;,
+  &quot;priority&quot;: null,
+  &quot;name&quot;: &quot;six&quot;,
+  &quot;vlanid&quot;: null,
+  &quot;created_at&quot;: &quot;2018-11-15T19:01:27.660Z&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15T19:01:27.660Z&quot;,
+  &quot;dhcp_id&quot;: null,
+  &quot;tftp_id&quot;: null,
+  &quot;gateway&quot;: null,
+  &quot;dns_primary&quot;: null,
+  &quot;dns_secondary&quot;: null,
+  &quot;from&quot;: null,
+  &quot;to&quot;: null,
+  &quot;dns_id&quot;: 113629430,
+  &quot;boot_mode&quot;: &quot;DHCP&quot;,
+  &quot;ipam&quot;: &quot;None&quot;,
+  &quot;description&quot;: null,
+  &quot;mtu&quot;: 1500,
+  &quot;template_id&quot;: null,
+  &quot;httpboot_id&quot;: null,
+  &quot;to_label&quot;: &quot;six (2001:db10::/64)&quot;,
+  &quot;type&quot;: &quot;Subnet::Ipv6&quot;
 }</pre>
 
   <h2><span class="translation_missing" title="translation missing: ca.apipie.params">Params</span></h2>

@@ -27,7 +27,7 @@
     
   </li>
   <li class='pull-right'>
-  &nbsp;[ <b><a href="../../apidoc/v2/ptables.pt_BR.html">pt_BR</a></b> | <a href="../../apidoc/v2/ptables.de.html">de</a> | <a href="../../apidoc/v2/ptables.it.html">it</a> | <a href="../../apidoc/v2/ptables.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/ptables.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/ptables.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/ptables.fr.html">fr</a> | <a href="../../apidoc/v2/ptables.ru.html">ru</a> | <a href="../../apidoc/v2/ptables.ja.html">ja</a> | <a href="../../apidoc/v2/ptables.es.html">es</a> | <a href="../../apidoc/v2/ptables.ko.html">ko</a> | <a href="../../apidoc/v2/ptables.ca.html">ca</a> | <a href="../../apidoc/v2/ptables.gl.html">gl</a> | <a href="../../apidoc/v2/ptables.en.html">en</a> | <a href="../../apidoc/v2/ptables.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/ptables.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/ptables.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../apidoc/v2/ptables.ko.html">ko</a> | <a href="../../apidoc/v2/ptables.en.html">en</a> | <a href="../../apidoc/v2/ptables.fr.html">fr</a> | <a href="../../apidoc/v2/ptables.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/ptables.de.html">de</a> | <a href="../../apidoc/v2/ptables.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/ptables.ja.html">ja</a> | <a href="../../apidoc/v2/ptables.pl.html">pl</a> | <a href="../../apidoc/v2/ptables.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/ptables.it.html">it</a> | <a href="../../apidoc/v2/ptables.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/ptables.ru.html">ru</a> | <a href="../../apidoc/v2/ptables.es.html">es</a> | <a href="../../apidoc/v2/ptables.ca.html">ca</a> | <a href="../../apidoc/v2/ptables.nl_NL.html">nl_NL</a> | <b><a href="../../apidoc/v2/ptables.pt_BR.html">pt_BR</a></b> | <a href="../../apidoc/v2/ptables.gl.html">gl</a> ]
 </li>
 
 </ul>
@@ -108,7 +108,7 @@
   &quot;subtotal&quot;: 1,
   &quot;page&quot;: 1,
   &quot;per_page&quot;: 20,
-  &quot;search&quot;: &quot;ptable679&quot;,
+  &quot;search&quot;: &quot;ptable145&quot;,
   &quot;sort&quot;: {
     &quot;by&quot;: null,
     &quot;order&quot;: null
@@ -116,10 +116,10 @@
   &quot;results&quot;: [
     {
       &quot;os_family&quot;: &quot;Redhat&quot;,
-      &quot;created_at&quot;: &quot;2018-11-01 13:33:03 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:33:03 UTC&quot;,
-      &quot;name&quot;: &quot;ptable679&quot;,
-      &quot;id&quot;: 1007981880
+      &quot;created_at&quot;: &quot;2018-11-15 19:02:39 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:02:39 UTC&quot;,
+      &quot;name&quot;: &quot;ptable145&quot;,
+      &quot;id&quot;: 1007981803
     }
   ]
 }</pre>
@@ -408,16 +408,16 @@
 
 
   <h3>Exemplos</h3>
-    <pre class="prettyprint">GET /api/ptables/1007981887-ptable685
+    <pre class="prettyprint">GET /api/ptables/1007981803-ptable143
 200
 {
   &quot;layout&quot;: &quot;zerombr\\nclearpart --all    --initlabel\\npart /boot --fstype ext3 --size=&lt;%= 10 * 10 %&gt; --asprimary\\npart /     --f   stype ext3 --size=1024 --grow\\npart swap  --recommended&quot;,
   &quot;locked&quot;: false,
   &quot;os_family&quot;: &quot;Redhat&quot;,
-  &quot;created_at&quot;: &quot;2018-11-01 13:33:04 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:33:04 UTC&quot;,
-  &quot;name&quot;: &quot;ptable685&quot;,
-  &quot;id&quot;: 1007981887,
+  &quot;created_at&quot;: &quot;2018-11-15 19:02:39 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:02:39 UTC&quot;,
+  &quot;name&quot;: &quot;ptable143&quot;,
+  &quot;id&quot;: 1007981803,
   &quot;operatingsystems&quot;: [],
   &quot;locations&quot;: [
     {
@@ -551,8 +551,8 @@
     <pre class="prettyprint">POST /api/ptables
 {
   &quot;ptable&quot;: {
-    &quot;name&quot;: &quot;&quot;,
-    &quot;layout&quot;: &quot;d-i partman-auto/disk&quot;
+    &quot;name&quot;: &quot;ptable_test&quot;,
+    &quot;layout&quot;: &quot;&quot;
   }
 }
 422
@@ -560,12 +560,16 @@
   &quot;error&quot;: {
     &quot;id&quot;: null,
     &quot;errors&quot;: {
-      &quot;name&quot;: [
+      &quot;template&quot;: [
+        &quot;can&#39;t be blank&quot;
+      ],
+      &quot;layout&quot;: [
         &quot;can&#39;t be blank&quot;
       ]
     },
     &quot;full_messages&quot;: [
-      &quot;Name can&#39;t be blank&quot;
+      &quot;Template can&#39;t be blank&quot;,
+      &quot;Layout can&#39;t be blank&quot;
     ]
   }
 }</pre>
@@ -938,27 +942,23 @@
     <pre class="prettyprint">POST /api/ptables/import
 {
   &quot;ptable&quot;: {
-    &quot;name&quot;: &quot;ptable697&quot;,
+    &quot;name&quot;: &quot;ptable148&quot;,
     &quot;template&quot;: &quot;b&quot;
   }
 }
 201
 {
   &quot;template&quot;: &quot;b&quot;,
-  &quot;name&quot;: &quot;ptable697&quot;,
-  &quot;id&quot;: 1007981902,
+  &quot;name&quot;: &quot;ptable148&quot;,
+  &quot;id&quot;: 1007981804,
   &quot;snippet&quot;: false,
   &quot;template_kind_id&quot;: null,
-  &quot;created_at&quot;: &quot;2018-11-01T13:33:04.476Z&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01T13:33:04.487Z&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15T19:02:39.646Z&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15T19:02:39.656Z&quot;,
   &quot;locked&quot;: false,
   &quot;default&quot;: false,
   &quot;vendor&quot;: null,
-  &quot;os_family&quot;: &quot;Redhat&quot;,
-  &quot;job_category&quot;: &quot;Miscellaneous&quot;,
-  &quot;provider_type&quot;: null,
-  &quot;description_format&quot;: null,
-  &quot;execution_timeout_interval&quot;: null
+  &quot;os_family&quot;: &quot;Redhat&quot;
 }</pre>
 
   <h3>Parâmentros</h3>
@@ -1399,21 +1399,22 @@
 
 
   <h3>Exemplos</h3>
-    <pre class="prettyprint">PUT /api/ptables/1007981874
+    <pre class="prettyprint">PUT /api/ptables/1007981803-ptable154
 {
   &quot;ptable&quot;: {
-    &quot;os_family&quot;: &quot;Coreos&quot;
+    &quot;name&quot;: &quot;ptable_test&quot;,
+    &quot;layout&quot;: &quot;d-i partman-auto/disk&quot;
   }
 }
 200
 {
-  &quot;layout&quot;: &quot;zerombr\\nclearpart --all    --initlabel\\npart /boot --fstype ext3 --size=&lt;%= 10 * 10 %&gt; --asprimary\\npart /     --f   stype ext3 --size=1024 --grow\\npart swap  --recommended&quot;,
+  &quot;layout&quot;: &quot;d-i partman-auto/disk&quot;,
   &quot;locked&quot;: false,
-  &quot;os_family&quot;: &quot;Coreos&quot;,
-  &quot;created_at&quot;: &quot;2018-11-01 13:33:03 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:33:03 UTC&quot;,
-  &quot;name&quot;: &quot;ptable674&quot;,
-  &quot;id&quot;: 1007981874,
+  &quot;os_family&quot;: &quot;Redhat&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:02:39 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:02:39 UTC&quot;,
+  &quot;name&quot;: &quot;ptable_test&quot;,
+  &quot;id&quot;: 1007981803,
   &quot;operatingsystems&quot;: [],
   &quot;locations&quot;: [
     {
@@ -1820,27 +1821,23 @@
 
 
   <h3>Exemplos</h3>
-    <pre class="prettyprint">DELETE /api/ptables/1007981886-ptable684
+    <pre class="prettyprint">DELETE /api/ptables/1007981803-ptable156
 {
   &quot;ptable&quot;: {}
 }
 200
 {
-  &quot;id&quot;: 1007981886,
-  &quot;name&quot;: &quot;ptable684&quot;,
+  &quot;id&quot;: 1007981803,
+  &quot;name&quot;: &quot;ptable156&quot;,
   &quot;template&quot;: &quot;zerombr\\nclearpart --all    --initlabel\\npart /boot --fstype ext3 --size=&lt;%= 10 * 10 %&gt; --asprimary\\npart /     --f   stype ext3 --size=1024 --grow\\npart swap  --recommended&quot;,
   &quot;snippet&quot;: false,
   &quot;template_kind_id&quot;: null,
-  &quot;created_at&quot;: &quot;2018-11-01T13:33:03.593Z&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01T13:33:03.593Z&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15T19:02:39.889Z&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15T19:02:39.889Z&quot;,
   &quot;locked&quot;: false,
   &quot;default&quot;: false,
   &quot;vendor&quot;: null,
-  &quot;os_family&quot;: &quot;Redhat&quot;,
-  &quot;job_category&quot;: &quot;Miscellaneous&quot;,
-  &quot;provider_type&quot;: null,
-  &quot;description_format&quot;: null,
-  &quot;execution_timeout_interval&quot;: null
+  &quot;os_family&quot;: &quot;Redhat&quot;
 }</pre>
 
   <h3>Parâmentros</h3>
@@ -1954,7 +1951,7 @@
 
 
   <h3>Exemplos</h3>
-    <pre class="prettyprint">POST /api/ptables/1007981885-ptable683/clone
+    <pre class="prettyprint">POST /api/ptables/1007981804-ptable153/clone
 {
   &quot;ptable&quot;: {
     &quot;name&quot;: &quot;&quot;
@@ -1963,7 +1960,7 @@
 422
 {
   &quot;error&quot;: {
-    &quot;id&quot;: 1007981885,
+    &quot;id&quot;: 1007981804,
     &quot;errors&quot;: {
       &quot;name&quot;: [
         &quot;can&#39;t be blank&quot;
@@ -2132,11 +2129,11 @@
 
 
   <h3>Exemplos</h3>
-    <pre class="prettyprint">GET /api/ptables/1007981905-ptable700/export
+    <pre class="prettyprint">GET /api/ptables/1007981804-ptable168/export
 200
 zerombr\nclearpart --all    --initlabel\npart /boot --fstype ext3 --size=&lt;%= 10 * 10 %&gt; --asprimary\npart /     --f   stype ext3 --size=1024 --grow\npart swap  --recommended
 &lt;%#
-name: ptable700
+name: ptable168
 snippet: false
 model: Ptable
 os_family: Redhat

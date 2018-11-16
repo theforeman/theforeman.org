@@ -31,7 +31,7 @@
   </li>
   <li class='active'>destroy</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/users/destroy.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/users/destroy.de.html">de</a> | <b><a href="../../../apidoc/v2/users/destroy.it.html">it</a></b> | <a href="../../../apidoc/v2/users/destroy.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/users/destroy.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/users/destroy.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/users/destroy.fr.html">fr</a> | <a href="../../../apidoc/v2/users/destroy.ru.html">ru</a> | <a href="../../../apidoc/v2/users/destroy.ja.html">ja</a> | <a href="../../../apidoc/v2/users/destroy.es.html">es</a> | <a href="../../../apidoc/v2/users/destroy.ko.html">ko</a> | <a href="../../../apidoc/v2/users/destroy.ca.html">ca</a> | <a href="../../../apidoc/v2/users/destroy.gl.html">gl</a> | <a href="../../../apidoc/v2/users/destroy.en.html">en</a> | <a href="../../../apidoc/v2/users/destroy.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/users/destroy.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/users/destroy.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/users/destroy.ko.html">ko</a> | <a href="../../../apidoc/v2/users/destroy.en.html">en</a> | <a href="../../../apidoc/v2/users/destroy.fr.html">fr</a> | <a href="../../../apidoc/v2/users/destroy.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/users/destroy.de.html">de</a> | <a href="../../../apidoc/v2/users/destroy.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/users/destroy.ja.html">ja</a> | <a href="../../../apidoc/v2/users/destroy.pl.html">pl</a> | <a href="../../../apidoc/v2/users/destroy.zh_CN.html">zh_CN</a> | <b><a href="../../../apidoc/v2/users/destroy.it.html">it</a></b> | <a href="../../../apidoc/v2/users/destroy.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/users/destroy.ru.html">ru</a> | <a href="../../../apidoc/v2/users/destroy.es.html">es</a> | <a href="../../../apidoc/v2/users/destroy.ca.html">ca</a> | <a href="../../../apidoc/v2/users/destroy.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/users/destroy.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/users/destroy.gl.html">gl</a> ]
 </li>
 
 
@@ -56,29 +56,12 @@
 {
   &quot;user&quot;: {}
 }
-200
+403
 {
-  &quot;id&quot;: 980190962,
-  &quot;login&quot;: &quot;one&quot;,
-  &quot;firstname&quot;: &quot;One&quot;,
-  &quot;lastname&quot;: &quot;User&quot;,
-  &quot;mail&quot;: &quot;userone@someware.com&quot;,
-  &quot;admin&quot;: false,
-  &quot;last_login_on&quot;: &quot;2009-10-12T21:50:04.000Z&quot;,
-  &quot;auth_source_id&quot;: 980190962,
-  &quot;created_at&quot;: &quot;2018-11-01T13:15:49.301Z&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01T13:15:49.301Z&quot;,
-  &quot;password_hash&quot;: null,
-  &quot;password_salt&quot;: null,
-  &quot;locale&quot;: null,
-  &quot;avatar_hash&quot;: null,
-  &quot;default_organization_id&quot;: null,
-  &quot;default_location_id&quot;: null,
-  &quot;lower_login&quot;: &quot;one&quot;,
-  &quot;mail_enabled&quot;: true,
-  &quot;timezone&quot;: null,
-  &quot;description&quot;: null,
-  &quot;password&quot;: null
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;Access denied&quot;,
+    &quot;details&quot;: &quot;You are trying to delete your own account&quot;
+  }
 }</pre>
 
   <h2>Parametri</h2>

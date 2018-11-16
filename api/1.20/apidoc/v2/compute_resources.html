@@ -27,7 +27,7 @@
     
   </li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../apidoc/v2/compute_resources.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/compute_resources.de.html">de</a> | <a href="../../apidoc/v2/compute_resources.it.html">it</a> | <a href="../../apidoc/v2/compute_resources.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/compute_resources.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/compute_resources.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/compute_resources.fr.html">fr</a> | <a href="../../apidoc/v2/compute_resources.ru.html">ru</a> | <a href="../../apidoc/v2/compute_resources.ja.html">ja</a> | <a href="../../apidoc/v2/compute_resources.es.html">es</a> | <a href="../../apidoc/v2/compute_resources.ko.html">ko</a> | <a href="../../apidoc/v2/compute_resources.ca.html">ca</a> | <a href="../../apidoc/v2/compute_resources.gl.html">gl</a> | <a href="../../apidoc/v2/compute_resources.en.html">en</a> | <a href="../../apidoc/v2/compute_resources.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/compute_resources.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/compute_resources.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../apidoc/v2/compute_resources.ko.html">ko</a> | <a href="../../apidoc/v2/compute_resources.en.html">en</a> | <a href="../../apidoc/v2/compute_resources.fr.html">fr</a> | <a href="../../apidoc/v2/compute_resources.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/compute_resources.de.html">de</a> | <a href="../../apidoc/v2/compute_resources.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/compute_resources.ja.html">ja</a> | <a href="../../apidoc/v2/compute_resources.pl.html">pl</a> | <a href="../../apidoc/v2/compute_resources.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/compute_resources.it.html">it</a> | <a href="../../apidoc/v2/compute_resources.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/compute_resources.ru.html">ru</a> | <a href="../../apidoc/v2/compute_resources.es.html">es</a> | <a href="../../apidoc/v2/compute_resources.ca.html">ca</a> | <a href="../../apidoc/v2/compute_resources.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/compute_resources.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/compute_resources.gl.html">gl</a> ]
 </li>
 
 </ul>
@@ -87,8 +87,8 @@
     {
       &quot;description&quot;: &quot;mycompute&quot;,
       &quot;url&quot;: &quot;test:///default&quot;,
-      &quot;created_at&quot;: &quot;2018-11-01 13:38:03 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:38:03 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
       &quot;id&quot;: 367690737,
       &quot;name&quot;: &quot;mycompute&quot;,
       &quot;provider&quot;: &quot;Libvirt&quot;,
@@ -335,126 +335,11 @@
 
   <h3>Examples</h3>
     <pre class="prettyprint">GET /api/compute_resources/980190962-bigcompute
-200
+404
 {
-  &quot;description&quot;: &quot;MyString&quot;,
-  &quot;url&quot;: &quot;qemu://stam/system&quot;,
-  &quot;created_at&quot;: &quot;2018-11-01 13:38:03 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:38:03 UTC&quot;,
-  &quot;id&quot;: 980190962,
-  &quot;name&quot;: &quot;bigcompute&quot;,
-  &quot;provider&quot;: &quot;Libvirt&quot;,
-  &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
-  &quot;display_type&quot;: &quot;vnc&quot;,
-  &quot;set_console_password&quot;: true,
-  &quot;images&quot;: [
-    {
-      &quot;id&quot;: 980190962,
-      &quot;name&quot;: &quot;centos-1&quot;
-    },
-    {
-      &quot;id&quot;: 298486374,
-      &quot;name&quot;: &quot;centos-2&quot;
-    }
-  ],
-  &quot;compute_attributes&quot;: [
-    {
-      &quot;id&quot;: 394428105,
-      &quot;name&quot;: null,
-      &quot;compute_resource_id&quot;: 980190962,
-      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
-      &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
-      &quot;compute_profile_id&quot;: 281110143,
-      &quot;compute_profile_name&quot;: &quot;4-Networking&quot;,
-      &quot;vm_attrs&quot;: {
-        &quot;nics_attributes&quot;: {
-          &quot;1&quot;: {
-            &quot;attr&quot;: 1
-          },
-          &quot;2&quot;: {
-            &quot;attr&quot;: 2
-          }
-        }
-      },
-      &quot;attributes&quot;: {
-        &quot;cpus&quot;: null,
-        &quot;memory&quot;: null,
-        &quot;image_id&quot;: null,
-        &quot;image_name&quot;: null,
-        &quot;volumes_attributes&quot;: {},
-        &quot;interfaces_attributes&quot;: {
-          &quot;1&quot;: {
-            &quot;type&quot;: null,
-            &quot;model&quot;: null,
-            &quot;bridge&quot;: null
-          },
-          &quot;2&quot;: {
-            &quot;type&quot;: null,
-            &quot;model&quot;: null,
-            &quot;bridge&quot;: null
-          }
-        }
-      }
-    },
-    {
-      &quot;id&quot;: 281110143,
-      &quot;name&quot;: null,
-      &quot;compute_resource_id&quot;: 980190962,
-      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
-      &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
-      &quot;compute_profile_id&quot;: 298486374,
-      &quot;compute_profile_name&quot;: &quot;2-Medium&quot;,
-      &quot;vm_attrs&quot;: {
-        &quot;cpus&quot;: 4,
-        &quot;memory&quot;: 4294967296
-      },
-      &quot;attributes&quot;: {
-        &quot;cpus&quot;: 4,
-        &quot;memory&quot;: 4294967296,
-        &quot;image_id&quot;: null,
-        &quot;image_name&quot;: null,
-        &quot;volumes_attributes&quot;: {},
-        &quot;interfaces_attributes&quot;: {}
-      }
-    },
-    {
-      &quot;id&quot;: 298486374,
-      &quot;name&quot;: null,
-      &quot;compute_resource_id&quot;: 980190962,
-      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
-      &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
-      &quot;compute_profile_id&quot;: 980190962,
-      &quot;compute_profile_name&quot;: &quot;1-Small&quot;,
-      &quot;vm_attrs&quot;: {
-        &quot;cpus&quot;: 2,
-        &quot;memory&quot;: 536870912
-      },
-      &quot;attributes&quot;: {
-        &quot;cpus&quot;: 2,
-        &quot;memory&quot;: 536870912,
-        &quot;image_id&quot;: null,
-        &quot;image_name&quot;: null,
-        &quot;volumes_attributes&quot;: {},
-        &quot;interfaces_attributes&quot;: {}
-      }
-    }
-  ],
-  &quot;locations&quot;: [
-    {
-      &quot;id&quot;: 255093256,
-      &quot;name&quot;: &quot;Location 1&quot;,
-      &quot;title&quot;: &quot;Location 1&quot;,
-      &quot;description&quot;: null
-    }
-  ],
-  &quot;organizations&quot;: [
-    {
-      &quot;id&quot;: 447626438,
-      &quot;name&quot;: &quot;Organization 1&quot;,
-      &quot;title&quot;: &quot;Organization 1&quot;,
-      &quot;description&quot;: null
-    }
-  ]
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;Resource compute_resource not found by id &#39;980190962-bigcompute&#39;&quot;
+  }
 }</pre>
 
   <h3>Params</h3>
@@ -571,51 +456,32 @@
     <pre class="prettyprint">POST /api/compute_resources
 {
   &quot;compute_resource&quot;: {
-    &quot;name&quot;: &quot;libvirt_compute&quot;,
-    &quot;provider&quot;: &quot;libvirt&quot;,
-    &quot;url&quot;: &quot;qemu+ssh://root@libvirt.example.com/system&quot;,
-    &quot;organization_ids&quot;: [
-      114267492,
-      447626438,
-      61304186
-    ]
+    &quot;name&quot;: &quot;Ovirt-create-test&quot;,
+    &quot;url&quot;: &quot;https://myovirt/api&quot;,
+    &quot;provider&quot;: &quot;ovirt&quot;,
+    &quot;datacenter&quot;: &quot;dc7725de-f008-4ba7-aa54-a5b25e8f6644&quot;,
+    &quot;user&quot;: &quot;user@example.com&quot;,
+    &quot;password&quot;: &quot;secret&quot;
   }
 }
 201
 {
   &quot;description&quot;: null,
-  &quot;url&quot;: &quot;qemu+ssh://root@libvirt.example.com/system&quot;,
-  &quot;created_at&quot;: &quot;2018-11-01 13:29:59 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:29:59 UTC&quot;,
+  &quot;url&quot;: &quot;https://myovirt/api&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:29 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:29 UTC&quot;,
   &quot;id&quot;: 980190963,
-  &quot;name&quot;: &quot;libvirt_compute&quot;,
-  &quot;provider&quot;: &quot;Libvirt&quot;,
-  &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
-  &quot;display_type&quot;: &quot;vnc&quot;,
-  &quot;set_console_password&quot;: true,
+  &quot;name&quot;: &quot;Ovirt-create-test&quot;,
+  &quot;provider&quot;: &quot;Ovirt&quot;,
+  &quot;provider_friendly_name&quot;: &quot;oVirt&quot;,
+  &quot;user&quot;: &quot;user@example.com&quot;,
+  &quot;datacenter&quot;: &quot;dc7725de-f008-4ba7-aa54-a5b25e8f6644&quot;,
+  &quot;use_v4&quot;: false,
+  &quot;ovirt_quota&quot;: null,
   &quot;images&quot;: [],
   &quot;compute_attributes&quot;: [],
   &quot;locations&quot;: [],
-  &quot;organizations&quot;: [
-    {
-      &quot;id&quot;: 114267492,
-      &quot;name&quot;: &quot;Empty Organization&quot;,
-      &quot;title&quot;: &quot;Empty Organization&quot;,
-      &quot;description&quot;: null
-    },
-    {
-      &quot;id&quot;: 447626438,
-      &quot;name&quot;: &quot;Organization 1&quot;,
-      &quot;title&quot;: &quot;Organization 1&quot;,
-      &quot;description&quot;: null
-    },
-    {
-      &quot;id&quot;: 61304186,
-      &quot;name&quot;: &quot;Organization 2&quot;,
-      &quot;title&quot;: &quot;Organization 2&quot;,
-      &quot;description&quot;: null
-    }
-  ]
+  &quot;organizations&quot;: []
 }</pre>
 
   <h3>Params</h3>
@@ -1184,44 +1050,28 @@
     <pre class="prettyprint">PUT /api/compute_resources/367690737
 {
   &quot;compute_resource&quot;: {
-    &quot;location_ids&quot;: [
-      447626442,
-      447626443,
-      447626444
-    ]
+    &quot;display_type&quot;: &quot;spice&quot;
   }
 }
 200
 {
   &quot;description&quot;: &quot;mycompute&quot;,
   &quot;url&quot;: &quot;test:///default&quot;,
-  &quot;created_at&quot;: &quot;2018-11-01 13:29:47 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:29:47 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:29 UTC&quot;,
   &quot;id&quot;: 367690737,
   &quot;name&quot;: &quot;mycompute&quot;,
   &quot;provider&quot;: &quot;Libvirt&quot;,
   &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
-  &quot;display_type&quot;: &quot;vnc&quot;,
+  &quot;display_type&quot;: &quot;spice&quot;,
   &quot;set_console_password&quot;: true,
   &quot;images&quot;: [],
   &quot;compute_attributes&quot;: [],
   &quot;locations&quot;: [
     {
-      &quot;id&quot;: 447626442,
-      &quot;name&quot;: &quot;loc152&quot;,
-      &quot;title&quot;: &quot;loc152&quot;,
-      &quot;description&quot;: null
-    },
-    {
-      &quot;id&quot;: 447626443,
-      &quot;name&quot;: &quot;loc153&quot;,
-      &quot;title&quot;: &quot;loc153&quot;,
-      &quot;description&quot;: null
-    },
-    {
-      &quot;id&quot;: 447626444,
-      &quot;name&quot;: &quot;loc154&quot;,
-      &quot;title&quot;: &quot;loc154&quot;,
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
       &quot;description&quot;: null
     }
   ],
@@ -2062,7 +1912,7 @@
 
 
   <h3>Examples</h3>
-    <pre class="prettyprint">GET /api/compute_resources/305613588-Vmware/available_clusters
+    <pre class="prettyprint">GET /api/compute_resources/510899777-Ovirt/available_clusters
 200
 {
   &quot;total&quot;: 9,
@@ -2076,7 +1926,7 @@
   },
   &quot;results&quot;: [
     {
-      &quot;name&quot;: &quot;test_vmware_object&quot;,
+      &quot;name&quot;: &quot;test_cluster&quot;,
       &quot;id&quot;: &quot;my11-test35-uuid99&quot;
     }
   ]
@@ -2595,7 +2445,7 @@
 
 
   <h3>Examples</h3>
-    <pre class="prettyprint">GET /api/compute_resources/305613588-Vmware/available_clusters/123-456-789/available_networks
+    <pre class="prettyprint">GET /api/compute_resources/510899777-Ovirt/available_clusters/123-456-789/available_networks
 200
 {
   &quot;total&quot;: 9,
@@ -2609,7 +2459,7 @@
   },
   &quot;results&quot;: [
     {
-      &quot;name&quot;: &quot;test_vmware_object&quot;,
+      &quot;name&quot;: &quot;test_network&quot;,
       &quot;id&quot;: &quot;my11-test35-uuid99&quot;
     }
   ]
@@ -2911,7 +2761,7 @@
 
 
   <h3>Examples</h3>
-    <pre class="prettyprint">GET /api/compute_resources/305613588-Vmware/available_storage_domains
+    <pre class="prettyprint">GET /api/compute_resources/305613588-Vmware/available_storage_domains/test_vmware_cluster
 200
 {
   &quot;total&quot;: 9,
@@ -2925,7 +2775,7 @@
   },
   &quot;results&quot;: [
     {
-      &quot;name&quot;: &quot;test_vmware_object&quot;,
+      &quot;name&quot;: &quot;test_vmware_cluster&quot;,
       &quot;id&quot;: &quot;my11-test35-uuid99&quot;
     }
   ]
@@ -3074,7 +2924,7 @@
 
 
   <h3>Examples</h3>
-    <pre class="prettyprint">GET /api/compute_resources/305613588-Vmware/available_storage_pods
+    <pre class="prettyprint">GET /api/compute_resources/305613588-Vmware/available_storage_pods/test_vmware_pod
 200
 {
   &quot;total&quot;: 9,
@@ -3088,8 +2938,8 @@
   },
   &quot;results&quot;: [
     {
-      &quot;name&quot;: &quot;test_vmware_object&quot;,
-      &quot;id&quot;: &quot;my11-test35-uuid99&quot;
+      &quot;name&quot;: &quot;test_vmware_pod&quot;,
+      &quot;id&quot;: &quot;group-p123456&quot;
     }
   ]
 }</pre>
@@ -3358,7 +3208,7 @@
 
 
   <h3>Examples</h3>
-    <pre class="prettyprint">PUT /api/compute_resources/980190966-compute_resource290/associate
+    <pre class="prettyprint">PUT /api/compute_resources/980190963-compute_resource2/associate
 {
   &quot;compute_resource&quot;: {}
 }
@@ -3415,9 +3265,9 @@
       &quot;managed&quot;: false,
       &quot;use_image&quot;: null,
       &quot;image_file&quot;: &quot;&quot;,
-      &quot;uuid&quot;: &quot;706c6b96-5f1f-4cae-b5fe-3742fdca903d&quot;,
-      &quot;compute_resource_id&quot;: 980190966,
-      &quot;compute_resource_name&quot;: &quot;compute_resource290&quot;,
+      &quot;uuid&quot;: &quot;d863be54-e4a9-43f4-a34c-516e8ae69fe5&quot;,
+      &quot;compute_resource_id&quot;: 980190963,
+      &quot;compute_resource_name&quot;: &quot;compute_resource2&quot;,
       &quot;compute_profile_id&quot;: null,
       &quot;compute_profile_name&quot;: null,
       &quot;capabilities&quot;: [
@@ -3425,11 +3275,11 @@
         &quot;key_pair&quot;
       ],
       &quot;provision_method&quot;: &quot;image&quot;,
-      &quot;certname&quot;: &quot;host2197&quot;,
+      &quot;certname&quot;: &quot;host2&quot;,
       &quot;image_id&quot;: null,
       &quot;image_name&quot;: null,
-      &quot;created_at&quot;: &quot;2018-11-01 13:38:06 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:38:06 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:30 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:30 UTC&quot;,
       &quot;last_compile&quot;: null,
       &quot;global_status&quot;: 0,
       &quot;global_status_label&quot;: &quot;OK&quot;,
@@ -3439,8 +3289,8 @@
       &quot;location_name&quot;: &quot;Location 1&quot;,
       &quot;puppet_status&quot;: 0,
       &quot;model_name&quot;: null,
-      &quot;name&quot;: &quot;host2197&quot;,
-      &quot;id&quot;: 28,
+      &quot;name&quot;: &quot;host2&quot;,
+      &quot;id&quot;: 2,
       &quot;puppet_proxy_id&quot;: null,
       &quot;puppet_proxy_name&quot;: null,
       &quot;puppet_ca_proxy_id&quot;: null,

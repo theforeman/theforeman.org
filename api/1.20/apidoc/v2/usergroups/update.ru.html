@@ -31,7 +31,7 @@
   </li>
   <li class='active'>update</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/usergroups/update.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/usergroups/update.de.html">de</a> | <a href="../../../apidoc/v2/usergroups/update.it.html">it</a> | <a href="../../../apidoc/v2/usergroups/update.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/usergroups/update.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/usergroups/update.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/usergroups/update.fr.html">fr</a> | <b><a href="../../../apidoc/v2/usergroups/update.ru.html">ru</a></b> | <a href="../../../apidoc/v2/usergroups/update.ja.html">ja</a> | <a href="../../../apidoc/v2/usergroups/update.es.html">es</a> | <a href="../../../apidoc/v2/usergroups/update.ko.html">ko</a> | <a href="../../../apidoc/v2/usergroups/update.ca.html">ca</a> | <a href="../../../apidoc/v2/usergroups/update.gl.html">gl</a> | <a href="../../../apidoc/v2/usergroups/update.en.html">en</a> | <a href="../../../apidoc/v2/usergroups/update.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/usergroups/update.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/usergroups/update.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/usergroups/update.ko.html">ko</a> | <a href="../../../apidoc/v2/usergroups/update.en.html">en</a> | <a href="../../../apidoc/v2/usergroups/update.fr.html">fr</a> | <a href="../../../apidoc/v2/usergroups/update.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/usergroups/update.de.html">de</a> | <a href="../../../apidoc/v2/usergroups/update.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/usergroups/update.ja.html">ja</a> | <a href="../../../apidoc/v2/usergroups/update.pl.html">pl</a> | <a href="../../../apidoc/v2/usergroups/update.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/usergroups/update.it.html">it</a> | <a href="../../../apidoc/v2/usergroups/update.zh_TW.html">zh_TW</a> | <b><a href="../../../apidoc/v2/usergroups/update.ru.html">ru</a></b> | <a href="../../../apidoc/v2/usergroups/update.es.html">es</a> | <a href="../../../apidoc/v2/usergroups/update.ca.html">ca</a> | <a href="../../../apidoc/v2/usergroups/update.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/usergroups/update.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/usergroups/update.gl.html">gl</a> ]
 </li>
 
 
@@ -54,33 +54,25 @@
 
 
   <h2>Примеры</h2>
-    <pre class="prettyprint">PUT /api/usergroups/21-usergroup294
+    <pre class="prettyprint">PUT /api/usergroups/1
 {
   &quot;usergroup&quot;: {
-    &quot;name&quot;: &quot;test_usergroup&quot;,
-    &quot;role_ids&quot;: [
-      1
-    ]
+    &quot;name&quot;: &quot;&quot;
   }
 }
-200
+422
 {
-  &quot;admin&quot;: false,
-  &quot;created_at&quot;: &quot;2018-11-01 13:38:04 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:38:04 UTC&quot;,
-  &quot;name&quot;: &quot;test_usergroup&quot;,
-  &quot;id&quot;: 21,
-  &quot;external_usergroups&quot;: [],
-  &quot;usergroups&quot;: [],
-  &quot;users&quot;: [],
-  &quot;roles&quot;: [
-    {
-      &quot;name&quot;: &quot;Manager&quot;,
-      &quot;id&quot;: 1,
-      &quot;description&quot;: null,
-      &quot;origin&quot;: &quot;foreman&quot;
-    }
-  ]
+  &quot;error&quot;: {
+    &quot;id&quot;: 1,
+    &quot;errors&quot;: {
+      &quot;name&quot;: [
+        &quot;can&#39;t be blank&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Name can&#39;t be blank&quot;
+    ]
+  }
 }</pre>
 
   <h2>Параметры</h2>

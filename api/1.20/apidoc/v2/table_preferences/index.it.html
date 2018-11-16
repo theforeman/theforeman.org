@@ -31,7 +31,7 @@
   </li>
   <li class='active'>index</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/table_preferences/index.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/table_preferences/index.de.html">de</a> | <b><a href="../../../apidoc/v2/table_preferences/index.it.html">it</a></b> | <a href="../../../apidoc/v2/table_preferences/index.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/table_preferences/index.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/table_preferences/index.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/table_preferences/index.fr.html">fr</a> | <a href="../../../apidoc/v2/table_preferences/index.ru.html">ru</a> | <a href="../../../apidoc/v2/table_preferences/index.ja.html">ja</a> | <a href="../../../apidoc/v2/table_preferences/index.es.html">es</a> | <a href="../../../apidoc/v2/table_preferences/index.ko.html">ko</a> | <a href="../../../apidoc/v2/table_preferences/index.ca.html">ca</a> | <a href="../../../apidoc/v2/table_preferences/index.gl.html">gl</a> | <a href="../../../apidoc/v2/table_preferences/index.en.html">en</a> | <a href="../../../apidoc/v2/table_preferences/index.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/table_preferences/index.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/table_preferences/index.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/table_preferences/index.ko.html">ko</a> | <a href="../../../apidoc/v2/table_preferences/index.en.html">en</a> | <a href="../../../apidoc/v2/table_preferences/index.fr.html">fr</a> | <a href="../../../apidoc/v2/table_preferences/index.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/table_preferences/index.de.html">de</a> | <a href="../../../apidoc/v2/table_preferences/index.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/table_preferences/index.ja.html">ja</a> | <a href="../../../apidoc/v2/table_preferences/index.pl.html">pl</a> | <a href="../../../apidoc/v2/table_preferences/index.zh_CN.html">zh_CN</a> | <b><a href="../../../apidoc/v2/table_preferences/index.it.html">it</a></b> | <a href="../../../apidoc/v2/table_preferences/index.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/table_preferences/index.ru.html">ru</a> | <a href="../../../apidoc/v2/table_preferences/index.es.html">es</a> | <a href="../../../apidoc/v2/table_preferences/index.ca.html">ca</a> | <a href="../../../apidoc/v2/table_preferences/index.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/table_preferences/index.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/table_preferences/index.gl.html">gl</a> ]
 </li>
 
 
@@ -52,13 +52,19 @@
 
 
   <h2>Esempi</h2>
-    <pre class="prettyprint">GET /api/users/988725680/table_preferences
-403
+    <pre class="prettyprint">GET /api/users/135138680/table_preferences
+200
 {
-  &quot;error&quot;: {
-    &quot;message&quot;: &quot;Access denied&quot;,
-    &quot;details&quot;: &quot;You are trying access the preferences of a different user&quot;
-  }
+  &quot;total&quot;: 0,
+  &quot;subtotal&quot;: 0,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: []
 }</pre>
 
   <h2>Parametri</h2>

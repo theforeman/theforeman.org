@@ -31,7 +31,7 @@
   </li>
   <li class='active'>import</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/provisioning_templates/import.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/provisioning_templates/import.de.html">de</a> | <a href="../../../apidoc/v2/provisioning_templates/import.it.html">it</a> | <a href="../../../apidoc/v2/provisioning_templates/import.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/provisioning_templates/import.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/provisioning_templates/import.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/provisioning_templates/import.fr.html">fr</a> | <b><a href="../../../apidoc/v2/provisioning_templates/import.ru.html">ru</a></b> | <a href="../../../apidoc/v2/provisioning_templates/import.ja.html">ja</a> | <a href="../../../apidoc/v2/provisioning_templates/import.es.html">es</a> | <a href="../../../apidoc/v2/provisioning_templates/import.ko.html">ko</a> | <a href="../../../apidoc/v2/provisioning_templates/import.ca.html">ca</a> | <a href="../../../apidoc/v2/provisioning_templates/import.gl.html">gl</a> | <a href="../../../apidoc/v2/provisioning_templates/import.en.html">en</a> | <a href="../../../apidoc/v2/provisioning_templates/import.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/provisioning_templates/import.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/provisioning_templates/import.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/provisioning_templates/import.ko.html">ko</a> | <a href="../../../apidoc/v2/provisioning_templates/import.en.html">en</a> | <a href="../../../apidoc/v2/provisioning_templates/import.fr.html">fr</a> | <a href="../../../apidoc/v2/provisioning_templates/import.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/provisioning_templates/import.de.html">de</a> | <a href="../../../apidoc/v2/provisioning_templates/import.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/provisioning_templates/import.ja.html">ja</a> | <a href="../../../apidoc/v2/provisioning_templates/import.pl.html">pl</a> | <a href="../../../apidoc/v2/provisioning_templates/import.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/provisioning_templates/import.it.html">it</a> | <a href="../../../apidoc/v2/provisioning_templates/import.zh_TW.html">zh_TW</a> | <b><a href="../../../apidoc/v2/provisioning_templates/import.ru.html">ru</a></b> | <a href="../../../apidoc/v2/provisioning_templates/import.es.html">es</a> | <a href="../../../apidoc/v2/provisioning_templates/import.ca.html">ca</a> | <a href="../../../apidoc/v2/provisioning_templates/import.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/provisioning_templates/import.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/provisioning_templates/import.gl.html">gl</a> ]
 </li>
 
 
@@ -55,27 +55,32 @@
     <pre class="prettyprint">POST /api/provisioning_templates/import
 {
   &quot;provisioning_template&quot;: {
-    &quot;name&quot;: &quot;provisioning_template19&quot;,
-    &quot;template&quot;: &quot;&lt;%#\nsnippet: true\n-%&gt;\nbbbb&quot;
+    &quot;name&quot;: &quot;taxonomy override test name&quot;,
+    &quot;template&quot;: &quot;&lt;%#\nkind: PXELinux\nname: taxonomy override test name\nmodel: ProvisioningTemplate\norganizations:\n - org19\nlocations:\n - loc9\n%&gt;\ntest&quot;,
+    &quot;organization_ids&quot;: [
+      447626441
+    ],
+    &quot;location_ids&quot;: [
+      447626442
+    ]
+  },
+  &quot;options&quot;: {
+    &quot;associate&quot;: &quot;new&quot;
   }
 }
 201
 {
-  &quot;template&quot;: &quot;&lt;%#\nsnippet: true\n-%&gt;\nbbbb&quot;,
-  &quot;name&quot;: &quot;provisioning_template19&quot;,
-  &quot;id&quot;: 1007981744,
-  &quot;snippet&quot;: true,
-  &quot;template_kind_id&quot;: null,
-  &quot;created_at&quot;: &quot;2018-11-01T13:20:30.045Z&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01T13:20:30.060Z&quot;,
+  &quot;id&quot;: 1007981803,
+  &quot;name&quot;: &quot;taxonomy override test name&quot;,
+  &quot;template&quot;: &quot;&lt;%#\nkind: PXELinux\nname: taxonomy override test name\nmodel: ProvisioningTemplate\norganizations:\n - org19\nlocations:\n - loc9\n%&gt;\ntest&quot;,
+  &quot;snippet&quot;: false,
+  &quot;template_kind_id&quot;: 452984334,
+  &quot;created_at&quot;: &quot;2018-11-15T19:02:17.211Z&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15T19:02:17.211Z&quot;,
   &quot;locked&quot;: false,
   &quot;default&quot;: false,
   &quot;vendor&quot;: null,
-  &quot;os_family&quot;: null,
-  &quot;job_category&quot;: &quot;Miscellaneous&quot;,
-  &quot;provider_type&quot;: null,
-  &quot;description_format&quot;: null,
-  &quot;execution_timeout_interval&quot;: null
+  &quot;os_family&quot;: null
 }</pre>
 
   <h2>Параметры</h2>

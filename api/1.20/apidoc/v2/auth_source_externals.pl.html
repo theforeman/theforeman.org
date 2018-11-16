@@ -27,7 +27,7 @@
     
   </li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../apidoc/v2/auth_source_externals.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/auth_source_externals.de.html">de</a> | <a href="../../apidoc/v2/auth_source_externals.it.html">it</a> | <a href="../../apidoc/v2/auth_source_externals.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/auth_source_externals.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/auth_source_externals.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/auth_source_externals.fr.html">fr</a> | <a href="../../apidoc/v2/auth_source_externals.ru.html">ru</a> | <a href="../../apidoc/v2/auth_source_externals.ja.html">ja</a> | <a href="../../apidoc/v2/auth_source_externals.es.html">es</a> | <a href="../../apidoc/v2/auth_source_externals.ko.html">ko</a> | <a href="../../apidoc/v2/auth_source_externals.ca.html">ca</a> | <a href="../../apidoc/v2/auth_source_externals.gl.html">gl</a> | <a href="../../apidoc/v2/auth_source_externals.en.html">en</a> | <a href="../../apidoc/v2/auth_source_externals.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/auth_source_externals.nl_NL.html">nl_NL</a> | <b><a href="../../apidoc/v2/auth_source_externals.pl.html">pl</a></b> ]
+  &nbsp;[ <a href="../../apidoc/v2/auth_source_externals.ko.html">ko</a> | <a href="../../apidoc/v2/auth_source_externals.en.html">en</a> | <a href="../../apidoc/v2/auth_source_externals.fr.html">fr</a> | <a href="../../apidoc/v2/auth_source_externals.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/auth_source_externals.de.html">de</a> | <a href="../../apidoc/v2/auth_source_externals.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/auth_source_externals.ja.html">ja</a> | <b><a href="../../apidoc/v2/auth_source_externals.pl.html">pl</a></b> | <a href="../../apidoc/v2/auth_source_externals.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/auth_source_externals.it.html">it</a> | <a href="../../apidoc/v2/auth_source_externals.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/auth_source_externals.ru.html">ru</a> | <a href="../../apidoc/v2/auth_source_externals.es.html">es</a> | <a href="../../apidoc/v2/auth_source_externals.ca.html">ca</a> | <a href="../../apidoc/v2/auth_source_externals.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/auth_source_externals.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/auth_source_externals.gl.html">gl</a> ]
 </li>
 
 </ul>
@@ -105,8 +105,8 @@
   },
   &quot;results&quot;: [
     {
-      &quot;created_at&quot;: &quot;2018-11-01 13:17:27 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:17:27 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
       &quot;id&quot;: 408068537,
       &quot;name&quot;: &quot;External&quot;,
       &quot;locations&quot;: [],
@@ -303,27 +303,13 @@
     <pre class="prettyprint">GET /api/auth_source_externals/408068537
 200
 {
-  &quot;created_at&quot;: &quot;2018-11-01 13:17:27 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:17:27 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
   &quot;id&quot;: 408068537,
   &quot;name&quot;: &quot;External&quot;,
   &quot;external_usergroups&quot;: [],
-  &quot;locations&quot;: [
-    {
-      &quot;id&quot;: 255093256,
-      &quot;name&quot;: &quot;Location 1&quot;,
-      &quot;title&quot;: &quot;Location 1&quot;,
-      &quot;description&quot;: null
-    }
-  ],
-  &quot;organizations&quot;: [
-    {
-      &quot;id&quot;: 447626438,
-      &quot;name&quot;: &quot;Organization 1&quot;,
-      &quot;title&quot;: &quot;Organization 1&quot;,
-      &quot;description&quot;: null
-    }
-  ]
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: []
 }</pre>
 
   <h3>Parametry</h3>
@@ -440,18 +426,37 @@
     <pre class="prettyprint">PUT /api/auth_source_externals/408068537
 {
   &quot;auth_source_external&quot;: {
-    &quot;name&quot;: &quot;new_name_external&quot;
+    &quot;organization_names&quot;: [
+      &quot;Organization 1&quot;
+    ],
+    &quot;location_ids&quot;: [
+      255093256
+    ]
   }
 }
 200
 {
-  &quot;created_at&quot;: &quot;2018-11-01 13:17:27 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:17:28 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
   &quot;id&quot;: 408068537,
-  &quot;name&quot;: &quot;new_name_external&quot;,
+  &quot;name&quot;: &quot;External&quot;,
   &quot;external_usergroups&quot;: [],
-  &quot;locations&quot;: [],
-  &quot;organizations&quot;: []
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
 }</pre>
 
   <h3>Parametry</h3>

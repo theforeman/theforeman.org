@@ -27,7 +27,7 @@
     
   </li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../apidoc/v2/roles.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/roles.de.html">de</a> | <a href="../../apidoc/v2/roles.it.html">it</a> | <a href="../../apidoc/v2/roles.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/roles.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/roles.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/roles.fr.html">fr</a> | <a href="../../apidoc/v2/roles.ru.html">ru</a> | <a href="../../apidoc/v2/roles.ja.html">ja</a> | <b><a href="../../apidoc/v2/roles.es.html">es</a></b> | <a href="../../apidoc/v2/roles.ko.html">ko</a> | <a href="../../apidoc/v2/roles.ca.html">ca</a> | <a href="../../apidoc/v2/roles.gl.html">gl</a> | <a href="../../apidoc/v2/roles.en.html">en</a> | <a href="../../apidoc/v2/roles.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/roles.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/roles.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../apidoc/v2/roles.ko.html">ko</a> | <a href="../../apidoc/v2/roles.en.html">en</a> | <a href="../../apidoc/v2/roles.fr.html">fr</a> | <a href="../../apidoc/v2/roles.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/roles.de.html">de</a> | <a href="../../apidoc/v2/roles.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/roles.ja.html">ja</a> | <a href="../../apidoc/v2/roles.pl.html">pl</a> | <a href="../../apidoc/v2/roles.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/roles.it.html">it</a> | <a href="../../apidoc/v2/roles.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/roles.ru.html">ru</a> | <b><a href="../../apidoc/v2/roles.es.html">es</a></b> | <a href="../../apidoc/v2/roles.ca.html">ca</a> | <a href="../../apidoc/v2/roles.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/roles.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/roles.gl.html">gl</a> ]
 </li>
 
 </ul>
@@ -87,16 +87,16 @@
     {
       &quot;builtin&quot;: 0,
       &quot;cloned_from_id&quot;: null,
-      &quot;name&quot;: &quot;Create hosts&quot;,
-      &quot;id&quot;: 9,
+      &quot;name&quot;: &quot;CRUD hosts&quot;,
+      &quot;id&quot;: 12,
       &quot;description&quot;: null,
       &quot;origin&quot;: &quot;&quot;
     },
     {
       &quot;builtin&quot;: 0,
       &quot;cloned_from_id&quot;: null,
-      &quot;name&quot;: &quot;CRUD hosts&quot;,
-      &quot;id&quot;: 12,
+      &quot;name&quot;: &quot;Create hosts&quot;,
+      &quot;id&quot;: 9,
       &quot;description&quot;: null,
       &quot;origin&quot;: &quot;&quot;
     },
@@ -175,16 +175,16 @@
     {
       &quot;builtin&quot;: 0,
       &quot;cloned_from_id&quot;: null,
-      &quot;name&quot;: &quot;Viewer&quot;,
-      &quot;id&quot;: 5,
+      &quot;name&quot;: &quot;View hosts&quot;,
+      &quot;id&quot;: 3,
       &quot;description&quot;: null,
       &quot;origin&quot;: &quot;foreman&quot;
     },
     {
       &quot;builtin&quot;: 0,
       &quot;cloned_from_id&quot;: null,
-      &quot;name&quot;: &quot;View hosts&quot;,
-      &quot;id&quot;: 3,
+      &quot;name&quot;: &quot;Viewer&quot;,
+      &quot;id&quot;: 5,
       &quot;description&quot;: null,
       &quot;origin&quot;: &quot;foreman&quot;
     }
@@ -637,20 +637,40 @@
     <pre class="prettyprint">POST /api/roles
 {
   &quot;role&quot;: {
-    &quot;name&quot;: &quot;staff&quot;
+    &quot;name&quot;: &quot;Test Role&quot;,
+    &quot;location_ids&quot;: [
+      255093256
+    ],
+    &quot;organization_ids&quot;: [
+      447626438
+    ]
   }
 }
 201
 {
   &quot;builtin&quot;: 0,
   &quot;cloned_from_id&quot;: null,
-  &quot;name&quot;: &quot;staff&quot;,
+  &quot;name&quot;: &quot;Test Role&quot;,
   &quot;id&quot;: 18,
   &quot;description&quot;: null,
   &quot;origin&quot;: null,
   &quot;filters&quot;: [],
-  &quot;locations&quot;: [],
-  &quot;organizations&quot;: []
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
 }</pre>
 
   <h3>Parámetros</h3>
@@ -858,27 +878,46 @@
 
 
   <h3>Ejemplos</h3>
-    <pre class="prettyprint">PUT /api/roles/8-Destroy%20hosts
+    <pre class="prettyprint">PUT /api/roles/18
 {
   &quot;role&quot;: {
-    &quot;name&quot;: &quot;staff&quot;
+    &quot;location_ids&quot;: [
+      255093256
+    ],
+    &quot;organization_ids&quot;: [
+      447626438
+    ]
   }
 }
 200
 {
   &quot;builtin&quot;: 0,
   &quot;cloned_from_id&quot;: null,
-  &quot;name&quot;: &quot;staff&quot;,
-  &quot;id&quot;: 8,
+  &quot;name&quot;: &quot;New Role&quot;,
+  &quot;id&quot;: 18,
   &quot;description&quot;: null,
-  &quot;origin&quot;: &quot;&quot;,
+  &quot;origin&quot;: null,
   &quot;filters&quot;: [
     {
-      &quot;id&quot;: 10997177
+      &quot;id&quot;: 1062414301
     }
   ],
-  &quot;locations&quot;: [],
-  &quot;organizations&quot;: []
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
 }</pre>
 
   <h3>Parámetros</h3>
@@ -1108,18 +1147,18 @@
 
 
   <h3>Ejemplos</h3>
-    <pre class="prettyprint">DELETE /api/roles/15
+    <pre class="prettyprint">DELETE /api/roles/13-Organization%20admin/clone
 {
   &quot;role&quot;: {}
 }
 200
 {
-  &quot;id&quot;: 15,
-  &quot;name&quot;: &quot;New Role&quot;,
+  &quot;id&quot;: 18,
+  &quot;name&quot;: &quot;Org Admin&quot;,
   &quot;builtin&quot;: 0,
   &quot;description&quot;: null,
   &quot;origin&quot;: null,
-  &quot;cloned_from_id&quot;: null
+  &quot;cloned_from_id&quot;: 13
 }</pre>
 
   <h3>Parámetros</h3>
@@ -1233,25 +1272,21 @@
 
 
   <h3>Ejemplos</h3>
-    <pre class="prettyprint">POST /api/roles/16/clone
+    <pre class="prettyprint">POST /api/roles/13-Organization%20admin/clone
 {
-  &quot;name&quot;: &quot;New Role&quot;,
+  &quot;new_name&quot;: &quot;Org Admin&quot;,
   &quot;role&quot;: {
-    &quot;description&quot;: &quot;updated description&quot;,
-    &quot;organization_ids&quot;: [
-      61304186
-    ],
-    &quot;name&quot;: &quot;New Role&quot;
+    &quot;name&quot;: &quot;Org Admin&quot;
   }
 }
 201
 {
-  &quot;id&quot;: 17,
-  &quot;name&quot;: &quot;New Role&quot;,
+  &quot;id&quot;: 18,
+  &quot;name&quot;: &quot;Org Admin&quot;,
   &quot;builtin&quot;: 0,
-  &quot;description&quot;: &quot;updated description&quot;,
+  &quot;description&quot;: null,
   &quot;origin&quot;: null,
-  &quot;cloned_from_id&quot;: 16
+  &quot;cloned_from_id&quot;: 13
 }</pre>
 
   <h3>Parámetros</h3>

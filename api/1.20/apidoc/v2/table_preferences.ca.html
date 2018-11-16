@@ -27,7 +27,7 @@
     
   </li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../apidoc/v2/table_preferences.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/table_preferences.de.html">de</a> | <a href="../../apidoc/v2/table_preferences.it.html">it</a> | <a href="../../apidoc/v2/table_preferences.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/table_preferences.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/table_preferences.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/table_preferences.fr.html">fr</a> | <a href="../../apidoc/v2/table_preferences.ru.html">ru</a> | <a href="../../apidoc/v2/table_preferences.ja.html">ja</a> | <a href="../../apidoc/v2/table_preferences.es.html">es</a> | <a href="../../apidoc/v2/table_preferences.ko.html">ko</a> | <b><a href="../../apidoc/v2/table_preferences.ca.html">ca</a></b> | <a href="../../apidoc/v2/table_preferences.gl.html">gl</a> | <a href="../../apidoc/v2/table_preferences.en.html">en</a> | <a href="../../apidoc/v2/table_preferences.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/table_preferences.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/table_preferences.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../apidoc/v2/table_preferences.ko.html">ko</a> | <a href="../../apidoc/v2/table_preferences.en.html">en</a> | <a href="../../apidoc/v2/table_preferences.fr.html">fr</a> | <a href="../../apidoc/v2/table_preferences.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/table_preferences.de.html">de</a> | <a href="../../apidoc/v2/table_preferences.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/table_preferences.ja.html">ja</a> | <a href="../../apidoc/v2/table_preferences.pl.html">pl</a> | <a href="../../apidoc/v2/table_preferences.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/table_preferences.it.html">it</a> | <a href="../../apidoc/v2/table_preferences.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/table_preferences.ru.html">ru</a> | <a href="../../apidoc/v2/table_preferences.es.html">es</a> | <b><a href="../../apidoc/v2/table_preferences.ca.html">ca</a></b> | <a href="../../apidoc/v2/table_preferences.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/table_preferences.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/table_preferences.gl.html">gl</a> ]
 </li>
 
 </ul>
@@ -71,13 +71,19 @@
 
 
   <h3><span class="translation_missing" title="translation missing: ca.apipie.examples">Examples</span></h3>
-    <pre class="prettyprint">GET /api/users/988725680/table_preferences
-403
+    <pre class="prettyprint">GET /api/users/135138680/table_preferences
+200
 {
-  &quot;error&quot;: {
-    &quot;message&quot;: &quot;Access denied&quot;,
-    &quot;details&quot;: &quot;You are trying access the preferences of a different user&quot;
-  }
+  &quot;total&quot;: 0,
+  &quot;subtotal&quot;: 0,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: []
 }</pre>
 
   <h3><span class="translation_missing" title="translation missing: ca.apipie.params">Params</span></h3>
@@ -172,15 +178,15 @@
     <pre class="prettyprint">GET /api/users/135138680/table_preferences/test_subscriptions_resource
 200
 {
-  &quot;id&quot;: 5,
+  &quot;id&quot;: 1,
   &quot;name&quot;: &quot;test_subscriptions_resource&quot;,
   &quot;columns&quot;: [
     &quot;1&quot;,
     &quot;2&quot;,
     &quot;3&quot;
   ],
-  &quot;created_at&quot;: &quot;2018-11-01 13:16:22 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:16:22 UTC&quot;
+  &quot;created_at&quot;: &quot;2018-11-15 19:02:05 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:02:05 UTC&quot;
 }</pre>
 
   <h3><span class="translation_missing" title="translation missing: ca.apipie.params">Params</span></h3>
@@ -313,15 +319,15 @@
 }
 201
 {
-  &quot;id&quot;: 4,
+  &quot;id&quot;: 1,
   &quot;name&quot;: &quot;test_subscriptions_resource&quot;,
   &quot;columns&quot;: [
     &quot;1&quot;,
     &quot;2&quot;,
     &quot;3&quot;
   ],
-  &quot;created_at&quot;: &quot;2018-11-01 13:16:22 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:16:22 UTC&quot;
+  &quot;created_at&quot;: &quot;2018-11-15 19:02:05 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:02:05 UTC&quot;
 }</pre>
 
   <h3><span class="translation_missing" title="translation missing: ca.apipie.params">Params</span></h3>
@@ -500,15 +506,15 @@
 }
 200
 {
-  &quot;id&quot;: 3,
+  &quot;id&quot;: 1,
   &quot;name&quot;: &quot;test_subscriptions_resource&quot;,
   &quot;columns&quot;: [
     &quot;1&quot;,
     &quot;2&quot;,
     &quot;3&quot;
   ],
-  &quot;created_at&quot;: &quot;2018-11-01 13:16:22 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:16:22 UTC&quot;
+  &quot;created_at&quot;: &quot;2018-11-15 19:02:05 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:02:05 UTC&quot;
 }</pre>
 
   <h3><span class="translation_missing" title="translation missing: ca.apipie.params">Params</span></h3>
@@ -683,8 +689,8 @@
     &quot;2&quot;,
     &quot;3&quot;
   ],
-  &quot;created_at&quot;: &quot;2018-11-01 13:16:22 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:16:22 UTC&quot;
+  &quot;created_at&quot;: &quot;2018-11-15 19:02:05 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:02:05 UTC&quot;
 }</pre>
 
   <h3><span class="translation_missing" title="translation missing: ca.apipie.params">Params</span></h3>

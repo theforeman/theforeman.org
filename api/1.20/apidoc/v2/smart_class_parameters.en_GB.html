@@ -27,7 +27,7 @@
     
   </li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../apidoc/v2/smart_class_parameters.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/smart_class_parameters.de.html">de</a> | <a href="../../apidoc/v2/smart_class_parameters.it.html">it</a> | <a href="../../apidoc/v2/smart_class_parameters.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/smart_class_parameters.zh_CN.html">zh_CN</a> | <b><a href="../../apidoc/v2/smart_class_parameters.en_GB.html">en_GB</a></b> | <a href="../../apidoc/v2/smart_class_parameters.fr.html">fr</a> | <a href="../../apidoc/v2/smart_class_parameters.ru.html">ru</a> | <a href="../../apidoc/v2/smart_class_parameters.ja.html">ja</a> | <a href="../../apidoc/v2/smart_class_parameters.es.html">es</a> | <a href="../../apidoc/v2/smart_class_parameters.ko.html">ko</a> | <a href="../../apidoc/v2/smart_class_parameters.ca.html">ca</a> | <a href="../../apidoc/v2/smart_class_parameters.gl.html">gl</a> | <a href="../../apidoc/v2/smart_class_parameters.en.html">en</a> | <a href="../../apidoc/v2/smart_class_parameters.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/smart_class_parameters.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/smart_class_parameters.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../apidoc/v2/smart_class_parameters.ko.html">ko</a> | <a href="../../apidoc/v2/smart_class_parameters.en.html">en</a> | <a href="../../apidoc/v2/smart_class_parameters.fr.html">fr</a> | <b><a href="../../apidoc/v2/smart_class_parameters.en_GB.html">en_GB</a></b> | <a href="../../apidoc/v2/smart_class_parameters.de.html">de</a> | <a href="../../apidoc/v2/smart_class_parameters.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/smart_class_parameters.ja.html">ja</a> | <a href="../../apidoc/v2/smart_class_parameters.pl.html">pl</a> | <a href="../../apidoc/v2/smart_class_parameters.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/smart_class_parameters.it.html">it</a> | <a href="../../apidoc/v2/smart_class_parameters.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/smart_class_parameters.ru.html">ru</a> | <a href="../../apidoc/v2/smart_class_parameters.es.html">es</a> | <a href="../../apidoc/v2/smart_class_parameters.ca.html">ca</a> | <a href="../../apidoc/v2/smart_class_parameters.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/smart_class_parameters.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/smart_class_parameters.gl.html">gl</a> ]
 </li>
 
 </ul>
@@ -121,11 +121,11 @@
 
 
   <h3>Examples</h3>
-    <pre class="prettyprint">GET /api/smart_class_parameters
+    <pre class="prettyprint">GET /api/puppetclasses/980190962/smart_class_parameters
 200
 {
-  &quot;total&quot;: 4,
-  &quot;subtotal&quot;: 4,
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
   &quot;page&quot;: 1,
   &quot;per_page&quot;: 20,
   &quot;search&quot;: null,
@@ -147,8 +147,8 @@
       &quot;merge_default&quot;: false,
       &quot;avoid_duplicates&quot;: false,
       &quot;override_value_order&quot;: &quot;fqdn\norganization,location\nhostgroup\nos&quot;,
-      &quot;created_at&quot;: &quot;2018-11-01 13:15:57 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:15:57 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
       &quot;use_puppet_default&quot;: null,
       &quot;puppetclass_name&quot;: &quot;base&quot;,
       &quot;parameter&quot;: &quot;cluster&quot;,
@@ -156,75 +156,6 @@
       &quot;puppetclass_id&quot;: 980190962,
       &quot;override_values_count&quot;: 2,
       &quot;default_value&quot;: &quot;secret&quot;
-    },
-    {
-      &quot;description&quot;: null,
-      &quot;override&quot;: true,
-      &quot;parameter_type&quot;: &quot;string&quot;,
-      &quot;hidden_value?&quot;: false,
-      &quot;omit&quot;: null,
-      &quot;required&quot;: false,
-      &quot;validator_type&quot;: null,
-      &quot;validator_rule&quot;: null,
-      &quot;merge_overrides&quot;: false,
-      &quot;merge_default&quot;: false,
-      &quot;avoid_duplicates&quot;: false,
-      &quot;override_value_order&quot;: &quot;fqdn\norganization,location\nhostgroup&quot;,
-      &quot;created_at&quot;: &quot;2018-11-01 13:15:57 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:15:57 UTC&quot;,
-      &quot;use_puppet_default&quot;: null,
-      &quot;puppetclass_name&quot;: &quot;apache&quot;,
-      &quot;parameter&quot;: &quot;custom_class_param&quot;,
-      &quot;id&quot;: 1018350795,
-      &quot;puppetclass_id&quot;: 298486374,
-      &quot;override_values_count&quot;: 0,
-      &quot;default_value&quot;: &quot;abcdef&quot;
-    },
-    {
-      &quot;description&quot;: null,
-      &quot;override&quot;: false,
-      &quot;parameter_type&quot;: &quot;integer&quot;,
-      &quot;hidden_value?&quot;: false,
-      &quot;omit&quot;: null,
-      &quot;required&quot;: false,
-      &quot;validator_type&quot;: null,
-      &quot;validator_rule&quot;: null,
-      &quot;merge_overrides&quot;: false,
-      &quot;merge_default&quot;: false,
-      &quot;avoid_duplicates&quot;: false,
-      &quot;override_value_order&quot;: &quot;hostgroup\ncomment\nfqdn&quot;,
-      &quot;created_at&quot;: &quot;2018-11-01 13:15:57 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:15:57 UTC&quot;,
-      &quot;use_puppet_default&quot;: null,
-      &quot;puppetclass_name&quot;: &quot;git&quot;,
-      &quot;parameter&quot;: &quot;port&quot;,
-      &quot;id&quot;: 980190962,
-      &quot;puppetclass_id&quot;: 113629430,
-      &quot;override_values_count&quot;: 3,
-      &quot;default_value&quot;: &quot;80&quot;
-    },
-    {
-      &quot;description&quot;: null,
-      &quot;override&quot;: true,
-      &quot;parameter_type&quot;: &quot;boolean&quot;,
-      &quot;hidden_value?&quot;: false,
-      &quot;omit&quot;: null,
-      &quot;required&quot;: false,
-      &quot;validator_type&quot;: null,
-      &quot;validator_rule&quot;: null,
-      &quot;merge_overrides&quot;: false,
-      &quot;merge_default&quot;: false,
-      &quot;avoid_duplicates&quot;: false,
-      &quot;override_value_order&quot;: &quot;fqdn\nhostgroup\nhostgroup,domain\nos&quot;,
-      &quot;created_at&quot;: &quot;2018-11-01 13:15:57 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:15:57 UTC&quot;,
-      &quot;use_puppet_default&quot;: null,
-      &quot;puppetclass_name&quot;: &quot;git&quot;,
-      &quot;parameter&quot;: &quot;ssl&quot;,
-      &quot;id&quot;: 113629430,
-      &quot;puppetclass_id&quot;: 113629430,
-      &quot;override_values_count&quot;: 0,
-      &quot;default_value&quot;: &quot;t&quot;
     }
   ]
 }</pre>
@@ -586,13 +517,13 @@
 
 
   <h3>Examples</h3>
-    <pre class="prettyprint">GET /api/smart_class_parameters/cluster
+    <pre class="prettyprint">GET /api/puppetclasses/980190962/smart_class_parameters/1018350796
 200
 {
   &quot;description&quot;: null,
-  &quot;override&quot;: true,
-  &quot;parameter_type&quot;: &quot;string&quot;,
-  &quot;hidden_value?&quot;: false,
+  &quot;override&quot;: false,
+  &quot;parameter_type&quot;: null,
+  &quot;hidden_value?&quot;: true,
   &quot;omit&quot;: null,
   &quot;required&quot;: false,
   &quot;validator_type&quot;: null,
@@ -600,47 +531,18 @@
   &quot;merge_overrides&quot;: false,
   &quot;merge_default&quot;: false,
   &quot;avoid_duplicates&quot;: false,
-  &quot;override_value_order&quot;: &quot;fqdn\norganization,location\nhostgroup\nos&quot;,
-  &quot;created_at&quot;: &quot;2018-11-01 13:15:57 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:15:57 UTC&quot;,
+  &quot;override_value_order&quot;: &quot;fqdn\nhostgroup\nos\ndomain&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:35 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:35 UTC&quot;,
   &quot;use_puppet_default&quot;: null,
   &quot;puppetclass_name&quot;: &quot;base&quot;,
-  &quot;parameter&quot;: &quot;cluster&quot;,
-  &quot;id&quot;: 328495940,
+  &quot;parameter&quot;: &quot;param1&quot;,
+  &quot;id&quot;: 1018350796,
   &quot;puppetclass_id&quot;: 980190962,
-  &quot;override_values_count&quot;: 2,
-  &quot;default_value&quot;: &quot;secret&quot;,
-  &quot;environments&quot;: [
-    {
-      &quot;id&quot;: 334344675,
-      &quot;name&quot;: &quot;production&quot;
-    }
-  ],
-  &quot;puppetclass&quot;: {
-    &quot;id&quot;: 980190962,
-    &quot;name&quot;: &quot;base&quot;,
-    &quot;module_name&quot;: &quot;base&quot;
-  },
-  &quot;override_values&quot;: [
-    {
-      &quot;created_at&quot;: &quot;2018-11-01 13:15:57 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:15:57 UTC&quot;,
-      &quot;id&quot;: 674471636,
-      &quot;match&quot;: &quot;fqdn=temp.yourdomain.net&quot;,
-      &quot;value&quot;: &quot;8080&quot;,
-      &quot;omit&quot;: false,
-      &quot;use_puppet_default&quot;: false
-    },
-    {
-      &quot;created_at&quot;: &quot;2018-11-01 13:15:57 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:15:57 UTC&quot;,
-      &quot;id&quot;: 874520030,
-      &quot;match&quot;: &quot;hostgroup=Common&quot;,
-      &quot;value&quot;: &quot;8080&quot;,
-      &quot;omit&quot;: false,
-      &quot;use_puppet_default&quot;: false
-    }
-  ]
+  &quot;override_values_count&quot;: 0,
+  &quot;default_value&quot;: &quot;hidden&quot;,
+  &quot;environments&quot;: [],
+  &quot;override_values&quot;: []
 }</pre>
 
   <h3>Params</h3>
@@ -778,20 +680,54 @@
 
 
   <h3>Examples</h3>
-    <pre class="prettyprint">PUT /api/smart_class_parameters/1018350796
+    <pre class="prettyprint">PUT /api/smart_class_parameters/1018350795
 {
   &quot;smart_class_parameter&quot;: {
     &quot;override&quot;: true,
-    &quot;default_value&quot;: &quot;7114735545&quot;,
-    &quot;validator_type&quot;: &quot;regexp&quot;,
-    &quot;validator_rule&quot;: &quot;[0-9]&quot;
+    &quot;parameter_type&quot;: &quot;array&quot;,
+    &quot;default_value&quot;: &quot;[yJjteNflIu, GXBIHwELce]&quot;,
+    &quot;avoid_duplicates&quot;: true,
+    &quot;merge_overrides&quot;: true
   }
 }
-500
+200
 {
-  &quot;error&quot;: {
-    &quot;message&quot;: &quot;Validation failed: Lookup values is invalid&quot;
-  }
+  &quot;description&quot;: null,
+  &quot;override&quot;: true,
+  &quot;parameter_type&quot;: &quot;array&quot;,
+  &quot;hidden_value?&quot;: false,
+  &quot;omit&quot;: null,
+  &quot;required&quot;: false,
+  &quot;validator_type&quot;: null,
+  &quot;validator_rule&quot;: null,
+  &quot;merge_overrides&quot;: true,
+  &quot;merge_default&quot;: false,
+  &quot;avoid_duplicates&quot;: true,
+  &quot;override_value_order&quot;: &quot;fqdn\norganization,location\nhostgroup&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:02:49 UTC&quot;,
+  &quot;use_puppet_default&quot;: null,
+  &quot;puppetclass_name&quot;: &quot;apache&quot;,
+  &quot;parameter&quot;: &quot;custom_class_param&quot;,
+  &quot;id&quot;: 1018350795,
+  &quot;puppetclass_id&quot;: 298486374,
+  &quot;override_values_count&quot;: 0,
+  &quot;default_value&quot;: [
+    &quot;yJjteNflIu&quot;,
+    &quot;GXBIHwELce&quot;
+  ],
+  &quot;environments&quot;: [
+    {
+      &quot;id&quot;: 334344675,
+      &quot;name&quot;: &quot;production&quot;
+    }
+  ],
+  &quot;puppetclass&quot;: {
+    &quot;id&quot;: 298486374,
+    &quot;name&quot;: &quot;apache&quot;,
+    &quot;module_name&quot;: &quot;apache&quot;
+  },
+  &quot;override_values&quot;: []
 }</pre>
 
   <h3>Params</h3>

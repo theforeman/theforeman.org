@@ -27,7 +27,7 @@
     
   </li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../apidoc/v2/host_classes.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/host_classes.de.html">de</a> | <a href="../../apidoc/v2/host_classes.it.html">it</a> | <a href="../../apidoc/v2/host_classes.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/host_classes.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/host_classes.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/host_classes.fr.html">fr</a> | <a href="../../apidoc/v2/host_classes.ru.html">ru</a> | <a href="../../apidoc/v2/host_classes.ja.html">ja</a> | <b><a href="../../apidoc/v2/host_classes.es.html">es</a></b> | <a href="../../apidoc/v2/host_classes.ko.html">ko</a> | <a href="../../apidoc/v2/host_classes.ca.html">ca</a> | <a href="../../apidoc/v2/host_classes.gl.html">gl</a> | <a href="../../apidoc/v2/host_classes.en.html">en</a> | <a href="../../apidoc/v2/host_classes.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/host_classes.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/host_classes.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../apidoc/v2/host_classes.ko.html">ko</a> | <a href="../../apidoc/v2/host_classes.en.html">en</a> | <a href="../../apidoc/v2/host_classes.fr.html">fr</a> | <a href="../../apidoc/v2/host_classes.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/host_classes.de.html">de</a> | <a href="../../apidoc/v2/host_classes.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/host_classes.ja.html">ja</a> | <a href="../../apidoc/v2/host_classes.pl.html">pl</a> | <a href="../../apidoc/v2/host_classes.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/host_classes.it.html">it</a> | <a href="../../apidoc/v2/host_classes.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/host_classes.ru.html">ru</a> | <b><a href="../../apidoc/v2/host_classes.es.html">es</a></b> | <a href="../../apidoc/v2/host_classes.ca.html">ca</a> | <a href="../../apidoc/v2/host_classes.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/host_classes.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/host_classes.gl.html">gl</a> ]
 </li>
 
 </ul>
@@ -71,11 +71,11 @@
 
 
   <h3>Ejemplos</h3>
-    <pre class="prettyprint">GET /api/hosts/host2611/puppetclass_ids
+    <pre class="prettyprint">GET /api/hosts/host300/puppetclass_ids
 200
 {
   &quot;results&quot;: [
-    1018350799
+    1018350796
   ]
 }</pre>
 
@@ -168,17 +168,18 @@
 
 
   <h3>Ejemplos</h3>
-    <pre class="prettyprint">POST /api/hosts/host2608/puppetclass_ids
+    <pre class="prettyprint">POST /api/hosts/host299/puppetclass_ids
 {
-  &quot;puppetclass_id&quot;: 281110143,
+  &quot;puppetclass_id&quot;: &quot;invalid_id&quot;,
   &quot;host_class&quot;: {
-    &quot;puppetclass_id&quot;: 281110143
+    &quot;puppetclass_id&quot;: &quot;invalid_id&quot;
   }
 }
-200
+404
 {
-  &quot;host_id&quot;: 45,
-  &quot;puppetclass_id&quot;: 281110143
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;Resource host_class not found by id &#39;&#39;&quot;
+  }
 }</pre>
 
   <h3>Parámetros</h3>
@@ -318,7 +319,7 @@
 
 
   <h3>Ejemplos</h3>
-    <pre class="prettyprint">DELETE /api/hosts/host2609/puppetclass_ids/1018350797
+    <pre class="prettyprint">DELETE /api/hosts/host302/puppetclass_ids/1018350796
 {
   &quot;host_class&quot;: {}
 }

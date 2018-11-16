@@ -31,7 +31,7 @@
   </li>
   <li class='active'>refresh</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/smart_proxies/refresh.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/smart_proxies/refresh.de.html">de</a> | <a href="../../../apidoc/v2/smart_proxies/refresh.it.html">it</a> | <a href="../../../apidoc/v2/smart_proxies/refresh.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/smart_proxies/refresh.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/smart_proxies/refresh.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/smart_proxies/refresh.fr.html">fr</a> | <a href="../../../apidoc/v2/smart_proxies/refresh.ru.html">ru</a> | <a href="../../../apidoc/v2/smart_proxies/refresh.ja.html">ja</a> | <a href="../../../apidoc/v2/smart_proxies/refresh.es.html">es</a> | <a href="../../../apidoc/v2/smart_proxies/refresh.ko.html">ko</a> | <a href="../../../apidoc/v2/smart_proxies/refresh.ca.html">ca</a> | <a href="../../../apidoc/v2/smart_proxies/refresh.gl.html">gl</a> | <b><a href="../../../apidoc/v2/smart_proxies/refresh.en.html">en</a></b> | <a href="../../../apidoc/v2/smart_proxies/refresh.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/smart_proxies/refresh.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/smart_proxies/refresh.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/smart_proxies/refresh.ko.html">ko</a> | <b><a href="../../../apidoc/v2/smart_proxies/refresh.en.html">en</a></b> | <a href="../../../apidoc/v2/smart_proxies/refresh.fr.html">fr</a> | <a href="../../../apidoc/v2/smart_proxies/refresh.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/smart_proxies/refresh.de.html">de</a> | <a href="../../../apidoc/v2/smart_proxies/refresh.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/smart_proxies/refresh.ja.html">ja</a> | <a href="../../../apidoc/v2/smart_proxies/refresh.pl.html">pl</a> | <a href="../../../apidoc/v2/smart_proxies/refresh.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/smart_proxies/refresh.it.html">it</a> | <a href="../../../apidoc/v2/smart_proxies/refresh.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/smart_proxies/refresh.ru.html">ru</a> | <a href="../../../apidoc/v2/smart_proxies/refresh.es.html">es</a> | <a href="../../../apidoc/v2/smart_proxies/refresh.ca.html">ca</a> | <a href="../../../apidoc/v2/smart_proxies/refresh.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/smart_proxies/refresh.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/smart_proxies/refresh.gl.html">gl</a> ]
 </li>
 
 
@@ -56,19 +56,67 @@
 {
   &quot;smart_proxy&quot;: {}
 }
-422
+201
 {
-  &quot;error&quot;: {
-    &quot;id&quot;: 980190962,
-    &quot;errors&quot;: {
-      &quot;base&quot;: [
-        &quot;Unable to communicate with the proxy: it&#39;s down&quot;
-      ]
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+  &quot;name&quot;: &quot;DHCP Proxy&quot;,
+  &quot;id&quot;: 980190962,
+  &quot;url&quot;: &quot;https://somewhere.net:8443&quot;,
+  &quot;features&quot;: [
+    {
+      &quot;name&quot;: &quot;DHCP&quot;,
+      &quot;id&quot;: 219245707
     },
-    &quot;full_messages&quot;: [
-      &quot;Unable to communicate with the proxy: it&#39;s down&quot;
-    ]
-  }
+    {
+      &quot;name&quot;: &quot;DNS&quot;,
+      &quot;id&quot;: 49142851
+    },
+    {
+      &quot;name&quot;: &quot;TFTP&quot;,
+      &quot;id&quot;: 303403661
+    },
+    {
+      &quot;name&quot;: &quot;Puppet CA&quot;,
+      &quot;id&quot;: 783807086
+    },
+    {
+      &quot;name&quot;: &quot;Logs&quot;,
+      &quot;id&quot;: 814728799
+    },
+    {
+      &quot;name&quot;: &quot;BMC&quot;,
+      &quot;id&quot;: 821748566
+    },
+    {
+      &quot;name&quot;: &quot;Chef Proxy&quot;,
+      &quot;id&quot;: 848995175
+    },
+    {
+      &quot;name&quot;: &quot;Realm&quot;,
+      &quot;id&quot;: 982965213
+    },
+    {
+      &quot;name&quot;: &quot;Puppet&quot;,
+      &quot;id&quot;: 1006510553
+    }
+  ],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
 }</pre>
 
   <h2>Params</h2>

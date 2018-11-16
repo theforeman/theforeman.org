@@ -31,7 +31,7 @@
   </li>
   <li class='active'>puppetrun</li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../../apidoc/v2/puppet_hosts/puppetrun.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.de.html">de</a> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.it.html">it</a> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.fr.html">fr</a> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.ru.html">ru</a> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.ja.html">ja</a> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.es.html">es</a> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.ko.html">ko</a> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.ca.html">ca</a> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.gl.html">gl</a> | <b><a href="../../../apidoc/v2/puppet_hosts/puppetrun.en.html">en</a></b> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../../apidoc/v2/puppet_hosts/puppetrun.ko.html">ko</a> | <b><a href="../../../apidoc/v2/puppet_hosts/puppetrun.en.html">en</a></b> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.fr.html">fr</a> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.en_GB.html">en_GB</a> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.de.html">de</a> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.sv_SE.html">sv_SE</a> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.ja.html">ja</a> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.pl.html">pl</a> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.zh_CN.html">zh_CN</a> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.it.html">it</a> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.zh_TW.html">zh_TW</a> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.ru.html">ru</a> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.es.html">es</a> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.ca.html">ca</a> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.nl_NL.html">nl_NL</a> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.pt_BR.html">pt_BR</a> | <a href="../../../apidoc/v2/puppet_hosts/puppetrun.gl.html">gl</a> ]
 </li>
 
 
@@ -51,60 +51,6 @@
 
 
 
-  <h2>Examples</h2>
-    <pre class="prettyprint">PUT /api/hosts/107/puppetrun
-{
-  &quot;controller&quot;: &quot;puppet_hosts&quot;,
-  &quot;puppet_host&quot;: {
-    &quot;controller&quot;: &quot;puppet_hosts&quot;
-  }
-}
-200
-{
-  &quot;id&quot;: 107,
-  &quot;name&quot;: &quot;host308&quot;,
-  &quot;last_compile&quot;: null,
-  &quot;last_report&quot;: null,
-  &quot;updated_at&quot;: &quot;2018-11-01T13:16:25.985Z&quot;,
-  &quot;created_at&quot;: &quot;2018-11-01T13:16:25.985Z&quot;,
-  &quot;root_pass&quot;: &quot;$5$99L87UF35Y6PakzX$.ftfbig/k.UhApQsfaTs9OdhY.4QAbctjCNhcqK7er5&quot;,
-  &quot;architecture_id&quot;: null,
-  &quot;operatingsystem_id&quot;: null,
-  &quot;environment_id&quot;: 687036955,
-  &quot;ptable_id&quot;: null,
-  &quot;medium_id&quot;: null,
-  &quot;build&quot;: false,
-  &quot;comment&quot;: null,
-  &quot;disk&quot;: null,
-  &quot;installed_at&quot;: null,
-  &quot;model_id&quot;: null,
-  &quot;hostgroup_id&quot;: null,
-  &quot;owner_id&quot;: 135138680,
-  &quot;owner_type&quot;: &quot;User&quot;,
-  &quot;enabled&quot;: true,
-  &quot;puppet_ca_proxy_id&quot;: null,
-  &quot;managed&quot;: false,
-  &quot;use_image&quot;: null,
-  &quot;image_file&quot;: &quot;&quot;,
-  &quot;uuid&quot;: null,
-  &quot;compute_resource_id&quot;: null,
-  &quot;puppet_proxy_id&quot;: 982965228,
-  &quot;certname&quot;: &quot;host308&quot;,
-  &quot;image_id&quot;: null,
-  &quot;organization_id&quot;: 447626438,
-  &quot;location_id&quot;: 255093256,
-  &quot;otp&quot;: null,
-  &quot;realm_id&quot;: null,
-  &quot;compute_profile_id&quot;: null,
-  &quot;provision_method&quot;: &quot;build&quot;,
-  &quot;grub_pass&quot;: &quot;$6$6uNtHlSYvvNjsJyo$sZKOUsqnZGBHdOXSuhvK2N8VhTdLwUja2UgKXu/AWZWzDhlucSXFbi0xNZbDequ5EwAYb4wmDJ8ouGmLLvvnq0&quot;,
-  &quot;global_status&quot;: 0,
-  &quot;lookup_value_matcher&quot;: &quot;fqdn=host308&quot;,
-  &quot;pxe_loader&quot;: null,
-  &quot;initiated_at&quot;: null,
-  &quot;build_errors&quot;: null,
-  &quot;discovery_rule_id&quot;: null
-}</pre>
 
   <h2>Params</h2>
   <table class='table'>

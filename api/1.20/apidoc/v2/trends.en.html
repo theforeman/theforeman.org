@@ -27,7 +27,7 @@
     
   </li>
   <li class='pull-right'>
-  &nbsp;[ <a href="../../apidoc/v2/trends.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/trends.de.html">de</a> | <a href="../../apidoc/v2/trends.it.html">it</a> | <a href="../../apidoc/v2/trends.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/trends.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/trends.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/trends.fr.html">fr</a> | <a href="../../apidoc/v2/trends.ru.html">ru</a> | <a href="../../apidoc/v2/trends.ja.html">ja</a> | <a href="../../apidoc/v2/trends.es.html">es</a> | <a href="../../apidoc/v2/trends.ko.html">ko</a> | <a href="../../apidoc/v2/trends.ca.html">ca</a> | <a href="../../apidoc/v2/trends.gl.html">gl</a> | <b><a href="../../apidoc/v2/trends.en.html">en</a></b> | <a href="../../apidoc/v2/trends.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/trends.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/trends.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../apidoc/v2/trends.ko.html">ko</a> | <b><a href="../../apidoc/v2/trends.en.html">en</a></b> | <a href="../../apidoc/v2/trends.fr.html">fr</a> | <a href="../../apidoc/v2/trends.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/trends.de.html">de</a> | <a href="../../apidoc/v2/trends.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/trends.ja.html">ja</a> | <a href="../../apidoc/v2/trends.pl.html">pl</a> | <a href="../../apidoc/v2/trends.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/trends.it.html">it</a> | <a href="../../apidoc/v2/trends.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/trends.ru.html">ru</a> | <a href="../../apidoc/v2/trends.es.html">es</a> | <a href="../../apidoc/v2/trends.ca.html">ca</a> | <a href="../../apidoc/v2/trends.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/trends.pt_BR.html">pt_BR</a> | <a href="../../apidoc/v2/trends.gl.html">gl</a> ]
 </li>
 
 </ul>
@@ -85,8 +85,19 @@
   },
   &quot;results&quot;: [
     {
-      &quot;created_at&quot;: &quot;2018-11-01 13:15:53 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:15:53 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:02:19 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:02:19 UTC&quot;,
+      &quot;id&quot;: 1,
+      &quot;trendable_type&quot;: &quot;Environment&quot;,
+      &quot;trendable_id&quot;: 1,
+      &quot;fact_name&quot;: &quot;fact&quot;,
+      &quot;type&quot;: &quot;ForemanTrend&quot;,
+      &quot;name&quot;: &quot;trend1&quot;,
+      &quot;label&quot;: &quot;Environment&quot;
+    },
+    {
+      &quot;created_at&quot;: &quot;2018-11-15 19:02:19 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:02:19 UTC&quot;,
       &quot;id&quot;: 5,
       &quot;trendable_type&quot;: &quot;FactName&quot;,
       &quot;trendable_id&quot;: 3,
@@ -94,17 +105,6 @@
       &quot;type&quot;: &quot;FactTrend&quot;,
       &quot;name&quot;: &quot;trend2&quot;,
       &quot;label&quot;: &quot;trend2&quot;
-    },
-    {
-      &quot;created_at&quot;: &quot;2018-11-01 13:15:53 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:15:53 UTC&quot;,
-      &quot;id&quot;: 1,
-      &quot;trendable_type&quot;: &quot;Environment&quot;,
-      &quot;trendable_id&quot;: 11,
-      &quot;fact_name&quot;: &quot;fact&quot;,
-      &quot;type&quot;: &quot;ForemanTrend&quot;,
-      &quot;name&quot;: &quot;trend1&quot;,
-      &quot;label&quot;: &quot;Environment&quot;
     }
   ]
 }</pre>
@@ -198,17 +198,17 @@
 
 
   <h3>Examples</h3>
-    <pre class="prettyprint">GET /api/trends/19
+    <pre class="prettyprint">GET /api/trends/1
 200
 {
-  &quot;created_at&quot;: &quot;2018-11-01 13:15:53 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:15:53 UTC&quot;,
-  &quot;id&quot;: 19,
+  &quot;created_at&quot;: &quot;2018-11-15 19:02:19 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:02:19 UTC&quot;,
+  &quot;id&quot;: 1,
   &quot;trendable_type&quot;: &quot;Environment&quot;,
-  &quot;trendable_id&quot;: 17,
+  &quot;trendable_id&quot;: 11,
   &quot;fact_name&quot;: &quot;fact&quot;,
   &quot;type&quot;: &quot;ForemanTrend&quot;,
-  &quot;name&quot;: &quot;trend7&quot;,
+  &quot;name&quot;: &quot;trend11&quot;,
   &quot;label&quot;: &quot;Environment&quot;
 }</pre>
 
@@ -326,21 +326,20 @@
     <pre class="prettyprint">POST /api/trends
 {
   &quot;trend&quot;: {
-    &quot;trendable_type&quot;: &quot;FactName&quot;,
-    &quot;trendable_id&quot;: &quot;5&quot;
+    &quot;trendable_type&quot;: &quot;Model&quot;
   }
 }
 201
 {
-  &quot;created_at&quot;: &quot;2018-11-01 13:15:53 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:15:53 UTC&quot;,
-  &quot;id&quot;: 11,
-  &quot;trendable_type&quot;: &quot;FactName&quot;,
-  &quot;trendable_id&quot;: 5,
-  &quot;fact_name&quot;: &quot;operatingsystem&quot;,
-  &quot;type&quot;: &quot;FactTrend&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:02:19 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:02:19 UTC&quot;,
+  &quot;id&quot;: 6,
+  &quot;trendable_type&quot;: &quot;Model&quot;,
+  &quot;trendable_id&quot;: null,
+  &quot;fact_name&quot;: null,
+  &quot;type&quot;: &quot;ForemanTrend&quot;,
   &quot;name&quot;: null,
-  &quot;label&quot;: &quot;operatingsystem&quot;
+  &quot;label&quot;: &quot;Model&quot;
 }</pre>
 
   <h3>Params</h3>
@@ -498,20 +497,20 @@
 
 
   <h3>Examples</h3>
-    <pre class="prettyprint">DELETE /api/trends/24
+    <pre class="prettyprint">DELETE /api/trends/1
 {
   &quot;trend&quot;: {}
 }
 200
 {
-  &quot;id&quot;: 24,
+  &quot;id&quot;: 1,
   &quot;trendable_type&quot;: &quot;Environment&quot;,
-  &quot;trendable_id&quot;: 19,
-  &quot;name&quot;: &quot;trend9&quot;,
+  &quot;trendable_id&quot;: 3,
+  &quot;name&quot;: &quot;trend3&quot;,
   &quot;fact_value&quot;: null,
   &quot;fact_name&quot;: &quot;fact&quot;,
-  &quot;created_at&quot;: &quot;2018-11-01T13:15:53.915Z&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01T13:15:53.915Z&quot;
+  &quot;created_at&quot;: &quot;2018-11-15T19:02:19.325Z&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15T19:02:19.325Z&quot;
 }</pre>
 
   <h3>Params</h3>

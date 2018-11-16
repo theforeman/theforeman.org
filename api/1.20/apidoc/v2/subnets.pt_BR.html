@@ -27,7 +27,7 @@
     
   </li>
   <li class='pull-right'>
-  &nbsp;[ <b><a href="../../apidoc/v2/subnets.pt_BR.html">pt_BR</a></b> | <a href="../../apidoc/v2/subnets.de.html">de</a> | <a href="../../apidoc/v2/subnets.it.html">it</a> | <a href="../../apidoc/v2/subnets.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/subnets.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/subnets.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/subnets.fr.html">fr</a> | <a href="../../apidoc/v2/subnets.ru.html">ru</a> | <a href="../../apidoc/v2/subnets.ja.html">ja</a> | <a href="../../apidoc/v2/subnets.es.html">es</a> | <a href="../../apidoc/v2/subnets.ko.html">ko</a> | <a href="../../apidoc/v2/subnets.ca.html">ca</a> | <a href="../../apidoc/v2/subnets.gl.html">gl</a> | <a href="../../apidoc/v2/subnets.en.html">en</a> | <a href="../../apidoc/v2/subnets.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/subnets.nl_NL.html">nl_NL</a> | <a href="../../apidoc/v2/subnets.pl.html">pl</a> ]
+  &nbsp;[ <a href="../../apidoc/v2/subnets.ko.html">ko</a> | <a href="../../apidoc/v2/subnets.en.html">en</a> | <a href="../../apidoc/v2/subnets.fr.html">fr</a> | <a href="../../apidoc/v2/subnets.en_GB.html">en_GB</a> | <a href="../../apidoc/v2/subnets.de.html">de</a> | <a href="../../apidoc/v2/subnets.sv_SE.html">sv_SE</a> | <a href="../../apidoc/v2/subnets.ja.html">ja</a> | <a href="../../apidoc/v2/subnets.pl.html">pl</a> | <a href="../../apidoc/v2/subnets.zh_CN.html">zh_CN</a> | <a href="../../apidoc/v2/subnets.it.html">it</a> | <a href="../../apidoc/v2/subnets.zh_TW.html">zh_TW</a> | <a href="../../apidoc/v2/subnets.ru.html">ru</a> | <a href="../../apidoc/v2/subnets.es.html">es</a> | <a href="../../apidoc/v2/subnets.ca.html">ca</a> | <a href="../../apidoc/v2/subnets.nl_NL.html">nl_NL</a> | <b><a href="../../apidoc/v2/subnets.pt_BR.html">pt_BR</a></b> | <a href="../../apidoc/v2/subnets.gl.html">gl</a> ]
 </li>
 
 </ul>
@@ -101,7 +101,7 @@
 
 
   <h3>Exemplos</h3>
-    <pre class="prettyprint">GET /api/locations/447626501/subnets
+    <pre class="prettyprint">GET /api/locations/447626440/subnets
 200
 {
   &quot;total&quot;: 1,
@@ -115,7 +115,7 @@
   },
   &quot;results&quot;: [
     {
-      &quot;network&quot;: &quot;95.17.130.0&quot;,
+      &quot;network&quot;: &quot;127.216.154.0&quot;,
       &quot;network_type&quot;: &quot;IPv4&quot;,
       &quot;cidr&quot;: 24,
       &quot;mask&quot;: &quot;255.255.255.0&quot;,
@@ -127,14 +127,14 @@
       &quot;dns_secondary&quot;: null,
       &quot;from&quot;: null,
       &quot;to&quot;: null,
-      &quot;created_at&quot;: &quot;2018-11-01 13:16:09 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:16:09 UTC&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:33 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:33 UTC&quot;,
       &quot;ipam&quot;: &quot;None&quot;,
       &quot;boot_mode&quot;: &quot;DHCP&quot;,
-      &quot;id&quot;: 1018350806,
-      &quot;name&quot;: &quot;subnet28&quot;,
+      &quot;id&quot;: 1018350796,
+      &quot;name&quot;: &quot;subnet3&quot;,
       &quot;description&quot;: null,
-      &quot;network_address&quot;: &quot;95.17.130.0/24&quot;,
+      &quot;network_address&quot;: &quot;127.216.154.0/24&quot;,
       &quot;dhcp_id&quot;: null,
       &quot;dhcp_name&quot;: null,
       &quot;tftp_id&quot;: null,
@@ -462,44 +462,61 @@
 
 
   <h3>Exemplos</h3>
-    <pre class="prettyprint">GET /api/subnets/1018350797-subnet24
+    <pre class="prettyprint">GET /api/subnets/980190962-one
 200
 {
-  &quot;network&quot;: &quot;42.94.234.0&quot;,
+  &quot;network&quot;: &quot;2.3.4.0&quot;,
   &quot;network_type&quot;: &quot;IPv4&quot;,
   &quot;cidr&quot;: 24,
   &quot;mask&quot;: &quot;255.255.255.0&quot;,
   &quot;priority&quot;: null,
-  &quot;vlanid&quot;: null,
+  &quot;vlanid&quot;: 41,
   &quot;mtu&quot;: 1500,
   &quot;gateway&quot;: null,
   &quot;dns_primary&quot;: null,
   &quot;dns_secondary&quot;: null,
   &quot;from&quot;: null,
   &quot;to&quot;: null,
-  &quot;created_at&quot;: &quot;2018-11-01 13:16:08 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:16:08 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:27 UTC&quot;,
   &quot;ipam&quot;: &quot;None&quot;,
   &quot;boot_mode&quot;: &quot;DHCP&quot;,
-  &quot;id&quot;: 1018350797,
-  &quot;name&quot;: &quot;subnet24&quot;,
+  &quot;id&quot;: 980190962,
+  &quot;name&quot;: &quot;one&quot;,
   &quot;description&quot;: null,
-  &quot;network_address&quot;: &quot;42.94.234.0/24&quot;,
-  &quot;dhcp_id&quot;: null,
-  &quot;dhcp_name&quot;: null,
-  &quot;tftp_id&quot;: null,
-  &quot;tftp_name&quot;: null,
+  &quot;network_address&quot;: &quot;2.3.4.0/24&quot;,
+  &quot;dhcp_id&quot;: 980190962,
+  &quot;dhcp_name&quot;: &quot;DHCP Proxy&quot;,
+  &quot;tftp_id&quot;: 298486374,
+  &quot;tftp_name&quot;: &quot;TFTP Proxy&quot;,
   &quot;httpboot_id&quot;: null,
   &quot;httpboot_name&quot;: null,
-  &quot;dns_id&quot;: null,
+  &quot;dns_id&quot;: 113629430,
   &quot;template_id&quot;: null,
   &quot;template_name&quot;: null,
-  &quot;dhcp&quot;: null,
-  &quot;tftp&quot;: null,
+  &quot;dhcp&quot;: {
+    &quot;name&quot;: &quot;DHCP Proxy&quot;,
+    &quot;id&quot;: 980190962,
+    &quot;url&quot;: &quot;https://somewhere.net:8443&quot;
+  },
+  &quot;tftp&quot;: {
+    &quot;name&quot;: &quot;TFTP Proxy&quot;,
+    &quot;id&quot;: 298486374,
+    &quot;url&quot;: &quot;http://somewhere.else&quot;
+  },
   &quot;httpboot&quot;: null,
-  &quot;dns&quot;: null,
+  &quot;dns&quot;: {
+    &quot;name&quot;: &quot;DNS Proxy&quot;,
+    &quot;id&quot;: 113629430,
+    &quot;url&quot;: &quot;http://else.where:45671&quot;
+  },
   &quot;template&quot;: null,
-  &quot;domains&quot;: [],
+  &quot;domains&quot;: [
+    {
+      &quot;id&quot;: 22495316,
+      &quot;name&quot;: &quot;mydomain.net&quot;
+    }
+  ],
   &quot;interfaces&quot;: [],
   &quot;parameters&quot;: [],
   &quot;locations&quot;: [
@@ -664,7 +681,7 @@
     &quot;mask&quot;: &quot;255.255.255.0&quot;,
     &quot;subnet_parameters_attributes&quot;: [
       {
-        &quot;name&quot;: &quot;foo&quot;,
+        &quot;name&quot;: &quot;mQlPmcGHjX,pievygiEM2,餷錔惌谡銍悻騚銀送跷,҆Ѐӄ҄эҬ҄ӳӯѰ,&lt;hr&gt;UrzMjyavWK&lt;/hr&gt;,ãÍïûýÞÔÆîÊ,1244362608,𫎢住𩀡𤝀䓿𨉩谖𗩒軉賢,^[.:=!:#]}&quot;,
         &quot;value&quot;: &quot;bar&quot;
       }
     ]
@@ -684,11 +701,11 @@
   &quot;dns_secondary&quot;: null,
   &quot;from&quot;: null,
   &quot;to&quot;: null,
-  &quot;created_at&quot;: &quot;2018-11-01 13:16:08 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:16:08 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:32 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:32 UTC&quot;,
   &quot;ipam&quot;: &quot;None&quot;,
   &quot;boot_mode&quot;: &quot;DHCP&quot;,
-  &quot;id&quot;: 1018350798,
+  &quot;id&quot;: 1018350796,
   &quot;name&quot;: &quot;QA2&quot;,
   &quot;description&quot;: null,
   &quot;network_address&quot;: &quot;10.35.2.27/24&quot;,
@@ -711,10 +728,10 @@
   &quot;parameters&quot;: [
     {
       &quot;priority&quot;: 40,
-      &quot;created_at&quot;: &quot;2018-11-01 13:16:08 UTC&quot;,
-      &quot;updated_at&quot;: &quot;2018-11-01 13:16:08 UTC&quot;,
-      &quot;id&quot;: 767575240,
-      &quot;name&quot;: &quot;foo&quot;,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:32 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:32 UTC&quot;,
+      &quot;id&quot;: 767575239,
+      &quot;name&quot;: &quot;mQlPmcGHjX,pievygiEM2,餷錔惌谡銍悻騚銀送跷,҆Ѐӄ҄эҬ҄ӳӯѰ,&lt;hr&gt;UrzMjyavWK&lt;/hr&gt;,ãÍïûýÞÔÆîÊ,1244362608,𫎢住𩀡𤝀䓿𨉩谖𗩒軉賢,^[.:=!:#]}&quot;,
       &quot;value&quot;: &quot;bar&quot;
     }
   ],
@@ -1385,71 +1402,65 @@
 
 
   <h3>Exemplos</h3>
-    <pre class="prettyprint">PUT /api/subnets/980190962-one
+    <pre class="prettyprint">PUT /api/subnets/1018350796
 {
   &quot;subnet&quot;: {
-    &quot;name&quot;: &quot;QA2&quot;,
-    &quot;network_type&quot;: &quot;IPv4&quot;,
-    &quot;network&quot;: &quot;10.35.2.27&quot;,
-    &quot;mask&quot;: &quot;255.255.255.0&quot;
+    &quot;subnet_parameters_attributes&quot;: [
+      {
+        &quot;name&quot;: &quot;foo&quot;,
+        &quot;value&quot;: &quot;new_value&quot;
+      }
+    ]
   }
 }
 200
 {
-  &quot;network&quot;: &quot;10.35.2.27&quot;,
+  &quot;network&quot;: &quot;36.82.40.0&quot;,
   &quot;network_type&quot;: &quot;IPv4&quot;,
   &quot;cidr&quot;: 24,
   &quot;mask&quot;: &quot;255.255.255.0&quot;,
   &quot;priority&quot;: null,
-  &quot;vlanid&quot;: 41,
+  &quot;vlanid&quot;: null,
   &quot;mtu&quot;: 1500,
   &quot;gateway&quot;: null,
   &quot;dns_primary&quot;: null,
   &quot;dns_secondary&quot;: null,
   &quot;from&quot;: null,
   &quot;to&quot;: null,
-  &quot;created_at&quot;: &quot;2018-11-01 13:15:57 UTC&quot;,
-  &quot;updated_at&quot;: &quot;2018-11-01 13:16:09 UTC&quot;,
+  &quot;created_at&quot;: &quot;2018-11-15 19:01:32 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15 19:01:32 UTC&quot;,
   &quot;ipam&quot;: &quot;None&quot;,
   &quot;boot_mode&quot;: &quot;DHCP&quot;,
-  &quot;id&quot;: 980190962,
-  &quot;name&quot;: &quot;QA2&quot;,
+  &quot;id&quot;: 1018350796,
+  &quot;name&quot;: &quot;subnet1&quot;,
   &quot;description&quot;: null,
-  &quot;network_address&quot;: &quot;10.35.2.27/24&quot;,
-  &quot;dhcp_id&quot;: 980190962,
-  &quot;dhcp_name&quot;: &quot;DHCP Proxy&quot;,
-  &quot;tftp_id&quot;: 298486374,
-  &quot;tftp_name&quot;: &quot;TFTP Proxy&quot;,
+  &quot;network_address&quot;: &quot;36.82.40.0/24&quot;,
+  &quot;dhcp_id&quot;: null,
+  &quot;dhcp_name&quot;: null,
+  &quot;tftp_id&quot;: null,
+  &quot;tftp_name&quot;: null,
   &quot;httpboot_id&quot;: null,
   &quot;httpboot_name&quot;: null,
-  &quot;dns_id&quot;: 113629430,
+  &quot;dns_id&quot;: null,
   &quot;template_id&quot;: null,
   &quot;template_name&quot;: null,
-  &quot;dhcp&quot;: {
-    &quot;name&quot;: &quot;DHCP Proxy&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;url&quot;: &quot;https://somewhere.net:8443&quot;
-  },
-  &quot;tftp&quot;: {
-    &quot;name&quot;: &quot;TFTP Proxy&quot;,
-    &quot;id&quot;: 298486374,
-    &quot;url&quot;: &quot;http://somewhere.else&quot;
-  },
+  &quot;dhcp&quot;: null,
+  &quot;tftp&quot;: null,
   &quot;httpboot&quot;: null,
-  &quot;dns&quot;: {
-    &quot;name&quot;: &quot;DNS Proxy&quot;,
-    &quot;id&quot;: 113629430,
-    &quot;url&quot;: &quot;http://else.where:45671&quot;
-  },
+  &quot;dns&quot;: null,
   &quot;template&quot;: null,
-  &quot;domains&quot;: [
+  &quot;domains&quot;: [],
+  &quot;interfaces&quot;: [],
+  &quot;parameters&quot;: [
     {
-      &quot;id&quot;: 22495316,
-      &quot;name&quot;: &quot;mydomain.net&quot;
+      &quot;priority&quot;: 40,
+      &quot;created_at&quot;: &quot;2018-11-15 19:01:32 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2018-11-15 19:01:32 UTC&quot;,
+      &quot;id&quot;: 767575239,
+      &quot;name&quot;: &quot;foo&quot;,
+      &quot;value&quot;: &quot;new_value&quot;
     }
   ],
-  &quot;interfaces&quot;: [],
-  &quot;parameters&quot;: [],
   &quot;locations&quot;: [
     {
       &quot;id&quot;: 255093256,
@@ -2155,23 +2166,36 @@
 
 
   <h3>Exemplos</h3>
-    <pre class="prettyprint">DELETE /api/subnets/980190962-one
+    <pre class="prettyprint">DELETE /api/subnets/51848956
 {
   &quot;subnet&quot;: {}
 }
-422
+200
 {
-  &quot;error&quot;: {
-    &quot;id&quot;: 980190962,
-    &quot;errors&quot;: {
-      &quot;base&quot;: [
-        &quot;one is used by mydomain.net&quot;
-      ]
-    },
-    &quot;full_messages&quot;: [
-      &quot;one is used by mydomain.net&quot;
-    ]
-  }
+  &quot;id&quot;: 51848956,
+  &quot;network&quot;: &quot;2001:db10::&quot;,
+  &quot;mask&quot;: &quot;ffff:ffff:ffff:ffff::&quot;,
+  &quot;priority&quot;: null,
+  &quot;name&quot;: &quot;six&quot;,
+  &quot;vlanid&quot;: null,
+  &quot;created_at&quot;: &quot;2018-11-15T19:01:27.660Z&quot;,
+  &quot;updated_at&quot;: &quot;2018-11-15T19:01:27.660Z&quot;,
+  &quot;dhcp_id&quot;: null,
+  &quot;tftp_id&quot;: null,
+  &quot;gateway&quot;: null,
+  &quot;dns_primary&quot;: null,
+  &quot;dns_secondary&quot;: null,
+  &quot;from&quot;: null,
+  &quot;to&quot;: null,
+  &quot;dns_id&quot;: 113629430,
+  &quot;boot_mode&quot;: &quot;DHCP&quot;,
+  &quot;ipam&quot;: &quot;None&quot;,
+  &quot;description&quot;: null,
+  &quot;mtu&quot;: 1500,
+  &quot;template_id&quot;: null,
+  &quot;httpboot_id&quot;: null,
+  &quot;to_label&quot;: &quot;six (2001:db10::/64)&quot;,
+  &quot;type&quot;: &quot;Subnet::Ipv6&quot;
 }</pre>
 
   <h3>Parâmentros</h3>
@@ -2287,7 +2311,7 @@
 
 
   <h3>Exemplos</h3>
-    <pre class="prettyprint">GET /api/subnets/1018350797-subnet5/freeip
+    <pre class="prettyprint">GET /api/subnets/1018350796-subnet8/freeip
 200
 {
   &quot;freeip&quot;: null,
