@@ -1,0 +1,101 @@
+#!/usr/bin/python3
+# pylint: disable=invalid-name
+
+import fileinput
+from pathlib import Path
+
+
+PREFIXES = {
+    '--[no-]enable-foreman-plugin-': 'foreman_',
+    '--[no-]enable-foreman-proxy-plugin-': 'smart_proxy_',
+}
+
+
+PLUGINS = {
+    'digitalocean': {
+        'url': 'https://github.com/theforeman/foreman-digitalocean',
+    },
+    'ovirt_provision': {
+        'name': 'ovirt_provision_plugin',
+    },
+    'puppetdb': {
+        'name': 'puppetdb_foreman',
+    },
+    'remote_execution_ssh': {
+        'url': '/plugins/foreman_remote_execution',
+    },
+    'snapshot_management': {
+        'url': 'https://github.com/ATIX-AG/foreman_snapshot_management',
+    },
+}
+
+
+def plugin_link(plugin, default_prefix):
+    config = PLUGINS.get(plugin, {})
+
+    try:
+        name = config['name']
+    except KeyError:
+        name = default_prefix + plugin
+
+    try:
+        url = config['url']
+    except KeyError:
+        plugin_path_name = 'foreman_' + plugin
+        if (Path(__file__).parent / '..' / '..' / 'plugins' / plugin_path_name).exists():
+            url = '/plugins/' + plugin_path_name
+        else:
+            url = 'https://github.com/theforeman/' + name
+
+    if name is None or url is None:
+        return None
+
+    return f' (<a href="{url}">{name}</a>)'
+
+
+def remove_prefix(text, prefix):
+    """
+    Remove the prefix from the text if present
+
+    >>> remove_prefix('changelog_message', 'changelog_')
+    'message'
+
+    >>> remove_prefix('message', 'changelog')
+    'message'
+    """
+    if text.startswith(prefix):
+        return text[len(prefix):]
+    return text
+
+
+def main():
+    print("""<div>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Option</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>""")
+
+    for line in fileinput.input():
+        arg, description = line.strip().split(None, 1)
+        for arg_prefix, default_prefix in PREFIXES.items():
+            if arg.startswith(arg_prefix):
+                plugin = remove_prefix(arg, arg_prefix).replace('-', '_')
+                link = plugin_link(plugin, default_prefix)
+                if link:
+                    description += link
+
+        print(f"""      <tr>
+        <td style='white-space:nowrap'>{arg}</td>
+        <td>{description}</td>
+      </tr>""")
+
+    print("""    </tbody>
+  </table>
+</div>""")
+
+if __name__ == '__main__':
+    main()
