@@ -21,8 +21,10 @@ Update the Katello client release packages:
      <option value="el5">Enterprise Linux 5 (RHEL, CentOS, etc.)</option>
      <option value="el6">Enterprise Linux 6 (RHEL, CentOS, etc.)</option>
      <option value="el7">Enterprise Linux 7 (RHEL, CentOS, etc.)</option>
-     <option value="fc24">Fedora 24</option>
-     <option value="fc25">Fedora 25</option>
+     <option value="f27">Fedora 27</option>
+     <option value="f28">Fedora 28</option>
+     <option value="sles11">Suse Enterprise Linux Server 11</option>
+     <option value="sles12">Suse Enterprise Linux Server 12</option>
   </select>
 </p>
 
@@ -47,15 +49,29 @@ yum -y install http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch
 {% endhighlight %}
 </div>
 
-<div id="fc24" style="display:none;" markdown="1">
+<div id="f27" style="display:none;" markdown="1">
 {% highlight bash %}
-yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/fc24/x86_64/katello-client-repos-latest.rpm
+yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/fc27/x86_64/katello-client-repos-latest.rpm
 {% endhighlight %}
 </div>
 
-<div id="fc25" style="display:none;" markdown="1">
+<div id="f28" style="display:none;" markdown="1">
 {% highlight bash %}
-yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/fc25/x86_64/katello-client-repos-latest.rpm
+yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/fc28/x86_64/katello-client-repos-latest.rpm
+{% endhighlight %}
+</div>
+
+<div id="sles12" style="display:none;" markdown="1">
+{% highlight bash %}
+rpm -Uvh https://yum.theforeman.org/client/{{ page.foreman_version }}/sles12/x86_64/foreman-client-release.rpm
+{% endhighlight %}
+</div>
+
+<div id="sles11" style="display:none;" markdown="1">
+{% highlight bash %}
+# For python-datetime dependency, ensure that the SDK addon product is enabled see: https://www.suse.com/support/kb/doc/?id=7015337
+zypper modifyrepo -e nu_novell_com:SLES11-Extras
+rpm -Uvh https://yum.theforeman.org/client/{{ page.foreman_version }}/sles11/x86_64/foreman-client-release.rpm
 {% endhighlight %}
 </div>
 

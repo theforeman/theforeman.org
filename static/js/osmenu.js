@@ -12,6 +12,7 @@ $(document).ready(function(){
             'f25': [],
             'f26': [],
             'f27': [],
+            'f28': [],
             'sles11': [],
             'sles12': []
         };

@@ -21,8 +21,8 @@ Update the Katello client release packages:
      <option value="el5">Enterprise Linux 5 (RHEL, CentOS, etc.)</option>
      <option value="el6">Enterprise Linux 6 (RHEL, CentOS, etc.)</option>
      <option value="el7">Enterprise Linux 7 (RHEL, CentOS, etc.)</option>
-     <option value="fc27">Fedora 27</option>
-     <option value="fc28">Fedora 28</option>
+     <option value="f27">Fedora 27</option>
+     <option value="f28">Fedora 28</option>
      <option value="sles11">Suse Enterprise Linux Server 11</option>
      <option value="sles12">Suse Enterprise Linux Server 12</option>
   </select>
