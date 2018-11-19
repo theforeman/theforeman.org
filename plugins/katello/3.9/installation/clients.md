@@ -11,7 +11,7 @@ Client machines can be added in one of two ways: manually or via a provisioned h
 
 ## Manual
 
-Install the appropriate Katello client release packages.  For CentOS 6, you will also need to enable the COPR repository for subscription-manager.
+Install the appropriate Katello client release packages.
 
 <p>
   Select your Operating System:
@@ -20,6 +20,7 @@ Install the appropriate Katello client release packages.  For CentOS 6, you will
      <option value="el6">Enterprise Linux 6 (CentOS, etc.)</option>
      <option value="el7">Enterprise Linux 7 (CentOS, etc.)</option>
      <option value="f27">Fedora 27</option>
+     <option value="f28">Fedora 28</option>
      <option value="sles11">Suse Enterprise Linux Server 11</option>
      <option value="sles12">Suse Enterprise Linux Server 12</option>
   </select>
@@ -102,4 +103,4 @@ zypper install katello-host-tools
 
 In order to install the katello-agent package on a host you are provisioning, you will need to make the appropriate client repository available within your Katello. The first step is to either create a new product or add to an existing product, the appropriate client repository from the dropdown in the [manual](/plugins/katello/{{ page.version }}/installation/clients.html#manual) section above. After you create the new repositories, they will need to be synced locally. Next, you will then need to add them to the relevant content view(s) for the hosts you are wanting to provision. At this point, a new version of the content view can be published and promoted to the appropriate environments that you are wanting to provision a host into. At this point, you can go provision a host and the host will install the katello-agent package during setup.
 
-When provisioning new clients that should use Puppet 4, set a parameter called 'enable-puppet4' to 'true', so the templates know which package to install and where to place the configuration.  This parameter can be placed at the host, host group, or another appropriate level of the hierarchy.
+When provisioning new clients that should use Puppet 5, set a parameter called 'enable-puppet5' to 'true', so the templates know which package to install and where to place the configuration.  This parameter can be placed at the host, host group, or another appropriate level of the hierarchy.
