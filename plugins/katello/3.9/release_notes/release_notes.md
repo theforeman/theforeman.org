@@ -19,6 +19,9 @@ For Red Hat Customers we've introduced a new feature called System Purpose to im
 ### Content View Import/Export
 Katello 3.9 ships with a new content view version import/export feature. This feature is meant to replace the inter-server synchronization feature. It allows users to export and import content view versions along with associated yum content. Please see the [instructions](https://www.theforeman.org/plugins/katello/nightly/user_guide/content_view_import_export/index.html) for more details.
 
+### Katello Client Repo Changes
+Katello client repos have been removed in favor of the Foreman client repo, which can be found [here](http://yum.theforeman.org/client/1.20/). Please see [install](https://theforeman.org/plugins/katello/3.9/installation/clients.html) and [upgrade](https://theforeman.org/plugins/katello/3.9/upgrade/clients.html) instructions to switch your clients.
+
 ## Bug Fixes
 
 This release also inclue 140 bug fixes, which can be seen [here](https://projects.theforeman.org/projects/katello/issues?fixed_version_id=899&set_filter=1&status_id=%2A&tracker_id=1).

@@ -27,43 +27,48 @@ Install the appropriate Katello client release packages.  For CentOS 6, you will
 
 <div id="el5" markdown="1">
 {% highlight bash %}
-yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/el5/x86_64/katello-client-repos-latest.rpm
-yum -y install http://dl.fedoraproject.org/pub/epel/epel-release-latest-5.noarch.rpm
+yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-5.noarch.rpm
+yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/el5/x86_64/foreman-client-release.rpm
 {% endhighlight %}
 </div>
 
 <div id="el6" style="display:none;" markdown="1">
 {% highlight bash %}
-wget https://copr.fedoraproject.org/coprs/dgoodwin/subscription-manager/repo/epel-6/dgoodwin-subscription-manager-epel-6.repo -O /etc/yum.repos.d/dgoodwin-subscription-manager-epel-6.repo
-yum -y install http://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
-yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/el6/x86_64/katello-client-repos-latest.rpm
+yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
+yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/el6/x86_64/foreman-client-release.rpm
 {% endhighlight %}
 </div>
 
 <div id="el7" style="display:none;" markdown="1">
 {% highlight bash %}
-yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/el7/x86_64/katello-client-repos-latest.rpm
-yum -y install http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/el7/x86_64/foreman-client-release.rpm
 {% endhighlight %}
 </div>
 
 <div id="f27" style="display:none;" markdown="1">
 {% highlight bash %}
-yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/f27/x86_64/katello-client-repos-latest.rpm
+yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/fc27/x86_64/foreman-client-release.rpm
+{% endhighlight %}
+</div>
+
+<div id="f28" style="display:none;" markdown="1">
+{% highlight bash %}
+yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/fc28/x86_64/foreman-client-release.rpm
 {% endhighlight %}
 </div>
 
 <div id="sles12" style="display:none;" markdown="1">
 {% highlight bash %}
-rpm -Uvh https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/sles12/x86_64/katello-client-repos-latest.rpm
+rpm -Uvh https://yum.theforeman.org/client/{{ page.foreman_version }}/sles12/x86_64/foreman-client-release.rpm
 {% endhighlight %}
 </div>
 
 <div id="sles11" style="display:none;" markdown="1">
 {% highlight bash %}
-# For python-datetime dependency, ensure that the SDK addon product is enabled see: https://www.suse.com/support/kb/doc/?id=70153.8
+# For python-datetime dependency, ensure that the SDK addon product is enabled see: https://www.suse.com/support/kb/doc/?id=7015337
 zypper modifyrepo -e nu_novell_com:SLES11-Extras
-rpm -Uvh https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/client/sles11/x86_64/katello-client-repos-latest.rpm
+rpm -Uvh https://yum.theforeman.org/client/{{ page.foreman_version }}/sles11/x86_64/foreman-client-release.rpm
 {% endhighlight %}
 </div>
 
