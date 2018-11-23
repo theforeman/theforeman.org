@@ -206,6 +206,8 @@ Copy the boot.cfg file from the mountpoint to tftproot and edit it to add a pref
   cp boot/ESXi-6.7.0-8169922/boot.cfg boot-ESXi-6.7.0-8169922.cfg
 
   sed -e "s#/##g" -e "3s#^#prefix=../boot/ESXi-6.7.0-8169922\n#" -i boot-ESXi-6.7.0-8169922.cfg
+
+  sed -i "/^kernelopt=/c\kernelopt=ks=http://${foreman_server_ip}/unattended/provision" boot-ESXi-6.7.0-8169922.cfg # Replace with actual IP/FQDN of Foreman server
   ```
 
   Note: 
@@ -279,6 +281,8 @@ Now we have to create an entry for this bootloader in the Foreman UI just like w
   
   Once the host is set to build mode, the MAC directory along with the boot.cfg file should be created automatically.  For this we need to hook into the after_build event.
 
+  Note: We will use shell hook scripts. This depends on the package jgrep. Please ensure `whereis jgrep` runs successfully before proceeding. It is [recommended](https://community.theforeman.org/t/esxi-deployment-via-uefi-hook-scripts-issue/11794/13) to use Python though. Example Python scripts are under `/usr/share/foreman/vendor/ruby/2.3.0/gems/foreman_hooks-0.x.xx/examples`. Please modify accordingly.
+
   ```sh
   cd /usr/share/foreman/config/hooks
 
@@ -306,10 +310,13 @@ Now we have to create an entry for this bootloader in the Foreman UI just like w
   exec >> /tmp/${event}.log
   exec 2>&1
 
-  system_name=$(hook_data host.host.name) # Yes it is host.host.<attribute> instead of host.<attribute> due to this open issue: https://github.com/theforeman/foreman_hooks/issues/46
-  system_mac=$(hook_data host.host.mac)
-  system_pxe_loader=$(hook_data host.host.pxe_loader)
-  system_operatingsystem_name=$(hook_data host.host.operatingsystem_name)
+  system_name=$(hook_data host.name)
+  # For Foreman versions before 1.19, it is host.host.<attribute> instead of host.<attribute> due to this open issue: https://github.com/theforeman/foreman_hooks/issues/46
+  system_mac=$(hook_data host.mac)
+  system_pxe_loader=$(hook_data host.pxe_loader)
+  system_operatingsystem_name=$(hook_data host.operatingsystem_name)
+  puppet_proxy_name=$(hook_data host.puppet_proxy_name)
+  host_token=$(hook_data host.token)
 
   echo "$(date): received ${event} on ${object}"
   echo "${system_name} ${system_mac} ${system_operatingsystem_name} ${system_pxe_loader}"
@@ -319,11 +326,13 @@ Now we have to create an entry for this bootloader in the Foreman UI just like w
       # Create MAC Address directory under tftproot after substituting : with -
       macdir="01-${system_mac//:/-}"
       mkdir -p /var/lib/tftpboot/${macdir}
+      cd /var/lib/tftpboot
 
       # Copy the boot.cfg file from the ISO mountpoint to tftproot and edit it to add a prefix to the ISO mountpoint.
       cp boot/ESXi-6.7.0-8169922/boot.cfg $macdir/
       # The mountpoint can also be parsed from $system_operatingsystem_name. Useful for deploying multiple ESXi builds.
       sed -e "s#/##g" -e "3s#^#prefix=/boot/ESXi-6.7.0-8169922\n#" -i $macdir/boot.cfg
+      sed -i "/^kernelopt=/c\kernelopt=ks=http://${puppet_proxy_name}/unattended/provision?token=${host_token}" ${HOSTDIR}/boot.cfg
   fi
   # exit code is important on orchestration tasks
   exit 0
@@ -385,11 +394,11 @@ Now we have to create an entry for this bootloader in the Foreman UI just like w
   exec >> /tmp/${event}.log
   exec 2>&1
 
-  system_name=$(hook_data host.host.name)
-  system_mac=$(hook_data host.host.mac)
-  system_id=$(hook_data host.host.id)
-  system_pxe_loader=$(hook_data host.host.pxe_loader)
-  system_operatingsystem_name=$(hook_data host.host.operatingsystem_name)
+  system_name=$(hook_data host.name)
+  system_mac=$(hook_data host.mac)
+  system_id=$(hook_data host.id)
+  system_pxe_loader=$(hook_data host.pxe_loader)
+  system_operatingsystem_name=$(hook_data host.operatingsystem_name)
 
   echo "$(date): received ${event} on ${object}"
   echo "${system_name} ${system_mac} ${system_operatingsystem_name} ${system_pxe_loader}"
