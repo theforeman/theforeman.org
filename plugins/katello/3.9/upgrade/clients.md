@@ -2,6 +2,7 @@
 layout: plugins/katello/documentation
 title: Client Upgrade
 version: 3.9
+foreman_version: '1.20'
 script: osmenu.js
 ---
 
