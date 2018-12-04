@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Foreman Community Newsletter, CFP edition! (November 2018)
-date: 2018-09-27 13:59:04
+date: 2018-11-30 13:59:04
 author:
   name: Greg Sutcliffe
   uri: gwmngilfen
