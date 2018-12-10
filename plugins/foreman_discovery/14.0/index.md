@@ -13,6 +13,8 @@ cliver: 1.0.2
 #warning: old
 # uncomment to show development version warning
 #warning: unreleased
+# uncomment for older versions than stable
+#robots: noindex
 ---
 
 # 1. Foreman Discovery {{ page.version }} manual

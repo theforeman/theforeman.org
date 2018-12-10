@@ -13,6 +13,7 @@ cliver: 1.0.0
 #warning: old
 # uncomment to show development version warning
 #warning: unreleased
+robots: noindex
 ---
 
 # 1. {{ page.title }}
