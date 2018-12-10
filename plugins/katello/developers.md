@@ -197,30 +197,26 @@ npm run lint:test # Run both linting and testing
 
 This guide covers how to peform a community release of Katello. The guide will reference the term 'X.Y' which reprsents the major and minor version that you are releasing. Throughout the guide we will use 2.0 and 2.1 as examples to represent the currently released community version (2.0) and the version that you are working on releasing (2.1).
 
+The Katello release process has two distinct roles that work together to get a release out.
+
+ * Release Owner: manages the release, ensuring that dates are being hit, communicated to the community, issues are being managed in Redmine
+ * Release Packager: handles creating source packages, testing pipelines, Koji setup and RPM building
+
 ### Step 0: Code Name
+
+Role: releaser owner
 
 Pick a release code name based on a style of beer previously unused. Examples from previous releases are Oktoberfest and Winter Warmer.
 
 ### Step 1: Warn Community of Branching
 
+Role: releaser owner
+
 The first step to any release is warning the community of impending branching prior to the branch date to give them time to push on any pull requests that are pending. The notification should be sent no less than 2 weeks prior to the intended branch date and ideally when Foreman sends their branching announcement.
 
-### Step 2: Stable Pulp Build
+### Step 2: Create Release Configuration and Procedures
 
-Prior to branching the Katello repositories, the release nanny should figure out what the current stable version of Pulp is and if not already tagged and built, do so. Please see the [Upgrading Pulp Guide](/plugins/katello/developers.html#upgrading-pulp).
-
-### Step 3: Setup Your Environment
-
-All you need is [tool_belt](https://github.com/theforeman/tool_belt).
-
-```sh
-git clone https://github.com/theforeman/tool_belt
-cd tool_belt
-bundle
-./tools.rb
-```
-
-### Step 4: Configure the Release
+Role: releaser owner
 
 Create a 2.1 release configuration in tool_belt at `configs/katello/2.1.yaml`. You may copy the config from the previous release and update accordingly. Once configured, run setup:
 
@@ -230,37 +226,21 @@ Create a 2.1 release configuration in tool_belt at `configs/katello/2.1.yaml`. Y
 
 You will find the repositories checked out to the versions specified in the release config in `repos/katello/2.1.0/`.
 
-### Step 5: Get Your Branch On
-
-#### Step 5.1: Create the branches for gems and docs
-
-On the date you previously warned the community branching would occur, ensure any project dependencies are updated, including gem version constraints, and branch the repositories:
+The `tool_belt` repository contains templated procedures that can be generated and then posted to Discourse for tracking of all release activities. To generate:
 
 ```
-./tools branch configs/katello/2.1.yaml
+./tools.rb procedure branch katello 2.1
+./tools.rb procedure release katello 2.1
 ```
 
-You will also need to branch the documentation at [theforeman.org](https://theforeman.org/plugins/katello).
+Copy the output to a Discourse post in the [release section](https://community.theforeman.org/c/development/releases) titled 'Katello 2.1 Release Process'
 
-```
-./tools branch-docs config/katello/2.1.yaml
-```
+From here on out the Release Owner and Release Packager should work to close out each of the respective item lists.
 
-Make sure to follow the instructions and update the docs to use the current release version. Submit a pull request to theforeman.org repository with the changes.
 
-Congratulations, you have successfully branched all of the repositories and prepared them for release. We recommend double checking each repository ensuring that the branch exists in the upstream repository, that the top of the commit stack in that branch includes the tag you created prior to branching (so that you have an initial tag point that represents the branch point) and that the tag itself exists. The last part of this step is to send to a follow up notification letting the community know that everything has been branched.
+## How to Release puppet modules
 
-#### Step 5.2: Teach Jenkins about the new branch
-
-Jenkins has a [branch map](https://github.com/theforeman/foreman-infra/blob/master/puppet/modules/jenkins_job_builder/files/theforeman.org/pipelines/test/testKatello.groovy#L2) for running Katello tests against the correct Foreman version, this map needs to be updated to contain the new version you've just branched.
-
-### Step 6. Release puppet modules
-
-Review the modules for releasing - we should be keeping them up to date when making incompatible changes, but do any need bumps of the major or minor version? If so, do so now.
-
-Go through the [list of managed modules](https://github.com/theforeman/foreman-installer-modulesync/blob/master/managed_modules.yml).
-
-Building the changelog is a somewhat delicate task. We use [github_changelog_generator](https://github.com/skywinder/github-changelog-generator) which is based on Github pull requests and issues but not everythis has a pull request. Especially cherry picks are sometimes forgotten.
+The release of puppet modules is now part of the foreman-installer release process after the merge of the codebases. This is preserved for now given that this lays out the detailed steps on how to release modules. Building the changelog is a somewhat delicate task. We use [github_changelog_generator](https://github.com/skywinder/github-changelog-generator) which is based on Github pull requests and issues but not everythis has a pull request. Especially cherry picks are sometimes forgotten.
 
 Start with updating the changelog.
 
@@ -346,150 +326,7 @@ bundle exec rake module:bump_commit:patch
 git push
 ```
 
-### Step 7. Pin katello-installer puppet modules for release
-
-On the katello-installer's KATELLO-X.Y branch, we need to pin the modules to a minor release. To pin to patch levels, we use Puppetfile.lock.
-
-```sh
-KATELLO_VERSION=3.7
-FOREMAN_VERSION=1.18
-
-# Fail fast
-set -e
-
-# Prepare the new branch
-git checkout -b KATELLO-$KATELLO_VERSION
-
-# Pin all modules to releases
-# NOTE: some modules are using git forks because there is no release - handle with care
-bundle exec rake pin_modules
-
-# Stage your changes
-git add Puppetfile
-
-# Append the foreman-installer's puppet file:
-curl https://raw.githubusercontent.com/theforeman/foreman-installer/${FOREMAN_VERSION}-stable/Puppetfile >> Puppetfile
-
-# Update the lock file
-bundle exec librarian-puppet update
-
-# Revert the foreman appendage
-git checkout Puppetfile
-
-# Remove lock file from .gitignore
-sed -i '/Puppetfile.lock/d' .gitignore
-git add .gitignore Puppetfile.lock
-
-git commit -m "Branch Katello ${KATELLO_VERSION}"
-```
-
-The result would look like [this](https://github.com/Katello/katello-installer/commit/76698d96872e7b8439daf6f15ebc1249ae23c53f).
-
-### Step 8: Configure Koji
-
-Note that to perform this step, Foreman must have generated it's Koji build targets for the targeted Foreman release. This is due to how Katello tags inherit from some Foreman tags. Coordinate with the Foreman release nanny on when they plan to do that step and wait to do this step until then. Koji needs to have configuration added specific to the tags that the release will occur under. The first step is to add new build roots and tags. Note that you will need access to koji. Contact the Development forum board to request access.
-
-```
-./tools koji configs/katello_XY.yaml # Make sure it looks good
-./tools koji --commit configs/katello_XY.yaml
-```
-
-### Step 9: Setup Mash Scripts
-
-In order to generate the release repositories on Koji, a mash script for the version being released needs to be added. If you do not have direct access to the koji.katello.org box, you can request access or ask someone who does to perform this step for you.
-
-```
-./tools mash-scripts config/katello_XY.yaml # Make sure it looks good
-./tools mash-scripts --commit config/katello_XY.yaml
-```
-
-The generated mash scripts should be committed to tool_belt and a pull request opened. The scripts will then need to be copied onto the Koji box itself. If you do not have access, please contact someone that does or request this action on the Development forum board.
-
-### Step 10: Verify Repos
-
-At this point we want to verify the updates we made to the version branches by mashing and checking the repositories generated on koji.
-
-You'll want to run the [`packaging_mash_rpms`](https://ci.theforeman.org/job/packaging_mash_rpms/) job.
-
-With the parameter set as:
-
-```
-katello-mash-split-X.Y.py
-```
-
-View the generated repositories at `http://koji.katello.org/releases/yum/katello-X.Y` and ensure none of the packages have a git hash within the package name.
-
-### Step 11: Build Fresh X.Y Packages
-
-For each repository that was branched, and for each package within a given repository (e.g. katello has both the katello and rubygem-katello packages) we do a tito release koji. For example, the Katello repository:
-
-```
-cd katello/
-tito release koji
-cd deploy/
-tito release koji
-```
-
-NOTE: This step can only be done after you have created the X.Y tags.
-
-### Step 12: Update Repos RPM
-
-Now we update the repos file to point at where the released version of the repositories will exist for the X.Y release.
-
-```
-cd katello-misc/repos
-export VER=X.Y
-sed -i "s#/[Nn]ightly/#/$VER/#g" katello*.repo
-git commit -a -m 'Updating repository URL to X.Y'
-tito tag
-tito release koji
-/usr/local/bin/katello-mash-split-X.Y.py
-```
-
-### Step 13: Release X.Y Release Candidate RPMs
-
-For this step we'll need to update the Jenkins job that pushes RPMs to fedorapeople and run the job. Go to `http://ci.theforeman.org/view/Katello%20Pipeline/job/release_push_rpm_katello/configure` and add X.Y to the list of RELEASE choices and save the configuration. Now head to `http://ci.theforeman.org/view/Katello%20Pipeline/job/release_push_rpm_katello/build?delay=0sec`, choose the X.Y version you just added and click `Build`. This will run a script that copies the RPMs from Koji to fedorapeople.
-
-### Step 14: Update forklift
-
-We maintain a deployment tool, forklift, for easily testing and deploying Katello versions. You'll want to clone the repository (https://github.com/theforeman/forklift) and update the following:
-
-1. Edit the [README](https://github.com/theforeman/forklift/blob/master/docs/production.md#vagrant-box-installation) to indicate the new version and the OSes it works with.
-1. Update the foreman version mappings - https://github.com/theforeman/forklift/blob/master/config/versions.yaml
-1. Verify the boxes exist with `vagrant status`
-1. Create pipeline playbooks for the new version - https://github.com/theforeman/forklift/tree/master/pipelines
-  - This should include a playbook to install the version fresh as well as
-    upgrading from the two versions prior.
-
-### Step 15: Test
-
-Use the newly updated forklift pipeline playbooks to test the X.Y release:
-
-```sh
-ansible-playbook pipelines/pipeline_katello_XY.yml -e "forklift_state=up"
-```
-
-Generally, we should test the fresh install pipeline before moving on to the upgrade pipelines. Once all pipelines are passing locally, the release in koji is ready to be published to https://fedorapeople.org/groups/katello/releases. Contact a senior engineer in theforeman-dev to complete this step.
-
-### Step 16: Announce RC
-
-Now you are ready to announce the RC by sending an post to the Release Announcements forum board, pointing users at the installation instructions. You should also open a PR to `katello.org` to update the news section with an announcement of the RC release.
-
-### Step 17: Fix Bugs
-
-As users test the RC, they may find and file issues. In addition, the RC may have been released with issues still to be fixed. As these issues are identified and fixed, they will need to be backported. The tool_belt tooling can be used to identify issues that need cherry picking across the various repositories. See the tool belt [README](https://github.com/theforeman/tool_belt/blob/master/README.md) for information on how to setup and configure it.
-
-### Step 18: Release!
-
-After iterating through Step 15 a few times over the course of roughly a month, and in sync with Foreman's release date decide that you are ready to release.
-
-```
-cd katello-misc/repos
-sed -i "s#/gpgcheck=0/#/gpgcheck=1/#g" katello*.repo
-git commit -a -m 'Turning on GPG key checking for X.Y'
-tito tag
-tito release koji
-```
+## How to Sign RPMs
 
 ##### Download Unsigned RPMs
 
@@ -561,30 +398,9 @@ Do a random check at http://koji.katello.org/packages/<name>/<version>/<release>
 
 Finally, the signed packages can be mashed and a final test of the signed RPMs performed to ensure nothng was missed. When doing a .Y release this is especially important. The X.Y branch may need some backported documentation changes. After backporting, you will need to do the following:
 
- * Update latest in _config.yml to X.Y
+ * Update latest in \_config.yml to X.Y
  * GA release announcement
  * Update the /project/katello/releases/yum/latest symlink on fedorapeople.org
-
-### Release Api docs
-
-On a git checkout run:
-```
-VERSION=3.4
-$GITDIR=~/git  #directory containing theforeman.org git repo
-
-FOREMAN_APIPIE_LANGS=en rake apipie:cache
-cp -rf public/apipie-cache $GITDIR/theforeman.org/plugins/katello/$VERSION/api
-# clear out json files
-find $GITDIR/theforeman.org/plugins/katello/$VERSION/api -name "*.json" -type f -delete
-
-cd $GITDIR/theforeman.org/
-cp plugins/katello/nightly/api/index.md  $GITDIR/theforeman.org/plugins/katello/$VERSION/api/
-sed -i "s/version: nightly/version: $VERSION/g" $GITDIR/theforeman.org/plugins/katello/$VERSION/api/index.md
-
-cp -rf $GITDIR/theforeman.org/api/new_version_template/apidoc/* $GITDIR/theforeman.org/plugins/katello/$VERSION/api/apidoc
-```
-
-Open a PR and commit the changes
 
 ## Upgrading Candlepin
 
@@ -675,34 +491,5 @@ times:
        * Update Runcible requirement in katello.gemspec.
        * Build new Runcible rpm.
        * Merge open PR for new Runcible requirement and any Katello changes from the fixes from steps 4 & 5.
-     * Tag into these Katello tags:
-       * katello-thirdparty-pulp-rhel6
-       * katello-thirdparty-pulp-rhel7
-      The following packages:
-       * pulp
-       * pulp-rpm
-       * pulp-puppet
-       * gofer (if applicable)
-       * Occasionally other dependencies (such as
-         https://github.com/pulp/pulp/tree/master/deps) are needed.  If you
-         kept track of what was updated as part of your upgrade and you noticed
-         any new deps pulled in from the Pulp repositories, tag those in now.
-     * In order for the client repo to be populated properly, tag the new pulp & pulp-rpm package into the following tags:
-      * katello-nightly-rhel5
-      * katello-nightly-rhel6
-      * katello-nightly-rhel7
-     * Sample tagging commands:
 
-       ```
-       koji-katello tag-pkg  katello-thirdparty-pulp-rhel6   pulp-2.4.0-0.23.beta.el6 pulp-rpm-2.4.0-0.23.beta.el6  pulp-puppet-2.4.0-0.23.beta.el6 pulp-nodes-2.4.0-0.23.beta.el6  gofer-1.3.0-1.el6
-       koji-katello tag-pkg  katello-thirdparty-pulp-rhel7   pulp-2.4.0-0.23.beta.el7 pulp-rpm-2.4.0-0.23.beta.el7  pulp-puppet-2.4.0-0.23.beta.el7 pulp-nodes-2.4.0-0.23.beta.el7  gofer-1.3.0-1.el7
-       koji-katello tag-pkg katello-nightly-rhel6 pulp-2.4.0-0.23.beta.el6 pulp-rpm-2.4.0-0.23.beta.el6
-       koji-katello tag-pkg katello-nightly-rhel7 pulp-2.4.0-0.23.beta.el7 pulp-rpm-2.4.0-0.23.beta.el7
-       koji-katello tag-pkg katello-nightly-rhel5 pulp-2.4.0-0.23.beta.el5 pulp-rpm-2.4.0-0.23.beta.el5
-       ```
-
-9. The next day when the Katello XL Pipeline runs, new Pulp rpms should have hit the Katello repos,
-perform a test install to ensure there are no issues.  You may also ask in the channel for someone to kick off a pipeline run.
-If the pipeline fails, determine the cause (most likely a missing dep needs tagging), and re-run the pipeline.
-
-10. Enjoy your new Pulp build and congratulate yourself for making it this far!
+9. Update the `katello-repos` RPM and Forklift `katello_repositories` role with the new version
