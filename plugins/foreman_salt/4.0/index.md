@@ -96,7 +96,7 @@ Install the Salt Smart Proxy package for your operating system (see above). The 
   - Add this to /etc/sudoers:
 
         Cmnd_Alias SALT = /usr/bin/salt, /usr/bin/salt-key
-        foreman_proxy ALL = (ALL) NOPASSWD: SALT
+        foreman-proxy ALL = (ALL) NOPASSWD: SALT
         Defaults:foreman-proxy !requiretty
 
    - For the salt-api, ensure the salt-api package is installed, and a supported server such as python-cherrypy is installed.
