@@ -102,7 +102,7 @@ Install the Salt Smart Proxy package for your operating system (see above). The 
 Add this to /etc/sudoers:
 
     Cmnd_Alias SALT = /usr/bin/salt, /usr/bin/salt-key
-    foreman-proxy ALL = NOPASSWD: SALT
+    foreman_proxy ALL = (ALL) NOPASSWD: SALT
     Defaults:foreman-proxy !requiretty
 
 In `/etc/salt/master`, make the following changes:
