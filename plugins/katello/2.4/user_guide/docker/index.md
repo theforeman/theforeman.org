@@ -19,7 +19,7 @@ The easiest way to get Docker content into Katello is to sync it in. You can eit
 
 ### Red Hat Docker Images
 
-Content can be synced into Katello using a Red Hat manifest in much the same way as yum content. See [our guide on how to manage Red Hat content for more information](/plugins/katello/{{ page.version }}/user_guide/red_hat_content/content.html).
+Content can be synced into Katello using a Red Hat manifest in much the same way as yum content. See [our guide on how to manage Red Hat content for more information](/plugins/katello/{{ page.version }}/user_guide/red_hat_content/index.html).
 
 ### Docker Hub/Docker Registry
 
