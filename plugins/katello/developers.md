@@ -409,7 +409,7 @@ The generated mash scripts should be committed to tool_belt and a pull request o
 
 At this point we want to verify the updates we made to the version branches by mashing and checking the repositories generated on koji.
 
-You'll want to run this job: `http://ci.theforeman.org/job/packaging_mash_rpms/`
+You'll want to run the [`packaging_mash_rpms`](https://ci.theforeman.org/job/packaging_mash_rpms/) job.
 
 With the parameter set as:
 
@@ -547,7 +547,7 @@ This step will import only signatures, not packages.
 koji -c ~/.koji/katello-config import-sig *.rpm
 ```
 
-As list-signed does not seem to work, do a random check in ​http://koji.katello.org/packages/ that http://koji.katello.org/packages/<name>/<version>/<release>/data/sigcache/d5a88496/ exists and has some content in it.
+As list-signed does not seem to work, do a random check in http://koji.katello.org/packages/ that http://koji.katello.org/packages/<name>/<version>/<release>/data/sigcache/d5a88496/ exists and has some content in it.
 
 
 ##### Create Back Signed RPMs in Koji
@@ -633,29 +633,27 @@ optional but highly recommended.**
 ### Requirements
 
 This assumes you have a working Katello installation and that you've checked
-out all the necessary repositories including Runcible (https://github.com/Katello/runcible).
+out all the necessary repositories including [Runcible](https://github.com/Katello/runcible).
 
 1. We recommend capturing some benchmarks before upgrading. This is
 optional though if the change in Pulp versions brings minor changes. See step 6
 for a idea of what to benchmark.
 
-2. Follow the Pulp documentation on how to install the latest version
-(https://pulp-user-guide.readthedocs.org/en/latest/installation.html). If
+2. Follow the [Pulp documentation on how to install the latest version](https://pulp-user-guide.readthedocs.org/en/latest/installation.html). If
 upgrading from a prevous installation, typically a `yum update *pulp*` will
 suffice.  Once you have the latest version installed, make you sure you update
 or reset the database. (We recommend keeping track of all packages
 installed as part of this upgrade, as it will make package tagging easier in
 step 8.)
 
-3. Upgrade Runcible by running the VCR tests in live mode
-(https://github.com/Katello/runcible#testing). Fix any broken tests.
+3. Upgrade Runcible by running the [VCR tests in live mode](https://github.com/Katello/runcible#testing).
+Fix any broken tests.
 Optionally, run some manual commands from a Ruby console to test Pulp's
 functionality. Once you're finished making changes, merge them into master
 (going through the Pull Request process).
 
-4. If Runcible changes were needed, release a new version of Runcible
-(https://github.com/Katello/runcible#building-and-releasing) but do NOT build
-new rpms in koji.
+4. If Runcible changes were needed, [release a new version of Runcible](https://github.com/Katello/runcible#building-and-releasing)
+but do NOT build new rpms in koji.
 
 5. Upgrade Katello to your new version of Runcible. Run the Katello VCR tests
 in live mode. Fix any failures.
