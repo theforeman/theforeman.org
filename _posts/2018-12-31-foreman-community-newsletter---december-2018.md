@@ -11,7 +11,7 @@ tags:
 - community
 excerpt: |
   Tickets for Config Management Camp are available!
-  Community survey planing has started and we have new releases.
+  Community survey planning has started and we have new releases.
   Happy Holidays everyone!
 ---
 
@@ -24,8 +24,8 @@ Details can be found in the [release announcement][1_20_1], and
 as always, if you do find issues then please [report them!][issues]
 
 Katello 3.10 is available with integration with Pulp 2.18,
-support of Subscription-Manager unified reports and more 54 bug fixes.
-Check out the [release announcement][k_3_10] for more details, and
+support for Subscription-Manager unified reports and 54 bug fixes.
+Check out the [release announcement][k_3_10] for more details and
 do report any [issues][k_issues].
 
 As ever, many thanks to the contributors to these releases - coders, RC testers,
@@ -34,7 +34,7 @@ is without you!
 
 ### Community Survey coming soon
 
-[Planing](https://community.theforeman.org/t/foreman-survey-2019-planning/12287)
+[Planning](https://community.theforeman.org/t/foreman-survey-2019-planning/12287)
 of this years survey has started.
 Look out for the survey on Discourse and in next month's newsletter!
 
@@ -44,7 +44,7 @@ We are moving into conference season with DevConf.cz, FOSDEM and CfgMgmtCamp com
 
 All Foreman events are available via [the forum
 calendar](https://community.theforeman.org/calendar) - hit the Subscribe button
-(which will give you an ICS link). You can also use the Add To Calendar button
+(which will give you an ICS link). You can also use the "Add To Calendar" button
 on specific events if you don't wish to import the whole thing.
 
 Future community demos will now be created much further in advance, so you
@@ -60,13 +60,13 @@ You can probably find the biggest group of Foreman developers all together at th
 
 * [FOSDEM 2019, 2-3rd Feb](https://community.theforeman.org/t/fosdem-2019/11964)
 
-Our usual yearly meetup, we'll be there with a stand, and plenty of folk to
+Our usual yearly meetup, we'll be there with a stand and plenty of folk to
 talk about Foreman's latest & greatest. Stop by and say hi!
 
 * [CfgMgmtCamp 2019, 4-6th](https://community.theforeman.org/t/config-management-camp/11966)
 
 Registration is open for CfgMgmtCamp, get your tickets before they run out!
-Foreman will be there, with booth, talks, demos, swag, and
+Foreman will be there with booth, talks, demos, swag, and
 probably dinner out on Tuesday night.
 
 Join our [Hackday](https://community.theforeman.org/t/foreman-cfgmgmt-hackday/12064) on the 6th!
