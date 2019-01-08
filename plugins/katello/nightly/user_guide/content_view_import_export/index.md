@@ -8,11 +8,11 @@ version: nightly
 
 Content view import/export is one of the new features in Katello 3.9. This feature is for users who want the *exact* same content view version on one Katello instance to be available on another Katello instance. The other Katello instances may or may not have Internet access.
 
+System administrators the ability to have fine-grained control over their content view versions, and they can have the same content view on two or more Katello instances. Additional APIs now exist to allow for this, as well as new commands to the hammer CLI tool.
+
 This new feature works differently than the old export/import feature. The old feature is still available but has been deprecated.
 
-In earlier versions of Katello, you could only export yum repositories. You could export an entire content view version, but this simply exported each yum repository in the version without any additional metadata.
-
-System administrators the ability to have fine-grained control over their content view versions, and they can have the same content view on two or more Katello instances. Additional APIs now exist to allow for this, as well as new commands to the hammer CLI tool.
+  * In earlier versions of Katello, you could only export yum repositories. You could export an entire content view version, but this simply exported each yum repository in the version without any additional metadata.
 
 ## API additions
 
@@ -39,21 +39,23 @@ Here is an example. You would POST this to `/katello/api/v2/content_views/<id>/p
 ]
 ```
 
-You can also set the `major` and `minor` versions when publishing. For example, if you called the `/publish` API with `major=55` and `minor=4`, the content view would be version `55.4`.
+* You can also set the `major` and `minor` versions when publishing. For example, if you called the `/publish` API with `major=55` and `minor=4`, the content view would be version `55.4`.
 
-:::info
-_NOTE_: If you call `/publish` with the `repos_units` parameter set and also have content view filters set, the `repos_units` will override any filters. This is intentional. A message will be logged to `/var/log/foreman/production.log` if the filter is overriden by the `repos_units` parameter.
-:::
+* Using `major`, `minor`, and `repos_units`, you can create a content view version that exactly matches the content on another Katello, with the same version number.
 
-Using `major`, `minor`, and `repos_units`, you can create a content view version that exactly matches the content on another Katello, with the same version number.
+<div class="alert alert-info" markdown="1">
+**Note**
+
+If you call **_/publish_** with the **_repos_units_** parameter set and also have content view filters set, the **_repos_units_** will override any filters. This is intentional. A message will be logged to **_/var/log/foreman/production.log_** if the filter is overriden by the **_repos_units_** parameter.
+</div>
 
 ## Hammer additions
 
-The Hammer CLI tool has two new commands: `hammer content-view version export` and `hammer content-view version import`.
+* The Hammer CLI tool has two new commands: `hammer content-view version export` and `hammer content-view version import`.
 
 ### Hammer export
 
-The `hammer content-view version export` command gathers information about a content view version, and then creates a tar file with that information. It will first create a json file with information about the content view. Here is an example:
+* The `hammer content-view version export` command gathers information about a content view version, and then creates a tar file with that information. It will first create a json file with information about the content view. Here is an example:
 
 ```jsonld=
 {
@@ -100,16 +102,21 @@ The `hammer content-view version export` command gathers information about a con
   ]
 }
 
+
 ```
-:::warning
-The `errata_ids` field is informational only. *ALL* errata in the repository are exported. A process during the import will then clean up errata that are not used.
-:::
+<div class="alert alert-danger" markdown="1">
+**Important**
+
+The **_errata_ids_** field is informational only. **ALL** errata in the repository are exported. A process during the import will then clean up errata that are not used.
+</div>
 
 The hammer command will also create a tar file that contains all of the repositories listed. The final result of the command is a tar file that contains two files: the json, and an inner tar file with all of the repositories. This tar file can be copied to a USB key and used for the `import` command.
 
-:::info
-_NOTE_: Older versions of Katello relied on the Pulp `export_distributor` and `group_export_distributor` to create an ISO image with the yum repositories. Katello would start a server-side task, create an ISO, and then copy the ISO to `/var/lib/pulp/katello-export`. This process could take many hours and hundreds of GB of disk space for temporary files. Users can now use hammer to create the tar file. This lets us avoid creating temporary copies of extremely large files.
-:::
+<div class="alert alert-info" markdown="1">
+**Note**
+
+Older versions of Katello relied on the Pulp **_export_distributor_** and **_group_export_distributor_** to create an ISO image with the yum repositories. Katello would start a server-side task, create an ISO, and then copy the ISO to **_/var/lib/pulp/katello-export_**. This process could take many hours and hundreds of GB of disk space for temporary files. Users can now use hammer to create the tar file. This lets us avoid creating temporary copies of extremely large files.
+</div>
 
 ### Hammer import
 
@@ -119,15 +126,17 @@ Before you run the `import` command for the first time, you will need to create 
 
 The `import` command will synchronize the packages from the export tar file into Library. It will then call the `/publish` API and create a new content view version using those packages.
 
-:::warning
-You will need to make sure Katello and Pulp can both read the tar file. If it cannot, you may get an error. The error will be logged in `/var/log/foreman/production.log` for Katello, or in `/var/log/messages` for Pulp.
-:::
+<div class="alert alert-danger" markdown="1">
+**Important**
 
-:::info
-_NOTE_: The import process will import all errata from an export. It will then purge any errata that are not associated with packages. This is the same process that is used today when copying RPMs between repositories.
-:::
+You will need to make sure Katello and Pulp can both read the tar file. If it cannot, you may get an error. The error will be logged in **/var/log/foreman/production.log** for Katello, or in **/var/log/messages** for Pulp. Ownership of the directory and files should be **_Apache_** with **_system_u:object_r:httpd_sys_rw_content_t:s0_** as the SELinux context.
+</div>
 
+<div class="alert alert-info" markdown="1">
+**Note**
 
+The import process will import all errata from an export. It will then purge any errata that are not associated with packages. This is the same process that is used today when copying RPMs between repositories.
+</div>
 
 ## Import/Export Best Practices
 
@@ -135,3 +144,8 @@ The intent of import/export is to capture a content view version on one Katello,
 
 Please use [foreman-ansible-modules](https://github.com/theforeman/foreman-ansible-modules) or Hammer scripts to define your SOE in a reproducible way. Once you have a reproducible SOE, you can then use import/export to keep your Katello updated.
 
+<div class="alert alert-info" markdown="1">
+**Note**
+
+To ensure proper SELinux contexts on the importing tar and files, use the `/var/lib/pulp/katello-export` directory on the importing Katello. This directory already has the correct permissions and correct SELinux labels, and was created specifically as a landing place for files not created by Pulp that Pulp needs to read or write. If choosing to use a different directory please see the alert at the end of the import section for proper permissions and SELinux context settings.
+</div>
