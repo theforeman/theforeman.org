@@ -64,7 +64,7 @@ yum -y localinstall https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.
 After setting up the appropriate repositories, install Katello:
 
 {% highlight bash %}
-yum -y install rubygem-hammer_cli_katello
+yum -y install tfm-rubygem-hammer_cli_katello
 {% endhighlight %}
 
 ## How do I use Hammer?
