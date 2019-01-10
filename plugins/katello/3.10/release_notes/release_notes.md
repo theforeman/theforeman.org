@@ -24,7 +24,7 @@ Katello client repos have been removed in favor of the Foreman client repo, whic
 
 ## Bug Fixes
 
-This release also inclue 140 bug fixes, which can be seen [here](https://projects.theforeman.org/projects/katello/issues?fixed_version_id=899&set_filter=1&status_id=%2A&tracker_id=1).
+This release also includes 54 bug fixes, which can be seen [here](https://projects.theforeman.org/projects/katello/issues?fixed_version_id=937&set_filter=1&status_id=%2A&tracker_id=1).
 
 ## Contributors
 Adam Ruzicka
