@@ -107,5 +107,11 @@ version: '1.20'
       Developer Handbook
     </a>
   </div>
+    <div class='col-xs-3 center'>
+      <a href="/storybook.html" class="btn-doc btn">
+        <h2 class='doc-icon'><i class="fa fa-book"></i></h2>
+        DEV UI Documentation 
+      </a>
+    </div>
 </div>
 <hr/>
