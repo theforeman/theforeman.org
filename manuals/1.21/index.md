@@ -1,6 +1,6 @@
 ---
 layout: manual
-title: Foreman Nightly Manual
+title: Foreman 1.21 Manual
 version: "1.21"
 previous_version: "1.20"
 ---
