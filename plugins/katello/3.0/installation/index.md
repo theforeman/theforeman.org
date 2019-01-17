@@ -3,7 +3,7 @@ layout: plugins/katello/documentation
 title: Katello Installation
 version: 3.0
 foreman_version: 1.11
-latest: 3.4
+latest: '3.10'
 script: osmenu.js
 ---
 
