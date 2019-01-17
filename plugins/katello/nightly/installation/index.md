@@ -3,7 +3,7 @@ layout: plugins/katello/documentation
 title: Katello Installation
 version: nightly
 foreman_version: nightly
-latest: 3.4
+latest: nightly
 script: osmenu.js
 ---
 
@@ -11,7 +11,7 @@ script: osmenu.js
 
 {% if page.version == 'nightly' %}
   <div class="alert alert-danger">
-    These are the instructions for installing the unstable nightly release of katello!
+    These are the instructions for installing the unstable nightly release of Katello!
   </div>
 {% elsif page.version != page.latest %}
   <div class="alert alert-danger">
