@@ -2,6 +2,7 @@
 layout: plugins/katello/documentation
 title: Client Installation
 version: nightly
+foreman_version: nightly
 script: osmenu.js
 ---
 
