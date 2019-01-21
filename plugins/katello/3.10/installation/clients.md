@@ -19,7 +19,7 @@ Install the appropriate Katello client release packages.
   <select id="operatingSystems">
      <option value="el5">Enterprise Linux 5 (CentOS, etc.)</option>
      <option value="el6">Enterprise Linux 6 (CentOS, etc.)</option>
-     <option value="el7">Enterprise Linux 7 (CentOS, etc.)</option>
+     <option value="el7" selected="selected">Enterprise Linux 7 (CentOS, etc.)</option>
      <option value="f27">Fedora 27</option>
      <option value="f28">Fedora 28</option>
      <option value="sles11">Suse Enterprise Linux Server 11</option>
@@ -27,7 +27,7 @@ Install the appropriate Katello client release packages.
   </select>
 </p>
 
-<div id="el5" markdown="1">
+<div id="el5" style="display:none;" markdown="1">
 {% highlight bash %}
 yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-5.noarch.rpm
 yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/el5/x86_64/foreman-client-release.rpm
@@ -41,7 +41,7 @@ yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/el6/
 {% endhighlight %}
 </div>
 
-<div id="el7" style="display:none;" markdown="1">
+<div id="el7" markdown="1">
 {% highlight bash %}
 yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/el7/x86_64/foreman-client-release.rpm
