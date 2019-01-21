@@ -78,6 +78,7 @@ Now you are ready to install the client package:
 
 The `katello-host-tools` package reports errata & package profile information, but does not allow you to run remote actions on the clients.
 
+<div class="el5 el6 el7 f27 f28">
 {% highlight bash %}
 yum install katello-host-tools
 {% endhighlight %}
@@ -88,17 +89,22 @@ We generally recommend using Foreman Remote Execution or Ansible for remote acti
 yum install katello-agent
 {% endhighlight %}
 
+<div class="el7 f27 f28">
 Optionally you can also install `katello-host-tools-tracer` and the client will report processes that need restarting after an update back to the Katello server. 
 
 {% highlight bash %}
 yum install katello-host-tools-tracer
 {% endhighlight %}
+</div>
+</div>
 
-For Suse Clients, only katello-host-tools is supported:
+<div class="sles11 sles12" style="display:none;" markdown="1">
+For Suse Clients, only `katello-host-tools` is supported:
 
 {% highlight bash %}
 zypper install katello-host-tools
 {% endhighlight %}
+</div>
 
 ## Provisioned
 
