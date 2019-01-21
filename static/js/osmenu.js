@@ -19,10 +19,12 @@ $(document).ready(function(){
 
         function show(os) {
             $('#' + os).show();
+            $('.' + os).show();
         }
 
         function hide(os) {
             $('#' + os).hide();
+            $('.' + os).hide();
         }
 
         function showOS(operatingSystem) {
@@ -30,10 +32,13 @@ $(document).ready(function(){
 
             for(os in operatingSystems) {
                 if (operatingSystems.hasOwnProperty(os)) {
+                    hide(os);
+                }
+            }
+            for(os in operatingSystems) {
+                if (operatingSystems.hasOwnProperty(os)) {
                     if (os === operatingSystem) {
                         show(os);
-                    } else {
-                        hide(os);
                     }
                 }
             }
