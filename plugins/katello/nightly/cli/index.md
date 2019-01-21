@@ -1,8 +1,8 @@
 ---
 layout: plugins/katello/documentation
 title: CLI
-version: 3.2
-foreman_version: 1.13
+version: nightly
+foreman_version: nightly
 script: osmenu.js
 ---
 
