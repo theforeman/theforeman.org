@@ -26,7 +26,7 @@ To sync content from a Docker registry such as Docker Hub (which is the official
 
 ![New Docker Repository](/plugins/katello/{{ page.version }}/user_guide/docker/docker_repo.png)
 
-On the new Repository screen, select "Docker" as the content type. Once you do that, you'll be given two options: upstream name and URL. The URL will be the registry URL; for Docker Hub, this would be `https://registry.hub.docker.com`.
+On the new Repository screen, select "Docker" as the content type. Once you do that, you'll be given two options: upstream name and URL. The URL will be the registry URL; for Docker Hub, this would be `https://registry-1.docker.io/`.
 
 For the upstream name, you want to use the fully qualified upstream name which also includes any namespace such as the username. This can be just "busybox" if the Repository is an official Docker Hub Repository or it can be something like "fedora/ssh" where "fedora" is the username/namespace.
 
