@@ -84,3 +84,7 @@ Copy docs to repo
 
 1. `cp -r dir/to/foreman/public/apipie-cache/apidoc/* Y.Y/apidoc`
 1. `find Y.Y -name *.json -delete`
+
+## Updating Foreman Ansible Modules docs
+
+1. `rake 'update_fam_docs[/path/to/foreman-ansible-modules/]'`
