@@ -128,6 +128,4 @@ Pick which you prefer!
 ## ![YouTube icon](static/images/youtube.png) [YouTube channel](https://www.youtube.com/channel/UCCo7AZ1oG6TbG0-dwjRqCmw)
 Please subscribe to our [YouTube channel](https://www.youtube.com/channel/UCCo7AZ1oG6TbG0-dwjRqCmw). We regularly upload deep dives on Foreman features, screencasts to learn how to use the different features and plugins of Foreman, discussions and much more.
 
-Our [Google+ community](https://plus.google.com/102496134326414788199) regularly hosts live hangouts on a variety of topics. Become a member of the community and you will be notified about these events, so you can ask questions to the presenters and join the conversation.
-
 <hr/>
