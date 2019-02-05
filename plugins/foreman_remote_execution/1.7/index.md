@@ -697,7 +697,7 @@ jobs based on matching job templates. The same applies on *view_hosts* and
 *view_smart_proxies* if you need to limit which hosts or smart proxies users
 can use.
 
-There's extra permission called **execute_template_invocation** which is
+There's extra permission called **create_template_invocations** which is
 checked just before the invocation starts allowing you to set even more
 granular permissions. The filter for this permission can define which job
 template can be run on particular host, let's look at some examples of such
