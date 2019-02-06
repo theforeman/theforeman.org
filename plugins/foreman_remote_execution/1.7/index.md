@@ -1,7 +1,7 @@
 ---
 layout: plugin
-title: Foreman Remote Execution 1.3 Manual
-version: 1.3
+title: Foreman Remote Execution 1.7 Manual
+version: 1.7
 ---
 
 # 1. {{ page.title }}
@@ -13,7 +13,7 @@ direct access to the target host and can scale to control many hosts. A command
 can be customized similarly to provisioning templates or partition tables. A
 number of templates are included for running basic commands, installing
 packages, etc. For more details see the
-[JobTemplates](plugins/foreman_remote_execution/{{page.version}}/index.html#3.1JobTemplates)
+[JobTemplates](/plugins/foreman_remote_execution/{{page.version}}/index.html#3.1JobTemplates)
 section.
 
 Below is a short demo of running a single command on a particular host, with
@@ -93,48 +93,9 @@ it should not be needed to open this port in the firewall, assuming communicatio
 over loopback interface is allowed.
 
 ## 1.2 Compatibility
-TODO: Check the versions
 
 Each component is packaged for platforms that Foreman is officially packaged
-for. Since both Foreman and Smart Proxy plugins requires Dynflow, Ruby 1.9+ is
-required.
-
-### 1.2.1 foreman_remote_execution
-
-<table class="table table-bordered table-condensed">
-  <tr>
-    <th>Foreman</th>
-    <th>foreman_remote_execution</th>
-  </tr>
-  <tr>
-    <td>1.9.x</td>
-    <td>0.0.x</td>
-  </tr>
-  <tr>
-    <td>1.10.x</td>
-    <td>0.1.x - 0.2.x</td>
-  </tr>
-</table>
-
-### 1.2.2 smart_proxy_remote_execution_ssh
-
-<table class="table table-bordered table-condensed">
-  <tr>
-    <th>Smart Proxy</th>
-    <th>smart_proxy_remote_execution_ssh</th>
-    <th>Notes</th>
-  </tr>
-  <tr>
-    <td>1.9.x</td>
-    <td>0.0.x</td>
-    <td>No compatibility with EL6 or Ubuntu 12.04</td>
-  </tr>
-  <tr>
-    <td>1.10.x</td>
-    <td>0.0.x</td>
-    <td>No compatibility with EL6 or Ubuntu 12.04</td>
-  </tr>
-</table>
+for.
 
 # 2. Installation
 
@@ -207,7 +168,7 @@ Don't forget to restart Foreman, Smart Proxy, Smart Proxy Dynflow and Foreman
 tasks so plugins are loaded
 
     service httpd restart
-    service foreman-tasks restart
+    service dynflowd restart
     service foreman-proxy restart
     # Skip the following step on Debian
     service smart_proxy_dynflow_core restart
@@ -331,7 +292,7 @@ or smart variable.
 
 If you're confused about the difference between smart class parameter,
 smart variable and parameter, checkout Foreman manual
-[parameters](http://www.theforeman.org/manuals/latest/index.html#4.2.3Parameters)
+[parameters](/manuals/latest/index.html#4.2.3Parameters)
 section.
 
 It is also possible to render one job template from another:
@@ -388,7 +349,7 @@ login, sudo would try to change effective user to this value. You can
 also enforce using **current user** login which can be handy if your users
 have same login as their posix accounts on target hosts. Last field
 is **overridable** which determines whether job template settings can be
-overridden during job invocation. See [settings chapter](plugins/foreman_remote_execution/{{page.version}}/index.html#4.2Globalsettings)
+overridden during job invocation. See [settings chapter](/plugins/foreman_remote_execution/{{page.version}}/index.html#4.2Globalsettings)
 for more details about customization.
 
 ## 3.2 Executing a Job
@@ -759,8 +720,8 @@ method and therefore it's wrapped in preview condition.
 Since version 1.3.2 Remote Execution can use Kerberos for authentication.
 In order for this to work the foreman-proxy user has to have a valid TGT.
 
-This feature can be enabled on a per-proxy basis by setting :kerberos_auth
-to true in /etc/smart_proxy_dynflow_core/settings.d/remote_execution_ssh.yml.
+This feature can be enabled on a per-proxy basis by setting ":kerberos_auth"
+to true in "/etc/smart_proxy_dynflow_core/settings.d/remote_execution_ssh.yml".
 Remote Execution will then try to authenticate using Kerberos and if that fails,
 fallback to public key authentication.
 
@@ -869,4 +830,4 @@ for contributing.
 * foreman-tasks plugin [https://github.com/theforeman/foreman-tasks](https://github.com/theforeman/foreman-tasks)
 * smart_proxy_remote_execution_ssh [https://github.com/theforeman/smart_proxy_remote_execution_ssh](https://github.com/theforeman/smart_proxy_remote_execution_ssh)
 * smart_proxy_dynflow [https://github.com/theforeman/smart_proxy_dynflow](https://github.com/theforeman/smart_proxy_dynflow)
-* issue tracker [http://projects.theforeman.org/projects/foreman_remote_execution](http://projects.theforeman.org/projects/foreman_remote_execution)
+* issue tracker [https://projects.theforeman.org/projects/foreman_remote_execution](http://projects.theforeman.org/projects/foreman_remote_execution)
