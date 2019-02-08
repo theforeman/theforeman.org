@@ -162,9 +162,18 @@ In Foreman, you can deploy containers only on a compute resource of the Docker p
 
               $ service docker restart
 
-    * If the container host is on a different machine than the Foreman server, open a port on the container host to communicate with the Foreman server. To do so, modify the OPTIONS variable in the /etc/sysconfig/docker file as follows:
+    * If the container host is on a different machine than the Foreman server, open a port on the container host to communicate with the Foreman server. Create the file /etc/systemd/system/docker.service.d/startup_options.conf
 
-          OPTIONS='--selinux-enabled -H tcp://0.0.0.0:[PORT_NUMBER] -H unix:///var/run/docker.sock'
+      ```
+      $ sudo mkdir -p /etc/systemd/system/docker.service.d/
+      $ sudo vi /etc/systemd/system/docker.service.d/startup_options.conf
+      ```
+      Now paste the below content into the created file.
+      ```
+      [Service]
+      ExecStart=
+      ExecStart=/usr/bin/dockerd -H fd:// -H tcp://0.0.0.0w:[PORT_NUMBER]
+      ```
 
     * Replace [PORT_NUMBER] with a selected port number. Restart the docker service and verify your settings as follows:
         *  If your operating system uses systemd:
@@ -175,6 +184,19 @@ In Foreman, you can deploy containers only on a compute resource of the Docker p
 
               $ service docker restart
               $ service docker status
+              
+   
+        *  You should see that there is an additional -H parameter after you restart docker service
+
+              ```
+              OLD:
+                 CGroup: /system.slice/docker.service
+                         ├─29397 /usr/bin/dockerd -H fd://
+              NEW:
+                 CGroup: /system.slice/docker.service
+                         ├─1864 /usr/bin/dockerd -H fd:// -H tcp://0.0.0.0:5000
+              ```
+        * Note: This connection is accessible by http which is not secure. Follow the docker [security guide] (https://docs.docker.com/engine/security/https/) to protect the Docker daemon with HTTPS.
 
 #### 4.1.2 To Create a Docker Compute Resource:
 
