@@ -34,39 +34,39 @@ yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/el5/
 {% endhighlight %}
 </div>
 
-<div id="el6" style="display:none;" markdown="1">
+<div id="el6" markdown="1">
 {% highlight bash %}
 yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
 yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/el6/x86_64/foreman-client-release.rpm
 {% endhighlight %}
 </div>
 
-<div id="el7" style="display:none;" markdown="1">
+<div id="el7" markdown="1">
 {% highlight bash %}
 yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/el7/x86_64/foreman-client-release.rpm
 {% endhighlight %}
 </div>
 
-<div id="f27" style="display:none;" markdown="1">
+<div id="f27" markdown="1">
 {% highlight bash %}
 yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/fc27/x86_64/foreman-client-release.rpm
 {% endhighlight %}
 </div>
 
-<div id="f28" style="display:none;" markdown="1">
+<div id="f28" markdown="1">
 {% highlight bash %}
 yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/fc28/x86_64/foreman-client-release.rpm
 {% endhighlight %}
 </div>
 
-<div id="sles12" style="display:none;" markdown="1">
+<div id="sles12" markdown="1">
 {% highlight bash %}
 rpm -Uvh https://yum.theforeman.org/client/{{ page.foreman_version }}/sles12/x86_64/foreman-client-release.rpm
 {% endhighlight %}
 </div>
 
-<div id="sles11" style="display:none;" markdown="1">
+<div id="sles11" markdown="1">
 {% highlight bash %}
 # For python-datetime dependency, ensure that the SDK addon product is enabled see: https://www.suse.com/support/kb/doc/?id=7015337
 zypper modifyrepo -e nu_novell_com:SLES11-Extras

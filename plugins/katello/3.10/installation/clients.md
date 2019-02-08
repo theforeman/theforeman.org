@@ -27,14 +27,14 @@ Install the appropriate Katello client release packages.
   </select>
 </p>
 
-<div id="el5" style="display:none;" markdown="1">
+<div id="el5" markdown="1">
 {% highlight bash %}
 yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-5.noarch.rpm
 yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/el5/x86_64/foreman-client-release.rpm
 {% endhighlight %}
 </div>
 
-<div id="el6" style="display:none;" markdown="1">
+<div id="el6" markdown="1">
 {% highlight bash %}
 yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
 yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/el6/x86_64/foreman-client-release.rpm
@@ -48,25 +48,25 @@ yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/el7/
 {% endhighlight %}
 </div>
 
-<div id="f27" style="display:none;" markdown="1">
+<div id="f27" markdown="1">
 {% highlight bash %}
 yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/fc27/x86_64/foreman-client-release.rpm
 {% endhighlight %}
 </div>
 
-<div id="f28" style="display:none;" markdown="1">
+<div id="f28" markdown="1">
 {% highlight bash %}
 yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/fc28/x86_64/foreman-client-release.rpm
 {% endhighlight %}
 </div>
 
-<div id="sles12" style="display:none;" markdown="1">
+<div id="sles12" markdown="1">
 {% highlight bash %}
 rpm -Uvh https://yum.theforeman.org/client/{{ page.foreman_version }}/sles12/x86_64/foreman-client-release.rpm
 {% endhighlight %}
 </div>
 
-<div id="sles11" style="display:none;" markdown="1">
+<div id="sles11" markdown="1">
 {% highlight bash %}
 # For python-datetime dependency, ensure that the SDK addon product is enabled see: https://www.suse.com/support/kb/doc/?id=7015337
 zypper modifyrepo -e nu_novell_com:SLES11-Extras
@@ -88,6 +88,7 @@ We generally recommend using Foreman Remote Execution or Ansible for remote acti
 {% highlight bash %}
 yum install katello-agent
 {% endhighlight %}
+</div>
 
 <div class="el7 f27 f28">
 Optionally you can also install `katello-host-tools-tracer` and the client will report processes that need restarting after an update back to the Katello server.
@@ -96,9 +97,8 @@ Optionally you can also install `katello-host-tools-tracer` and the client will 
 yum install katello-host-tools-tracer
 {% endhighlight %}
 </div>
-</div>
 
-<div class="sles11 sles12" style="display:none;" markdown="1">
+<div class="sles11 sles12" markdown="1">
 For Suse Clients, only `katello-host-tools` is supported:
 
 {% highlight bash %}
