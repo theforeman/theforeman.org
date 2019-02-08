@@ -249,9 +249,9 @@ Note that you can not change the container configuration once the container is c
 ![Container wizard config](static/images/plugins/foreman_docker/docker-config-options.png)
 
 5. In the final stage of container creation named Environment, select if you want to allocate a pseudo-tty, attach STDIN, STDOUT, and STDERR to the container. Click Add environment variable to create a custom environment variable for the container.
-![Container wizard environment](static/images/plugins/foreman_docker/docker-environment.png)
+![Container wizard environment](static/images/plugins/foreman_docker/docker-environment.png) - Don't forget to select the checkbox "run". Otherwise the newly created container will be in "EXITED" state after creation.
 
-6. Click Submit to create the container.
+7. Click Submit to create the container.
 
 
 After creating a container, Foreman displays a summary of container metadata. By default, the newly created container is inactive, for instructions how to start it see Procedure 1.5, “To Start or Stop a Container:”.
