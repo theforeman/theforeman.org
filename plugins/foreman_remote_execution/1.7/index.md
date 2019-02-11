@@ -720,8 +720,8 @@ method and therefore it's wrapped in preview condition.
 Since version 1.3.2 Remote Execution can use Kerberos for authentication.
 In order for this to work the foreman-proxy user has to have a valid TGT.
 
-This feature can be enabled on a per-proxy basis by setting ":kerberos_auth"
-to true in "/etc/smart_proxy_dynflow_core/settings.d/remote_execution_ssh.yml".
+This feature can be enabled on a per-proxy basis by setting `:kerberos_auth`
+to true in `/etc/smart_proxy_dynflow_core/settings.d/remote_execution_ssh.yml`.
 Remote Execution will then try to authenticate using Kerberos and if that fails,
 fallback to public key authentication.
 
@@ -813,7 +813,7 @@ Please follow our [standard procedures and contacts]({{site.baseurl}}support.htm
 ## 6.1 Troubleshooting
 
 If you find a bug, please file it in
-[Redmine](http://projects.theforeman.org/projects/foreman_remote_execution/issues/new).
+[Redmine](https://projects.theforeman.org/projects/foreman_remote_execution/issues/new).
 
 See the [troubleshooting section](/manuals/latest/index.html#7.2GettingHelp)
 in the Foreman manual for more info.
@@ -830,4 +830,4 @@ for contributing.
 * foreman-tasks plugin [https://github.com/theforeman/foreman-tasks](https://github.com/theforeman/foreman-tasks)
 * smart_proxy_remote_execution_ssh [https://github.com/theforeman/smart_proxy_remote_execution_ssh](https://github.com/theforeman/smart_proxy_remote_execution_ssh)
 * smart_proxy_dynflow [https://github.com/theforeman/smart_proxy_dynflow](https://github.com/theforeman/smart_proxy_dynflow)
-* issue tracker [https://projects.theforeman.org/projects/foreman_remote_execution](http://projects.theforeman.org/projects/foreman_remote_execution)
+* issue tracker [https://projects.theforeman.org/projects/foreman_remote_execution](https://projects.theforeman.org/projects/foreman_remote_execution)
