@@ -445,49 +445,33 @@ others_xccdf_rule = xccdf_org.ssgproject.content_rule_firefox_preferences-auto-d
 * When uploading an SCAP content to Foreman it sends the file for validation at the Smart-Proxy:
   * The Smart-Proxy validates that the SCAP xml file is a valid OpenSCAP file, and returns the errors if not.
   * Once the SCAP content is validated, the Smart-Proxy is extracting the SCAP profiles for later use when creating a policy.
-  
+
 ## 5.3 Arf Report retrieval process
 * The client host is running oscap test and uploads ARF report to the Smart-Proxy as an XML file.
-* The Smart-Proxy parses the XML and generates a JSON report. 
+* The Smart-Proxy parses the XML and generates a JSON report.
 * Once the JSON report has been successfully posted to the Foreman, the XML file is saved on the Smart-Proxy's filesystem for later use from the Foreman
 * (If the post to the Foreman fails the file is saved for later retry)
-* On the Foreman side: 
+* On the Foreman side:
   * The ARF report receives the JSON formatter report from the proxy and generates the report, its logs and messages.
-  * The complete report can be downloaded from the Smart-Proxy as a compressed XML, or viewed in OpenSCAP style HTML.  
+  * The complete report can be downloaded from the Smart-Proxy as a compressed XML, or viewed in OpenSCAP style HTML.
 
 ![Upload ARF Reports]({{page.images}}/reports_design.png)
-  
+
 # 6. Help
 
-Please follow our [standard procedures and
-contacts]({{site.baseurl}}support.html).
+There are several [contact channels]({{site.baseurl}}support.html) where you can reach us if you have any problems or questions. While you are waiting for our response, the following debugging steps might help you.
 
-# 7. Getting involved
+## 6.1 Running with Katello
 
-## 7.1 Troubleshooting
-
-If you find a bug, please file it in
-[Redmine](http://projects.theforeman.org/projects/foreman_openscap/issues/new).
-
-See the [troubleshooting section](/manuals/latest/index.html#7.2GettingHelp)
-in the Foreman manual for more info.
-
-### 7.1.1 Debugging foreman_scap_client
-
-Everything seems to be set up correctly but the reports are not showing up in UI? These are a few debugging steps:
+When running with [Katello](/plugins/katello/index.html), make sure your host is registered as [Content Host](plugins/katello/nightly/user_guide/content_hosts/index.html) because consumer certificates are used for client authentication instead of Puppet certs. Having unsubscribed hosts with Katello results in SSL cert verification error when foreman_scap_client tries to upload a report.
 
 
-* Running with Katello
-
-When running with [Katello](/plugins/katello/index.html), make sure your host is registered as [Content Host](plugins/katello/nightly/user_guide/content_hosts/index.html). Consumer certificates are used for client authentication instead of Puppet certs.
-
-
-* Scans based on cronlines
+## 6.2 Scans based on cronlines
 
 Scanning and report generation are based on cron. You can inspect all the cron lines in ```/etc/cron.d/foreman_scap_client_cron```. This file is managed by Puppet and any manual changes will be overwritten on next Puppet agent run.
 
 
-* Config for client
+## 6.3 Config for client
 
 Config file for foreman_scap_client is located at ```/etc/foreman_scap_client/config.yaml```. It should look something like this:
 
@@ -527,7 +511,7 @@ Config file for foreman_scap_client is located at ```/etc/foreman_scap_client/co
 There will be an entry for each policy that is assigned to your host. The policy entry starts by number followed by colon. Policy attributes are indented by 2 spaces. This file is also managed by Puppet and any manual changes will be rewritten on next Puppet agent run.
 
 
-* Running scans manually
+## 6.3 Running scans manually
 
 You can try running foreman_scap_client manually by executing
 
@@ -536,7 +520,7 @@ You can try running foreman_scap_client manually by executing
 from your command line, where `$policy_id` is a policy id from config file (1 in case of example config file above)
 
 
-* Information in logs
+## 6.4 Information in logs
 
 If running scan manually succeeds and there are no errors, try switching logging to DEBUG on proxy with openscap feature that your host uploads reports to and restart the proxy. Then use
 
@@ -544,7 +528,7 @@ If running scan manually succeeds and there are no errors, try switching logging
 
 and run foreman_scap_client manually again. Tailing the proxy logs will give you more insight into what is going on when report is uploaded by a client. Tailing ```/var/log/foreman/production.log``` on your Foreman server might be usefull as well.
 
-### 7.1.2 Slow queries due to many message records in database ( foreman_openscap >= 0.7.2 )
+## 6.5 Slow queries due to many message records in database ( foreman_openscap >= 0.7.2 )
 
 Fix [#19527](http://projects.theforeman.org/issues/19527) introduced a performance improvements to some of report-related queries and also added a rake task that performs a cleanup of database by removing duplicated report messages. You can execute it by running:
 
@@ -552,13 +536,14 @@ Fix [#19527](http://projects.theforeman.org/issues/19527) introduced a performan
 
 Please note that the task has to go through all your reports and it may take a significant amount of time to fininsh. We recommend expiring the reports that are no longer needed before running the task. This task does not need to be run more than once as the patch prevents the duplicates from being created.
 
-### 7.1.3 Cleaning up reports without OpenSCAP proxy ( foreman_openscap >= 0.8.4 )
+## 6.6 Cleaning up reports without OpenSCAP proxy ( foreman_openscap >= 0.8.4 )
 
 Fix [#21091](http://projects.theforeman.org/issues/21091) added a rake task that deletes all reports that do not have and associated proxy with OpenSCAP feature. Apparently, some workflows may lead to proxy not being associated which causes problems when users try to delete hosts with such reports. You can execute it by running:
 
     foreman-rake foreman_openscap:clean_reports_without_proxy
 
-## 7.2 Contributing
+
+# 7. Getting involved
 
 Follow the [same process as Foreman](/contribute.html#SubmitPatches)
 for contributing.
