@@ -257,6 +257,23 @@
         </tr>
                             <tr>
                                                             <td colspan="1">
+                <b>mirror_on_sync</b>
+                <div style="font-size: small">
+                    <span style="color: purple">boolean</span>
+                                        </div>
+                                </td>
+                            <td>
+                                                                                                                                                                                                                <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                            <li>no</li>
+                                                                                                                                                                                            <li><div style="color: blue"><b>yes</b>&nbsp;&larr;</div></li>
+                                                                                </ul>
+                                                                        </td>
+                                                            <td>
+                                                                    <div>toggle &quot;mirror on sync&quot; where the state of the repository mirrors that of the upstream repository at sync time</div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                            <td colspan="1">
                 <b>name</b>
                 <div style="font-size: small">
                     <span style="color: purple">-</span>
@@ -396,6 +413,7 @@
     <span class="nt">product</span><span class="p">:</span> <span class="s">&quot;My</span><span class="nv"> </span><span class="s">Product&quot;</span>
     <span class="nt">organization</span><span class="p">:</span> <span class="s">&quot;Default</span><span class="nv"> </span><span class="s">Organization&quot;</span>
     <span class="nt">url</span><span class="p">:</span> <span class="s">&quot;http://yum.theforeman.org/plugins/latest/el7/x86_64/&quot;</span>
+    <span class="nt">mirror_on_sync</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
     <span class="nt">download_policy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">background</span>
 
 <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;Create</span><span class="nv"> </span><span class="s">repository</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">content</span><span class="nv"> </span><span class="s">credentials&quot;</span>
@@ -410,6 +428,7 @@
     <span class="nt">organization</span><span class="p">:</span> <span class="s">&quot;Default</span><span class="nv"> </span><span class="s">Organization&quot;</span>
     <span class="nt">url</span><span class="p">:</span> <span class="s">&quot;http://yum.theforeman.org/releases/latest/el7/x86_64/&quot;</span>
     <span class="nt">download_policy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">background</span>
+    <span class="nt">mirror_on_sync</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
     <span class="nt">gpg_key</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">RPM-GPG-KEY-my-product2</span>
 </pre></div>
 </div>

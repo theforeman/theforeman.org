@@ -25,7 +25,7 @@ Requirements
 ------------
 The below requirements are needed on the host that executes this module.
 
-- nailgun >= 0.28.0
+- nailgun >= 0.32.0
 - ansible >= 2.3
 
 
@@ -123,7 +123,7 @@ Parameters
                                                                                     <b>Default:</b><br/><div style="color: blue">None</div>
                                     </td>
                                                                 <td>
-                                                                        <div>provider</div>
+                                                                        <div>Compute resource provider. Required if <em>state=present</em>.</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -137,7 +137,21 @@ Parameters
                                                                                                                                                                     <b>Default:</b><br/><div style="color: blue">None</div>
                                     </td>
                                                                 <td>
-                                                                        <div>provider authentication</div>
+                                                                        <div>Deprecated, use <em>provider_params</em> instead. Provider authentication</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>provider_params</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">-</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">None</div>
+                                    </td>
+                                                                <td>
+                                                                        <div>Parameter specific to compute resource provider</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -169,6 +183,19 @@ Parameters
                                                                             </td>
                                                                 <td>
                                                                         <div>compute resource presence</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>updated_name</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">-</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>new compute resource name</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -216,17 +243,37 @@ Examples
     - name: vmware compute resource
       foreman_compute_resource:
         name: example_compute_resource
-        datacenter: ax01
         locations:
           - Munich
         organizations:
           - ATIX
         provider: vmware
-        provider_auth:
+        provider_params:
           url: vsphere.example.com
           user: admin
           password: secret
-        server_url: vsphere.example.com
+          datacenter: ax01
+        server_url: foreman.example.com
+        username: admin
+        password: secret
+        state: present
+
+    - name: ovirt compute resource
+      foreman_compute_resource:
+        name: ovirt_compute_resource
+        locations:
+          - France/Toulouse
+        organizations:
+          - Example Org
+        provider: ovirt
+        provider_params:
+          url: ovirt.example.com
+          user: ovirt-admin@example.com
+          password: ovirtsecret
+          datacenter: aa92fb54-0736-4066-8fa8-b8b9e3bd75ac
+          ovirt_quota: 24868ab9-c2a1-47c3-87e7-706f17d215ac
+          use_v4: true
+        server_url: foreman.example.com
         username: admin
         password: secret
         state: present
@@ -254,6 +301,7 @@ Authors
 ~~~~~~~
 
 - Philipp Joos (@philippj)
+- Baptiste Agasse (@bagasse)
 
 
 .. hint::

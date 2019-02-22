@@ -205,8 +205,8 @@
                             <td>
                                                                                                                                                         </td>
                                                             <td>
-                                                                    <div>List of content views to includes name and either version or latest.</div>
-                                                <div>Ignored if <code>composite</code> is False.</div>
+                                                                    <div>List of content views to includes content_view and either version or latest.</div>
+                                                <div>Ignored if <em>composite=False</em>.</div>
                                                                             </td>
         </tr>
                             <tr>
@@ -276,7 +276,7 @@
                                                                                                                                                         </td>
                                                             <td>
                                                                     <div>List of repositories that include name and product.</div>
-                                                <div>Ignored if <code>composite</code> is True.</div>
+                                                <div>Ignored if <em>composite=True</em>.</div>
                                                                             </td>
         </tr>
                             <tr>
@@ -355,20 +355,20 @@
       <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&#39;Fedora</span><span class="nv"> </span><span class="s">26&#39;</span>
         <span class="nt">product</span><span class="p">:</span> <span class="s">&#39;Fedora&#39;</span>
 
-<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;Create</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">composite</span><span class="nv"> </span><span class="s">content</span><span class="nv"> </span><span class="s">view</span>
-  <span class="s">katello_content_view:</span>
-    <span class="s">username:</span><span class="nv"> </span><span class="s">&quot;</span><span class="l l-Scalar l-Scalar-Plain">admin&quot;</span>
-    <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="s">&quot;changeme&quot;</span>
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;Create</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">composite</span><span class="nv"> </span><span class="s">content</span><span class="nv"> </span><span class="s">view&quot;</span>
+  <span class="nt">katello_content_view</span><span class="p">:</span>
+    <span class="nt">username</span><span class="p">:</span> <span class="s">&quot;admin&quot;</span>
+    <span class="nt">password</span><span class="p">:</span> <span class="s">&quot;changeme&quot;</span>
     <span class="nt">server_url</span><span class="p">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
     <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;Fedora</span><span class="nv"> </span><span class="s">CCV&quot;</span>
     <span class="nt">organization</span><span class="p">:</span> <span class="s">&quot;My</span><span class="nv"> </span><span class="s">Cool</span><span class="nv"> </span><span class="s">new</span><span class="nv"> </span><span class="s">Organization&quot;</span>
     <span class="nt">composite</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
     <span class="nt">auto_publish</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
     <span class="nt">components</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Fedora CV</span>
-        <span class="nt">content_view</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1.0</span>
-      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Internal CV</span>
-        <span class="nt">content_view</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="p p-Indicator">-</span> <span class="nt">content_view</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Fedora CV</span>
+        <span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1.0</span>
+      <span class="p p-Indicator">-</span> <span class="nt">content_view</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Internal CV</span>
+        <span class="nt">latest</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
 </pre></div>
 </div>
 </div>
