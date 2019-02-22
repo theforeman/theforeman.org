@@ -62,7 +62,7 @@ Parameters
                                                                                                                                                             </td>
                                                                 <td>
                                                                         <div>Resource to search</div>
-                                                    <div>Set to an invalid choice like <code>foo</code> see all available options.</div>
+                                                    <div>Set to an invalid choice like <em>foo</em> see all available options.</div>
                                                                                 </td>
             </tr>
                                 <tr>

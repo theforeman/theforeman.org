@@ -120,6 +120,23 @@ Parameters
             </tr>
                                 <tr>
                                                                 <td colspan="1">
+                    <b>mirror_on_sync</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">boolean</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                                                                                    <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                                <li>no</li>
+                                                                                                                                                                                                <li><div style="color: blue"><b>yes</b>&nbsp;&larr;</div></li>
+                                                                                    </ul>
+                                                                            </td>
+                                                                <td>
+                                                                        <div>toggle &quot;mirror on sync&quot; where the state of the repository mirrors that of the upstream repository at sync time</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
                     <b>name</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
@@ -267,6 +284,7 @@ Examples
         product: "My Product"
         organization: "Default Organization"
         url: "http://yum.theforeman.org/plugins/latest/el7/x86_64/"
+        mirror_on_sync: true
         download_policy: background
 
     - name: "Create repository with content credentials"
@@ -281,6 +299,7 @@ Examples
         organization: "Default Organization"
         url: "http://yum.theforeman.org/releases/latest/el7/x86_64/"
         download_policy: background
+        mirror_on_sync: true
         gpg_key: RPM-GPG-KEY-my-product2
 
 

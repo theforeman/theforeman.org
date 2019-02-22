@@ -68,8 +68,8 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>List of content views to includes name and either version or latest.</div>
-                                                    <div>Ignored if <code>composite</code> is False.</div>
+                                                                        <div>List of content views to includes content_view and either version or latest.</div>
+                                                    <div>Ignored if <em>composite=False</em>.</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -139,7 +139,7 @@ Parameters
                                                                                                                                                             </td>
                                                                 <td>
                                                                         <div>List of repositories that include name and product.</div>
-                                                    <div>Ignored if <code>composite</code> is True.</div>
+                                                    <div>Ignored if <em>composite=True</em>.</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -226,7 +226,7 @@ Examples
           - name: 'Fedora 26'
             product: 'Fedora'
 
-    - name: "Create a composite content view
+    - name: "Create a composite content view"
       katello_content_view:
         username: "admin"
         password: "changeme"
@@ -236,10 +236,10 @@ Examples
         composite: true
         auto_publish: true
         components:
-          - name: Fedora CV
-            content_view: 1.0
-          - name: Internal CV
-            content_view: true
+          - content_view: Fedora CV
+            version: 1.0
+          - content_view: Internal CV
+            latest: true
 
 
 
