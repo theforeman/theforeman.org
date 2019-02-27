@@ -182,6 +182,19 @@
     </tr>
                 <tr>
                                                             <td colspan="1">
+                <b>compute_attributes</b>
+                <div style="font-size: small">
+                    <span style="color: purple">-</span>
+                                        </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>Compute attributes related to this compute profile. Some of these attributes are specific to the underlying compute resource type</div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                            <td colspan="1">
                 <b>name</b>
                 <div style="font-size: small">
                     <span style="color: purple">-</span>
@@ -291,6 +304,71 @@
     <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
     <span class="nt">verify_ssl</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
     <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
+
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">another compute profile</span>
+  <span class="nt">foreman_compute_profile</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">another_example_compute_profile</span>
+    <span class="nt">compute_attributes</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">compute_resource</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ovirt_compute_resource1</span>
+      <span class="nt">vm_attrs</span><span class="p">:</span>
+        <span class="nt">cluster</span><span class="p">:</span> <span class="s">&#39;a96d44a4-f14a-1015-82c6-f80354acdf01&#39;</span>
+        <span class="nt">template</span><span class="p">:</span> <span class="s">&#39;c88af4b7-a24a-453b-9ac2-bc647ca2ef99&#39;</span>
+        <span class="nt">instance_type</span><span class="p">:</span> <span class="s">&#39;cb8927e7-a404-40fb-a6c1-06cbfc92e077&#39;</span>
+    <span class="nt">server_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">foreman.example.com</span>
+    <span class="nt">username</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
+    <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
+    <span class="nt">verify_ssl</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
+
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">compute profile2</span>
+  <span class="nt">foreman_compute_profile</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">example_compute_profile2</span>
+    <span class="nt">compute_attributes</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">compute_resource</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ovirt_compute_resource01</span>
+      <span class="nt">vm_attrs</span><span class="p">:</span>
+        <span class="nt">cluster</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">a96d44a4-f14a-1015-82c6-f80354acdf01</span>
+        <span class="nt">cores</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+        <span class="nt">sockets</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+        <span class="nt">memory</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1073741824</span>
+        <span class="nt">ha</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+        <span class="nt">interfaces_attributes</span><span class="p">:</span>
+          <span class="nt">0</span><span class="p">:</span>
+            <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
+            <span class="nt">network</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">390666e1-dab3-4c99-9f96-006b2e2fd801</span>
+            <span class="nt">interface</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">virtio</span>
+        <span class="nt">volumes_attributes</span><span class="p">:</span>
+          <span class="nt">0</span><span class="p">:</span>
+            <span class="nt">size_gb</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">16</span>
+            <span class="nt">storage_domain</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">19c50090-1ab4-4023-a63f-75ee1018ed5e</span>
+            <span class="nt">preallocate</span><span class="p">:</span> <span class="s">&#39;1&#39;</span>
+            <span class="nt">wipe_after_delete</span><span class="p">:</span> <span class="s">&#39;0&#39;</span>
+            <span class="nt">interface</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">virtio_scsi</span>
+            <span class="nt">bootable</span><span class="p">:</span> <span class="s">&#39;true&#39;</span>
+    <span class="p p-Indicator">-</span> <span class="nt">compute_resource</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">libvirt_compute_resource03</span>
+      <span class="nt">vm_attrs</span><span class="p">:</span>
+        <span class="nt">cpus</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+        <span class="nt">memory</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2147483648</span>
+        <span class="nt">nics_attributes</span><span class="p">:</span>
+          <span class="nt">0</span><span class="p">:</span>
+            <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bridge</span>
+            <span class="nt">bridge</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
+            <span class="nt">model</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">virtio</span>
+        <span class="nt">volumes_attributes</span><span class="p">:</span>
+          <span class="nt">0</span><span class="p">:</span>
+            <span class="nt">pool_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
+            <span class="nt">capacity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">16G</span>
+            <span class="nt">allocation</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">16G</span>
+            <span class="nt">format_type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">raw</span>
+    <span class="nt">server_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">foreman.example.com</span>
+    <span class="nt">username</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
+    <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
+    <span class="nt">verify_ssl</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
+
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Remove compute profile</span>
+  <span class="nt">foreman_compute_profile</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">example_compute_profile2</span>
+    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">absent</span>
 </pre></div>
 </div>
 </div>
@@ -304,6 +382,7 @@
 <h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Philipp Joos (&#64;philippj)</li>
+<li>Baptiste Agasse (&#64;bagasse)</li>
 </ul>
 <div class="admonition hint">
 <p class="first admonition-title">Hint</p>
