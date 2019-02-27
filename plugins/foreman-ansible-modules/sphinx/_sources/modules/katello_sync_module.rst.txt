@@ -25,8 +25,6 @@ Requirements
 The below requirements are needed on the host that executes this module.
 
 - nailgun >= 0.28.0
-- python >= 2.6
-- ansible >= 2.3
 
 
 Parameters
@@ -50,7 +48,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Organization that the Product is in</div>
+                                                                        <div>Organization that the <em>product</em> is in</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -63,7 +61,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Password for user accessing Foreman server</div>
+                                                                        <div>foreman user password</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -76,7 +74,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Product to which the repository lives in</div>
+                                                                        <div>Product to which the <em>repository</em> lives in</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -89,7 +87,8 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Name of the repository to sync</div>
+                                                                        <div>Name of the repository to sync
+    If omitted, all repositories in <em>product</em> are synched.</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -102,7 +101,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>URL of Foreman server</div>
+                                                                        <div>foreman url</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -129,7 +128,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Username on Foreman server</div>
+                                                                        <div>foreman username</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -146,7 +145,7 @@ Parameters
                                                                                     </ul>
                                                                             </td>
                                                                 <td>
-                                                                        <div>Verify SSL of the Foreman server</div>
+                                                                        <div>verify ssl connection when communicating with foreman</div>
                                                                                 </td>
             </tr>
                         </table>
@@ -209,7 +208,6 @@ Examples
 
 
 
-
 Status
 ------
 
@@ -229,6 +227,7 @@ Authors
 ~~~~~~~
 
 - Eric D Helms (@ehelms)
+- Matthias M Dellweg (@mdellweg) ATIX AG
 
 
 .. hint::

@@ -43,6 +43,19 @@ Parameters
         </tr>
                     <tr>
                                                                 <td colspan="1">
+                    <b>compute_attributes</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">-</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Compute attributes related to this compute profile. Some of these attributes are specific to the underlying compute resource type</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
                     <b>name</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
@@ -161,6 +174,71 @@ Examples
         verify_ssl: false
         state: present
 
+    - name: another compute profile
+      foreman_compute_profile:
+        name: another_example_compute_profile
+        compute_attributes:
+        - compute_resource: ovirt_compute_resource1
+          vm_attrs:
+            cluster: 'a96d44a4-f14a-1015-82c6-f80354acdf01'
+            template: 'c88af4b7-a24a-453b-9ac2-bc647ca2ef99'
+            instance_type: 'cb8927e7-a404-40fb-a6c1-06cbfc92e077'
+        server_url: foreman.example.com
+        username: admin
+        password: secret
+        verify_ssl: false
+        state: present
+
+    - name: compute profile2
+      foreman_compute_profile:
+        name: example_compute_profile2
+        compute_attributes:
+        - compute_resource: ovirt_compute_resource01
+          vm_attrs:
+            cluster: a96d44a4-f14a-1015-82c6-f80354acdf01
+            cores: 1
+            sockets: 1
+            memory: 1073741824
+            ha: 0
+            interfaces_attributes:
+              0:
+                name: ""
+                network: 390666e1-dab3-4c99-9f96-006b2e2fd801
+                interface: virtio
+            volumes_attributes:
+              0:
+                size_gb: 16
+                storage_domain: 19c50090-1ab4-4023-a63f-75ee1018ed5e
+                preallocate: '1'
+                wipe_after_delete: '0'
+                interface: virtio_scsi
+                bootable: 'true'
+        - compute_resource: libvirt_compute_resource03
+          vm_attrs:
+            cpus: 1
+            memory: 2147483648
+            nics_attributes:
+              0:
+                type: bridge
+                bridge: ""
+                model: virtio
+            volumes_attributes:
+              0:
+                pool_name: default
+                capacity: 16G
+                allocation: 16G
+                format_type: raw
+        server_url: foreman.example.com
+        username: admin
+        password: secret
+        verify_ssl: false
+        state: present
+
+    - name: Remove compute profile
+      foreman_compute_profile:
+        name: example_compute_profile2
+        state: absent
+
 
 
 
@@ -184,6 +262,7 @@ Authors
 ~~~~~~~
 
 - Philipp Joos (@philippj)
+- Baptiste Agasse (@bagasse)
 
 
 .. hint::
