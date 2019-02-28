@@ -1,7 +1,7 @@
 ---
 layout: plugin
 title: Plugins
-version: '1.19'
+version: '1.21'
 ---
 
 # 1. Plugins
@@ -265,7 +265,7 @@ gpgcheck=0
   </p>
 
   <p>
-    If not already configured, add the repo by editing <code>/etc/apt/sources.list.d/foreman.list</code> and adding the following line:
+    If not already configured, add the repo by editing <code>/etc/apt/sources.list.d/deb_theforeman_org.list</code> and adding the following line:
   </p>
 
 <pre>
