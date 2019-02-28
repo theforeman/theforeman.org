@@ -168,7 +168,7 @@ Foreman plugins are implemented as [Rails engines](http://guides.rubyonrails.org
 		</a>
 	</div>
  	<div class='col-xs-3 center'>
-		<a href="http://projects.theforeman.org/projects/foreman/wiki/List_of_Plugins" class="btn-doc btn">
+		<a href="https://projects.theforeman.org/projects/foreman/wiki/List_of_Plugins" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-plus"></i></p>
       More
 		</a>
@@ -179,15 +179,15 @@ Foreman plugins are implemented as [Rails engines](http://guides.rubyonrails.org
 
 Full lists of plugins are available:
 
-* [Foreman plugins](http://projects.theforeman.org/projects/foreman/wiki/List_of_Plugins)
-* [Smart proxy plugins](http://projects.theforeman.org/projects/foreman/wiki/List_of_Smart-Proxy_Plugins)
-* [Hammer CLI plugins](http://projects.theforeman.org/projects/hammer-cli/wiki/List_of_Plugins)
+* [Foreman plugins](https://projects.theforeman.org/projects/foreman/wiki/List_of_Plugins)
+* [Smart proxy plugins](https://projects.theforeman.org/projects/foreman/wiki/List_of_Smart-Proxy_Plugins)
+* [Hammer CLI plugins](https://projects.theforeman.org/projects/hammer-cli/wiki/List_of_Plugins)
 
 # 2. Installation
 
-Foreman, Smart Proxy and Hammer CLI plugins are packaged as [gems](http://guides.rubygems.org/what-is-a-gem/), but the Foreman project provides RPMs and Debian packages to ease installation with standard Foreman packages. See below for the different installation methods, which depend on your platform.
+Foreman, Smart Proxy and Hammer CLI plugins are packaged as [gems](https://guides.rubygems.org/what-is-a-gem/), but the Foreman project provides RPMs and Debian packages to ease installation with standard Foreman packages. See below for the different installation methods, which depend on your platform.
 
-The number of plugins available in the project repositories is increasing, so check the [wiki](http://projects.theforeman.org/projects/foreman/wiki/List_of_Plugins) to see if a package is available yet.  If it's a useful or popular plugin and not yet packaged, please file a feature request in [the packaging project](http://projects.theforeman.org/projects/rpms/issues/new) (see [Bug Reporting](/contribute.html#Bugreporting) for more details on reporting issues).
+The number of plugins available in the project repositories is increasing, so check the [wiki](https://projects.theforeman.org/projects/foreman/wiki/List_of_Plugins) to see if a package is available yet.  If it's a useful or popular plugin and not yet packaged, please file a feature request in [the packaging project](https://projects.theforeman.org/projects/rpms/issues/new) (see [Bug Reporting](/contribute.html#Bugreporting) for more details on reporting issues).
 
 ## 2.1 Using the Foreman installer
 
@@ -241,7 +241,7 @@ To provide specific installation instructions, please select your operating syst
 
 <div class="installation_os installation_os_el7">
   <p>
-    The repositories are available at <a href="http://yum.theforeman.org/plugins/">yum.theforeman.org/plugins</a>.  Separate repositories are available for each Foreman release, containing plugins that are compatible with that particular version.  Packages are not currently GPG signed.
+    The repositories are available at <a href="https://yum.theforeman.org/plugins/">yum.theforeman.org/plugins</a>.  Separate repositories are available for each Foreman release, containing plugins that are compatible with that particular version.  Packages are not currently GPG signed.
   </p>
 
   <p>
@@ -253,7 +253,7 @@ To provide specific installation instructions, please select your operating syst
 <pre>
 [foreman-plugins]
 name=Foreman plugins
-baseurl=http://yum.theforeman.org/plugins/{{page.version}}/el7/x86_64/
+baseurl=https://yum.theforeman.org/plugins/{{page.version}}/el7/x86_64/
 enabled=1
 gpgcheck=0
 </pre>
@@ -261,7 +261,7 @@ gpgcheck=0
 
 <div class="installation_os installation_os_debian">
   <p>
-    The repositories are available at <code>http://deb.theforeman.org plugins &lt;version&gt;</code>. Separate repositories are available for each Foreman release, containing plugins that are compatible with that particular version. They are signed with the Foreman APT key.
+    The repositories are available at <code>https://deb.theforeman.org plugins &lt;version&gt;</code>. Separate repositories are available for each Foreman release, containing plugins that are compatible with that particular version. They are signed with the Foreman APT key.
   </p>
 
   <p>
@@ -366,8 +366,8 @@ It is recommended to use `~foreman/bundler.d/Gemfile.local.rb` so that it is not
 
 More information about writing your own plugins is available in the wiki:
 
-* [How to Create a Foreman Plugin](http://projects.theforeman.org/projects/foreman/wiki/How_to_Create_a_Plugin)
-* [How to Create a Smart Proxy Plugin](http://projects.theforeman.org/projects/foreman/wiki/How_to_Create_a_Smart-Proxy_Plugin)
+* [How to Create a Foreman Plugin](https://projects.theforeman.org/projects/foreman/wiki/How_to_Create_a_Plugin)
+* [How to Create a Smart Proxy Plugin](https://projects.theforeman.org/projects/foreman/wiki/How_to_Create_a_Smart-Proxy_Plugin)
 * [Hammer CLI developer documentation](https://github.com/theforeman/hammer-cli/blob/master/doc/developer_docs.md)
 
 The Foreman development [forum and IRC channels]({{site.baseurl}}support.html) can be of help for plugin developers.
@@ -379,15 +379,15 @@ We are happy to help bring your plugin to the Foreman Community! We offer:
 * Automated testing of your plugin in our Jenkins CI system
 * Adding it to our packaging repos so users can yum/apt install it
 * Hosting the plugin code under our 'theforeman' organization on GitHub
-* An issue tracker on our [Redmine instance](http://projects.theforeman.org) (or use GitHub issues)
+* An issue tracker on our [Redmine instance](https://projects.theforeman.org) (or use GitHub issues)
 
 We do ask for a few things in return:
 
-* Releases are tagged, ideally using [SemVer](http://semver.org)
+* Releases are tagged, ideally using [SemVer](https://semver.org)
 * Repos (on GitHub) and gems (on Rubygems) have an extra maintainer added
   * This is so that we can help with maintenance if you become too busy or move on from the plugin
   * You're welcome to request a specific member of the development community to be the additional author, otherwise we'll recommend someone
 
-Please see [the wiki](http://projects.theforeman.org/projects/foreman/wiki/How_to_Create_a_Plugin#Making-your-plugin-official) for more details
+Please see [the wiki](https://projects.theforeman.org/projects/foreman/wiki/How_to_Create_a_Plugin#Making-your-plugin-official) for more details
 
 <hr/>
