@@ -43,3 +43,7 @@ plugins:
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
+
+gems:
+  - jekyll-paginate
+  - jekyll-gist
