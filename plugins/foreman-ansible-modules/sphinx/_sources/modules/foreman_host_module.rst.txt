@@ -1,13 +1,14 @@
-:source: katello_product.py
+:source: foreman_host.py
 
 :orphan:
 
-.. _katello_product_module:
+.. _foreman_host_module:
 
 
-katello_product -- Create and Manage Katello products
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+foreman_host -- Manage Foreman hosts
+++++++++++++++++++++++++++++++++++++
 
+.. versionadded:: 2.7
 
 .. contents::
    :local:
@@ -16,7 +17,8 @@ katello_product -- Create and Manage Katello products
 
 Synopsis
 --------
-- Create and Manage Katello products
+- Manage Foreman host Entities
+- This beta version can create and delete hosts from preexisting host groups
 
 
 
@@ -24,8 +26,7 @@ Requirements
 ------------
 The below requirements are needed on the host that executes this module.
 
-- nailgun >= 0.32.0
-- python >= 2.6
+- nailgun >= 0.29.0
 - ansible >= 2.3
 
 
@@ -42,20 +43,20 @@ Parameters
         </tr>
                     <tr>
                                                                 <td colspan="1">
-                    <b>description</b>
+                    <b>hostgroup</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                         / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Possibly long descriptionto show the user in detail view</div>
+                                                                        <div>Name of related hostgroup</div>
                                                                                 </td>
             </tr>
                                 <tr>
                                                                 <td colspan="1">
-                    <b>gpg_key</b>
+                    <b>location</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
                                             </div>
@@ -63,20 +64,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Content GPG key name attached to this product</div>
-                                                                                </td>
-            </tr>
-                                <tr>
-                                                                <td colspan="1">
-                    <b>label</b>
-                    <div style="font-size: small">
-                        <span style="color: purple">-</span>
-                                            </div>
-                                    </td>
-                                <td>
-                                                                                                                                                            </td>
-                                                                <td>
-                                                                        <div>Label to show the user</div>
+                                                                        <div>Name of related location</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -89,7 +77,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Name of the Katello product</div>
+                                                                        <div>Name of host (without the related domain!)</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -97,12 +85,12 @@ Parameters
                     <b>organization</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                            </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Organization that the Product is in</div>
+                                                                        <div>Name of related organization</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -129,37 +117,6 @@ Parameters
                                                                                                                                                             </td>
                                                                 <td>
                                                                         <div>URL of Foreman server</div>
-                                                                                </td>
-            </tr>
-                                <tr>
-                                                                <td colspan="1">
-                    <b>state</b>
-                    <div style="font-size: small">
-                        <span style="color: purple">-</span>
-                                            </div>
-                                    </td>
-                                <td>
-                                                                                                                            <ul style="margin: 0; padding: 0"><b>Choices:</b>
-                                                                                                                                                                <li><div style="color: blue"><b>present</b>&nbsp;&larr;</div></li>
-                                                                                                                                                                                                <li>absent</li>
-                                                                                                                                                                                                <li>present_with_defaults</li>
-                                                                                    </ul>
-                                                                            </td>
-                                                                <td>
-                                                                        <div>State of the Product</div>
-                                                                                </td>
-            </tr>
-                                <tr>
-                                                                <td colspan="1">
-                    <b>sync_plan</b>
-                    <div style="font-size: small">
-                        <span style="color: purple">-</span>
-                                            </div>
-                                    </td>
-                                <td>
-                                                                                                                                                            </td>
-                                                                <td>
-                                                                        <div>Sync plan name attached to this product</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -204,25 +161,22 @@ Examples
 .. code-block:: yaml+jinja
 
     
-    - name: "Create Fedora product with a sync plan"
-      katello_product:
+    - name: "Create a host"
+      foreman_host:
         username: "admin"
         password: "changeme"
         server_url: "https://foreman.example.com"
-        name: "Fedora"
-        organization: "My Cool new Organization"
-        sync_plan: "Fedora repos sync"
+        name: "new_host"
+        hostgroup: my_hostgroup
         state: present
 
-    - name: "Create CentOS 7 product with content credentials"
-      katello_product:
+    - name: "Delete a host"
+      foreman_host:
         username: "admin"
         password: "changeme"
         server_url: "https://foreman.example.com"
-        name: "CentOS 7"
-        gpg_key: "RPM-GPG-KEY-CentOS7"
-        organization: "My Cool new Organization"
-        state: present
+        name: "new_host"
+        state: absent
 
 
 
@@ -246,9 +200,8 @@ Status
 Authors
 ~~~~~~~
 
-- Eric D Helms (@ehelms)
-- Matthias Dellweg (@mdellweg) ATIX AG
+- Bernhard Hopfenmueller (@Fobhep) ATIX AG
 
 
 .. hint::
-    If you notice any issues in this documentation you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/katello_product.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr>`_ to improve it.
+    If you notice any issues in this documentation you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/foreman_host.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr>`_ to improve it.
