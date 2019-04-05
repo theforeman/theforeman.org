@@ -5,8 +5,8 @@
 .. _katello_sync_plan_module:
 
 
-katello_sync_plan -- Create and Manage Katello sync plans
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+katello_sync_plan -- Manage Katello sync plans
+++++++++++++++++++++++++++++++++++++++++++++++
 
 
 .. contents::
@@ -16,7 +16,7 @@ katello_sync_plan -- Create and Manage Katello sync plans
 
 Synopsis
 --------
-- Create and Manage Katello sync plans
+- Manage Katello sync plans
 
 
 
@@ -24,9 +24,7 @@ Requirements
 ------------
 The below requirements are needed on the host that executes this module.
 
-- nailgun >= 0.29.0
-- python >= 2.6
-- ansible >= 2.3
+- nailgun >= 0.32.0
 
 
 Parameters
@@ -41,6 +39,33 @@ Parameters
                         <th width="100%">Comments</th>
         </tr>
                     <tr>
+                                                                <td colspan="1">
+                    <b>cron_expression</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">-</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>A cron expression as found in crontab files</div>
+                                                    <div>This must be provided together with <em>interval='custom cron'</em>.</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>description</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">-</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Description of the Katello sync plan</div>
+                                                                                </td>
+            </tr>
+                                <tr>
                                                                 <td colspan="1">
                     <b>enabled</b>
                     <div style="font-size: small">
@@ -61,9 +86,15 @@ Parameters
                          / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
-                                                                                                                                                            </td>
+                                                                                                                            <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                                <li>hourly</li>
+                                                                                                                                                                                                <li>daily</li>
+                                                                                                                                                                                                <li>weekly</li>
+                                                                                                                                                                                                <li>custom cron</li>
+                                                                                    </ul>
+                                                                            </td>
                                                                 <td>
-                                                                        <div>How often synchronization should run ('hourly', 'daily', 'weekly')</div>
+                                                                        <div>How often synchronization should run</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -139,8 +170,7 @@ Parameters
                          / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
-                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">now</div>
-                                    </td>
+                                                                                                                                                            </td>
                                                                 <td>
                                                                         <div>Start date and time of the first synchronization</div>
                                                                                 </td>
@@ -196,7 +226,7 @@ Examples
         organization: "Default Organization"
         interval: "weekly"
         enabled: false
-        sync_date: "2017-01-01 00:00:00"
+        sync_date: "2017/01/01 00:00:00 +0000"
         products:
           - name: 'Red Hat Enterprise Linux Server'
 
@@ -223,6 +253,7 @@ Authors
 ~~~~~~~
 
 - Andrew Kofink (@akofink)
+- Matthis Dellweg (@mdellweg) ATIX-AG
 
 
 .. hint::

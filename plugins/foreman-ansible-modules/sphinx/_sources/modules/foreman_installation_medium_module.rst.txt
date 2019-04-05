@@ -63,7 +63,8 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>The full installation medium name</div>
+                                                                        <div>The full installation medium name.
+    The special name &quot;*&quot; (only possible as parameter) is used to perform bulk actions (modify, delete) on all existing partition tables.</div>
                                                                                 </td>
             </tr>
                                 <tr>

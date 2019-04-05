@@ -1,13 +1,14 @@
-:source: katello_product.py
+:source: foreman_bookmark.py
 
 :orphan:
 
-.. _katello_product_module:
+.. _foreman_bookmark_module:
 
 
-katello_product -- Create and Manage Katello products
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+foreman_bookmark -- Manage Foreman Bookmarks
+++++++++++++++++++++++++++++++++++++++++++++
 
+.. versionadded:: 2.4
 
 .. contents::
    :local:
@@ -16,7 +17,8 @@ katello_product -- Create and Manage Katello products
 
 Synopsis
 --------
-- Create and Manage Katello products
+- Manage Foreman Bookmark Entities
+- Uses https://github.com/SatelliteQE/nailgun
 
 
 
@@ -24,8 +26,7 @@ Requirements
 ------------
 The below requirements are needed on the host that executes this module.
 
-- nailgun >= 0.32.0
-- python >= 2.6
+- nailgun >= 0.29.0
 - ansible >= 2.3
 
 
@@ -42,41 +43,15 @@ Parameters
         </tr>
                     <tr>
                                                                 <td colspan="1">
-                    <b>description</b>
+                    <b>controller</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                         / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Possibly long descriptionto show the user in detail view</div>
-                                                                                </td>
-            </tr>
-                                <tr>
-                                                                <td colspan="1">
-                    <b>gpg_key</b>
-                    <div style="font-size: small">
-                        <span style="color: purple">-</span>
-                                            </div>
-                                    </td>
-                                <td>
-                                                                                                                                                            </td>
-                                                                <td>
-                                                                        <div>Content GPG key name attached to this product</div>
-                                                                                </td>
-            </tr>
-                                <tr>
-                                                                <td colspan="1">
-                    <b>label</b>
-                    <div style="font-size: small">
-                        <span style="color: purple">-</span>
-                                            </div>
-                                    </td>
-                                <td>
-                                                                                                                                                            </td>
-                                                                <td>
-                                                                        <div>Label to show the user</div>
+                                                                        <div>Controller for the bookmark</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -89,20 +64,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Name of the Katello product</div>
-                                                                                </td>
-            </tr>
-                                <tr>
-                                                                <td colspan="1">
-                    <b>organization</b>
-                    <div style="font-size: small">
-                        <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
-                                    </td>
-                                <td>
-                                                                                                                                                            </td>
-                                                                <td>
-                                                                        <div>Organization that the Product is in</div>
+                                                                        <div>Name of the bookmark</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -116,6 +78,36 @@ Parameters
                                                                                                                                                             </td>
                                                                 <td>
                                                                         <div>Password for user accessing Foreman server</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>public</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">boolean</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                                                                                    <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                                <li>no</li>
+                                                                                                                                                                                                <li><div style="color: blue"><b>yes</b>&nbsp;&larr;</div></li>
+                                                                                    </ul>
+                                                                            </td>
+                                                                <td>
+                                                                        <div>Make bookmark available for all users</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>query</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">-</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Query of the bookmark</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -141,25 +133,12 @@ Parameters
                                 <td>
                                                                                                                             <ul style="margin: 0; padding: 0"><b>Choices:</b>
                                                                                                                                                                 <li><div style="color: blue"><b>present</b>&nbsp;&larr;</div></li>
-                                                                                                                                                                                                <li>absent</li>
                                                                                                                                                                                                 <li>present_with_defaults</li>
+                                                                                                                                                                                                <li>absent</li>
                                                                                     </ul>
                                                                             </td>
                                                                 <td>
-                                                                        <div>State of the Product</div>
-                                                                                </td>
-            </tr>
-                                <tr>
-                                                                <td colspan="1">
-                    <b>sync_plan</b>
-                    <div style="font-size: small">
-                        <span style="color: purple">-</span>
-                                            </div>
-                                    </td>
-                                <td>
-                                                                                                                                                            </td>
-                                                                <td>
-                                                                        <div>Sync plan name attached to this product</div>
+                                                                        <div>State of the bookmark</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -204,25 +183,34 @@ Examples
 .. code-block:: yaml+jinja
 
     
-    - name: "Create Fedora product with a sync plan"
-      katello_product:
+    - name: "Create a Bookmark"
+      foreman_bookmark:
         username: "admin"
         password: "changeme"
         server_url: "https://foreman.example.com"
-        name: "Fedora"
-        organization: "My Cool new Organization"
-        sync_plan: "Fedora repos sync"
+        name: "recent"
+        controller: "job_invocations"
+        query: "started_at > '24 hours ago'"
+        state: present_with_defaults
+
+    - name: "Update a Bookmark"
+      foreman_bookmark:
+        username: "admin"
+        password: "changeme"
+        server_url: "https://foreman.example.com"
+        name: "recent"
+        controller: "job_invocations"
+        query: "started_at > '12 hours ago'"
         state: present
 
-    - name: "Create CentOS 7 product with content credentials"
-      katello_product:
+    - name: "Delete a Bookmark"
+      foreman_bookmark:
         username: "admin"
         password: "changeme"
         server_url: "https://foreman.example.com"
-        name: "CentOS 7"
-        gpg_key: "RPM-GPG-KEY-CentOS7"
-        organization: "My Cool new Organization"
-        state: present
+        name: "recent"
+        controller: "job_invocations"
+        state: absent
 
 
 
@@ -246,9 +234,8 @@ Status
 Authors
 ~~~~~~~
 
-- Eric D Helms (@ehelms)
-- Matthias Dellweg (@mdellweg) ATIX AG
+- Bernhard Hopfenmueller (@Fobhep) ATIX AG
 
 
 .. hint::
-    If you notice any issues in this documentation you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/katello_product.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr>`_ to improve it.
+    If you notice any issues in this documentation you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/foreman_bookmark.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr>`_ to improve it.

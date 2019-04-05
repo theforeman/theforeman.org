@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>katello_product – Create and Manage Katello products &mdash; Foreman Ansible Modules  documentation</title>
+  <title>foreman_host_power – Manage Foreman hosts power state &mdash; Foreman Ansible Modules  documentation</title>
   
 
   
@@ -124,13 +124,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>katello_product – Create and Manage Katello products</li>
+      <li>foreman_host_power – Manage Foreman hosts power state</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/modules/katello_product_module.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/modules/foreman_host_power_module.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -143,29 +143,33 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="katello-product-create-and-manage-katello-products">
-<span id="katello-product-module"></span><h1>katello_product – Create and Manage Katello products<a class="headerlink" href="#katello-product-create-and-manage-katello-products" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="foreman-host-power-manage-foreman-hosts-power-state">
+<span id="foreman-host-power-module"></span><h1>foreman_host_power – Manage Foreman hosts power state<a class="headerlink" href="#foreman-host-power-manage-foreman-hosts-power-state" title="Permalink to this headline">¶</a></h1>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.7.</span></p>
+</div>
 <div class="contents local topic" id="contents">
 <ul class="simple">
 <li><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></li>
 <li><a class="reference internal" href="#requirements" id="id2">Requirements</a></li>
 <li><a class="reference internal" href="#parameters" id="id3">Parameters</a></li>
 <li><a class="reference internal" href="#examples" id="id4">Examples</a></li>
-<li><a class="reference internal" href="#status" id="id5">Status</a></li>
+<li><a class="reference internal" href="#return-values" id="id5">Return Values</a></li>
+<li><a class="reference internal" href="#status" id="id6">Status</a></li>
 </ul>
 </div>
 <div class="section" id="synopsis">
 <h2><a class="toc-backref" href="#id1">Synopsis</a><a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Create and Manage Katello products</li>
+<li>Manage power state of Foreman host</li>
+<li>This beta version can start and stop an existing foreman host and question the current power state.</li>
 </ul>
 </div>
 <div class="section" id="requirements">
 <h2><a class="toc-backref" href="#id2">Requirements</a><a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <p>The below requirements are needed on the host that executes this module.</p>
 <ul class="simple">
-<li>nailgun &gt;= 0.32.0</li>
-<li>python &gt;= 2.6</li>
+<li>nailgun &gt;= 0.29.0</li>
 <li>ansible &gt;= 2.3</li>
 </ul>
 </div>
@@ -179,46 +183,7 @@
     </tr>
                 <tr>
                                                             <td colspan="1">
-                <b>description</b>
-                <div style="font-size: small">
-                    <span style="color: purple">-</span>
-                                        </div>
-                                </td>
-                            <td>
-                                                                                                                                                        </td>
-                                                            <td>
-                                                                    <div>Possibly long descriptionto show the user in detail view</div>
-                                                                            </td>
-        </tr>
-                            <tr>
-                                                            <td colspan="1">
-                <b>gpg_key</b>
-                <div style="font-size: small">
-                    <span style="color: purple">-</span>
-                                        </div>
-                                </td>
-                            <td>
-                                                                                                                                                        </td>
-                                                            <td>
-                                                                    <div>Content GPG key name attached to this product</div>
-                                                                            </td>
-        </tr>
-                            <tr>
-                                                            <td colspan="1">
-                <b>label</b>
-                <div style="font-size: small">
-                    <span style="color: purple">-</span>
-                                        </div>
-                                </td>
-                            <td>
-                                                                                                                                                        </td>
-                                                            <td>
-                                                                    <div>Label to show the user</div>
-                                                                            </td>
-        </tr>
-                            <tr>
-                                                            <td colspan="1">
-                <b>name</b>
+                <b>hostname</b>
                 <div style="font-size: small">
                     <span style="color: purple">-</span>
                      / <span style="color: red">required</span>                    </div>
@@ -226,20 +191,7 @@
                             <td>
                                                                                                                                                         </td>
                                                             <td>
-                                                                    <div>Name of the Katello product</div>
-                                                                            </td>
-        </tr>
-                            <tr>
-                                                            <td colspan="1">
-                <b>organization</b>
-                <div style="font-size: small">
-                    <span style="color: purple">-</span>
-                     / <span style="color: red">required</span>                    </div>
-                                </td>
-                            <td>
-                                                                                                                                                        </td>
-                                                            <td>
-                                                                    <div>Organization that the Product is in</div>
+                                                                    <div>fqdn of host</div>
                                                                             </td>
         </tr>
                             <tr>
@@ -257,6 +209,24 @@
         </tr>
                             <tr>
                                                             <td colspan="1">
+                <b>power_state</b>
+                <div style="font-size: small">
+                    <span style="color: purple">list</span>
+                                        </div>
+                                </td>
+                            <td>
+                                                                                                                        <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                                                                                                <li>yes</li>
+                                                                                                                                                                                                                                                                <li>no</li>
+                                                                                                                                                                                            <li>state</li>
+                                                                                </ul>
+                                                                        </td>
+                                                            <td>
+                                                                    <div>Desired power state</div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                            <td colspan="1">
                 <b>server_url</b>
                 <div style="font-size: small">
                     <span style="color: purple">-</span>
@@ -266,37 +236,6 @@
                                                                                                                                                         </td>
                                                             <td>
                                                                     <div>URL of Foreman server</div>
-                                                                            </td>
-        </tr>
-                            <tr>
-                                                            <td colspan="1">
-                <b>state</b>
-                <div style="font-size: small">
-                    <span style="color: purple">-</span>
-                                        </div>
-                                </td>
-                            <td>
-                                                                                                                        <ul style="margin: 0; padding: 0"><b>Choices:</b>
-                                                                                                                                                            <li><div style="color: blue"><b>present</b>&nbsp;&larr;</div></li>
-                                                                                                                                                                                            <li>absent</li>
-                                                                                                                                                                                            <li>present_with_defaults</li>
-                                                                                </ul>
-                                                                        </td>
-                                                            <td>
-                                                                    <div>State of the Product</div>
-                                                                            </td>
-        </tr>
-                            <tr>
-                                                            <td colspan="1">
-                <b>sync_plan</b>
-                <div style="font-size: small">
-                    <span style="color: purple">-</span>
-                                        </div>
-                                </td>
-                            <td>
-                                                                                                                                                        </td>
-                                                            <td>
-                                                                    <div>Sync plan name attached to this product</div>
                                                                             </td>
         </tr>
                             <tr>
@@ -333,30 +272,61 @@
 <br/></div>
 <div class="section" id="examples">
 <h2><a class="toc-backref" href="#id4">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;Create</span><span class="nv"> </span><span class="s">Fedora</span><span class="nv"> </span><span class="s">product</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">sync</span><span class="nv"> </span><span class="s">plan&quot;</span>
-  <span class="nt">katello_product</span><span class="p">:</span>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;Switch</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">host</span><span class="nv"> </span><span class="s">on&quot;</span>
+  <span class="nt">foreman_host_power</span><span class="p">:</span>
     <span class="nt">username</span><span class="p">:</span> <span class="s">&quot;admin&quot;</span>
     <span class="nt">password</span><span class="p">:</span> <span class="s">&quot;changeme&quot;</span>
     <span class="nt">server_url</span><span class="p">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
-    <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;Fedora&quot;</span>
-    <span class="nt">organization</span><span class="p">:</span> <span class="s">&quot;My</span><span class="nv"> </span><span class="s">Cool</span><span class="nv"> </span><span class="s">new</span><span class="nv"> </span><span class="s">Organization&quot;</span>
-    <span class="nt">sync_plan</span><span class="p">:</span> <span class="s">&quot;Fedora</span><span class="nv"> </span><span class="s">repos</span><span class="nv"> </span><span class="s">sync&quot;</span>
-    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
+    <span class="nt">hostname</span><span class="p">:</span> <span class="s">&quot;test-host.domain.test&quot;</span>
+    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">on</span>
 
-<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;Create</span><span class="nv"> </span><span class="s">CentOS</span><span class="nv"> </span><span class="s">7</span><span class="nv"> </span><span class="s">product</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">content</span><span class="nv"> </span><span class="s">credentials&quot;</span>
-  <span class="nt">katello_product</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;Switch</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">host</span><span class="nv"> </span><span class="s">off&quot;</span>
+  <span class="nt">foreman_host_power</span><span class="p">:</span>
     <span class="nt">username</span><span class="p">:</span> <span class="s">&quot;admin&quot;</span>
     <span class="nt">password</span><span class="p">:</span> <span class="s">&quot;changeme&quot;</span>
     <span class="nt">server_url</span><span class="p">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
-    <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;CentOS</span><span class="nv"> </span><span class="s">7&quot;</span>
-    <span class="nt">gpg_key</span><span class="p">:</span> <span class="s">&quot;RPM-GPG-KEY-CentOS7&quot;</span>
-    <span class="nt">organization</span><span class="p">:</span> <span class="s">&quot;My</span><span class="nv"> </span><span class="s">Cool</span><span class="nv"> </span><span class="s">new</span><span class="nv"> </span><span class="s">Organization&quot;</span>
-    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
+    <span class="nt">hostname</span><span class="p">:</span> <span class="s">&quot;test-host.domain.test&quot;</span>
+    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">off</span>
+
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;Query</span><span class="nv"> </span><span class="s">host</span><span class="nv"> </span><span class="s">power</span><span class="nv"> </span><span class="s">state&quot;</span>
+  <span class="nt">foreman_host_power</span><span class="p">:</span>
+    <span class="nt">username</span><span class="p">:</span> <span class="s">&quot;admin&quot;</span>
+    <span class="nt">password</span><span class="p">:</span> <span class="s">&quot;changeme&quot;</span>
+    <span class="nt">server_url</span><span class="p">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
+    <span class="nt">hostname</span><span class="p">:</span> <span class="s">&quot;test-host.domain.test&quot;</span>
+    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">state</span>
+    <span class="nt">register</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">result</span>
+<span class="p p-Indicator">-</span> <span class="nt">debug</span><span class="p">:</span>
+    <span class="nt">msg</span><span class="p">:</span> <span class="s">&quot;Host</span><span class="nv"> </span><span class="s">power</span><span class="nv"> </span><span class="s">state</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="cp">{{</span> <span class="nv">result.power_state</span> <span class="cp">}}</span><span class="s">&quot;</span>
 </pre></div>
 </div>
 </div>
+<div class="section" id="return-values">
+<h2><a class="toc-backref" href="#id5">Return Values</a><a class="headerlink" href="#return-values" title="Permalink to this headline">¶</a></h2>
+<p>Common return values are documented <a class="reference external" href="https://docs.ansible.com/ansible/latest/reference_appendices/common_return_values.html#common-return-values" title="(in Ansible Documentation v2.7)"><span class="xref std std-ref">here</span></a>, the following are the fields unique to this module:</p>
+<table border=0 cellpadding=0 class="documentation-table">
+    <tr>
+        <th colspan="1">Key</th>
+        <th>Returned</th>
+        <th width="100%">Description</th>
+    </tr>
+                <tr>
+                            <td colspan="1">
+                <b>power_state</b>
+                <div style="font-size: small; color: purple">string</div>
+                                </td>
+            <td>always</td>
+            <td>
+                                        <div>current power state of host</div>
+                                    <br/>
+                                        <div style="font-size: smaller"><b>Sample:</b></div>
+                                            <div style="font-size: smaller; color: blue; word-wrap: break-word; word-break: break-all;">off</div>
+                                </td>
+        </tr>
+                    </table>
+<br/><br/></div>
 <div class="section" id="status">
-<h2><a class="toc-backref" href="#id5">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id6">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>This module is not guaranteed to have a backwards compatible interface. <em>[preview]</em></li>
 <li>This module is <a class="reference external" href="https://docs.ansible.com/ansible/latest/user_guide/modules_support.html#modules-support" title="(in Ansible Documentation v2.7)"><span class="xref std std-ref">maintained by the Ansible Community</span></a>. <em>[community]</em></li>
@@ -364,12 +334,11 @@
 <div class="section" id="authors">
 <h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Eric D Helms (&#64;ehelms)</li>
-<li>Matthias Dellweg (&#64;mdellweg) ATIX AG</li>
+<li>Bernhard Hopfenmueller (&#64;Fobhep) ATIX AG</li>
 </ul>
 <div class="admonition hint">
 <p class="first admonition-title">Hint</p>
-<p class="last">If you notice any issues in this documentation you can <a class="reference external" href="https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/katello_product.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr">edit this document</a> to improve it.</p>
+<p class="last">If you notice any issues in this documentation you can <a class="reference external" href="https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/foreman_host_power.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr">edit this document</a> to improve it.</p>
 </div>
 </div>
 </div>
