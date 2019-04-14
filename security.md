@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
 
+* [CVE-2019-3893: Compute resource credentials exposed during deletion on API](security.html#2019-3893)
 * [CVE-2018-14664: Persisted XSS on all pages that use breadcrumbs](security.html#2018-1097)
 * [CVE-2018-1097: oVirt credetials exposed by power API](security.html#2018-1097)
 * [CVE-2018-1096: SQL injection on dashboard](security.html#2018-1096)
@@ -76,6 +77,14 @@ All security advisories made for Foreman are listed below with their correspondi
 
 ### Disclosure details
 
+#### <a id="2019-3893"></a>CVE-2019-3893: Compute resource credentials exposed during deletion on API
+
+When deleting a compute resource via the API, the API responded with details of the compute resource, including credentials in clear text. Users not able to upgrade should ensure the `delete_compute_resource` permission is not granted to users not trusted with the credentials.
+
+* Affects Foreman 1.1 and higher.
+* Fix released with Foreman 1.21.1.
+* Redmine issue [#26450](http://projects.theforeman.org/issues/26450)
+
 #### <a id="2018-14664"></a>CVE-2018-14664: Persisted XSS on all pages that use breadcrumbs
 
 If user has the permission to edit resource which attribute is user in the breadcrumbs bar, it's not properly escaped allowing attacker to store code, that will be executed on client side. E.g. create a domain with name test.com, the go to it's edit form. See the breadcrumb didn't escape the HTML code.
@@ -84,7 +93,7 @@ If user has the permission to edit resource which attribute is user in the bread
 * Fix released with Foreman 1.18.3
 * Redmine issue [#25169](http://projects.theforeman.org/issues/25169)
 
-#### <a id="2018-1097"></a>CVE-2018-1097: oVirt credetials exposed by power API
+#### <a id="2018-1097"></a>CVE-2018-1097: oVirt credentials exposed by power API
 
 When sending a power action to a host provisioned on an oVirt compute resource, the API responded with details of the compute resource, including credentials in clear text.
 
