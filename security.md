@@ -13,7 +13,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 ## Security advisories
 
-All security advisories made for Foreman are listed below with their corresponding [CVE identifier](http://cve.mitre.org/).
+All security advisories made for Foreman are listed below with their corresponding [CVE identifier](https://cve.mitre.org/).
 
 * [CVE-2019-3893: Compute resource credentials exposed during deletion on API](security.html#2019-3893)
 * [CVE-2018-14664: Persisted XSS on all pages that use breadcrumbs](security.html#2018-1097)
@@ -83,7 +83,7 @@ When deleting a compute resource via the API, the API responded with details of 
 
 * Affects Foreman 1.1 and higher.
 * Fix released with Foreman 1.21.1.
-* Redmine issue [#26450](http://projects.theforeman.org/issues/26450)
+* Redmine issue [#26450](https://projects.theforeman.org/issues/26450)
 
 #### <a id="2018-14664"></a>CVE-2018-14664: Persisted XSS on all pages that use breadcrumbs
 
@@ -91,7 +91,7 @@ If user has the permission to edit resource which attribute is user in the bread
 
 * Affects Foreman 1.18 and higher
 * Fix released with Foreman 1.18.3
-* Redmine issue [#25169](http://projects.theforeman.org/issues/25169)
+* Redmine issue [#25169](https://projects.theforeman.org/issues/25169)
 
 #### <a id="2018-1097"></a>CVE-2018-1097: oVirt credentials exposed by power API
 
@@ -99,9 +99,9 @@ When sending a power action to a host provisioned on an oVirt compute resource, 
 
 * Affects Foreman 1.3 and higher.
 * Fix released with Foreman 1.16.1.
-* Redmine issue [#22546](http://projects.theforeman.org/issues/22546)
+* Redmine issue [#22546](https://projects.theforeman.org/issues/22546)
 
-#### <a id="2018-1096"></a>CVE-2018-1096: SQL injection on dashboard 
+#### <a id="2018-1096"></a>CVE-2018-1096: SQL injection on dashboard
 
 One of the parameters passed when saving dashboard widget positions was not properly escaped, leading to possibility of SQL injection attack. Due to the nature of the query the impact is limited to possible information disclosure and does not allow modifications to the database.
 
@@ -109,7 +109,7 @@ This issue was reported by Martin Povolný of Red Hat.
 
 * Affects Foreman 1.9 and higher.
 * Fix released with Foreman 1.16.1.
-* Redmine issue [#23028](http://projects.theforeman.org/issues/23028)
+* Redmine issue [#23028](https://projects.theforeman.org/issues/23028)
 
 #### <a id="2017-15100"></a>CVE-2017-15100: Stored XSS on fact related charts
 
@@ -119,7 +119,7 @@ This issue was reported by Roman Mueller.
 
 * Affects Foreman 1.2 and higher.
 * Fix released with Foreman 1.16.0
-* Redmine issue [#21519](http://projects.theforeman.org/issues/21519)
+* Redmine issue [#21519](https://projects.theforeman.org/issues/21519)
 
 #### <a id="2017-7535"></a>CVE-2017-7535: Stored XSS when assigning unassigned hosts to organization/location
 
@@ -129,7 +129,7 @@ This issue was reported by Sanket Jagtap.
 
 * Affects Foreman 1.1 and higher.
 * Fix released with Foreman 1.16.0
-* Redmine issue [#20963](http://projects.theforeman.org/issues/20963)
+* Redmine issue [#20963](https://projects.theforeman.org/issues/20963)
 
 #### <a id="2017-7505"></a>CVE-2017-7505: User scoped in organization with permissions for user management can manage administrators that are not assigned to any organization
 
@@ -139,7 +139,7 @@ The issue was reported by David Caplan.
 
 * Affects Foreman 1.5 and higher
 * Fix released with Foreman 1.15.1
-* Redmine issue [#19612](http://projects.theforeman.org/issues/19612)
+* Redmine issue [#19612](https://projects.theforeman.org/issues/19612)
 
 #### <a id="2017-2672"></a>CVE-2017-2672: audit log stores plain text compute resource image passwords
 
@@ -149,7 +149,7 @@ This issue was reported by Daniel Kimsey.
 
 * Affects Foreman 1.4 and higher
 * Fix released with Foreman 1.15.0-RC2
-* Redmine issue [#19169](http://projects.theforeman.org/issues/19169)
+* Redmine issue [#19169](https://projects.theforeman.org/issues/19169)
 
 #### <a id="2017-2667"></a>CVE-2017-2667: Hammer CLI does not verify server SSL certificate
 
@@ -159,7 +159,7 @@ This issue was reported by Tomas Strachota.
 
 * Affects all versions of Hammer CLI
 * Fix released in Hammer CLI 0.10.0 (with Foreman 1.15.0)
-* Redmine issue [#19033](http://projects.theforeman.org/issues/19033)
+* Redmine issue [#19033](https://projects.theforeman.org/issues/19033)
 
 #### <a id="2016-9593"></a>CVE-2016-9593: foreman-debug collects sensitive data
 
@@ -169,7 +169,7 @@ This issue was reported by Pavel Moravec.
 
 * Affects Foreman 1.2.0 up to and including 1.14.x
 * Fix released with Foreman 1.15.0-RC1
-* Redmine issue [#17005](http://projects.theforeman.org/issues/17005)
+* Redmine issue [#17005](https://projects.theforeman.org/issues/17005)
 
 #### <a id="2016-8639"></a>CVE-2016-8639: settings dropdown menus may run stored XSS in org/location name
 
@@ -185,7 +185,7 @@ This issue was reported by Sanket Jagtap.
 
 * Affects Foreman 1.11.0 to 1.12.4
 * Fix released in Foreman 1.13.0
-* Redmine issue [#15037](http://projects.theforeman.org/issues/15037)
+* Redmine issue [#15037](https://projects.theforeman.org/issues/15037)
 
 #### <a id="2016-8634"></a>CVE-2016-8634: organizations/locations wizard may run stored XSS in name
 
@@ -199,7 +199,7 @@ This issue was reported by Sanket Jagtap.
 
 * Affects Foreman 1.1 and higher
 * Fix released in Foreman 1.14.0-RC1
-* Redmine issue [#17195](http://projects.theforeman.org/issues/17195)
+* Redmine issue [#17195](https://projects.theforeman.org/issues/17195)
 
 #### <a id="2016-7078"></a>CVE-2016-7078: user with no organizations or locations can see all resources
 
@@ -211,7 +211,7 @@ This issue was reported by Daniel Lobato Garcia.
 
 * Affects all known Foreman versions
 * Fix released in Foreman 1.15.0-RC1
-* Redmine issue [#16982](http://projects.theforeman.org/issues/16982)
+* Redmine issue [#16982](https://projects.theforeman.org/issues/16982)
 
 #### <a id="2016-7077"></a>CVE-2016-7077: information disclosure from association lists shown without authorization
 
@@ -221,7 +221,7 @@ This issue was reported by Jitendra Yejare.
 
 * Affects Foreman 1.1 and higher, but was first mitigated against in Foreman 1.9.0 for some cases
 * Fix released in Foreman 1.14.0-RC1
-* Redmine issue [#16971](http://projects.theforeman.org/issues/16971)
+* Redmine issue [#16971](https://projects.theforeman.org/issues/16971)
 
 #### <a id="2016-6320"></a>CVE-2016-6320: network interface device identifiers may contain stored XSS on host form
 
@@ -231,7 +231,7 @@ This issue was reported by Sanket Jagtap.
 
 * Affects Foreman 1.8.0 and higher
 * Fix released in Foreman 1.12.2
-* Redmine issue [#16022](http://projects.theforeman.org/issues/16022)
+* Redmine issue [#16022](https://projects.theforeman.org/issues/16022)
 
 #### <a id="2016-6319"></a>CVE-2016-6319: Foreman form helpers do not escape JS when rendering label
 
@@ -239,7 +239,7 @@ Label parameter of all form helpers was not escaped allowing XSS (cross-site scr
 
 * Affects Foreman 1.6.0 and higher
 * Fix released in Foreman 1.12.2
-* Redmine issue [#16024](http://projects.theforeman.org/issues/16024)
+* Redmine issue [#16024](https://projects.theforeman.org/issues/16024)
 
 #### <a id="2016-5390"></a>CVE-2016-5390: API host interfaces data not restricted by view_hosts filters
 
@@ -249,7 +249,7 @@ The filter is only correctly used when accessing the main host details (/api/v2/
 
 * Affects Foreman 1.10.0 and higher
 * Fix released in Foreman 1.12.1 and 1.11.4
-* Redmine issue [#15653](http://projects.theforeman.org/issues/15653)
+* Redmine issue [#15653](https://projects.theforeman.org/issues/15653)
 
 #### <a id="2016-4995"></a>CVE-2016-4995: information disclosure through unauthorized template previews
 
@@ -259,7 +259,7 @@ If the organization or location features are enabled, the user will still be res
 
 * Affects Foreman 1.11.0 and higher
 * Fix released in Foreman 1.12.1 and 1.11.4
-* Redmine issue [#15490](http://projects.theforeman.org/issues/15490)
+* Redmine issue [#15490](https://projects.theforeman.org/issues/15490)
 
 #### <a id="2016-4475"></a>CVE-2016-4475: Privilege escalation in Organization and Locations API and UI
 
@@ -269,7 +269,7 @@ When accessing Foreman as a user limited to specific organization or location, t
 
 * Affects Foreman 1.1 and higher
 * Fix released in Foreman 1.12.0-RC3 and 1.11.4
-* Redmine issue [#15268](http://projects.theforeman.org/issues/15268)
+* Redmine issue [#15268](https://projects.theforeman.org/issues/15268)
 
 #### <a id="2016-4451"></a>CVE-2016-4451: Privilege escalation through Organization and Locations API
 
@@ -279,7 +279,7 @@ When accessing Foreman as a user limited to specific organization, if users know
 
 * Affects Foreman 1.7 and higher
 * Fix released in Foreman 1.12.0-RC1 and 1.11.3
-* Redmine issue [#15812](http://projects.theforeman.org/issues/15182)
+* Redmine issue [#15812](https://projects.theforeman.org/issues/15182)
 
 #### <a id="2016-3728"></a>CVE-2016-3728: remote code execution in smart proxy TFTP API
 
@@ -291,7 +291,7 @@ Thanks to Lukas Zapletal for reporting the issue.
 
 * Affects Foreman 0.2 and higher
 * Fix released in Foreman 1.11.2 and 1.10.4
-* Redmine issue [#14931](http://projects.theforeman.org/issues/14931)
+* Redmine issue [#14931](https://projects.theforeman.org/issues/14931)
 
 #### <a id="2016-3693"></a>CVE-2016-3693: application information leakage through templates
 
@@ -309,7 +309,7 @@ As a precaution, the security token may be regenerated with:
 
 * Affects all known Foreman versions
 * Fix released in Foreman 1.11.1
-* Redmine issue [#14635](http://projects.theforeman.org/issues/14635)
+* Redmine issue [#14635](https://projects.theforeman.org/issues/14635)
 
 #### <a id="2016-discovery-settings"></a>Ruby code execution via Discovery settings
 
@@ -320,7 +320,7 @@ gets rendered.
 * Affects Foreman Discovery 4.2.0 to 5.0.1 (gem releases only, rc and nightly builds)
 * Discovery plugin 4.1 series (shipped with Foreman 1.10) was *not* affected.
 * Fixed in Discovery plugin 5.0.2
-* Redmine issue [#14140](http://projects.theforeman.org/issues/14140)
+* Redmine issue [#14140](https://projects.theforeman.org/issues/14140)
 
 #### <a id="2016-2100"></a>CVE-2016-2100: private bookmarks can be viewed and edited
 
@@ -330,7 +330,7 @@ Bookmarks set to 'private' can be viewed by any user, and edited or deleted by a
 
 * Affects Foreman 0.3 and higher
 * Fix released in Foreman 1.11.0-RC2 and 1.10.3
-* Redmine issue [#13828](http://projects.theforeman.org/issues/13828)
+* Redmine issue [#13828](https://projects.theforeman.org/issues/13828)
 
 #### <a id="2015-7518"></a>CVE-2015-7518: parameter information popup allows stored XSS
 
@@ -340,7 +340,7 @@ The popup boxes next to global parameters, smart class parameters and smart vari
 
 * Affects all known Foreman versions
 * Fix released in Foreman 1.10.0
-* Redmine issue [#12611](http://projects.theforeman.org/issues/12611)
+* Redmine issue [#12611](https://projects.theforeman.org/issues/12611)
 
 #### <a id="2015-facts-sql"></a>SQL injection via facts search terms
 
@@ -350,7 +350,7 @@ No CVE identifier will be assigned to this vulnerability as it affects only rele
 
 * Affects Foreman 1.10.0-RC1 and higher
 * Fix released in Foreman 1.10.0-RC3
-* Redmine issue [#12458](http://projects.theforeman.org/issues/12458)
+* Redmine issue [#12458](https://projects.theforeman.org/issues/12458)
 
 #### <a id="2015-5282"></a>CVE-2015-5282: parameter hide checkbox allows stored XSS during change
 
@@ -358,7 +358,7 @@ The parameter management UI has a checkbox to mark values as hidden to mask them
 
 * Affects Foreman 1.7.0 and higher
 * Fix released in Foreman 1.10.0-RC1
-* Redmine issue [#11859](http://projects.theforeman.org/issues/11859)
+* Redmine issue [#11859](https://projects.theforeman.org/issues/11859)
 
 #### <a id="2015-5246"></a>CVE-2015-5246: Active Directory login works with old password after change
 
@@ -367,7 +367,7 @@ The parameter management UI has a checkbox to mark values as hidden to mask them
 When using an Active Directory instance to log into Foreman (via an LDAP authentication source), it is possible to log into Foreman for up to one hour after a password change in AD using the old password.
 
 * Fix to Foreman not required, reconfigure Active Directory
-* Redmine issue [#11471](http://projects.theforeman.org/issues/11471)
+* Redmine issue [#11471](https://projects.theforeman.org/issues/11471)
 
 #### <a id="2015-5233"></a>CVE-2015-5233: reports show/destroy not restricted by host authorization
 
@@ -379,7 +379,7 @@ The reports list and other views combine the reports and hosts permissions to on
 
 * Affects Foreman 1.5.0 and higher
 * Fix released in Foreman 1.9.1 and 1.8.4
-* Redmine issue [#11579](http://projects.theforeman.org/issues/11579)
+* Redmine issue [#11579](https://projects.theforeman.org/issues/11579)
 
 #### <a id="2015-5152"></a>CVE-2015-5152: require_ssl does not enforce HTTPS on API
 
@@ -394,7 +394,7 @@ Redirection won't help with credentials having already been sent, but should giv
 
 * Affects Foreman 1.1 and higher
 * Fix released in Foreman 1.9.0-RC1
-* Redmine issue [#11119](http://projects.theforeman.org/issues/11119)
+* Redmine issue [#11119](https://projects.theforeman.org/issues/11119)
 
 #### <a id="2015-3235"></a>CVE-2015-3235: edit_users permission allows changing of admin passwords
 
@@ -404,7 +404,7 @@ A user with the edit_users permission (e.g. with the Manager role) is allowed to
 
 * Affects all known Foreman versions
 * Fix released in Foreman 1.9.0-RC1
-* Redmine issue [#10829](http://projects.theforeman.org/issues/10829)
+* Redmine issue [#10829](https://projects.theforeman.org/issues/10829)
 
 #### <a id="2015-3199"></a>CVE-2015-3199: Discovery: auto provision rule not enforcing org/locations
 
@@ -414,7 +414,7 @@ The Foreman Discovery plugin auto provisioning rules do not enforce that the rul
 
 * Affects no released versions of Foreman Discovery
 * Fix released in Foreman Discovery 4.0.0
-* Redmine issue [#10469](http://projects.theforeman.org/issues/10469)
+* Redmine issue [#10469](https://projects.theforeman.org/issues/10469)
 
 #### <a id="2015-3155"></a>CVE-2015-3155: session cookie set without secure flag on HTTPS
 
@@ -424,7 +424,7 @@ If a user successfully logs into Foreman, then accesses Foreman over HTTP (which
 
 * Affects all known Foreman versions
 * Fix released in Foreman 1.8.1
-* Redmine issue [#10275](http://projects.theforeman.org/issues/10275)
+* Redmine issue [#10275](https://projects.theforeman.org/issues/10275)
 
 #### <a id="2015-1844"></a>CVE-2015-1844: users are not restricted to organizations/locations
 
@@ -434,7 +434,7 @@ This allows users to read, edit and perform actions on resources (e.g. hosts) ou
 
 * Affects Foreman 1.2.0 (TBC) and higher
 * Fix released in Foreman 1.8.0-RC3 and 1.7.5
-* Redmine issue [#9947](http://projects.theforeman.org/issues/9947)
+* Redmine issue [#9947](https://projects.theforeman.org/issues/9947)
 
 #### <a id="2015-1816"></a>CVE-2015-1816: SSL certificate not verified on LDAP connections
 
@@ -444,7 +444,7 @@ This can allow the LDAP connection between Foreman and the LDAP server to be att
 
 * Affects Foreman 1.3.0 and higher
 * Fix released in Foreman 1.7.4 and 1.8.0-RC2
-* Redmine issue [#9858](http://projects.theforeman.org/issues/9858)
+* Redmine issue [#9858](https://projects.theforeman.org/issues/9858)
 
 #### <a id="2014-3691"></a>CVE-2014-3691: SSL certificate verification bypass in smart proxy
 
@@ -456,7 +456,7 @@ Thanks to Michael Moll, Jon McKenzie and Michael Messmore for reporting the issu
 
 * Affects all known Foreman versions
 * Fix released in Foreman 1.6.2 and 1.5.4
-* Redmine issue [#7822](http://projects.theforeman.org/issues/7822)
+* Redmine issue [#7822](https://projects.theforeman.org/issues/7822)
 * Red Hat Bugzilla [#1150879](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-3691)
 
 #### <a id="2014-3653"></a>CVE-2014-3653: stored cross site scripting (XSS) in template previews
@@ -467,7 +467,7 @@ Thanks to Aaron Stone for reporting this issue.
 
 * Affects all known Foreman versions
 * Fix released in Foreman 1.6.1
-* Redmine issue [#7483](http://projects.theforeman.org/issues/7483)
+* Redmine issue [#7483](https://projects.theforeman.org/issues/7483)
 * Red Hat Bugzilla [#1145398](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-3653)
 
 #### <a id="2014-3590"></a>CVE-2014-3590: user logout vulnerable to CSRF
@@ -478,7 +478,7 @@ Thanks to Jan Hutař of Red Hat for discovering this issue.
 
 * Affects all known Foreman versions
 * Fix released in Foreman 1.6.1
-* Redmine issue [#6999](http://projects.theforeman.org/issues/6999)
+* Redmine issue [#6999](https://projects.theforeman.org/issues/6999)
 * Red Hat Bugzilla [#1128108](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-3590)
 
 #### <a id="2014-3531"></a>CVE-2014-3531: stored cross site scripting (XSS) in operating system names
@@ -489,7 +489,7 @@ Thanks to Jan Hutař of Red Hat for discovering this issue.
 
 * Affects all known Foreman versions
 * Fix released in Foreman 1.5.2
-* Redmine issue [#6580](http://projects.theforeman.org/issues/6580)
+* Redmine issue [#6580](https://projects.theforeman.org/issues/6580)
 * Red Hat Bugzilla [#1108745](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-3531)
 
 #### <a id="2014-3492"></a>CVE-2014-3492: stored cross site scripting (XSS) in YAML preview
@@ -498,7 +498,7 @@ The host YAML page, used to preview the Foreman response for the Puppet ENC, wil
 
 * Affects all known Foreman versions
 * Fix released in Foreman 1.4.5 and 1.5.1
-* Redmine issue [#6149](http://projects.theforeman.org/issues/6149)
+* Redmine issue [#6149](https://projects.theforeman.org/issues/6149)
 * Red Hat Bugzilla [#1108241](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-3492)
 
 #### <a id="2014-3491"></a>CVE-2014-3491: stored cross site scripting (XSS) in notification dialogs
@@ -509,7 +509,7 @@ Thanks to Adam Salah of the Red Hat Satellite 6 QE Team for discovering this iss
 
 * Affects all known Foreman versions
 * Fix released in Foreman 1.4.5 and 1.5.1
-* Redmine issue [#5881](http://projects.theforeman.org/issues/5881)
+* Redmine issue [#5881](https://projects.theforeman.org/issues/5881)
 * Red Hat Bugzilla [#1100313](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-3491)
 
 #### <a id="2014-0007"></a>CVE-2014-0007: TFTP boot file fetch API permits remote code execution
@@ -520,7 +520,7 @@ Thanks to Lukas Zapletal of the Red Hat Foreman Team for discovering this issue.
 
 * Affects all known Foreman versions
 * Fix released in Foreman 1.4.5 and 1.5.1
-* Redmine issue [#6086](http://projects.theforeman.org/issues/6086)
+* Redmine issue [#6086](https://projects.theforeman.org/issues/6086)
 * Red Hat Bugzilla [#1105369](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-0007)
 
 #### <a id="2014-0208"></a>CVE-2014-0208: stored cross site scripting (XSS) in search auto-completion
@@ -531,7 +531,7 @@ Thanks to Jan Hutař of Red Hat for discovering this issue.
 
 * Affects all known Foreman versions
 * Fix released in Foreman 1.4.4 and 1.5.0
-* Redmine issue [#5471](http://projects.theforeman.org/issues/5471)
+* Redmine issue [#5471](https://projects.theforeman.org/issues/5471)
 * Red Hat Bugzilla [#1094642](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-0208)
 
 #### <a id="2014-0192"></a>CVE-2014-0192: provisioning template previews are world-readable
@@ -540,7 +540,7 @@ Provisioning templates previews ("spoof") are accessible without authentication 
 
 * Affects Foreman 1.4.0 to 1.4.3 inclusive
 * Fix released in Foreman 1.4.4 and 1.5.0
-* Redmine issue [#5436](http://projects.theforeman.org/issues/5436)
+* Redmine issue [#5436](https://projects.theforeman.org/issues/5436)
 * Red Hat Bugzilla [#1092354](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-0192)
 
 #### <a id="2014-0135"></a>CVE-2014-0135: Kafo leaves world-readable default_values.yaml file
@@ -549,7 +549,7 @@ When Kafo (used in the Foreman installer) runs, a /tmp/default_values.yaml file 
 
 * Affects all known Kafo versions
 * Fix released in Kafo 0.3.17 and 0.5.2 (to Foreman 1.4 and 1.5 repos respectively)
-* Redmine issue [#4648](http://projects.theforeman.org/issues/4648)
+* Redmine issue [#4648](https://projects.theforeman.org/issues/4648)
 * Red Hat Bugzilla [#1076335](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-0135)
 
 #### <a id="2014-0090"></a>CVE-2014-0090: session fixation, new session IDs are not generated on login
@@ -560,7 +560,7 @@ Thanks to Jeremy Choi and Keqin Hong of the Red Hat HSS Pen-Test Team for discov
 
 * Affects all known Foreman versions
 * Fix released in Foreman 1.4.2
-* Redmine issue [#4457](http://projects.theforeman.org/issues/4457)
+* Redmine issue [#4457](https://projects.theforeman.org/issues/4457)
 * Red Hat Bugzilla [#1072151](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-0090)
 
 #### <a id="2014-0089"></a>CVE-2014-0089: stored cross site scripting (XSS) on 500 error page
@@ -571,7 +571,7 @@ Thanks to Jeremy Choi and Keqin Hong of the Red Hat HSS Pen-Test Team for discov
 
 * Affects Foreman 1.4.0 to 1.4.1 inclusive
 * Fix released in Foreman 1.4.2
-* Redmine issue [#4456](http://projects.theforeman.org/issues/4456)
+* Redmine issue [#4456](https://projects.theforeman.org/issues/4456)
 * Red Hat Bugzilla [#1071741](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-0089)
 
 #### <a id="2013-4386"></a>CVE-2013-4386: SQL injection in host/host group parameter overrides
@@ -579,7 +579,7 @@ Thanks to Jeremy Choi and Keqin Hong of the Red Hat HSS Pen-Test Team for discov
 Host and host group parameter overrides (lookup_values) allowed SQL injection from the host FQDN or host group label.
 
 * Fix released in Foreman 1.2.3
-* Redmine issue [#3160](http://projects.theforeman.org/issues/3160)
+* Redmine issue [#3160](https://projects.theforeman.org/issues/3160)
 * Red Hat Bugzilla [#1013076](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2013-4386)
 
 #### <a id="2013-4182"></a>CVE-2013-4182: hosts API privilege escalation
@@ -589,7 +589,7 @@ The /api/hosts API was found to provide access to all hosts without checking whe
 Thanks to Daniel Lobato Garcia of CERN IT-PES-PS for discovering this issue.
 
 * Fix released in Foreman 1.2.2
-* Redmine issue [#2863](http://projects.theforeman.org/issues/2863)
+* Redmine issue [#2863](https://projects.theforeman.org/issues/2863)
 * Red Hat Bugzilla [#990374](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2013-4182)
 
 #### <a id="2013-4180"></a>CVE-2013-4180: DoS via hosts controller input conversion
@@ -599,7 +599,7 @@ Power and IPMI boot actions converted user input to symbols, which could lead to
 Thanks to Marek Hulan of the Red Hat Foreman Team for discovering this issue.
 
 * Fix released in Foreman 1.2.2
-* Redmine issue [#2860](http://projects.theforeman.org/issues/2860)
+* Redmine issue [#2860](https://projects.theforeman.org/issues/2860)
 * Red Hat Bugzilla [#989755](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2013-4180)
 
 #### <a id="2013-2121"></a>CVE-2013-2121: bookmarks remote code execution
@@ -609,7 +609,7 @@ Bookmarks could be created in Foreman containing data that was later executed ar
 Thanks to Ramon de C Valle of the Red Hat Product Security Team for discovering this issue.
 
 * Fix released in Foreman 1.2.0
-* Redmine issue [#2631](http://projects.theforeman.org/issues/2631)
+* Redmine issue [#2631](https://projects.theforeman.org/issues/2631)
 * Red Hat Bugzilla [#968166](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2013-2121)
 
 #### <a id="2013-2113"></a>CVE-2013-2113: admin user creation, privilege escalation
@@ -619,7 +619,7 @@ Non-admin user with permissions to create or edit other users were able to chang
 Thanks to Ramon de C Valle of the Red Hat Product Security Team for discovering this issue.
 
 * Fix released in Foreman 1.2.0
-* Redmine issue [#2630](http://projects.theforeman.org/issues/2630)
+* Redmine issue [#2630](https://projects.theforeman.org/issues/2630)
 * Red Hat Bugzilla [#966804](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2013-2113)
 
 #### <a id="2013-0210"></a>CVE-2013-0210: Arbitrary command execution risk in smart proxy
@@ -641,21 +641,21 @@ The external node classifier (ENC) API in Foreman was accessible to any remote h
 Thanks to Andreas Rogge for discovering this issue.
 
 * Fix released in Foreman 1.1
-* Redmine issue [#2069](http://projects.theforeman.org/issues/2069)
+* Redmine issue [#2069](https://projects.theforeman.org/issues/2069)
 
 #### <a id="2013-0173"></a>CVE-2013-0173: insecure fixed salt "foreman" for passwords
 
 The salt used to hash root passwords (used for unattended installation) was fixed to the string "foreman" instead of being randomized.
 
 * Fix released in Foreman 1.1
-* Redmine issue [#2069](http://projects.theforeman.org/issues/2069)
+* Redmine issue [#2069](https://projects.theforeman.org/issues/2069)
 
 #### <a id="2013-0171"></a>CVE-2013-0171: import allows unauthenticated YAML uploads/parsing leading to arbitrary code execution
 
 Fact and report import APIs in Foreman were accessible to any remote host and accepted YAML input, allowing arbitrary objects to be created on the Foreman server via YAML.  Authentication and authorization features were added to the import APIs to prevent this.
 
 * Fix released in Foreman 1.1
-* Redmine issue [#2121](http://projects.theforeman.org/issues/2121)
+* Redmine issue [#2121](https://projects.theforeman.org/issues/2121)
 
 #### <a id="2012-5648"></a>CVE-2012-5648: SQL injection through search mechanism
 
@@ -668,7 +668,7 @@ Input to the search mechanism in Foreman was not escaped when constructing queri
 The smart proxy daemon ran with a umask of 0, causing files and directories written by it to have world-writable bits set.  Files managed by the smart proxy could be modified by local users on the same host.
 
 * Fix released in Foreman 1.1
-* Redmine issue [#1929](http://projects.theforeman.org/issues/1929)
+* Redmine issue [#1929](https://projects.theforeman.org/issues/1929)
 
 ## GPG keys
 
@@ -693,7 +693,7 @@ Key management is changing at the time of writing to cycle nightly keys every tw
     </thead>
     <tbody>
       <tr>
-        <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&search=0x1DCB15D12CA140EEF4947E5766CF053FE775FF07">E775FF07</a></td>
+        <td><a href="https://pgp.mit.edu:11371/pks/lookup?op=get&search=0x1DCB15D12CA140EEF4947E5766CF053FE775FF07">E775FF07</a></td>
         <td>1DCB 15D1 2CA1 40EE F494  7E57 66CF 053F E775 FF07</td>
         <td>Foreman Archive Signing Key</td>
         <td style='white-space:nowrap'>2010-11-10</td>
@@ -702,7 +702,7 @@ Key management is changing at the time of writing to cycle nightly keys every tw
         <td>Used up to Foreman 1.5.1</td>
       </tr>
       <tr>
-        <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&search=0x7059542D5AEA367F78732D02B3484CB71AA043B8">1AA043B8</a></td>
+        <td><a href="https://pgp.mit.edu:11371/pks/lookup?op=get&search=0x7059542D5AEA367F78732D02B3484CB71AA043B8">1AA043B8</a></td>
         <td>7059 542D 5AEA 367F 7873  2D02 B348 4CB7 1AA0 43B8</td>
         <td>Foreman Automatic Signing Key (2014)</td>
         <td style='white-space:nowrap'>2014-07-01</td>
@@ -711,7 +711,7 @@ Key management is changing at the time of writing to cycle nightly keys every tw
         <td></td>
       </tr>
       <tr>
-        <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&search=0xAE0AF310E2EA96B6B6F4BD726F8600B9563278F6">563278F6</a></td>
+        <td><a href="https://pgp.mit.edu:11371/pks/lookup?op=get&search=0xAE0AF310E2EA96B6B6F4BD726F8600B9563278F6">563278F6</a></td>
         <td>AE0A F310 E2EA 96B6 B6F4  BD72 6F86 00B9 5632 78F6</td>
         <td>Foreman Automatic Signing Key (2016)</td>
         <td style='white-space:nowrap'>2016-04-08</td>
@@ -720,7 +720,7 @@ Key management is changing at the time of writing to cycle nightly keys every tw
         <td></td>
       </tr>
       <tr>
-        <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&search=0xA91E2984667D1F07">667D1F07</a></td>
+        <td><a href="https://pgp.mit.edu:11371/pks/lookup?op=get&search=0xA91E2984667D1F07">667D1F07</a></td>
         <td>503E FA96 89AA AD57 D693  6514 A91E 2984 667D 1F07</td>
         <td>Foreman Release Signing Key (1.6)</td>
         <td style='white-space:nowrap'>2014-08-14</td>
@@ -729,7 +729,7 @@ Key management is changing at the time of writing to cycle nightly keys every tw
         <td></td>
       </tr>
       <tr>
-        <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&search=0x4C258BD42D762E88">2D762E88</a></td>
+        <td><a href="https://pgp.mit.edu:11371/pks/lookup?op=get&search=0x4C258BD42D762E88">2D762E88</a></td>
         <td>730A 9338 F93E E729 2EAC  2052 4C25 8BD4 2D76 2E88</td>
         <td>Foreman Release Signing Key (1.7)</td>
         <td style='white-space:nowrap'>2014-11-10</td>
@@ -738,7 +738,7 @@ Key management is changing at the time of writing to cycle nightly keys every tw
         <td></td>
       </tr>
       <tr>
-        <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&search=0x28F5A69D225C9B71">225C9B71</a></td>
+        <td><a href="https://pgp.mit.edu:11371/pks/lookup?op=get&search=0x28F5A69D225C9B71">225C9B71</a></td>
         <td>64E3 7B1F A6C0 2416 6B53  5495 28F5 A69D 225C 9B71</td>
         <td>Foreman Release Signing Key (1.8)</td>
         <td style='white-space:nowrap'>2015-03-09</td>
@@ -747,7 +747,7 @@ Key management is changing at the time of writing to cycle nightly keys every tw
         <td></td>
       </tr>
       <tr>
-        <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&search=0xE05F71576E2A21BF">6E2A21BF</a></td>
+        <td><a href="https://pgp.mit.edu:11371/pks/lookup?op=get&search=0xE05F71576E2A21BF">6E2A21BF</a></td>
         <td>BEA5 E3F6 AF59 7107 0241  4514 E05F 7157 6E2A 21BF</td>
         <td>Foreman Release Signing Key (1.9)</td>
         <td style='white-space:nowrap'>2015-06-26</td>
@@ -756,7 +756,7 @@ Key management is changing at the time of writing to cycle nightly keys every tw
         <td></td>
       </tr>
       <tr>
-        <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&search=0xC1B2621DBE67E9DA">BE67E9DA</a></td>
+        <td><a href="https://pgp.mit.edu:11371/pks/lookup?op=get&search=0xC1B2621DBE67E9DA">BE67E9DA</a></td>
         <td>9EFD 673A 649D 77F5 C615  44AC C1B2 621D BE67 E9DA</td>
         <td>Foreman Release Signing Key (1.10)</td>
         <td style='white-space:nowrap'>2015-10-07</td>
@@ -765,7 +765,7 @@ Key management is changing at the time of writing to cycle nightly keys every tw
         <td></td>
       </tr>
       <tr>
-        <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&search=0x335F3A453494A06D">3494A06D</a></td>
+        <td><a href="https://pgp.mit.edu:11371/pks/lookup?op=get&search=0x335F3A453494A06D">3494A06D</a></td>
         <td>6681 20FA 0528 3FD2 AF60  FC3A 335F 3A45 3494 A06D</td>
         <td>Foreman Release Signing Key (1.11)</td>
         <td style='white-space:nowrap'>2016-02-17</td>
@@ -774,7 +774,7 @@ Key management is changing at the time of writing to cycle nightly keys every tw
         <td></td>
       </tr>
       <tr>
-        <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&search=0xB507F6A67D492D06">7D492D06</a></td>
+        <td><a href="https://pgp.mit.edu:11371/pks/lookup?op=get&search=0xB507F6A67D492D06">7D492D06</a></td>
         <td>860D D70A 378A 84CE 8D47  C10E B507 F6A6 7D49 2D06</td>
         <td>Foreman Release Signing Key (1.12)</td>
         <td style='white-space:nowrap'>2016-05-31</td>
@@ -783,7 +783,7 @@ Key management is changing at the time of writing to cycle nightly keys every tw
         <td></td>
       </tr>
       <tr>
-        <td><a href="http://pgp.mit.edu:11371/pks/lookup?op=get&search=0x4EA2F7E77DFE6FC2">7DFE6FC2</a></td>
+        <td><a href="https://pgp.mit.edu:11371/pks/lookup?op=get&search=0x4EA2F7E77DFE6FC2">7DFE6FC2</a></td>
         <td>84E7 90DF FB1D 2EAE C429  C6CD 4EA2 F7E7 7DFE 6FC2</td>
         <td>Foreman Release Signing Key (1.13)</td>
         <td style='white-space:nowrap'>2016-09-05</td>
