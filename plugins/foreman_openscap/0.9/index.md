@@ -230,7 +230,7 @@ which runs the SCAP client at the schedule select when creating the policy.
 
 ### 4.1.1 Creating default SCAP content
 
-When installing foreman_openscap from RPM, we also add default SCAP content provided by [scap-security-guide](https://fedorahosted.org/scap-security-guide/).
+When installing foreman_openscap from RPM, we also add default SCAP content provided by [scap-security-guide](https://open-scap.org/security-policies/scap-security-guide/).
 
 In previous versions, the default SCAP content was added via seed task.
 
