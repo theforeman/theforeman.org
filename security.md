@@ -863,6 +863,15 @@ Key management is changing at the time of writing to cycle nightly keys every tw
         <td style='white-space:nowrap'></td>
         <td></td>
       </tr>
+      <tr>
+        <td><a href="{{ site.baseurl }}/static/keys/9365257981403859B36B3738163F76F3B36987A9.pub">9365257981403859B36B3738163F76F3B36987A9</a></td>
+        <td>9365 2579 8140 3859 B36B  3738 163F 76F3 B369 87A9</td>
+        <td>Foreman Release Signing Key (1.22)</td>
+        <td style='white-space:nowrap'>2019-04-23</td>
+        <td style='white-space:nowrap'>2020-04-22</td>
+        <td style='white-space:nowrap'></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
 </div>
