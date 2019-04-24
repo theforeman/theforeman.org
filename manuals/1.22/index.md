@@ -1,6 +1,6 @@
 ---
 layout: manual
-title: Foreman Nightly Manual
+title: Foreman 1.22 Manual
 version: "1.22"
 previous_version: "1.21"
 ---
@@ -242,6 +242,8 @@ previous_version: "1.21"
 {%include manuals/{{ page.version }}/5.1.9_oauth.md %}
 ### 5.1.10 Using Apipie-Bindings
 {%include manuals/{{ page.version }}/5.1.10_apipie-bindings.md %}
+### 5.1.11 Using Graphql
+{%include manuals/{{ page.version }}/5.1.11_graphql.md %}
 
 ## 5.2 Compute Resources
 {%include manuals/{{ page.version }}/5.2_compute_resources.md %}
