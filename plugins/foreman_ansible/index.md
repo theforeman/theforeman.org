@@ -1,7 +1,7 @@
 ---
 layout: plugin_index
 title: Foreman Ansible documentation
-versions: [2.x, 1.x, 0.x]
+versions: [3.x, 2.x, 1.x, 0.x]
 ---
 
 # Foreman Ansible manuals
