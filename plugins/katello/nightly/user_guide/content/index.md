@@ -120,6 +120,3 @@ Then select the Products you want to add and click "Add Selected" in the upper r
 
 ![Creating a Sync Plan](/plugins/katello/{{ page.version }}/user_guide/content/sync_plan_assign.png)
 
-### GPG Keys
-
-To learn about securing your packages and Repositories with GPG Keys click here.  TODO
