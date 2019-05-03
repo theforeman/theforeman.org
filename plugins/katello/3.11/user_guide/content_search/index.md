@@ -1,7 +1,7 @@
 ---
 layout: plugins/katello/documentation
 title: Content Search
-version: 3.11
+version: '3.11'
 ---
 
 # Content Search

@@ -1,7 +1,7 @@
 ---
 layout: plugins/katello/documentation
 title: Smart Proxies
-version: 3.11
+version: '3.11'
 ---
 
 # Smart Proxies

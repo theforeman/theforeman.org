@@ -1,7 +1,7 @@
 ---
 layout: plugins/katello/documentation
 title: Disconnected
-version: 3.11
+version: '3.11'
 ---
 
 # Katello Inter-Server Sync

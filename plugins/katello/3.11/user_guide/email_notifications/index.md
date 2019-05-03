@@ -1,7 +1,7 @@
 ---
 layout: plugins/katello/documentation
 title: Email Notifications
-version: 3.11
+version: '3.11'
 ---
 
 # Email Notifications

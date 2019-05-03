@@ -1,7 +1,7 @@
 ---
 layout: plugins/katello/documentation
 title: SUSE Content
-version: 3.11
+version: '3.11'
 ---
 
 # SUSE Content

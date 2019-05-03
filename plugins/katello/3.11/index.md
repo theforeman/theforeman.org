@@ -1,7 +1,7 @@
 ---
 layout: plugins/katello/documentation
 title: Documentation
-version: 3.11
+version: '3.11'
 ---
 
 # Katello Documentation

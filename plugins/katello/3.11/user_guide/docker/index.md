@@ -1,7 +1,7 @@
 ---
 layout: plugins/katello/documentation
 title: Docker Management
-version: 3.11
+version: '3.11'
 ---
 
 # Docker Management
