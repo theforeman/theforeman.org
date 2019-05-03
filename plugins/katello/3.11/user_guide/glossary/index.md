@@ -1,7 +1,7 @@
 ---
 layout: plugins/katello/documentation
 title: Glossary
-version: 3.11
+version: '3.11'
 ---
 
 # Glossary

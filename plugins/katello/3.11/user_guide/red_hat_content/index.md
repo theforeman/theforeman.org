@@ -1,7 +1,7 @@
 ---
 layout: plugins/katello/documentation
 title: Red Hat Content
-version: 3.11
+version: '3.11'
 ---
 
 # Red Hat Content

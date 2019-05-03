@@ -1,7 +1,7 @@
 ---
 layout: plugins/katello/documentation
 title: Content Hosts
-version: 3.11
+version: '3.11'
 ---
 
 # Content Hosts

@@ -1,7 +1,7 @@
 ---
 layout: plugins/katello/documentation_no_menu
 title: Documentation
-version: 3.11
+version: '3.11'
 ---
 
 <div id="wrap">
