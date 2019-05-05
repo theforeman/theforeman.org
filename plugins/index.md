@@ -372,7 +372,7 @@ It is recommended to use `~foreman/bundler.d/Gemfile.local.rb` so that it is not
 
 More information about writing your own plugins is available in the wiki:
 
-* [How to Create a Foreman Plugin](https://projects.theforeman.org/projects/foreman/wiki/How_to_Create_a_Plugin)
+* Latest [How to Create a Foreman Plugin](https://github.com/theforeman/foreman/blob/develop/developer_docs/how_to_create_a_plugin.asciidoc)
 * [How to Create a Smart Proxy Plugin](https://projects.theforeman.org/projects/foreman/wiki/How_to_Create_a_Smart-Proxy_Plugin)
 * [Hammer CLI developer documentation](https://github.com/theforeman/hammer-cli/blob/master/doc/developer_docs.md)
 
@@ -394,6 +394,6 @@ We do ask for a few things in return:
   * This is so that we can help with maintenance if you become too busy or move on from the plugin
   * You're welcome to request a specific member of the development community to be the additional author, otherwise we'll recommend someone
 
-Please see [the wiki](https://projects.theforeman.org/projects/foreman/wiki/How_to_Create_a_Plugin#Making-your-plugin-official) for more details
+Please see [plugin development documentation](https://github.com/theforeman/foreman/blob/develop/developer_docs/how_to_create_a_plugin.asciidoc#making-your-plugin-official) for more details
 
 <hr/>
