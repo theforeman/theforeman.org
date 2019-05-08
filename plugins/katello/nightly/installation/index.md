@@ -103,7 +103,7 @@ yum install -y yum-utils
 {% highlight bash %}
 yum -y localinstall https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/katello/el7/x86_64/katello-repos-latest.rpm
 yum -y localinstall https://yum.theforeman.org/releases/{{ page.foreman_version }}/el7/x86_64/foreman-release.rpm
-yum -y localinstall https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
+yum -y localinstall https://yum.puppet.com/puppet5-release-el-7.noarch.rpm
 yum -y localinstall https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 yum -y install foreman-release-scl
 {% endhighlight %}
