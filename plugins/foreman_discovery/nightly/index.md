@@ -354,7 +354,7 @@ Foreman Discovery relies on intercepting the normal boot process for machines
 not registered in Foreman. To achieve this, the PXE *default.cfg* file needs to
 be altered to instruct new machines to boot the discovery image.
 
-## 3.1.1 Default PXE template
+## 3.1.1 Default PXE templates
 
 In the Foreman UI, go to Settings and on the Provisioning tab, set *Default PXE
 global template entry* to *discovery* instead of *local*. This enables booting
@@ -367,6 +367,15 @@ change the default entry from localboot entry to Discovery:
 
     ONTIMEOUT discovery
 
+Similar change is needed in *PXEGrub2 global default* template:
+
+    default=discovery
+
+*PXEGrub1 global default* must be changed in the same way, but this is a legacy
+bootloader not in wide use anymore. In that case provide the number of the
+discovery menu entry (starting from 0) as Grub1 does not accept menu
+titles.
+
 To commit the change, click on Build PXE Default button to deploy the template.
 The template already contains a menu entry rendered from pxelinux_discovery
 snippet which looks like:
@@ -376,6 +385,13 @@ snippet which looks like:
     KERNEL boot/fdi-image/vmlinuz0
     APPEND initrd=boot/fdi-image/initrd0.img ... proxy.url=<%= foreman_server_url %> proxy.type=foreman
     IPAPPEND 2
+
+Similarly, this is also rendered for Grub2 and Grub1. The following files are
+created on all associated TFTP servers:
+
+* `pxelinux.cfg/default`
+* `grub2/grub.cfg`
+* `grub/grub.cfg`
 
 The *proxy.type* option can be either *proxy* or *foreman*. In the first case
 all communication goes through Smart Proxy, in the latter case the
