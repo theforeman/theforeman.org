@@ -2,19 +2,17 @@
 layout: plugin
 pluginname: foreman_discovery
 title: Foreman Discovery Manual
-version: 16.0
+version: 15.0
 # versions for matrix and snippets
 # (use short version for imgver e.g. 3.0)
-pluginver: 16.0.0
+pluginver: 15.0.0
 proxyver: 1.0.4
 imgver: 3.5
 cliver: 1.0.2
 # uncomment to show warning box for an old release
 #warning: old
 # uncomment to show development version warning
-warning: unreleased
-# uncomment for older versions than stable or nightly
-robots: noindex
+#warning: unreleased
 ---
 
 # 1. Foreman Discovery {{ page.version }} manual
@@ -228,7 +226,7 @@ on Debian and Ubuntu systems.
 Restart of Foreman is needed when not using the installer:
 
     # systemctl restart httpd
-    
+
 On Debian-based systems the command is:
 
     # systemctl restart apache2
