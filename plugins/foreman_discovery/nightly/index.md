@@ -225,7 +225,9 @@ on Fedora and Red Hat systems or
 
 on Debian and Ubuntu systems.
 
-Restart of Foreman is needed when installing the package separately.
+Restart of Foreman is needed when not using the installer:
+
+    # systemctl restart httpd
 
 ## 2.2 Smart Proxy Discovery plugin (optional)
 
