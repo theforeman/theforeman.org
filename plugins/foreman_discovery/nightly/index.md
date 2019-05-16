@@ -2,10 +2,10 @@
 layout: plugin
 pluginname: foreman_discovery
 title: Foreman Discovery Manual
-version: 15.0
+version: 16.0
 # versions for matrix and snippets
 # (use short version for imgver e.g. 3.0)
-pluginver: 15.0.0
+pluginver: 16.0.0
 proxyver: 1.0.4
 imgver: 3.5
 cliver: 1.0.2
@@ -226,6 +226,10 @@ on Debian and Ubuntu systems.
 Restart of Foreman is needed when not using the installer:
 
     # systemctl restart httpd
+    
+On Debian-based systems the command is:
+
+    # systemctl restart apache2
 
 ## 2.2 Smart Proxy Discovery plugin (optional)
 
