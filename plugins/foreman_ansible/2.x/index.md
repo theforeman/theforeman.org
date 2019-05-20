@@ -2,6 +2,8 @@
 layout: plugin
 title: Foreman Ansible 2.x Manual
 version: 2.x
+# uncomment for older versions than stable or nightly
+#robots: noindex
 ---
 
 # 1. Basics

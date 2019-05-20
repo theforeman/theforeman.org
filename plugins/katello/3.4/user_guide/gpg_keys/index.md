@@ -1,5 +1,6 @@
 ---
 layout: plugins/katello/documentation
+robots: noindex
 title: GPG Keys
 version: nightly
 ---

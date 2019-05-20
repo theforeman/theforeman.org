@@ -1,5 +1,6 @@
 # Hammer
 
+robots: noindex
 Hammer provides a command-line-interface (CLI) for performing
 tasks in Katello. It provides an alternative to the web interface where
 commands can be run from the command line or used in shell scripts.

@@ -1,5 +1,6 @@
 ---
 layout: plugins/katello/documentation
+robots: noindex
 title: Client Installation
 version: 3.1
 script: osmenu.js

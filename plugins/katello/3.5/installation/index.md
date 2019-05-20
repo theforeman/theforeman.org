@@ -1,5 +1,6 @@
 ---
 layout: plugins/katello/documentation
+robots: noindex
 title: Katello Installation
 version: 3.5
 foreman_version: 1.16

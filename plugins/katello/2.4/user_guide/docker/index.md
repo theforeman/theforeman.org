@@ -1,5 +1,6 @@
 ---
 layout: plugins/katello/documentation
+robots: noindex
 title: Docker Management
 version: 2.4
 sidebar: sidebars/documentation.html

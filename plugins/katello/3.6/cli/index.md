@@ -1,5 +1,6 @@
 ---
 layout: plugins/katello/documentation
+robots: noindex
 title: CLI
 version: 3.6
 foreman_version: 1.17

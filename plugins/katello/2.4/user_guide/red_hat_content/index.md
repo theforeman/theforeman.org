@@ -1,5 +1,6 @@
 ---
 layout: plugins/katello/documentation
+robots: noindex
 title: Red Hat Content
 version: 2.4
 sidebar: sidebars/documentation.html

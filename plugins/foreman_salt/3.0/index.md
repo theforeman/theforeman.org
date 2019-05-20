@@ -2,6 +2,8 @@
 layout: plugin
 title: Foreman Salt 3.0 Manual
 version: 3.0
+# uncomment for older versions than stable or nightly
+robots: noindex
 ---
 
 # 1. {{ page.title }}

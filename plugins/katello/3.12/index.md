@@ -2,6 +2,8 @@
 layout: plugins/katello/documentation
 title: Documentation
 version: '3.12'
+# uncomment for older versions than stable or nightly
+#robots: noindex
 ---
 
 # Katello Documentation

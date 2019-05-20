@@ -5,6 +5,8 @@ images: /plugins/foreman_openscap/0.6
 version: 0.8.0
 version_short: 0.8
 foreman_version: '1.17'
+# uncomment for older versions than stable or nightly
+robots: noindex
 ---
 
 # 1. {{ page.title }}

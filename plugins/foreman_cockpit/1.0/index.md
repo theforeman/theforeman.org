@@ -2,6 +2,8 @@
 layout: plugin
 title: Foreman Cockpit 1.0 manual
 version: 1.0
+# uncomment for older versions than stable or nightly
+#robots: noindex
 ---
 
 # 1. {{ page.title }}

@@ -1,5 +1,6 @@
 ---
 layout: plugins/katello/documentation
+robots: noindex
 title: Client Upgrade
 version: 3.4
 script: osmenu.js

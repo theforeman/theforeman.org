@@ -1,5 +1,6 @@
 ---
 layout: plugins/katello/documentation
+robots: noindex
 title: Katello Upgrade
 version: 3.3
 foreman_version: 1.14

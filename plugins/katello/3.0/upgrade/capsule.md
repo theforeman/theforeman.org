@@ -1,5 +1,6 @@
 ---
 layout: plugins/katello/documentation
+robots: noindex
 version: 3.0
 foreman_version: 1.11
 title: Capsule Upgrade
