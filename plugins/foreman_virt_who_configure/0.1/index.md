@@ -2,6 +2,8 @@
 layout: plugin
 title: Foreman Virt Who Configure 0.1 Manual
 version: 0.1
+# uncomment for older versions than stable or nightly
+#robots: noindex
 ---
 
 # 1. {{ page.title }}

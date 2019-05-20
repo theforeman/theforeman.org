@@ -3,6 +3,8 @@ layout: plugin
 title: Foreman OpenSCAP manual
 images: /plugins/foreman_openscap/0.5
 version: 0.5.0
+# uncomment for older versions than stable or nightly
+robots: noindex
 ---
 
 # 1. {{ page.title }}

@@ -1,5 +1,6 @@
 ---
 layout: plugins/katello/documentation
+robots: noindex
 title: Annotated Requests
 version: 3.5
 foreman_version: 1.16

@@ -2,6 +2,8 @@
 layout: plugin
 title: Foreman Templates 5.0 Manual
 version: 5.0
+# uncomment for older versions than stable or nightly
+robots: noindex
 ---
 
 # 1. {{ page.title }}

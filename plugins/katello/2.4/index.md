@@ -1,6 +1,9 @@
 ---
 layout: plugins/katello/documentation
+robots: noindex
 version: 2.4
+# uncomment for older versions than stable or nightly
+robots: noindex
 ---
 
 # Katello Documentation

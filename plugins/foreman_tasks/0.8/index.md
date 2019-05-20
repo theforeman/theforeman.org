@@ -2,6 +2,8 @@
 layout: plugin
 title: Foreman Tasks 0.8 Manual
 version: 0.8
+# uncomment for older versions than stable or nightly
+#robots: noindex
 ---
 
 # 1. {{ page.title }}

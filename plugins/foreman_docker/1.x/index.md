@@ -3,6 +3,8 @@ layout: plugin
 pluginname: foreman_docker
 title: Foreman Docker 1.x Manual
 version: 1.x
+# uncomment for older versions than stable or nightly
+robots: noindex
 ---
 
 # 1. {{ page.title }}

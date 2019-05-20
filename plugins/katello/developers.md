@@ -1,5 +1,6 @@
 ---
 layout: plugin
+robots: noindex
 title: Katello Developer Guide
 ---
 

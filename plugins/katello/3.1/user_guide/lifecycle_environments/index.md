@@ -1,5 +1,6 @@
 ---
 layout: plugins/katello/documentation
+robots: noindex
 title: Lifecycle Environments
 version: 3.1
 ---

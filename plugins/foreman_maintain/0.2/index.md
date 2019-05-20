@@ -2,6 +2,8 @@
 layout: plugin
 title: Foreman Maintain 0.2 Manual
 version: 0.2 
+# uncomment for older versions than stable or nightly
+#robots: noindex
 ---
 
 # Foreman Maintain

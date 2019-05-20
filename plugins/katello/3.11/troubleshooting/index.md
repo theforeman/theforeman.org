@@ -1,5 +1,6 @@
 ---
 layout: plugins/katello/documentation
+robots: noindex
 version: '3.11'
 title: Troubleshooting
 ---

@@ -7,6 +7,8 @@ version: 0.3
 warning: old
 # uncomment to show development version warning
 #warning: unreleased
+# uncomment for older versions than stable or nightly
+robots: noindex
 ---
 
 # 1. {{ page.title }}

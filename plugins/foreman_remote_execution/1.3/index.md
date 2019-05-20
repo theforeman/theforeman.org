@@ -2,6 +2,8 @@
 layout: plugin
 title: Foreman Remote Execution 1.3 Manual
 version: 1.3
+# uncomment for older versions than stable or nightly
+robots: noindex
 ---
 
 # 1. {{ page.title }}
