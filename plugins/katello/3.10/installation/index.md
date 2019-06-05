@@ -4,7 +4,7 @@ robots: noindex
 title: Katello Installation
 version: '3.10'
 foreman_version: '1.20'
-latest: '3.11'
+latest: '3.12'
 script: osmenu.js
 ---
 
