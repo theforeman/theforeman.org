@@ -174,7 +174,8 @@ We will create a new directory under the tftp root directory (typically `/var/li
 
 **2.2: Create the bootloader entry in Foreman**  
 Now comes the interesting part. We will create a new PXELoader entry in Foreman for `pxelinux-3.86.0`. Huge thanks to Lukáš Zapletal for [pointing this out](https://community.theforeman.org/t/edit-dhcpd-leases-through-a-foreman-hook-script/9957/2).  
-  * **2.2.1:** Edit the file -   `/usr/share/foreman/app/models/concerns/pxe_loader_support.rb`
+  * **2.2.1:** Edit the file -   `/usr/share/foreman/app/models/concerns/pxe_loader_support.rb` 
+
     <pre><code>
     def all_loaders_map(precision = 'x64')
       {
@@ -281,20 +282,20 @@ Now we have to create an entry for this bootloader in the Foreman UI just like w
   
   Once the host is set to build mode, the MAC directory along with the boot.cfg file should be created automatically.  For this we need to hook into the after_build event.
 
-  Note: We will use shell hook scripts. This depends on the package jgrep. Please ensure `whereis jgrep` runs successfully before proceeding. It is [recommended](https://community.theforeman.org/t/esxi-deployment-via-uefi-hook-scripts-issue/11794/13) to use Python though. Example Python scripts are under `/usr/share/foreman/vendor/ruby/2.3.0/gems/foreman_hooks-0.x.xx/examples`. Please modify accordingly.
+  Note: We will use shell hook scripts. This depends on the package jgrep. Please install using `gem install jgrep` and ensure `whereis jgrep` runs successfully before proceeding. It is [recommended](https://community.theforeman.org/t/esxi-deployment-via-uefi-hook-scripts-issue/11794/13) to use Python though. Example Python scripts are under `/usr/share/foreman/vendor/ruby/2.3.0/gems/foreman_hooks-0.x.xx/examples`. Please modify accordingly.
 
   ```sh
-  cd /usr/share/foreman/config/hooks
+  cd /usr/share/foreman/config/
 
-  mkdir -p host/managed/after_build
+  mkdir -p hooks/host/managed/after_build
 
-  cd host/managed/after_build
+  cd hooks/host/managed/after_build
 
   # Symlink the hook_functions file.
   ln -s /usr/share/foreman/vendor/ruby/2.3.0/gems/foreman_hooks-0.3.14/examples/bash/hook_functions.sh .
 
   # Now create the script
-  cat  <<EOT >> /host/managed/after_build/01-prep-esxi-uefimode.sh
+  cat  <<'EOT' >> 01-prep-esxi-uefimode.sh
   #!/bin/bash
 
   # Import the functions
@@ -315,6 +316,7 @@ Now we have to create an entry for this bootloader in the Foreman UI just like w
   system_mac=$(hook_data host.mac)
   system_pxe_loader=$(hook_data host.pxe_loader)
   system_operatingsystem_name=$(hook_data host.operatingsystem_name)
+  # Ensure Host is Part of an Environment with Puppet Master and Puppet CA set to the Foreman Server. Otherwise this value will be null
   puppet_proxy_name=$(hook_data host.puppet_proxy_name)
   host_token=$(hook_data host.token)
 
@@ -331,8 +333,8 @@ Now we have to create an entry for this bootloader in the Foreman UI just like w
       # Copy the boot.cfg file from the ISO mountpoint to tftproot and edit it to add a prefix to the ISO mountpoint.
       cp boot/ESXi-6.7.0-8169922/boot.cfg $macdir/
       # The mountpoint can also be parsed from $system_operatingsystem_name. Useful for deploying multiple ESXi builds.
-      sed -e "s#/##g" -e "3s#^#prefix=/boot/ESXi-6.7.0-8169922\n#" -i $macdir/boot.cfg
-      sed -i "/^kernelopt=/c\kernelopt=ks=http://${puppet_proxy_name}/unattended/provision?token=${host_token}" ${HOSTDIR}/boot.cfg
+      sed -e "s#/##g" -e "3s#^#prefix=/boot/ESXi-6.7.0-8169922\n#" -i ${macdir}/boot.cfg
+      sed -i "/^kernelopt=/c\kernelopt=ks=http://${puppet_proxy_name}/unattended/provision?token=${host_token}" ${macdir}/boot.cfg
   fi
   # exit code is important on orchestration tasks
   exit 0
@@ -341,11 +343,14 @@ Now we have to create an entry for this bootloader in the Foreman UI just like w
   chmod u+x 01-prep-esxi-uefimode.sh
 
   # Make it accessible to Foreman
-  cd /usr/share/foreman/config/hooks
-  chown -R foreman:foreman host/
+  cd /usr/share/foreman/config/
+  chown -R foreman:foreman hooks/
 
   # Register the hook script in Foreman by restarting Apache
   service apache2 restart
+
+  # Make /var/lib/tftpboot writable to foreman user as hook scripts are run using that account
+  chown foreman /var/lib/tftpboot
   ```
 
   **Important Note:** after_build hook scripts are not run on newly created hosts. These are only run when build mode is enabled on an existing host.
@@ -385,7 +390,7 @@ Now we have to create an entry for this bootloader in the Foreman UI just like w
   ln -s /usr/share/foreman/vendor/ruby/2.3.0/gems/foreman_hooks-0.3.14/examples/bash/hook_functions.sh .
 
   # Now create the script
-  cat  <<EOT >> 01-esxi-unset-pxeloaders.sh
+  cat  <<'EOT' >> 01-esxi-unset-pxeloaders.sh
   #!/bin/bash
   . $(dirname $0)/hook_functions.sh
   event=${HOOK_EVENT}
