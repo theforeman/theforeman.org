@@ -8,11 +8,19 @@ tags:
 - foreman
 - esxi
 - vmware
+- uefi
 guest_post: true
 ---
+## For Foreman v1.20 and above:
+
+For Foreman versions above 1.20 there is a much simpler way to install ESXi using the new iPXE bootstrapping feature. Here's the link to the blogpost:  
+<https://theforeman.org/2019/06/install-esxi-through-foreman-using-ipxe-bootstrapping.html>
+
+## For Foreman v1.19 and below:
+
 At the time of writing this (Foreman v1.18), ESXi deployment through Foreman is not supported natively. The problem is exacerbated by the fact that the ESXi Legacy BIOS bootloader depends on an older Syslinux (v3.86) and [GRUB2 not being able to chainload the ESXi EFI bootloader](https://communities.vmware.com/thread/463818?start=15&tstart=0). However there are [quite](http://blog.reversion.org/sysadmin/deploying-esxi-with-satellite-6/) [a](http://www.c0t0d0s0.de/esxwithforeman/esxwithforeman.html) [few](https://beryju.org/en/blog/getting-started-foreman-part-3) articles on the Internet that have attempted to work around these issues.  
 This post is an attempt to bring all the information together in one place, simplify the process and most importantly, support both Legacy BIOS and UEFI modes of installation.  
-Huge thanks to the foreman developers for helping me out whenever I was stuck.
+Huge thanks to the foreman developers for helping me out whenever I was stuck.  
 
 ### Requirements
 
@@ -21,7 +29,7 @@ Huge thanks to the foreman developers for helping me out whenever I was stuck.
 
     ```
     # Bootfile Handoff
-    next-server 127.0.0.1;
+    next-server next-server X.X.X.X;  # Replace with actual IP address of Foreman Server
     option architecture code 93 = unsigned integer 16 ;
     if option architecture = 00:06 {
       filename "grub2/bootia32.efi";
@@ -57,9 +65,11 @@ Note: This demo is run on a Ubuntu system. The paths may be different for other 
 **1.2: Create the OS**
   * Open https://{foreman-url}/operatingsystems and click on **Create Operating System** 
   * Under Operating System, enter the following:  
+  
     Name            -  ESXi-6.7.0-8169922 (ESXi-{**OS Version**}-{**Build Number**})  
     Major version   -  6  
     Minor version   -  7  
+    Description     -  ESXi-6.7.0-8169922  
     Family          -  Redhat  
     Root pass hash  -  [SHA512](https://www.virtuallyghetto.com/2018/05/quick-tip-what-hashing-algorithm-is-supported-for-esxi-kickstart-password.html)  
     Architectures   -  x86_64  
@@ -75,7 +85,7 @@ Note: This demo is run on a Ubuntu system. The paths may be different for other 
     <p float='left' align='left'>
       <img src="/static/images/blog_images/2018-08-16-deploying-esxi-through-foreman/new_esxi_os_media.png" width="400" />
     </p>
-  * Press Submit
+  * Click Submit
 
 **1.3: Create provisioning templates**
   * **1.3.1:** Create the PXELinux template
@@ -88,7 +98,7 @@ Note: This demo is run on a Ubuntu system. The paths may be different for other 
       NOHALT 1
       LABEL ESXi
       KERNEL ../boot/ESXi-6.7.0-8169922/mboot.c32
-      APPEND -c ../boot-ESXi-6.7.0-8169922.cfg
+      APPEND -c ../boot-ESXi-6.7.0-8169922.cfg ks=<%= foreman_url("provision") %>
       IPAPPEND 2
       ```
     <p float='left' align='left'>
@@ -140,7 +150,7 @@ Note: This demo is run on a Ubuntu system. The paths may be different for other 
   Now that the templates are created, we need to set those as default.
   * Navigate to https://{foreman-url}/operatingsystems and click on the newly created ESXi OS **"ESXi 6.7 Build 8169922"**
   * Open the "Templates" tab
-  * Select the newly created provisioning templates from the drop down boxes and press Submit.
+  * Select the newly created provisioning templates from the drop down boxes and click Submit.
     <p float='left' align='left'>
       <img src="/static/images/blog_images/2018-08-16-deploying-esxi-through-foreman/os_default_templates.png" width="400" />
     </p>
@@ -208,7 +218,6 @@ Copy the boot.cfg file from the mountpoint to tftproot and edit it to add a pref
 
   sed -e "s#/##g" -e "3s#^#prefix=../boot/ESXi-6.7.0-8169922\n#" -i boot-ESXi-6.7.0-8169922.cfg
 
-  sed -i "/^kernelopt=/c\kernelopt=ks=http://${foreman_server_ip}/unattended/provision" boot-ESXi-6.7.0-8169922.cfg # Replace with actual IP/FQDN of Foreman server
   ```
 
   Note: 
@@ -226,12 +235,12 @@ Copy the boot.cfg file from the mountpoint to tftproot and edit it to add a pref
   Partition table: Kickstart default  
   PXE Loader : PXELinux Alt BIOS 
 
-**2.7:** Press 'Resolve' beside Provisioning templates and you should see the ESXi PXELinux and Kickstart templates.
+**2.7:** Click 'Resolve' beside Provisioning templates and you should see the ESXi PXELinux and Kickstart templates. Click on Submit.
   <p float='left' align='left'>
     <img src="/static/images/blog_images/2018-08-16-deploying-esxi-through-foreman/edit_host_legacy_bios.png" width="400" />
   </p>
 
-**2.8:** Press 'Build' and reboot the host to PXE. If all goes well, you should see ESXi installer load up and perform an automated installation.
+**2.8:** Click 'Build' and reboot the host to PXE. If all goes well, you should see ESXi installer load up and perform an automated installation.
   <p float='left' align='center'>
     <img src="/static/images/blog_images/2018-08-16-deploying-esxi-through-foreman/esxi_installer_loading.png" width="400" />
   </p>
@@ -355,8 +364,8 @@ Now we have to create an entry for this bootloader in the Foreman UI just like w
 
   **Important Note:** after_build hook scripts are not run on newly created hosts. These are only run when build mode is enabled on an existing host.
 
-* **3.4:** Now we are ready to deploy the host. Edit the host entry in Foreman and set the following:
-
+* **3.4:** Now we are ready to deploy the host. Edit the host entry in Foreman and set the following:  
+  Puppet Master and Puppet CA set to Foreman Server  
   Operating System : ESXi 6.7 Build 8169922  
   Media : ESXi Dummy  
   Partition table: Kickstart default  
@@ -365,11 +374,11 @@ Now we have to create an entry for this bootloader in the Foreman UI just like w
     <img src="/static/images/blog_images/2018-08-16-deploying-esxi-through-foreman/edit_host_uefi.png" width="400" />
   </p>
 
-* **3.5:** Press 'Resolve' beside Provisioning templates and you should see the ESXi PXELinux and Kickstart templates.
+* **3.5:** Click 'Resolve' beside Provisioning templates and you should see the ESXi PXELinux and Kickstart templates. Click on Submit.
 
   Note: The PXELinux template is irrelevant as it does not play any role in UEFI mode. So we are keeping it as is.
 
-* **3.6:** Press 'Build', change the host's boot mode to UEFI and reboot the host to PXE. You should see the ESXi installer load up.
+* **3.6:** Click 'Build', change the host's boot mode to UEFI and reboot the host to PXE. You should see the ESXi installer load up.
 
   Once the installation is complete and the host reboots, it will load mboot.efi from the DHCP Server again and the installation will restart. However since the host is not in build mode, it will not be able to fetch the kickstart file from Foreman and will throw an error and freeze at the installer screen.   
   To solve this we have to manually change the host PXE Loader to **None** in Foreman.  
