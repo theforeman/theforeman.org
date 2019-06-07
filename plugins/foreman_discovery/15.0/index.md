@@ -178,6 +178,13 @@ plugin:
   </tr>
   <tr>
     <td>= 1.21</td>
+    <td>14.0</td>
+    <td>1.0.4</td>
+    <td>3.5</td>
+    <td>1.0.2</td>
+  </tr>
+  <tr>
+    <td>= 1.22</td>
     <td>{{page.pluginver}}</td>
     <td>{{page.proxyver}}</td>
     <td>{{page.imgver}}</td>
