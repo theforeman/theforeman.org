@@ -243,24 +243,10 @@ From here on out the Release Owner and Release Packager should work to close out
 
 The release of puppet modules is now part of the foreman-installer release process after the merge of the codebases. This is preserved for now given that this lays out the detailed steps on how to release modules. Building the changelog is a somewhat delicate task. We use [github_changelog_generator](https://github.com/skywinder/github-changelog-generator) which is based on Github pull requests and issues but not everythis has a pull request. Especially cherry picks are sometimes forgotten.
 
-Start with updating the changelog.
+Start with updating the changelog. You will need to [set up a Github token](https://github.com/skywinder/github-changelog-generator#github-token) to avoid rate limits.
 
 ```
-bundle exec rake changelog
-```
-
-This is a [recent addition](https://github.com/theforeman/foreman-installer-modulesync/pull/86) and stable branches might not have this. Then you need to do it manually:
-
-```
-# See https://github.com/skywinder/github-changelog-generator#github-token on using a token to avoid ratelimits
-github_changelog_generator -u theforeman -p $(basename $PWD) -o new-changelog.md --future-release $(bundle exec rake module:version) --exclude-labels duplicate,question,invalid,wontfix,Modulesync
-
-# Now merge new-changelog.md into CHANGELOG.md - do note that it doesn't handle
-# branches so if anything was merged to a stable branch you should manually put
-# it in the correct release. This may also break badly on stable branches.
-
-# Add links to Redmine for issues
-sed -i 's,\(fixes\|fixing\|refs\) \\#\([0-9]\+\),\1 [\\#\2](https://projects.theforeman.org/issues/\2),i' CHANGELOG.md
+CHANGELOG_GITHUB_TOKEN="$my_token" bundle exec rake changelog
 ```
 
 Now go through the `git diff` and the actual content. Check if pull requests need a `Bug`, `Breaking` or `Enhancements` label. You can also determine based on these labels if a minor or major version bump is needed.
@@ -298,20 +284,17 @@ When merging a PR note that the date is in the changelog which you may need to u
 
 ```
 bundle exec rake module:tag
-
-# Only recently puppet-blacksmith learned to do GPG signed tags - check this
-git verify-tag $(bundle exec rake module:version)
-
-# If it failed you can do it manually
-# VERSION=$(bundle exec rake module:version) && git tag -s $VERSION -m "Version $VERSION"
 ```
 
 When you're satisfied you can push the changes to git and release the module to the forge:
 
 ```
-# Push the changes to github
 git push --follow-tags
+```
 
+After pushing, it's time to release.
+
+```
 # Push the release to the forge
 # This assumes you have set the credentials previously
 bundle exec rake module:clean module:push
@@ -319,7 +302,11 @@ bundle exec rake module:clean module:push
 # Automated using pass - https://www.passwordstore.org/
 # Assumes you have a katello/forge or theforeman/forge password configured
 BLACKSMITH_FORGE_USERNAME="$(jq -r .author metadata.json | tr [A-Z] [a-z])" && BLACKSMITH_FORGE_USERNAME=$BLACKSMITH_FORGE_USERNAME BLACKSMITH_FORGE_PASSWORD=$(pass show $BLACKSMITH_FORGE_USERNAME/forge | head -n 1) bundle exec rake module:clean module:push
+```
 
+Afterwards it's time to start the new release cycle by bumping the patch version.
+
+```
 # Start the next minor version
 bundle exec rake module:bump_commit:patch
 
