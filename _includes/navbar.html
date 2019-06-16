@@ -1,0 +1,34 @@
+{% if page.url != "/" %}
+  <nav class="navbar navbar-default navbar-static-top">
+{% else %}
+  <nav class="navbar navbar-default navbar-static-top navbar-index">
+{% endif %}
+  <ul class="nav navbar-nav nav-justified">
+    {% if page.url != "/" %}
+      <li class='visible-xs'><a class='index-link' href="/">Home</a></li>
+      <li class='hidden-xs'><a class='index-link' href="/">
+        <i class="logo"><img style="width: 90px" src="/static/images/foremanhelmet.svg" alt="Foreman home"></i>
+      </a></li>
+    {% endif %}
+    {% for link in site.navigation %}
+      {% assign class = nil %}
+      {% if page.url contains link.url %}
+          {% assign class = 'active' %}
+      {% endif %}
+      {% if link.sublinks %}
+          <li class="dropdown {{ class }}">
+              <a role="button" aria-haspopup="true" aria-expanded="false">{{ link.title }} <span class="caret"></span></a>
+              <div class="dropdown-content">
+                  {% for sublink in link.sublinks %}
+                    <a href="{{ sublink.url }}">{{ sublink.title }}</a>
+                  {% endfor %}
+              </div>
+          </li>
+      {% else %}
+          <li class="{{ class }}">
+              <a href="{{ link.url }}">{{ link.title }}</a>
+          </li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+</nav>

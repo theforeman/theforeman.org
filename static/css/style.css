@@ -88,7 +88,6 @@ th.underlined {
 
 .container {
   position: relative;
-  z-index: 2;
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -182,7 +181,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9d216', end
 #page-header a {
   color: #fcfcff;
 }
-#page-header a:hover,
+
 #page-header a:focus {
   color: #23b0db;
 }
@@ -346,7 +345,6 @@ video {
 .navbar-nav.nav-justified > li > a:focus {
 	color: #fff;
   background-color: transparent;
-  border-bottom-color: #ffffff;
 }
 .nav-list > li > a,
 .nav-list .nav-header {
@@ -357,11 +355,8 @@ video {
 .nav-list > .active > a:focus {
 	color: #025D8C;
   background-color: transparent;
-  border-bottom-color: #ffffff;
 }
-.navbar-nav.nav-justified > li.active > a {
-  border-bottom-color: #ffffff;
-}
+
 .navbar .nav > li > a{
 	text-shadow: none;
 	padding: 11px 11px;
@@ -372,7 +367,8 @@ video {
 }
 
 .navbar .nav {
-	float: inherit;
+  float: inherit;
+  margin: auto;
 }
 .navbar {
   position: relative;
@@ -439,6 +435,45 @@ video {
 }
 .nav > li > a > img {
   max-width: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #025D8C;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  box-shadow: 0px 8px 14px 6px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  background-color: inherit;
+  transition: background-color 0.4s;
+  text-transform: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #3884ac;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .dropdown-content {
+    position: relative;
+  }
+  .navbar-static-top {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 
 .clearfix:after,
@@ -641,16 +676,6 @@ border-radius: 4px;
 .latest-news a,
 .footer a {
   color: #23B0DB;
-}
-
-.nav .dropdown-toggle .caret {
-  border-bottom-color: #999999;
-  border-top-color: #999999;
-}
-
-.nav .dropdown-toggle:hover .caret {
-  border-bottom-color: #FFFFFF;
-  border-top-color: #FFFFFF;
 }
 
 .footnote {

@@ -28,16 +28,46 @@ include:
 - _static
 
 navigation:
-- text: Introduction
-  url: introduction.html
-- text: Quickstart
-  url: manuals/1.20/quickstart_guide.html#QuickstartGuide
-- text: Documentation
-  url: documentation.html
-- text: Videos
-  url: media.html
-- text: Blog
-  url: blog/index.html
+  - title: Get Started
+    sublinks:
+      - title: Features
+        url: /introduction.html
+      - title: Who uses Foreman
+        url: /who_uses.html
+      - title: Quickstart
+        url: /manuals/1.21/quickstart_guide.html
+      - title: Sponsors
+        url: /sponsors.html
+  - title: Get Help
+    sublinks:
+      - title: Manual
+        url: /manuals/1.21/index.html
+      - title: Plugins
+        url: /plugins/
+      - title: API docs
+        url: /api/1.21/index.html
+      - title: Training
+        url: /training.html
+      - title: Support
+        url: /support.html
+  - title: Get involved
+    sublinks:
+      - title: Community
+        url: https://community.theforeman.org
+      - title: Report bug
+        url: https://projects.theforeman.org/projects
+      - title: Contribute
+        url: /contribute.html
+  - title: News
+    sublinks:
+      - title: Blog
+        url: /blog/index.html
+      - title: Events
+        url: https://theforeman.org/events
+      - title: Videos
+        url: /media.html
+      - title: Security
+        url: /security.html
 
 plugins:
   - jekyll-feed
