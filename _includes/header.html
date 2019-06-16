@@ -60,24 +60,7 @@
     <header id="page-header">
   {% endif %}
 		<div class="container">
-      {% if page.url != "/" %}
-		    <nav class="navbar navbar-default navbar-static-top">
-	    {% else %}
-		    <nav class="navbar navbar-default navbar-static-top navbar-index">
-      {% endif %}
-				<ul class="nav navbar-nav nav-justified">
-          {% if page.url != "/" %}
- 						<li class='visible-xs'><a class='index-link' href="/">Home</a></li>
-						<li class='hidden-xs'><a class='index-link' href="/">
-							<i class="logo"><img style="width: 90px" src="/static/images/foremanhelmet.svg" alt="Foreman home"></i>
-						</a></li>
-          {% endif %}
-					{% for link in site.navigation %}
-			  		<li><a href="{{ site.baseurl}}/{{ link.url }}"> {{ link.text }} </a></li>
-					{% endfor %}
-			  		<li><a href="https://community.theforeman.org"> Community </a></li>
-  				</ul>
-			</nav>
+      {% include navbar.html %}
       {% if page.url == "/" %}
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3 text-center">
@@ -109,8 +92,3 @@
       {% endif %}
 		</div>
   </header>
-<script>
-$(function(){
-  $('.nav > li a[href="'+window.location.pathname+'"]').parents('.nav > li').addClass('active')
-})
-</script>
