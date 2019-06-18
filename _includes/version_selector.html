@@ -1,0 +1,10 @@
+<div class="bs-callout-info bs-callout">
+  <div class='dropdown'>	
+    <a id='version' class='dropdown-toggle' data-toggle='dropdown'>Version {{page.version}} <span class="caret"></span></a>	
+    <ul class="dropdown-menu" role="menu" aria-labelledby="version">
+      {% for version in site.foreman_versions %}
+        <li><a tabindex="-1" href="/manuals/{{ version }}/index.html">{{ version }}</a></li>	
+      {% endfor %}
+    </ul>	
+  </div>
+</div>
