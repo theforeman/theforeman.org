@@ -7,7 +7,7 @@ description: Foreman is an open source project that gives system administrators 
 production_url : http://theforeman.org
 url: http://theforeman.org
 baseurl: "" #keep at "" for the Atom feed
-foreman_version: '1.20'
+foreman_version: '1.22'
 
 paginate: 5
 paginate_path: "blog/page:num"
@@ -35,17 +35,17 @@ navigation:
       - title: Who uses Foreman
         url: /who_uses.html
       - title: Quickstart
-        url: /manuals/1.21/quickstart_guide.html
+        url: /manuals/latest/quickstart_guide.html
       - title: Sponsors
         url: /sponsors.html
   - title: Get Help
     sublinks:
       - title: Manual
-        url: /manuals/1.21/index.html
+        url: /manuals/latest/index.html
       - title: Plugins
         url: /plugins/
       - title: API docs
-        url: /api/1.21/index.html
+        url: /api/latest/index.html
       - title: Training
         url: /training.html
       - title: Support
