@@ -1,6 +1,7 @@
 ---
 pagename: Manual
 latestversion: "1.22"
+version_selector_target: "index"
 ---
 {% include header.html %}
 <div id="wrap">
@@ -26,9 +27,7 @@ latestversion: "1.22"
 				</div>
 			</div>
 			<div id="doc" class="col-md-9">
-				<div id="version_selector">
-					{% include version_selector.html %}
-				</div>
+				{% include version_selector.html %}
 				{{ content }}
 			</div>
 		</div>
