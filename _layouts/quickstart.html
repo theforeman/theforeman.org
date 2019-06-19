@@ -1,6 +1,5 @@
 ---
 pagename: Quickstart
-latestversion: "1.20"
 version_selector_target: "quickstart_guide"
 ---
 {% include header.html %}
@@ -9,17 +8,17 @@ version_selector_target: "quickstart_guide"
 		<div class="row">
 			{% capture versionmaj %}{{ page.version | split: "." | first | times: 100 }}{% endcapture %}
 			{% capture versioni %}{{ page.version | split: "." | last | plus: versionmaj }}{% endcapture %}
-			{% capture latestmaj %}{{ layout.latestversion | split: "." | first | times: 100 }}{% endcapture %}
-			{% capture latesti %}{{ layout.latestversion | split: "." | last | plus: latestmaj }}{% endcapture %}
+			{% capture latestmaj %}{{ site.foreman_version | split: "." | first | times: 100 }}{% endcapture %}
+			{% capture latesti %}{{ site.foreman_version | split: "." | last | plus: latestmaj }}{% endcapture %}
 			{% if page.version == "nightly" or versioni > latesti %}
 			<div class="alert alert-warning" style="margin-top:5px">
 				<p style="margin-bottom: 3px"><strong>Not yet released</strong></p>
-				<p style="margin-bottom: 0">This quickstart guide is for Foreman {{ page.version }}, but <a href="{{ site.baseurl }}manuals/{{ layout.latestversion }}/index.html">{{ layout.latestversion }}</a> is the current stable version.</p>
+				<p style="margin-bottom: 0">This quickstart guide is for Foreman {{ page.version }}, but <a href="{{ site.baseurl }}manuals/{{ site.foreman_version }}/index.html">{{ site.foreman_version }}</a> is the current stable version.</p>
 			</div>
 			{% elsif versioni < latesti %}
 			<div class="alert alert-warning" style="margin-top:5px">
 				<p style="margin-bottom: 3px"><strong>Newer version available</strong></p>
-				<p style="margin-bottom: 0">This quickstart guide is for Foreman {{ page.version }}, but the <a href="{{ site.baseurl }}manuals/{{ layout.latestversion }}/index.html">latest version is {{ layout.latestversion }}</a>.</p>
+				<p style="margin-bottom: 0">This quickstart guide is for Foreman {{ page.version }}, but the <a href="{{ site.baseurl }}manuals/{{ site.foreman_version }}/index.html">latest version is {{ site.foreman_version }}</a>.</p>
 			</div>
 			{% endif %}
 			<div id="doc" class="col-md-12">
