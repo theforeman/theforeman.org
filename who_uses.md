@@ -15,6 +15,6 @@ The list is in alphabetical order.
 * [CERN](https://home.cern)
 * [Linköpings universitet](https://liu.se)
 * [Paychex](https://www.paychex.com)
-* [Sixt](https://www.sixt.de)
+* [Sixt SE](https://www.sixt.com)
 * [ThinkIT Data Solutions](http://thinkitdata.com/)
 * [Tipsport.net](https://www.tipsport.cz)
