@@ -1,6 +1,7 @@
 ---
 pagename: Quickstart
 latestversion: "1.20"
+version_selector_target: "quickstart_guide"
 ---
 {% include header.html %}
 <div id="wrap">
@@ -22,6 +23,7 @@ latestversion: "1.20"
 			</div>
 			{% endif %}
 			<div id="doc" class="col-md-12">
+				{% include version_selector.html %}
 				{{ content }}
 			</div>
 		</div>
