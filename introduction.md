@@ -140,7 +140,7 @@ Foreman can provision on bare metal as well as the following cloud providers:
 
 <div class='row'>
   <div class='col-md-4 center'>
-  <a href="documentation.html" class="btn-doc btn">
+  <a href="/manuals/latest/index.html" class="btn-doc btn">
     <h2 class='doc-icon'><i class="fa fa-newspaper-o"></i></h2>
     documentation
   </a>

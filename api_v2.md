@@ -1,6 +1,6 @@
 ---
 layout: default
-redirect: /documentation.html
+redirect: /api/latest/index.html
 ---
 
 # API documentation

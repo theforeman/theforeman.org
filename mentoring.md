@@ -14,7 +14,7 @@ currently available projects.
 ## I'm interested - how can I get familiar with Foreman?
 
 * [Install Foreman](/manuals/latest/quickstart_guide.html) on a virtual machine or your own computer
-* Skim through the [manual](/documentation.html)
+* Skim through the [manual](/manuals/latest/index.html)
 * Watch a few [demo videos](/media.html)
 * Read a couple posts from the [forum](/support.html#forum)
 * Join us on [IRC](/support.html#IRC):
