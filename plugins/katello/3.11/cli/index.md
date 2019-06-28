@@ -21,28 +21,10 @@ their entire Katello workflow.
 The first step to install the CLI is to setup the appropriate repositories: foreman, katello and epel.
 
 <p>Select your Operating System: <select id="operatingSystems">
-   <option value="rhel6">Red Hat Enterprise Linux 6</option>
    <option value="rhel7">Red Hat Enterprise Linux 7</option>
-   <option value="el6">Enterprise Linux 6 (CentOS, etc.)</option>
    <option value="el7">Enterprise Linux 7 (CentOS, etc.)</option>
    </select>
 </p>
-<div id="rhel6" markdown="1">
-{% highlight bash %}
-yum -y  --disablerepo="*" --enablerepo=rhel-6-server-rpms install yum-utils wget
-yum-config-manager --disable "*"
-yum-config-manager --enable rhel-6-server-rpms epel
-yum-config-manager --enable rhel-6-server-optional-rpms
-{% endhighlight %}
-</div>
-
-<div id="el6" markdown="1">
-{% highlight bash %}
-yum -y localinstall https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/katello/el6/x86_64/katello-repos-latest.rpm
-yum -y localinstall https://yum.theforeman.org/releases/{{ page.foreman_version }}/el6/x86_64/foreman-release.rpm
-yum -y localinstall https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
-{% endhighlight %}
-</div>
 
 <div id="rhel7" style="display: none;" markdown="1">
 {% highlight bash %}
