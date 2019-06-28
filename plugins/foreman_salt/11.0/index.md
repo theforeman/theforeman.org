@@ -327,7 +327,7 @@ Foreman parameters (e.g. Global Parameters, Hostgroup Parameters, ...) are avail
     ext_pillar:
       - puppet: /usr/bin/foreman-node
 
-By default, Foreman pillars are sent to the top-level pillar namespace, but if you'd like them confined to their own namespace, change the Foreman setting called `salt_namespace_pillars` to true.  Currently, Foreman parameters are limited to String values only. To access the pillars in your Salt states, use e.g. `{{ salt['pillar.get']('brandname', 'foreman') }}`.
+By default, Foreman pillars are sent to the top-level pillar namespace, but if you'd like them confined to their own namespace, change the Foreman setting called `salt_namespace_pillars` to true.  Currently, Foreman parameters are limited to String values only. To access the pillars in your Salt states, use e.g.: `salt['pillar.get']('brandname', 'foreman')`
 
 ## 4.7 Grains
 
