@@ -8,7 +8,6 @@
 foreman_setting -- Manage Foreman Settings
 ++++++++++++++++++++++++++++++++++++++++++
 
-.. versionadded:: 2.4
 
 .. contents::
    :local:
@@ -95,22 +94,7 @@ Parameters
             </tr>
                                 <tr>
                                                                 <td colspan="1">
-                    <b>value</b>
-                    <div style="font-size: small">
-                        <span style="color: purple">-</span>
-                                            </div>
-                                    </td>
-                                <td>
-                                                                                                                                                            </td>
-                                                                <td>
-                                                                        <div>value to set the Setting to</div>
-                                                    <div>if missing, reset to default</div>
-                                                    <div>use a comma separated list for an array</div>
-                                                                                </td>
-            </tr>
-                                <tr>
-                                                                <td colspan="1">
-                    <b>verify_ssl</b>
+                    <b>validate_certs</b>
                     <div style="font-size: small">
                         <span style="color: purple">boolean</span>
                                             </div>
@@ -123,6 +107,22 @@ Parameters
                                                                             </td>
                                                                 <td>
                                                                         <div>Verify SSL of the Foreman server</div>
+                                                                                        <div style="font-size: small; color: darkgreen"><br/>aliases: verify_ssl</div>
+                                    </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>value</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">-</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>value to set the Setting to</div>
+                                                    <div>if missing, reset to default</div>
+                                                    <div>use a comma separated list for an array</div>
                                                                                 </td>
             </tr>
                         </table>

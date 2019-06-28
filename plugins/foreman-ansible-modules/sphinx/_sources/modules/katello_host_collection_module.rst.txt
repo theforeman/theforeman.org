@@ -1,12 +1,12 @@
-:source: foreman_organization.py
+:source: katello_host_collection.py
 
 :orphan:
 
-.. _foreman_organization_module:
+.. _katello_host_collection_module:
 
 
-foreman_organization -- Manage Foreman Organization
-+++++++++++++++++++++++++++++++++++++++++++++++++++
+katello_host_collection -- Create and Manage host collections
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 .. contents::
@@ -16,7 +16,7 @@ foreman_organization -- Manage Foreman Organization
 
 Synopsis
 --------
-- Manage Foreman Organization
+- Create and Manage host collections
 
 
 
@@ -24,6 +24,7 @@ Requirements
 ------------
 The below requirements are needed on the host that executes this module.
 
+- nailgun >= 0.32.0
 - python >= 2.6
 - ansible >= 2.3
 
@@ -49,20 +50,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Description of the Foreman organization</div>
-                                                                                </td>
-            </tr>
-                                <tr>
-                                                                <td colspan="1">
-                    <b>label</b>
-                    <div style="font-size: small">
-                        <span style="color: purple">-</span>
-                                            </div>
-                                    </td>
-                                <td>
-                                                                                                                                                            </td>
-                                                                <td>
-                                                                        <div>Label of the Foreman organization</div>
+                                                                        <div>Description of the host collection</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -75,7 +63,20 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Name of the Foreman organization</div>
+                                                                        <div>Name of the host collection</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>organization</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">-</span>
+                         / <span style="color: red">required</span>                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Organization that the host collection is in</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -115,10 +116,11 @@ Parameters
                                                                                                                             <ul style="margin: 0; padding: 0"><b>Choices:</b>
                                                                                                                                                                 <li><div style="color: blue"><b>present</b>&nbsp;&larr;</div></li>
                                                                                                                                                                                                 <li>absent</li>
+                                                                                                                                                                                                <li>present_with_defaults</li>
                                                                                     </ul>
                                                                             </td>
                                                                 <td>
-                                                                        <div>State of the Organization</div>
+                                                                        <div>State of the host collection</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -136,7 +138,7 @@ Parameters
             </tr>
                                 <tr>
                                                                 <td colspan="1">
-                    <b>validate_certs</b>
+                    <b>verify_ssl</b>
                     <div style="font-size: small">
                         <span style="color: purple">boolean</span>
                                             </div>
@@ -149,8 +151,7 @@ Parameters
                                                                             </td>
                                                                 <td>
                                                                         <div>Verify SSL of the Foreman server</div>
-                                                                                        <div style="font-size: small; color: darkgreen"><br/>aliases: verify_ssl</div>
-                                    </td>
+                                                                                </td>
             </tr>
                         </table>
     <br/>
@@ -164,12 +165,14 @@ Examples
 .. code-block:: yaml+jinja
 
     
-    - name: "Create CI Organization"
-      foreman_organization:
+    - name: "Create Foo host collection"
+      katello_host_collection:
         username: "admin"
         password: "changeme"
         server_url: "https://foreman.example.com"
-        name: "My Cool New Organization"
+        name: "Foo"
+        description: "Foo host collection for Foo servers"
+        organization: "My Cool new Organization"
         state: present
 
 
@@ -194,9 +197,9 @@ Status
 Authors
 ~~~~~~~
 
-- Eric D Helms (@ehelms)
-- Matthias M Dellweg (@mdellweg) ATIX AG
+- Maxim Burgerhout (@wzzrd)
+- Christoffer Reijer (@ephracis)
 
 
 .. hint::
-    If you notice any issues in this documentation you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/foreman_organization.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr>`_ to improve it.
+    If you notice any issues in this documentation you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/katello_host_collection.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr>`_ to improve it.

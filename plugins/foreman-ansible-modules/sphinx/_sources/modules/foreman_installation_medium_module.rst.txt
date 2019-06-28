@@ -8,7 +8,6 @@
 foreman_installation_medium -- Manage Foreman Installation Medium using Foreman API
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. versionadded:: 2.5
 
 .. contents::
    :local:
@@ -190,7 +189,7 @@ Parameters
             </tr>
                                 <tr>
                                                                 <td colspan="1">
-                    <b>verify_ssl</b>
+                    <b>validate_certs</b>
                     <div style="font-size: small">
                         <span style="color: purple">boolean</span>
                                             </div>
@@ -203,7 +202,8 @@ Parameters
                                                                             </td>
                                                                 <td>
                                                                         <div>verify ssl connection when communicating with foreman</div>
-                                                                                </td>
+                                                                                        <div style="font-size: small; color: darkgreen"><br/>aliases: verify_ssl</div>
+                                    </td>
             </tr>
                         </table>
     <br/>
@@ -230,7 +230,7 @@ Examples
         server_url: "https://foreman.example.com"
         username: "admin"
         password: "secret"
-        verify_ssl: False
+        validate_certs: False
         state: present
 
 

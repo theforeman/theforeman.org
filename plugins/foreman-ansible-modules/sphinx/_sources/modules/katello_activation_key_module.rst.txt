@@ -83,6 +83,19 @@ Parameters
             </tr>
                                 <tr>
                                                                 <td colspan="1">
+                    <b>host_collections</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">list</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>List of host collections to add to activation key</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
                     <b>lifecycle_environment</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
@@ -206,7 +219,7 @@ Parameters
             </tr>
                                 <tr>
                                                                 <td colspan="1">
-                    <b>verify_ssl</b>
+                    <b>validate_certs</b>
                     <div style="font-size: small">
                         <span style="color: purple">boolean</span>
                                             </div>
@@ -219,7 +232,8 @@ Parameters
                                                                             </td>
                                                                 <td>
                                                                         <div>Verify SSL of the Foreman server</div>
-                                                                                </td>
+                                                                                        <div style="font-size: small; color: darkgreen"><br/>aliases: verify_ssl</div>
+                                    </td>
             </tr>
                         </table>
     <br/>
@@ -242,6 +256,9 @@ Examples
         organization: "Default Organization"
         lifecycle_environment: "Library"
         content_view: 'client content view'
+        host_collections:
+            - rhel7-servers
+            - rhel7-production
         subscriptions:
             - name: "Red Hat Enterprise Linux"
         content_overrides:
