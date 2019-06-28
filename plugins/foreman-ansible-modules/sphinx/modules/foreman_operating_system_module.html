@@ -145,9 +145,6 @@
             
   <div class="section" id="foreman-operating-system-manage-foreman-operating-systems">
 <span id="foreman-operating-system-module"></span><h1>foreman_operating_system – Manage Foreman Operating Systems<a class="headerlink" href="#foreman-operating-system-manage-foreman-operating-systems" title="Permalink to this headline">¶</a></h1>
-<div class="versionadded">
-<p><span class="versionmodified">New in version 2.4.</span></p>
-</div>
 <div class="contents local topic" id="contents">
 <ul class="simple">
 <li><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></li>
@@ -273,6 +270,19 @@
         </tr>
                             <tr>
                                                             <td colspan="1">
+                <b>parameters</b>
+                <div style="font-size: small">
+                    <span style="color: purple">dictionary</span>
+                                        </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>Operating System specific host parameters</div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                            <td colspan="1">
                 <b>password</b>
                 <div style="font-size: small">
                     <span style="color: purple">-</span>
@@ -387,7 +397,7 @@
         </tr>
                             <tr>
                                                             <td colspan="1">
-                <b>verify_ssl</b>
+                <b>validate_certs</b>
                 <div style="font-size: small">
                     <span style="color: purple">boolean</span>
                                         </div>
@@ -400,43 +410,44 @@
                                                                         </td>
                                                             <td>
                                                                     <div>Verify SSL of the Foreman server</div>
-                                                                            </td>
+                                                                                    <div style="font-size: small; color: darkgreen"><br/>aliases: verify_ssl</div>
+                                </td>
         </tr>
                     </table>
 <br/></div>
 <div class="section" id="examples">
 <h2><a class="toc-backref" href="#id4">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;Create</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">Operating</span><span class="nv"> </span><span class="s">System&quot;</span>
-  <span class="nt">foreman_operating_system</span><span class="p">:</span>
-    <span class="nt">username</span><span class="p">:</span> <span class="s">&quot;admin&quot;</span>
-    <span class="nt">password</span><span class="p">:</span> <span class="s">&quot;changeme&quot;</span>
-    <span class="nt">server_url</span><span class="p">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
-    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Debian 9</span>
-    <span class="nt">release_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">stretch</span>
-    <span class="nt">family</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Debian</span>
-    <span class="nt">major</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">9</span>
-    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&quot;Create</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">Operating</span><span class="nv"> </span><span class="s">System&quot;</span>
+  <span class="l l-Scalar l-Scalar-Plain">foreman_operating_system</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="s">&quot;admin&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="s">&quot;changeme&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">server_url</span><span class="p p-Indicator">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Debian 9</span>
+    <span class="l l-Scalar l-Scalar-Plain">release_name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">stretch</span>
+    <span class="l l-Scalar l-Scalar-Plain">family</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Debian</span>
+    <span class="l l-Scalar l-Scalar-Plain">major</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">9</span>
+    <span class="l l-Scalar l-Scalar-Plain">state</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
 
-<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;Ensure</span><span class="nv"> </span><span class="s">existence</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">Operating</span><span class="nv"> </span><span class="s">System</span><span class="nv"> </span><span class="s">(provide</span><span class="nv"> </span><span class="s">default</span><span class="nv"> </span><span class="s">values)&quot;</span>
-  <span class="nt">foreman_operating_system</span><span class="p">:</span>
-    <span class="nt">username</span><span class="p">:</span> <span class="s">&quot;admin&quot;</span>
-    <span class="nt">password</span><span class="p">:</span> <span class="s">&quot;changeme&quot;</span>
-    <span class="nt">server_url</span><span class="p">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
-    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Centos 7</span>
-    <span class="nt">family</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Red Hat</span>
-    <span class="nt">major</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">7</span>
-    <span class="nt">password_hash</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">SHA256</span>
-    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">present_with_defaults</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&quot;Ensure</span><span class="nv"> </span><span class="s">existence</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">Operating</span><span class="nv"> </span><span class="s">System</span><span class="nv"> </span><span class="s">(provide</span><span class="nv"> </span><span class="s">default</span><span class="nv"> </span><span class="s">values)&quot;</span>
+  <span class="l l-Scalar l-Scalar-Plain">foreman_operating_system</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="s">&quot;admin&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="s">&quot;changeme&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">server_url</span><span class="p p-Indicator">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Centos 7</span>
+    <span class="l l-Scalar l-Scalar-Plain">family</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Red Hat</span>
+    <span class="l l-Scalar l-Scalar-Plain">major</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">7</span>
+    <span class="l l-Scalar l-Scalar-Plain">password_hash</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">SHA256</span>
+    <span class="l l-Scalar l-Scalar-Plain">state</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">present_with_defaults</span>
 
-<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;Delete</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">Operating</span><span class="nv"> </span><span class="s">System&quot;</span>
-  <span class="nt">foreman_operating_system</span><span class="p">:</span>
-    <span class="nt">username</span><span class="p">:</span> <span class="s">&quot;admin&quot;</span>
-    <span class="nt">password</span><span class="p">:</span> <span class="s">&quot;changeme&quot;</span>
-    <span class="nt">server_url</span><span class="p">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
-    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Debian 9</span>
-    <span class="nt">family</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Debian</span>
-    <span class="nt">major</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">9</span>
-    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">absent</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&quot;Delete</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">Operating</span><span class="nv"> </span><span class="s">System&quot;</span>
+  <span class="l l-Scalar l-Scalar-Plain">foreman_operating_system</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="s">&quot;admin&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="s">&quot;changeme&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">server_url</span><span class="p p-Indicator">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Debian 9</span>
+    <span class="l l-Scalar l-Scalar-Plain">family</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Debian</span>
+    <span class="l l-Scalar l-Scalar-Plain">major</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">9</span>
+    <span class="l l-Scalar l-Scalar-Plain">state</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">absent</span>
 </pre></div>
 </div>
 </div>
@@ -444,7 +455,7 @@
 <h2><a class="toc-backref" href="#id5">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>This module is not guaranteed to have a backwards compatible interface. <em>[preview]</em></li>
-<li>This module is <a class="reference external" href="https://docs.ansible.com/ansible/latest/user_guide/modules_support.html#modules-support" title="(in Ansible Documentation v2.7)"><span class="xref std std-ref">maintained by the Ansible Community</span></a>. <em>[community]</em></li>
+<li>This module is <a class="reference external" href="https://docs.ansible.com/ansible/latest/user_guide/modules_support.html#modules-support" title="(in Ansible Documentation v2.8)"><span class="xref std std-ref">maintained by the Ansible Community</span></a>. <em>[community]</em></li>
 </ul>
 <div class="section" id="authors">
 <h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>

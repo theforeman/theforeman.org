@@ -51,6 +51,7 @@ Parameters
                                                                                                                                                             </td>
                                                                 <td>
                                                                         <div>Path to the manifest zip file</div>
+                                                    <div>This parameter will be ignored if <em>state=absent</em> or <em>state=refreshed</em></div>
                                                                                 </td>
             </tr>
                                 <tr>

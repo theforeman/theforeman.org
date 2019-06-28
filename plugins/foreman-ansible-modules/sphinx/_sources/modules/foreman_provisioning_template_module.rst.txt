@@ -8,7 +8,6 @@
 foreman_provisioning_template -- Manage Provisioning Template in Foreman
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. versionadded:: 2.4
 
 .. contents::
    :local:
@@ -245,7 +244,7 @@ Parameters
             </tr>
                                 <tr>
                                                                 <td colspan="1">
-                    <b>verify_ssl</b>
+                    <b>validate_certs</b>
                     <div style="font-size: small">
                         <span style="color: purple">boolean</span>
                                             </div>
@@ -258,7 +257,8 @@ Parameters
                                                                             </td>
                                                                 <td>
                                                                         <div>Verify SSL of the Foreman server</div>
-                                                                                </td>
+                                                                                        <div style="font-size: small; color: darkgreen"><br/>aliases: verify_ssl</div>
+                                    </td>
             </tr>
                         </table>
     <br/>

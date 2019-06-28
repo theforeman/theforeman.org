@@ -17,7 +17,7 @@ DEPRECATED
 ----------
 :Removed in Ansible: version: 2.8
 :Why: This has been replaced with another module.
-:Alternative: Use :ref:`foreman_fact <foreman_fact_module>` instead.
+:Alternative: Use :ref:`foreman_search_facts <foreman_search_facts_module>` instead.
 
 
 

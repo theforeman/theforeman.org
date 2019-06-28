@@ -145,9 +145,6 @@
             
   <div class="section" id="foreman-setting-manage-foreman-settings">
 <span id="foreman-setting-module"></span><h1>foreman_setting – Manage Foreman Settings<a class="headerlink" href="#foreman-setting-manage-foreman-settings" title="Permalink to this headline">¶</a></h1>
-<div class="versionadded">
-<p><span class="versionmodified">New in version 2.4.</span></p>
-</div>
 <div class="contents local topic" id="contents">
 <ul class="simple">
 <li><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></li>
@@ -235,6 +232,24 @@
         </tr>
                             <tr>
                                                             <td colspan="1">
+                <b>validate_certs</b>
+                <div style="font-size: small">
+                    <span style="color: purple">boolean</span>
+                                        </div>
+                                </td>
+                            <td>
+                                                                                                                                                                                                                <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                            <li>no</li>
+                                                                                                                                                                                            <li><div style="color: blue"><b>yes</b>&nbsp;&larr;</div></li>
+                                                                                </ul>
+                                                                        </td>
+                                                            <td>
+                                                                    <div>Verify SSL of the Foreman server</div>
+                                                                                    <div style="font-size: small; color: darkgreen"><br/>aliases: verify_ssl</div>
+                                </td>
+        </tr>
+                            <tr>
+                                                            <td colspan="1">
                 <b>value</b>
                 <div style="font-size: small">
                     <span style="color: purple">-</span>
@@ -248,47 +263,30 @@
                                                 <div>use a comma separated list for an array</div>
                                                                             </td>
         </tr>
-                            <tr>
-                                                            <td colspan="1">
-                <b>verify_ssl</b>
-                <div style="font-size: small">
-                    <span style="color: purple">boolean</span>
-                                        </div>
-                                </td>
-                            <td>
-                                                                                                                                                                                                                <ul style="margin: 0; padding: 0"><b>Choices:</b>
-                                                                                                                                                            <li>no</li>
-                                                                                                                                                                                            <li><div style="color: blue"><b>yes</b>&nbsp;&larr;</div></li>
-                                                                                </ul>
-                                                                        </td>
-                                                            <td>
-                                                                    <div>Verify SSL of the Foreman server</div>
-                                                                            </td>
-        </tr>
                     </table>
 <br/></div>
 <div class="section" id="examples">
 <h2><a class="toc-backref" href="#id4">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;Set</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Setting&quot;</span>
-  <span class="nt">foreman_setting</span><span class="p">:</span>
-    <span class="nt">username</span><span class="p">:</span> <span class="s">&quot;admin&quot;</span>
-    <span class="nt">password</span><span class="p">:</span> <span class="s">&quot;changeme&quot;</span>
-    <span class="nt">server_url</span><span class="p">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
-    <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;http_proxy&quot;</span>
-    <span class="nt">value</span><span class="p">:</span> <span class="s">&quot;http://localhost:8088&quot;</span>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&quot;Set</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Setting&quot;</span>
+  <span class="l l-Scalar l-Scalar-Plain">foreman_setting</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="s">&quot;admin&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="s">&quot;changeme&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">server_url</span><span class="p p-Indicator">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&quot;http_proxy&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">value</span><span class="p p-Indicator">:</span> <span class="s">&quot;http://localhost:8088&quot;</span>
 
-<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;Reset</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Setting&quot;</span>
-  <span class="nt">foreman_setting</span><span class="p">:</span>
-    <span class="nt">username</span><span class="p">:</span> <span class="s">&quot;admin&quot;</span>
-    <span class="nt">password</span><span class="p">:</span> <span class="s">&quot;changeme&quot;</span>
-    <span class="nt">server_url</span><span class="p">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
-    <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;http_proxy&quot;</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&quot;Reset</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Setting&quot;</span>
+  <span class="l l-Scalar l-Scalar-Plain">foreman_setting</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="s">&quot;admin&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="s">&quot;changeme&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">server_url</span><span class="p p-Indicator">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&quot;http_proxy&quot;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="return-values">
 <h2><a class="toc-backref" href="#id5">Return Values</a><a class="headerlink" href="#return-values" title="Permalink to this headline">¶</a></h2>
-<p>Common return values are documented <a class="reference external" href="https://docs.ansible.com/ansible/latest/reference_appendices/common_return_values.html#common-return-values" title="(in Ansible Documentation v2.7)"><span class="xref std std-ref">here</span></a>, the following are the fields unique to this module:</p>
+<p>Common return values are documented <a class="reference external" href="https://docs.ansible.com/ansible/latest/reference_appendices/common_return_values.html#common-return-values" title="(in Ansible Documentation v2.8)"><span class="xref std std-ref">here</span></a>, the following are the fields unique to this module:</p>
 <table border=0 cellpadding=0 class="documentation-table">
     <tr>
         <th colspan="1">Key</th>
@@ -312,7 +310,7 @@
 <h2><a class="toc-backref" href="#id6">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>This module is not guaranteed to have a backwards compatible interface. <em>[preview]</em></li>
-<li>This module is <a class="reference external" href="https://docs.ansible.com/ansible/latest/user_guide/modules_support.html#modules-support" title="(in Ansible Documentation v2.7)"><span class="xref std std-ref">maintained by the Ansible Community</span></a>. <em>[community]</em></li>
+<li>This module is <a class="reference external" href="https://docs.ansible.com/ansible/latest/user_guide/modules_support.html#modules-support" title="(in Ansible Documentation v2.8)"><span class="xref std std-ref">maintained by the Ansible Community</span></a>. <em>[community]</em></li>
 </ul>
 <div class="section" id="authors">
 <h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>

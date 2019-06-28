@@ -7,6 +7,7 @@
 
 
 
+  * :ref:`foreman_auth_source_ldap_module` 
   * :ref:`foreman_bookmark_module` 
   * :ref:`foreman_compute_profile_module` 
   * :ref:`foreman_compute_resource_module` 
@@ -24,10 +25,12 @@
   * :ref:`foreman_provisioning_template_module` 
   * :ref:`foreman_ptable_module` 
   * :ref:`foreman_realm_module` 
+  * :ref:`foreman_role_module` 
   * :ref:`foreman_search_facts_module` 
   * :ref:`foreman_setting_module` 
   * :ref:`foreman_setting_facts_module` 
   * :ref:`foreman_subnet_module` 
+  * :ref:`foreman_user_module` 
   * :ref:`katello_activation_key_module` 
   * :ref:`katello_content_credential_module` 
   * :ref:`katello_content_view_module` 
@@ -35,6 +38,7 @@
   * :ref:`katello_content_view_publish_module` 
   * :ref:`katello_content_view_version_module` 
   * :ref:`katello_content_view_version_promote_module` 
+  * :ref:`katello_host_collection_module` 
   * :ref:`katello_lifecycle_environment_module` 
   * :ref:`katello_manifest_module` 
   * :ref:`katello_product_module` 

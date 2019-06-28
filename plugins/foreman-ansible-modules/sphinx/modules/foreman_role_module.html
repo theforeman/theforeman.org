@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>katello_product – Create and Manage Katello products &mdash; Foreman Ansible Modules  documentation</title>
+  <title>foreman_role – Manage Foreman Roles using Foreman API &mdash; Foreman Ansible Modules  documentation</title>
   
 
   
@@ -124,13 +124,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>katello_product – Create and Manage Katello products</li>
+      <li>foreman_role – Manage Foreman Roles using Foreman API</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/modules/katello_product_module.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/modules/foreman_role_module.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -143,8 +143,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="katello-product-create-and-manage-katello-products">
-<span id="katello-product-module"></span><h1>katello_product – Create and Manage Katello products<a class="headerlink" href="#katello-product-create-and-manage-katello-products" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="foreman-role-manage-foreman-roles-using-foreman-api">
+<span id="foreman-role-module"></span><h1>foreman_role – Manage Foreman Roles using Foreman API<a class="headerlink" href="#foreman-role-manage-foreman-roles-using-foreman-api" title="Permalink to this headline">¶</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
 <li><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></li>
@@ -157,16 +157,14 @@
 <div class="section" id="synopsis">
 <h2><a class="toc-backref" href="#id1">Synopsis</a><a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Create and Manage Katello products</li>
+<li>Create and Delete Foreman Roles using Foreman API</li>
 </ul>
 </div>
 <div class="section" id="requirements">
 <h2><a class="toc-backref" href="#id2">Requirements</a><a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <p>The below requirements are needed on the host that executes this module.</p>
 <ul class="simple">
-<li>nailgun &gt;= 0.32.0</li>
-<li>python &gt;= 2.6</li>
-<li>ansible &gt;= 2.3</li>
+<li>apypie</li>
 </ul>
 </div>
 <div class="section" id="parameters">
@@ -187,33 +185,21 @@
                             <td>
                                                                                                                                                         </td>
                                                             <td>
-                                                                    <div>Possibly long descriptionto show the user in detail view</div>
+                                                                    <div>Description of the role</div>
                                                                             </td>
         </tr>
                             <tr>
                                                             <td colspan="1">
-                <b>gpg_key</b>
+                <b>locations</b>
                 <div style="font-size: small">
-                    <span style="color: purple">-</span>
+                    <span style="color: purple">list</span>
                                         </div>
                                 </td>
                             <td>
-                                                                                                                                                        </td>
-                                                            <td>
-                                                                    <div>Content GPG key name attached to this product</div>
-                                                                            </td>
-        </tr>
-                            <tr>
-                                                            <td colspan="1">
-                <b>label</b>
-                <div style="font-size: small">
-                    <span style="color: purple">-</span>
-                                        </div>
+                                                                                                                                                                <b>Default:</b><br/><div style="color: blue">None</div>
                                 </td>
-                            <td>
-                                                                                                                                                        </td>
                                                             <td>
-                                                                    <div>Label to show the user</div>
+                                                                    <div>List of locations the role should be assigned to</div>
                                                                             </td>
         </tr>
                             <tr>
@@ -226,20 +212,21 @@
                             <td>
                                                                                                                                                         </td>
                                                             <td>
-                                                                    <div>Name of the Katello product</div>
+                                                                    <div>The name of the role</div>
                                                                             </td>
         </tr>
                             <tr>
                                                             <td colspan="1">
-                <b>organization</b>
+                <b>organizations</b>
                 <div style="font-size: small">
-                    <span style="color: purple">-</span>
-                     / <span style="color: red">required</span>                    </div>
+                    <span style="color: purple">list</span>
+                                        </div>
                                 </td>
                             <td>
-                                                                                                                                                        </td>
+                                                                                                                                                                <b>Default:</b><br/><div style="color: blue">None</div>
+                                </td>
                                                             <td>
-                                                                    <div>Organization that the Product is in</div>
+                                                                    <div>List of organizations the role should be assigned to</div>
                                                                             </td>
         </tr>
                             <tr>
@@ -252,7 +239,7 @@
                             <td>
                                                                                                                                                         </td>
                                                             <td>
-                                                                    <div>Password for user accessing Foreman server</div>
+                                                                    <div>foreman user password</div>
                                                                             </td>
         </tr>
                             <tr>
@@ -265,7 +252,7 @@
                             <td>
                                                                                                                                                         </td>
                                                             <td>
-                                                                    <div>URL of Foreman server</div>
+                                                                    <div>foreman url</div>
                                                                             </td>
         </tr>
                             <tr>
@@ -279,24 +266,10 @@
                                                                                                                         <ul style="margin: 0; padding: 0"><b>Choices:</b>
                                                                                                                                                             <li><div style="color: blue"><b>present</b>&nbsp;&larr;</div></li>
                                                                                                                                                                                             <li>absent</li>
-                                                                                                                                                                                            <li>present_with_defaults</li>
                                                                                 </ul>
                                                                         </td>
                                                             <td>
-                                                                    <div>State of the Product</div>
-                                                                            </td>
-        </tr>
-                            <tr>
-                                                            <td colspan="1">
-                <b>sync_plan</b>
-                <div style="font-size: small">
-                    <span style="color: purple">-</span>
-                                        </div>
-                                </td>
-                            <td>
-                                                                                                                                                        </td>
-                                                            <td>
-                                                                    <div>Sync plan name attached to this product</div>
+                                                                    <div>role presence</div>
                                                                             </td>
         </tr>
                             <tr>
@@ -309,7 +282,7 @@
                             <td>
                                                                                                                                                         </td>
                                                             <td>
-                                                                    <div>Username on Foreman server</div>
+                                                                    <div>foreman username</div>
                                                                             </td>
         </tr>
                             <tr>
@@ -326,7 +299,7 @@
                                                                                 </ul>
                                                                         </td>
                                                             <td>
-                                                                    <div>Verify SSL of the Foreman server</div>
+                                                                    <div>verify ssl connection when communicating with foreman</div>
                                                                                     <div style="font-size: small; color: darkgreen"><br/>aliases: verify_ssl</div>
                                 </td>
         </tr>
@@ -334,24 +307,18 @@
 <br/></div>
 <div class="section" id="examples">
 <h2><a class="toc-backref" href="#id4">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&quot;Create</span><span class="nv"> </span><span class="s">Fedora</span><span class="nv"> </span><span class="s">product</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">sync</span><span class="nv"> </span><span class="s">plan&quot;</span>
-  <span class="l l-Scalar l-Scalar-Plain">katello_product</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="s">&quot;admin&quot;</span>
-    <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="s">&quot;changeme&quot;</span>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">role</span>
+  <span class="l l-Scalar l-Scalar-Plain">foreman_role</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&quot;Provisioner&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">description</span><span class="p p-Indicator">:</span> <span class="s">&quot;Only</span><span class="nv"> </span><span class="s">provision</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">libvirt&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">locations</span><span class="p p-Indicator">:</span>
+      <span class="p p-Indicator">-</span> <span class="s">&quot;Uppsala&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">organizations</span><span class="p p-Indicator">:</span>
+      <span class="p p-Indicator">-</span> <span class="s">&quot;Basalt&quot;</span>
     <span class="l l-Scalar l-Scalar-Plain">server_url</span><span class="p p-Indicator">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
-    <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&quot;Fedora&quot;</span>
-    <span class="l l-Scalar l-Scalar-Plain">organization</span><span class="p p-Indicator">:</span> <span class="s">&quot;My</span><span class="nv"> </span><span class="s">Cool</span><span class="nv"> </span><span class="s">new</span><span class="nv"> </span><span class="s">Organization&quot;</span>
-    <span class="l l-Scalar l-Scalar-Plain">sync_plan</span><span class="p p-Indicator">:</span> <span class="s">&quot;Fedora</span><span class="nv"> </span><span class="s">repos</span><span class="nv"> </span><span class="s">sync&quot;</span>
-    <span class="l l-Scalar l-Scalar-Plain">state</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
-
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&quot;Create</span><span class="nv"> </span><span class="s">CentOS</span><span class="nv"> </span><span class="s">7</span><span class="nv"> </span><span class="s">product</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">content</span><span class="nv"> </span><span class="s">credentials&quot;</span>
-  <span class="l l-Scalar l-Scalar-Plain">katello_product</span><span class="p p-Indicator">:</span>
     <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="s">&quot;admin&quot;</span>
-    <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="s">&quot;changeme&quot;</span>
-    <span class="l l-Scalar l-Scalar-Plain">server_url</span><span class="p p-Indicator">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
-    <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&quot;CentOS</span><span class="nv"> </span><span class="s">7&quot;</span>
-    <span class="l l-Scalar l-Scalar-Plain">gpg_key</span><span class="p p-Indicator">:</span> <span class="s">&quot;RPM-GPG-KEY-CentOS7&quot;</span>
-    <span class="l l-Scalar l-Scalar-Plain">organization</span><span class="p p-Indicator">:</span> <span class="s">&quot;My</span><span class="nv"> </span><span class="s">Cool</span><span class="nv"> </span><span class="s">new</span><span class="nv"> </span><span class="s">Organization&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="s">&quot;secret&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">validate_certs</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
     <span class="l l-Scalar l-Scalar-Plain">state</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
 </pre></div>
 </div>
@@ -365,12 +332,11 @@
 <div class="section" id="authors">
 <h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Eric D Helms (&#64;ehelms)</li>
-<li>Matthias Dellweg (&#64;mdellweg) ATIX AG</li>
+<li>Christoffer Reijer (&#64;ephracis) Basalt AB</li>
 </ul>
 <div class="admonition hint">
 <p class="first admonition-title">Hint</p>
-<p class="last">If you notice any issues in this documentation you can <a class="reference external" href="https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/katello_product.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr">edit this document</a> to improve it.</p>
+<p class="last">If you notice any issues in this documentation you can <a class="reference external" href="https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/foreman_role.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr">edit this document</a> to improve it.</p>
 </div>
 </div>
 </div>

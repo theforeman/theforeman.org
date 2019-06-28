@@ -1,12 +1,12 @@
-:source: foreman_organization.py
+:source: foreman_role.py
 
 :orphan:
 
-.. _foreman_organization_module:
+.. _foreman_role_module:
 
 
-foreman_organization -- Manage Foreman Organization
-+++++++++++++++++++++++++++++++++++++++++++++++++++
+foreman_role -- Manage Foreman Roles using Foreman API
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 .. contents::
@@ -16,7 +16,7 @@ foreman_organization -- Manage Foreman Organization
 
 Synopsis
 --------
-- Manage Foreman Organization
+- Create and Delete Foreman Roles using Foreman API
 
 
 
@@ -24,8 +24,7 @@ Requirements
 ------------
 The below requirements are needed on the host that executes this module.
 
-- python >= 2.6
-- ansible >= 2.3
+- apypie
 
 
 Parameters
@@ -49,20 +48,21 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Description of the Foreman organization</div>
+                                                                        <div>Description of the role</div>
                                                                                 </td>
             </tr>
                                 <tr>
                                                                 <td colspan="1">
-                    <b>label</b>
+                    <b>locations</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">list</span>
                                             </div>
                                     </td>
                                 <td>
-                                                                                                                                                            </td>
+                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">None</div>
+                                    </td>
                                                                 <td>
-                                                                        <div>Label of the Foreman organization</div>
+                                                                        <div>List of locations the role should be assigned to</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -75,7 +75,21 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Name of the Foreman organization</div>
+                                                                        <div>The name of the role</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>organizations</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">list</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">None</div>
+                                    </td>
+                                                                <td>
+                                                                        <div>List of organizations the role should be assigned to</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -88,7 +102,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Password for user accessing Foreman server</div>
+                                                                        <div>foreman user password</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -101,7 +115,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>URL of Foreman server</div>
+                                                                        <div>foreman url</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -118,7 +132,7 @@ Parameters
                                                                                     </ul>
                                                                             </td>
                                                                 <td>
-                                                                        <div>State of the Organization</div>
+                                                                        <div>role presence</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -131,7 +145,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Username on Foreman server</div>
+                                                                        <div>foreman username</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -148,7 +162,7 @@ Parameters
                                                                                     </ul>
                                                                             </td>
                                                                 <td>
-                                                                        <div>Verify SSL of the Foreman server</div>
+                                                                        <div>verify ssl connection when communicating with foreman</div>
                                                                                         <div style="font-size: small; color: darkgreen"><br/>aliases: verify_ssl</div>
                                     </td>
             </tr>
@@ -164,12 +178,18 @@ Examples
 .. code-block:: yaml+jinja
 
     
-    - name: "Create CI Organization"
-      foreman_organization:
-        username: "admin"
-        password: "changeme"
+    - name: role
+      foreman_role:
+        name: "Provisioner"
+        description: "Only provision on libvirt"
+        locations:
+          - "Uppsala"
+        organizations:
+          - "Basalt"
         server_url: "https://foreman.example.com"
-        name: "My Cool New Organization"
+        username: "admin"
+        password: "secret"
+        validate_certs: False
         state: present
 
 
@@ -194,9 +214,8 @@ Status
 Authors
 ~~~~~~~
 
-- Eric D Helms (@ehelms)
-- Matthias M Dellweg (@mdellweg) ATIX AG
+- Christoffer Reijer (@ephracis) Basalt AB
 
 
 .. hint::
-    If you notice any issues in this documentation you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/foreman_organization.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr>`_ to improve it.
+    If you notice any issues in this documentation you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/foreman_role.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr>`_ to improve it.

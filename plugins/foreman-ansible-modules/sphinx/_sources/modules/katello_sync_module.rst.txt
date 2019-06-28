@@ -133,7 +133,7 @@ Parameters
             </tr>
                                 <tr>
                                                                 <td colspan="1">
-                    <b>verify_ssl</b>
+                    <b>validate_certs</b>
                     <div style="font-size: small">
                         <span style="color: purple">boolean</span>
                                             </div>
@@ -146,7 +146,8 @@ Parameters
                                                                             </td>
                                                                 <td>
                                                                         <div>verify ssl connection when communicating with foreman</div>
-                                                                                </td>
+                                                                                        <div style="font-size: small; color: darkgreen"><br/>aliases: verify_ssl</div>
+                                    </td>
             </tr>
                         </table>
     <br/>
@@ -175,7 +176,7 @@ Examples
         username: "admin"
         password: "changeme"
         server_url: "https://foreman.example.com"
-        resource: Repository
+        resource: repositories
       register: repositories
 
     - name: Kick off repository Sync tasks
