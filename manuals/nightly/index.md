@@ -64,6 +64,8 @@ previous_version: "1.22"
 {%include manuals/{{ page.version }}/3.5.6_cli.md %}
 ## 3.6 Upgrade
 {%include manuals/{{ page.version }}/3.6_upgrade.md %}
+## 3.7 Migrating to PostgreSQL
+{%include manuals/{{ page.version }}/3.7_migration.md %}
 
 # 4. General Foreman
 {%include manuals/{{ page.version }}/4_general_foreman.md %}
