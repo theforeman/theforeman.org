@@ -7,6 +7,8 @@ tags:
 - foreman
 ---
 
+*The [official Foreman manual](/manuals/1.23/index.html#3.7MigratingtoPostgreSQL) now contains the up to date and recommended migration procedure, please follow the instructions there.*
+
 While Foreman supports both MySQL and Postgresql as a database management system, Katello requires Postgresql. If you want to add the Katello plugin on an existing Foreman setup with MySQL, you need to migrate your database. But there are other reasons why you might want to switch your database management system. This blog post describes what steps are required to migrate your data.
 
 
