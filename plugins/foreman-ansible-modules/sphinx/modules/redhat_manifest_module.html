@@ -148,10 +148,9 @@
 <div class="contents local topic" id="contents">
 <ul class="simple">
 <li><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></li>
-<li><a class="reference internal" href="#requirements" id="id2">Requirements</a></li>
-<li><a class="reference internal" href="#parameters" id="id3">Parameters</a></li>
-<li><a class="reference internal" href="#examples" id="id4">Examples</a></li>
-<li><a class="reference internal" href="#status" id="id5">Status</a></li>
+<li><a class="reference internal" href="#parameters" id="id2">Parameters</a></li>
+<li><a class="reference internal" href="#examples" id="id3">Examples</a></li>
+<li><a class="reference internal" href="#status" id="id4">Status</a></li>
 </ul>
 </div>
 <div class="section" id="synopsis">
@@ -160,17 +159,8 @@
 <li>Download and modify a Red Hat Satellite Subscription Manifest</li>
 </ul>
 </div>
-<div class="section" id="requirements">
-<h2><a class="toc-backref" href="#id2">Requirements</a><a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
-<p>The below requirements are needed on the host that executes this module.</p>
-<ul class="simple">
-<li>nailgun &gt;= 0.28.0</li>
-<li>python &gt;= 2.6</li>
-<li>ansible &gt;= 2.3</li>
-</ul>
-</div>
 <div class="section" id="parameters">
-<h2><a class="toc-backref" href="#id3">Parameters</a><a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Parameters</a><a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
 <table  border=0 cellpadding=0 class="documentation-table">
     <tr>
         <th colspan="1">Parameter</th>
@@ -336,7 +326,7 @@
                     </table>
 <br/></div>
 <div class="section" id="examples">
-<h2><a class="toc-backref" href="#id4">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Create katello.example.com Manifest and add 7 sub</span>
   <span class="l l-Scalar l-Scalar-Plain">redhat_manifest</span><span class="p p-Indicator">:</span>
     <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&quot;katello.example.com&quot;</span>
@@ -344,7 +334,6 @@
     <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="s">&quot;changeme&quot;</span>
     <span class="l l-Scalar l-Scalar-Plain">pool_id</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span>
     <span class="l l-Scalar l-Scalar-Plain">quantity</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">7</span>
-    <span class="l l-Scalar l-Scalar-Plain">validate_certs</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
 
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Ensure my manifest has 10 of one subs in it and export</span>
   <span class="l l-Scalar l-Scalar-Plain">redhat_manifest</span><span class="p p-Indicator">:</span>
@@ -353,7 +342,6 @@
     <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">changeme</span>
     <span class="l l-Scalar l-Scalar-Plain">pool_id</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span>
     <span class="l l-Scalar l-Scalar-Plain">quantity</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
-    <span class="l l-Scalar l-Scalar-Plain">validate_certs</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
     <span class="l l-Scalar l-Scalar-Plain">path</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">/root/manifest.zip</span>
 
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Remove all of one subs from katello.example.com</span>
@@ -363,12 +351,11 @@
     <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">changeme</span>
     <span class="l l-Scalar l-Scalar-Plain">pool_id</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span>
     <span class="l l-Scalar l-Scalar-Plain">pool_state</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">absent</span>
-    <span class="l l-Scalar l-Scalar-Plain">validate_certs</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="status">
-<h2><a class="toc-backref" href="#id5">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id4">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>This module is not guaranteed to have a backwards compatible interface. <em>[preview]</em></li>
 <li>This module is <a class="reference external" href="https://docs.ansible.com/ansible/latest/user_guide/modules_support.html#modules-support" title="(in Ansible Documentation v2.8)"><span class="xref std std-ref">maintained by the Ansible Community</span></a>. <em>[community]</em></li>

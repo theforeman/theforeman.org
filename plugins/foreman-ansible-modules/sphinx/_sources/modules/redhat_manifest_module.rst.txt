@@ -20,14 +20,6 @@ Synopsis
 
 
 
-Requirements
-------------
-The below requirements are needed on the host that executes this module.
-
-- nailgun >= 0.28.0
-- python >= 2.6
-- ansible >= 2.3
-
 
 Parameters
 ----------
@@ -215,7 +207,6 @@ Examples
         password: "changeme"
         pool_id: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
         quantity: 7
-        validate_certs: false
 
     - name: Ensure my manifest has 10 of one subs in it and export
       redhat_manifest:
@@ -224,7 +215,6 @@ Examples
         password: changeme
         pool_id: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
         quantity: 10
-        validate_certs: false
         path: /root/manifest.zip
 
     - name: Remove all of one subs from katello.example.com
@@ -234,7 +224,6 @@ Examples
         password: changeme
         pool_id: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
         pool_state: absent
-        validate_certs: false
 
 
 

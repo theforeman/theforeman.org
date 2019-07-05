@@ -165,8 +165,6 @@
 <p>The below requirements are needed on the host that executes this module.</p>
 <ul class="simple">
 <li>nailgun &gt;= 0.28.0</li>
-<li>python &gt;= 2.6</li>
-<li>ansible &gt;= 2.3</li>
 </ul>
 </div>
 <div class="section" id="parameters">
@@ -230,7 +228,7 @@
                             <td>
                                                                                                                                                         </td>
                                                             <td>
-                                                                    <div>Password for user accessing Foreman server</div>
+                                                                    <div>Password of the user accessing the Foreman server</div>
                                                                             </td>
         </tr>
                             <tr>
@@ -269,7 +267,7 @@
                             <td>
                                                                                                                                                         </td>
                                                             <td>
-                                                                    <div>URL of Foreman server</div>
+                                                                    <div>URL of the Foreman server</div>
                                                                             </td>
         </tr>
                             <tr>
@@ -299,21 +297,24 @@
                             <td>
                                                                                                                                                         </td>
                                                             <td>
-                                                                    <div>Username on Foreman server</div>
+                                                                    <div>Username accessing the Foreman server</div>
                                                                             </td>
         </tr>
                             <tr>
                                                             <td colspan="1">
                 <b>validate_certs</b>
                 <div style="font-size: small">
-                    <span style="color: purple">-</span>
+                    <span style="color: purple">boolean</span>
                                         </div>
                                 </td>
                             <td>
-                                                                                                                                                                                                            <b>Default:</b><br/><div style="color: blue">yes</div>
-                                </td>
+                                                                                                                                                                                                                <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                            <li>no</li>
+                                                                                                                                                                                            <li><div style="color: blue"><b>yes</b>&nbsp;&larr;</div></li>
+                                                                                </ul>
+                                                                        </td>
                                                             <td>
-                                                                    <div>Verify SSL of the Foreman server</div>
+                                                                    <div>Whether or not to verify the TLS certificates of the Foreman server</div>
                                                                                     <div style="font-size: small; color: darkgreen"><br/>aliases: verify_ssl</div>
                                 </td>
         </tr>
@@ -326,7 +327,6 @@
     <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="s">&quot;admin&quot;</span>
     <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="s">&quot;changeme&quot;</span>
     <span class="l l-Scalar l-Scalar-Plain">server_url</span><span class="p p-Indicator">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
-    <span class="l l-Scalar l-Scalar-Plain">validate_certs</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
     <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&quot;Red</span><span class="nv"> </span><span class="s">Hat</span><span class="nv"> </span><span class="s">Enterprise</span><span class="nv"> </span><span class="s">Linux</span><span class="nv"> </span><span class="s">7</span><span class="nv"> </span><span class="s">Server</span><span class="nv"> </span><span class="s">(RPMs)&quot;</span>
     <span class="l l-Scalar l-Scalar-Plain">organization</span><span class="p p-Indicator">:</span> <span class="s">&quot;Default</span><span class="nv"> </span><span class="s">Organization&quot;</span>
     <span class="l l-Scalar l-Scalar-Plain">product</span><span class="p p-Indicator">:</span> <span class="s">&quot;Red</span><span class="nv"> </span><span class="s">Hat</span><span class="nv"> </span><span class="s">Enterprise</span><span class="nv"> </span><span class="s">Linux</span><span class="nv"> </span><span class="s">Server&quot;</span>
@@ -346,7 +346,6 @@
     <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="s">&quot;admin&quot;</span>
     <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="s">&quot;changeme&quot;</span>
     <span class="l l-Scalar l-Scalar-Plain">server_url</span><span class="p p-Indicator">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
-    <span class="l l-Scalar l-Scalar-Plain">validate_certs</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
     <span class="l l-Scalar l-Scalar-Plain">organization</span><span class="p p-Indicator">:</span> <span class="s">&quot;Default</span><span class="nv"> </span><span class="s">Organization&quot;</span>
     <span class="l l-Scalar l-Scalar-Plain">label</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">rhel-7-server-rpms</span>
     <span class="l l-Scalar l-Scalar-Plain">repositories</span><span class="p p-Indicator">:</span>
@@ -365,7 +364,6 @@
     <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="s">&quot;admin&quot;</span>
     <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="s">&quot;changeme&quot;</span>
     <span class="l l-Scalar l-Scalar-Plain">server_url</span><span class="p p-Indicator">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
-    <span class="l l-Scalar l-Scalar-Plain">validate_certs</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
     <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Red Hat Enterprise Linux 7 Server - Extras (RPMs)</span>
     <span class="l l-Scalar l-Scalar-Plain">organization</span><span class="p p-Indicator">:</span> <span class="s">&quot;Default</span><span class="nv"> </span><span class="s">Organization&quot;</span>
     <span class="l l-Scalar l-Scalar-Plain">product</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Red Hat Enterprise Linux Server</span>

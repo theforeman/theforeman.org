@@ -1,12 +1,12 @@
-:source: foreman_organization.py
+:source: foreman_hostgroup.py
 
 :orphan:
 
-.. _foreman_organization_module:
+.. _foreman_hostgroup_module:
 
 
-foreman_organization -- Manage Foreman Organization
-+++++++++++++++++++++++++++++++++++++++++++++++++++
+foreman_hostgroup -- Manage Foreman Hostgroups using Foreman API
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 .. contents::
@@ -16,7 +16,7 @@ foreman_organization -- Manage Foreman Organization
 
 Synopsis
 --------
-- Manage Foreman Organization
+- Create, Update and Delete Foreman Hostgroups using Foreman API
 
 
 
@@ -24,7 +24,7 @@ Requirements
 ------------
 The below requirements are needed on the host that executes this module.
 
-- apypie
+- apypie >= 0.0.1
 
 
 Parameters
@@ -40,6 +40,20 @@ Parameters
         </tr>
                     <tr>
                                                                 <td colspan="1">
+                    <b>architecture</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">-</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">None</div>
+                                    </td>
+                                                                <td>
+                                                                        <div>Architecture name</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
                     <b>description</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
@@ -48,20 +62,21 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Description of the Foreman organization</div>
+                                                                        <div>Description of hostgroup</div>
                                                                                 </td>
             </tr>
                                 <tr>
                                                                 <td colspan="1">
-                    <b>label</b>
+                    <b>medium</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
                                             </div>
                                     </td>
                                 <td>
-                                                                                                                                                            </td>
+                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">None</div>
+                                    </td>
                                                                 <td>
-                                                                        <div>Label of the Foreman organization</div>
+                                                                        <div>Medium name</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -74,7 +89,35 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Name of the Foreman organization</div>
+                                                                        <div>Name of hostgroup</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>operatingsystem</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">-</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">None</div>
+                                    </td>
+                                                                <td>
+                                                                        <div>Operatingsystem name</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>partition_table</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">-</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">None</div>
+                                    </td>
+                                                                <td>
+                                                                        <div>Partition table name</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -88,6 +131,20 @@ Parameters
                                                                                                                                                             </td>
                                                                 <td>
                                                                         <div>Password of the user accessing the Foreman server</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>root_pass</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">-</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">None</div>
+                                    </td>
+                                                                <td>
+                                                                        <div>root password</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -117,7 +174,7 @@ Parameters
                                                                                     </ul>
                                                                             </td>
                                                                 <td>
-                                                                        <div>State of the Organization</div>
+                                                                        <div>Hostgroup presence</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -163,13 +220,38 @@ Examples
 .. code-block:: yaml+jinja
 
     
-    - name: "Create CI Organization"
-      foreman_organization:
-        username: "admin"
-        password: "changeme"
+    - name: "Create a Hostgroup"
+      foreman_hostgroup:
+        name: "new_hostgroup"
+        architecture: "architecture_name"
+        operatingsystem: "operatingsystem_name"
+        medium: "media_name"
+        ptable: "Partition_table_name"
         server_url: "https://foreman.example.com"
-        name: "My Cool New Organization"
+        username: "admin"
+        password: "secret"
         state: present
+
+    - name: "Update a Hostgroup"
+      foreman_hostgroup:
+        name: "new_hostgroup"
+        architecture: "updated_architecture_name"
+        operatingsystem: "updated_operatingsystem_name"
+        medium: "updated_media_name"
+        ptable: "updated_Partition_table_name"
+        root_pass: "password"
+        server_url: "https://foreman.example.com"
+        username: "admin"
+        password: "secret"
+        state: present
+
+    - name: "Delete a Hostgroup"
+      foreman_hostgroup:
+        name: "new_hostgroup"
+        server_url: "https://foreman.example.com"
+        username: "admin"
+        password: "secret"
+        state: absent
 
 
 
@@ -193,9 +275,8 @@ Status
 Authors
 ~~~~~~~
 
-- Eric D Helms (@ehelms)
-- Matthias M Dellweg (@mdellweg) ATIX AG
+- Manisha Singhal (@Manisha15) ATIX AG
 
 
 .. hint::
-    If you notice any issues in this documentation you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/foreman_organization.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr>`_ to improve it.
+    If you notice any issues in this documentation you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/foreman_hostgroup.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr>`_ to improve it.
