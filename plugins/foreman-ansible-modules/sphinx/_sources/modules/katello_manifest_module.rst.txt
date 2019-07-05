@@ -25,8 +25,6 @@ Requirements
 The below requirements are needed on the host that executes this module.
 
 - nailgun >= 0.29.0
-- python >= 2.6
-- ansible >= 2.3
 
 
 Parameters
@@ -172,7 +170,6 @@ Examples
         username: "admin"
         password: "changeme"
         server_url: "https://foreman.example.com"
-        verify_ssl: false
         organization: "Default Organization"
         state: present
         manifest_path: "/tmp/manifest.zip"

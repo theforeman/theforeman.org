@@ -26,7 +26,6 @@ Requirements
 The below requirements are needed on the host that executes this module.
 
 - nailgun >= 0.29.0
-- ansible >= 2.3
 
 
 Parameters
@@ -63,7 +62,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Password for user accessing Foreman server</div>
+                                                                        <div>Password of the user accessing the Foreman server</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -89,7 +88,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>URL of Foreman server</div>
+                                                                        <div>URL of the Foreman server</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -133,7 +132,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Username on Foreman server</div>
+                                                                        <div>Username accessing the Foreman server</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -150,7 +149,7 @@ Parameters
                                                                                     </ul>
                                                                             </td>
                                                                 <td>
-                                                                        <div>Verify SSL of the Foreman server</div>
+                                                                        <div>Whether or not to verify the TLS certificates of the Foreman server</div>
                                                                                         <div style="font-size: small; color: darkgreen"><br/>aliases: verify_ssl</div>
                                     </td>
             </tr>

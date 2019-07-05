@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>foreman_environment – Manage Foreman Environment (Puppet) using Foreman API &mdash; Foreman Ansible Modules  documentation</title>
+  <title>foreman_compute_attribute – Manage Foreman Compute Attributes &mdash; Foreman Ansible Modules  documentation</title>
   
 
   
@@ -124,13 +124,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>foreman_environment – Manage Foreman Environment (Puppet) using Foreman API</li>
+      <li>foreman_compute_attribute – Manage Foreman Compute Attributes</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/modules/foreman_environment_module.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/modules/foreman_compute_attribute_module.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -143,8 +143,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="foreman-environment-manage-foreman-environment-puppet-using-foreman-api">
-<span id="foreman-environment-module"></span><h1>foreman_environment – Manage Foreman Environment (Puppet) using Foreman API<a class="headerlink" href="#foreman-environment-manage-foreman-environment-puppet-using-foreman-api" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="foreman-compute-attribute-manage-foreman-compute-attributes">
+<span id="foreman-compute-attribute-module"></span><h1>foreman_compute_attribute – Manage Foreman Compute Attributes<a class="headerlink" href="#foreman-compute-attribute-manage-foreman-compute-attributes" title="Permalink to this headline">¶</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
 <li><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></li>
@@ -157,14 +157,15 @@
 <div class="section" id="synopsis">
 <h2><a class="toc-backref" href="#id1">Synopsis</a><a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Create and Delete Foreman Environment using Foreman API</li>
+<li>Manage Foreman Compute Attributes</li>
+<li>This beta version can create, and update compute attributes</li>
 </ul>
 </div>
 <div class="section" id="requirements">
 <h2><a class="toc-backref" href="#id2">Requirements</a><a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <p>The below requirements are needed on the host that executes this module.</p>
 <ul class="simple">
-<li>apypie</li>
+<li>apypie &gt;= 0.0.1</li>
 </ul>
 </div>
 <div class="section" id="parameters">
@@ -177,20 +178,7 @@
     </tr>
                 <tr>
                                                             <td colspan="1">
-                <b>locations</b>
-                <div style="font-size: small">
-                    <span style="color: purple">list</span>
-                                        </div>
-                                </td>
-                            <td>
-                                                                                                                                                        </td>
-                                                            <td>
-                                                                    <div>List of locations the environent should be assigned to</div>
-                                                                            </td>
-        </tr>
-                            <tr>
-                                                            <td colspan="1">
-                <b>name</b>
+                <b>compute_profile</b>
                 <div style="font-size: small">
                     <span style="color: purple">-</span>
                      / <span style="color: red">required</span>                    </div>
@@ -198,20 +186,20 @@
                             <td>
                                                                                                                                                         </td>
                                                             <td>
-                                                                    <div>The full environment name</div>
+                                                                    <div>Name of compute profile</div>
                                                                             </td>
         </tr>
                             <tr>
                                                             <td colspan="1">
-                <b>organizations</b>
+                <b>compute_resource</b>
                 <div style="font-size: small">
-                    <span style="color: purple">list</span>
-                                        </div>
+                    <span style="color: purple">-</span>
+                     / <span style="color: red">required</span>                    </div>
                                 </td>
                             <td>
                                                                                                                                                         </td>
                                                             <td>
-                                                                    <div>List of organizations the environment should be assigned to</div>
+                                                                    <div>Name of compute resource</div>
                                                                             </td>
         </tr>
                             <tr>
@@ -238,23 +226,6 @@
                                                                                                                                                         </td>
                                                             <td>
                                                                     <div>URL of the Foreman server</div>
-                                                                            </td>
-        </tr>
-                            <tr>
-                                                            <td colspan="1">
-                <b>state</b>
-                <div style="font-size: small">
-                    <span style="color: purple">-</span>
-                                        </div>
-                                </td>
-                            <td>
-                                                                                                                        <ul style="margin: 0; padding: 0"><b>Choices:</b>
-                                                                                                                                                            <li><div style="color: blue"><b>present</b>&nbsp;&larr;</div></li>
-                                                                                                                                                                                            <li>absent</li>
-                                                                                </ul>
-                                                                        </td>
-                                                            <td>
-                                                                    <div>environment presence</div>
                                                                             </td>
         </tr>
                             <tr>
@@ -288,20 +259,41 @@
                                                                                     <div style="font-size: small; color: darkgreen"><br/>aliases: verify_ssl</div>
                                 </td>
         </tr>
+                            <tr>
+                                                            <td colspan="1">
+                <b>vm_attributes</b>
+                <div style="font-size: small">
+                    <span style="color: purple">-</span>
+                     / <span style="color: red">required</span>                    </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>Hash containing the data of vm_attrs</div>
+                                                                            </td>
+        </tr>
                     </table>
 <br/></div>
 <div class="section" id="examples">
 <h2><a class="toc-backref" href="#id4">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">create new environment</span>
-  <span class="l l-Scalar l-Scalar-Plain">foreman_environment</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&quot;testing&quot;</span>
-    <span class="l l-Scalar l-Scalar-Plain">locations</span><span class="p p-Indicator">:</span>
-      <span class="p p-Indicator">-</span> <span class="s">&quot;Munich&quot;</span>
-    <span class="l l-Scalar l-Scalar-Plain">organizations</span><span class="p p-Indicator">:</span>
-      <span class="p p-Indicator">-</span> <span class="s">&quot;ATIX&quot;</span>
-    <span class="l l-Scalar l-Scalar-Plain">server_url</span><span class="p p-Indicator">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&quot;Create</span><span class="nv"> </span><span class="s">compute</span><span class="nv"> </span><span class="s">attribute&quot;</span>
+  <span class="l l-Scalar l-Scalar-Plain">foreman_compute_attribute</span><span class="p p-Indicator">:</span>
     <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="s">&quot;admin&quot;</span>
-    <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="s">&quot;secret&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="s">&quot;changeme&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">server_url</span><span class="p p-Indicator">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">vm_attrs</span><span class="p p-Indicator">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">memory_mb</span><span class="p p-Indicator">:</span> <span class="s">&#39;2048&#39;</span>
+      <span class="l l-Scalar l-Scalar-Plain">cpu</span><span class="p p-Indicator">:</span> <span class="s">&#39;2&#39;</span>
+    <span class="l l-Scalar l-Scalar-Plain">state</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
+
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&quot;Update</span><span class="nv"> </span><span class="s">compute</span><span class="nv"> </span><span class="s">attribute&quot;</span>
+  <span class="l l-Scalar l-Scalar-Plain">foreman_compute_attribute</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="s">&quot;admin&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="s">&quot;changeme&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">server_url</span><span class="p p-Indicator">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">vm_attrs</span><span class="p p-Indicator">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">memory_mb</span><span class="p p-Indicator">:</span> <span class="s">&#39;1024&#39;</span>
+      <span class="l l-Scalar l-Scalar-Plain">cpu</span><span class="p p-Indicator">:</span> <span class="s">&#39;1&#39;</span>
     <span class="l l-Scalar l-Scalar-Plain">state</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
 </pre></div>
 </div>
@@ -315,12 +307,11 @@
 <div class="section" id="authors">
 <h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Bernhard Suttner (&#64;_sbernhard) ATIX AG</li>
-<li>Christoffer Reijer (&#64;ephracis) Basalt AB</li>
+<li>Manisha Singhal (&#64;Manisha15) ATIX AG</li>
 </ul>
 <div class="admonition hint">
 <p class="first admonition-title">Hint</p>
-<p class="last">If you notice any issues in this documentation you can <a class="reference external" href="https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/foreman_environment.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr">edit this document</a> to improve it.</p>
+<p class="last">If you notice any issues in this documentation you can <a class="reference external" href="https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/foreman_compute_attribute.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr">edit this document</a> to improve it.</p>
 </div>
 </div>
 </div>
