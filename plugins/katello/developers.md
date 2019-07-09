@@ -167,13 +167,13 @@ One thing to note is that while the normal rake test command will migrate the da
 not (in the interest of saving time). To do this, simply run this in your foreman directory:
 
 ```
-RAILS_ENV=test rake db:drop && RAILS_ENV=test rake db:create && RAILS_ENV=test rake db:test:prepare && RAILS_ENV=test rake db:migrate
+RAILS_ENV=test bundle exec rake db:drop && RAILS_ENV=test bundle exec rake db:create && RAILS_ENV=test bundle exec rake db:test:prepare && RAILS_ENV=test bundle exec rake db:migrate
 ```
 
 Or if you're a CLI ninja, you can alias it:
 
 ```
-alias testdb='RAILS_ENV=test rake db:drop && RAILS_ENV=test rake db:create && RAILS_ENV=test rake db:test:prepare && RAILS_ENV=test rake db:migrate'
+alias testdb='RAILS_ENV=test bundle exec rake db:drop && RAILS_ENV=test bundle exec rake db:create && RAILS_ENV=test bundle exec rake db:test:prepare && RAILS_ENV=test bundle exec rake db:migrate'
 ```
 
 ### Javascript Testing
