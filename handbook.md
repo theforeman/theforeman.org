@@ -212,8 +212,9 @@ Be mindful of our [Translating](http://projects.theforeman.org/projects/foreman/
 #### JavaScript
 
 * Both `__` and `n__` functions are available and work in much the same way as in Ruby, with the following exceptions..
-* Interpolation of values uses `Jed.sprintf` on the translated string, so for a single parameter: `Jed.sprintf(__("Foo: %s"), "bar")`
-* Multiple parameters must be named: `Jed.sprintf(__("Example: %(foo) %(bar)"), {foo: "a", bar: "b"}) `
+* Interpolation of values uses `tfm.i18n.sprintf` on the translated string, so for a single parameter: `tfm.i18n.sprintff(__("Foo: %s"), "bar")`
+* Multiple parameters must be named: `tfm.i18n.sprintf(__("Example: %(foo) %(bar)"), {foo: "a", bar: "b"}) `
+* For further information, please look at our storybook by running `npm run storybook`
 
 ## Code reviews
 
