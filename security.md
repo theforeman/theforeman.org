@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](https://cve.mitre.org/).
 
+* [CVE-2019-10198: Information disclosure in foreman tasks plugin](security.html#2019-10198)
 * [CVE-2019-3845: Lack of access control around Qpid message broker](security.html#2019-3845)
 * [CVE-2019-3893: Compute resource credentials exposed during deletion on API](security.html#2019-3893)
 * [CVE-2018-14664: Persisted XSS on all pages that use breadcrumbs](security.html#2018-1097)
@@ -77,6 +78,13 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2019-10198"></a>CVE-2019-10198: Authorization bypass in foreman tasks plugin
+The Foreman tasks plugin allowed authenticated users to view task details even if they lack the permission to do so. This bypass requires prior knowledge of the task UUID, which can not be easily guessed.
+
+* Affects Foreman tasks 0.7.8 and higher.
+* Fix released in Foreman tasks 0.15.7 and higher.
+* Redmine issue [#27275](https://projects.theforeman.org/issues/27275)
 
 #### <a id="2019-3845"></a>CVE-2019-3845: Lack of access control around Qpid message broker
 Katello installations include the Apache Qpid message broker and dispatch router services. It was found that due to the lack of access permissions around the message broker and router, clients using the katello-agent for package management could invoke QMF (QPid Management Framework) actions against the broker. QMF enables broker settings, queues, exchanges, etc. to be manipulated and those actions could compromise communication between hosts and the server, or allow undesired katello-agent actions to be invoked across clients. This issue was reported by Pavel Moravec.
