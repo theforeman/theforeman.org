@@ -73,7 +73,7 @@ Installing             Done                     [100%] [.....................]
                     --foreman-proxy-trusted-hosts         "myproxy.example.com"\
                     --foreman-proxy-oauth-consumer-key    "UVrAZfMaCfBiiWejoUVLYCZHT2xhzuFV"\
                     --foreman-proxy-oauth-consumer-secret "ZhH8p7M577ttNU3WmUGWASag3JeXKgUX"\
-                    --foreman-proxy-content-certs-tar     "/root/myproxy.example.com-certs.tar"
+                    --certs-tar-file                      "/root/myproxy.example.com-certs.tar"
   The full log is at /var/log/foreman-proxy-certs-generate.log
 {% endhighlight %}
 
