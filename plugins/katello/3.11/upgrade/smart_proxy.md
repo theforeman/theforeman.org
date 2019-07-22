@@ -69,7 +69,7 @@ The installer with the --upgrade flag will run the right database migrations for
 
 {% highlight bash %}
 foreman-installer --scenario foreman-proxy-content --upgrade\
-                  --foreman-proxy-content-certs-tar ~/myproxy.example.com-certs.tar\
+                  --certs-tar-file ~/myproxy.example.com-certs.tar\
                   --certs-update-all --certs-regenerate true --certs-deploy true
 {% endhighlight %}
 
