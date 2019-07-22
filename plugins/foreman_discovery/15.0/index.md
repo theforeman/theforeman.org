@@ -979,6 +979,29 @@ the name.
 * Transfer the ISO image onto an USB stick or CDROM and boot it.
 * Discovered node automatically uploads facts and reloads kernel into installer.
 
+# 5.4 Running arbitrary commands after boot
+
+Discovery version 3.5 or above supports running arbitrary commands (or short
+shell scripts) provided via `fdi.script` kernel command line option. The script
+must be BASH shell compressed via gzip and encoded in base64. To create the
+option, run:
+
+    # cat aux/basescript-examples/myscript | gzip -9 | base64 -w0
+    fdi.script=H4sIAK4hZ1oCA0tNzshXUA/JyCxWAKJEhZLU4hJ1LgA92U9qFgAAAA==
+
+Keep in mind that kernel command line option is limited, Red Hat Enterprise
+Linux 7 (or CentOS 7) has limitation of 512 characters and there are already a
+lot of characters, so in practice the script option must be shorter than 300
+characters in total. When it exceeds the threshold, rest of the kernel command
+line option will be ignored, therefore it will likely fail.Typically the script
+can be used to download a larger script using `curl` command from a remote
+HTTP(s) server.
+
+The script is executed during the initial boot *in parallel* with other
+services. Although the service unit is scheduled to start after network is
+initialized, the connection *might not* be fully available so make sure to put
+some `sleep` command if you encounter network issues.
+
 # 6 Help
 
 Please follow our [standard procedures and
