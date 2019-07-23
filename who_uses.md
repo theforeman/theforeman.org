@@ -11,6 +11,7 @@ and we will add you to the page.
 
 The list is in alphabetical order.
 
+* [AstraZeneca](https://www.astrazeneca.com)
 * [Brandorr Group](https://www.brandorr.com)
 * [CERN](https://home.cern)
 * [Linköpings universitet](https://liu.se)
