@@ -59,6 +59,7 @@ For each new release we keep stable documentation tree for the record.
 1. change version numbers in manuals/X.Z/*.md
 1. add version to documentation.md
 1. Generate release notes using `scripts/release_notes.rb`
+1. Update installer options using `scripts/installer/get_params`
 
 ### Foreman Plugins
 
@@ -70,7 +71,8 @@ For each new release we keep stable documentation tree for the record.
 
 Generate API docs in Foreman
 
-1. cd to foreman directory
+1. cd to foreman directory and checkout the relevant stable branch
+1. disable any plugins installed locally 
 1. `APIPIE_RECORD=examples rake test`
 1. `rake apipie:cache`
 
