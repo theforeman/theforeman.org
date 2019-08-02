@@ -1182,64 +1182,6 @@ code {
   border-width: 0.833333px;
 }
 
-/* Our changes to FullCalendar */
-#calendar {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.fc-tooltip {
-  position: absolute;
-  pointer-events: none;
-  display: block;
-  width: 40ex;
-  background: rgba(51,51,51, 0.8);
-  border-radius: 3px;
-  color: #eeeeee;
-  text-shadow: 1px 1px 3px rgba(51,51,51, 0.8);
-  padding: 1ex 1.25ex;
-  z-index: 100;
-}
-.fc-tooltip:after {
-	position: absolute;
-	border: 0 solid transparent;
-	border-width: 14px;
-	border-right: 0;
-	border-left-color: rgba(51,51,51, 0.8);
-	content: " ";
-	font-size: 0;
-	top: 0;
-	right: -14px;
-	margin-top: 16px;
-}
-.fc-tip-title {
-	font-weight: bold;
-	margin-bottom: 1ex;
-	line-height: 1.2;
-	font-size: 110%;
-}
-.fc-tip-title.label {
-	display: none;
-}
-.label {
-	display: inline-block;
-	min-width: 9ex;
-	opacity: 0.75;
-}
-a.fc-event.current {
-  color: white;
-  text-decoration: none;
-  cursor: pointer;
-  background: #025d8c;
-  border-color: #9d8d9e;
-}
-a.fc-event.old {
-  color: grey;
-  text-decoration: none;
-  cursor: pointer;
-  border-color: #9d8d9e;
-	background-color: rgba(2, 93, 140, 0.2);
-}
-
 #toc.static-toc {
   width: auto;
 }
