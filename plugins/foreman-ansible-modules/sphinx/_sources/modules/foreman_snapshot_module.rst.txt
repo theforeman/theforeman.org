@@ -1,12 +1,12 @@
-:source: katello_product.py
+:source: foreman_snapshot.py
 
 :orphan:
 
-.. _katello_product_module:
+.. _foreman_snapshot_module:
 
 
-katello_product -- Create and Manage Katello products
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+foreman_snapshot -- Manage Foreman Snapshots
+++++++++++++++++++++++++++++++++++++++++++++
 
 
 .. contents::
@@ -16,7 +16,10 @@ katello_product -- Create and Manage Katello products
 
 Synopsis
 --------
-- Create and Manage Katello products
+- Manage Foreman Snapshots for Host Entities
+- This module can create, update, revert and delete snapshots
+- This module requires the foreman_snapshot_management plugin set up in the server
+- See: https://github.com/ATIX-AG/foreman_snapshot_management
 
 
 
@@ -48,33 +51,20 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Possibly long descriptionto show the user in detail view</div>
+                                                                        <div>Description of Snapshot</div>
                                                                                 </td>
             </tr>
                                 <tr>
                                                                 <td colspan="1">
-                    <b>gpg_key</b>
+                    <b>host</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                         / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Content GPG key name attached to this product</div>
-                                                                                </td>
-            </tr>
-                                <tr>
-                                                                <td colspan="1">
-                    <b>label</b>
-                    <div style="font-size: small">
-                        <span style="color: purple">-</span>
-                                            </div>
-                                    </td>
-                                <td>
-                                                                                                                                                            </td>
-                                                                <td>
-                                                                        <div>Label to show the user</div>
+                                                                        <div>Name of related Host</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -87,20 +77,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Name of the Katello product</div>
-                                                                                </td>
-            </tr>
-                                <tr>
-                                                                <td colspan="1">
-                    <b>organization</b>
-                    <div style="font-size: small">
-                        <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
-                                    </td>
-                                <td>
-                                                                                                                                                            </td>
-                                                                <td>
-                                                                        <div>Organization that the Product is in</div>
+                                                                        <div>Name of Snapshot</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -139,25 +116,12 @@ Parameters
                                 <td>
                                                                                                                             <ul style="margin: 0; padding: 0"><b>Choices:</b>
                                                                                                                                                                 <li><div style="color: blue"><b>present</b>&nbsp;&larr;</div></li>
+                                                                                                                                                                                                <li>reverted</li>
                                                                                                                                                                                                 <li>absent</li>
-                                                                                                                                                                                                <li>present_with_defaults</li>
                                                                                     </ul>
                                                                             </td>
                                                                 <td>
-                                                                        <div>State of the Product</div>
-                                                                                </td>
-            </tr>
-                                <tr>
-                                                                <td colspan="1">
-                    <b>sync_plan</b>
-                    <div style="font-size: small">
-                        <span style="color: purple">-</span>
-                                            </div>
-                                    </td>
-                                <td>
-                                                                                                                                                            </td>
-                                                                <td>
-                                                                        <div>Sync plan name attached to this product</div>
+                                                                        <div>State of Snapshot</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -203,25 +167,42 @@ Examples
 .. code-block:: yaml+jinja
 
     
-    - name: "Create Fedora product with a sync plan"
-      katello_product:
+    - name: "Create a Snapshot"
+      foreman_snapshot:
         username: "admin"
         password: "changeme"
         server_url: "https://foreman.example.com"
-        name: "Fedora"
-        organization: "My Cool new Organization"
-        sync_plan: "Fedora repos sync"
+        name: "snapshot_before_software_upgrade"
+        host: "server.example.com"
         state: present
 
-    - name: "Create CentOS 7 product with content credentials"
-      katello_product:
+    - name: "Update a Snapshot"
+      foreman_snapshot:
         username: "admin"
         password: "changeme"
         server_url: "https://foreman.example.com"
-        name: "CentOS 7"
-        gpg_key: "RPM-GPG-KEY-CentOS7"
-        organization: "My Cool new Organization"
+        name: "snapshot_before_software_upgrade"
+        host: "server.example.com"
+        description: "description of snapshot"
         state: present
+
+    - name: "Revert a Snapshot"
+      foreman_snapshot:
+        username: "admin"
+        password: "changeme"
+        server_url: "https://foreman.example.com"
+        name: "snapshot_before_software_upgrade"
+        host: "server.example.com"
+        state: reverted
+
+    - name: "Delete a Snapshot"
+      foreman_snapshot:
+        username: "admin"
+        password: "changeme"
+        server_url: "https://foreman.example.com"
+        name: "snapshot_before_software_upgrade"
+        host: "server.example.com"
+        state: absent
 
 
 
@@ -245,9 +226,8 @@ Status
 Authors
 ~~~~~~~
 
-- Eric D Helms (@ehelms)
-- Matthias Dellweg (@mdellweg) ATIX AG
+- Manisha Singhal (@Manisha15) ATIX AG
 
 
 .. hint::
-    If you notice any issues in this documentation you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/katello_product.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr>`_ to improve it.
+    If you notice any issues in this documentation you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/foreman_snapshot.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr>`_ to improve it.

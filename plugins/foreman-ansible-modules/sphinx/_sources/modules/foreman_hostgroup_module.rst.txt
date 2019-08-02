@@ -54,6 +54,48 @@ Parameters
             </tr>
                                 <tr>
                                                                 <td colspan="1">
+                    <b>compute_profile</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">-</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">None</div>
+                                    </td>
+                                                                <td>
+                                                                        <div>Compute profile name</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>compute_resource</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">-</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">None</div>
+                                    </td>
+                                                                <td>
+                                                                        <div>Compute resource name</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>config_groups</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">list</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">None</div>
+                                    </td>
+                                                                <td>
+                                                                        <div>Config groups list</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
                     <b>description</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
@@ -63,6 +105,48 @@ Parameters
                                                                                                                                                             </td>
                                                                 <td>
                                                                         <div>Description of hostgroup</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>domain</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">-</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">None</div>
+                                    </td>
+                                                                <td>
+                                                                        <div>Domain name</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>environment</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">-</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">None</div>
+                                    </td>
+                                                                <td>
+                                                                        <div>Puppet environment name</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>locations</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">list</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">None</div>
+                                    </td>
+                                                                <td>
+                                                                        <div>List of locations names</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -103,7 +187,35 @@ Parameters
                                                                                                                                                                     <b>Default:</b><br/><div style="color: blue">None</div>
                                     </td>
                                                                 <td>
-                                                                        <div>Operatingsystem name</div>
+                                                                        <div>Operatingsystem title</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>organizations</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">list</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">None</div>
+                                    </td>
+                                                                <td>
+                                                                        <div>List of organizations names</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>parent</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">-</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">None</div>
+                                    </td>
+                                                                <td>
+                                                                        <div>Hostgroup parent name</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -131,6 +243,78 @@ Parameters
                                                                                                                                                             </td>
                                                                 <td>
                                                                         <div>Password of the user accessing the Foreman server</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>puppet_ca_proxy</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">-</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">None</div>
+                                    </td>
+                                                                <td>
+                                                                        <div>Puppet CA proxy name</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>puppet_proxy</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">-</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">None</div>
+                                    </td>
+                                                                <td>
+                                                                        <div>Puppet server proxy name</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>pxe_loader</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">-</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                            <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                                <li>PXELinux BIOS</li>
+                                                                                                                                                                                                <li>PXELinux UEFI</li>
+                                                                                                                                                                                                <li>Grub UEFI</li>
+                                                                                                                                                                                                <li>Grub2 BIOS</li>
+                                                                                                                                                                                                <li>Grub2 ELF</li>
+                                                                                                                                                                                                <li>Grub2 UEFI</li>
+                                                                                                                                                                                                <li>Grub2 UEFI SecureBoot</li>
+                                                                                                                                                                                                <li>Grub2 UEFI HTTP</li>
+                                                                                                                                                                                                <li>Grub2 UEFI HTTPS</li>
+                                                                                                                                                                                                <li>Grub2 UEFI HTTPS SecureBoot</li>
+                                                                                                                                                                                                <li>iPXE Embedded</li>
+                                                                                                                                                                                                <li>iPXE UEFI HTTP</li>
+                                                                                                                                                                                                <li>iPXE Chain BIOS</li>
+                                                                                                                                                                                                <li>iPXE Chain UEFI</li>
+                                                                                    </ul>
+                                                                                    <b>Default:</b><br/><div style="color: blue">None</div>
+                                    </td>
+                                                                <td>
+                                                                        <div>PXE Bootloader</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>realm</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">-</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">None</div>
+                                    </td>
+                                                                <td>
+                                                                        <div>Realm name</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -175,6 +359,34 @@ Parameters
                                                                             </td>
                                                                 <td>
                                                                         <div>Hostgroup presence</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>subnet</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">-</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">None</div>
+                                    </td>
+                                                                <td>
+                                                                        <div>IPv4 Subnet name</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>subnet6</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">-</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">None</div>
+                                    </td>
+                                                                <td>
+                                                                        <div>IPv6 Subnet name</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -276,6 +488,7 @@ Authors
 ~~~~~~~
 
 - Manisha Singhal (@Manisha15) ATIX AG
+- Baptiste Agasse (@bagasse)
 
 
 .. hint::
