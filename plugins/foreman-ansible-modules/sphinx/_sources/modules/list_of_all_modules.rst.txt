@@ -7,11 +7,13 @@ All modules
 
 
 
+  * :ref:`foreman_architecture_module` 
   * :ref:`foreman_auth_source_ldap_module` 
   * :ref:`foreman_bookmark_module` 
   * :ref:`foreman_compute_attribute_module` 
   * :ref:`foreman_compute_profile_module` 
   * :ref:`foreman_compute_resource_module` 
+  * :ref:`foreman_config_group_module` 
   * :ref:`foreman_domain_module` 
   * :ref:`foreman_environment_module` 
   * :ref:`foreman_global_parameter_module` 
@@ -31,6 +33,7 @@ All modules
   * :ref:`foreman_search_facts_module` 
   * :ref:`foreman_setting_module` 
   * :ref:`foreman_setting_facts_module` 
+  * :ref:`foreman_snapshot_module` 
   * :ref:`foreman_subnet_module` 
   * :ref:`foreman_user_module` 
   * :ref:`katello_activation_key_module` 

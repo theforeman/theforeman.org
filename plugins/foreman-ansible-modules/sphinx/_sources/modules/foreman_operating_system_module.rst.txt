@@ -25,7 +25,7 @@ Requirements
 ------------
 The below requirements are needed on the host that executes this module.
 
-- nailgun >= 0.29.0
+- apypie
 
 
 Parameters
@@ -134,7 +134,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>parameters</b>
                     <div style="font-size: small">
-                        <span style="color: purple">dictionary</span>
+                        <span style="color: purple">list</span>
                                             </div>
                                     </td>
                                 <td>
@@ -296,6 +296,9 @@ Examples
         release_name: stretch
         family: Debian
         major: 9
+        parameters:
+          - name: additional-packages
+            value: python vim
         state: present
 
     - name: "Ensure existence of an Operating System (provide default values)"
