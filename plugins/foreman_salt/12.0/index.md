@@ -1,7 +1,7 @@
 ---
 layout: plugin
-title: Foreman Salt 11.0 Manual
-version: 11.0
+title: Foreman Salt 12.0 Manual
+version: 12.0
 ---
 
 # 1. {{ page.title }}
@@ -41,6 +41,9 @@ The core plugin major version will increment with the specific Foreman release, 
 ## 1.1 Release Notes
 
 ### 1.1.1 Foreman plugin
+
+- **12.0**:
+  - Use Salt as a Remote Execution provider
 
 - **11.0**:
   - Compatible with Foreman 1.21 / 1.22
@@ -319,6 +322,14 @@ For more information regarding Foreman Remote Execution Plugin, have a look at t
 The job templates to run a job and to execution a salt function exists and can be used. 
 
 ![](/static/images/plugins/foreman_salt/rex_details.png)
+
+### 4.5.1 Salt as Remote Execution provider
+
+Starting with version 12.0, Salt can be used as a Remote Execution provider. This means Salt can be used to drive Remote Execution without having to rely on SSH at all. In order for this mode to work, the master's publisher access control list needs to be modified:
+
+    publisher_acl:
+      foreman-proxy:
+        - .*
 
 ## 4.6 Pillars
 
