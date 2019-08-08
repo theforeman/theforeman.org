@@ -1,7 +1,7 @@
 ---
 layout: plugins/katello/documentation
 title: Activation Keys
-version: nightly
+version: 3.13
 ---
 
 # Activation Keys

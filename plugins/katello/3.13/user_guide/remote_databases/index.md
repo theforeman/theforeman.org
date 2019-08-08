@@ -1,7 +1,7 @@
 ---
 layout: plugins/katello/documentation
 title: Use Foreman with Remote Databases
-version: nightly
+version: 3.13
 ---
 
 # Setup Remote Databases in Foreman with Katello Plugin Installed

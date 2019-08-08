@@ -1,7 +1,7 @@
 ---
 layout: plugins/katello/documentation
 title: Release Notes
-version: nightly
+version: 3.13
 ---
 
 # Katello {{ page.version }} Release Notes

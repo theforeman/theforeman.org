@@ -1,8 +1,8 @@
 ---
 layout: plugins/katello/documentation
 title: Smart Proxy Upgrade
-version: nightly
-foreman_version: nightly
+version: 3.13
+foreman_version: 1.23
 ---
 
 # Smart Proxy Upgrade
@@ -72,6 +72,6 @@ foreman-installer --scenario foreman-proxy-content --upgrade\
                   --certs-update-all --certs-regenerate true --certs-deploy true
 {% endhighlight %}
 
-**Congratulations! You have now successfully upgraded your Smart Proxy to {% if page.version %}{{ page.version }} For a rundown of what was added, please see [release notes](/plugins/katello/{{ page.version }}/release_notes/release_notes.html).{% else %}the latest nightly{% endif %}!**
+**Congratulations! You have now successfully upgraded your Smart Proxy to {% if page.version %}{{ page.version }} For a rundown of what was added, please see [release notes](/plugins/katello/{{ page.version }}/release_notes/release_notes.html).{% else %}the latest 3.13{% endif %}!**
 
 If for any reason, the above steps failed, please review /var/log/foreman-installer/foreman-proxy.log -- if any of the "Upgrade step" tasks failed, you may try to run them manaully below to aid in troubleshooting.

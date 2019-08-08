@@ -1,7 +1,7 @@
 ---
 layout: plugins/katello/documentation
 title: Lifecycle Environments
-version: nightly
+version: 3.13
 ---
 
 # Lifecycle Environments

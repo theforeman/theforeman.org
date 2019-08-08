@@ -1,7 +1,7 @@
 ---
 layout: plugins/katello/documentation
 title: Backup
-version: nightly
+version: 3.13
 ---
 
 # Backup

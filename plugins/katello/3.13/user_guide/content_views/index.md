@@ -1,7 +1,7 @@
 ---
 layout: plugins/katello/documentation
 title: Content Views
-version: nightly
+version: 3.13
 ---
 
 # Content Views

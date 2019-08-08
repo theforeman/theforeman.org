@@ -1,7 +1,7 @@
 ---
 layout: plugins/katello/documentation
 title: Glossary
-version: nightly
+version: 3.13
 ---
 
 # Glossary

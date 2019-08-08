@@ -1,7 +1,7 @@
 ---
 layout: plugins/katello/documentation
 title: User Guide
-version: nightly
+version: 3.13
 ---
 
 # User Guide

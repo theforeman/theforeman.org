@@ -1,6 +1,6 @@
 ---
 layout: plugins/katello/documentation
-version: nightly
+version: 3.13
 title: Troubleshooting
 ---
 

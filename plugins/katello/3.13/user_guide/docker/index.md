@@ -1,7 +1,7 @@
 ---
 layout: plugins/katello/documentation
 title: Docker Management
-version: nightly
+version: 3.13
 ---
 
 # Docker Management

@@ -1,7 +1,7 @@
 ---
 layout: plugins/katello/documentation
 title: Content View Import/Export
-version: nightly
+version: 3.13
 ---
 
 # Content View Import/Export

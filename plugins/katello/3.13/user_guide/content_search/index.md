@@ -1,7 +1,7 @@
 ---
 layout: plugins/katello/documentation
 title: Content Search
-version: nightly
+version: 3.13
 ---
 
 # Content Search
