@@ -9,7 +9,7 @@ script: osmenu.js
 
 # Katello {{ page.version }} Installation
 
-{% if page.version == '3.13' %}
+{% if page.version == 'nightly' %}
   <div class="alert alert-danger">
     These are the instructions for installing the unstable 3.13 release of Katello!
   </div>
