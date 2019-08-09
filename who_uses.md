@@ -14,6 +14,7 @@ The list is in alphabetical order.
 * [AstraZeneca](https://www.astrazeneca.com)
 * [Brandorr Group](https://www.brandorr.com)
 * [CERN](https://home.cern)
+* [Erasys GmbH](https://www.erasys.de)
 * [Linköpings universitet](https://liu.se)
 * [NETWAYS](https://www.netways.de)
 * [Paychex](https://www.paychex.com)
