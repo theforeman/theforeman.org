@@ -25,7 +25,7 @@ Requirements
 ------------
 The below requirements are needed on the host that executes this module.
 
-- nailgun >= 0.29.0
+- apypie
 
 
 Parameters
@@ -50,6 +50,29 @@ Parameters
                                                                                                                                                             </td>
                                                                 <td>
                                                                         <div>Name of the Global Parameter</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>parameter_type</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">-</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                            <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                                <li><div style="color: blue"><b>string</b>&nbsp;&larr;</div></li>
+                                                                                                                                                                                                <li>boolean</li>
+                                                                                                                                                                                                <li>integer</li>
+                                                                                                                                                                                                <li>real</li>
+                                                                                                                                                                                                <li>array</li>
+                                                                                                                                                                                                <li>hash</li>
+                                                                                                                                                                                                <li>yaml</li>
+                                                                                                                                                                                                <li>json</li>
+                                                                                    </ul>
+                                                                            </td>
+                                                                <td>
+                                                                        <div>Type of value</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -202,6 +225,7 @@ Authors
 
 - Bernhard Hopfenmueller (@Fobhep) ATIX AG
 - Matthias Dellweg (@mdellweg) ATIX AG
+- Manisha Singhal (@manisha15) ATIX AG
 
 
 .. hint::

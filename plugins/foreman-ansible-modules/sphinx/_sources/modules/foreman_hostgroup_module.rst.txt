@@ -24,7 +24,7 @@ Requirements
 ------------
 The below requirements are needed on the host that executes this module.
 
-- apypie >= 0.0.1
+- apypie
 
 
 Parameters
@@ -161,7 +161,8 @@ Parameters
                                     </td>
                                                                 <td>
                                                                         <div>Medium name</div>
-                                                                                </td>
+                                                                                        <div style="font-size: small; color: darkgreen"><br/>aliases: media</div>
+                                    </td>
             </tr>
                                 <tr>
                                                                 <td colspan="1">
@@ -202,6 +203,19 @@ Parameters
                                     </td>
                                                                 <td>
                                                                         <div>List of organizations names</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>parameters</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">list</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Subnet specific host parameters</div>
                                                                                 </td>
             </tr>
                                 <tr>

@@ -24,7 +24,7 @@ Requirements
 ------------
 The below requirements are needed on the host that executes this module.
 
-- nailgun >= 0.30.2
+- apypie
 
 
 Parameters
@@ -61,20 +61,20 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Password for user accessing Foreman server</div>
+                                                                        <div>Password of the user accessing the Foreman server</div>
                                                                                 </td>
             </tr>
                                 <tr>
                                                                 <td colspan="1">
                     <b>realm_proxy</b>
                     <div style="font-size: small">
-                        <span style="color: purple">integer</span>
+                        <span style="color: purple">-</span>
                          / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Id of Proxy to use for this realm</div>
+                                                                        <div>Proxy to use for this realm</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -100,7 +100,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>URL of Foreman server</div>
+                                                                        <div>URL of the Foreman server</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -130,12 +130,12 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Username on Foreman server</div>
+                                                                        <div>Username accessing the Foreman server</div>
                                                                                 </td>
             </tr>
                                 <tr>
                                                                 <td colspan="1">
-                    <b>verify_ssl</b>
+                    <b>validate_certs</b>
                     <div style="font-size: small">
                         <span style="color: purple">boolean</span>
                                             </div>
@@ -147,8 +147,9 @@ Parameters
                                                                                     </ul>
                                                                             </td>
                                                                 <td>
-                                                                        <div>Verify SSL of the Foreman server</div>
-                                                                                </td>
+                                                                        <div>Whether or not to verify the TLS certificates of the Foreman server</div>
+                                                                                        <div style="font-size: small; color: darkgreen"><br/>aliases: verify_ssl</div>
+                                    </td>
             </tr>
                         </table>
     <br/>
@@ -168,7 +169,7 @@ Examples
         password: "changeme"
         server_url: "https://foreman.example.com"
         name: "EXAMPLE.COM"
-        realm_proxy: 1
+        realm_proxy: "foreman.example.com"
         realm_type: "Red Hat Identity Management"
         state: present
 

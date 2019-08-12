@@ -1,12 +1,12 @@
-:source: foreman_operating_system.py
+:source: foreman_operatingsystem.py
 
 :orphan:
 
-.. _foreman_operating_system_module:
+.. _foreman_operatingsystem_module:
 
 
-foreman_operating_system -- Manage Foreman Operating Systems
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+foreman_operatingsystem -- Manage Foreman Operating Systems
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 .. contents::
@@ -17,7 +17,6 @@ foreman_operating_system -- Manage Foreman Operating Systems
 Synopsis
 --------
 - Manage Foreman Operating System Entities
-- Uses https://github.com/SatelliteQE/nailgun
 
 
 
@@ -70,7 +69,7 @@ Parameters
                     <b>family</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                            </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -83,7 +82,7 @@ Parameters
                     <b>major</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                            </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -122,7 +121,7 @@ Parameters
                     <b>name</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                            </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -288,7 +287,7 @@ Examples
 
     
     - name: "Create an Operating System"
-      foreman_operating_system:
+      foreman_operatingsystem:
         username: "admin"
         password: "changeme"
         server_url: "https://foreman.example.com"
@@ -302,7 +301,7 @@ Examples
         state: present
 
     - name: "Ensure existence of an Operating System (provide default values)"
-      foreman_operating_system:
+      foreman_operatingsystem:
         username: "admin"
         password: "changeme"
         server_url: "https://foreman.example.com"
@@ -313,7 +312,7 @@ Examples
         state: present_with_defaults
 
     - name: "Delete an Operating System"
-      foreman_operating_system:
+      foreman_operatingsystem:
         username: "admin"
         password: "changeme"
         server_url: "https://foreman.example.com"
@@ -349,4 +348,4 @@ Authors
 
 
 .. hint::
-    If you notice any issues in this documentation you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/foreman_operating_system.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr>`_ to improve it.
+    If you notice any issues in this documentation you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/foreman_operatingsystem.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr>`_ to improve it.

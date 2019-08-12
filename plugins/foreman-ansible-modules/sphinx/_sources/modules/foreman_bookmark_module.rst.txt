@@ -17,7 +17,6 @@ foreman_bookmark -- Manage Foreman Bookmarks
 Synopsis
 --------
 - Manage Foreman Bookmark Entities
-- Uses https://github.com/SatelliteQE/nailgun
 
 
 
