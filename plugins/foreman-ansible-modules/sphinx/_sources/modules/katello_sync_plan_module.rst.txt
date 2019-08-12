@@ -24,7 +24,7 @@ Requirements
 ------------
 The below requirements are needed on the host that executes this module.
 
-- nailgun >= 0.32.0
+- apypie
 
 
 Parameters
@@ -227,9 +227,10 @@ Examples
         organization: "Default Organization"
         interval: "weekly"
         enabled: false
-        sync_date: "2017/01/01 00:00:00 +0000"
+        sync_date: "2017-01-01 00:00:00 UTC"
         products:
           - 'Red Hat Enterprise Linux Server'
+        state: present
 
 
 

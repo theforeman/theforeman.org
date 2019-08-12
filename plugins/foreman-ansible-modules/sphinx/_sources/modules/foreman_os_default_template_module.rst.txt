@@ -17,7 +17,6 @@ foreman_os_default_template -- Manage Foreman Default Template Associations To O
 Synopsis
 --------
 - Manage Foreman OSDefaultTemplate Entities
-- Uses https://github.com/SatelliteQE/nailgun
 
 
 

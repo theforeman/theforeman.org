@@ -49,7 +49,8 @@ Parameters
                                                                                                                                                             </td>
                                                                 <td>
                                                                         <div>Full name describing the domain</div>
-                                                                                </td>
+                                                                                        <div style="font-size: small; color: darkgreen"><br/>aliases: fullname</div>
+                                    </td>
             </tr>
                                 <tr>
                                                                 <td colspan="1">
@@ -62,7 +63,8 @@ Parameters
                                                                                                                                                             </td>
                                                                 <td>
                                                                         <div>DNS proxy to use within this domain for managing A records</div>
-                                                                                </td>
+                                                                                        <div style="font-size: small; color: darkgreen"><br/>aliases: dns</div>
+                                    </td>
             </tr>
                                 <tr>
                                                                 <td colspan="1">
@@ -103,6 +105,19 @@ Parameters
                                     </td>
                                                                 <td>
                                                                         <div>List of organizations the domain should be assigned to</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>parameters</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">list</span>
+                                            </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Domain specific host parameters</div>
                                                                                 </td>
             </tr>
                                 <tr>

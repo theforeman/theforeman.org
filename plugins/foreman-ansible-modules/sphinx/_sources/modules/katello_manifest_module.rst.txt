@@ -24,7 +24,7 @@ Requirements
 ------------
 The below requirements are needed on the host that executes this module.
 
-- nailgun >= 0.29.0
+- apypie
 
 
 Parameters
@@ -75,22 +75,22 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Password for user accessing Foreman server</div>
+                                                                        <div>Password of the user accessing the Foreman server</div>
                                                                                 </td>
             </tr>
                                 <tr>
                                                                 <td colspan="1">
-                    <b>redhat_repository_url</b>
+                    <b>repository_url</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
                                             </div>
                                     </td>
                                 <td>
-                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">https://cdn.redhat.com</div>
-                                    </td>
+                                                                                                                                                            </td>
                                                                 <td>
                                                                         <div>URL to retrieve content from</div>
-                                                                                </td>
+                                                                                        <div style="font-size: small; color: darkgreen"><br/>aliases: redhat_repository_url</div>
+                                    </td>
             </tr>
                                 <tr>
                                                                 <td colspan="1">
@@ -102,7 +102,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>URL of Foreman server</div>
+                                                                        <div>URL of the Foreman server</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -133,12 +133,12 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Username on Foreman server</div>
+                                                                        <div>Username accessing the Foreman server</div>
                                                                                 </td>
             </tr>
                                 <tr>
                                                                 <td colspan="1">
-                    <b>verify_ssl</b>
+                    <b>validate_certs</b>
                     <div style="font-size: small">
                         <span style="color: purple">boolean</span>
                                             </div>
@@ -150,8 +150,9 @@ Parameters
                                                                                     </ul>
                                                                             </td>
                                                                 <td>
-                                                                        <div>Verify SSL of the Foreman server</div>
-                                                                                </td>
+                                                                        <div>Whether or not to verify the TLS certificates of the Foreman server</div>
+                                                                                        <div style="font-size: small; color: darkgreen"><br/>aliases: verify_ssl</div>
+                                    </td>
             </tr>
                         </table>
     <br/>

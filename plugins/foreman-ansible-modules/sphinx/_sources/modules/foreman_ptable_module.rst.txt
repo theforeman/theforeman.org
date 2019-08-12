@@ -17,8 +17,6 @@ foreman_ptable -- Manage Partition Table Template in Foreman
 Synopsis
 --------
 - Manage Foreman Partition Table
-- Uses https://github.com/SatelliteQE/nailgun
-- Uses ansible_nailgun_cement in /module_utils
 
 
 
