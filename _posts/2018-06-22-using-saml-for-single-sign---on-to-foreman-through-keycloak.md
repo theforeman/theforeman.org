@@ -76,7 +76,7 @@ external provider. This requires the following settings:
 1.  Enable external user authentication by setting `authorize_login_delegation` to `true`.
 
 2.  Enable auto-creation of users from external authentication providers:
-    `authorize_login_delegation_auth_source_autocreate` to `External`.
+    `authorize_login_delegation_auth_source_user_autocreate` to `External`.
 
 3.  Set `login_delegation_logout_url` to
     `https://foreman.example.com/saml2/logout?ReturnTo=https://foreman.example.com/users/extlogout`
