@@ -1,7 +1,7 @@
 ---
 layout: plugins/katello/documentation
 title: HTTP Proxies
-version: 'nightly'
+version: '3.13'
 ---
 
 # HTTP Proxies
