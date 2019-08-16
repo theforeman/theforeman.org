@@ -1,7 +1,7 @@
 ---
 layout: plugins/katello/documentation
 title: Certificates
-version: 3.13
+version: nightly
 ---
 
 # Certificates
