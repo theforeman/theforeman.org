@@ -24,6 +24,7 @@ As time goes on more and more of this functionality will be moved to the Host ob
 * Initiates package install/upgrade/removal
 * Determines which errata apply to a system
 * Initiates errata installation
+* Stores details about System Purpose
 
 ## How is a Content Host registered?
 
@@ -167,5 +168,10 @@ Next select the 'Bulk Actions' button in the top right.
 
 From here you can select the tab corresponding to any action you wish to perform.
 
+## Set System Purpose attributes
+
+To set System Purpose attributes for a host, Navigate to the Content Host Details page,  Host > Content Hosts > Click the name of the desired Content Host. You can edit Service Level, Role, Usage Type, and Add-ons from the System Purpose section.
+
+![System Purpose](/plugins/katello/{{ page.version }}/user_guide/content_hosts/system_purpose.png)
 
 
