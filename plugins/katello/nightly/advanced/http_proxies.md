@@ -17,12 +17,16 @@ HTTP proxies can be created and then assigned to a product though bulk selection
 
 ## Creation
 
-There are two ways of creating a HTTP Proxy for use in Katello: through a rake task or the Foreman UI.
+There are two ways of creating a HTTP Proxy for use in Katello: through the Foreman installer or the Foreman UI.
 
-### Creating an HTTP Proxy with Rake
+### Creating an HTTP Proxy with the Foreman Installer
 
+Additional installer parameters are provided for creating an HTTP proxy:
 ```
-foreman-rake katello:update_default_http_proxy -- --name "A Great HTTP Proxy" --url "http://192.0.2.1:8888" --user admin --password redhat
+--katello-proxy-password Proxy password for authentication (default: nil)
+--katello-proxy-port Port the proxy is running on (default: nil)
+--katello-proxy-url URL of the proxy server (default: nil)
+--katello-proxy-username Proxy username for authentication (default: nil)
 ```
 
 ### Creating an HTTP Proxy through the web UI
@@ -52,20 +56,6 @@ To remove a HTTP Proxy:
 
   - navigate to: Infrastructure > HTTP Proxies
   - click **Delete** in the row of the proxy you want to remove
-
-## Setting the Global Default Content Proxy
-
-If an HTTP Proxy exists you can specify a global default HTTP proxy. By default newly created repositories will use this proxy for content synchronization requests. Existing repositories using the global default HTTP proxy policy will also be updated if the global default HTTP proxy setting changes.
-
-To set the global default:
-
-  - navigate to: Administer > Settings
-  - click the **Content** tab
-  - click the edit icon in the row labelled **Default http proxy** and select the proxy you wish to use as the default.
-
-![Settings Content tab.](/plugins/katello/{{ page.version }}/advanced/settings_content.png)
-
-Note that selecting different HTTP proxies will trigger updates to repositories that have the HTTP proxy policy set to the global default. Remote proxy settings will be updated asynchronously in a task.
 
 ## Bulk Applying HTTP Proxy Policies and HTTP Proxy Selection
 
