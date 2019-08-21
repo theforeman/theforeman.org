@@ -13,12 +13,14 @@ Activation Keys provide a mechanism to define properties that may be applied to 
 - Subscriptions
 - Repository Enablement
 - Host Collections
+- System Purpose
 
 ## Definitions
 
 - [Content Host](/plugins/katello/{{ page.version }}/user_guide/content_hosts/index.html#what-are-content-hosts)
 - Host Collection - A statically defined group of Content Hosts.
 - Subscription - The right to receive the associated content from Katello.
+- System Purpose - Helps auto-attach find a subscription that satisfies the intended use of the system
 
 ## General Features
 
@@ -28,7 +30,9 @@ The following is a high-level summary of the Activation Key features:
 - [Add subscriptions to an Activation Key](/plugins/katello/{{ page.version }}/user_guide/activation_keys/index.html#add-subscriptions-to-an-activation-key)
 - [Change repository enablement for an Activation Key](/plugins/katello/{{ page.version }}/user_guide/activation_keys/index.html#change-repository-enablement-for-an-activation-key)
 - [Add Host Collections to an Activation Key](/plugins/katello/{{ page.version }}/user_guide/activation_keys/index.html#add-host-collections-to-an-activation-key)
+- [Add System Purpose details to an Activation Key](/plugins/katello/{{page.version}}/user_guide/activation_keys/index.html#add-system-purpose-details-to-an-activation-key)
 - [Register a Content Host using an Activation Key](/plugins/katello/{{ page.version }}/user_guide/activation_keys/index.html#register-a-content-host-using-an-activation-key)
+- [View Content Hosts registered with an Activation Key](/plugins/katello/{{ page.version }}/user_guide/activation_keys/index.html#view-content-hosts-registered-with-an-activation-key)
 
 ## Create an Activation Key
 
@@ -86,37 +90,52 @@ Finally, when 'Auto-Attach' is disabled, all subscriptions on the activation key
 
 ![Adding subscriptions to an Activation Key](/plugins/katello/{{ page.version }}/user_guide/activation_keys/activation_key_add_subscriptions.png)
 
-
-
 ## Change Repository Enablement for an Activation Key
 
 To change repository enablement settings using a key:
 
 - navigate to: Content > Activation Keys
-- select the desired key from the list
-- click **Product Content**
-- click the edit icon for the repository content set that you would like to modify
-- select the desired value (e.g. 'Override to Yes', 'Override to No', 'Defaults to Yes', 'Defaults to No')
-- click **Save**
+- select the key you want from the list
+- click **Repository Sets**
+- select the repository you want to modify
+- select the value you want to change from the **Select Action** menu('Override to Enabled', 'Override to Disable', 'Reset to Default')
 
-View current settings:
-![Activation key product content](/plugins/katello/{{ page.version }}/user_guide/activation_keys/activation_key_product_content.png)
+View and change settings:
 
-Change current settings:
-![Activation key product content update](/plugins/katello/{{ page.version }}/user_guide/activation_keys/activation_key_product_content_change.png)
+![Activation key repository sets](/plugins/katello/{{ page.version }}/user_guide/activation_keys/activation_key_repository_sets.png)
 
 ## Add Host Collections to an Activation Key
 
 To add Host Collections to a key:
 
 - navigate to: Content > Activation Keys
-- select the desired key from the list
+- select the key you want from the list
 - click **Host Collections**
 - click **Add**
 - select the Host Collections you would like to add
 - click **Add Selected**
 
 ![Adding Host Collections to an Activation Key](/plugins/katello/{{ page.version }}/user_guide/activation_keys/activation_key_add_host_collections.png)
+
+## Add System Purpose details to an Activation Key
+
+To add System Purpose to a key:
+
+- navigate to: Content > Activation Keys
+- select the key you want from the list
+- There is a section for System Purpose where you can set the Service Level, Usage Type, Role, and Add-ons for a system. 
+
+![Adding System Purpose to an Activation Key](/plugins/katello/{{ page.version }}/user_guide/activation_keys/activation_key_system_purpose.png)
+
+## View Content Hosts registered with the Activation Key
+
+To view Content Hosts registered with a particular Activation Key:
+
+- navigate to: Content > Activation Keys
+- select the key you want from the list
+- select **Content Hosts** under **Associations**
+
+![View Content Hosts registered with an Activation Key](/plugins/katello/{{ page.version }}/user_guide/activation_keys/activation_key_associations_content_host.png)
 
 ## Register a Content Host using an Activation Key
 
