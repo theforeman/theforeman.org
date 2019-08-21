@@ -16,7 +16,7 @@ Katello 3.13 provides setting System Purpose attributes on Activation Keys in th
 
 ### HTTP Proxy Support
 
-Katello 3.13 introduces support for HTTP proxies for content syncing. Repositories may be assigned an HTTP proxy policy: a global default, no proxy, or specify a proxy. HTTP proxy policies can be applied through bulk actions at the product level.
+Katello 3.13 introduces support for HTTP proxies for content syncing. Repositories may be assigned an HTTP proxy policy: a global default, no proxy, or specify a proxy. HTTP proxy policies can be applied through bulk actions at the product level. Documentation regarding HTTP proxy support can be found [here](https://theforeman.org/plugins/katello/3.13/advanced/http_proxies.html).
 
 ### Content Views
 
