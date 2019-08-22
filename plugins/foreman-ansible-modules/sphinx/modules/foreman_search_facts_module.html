@@ -178,10 +178,28 @@
     </tr>
                 <tr>
                                                             <td colspan="1">
+                <b>full_details</b>
+                <div style="font-size: small">
+                    <span style="color: purple">boolean</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                                                                                <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                            <li><div style="color: blue"><b>no</b>&nbsp;&larr;</div></li>
+                                                                                                                                                                                            <li>yes</li>
+                                                                                </ul>
+                                                                        </td>
+                                                            <td>
+                                                                    <div>If <code>True</code> all details about the found resources are returned</div>
+                                                                                    <div style="font-size: small; color: darkgreen"><br/>aliases: info</div>
+                                </td>
+        </tr>
+                            <tr>
+                                                            <td colspan="1">
                 <b>password</b>
                 <div style="font-size: small">
                     <span style="color: purple">-</span>
-                     / <span style="color: red">required</span>                    </div>
+                                             / <span style="color: red">required</span>                    </div>
                                 </td>
                             <td>
                                                                                                                                                         </td>
@@ -194,7 +212,7 @@
                 <b>resource</b>
                 <div style="font-size: small">
                     <span style="color: purple">-</span>
-                                        </div>
+                                             / <span style="color: red">required</span>                    </div>
                                 </td>
                             <td>
                                                                                                                                                         </td>
@@ -208,7 +226,7 @@
                 <b>search</b>
                 <div style="font-size: small">
                     <span style="color: purple">-</span>
-                                        </div>
+                                                                </div>
                                 </td>
                             <td>
                                                                                                                                                         </td>
@@ -222,7 +240,7 @@
                 <b>server_url</b>
                 <div style="font-size: small">
                     <span style="color: purple">-</span>
-                     / <span style="color: red">required</span>                    </div>
+                                             / <span style="color: red">required</span>                    </div>
                                 </td>
                             <td>
                                                                                                                                                         </td>
@@ -235,7 +253,7 @@
                 <b>username</b>
                 <div style="font-size: small">
                     <span style="color: purple">-</span>
-                     / <span style="color: red">required</span>                    </div>
+                                             / <span style="color: red">required</span>                    </div>
                                 </td>
                             <td>
                                                                                                                                                         </td>
@@ -248,7 +266,7 @@
                 <b>validate_certs</b>
                 <div style="font-size: small">
                     <span style="color: purple">boolean</span>
-                                        </div>
+                                                                </div>
                                 </td>
                             <td>
                                                                                                                                                                                                                 <ul style="margin: 0; padding: 0"><b>Choices:</b>
@@ -286,6 +304,17 @@
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">debug</span><span class="p p-Indicator">:</span>
     <span class="l l-Scalar l-Scalar-Plain">var</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">item.name</span>
   <span class="l l-Scalar l-Scalar-Plain">with_items</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">result.resources</span>
+
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&quot;Read</span><span class="nv"> </span><span class="s">all</span><span class="nv"> </span><span class="s">Organizations</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">full</span><span class="nv"> </span><span class="s">details&quot;</span>
+  <span class="l l-Scalar l-Scalar-Plain">foreman_search_facts</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="s">&quot;admin&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="s">&quot;changeme&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">server_url</span><span class="p p-Indicator">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">resource</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">organizations</span>
+    <span class="l l-Scalar l-Scalar-Plain">full_details</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="l l-Scalar l-Scalar-Plain">register</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">result</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">debug</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">var</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">result.resources</span>
 </pre></div>
 </div>
 </div>
