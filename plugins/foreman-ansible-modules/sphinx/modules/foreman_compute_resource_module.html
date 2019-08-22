@@ -157,14 +157,14 @@
 <div class="section" id="synopsis">
 <h2><a class="toc-backref" href="#id1">Synopsis</a><a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Create and delete Foreman Compute Resources using Foreman API</li>
+<li>Create, update and delete Foreman Compute Resources using Foreman API</li>
 </ul>
 </div>
 <div class="section" id="requirements">
 <h2><a class="toc-backref" href="#id2">Requirements</a><a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <p>The below requirements are needed on the host that executes this module.</p>
 <ul class="simple">
-<li>nailgun &gt;= 0.32.0</li>
+<li>apypie</li>
 </ul>
 </div>
 <div class="section" id="parameters">
@@ -180,7 +180,7 @@
                 <b>description</b>
                 <div style="font-size: small">
                     <span style="color: purple">-</span>
-                                        </div>
+                                                                </div>
                                 </td>
                             <td>
                                                                                                                                                         </td>
@@ -193,11 +193,10 @@
                 <b>locations</b>
                 <div style="font-size: small">
                     <span style="color: purple">list</span>
-                                        </div>
+                                                                </div>
                                 </td>
                             <td>
-                                                                                                                                                                <b>Default:</b><br/><div style="color: blue">None</div>
-                                </td>
+                                                                                                                                                        </td>
                                                             <td>
                                                                     <div>List of locations the compute resource should be assigned to</div>
                                                                             </td>
@@ -207,7 +206,7 @@
                 <b>name</b>
                 <div style="font-size: small">
                     <span style="color: purple">-</span>
-                     / <span style="color: red">required</span>                    </div>
+                                             / <span style="color: red">required</span>                    </div>
                                 </td>
                             <td>
                                                                                                                                                         </td>
@@ -220,11 +219,10 @@
                 <b>organizations</b>
                 <div style="font-size: small">
                     <span style="color: purple">list</span>
-                                        </div>
+                                                                </div>
                                 </td>
                             <td>
-                                                                                                                                                                <b>Default:</b><br/><div style="color: blue">None</div>
-                                </td>
+                                                                                                                                                        </td>
                                                             <td>
                                                                     <div>List of organizations the compute resource should be assigned to</div>
                                                                             </td>
@@ -234,7 +232,7 @@
                 <b>password</b>
                 <div style="font-size: small">
                     <span style="color: purple">-</span>
-                     / <span style="color: red">required</span>                    </div>
+                                             / <span style="color: red">required</span>                    </div>
                                 </td>
                             <td>
                                                                                                                                                         </td>
@@ -247,7 +245,7 @@
                 <b>provider</b>
                 <div style="font-size: small">
                     <span style="color: purple">-</span>
-                                        </div>
+                                                                </div>
                                 </td>
                             <td>
                                                                                                                         <ul style="margin: 0; padding: 0"><b>Choices:</b>
@@ -255,24 +253,9 @@
                                                                                                                                                                                             <li>libvirt</li>
                                                                                                                                                                                             <li>ovirt</li>
                                                                                 </ul>
-                                                                                <b>Default:</b><br/><div style="color: blue">None</div>
-                                </td>
+                                                                        </td>
                                                             <td>
-                                                                    <div>Compute resource provider. Required if <em>state=present</em>.</div>
-                                                                            </td>
-        </tr>
-                            <tr>
-                                                            <td colspan="1">
-                <b>provider_auth</b>
-                <div style="font-size: small">
-                    <span style="color: purple">-</span>
-                                        </div>
-                                </td>
-                            <td>
-                                                                                                                                                                <b>Default:</b><br/><div style="color: blue">None</div>
-                                </td>
-                                                            <td>
-                                                                    <div>Deprecated, use <em>provider_params</em> instead. Provider authentication</div>
+                                                                    <div>Compute resource provider. Required if <em>state=present_with_defaults</em>.</div>
                                                                             </td>
         </tr>
                             <tr>
@@ -280,13 +263,12 @@
                 <b>provider_params</b>
                 <div style="font-size: small">
                     <span style="color: purple">-</span>
-                                        </div>
+                                                                </div>
                                 </td>
                             <td>
-                                                                                                                                                                <b>Default:</b><br/><div style="color: blue">None</div>
-                                </td>
+                                                                                                                                                        </td>
                                                             <td>
-                                                                    <div>Parameter specific to compute resource provider</div>
+                                                                    <div>Parameter specific to compute resource provider. Required if <em>state=present_with_defaults</em>.</div>
                                                                             </td>
         </tr>
                             <tr>
@@ -294,7 +276,7 @@
                 <b>server_url</b>
                 <div style="font-size: small">
                     <span style="color: purple">-</span>
-                     / <span style="color: red">required</span>                    </div>
+                                             / <span style="color: red">required</span>                    </div>
                                 </td>
                             <td>
                                                                                                                                                         </td>
@@ -307,7 +289,7 @@
                 <b>state</b>
                 <div style="font-size: small">
                     <span style="color: purple">-</span>
-                                        </div>
+                                                                </div>
                                 </td>
                             <td>
                                                                                                                         <ul style="margin: 0; padding: 0"><b>Choices:</b>
@@ -325,7 +307,7 @@
                 <b>updated_name</b>
                 <div style="font-size: small">
                     <span style="color: purple">-</span>
-                                        </div>
+                                                                </div>
                                 </td>
                             <td>
                                                                                                                                                         </td>
@@ -338,7 +320,7 @@
                 <b>username</b>
                 <div style="font-size: small">
                     <span style="color: purple">-</span>
-                     / <span style="color: red">required</span>                    </div>
+                                             / <span style="color: red">required</span>                    </div>
                                 </td>
                             <td>
                                                                                                                                                         </td>
@@ -351,7 +333,7 @@
                 <b>validate_certs</b>
                 <div style="font-size: small">
                     <span style="color: purple">boolean</span>
-                                        </div>
+                                                                </div>
                                 </td>
                             <td>
                                                                                                                                                                                                                 <ul style="margin: 0; padding: 0"><b>Choices:</b>
@@ -368,7 +350,48 @@
 <br/></div>
 <div class="section" id="examples">
 <h2><a class="toc-backref" href="#id4">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">vmware compute resource</span>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Create livirt compute resource</span>
+  <span class="l l-Scalar l-Scalar-Plain">foreman_compute_resource</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">example_compute_resource</span>
+    <span class="l l-Scalar l-Scalar-Plain">locations</span><span class="p p-Indicator">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Munich</span>
+    <span class="l l-Scalar l-Scalar-Plain">organizations</span><span class="p p-Indicator">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ATIX</span>
+    <span class="l l-Scalar l-Scalar-Plain">provider</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">libvirt</span>
+    <span class="l l-Scalar l-Scalar-Plain">provider_params</span><span class="p p-Indicator">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">libvirt.example.com</span>
+      <span class="l l-Scalar l-Scalar-Plain">display_type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">vnc</span>
+    <span class="l l-Scalar l-Scalar-Plain">server_url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">foreman.example.com</span>
+    <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
+    <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
+    <span class="l l-Scalar l-Scalar-Plain">state</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
+
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Update livirt compute resource</span>
+  <span class="l l-Scalar l-Scalar-Plain">foreman_compute_resource</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">example_compute_resource</span>
+    <span class="l l-Scalar l-Scalar-Plain">description</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">updated compute resource</span>
+    <span class="l l-Scalar l-Scalar-Plain">locations</span><span class="p p-Indicator">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Munich</span>
+    <span class="l l-Scalar l-Scalar-Plain">organizations</span><span class="p p-Indicator">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ATIX</span>
+    <span class="l l-Scalar l-Scalar-Plain">provider</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">libvirt</span>
+    <span class="l l-Scalar l-Scalar-Plain">provider_params</span><span class="p p-Indicator">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">libvirt.example.com</span>
+      <span class="l l-Scalar l-Scalar-Plain">display_type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">vnc</span>
+    <span class="l l-Scalar l-Scalar-Plain">server_url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">foreman.example.com</span>
+    <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
+    <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
+    <span class="l l-Scalar l-Scalar-Plain">state</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
+
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Delete livirt compute resource</span>
+  <span class="l l-Scalar l-Scalar-Plain">foreman_compute_resource</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">example_compute_resource</span>
+    <span class="l l-Scalar l-Scalar-Plain">server_url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">foreman.example.com</span>
+    <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
+    <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
+    <span class="l l-Scalar l-Scalar-Plain">state</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">absent</span>
+
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Create vmware compute resource</span>
   <span class="l l-Scalar l-Scalar-Plain">foreman_compute_resource</span><span class="p p-Indicator">:</span>
     <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">example_compute_resource</span>
     <span class="l l-Scalar l-Scalar-Plain">locations</span><span class="p p-Indicator">:</span>
@@ -386,7 +409,7 @@
     <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
     <span class="l l-Scalar l-Scalar-Plain">state</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
 
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ovirt compute resource</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Create ovirt compute resource</span>
   <span class="l l-Scalar l-Scalar-Plain">foreman_compute_resource</span><span class="p p-Indicator">:</span>
     <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ovirt_compute_resource</span>
     <span class="l l-Scalar l-Scalar-Plain">locations</span><span class="p p-Indicator">:</span>
@@ -419,6 +442,7 @@
 <ul class="simple">
 <li>Philipp Joos (&#64;philippj)</li>
 <li>Baptiste Agasse (&#64;bagasse)</li>
+<li>Manisha Singhal (&#64;Manisha15) ATIX AG</li>
 </ul>
 <div class="admonition hint">
 <p class="first admonition-title">Hint</p>

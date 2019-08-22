@@ -43,7 +43,7 @@ Parameters
                     <b>content_view</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -56,7 +56,7 @@ Parameters
                     <b>date_type</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                             <ul style="margin: 0; padding: 0"><b>Choices:</b>
@@ -74,7 +74,7 @@ Parameters
                     <b>end_date</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -87,7 +87,7 @@ Parameters
                     <b>errata_id</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -100,7 +100,7 @@ Parameters
                     <b>filter_state</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                             <ul style="margin: 0; padding: 0"><b>Choices:</b>
@@ -117,7 +117,7 @@ Parameters
                     <b>filter_type</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                             <ul style="margin: 0; padding: 0"><b>Choices:</b>
@@ -136,10 +136,10 @@ Parameters
                     <b>inclusion</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
-                                                                                                                                                                                                                <b>Default:</b><br/><div style="color: blue">no</div>
+                                                                                                                                                                                                                <b>Default:</b><br/><div style="color: blue">"no"</div>
                                     </td>
                                                                 <td>
                                                                         <div>Create an include filter</div>
@@ -150,7 +150,7 @@ Parameters
                     <b>max_version</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -163,7 +163,7 @@ Parameters
                     <b>min_version</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -176,7 +176,7 @@ Parameters
                     <b>organization</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -189,7 +189,7 @@ Parameters
                     <b>password</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -202,7 +202,7 @@ Parameters
                     <b>repositories</b>
                     <div style="font-size: small">
                         <span style="color: purple">list</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                                     <b>Default:</b><br/><div style="color: blue">[]</div>
@@ -217,10 +217,10 @@ Parameters
                     <b>rule_name</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
-                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">I(name)</div>
+                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">"I(name)"</div>
                                     </td>
                                                                 <td>
                                                                         <div>Content view filter rule name or package name</div>
@@ -231,7 +231,7 @@ Parameters
                     <b>rule_state</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                             <ul style="margin: 0; padding: 0"><b>Choices:</b>
@@ -248,7 +248,7 @@ Parameters
                     <b>server_url</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -261,7 +261,7 @@ Parameters
                     <b>start_date</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -274,10 +274,10 @@ Parameters
                     <b>types</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
-                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">[u&#39;bugfix&#39;, u&#39;enhancement&#39;, u&#39;security&#39;]</div>
+                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">["bugfix", "enhancement", "security"]</div>
                                     </td>
                                                                 <td>
                                                                         <div>erratum types (enhancement, bugfix, security)</div>
@@ -288,7 +288,7 @@ Parameters
                     <b>username</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -301,7 +301,7 @@ Parameters
                     <b>validate_certs</b>
                     <div style="font-size: small">
                         <span style="color: purple">boolean</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                                                                                     <ul style="margin: 0; padding: 0"><b>Choices:</b>
@@ -319,7 +319,7 @@ Parameters
                     <b>version</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>

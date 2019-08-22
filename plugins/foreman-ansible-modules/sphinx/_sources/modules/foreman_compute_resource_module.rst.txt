@@ -16,7 +16,7 @@ foreman_compute_resource -- Manage Foreman Compute resources using Foreman API
 
 Synopsis
 --------
-- Create and delete Foreman Compute Resources using Foreman API
+- Create, update and delete Foreman Compute Resources using Foreman API
 
 
 
@@ -24,7 +24,7 @@ Requirements
 ------------
 The below requirements are needed on the host that executes this module.
 
-- nailgun >= 0.32.0
+- apypie
 
 
 Parameters
@@ -43,7 +43,7 @@ Parameters
                     <b>description</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -56,11 +56,10 @@ Parameters
                     <b>locations</b>
                     <div style="font-size: small">
                         <span style="color: purple">list</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
-                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">None</div>
-                                    </td>
+                                                                                                                                                            </td>
                                                                 <td>
                                                                         <div>List of locations the compute resource should be assigned to</div>
                                                                                 </td>
@@ -70,7 +69,7 @@ Parameters
                     <b>name</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -83,11 +82,10 @@ Parameters
                     <b>organizations</b>
                     <div style="font-size: small">
                         <span style="color: purple">list</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
-                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">None</div>
-                                    </td>
+                                                                                                                                                            </td>
                                                                 <td>
                                                                         <div>List of organizations the compute resource should be assigned to</div>
                                                                                 </td>
@@ -97,7 +95,7 @@ Parameters
                     <b>password</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -110,7 +108,7 @@ Parameters
                     <b>provider</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                             <ul style="margin: 0; padding: 0"><b>Choices:</b>
@@ -118,24 +116,9 @@ Parameters
                                                                                                                                                                                                 <li>libvirt</li>
                                                                                                                                                                                                 <li>ovirt</li>
                                                                                     </ul>
-                                                                                    <b>Default:</b><br/><div style="color: blue">None</div>
-                                    </td>
+                                                                            </td>
                                                                 <td>
-                                                                        <div>Compute resource provider. Required if <em>state=present</em>.</div>
-                                                                                </td>
-            </tr>
-                                <tr>
-                                                                <td colspan="1">
-                    <b>provider_auth</b>
-                    <div style="font-size: small">
-                        <span style="color: purple">-</span>
-                                            </div>
-                                    </td>
-                                <td>
-                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">None</div>
-                                    </td>
-                                                                <td>
-                                                                        <div>Deprecated, use <em>provider_params</em> instead. Provider authentication</div>
+                                                                        <div>Compute resource provider. Required if <em>state=present_with_defaults</em>.</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -143,13 +126,12 @@ Parameters
                     <b>provider_params</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
-                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">None</div>
-                                    </td>
+                                                                                                                                                            </td>
                                                                 <td>
-                                                                        <div>Parameter specific to compute resource provider</div>
+                                                                        <div>Parameter specific to compute resource provider. Required if <em>state=present_with_defaults</em>.</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -157,7 +139,7 @@ Parameters
                     <b>server_url</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -170,7 +152,7 @@ Parameters
                     <b>state</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                             <ul style="margin: 0; padding: 0"><b>Choices:</b>
@@ -188,7 +170,7 @@ Parameters
                     <b>updated_name</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -201,7 +183,7 @@ Parameters
                     <b>username</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -214,7 +196,7 @@ Parameters
                     <b>validate_certs</b>
                     <div style="font-size: small">
                         <span style="color: purple">boolean</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                                                                                     <ul style="margin: 0; padding: 0"><b>Choices:</b>
@@ -239,7 +221,48 @@ Examples
 .. code-block:: yaml+jinja
 
     
-    - name: vmware compute resource
+    - name: Create livirt compute resource
+      foreman_compute_resource:
+        name: example_compute_resource
+        locations:
+          - Munich
+        organizations:
+          - ATIX
+        provider: libvirt
+        provider_params:
+          url: libvirt.example.com
+          display_type: vnc
+        server_url: foreman.example.com
+        username: admin
+        password: secret
+        state: present
+
+    - name: Update livirt compute resource
+      foreman_compute_resource:
+        name: example_compute_resource
+        description: updated compute resource
+        locations:
+          - Munich
+        organizations:
+          - ATIX
+        provider: libvirt
+        provider_params:
+          url: libvirt.example.com
+          display_type: vnc
+        server_url: foreman.example.com
+        username: admin
+        password: secret
+        state: present
+
+    - name: Delete livirt compute resource
+      foreman_compute_resource:
+        name: example_compute_resource
+        server_url: foreman.example.com
+        username: admin
+        password: secret
+        state: absent
+
+    - name: Create vmware compute resource
       foreman_compute_resource:
         name: example_compute_resource
         locations:
@@ -257,7 +280,7 @@ Examples
         password: secret
         state: present
 
-    - name: ovirt compute resource
+    - name: Create ovirt compute resource
       foreman_compute_resource:
         name: ovirt_compute_resource
         locations:
@@ -301,6 +324,7 @@ Authors
 
 - Philipp Joos (@philippj)
 - Baptiste Agasse (@bagasse)
+- Manisha Singhal (@Manisha15) ATIX AG
 
 
 .. hint::

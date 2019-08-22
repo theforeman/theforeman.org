@@ -43,7 +43,7 @@ Parameters
                     <b>admin</b>
                     <div style="font-size: small">
                         <span style="color: purple">boolean</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                                                                                     <ul style="margin: 0; padding: 0"><b>Choices:</b>
@@ -60,10 +60,10 @@ Parameters
                     <b>auth_source</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
-                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">Internal</div>
+                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">"Internal"</div>
                                     </td>
                                                                 <td>
                                                                         <div>Authentication source where the user exists</div>
@@ -74,7 +74,7 @@ Parameters
                     <b>default_location</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -87,7 +87,7 @@ Parameters
                     <b>default_organization</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -100,7 +100,7 @@ Parameters
                     <b>description</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -113,7 +113,7 @@ Parameters
                     <b>firstname</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -126,7 +126,7 @@ Parameters
                     <b>lastname</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -139,7 +139,7 @@ Parameters
                     <b>locale</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -152,7 +152,7 @@ Parameters
                     <b>locations</b>
                     <div style="font-size: small">
                         <span style="color: purple">list</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -165,7 +165,7 @@ Parameters
                     <b>login</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -179,7 +179,7 @@ Parameters
                     <b>mail</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -193,7 +193,7 @@ Parameters
                     <b>organizations</b>
                     <div style="font-size: small">
                         <span style="color: purple">list</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -206,7 +206,7 @@ Parameters
                     <b>password</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -219,7 +219,7 @@ Parameters
                     <b>roles</b>
                     <div style="font-size: small">
                         <span style="color: purple">list</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -232,7 +232,7 @@ Parameters
                     <b>server_url</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -245,7 +245,7 @@ Parameters
                     <b>state</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                             <ul style="margin: 0; padding: 0"><b>Choices:</b>
@@ -262,7 +262,7 @@ Parameters
                     <b>timezone</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -276,7 +276,7 @@ Parameters
                     <b>user_password</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -289,7 +289,7 @@ Parameters
                     <b>username</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -302,7 +302,7 @@ Parameters
                     <b>validate_certs</b>
                     <div style="font-size: small">
                         <span style="color: purple">boolean</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                                                                                     <ul style="margin: 0; padding: 0"><b>Choices:</b>

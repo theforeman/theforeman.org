@@ -43,7 +43,7 @@ Parameters
                     <b>content_type</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                             <ul style="margin: 0; padding: 0"><b>Choices:</b>
@@ -64,7 +64,7 @@ Parameters
                     <b>docker_upstream_name</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -77,7 +77,7 @@ Parameters
                     <b>download_policy</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                             <ul style="margin: 0; padding: 0"><b>Choices:</b>
@@ -95,7 +95,7 @@ Parameters
                     <b>gpg_key</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -108,7 +108,7 @@ Parameters
                     <b>label</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -121,7 +121,7 @@ Parameters
                     <b>mirror_on_sync</b>
                     <div style="font-size: small">
                         <span style="color: purple">boolean</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                                                                                     <ul style="margin: 0; padding: 0"><b>Choices:</b>
@@ -138,7 +138,7 @@ Parameters
                     <b>name</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -151,7 +151,7 @@ Parameters
                     <b>organization</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -164,7 +164,7 @@ Parameters
                     <b>password</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -177,7 +177,7 @@ Parameters
                     <b>product</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -190,7 +190,7 @@ Parameters
                     <b>server_url</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -203,7 +203,7 @@ Parameters
                     <b>state</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                             <ul style="margin: 0; padding: 0"><b>Choices:</b>
@@ -221,7 +221,7 @@ Parameters
                     <b>url</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -234,7 +234,7 @@ Parameters
                     <b>username</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -247,7 +247,7 @@ Parameters
                     <b>validate_certs</b>
                     <div style="font-size: small">
                         <span style="color: purple">boolean</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                                                                                     <ul style="margin: 0; padding: 0"><b>Choices:</b>

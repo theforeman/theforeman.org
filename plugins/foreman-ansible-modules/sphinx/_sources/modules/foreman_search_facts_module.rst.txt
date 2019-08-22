@@ -40,10 +40,28 @@ Parameters
         </tr>
                     <tr>
                                                                 <td colspan="1">
+                    <b>full_details</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">boolean</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                                                                                    <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                                <li><div style="color: blue"><b>no</b>&nbsp;&larr;</div></li>
+                                                                                                                                                                                                <li>yes</li>
+                                                                                    </ul>
+                                                                            </td>
+                                                                <td>
+                                                                        <div>If <code>True</code> all details about the found resources are returned</div>
+                                                                                        <div style="font-size: small; color: darkgreen"><br/>aliases: info</div>
+                                    </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
                     <b>password</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -56,7 +74,7 @@ Parameters
                     <b>resource</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -70,7 +88,7 @@ Parameters
                     <b>search</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -84,7 +102,7 @@ Parameters
                     <b>server_url</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -97,7 +115,7 @@ Parameters
                     <b>username</b>
                     <div style="font-size: small">
                         <span style="color: purple">-</span>
-                         / <span style="color: red">required</span>                    </div>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -110,7 +128,7 @@ Parameters
                     <b>validate_certs</b>
                     <div style="font-size: small">
                         <span style="color: purple">boolean</span>
-                                            </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                                                                                     <ul style="margin: 0; padding: 0"><b>Choices:</b>
@@ -156,6 +174,17 @@ Examples
     - debug:
         var: item.name
       with_items: result.resources
+
+    - name: "Read all Organizations with full details"
+      foreman_search_facts:
+        username: "admin"
+        password: "changeme"
+        server_url: "https://foreman.example.com"
+        resource: organizations
+        full_details: true
+      register: result
+    - debug:
+        var: result.resources
 
 
 
