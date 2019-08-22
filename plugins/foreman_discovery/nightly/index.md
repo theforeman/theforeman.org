@@ -462,10 +462,6 @@ bottom:
 * According to the `discovery_organization` or `discovery_location`, if
 present. These can be set under *Administer > Settings > Discovered*.
 
-* If `foreman_organization` or `foreman_location` fact is present, set
-accordingly. Fact names which are looked up can be configured in
-*Administer > Settings > Puppet* section as *Organization/Location fact* setting.
-
 * If Subnet was determined for particular discovered host, use the first
 Organization and Location associated with the Subnet.
 
@@ -475,6 +471,10 @@ hosts [without taxonomy](http://projects.theforeman.org/issues/4426).
 
 Organization or Location can be changed via the "bulk actions" menu which
 appears once once or more discovered hosts are selected.
+
+Note `foreman_organization` or `foreman_location` facts are no longer taken
+into account. These can still be set via *Administer > Settings > Puppet* but
+only applies to Puppet checkins.
 
 ## 3.1.4 Global settings
 
