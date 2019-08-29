@@ -56,7 +56,7 @@ navigation:
     sublinks:
       - title: Community
         url: https://community.theforeman.org
-      - title: Report bug
+      - title: Report a bug
         url: https://projects.theforeman.org/projects
       - title: Contribute
         url: /contribute.html
