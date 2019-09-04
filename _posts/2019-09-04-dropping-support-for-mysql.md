@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dropping support for MySQL
-date: 2019-09-04 16:30:00
+date: 2019-09-04 6:30:00
 author: Lukas Zapletal
 tags:
 - foreman
