@@ -1,7 +1,7 @@
 # theforeman.org
 
 This repo contains the source code for
-[theforeman.org](http://theforeman.org). All of the site's content is written in
+[theforeman.org](https://theforeman.org). All of the site's content is written in
 [Markdown](http://daringfireball.net/projects/markdown/syntax). If you're not familiar with it, fear not; it's easy
 to learn and to become rapidly productive!
 
