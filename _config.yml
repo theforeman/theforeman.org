@@ -9,7 +9,7 @@ url: https://theforeman.org
 baseurl: "" #keep at "" for the Atom feed
 
 # latest *stable* version
-foreman_version: '1.22'
+foreman_version: '1.23'
 
 paginate: 5
 paginate_path: "blog/page:num"
@@ -78,6 +78,7 @@ plugins:
 
 foreman_versions:
   - nightly
+  - "1.23"
   - "1.22"
   - "1.21"
   - "1.20"
