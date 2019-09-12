@@ -51,6 +51,23 @@
 
 
 
+  <h2>示例</h2>
+    <pre class="prettyprint">PUT /api/usergroups/7/external_usergroups/7
+{
+  &quot;external_usergroup&quot;: {
+    &quot;name&quot;: &quot;foremanusergroup&quot;
+  }
+}
+200
+{
+  &quot;id&quot;: 7,
+  &quot;name&quot;: &quot;foremanusergroup&quot;,
+  &quot;auth_source_ldap&quot;: {
+    &quot;id&quot;: 980190969,
+    &quot;type&quot;: &quot;AuthSourceLdap&quot;,
+    &quot;name&quot;: &quot;auth_source_ldap_69&quot;
+  }
+}</pre>
 
   <h2>參數</h2>
   <table class='table'>

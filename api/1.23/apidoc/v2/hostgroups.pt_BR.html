@@ -100,6 +100,265 @@
 
 
 
+  <h3>Exemplos</h3>
+    <pre class="prettyprint">GET /api/hostgroups
+200
+{
+  &quot;total&quot;: 5,
+  &quot;subtotal&quot;: 5,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;operatingsystem_id&quot;: 309172073,
+      &quot;operatingsystem_name&quot;: &quot;centos 5.3&quot;,
+      &quot;domain_id&quot;: 22495316,
+      &quot;domain_name&quot;: &quot;mydomain.net&quot;,
+      &quot;environment_id&quot;: 334344675,
+      &quot;environment_name&quot;: &quot;production&quot;,
+      &quot;compute_profile_id&quot;: 980190962,
+      &quot;compute_profile_name&quot;: &quot;1-Small&quot;,
+      &quot;ancestry&quot;: null,
+      &quot;parent_id&quot;: null,
+      &quot;parent_name&quot;: null,
+      &quot;ptable_id&quot;: null,
+      &quot;ptable_name&quot;: null,
+      &quot;medium_id&quot;: 980190962,
+      &quot;medium_name&quot;: &quot;CentOS 5.4&quot;,
+      &quot;pxe_loader&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;compute_resource_id&quot;: null,
+      &quot;compute_resource_name&quot;: null,
+      &quot;architecture_id&quot;: 501905019,
+      &quot;architecture_name&quot;: &quot;x86_64&quot;,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
+      &quot;created_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;id&quot;: 636252244,
+      &quot;name&quot;: &quot;Common&quot;,
+      &quot;title&quot;: &quot;Common&quot;,
+      &quot;description&quot;: null,
+      &quot;puppet_proxy_id&quot;: 182953976,
+      &quot;puppet_proxy_name&quot;: &quot;Puppetmaster Proxy&quot;,
+      &quot;puppet_ca_proxy_id&quot;: null,
+      &quot;puppet_ca_proxy_name&quot;: null,
+      &quot;puppet_proxy&quot;: {
+        &quot;name&quot;: &quot;Puppetmaster Proxy&quot;,
+        &quot;id&quot;: 182953976,
+        &quot;url&quot;: &quot;http://else.where:4567&quot;
+      },
+      &quot;puppet_ca_proxy&quot;: null,
+      &quot;parameters&quot;: [
+        {
+          &quot;priority&quot;: null,
+          &quot;created_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+          &quot;updated_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+          &quot;id&quot;: 767575238,
+          &quot;name&quot;: &quot;group1&quot;,
+          &quot;parameter_type&quot;: null,
+          &quot;value&quot;: &quot;group1&quot;
+        }
+      ]
+    },
+    {
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;operatingsystem_id&quot;: 309172073,
+      &quot;operatingsystem_name&quot;: &quot;centos 5.3&quot;,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;environment_id&quot;: 334344675,
+      &quot;environment_name&quot;: &quot;production&quot;,
+      &quot;compute_profile_id&quot;: null,
+      &quot;compute_profile_name&quot;: null,
+      &quot;ancestry&quot;: null,
+      &quot;parent_id&quot;: null,
+      &quot;parent_name&quot;: null,
+      &quot;ptable_id&quot;: null,
+      &quot;ptable_name&quot;: null,
+      &quot;medium_id&quot;: 980190962,
+      &quot;medium_name&quot;: &quot;CentOS 5.4&quot;,
+      &quot;pxe_loader&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;compute_resource_id&quot;: null,
+      &quot;compute_resource_name&quot;: null,
+      &quot;architecture_id&quot;: 501905019,
+      &quot;architecture_name&quot;: &quot;x86_64&quot;,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
+      &quot;created_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;id&quot;: 603241515,
+      &quot;name&quot;: &quot;db&quot;,
+      &quot;title&quot;: &quot;db&quot;,
+      &quot;description&quot;: null,
+      &quot;puppet_proxy_id&quot;: 182953976,
+      &quot;puppet_proxy_name&quot;: &quot;Puppetmaster Proxy&quot;,
+      &quot;puppet_ca_proxy_id&quot;: null,
+      &quot;puppet_ca_proxy_name&quot;: null,
+      &quot;puppet_proxy&quot;: {
+        &quot;name&quot;: &quot;Puppetmaster Proxy&quot;,
+        &quot;id&quot;: 182953976,
+        &quot;url&quot;: &quot;http://else.where:4567&quot;
+      },
+      &quot;puppet_ca_proxy&quot;: null,
+      &quot;parameters&quot;: []
+    },
+    {
+      &quot;subnet_id&quot;: 1018350795,
+      &quot;subnet_name&quot;: &quot;five&quot;,
+      &quot;operatingsystem_id&quot;: 309172073,
+      &quot;operatingsystem_name&quot;: &quot;centos 5.3&quot;,
+      &quot;domain_id&quot;: 22495316,
+      &quot;domain_name&quot;: &quot;mydomain.net&quot;,
+      &quot;environment_id&quot;: 153855663,
+      &quot;environment_name&quot;: &quot;global_puppetmaster&quot;,
+      &quot;compute_profile_id&quot;: 980190962,
+      &quot;compute_profile_name&quot;: &quot;1-Small&quot;,
+      &quot;ancestry&quot;: null,
+      &quot;parent_id&quot;: null,
+      &quot;parent_name&quot;: null,
+      &quot;ptable_id&quot;: 615088209,
+      &quot;ptable_name&quot;: &quot;Example partition table&quot;,
+      &quot;medium_id&quot;: 980190962,
+      &quot;medium_name&quot;: &quot;CentOS 5.4&quot;,
+      &quot;pxe_loader&quot;: &quot;PXELinux BIOS&quot;,
+      &quot;subnet6_id&quot;: 51848956,
+      &quot;subnet6_name&quot;: &quot;six&quot;,
+      &quot;compute_resource_id&quot;: null,
+      &quot;compute_resource_name&quot;: null,
+      &quot;architecture_id&quot;: 501905019,
+      &quot;architecture_name&quot;: &quot;x86_64&quot;,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
+      &quot;created_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;id&quot;: 1,
+      &quot;name&quot;: &quot;Parent&quot;,
+      &quot;title&quot;: &quot;Parent&quot;,
+      &quot;description&quot;: null,
+      &quot;puppet_proxy_id&quot;: 182953976,
+      &quot;puppet_proxy_name&quot;: &quot;Puppetmaster Proxy&quot;,
+      &quot;puppet_ca_proxy_id&quot;: 182953976,
+      &quot;puppet_ca_proxy_name&quot;: &quot;Puppetmaster Proxy&quot;,
+      &quot;puppet_proxy&quot;: {
+        &quot;name&quot;: &quot;Puppetmaster Proxy&quot;,
+        &quot;id&quot;: 182953976,
+        &quot;url&quot;: &quot;http://else.where:4567&quot;
+      },
+      &quot;puppet_ca_proxy&quot;: {
+        &quot;name&quot;: &quot;Puppetmaster Proxy&quot;,
+        &quot;id&quot;: 182953976,
+        &quot;url&quot;: &quot;http://else.where:4567&quot;
+      },
+      &quot;parameters&quot;: []
+    },
+    {
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: &quot;five&quot;,
+      &quot;operatingsystem_id&quot;: null,
+      &quot;operatingsystem_name&quot;: &quot;centos 5.3&quot;,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: &quot;mydomain.net&quot;,
+      &quot;environment_id&quot;: 334344675,
+      &quot;environment_name&quot;: &quot;production&quot;,
+      &quot;compute_profile_id&quot;: null,
+      &quot;compute_profile_name&quot;: &quot;1-Small&quot;,
+      &quot;ancestry&quot;: &quot;1&quot;,
+      &quot;parent_id&quot;: 1,
+      &quot;parent_name&quot;: &quot;Parent&quot;,
+      &quot;ptable_id&quot;: null,
+      &quot;ptable_name&quot;: &quot;Example partition table&quot;,
+      &quot;medium_id&quot;: null,
+      &quot;medium_name&quot;: &quot;CentOS 5.4&quot;,
+      &quot;pxe_loader&quot;: &quot;PXELinux BIOS&quot;,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: &quot;six&quot;,
+      &quot;compute_resource_id&quot;: null,
+      &quot;compute_resource_name&quot;: null,
+      &quot;architecture_id&quot;: null,
+      &quot;architecture_name&quot;: &quot;x86_64&quot;,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
+      &quot;created_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;id&quot;: 928644285,
+      &quot;name&quot;: &quot;inherited&quot;,
+      &quot;title&quot;: &quot;Parent/inherited&quot;,
+      &quot;description&quot;: null,
+      &quot;puppet_proxy_id&quot;: null,
+      &quot;puppet_proxy_name&quot;: &quot;Puppetmaster Proxy&quot;,
+      &quot;puppet_ca_proxy_id&quot;: null,
+      &quot;puppet_ca_proxy_name&quot;: &quot;Puppetmaster Proxy&quot;,
+      &quot;puppet_proxy&quot;: {
+        &quot;name&quot;: &quot;Puppetmaster Proxy&quot;,
+        &quot;id&quot;: 182953976,
+        &quot;url&quot;: &quot;http://else.where:4567&quot;
+      },
+      &quot;puppet_ca_proxy&quot;: {
+        &quot;name&quot;: &quot;Puppetmaster Proxy&quot;,
+        &quot;id&quot;: 182953976,
+        &quot;url&quot;: &quot;http://else.where:4567&quot;
+      },
+      &quot;parameters&quot;: []
+    },
+    {
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;operatingsystem_id&quot;: null,
+      &quot;operatingsystem_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;environment_id&quot;: null,
+      &quot;environment_name&quot;: null,
+      &quot;compute_profile_id&quot;: null,
+      &quot;compute_profile_name&quot;: null,
+      &quot;ancestry&quot;: null,
+      &quot;parent_id&quot;: null,
+      &quot;parent_name&quot;: null,
+      &quot;ptable_id&quot;: null,
+      &quot;ptable_name&quot;: null,
+      &quot;medium_id&quot;: null,
+      &quot;medium_name&quot;: null,
+      &quot;pxe_loader&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;compute_resource_id&quot;: null,
+      &quot;compute_resource_name&quot;: null,
+      &quot;architecture_id&quot;: null,
+      &quot;architecture_name&quot;: null,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
+      &quot;created_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;id&quot;: 866317115,
+      &quot;name&quot;: &quot;Unusual&quot;,
+      &quot;title&quot;: &quot;Unusual&quot;,
+      &quot;description&quot;: null,
+      &quot;puppet_proxy_id&quot;: 182953976,
+      &quot;puppet_proxy_name&quot;: &quot;Puppetmaster Proxy&quot;,
+      &quot;puppet_ca_proxy_id&quot;: null,
+      &quot;puppet_ca_proxy_name&quot;: null,
+      &quot;puppet_proxy&quot;: {
+        &quot;name&quot;: &quot;Puppetmaster Proxy&quot;,
+        &quot;id&quot;: 182953976,
+        &quot;url&quot;: &quot;http://else.where:4567&quot;
+      },
+      &quot;puppet_ca_proxy&quot;: null,
+      &quot;parameters&quot;: []
+    }
+  ]
+}</pre>
 
   <h3>Parâmentros</h3>
   <table class='table'>
@@ -458,6 +717,80 @@
 
 
 
+  <h3>Exemplos</h3>
+    <pre class="prettyprint">GET /api/hostgroups/928644287-hostgroup5
+200
+{
+  &quot;subnet_id&quot;: null,
+  &quot;subnet_name&quot;: null,
+  &quot;operatingsystem_id&quot;: null,
+  &quot;operatingsystem_name&quot;: null,
+  &quot;domain_id&quot;: null,
+  &quot;domain_name&quot;: null,
+  &quot;environment_id&quot;: null,
+  &quot;environment_name&quot;: null,
+  &quot;compute_profile_id&quot;: null,
+  &quot;compute_profile_name&quot;: null,
+  &quot;ancestry&quot;: null,
+  &quot;parent_id&quot;: null,
+  &quot;parent_name&quot;: null,
+  &quot;ptable_id&quot;: null,
+  &quot;ptable_name&quot;: null,
+  &quot;medium_id&quot;: null,
+  &quot;medium_name&quot;: null,
+  &quot;pxe_loader&quot;: null,
+  &quot;subnet6_id&quot;: null,
+  &quot;subnet6_name&quot;: null,
+  &quot;compute_resource_id&quot;: null,
+  &quot;compute_resource_name&quot;: null,
+  &quot;architecture_id&quot;: null,
+  &quot;architecture_name&quot;: null,
+  &quot;realm_id&quot;: null,
+  &quot;realm_name&quot;: null,
+  &quot;created_at&quot;: &quot;2019-09-11 14:32:23 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:32:23 UTC&quot;,
+  &quot;id&quot;: 928644287,
+  &quot;name&quot;: &quot;hostgroup5&quot;,
+  &quot;title&quot;: &quot;hostgroup5&quot;,
+  &quot;description&quot;: null,
+  &quot;puppet_proxy_id&quot;: null,
+  &quot;puppet_proxy_name&quot;: null,
+  &quot;puppet_ca_proxy_id&quot;: null,
+  &quot;puppet_ca_proxy_name&quot;: null,
+  &quot;puppet_proxy&quot;: null,
+  &quot;puppet_ca_proxy&quot;: null,
+  &quot;parameters&quot;: [
+    {
+      &quot;priority&quot;: 60,
+      &quot;created_at&quot;: &quot;2019-09-11 14:32:23 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:32:23 UTC&quot;,
+      &quot;id&quot;: 767575240,
+      &quot;name&quot;: &quot;parameter5&quot;,
+      &quot;parameter_type&quot;: null,
+      &quot;value&quot;: &quot;parameter value 5&quot;
+    }
+  ],
+  &quot;template_combinations&quot;: [],
+  &quot;puppetclasses&quot;: [],
+  &quot;config_groups&quot;: [],
+  &quot;all_puppetclasses&quot;: [],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
+}</pre>
 
   <h3>Parâmentros</h3>
   <table class='table'>
@@ -593,6 +926,61 @@
 
 
 
+  <h3>Exemplos</h3>
+    <pre class="prettyprint">POST /api/hostgroups
+{
+  &quot;hostgroup&quot;: {
+    &quot;name&quot;: &quot;TestHostgroup&quot;
+  }
+}
+201
+{
+  &quot;subnet_id&quot;: null,
+  &quot;subnet_name&quot;: null,
+  &quot;operatingsystem_id&quot;: null,
+  &quot;operatingsystem_name&quot;: null,
+  &quot;domain_id&quot;: null,
+  &quot;domain_name&quot;: null,
+  &quot;environment_id&quot;: null,
+  &quot;environment_name&quot;: null,
+  &quot;compute_profile_id&quot;: null,
+  &quot;compute_profile_name&quot;: null,
+  &quot;ancestry&quot;: null,
+  &quot;parent_id&quot;: null,
+  &quot;parent_name&quot;: null,
+  &quot;ptable_id&quot;: null,
+  &quot;ptable_name&quot;: null,
+  &quot;medium_id&quot;: null,
+  &quot;medium_name&quot;: null,
+  &quot;pxe_loader&quot;: null,
+  &quot;subnet6_id&quot;: null,
+  &quot;subnet6_name&quot;: null,
+  &quot;compute_resource_id&quot;: null,
+  &quot;compute_resource_name&quot;: null,
+  &quot;architecture_id&quot;: null,
+  &quot;architecture_name&quot;: null,
+  &quot;realm_id&quot;: null,
+  &quot;realm_name&quot;: null,
+  &quot;created_at&quot;: &quot;2019-09-11 14:32:24 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:32:24 UTC&quot;,
+  &quot;id&quot;: 928644288,
+  &quot;name&quot;: &quot;TestHostgroup&quot;,
+  &quot;title&quot;: &quot;TestHostgroup&quot;,
+  &quot;description&quot;: null,
+  &quot;puppet_proxy_id&quot;: null,
+  &quot;puppet_proxy_name&quot;: null,
+  &quot;puppet_ca_proxy_id&quot;: null,
+  &quot;puppet_ca_proxy_name&quot;: null,
+  &quot;puppet_proxy&quot;: null,
+  &quot;puppet_ca_proxy&quot;: null,
+  &quot;parameters&quot;: [],
+  &quot;template_combinations&quot;: [],
+  &quot;puppetclasses&quot;: [],
+  &quot;config_groups&quot;: [],
+  &quot;all_puppetclasses&quot;: [],
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: []
+}</pre>
 
   <h3>Parâmentros</h3>
   <table class='table'>
@@ -1280,6 +1668,27 @@
 
 
 
+  <h3>Exemplos</h3>
+    <pre class="prettyprint">PUT /api/hostgroups/636252244
+{
+  &quot;hostgroup&quot;: {
+    &quot;name&quot;: &quot;&quot;
+  }
+}
+422
+{
+  &quot;error&quot;: {
+    &quot;id&quot;: 636252244,
+    &quot;errors&quot;: {
+      &quot;name&quot;: [
+        &quot;can&#39;t be blank&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Name can&#39;t be blank&quot;
+    ]
+  }
+}</pre>
 
   <h3>Parâmentros</h3>
   <table class='table'>
@@ -1989,6 +2398,15 @@
 
 
 
+  <h3>Exemplos</h3>
+    <pre class="prettyprint">DELETE /api/hostgroups/1-Parent
+{
+  &quot;hostgroup&quot;: {}
+}
+409
+{
+  &quot;message&quot;: &quot;Cannot delete group Parent because it has nested host groups.&quot;
+}</pre>
 
   <h3>Parâmentros</h3>
   <table class='table'>
@@ -2100,6 +2518,44 @@
 
 
 
+  <h3>Exemplos</h3>
+    <pre class="prettyprint">POST /api/hostgroups/636252244/clone
+{
+  &quot;name&quot;: &quot;sdpYHEctpz&quot;,
+  &quot;hostgroup&quot;: {
+    &quot;name&quot;: &quot;sdpYHEctpz&quot;
+  }
+}
+201
+{
+  &quot;id&quot;: 928644299,
+  &quot;name&quot;: &quot;sdpYHEctpz&quot;,
+  &quot;created_at&quot;: &quot;2019-09-11T14:32:26.077Z&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11T14:32:26.077Z&quot;,
+  &quot;environment_id&quot;: 334344675,
+  &quot;operatingsystem_id&quot;: 309172073,
+  &quot;architecture_id&quot;: 501905019,
+  &quot;medium_id&quot;: 980190962,
+  &quot;ptable_id&quot;: null,
+  &quot;root_pass&quot;: &quot;$1$foreman$NW1XVtbk4/XkJqmKNrFWV0&quot;,
+  &quot;puppet_ca_proxy_id&quot;: 182953976,
+  &quot;use_image&quot;: null,
+  &quot;image_file&quot;: &quot;&quot;,
+  &quot;ancestry&quot;: null,
+  &quot;vm_defaults&quot;: null,
+  &quot;subnet_id&quot;: null,
+  &quot;domain_id&quot;: 22495316,
+  &quot;puppet_proxy_id&quot;: 182953976,
+  &quot;title&quot;: &quot;sdpYHEctpz&quot;,
+  &quot;realm_id&quot;: null,
+  &quot;compute_profile_id&quot;: 980190962,
+  &quot;grub_pass&quot;: &quot;$1$foreman$NW1XVtbk4/XkJqmKNrFWV0&quot;,
+  &quot;lookup_value_matcher&quot;: &quot;hostgroup=sdpYHEctpz&quot;,
+  &quot;subnet6_id&quot;: null,
+  &quot;pxe_loader&quot;: null,
+  &quot;description&quot;: null,
+  &quot;compute_resource_id&quot;: null
+}</pre>
 
   <h3>Parâmentros</h3>
   <table class='table'>
@@ -2211,6 +2667,18 @@
 
 
 
+  <h3>Exemplos</h3>
+    <pre class="prettyprint">POST /api/hostgroups/928644292-hostgroup7/rebuild_config
+{
+  &quot;only&quot;: [
+    &quot;TFTP&quot;
+  ],
+  &quot;hostgroup&quot;: {}
+}
+200
+{
+  &quot;message&quot;: &quot;Configuration successfully rebuilt.&quot;
+}</pre>
 
   <h3>Parâmentros</h3>
   <table class='table'>

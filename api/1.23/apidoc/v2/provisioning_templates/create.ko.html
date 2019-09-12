@@ -51,6 +51,33 @@
 
 
 
+  <h2><span class="translation_missing" title="translation missing: ko.apipie.examples">Examples</span></h2>
+    <pre class="prettyprint">POST /api/provisioning_templates
+{
+  &quot;provisioning_template&quot;: {
+    &quot;template&quot;: &quot;This is a test template&quot;,
+    &quot;template_kind_id&quot;: 131565194,
+    &quot;name&quot;: &quot;new_template&quot;
+  }
+}
+201
+{
+  &quot;template&quot;: &quot;This is a test template&quot;,
+  &quot;locked&quot;: false,
+  &quot;snippet&quot;: false,
+  &quot;audit_comment&quot;: null,
+  &quot;created_at&quot;: &quot;2019-09-11 14:57:19 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:57:19 UTC&quot;,
+  &quot;id&quot;: 1007981787,
+  &quot;name&quot;: &quot;new_template&quot;,
+  &quot;template_kind_id&quot;: 131565194,
+  &quot;template_kind_name&quot;: &quot;PXEGrub&quot;,
+  &quot;template_combinations&quot;: [],
+  &quot;operatingsystems&quot;: [],
+  &quot;os_default_templates&quot;: [],
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: []
+}</pre>
 
   <h2><span class="translation_missing" title="translation missing: ko.apipie.params">Params</span></h2>
   <table class='table'>

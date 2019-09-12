@@ -51,6 +51,37 @@
 
 
 
+  <h2>Esempi</h2>
+    <pre class="prettyprint">POST /api/provisioning_templates/import
+{
+  &quot;provisioning_template&quot;: {
+    &quot;name&quot;: &quot;taxonomy override test name&quot;,
+    &quot;template&quot;: &quot;&lt;%#\nkind: PXELinux\nname: taxonomy override test name\nmodel: ProvisioningTemplate\norganizations:\n - org432\nlocations:\n - loc339\n%&gt;\ntest&quot;,
+    &quot;organization_ids&quot;: [
+      447626449
+    ],
+    &quot;location_ids&quot;: [
+      447626450
+    ]
+  },
+  &quot;options&quot;: {
+    &quot;associate&quot;: &quot;new&quot;
+  }
+}
+201
+{
+  &quot;id&quot;: 1007981788,
+  &quot;name&quot;: &quot;taxonomy override test name&quot;,
+  &quot;template&quot;: &quot;&lt;%#\nkind: PXELinux\nname: taxonomy override test name\nmodel: ProvisioningTemplate\norganizations:\n - org432\nlocations:\n - loc339\n%&gt;\ntest&quot;,
+  &quot;snippet&quot;: false,
+  &quot;template_kind_id&quot;: 452984334,
+  &quot;created_at&quot;: &quot;2019-09-11T14:57:19.599Z&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11T14:57:19.599Z&quot;,
+  &quot;locked&quot;: false,
+  &quot;default&quot;: false,
+  &quot;vendor&quot;: null,
+  &quot;os_family&quot;: null
+}</pre>
 
   <h2>Parametri</h2>
   <table class='table'>

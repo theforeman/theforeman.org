@@ -70,6 +70,35 @@
 
 
 
+  <h3>Esempi</h3>
+    <pre class="prettyprint">GET /api/templates/1007981710/template_inputs
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;template_id&quot;: 1007981710,
+      &quot;fact_name&quot;: null,
+      &quot;variable_name&quot;: null,
+      &quot;puppet_parameter_name&quot;: null,
+      &quot;puppet_class_name&quot;: null,
+      &quot;description&quot;: null,
+      &quot;required&quot;: false,
+      &quot;id&quot;: 6,
+      &quot;name&quot;: &quot;Template input 17&quot;,
+      &quot;input_type&quot;: &quot;user&quot;,
+      &quot;options&quot;: null
+    }
+  ]
+}</pre>
 
   <h3>Parametri</h3>
   <table class='table'>
@@ -277,6 +306,22 @@
 
 
 
+  <h3>Esempi</h3>
+    <pre class="prettyprint">GET /api/templates/1007981705-report_template136/template_inputs/1
+200
+{
+  &quot;template_id&quot;: 1007981705,
+  &quot;fact_name&quot;: null,
+  &quot;variable_name&quot;: null,
+  &quot;puppet_parameter_name&quot;: null,
+  &quot;puppet_class_name&quot;: null,
+  &quot;description&quot;: null,
+  &quot;required&quot;: false,
+  &quot;id&quot;: 1,
+  &quot;name&quot;: &quot;Template input 12&quot;,
+  &quot;input_type&quot;: &quot;user&quot;,
+  &quot;options&quot;: null
+}</pre>
 
   <h3>Parametri</h3>
   <table class='table'>
@@ -410,6 +455,31 @@
 
 
 
+  <h3>Esempi</h3>
+    <pre class="prettyprint">POST /api/templates/1007981706-report_template137/template_inputs
+{
+  &quot;template_input&quot;: {}
+}
+422
+{
+  &quot;error&quot;: {
+    &quot;id&quot;: null,
+    &quot;errors&quot;: {
+      &quot;name&quot;: [
+        &quot;can&#39;t be blank&quot;
+      ],
+      &quot;input_type&quot;: [
+        &quot;can&#39;t be blank&quot;,
+        &quot;is not included in the list&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Name can&#39;t be blank&quot;,
+      &quot;Input type can&#39;t be blank&quot;,
+      &quot;Input type is not included in the list&quot;
+    ]
+  }
+}</pre>
 
   <h3>Parametri</h3>
   <table class='table'>
@@ -831,6 +901,30 @@
 
 
 
+  <h3>Esempi</h3>
+    <pre class="prettyprint">DELETE /api/templates/1007981707-report_template138/template_inputs/3
+{
+  &quot;template_input&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 3,
+  &quot;name&quot;: &quot;Template input 14&quot;,
+  &quot;required&quot;: false,
+  &quot;input_type&quot;: &quot;user&quot;,
+  &quot;fact_name&quot;: null,
+  &quot;variable_name&quot;: null,
+  &quot;puppet_class_name&quot;: null,
+  &quot;puppet_parameter_name&quot;: null,
+  &quot;description&quot;: null,
+  &quot;template_id&quot;: 1007981707,
+  &quot;created_at&quot;: &quot;2019-09-11T14:53:40.408Z&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11T14:53:40.408Z&quot;,
+  &quot;options&quot;: null,
+  &quot;advanced&quot;: false,
+  &quot;value_type&quot;: &quot;plain&quot;,
+  &quot;resource_type&quot;: null
+}</pre>
 
   <h3>Parametri</h3>
   <table class='table'>
@@ -964,6 +1058,32 @@
 
 
 
+  <h3>Esempi</h3>
+    <pre class="prettyprint">PUT /api/templates/1007981708-report_template139/template_inputs/4
+{
+  &quot;template_input&quot;: {
+    &quot;name&quot;: &quot;blah&quot;
+  }
+}
+200
+{
+  &quot;id&quot;: 4,
+  &quot;name&quot;: &quot;blah&quot;,
+  &quot;required&quot;: false,
+  &quot;input_type&quot;: &quot;user&quot;,
+  &quot;fact_name&quot;: null,
+  &quot;variable_name&quot;: null,
+  &quot;puppet_class_name&quot;: null,
+  &quot;puppet_parameter_name&quot;: null,
+  &quot;description&quot;: null,
+  &quot;template_id&quot;: 1007981708,
+  &quot;created_at&quot;: &quot;2019-09-11T14:53:40.435Z&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11T14:53:40.450Z&quot;,
+  &quot;options&quot;: null,
+  &quot;advanced&quot;: false,
+  &quot;value_type&quot;: &quot;plain&quot;,
+  &quot;resource_type&quot;: null
+}</pre>
 
   <h3>Parametri</h3>
   <table class='table'>

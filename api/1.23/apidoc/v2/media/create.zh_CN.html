@@ -51,6 +51,46 @@
 
 
 
+  <h2>示例</h2>
+    <pre class="prettyprint">POST /api/media
+{
+  &quot;medium&quot;: {
+    &quot;name&quot;: &quot;new medium&quot;,
+    &quot;path&quot;: &quot;http://www.newmedium.com/&quot;,
+    &quot;organization_ids&quot;: [
+      114267492
+    ],
+    &quot;location_ids&quot;: [
+      255093256
+    ]
+  }
+}
+201
+{
+  &quot;path&quot;: &quot;http://www.newmedium.com/&quot;,
+  &quot;os_family&quot;: null,
+  &quot;created_at&quot;: &quot;2019-09-11 14:35:07 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:35:07 UTC&quot;,
+  &quot;id&quot;: 1011586619,
+  &quot;name&quot;: &quot;new medium&quot;,
+  &quot;operatingsystems&quot;: [],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 114267492,
+      &quot;name&quot;: &quot;Empty Organization&quot;,
+      &quot;title&quot;: &quot;Empty Organization&quot;,
+      &quot;description&quot;: null
+    }
+  ]
+}</pre>
 
   <h2>参数</h2>
   <table class='table'>

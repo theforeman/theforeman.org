@@ -101,6 +101,48 @@
 
 
 
+  <h3>Примеры</h3>
+    <pre class="prettyprint">GET /api/config_templates/269958254/template_combinations
+200
+{
+  &quot;total&quot;: 2,
+  &quot;subtotal&quot;: 2,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;created_at&quot;: &quot;2019-09-11 14:41:58 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:41:58 UTC&quot;,
+      &quot;id&quot;: 298486374,
+      &quot;provisioning_template_id&quot;: 269958254,
+      &quot;provisioning_template_name&quot;: &quot;MyString2&quot;,
+      &quot;hostgroup_id&quot;: 0,
+      &quot;hostgroup_name&quot;: null,
+      &quot;environment_id&quot;: null,
+      &quot;environment_name&quot;: null,
+      &quot;config_template_id&quot;: 269958254,
+      &quot;config_template_name&quot;: &quot;MyString2&quot;
+    },
+    {
+      &quot;created_at&quot;: &quot;2019-09-11 14:41:58 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:41:58 UTC&quot;,
+      &quot;id&quot;: 281110143,
+      &quot;provisioning_template_id&quot;: 269958254,
+      &quot;provisioning_template_name&quot;: &quot;MyString2&quot;,
+      &quot;hostgroup_id&quot;: 636252244,
+      &quot;hostgroup_name&quot;: &quot;Common&quot;,
+      &quot;environment_id&quot;: 334344675,
+      &quot;environment_name&quot;: &quot;production&quot;,
+      &quot;config_template_id&quot;: 269958254,
+      &quot;config_template_name&quot;: &quot;MyString2&quot;
+    }
+  ]
+}</pre>
 
   <h3>Параметры</h3>
   <table class='table'>
@@ -317,6 +359,28 @@
 
 
 
+  <h3>Примеры</h3>
+    <pre class="prettyprint">POST /api/config_templates/269958254/template_combinations
+{
+  &quot;template_combination&quot;: {
+    &quot;environment_id&quot;: 334344675,
+    &quot;hostgroup_id&quot;: 866317115
+  }
+}
+201
+{
+  &quot;created_at&quot;: &quot;2019-09-11 14:42:09 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:42:09 UTC&quot;,
+  &quot;id&quot;: 1018350796,
+  &quot;provisioning_template_id&quot;: 269958254,
+  &quot;provisioning_template_name&quot;: &quot;MyString2&quot;,
+  &quot;hostgroup_id&quot;: 866317115,
+  &quot;hostgroup_name&quot;: &quot;Unusual&quot;,
+  &quot;environment_id&quot;: 334344675,
+  &quot;environment_name&quot;: &quot;production&quot;,
+  &quot;config_template_id&quot;: 269958254,
+  &quot;config_template_name&quot;: &quot;MyString2&quot;
+}</pre>
 
   <h3>Параметры</h3>
   <table class='table'>
@@ -613,6 +677,22 @@
 
 
 
+  <h3>Примеры</h3>
+    <pre class="prettyprint">GET /api/config_templates/269958254-MyString2/template_combinations/298486374
+200
+{
+  &quot;created_at&quot;: &quot;2019-09-11 14:41:58 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:41:58 UTC&quot;,
+  &quot;id&quot;: 298486374,
+  &quot;provisioning_template_id&quot;: 269958254,
+  &quot;provisioning_template_name&quot;: &quot;MyString2&quot;,
+  &quot;hostgroup_id&quot;: 0,
+  &quot;hostgroup_name&quot;: null,
+  &quot;environment_id&quot;: null,
+  &quot;environment_name&quot;: null,
+  &quot;config_template_id&quot;: 269958254,
+  &quot;config_template_name&quot;: &quot;MyString2&quot;
+}</pre>
 
   <h3>Параметры</h3>
   <table class='table'>
@@ -851,6 +931,28 @@
 
 
 
+  <h3>Примеры</h3>
+    <pre class="prettyprint">PUT /api/config_templates/269958254/template_combinations/298486374
+{
+  &quot;template_combination&quot;: {
+    &quot;environment_id&quot;: 687036937,
+    &quot;hostgroup_id&quot;: 636252244
+  }
+}
+200
+{
+  &quot;created_at&quot;: &quot;2019-09-11 14:41:58 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:42:09 UTC&quot;,
+  &quot;id&quot;: 298486374,
+  &quot;provisioning_template_id&quot;: 269958254,
+  &quot;provisioning_template_name&quot;: &quot;MyString2&quot;,
+  &quot;hostgroup_id&quot;: 636252244,
+  &quot;hostgroup_name&quot;: &quot;Common&quot;,
+  &quot;environment_id&quot;: 687036937,
+  &quot;environment_name&quot;: &quot;testing&quot;,
+  &quot;config_template_id&quot;: 269958254,
+  &quot;config_template_name&quot;: &quot;MyString2&quot;
+}</pre>
 
   <h3>Параметры</h3>
   <table class='table'>
@@ -1128,6 +1230,21 @@
 
 
 
+  <h3>Примеры</h3>
+    <pre class="prettyprint">DELETE /api/template_combinations/298486374
+{
+  &quot;config_template_id&quot;: 269958254,
+  &quot;template_combination&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 298486374,
+  &quot;provisioning_template_id&quot;: 269958254,
+  &quot;hostgroup_id&quot;: 0,
+  &quot;environment_id&quot;: null,
+  &quot;created_at&quot;: &quot;2019-09-11T14:41:58.544Z&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11T14:41:58.544Z&quot;
+}</pre>
 
   <h3>Параметры</h3>
   <table class='table'>

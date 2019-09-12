@@ -90,6 +90,15 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">GET /api/auth_source_ldaps
+403
+{
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;Access denied&quot;,
+    &quot;details&quot;: &quot;Missing one of the required permissions: view_authenticators&quot;
+  }
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>
@@ -315,6 +324,49 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">GET /api/auth_source_ldaps/980190962-ldap-server
+200
+{
+  &quot;host&quot;: &quot;ldap&quot;,
+  &quot;port&quot;: 123,
+  &quot;account&quot;: null,
+  &quot;base_dn&quot;: &quot;dn=x,dn=y&quot;,
+  &quot;ldap_filter&quot;: null,
+  &quot;attr_login&quot;: &quot;uid&quot;,
+  &quot;attr_firstname&quot;: &quot;givenName&quot;,
+  &quot;attr_lastname&quot;: &quot;sn&quot;,
+  &quot;attr_mail&quot;: &quot;mail&quot;,
+  &quot;attr_photo&quot;: null,
+  &quot;onthefly_register&quot;: true,
+  &quot;usergroup_sync&quot;: true,
+  &quot;tls&quot;: true,
+  &quot;server_type&quot;: &quot;posix&quot;,
+  &quot;groups_base&quot;: null,
+  &quot;use_netgroups&quot;: false,
+  &quot;created_at&quot;: &quot;2019-09-11 14:53:14 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:53:14 UTC&quot;,
+  &quot;id&quot;: 980190962,
+  &quot;type&quot;: &quot;AuthSourceLdap&quot;,
+  &quot;name&quot;: &quot;ldap-server&quot;,
+  &quot;external_usergroups&quot;: [],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>
@@ -426,6 +478,42 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">POST /api/auth_source_ldaps
+{
+  &quot;auth_source_ldap&quot;: {
+    &quot;name&quot;: &quot;ldap2&quot;,
+    &quot;host&quot;: &quot;ldap2&quot;,
+    &quot;server_type&quot;: &quot;posix&quot;
+  }
+}
+201
+{
+  &quot;host&quot;: &quot;ldap2&quot;,
+  &quot;port&quot;: 389,
+  &quot;account&quot;: null,
+  &quot;base_dn&quot;: null,
+  &quot;ldap_filter&quot;: null,
+  &quot;attr_login&quot;: null,
+  &quot;attr_firstname&quot;: null,
+  &quot;attr_lastname&quot;: null,
+  &quot;attr_mail&quot;: null,
+  &quot;attr_photo&quot;: null,
+  &quot;onthefly_register&quot;: false,
+  &quot;usergroup_sync&quot;: true,
+  &quot;tls&quot;: false,
+  &quot;server_type&quot;: &quot;posix&quot;,
+  &quot;groups_base&quot;: null,
+  &quot;use_netgroups&quot;: false,
+  &quot;created_at&quot;: &quot;2019-09-11 14:55:05 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:55:05 UTC&quot;,
+  &quot;id&quot;: 980190963,
+  &quot;type&quot;: &quot;AuthSourceLdap&quot;,
+  &quot;name&quot;: &quot;ldap2&quot;,
+  &quot;external_usergroups&quot;: [],
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: []
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>
@@ -1003,6 +1091,65 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">PUT /api/auth_source_ldaps/980190962-ldap-server
+{
+  &quot;organization_names&quot;: [
+    &quot;Organization 1&quot;
+  ],
+  &quot;location_ids&quot;: [
+    255093256
+  ],
+  &quot;auth_source_ldap&quot;: {
+    &quot;organization_names&quot;: [
+      &quot;Organization 1&quot;
+    ],
+    &quot;location_ids&quot;: [
+      255093256
+    ]
+  }
+}
+200
+{
+  &quot;host&quot;: &quot;ldap&quot;,
+  &quot;port&quot;: 123,
+  &quot;account&quot;: null,
+  &quot;base_dn&quot;: &quot;dn=x,dn=y&quot;,
+  &quot;ldap_filter&quot;: null,
+  &quot;attr_login&quot;: &quot;uid&quot;,
+  &quot;attr_firstname&quot;: &quot;givenName&quot;,
+  &quot;attr_lastname&quot;: &quot;sn&quot;,
+  &quot;attr_mail&quot;: &quot;mail&quot;,
+  &quot;attr_photo&quot;: null,
+  &quot;onthefly_register&quot;: true,
+  &quot;usergroup_sync&quot;: true,
+  &quot;tls&quot;: true,
+  &quot;server_type&quot;: &quot;posix&quot;,
+  &quot;groups_base&quot;: null,
+  &quot;use_netgroups&quot;: false,
+  &quot;created_at&quot;: &quot;2019-09-11 14:55:05 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:55:05 UTC&quot;,
+  &quot;id&quot;: 980190962,
+  &quot;type&quot;: &quot;AuthSourceLdap&quot;,
+  &quot;name&quot;: &quot;ldap-server&quot;,
+  &quot;external_usergroups&quot;: [],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>
@@ -1602,6 +1749,17 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">PUT /api/auth_source_ldaps/980190962-ldap-server/test
+{
+  &quot;auth_source_ldap&quot;: {}
+}
+500
+{
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;wrong number of arguments (given 0, expected 1+)&quot;
+  }
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>
@@ -1713,6 +1871,35 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">DELETE /api/auth_source_ldaps/980190962
+{
+  &quot;auth_source_ldap&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 980190962,
+  &quot;name&quot;: &quot;ldap-server&quot;,
+  &quot;host&quot;: &quot;ldap&quot;,
+  &quot;port&quot;: 123,
+  &quot;account&quot;: null,
+  &quot;account_password&quot;: null,
+  &quot;base_dn&quot;: &quot;dn=x,dn=y&quot;,
+  &quot;attr_login&quot;: &quot;uid&quot;,
+  &quot;attr_firstname&quot;: &quot;givenName&quot;,
+  &quot;attr_lastname&quot;: &quot;sn&quot;,
+  &quot;attr_mail&quot;: &quot;mail&quot;,
+  &quot;onthefly_register&quot;: true,
+  &quot;tls&quot;: true,
+  &quot;created_at&quot;: &quot;2019-09-11T14:55:05.079Z&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11T14:55:05.079Z&quot;,
+  &quot;ldap_filter&quot;: null,
+  &quot;attr_photo&quot;: null,
+  &quot;server_type&quot;: &quot;posix&quot;,
+  &quot;groups_base&quot;: null,
+  &quot;usergroup_sync&quot;: true,
+  &quot;use_netgroups&quot;: false
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>

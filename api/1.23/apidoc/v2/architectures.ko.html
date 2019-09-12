@@ -80,6 +80,46 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: ko.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">GET /api/architectures
+200
+{
+  &quot;total&quot;: 4,
+  &quot;subtotal&quot;: 4,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;created_at&quot;: &quot;2019-09-11 14:40:18 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:40:18 UTC&quot;,
+      &quot;name&quot;: &quot;x86_64&quot;,
+      &quot;id&quot;: 501905019
+    },
+    {
+      &quot;created_at&quot;: &quot;2019-09-11 14:40:18 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:40:18 UTC&quot;,
+      &quot;name&quot;: &quot;sparc&quot;,
+      &quot;id&quot;: 331892513
+    },
+    {
+      &quot;created_at&quot;: &quot;2019-09-11 14:40:18 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:40:18 UTC&quot;,
+      &quot;name&quot;: &quot;s390&quot;,
+      &quot;id&quot;: 381564594
+    },
+    {
+      &quot;created_at&quot;: &quot;2019-09-11 14:40:18 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:40:18 UTC&quot;,
+      &quot;name&quot;: &quot;ASIC&quot;,
+      &quot;id&quot;: 578327757
+    }
+  ]
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: ko.apipie.params">Params</span></h3>
   <table class='table'>
@@ -309,6 +349,52 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: ko.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">GET /api/architectures/501905019-x86_64
+200
+{
+  &quot;created_at&quot;: &quot;2019-09-11 14:40:18 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:40:18 UTC&quot;,
+  &quot;name&quot;: &quot;x86_64&quot;,
+  &quot;id&quot;: 501905019,
+  &quot;operatingsystems&quot;: [
+    {
+      &quot;id&quot;: 309172073,
+      &quot;name&quot;: &quot;centos&quot;,
+      &quot;title&quot;: &quot;centos 5.3&quot;
+    },
+    {
+      &quot;id&quot;: 750842046,
+      &quot;name&quot;: &quot;OpenSuse&quot;,
+      &quot;title&quot;: &quot;OpenSuSE 12.3&quot;
+    },
+    {
+      &quot;id&quot;: 1073012828,
+      &quot;name&quot;: &quot;Redhat&quot;,
+      &quot;title&quot;: &quot;RHEL 6.1&quot;
+    },
+    {
+      &quot;id&quot;: 331303656,
+      &quot;name&quot;: &quot;Ubuntu&quot;,
+      &quot;title&quot;: &quot;Ubuntu 10.10&quot;
+    },
+    {
+      &quot;id&quot;: 272342666,
+      &quot;name&quot;: &quot;Ubuntu&quot;,
+      &quot;title&quot;: &quot;Ubuntu 12.10&quot;
+    }
+  ],
+  &quot;images&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;centos-1&quot;
+    },
+    {
+      &quot;id&quot;: 298486374,
+      &quot;name&quot;: &quot;centos-2&quot;
+    }
+  ]
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: ko.apipie.params">Params</span></h3>
   <table class='table'>
@@ -420,6 +506,22 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: ko.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">POST /api/architectures
+{
+  &quot;architecture&quot;: {
+    &quot;name&quot;: &quot;i386&quot;
+  }
+}
+201
+{
+  &quot;created_at&quot;: &quot;2019-09-11 14:40:35 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:40:35 UTC&quot;,
+  &quot;name&quot;: &quot;i386&quot;,
+  &quot;id&quot;: 578327784,
+  &quot;operatingsystems&quot;: [],
+  &quot;images&quot;: []
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: ko.apipie.params">Params</span></h3>
   <table class='table'>
@@ -577,6 +679,20 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: ko.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">PUT /api/architectures/501905019-x86_64
+{
+  &quot;architecture&quot;: {
+    &quot;name&quot;: &quot;newx86_64&quot;
+  }
+}
+403
+{
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;Access denied&quot;,
+    &quot;details&quot;: &quot;Missing one of the required permissions: edit_architectures&quot;
+  }
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: ko.apipie.params">Params</span></h3>
   <table class='table'>
@@ -756,6 +872,18 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: ko.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">DELETE /api/architectures/381564594-s390
+{
+  &quot;architecture&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 381564594,
+  &quot;name&quot;: &quot;s390&quot;,
+  &quot;created_at&quot;: &quot;2019-09-11T14:40:18.769Z&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11T14:40:18.769Z&quot;
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: ko.apipie.params">Params</span></h3>
   <table class='table'>

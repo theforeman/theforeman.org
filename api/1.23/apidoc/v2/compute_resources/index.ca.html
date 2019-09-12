@@ -51,6 +51,34 @@
 
 
 
+  <h2><span class="translation_missing" title="translation missing: ca.apipie.examples">Examples</span></h2>
+    <pre class="prettyprint">GET /api/compute_resources
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;description&quot;: &quot;mycompute&quot;,
+      &quot;url&quot;: &quot;test:///default&quot;,
+      &quot;created_at&quot;: &quot;2019-09-11 14:37:23 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:37:23 UTC&quot;,
+      &quot;id&quot;: 367690737,
+      &quot;name&quot;: &quot;mycompute&quot;,
+      &quot;provider&quot;: &quot;Libvirt&quot;,
+      &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
+      &quot;display_type&quot;: &quot;vnc&quot;,
+      &quot;set_console_password&quot;: true
+    }
+  ]
+}</pre>
 
   <h2><span class="translation_missing" title="translation missing: ca.apipie.params">Params</span></h2>
   <table class='table'>

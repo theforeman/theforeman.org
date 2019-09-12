@@ -90,6 +90,50 @@
 
 
 
+  <h3>Ejemplos</h3>
+    <pre class="prettyprint">GET /api/compute_resources/980190962/images
+200
+{
+  &quot;total&quot;: 2,
+  &quot;subtotal&quot;: 2,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;operatingsystem_id&quot;: 309172073,
+      &quot;operatingsystem_name&quot;: &quot;centos 5.3&quot;,
+      &quot;compute_resource_id&quot;: 980190962,
+      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
+      &quot;architecture_id&quot;: 501905019,
+      &quot;architecture_name&quot;: &quot;x86_64&quot;,
+      &quot;uuid&quot;: &quot;string-of-uuid&quot;,
+      &quot;username&quot;: &quot;root&quot;,
+      &quot;created_at&quot;: &quot;2019-09-11 14:34:13 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:34:13 UTC&quot;,
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;centos-1&quot;
+    },
+    {
+      &quot;operatingsystem_id&quot;: 309172073,
+      &quot;operatingsystem_name&quot;: &quot;centos 5.3&quot;,
+      &quot;compute_resource_id&quot;: 980190962,
+      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
+      &quot;architecture_id&quot;: 501905019,
+      &quot;architecture_name&quot;: &quot;x86_64&quot;,
+      &quot;uuid&quot;: &quot;MyString2&quot;,
+      &quot;username&quot;: &quot;MyString&quot;,
+      &quot;created_at&quot;: &quot;2019-09-11 14:34:13 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:34:13 UTC&quot;,
+      &quot;id&quot;: 298486374,
+      &quot;name&quot;: &quot;centos-2&quot;
+    }
+  ]
+}</pre>
 
   <h3>Parámetros</h3>
   <table class='table'>
@@ -412,6 +456,23 @@
 
 
 
+  <h3>Ejemplos</h3>
+    <pre class="prettyprint">GET /api/compute_resources/980190962/images/980190962
+200
+{
+  &quot;operatingsystem_id&quot;: 309172073,
+  &quot;operatingsystem_name&quot;: &quot;centos 5.3&quot;,
+  &quot;compute_resource_id&quot;: 980190962,
+  &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
+  &quot;architecture_id&quot;: 501905019,
+  &quot;architecture_name&quot;: &quot;x86_64&quot;,
+  &quot;uuid&quot;: &quot;string-of-uuid&quot;,
+  &quot;username&quot;: &quot;root&quot;,
+  &quot;created_at&quot;: &quot;2019-09-11 14:34:13 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:34:13 UTC&quot;,
+  &quot;id&quot;: 980190962,
+  &quot;name&quot;: &quot;centos-1&quot;
+}</pre>
 
   <h3>Parámetros</h3>
   <table class='table'>
@@ -595,6 +656,35 @@
 
 
 
+  <h3>Ejemplos</h3>
+    <pre class="prettyprint">POST /api/compute_resources/980190962/images
+{
+  &quot;image&quot;: {
+    &quot;name&quot;: &quot;TestImage&quot;,
+    &quot;username&quot;: &quot;ec2-user&quot;,
+    &quot;uuid&quot;: &quot;abcdef&quot;,
+    &quot;password&quot;: &quot;password&quot;,
+    &quot;operatingsystem_id&quot;: 309172073,
+    &quot;compute_resource_id&quot;: 928692541,
+    &quot;architecture_id&quot;: 331892513,
+    &quot;user_data&quot;: true
+  }
+}
+201
+{
+  &quot;operatingsystem_id&quot;: 309172073,
+  &quot;operatingsystem_name&quot;: &quot;centos 5.3&quot;,
+  &quot;compute_resource_id&quot;: 980190962,
+  &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
+  &quot;architecture_id&quot;: 331892513,
+  &quot;architecture_name&quot;: &quot;sparc&quot;,
+  &quot;uuid&quot;: &quot;abcdef&quot;,
+  &quot;username&quot;: &quot;ec2-user&quot;,
+  &quot;created_at&quot;: &quot;2019-09-11 14:34:31 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:34:31 UTC&quot;,
+  &quot;id&quot;: 980190963,
+  &quot;name&quot;: &quot;TestImage&quot;
+}</pre>
 
   <h3>Parámetros</h3>
   <table class='table'>
@@ -914,6 +1004,26 @@
 
 
 
+  <h3>Ejemplos</h3>
+    <pre class="prettyprint">PUT /api/compute_resources/980190962/images/980190962
+{
+  &quot;image&quot;: {}
+}
+200
+{
+  &quot;operatingsystem_id&quot;: 309172073,
+  &quot;operatingsystem_name&quot;: &quot;centos 5.3&quot;,
+  &quot;compute_resource_id&quot;: 980190962,
+  &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
+  &quot;architecture_id&quot;: 501905019,
+  &quot;architecture_name&quot;: &quot;x86_64&quot;,
+  &quot;uuid&quot;: &quot;string-of-uuid&quot;,
+  &quot;username&quot;: &quot;root&quot;,
+  &quot;created_at&quot;: &quot;2019-09-11 14:34:13 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:34:13 UTC&quot;,
+  &quot;id&quot;: 980190962,
+  &quot;name&quot;: &quot;centos-1&quot;
+}</pre>
 
   <h3>Parámetros</h3>
   <table class='table'>
@@ -1255,6 +1365,26 @@
 
 
 
+  <h3>Ejemplos</h3>
+    <pre class="prettyprint">DELETE /api/compute_resources/980190962/images/980190962
+{
+  &quot;image&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 980190962,
+  &quot;operatingsystem_id&quot;: 309172073,
+  &quot;compute_resource_id&quot;: 980190962,
+  &quot;architecture_id&quot;: 501905019,
+  &quot;uuid&quot;: &quot;string-of-uuid&quot;,
+  &quot;username&quot;: &quot;root&quot;,
+  &quot;name&quot;: &quot;centos-1&quot;,
+  &quot;created_at&quot;: &quot;2019-09-11T14:34:13.271Z&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11T14:34:13.271Z&quot;,
+  &quot;iam_role&quot;: null,
+  &quot;user_data&quot;: false,
+  &quot;password&quot;: null
+}</pre>
 
   <h3>Parámetros</h3>
   <table class='table'>

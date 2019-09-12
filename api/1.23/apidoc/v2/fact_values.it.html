@@ -80,6 +80,25 @@
 
 
 
+  <h3>Esempi</h3>
+    <pre class="prettyprint">GET /api/hosts/host1933/facts
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: &quot; host = host1933&quot;,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: {
+    &quot;host1933&quot;: {
+      &quot;kernelversion&quot;: &quot;2.6.9&quot;
+    }
+  }
+}</pre>
 
   <h3>Parametri</h3>
   <table class='table'>

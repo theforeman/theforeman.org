@@ -120,6 +120,45 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">GET /api/hostgroups/636252244-Common/smart_class_parameters
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;description&quot;: null,
+      &quot;override&quot;: true,
+      &quot;parameter_type&quot;: &quot;string&quot;,
+      &quot;hidden_value?&quot;: false,
+      &quot;omit&quot;: null,
+      &quot;required&quot;: false,
+      &quot;validator_type&quot;: null,
+      &quot;validator_rule&quot;: null,
+      &quot;merge_overrides&quot;: false,
+      &quot;merge_default&quot;: false,
+      &quot;avoid_duplicates&quot;: false,
+      &quot;override_value_order&quot;: &quot;fqdn\norganization,location\nhostgroup\nos&quot;,
+      &quot;created_at&quot;: &quot;2019-09-11 14:57:07 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:57:07 UTC&quot;,
+      &quot;use_puppet_default&quot;: null,
+      &quot;parameter&quot;: &quot;cluster&quot;,
+      &quot;id&quot;: 328495940,
+      &quot;puppetclass_id&quot;: 980190962,
+      &quot;override_values_count&quot;: 2,
+      &quot;default_value&quot;: &quot;secret&quot;,
+      &quot;puppetclass_name&quot;: &quot;base&quot;
+    }
+  ]
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
@@ -477,6 +516,39 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">GET /api/puppetclasses/980190962/smart_class_parameters/1018350809
+200
+{
+  &quot;description&quot;: null,
+  &quot;override&quot;: false,
+  &quot;parameter_type&quot;: null,
+  &quot;hidden_value?&quot;: true,
+  &quot;omit&quot;: null,
+  &quot;required&quot;: false,
+  &quot;validator_type&quot;: null,
+  &quot;validator_rule&quot;: null,
+  &quot;merge_overrides&quot;: false,
+  &quot;merge_default&quot;: false,
+  &quot;avoid_duplicates&quot;: false,
+  &quot;override_value_order&quot;: &quot;fqdn\nhostgroup\nos\ndomain&quot;,
+  &quot;created_at&quot;: &quot;2019-09-11 14:41:01 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:41:01 UTC&quot;,
+  &quot;use_puppet_default&quot;: null,
+  &quot;parameter&quot;: &quot;param140&quot;,
+  &quot;id&quot;: 1018350809,
+  &quot;puppetclass_id&quot;: 980190962,
+  &quot;override_values_count&quot;: 0,
+  &quot;default_value&quot;: &quot;*****&quot;,
+  &quot;puppetclass_name&quot;: &quot;base&quot;,
+  &quot;environments&quot;: [
+    {
+      &quot;id&quot;: 687036937,
+      &quot;name&quot;: &quot;testing&quot;
+    }
+  ],
+  &quot;override_values&quot;: []
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
@@ -612,6 +684,56 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">PUT /api/smart_class_parameters/1018350795
+{
+  &quot;smart_class_parameter&quot;: {
+    &quot;override&quot;: true,
+    &quot;parameter_type&quot;: &quot;array&quot;,
+    &quot;default_value&quot;: &quot;[aPtzKwuMSk, neBPGzsIqu]&quot;,
+    &quot;merge_overrides&quot;: true,
+    &quot;merge_default&quot;: true
+  }
+}
+200
+{
+  &quot;description&quot;: null,
+  &quot;override&quot;: true,
+  &quot;parameter_type&quot;: &quot;array&quot;,
+  &quot;hidden_value?&quot;: false,
+  &quot;omit&quot;: null,
+  &quot;required&quot;: false,
+  &quot;validator_type&quot;: null,
+  &quot;validator_rule&quot;: null,
+  &quot;merge_overrides&quot;: true,
+  &quot;merge_default&quot;: true,
+  &quot;avoid_duplicates&quot;: false,
+  &quot;override_value_order&quot;: &quot;fqdn\norganization,location\nhostgroup&quot;,
+  &quot;created_at&quot;: &quot;2019-09-11 14:57:07 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:57:47 UTC&quot;,
+  &quot;use_puppet_default&quot;: null,
+  &quot;parameter&quot;: &quot;custom_class_param&quot;,
+  &quot;id&quot;: 1018350795,
+  &quot;puppetclass_id&quot;: 298486374,
+  &quot;override_values_count&quot;: 0,
+  &quot;default_value&quot;: [
+    &quot;aPtzKwuMSk&quot;,
+    &quot;neBPGzsIqu&quot;
+  ],
+  &quot;puppetclass_name&quot;: &quot;apache&quot;,
+  &quot;environments&quot;: [
+    {
+      &quot;id&quot;: 334344675,
+      &quot;name&quot;: &quot;production&quot;
+    }
+  ],
+  &quot;puppetclass&quot;: {
+    &quot;id&quot;: 298486374,
+    &quot;name&quot;: &quot;apache&quot;,
+    &quot;module_name&quot;: &quot;apache&quot;
+  },
+  &quot;override_values&quot;: []
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>

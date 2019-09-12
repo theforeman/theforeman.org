@@ -70,6 +70,44 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: nl-NL.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">GET /api/trends
+200
+{
+  &quot;total&quot;: 2,
+  &quot;subtotal&quot;: 2,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;created_at&quot;: &quot;2019-09-11 14:41:07 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:41:07 UTC&quot;,
+      &quot;id&quot;: 31,
+      &quot;trendable_type&quot;: &quot;FactName&quot;,
+      &quot;trendable_id&quot;: 15,
+      &quot;fact_name&quot;: &quot;fact122&quot;,
+      &quot;type&quot;: &quot;FactTrend&quot;,
+      &quot;name&quot;: &quot;trend10&quot;,
+      &quot;label&quot;: &quot;trend10&quot;
+    },
+    {
+      &quot;created_at&quot;: &quot;2019-09-11 14:41:07 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:41:07 UTC&quot;,
+      &quot;id&quot;: 27,
+      &quot;trendable_type&quot;: &quot;Environment&quot;,
+      &quot;trendable_id&quot;: 9,
+      &quot;fact_name&quot;: &quot;fact&quot;,
+      &quot;type&quot;: &quot;ForemanTrend&quot;,
+      &quot;name&quot;: &quot;trend9&quot;,
+      &quot;label&quot;: &quot;Environment&quot;
+    }
+  ]
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: nl-NL.apipie.params">Params</span></h3>
   <table class='table'>
@@ -159,6 +197,20 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: nl-NL.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">GET /api/trends/32
+200
+{
+  &quot;created_at&quot;: &quot;2019-09-11 14:41:07 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:41:07 UTC&quot;,
+  &quot;id&quot;: 32,
+  &quot;trendable_type&quot;: &quot;Environment&quot;,
+  &quot;trendable_id&quot;: 11,
+  &quot;fact_name&quot;: &quot;fact&quot;,
+  &quot;type&quot;: &quot;ForemanTrend&quot;,
+  &quot;name&quot;: &quot;trend11&quot;,
+  &quot;label&quot;: &quot;Environment&quot;
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: nl-NL.apipie.params">Params</span></h3>
   <table class='table'>
@@ -270,6 +322,19 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: nl-NL.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">POST /api/trends
+{
+  &quot;trend&quot;: {
+    &quot;trendable_type&quot;: &quot;NotExists&quot;
+  }
+}
+500
+{
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;uninitialized constant NotExists&quot;
+  }
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: nl-NL.apipie.params">Params</span></h3>
   <table class='table'>
@@ -425,6 +490,22 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: nl-NL.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">DELETE /api/trends/22
+{
+  &quot;trend&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 22,
+  &quot;trendable_type&quot;: &quot;Environment&quot;,
+  &quot;trendable_id&quot;: 7,
+  &quot;name&quot;: &quot;trend7&quot;,
+  &quot;fact_value&quot;: null,
+  &quot;fact_name&quot;: &quot;fact&quot;,
+  &quot;created_at&quot;: &quot;2019-09-11T14:41:07.646Z&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11T14:41:07.646Z&quot;
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: nl-NL.apipie.params">Params</span></h3>
   <table class='table'>

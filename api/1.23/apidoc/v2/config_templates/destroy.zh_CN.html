@@ -51,6 +51,25 @@
 
 
 
+  <h2>示例</h2>
+    <pre class="prettyprint">DELETE /api/config_templates/1007981701-centos5_3_pxelinux
+{
+  &quot;config_template&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 1007981701,
+  &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
+  &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ks=&lt;%= foreman_url(\&quot;kickstart\&quot;)%&gt; ksdevice=bootif network kssendmac&quot;,
+  &quot;snippet&quot;: false,
+  &quot;template_kind_id&quot;: 452984334,
+  &quot;created_at&quot;: &quot;2019-09-11T14:32:19.050Z&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11T14:32:19.050Z&quot;,
+  &quot;locked&quot;: false,
+  &quot;default&quot;: false,
+  &quot;vendor&quot;: null,
+  &quot;os_family&quot;: null
+}</pre>
 
   <h2>参数</h2>
   <table class='table'>

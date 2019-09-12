@@ -51,6 +51,36 @@
 
 
 
+  <h2>Beispiele</h2>
+    <pre class="prettyprint">GET /api/smart_proxies
+200
+{
+  &quot;total&quot;: 8,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: &quot;feature=TFTP&quot;,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;created_at&quot;: &quot;2019-09-11 14:48:32 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:48:32 UTC&quot;,
+      &quot;name&quot;: &quot;TFTP Proxy&quot;,
+      &quot;id&quot;: 298486374,
+      &quot;url&quot;: &quot;http://somewhere.else&quot;,
+      &quot;features&quot;: [
+        {
+          &quot;capabilities&quot;: [],
+          &quot;name&quot;: &quot;TFTP&quot;,
+          &quot;id&quot;: 303403661
+        }
+      ]
+    }
+  ]
+}</pre>
 
   <h2>Parameter</h2>
   <table class='table'>

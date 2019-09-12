@@ -65,6 +65,60 @@
 
 
 
+  <h2>例</h2>
+    <pre class="prettyprint">POST /api/smart_proxies/182953976/import_puppetclasses
+{
+  &quot;smart_proxy&quot;: {}
+}
+200
+{
+  &quot;message&quot;: &quot;Successfully updated environment and puppetclasses from the on-disk puppet installation&quot;,
+  &quot;environments_with_new_puppetclasses&quot;: 2,
+  &quot;environments_updated_puppetclasses&quot;: 0,
+  &quot;environments_obsolete&quot;: 3,
+  &quot;environments_ignored&quot;: 0,
+  &quot;results&quot;: [
+    {
+      &quot;name&quot;: &quot;env1&quot;,
+      &quot;actions&quot;: [
+        &quot;new&quot;
+      ],
+      &quot;new_puppetclasses&quot;: [
+        &quot;a&quot;
+      ]
+    },
+    {
+      &quot;name&quot;: &quot;env2&quot;,
+      &quot;actions&quot;: [
+        &quot;new&quot;
+      ],
+      &quot;new_puppetclasses&quot;: [
+        &quot;b&quot;
+      ]
+    },
+    {
+      &quot;name&quot;: &quot;global_puppetmaster&quot;,
+      &quot;actions&quot;: [
+        &quot;obsolete&quot;
+      ],
+      &quot;removed_environment&quot;: &quot;global_puppetmaster&quot;
+    },
+    {
+      &quot;name&quot;: &quot;production&quot;,
+      &quot;actions&quot;: [
+        &quot;obsolete&quot;
+      ],
+      &quot;removed_environment&quot;: &quot;production&quot;
+    },
+    {
+      &quot;name&quot;: &quot;testing&quot;,
+      &quot;actions&quot;: [
+        &quot;obsolete&quot;
+      ],
+      &quot;removed_environment&quot;: &quot;testing&quot;
+    }
+  ]
+}</pre>
 
   <h2>パラメーター</h2>
   <table class='table'>

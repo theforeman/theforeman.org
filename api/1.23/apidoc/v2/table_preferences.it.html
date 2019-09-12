@@ -70,6 +70,21 @@
 
 
 
+  <h3>Esempi</h3>
+    <pre class="prettyprint">GET /api/users/135138680/table_preferences
+200
+{
+  &quot;total&quot;: 0,
+  &quot;subtotal&quot;: 0,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: []
+}</pre>
 
   <h3>Parametri</h3>
   <table class='table'>
@@ -159,6 +174,20 @@
 
 
 
+  <h3>Esempi</h3>
+    <pre class="prettyprint">GET /api/users/135138680/table_preferences/test_subscriptions_resource
+200
+{
+  &quot;id&quot;: 4,
+  &quot;name&quot;: &quot;test_subscriptions_resource&quot;,
+  &quot;columns&quot;: [
+    &quot;1&quot;,
+    &quot;2&quot;,
+    &quot;3&quot;
+  ],
+  &quot;created_at&quot;: &quot;2019-09-11 14:56:37 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:56:37 UTC&quot;
+}</pre>
 
   <h3>Parametri</h3>
   <table class='table'>
@@ -270,6 +299,36 @@
 
 
 
+  <h3>Esempi</h3>
+    <pre class="prettyprint">POST /api/users/135138680/table_preferences
+{
+  &quot;name&quot;: &quot;test_subscriptions_resource&quot;,
+  &quot;columns&quot;: [
+    &quot;1&quot;,
+    &quot;2&quot;,
+    &quot;3&quot;
+  ],
+  &quot;table_preference&quot;: {
+    &quot;name&quot;: &quot;test_subscriptions_resource&quot;,
+    &quot;columns&quot;: [
+      &quot;1&quot;,
+      &quot;2&quot;,
+      &quot;3&quot;
+    ]
+  }
+}
+201
+{
+  &quot;id&quot;: 3,
+  &quot;name&quot;: &quot;test_subscriptions_resource&quot;,
+  &quot;columns&quot;: [
+    &quot;1&quot;,
+    &quot;2&quot;,
+    &quot;3&quot;
+  ],
+  &quot;created_at&quot;: &quot;2019-09-11 14:56:37 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:56:37 UTC&quot;
+}</pre>
 
   <h3>Parametri</h3>
   <table class='table'>
@@ -429,6 +488,34 @@
 
 
 
+  <h3>Esempi</h3>
+    <pre class="prettyprint">PUT /api/users/135138680/table_preferences/test_subscriptions_resource
+{
+  &quot;columns&quot;: [
+    &quot;1&quot;,
+    &quot;2&quot;,
+    &quot;3&quot;
+  ],
+  &quot;table_preference&quot;: {
+    &quot;columns&quot;: [
+      &quot;1&quot;,
+      &quot;2&quot;,
+      &quot;3&quot;
+    ]
+  }
+}
+200
+{
+  &quot;id&quot;: 5,
+  &quot;name&quot;: &quot;test_subscriptions_resource&quot;,
+  &quot;columns&quot;: [
+    &quot;1&quot;,
+    &quot;2&quot;,
+    &quot;3&quot;
+  ],
+  &quot;created_at&quot;: &quot;2019-09-11 14:56:37 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:56:37 UTC&quot;
+}</pre>
 
   <h3>Parametri</h3>
   <table class='table'>
@@ -588,6 +675,23 @@
 
 
 
+  <h3>Esempi</h3>
+    <pre class="prettyprint">DELETE /api/users/135138680/table_preferences/test_subscriptions_resource
+{
+  &quot;table_preference&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 1,
+  &quot;name&quot;: &quot;test_subscriptions_resource&quot;,
+  &quot;columns&quot;: [
+    &quot;1&quot;,
+    &quot;2&quot;,
+    &quot;3&quot;
+  ],
+  &quot;created_at&quot;: &quot;2019-09-11 14:56:37 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:56:37 UTC&quot;
+}</pre>
 
   <h3>Parametri</h3>
   <table class='table'>

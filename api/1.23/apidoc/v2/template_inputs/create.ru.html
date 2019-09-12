@@ -51,6 +51,31 @@
 
 
 
+  <h2>Примеры</h2>
+    <pre class="prettyprint">POST /api/templates/1007981706-report_template137/template_inputs
+{
+  &quot;template_input&quot;: {}
+}
+422
+{
+  &quot;error&quot;: {
+    &quot;id&quot;: null,
+    &quot;errors&quot;: {
+      &quot;name&quot;: [
+        &quot;can&#39;t be blank&quot;
+      ],
+      &quot;input_type&quot;: [
+        &quot;can&#39;t be blank&quot;,
+        &quot;is not included in the list&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Name can&#39;t be blank&quot;,
+      &quot;Input type can&#39;t be blank&quot;,
+      &quot;Input type is not included in the list&quot;
+    ]
+  }
+}</pre>
 
   <h2>Параметры</h2>
   <table class='table'>

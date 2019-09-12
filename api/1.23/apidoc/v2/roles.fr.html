@@ -70,6 +70,126 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">GET /api/roles
+200
+{
+  &quot;total&quot;: 13,
+  &quot;subtotal&quot;: 13,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: &quot;name&quot;,
+    &quot;order&quot;: &quot;ASC&quot;
+  },
+  &quot;results&quot;: [
+    {
+      &quot;builtin&quot;: 0,
+      &quot;cloned_from_id&quot;: null,
+      &quot;name&quot;: &quot;Create hosts&quot;,
+      &quot;id&quot;: 9,
+      &quot;description&quot;: null,
+      &quot;origin&quot;: &quot;&quot;
+    },
+    {
+      &quot;builtin&quot;: 0,
+      &quot;cloned_from_id&quot;: null,
+      &quot;name&quot;: &quot;CRUD hosts&quot;,
+      &quot;id&quot;: 12,
+      &quot;description&quot;: null,
+      &quot;origin&quot;: &quot;&quot;
+    },
+    {
+      &quot;builtin&quot;: 2,
+      &quot;cloned_from_id&quot;: null,
+      &quot;name&quot;: &quot;Default role&quot;,
+      &quot;id&quot;: 7,
+      &quot;description&quot;: null,
+      &quot;origin&quot;: &quot;foreman&quot;
+    },
+    {
+      &quot;builtin&quot;: 0,
+      &quot;cloned_from_id&quot;: null,
+      &quot;name&quot;: &quot;Destroy hosts&quot;,
+      &quot;id&quot;: 8,
+      &quot;description&quot;: null,
+      &quot;origin&quot;: &quot;&quot;
+    },
+    {
+      &quot;builtin&quot;: 0,
+      &quot;cloned_from_id&quot;: null,
+      &quot;name&quot;: &quot;Edit hosts&quot;,
+      &quot;id&quot;: 4,
+      &quot;description&quot;: null,
+      &quot;origin&quot;: &quot;foreman&quot;
+    },
+    {
+      &quot;builtin&quot;: 0,
+      &quot;cloned_from_id&quot;: null,
+      &quot;name&quot;: &quot;Edit partition tables&quot;,
+      &quot;id&quot;: 2,
+      &quot;description&quot;: null,
+      &quot;origin&quot;: &quot;foreman&quot;
+    },
+    {
+      &quot;builtin&quot;: 0,
+      &quot;cloned_from_id&quot;: null,
+      &quot;name&quot;: &quot;Manager&quot;,
+      &quot;id&quot;: 1,
+      &quot;description&quot;: null,
+      &quot;origin&quot;: &quot;foreman&quot;
+    },
+    {
+      &quot;builtin&quot;: 0,
+      &quot;cloned_from_id&quot;: null,
+      &quot;name&quot;: &quot;No rights&quot;,
+      &quot;id&quot;: 10,
+      &quot;description&quot;: null,
+      &quot;origin&quot;: &quot;&quot;
+    },
+    {
+      &quot;builtin&quot;: 0,
+      &quot;cloned_from_id&quot;: null,
+      &quot;name&quot;: &quot;Organization admin&quot;,
+      &quot;id&quot;: 13,
+      &quot;description&quot;: null,
+      &quot;origin&quot;: &quot;foreman&quot;
+    },
+    {
+      &quot;builtin&quot;: 0,
+      &quot;cloned_from_id&quot;: null,
+      &quot;name&quot;: &quot;System admin&quot;,
+      &quot;id&quot;: 14,
+      &quot;description&quot;: null,
+      &quot;origin&quot;: &quot;foreman&quot;
+    },
+    {
+      &quot;builtin&quot;: 0,
+      &quot;cloned_from_id&quot;: null,
+      &quot;name&quot;: &quot;View compute resources&quot;,
+      &quot;id&quot;: 11,
+      &quot;description&quot;: null,
+      &quot;origin&quot;: &quot;&quot;
+    },
+    {
+      &quot;builtin&quot;: 0,
+      &quot;cloned_from_id&quot;: null,
+      &quot;name&quot;: &quot;Viewer&quot;,
+      &quot;id&quot;: 5,
+      &quot;description&quot;: null,
+      &quot;origin&quot;: &quot;foreman&quot;
+    },
+    {
+      &quot;builtin&quot;: 0,
+      &quot;cloned_from_id&quot;: null,
+      &quot;name&quot;: &quot;View hosts&quot;,
+      &quot;id&quot;: 3,
+      &quot;description&quot;: null,
+      &quot;origin&quot;: &quot;foreman&quot;
+    }
+  ]
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>
@@ -290,6 +410,96 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">GET /api/roles/1-Manager
+200
+{
+  &quot;builtin&quot;: 0,
+  &quot;cloned_from_id&quot;: null,
+  &quot;name&quot;: &quot;Manager&quot;,
+  &quot;id&quot;: 1,
+  &quot;description&quot;: null,
+  &quot;origin&quot;: &quot;foreman&quot;,
+  &quot;filters&quot;: [
+    {
+      &quot;id&quot;: 139728896
+    },
+    {
+      &quot;id&quot;: 169533705
+    },
+    {
+      &quot;id&quot;: 170801529
+    },
+    {
+      &quot;id&quot;: 222559602
+    },
+    {
+      &quot;id&quot;: 225912082
+    },
+    {
+      &quot;id&quot;: 255448041
+    },
+    {
+      &quot;id&quot;: 291325508
+    },
+    {
+      &quot;id&quot;: 321349837
+    },
+    {
+      &quot;id&quot;: 340438230
+    },
+    {
+      &quot;id&quot;: 343831726
+    },
+    {
+      &quot;id&quot;: 372277853
+    },
+    {
+      &quot;id&quot;: 503111935
+    },
+    {
+      &quot;id&quot;: 528928374
+    },
+    {
+      &quot;id&quot;: 557298380
+    },
+    {
+      &quot;id&quot;: 592288835
+    },
+    {
+      &quot;id&quot;: 595149887
+    },
+    {
+      &quot;id&quot;: 643462867
+    },
+    {
+      &quot;id&quot;: 679608033
+    },
+    {
+      &quot;id&quot;: 721145960
+    },
+    {
+      &quot;id&quot;: 943645556
+    },
+    {
+      &quot;id&quot;: 977587707
+    },
+    {
+      &quot;id&quot;: 980424071
+    },
+    {
+      &quot;id&quot;: 1025364382
+    },
+    {
+      &quot;id&quot;: 1026099682
+    },
+    {
+      &quot;id&quot;: 1062414187
+    }
+  ],
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: []
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>
@@ -423,6 +633,27 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">POST /api/roles
+{
+  &quot;role&quot;: {
+    &quot;name&quot;: &quot;staff&quot;,
+    &quot;organizations&quot;: [],
+    &quot;locations&quot;: []
+  }
+}
+201
+{
+  &quot;builtin&quot;: 0,
+  &quot;cloned_from_id&quot;: null,
+  &quot;name&quot;: &quot;staff&quot;,
+  &quot;id&quot;: 18,
+  &quot;description&quot;: null,
+  &quot;origin&quot;: null,
+  &quot;filters&quot;: [],
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: []
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>
@@ -628,6 +859,29 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">PUT /api/roles/8-Destroy%20hosts
+{
+  &quot;role&quot;: {
+    &quot;name&quot;: &quot;staff&quot;
+  }
+}
+200
+{
+  &quot;builtin&quot;: 0,
+  &quot;cloned_from_id&quot;: null,
+  &quot;name&quot;: &quot;staff&quot;,
+  &quot;id&quot;: 8,
+  &quot;description&quot;: null,
+  &quot;origin&quot;: &quot;&quot;,
+  &quot;filters&quot;: [
+    {
+      &quot;id&quot;: 10997177
+    }
+  ],
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: []
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>
@@ -855,6 +1109,20 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">DELETE /api/roles/19
+{
+  &quot;role&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 19,
+  &quot;name&quot;: &quot;New Role&quot;,
+  &quot;builtin&quot;: 0,
+  &quot;description&quot;: null,
+  &quot;origin&quot;: null,
+  &quot;cloned_from_id&quot;: null
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>
@@ -966,6 +1234,23 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">POST /api/roles/1/clone
+{
+  &quot;name&quot;: &quot;New Manager&quot;,
+  &quot;role&quot;: {
+    &quot;name&quot;: &quot;New Manager&quot;
+  }
+}
+201
+{
+  &quot;id&quot;: 15,
+  &quot;name&quot;: &quot;New Manager&quot;,
+  &quot;builtin&quot;: 0,
+  &quot;description&quot;: null,
+  &quot;origin&quot;: null,
+  &quot;cloned_from_id&quot;: 1
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>

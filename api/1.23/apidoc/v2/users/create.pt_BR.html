@@ -53,6 +53,64 @@
 
 
 
+  <h2>Exemplos</h2>
+    <pre class="prettyprint">POST /api/users
+{
+  &quot;user&quot;: {
+    &quot;login&quot;: &quot;foo&quot;,
+    &quot;auth_source_id&quot;: 200482051,
+    &quot;password&quot;: &quot;123456&quot;,
+    &quot;role_ids&quot;: [
+      1,
+      3
+    ]
+  }
+}
+201
+{
+  &quot;firstname&quot;: null,
+  &quot;lastname&quot;: null,
+  &quot;mail&quot;: null,
+  &quot;admin&quot;: false,
+  &quot;auth_source_id&quot;: 200482051,
+  &quot;auth_source_name&quot;: &quot;Internal&quot;,
+  &quot;timezone&quot;: null,
+  &quot;locale&quot;: null,
+  &quot;last_login_on&quot;: null,
+  &quot;created_at&quot;: &quot;2019-09-11 14:58:29 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:58:29 UTC&quot;,
+  &quot;id&quot;: 988725677,
+  &quot;login&quot;: &quot;foo&quot;,
+  &quot;description&quot;: null,
+  &quot;ssh_keys&quot;: [],
+  &quot;default_location&quot;: null,
+  &quot;locations&quot;: [],
+  &quot;default_organization&quot;: null,
+  &quot;organizations&quot;: [],
+  &quot;effective_admin&quot;: false,
+  &quot;cached_usergroups&quot;: [],
+  &quot;auth_source_internal&quot;: {
+    &quot;id&quot;: 200482051,
+    &quot;type&quot;: &quot;AuthSourceInternal&quot;,
+    &quot;name&quot;: &quot;Internal&quot;
+  },
+  &quot;mail_notifications&quot;: [],
+  &quot;roles&quot;: [
+    {
+      &quot;name&quot;: &quot;Manager&quot;,
+      &quot;id&quot;: 1,
+      &quot;description&quot;: null,
+      &quot;origin&quot;: &quot;foreman&quot;
+    },
+    {
+      &quot;name&quot;: &quot;View hosts&quot;,
+      &quot;id&quot;: 3,
+      &quot;description&quot;: null,
+      &quot;origin&quot;: &quot;foreman&quot;
+    }
+  ],
+  &quot;usergroups&quot;: []
+}</pre>
 
   <h2>Parâmentros</h2>
   <table class='table'>

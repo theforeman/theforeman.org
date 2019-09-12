@@ -103,6 +103,31 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">GET /api/domains
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;fullname&quot;: &quot;example577.com&quot;,
+      &quot;created_at&quot;: &quot;2019-09-11 14:41:10 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:41:10 UTC&quot;,
+      &quot;id&quot;: 759776770,
+      &quot;name&quot;: &quot;example577.com&quot;,
+      &quot;dns_id&quot;: null,
+      &quot;dns&quot;: null
+    }
+  ]
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>
@@ -362,6 +387,58 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">GET /api/domains/22495316-mydomain-net
+200
+{
+  &quot;fullname&quot;: null,
+  &quot;created_at&quot;: &quot;2019-09-11 14:45:07 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:45:07 UTC&quot;,
+  &quot;id&quot;: 22495316,
+  &quot;name&quot;: &quot;mydomain.net&quot;,
+  &quot;dns_id&quot;: 113629430,
+  &quot;dns&quot;: {
+    &quot;name&quot;: &quot;DNS Proxy&quot;,
+    &quot;id&quot;: 113629430,
+    &quot;url&quot;: &quot;http://else.where:45671&quot;
+  },
+  &quot;subnets&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;one&quot;,
+      &quot;description&quot;: null,
+      &quot;network_address&quot;: &quot;2.3.4.0/24&quot;
+    }
+  ],
+  &quot;interfaces&quot;: [],
+  &quot;parameters&quot;: [
+    {
+      &quot;priority&quot;: null,
+      &quot;created_at&quot;: &quot;2019-09-11 14:45:07 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:45:07 UTC&quot;,
+      &quot;id&quot;: 665394701,
+      &quot;name&quot;: &quot;parameter&quot;,
+      &quot;parameter_type&quot;: null,
+      &quot;value&quot;: &quot;value1&quot;
+    }
+  ],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>
@@ -501,6 +578,29 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">POST /api/domains
+{
+  &quot;organization_id&quot;: null,
+  &quot;domain&quot;: {
+    &quot;name&quot;: &quot;example686.com&quot;
+  }
+}
+201
+{
+  &quot;fullname&quot;: null,
+  &quot;created_at&quot;: &quot;2019-09-11 14:45:08 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:45:08 UTC&quot;,
+  &quot;id&quot;: 759776766,
+  &quot;name&quot;: &quot;example686.com&quot;,
+  &quot;dns_id&quot;: null,
+  &quot;dns&quot;: null,
+  &quot;subnets&quot;: [],
+  &quot;interfaces&quot;: [],
+  &quot;parameters&quot;: [],
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: []
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>
@@ -756,6 +856,63 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">PUT /api/domains/22495316-mydomain-net
+{
+  &quot;domain&quot;: {
+    &quot;name&quot;: &quot;domain.new&quot;
+  }
+}
+200
+{
+  &quot;fullname&quot;: null,
+  &quot;created_at&quot;: &quot;2019-09-11 14:45:07 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:45:08 UTC&quot;,
+  &quot;id&quot;: 22495316,
+  &quot;name&quot;: &quot;domain.new&quot;,
+  &quot;dns_id&quot;: 113629430,
+  &quot;dns&quot;: {
+    &quot;name&quot;: &quot;DNS Proxy&quot;,
+    &quot;id&quot;: 113629430,
+    &quot;url&quot;: &quot;http://else.where:45671&quot;
+  },
+  &quot;subnets&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;one&quot;,
+      &quot;description&quot;: null,
+      &quot;network_address&quot;: &quot;2.3.4.0/24&quot;
+    }
+  ],
+  &quot;interfaces&quot;: [],
+  &quot;parameters&quot;: [
+    {
+      &quot;priority&quot;: null,
+      &quot;created_at&quot;: &quot;2019-09-11 14:45:07 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:45:07 UTC&quot;,
+      &quot;id&quot;: 665394701,
+      &quot;name&quot;: &quot;parameter&quot;,
+      &quot;parameter_type&quot;: null,
+      &quot;value&quot;: &quot;value1&quot;
+    }
+  ],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>
@@ -1033,6 +1190,20 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">DELETE /api/domains/22495316-mydomain-net
+{
+  &quot;domain&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 22495316,
+  &quot;name&quot;: &quot;mydomain.net&quot;,
+  &quot;fullname&quot;: null,
+  &quot;created_at&quot;: &quot;2019-09-11T14:45:07.866Z&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11T14:45:07.866Z&quot;,
+  &quot;dns_id&quot;: 113629430
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>

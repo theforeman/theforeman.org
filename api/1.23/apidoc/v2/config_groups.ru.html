@@ -391,6 +391,36 @@
 
 
 
+  <h3>Примеры</h3>
+    <pre class="prettyprint">POST /api/config_groups
+{
+  &quot;config_group&quot;: {
+    &quot;name&quot;: &quot;config-group&quot;,
+    &quot;puppetclass_ids&quot;: [
+      980190962,
+      281110143
+    ]
+  }
+}
+201
+{
+  &quot;created_at&quot;: &quot;2019-09-11 14:38:32 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:38:32 UTC&quot;,
+  &quot;id&quot;: 980190963,
+  &quot;name&quot;: &quot;config-group&quot;,
+  &quot;puppetclasses&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;base&quot;,
+      &quot;module_name&quot;: &quot;base&quot;
+    },
+    {
+      &quot;id&quot;: 281110143,
+      &quot;name&quot;: &quot;vim&quot;,
+      &quot;module_name&quot;: &quot;vim&quot;
+    }
+  ]
+}</pre>
 
   <h3>Параметры</h3>
   <table class='table'>
@@ -546,6 +576,36 @@
 
 
 
+  <h3>Примеры</h3>
+    <pre class="prettyprint">PUT /api/config_groups/980190962-Monitoring
+{
+  &quot;config_group&quot;: {
+    &quot;name&quot;: &quot;new name&quot;,
+    &quot;puppetclass_ids&quot;: [
+      980190962,
+      281110143
+    ]
+  }
+}
+200
+{
+  &quot;created_at&quot;: &quot;2019-09-11 14:38:12 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:38:32 UTC&quot;,
+  &quot;id&quot;: 980190962,
+  &quot;name&quot;: &quot;new name&quot;,
+  &quot;puppetclasses&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;base&quot;,
+      &quot;module_name&quot;: &quot;base&quot;
+    },
+    {
+      &quot;id&quot;: 281110143,
+      &quot;name&quot;: &quot;vim&quot;,
+      &quot;module_name&quot;: &quot;vim&quot;
+    }
+  ]
+}</pre>
 
   <h3>Параметры</h3>
   <table class='table'>

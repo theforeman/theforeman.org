@@ -53,6 +53,35 @@
 
 
 
+  <h2>示例</h2>
+    <pre class="prettyprint">PUT /api/usergroups/3-usergroup190
+{
+  &quot;usergroup&quot;: {
+    &quot;name&quot;: &quot;test_usergroup&quot;,
+    &quot;usergroup_ids&quot;: [
+      4
+    ]
+  }
+}
+200
+{
+  &quot;admin&quot;: false,
+  &quot;created_at&quot;: &quot;2019-09-11 14:33:33 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:33:33 UTC&quot;,
+  &quot;name&quot;: &quot;test_usergroup&quot;,
+  &quot;id&quot;: 3,
+  &quot;external_usergroups&quot;: [],
+  &quot;usergroups&quot;: [
+    {
+      &quot;name&quot;: &quot;usergroup191&quot;,
+      &quot;id&quot;: 4,
+      &quot;created_at&quot;: &quot;2019-09-11 14:33:33 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:33:33 UTC&quot;
+    }
+  ],
+  &quot;users&quot;: [],
+  &quot;roles&quot;: []
+}</pre>
 
   <h2>參數</h2>
   <table class='table'>

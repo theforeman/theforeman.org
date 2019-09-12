@@ -51,6 +51,20 @@
 
 
 
+  <h2>Exemplos</h2>
+    <pre class="prettyprint">POST /api/locations
+{
+  &quot;location&quot;: {
+    &quot;name&quot;: &quot;loc1&quot;
+  }
+}
+403
+{
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;Access denied&quot;,
+    &quot;details&quot;: &quot;Missing one of the required permissions: create_locations&quot;
+  }
+}</pre>
 
   <h2>Parâmentros</h2>
   <table class='table'>

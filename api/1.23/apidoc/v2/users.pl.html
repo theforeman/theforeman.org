@@ -130,6 +130,86 @@
 
 
 
+  <h3>Przykłady</h3>
+    <pre class="prettyprint">GET /api/users
+200
+{
+  &quot;total&quot;: 2,
+  &quot;subtotal&quot;: 2,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;firstname&quot;: &quot;One&quot;,
+      &quot;lastname&quot;: &quot;User&quot;,
+      &quot;mail&quot;: &quot;userone@someware.com&quot;,
+      &quot;admin&quot;: false,
+      &quot;auth_source_id&quot;: 980190962,
+      &quot;auth_source_name&quot;: &quot;ldap-server&quot;,
+      &quot;timezone&quot;: null,
+      &quot;locale&quot;: null,
+      &quot;last_login_on&quot;: &quot;2009-10-12 21:50:04 UTC&quot;,
+      &quot;created_at&quot;: &quot;2019-09-11 14:58:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:58:27 UTC&quot;,
+      &quot;id&quot;: 980190962,
+      &quot;login&quot;: &quot;one&quot;,
+      &quot;description&quot;: null,
+      &quot;ssh_keys&quot;: [],
+      &quot;default_location&quot;: null,
+      &quot;locations&quot;: [
+        {
+          &quot;id&quot;: 255093256,
+          &quot;name&quot;: &quot;Location 1&quot;
+        }
+      ],
+      &quot;default_organization&quot;: null,
+      &quot;organizations&quot;: [
+        {
+          &quot;id&quot;: 447626438,
+          &quot;name&quot;: &quot;Organization 1&quot;
+        }
+      ],
+      &quot;effective_admin&quot;: false
+    },
+    {
+      &quot;firstname&quot;: &quot;Scoped&quot;,
+      &quot;lastname&quot;: &quot;User&quot;,
+      &quot;mail&quot;: &quot;userscoped@someware.com&quot;,
+      &quot;admin&quot;: false,
+      &quot;auth_source_id&quot;: 980190962,
+      &quot;auth_source_name&quot;: &quot;ldap-server&quot;,
+      &quot;timezone&quot;: null,
+      &quot;locale&quot;: null,
+      &quot;last_login_on&quot;: &quot;2009-10-12 21:50:05 UTC&quot;,
+      &quot;created_at&quot;: &quot;2019-09-11 14:58:27 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:58:27 UTC&quot;,
+      &quot;id&quot;: 117925625,
+      &quot;login&quot;: &quot;scoped&quot;,
+      &quot;description&quot;: null,
+      &quot;ssh_keys&quot;: [],
+      &quot;default_location&quot;: null,
+      &quot;locations&quot;: [
+        {
+          &quot;id&quot;: 255093256,
+          &quot;name&quot;: &quot;Location 1&quot;
+        }
+      ],
+      &quot;default_organization&quot;: null,
+      &quot;organizations&quot;: [
+        {
+          &quot;id&quot;: 447626438,
+          &quot;name&quot;: &quot;Organization 1&quot;
+        }
+      ],
+      &quot;effective_admin&quot;: false
+    }
+  ]
+}</pre>
 
   <h3>Parametry</h3>
   <table class='table'>
@@ -472,6 +552,66 @@
 
 
 
+  <h3>Przykłady</h3>
+    <pre class="prettyprint">GET /api/users/980190962
+200
+{
+  &quot;firstname&quot;: &quot;One&quot;,
+  &quot;lastname&quot;: &quot;User&quot;,
+  &quot;mail&quot;: &quot;userone@someware.com&quot;,
+  &quot;admin&quot;: false,
+  &quot;auth_source_id&quot;: 980190962,
+  &quot;auth_source_name&quot;: &quot;ldap-server&quot;,
+  &quot;timezone&quot;: null,
+  &quot;locale&quot;: null,
+  &quot;last_login_on&quot;: &quot;2009-10-12 21:50:04 UTC&quot;,
+  &quot;created_at&quot;: &quot;2019-09-11 14:58:27 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:58:29 UTC&quot;,
+  &quot;id&quot;: 980190962,
+  &quot;login&quot;: &quot;one&quot;,
+  &quot;description&quot;: null,
+  &quot;ssh_keys&quot;: [],
+  &quot;default_location&quot;: {
+    &quot;id&quot;: 255093256,
+    &quot;name&quot;: &quot;Location 1&quot;,
+    &quot;title&quot;: &quot;Location 1&quot;,
+    &quot;description&quot;: null
+  },
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;default_organization&quot;: null,
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;effective_admin&quot;: false,
+  &quot;cached_usergroups&quot;: [],
+  &quot;auth_source_ldap&quot;: {
+    &quot;id&quot;: 980190962,
+    &quot;type&quot;: &quot;AuthSourceLdap&quot;,
+    &quot;name&quot;: &quot;ldap-server&quot;
+  },
+  &quot;mail_notifications&quot;: [],
+  &quot;roles&quot;: [
+    {
+      &quot;name&quot;: &quot;Viewer&quot;,
+      &quot;id&quot;: 5,
+      &quot;description&quot;: null,
+      &quot;origin&quot;: &quot;foreman&quot;
+    }
+  ],
+  &quot;usergroups&quot;: []
+}</pre>
 
   <h3>Parametry</h3>
   <table class='table'>
@@ -585,6 +725,64 @@
 
 
 
+  <h3>Przykłady</h3>
+    <pre class="prettyprint">POST /api/users
+{
+  &quot;user&quot;: {
+    &quot;login&quot;: &quot;foo&quot;,
+    &quot;auth_source_id&quot;: 200482051,
+    &quot;password&quot;: &quot;123456&quot;,
+    &quot;role_ids&quot;: [
+      1,
+      3
+    ]
+  }
+}
+201
+{
+  &quot;firstname&quot;: null,
+  &quot;lastname&quot;: null,
+  &quot;mail&quot;: null,
+  &quot;admin&quot;: false,
+  &quot;auth_source_id&quot;: 200482051,
+  &quot;auth_source_name&quot;: &quot;Internal&quot;,
+  &quot;timezone&quot;: null,
+  &quot;locale&quot;: null,
+  &quot;last_login_on&quot;: null,
+  &quot;created_at&quot;: &quot;2019-09-11 14:58:29 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:58:29 UTC&quot;,
+  &quot;id&quot;: 988725677,
+  &quot;login&quot;: &quot;foo&quot;,
+  &quot;description&quot;: null,
+  &quot;ssh_keys&quot;: [],
+  &quot;default_location&quot;: null,
+  &quot;locations&quot;: [],
+  &quot;default_organization&quot;: null,
+  &quot;organizations&quot;: [],
+  &quot;effective_admin&quot;: false,
+  &quot;cached_usergroups&quot;: [],
+  &quot;auth_source_internal&quot;: {
+    &quot;id&quot;: 200482051,
+    &quot;type&quot;: &quot;AuthSourceInternal&quot;,
+    &quot;name&quot;: &quot;Internal&quot;
+  },
+  &quot;mail_notifications&quot;: [],
+  &quot;roles&quot;: [
+    {
+      &quot;name&quot;: &quot;Manager&quot;,
+      &quot;id&quot;: 1,
+      &quot;description&quot;: null,
+      &quot;origin&quot;: &quot;foreman&quot;
+    },
+    {
+      &quot;name&quot;: &quot;View hosts&quot;,
+      &quot;id&quot;: 3,
+      &quot;description&quot;: null,
+      &quot;origin&quot;: &quot;foreman&quot;
+    }
+  ],
+  &quot;usergroups&quot;: []
+}</pre>
 
   <h3>Parametry</h3>
   <table class='table'>
@@ -1040,6 +1238,45 @@
 
 
 
+  <h3>Przykłady</h3>
+    <pre class="prettyprint">PUT /api/users/886836129
+{
+  &quot;user&quot;: {
+    &quot;login&quot;: &quot;qKqMmklNew&quot;
+  }
+}
+200
+{
+  &quot;firstname&quot;: &quot;apiadmin&quot;,
+  &quot;lastname&quot;: &quot;User&quot;,
+  &quot;mail&quot;: &quot;apiadmin@someware.com&quot;,
+  &quot;admin&quot;: true,
+  &quot;auth_source_id&quot;: 200482051,
+  &quot;auth_source_name&quot;: &quot;Internal&quot;,
+  &quot;timezone&quot;: null,
+  &quot;locale&quot;: null,
+  &quot;last_login_on&quot;: &quot;2009-10-12 21:50:04 UTC&quot;,
+  &quot;created_at&quot;: &quot;2019-09-11 14:58:27 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:58:30 UTC&quot;,
+  &quot;id&quot;: 886836129,
+  &quot;login&quot;: &quot;qKqMmklNew&quot;,
+  &quot;description&quot;: null,
+  &quot;ssh_keys&quot;: [],
+  &quot;default_location&quot;: null,
+  &quot;locations&quot;: [],
+  &quot;default_organization&quot;: null,
+  &quot;organizations&quot;: [],
+  &quot;effective_admin&quot;: true,
+  &quot;cached_usergroups&quot;: [],
+  &quot;auth_source_internal&quot;: {
+    &quot;id&quot;: 200482051,
+    &quot;type&quot;: &quot;AuthSourceInternal&quot;,
+    &quot;name&quot;: &quot;Internal&quot;
+  },
+  &quot;mail_notifications&quot;: [],
+  &quot;roles&quot;: [],
+  &quot;usergroups&quot;: []
+}</pre>
 
   <h3>Parametry</h3>
   <table class='table'>
@@ -1539,6 +1776,36 @@
 
 
 
+  <h3>Przykłady</h3>
+    <pre class="prettyprint">DELETE /api/users/980190962
+{
+  &quot;user&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 980190962,
+  &quot;login&quot;: &quot;one&quot;,
+  &quot;firstname&quot;: &quot;One&quot;,
+  &quot;lastname&quot;: &quot;User&quot;,
+  &quot;mail&quot;: &quot;userone@someware.com&quot;,
+  &quot;admin&quot;: false,
+  &quot;last_login_on&quot;: &quot;2009-10-12T21:50:04.000Z&quot;,
+  &quot;auth_source_id&quot;: 980190962,
+  &quot;created_at&quot;: &quot;2019-09-11T14:58:27.192Z&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11T14:58:27.192Z&quot;,
+  &quot;password_hash&quot;: null,
+  &quot;password_salt&quot;: null,
+  &quot;locale&quot;: null,
+  &quot;avatar_hash&quot;: null,
+  &quot;default_organization_id&quot;: null,
+  &quot;default_location_id&quot;: null,
+  &quot;lower_login&quot;: &quot;one&quot;,
+  &quot;mail_enabled&quot;: true,
+  &quot;timezone&quot;: null,
+  &quot;description&quot;: null,
+  &quot;password&quot;: null,
+  &quot;name&quot;: &quot;One User&quot;
+}</pre>
 
   <h3>Parametry</h3>
   <table class='table'>

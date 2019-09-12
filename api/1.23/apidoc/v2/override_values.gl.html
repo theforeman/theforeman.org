@@ -80,6 +80,40 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">GET /api/smart_class_parameters/328495940-cluster/override_values
+200
+{
+  &quot;total&quot;: 2,
+  &quot;subtotal&quot;: 2,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;created_at&quot;: &quot;2019-09-11 14:40:10 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:40:10 UTC&quot;,
+      &quot;id&quot;: 674471636,
+      &quot;match&quot;: &quot;fqdn=temp.yourdomain.net&quot;,
+      &quot;value&quot;: &quot;8080&quot;,
+      &quot;omit&quot;: false,
+      &quot;use_puppet_default&quot;: false
+    },
+    {
+      &quot;created_at&quot;: &quot;2019-09-11 14:40:10 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:40:10 UTC&quot;,
+      &quot;id&quot;: 874520030,
+      &quot;match&quot;: &quot;hostgroup=Common&quot;,
+      &quot;value&quot;: &quot;8080&quot;,
+      &quot;omit&quot;: false,
+      &quot;use_puppet_default&quot;: false
+    }
+  ]
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
@@ -295,6 +329,18 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">GET /api/smart_class_parameters/1018350796-param22/override_values/os=fake
+200
+{
+  &quot;created_at&quot;: &quot;2019-09-11 14:34:53 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:34:53 UTC&quot;,
+  &quot;id&quot;: 1018350796,
+  &quot;match&quot;: &quot;os=fake&quot;,
+  &quot;value&quot;: &quot;*****&quot;,
+  &quot;omit&quot;: false,
+  &quot;use_puppet_default&quot;: false
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
@@ -484,6 +530,24 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">POST /api/smart_class_parameters/328495940-cluster/override_values
+{
+  &quot;override_value&quot;: {
+    &quot;match&quot;: &quot;os=abc&quot;,
+    &quot;value&quot;: &quot;liftoff&quot;
+  }
+}
+201
+{
+  &quot;created_at&quot;: &quot;2019-09-11 14:40:10 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:40:10 UTC&quot;,
+  &quot;id&quot;: 1018350796,
+  &quot;match&quot;: &quot;os=abc&quot;,
+  &quot;value&quot;: &quot;liftoff&quot;,
+  &quot;omit&quot;: false,
+  &quot;use_puppet_default&quot;: false
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
@@ -745,6 +809,23 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">PUT /api/smart_class_parameters/328495940-cluster/override_values/hostgroup=Common
+{
+  &quot;override_value&quot;: {
+    &quot;match&quot;: &quot;os=abc&quot;
+  }
+}
+200
+{
+  &quot;created_at&quot;: &quot;2019-09-11 14:40:10 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:40:11 UTC&quot;,
+  &quot;id&quot;: 874520030,
+  &quot;match&quot;: &quot;os=abc&quot;,
+  &quot;value&quot;: &quot;8080&quot;,
+  &quot;omit&quot;: false,
+  &quot;use_puppet_default&quot;: false
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
@@ -1006,6 +1087,21 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">DELETE /api/smart_variables/1018350801/override_values/1018350801
+{
+  &quot;override_value&quot;: {}
+}
+200
+{
+  &quot;created_at&quot;: &quot;2019-09-11 14:40:11 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:40:11 UTC&quot;,
+  &quot;id&quot;: 1018350801,
+  &quot;match&quot;: &quot;is_virtual=true&quot;,
+  &quot;value&quot;: &quot;some_value&quot;,
+  &quot;omit&quot;: false,
+  &quot;use_puppet_default&quot;: false
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>

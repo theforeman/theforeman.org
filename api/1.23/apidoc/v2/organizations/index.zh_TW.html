@@ -51,6 +51,33 @@
 
 
 
+  <h2>示例</h2>
+    <pre class="prettyprint">GET /api/organizations
+200
+{
+  &quot;total&quot;: 3,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: &quot;name = \&quot;Empty Organization\&quot;&quot;,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;ancestry&quot;: null,
+      &quot;parent_id&quot;: null,
+      &quot;parent_name&quot;: null,
+      &quot;created_at&quot;: &quot;2019-09-11 14:41:48 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:41:48 UTC&quot;,
+      &quot;id&quot;: 114267492,
+      &quot;name&quot;: &quot;Empty Organization&quot;,
+      &quot;title&quot;: &quot;Empty Organization&quot;,
+      &quot;description&quot;: null
+    }
+  ]
+}</pre>
 
   <h2>參數</h2>
   <table class='table'>

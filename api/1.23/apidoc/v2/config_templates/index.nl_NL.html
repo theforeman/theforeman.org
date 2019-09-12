@@ -72,6 +72,162 @@
 
 
 
+  <h2><span class="translation_missing" title="translation missing: nl-NL.apipie.examples">Examples</span></h2>
+    <pre class="prettyprint">GET /api/config_templates
+200
+{
+  &quot;total&quot;: 14,
+  &quot;subtotal&quot;: 14,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;snippet&quot;: false,
+      &quot;audit_comment&quot;: null,
+      &quot;created_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;id&quot;: 1007981701,
+      &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
+      &quot;template_kind_id&quot;: 452984334,
+      &quot;template_kind_name&quot;: &quot;PXELinux&quot;
+    },
+    {
+      &quot;snippet&quot;: false,
+      &quot;audit_comment&quot;: null,
+      &quot;created_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;id&quot;: 698706415,
+      &quot;name&quot;: &quot;iPXE Dummy Menu&quot;,
+      &quot;template_kind_id&quot;: 698706415,
+      &quot;template_kind_name&quot;: &quot;iPXE&quot;
+    },
+    {
+      &quot;snippet&quot;: false,
+      &quot;audit_comment&quot;: null,
+      &quot;created_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;id&quot;: 718456980,
+      &quot;name&quot;: &quot;Locked Template&quot;,
+      &quot;template_kind_id&quot;: 983253650,
+      &quot;template_kind_name&quot;: &quot;provision&quot;
+    },
+    {
+      &quot;snippet&quot;: false,
+      &quot;audit_comment&quot;: null,
+      &quot;created_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;id&quot;: 104314179,
+      &quot;name&quot;: &quot;MyFinish&quot;,
+      &quot;template_kind_id&quot;: 550103832,
+      &quot;template_kind_name&quot;: &quot;finish&quot;
+    },
+    {
+      &quot;snippet&quot;: false,
+      &quot;audit_comment&quot;: null,
+      &quot;created_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;id&quot;: 981457253,
+      &quot;name&quot;: &quot;MyScript&quot;,
+      &quot;template_kind_id&quot;: 478250810,
+      &quot;template_kind_name&quot;: &quot;script&quot;
+    },
+    {
+      &quot;snippet&quot;: false,
+      &quot;audit_comment&quot;: null,
+      &quot;created_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;id&quot;: 943779058,
+      &quot;name&quot;: &quot;MyString&quot;,
+      &quot;template_kind_id&quot;: 698706415,
+      &quot;template_kind_name&quot;: &quot;iPXE&quot;
+    },
+    {
+      &quot;snippet&quot;: false,
+      &quot;audit_comment&quot;: null,
+      &quot;created_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;id&quot;: 269958254,
+      &quot;name&quot;: &quot;MyString2&quot;,
+      &quot;template_kind_id&quot;: 983253650,
+      &quot;template_kind_name&quot;: &quot;provision&quot;
+    },
+    {
+      &quot;snippet&quot;: false,
+      &quot;audit_comment&quot;: null,
+      &quot;created_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;id&quot;: 684651467,
+      &quot;name&quot;: &quot;PXE Default Menu&quot;,
+      &quot;template_kind_id&quot;: 710512633,
+      &quot;template_kind_name&quot;: null
+    },
+    {
+      &quot;snippet&quot;: false,
+      &quot;audit_comment&quot;: null,
+      &quot;created_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;id&quot;: 554905648,
+      &quot;name&quot;: &quot;PXEGrub2 global default&quot;,
+      &quot;template_kind_id&quot;: 701398793,
+      &quot;template_kind_name&quot;: &quot;PXEGrub2&quot;
+    },
+    {
+      &quot;snippet&quot;: false,
+      &quot;audit_comment&quot;: null,
+      &quot;created_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;id&quot;: 131565194,
+      &quot;name&quot;: &quot;PXEGrub Dummy Menu&quot;,
+      &quot;template_kind_id&quot;: 131565194,
+      &quot;template_kind_name&quot;: &quot;PXEGrub&quot;
+    },
+    {
+      &quot;snippet&quot;: false,
+      &quot;audit_comment&quot;: null,
+      &quot;created_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;id&quot;: 824224502,
+      &quot;name&quot;: &quot;PXEGrub global default&quot;,
+      &quot;template_kind_id&quot;: 131565194,
+      &quot;template_kind_name&quot;: &quot;PXEGrub&quot;
+    },
+    {
+      &quot;snippet&quot;: false,
+      &quot;audit_comment&quot;: null,
+      &quot;created_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;id&quot;: 821548108,
+      &quot;name&quot;: &quot;PXELinux default local boot&quot;,
+      &quot;template_kind_id&quot;: 452984334,
+      &quot;template_kind_name&quot;: &quot;PXELinux&quot;
+    },
+    {
+      &quot;snippet&quot;: false,
+      &quot;audit_comment&quot;: null,
+      &quot;created_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;id&quot;: 352050261,
+      &quot;name&quot;: &quot;PXELinux global default&quot;,
+      &quot;template_kind_id&quot;: 452984334,
+      &quot;template_kind_name&quot;: &quot;PXELinux&quot;
+    },
+    {
+      &quot;snippet&quot;: false,
+      &quot;audit_comment&quot;: null,
+      &quot;created_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:32:19 UTC&quot;,
+      &quot;id&quot;: 56083308,
+      &quot;name&quot;: &quot;suse_pxelinux&quot;,
+      &quot;template_kind_id&quot;: 452984334,
+      &quot;template_kind_name&quot;: &quot;PXELinux&quot;
+    }
+  ]
+}</pre>
 
   <h2><span class="translation_missing" title="translation missing: nl-NL.apipie.params">Params</span></h2>
   <table class='table'>

@@ -51,6 +51,57 @@
 
 
 
+  <h2>示例</h2>
+    <pre class="prettyprint">PUT /api/compute_profiles/980190962-1-Small
+{
+  &quot;compute_profile&quot;: {
+    &quot;name&quot;: &quot;new name&quot;
+  }
+}
+200
+{
+  &quot;created_at&quot;: &quot;2019-09-11 14:32:44 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:32:53 UTC&quot;,
+  &quot;id&quot;: 980190962,
+  &quot;name&quot;: &quot;new name&quot;,
+  &quot;compute_attributes&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: null,
+      &quot;compute_resource_id&quot;: 928692541,
+      &quot;compute_resource_name&quot;: &quot;amazon123&quot;,
+      &quot;provider_friendly_name&quot;: &quot;EC2&quot;,
+      &quot;compute_profile_id&quot;: 980190962,
+      &quot;compute_profile_name&quot;: &quot;new name&quot;,
+      &quot;vm_attrs&quot;: {
+        &quot;flavor_id&quot;: &quot;m1.small&quot;,
+        &quot;availability_zone&quot;: &quot;eu-west-1a&quot;
+      },
+      &quot;attributes&quot;: {}
+    },
+    {
+      &quot;id&quot;: 298486374,
+      &quot;name&quot;: null,
+      &quot;compute_resource_id&quot;: 980190962,
+      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
+      &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
+      &quot;compute_profile_id&quot;: 980190962,
+      &quot;compute_profile_name&quot;: &quot;new name&quot;,
+      &quot;vm_attrs&quot;: {
+        &quot;cpus&quot;: 2,
+        &quot;memory&quot;: 536870912
+      },
+      &quot;attributes&quot;: {
+        &quot;cpus&quot;: 2,
+        &quot;memory&quot;: 536870912,
+        &quot;image_id&quot;: null,
+        &quot;image_name&quot;: null,
+        &quot;volumes_attributes&quot;: {},
+        &quot;interfaces_attributes&quot;: {}
+      }
+    }
+  ]
+}</pre>
 
   <h2>參數</h2>
   <table class='table'>

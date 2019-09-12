@@ -70,6 +70,31 @@
 
 
 
+  <h3>Esempi</h3>
+    <pre class="prettyprint">GET /api/users/988725678/ssh_keys
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;created_at&quot;: &quot;2019-09-11 14:31:52 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:31:52 UTC&quot;,
+      &quot;id&quot;: 2,
+      &quot;name&quot;: &quot;user2@example.com&quot;,
+      &quot;key&quot;: &quot;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC73jm3itxuHfeEboe6l/u35KFx3h2de9/PJ5OBblsIYLGC5h+AGw+4Ny8ggLAB5wYw/ks5xMoahAdIZ4yI0ecS09cdTMN7V1oVL/IFdFA+7VSKsK8j1SUbSJjeuX7tbeFYhYx/HG/qmn2x3/10huUqDp3AhdiLTHPV1wVYDlEK/mSoYJOSRns0oyQBYSvmG8TSMdjh6smyrLZU5PWK/Qo922WG8QkzzLmCx5TsSrmDHFbKBXnf88AsG9EVcF9VRxCJYagbCtszHKcc5QV7I7EyDlbP0QmRsfvfi1KPI/ozBcm5SJFIsTLyX/KEi0T8bYYfvKNUTUEkmzpjf6NfE1GF foreman2@example.com&quot;,
+      &quot;length&quot;: 2048,
+      &quot;fingerprint&quot;: &quot;25:14:96:87:ef:f3:b4:52:83:94:bc:49:0b:0b:63:47&quot;
+    }
+  ]
+}</pre>
 
   <h3>Parametri</h3>
   <table class='table'>
@@ -304,6 +329,18 @@
 
 
 
+  <h3>Esempi</h3>
+    <pre class="prettyprint">GET /api/users/988725677/ssh_keys/1-user1example-com
+200
+{
+  &quot;created_at&quot;: &quot;2019-09-11 14:31:52 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:31:52 UTC&quot;,
+  &quot;id&quot;: 1,
+  &quot;name&quot;: &quot;user1@example.com&quot;,
+  &quot;key&quot;: &quot;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCeU1GmZAFEvuifxP84M1R+Lvse5C7KfQ/st3WuBERmGbSwBRtQfbq2wIuyI90bBFuvmU9Ur7PjQ1icqn6QB/r6YypB3KJ6V9vT18REwfjhYaRkgwYipNC+VvUH9J9teRJjRtTgouwmMbcJDrhfynMxpJar4Tg2OccoB5IGRVUFTCS0fdeOdsb9GycAOgeoZTew756dwMKCX6Z9jcNTXRDcppwqaa3hZB0hGAYnzMeaGvHDH6q1UEUMZPje6Z3djNcZRGpipgyWEnK7Jigh6mupCda2LOVW4k7XwjAXfUFOgTLqekculyd8QZq7jhfozu11W0vXtJEZKHa/vq2w1Zh9 foreman1@example.com&quot;,
+  &quot;length&quot;: 2048,
+  &quot;fingerprint&quot;: &quot;a0:d6:20:f7:85:be:c5:df:e7:a5:e2:67:37:31:96:8c&quot;
+}</pre>
 
   <h3>Parametri</h3>
   <table class='table'>
@@ -439,6 +476,24 @@
 
 
 
+  <h3>Esempi</h3>
+    <pre class="prettyprint">POST /api/users/988725680/ssh_keys
+{
+  &quot;ssh_key&quot;: {
+    &quot;name&quot;: &quot;foreman@example.com&quot;,
+    &quot;key&quot;: &quot;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIhRoL6PfBRs9YwW3r2/pYeLrxRzEZSUO3Go8JivxMsguEKjJ3byHDPvPpMHhKKSZD/HJY/A+2Ndqp0ElB+t2qs= foreman@example.com&quot;
+  }
+}
+201
+{
+  &quot;created_at&quot;: &quot;2019-09-11 14:31:52 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:31:52 UTC&quot;,
+  &quot;id&quot;: 5,
+  &quot;name&quot;: &quot;foreman@example.com&quot;,
+  &quot;key&quot;: &quot;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIhRoL6PfBRs9YwW3r2/pYeLrxRzEZSUO3Go8JivxMsguEKjJ3byHDPvPpMHhKKSZD/HJY/A+2Ndqp0ElB+t2qs= foreman@example.com&quot;,
+  &quot;length&quot;: 520,
+  &quot;fingerprint&quot;: &quot;8e:0c:28:d9:99:e8:c2:84:46:1b:1d:ba:e5:78:4c:33&quot;
+}</pre>
 
   <h3>Parametri</h3>
   <table class='table'>
@@ -620,6 +675,22 @@
 
 
 
+  <h3>Esempi</h3>
+    <pre class="prettyprint">DELETE /api/users/988725679/ssh_keys/3-user3example-com
+{
+  &quot;ssh_key&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 3,
+  &quot;name&quot;: &quot;user3@example.com&quot;,
+  &quot;key&quot;: &quot;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtg/vnAQOrltUERTujEXAbrymn53kOU/yJhQiX33rcTCoQtdSOJW9zmPaE/pUGn7cGWtfZY8GgLNciHirS8ujcxEMsmHZ5ng4HqHq/jFNdwAgDPQtt2rb1NHIxHCCMrOHtqjQKXU3fSg1qMUiEV7dIaRHv3fLmYRCKLZ7Z19kWa6y4NPR6DeXkEhCa3eT0VSUOQmEzcUj0L/Cb+h/iHuB6M7zJmtk9rG4DbXtKU2NJqHfSu5G3t7+reh1kSSLx4mH4jXKH+xOWGG7t2l4dW2IreKeQp0S6UDq9rLToVtHxHkHMxydd4xNIrw3A4e179FwGNZY16cvvob4GpVLq98L9 foreman3@example.com&quot;,
+  &quot;fingerprint&quot;: &quot;b3:35:29:52:b9:37:c2:68:bd:cf:c1:56:66:9e:98:72&quot;,
+  &quot;user_id&quot;: 988725679,
+  &quot;length&quot;: 2048,
+  &quot;created_at&quot;: &quot;2019-09-11T14:31:52.855Z&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11T14:31:52.855Z&quot;
+}</pre>
 
   <h3>Parametri</h3>
   <table class='table'>

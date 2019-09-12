@@ -70,6 +70,122 @@
 
 
 
+  <h3>Exemplos</h3>
+    <pre class="prettyprint">GET /api/permissions
+200
+{
+  &quot;total&quot;: 162,
+  &quot;subtotal&quot;: 162,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;name&quot;: &quot;view_architectures&quot;,
+      &quot;id&quot;: 350275019,
+      &quot;resource_type&quot;: &quot;Architecture&quot;
+    },
+    {
+      &quot;name&quot;: &quot;create_architectures&quot;,
+      &quot;id&quot;: 912770095,
+      &quot;resource_type&quot;: &quot;Architecture&quot;
+    },
+    {
+      &quot;name&quot;: &quot;edit_architectures&quot;,
+      &quot;id&quot;: 874798611,
+      &quot;resource_type&quot;: &quot;Architecture&quot;
+    },
+    {
+      &quot;name&quot;: &quot;destroy_architectures&quot;,
+      &quot;id&quot;: 586604735,
+      &quot;resource_type&quot;: &quot;Architecture&quot;
+    },
+    {
+      &quot;name&quot;: &quot;view_authenticators&quot;,
+      &quot;id&quot;: 687843582,
+      &quot;resource_type&quot;: &quot;AuthSource&quot;
+    },
+    {
+      &quot;name&quot;: &quot;create_authenticators&quot;,
+      &quot;id&quot;: 956119309,
+      &quot;resource_type&quot;: &quot;AuthSource&quot;
+    },
+    {
+      &quot;name&quot;: &quot;edit_authenticators&quot;,
+      &quot;id&quot;: 395314704,
+      &quot;resource_type&quot;: &quot;AuthSource&quot;
+    },
+    {
+      &quot;name&quot;: &quot;destroy_authenticators&quot;,
+      &quot;id&quot;: 1067518973,
+      &quot;resource_type&quot;: &quot;AuthSource&quot;
+    },
+    {
+      &quot;name&quot;: &quot;view_bookmarks&quot;,
+      &quot;id&quot;: 995886532,
+      &quot;resource_type&quot;: &quot;Bookmark&quot;
+    },
+    {
+      &quot;name&quot;: &quot;create_bookmarks&quot;,
+      &quot;id&quot;: 435712857,
+      &quot;resource_type&quot;: &quot;Bookmark&quot;
+    },
+    {
+      &quot;name&quot;: &quot;edit_bookmarks&quot;,
+      &quot;id&quot;: 978016136,
+      &quot;resource_type&quot;: &quot;Bookmark&quot;
+    },
+    {
+      &quot;name&quot;: &quot;destroy_bookmarks&quot;,
+      &quot;id&quot;: 1027408783,
+      &quot;resource_type&quot;: &quot;Bookmark&quot;
+    },
+    {
+      &quot;name&quot;: &quot;view_compute_resources&quot;,
+      &quot;id&quot;: 524255159,
+      &quot;resource_type&quot;: &quot;ComputeResource&quot;
+    },
+    {
+      &quot;name&quot;: &quot;create_compute_resources&quot;,
+      &quot;id&quot;: 673360498,
+      &quot;resource_type&quot;: &quot;ComputeResource&quot;
+    },
+    {
+      &quot;name&quot;: &quot;edit_compute_resources&quot;,
+      &quot;id&quot;: 385985960,
+      &quot;resource_type&quot;: &quot;ComputeResource&quot;
+    },
+    {
+      &quot;name&quot;: &quot;destroy_compute_resources&quot;,
+      &quot;id&quot;: 382135357,
+      &quot;resource_type&quot;: &quot;ComputeResource&quot;
+    },
+    {
+      &quot;name&quot;: &quot;view_compute_profiles&quot;,
+      &quot;id&quot;: 944771383,
+      &quot;resource_type&quot;: &quot;ComputeProfile&quot;
+    },
+    {
+      &quot;name&quot;: &quot;create_compute_profiles&quot;,
+      &quot;id&quot;: 1035871455,
+      &quot;resource_type&quot;: &quot;ComputeProfile&quot;
+    },
+    {
+      &quot;name&quot;: &quot;edit_compute_profiles&quot;,
+      &quot;id&quot;: 884230802,
+      &quot;resource_type&quot;: &quot;ComputeProfile&quot;
+    },
+    {
+      &quot;name&quot;: &quot;destroy_compute_profiles&quot;,
+      &quot;id&quot;: 932164668,
+      &quot;resource_type&quot;: &quot;ComputeProfile&quot;
+    }
+  ]
+}</pre>
 
   <h3>Parâmentros</h3>
   <table class='table'>
@@ -324,6 +440,14 @@
 
 
 
+  <h3>Exemplos</h3>
+    <pre class="prettyprint">GET /api/permissions/350275019
+200
+{
+  &quot;name&quot;: &quot;view_architectures&quot;,
+  &quot;id&quot;: 350275019,
+  &quot;resource_type&quot;: &quot;Architecture&quot;
+}</pre>
 
   <h3>Parâmentros</h3>
   <table class='table'>
@@ -435,6 +559,133 @@
 
 
 
+  <h3>Exemplos</h3>
+    <pre class="prettyprint">GET /api/permissions/resource_types
+200
+{
+  &quot;total&quot;: 37,
+  &quot;subtotal&quot;: 37,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;name&quot;: &quot;Architecture&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Audit&quot;
+    },
+    {
+      &quot;name&quot;: &quot;AuthSource&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Bookmark&quot;
+    },
+    {
+      &quot;name&quot;: &quot;CommonParameter&quot;
+    },
+    {
+      &quot;name&quot;: &quot;ComputeProfile&quot;
+    },
+    {
+      &quot;name&quot;: &quot;ComputeResource&quot;
+    },
+    {
+      &quot;name&quot;: &quot;ConfigReport&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Domain&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Environment&quot;
+    },
+    {
+      &quot;name&quot;: &quot;FactValue&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Host&quot;
+    },
+    {
+      &quot;name&quot;: &quot;HostClass&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Hostgroup&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Image&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Location&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Medium&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Model&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Operatingsystem&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Organization&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Parameter&quot;
+    },
+    {
+      &quot;name&quot;: &quot;ProvisioningTemplate&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Ptable&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Puppetclass&quot;
+    },
+    {
+      &quot;name&quot;: &quot;PuppetclassLookupKey&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Realm&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Report&quot;
+    },
+    {
+      &quot;name&quot;: &quot;ReportTemplate&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Role&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Setting&quot;
+    },
+    {
+      &quot;name&quot;: &quot;SmartProxy&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Subnet&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Test::Resource&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Trend&quot;
+    },
+    {
+      &quot;name&quot;: &quot;User&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Usergroup&quot;
+    },
+    {
+      &quot;name&quot;: &quot;VariableLookupKey&quot;
+    }
+  ]
+}</pre>
 
   <h3>Parâmentros</h3>
   <table class='table'>

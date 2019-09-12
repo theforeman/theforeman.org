@@ -51,6 +51,34 @@
 
 
 
+  <h2><span class="translation_missing" title="translation missing: ko.apipie.examples">Examples</span></h2>
+    <pre class="prettyprint">POST /api/environments
+{
+  &quot;environment&quot;: {
+    &quot;name&quot;: &quot;some_environment&quot;,
+    &quot;organization_ids&quot;: [
+      114267492
+    ]
+  }
+}
+201
+{
+  &quot;created_at&quot;: &quot;2019-09-11 14:51:49 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:51:49 UTC&quot;,
+  &quot;name&quot;: &quot;some_environment&quot;,
+  &quot;id&quot;: 687036947,
+  &quot;template_combinations&quot;: [],
+  &quot;puppetclasses&quot;: [],
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 114267492,
+      &quot;name&quot;: &quot;Empty Organization&quot;,
+      &quot;title&quot;: &quot;Empty Organization&quot;,
+      &quot;description&quot;: null
+    }
+  ]
+}</pre>
 
   <h2><span class="translation_missing" title="translation missing: ko.apipie.params">Params</span></h2>
   <table class='table'>

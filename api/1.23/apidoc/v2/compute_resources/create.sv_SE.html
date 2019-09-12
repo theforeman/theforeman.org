@@ -51,6 +51,39 @@
 
 
 
+  <h2><span class="translation_missing" title="translation missing: sv-SE.apipie.examples">Examples</span></h2>
+    <pre class="prettyprint">POST /api/compute_resources
+{
+  &quot;compute_resource&quot;: {
+    &quot;name&quot;: &quot;Ovirt-create-test&quot;,
+    &quot;url&quot;: &quot;https://myovirt/api&quot;,
+    &quot;provider&quot;: &quot;ovirt&quot;,
+    &quot;datacenter&quot;: &quot;8c30ea90-9bc8-4a90-867b-1a8ccdef44e8&quot;,
+    &quot;user&quot;: &quot;user@example.com&quot;,
+    &quot;password&quot;: &quot;secret&quot;
+  }
+}
+201
+{
+  &quot;description&quot;: null,
+  &quot;url&quot;: &quot;https://myovirt/api&quot;,
+  &quot;created_at&quot;: &quot;2019-09-11 14:37:28 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:37:28 UTC&quot;,
+  &quot;id&quot;: 980190963,
+  &quot;name&quot;: &quot;Ovirt-create-test&quot;,
+  &quot;provider&quot;: &quot;Ovirt&quot;,
+  &quot;provider_friendly_name&quot;: &quot;oVirt&quot;,
+  &quot;user&quot;: &quot;user@example.com&quot;,
+  &quot;datacenter&quot;: &quot;8c30ea90-9bc8-4a90-867b-1a8ccdef44e8&quot;,
+  &quot;use_v4&quot;: false,
+  &quot;ovirt_quota&quot;: null,
+  &quot;display_type&quot;: &quot;vnc&quot;,
+  &quot;keyboard_layout&quot;: &quot;en-us&quot;,
+  &quot;images&quot;: [],
+  &quot;compute_attributes&quot;: [],
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: []
+}</pre>
 
   <h2><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h2>
   <table class='table'>

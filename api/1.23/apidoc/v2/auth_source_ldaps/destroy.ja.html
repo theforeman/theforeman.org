@@ -51,6 +51,35 @@
 
 
 
+  <h2>例</h2>
+    <pre class="prettyprint">DELETE /api/auth_source_ldaps/980190962
+{
+  &quot;auth_source_ldap&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 980190962,
+  &quot;name&quot;: &quot;ldap-server&quot;,
+  &quot;host&quot;: &quot;ldap&quot;,
+  &quot;port&quot;: 123,
+  &quot;account&quot;: null,
+  &quot;account_password&quot;: null,
+  &quot;base_dn&quot;: &quot;dn=x,dn=y&quot;,
+  &quot;attr_login&quot;: &quot;uid&quot;,
+  &quot;attr_firstname&quot;: &quot;givenName&quot;,
+  &quot;attr_lastname&quot;: &quot;sn&quot;,
+  &quot;attr_mail&quot;: &quot;mail&quot;,
+  &quot;onthefly_register&quot;: true,
+  &quot;tls&quot;: true,
+  &quot;created_at&quot;: &quot;2019-09-11T14:55:05.079Z&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11T14:55:05.079Z&quot;,
+  &quot;ldap_filter&quot;: null,
+  &quot;attr_photo&quot;: null,
+  &quot;server_type&quot;: &quot;posix&quot;,
+  &quot;groups_base&quot;: null,
+  &quot;usergroup_sync&quot;: true,
+  &quot;use_netgroups&quot;: false
+}</pre>
 
   <h2>パラメーター</h2>
   <table class='table'>

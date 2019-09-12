@@ -53,6 +53,39 @@
 
 
 
+  <h2><span class="translation_missing" title="translation missing: sv-SE.apipie.examples">Examples</span></h2>
+    <pre class="prettyprint">POST /api/realms
+{
+  &quot;realm&quot;: {
+    &quot;name&quot;: &quot;&quot;
+  }
+}
+422
+{
+  &quot;error&quot;: {
+    &quot;id&quot;: null,
+    &quot;errors&quot;: {
+      &quot;realm_proxy_id&quot;: [
+        &quot;was not found&quot;,
+        &quot;can&#39;t be blank&quot;
+      ],
+      &quot;name&quot;: [
+        &quot;can&#39;t be blank&quot;
+      ],
+      &quot;realm_type&quot;: [
+        &quot;can&#39;t be blank&quot;,
+        &quot;is not included in the list&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Realm proxy was not found&quot;,
+      &quot;Realm proxy can&#39;t be blank&quot;,
+      &quot;Name can&#39;t be blank&quot;,
+      &quot;Realm type can&#39;t be blank&quot;,
+      &quot;Realm type is not included in the list&quot;
+    ]
+  }
+}</pre>
 
   <h2><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h2>
   <table class='table'>
