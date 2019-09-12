@@ -51,6 +51,18 @@
 
 
 
+  <h2>Exemples</h2>
+    <pre class="prettyprint">POST /api/config_reports
+{
+  &quot;config_report&quot;: {}
+}
+403
+{
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;Access denied&quot;,
+    &quot;details&quot;: &quot;Missing one of the required permissions: upload_config_reports&quot;
+  }
+}</pre>
 
   <h2>Paramètres</h2>
   <table class='table'>

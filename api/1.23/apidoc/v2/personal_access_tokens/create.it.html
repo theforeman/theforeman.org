@@ -51,6 +51,28 @@
 
 
 
+  <h2>Esempi</h2>
+    <pre class="prettyprint">POST /api/users/988725684/personal_access_tokens
+{
+  &quot;name&quot;: &quot;foreman@example.com&quot;,
+  &quot;expires_at&quot;: &quot;2019-10-09T14:33:21Z&quot;,
+  &quot;personal_access_token&quot;: {
+    &quot;name&quot;: &quot;foreman@example.com&quot;,
+    &quot;expires_at&quot;: &quot;2019-10-09T14:33:21Z&quot;
+  }
+}
+201
+{
+  &quot;token_value&quot;: &quot;u33WWClcBW1BsqsjhF7lQQ&quot;,
+  &quot;created_at&quot;: &quot;2019-09-11 14:33:21 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:33:21 UTC&quot;,
+  &quot;id&quot;: 5,
+  &quot;name&quot;: &quot;foreman@example.com&quot;,
+  &quot;expires_at&quot;: &quot;2019-10-09 14:33:21 UTC&quot;,
+  &quot;active?&quot;: true,
+  &quot;user_id&quot;: 988725684,
+  &quot;last_used_at&quot;: null
+}</pre>
 
   <h2>Parametri</h2>
   <table class='table'>

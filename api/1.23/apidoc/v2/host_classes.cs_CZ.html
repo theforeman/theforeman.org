@@ -70,6 +70,14 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: cs-CZ.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">GET /api/hosts/host2666/puppetclass_ids
+200
+{
+  &quot;results&quot;: [
+    1018350797
+  ]
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: cs-CZ.apipie.params">Params</span></h3>
   <table class='table'>
@@ -159,6 +167,20 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: cs-CZ.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">POST /api/hosts/host2667/puppetclass_ids
+{
+  &quot;puppetclass_id&quot;: &quot;invalid_id&quot;,
+  &quot;host_class&quot;: {
+    &quot;puppetclass_id&quot;: &quot;invalid_id&quot;
+  }
+}
+404
+{
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;Resource host_class not found by id &#39;&#39;&quot;
+  }
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: cs-CZ.apipie.params">Params</span></h3>
   <table class='table'>
@@ -296,6 +318,15 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: cs-CZ.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">DELETE /api/hosts/host2669/puppetclass_ids/1018350800
+{
+  &quot;host_class&quot;: {}
+}
+200
+[
+
+]</pre>
 
   <h3><span class="translation_missing" title="translation missing: cs-CZ.apipie.params">Params</span></h3>
   <table class='table'>

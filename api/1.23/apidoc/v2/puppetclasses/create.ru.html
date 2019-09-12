@@ -51,6 +51,35 @@
 
 
 
+  <h2>Примеры</h2>
+    <pre class="prettyprint">POST /api/puppetclasses
+{
+  &quot;puppetclass&quot;: {
+    &quot;name&quot;: &quot;test_puppetclass&quot;,
+    &quot;lookup_keys_attributes&quot;: [
+      {
+        &quot;key&quot;: &quot;smart_variable1&quot;
+      }
+    ]
+  }
+}
+201
+{
+  &quot;created_at&quot;: &quot;2019-09-11 14:57:13 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:57:13 UTC&quot;,
+  &quot;id&quot;: 1018350800,
+  &quot;name&quot;: &quot;test_puppetclass&quot;,
+  &quot;module_name&quot;: &quot;test_puppetclass&quot;,
+  &quot;environments&quot;: [],
+  &quot;hostgroups&quot;: [],
+  &quot;smart_variables&quot;: [
+    {
+      &quot;variable&quot;: &quot;smart_variable1&quot;,
+      &quot;id&quot;: 1018350797
+    }
+  ],
+  &quot;smart_class_parameters&quot;: []
+}</pre>
 
   <h2>Параметры</h2>
   <table class='table'>

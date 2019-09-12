@@ -51,6 +51,46 @@
 
 
 
+  <h2><span class="translation_missing" title="translation missing: ca.apipie.examples">Examples</span></h2>
+    <pre class="prettyprint">POST /api/usergroups
+{
+  &quot;usergroup&quot;: {
+    &quot;name&quot;: &quot;test_usergroup&quot;,
+    &quot;user_ids&quot;: [
+      980190962,
+      298486374,
+      200482051
+    ]
+  }
+}
+201
+{
+  &quot;admin&quot;: false,
+  &quot;created_at&quot;: &quot;2019-09-11 14:33:33 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:33:33 UTC&quot;,
+  &quot;name&quot;: &quot;test_usergroup&quot;,
+  &quot;id&quot;: 2,
+  &quot;external_usergroups&quot;: [],
+  &quot;usergroups&quot;: [],
+  &quot;users&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;login&quot;: &quot;one&quot;,
+      &quot;description&quot;: null
+    },
+    {
+      &quot;id&quot;: 298486374,
+      &quot;login&quot;: &quot;two&quot;,
+      &quot;description&quot;: null
+    },
+    {
+      &quot;id&quot;: 200482051,
+      &quot;login&quot;: &quot;test&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;roles&quot;: []
+}</pre>
 
   <h2><span class="translation_missing" title="translation missing: ca.apipie.params">Params</span></h2>
   <table class='table'>

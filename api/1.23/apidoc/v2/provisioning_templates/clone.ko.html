@@ -51,6 +51,27 @@
 
 
 
+  <h2><span class="translation_missing" title="translation missing: ko.apipie.examples">Examples</span></h2>
+    <pre class="prettyprint">POST /api/provisioning_templates/1007981701-centos5_3_pxelinux/clone
+{
+  &quot;provisioning_template&quot;: {
+    &quot;name&quot;: &quot;MyClone&quot;
+  }
+}
+201
+{
+  &quot;id&quot;: 1007981786,
+  &quot;name&quot;: &quot;MyClone&quot;,
+  &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ks=&lt;%= foreman_url(\&quot;kickstart\&quot;)%&gt; ksdevice=bootif network kssendmac&quot;,
+  &quot;snippet&quot;: false,
+  &quot;template_kind_id&quot;: 452984334,
+  &quot;created_at&quot;: &quot;2019-09-11T14:57:18.901Z&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11T14:57:18.901Z&quot;,
+  &quot;locked&quot;: false,
+  &quot;default&quot;: false,
+  &quot;vendor&quot;: null,
+  &quot;os_family&quot;: null
+}</pre>
 
   <h2><span class="translation_missing" title="translation missing: ko.apipie.params">Params</span></h2>
   <table class='table'>

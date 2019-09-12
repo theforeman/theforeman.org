@@ -51,6 +51,37 @@
 
 
 
+  <h2>Exemples</h2>
+    <pre class="prettyprint">POST /api/report_templates
+{
+  &quot;report_template&quot;: {
+    &quot;name&quot;: &quot;report_template_test&quot;,
+    &quot;template&quot;: &quot;a,b,c&quot;,
+    &quot;organization_ids&quot;: [
+      114267492
+    ]
+  }
+}
+201
+{
+  &quot;template&quot;: &quot;a,b,c&quot;,
+  &quot;default&quot;: false,
+  &quot;snippet&quot;: false,
+  &quot;locked&quot;: false,
+  &quot;created_at&quot;: &quot;2019-09-11 14:39:38 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:39:38 UTC&quot;,
+  &quot;name&quot;: &quot;report_template_test&quot;,
+  &quot;id&quot;: 1007981732,
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 114267492,
+      &quot;name&quot;: &quot;Empty Organization&quot;,
+      &quot;title&quot;: &quot;Empty Organization&quot;,
+      &quot;description&quot;: null
+    }
+  ]
+}</pre>
 
   <h2>Paramètres</h2>
   <table class='table'>

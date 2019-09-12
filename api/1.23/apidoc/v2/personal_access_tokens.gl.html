@@ -70,6 +70,32 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">GET /api/users/988725681/personal_access_tokens
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;created_at&quot;: &quot;2019-09-11 14:33:21 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:33:21 UTC&quot;,
+      &quot;id&quot;: 1,
+      &quot;name&quot;: &quot;Personal Access Token 1&quot;,
+      &quot;expires_at&quot;: &quot;2019-09-21 14:33:21 UTC&quot;,
+      &quot;active?&quot;: true,
+      &quot;user_id&quot;: 988725681,
+      &quot;last_used_at&quot;: null
+    }
+  ]
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
@@ -279,6 +305,19 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">GET /api/users/988725683/personal_access_tokens/3
+200
+{
+  &quot;created_at&quot;: &quot;2019-09-11 14:33:21 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:33:21 UTC&quot;,
+  &quot;id&quot;: 3,
+  &quot;name&quot;: &quot;Personal Access Token 3&quot;,
+  &quot;expires_at&quot;: &quot;2019-09-21 14:33:21 UTC&quot;,
+  &quot;active?&quot;: true,
+  &quot;user_id&quot;: 988725683,
+  &quot;last_used_at&quot;: null
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
@@ -414,6 +453,28 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">POST /api/users/988725684/personal_access_tokens
+{
+  &quot;name&quot;: &quot;foreman@example.com&quot;,
+  &quot;expires_at&quot;: &quot;2019-10-09T14:33:21Z&quot;,
+  &quot;personal_access_token&quot;: {
+    &quot;name&quot;: &quot;foreman@example.com&quot;,
+    &quot;expires_at&quot;: &quot;2019-10-09T14:33:21Z&quot;
+  }
+}
+201
+{
+  &quot;token_value&quot;: &quot;u33WWClcBW1BsqsjhF7lQQ&quot;,
+  &quot;created_at&quot;: &quot;2019-09-11 14:33:21 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:33:21 UTC&quot;,
+  &quot;id&quot;: 5,
+  &quot;name&quot;: &quot;foreman@example.com&quot;,
+  &quot;expires_at&quot;: &quot;2019-10-09 14:33:21 UTC&quot;,
+  &quot;active?&quot;: true,
+  &quot;user_id&quot;: 988725684,
+  &quot;last_used_at&quot;: null
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>
@@ -595,6 +656,23 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">DELETE /api/users/988725682/personal_access_tokens/2
+{
+  &quot;personal_access_token&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 2,
+  &quot;revoked&quot;: true,
+  &quot;token&quot;: &quot;$2a$05$da4b9237bacccdf19c076uP.zXXGisdweoj.B9LhaHca2VWwv.n02&quot;,
+  &quot;name&quot;: &quot;Personal Access Token 2&quot;,
+  &quot;expires_at&quot;: &quot;2019-09-21T14:33:21.603Z&quot;,
+  &quot;last_used_at&quot;: null,
+  &quot;user_id&quot;: 988725682,
+  &quot;created_at&quot;: &quot;2019-09-11T14:33:21.604Z&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11T14:33:21.617Z&quot;
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h3>
   <table class='table'>

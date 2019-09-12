@@ -133,6 +133,31 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: ca.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">GET /api/hosts/host2324/parameters
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;priority&quot;: 70,
+      &quot;created_at&quot;: &quot;2019-09-11 14:55:09 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:55:09 UTC&quot;,
+      &quot;id&quot;: 767575239,
+      &quot;name&quot;: &quot;parameter332&quot;,
+      &quot;parameter_type&quot;: null,
+      &quot;value&quot;: &quot;parameter value 359&quot;
+    }
+  ]
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: ca.apipie.params">Params</span></h3>
   <table class='table'>
@@ -597,6 +622,18 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: ca.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">GET /api/hosts/host470/parameters/767575240-parameter10
+200
+{
+  &quot;priority&quot;: 70,
+  &quot;created_at&quot;: &quot;2019-09-11 14:35:47 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:35:47 UTC&quot;,
+  &quot;id&quot;: 767575240,
+  &quot;name&quot;: &quot;parameter10&quot;,
+  &quot;parameter_type&quot;: null,
+  &quot;value&quot;: &quot;parameter value 10&quot;
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: ca.apipie.params">Params</span></h3>
   <table class='table'>
@@ -914,6 +951,24 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: ca.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">POST /api/domains/22495316-mydomain-net/parameters
+{
+  &quot;parameter&quot;: {
+    &quot;name&quot;: &quot;parameter2&quot;,
+    &quot;value&quot;: &quot;X&quot;
+  }
+}
+201
+{
+  &quot;priority&quot;: 30,
+  &quot;created_at&quot;: &quot;2019-09-11 14:57:35 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:57:35 UTC&quot;,
+  &quot;id&quot;: 767575246,
+  &quot;name&quot;: &quot;parameter2&quot;,
+  &quot;parameter_type&quot;: null,
+  &quot;value&quot;: &quot;X&quot;
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: ca.apipie.params">Params</span></h3>
   <table class='table'>
@@ -1273,6 +1328,24 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: ca.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">PUT /api/domains/22495316-mydomain-net/parameters/665394701-parameter
+{
+  &quot;parameter&quot;: {
+    &quot;name&quot;: &quot;special_key&quot;,
+    &quot;value&quot;: &quot;123&quot;
+  }
+}
+200
+{
+  &quot;priority&quot;: null,
+  &quot;created_at&quot;: &quot;2019-09-11 14:58:27 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:58:41 UTC&quot;,
+  &quot;id&quot;: 665394701,
+  &quot;name&quot;: &quot;special_key&quot;,
+  &quot;parameter_type&quot;: null,
+  &quot;value&quot;: &quot;123&quot;
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: ca.apipie.params">Params</span></h3>
   <table class='table'>
@@ -1656,6 +1729,23 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: ca.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">DELETE /api/subnets/1018350795-five/parameters/297943576-parameter
+{
+  &quot;parameter&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 297943576,
+  &quot;name&quot;: &quot;parameter&quot;,
+  &quot;value&quot;: &quot;subnet1&quot;,
+  &quot;reference_id&quot;: 1018350795,
+  &quot;created_at&quot;: &quot;2019-09-11T14:58:27.166Z&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11T14:58:27.166Z&quot;,
+  &quot;priority&quot;: null,
+  &quot;hidden_value&quot;: &quot;*****&quot;,
+  &quot;key_type&quot;: null
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: ca.apipie.params">Params</span></h3>
   <table class='table'>
@@ -1949,6 +2039,15 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: ca.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">DELETE /api/operatingsystems/1073012828/parameters
+{
+  &quot;parameter&quot;: {}
+}
+200
+[
+
+]</pre>
 
   <h3><span class="translation_missing" title="translation missing: ca.apipie.params">Params</span></h3>
   <table class='table'>

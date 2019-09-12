@@ -79,6 +79,160 @@
 
 
 
+  <h2><span class="translation_missing" title="translation missing: cs-CZ.apipie.examples">Examples</span></h2>
+    <pre class="prettyprint">GET /api/compute_attributes
+200
+{
+  &quot;total&quot;: 5,
+  &quot;subtotal&quot;: 5,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;created_at&quot;: &quot;2019-09-11 14:54:14 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:54:14 UTC&quot;,
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: null,
+      &quot;compute_resource_id&quot;: 928692541,
+      &quot;compute_resource_name&quot;: &quot;amazon123&quot;,
+      &quot;provider_friendly_name&quot;: &quot;EC2&quot;,
+      &quot;compute_profile_id&quot;: 980190962,
+      &quot;compute_profile_name&quot;: &quot;1-Small&quot;,
+      &quot;vm_attrs&quot;: {
+        &quot;flavor_id&quot;: &quot;m1.small&quot;,
+        &quot;availability_zone&quot;: &quot;eu-west-1a&quot;
+      },
+      &quot;attributes&quot;: {
+        &quot;flavor_id&quot;: &quot;m1.small&quot;,
+        &quot;availability_zone&quot;: &quot;eu-west-1a&quot;,
+        &quot;subnet_id&quot;: null,
+        &quot;image_id&quot;: null,
+        &quot;managed_ip&quot;: null,
+        &quot;flavor_name&quot;: &quot;Small Instance&quot;,
+        &quot;subnet_name&quot;: null,
+        &quot;image_name&quot;: null,
+        &quot;security_groups&quot;: {}
+      }
+    },
+    {
+      &quot;created_at&quot;: &quot;2019-09-11 14:54:14 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:54:14 UTC&quot;,
+      &quot;id&quot;: 298486374,
+      &quot;name&quot;: null,
+      &quot;compute_resource_id&quot;: 980190962,
+      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
+      &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
+      &quot;compute_profile_id&quot;: 980190962,
+      &quot;compute_profile_name&quot;: &quot;1-Small&quot;,
+      &quot;vm_attrs&quot;: {
+        &quot;cpus&quot;: 2,
+        &quot;memory&quot;: 536870912
+      },
+      &quot;attributes&quot;: {
+        &quot;cpus&quot;: 2,
+        &quot;memory&quot;: 536870912,
+        &quot;image_id&quot;: null,
+        &quot;image_name&quot;: null,
+        &quot;volumes_attributes&quot;: {},
+        &quot;interfaces_attributes&quot;: {}
+      }
+    },
+    {
+      &quot;created_at&quot;: &quot;2019-09-11 14:54:14 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:54:14 UTC&quot;,
+      &quot;id&quot;: 113629430,
+      &quot;name&quot;: null,
+      &quot;compute_resource_id&quot;: 928692541,
+      &quot;compute_resource_name&quot;: &quot;amazon123&quot;,
+      &quot;provider_friendly_name&quot;: &quot;EC2&quot;,
+      &quot;compute_profile_id&quot;: 298486374,
+      &quot;compute_profile_name&quot;: &quot;2-Medium&quot;,
+      &quot;vm_attrs&quot;: {
+        &quot;flavor_id&quot;: &quot;m1.medium&quot;,
+        &quot;availability_zone&quot;: &quot;eu-west-1a&quot;
+      },
+      &quot;attributes&quot;: {
+        &quot;flavor_id&quot;: &quot;m1.medium&quot;,
+        &quot;availability_zone&quot;: &quot;eu-west-1a&quot;,
+        &quot;subnet_id&quot;: null,
+        &quot;image_id&quot;: null,
+        &quot;managed_ip&quot;: null,
+        &quot;flavor_name&quot;: &quot;Medium Instance&quot;,
+        &quot;subnet_name&quot;: null,
+        &quot;image_name&quot;: null,
+        &quot;security_groups&quot;: {}
+      }
+    },
+    {
+      &quot;created_at&quot;: &quot;2019-09-11 14:54:14 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:54:14 UTC&quot;,
+      &quot;id&quot;: 281110143,
+      &quot;name&quot;: null,
+      &quot;compute_resource_id&quot;: 980190962,
+      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
+      &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
+      &quot;compute_profile_id&quot;: 298486374,
+      &quot;compute_profile_name&quot;: &quot;2-Medium&quot;,
+      &quot;vm_attrs&quot;: {
+        &quot;cpus&quot;: 4,
+        &quot;memory&quot;: 4294967296
+      },
+      &quot;attributes&quot;: {
+        &quot;cpus&quot;: 4,
+        &quot;memory&quot;: 4294967296,
+        &quot;image_id&quot;: null,
+        &quot;image_name&quot;: null,
+        &quot;volumes_attributes&quot;: {},
+        &quot;interfaces_attributes&quot;: {}
+      }
+    },
+    {
+      &quot;created_at&quot;: &quot;2019-09-11 14:54:14 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:54:14 UTC&quot;,
+      &quot;id&quot;: 394428105,
+      &quot;name&quot;: null,
+      &quot;compute_resource_id&quot;: 980190962,
+      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
+      &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
+      &quot;compute_profile_id&quot;: 281110143,
+      &quot;compute_profile_name&quot;: &quot;4-Networking&quot;,
+      &quot;vm_attrs&quot;: {
+        &quot;nics_attributes&quot;: {
+          &quot;1&quot;: {
+            &quot;attr&quot;: 1
+          },
+          &quot;2&quot;: {
+            &quot;attr&quot;: 2
+          }
+        }
+      },
+      &quot;attributes&quot;: {
+        &quot;cpus&quot;: null,
+        &quot;memory&quot;: null,
+        &quot;image_id&quot;: null,
+        &quot;image_name&quot;: null,
+        &quot;volumes_attributes&quot;: {},
+        &quot;interfaces_attributes&quot;: {
+          &quot;1&quot;: {
+            &quot;type&quot;: null,
+            &quot;model&quot;: null,
+            &quot;bridge&quot;: null
+          },
+          &quot;2&quot;: {
+            &quot;type&quot;: null,
+            &quot;model&quot;: null,
+            &quot;bridge&quot;: null
+          }
+        }
+      }
+    }
+  ]
+}</pre>
 
   <h2><span class="translation_missing" title="translation missing: cs-CZ.apipie.params">Params</span></h2>
   <table class='table'>

@@ -90,6 +90,60 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">POST /api/smart_proxies/182953976/import_puppetclasses
+{
+  &quot;smart_proxy&quot;: {}
+}
+200
+{
+  &quot;message&quot;: &quot;Successfully updated environment and puppetclasses from the on-disk puppet installation&quot;,
+  &quot;environments_with_new_puppetclasses&quot;: 2,
+  &quot;environments_updated_puppetclasses&quot;: 0,
+  &quot;environments_obsolete&quot;: 3,
+  &quot;environments_ignored&quot;: 0,
+  &quot;results&quot;: [
+    {
+      &quot;name&quot;: &quot;env1&quot;,
+      &quot;actions&quot;: [
+        &quot;new&quot;
+      ],
+      &quot;new_puppetclasses&quot;: [
+        &quot;a&quot;
+      ]
+    },
+    {
+      &quot;name&quot;: &quot;env2&quot;,
+      &quot;actions&quot;: [
+        &quot;new&quot;
+      ],
+      &quot;new_puppetclasses&quot;: [
+        &quot;b&quot;
+      ]
+    },
+    {
+      &quot;name&quot;: &quot;global_puppetmaster&quot;,
+      &quot;actions&quot;: [
+        &quot;obsolete&quot;
+      ],
+      &quot;removed_environment&quot;: &quot;global_puppetmaster&quot;
+    },
+    {
+      &quot;name&quot;: &quot;production&quot;,
+      &quot;actions&quot;: [
+        &quot;obsolete&quot;
+      ],
+      &quot;removed_environment&quot;: &quot;production&quot;
+    },
+    {
+      &quot;name&quot;: &quot;testing&quot;,
+      &quot;actions&quot;: [
+        &quot;obsolete&quot;
+      ],
+      &quot;removed_environment&quot;: &quot;testing&quot;
+    }
+  ]
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>
@@ -291,6 +345,36 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">GET /api/smart_proxies
+200
+{
+  &quot;total&quot;: 8,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: &quot;feature=TFTP&quot;,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;created_at&quot;: &quot;2019-09-11 14:48:32 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:48:32 UTC&quot;,
+      &quot;name&quot;: &quot;TFTP Proxy&quot;,
+      &quot;id&quot;: 298486374,
+      &quot;url&quot;: &quot;http://somewhere.else&quot;,
+      &quot;features&quot;: [
+        {
+          &quot;capabilities&quot;: [],
+          &quot;name&quot;: &quot;TFTP&quot;,
+          &quot;id&quot;: 303403661
+        }
+      ]
+    }
+  ]
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>
@@ -526,6 +610,39 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">GET /api/smart_proxies/980190962-DHCP%20Proxy
+200
+{
+  &quot;created_at&quot;: &quot;2019-09-11 14:48:32 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:48:32 UTC&quot;,
+  &quot;name&quot;: &quot;DHCP Proxy&quot;,
+  &quot;id&quot;: 980190962,
+  &quot;url&quot;: &quot;https://somewhere.net:8443&quot;,
+  &quot;features&quot;: [
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;DHCP&quot;,
+      &quot;id&quot;: 219245707
+    }
+  ],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>
@@ -637,6 +754,28 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">POST /api/smart_proxies
+{
+  &quot;smart_proxy&quot;: {
+    &quot;name&quot;: &quot;&quot;,
+    &quot;url&quot;: &quot;http://server:8443&quot;
+  }
+}
+422
+{
+  &quot;error&quot;: {
+    &quot;id&quot;: null,
+    &quot;errors&quot;: {
+      &quot;name&quot;: [
+        &quot;can&#39;t be blank&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Name can&#39;t be blank&quot;
+    ]
+  }
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>
@@ -840,6 +979,90 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">PUT /api/smart_proxies/980190962-DHCP%20Proxy
+{
+  &quot;smart_proxy&quot;: {
+    &quot;name&quot;: &quot;master02&quot;,
+    &quot;url&quot;: &quot;http://server:8443&quot;
+  }
+}
+200
+{
+  &quot;created_at&quot;: &quot;2019-09-11 14:48:32 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:48:39 UTC&quot;,
+  &quot;name&quot;: &quot;master02&quot;,
+  &quot;id&quot;: 980190962,
+  &quot;url&quot;: &quot;http://server:8443&quot;,
+  &quot;features&quot;: [
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;DHCP&quot;,
+      &quot;id&quot;: 219245707
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;DNS&quot;,
+      &quot;id&quot;: 49142851
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;TFTP&quot;,
+      &quot;id&quot;: 303403661
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;DHCP&quot;,
+      &quot;id&quot;: 219245707
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Puppet CA&quot;,
+      &quot;id&quot;: 783807086
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Puppet&quot;,
+      &quot;id&quot;: 1006510553
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;BMC&quot;,
+      &quot;id&quot;: 821748566
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Chef Proxy&quot;,
+      &quot;id&quot;: 848995175
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Realm&quot;,
+      &quot;id&quot;: 982965213
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Logs&quot;,
+      &quot;id&quot;: 814728799
+    }
+  ],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>
@@ -1065,6 +1288,20 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">DELETE /api/smart_proxies/281110143-Unused%20Proxy
+{
+  &quot;smart_proxy&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 281110143,
+  &quot;name&quot;: &quot;Unused Proxy&quot;,
+  &quot;url&quot;: &quot;http://else.where:45672&quot;,
+  &quot;created_at&quot;: &quot;2019-09-11T14:48:32.049Z&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11T14:48:32.049Z&quot;,
+  &quot;expired_logs&quot;: &quot;0&quot;
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>
@@ -1176,6 +1413,82 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">POST /api/smart_proxies/980190962-DHCP%20Proxy/refresh
+{
+  &quot;smart_proxy&quot;: {}
+}
+201
+{
+  &quot;created_at&quot;: &quot;2019-09-11 14:48:32 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:48:32 UTC&quot;,
+  &quot;name&quot;: &quot;DHCP Proxy&quot;,
+  &quot;id&quot;: 980190962,
+  &quot;url&quot;: &quot;https://somewhere.net:8443&quot;,
+  &quot;features&quot;: [
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;DHCP&quot;,
+      &quot;id&quot;: 219245707
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;DNS&quot;,
+      &quot;id&quot;: 49142851
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;TFTP&quot;,
+      &quot;id&quot;: 303403661
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Puppet CA&quot;,
+      &quot;id&quot;: 783807086
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Puppet&quot;,
+      &quot;id&quot;: 1006510553
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;BMC&quot;,
+      &quot;id&quot;: 821748566
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Chef Proxy&quot;,
+      &quot;id&quot;: 848995175
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Realm&quot;,
+      &quot;id&quot;: 982965213
+    },
+    {
+      &quot;capabilities&quot;: [],
+      &quot;name&quot;: &quot;Logs&quot;,
+      &quot;id&quot;: 814728799
+    }
+  ],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>

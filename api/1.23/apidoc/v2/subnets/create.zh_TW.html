@@ -51,6 +51,74 @@
 
 
 
+  <h2>示例</h2>
+    <pre class="prettyprint">POST /api/subnets
+{
+  &quot;subnet&quot;: {
+    &quot;name&quot;: &quot;QA2&quot;,
+    &quot;network_type&quot;: &quot;IPv4&quot;,
+    &quot;network&quot;: &quot;10.35.2.27&quot;,
+    &quot;mask&quot;: &quot;255.255.255.0&quot;,
+    &quot;subnet_parameters_attributes&quot;: [
+      {
+        &quot;name&quot;: &quot;foo&quot;,
+        &quot;value&quot;: &quot;bar&quot;
+      }
+    ]
+  }
+}
+201
+{
+  &quot;network&quot;: &quot;10.35.2.27&quot;,
+  &quot;network_type&quot;: &quot;IPv4&quot;,
+  &quot;cidr&quot;: 24,
+  &quot;mask&quot;: &quot;255.255.255.0&quot;,
+  &quot;priority&quot;: null,
+  &quot;vlanid&quot;: null,
+  &quot;mtu&quot;: 1500,
+  &quot;gateway&quot;: null,
+  &quot;dns_primary&quot;: null,
+  &quot;dns_secondary&quot;: null,
+  &quot;from&quot;: null,
+  &quot;to&quot;: null,
+  &quot;created_at&quot;: &quot;2019-09-11 14:46:34 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:46:34 UTC&quot;,
+  &quot;ipam&quot;: &quot;None&quot;,
+  &quot;boot_mode&quot;: &quot;DHCP&quot;,
+  &quot;id&quot;: 1018350798,
+  &quot;name&quot;: &quot;QA2&quot;,
+  &quot;description&quot;: null,
+  &quot;network_address&quot;: &quot;10.35.2.27/24&quot;,
+  &quot;dhcp_id&quot;: null,
+  &quot;dhcp_name&quot;: null,
+  &quot;tftp_id&quot;: null,
+  &quot;tftp_name&quot;: null,
+  &quot;httpboot_id&quot;: null,
+  &quot;httpboot_name&quot;: null,
+  &quot;dns_id&quot;: null,
+  &quot;template_id&quot;: null,
+  &quot;template_name&quot;: null,
+  &quot;dhcp&quot;: null,
+  &quot;tftp&quot;: null,
+  &quot;httpboot&quot;: null,
+  &quot;dns&quot;: null,
+  &quot;template&quot;: null,
+  &quot;domains&quot;: [],
+  &quot;interfaces&quot;: [],
+  &quot;parameters&quot;: [
+    {
+      &quot;priority&quot;: 40,
+      &quot;created_at&quot;: &quot;2019-09-11 14:46:34 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:46:34 UTC&quot;,
+      &quot;id&quot;: 767575241,
+      &quot;name&quot;: &quot;foo&quot;,
+      &quot;parameter_type&quot;: null,
+      &quot;value&quot;: &quot;bar&quot;
+    }
+  ],
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: []
+}</pre>
 
   <h2>參數</h2>
   <table class='table'>

@@ -51,6 +51,20 @@
 
 
 
+  <h2>示例</h2>
+    <pre class="prettyprint">POST /api/hosts/host2667/puppetclass_ids
+{
+  &quot;puppetclass_id&quot;: &quot;invalid_id&quot;,
+  &quot;host_class&quot;: {
+    &quot;puppetclass_id&quot;: &quot;invalid_id&quot;
+  }
+}
+404
+{
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;Resource host_class not found by id &#39;&#39;&quot;
+  }
+}</pre>
 
   <h2>参数</h2>
   <table class='table'>

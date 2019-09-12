@@ -51,6 +51,20 @@
 
 
 
+  <h2><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h2>
+    <pre class="prettyprint">GET /api/provisioning_templates/1007981701-centos5_3_pxelinux/export
+200
+default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ks=&lt;%= foreman_url(&quot;kickstart&quot;)%&gt; ksdevice=bootif network kssendmac
+&lt;%#
+name: centos5_3_pxelinux
+snippet: false
+model: ProvisioningTemplate
+kind: PXELinux
+oses:
+- centos
+- Redhat
+- Ubuntu
+%&gt;</pre>
 
   <h2><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h2>
   <table class='table'>

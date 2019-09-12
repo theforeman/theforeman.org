@@ -70,6 +70,78 @@
 
 
 
+  <h3>示例</h3>
+    <pre class="prettyprint">GET /api/realms
+200
+{
+  &quot;total&quot;: 4,
+  &quot;subtotal&quot;: 4,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;name&quot;: &quot;myrealm.net&quot;,
+      &quot;realm_type&quot;: &quot;FreeIPA&quot;,
+      &quot;created_at&quot;: &quot;2019-09-11 14:41:58 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:41:58 UTC&quot;,
+      &quot;id&quot;: 664044182,
+      &quot;realm_proxy_id&quot;: 982965213,
+      &quot;realm_proxy_name&quot;: &quot;Realm Proxy&quot;,
+      &quot;realm_proxy&quot;: {
+        &quot;name&quot;: &quot;Realm Proxy&quot;,
+        &quot;id&quot;: 982965213,
+        &quot;url&quot;: &quot;http://else.where:1337&quot;
+      }
+    },
+    {
+      &quot;name&quot;: &quot;unused.net&quot;,
+      &quot;realm_type&quot;: &quot;FreeIPA&quot;,
+      &quot;created_at&quot;: &quot;2019-09-11 14:41:58 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:41:58 UTC&quot;,
+      &quot;id&quot;: 90728897,
+      &quot;realm_proxy_id&quot;: 982965213,
+      &quot;realm_proxy_name&quot;: &quot;Realm Proxy&quot;,
+      &quot;realm_proxy&quot;: {
+        &quot;name&quot;: &quot;Realm Proxy&quot;,
+        &quot;id&quot;: 982965213,
+        &quot;url&quot;: &quot;http://else.where:1337&quot;
+      }
+    },
+    {
+      &quot;name&quot;: &quot;useless.net&quot;,
+      &quot;realm_type&quot;: &quot;FreeIPA&quot;,
+      &quot;created_at&quot;: &quot;2019-09-11 14:41:58 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:41:58 UTC&quot;,
+      &quot;id&quot;: 229305443,
+      &quot;realm_proxy_id&quot;: 982965213,
+      &quot;realm_proxy_name&quot;: &quot;Realm Proxy&quot;,
+      &quot;realm_proxy&quot;: {
+        &quot;name&quot;: &quot;Realm Proxy&quot;,
+        &quot;id&quot;: 982965213,
+        &quot;url&quot;: &quot;http://else.where:1337&quot;
+      }
+    },
+    {
+      &quot;name&quot;: &quot;yourrealm.net&quot;,
+      &quot;realm_type&quot;: &quot;FreeIPA&quot;,
+      &quot;created_at&quot;: &quot;2019-09-11 14:41:58 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:41:58 UTC&quot;,
+      &quot;id&quot;: 936160439,
+      &quot;realm_proxy_id&quot;: 982965213,
+      &quot;realm_proxy_name&quot;: &quot;Realm Proxy&quot;,
+      &quot;realm_proxy&quot;: {
+        &quot;name&quot;: &quot;Realm Proxy&quot;,
+        &quot;id&quot;: 982965213,
+        &quot;url&quot;: &quot;http://else.where:1337&quot;
+      }
+    }
+  ]
+}</pre>
 
   <h3>参数</h3>
   <table class='table'>
@@ -300,6 +372,39 @@
 
 
 
+  <h3>示例</h3>
+    <pre class="prettyprint">GET /api/realms/myrealm.net
+200
+{
+  &quot;name&quot;: &quot;myrealm.net&quot;,
+  &quot;realm_type&quot;: &quot;FreeIPA&quot;,
+  &quot;created_at&quot;: &quot;2019-09-11 14:41:58 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:41:58 UTC&quot;,
+  &quot;id&quot;: 664044182,
+  &quot;realm_proxy_id&quot;: 982965213,
+  &quot;realm_proxy_name&quot;: &quot;Realm Proxy&quot;,
+  &quot;realm_proxy&quot;: {
+    &quot;name&quot;: &quot;Realm Proxy&quot;,
+    &quot;id&quot;: 982965213,
+    &quot;url&quot;: &quot;http://else.where:1337&quot;
+  },
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
+}</pre>
 
   <h3>参数</h3>
   <table class='table'>
@@ -415,6 +520,39 @@
 
 
 
+  <h3>示例</h3>
+    <pre class="prettyprint">POST /api/realms
+{
+  &quot;realm&quot;: {
+    &quot;name&quot;: &quot;&quot;
+  }
+}
+422
+{
+  &quot;error&quot;: {
+    &quot;id&quot;: null,
+    &quot;errors&quot;: {
+      &quot;realm_proxy_id&quot;: [
+        &quot;was not found&quot;,
+        &quot;can&#39;t be blank&quot;
+      ],
+      &quot;name&quot;: [
+        &quot;can&#39;t be blank&quot;
+      ],
+      &quot;realm_type&quot;: [
+        &quot;can&#39;t be blank&quot;,
+        &quot;is not included in the list&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Realm proxy was not found&quot;,
+      &quot;Realm proxy can&#39;t be blank&quot;,
+      &quot;Name can&#39;t be blank&quot;,
+      &quot;Realm type can&#39;t be blank&quot;,
+      &quot;Realm type is not included in the list&quot;
+    ]
+  }
+}</pre>
 
   <h3>参数</h3>
   <table class='table'>
@@ -646,6 +784,27 @@
 
 
 
+  <h3>示例</h3>
+    <pre class="prettyprint">PUT /api/realms/myrealm.net
+{
+  &quot;realm&quot;: {
+    &quot;name&quot;: &quot;&quot;
+  }
+}
+422
+{
+  &quot;error&quot;: {
+    &quot;id&quot;: 664044182,
+    &quot;errors&quot;: {
+      &quot;name&quot;: [
+        &quot;can&#39;t be blank&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Name can&#39;t be blank&quot;
+    ]
+  }
+}</pre>
 
   <h3>参数</h3>
   <table class='table'>
@@ -899,6 +1058,20 @@
 
 
 
+  <h3>示例</h3>
+    <pre class="prettyprint">DELETE /api/realms/myrealm.net
+{
+  &quot;realm&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 664044182,
+  &quot;name&quot;: &quot;myrealm.net&quot;,
+  &quot;realm_type&quot;: &quot;FreeIPA&quot;,
+  &quot;realm_proxy_id&quot;: 982965213,
+  &quot;created_at&quot;: &quot;2019-09-11T14:41:58.529Z&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11T14:41:58.529Z&quot;
+}</pre>
 
   <h3>参数</h3>
   <table class='table'>

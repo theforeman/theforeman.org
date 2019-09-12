@@ -51,6 +51,25 @@
 
 
 
+  <h2><span class="translation_missing" title="translation missing: ca.apipie.examples">Examples</span></h2>
+    <pre class="prettyprint">DELETE /api/ptables/1007981794-ptable206
+{
+  &quot;ptable&quot;: {}
+}
+422
+{
+  &quot;error&quot;: {
+    &quot;id&quot;: 1007981794,
+    &quot;errors&quot;: {
+      &quot;base&quot;: [
+        &quot;ptable206 is used by host312&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;ptable206 is used by host312&quot;
+    ]
+  }
+}</pre>
 
   <h2><span class="translation_missing" title="translation missing: ca.apipie.params">Params</span></h2>
   <table class='table'>

@@ -51,6 +51,26 @@
 
 
 
+  <h2>Beispiele</h2>
+    <pre class="prettyprint">POST /api/bookmarks
+{
+  &quot;bookmark&quot;: {
+    &quot;public&quot;: false,
+    &quot;controller&quot;: &quot;hosts&quot;,
+    &quot;name&quot;: &quot;facts.architecture&quot;,
+    &quot;query&quot;: &quot; facts.architecture = x86_64&quot;
+  }
+}
+201
+{
+  &quot;name&quot;: &quot;facts.architecture&quot;,
+  &quot;controller&quot;: &quot;hosts&quot;,
+  &quot;query&quot;: &quot;facts.architecture = x86_64&quot;,
+  &quot;public&quot;: false,
+  &quot;id&quot;: 980190963,
+  &quot;owner_id&quot;: 135138680,
+  &quot;owner_type&quot;: &quot;User&quot;
+}</pre>
 
   <h2>Parameter</h2>
   <table class='table'>

@@ -51,6 +51,15 @@
 
 
 
+  <h2><span class="translation_missing" title="translation missing: ko.apipie.examples">Examples</span></h2>
+    <pre class="prettyprint">DELETE /api/hostgroups/1-Parent
+{
+  &quot;hostgroup&quot;: {}
+}
+409
+{
+  &quot;message&quot;: &quot;Cannot delete group Parent because it has nested host groups.&quot;
+}</pre>
 
   <h2><span class="translation_missing" title="translation missing: ko.apipie.params">Params</span></h2>
   <table class='table'>

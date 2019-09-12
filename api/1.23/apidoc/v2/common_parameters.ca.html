@@ -70,6 +70,32 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: ca.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">GET /api/common_parameters
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;created_at&quot;: &quot;2019-09-11 14:48:32 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:48:32 UTC&quot;,
+      &quot;hidden_value?&quot;: false,
+      &quot;hidden_value&quot;: &quot;*****&quot;,
+      &quot;id&quot;: 636252244,
+      &quot;name&quot;: &quot;test&quot;,
+      &quot;parameter_type&quot;: null,
+      &quot;value&quot;: &quot;myvalue&quot;
+    }
+  ]
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: ca.apipie.params">Params</span></h3>
   <table class='table'>
@@ -354,6 +380,19 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: ca.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">GET /api/common_parameters/767575239-parameter-243
+200
+{
+  &quot;created_at&quot;: &quot;2019-09-11 14:37:22 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:37:22 UTC&quot;,
+  &quot;hidden_value?&quot;: true,
+  &quot;hidden_value&quot;: &quot;*****&quot;,
+  &quot;id&quot;: 767575239,
+  &quot;name&quot;: &quot;parameter-243&quot;,
+  &quot;parameter_type&quot;: null,
+  &quot;value&quot;: &quot;*****&quot;
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: ca.apipie.params">Params</span></h3>
   <table class='table'>
@@ -489,6 +528,25 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: ca.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">POST /api/common_parameters
+{
+  &quot;common_parameter&quot;: {
+    &quot;name&quot;: &quot;special_key&quot;,
+    &quot;value&quot;: &quot;123&quot;
+  }
+}
+201
+{
+  &quot;created_at&quot;: &quot;2019-09-11 14:48:56 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:48:56 UTC&quot;,
+  &quot;hidden_value?&quot;: false,
+  &quot;hidden_value&quot;: &quot;*****&quot;,
+  &quot;id&quot;: 767575239,
+  &quot;name&quot;: &quot;special_key&quot;,
+  &quot;parameter_type&quot;: null,
+  &quot;value&quot;: &quot;123&quot;
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: ca.apipie.params">Params</span></h3>
   <table class='table'>
@@ -690,6 +748,25 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: ca.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">PUT /api/common_parameters/636252244-test
+{
+  &quot;common_parameter&quot;: {
+    &quot;name&quot;: &quot;special_key&quot;,
+    &quot;value&quot;: &quot;123&quot;
+  }
+}
+200
+{
+  &quot;created_at&quot;: &quot;2019-09-11 14:48:32 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:48:56 UTC&quot;,
+  &quot;hidden_value?&quot;: false,
+  &quot;hidden_value&quot;: &quot;*****&quot;,
+  &quot;id&quot;: 636252244,
+  &quot;name&quot;: &quot;special_key&quot;,
+  &quot;parameter_type&quot;: null,
+  &quot;value&quot;: &quot;123&quot;
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: ca.apipie.params">Params</span></h3>
   <table class='table'>
@@ -913,6 +990,23 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: ca.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">DELETE /api/common_parameters/636252244-test
+{
+  &quot;common_parameter&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 636252244,
+  &quot;name&quot;: &quot;test&quot;,
+  &quot;value&quot;: &quot;myvalue&quot;,
+  &quot;reference_id&quot;: null,
+  &quot;created_at&quot;: &quot;2019-09-11T14:48:32.040Z&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11T14:48:32.040Z&quot;,
+  &quot;priority&quot;: null,
+  &quot;hidden_value&quot;: &quot;*****&quot;,
+  &quot;key_type&quot;: null
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: ca.apipie.params">Params</span></h3>
   <table class='table'>

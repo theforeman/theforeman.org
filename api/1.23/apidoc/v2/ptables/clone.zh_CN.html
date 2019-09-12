@@ -51,6 +51,27 @@
 
 
 
+  <h2>示例</h2>
+    <pre class="prettyprint">POST /api/ptables/1007981806-ptable218/clone
+{
+  &quot;ptable&quot;: {
+    &quot;name&quot;: &quot;&quot;
+  }
+}
+422
+{
+  &quot;error&quot;: {
+    &quot;id&quot;: 1007981806,
+    &quot;errors&quot;: {
+      &quot;name&quot;: [
+        &quot;can&#39;t be blank&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Name can&#39;t be blank&quot;
+    ]
+  }
+}</pre>
 
   <h2>参数</h2>
   <table class='table'>

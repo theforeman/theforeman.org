@@ -70,6 +70,15 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">GET /api/smart_proxies/182953976/autosign
+200
+{
+  &quot;results&quot;: [
+    &quot;a5809524-82fe-a8a4f3d6ebf4&quot;,
+    &quot;5eed0cb7-9aa-00b7b9780f20&quot;
+  ]
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h3>
   <table class='table'>
@@ -159,6 +168,18 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">POST /api/smart_proxies/182953976/autosign
+{
+  &quot;id&quot;: &quot;test&quot;,
+  &quot;autosign&quot;: {
+    &quot;id&quot;: &quot;test&quot;
+  }
+}
+200
+{
+  &quot;results&quot;: true
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h3>
   <table class='table'>
@@ -272,6 +293,15 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">POST /api/smart_proxies/182953976/autosign/test
+{
+  &quot;autosign&quot;: {}
+}
+500
+{
+  &quot;error&quot;: &quot;ERF12-6986 [ProxyAPI::ProxyException]: Test exception ([RuntimeError]: RuntimeError) for proxy http://else.where:4567&quot;
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h3>
   <table class='table'>

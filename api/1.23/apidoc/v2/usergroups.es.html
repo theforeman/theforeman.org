@@ -70,6 +70,29 @@
 
 
 
+  <h3>Ejemplos</h3>
+    <pre class="prettyprint">GET /api/usergroups
+200
+{
+  &quot;total&quot;: 1,
+  &quot;subtotal&quot;: 1,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;admin&quot;: false,
+      &quot;created_at&quot;: &quot;2019-09-11 14:33:34 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:33:34 UTC&quot;,
+      &quot;name&quot;: &quot;usergroup200&quot;,
+      &quot;id&quot;: 15
+    }
+  ]
+}</pre>
 
   <h3>Parámetros</h3>
   <table class='table'>
@@ -285,6 +308,20 @@
 
 
 
+  <h3>Ejemplos</h3>
+    <pre class="prettyprint">GET /api/usergroups/11-usergroup196
+200
+{
+  &quot;admin&quot;: false,
+  &quot;created_at&quot;: &quot;2019-09-11 14:33:33 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:33:33 UTC&quot;,
+  &quot;name&quot;: &quot;usergroup196&quot;,
+  &quot;id&quot;: 11,
+  &quot;external_usergroups&quot;: [],
+  &quot;usergroups&quot;: [],
+  &quot;users&quot;: [],
+  &quot;roles&quot;: []
+}</pre>
 
   <h3>Parámetros</h3>
   <table class='table'>
@@ -396,6 +433,46 @@
 
 
 
+  <h3>Ejemplos</h3>
+    <pre class="prettyprint">POST /api/usergroups
+{
+  &quot;usergroup&quot;: {
+    &quot;name&quot;: &quot;test_usergroup&quot;,
+    &quot;user_ids&quot;: [
+      980190962,
+      298486374,
+      200482051
+    ]
+  }
+}
+201
+{
+  &quot;admin&quot;: false,
+  &quot;created_at&quot;: &quot;2019-09-11 14:33:33 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:33:33 UTC&quot;,
+  &quot;name&quot;: &quot;test_usergroup&quot;,
+  &quot;id&quot;: 2,
+  &quot;external_usergroups&quot;: [],
+  &quot;usergroups&quot;: [],
+  &quot;users&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;login&quot;: &quot;one&quot;,
+      &quot;description&quot;: null
+    },
+    {
+      &quot;id&quot;: 298486374,
+      &quot;login&quot;: &quot;two&quot;,
+      &quot;description&quot;: null
+    },
+    {
+      &quot;id&quot;: 200482051,
+      &quot;login&quot;: &quot;test&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;roles&quot;: []
+}</pre>
 
   <h3>Parámetros</h3>
   <table class='table'>
@@ -621,6 +698,35 @@
 
 
 
+  <h3>Ejemplos</h3>
+    <pre class="prettyprint">PUT /api/usergroups/3-usergroup190
+{
+  &quot;usergroup&quot;: {
+    &quot;name&quot;: &quot;test_usergroup&quot;,
+    &quot;usergroup_ids&quot;: [
+      4
+    ]
+  }
+}
+200
+{
+  &quot;admin&quot;: false,
+  &quot;created_at&quot;: &quot;2019-09-11 14:33:33 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:33:33 UTC&quot;,
+  &quot;name&quot;: &quot;test_usergroup&quot;,
+  &quot;id&quot;: 3,
+  &quot;external_usergroups&quot;: [],
+  &quot;usergroups&quot;: [
+    {
+      &quot;name&quot;: &quot;usergroup191&quot;,
+      &quot;id&quot;: 4,
+      &quot;created_at&quot;: &quot;2019-09-11 14:33:33 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:33:33 UTC&quot;
+    }
+  ],
+  &quot;users&quot;: [],
+  &quot;roles&quot;: []
+}</pre>
 
   <h3>Parámetros</h3>
   <table class='table'>
@@ -866,6 +972,19 @@
 
 
 
+  <h3>Ejemplos</h3>
+    <pre class="prettyprint">DELETE /api/usergroups/17-usergroup202
+{
+  &quot;usergroup&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 17,
+  &quot;name&quot;: &quot;usergroup202&quot;,
+  &quot;created_at&quot;: &quot;2019-09-11T14:33:34.088Z&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11T14:33:34.088Z&quot;,
+  &quot;admin&quot;: false
+}</pre>
 
   <h3>Parámetros</h3>
   <table class='table'>

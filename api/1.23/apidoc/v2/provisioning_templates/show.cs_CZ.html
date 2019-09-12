@@ -51,6 +51,65 @@
 
 
 
+  <h2><span class="translation_missing" title="translation missing: cs-CZ.apipie.examples">Examples</span></h2>
+    <pre class="prettyprint">GET /api/provisioning_templates/1007981701-centos5_3_pxelinux
+200
+{
+  &quot;template&quot;: &quot;default linux~label linux~kernel &lt;%= @kernel %&gt;~append initrd=&lt;%= @initrd %&gt; ks=&lt;%= foreman_url(\&quot;kickstart\&quot;)%&gt; ksdevice=bootif network kssendmac&quot;,
+  &quot;locked&quot;: false,
+  &quot;snippet&quot;: false,
+  &quot;audit_comment&quot;: null,
+  &quot;created_at&quot;: &quot;2019-09-11 14:57:07 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:57:07 UTC&quot;,
+  &quot;id&quot;: 1007981701,
+  &quot;name&quot;: &quot;centos5_3_pxelinux&quot;,
+  &quot;template_kind_id&quot;: 452984334,
+  &quot;template_kind_name&quot;: &quot;PXELinux&quot;,
+  &quot;template_combinations&quot;: [],
+  &quot;operatingsystems&quot;: [
+    {
+      &quot;id&quot;: 309172073,
+      &quot;name&quot;: &quot;centos&quot;,
+      &quot;title&quot;: &quot;centos 5.3&quot;
+    },
+    {
+      &quot;id&quot;: 1073012828,
+      &quot;name&quot;: &quot;Redhat&quot;,
+      &quot;title&quot;: &quot;RHEL 6.1&quot;
+    },
+    {
+      &quot;id&quot;: 331303656,
+      &quot;name&quot;: &quot;Ubuntu&quot;,
+      &quot;title&quot;: &quot;Ubuntu 10.10&quot;
+    }
+  ],
+  &quot;os_default_templates&quot;: [
+    {
+      &quot;id&quot;: 281110143,
+      &quot;provisioning_template_id&quot;: 1007981701,
+      &quot;provisioning_template_name&quot;: &quot;centos5_3_pxelinux&quot;,
+      &quot;template_kind_id&quot;: 710512633,
+      &quot;template_kind_name&quot;: null,
+      &quot;operatingsystem_id&quot;: 1073012828,
+      &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
+      &quot;config_template_id&quot;: 1007981701,
+      &quot;config_template_name&quot;: &quot;centos5_3_pxelinux&quot;
+    },
+    {
+      &quot;id&quot;: 638205575,
+      &quot;provisioning_template_id&quot;: 1007981701,
+      &quot;provisioning_template_name&quot;: &quot;centos5_3_pxelinux&quot;,
+      &quot;template_kind_id&quot;: 710512633,
+      &quot;template_kind_name&quot;: null,
+      &quot;operatingsystem_id&quot;: 331303656,
+      &quot;operatingsystem_name&quot;: &quot;Ubuntu 10.10&quot;,
+      &quot;config_template_id&quot;: 1007981701,
+      &quot;config_template_name&quot;: &quot;centos5_3_pxelinux&quot;
+    }
+  ],
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: []
+}</pre>
 
   <h2><span class="translation_missing" title="translation missing: cs-CZ.apipie.params">Params</span></h2>
   <table class='table'>

@@ -51,6 +51,41 @@
 
 
 
+  <h2>Przykłady</h2>
+    <pre class="prettyprint">PUT /api/filters/10997177
+{
+  &quot;filter&quot;: {
+    &quot;role_id&quot;: 8,
+    &quot;permission_ids&quot;: [
+      740433627
+    ]
+  }
+}
+200
+{
+  &quot;search&quot;: null,
+  &quot;resource_type&quot;: &quot;Host&quot;,
+  &quot;unlimited?&quot;: true,
+  &quot;created_at&quot;: &quot;2019-09-11 14:35:58 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:35:58 UTC&quot;,
+  &quot;override?&quot;: false,
+  &quot;id&quot;: 10997177,
+  &quot;role&quot;: {
+    &quot;name&quot;: &quot;Destroy hosts&quot;,
+    &quot;id&quot;: 8,
+    &quot;description&quot;: null,
+    &quot;origin&quot;: &quot;&quot;
+  },
+  &quot;permissions&quot;: [
+    {
+      &quot;name&quot;: &quot;create_hosts&quot;,
+      &quot;id&quot;: 740433627,
+      &quot;resource_type&quot;: &quot;Host&quot;
+    }
+  ],
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: []
+}</pre>
 
   <h2>Parametry</h2>
   <table class='table'>

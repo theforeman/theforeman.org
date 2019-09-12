@@ -70,6 +70,40 @@
 
 
 
+  <h3>示例</h3>
+    <pre class="prettyprint">GET /api/bookmarks
+200
+{
+  &quot;total&quot;: 2,
+  &quot;subtotal&quot;: 2,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;name&quot;: &quot;foo&quot;,
+      &quot;controller&quot;: &quot;hosts&quot;,
+      &quot;query&quot;: &quot;foo=boo&quot;,
+      &quot;public&quot;: true,
+      &quot;id&quot;: 980190962,
+      &quot;owner_id&quot;: null,
+      &quot;owner_type&quot;: null
+    },
+    {
+      &quot;name&quot;: &quot;three&quot;,
+      &quot;controller&quot;: &quot;hosts&quot;,
+      &quot;query&quot;: &quot;three&quot;,
+      &quot;public&quot;: true,
+      &quot;id&quot;: 113629430,
+      &quot;owner_id&quot;: null,
+      &quot;owner_type&quot;: null
+    }
+  ]
+}</pre>
 
   <h3>參數</h3>
   <table class='table'>
@@ -280,6 +314,18 @@
 
 
 
+  <h3>示例</h3>
+    <pre class="prettyprint">GET /api/bookmarks/980190962-foo
+200
+{
+  &quot;name&quot;: &quot;foo&quot;,
+  &quot;controller&quot;: &quot;hosts&quot;,
+  &quot;query&quot;: &quot;foo=boo&quot;,
+  &quot;public&quot;: true,
+  &quot;id&quot;: 980190962,
+  &quot;owner_id&quot;: null,
+  &quot;owner_type&quot;: null
+}</pre>
 
   <h3>參數</h3>
   <table class='table'>
@@ -391,6 +437,26 @@
 
 
 
+  <h3>示例</h3>
+    <pre class="prettyprint">POST /api/bookmarks
+{
+  &quot;bookmark&quot;: {
+    &quot;public&quot;: false,
+    &quot;controller&quot;: &quot;hosts&quot;,
+    &quot;name&quot;: &quot;facts.architecture&quot;,
+    &quot;query&quot;: &quot; facts.architecture = x86_64&quot;
+  }
+}
+201
+{
+  &quot;name&quot;: &quot;facts.architecture&quot;,
+  &quot;controller&quot;: &quot;hosts&quot;,
+  &quot;query&quot;: &quot;facts.architecture = x86_64&quot;,
+  &quot;public&quot;: false,
+  &quot;id&quot;: 980190963,
+  &quot;owner_id&quot;: 135138680,
+  &quot;owner_type&quot;: &quot;User&quot;
+}</pre>
 
   <h3>參數</h3>
   <table class='table'>
@@ -590,6 +656,19 @@
 
 
 
+  <h3>示例</h3>
+    <pre class="prettyprint">PUT /api/bookmarks/298486374-bar
+{
+  &quot;bookmark&quot;: {
+    &quot;name&quot;: &quot;bar&quot;
+  }
+}
+404
+{
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;Resource bookmark not found by id &#39;298486374-bar&#39;&quot;
+  }
+}</pre>
 
   <h3>參數</h3>
   <table class='table'>
@@ -811,6 +890,21 @@
 
 
 
+  <h3>示例</h3>
+    <pre class="prettyprint">DELETE /api/bookmarks/980190962-foo
+{
+  &quot;bookmark&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 980190962,
+  &quot;name&quot;: &quot;foo&quot;,
+  &quot;query&quot;: &quot;foo=boo&quot;,
+  &quot;controller&quot;: &quot;hosts&quot;,
+  &quot;public&quot;: true,
+  &quot;owner_id&quot;: null,
+  &quot;owner_type&quot;: null
+}</pre>
 
   <h3>參數</h3>
   <table class='table'>

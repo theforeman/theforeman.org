@@ -58,6 +58,23 @@
 
 
 
+  <h2>例</h2>
+    <pre class="prettyprint">PUT /api/smart_class_parameters/328495940-cluster/override_values/hostgroup=Common
+{
+  &quot;override_value&quot;: {
+    &quot;match&quot;: &quot;os=abc&quot;
+  }
+}
+200
+{
+  &quot;created_at&quot;: &quot;2019-09-11 14:40:10 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:40:11 UTC&quot;,
+  &quot;id&quot;: 874520030,
+  &quot;match&quot;: &quot;os=abc&quot;,
+  &quot;value&quot;: &quot;8080&quot;,
+  &quot;omit&quot;: false,
+  &quot;use_puppet_default&quot;: false
+}</pre>
 
   <h2>パラメーター</h2>
   <table class='table'>

@@ -51,6 +51,20 @@
 
 
 
+  <h2><span class="translation_missing" title="translation missing: gl.apipie.examples">Examples</span></h2>
+    <pre class="prettyprint">POST /api/locations
+{
+  &quot;location&quot;: {
+    &quot;name&quot;: &quot;loc1&quot;
+  }
+}
+403
+{
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;Access denied&quot;,
+    &quot;details&quot;: &quot;Missing one of the required permissions: create_locations&quot;
+  }
+}</pre>
 
   <h2><span class="translation_missing" title="translation missing: gl.apipie.params">Params</span></h2>
   <table class='table'>

@@ -51,6 +51,35 @@
 
 
 
+  <h2><span class="translation_missing" title="translation missing: ko.apipie.examples">Examples</span></h2>
+    <pre class="prettyprint">POST /api/compute_resources/980190962/images
+{
+  &quot;image&quot;: {
+    &quot;name&quot;: &quot;TestImage&quot;,
+    &quot;username&quot;: &quot;ec2-user&quot;,
+    &quot;uuid&quot;: &quot;abcdef&quot;,
+    &quot;password&quot;: &quot;password&quot;,
+    &quot;operatingsystem_id&quot;: 309172073,
+    &quot;compute_resource_id&quot;: 928692541,
+    &quot;architecture_id&quot;: 331892513,
+    &quot;user_data&quot;: true
+  }
+}
+201
+{
+  &quot;operatingsystem_id&quot;: 309172073,
+  &quot;operatingsystem_name&quot;: &quot;centos 5.3&quot;,
+  &quot;compute_resource_id&quot;: 980190962,
+  &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
+  &quot;architecture_id&quot;: 331892513,
+  &quot;architecture_name&quot;: &quot;sparc&quot;,
+  &quot;uuid&quot;: &quot;abcdef&quot;,
+  &quot;username&quot;: &quot;ec2-user&quot;,
+  &quot;created_at&quot;: &quot;2019-09-11 14:34:31 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:34:31 UTC&quot;,
+  &quot;id&quot;: 980190963,
+  &quot;name&quot;: &quot;TestImage&quot;
+}</pre>
 
   <h2><span class="translation_missing" title="translation missing: ko.apipie.params">Params</span></h2>
   <table class='table'>

@@ -51,6 +51,65 @@
 
 
 
+  <h2>示例</h2>
+    <pre class="prettyprint">GET /api/hosts/host37/enc
+200
+{
+  &quot;data&quot;: {
+    &quot;parameters&quot;: {
+      &quot;foreman_subnets&quot;: [],
+      &quot;foreman_interfaces&quot;: [
+        {
+          &quot;ip&quot;: null,
+          &quot;ip6&quot;: null,
+          &quot;mac&quot;: null,
+          &quot;name&quot;: &quot;host37&quot;,
+          &quot;attrs&quot;: {},
+          &quot;virtual&quot;: false,
+          &quot;link&quot;: true,
+          &quot;identifier&quot;: null,
+          &quot;managed&quot;: true,
+          &quot;primary&quot;: true,
+          &quot;provision&quot;: true,
+          &quot;subnet&quot;: null,
+          &quot;subnet6&quot;: null,
+          &quot;tag&quot;: null,
+          &quot;attached_to&quot;: null,
+          &quot;type&quot;: &quot;Interface&quot;
+        }
+      ],
+      &quot;location&quot;: &quot;Location 1&quot;,
+      &quot;location_title&quot;: &quot;Location 1&quot;,
+      &quot;organization&quot;: &quot;Organization 1&quot;,
+      &quot;organization_title&quot;: &quot;Organization 1&quot;,
+      &quot;owner_name&quot;: &quot;Admin User&quot;,
+      &quot;owner_email&quot;: &quot;admin@someware.com&quot;,
+      &quot;ssh_authorized_keys&quot;: [],
+      &quot;foreman_users&quot;: {
+        &quot;secret_admin&quot;: {
+          &quot;firstname&quot;: &quot;Admin&quot;,
+          &quot;lastname&quot;: &quot;User&quot;,
+          &quot;mail&quot;: &quot;admin@someware.com&quot;,
+          &quot;description&quot;: null,
+          &quot;fullname&quot;: &quot;Admin User&quot;,
+          &quot;name&quot;: &quot;secret_admin&quot;,
+          &quot;ssh_authorized_keys&quot;: []
+        }
+      },
+      &quot;root_pw&quot;: &quot;$5$LNghnpYoI94vN2OZ$39iivXS1MnBFhWGgHFeMxY5KS8mp5iF0gvoldfq0Ok4&quot;,
+      &quot;foreman_config_groups&quot;: [],
+      &quot;puppetmaster&quot;: &quot;&quot;,
+      &quot;foreman_env&quot;: &quot;environment2&quot;,
+      &quot;test&quot;: &quot;myvalue&quot;,
+      &quot;org_param&quot;: &quot;xyz&quot;,
+      &quot;loc_param&quot;: &quot;abc&quot;
+    },
+    &quot;classes&quot;: [
+      &quot;class1&quot;
+    ],
+    &quot;environment&quot;: &quot;environment2&quot;
+  }
+}</pre>
 
   <h2>参数</h2>
   <table class='table'>

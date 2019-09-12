@@ -70,6 +70,47 @@
 
 
 
+  <h3>Примеры</h3>
+    <pre class="prettyprint">GET /api/dashboard
+200
+{
+  &quot;total_hosts&quot;: 0,
+  &quot;bad_hosts&quot;: 0,
+  &quot;bad_hosts_enabled&quot;: 0,
+  &quot;active_hosts&quot;: 0,
+  &quot;active_hosts_ok&quot;: 0,
+  &quot;active_hosts_ok_enabled&quot;: 0,
+  &quot;ok_hosts&quot;: 0,
+  &quot;ok_hosts_enabled&quot;: 0,
+  &quot;disabled_hosts&quot;: 0,
+  &quot;pending_hosts&quot;: 0,
+  &quot;pending_hosts_enabled&quot;: 0,
+  &quot;out_of_sync_hosts&quot;: 0,
+  &quot;out_of_sync_hosts_enabled&quot;: 0,
+  &quot;good_hosts&quot;: 0,
+  &quot;good_hosts_enabled&quot;: 0,
+  &quot;percentage&quot;: 0,
+  &quot;reports_missing&quot;: 0,
+  &quot;glossary&quot;: {
+    &quot;total_hosts&quot;: &quot;Total hosts count&quot;,
+    &quot;bad_hosts&quot;: &quot;Hosts with error state&quot;,
+    &quot;bad_hosts_enabled&quot;: &quot;Hosts with error state and alerts enabled&quot;,
+    &quot;active_hosts&quot;: &quot;Hosts which recently applied changes&quot;,
+    &quot;active_hosts_ok&quot;: &quot;Hosts which recently applied changes successfully&quot;,
+    &quot;active_hosts_ok_enabled&quot;: &quot;Hosts which recently applied changes successfully with alerts enabled&quot;,
+    &quot;ok_hosts&quot;: &quot;Hosts without changes or errors&quot;,
+    &quot;ok_hosts_enabled&quot;: &quot;Hosts without changes or errors, with alerts enabled&quot;,
+    &quot;out_of_sync_hosts&quot;: &quot;Out of sync hosts&quot;,
+    &quot;out_of_sync_hosts_enabled&quot;: &quot;Out of sync hosts with alerts enabled&quot;,
+    &quot;disabled_hosts&quot;: &quot;Hosts with alerts disabled&quot;,
+    &quot;pending_hosts&quot;: &quot;Hosts that had pending changes&quot;,
+    &quot;pending_hosts_enabled&quot;: &quot;Hosts that had pending changes with alerts enabled&quot;,
+    &quot;good_hosts&quot;: &quot;Hosts without errors&quot;,
+    &quot;good_hosts_enabled&quot;: &quot;Hosts without errors, with alerts enabled&quot;,
+    &quot;percentage&quot;: &quot;Hosts without errors percent&quot;,
+    &quot;reports_missing&quot;: &quot;Hosts which are not reporting&quot;
+  }
+}</pre>
 
   <h3>Параметры</h3>
   <table class='table'>

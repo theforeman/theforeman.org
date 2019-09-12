@@ -51,6 +51,42 @@
 
 
 
+  <h2><span class="translation_missing" title="translation missing: ca.apipie.examples">Examples</span></h2>
+    <pre class="prettyprint">POST /api/auth_source_ldaps
+{
+  &quot;auth_source_ldap&quot;: {
+    &quot;name&quot;: &quot;ldap2&quot;,
+    &quot;host&quot;: &quot;ldap2&quot;,
+    &quot;server_type&quot;: &quot;posix&quot;
+  }
+}
+201
+{
+  &quot;host&quot;: &quot;ldap2&quot;,
+  &quot;port&quot;: 389,
+  &quot;account&quot;: null,
+  &quot;base_dn&quot;: null,
+  &quot;ldap_filter&quot;: null,
+  &quot;attr_login&quot;: null,
+  &quot;attr_firstname&quot;: null,
+  &quot;attr_lastname&quot;: null,
+  &quot;attr_mail&quot;: null,
+  &quot;attr_photo&quot;: null,
+  &quot;onthefly_register&quot;: false,
+  &quot;usergroup_sync&quot;: true,
+  &quot;tls&quot;: false,
+  &quot;server_type&quot;: &quot;posix&quot;,
+  &quot;groups_base&quot;: null,
+  &quot;use_netgroups&quot;: false,
+  &quot;created_at&quot;: &quot;2019-09-11 14:55:05 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:55:05 UTC&quot;,
+  &quot;id&quot;: 980190963,
+  &quot;type&quot;: &quot;AuthSourceLdap&quot;,
+  &quot;name&quot;: &quot;ldap2&quot;,
+  &quot;external_usergroups&quot;: [],
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: []
+}</pre>
 
   <h2><span class="translation_missing" title="translation missing: ca.apipie.params">Params</span></h2>
   <table class='table'>

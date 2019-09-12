@@ -51,6 +51,47 @@
 
 
 
+  <h2>Exemplos</h2>
+    <pre class="prettyprint">POST /api/hosts/host2642/interfaces
+{
+  &quot;interface&quot;: {
+    &quot;name&quot;: &quot;test.foreman.com&quot;,
+    &quot;ip&quot;: &quot;10.0.1.1&quot;,
+    &quot;mac&quot;: &quot;AA:AA:AA:AA:AA:AA&quot;,
+    &quot;username&quot;: &quot;foo&quot;,
+    &quot;password&quot;: &quot;bar&quot;,
+    &quot;provider&quot;: &quot;IPMI&quot;,
+    &quot;type&quot;: &quot;bmc&quot;,
+    &quot;ip6&quot;: &quot;2001:db8::1&quot;
+  }
+}
+201
+{
+  &quot;subnet_id&quot;: null,
+  &quot;subnet_name&quot;: null,
+  &quot;subnet6_id&quot;: null,
+  &quot;subnet6_name&quot;: null,
+  &quot;domain_id&quot;: null,
+  &quot;domain_name&quot;: null,
+  &quot;created_at&quot;: &quot;2019-09-11 14:58:36 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:58:36 UTC&quot;,
+  &quot;managed&quot;: true,
+  &quot;identifier&quot;: null,
+  &quot;id&quot;: 5,
+  &quot;name&quot;: &quot;test.foreman.com&quot;,
+  &quot;ip&quot;: &quot;10.0.1.1&quot;,
+  &quot;ip6&quot;: &quot;2001:db8::1&quot;,
+  &quot;mac&quot;: &quot;aa:aa:aa:aa:aa:aa&quot;,
+  &quot;mtu&quot;: null,
+  &quot;fqdn&quot;: &quot;test.foreman.com&quot;,
+  &quot;primary&quot;: false,
+  &quot;provision&quot;: false,
+  &quot;type&quot;: &quot;bmc&quot;,
+  &quot;username&quot;: &quot;foo&quot;,
+  &quot;password&quot;: &quot;bar&quot;,
+  &quot;provider&quot;: &quot;IPMI&quot;,
+  &quot;virtual&quot;: false
+}</pre>
 
   <h2>Parâmentros</h2>
   <table class='table'>

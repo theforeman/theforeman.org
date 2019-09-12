@@ -70,6 +70,46 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">GET /api/compute_profiles
+200
+{
+  &quot;total&quot;: 4,
+  &quot;subtotal&quot;: 4,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;created_at&quot;: &quot;2019-09-11 14:32:44 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:32:44 UTC&quot;,
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: &quot;1-Small&quot;
+    },
+    {
+      &quot;created_at&quot;: &quot;2019-09-11 14:32:44 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:32:44 UTC&quot;,
+      &quot;id&quot;: 298486374,
+      &quot;name&quot;: &quot;2-Medium&quot;
+    },
+    {
+      &quot;created_at&quot;: &quot;2019-09-11 14:32:44 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:32:44 UTC&quot;,
+      &quot;id&quot;: 113629430,
+      &quot;name&quot;: &quot;3-Large&quot;
+    },
+    {
+      &quot;created_at&quot;: &quot;2019-09-11 14:32:44 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:32:44 UTC&quot;,
+      &quot;id&quot;: 281110143,
+      &quot;name&quot;: &quot;4-Networking&quot;
+    }
+  ]
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>
@@ -275,6 +315,52 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">GET /api/compute_profiles/980190962-1-Small
+200
+{
+  &quot;created_at&quot;: &quot;2019-09-11 14:32:44 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:32:44 UTC&quot;,
+  &quot;id&quot;: 980190962,
+  &quot;name&quot;: &quot;1-Small&quot;,
+  &quot;compute_attributes&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: null,
+      &quot;compute_resource_id&quot;: 928692541,
+      &quot;compute_resource_name&quot;: &quot;amazon123&quot;,
+      &quot;provider_friendly_name&quot;: &quot;EC2&quot;,
+      &quot;compute_profile_id&quot;: 980190962,
+      &quot;compute_profile_name&quot;: &quot;1-Small&quot;,
+      &quot;vm_attrs&quot;: {
+        &quot;flavor_id&quot;: &quot;m1.small&quot;,
+        &quot;availability_zone&quot;: &quot;eu-west-1a&quot;
+      },
+      &quot;attributes&quot;: {}
+    },
+    {
+      &quot;id&quot;: 298486374,
+      &quot;name&quot;: null,
+      &quot;compute_resource_id&quot;: 980190962,
+      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
+      &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
+      &quot;compute_profile_id&quot;: 980190962,
+      &quot;compute_profile_name&quot;: &quot;1-Small&quot;,
+      &quot;vm_attrs&quot;: {
+        &quot;cpus&quot;: 2,
+        &quot;memory&quot;: 536870912
+      },
+      &quot;attributes&quot;: {
+        &quot;cpus&quot;: 2,
+        &quot;memory&quot;: 536870912,
+        &quot;image_id&quot;: null,
+        &quot;image_name&quot;: null,
+        &quot;volumes_attributes&quot;: {},
+        &quot;interfaces_attributes&quot;: {}
+      }
+    }
+  ]
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>
@@ -386,6 +472,27 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">POST /api/compute_profiles
+{
+  &quot;compute_profile&quot;: {
+    &quot;name&quot;: &quot;&quot;
+  }
+}
+422
+{
+  &quot;error&quot;: {
+    &quot;id&quot;: null,
+    &quot;errors&quot;: {
+      &quot;name&quot;: [
+        &quot;can&#39;t be blank&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Name can&#39;t be blank&quot;
+    ]
+  }
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>
@@ -519,6 +626,57 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">PUT /api/compute_profiles/980190962-1-Small
+{
+  &quot;compute_profile&quot;: {
+    &quot;name&quot;: &quot;new name&quot;
+  }
+}
+200
+{
+  &quot;created_at&quot;: &quot;2019-09-11 14:32:44 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:32:53 UTC&quot;,
+  &quot;id&quot;: 980190962,
+  &quot;name&quot;: &quot;new name&quot;,
+  &quot;compute_attributes&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;name&quot;: null,
+      &quot;compute_resource_id&quot;: 928692541,
+      &quot;compute_resource_name&quot;: &quot;amazon123&quot;,
+      &quot;provider_friendly_name&quot;: &quot;EC2&quot;,
+      &quot;compute_profile_id&quot;: 980190962,
+      &quot;compute_profile_name&quot;: &quot;new name&quot;,
+      &quot;vm_attrs&quot;: {
+        &quot;flavor_id&quot;: &quot;m1.small&quot;,
+        &quot;availability_zone&quot;: &quot;eu-west-1a&quot;
+      },
+      &quot;attributes&quot;: {}
+    },
+    {
+      &quot;id&quot;: 298486374,
+      &quot;name&quot;: null,
+      &quot;compute_resource_id&quot;: 980190962,
+      &quot;compute_resource_name&quot;: &quot;bigcompute&quot;,
+      &quot;provider_friendly_name&quot;: &quot;Libvirt&quot;,
+      &quot;compute_profile_id&quot;: 980190962,
+      &quot;compute_profile_name&quot;: &quot;new name&quot;,
+      &quot;vm_attrs&quot;: {
+        &quot;cpus&quot;: 2,
+        &quot;memory&quot;: 536870912
+      },
+      &quot;attributes&quot;: {
+        &quot;cpus&quot;: 2,
+        &quot;memory&quot;: 536870912,
+        &quot;image_id&quot;: null,
+        &quot;image_name&quot;: null,
+        &quot;volumes_attributes&quot;: {},
+        &quot;interfaces_attributes&quot;: {}
+      }
+    }
+  ]
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>
@@ -674,6 +832,18 @@
 
 
 
+  <h3>Exemples</h3>
+    <pre class="prettyprint">DELETE /api/compute_profiles/113629430-3-Large
+{
+  &quot;compute_profile&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 113629430,
+  &quot;name&quot;: &quot;3-Large&quot;,
+  &quot;created_at&quot;: &quot;2019-09-11T14:32:44.253Z&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11T14:32:44.253Z&quot;
+}</pre>
 
   <h3>Paramètres</h3>
   <table class='table'>

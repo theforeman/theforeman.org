@@ -100,6 +100,36 @@
 
 
 
+  <h3>示例</h3>
+    <pre class="prettyprint">GET /api/ptables
+200
+{
+  &quot;total&quot;: 2,
+  &quot;subtotal&quot;: 2,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;os_family&quot;: null,
+      &quot;created_at&quot;: &quot;2019-09-11 14:34:13 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:34:13 UTC&quot;,
+      &quot;name&quot;: &quot;Example partition table&quot;,
+      &quot;id&quot;: 615088209
+    },
+    {
+      &quot;os_family&quot;: &quot;Redhat&quot;,
+      &quot;created_at&quot;: &quot;2019-09-11 14:34:42 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:34:42 UTC&quot;,
+      &quot;name&quot;: &quot;ptable214&quot;,
+      &quot;id&quot;: 1007981802
+    }
+  ]
+}</pre>
 
   <h3>參數</h3>
   <table class='table'>
@@ -384,6 +414,41 @@
 
 
 
+  <h3>示例</h3>
+    <pre class="prettyprint">GET /api/ptables/1007981804-ptable216
+200
+{
+  &quot;layout&quot;: &quot;zerombr\\nclearpart --all    --initlabel\\npart /boot --fstype ext3 --size=&lt;%= 10 * 10 %&gt; --asprimary\\npart /     --f   stype ext3 --size=1024 --grow\\npart swap  --recommended&quot;,
+  &quot;locked&quot;: false,
+  &quot;os_family&quot;: &quot;Redhat&quot;,
+  &quot;created_at&quot;: &quot;2019-09-11 14:34:43 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:34:43 UTC&quot;,
+  &quot;name&quot;: &quot;ptable216&quot;,
+  &quot;id&quot;: 1007981804,
+  &quot;operatingsystems&quot;: [
+    {
+      &quot;id&quot;: 1073012828,
+      &quot;name&quot;: &quot;Redhat&quot;,
+      &quot;title&quot;: &quot;RHEL 6.1&quot;
+    }
+  ],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
+}</pre>
 
   <h3>參數</h3>
   <table class='table'>
@@ -495,6 +560,27 @@
 
 
 
+  <h3>示例</h3>
+    <pre class="prettyprint">POST /api/ptables
+{
+  &quot;ptable&quot;: {
+    &quot;name&quot;: &quot;W&quot;,
+    &quot;layout&quot;: &quot;d-i partman-auto/disk&quot;
+  }
+}
+201
+{
+  &quot;layout&quot;: &quot;d-i partman-auto/disk&quot;,
+  &quot;locked&quot;: false,
+  &quot;os_family&quot;: null,
+  &quot;created_at&quot;: &quot;2019-09-11 14:34:42 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:34:42 UTC&quot;,
+  &quot;name&quot;: &quot;W&quot;,
+  &quot;id&quot;: 1007981781,
+  &quot;operatingsystems&quot;: [],
+  &quot;locations&quot;: [],
+  &quot;organizations&quot;: []
+}</pre>
 
   <h3>參數</h3>
   <table class='table'>
@@ -860,6 +946,28 @@
 
 
 
+  <h3>示例</h3>
+    <pre class="prettyprint">POST /api/ptables/import
+{
+  &quot;ptable&quot;: {
+    &quot;name&quot;: &quot;ptable212&quot;,
+    &quot;template&quot;: &quot;b&quot;
+  }
+}
+201
+{
+  &quot;template&quot;: &quot;b&quot;,
+  &quot;name&quot;: &quot;ptable212&quot;,
+  &quot;id&quot;: 1007981800,
+  &quot;snippet&quot;: false,
+  &quot;template_kind_id&quot;: null,
+  &quot;created_at&quot;: &quot;2019-09-11T14:34:42.858Z&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11T14:34:42.873Z&quot;,
+  &quot;locked&quot;: false,
+  &quot;default&quot;: false,
+  &quot;vendor&quot;: null,
+  &quot;os_family&quot;: &quot;Redhat&quot;
+}</pre>
 
   <h3>參數</h3>
   <table class='table'>
@@ -1298,6 +1406,41 @@
 
 
 
+  <h3>示例</h3>
+    <pre class="prettyprint">PUT /api/ptables/1007981787-ptable201
+{
+  &quot;ptable&quot;: {
+    &quot;audit_comment&quot;: &quot;aha&quot;,
+    &quot;template&quot;: &quot;tmp&quot;
+  }
+}
+200
+{
+  &quot;layout&quot;: &quot;tmp&quot;,
+  &quot;locked&quot;: false,
+  &quot;os_family&quot;: &quot;Redhat&quot;,
+  &quot;created_at&quot;: &quot;2019-09-11 14:34:42 UTC&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11 14:34:42 UTC&quot;,
+  &quot;name&quot;: &quot;ptable201&quot;,
+  &quot;id&quot;: 1007981787,
+  &quot;operatingsystems&quot;: [],
+  &quot;locations&quot;: [
+    {
+      &quot;id&quot;: 255093256,
+      &quot;name&quot;: &quot;Location 1&quot;,
+      &quot;title&quot;: &quot;Location 1&quot;,
+      &quot;description&quot;: null
+    }
+  ],
+  &quot;organizations&quot;: [
+    {
+      &quot;id&quot;: 447626438,
+      &quot;name&quot;: &quot;Organization 1&quot;,
+      &quot;title&quot;: &quot;Organization 1&quot;,
+      &quot;description&quot;: null
+    }
+  ]
+}</pre>
 
   <h3>參數</h3>
   <table class='table'>
@@ -1685,6 +1828,25 @@
 
 
 
+  <h3>示例</h3>
+    <pre class="prettyprint">DELETE /api/ptables/1007981794-ptable206
+{
+  &quot;ptable&quot;: {}
+}
+422
+{
+  &quot;error&quot;: {
+    &quot;id&quot;: 1007981794,
+    &quot;errors&quot;: {
+      &quot;base&quot;: [
+        &quot;ptable206 is used by host312&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;ptable206 is used by host312&quot;
+    ]
+  }
+}</pre>
 
   <h3>參數</h3>
   <table class='table'>
@@ -1796,6 +1958,27 @@
 
 
 
+  <h3>示例</h3>
+    <pre class="prettyprint">POST /api/ptables/1007981806-ptable218/clone
+{
+  &quot;ptable&quot;: {
+    &quot;name&quot;: &quot;&quot;
+  }
+}
+422
+{
+  &quot;error&quot;: {
+    &quot;id&quot;: 1007981806,
+    &quot;errors&quot;: {
+      &quot;name&quot;: [
+        &quot;can&#39;t be blank&quot;
+      ]
+    },
+    &quot;full_messages&quot;: [
+      &quot;Name can&#39;t be blank&quot;
+    ]
+  }
+}</pre>
 
   <h3>參數</h3>
   <table class='table'>
@@ -1953,6 +2136,20 @@
 
 
 
+  <h3>示例</h3>
+    <pre class="prettyprint">GET /api/ptables/1007981785-ptable199/export
+200
+zerombr\nclearpart --all    --initlabel\npart /boot --fstype ext3 --size=&lt;%= 10 * 10 %&gt; --asprimary\npart /     --f   stype ext3 --size=1024 --grow\npart swap  --recommended
+&lt;%#
+name: ptable199
+snippet: false
+model: Ptable
+os_family: Redhat
+organizations:
+- Organization 1
+locations:
+- Location 1
+%&gt;</pre>
 
   <h3>參數</h3>
   <table class='table'>

@@ -41,7 +41,7 @@
     <h1>
       PUT /api/compute_resources/:id/refresh_cache
       <br>
-      <small>Refresh Compute Resource Cache</small>
+      <small>Zaktualizovat mezipaměť výpočetního prostředku</small>
     </h1>
   </div>
 
@@ -51,6 +51,15 @@
 
 
 
+  <h2><span class="translation_missing" title="translation missing: cs-CZ.apipie.examples">Examples</span></h2>
+    <pre class="prettyprint">PUT /api/compute_resources/305613588-Vmware/refresh_cache
+{
+  &quot;compute_resource&quot;: {}
+}
+200
+{
+  &quot;message&quot;: &quot;Successfully refreshed the cache.&quot;
+}</pre>
 
   <h2><span class="translation_missing" title="translation missing: cs-CZ.apipie.params">Params</span></h2>
   <table class='table'>

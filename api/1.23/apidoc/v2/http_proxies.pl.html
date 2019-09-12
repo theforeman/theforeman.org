@@ -70,6 +70,21 @@
 
 
 
+  <h3>Przykłady</h3>
+    <pre class="prettyprint">GET /api/http_proxies
+200
+{
+  &quot;total&quot;: 0,
+  &quot;subtotal&quot;: 0,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: []
+}</pre>
 
   <h3>Parametry</h3>
   <table class='table'>
@@ -255,6 +270,15 @@
 
 
 
+  <h3>Przykłady</h3>
+    <pre class="prettyprint">GET /api/http_proxies/4
+200
+{
+  &quot;id&quot;: 4,
+  &quot;name&quot;: &quot;http_proxies&quot;,
+  &quot;url&quot;: &quot;http://url_18&quot;,
+  &quot;username&quot;: null
+}</pre>
 
   <h3>Parametry</h3>
   <table class='table'>
@@ -368,6 +392,22 @@
 
 
 
+  <h3>Przykłady</h3>
+    <pre class="prettyprint">POST /api/http_proxies
+{
+  &quot;http_proxy&quot;: {
+    &quot;name&quot;: &quot;http_proxy_is_smart&quot;,
+    &quot;url&quot;: &quot;http://what????:5000&quot;
+  }
+}
+201
+{
+  &quot;id&quot;: 2,
+  &quot;name&quot;: &quot;http_proxy_is_smart&quot;,
+  &quot;url&quot;: &quot;http://what????:5000&quot;,
+  &quot;username&quot;: null,
+  &quot;password&quot;: null
+}</pre>
 
   <h3>Parametry</h3>
   <table class='table'>
@@ -623,6 +663,21 @@
 
 
 
+  <h3>Przykłady</h3>
+    <pre class="prettyprint">PUT /api/http_proxies/1
+{
+  &quot;http_proxy&quot;: {
+    &quot;url&quot;: &quot;https://some_other_url&quot;
+  }
+}
+200
+{
+  &quot;id&quot;: 1,
+  &quot;url&quot;: &quot;https://some_other_url&quot;,
+  &quot;name&quot;: &quot;http_proxies&quot;,
+  &quot;username&quot;: null,
+  &quot;password&quot;: null
+}</pre>
 
   <h3>Parametry</h3>
   <table class='table'>
@@ -900,6 +955,19 @@
 
 
 
+  <h3>Przykłady</h3>
+    <pre class="prettyprint">DELETE /api/http_proxies/3
+{
+  &quot;http_proxy&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 3,
+  &quot;name&quot;: &quot;http_proxies&quot;,
+  &quot;url&quot;: &quot;http://url_17&quot;,
+  &quot;username&quot;: null,
+  &quot;password&quot;: null
+}</pre>
 
   <h3>Parametry</h3>
   <table class='table'>

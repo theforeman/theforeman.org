@@ -90,6 +90,88 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: cs-CZ.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">GET /api/operatingsystems/1073012828-RHEL%206-1/os_default_templates
+200
+{
+  &quot;total&quot;: 6,
+  &quot;subtotal&quot;: 6,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;id&quot;: 980190962,
+      &quot;provisioning_template_id&quot;: 943779058,
+      &quot;provisioning_template_name&quot;: &quot;MyString&quot;,
+      &quot;template_kind_id&quot;: 698706415,
+      &quot;template_kind_name&quot;: &quot;iPXE&quot;,
+      &quot;operatingsystem_id&quot;: 1073012828,
+      &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
+      &quot;config_template_id&quot;: 943779058,
+      &quot;config_template_name&quot;: &quot;MyString&quot;
+    },
+    {
+      &quot;id&quot;: 298486374,
+      &quot;provisioning_template_id&quot;: 269958254,
+      &quot;provisioning_template_name&quot;: &quot;MyString2&quot;,
+      &quot;template_kind_id&quot;: 983253650,
+      &quot;template_kind_name&quot;: &quot;provision&quot;,
+      &quot;operatingsystem_id&quot;: 1073012828,
+      &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
+      &quot;config_template_id&quot;: 269958254,
+      &quot;config_template_name&quot;: &quot;MyString2&quot;
+    },
+    {
+      &quot;id&quot;: 113629430,
+      &quot;provisioning_template_id&quot;: 981457253,
+      &quot;provisioning_template_name&quot;: &quot;MyScript&quot;,
+      &quot;template_kind_id&quot;: 478250810,
+      &quot;template_kind_name&quot;: &quot;script&quot;,
+      &quot;operatingsystem_id&quot;: 1073012828,
+      &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
+      &quot;config_template_id&quot;: 981457253,
+      &quot;config_template_name&quot;: &quot;MyScript&quot;
+    },
+    {
+      &quot;id&quot;: 281110143,
+      &quot;provisioning_template_id&quot;: 1007981701,
+      &quot;provisioning_template_name&quot;: &quot;centos5_3_pxelinux&quot;,
+      &quot;template_kind_id&quot;: 710512633,
+      &quot;template_kind_name&quot;: null,
+      &quot;operatingsystem_id&quot;: 1073012828,
+      &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
+      &quot;config_template_id&quot;: 1007981701,
+      &quot;config_template_name&quot;: &quot;centos5_3_pxelinux&quot;
+    },
+    {
+      &quot;id&quot;: 1018350795,
+      &quot;provisioning_template_id&quot;: 131565194,
+      &quot;provisioning_template_name&quot;: &quot;PXEGrub Dummy Menu&quot;,
+      &quot;template_kind_id&quot;: 131565194,
+      &quot;template_kind_name&quot;: &quot;PXEGrub&quot;,
+      &quot;operatingsystem_id&quot;: 1073012828,
+      &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
+      &quot;config_template_id&quot;: 131565194,
+      &quot;config_template_name&quot;: &quot;PXEGrub Dummy Menu&quot;
+    },
+    {
+      &quot;id&quot;: 51848956,
+      &quot;provisioning_template_id&quot;: 698706415,
+      &quot;provisioning_template_name&quot;: &quot;iPXE Dummy Menu&quot;,
+      &quot;template_kind_id&quot;: 698706415,
+      &quot;template_kind_name&quot;: &quot;iPXE&quot;,
+      &quot;operatingsystem_id&quot;: 1073012828,
+      &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
+      &quot;config_template_id&quot;: 698706415,
+      &quot;config_template_name&quot;: &quot;iPXE Dummy Menu&quot;
+    }
+  ]
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: cs-CZ.apipie.params">Params</span></h3>
   <table class='table'>
@@ -299,6 +381,20 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: cs-CZ.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">GET /api/operatingsystems/1073012828-RHEL%206-1/os_default_templates/980190962
+200
+{
+  &quot;id&quot;: 980190962,
+  &quot;provisioning_template_id&quot;: 943779058,
+  &quot;provisioning_template_name&quot;: &quot;MyString&quot;,
+  &quot;template_kind_id&quot;: 698706415,
+  &quot;template_kind_name&quot;: &quot;iPXE&quot;,
+  &quot;operatingsystem_id&quot;: 1073012828,
+  &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
+  &quot;config_template_id&quot;: 943779058,
+  &quot;config_template_name&quot;: &quot;MyString&quot;
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: cs-CZ.apipie.params">Params</span></h3>
   <table class='table'>
@@ -434,6 +530,26 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: cs-CZ.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">POST /api/operatingsystems/1073012828-RHEL%206-1/os_default_templates
+{
+  &quot;os_default_template&quot;: {
+    &quot;provisioning_template_id&quot;: 943779058,
+    &quot;template_kind_id&quot;: 698706415
+  }
+}
+201
+{
+  &quot;id&quot;: 1018350796,
+  &quot;provisioning_template_id&quot;: 943779058,
+  &quot;provisioning_template_name&quot;: &quot;MyString&quot;,
+  &quot;template_kind_id&quot;: 698706415,
+  &quot;template_kind_name&quot;: &quot;iPXE&quot;,
+  &quot;operatingsystem_id&quot;: 1073012828,
+  &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
+  &quot;config_template_id&quot;: 943779058,
+  &quot;config_template_name&quot;: &quot;MyString&quot;
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: cs-CZ.apipie.params">Params</span></h3>
   <table class='table'>
@@ -639,6 +755,26 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: cs-CZ.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">PUT /api/operatingsystems/1073012828-RHEL%206-1/os_default_templates/980190962
+{
+  &quot;os_default_template&quot;: {
+    &quot;provisioning_template_id&quot;: 821548108,
+    &quot;template_kind_id&quot;: 452984334
+  }
+}
+200
+{
+  &quot;id&quot;: 980190962,
+  &quot;provisioning_template_id&quot;: 821548108,
+  &quot;provisioning_template_name&quot;: &quot;PXELinux default local boot&quot;,
+  &quot;template_kind_id&quot;: 452984334,
+  &quot;template_kind_name&quot;: &quot;PXELinux&quot;,
+  &quot;operatingsystem_id&quot;: 1073012828,
+  &quot;operatingsystem_name&quot;: &quot;RHEL 6.1&quot;,
+  &quot;config_template_id&quot;: 821548108,
+  &quot;config_template_name&quot;: &quot;PXELinux default local boot&quot;
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: cs-CZ.apipie.params">Params</span></h3>
   <table class='table'>
@@ -866,6 +1002,20 @@
 
 
 
+  <h3><span class="translation_missing" title="translation missing: cs-CZ.apipie.examples">Examples</span></h3>
+    <pre class="prettyprint">DELETE /api/operatingsystems/1073012828-RHEL%206-1/os_default_templates/980190962
+{
+  &quot;os_default_template&quot;: {}
+}
+200
+{
+  &quot;id&quot;: 980190962,
+  &quot;provisioning_template_id&quot;: 943779058,
+  &quot;template_kind_id&quot;: 698706415,
+  &quot;operatingsystem_id&quot;: 1073012828,
+  &quot;created_at&quot;: &quot;2019-09-11T14:55:05.119Z&quot;,
+  &quot;updated_at&quot;: &quot;2019-09-11T14:55:05.119Z&quot;
+}</pre>
 
   <h3><span class="translation_missing" title="translation missing: cs-CZ.apipie.params">Params</span></h3>
   <table class='table'>

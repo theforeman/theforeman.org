@@ -86,6 +86,126 @@
 
 
 
+  <h2><span class="translation_missing" title="translation missing: ca.apipie.examples">Examples</span></h2>
+    <pre class="prettyprint">GET /api/operatingsystems
+200
+{
+  &quot;total&quot;: 8,
+  &quot;subtotal&quot;: 8,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;description&quot;: null,
+      &quot;major&quot;: &quot;5&quot;,
+      &quot;minor&quot;: &quot;3&quot;,
+      &quot;family&quot;: &quot;Redhat&quot;,
+      &quot;release_name&quot;: null,
+      &quot;password_hash&quot;: &quot;SHA256&quot;,
+      &quot;created_at&quot;: &quot;2019-09-11 14:55:21 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:55:21 UTC&quot;,
+      &quot;id&quot;: 309172073,
+      &quot;name&quot;: &quot;centos&quot;,
+      &quot;title&quot;: &quot;centos 5.3&quot;
+    },
+    {
+      &quot;description&quot;: null,
+      &quot;major&quot;: &quot;5&quot;,
+      &quot;minor&quot;: &quot;17&quot;,
+      &quot;family&quot;: &quot;VRP&quot;,
+      &quot;release_name&quot;: null,
+      &quot;password_hash&quot;: &quot;SHA256&quot;,
+      &quot;created_at&quot;: &quot;2019-09-11 14:55:21 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:55:21 UTC&quot;,
+      &quot;id&quot;: 32055736,
+      &quot;name&quot;: &quot;Huawei_VRP&quot;,
+      &quot;title&quot;: &quot;Huawei VRP 5&quot;
+    },
+    {
+      &quot;description&quot;: null,
+      &quot;major&quot;: &quot;1&quot;,
+      &quot;minor&quot;: &quot;1&quot;,
+      &quot;family&quot;: &quot;Redhat&quot;,
+      &quot;release_name&quot;: null,
+      &quot;password_hash&quot;: &quot;SHA256&quot;,
+      &quot;created_at&quot;: &quot;2019-09-11 14:55:21 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:55:21 UTC&quot;,
+      &quot;id&quot;: 775246587,
+      &quot;name&quot;: &quot;NoHosts&quot;,
+      &quot;title&quot;: &quot;NoHosts 1.1&quot;
+    },
+    {
+      &quot;description&quot;: null,
+      &quot;major&quot;: &quot;12&quot;,
+      &quot;minor&quot;: &quot;3&quot;,
+      &quot;family&quot;: &quot;Suse&quot;,
+      &quot;release_name&quot;: null,
+      &quot;password_hash&quot;: &quot;SHA256&quot;,
+      &quot;created_at&quot;: &quot;2019-09-11 14:55:21 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:55:21 UTC&quot;,
+      &quot;id&quot;: 750842046,
+      &quot;name&quot;: &quot;OpenSuse&quot;,
+      &quot;title&quot;: &quot;OpenSuSE 12.3&quot;
+    },
+    {
+      &quot;description&quot;: &quot;RHEL 6.1&quot;,
+      &quot;major&quot;: &quot;6&quot;,
+      &quot;minor&quot;: &quot;1&quot;,
+      &quot;family&quot;: &quot;Redhat&quot;,
+      &quot;release_name&quot;: null,
+      &quot;password_hash&quot;: &quot;SHA256&quot;,
+      &quot;created_at&quot;: &quot;2019-09-11 14:55:21 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:55:21 UTC&quot;,
+      &quot;id&quot;: 1073012828,
+      &quot;name&quot;: &quot;Redhat&quot;,
+      &quot;title&quot;: &quot;RHEL 6.1&quot;
+    },
+    {
+      &quot;description&quot;: null,
+      &quot;major&quot;: &quot;5&quot;,
+      &quot;minor&quot;: &quot;10&quot;,
+      &quot;family&quot;: &quot;Solaris&quot;,
+      &quot;release_name&quot;: &quot;hw0910&quot;,
+      &quot;password_hash&quot;: &quot;SHA256&quot;,
+      &quot;created_at&quot;: &quot;2019-09-11 14:55:21 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:55:21 UTC&quot;,
+      &quot;id&quot;: 442321401,
+      &quot;name&quot;: &quot;Solaris&quot;,
+      &quot;title&quot;: &quot;Solaris 5.10&quot;
+    },
+    {
+      &quot;description&quot;: null,
+      &quot;major&quot;: &quot;10&quot;,
+      &quot;minor&quot;: &quot;10&quot;,
+      &quot;family&quot;: &quot;Debian&quot;,
+      &quot;release_name&quot;: &quot;rn10&quot;,
+      &quot;password_hash&quot;: &quot;SHA256&quot;,
+      &quot;created_at&quot;: &quot;2019-09-11 14:55:21 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:55:21 UTC&quot;,
+      &quot;id&quot;: 331303656,
+      &quot;name&quot;: &quot;Ubuntu&quot;,
+      &quot;title&quot;: &quot;Ubuntu 10.10&quot;
+    },
+    {
+      &quot;description&quot;: null,
+      &quot;major&quot;: &quot;12&quot;,
+      &quot;minor&quot;: &quot;10&quot;,
+      &quot;family&quot;: &quot;Debian&quot;,
+      &quot;release_name&quot;: &quot;rn10&quot;,
+      &quot;password_hash&quot;: &quot;SHA256&quot;,
+      &quot;created_at&quot;: &quot;2019-09-11 14:55:21 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2019-09-11 14:55:21 UTC&quot;,
+      &quot;id&quot;: 272342666,
+      &quot;name&quot;: &quot;Ubuntu&quot;,
+      &quot;title&quot;: &quot;Ubuntu 12.10&quot;
+    }
+  ]
+}</pre>
 
   <h2><span class="translation_missing" title="translation missing: ca.apipie.params">Params</span></h2>
   <table class='table'>
