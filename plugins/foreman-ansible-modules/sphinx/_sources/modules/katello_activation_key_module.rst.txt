@@ -34,12 +34,12 @@ Parameters
 
     <table  border=0 cellpadding=0 class="documentation-table">
         <tr>
-            <th colspan="1">Parameter</th>
+            <th colspan="2">Parameter</th>
             <th>Choices/<font color="blue">Defaults</font></th>
                         <th width="100%">Comments</th>
         </tr>
                     <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
                     <b>auto_attach</b>
                     <div style="font-size: small">
                         <span style="color: purple">boolean</span>
@@ -56,7 +56,7 @@ Parameters
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
                     <b>content_overrides</b>
                     <div style="font-size: small">
                         <span style="color: purple">list</span>
@@ -65,14 +65,47 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>List of content overrides that include label and override state ('enabled', 'disabled' or 'default')</div>
+                                                                        <div>List of content overrides that include label and override state (&#x27;enabled&#x27;, &#x27;disabled&#x27; or &#x27;default&#x27;)</div>
+                                                                                </td>
+            </tr>
+                                                            <tr>
+                                                    <td class="elbow-placeholder"></td>
+                                                <td colspan="1">
+                    <b>label</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                 / <span style="color: red">required</span>                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Label of the content override</div>
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                    <td class="elbow-placeholder"></td>
+                                                <td colspan="1">
+                    <b>override</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                 / <span style="color: red">required</span>                    </div>
+                                    </td>
+                                <td>
+                                                                                                                            <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                                <li>enabled</li>
+                                                                                                                                                                                                <li>disabled</li>
+                                                                                    </ul>
+                                                                            </td>
+                                                                <td>
+                                                                        <div>Override value</div>
+                                                                                </td>
+            </tr>
+                    
+                                                <tr>
+                                                                <td colspan="2">
                     <b>content_view</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -82,7 +115,7 @@ Parameters
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
                     <b>host_collections</b>
                     <div style="font-size: small">
                         <span style="color: purple">list</span>
@@ -95,10 +128,10 @@ Parameters
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
                     <b>lifecycle_environment</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -108,10 +141,10 @@ Parameters
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
                     <b>name</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
@@ -121,10 +154,10 @@ Parameters
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
                     <b>new_name</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -134,10 +167,10 @@ Parameters
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
                     <b>organization</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
@@ -147,10 +180,10 @@ Parameters
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
                     <b>password</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
@@ -160,10 +193,23 @@ Parameters
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
+                    <b>release_version</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Set the content release version</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="2">
                     <b>server_url</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
@@ -173,10 +219,28 @@ Parameters
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
+                    <b>service_level</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                            <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                                <li>Self-Support</li>
+                                                                                                                                                                                                <li>Standard</li>
+                                                                                                                                                                                                <li>Premium</li>
+                                                                                    </ul>
+                                                                            </td>
+                                                                <td>
+                                                                        <div>Set the service level</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="2">
                     <b>state</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -192,7 +256,7 @@ Parameters
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
                     <b>subscriptions</b>
                     <div style="font-size: small">
                         <span style="color: purple">list</span>
@@ -204,11 +268,26 @@ Parameters
                                                                         <div>List of subscriptions that include name</div>
                                                                                 </td>
             </tr>
-                                <tr>
-                                                                <td colspan="1">
+                                                            <tr>
+                                                    <td class="elbow-placeholder"></td>
+                                                <td colspan="1">
+                    <b>name</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                 / <span style="color: red">required</span>                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Name of the Subscription to be added</div>
+                                                                                </td>
+            </tr>
+                    
+                                                <tr>
+                                                                <td colspan="2">
                     <b>username</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
@@ -218,7 +297,7 @@ Parameters
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
                     <b>validate_certs</b>
                     <div style="font-size: small">
                         <span style="color: purple">boolean</span>
@@ -265,6 +344,8 @@ Examples
             - label: rhel-7-server-optional-rpms
               override: enabled
         auto_attach: False
+        release_version: 7Server
+        service_level: Standard
 
 
 

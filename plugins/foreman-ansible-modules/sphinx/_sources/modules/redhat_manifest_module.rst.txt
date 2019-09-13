@@ -36,7 +36,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>name</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -49,7 +49,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>password</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
@@ -75,7 +75,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>pool_id</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -88,7 +88,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>pool_state</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -105,7 +105,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>portal</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -132,7 +132,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>state</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -149,7 +149,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>username</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
@@ -162,7 +162,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>uuid</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>

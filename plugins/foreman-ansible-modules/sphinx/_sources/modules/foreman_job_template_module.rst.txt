@@ -17,8 +17,6 @@ foreman_job_template -- Manage Job Templates in Foreman
 Synopsis
 --------
 - Manage Foreman Remote Execution Job Templates
-- Uses https://github.com/SatelliteQE/nailgun
-- Uses ansible_nailgun_cement in /module_utils
 
 
 
@@ -26,7 +24,7 @@ Requirements
 ------------
 The below requirements are needed on the host that executes this module.
 
-- nailgun >= 0.29.0
+- apypie
 
 
 Parameters
@@ -44,7 +42,7 @@ Parameters
                                                                 <td colspan="2">
                     <b>audit_comment</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -57,7 +55,7 @@ Parameters
                                                                 <td colspan="2">
                     <b>description_format</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -85,7 +83,7 @@ Parameters
                                                                 <td colspan="2">
                     <b>job_category</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -128,7 +126,7 @@ Parameters
                                                                 <td colspan="2">
                     <b>name</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -160,7 +158,7 @@ Parameters
                                                                 <td colspan="2">
                     <b>password</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
@@ -173,14 +171,11 @@ Parameters
                                                                 <td colspan="2">
                     <b>provider_type</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
-                                                                                                                            <ul style="margin: 0; padding: 0"><b>Choices:</b>
-                                                                                                                                                                <li><div style="color: blue"><b>SSH</b>&nbsp;&larr;</div></li>
-                                                                                    </ul>
-                                                                            </td>
+                                                                                                                                                            </td>
                                                                 <td>
                                                                         <div>Determines via which provider the template shall be executed</div>
                                                                                 </td>
@@ -189,7 +184,7 @@ Parameters
                                                                 <td colspan="2">
                     <b>server_url</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
@@ -219,7 +214,7 @@ Parameters
                                                                 <td colspan="2">
                     <b>state</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -237,7 +232,7 @@ Parameters
                                                                 <td colspan="2">
                     <b>template</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -283,7 +278,7 @@ Parameters
                                                 <td colspan="1">
                     <b>description</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -297,13 +292,13 @@ Parameters
                                                 <td colspan="1">
                     <b>fact_name</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>description of the Template Input</div>
+                                                                        <div>Fact name, used when input type is fact</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -311,7 +306,7 @@ Parameters
                                                 <td colspan="1">
                     <b>input_type</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
@@ -331,13 +326,13 @@ Parameters
                                                 <td colspan="1">
                     <b>name</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>description of the Template Input</div>
+                                                                        <div>name of the Template Input</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -351,15 +346,15 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>selecTemplate values for user inputs. Must be an array of any type.</div>
+                                                                        <div>Template values for user inputs. Must be an array of any type.</div>
                                                                                 </td>
             </tr>
                                 <tr>
                                                     <td class="elbow-placeholder"></td>
                                                 <td colspan="1">
-                    <b>puppet_parameter_class</b>
+                    <b>puppet_class_name</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -373,7 +368,7 @@ Parameters
                                                 <td colspan="1">
                     <b>puppet_parameter_name</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -403,9 +398,42 @@ Parameters
                                 <tr>
                                                     <td class="elbow-placeholder"></td>
                                                 <td colspan="1">
+                    <b>resource_type</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Type of the resource</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                    <td class="elbow-placeholder"></td>
+                                                <td colspan="1">
+                    <b>value_type</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                            <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                                <li>plain</li>
+                                                                                                                                                                                                <li>search</li>
+                                                                                                                                                                                                <li>date</li>
+                                                                                    </ul>
+                                                                            </td>
+                                                                <td>
+                                                                        <div>Type of the value</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                    <td class="elbow-placeholder"></td>
+                                                <td colspan="1">
                     <b>variable_name</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -419,7 +447,7 @@ Parameters
                                                                 <td colspan="2">
                     <b>username</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
@@ -461,89 +489,89 @@ Examples
 
     - name: "Create a Job Template inline"
       foreman_job_template:
-          username: "admin"
-          password: "changeme"
-          server_url: "https://foreman.example.com"
-          name: A New Job Template
-          state: present
-          template: |
-            <%#
-                name: A Job Template
-            %>
-            rm -rf <%= input("toDelete") %>
-          template_inputs:
-            - name: toDelete
-              input_type: user
-          locations:
-          - Gallifrey
-          organizations:
-          - TARDIS INC
+        username: "admin"
+        password: "changeme"
+        server_url: "https://foreman.example.com"
+        name: A New Job Template
+        state: present
+        template: |
+          <%#
+              name: A Job Template
+          %>
+          rm -rf <%= input("toDelete") %>
+        template_inputs:
+          - name: toDelete
+            input_type: user
+        locations:
+        - Gallifrey
+        organizations:
+        - TARDIS INC
 
     - name: "Create a Job Template from a file"
       foreman_job_template:
-          username: "admin"
-          password: "changeme"
-          server_url: "https://foreman.example.com"
-          name: a new job template
-          file_name: timeywimey_template.erb
-          template_inputs:
-            - name: a new template input
-              input_type: user
-          state: present
-          locations:
-          - Gallifrey
-          organizations:
-          - TARDIS INC
+        username: "admin"
+        password: "changeme"
+        server_url: "https://foreman.example.com"
+        name: a new job template
+        file_name: timeywimey_template.erb
+        template_inputs:
+          - name: a new template input
+            input_type: user
+        state: present
+        locations:
+        - Gallifrey
+        organizations:
+        - TARDIS INC
 
     - name: "remove a job template's template inputs"
       foreman_job_template:
-          username: "admin"
-          password: "changeme"
-          server_url: "https://foreman.example.com"
-          name: a new job template
-          template_inputs: []
-          state: present
-          locations:
-          - Gallifrey
-          organizations:
-          - TARDIS INC
+        username: "admin"
+        password: "changeme"
+        server_url: "https://foreman.example.com"
+        name: a new job template
+        template_inputs: []
+        state: present
+        locations:
+        - Gallifrey
+        organizations:
+        - TARDIS INC
 
     - name: "Delete a Job Template"
       foreman_job_template:
-          username: "admin"
-          password: "changeme"
-          server_url: "https://foreman.example.com"
-          name: timeywimey
-          state: absent
+        username: "admin"
+        password: "changeme"
+        server_url: "https://foreman.example.com"
+        name: timeywimey
+        state: absent
 
     - name: "Create a Job Template from a file and modify with parameter(s)"
       foreman_job_template:
-          username: "admin"
-          password: "changeme"
-          server_url: "https://foreman.example.com"
-          file_name: timeywimey_template.erb
-          name: Wibbly Wobbly Template
-          state: present
-          locations:
-          - Gallifrey
-          organizations:
-          - TARDIS INC
+        username: "admin"
+        password: "changeme"
+        server_url: "https://foreman.example.com"
+        file_name: timeywimey_template.erb
+        name: Wibbly Wobbly Template
+        state: present
+        locations:
+        - Gallifrey
+        organizations:
+        - TARDIS INC
 
     # Providing a name in this case wouldn't be very sensible.
     # Alternatively make use of with_filetree to parse recursively with filter.
     - name: Parsing a directory of Job templates
       foreman_job_template:
-          username: "admin"
-          password: "changeme"
-          server_url: "https://foreman.example.com"
-          file_name: "{{ item }}"
-          state: present
-          locations:
-          - SKARO
-          organizations:
-          - DALEK INC
-          with_fileglob:
-           - "./arsenal_templates/*.erb"
+        username: "admin"
+        password: "changeme"
+        server_url: "https://foreman.example.com"
+        file_name: "{{ item }}"
+        state: present
+        locations:
+        - SKARO
+        organizations:
+        - DALEK INC
+        with_fileglob:
+         - "./arsenal_templates/*.erb"
 
     # If the templates are stored locally and the ansible module is executed on a remote host
     - name: Ensure latest version of all your Job Templates
@@ -560,25 +588,25 @@ Examples
     # with name set to "*" bulk actions can be performed
     - name: "Delete *ALL* Job Templates"
       local_action:
-          module: foreman_job_template
-          username: "admin"
-          password: "admin"
-          server_url: "https://foreman.example.com"
-          name: "*"
-          state: absent
+        module: foreman_job_template
+        username: "admin"
+        password: "admin"
+        server_url: "https://foreman.example.com"
+        name: "*"
+        state: absent
 
     - name: "Assign all Job Templates to the same organization(s)"
       local_action:
-          module: foreman_job_template
-          username: "admin"
-          password: "admin"
-          server_url: "https://foreman.example.com"
-          name: "*"
-          state: present
-          organizations:
-          - DALEK INC
-          - sky.net
-          - Doc Brown's garage
+        module: foreman_job_template
+        username: "admin"
+        password: "admin"
+        server_url: "https://foreman.example.com"
+        name: "*"
+        state: present
+        organizations:
+        - DALEK INC
+        - sky.net
+        - Doc Brown's garage
 
 
 

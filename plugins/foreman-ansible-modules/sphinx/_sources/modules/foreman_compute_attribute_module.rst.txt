@@ -43,7 +43,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>compute_profile</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
@@ -56,7 +56,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>compute_resource</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
@@ -69,7 +69,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>password</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
@@ -82,7 +82,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>server_url</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
@@ -93,9 +93,26 @@ Parameters
             </tr>
                                 <tr>
                                                                 <td colspan="1">
+                    <b>state</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                            <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                                <li><div style="color: blue"><b>present</b>&nbsp;&larr;</div></li>
+                                                                                                                                                                                                <li>absent</li>
+                                                                                    </ul>
+                                                                            </td>
+                                                                <td>
+                                                                        <div>State of the compute attribute</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
                     <b>username</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
@@ -124,16 +141,17 @@ Parameters
             </tr>
                                 <tr>
                                                                 <td colspan="1">
-                    <b>vm_attributes</b>
+                    <b>vm_attrs</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">dictionary</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
                                                                         <div>Hash containing the data of vm_attrs</div>
-                                                                                </td>
+                                                                                        <div style="font-size: small; color: darkgreen"><br/>aliases: vm_attributes</div>
+                                    </td>
             </tr>
                         </table>
     <br/>
@@ -152,6 +170,8 @@ Examples
         username: "admin"
         password: "changeme"
         server_url: "https://foreman.example.com"
+        compute_profile: "Test Compute Profile"
+        compute_resource: "Test Compute Resource"
         vm_attrs:
           memory_mb: '2048'
           cpu: '2'
@@ -162,6 +182,8 @@ Examples
         username: "admin"
         password: "changeme"
         server_url: "https://foreman.example.com"
+        compute_profile: "Test Compute Profile"
+        compute_resource: "Test Compute Resource"
         vm_attrs:
           memory_mb: '1024'
           cpu: '1'

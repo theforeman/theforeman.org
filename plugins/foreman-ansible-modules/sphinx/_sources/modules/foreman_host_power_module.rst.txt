@@ -25,7 +25,7 @@ Requirements
 ------------
 The below requirements are needed on the host that executes this module.
 
-- nailgun >= 0.29.0
+- apypie
 
 
 Parameters
@@ -41,22 +41,23 @@ Parameters
         </tr>
                     <tr>
                                                                 <td colspan="1">
-                    <b>hostname</b>
+                    <b>name</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>fqdn of host</div>
-                                                                                </td>
+                                                                        <div>Name (FQDN) of the host</div>
+                                                                                        <div style="font-size: small; color: darkgreen"><br/>aliases: hostname</div>
+                                    </td>
             </tr>
                                 <tr>
                                                                 <td colspan="1">
                     <b>password</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
@@ -67,27 +68,9 @@ Parameters
             </tr>
                                 <tr>
                                                                 <td colspan="1">
-                    <b>power_state</b>
-                    <div style="font-size: small">
-                        <span style="color: purple">list</span>
-                                                                    </div>
-                                    </td>
-                                <td>
-                                                                                                                            <ul style="margin: 0; padding: 0"><b>Choices:</b>
-                                                                                                                                                                                                                                    <li>yes</li>
-                                                                                                                                                                                                                                                                    <li>no</li>
-                                                                                                                                                                                                <li>state</li>
-                                                                                    </ul>
-                                                                            </td>
-                                                                <td>
-                                                                        <div>Desired power state</div>
-                                                                                </td>
-            </tr>
-                                <tr>
-                                                                <td colspan="1">
                     <b>server_url</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
@@ -98,9 +81,34 @@ Parameters
             </tr>
                                 <tr>
                                                                 <td colspan="1">
+                    <b>state</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                            <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                                <li>on</li>
+                                                                                                                                                                                                <li>start</li>
+                                                                                                                                                                                                <li>off</li>
+                                                                                                                                                                                                <li>stop</li>
+                                                                                                                                                                                                <li>soft</li>
+                                                                                                                                                                                                <li>reboot</li>
+                                                                                                                                                                                                <li>cycle</li>
+                                                                                                                                                                                                <li>reset</li>
+                                                                                                                                                                                                <li><div style="color: blue"><b>state</b>&nbsp;&larr;</div></li>
+                                                                                                                                                                                                <li>status</li>
+                                                                                    </ul>
+                                                                            </td>
+                                                                <td>
+                                                                        <div>Desired power state</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
                     <b>username</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
@@ -219,6 +227,7 @@ Authors
 ~~~~~~~
 
 - Bernhard Hopfenmueller (@Fobhep) ATIX AG
+- Baptiste Agasse (@bagasse)
 
 
 .. hint::
