@@ -150,8 +150,9 @@
 <li><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></li>
 <li><a class="reference internal" href="#requirements" id="id2">Requirements</a></li>
 <li><a class="reference internal" href="#parameters" id="id3">Parameters</a></li>
-<li><a class="reference internal" href="#examples" id="id4">Examples</a></li>
-<li><a class="reference internal" href="#status" id="id5">Status</a></li>
+<li><a class="reference internal" href="#notes" id="id4">Notes</a></li>
+<li><a class="reference internal" href="#examples" id="id5">Examples</a></li>
+<li><a class="reference internal" href="#status" id="id6">Status</a></li>
 </ul>
 </div>
 <div class="section" id="synopsis">
@@ -179,7 +180,7 @@
                                                             <td colspan="1">
                 <b>name</b>
                 <div style="font-size: small">
-                    <span style="color: purple">-</span>
+                    <span style="color: purple">string</span>
                                              / <span style="color: red">required</span>                    </div>
                                 </td>
                             <td>
@@ -192,7 +193,7 @@
                                                             <td colspan="1">
                 <b>parameter_type</b>
                 <div style="font-size: small">
-                    <span style="color: purple">-</span>
+                    <span style="color: purple">string</span>
                                                                 </div>
                                 </td>
                             <td>
@@ -215,7 +216,7 @@
                                                             <td colspan="1">
                 <b>password</b>
                 <div style="font-size: small">
-                    <span style="color: purple">-</span>
+                    <span style="color: purple">string</span>
                                              / <span style="color: red">required</span>                    </div>
                                 </td>
                             <td>
@@ -228,7 +229,7 @@
                                                             <td colspan="1">
                 <b>server_url</b>
                 <div style="font-size: small">
-                    <span style="color: purple">-</span>
+                    <span style="color: purple">string</span>
                                              / <span style="color: red">required</span>                    </div>
                                 </td>
                             <td>
@@ -241,7 +242,7 @@
                                                             <td colspan="1">
                 <b>state</b>
                 <div style="font-size: small">
-                    <span style="color: purple">-</span>
+                    <span style="color: purple">string</span>
                                                                 </div>
                                 </td>
                             <td>
@@ -259,7 +260,7 @@
                                                             <td colspan="1">
                 <b>username</b>
                 <div style="font-size: small">
-                    <span style="color: purple">-</span>
+                    <span style="color: purple">string</span>
                                              / <span style="color: red">required</span>                    </div>
                                 </td>
                             <td>
@@ -290,7 +291,7 @@
                                                             <td colspan="1">
                 <b>value</b>
                 <div style="font-size: small">
-                    <span style="color: purple">-</span>
+                    <span style="color: purple">raw</span>
                                                                 </div>
                                 </td>
                             <td>
@@ -301,8 +302,17 @@
         </tr>
                     </table>
 <br/></div>
+<div class="section" id="notes">
+<h2><a class="toc-backref" href="#id4">Notes</a><a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>The <em>parameter_type</em> only has an effect on Foreman &gt;= 1.22</li>
+</ul>
+</div>
+</div>
 <div class="section" id="examples">
-<h2><a class="toc-backref" href="#id4">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id5">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&quot;Create</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Global</span><span class="nv"> </span><span class="s">Parameter&quot;</span>
   <span class="l l-Scalar l-Scalar-Plain">foreman_global_parameter</span><span class="p p-Indicator">:</span>
     <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="s">&quot;admin&quot;</span>
@@ -332,7 +342,7 @@
 </div>
 </div>
 <div class="section" id="status">
-<h2><a class="toc-backref" href="#id5">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id6">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>This module is not guaranteed to have a backwards compatible interface. <em>[preview]</em></li>
 <li>This module is <a class="reference external" href="https://docs.ansible.com/ansible/latest/user_guide/modules_support.html#modules-support" title="(in Ansible Documentation v2.8)"><span class="xref std std-ref">maintained by the Ansible Community</span></a>. <em>[community]</em></li>

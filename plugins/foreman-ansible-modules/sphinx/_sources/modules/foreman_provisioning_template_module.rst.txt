@@ -42,7 +42,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>audit_comment</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -70,7 +70,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>kind</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -128,7 +128,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>name</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -172,7 +172,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>password</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
@@ -185,7 +185,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>server_url</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
@@ -198,7 +198,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>state</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -216,7 +216,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>template</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -230,7 +230,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>username</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
@@ -314,7 +314,7 @@ Examples
         template: |
           <%#
               dummy:
-         %>
+          %>
         state: absent
 
     - name: "Create a Provisioning Template from a file and modify with parameter"

@@ -180,7 +180,7 @@
                                                             <td colspan="1">
                 <b>compute_profile</b>
                 <div style="font-size: small">
-                    <span style="color: purple">-</span>
+                    <span style="color: purple">string</span>
                                              / <span style="color: red">required</span>                    </div>
                                 </td>
                             <td>
@@ -193,7 +193,7 @@
                                                             <td colspan="1">
                 <b>compute_resource</b>
                 <div style="font-size: small">
-                    <span style="color: purple">-</span>
+                    <span style="color: purple">string</span>
                                              / <span style="color: red">required</span>                    </div>
                                 </td>
                             <td>
@@ -206,7 +206,7 @@
                                                             <td colspan="1">
                 <b>password</b>
                 <div style="font-size: small">
-                    <span style="color: purple">-</span>
+                    <span style="color: purple">string</span>
                                              / <span style="color: red">required</span>                    </div>
                                 </td>
                             <td>
@@ -219,7 +219,7 @@
                                                             <td colspan="1">
                 <b>server_url</b>
                 <div style="font-size: small">
-                    <span style="color: purple">-</span>
+                    <span style="color: purple">string</span>
                                              / <span style="color: red">required</span>                    </div>
                                 </td>
                             <td>
@@ -230,9 +230,26 @@
         </tr>
                             <tr>
                                                             <td colspan="1">
+                <b>state</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                        <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                            <li><div style="color: blue"><b>present</b>&nbsp;&larr;</div></li>
+                                                                                                                                                                                            <li>absent</li>
+                                                                                </ul>
+                                                                        </td>
+                                                            <td>
+                                                                    <div>State of the compute attribute</div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                            <td colspan="1">
                 <b>username</b>
                 <div style="font-size: small">
-                    <span style="color: purple">-</span>
+                    <span style="color: purple">string</span>
                                              / <span style="color: red">required</span>                    </div>
                                 </td>
                             <td>
@@ -261,16 +278,17 @@
         </tr>
                             <tr>
                                                             <td colspan="1">
-                <b>vm_attributes</b>
+                <b>vm_attrs</b>
                 <div style="font-size: small">
-                    <span style="color: purple">-</span>
+                    <span style="color: purple">dictionary</span>
                                              / <span style="color: red">required</span>                    </div>
                                 </td>
                             <td>
                                                                                                                                                         </td>
                                                             <td>
                                                                     <div>Hash containing the data of vm_attrs</div>
-                                                                            </td>
+                                                                                    <div style="font-size: small; color: darkgreen"><br/>aliases: vm_attributes</div>
+                                </td>
         </tr>
                     </table>
 <br/></div>
@@ -281,6 +299,8 @@
     <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="s">&quot;admin&quot;</span>
     <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="s">&quot;changeme&quot;</span>
     <span class="l l-Scalar l-Scalar-Plain">server_url</span><span class="p p-Indicator">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">compute_profile</span><span class="p p-Indicator">:</span> <span class="s">&quot;Test</span><span class="nv"> </span><span class="s">Compute</span><span class="nv"> </span><span class="s">Profile&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">compute_resource</span><span class="p p-Indicator">:</span> <span class="s">&quot;Test</span><span class="nv"> </span><span class="s">Compute</span><span class="nv"> </span><span class="s">Resource&quot;</span>
     <span class="l l-Scalar l-Scalar-Plain">vm_attrs</span><span class="p p-Indicator">:</span>
       <span class="l l-Scalar l-Scalar-Plain">memory_mb</span><span class="p p-Indicator">:</span> <span class="s">&#39;2048&#39;</span>
       <span class="l l-Scalar l-Scalar-Plain">cpu</span><span class="p p-Indicator">:</span> <span class="s">&#39;2&#39;</span>
@@ -291,6 +311,8 @@
     <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="s">&quot;admin&quot;</span>
     <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="s">&quot;changeme&quot;</span>
     <span class="l l-Scalar l-Scalar-Plain">server_url</span><span class="p p-Indicator">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">compute_profile</span><span class="p p-Indicator">:</span> <span class="s">&quot;Test</span><span class="nv"> </span><span class="s">Compute</span><span class="nv"> </span><span class="s">Profile&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">compute_resource</span><span class="p p-Indicator">:</span> <span class="s">&quot;Test</span><span class="nv"> </span><span class="s">Compute</span><span class="nv"> </span><span class="s">Resource&quot;</span>
     <span class="l l-Scalar l-Scalar-Plain">vm_attrs</span><span class="p p-Indicator">:</span>
       <span class="l l-Scalar l-Scalar-Plain">memory_mb</span><span class="p p-Indicator">:</span> <span class="s">&#39;1024&#39;</span>
       <span class="l l-Scalar l-Scalar-Plain">cpu</span><span class="p p-Indicator">:</span> <span class="s">&#39;1&#39;</span>

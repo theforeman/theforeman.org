@@ -171,15 +171,15 @@
 <h2><a class="toc-backref" href="#id3">Parameters</a><a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
 <table  border=0 cellpadding=0 class="documentation-table">
     <tr>
-        <th colspan="1">Parameter</th>
+        <th colspan="2">Parameter</th>
         <th>Choices/<font color="blue">Defaults</font></th>
                     <th width="100%">Comments</th>
     </tr>
                 <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>description</b>
                 <div style="font-size: small">
-                    <span style="color: purple">-</span>
+                    <span style="color: purple">string</span>
                                                                 </div>
                                 </td>
                             <td>
@@ -189,7 +189,7 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>locations</b>
                 <div style="font-size: small">
                     <span style="color: purple">list</span>
@@ -202,10 +202,10 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>name</b>
                 <div style="font-size: small">
-                    <span style="color: purple">-</span>
+                    <span style="color: purple">string</span>
                                              / <span style="color: red">required</span>                    </div>
                                 </td>
                             <td>
@@ -215,7 +215,7 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>organizations</b>
                 <div style="font-size: small">
                     <span style="color: purple">list</span>
@@ -228,10 +228,10 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>password</b>
                 <div style="font-size: small">
-                    <span style="color: purple">-</span>
+                    <span style="color: purple">string</span>
                                              / <span style="color: red">required</span>                    </div>
                                 </td>
                             <td>
@@ -241,10 +241,10 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>provider</b>
                 <div style="font-size: small">
-                    <span style="color: purple">-</span>
+                    <span style="color: purple">string</span>
                                                                 </div>
                                 </td>
                             <td>
@@ -259,10 +259,10 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>provider_params</b>
                 <div style="font-size: small">
-                    <span style="color: purple">-</span>
+                    <span style="color: purple">dictionary</span>
                                                                 </div>
                                 </td>
                             <td>
@@ -271,11 +271,114 @@
                                                                     <div>Parameter specific to compute resource provider. Required if <em>state=present_with_defaults</em>.</div>
                                                                             </td>
         </tr>
+                                                        <tr>
+                                                <td class="elbow-placeholder"></td>
+                                            <td colspan="1">
+                <b>datacenter</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>Datacenter the compute resource is in, not valid for <em>provider=libvirt</em></div>
+                                                                            </td>
+        </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                <td class="elbow-placeholder"></td>
+                                            <td colspan="1">
+                <b>display_type</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>Display type to use for the remote console, only valid for <em>provider=libvirt</em></div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                <td class="elbow-placeholder"></td>
+                                            <td colspan="1">
+                <b>ovirt_quota</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>oVirt quota ID, only valid for <em>provider=ovirt</em></div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                <td class="elbow-placeholder"></td>
+                                            <td colspan="1">
+                <b>password</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>Password for the compute resource connection, not valid for <em>provider=libvirt</em></div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                <td class="elbow-placeholder"></td>
+                                            <td colspan="1">
+                <b>url</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>URL of the compute resource</div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                <td class="elbow-placeholder"></td>
+                                            <td colspan="1">
+                <b>use_v4</b>
+                <div style="font-size: small">
+                    <span style="color: purple">boolean</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                                    <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                            <li>no</li>
+                                                                                                                                                                                            <li>yes</li>
+                                                                                </ul>
+                                                                        </td>
+                                                            <td>
+                                                                    <div>Use oVirt API v4, only valid for <em>provider=ovirt</em></div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                <td class="elbow-placeholder"></td>
+                                            <td colspan="1">
+                <b>user</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>Username for the compute resource connection, not valid for <em>provider=libvirt</em></div>
+                                                                            </td>
+        </tr>
+
+                                            <tr>
+                                                            <td colspan="2">
                 <b>server_url</b>
                 <div style="font-size: small">
-                    <span style="color: purple">-</span>
+                    <span style="color: purple">string</span>
                                              / <span style="color: red">required</span>                    </div>
                                 </td>
                             <td>
@@ -285,10 +388,10 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>state</b>
                 <div style="font-size: small">
-                    <span style="color: purple">-</span>
+                    <span style="color: purple">string</span>
                                                                 </div>
                                 </td>
                             <td>
@@ -303,10 +406,10 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>updated_name</b>
                 <div style="font-size: small">
-                    <span style="color: purple">-</span>
+                    <span style="color: purple">string</span>
                                                                 </div>
                                 </td>
                             <td>
@@ -316,10 +419,10 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>username</b>
                 <div style="font-size: small">
-                    <span style="color: purple">-</span>
+                    <span style="color: purple">string</span>
                                              / <span style="color: red">required</span>                    </div>
                                 </td>
                             <td>
@@ -329,7 +432,7 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>validate_certs</b>
                 <div style="font-size: small">
                     <span style="color: purple">boolean</span>

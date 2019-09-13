@@ -59,12 +59,11 @@ Parameters
                                                                 <td colspan="1">
                     <b>auth_source</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
-                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">"Internal"</div>
-                                    </td>
+                                                                                                                                                            </td>
                                                                 <td>
                                                                         <div>Authentication source where the user exists</div>
                                                                                 </td>
@@ -73,7 +72,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>default_location</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -86,7 +85,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>default_organization</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -99,7 +98,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>description</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -112,7 +111,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>firstname</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -125,7 +124,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>lastname</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -138,11 +137,30 @@ Parameters
                                                                 <td colspan="1">
                     <b>locale</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
-                                                                                                                                                            </td>
+                                                                                                                            <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                                <li>ca</li>
+                                                                                                                                                                                                <li>de</li>
+                                                                                                                                                                                                <li>en</li>
+                                                                                                                                                                                                <li>en_GB</li>
+                                                                                                                                                                                                <li>es</li>
+                                                                                                                                                                                                <li>fr</li>
+                                                                                                                                                                                                <li>gl</li>
+                                                                                                                                                                                                <li>it</li>
+                                                                                                                                                                                                <li>ja</li>
+                                                                                                                                                                                                <li>ko</li>
+                                                                                                                                                                                                <li>nl_NL</li>
+                                                                                                                                                                                                <li>pl</li>
+                                                                                                                                                                                                <li>pt_BR</li>
+                                                                                                                                                                                                <li>ru</li>
+                                                                                                                                                                                                <li>sv_SE</li>
+                                                                                                                                                                                                <li>zh_CN</li>
+                                                                                                                                                                                                <li>zh_TW</li>
+                                                                                    </ul>
+                                                                            </td>
                                                                 <td>
                                                                         <div>The language locale for the user</div>
                                                                                 </td>
@@ -164,7 +182,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>login</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
@@ -178,7 +196,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>mail</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -205,7 +223,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>password</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
@@ -231,7 +249,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>server_url</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
@@ -244,7 +262,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>state</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -261,11 +279,164 @@ Parameters
                                                                 <td colspan="1">
                     <b>timezone</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
-                                                                                                                                                            </td>
+                                                                                                                            <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                                <li>International Date Line West</li>
+                                                                                                                                                                                                <li>American Samoa</li>
+                                                                                                                                                                                                <li>Midway Island</li>
+                                                                                                                                                                                                <li>Hawaii</li>
+                                                                                                                                                                                                <li>Alaska</li>
+                                                                                                                                                                                                <li>Pacific Time (US &amp; Canada)</li>
+                                                                                                                                                                                                <li>Tijuana</li>
+                                                                                                                                                                                                <li>Arizona</li>
+                                                                                                                                                                                                <li>Chihuahua</li>
+                                                                                                                                                                                                <li>Mazatlan</li>
+                                                                                                                                                                                                <li>Mountain Time (US &amp; Canada)</li>
+                                                                                                                                                                                                <li>Central America</li>
+                                                                                                                                                                                                <li>Central Time (US &amp; Canada)</li>
+                                                                                                                                                                                                <li>Guadalajara</li>
+                                                                                                                                                                                                <li>Mexico City</li>
+                                                                                                                                                                                                <li>Monterrey</li>
+                                                                                                                                                                                                <li>Saskatchewan</li>
+                                                                                                                                                                                                <li>Bogota</li>
+                                                                                                                                                                                                <li>Eastern Time (US &amp; Canada)</li>
+                                                                                                                                                                                                <li>Indiana (East)</li>
+                                                                                                                                                                                                <li>Lima</li>
+                                                                                                                                                                                                <li>Quito</li>
+                                                                                                                                                                                                <li>Atlantic Time (Canada)</li>
+                                                                                                                                                                                                <li>Caracas</li>
+                                                                                                                                                                                                <li>Georgetown</li>
+                                                                                                                                                                                                <li>La Paz</li>
+                                                                                                                                                                                                <li>Puerto Rico</li>
+                                                                                                                                                                                                <li>Santiago</li>
+                                                                                                                                                                                                <li>Newfoundland</li>
+                                                                                                                                                                                                <li>Brasilia</li>
+                                                                                                                                                                                                <li>Buenos Aires</li>
+                                                                                                                                                                                                <li>Greenland</li>
+                                                                                                                                                                                                <li>Montevideo</li>
+                                                                                                                                                                                                <li>Mid-Atlantic</li>
+                                                                                                                                                                                                <li>Azores</li>
+                                                                                                                                                                                                <li>Cape Verde Is.</li>
+                                                                                                                                                                                                <li>Dublin</li>
+                                                                                                                                                                                                <li>Edinburgh</li>
+                                                                                                                                                                                                <li>Lisbon</li>
+                                                                                                                                                                                                <li>London</li>
+                                                                                                                                                                                                <li>Monrovia</li>
+                                                                                                                                                                                                <li>UTC</li>
+                                                                                                                                                                                                <li>Amsterdam</li>
+                                                                                                                                                                                                <li>Belgrade</li>
+                                                                                                                                                                                                <li>Berlin</li>
+                                                                                                                                                                                                <li>Bern</li>
+                                                                                                                                                                                                <li>Bratislava</li>
+                                                                                                                                                                                                <li>Brussels</li>
+                                                                                                                                                                                                <li>Budapest</li>
+                                                                                                                                                                                                <li>Casablanca</li>
+                                                                                                                                                                                                <li>Copenhagen</li>
+                                                                                                                                                                                                <li>Ljubljana</li>
+                                                                                                                                                                                                <li>Madrid</li>
+                                                                                                                                                                                                <li>Paris</li>
+                                                                                                                                                                                                <li>Prague</li>
+                                                                                                                                                                                                <li>Rome</li>
+                                                                                                                                                                                                <li>Sarajevo</li>
+                                                                                                                                                                                                <li>Skopje</li>
+                                                                                                                                                                                                <li>Stockholm</li>
+                                                                                                                                                                                                <li>Vienna</li>
+                                                                                                                                                                                                <li>Warsaw</li>
+                                                                                                                                                                                                <li>West Central Africa</li>
+                                                                                                                                                                                                <li>Zagreb</li>
+                                                                                                                                                                                                <li>Zurich</li>
+                                                                                                                                                                                                <li>Athens</li>
+                                                                                                                                                                                                <li>Bucharest</li>
+                                                                                                                                                                                                <li>Cairo</li>
+                                                                                                                                                                                                <li>Harare</li>
+                                                                                                                                                                                                <li>Helsinki</li>
+                                                                                                                                                                                                <li>Jerusalem</li>
+                                                                                                                                                                                                <li>Kaliningrad</li>
+                                                                                                                                                                                                <li>Kyiv</li>
+                                                                                                                                                                                                <li>Pretoria</li>
+                                                                                                                                                                                                <li>Riga</li>
+                                                                                                                                                                                                <li>Sofia</li>
+                                                                                                                                                                                                <li>Tallinn</li>
+                                                                                                                                                                                                <li>Vilnius</li>
+                                                                                                                                                                                                <li>Baghdad</li>
+                                                                                                                                                                                                <li>Istanbul</li>
+                                                                                                                                                                                                <li>Kuwait</li>
+                                                                                                                                                                                                <li>Minsk</li>
+                                                                                                                                                                                                <li>Moscow</li>
+                                                                                                                                                                                                <li>Nairobi</li>
+                                                                                                                                                                                                <li>Riyadh</li>
+                                                                                                                                                                                                <li>St. Petersburg</li>
+                                                                                                                                                                                                <li>Tehran</li>
+                                                                                                                                                                                                <li>Abu Dhabi</li>
+                                                                                                                                                                                                <li>Baku</li>
+                                                                                                                                                                                                <li>Muscat</li>
+                                                                                                                                                                                                <li>Samara</li>
+                                                                                                                                                                                                <li>Tbilisi</li>
+                                                                                                                                                                                                <li>Volgograd</li>
+                                                                                                                                                                                                <li>Yerevan</li>
+                                                                                                                                                                                                <li>Kabul</li>
+                                                                                                                                                                                                <li>Ekaterinburg</li>
+                                                                                                                                                                                                <li>Islamabad</li>
+                                                                                                                                                                                                <li>Karachi</li>
+                                                                                                                                                                                                <li>Tashkent</li>
+                                                                                                                                                                                                <li>Chennai</li>
+                                                                                                                                                                                                <li>Kolkata</li>
+                                                                                                                                                                                                <li>Mumbai</li>
+                                                                                                                                                                                                <li>New Delhi</li>
+                                                                                                                                                                                                <li>Sri Jayawardenepura</li>
+                                                                                                                                                                                                <li>Kathmandu</li>
+                                                                                                                                                                                                <li>Almaty</li>
+                                                                                                                                                                                                <li>Astana</li>
+                                                                                                                                                                                                <li>Dhaka</li>
+                                                                                                                                                                                                <li>Urumqi</li>
+                                                                                                                                                                                                <li>Rangoon</li>
+                                                                                                                                                                                                <li>Bangkok</li>
+                                                                                                                                                                                                <li>Hanoi</li>
+                                                                                                                                                                                                <li>Jakarta</li>
+                                                                                                                                                                                                <li>Krasnoyarsk</li>
+                                                                                                                                                                                                <li>Novosibirsk</li>
+                                                                                                                                                                                                <li>Beijing</li>
+                                                                                                                                                                                                <li>Chongqing</li>
+                                                                                                                                                                                                <li>Hong Kong</li>
+                                                                                                                                                                                                <li>Irkutsk</li>
+                                                                                                                                                                                                <li>Kuala Lumpur</li>
+                                                                                                                                                                                                <li>Perth</li>
+                                                                                                                                                                                                <li>Singapore</li>
+                                                                                                                                                                                                <li>Taipei</li>
+                                                                                                                                                                                                <li>Ulaanbaatar</li>
+                                                                                                                                                                                                <li>Osaka</li>
+                                                                                                                                                                                                <li>Sapporo</li>
+                                                                                                                                                                                                <li>Seoul</li>
+                                                                                                                                                                                                <li>Tokyo</li>
+                                                                                                                                                                                                <li>Yakutsk</li>
+                                                                                                                                                                                                <li>Adelaide</li>
+                                                                                                                                                                                                <li>Darwin</li>
+                                                                                                                                                                                                <li>Brisbane</li>
+                                                                                                                                                                                                <li>Canberra</li>
+                                                                                                                                                                                                <li>Guam</li>
+                                                                                                                                                                                                <li>Hobart</li>
+                                                                                                                                                                                                <li>Melbourne</li>
+                                                                                                                                                                                                <li>Port Moresby</li>
+                                                                                                                                                                                                <li>Sydney</li>
+                                                                                                                                                                                                <li>Vladivostok</li>
+                                                                                                                                                                                                <li>Magadan</li>
+                                                                                                                                                                                                <li>New Caledonia</li>
+                                                                                                                                                                                                <li>Solomon Is.</li>
+                                                                                                                                                                                                <li>Srednekolymsk</li>
+                                                                                                                                                                                                <li>Auckland</li>
+                                                                                                                                                                                                <li>Fiji</li>
+                                                                                                                                                                                                <li>Kamchatka</li>
+                                                                                                                                                                                                <li>Marshall Is.</li>
+                                                                                                                                                                                                <li>Wellington</li>
+                                                                                                                                                                                                <li>Chatham Is.</li>
+                                                                                                                                                                                                <li>Nuku&#39;alofa</li>
+                                                                                                                                                                                                <li>Samoa</li>
+                                                                                                                                                                                                <li>Tokelau Is.</li>
+                                                                                    </ul>
+                                                                            </td>
                                                                 <td>
                                                                         <div>Timezone for the user</div>
                                                     <div>If blank it will use the browser timezone.</div>
@@ -275,7 +446,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>user_password</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                                     </div>
                                     </td>
                                 <td>
@@ -288,7 +459,7 @@ Parameters
                                                                 <td colspan="1">
                     <b>username</b>
                     <div style="font-size: small">
-                        <span style="color: purple">-</span>
+                        <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
