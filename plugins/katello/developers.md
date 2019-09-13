@@ -180,11 +180,7 @@ alias testdb='RAILS_ENV=test bundle exec rake db:drop && RAILS_ENV=test bundle e
 
 We use both AngularJS and React in our UI and they have different ways of running tests.
 
-For testing Angular code, you can `cd engines/bastion_katello` in the Katello root directory, and run:
-```
-rake bastion:setup # Setup testing enviromnent
-rake bastion:ci    # Run testing suite
-```
+For testing AngularJS code, you can visit [the bastion_katello README page for testing instructions](https://github.com/Katello/katello/blob/master/engines/bastion_katello/README.md)
 
 For testing React code, you can run the following in the Katello root directory:
 ```
