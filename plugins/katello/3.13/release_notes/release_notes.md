@@ -26,9 +26,13 @@ Content View descriptions may now be updated via the Hammer CLI.
 
 Katello 3.13 provides the ability to upload SRPMs via the API and through Hammer and Katello to correctly identify the content as a source RPM.
 
+## Change to signing key
+
+Previous releases were signed using the Katelo key, but starting with 3.13 package signing will use the [Foreman Key](https://theforeman.org/static/keys/4674C97BD8C2A3EF63BCB20788BB5C467B5B366A.pub).
+
 ## Bug Fixes
 
-Katello 3.13 includes 77 bug fixes, which can be seen [here](https://projects.theforeman.org/projects/katello/issues?utf8=%E2%9C%93&set_filter=1&sort=id%3Adesc&f%5B%5D=status_id&op%5Bstatus_id%5D=c&f%5B%5D=tracker_id&op%5Btracker_id%5D=%3D&v%5Btracker_id%5D%5B%5D=1&f%5B%5D=fixed_version_id&op%5Bfixed_version_id%5D=%3D&v%5Bfixed_version_id%5D%5B%5D=1021&f%5B%5D=&c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=priority&c%5B%5D=subject&c%5B%5D=author&c%5B%5D=assigned_to&c%5B%5D=updated_on&c%5B%5D=category&c%5B%5D=fixed_version&group_by=)
+Katello 3.13 includes 82 bug fixes, which can be seen [here](https://projects.theforeman.org/projects/katello/issues?utf8=%E2%9C%93&set_filter=1&sort=id%3Adesc&f%5B%5D=status_id&op%5Bstatus_id%5D=c&f%5B%5D=tracker_id&op%5Btracker_id%5D=%3D&v%5Btracker_id%5D%5B%5D=1&f%5B%5D=fixed_version_id&op%5Bfixed_version_id%5D=%3D&v%5Bfixed_version_id%5D%5B%5D=1021&f%5B%5D=&c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=priority&c%5B%5D=subject&c%5B%5D=author&c%5B%5D=assigned_to&c%5B%5D=updated_on&c%5B%5D=category&c%5B%5D=fixed_version&group_by=)
 
 ## Contributors
 
