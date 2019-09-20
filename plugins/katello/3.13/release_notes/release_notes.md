@@ -28,7 +28,7 @@ Katello 3.13 provides the ability to upload SRPMs via the API and through Hammer
 
 ## Change to signing key
 
-Previous releases were signed using the Katelo key, but starting with 3.13 package signing will use the [Foreman Key](https://theforeman.org/static/keys/4674C97BD8C2A3EF63BCB20788BB5C467B5B366A.pub).
+Previous releases were signed using the Katelo key, but starting with 3.13 package signing will use the [Foreman Key](/static/keys/4674C97BD8C2A3EF63BCB20788BB5C467B5B366A.pub) 4674C97BD8C2A3EF63BCB20788BB5C467B5B366A.
 
 ## Bug Fixes
 
