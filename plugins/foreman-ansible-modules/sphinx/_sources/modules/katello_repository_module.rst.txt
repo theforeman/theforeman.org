@@ -214,6 +214,7 @@ Parameters
                                                                             </td>
                                                                 <td>
                                                                         <div>State of the Repository</div>
+                                                    <div><code>present_with_defaults</code> will ensure the entity exists, but won&#x27;t update existing ones</div>
                                                                                 </td>
             </tr>
                                 <tr>

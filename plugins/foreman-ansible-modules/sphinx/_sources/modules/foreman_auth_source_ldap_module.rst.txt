@@ -8,7 +8,6 @@
 foreman_auth_source_ldap -- Manage Foreman LDAP authentication sources using Foreman API
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. versionadded:: 2.9
 
 .. contents::
    :local:

@@ -24,7 +24,7 @@ Requirements
 ------------
 The below requirements are needed on the host that executes this module.
 
-- nailgun >= 0.28.0
+- apypie
 
 
 Parameters
@@ -67,6 +67,19 @@ Parameters
                                                                 <td>
                                                                         <div>Search using the &#x27;Issued On&#x27; or &#x27;Updated On&#x27;</div>
                                                     <div>Only valid on <em>filter_type=erratum</em>.</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>description</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Description of the Content View Filter</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -176,6 +189,19 @@ Parameters
             </tr>
                                 <tr>
                                                                 <td colspan="1">
+                    <b>name</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                 / <span style="color: red">required</span>                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Name of the Content View Filter</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
                     <b>organization</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
@@ -223,11 +249,12 @@ Parameters
                                                                     </div>
                                     </td>
                                 <td>
-                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">"I(name)"</div>
-                                    </td>
+                                                                                                                                                            </td>
                                                                 <td>
                                                                         <div>Content view filter rule name or package name</div>
-                                                                                </td>
+                                                    <div>If omitted, the value of <em>name</em> will be used if necessary</div>
+                                                                                        <div style="font-size: small; color: darkgreen"><br/>aliases: package_name, package_group, tag</div>
+                                    </td>
             </tr>
                                 <tr>
                                                                 <td colspan="1">
