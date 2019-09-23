@@ -197,6 +197,7 @@ Parameters
                                                                             </td>
                                                                 <td>
                                                                         <div>The state the template should be in.</div>
+                                                    <div><code>present_with_defaults</code> will ensure the entity exists, but won&#x27;t update existing ones</div>
                                                                                 </td>
             </tr>
                                 <tr>

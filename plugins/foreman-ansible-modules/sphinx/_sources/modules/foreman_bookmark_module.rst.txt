@@ -24,7 +24,6 @@ Requirements
 ------------
 The below requirements are needed on the host that executes this module.
 
-- ansible >= 2.3
 - apypie
 
 
@@ -137,6 +136,7 @@ Parameters
                                                                             </td>
                                                                 <td>
                                                                         <div>State of the bookmark</div>
+                                                    <div><code>present_with_defaults</code> will ensure the entity exists, but won&#x27;t update existing ones</div>
                                                                                 </td>
             </tr>
                                 <tr>

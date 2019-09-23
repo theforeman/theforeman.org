@@ -252,7 +252,9 @@ Parameters
                                                                                     </ul>
                                                                             </td>
                                                                 <td>
-                                                                        <div>State of the Activation Key. If &quot;copied&quot; the key will be copied to a new one with &quot;new_name&quot; as the name and all other fields left untouched.</div>
+                                                                        <div>State of the Activation Key</div>
+                                                    <div>If <code>copied</code> the key will be copied to a new one with <em>new_name</em> as the name and all other fields left untouched</div>
+                                                    <div><code>present_with_defaults</code> will ensure the entity exists, but won&#x27;t update existing ones</div>
                                                                                 </td>
             </tr>
                                 <tr>
