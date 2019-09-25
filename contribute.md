@@ -83,6 +83,10 @@ You can also exclude these features by using `bundle install --without libvirt p
 1. Or a single test: `bundle exec bin/rake test TEST=test/functional/your_test.rb`
 1. Once done, stop any background processes with `bundle exec spring stop` ([more info](/handbook.html#UsingtheSpringpreloaderindevelopment))
 
+Our test environment requires Google Chrome to run integration tests and by default a particular chromedriver library is installed.
+This may not match the Chrome version installed on your system, in that case install the correct driver version: `npm install chromedriver@<chrome-version>`.
+The error message you can encounter is: Chrome version must be between XX and YY.
+
 #### Start up foreman
 1. Follow steps 1, 2 and 3 from the section "setup test environment" if you haven't done so already
 1. Populate database: `bundle exec bin/rake db:seed` and take note of the password it generates
