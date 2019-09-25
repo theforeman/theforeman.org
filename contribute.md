@@ -77,15 +77,20 @@ for RHEL/Fedora based distributions).
 
 You can also exclude these features by using `bundle install --without libvirt postgresql` etc (groups are under bundler.d/).
 
+To run integration tests, it's best to install chromedriver package from your
+distribution as it comes with compatible chromium headless browser. For example
+in Fedora do this: `yum install chromedriver`. If you don't do this, npm will
+install chromedriver that might be not compatible with your Chrome or Chromium
+browser which can lead to error "Chrome version must be between XX and YY."
+
+When using system chromedriver, set the correct path to it via vabieble. For
+Fedora that would be: `TESTDRIVER_PATH=/usr/bin/chromedriver`.
+
 #### Setup test environment
 1. Create your database: `bundle exec bin/rake db:migrate`
 1. Run all the tests: `bundle exec bin/rake test`
 1. Or a single test: `bundle exec bin/rake test TEST=test/functional/your_test.rb`
 1. Once done, stop any background processes with `bundle exec spring stop` ([more info](/handbook.html#UsingtheSpringpreloaderindevelopment))
-
-Our test environment requires Google Chrome to run integration tests and by default a particular chromedriver library is installed.
-This may not match the Chrome version installed on your system, in that case install the correct driver version: `npm install chromedriver@<chrome-version>`.
-The error message you can encounter is: Chrome version must be between XX and YY.
 
 #### Start up foreman
 1. Follow steps 1, 2 and 3 from the section "setup test environment" if you haven't done so already
