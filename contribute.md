@@ -83,7 +83,7 @@ in Fedora do this: `yum install chromedriver`. If you don't do this, npm will
 install chromedriver that might be not compatible with your Chrome or Chromium
 browser which can lead to error "Chrome version must be between XX and YY."
 
-When using system chromedriver, set the correct path to it via vabieble. For
+When using system chromedriver, set the correct path to it via variable. For
 Fedora that would be: `TESTDRIVER_PATH=/usr/bin/chromedriver`.
 
 #### Setup test environment
