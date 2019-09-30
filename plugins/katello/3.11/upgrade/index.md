@@ -8,14 +8,11 @@ foreman_version: 1.21
 
 # Katello Upgrade
 
-Katello supports upgrades from version 2.0.  For users transitioning from 1.4, please see - [Transition Guide](/plugins/katello/{{ page.version }}/installation/2.0-transition.html).
+Katello supports upgrades from the previous two versions only. Upgrades should be performed sequentially without skipping versions in between.
 
+# Pre-upgrade
 
-# Pre-upgrade considerations
-
-Before you upgrade, you need to run the upgrade check script that will check for any active tasks, your version of Katello, and if there are any content hosts that will be deleted (see below). This script is included in Katello 2.4.3.
-
-To run the script:
+Before upgrading, run the upgrade check script that will check for any active tasks:
 
 {% highlight bash %}
 foreman-rake katello:upgrade_check
@@ -23,7 +20,7 @@ foreman-rake katello:upgrade_check
 
 ## Step 1 - Backup
 
-If Katello is running on a Virtual Machine, we recommend to take a snapshot prior to upgrading. Otherwise, take a backup of the relevant databases by following the [instructions here](/plugins/katello/{{ page.version }}/user_guide/backup/).
+If Katello is running on a virtual machine, we recommend to take a snapshot prior to upgrading. Otherwise, take a backup of the relevant databases by following the [instructions here](/plugins/katello/{{ page.version }}/user_guide/backup/).
 
 ## Step 2 - Operating System
 
@@ -61,17 +58,21 @@ yum -y update
 
 ## Step 5 - Run Installer
 
-The installer with the --upgrade flag will run the right database migrations for all component services, as well as adjusting the configuration to reflect what's new in Katello {{ page.version }}
+The installer with the --upgrade flag will run the right database migrations for all component services, as well as adjust the configuration to reflect what's new in Katello {{ page.version }}.
 
 {% highlight bash %}
 foreman-installer --scenario katello --upgrade
 {% endhighlight %}
 
 ## Step 6 - Reboot if necessary
-If kernel packages are updated during Step 2 (e.g. upgrading el 6.6 to 6.7), you must reboot and ensure the new kernel and SELinux policy are loaded. If there are no kernel or selinux updates
+If kernel packages are updated during Step 2 the system must be rebooted to ensure the new kernel and SELinux policy are loaded. If there are no kernel or selinux updates
 then this step can be omitted.
 
 ## Congratulations!
-You have now successfully upgraded your Katello to {% if page.version %}{{ page.version }} For a rundown of what was added, please see [release notes](/plugins/katello/{{ page.version }}/release_notes/release_notes.html).{% else %}the latest nightly{% endif %}!**
+You have now successfully upgraded your Katello to {{ page.version }}.
 
-If for any reason, the above steps failed, please review /var/log/foreman-installer/katello.log -- if any of the "Upgrade step" tasks failed, you may try to run them manaully below to aid in troubleshooting.
+{% if page.version != "nightly" %}
+For a rundown of what was added, please see the [release notes](/plugins/katello/{{ page.version }}/release_notes/release_notes.html).
+{% endif %}
+
+If the above steps failed, please review /var/log/foreman-installer/katello.log and [let us know about it](https://community.theforeman.org/c/support) if unable to resolve.
