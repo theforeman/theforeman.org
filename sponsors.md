@@ -45,6 +45,10 @@ Thank you to ATIX, for their many ongoing contributions to the codebase.
 <div class="lead text-left"><a href="https://www.dm.de"><img src="/static/images/sponsors/dm.jpg" height="125px"/></a></div>
 Thank you to dm, for their many ongoing contributions to the codebase.
 
+### Fastly
+<div class="lead text-left"><a href="https://fastly.com"><img src="/static/images/sponsors/fastly.png" height="125px"/></a></div>
+Thank you to Fastly, who provides the CDN for our downloads and repositories.
+
 ## Former Sponsors
 
 ### Positive Internet
