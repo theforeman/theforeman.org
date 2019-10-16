@@ -168,8 +168,7 @@ Follow the instructions to [prepare remote mongo](plugins/katello/{{ page.versio
 ### Stop the Foreman server
 Stop the Foreman related services to minimize risk of the data changes during the migration
 ```
-katello-service stop
-systemctl start postgresql mongod
+foreman-maintain service stop --exclude postgresql,rh-mongodb34-mongod
 ```
 
 ### Dump databases
