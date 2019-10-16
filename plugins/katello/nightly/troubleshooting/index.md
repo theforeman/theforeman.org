@@ -25,7 +25,7 @@ The status of back-end services can be found either from the Web UI on the `/abo
 
 Alternatively, the `hammer ping` command can be used to get this information.
 
-`katello-service` tool can be used to restart Katello related services. See `man katello-service` for more details.
+`foreman-maintain` tool can be used to restart Katello related services. See `foreman-maintain --help` for more details.
 
 ## Tasks
 
