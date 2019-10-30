@@ -53,6 +53,19 @@ Parameters
             </tr>
                                 <tr>
                                                                 <td colspan="1">
+                    <b>filters</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">list</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Filters with permissions for this role</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
                     <b>locations</b>
                     <div style="font-size: small">
                         <span style="color: purple">list</span>
@@ -184,6 +197,11 @@ Examples
           - "Uppsala"
         organizations:
           - "Basalt"
+        filters:
+          - resource: 'Host'
+            permissions:
+              - view_hosts
+            search: "owner_type = Usergroup and owner_id = 4"
         server_url: "https://foreman.example.com"
         username: "admin"
         password: "secret"

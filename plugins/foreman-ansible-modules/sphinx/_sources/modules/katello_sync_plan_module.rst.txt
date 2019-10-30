@@ -177,10 +177,12 @@ Parameters
                                                                                                                             <ul style="margin: 0; padding: 0"><b>Choices:</b>
                                                                                                                                                                 <li><div style="color: blue"><b>present</b>&nbsp;&larr;</div></li>
                                                                                                                                                                                                 <li>absent</li>
+                                                                                                                                                                                                <li>present_with_defaults</li>
                                                                                     </ul>
                                                                             </td>
                                                                 <td>
-                                                                        <div>State of the sync plan</div>
+                                                                        <div>State of the Sync plan</div>
+                                                    <div><code>present_with_defaults</code> will ensure the entity exists, but won&#x27;t update existing ones</div>
                                                                                 </td>
             </tr>
                                 <tr>

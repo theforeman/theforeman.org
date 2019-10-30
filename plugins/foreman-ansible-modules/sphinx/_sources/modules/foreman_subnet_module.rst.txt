@@ -71,6 +71,19 @@ Parameters
             </tr>
                                 <tr>
                                                                 <td colspan="2">
+                    <b>description</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Description of the subnet</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="2">
                     <b>dhcp_proxy</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
@@ -172,6 +185,19 @@ Parameters
                                                                                                                                                             </td>
                                                                 <td>
                                                                         <div>Subnet gateway IP address</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="2">
+                    <b>httpboot_proxy</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>HTTP Boot Smart proxy for this subnet</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -437,6 +463,19 @@ Parameters
             </tr>
                                 <tr>
                                                                 <td colspan="2">
+                    <b>updated_name</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>New subnet name. When this parameter is set, the module will not be idempotent.</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="2">
                     <b>username</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
@@ -494,6 +533,7 @@ Examples
     - name: My subnet
       foreman_subnet:
         name: "My subnet"
+        description: "My description"
         network: "192.168.0.0"
         mask: "255.255.255.192"
         gateway: "192.168.0.1"

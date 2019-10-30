@@ -17,32 +17,34 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/ansible_rtd.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -208,6 +210,19 @@
         </tr>
                             <tr>
                                                             <td colspan="2">
+                <b>description</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>Description of the subnet</div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                            <td colspan="2">
                 <b>dhcp_proxy</b>
                 <div style="font-size: small">
                     <span style="color: purple">string</span>
@@ -309,6 +324,19 @@
                                                                                                                                                         </td>
                                                             <td>
                                                                     <div>Subnet gateway IP address</div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                            <td colspan="2">
+                <b>httpboot_proxy</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>HTTP Boot Smart proxy for this subnet</div>
                                                                             </td>
         </tr>
                             <tr>
@@ -574,6 +602,19 @@
         </tr>
                             <tr>
                                                             <td colspan="2">
+                <b>updated_name</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>New subnet name. When this parameter is set, the module will not be idempotent.</div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                            <td colspan="2">
                 <b>username</b>
                 <div style="font-size: small">
                     <span style="color: purple">string</span>
@@ -623,6 +664,7 @@
 <div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">My subnet</span>
   <span class="l l-Scalar l-Scalar-Plain">foreman_subnet</span><span class="p p-Indicator">:</span>
     <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&quot;My</span><span class="nv"> </span><span class="s">subnet&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">description</span><span class="p p-Indicator">:</span> <span class="s">&quot;My</span><span class="nv"> </span><span class="s">description&quot;</span>
     <span class="l l-Scalar l-Scalar-Plain">network</span><span class="p p-Indicator">:</span> <span class="s">&quot;192.168.0.0&quot;</span>
     <span class="l l-Scalar l-Scalar-Plain">mask</span><span class="p p-Indicator">:</span> <span class="s">&quot;255.255.255.192&quot;</span>
     <span class="l l-Scalar l-Scalar-Plain">gateway</span><span class="p p-Indicator">:</span> <span class="s">&quot;192.168.0.1&quot;</span>
@@ -695,35 +737,16 @@
   
 
 
-  
-
-    
-    
-      <script type="text/javascript">
-          var DOCUMENTATION_OPTIONS = {
-              URL_ROOT:'../',
-              VERSION:'',
-              LANGUAGE:'None',
-              COLLAPSE_INDEX:false,
-              FILE_SUFFIX:'.html',
-              HAS_SOURCE:  true,
-              SOURCELINK_SUFFIX: '.txt'
-          };
-      </script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

@@ -16,6 +16,7 @@
   * :ref:`foreman_config_group_module` 
   * :ref:`foreman_domain_module` 
   * :ref:`foreman_environment_module` 
+  * :ref:`foreman_external_usergroup_module` 
   * :ref:`foreman_global_parameter_module` 
   * :ref:`foreman_host_module` 
   * :ref:`foreman_host_power_module` 
@@ -35,6 +36,7 @@
   * :ref:`foreman_snapshot_module` 
   * :ref:`foreman_subnet_module` 
   * :ref:`foreman_user_module` 
+  * :ref:`foreman_usergroup_module` 
   * :ref:`katello_activation_key_module` 
   * :ref:`katello_content_credential_module` 
   * :ref:`katello_content_view_module` 
