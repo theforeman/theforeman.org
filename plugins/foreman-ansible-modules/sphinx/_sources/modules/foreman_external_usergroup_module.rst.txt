@@ -1,12 +1,12 @@
-:source: foreman_global_parameter.py
+:source: foreman_external_usergroup.py
 
 :orphan:
 
-.. _foreman_global_parameter_module:
+.. _foreman_external_usergroup_module:
 
 
-foreman_global_parameter -- Manage Foreman Global Parameters
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+foreman_external_usergroup -- Manage external user groups in Foreman
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 .. contents::
@@ -16,7 +16,7 @@ foreman_global_parameter -- Manage Foreman Global Parameters
 
 Synopsis
 --------
-- Manage Foreman Global Parameter Entities
+- Create and delete external user groups in Foreman
 
 
 
@@ -40,6 +40,19 @@ Parameters
         </tr>
                     <tr>
                                                                 <td colspan="1">
+                    <b>auth_source_ldap</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                 / <span style="color: red">required</span>                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Name of the authentication source to be used for this group</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
                     <b>name</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
@@ -48,30 +61,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Name of the Global Parameter</div>
-                                                                                </td>
-            </tr>
-                                <tr>
-                                                                <td colspan="1">
-                    <b>parameter_type</b>
-                    <div style="font-size: small">
-                        <span style="color: purple">string</span>
-                                                                    </div>
-                                    </td>
-                                <td>
-                                                                                                                            <ul style="margin: 0; padding: 0"><b>Choices:</b>
-                                                                                                                                                                <li><div style="color: blue"><b>string</b>&nbsp;&larr;</div></li>
-                                                                                                                                                                                                <li>boolean</li>
-                                                                                                                                                                                                <li>integer</li>
-                                                                                                                                                                                                <li>real</li>
-                                                                                                                                                                                                <li>array</li>
-                                                                                                                                                                                                <li>hash</li>
-                                                                                                                                                                                                <li>yaml</li>
-                                                                                                                                                                                                <li>json</li>
-                                                                                    </ul>
-                                                                            </td>
-                                                                <td>
-                                                                        <div>Type of value</div>
+                                                                        <div>Name of the group</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -110,26 +100,24 @@ Parameters
                                 <td>
                                                                                                                             <ul style="margin: 0; padding: 0"><b>Choices:</b>
                                                                                                                                                                 <li><div style="color: blue"><b>present</b>&nbsp;&larr;</div></li>
-                                                                                                                                                                                                <li>present_with_defaults</li>
                                                                                                                                                                                                 <li>absent</li>
                                                                                     </ul>
                                                                             </td>
                                                                 <td>
-                                                                        <div>State of the Global Parameter</div>
-                                                    <div><code>present_with_defaults</code> will ensure the entity exists, but won&#x27;t update existing ones</div>
+                                                                        <div>State of the external user group</div>
                                                                                 </td>
             </tr>
                                 <tr>
                                                                 <td colspan="1">
-                    <b>updated_name</b>
+                    <b>usergroup</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
-                                                                    </div>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>New name of the Global Parameter. When this parameter is set, the module will not be idempotent.</div>
+                                                                        <div>Name of the linked usergroup</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -163,28 +151,9 @@ Parameters
                                                                                         <div style="font-size: small; color: darkgreen"><br/>aliases: verify_ssl</div>
                                     </td>
             </tr>
-                                <tr>
-                                                                <td colspan="1">
-                    <b>value</b>
-                    <div style="font-size: small">
-                        <span style="color: purple">raw</span>
-                                                                    </div>
-                                    </td>
-                                <td>
-                                                                                                                                                            </td>
-                                                                <td>
-                                                                        <div>Value of the Global Parameter</div>
-                                                                                </td>
-            </tr>
                         </table>
     <br/>
 
-
-Notes
------
-
-.. note::
-   - The *parameter_type* only has an effect on Foreman >= 1.22
 
 
 
@@ -194,31 +163,12 @@ Examples
 .. code-block:: yaml+jinja
 
     
-    - name: "Create a Global Parameter"
-      foreman_global_parameter:
-        username: "admin"
-        password: "changeme"
-        server_url: "https://foreman.example.com"
-        name: "TheAnswer"
-        value: "42"
-        state: present_with_defaults
-
-    - name: "Update a Global Parameter"
-      foreman_global_parameter:
-        username: "admin"
-        password: "changeme"
-        server_url: "https://foreman.example.com"
-        name: "TheAnswer"
-        value: "43"
+    - name: Create an external user group
+      foreman_external_usergroup:
+        name: test
+        auth_source_ldap: "My LDAP server"
+        usergroup: "Internal Usergroup"
         state: present
-
-    - name: "Delete a Global Parameter"
-      foreman_global_parameter:
-        username: "admin"
-        password: "changeme"
-        server_url: "https://foreman.example.com"
-        name: "TheAnswer"
-        state: absent
 
 
 
@@ -242,10 +192,8 @@ Status
 Authors
 ~~~~~~~
 
-- Bernhard Hopfenmueller (@Fobhep) ATIX AG
-- Matthias Dellweg (@mdellweg) ATIX AG
-- Manisha Singhal (@manisha15) ATIX AG
+- Kirill Shirinkin (@Fodoj)
 
 
 .. hint::
-    If you notice any issues in this documentation you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/foreman_global_parameter.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr>`_ to improve it.
+    If you notice any issues in this documentation you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/foreman_external_usergroup.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr>`_ to improve it.

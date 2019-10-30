@@ -72,7 +72,24 @@ Parameters
                                                                     </div>
                                     </td>
                                 <td>
-                                                                                                                                                            </td>
+                                                                                                                            <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                                <li>AIX</li>
+                                                                                                                                                                                                <li>Altlinux</li>
+                                                                                                                                                                                                <li>Archlinux</li>
+                                                                                                                                                                                                <li>Coreos</li>
+                                                                                                                                                                                                <li>Debian</li>
+                                                                                                                                                                                                <li>Freebsd</li>
+                                                                                                                                                                                                <li>Gentoo</li>
+                                                                                                                                                                                                <li>Junos</li>
+                                                                                                                                                                                                <li>NXOS</li>
+                                                                                                                                                                                                <li>Rancheros</li>
+                                                                                                                                                                                                <li>Redhat</li>
+                                                                                                                                                                                                <li>Solaris</li>
+                                                                                                                                                                                                <li>Suse</li>
+                                                                                                                                                                                                <li>Windows</li>
+                                                                                                                                                                                                <li>Xenserver</li>
+                                                                                    </ul>
+                                                                            </td>
                                                                 <td>
                                                                         <div>distribution family of the Operating System</div>
                                                                                 </td>
@@ -121,7 +138,7 @@ Parameters
                     <b>name</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
-                                                                    </div>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -236,7 +253,11 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>list of provisioning templates</div>
+                                                                        <div>List of provisioning templates that are associated with the operating system.</div>
+                                                    <div>Specify the full list of template names you want to associate with your OS.</div>
+                                                    <div>For example [&quot;Kickstart default&quot;, &quot;Kickstart default finish&quot;, &quot;Kickstart default iPXE&quot;, &quot;custom&quot;].</div>
+                                                    <div>After specifying the template associations, you can set the default association in</div>
+                                                    <div>the <span class='module'>foreman_os_default_template</span> module.</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -295,6 +316,19 @@ Parameters
                                                                 <td>
                                                                         <div>State of the Operating System</div>
                                                     <div><code>present_with_defaults</code> will ensure the entity exists, but won&#x27;t update existing ones</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="2">
+                    <b>updated_name</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>New operating system name. When this parameter is set, the module will not be idempotent.</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -360,7 +394,7 @@ Examples
         password: "changeme"
         server_url: "https://foreman.example.com"
         name: Centos 7
-        family: Red Hat
+        family: Redhat
         major: 7
         password_hash: SHA256
         state: present_with_defaults

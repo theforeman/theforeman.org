@@ -25,6 +25,8 @@ Requirements
 The below requirements are needed on the host that executes this module.
 
 - apypie
+- python-debian (For deb Package upload)
+- rpm (For rpm upload)
 
 
 Parameters
@@ -156,7 +158,8 @@ Notes
 -----
 
 .. note::
-   - Currently only idempotent when uploading to an RPM & file repository
+   - Currently only uploading to deb, RPM & file repositories is supported
+   - For anything but file repositories, a supporting library must be installed. See Requirements.
 
 
 
