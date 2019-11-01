@@ -1,7 +1,7 @@
 ---
 layout: plugin_index
 title: Foreman Azure documentation
-versions: [1.x]
+versions: [2.0.x, 1.x]
 ---
 
 # Foreman Azure manuals
