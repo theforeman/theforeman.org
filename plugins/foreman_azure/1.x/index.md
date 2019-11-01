@@ -3,7 +3,7 @@ layout: plugin
 title: Foreman Azure 1.x Manual
 version: 1.x
 # uncomment for older versions than stable or nightly
-#robots: noindex
+robots: noindex
 ---
 
 # 1. Basics
