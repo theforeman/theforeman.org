@@ -1,7 +1,5 @@
 ---
-layout: plugins/katello/documentation
 title: Disconnected
-version: nightly
 ---
 
 # Katello Inter-Server Sync

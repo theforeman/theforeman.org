@@ -1,5 +1,4 @@
 ---
-layout: plugins/katello/documentation_no_menu
 robots: noindex
 title: Documentation
 version: 3.4

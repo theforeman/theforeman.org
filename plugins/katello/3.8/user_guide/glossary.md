@@ -1,5 +1,4 @@
 ---
-layout: plugins/katello/documentation
 robots: noindex
 title: Glossary
 version: 3.8

@@ -1,5 +1,4 @@
 ---
-layout: plugins/katello/documentation
 robots: noindex
 title: Capsules
 version: 3.2

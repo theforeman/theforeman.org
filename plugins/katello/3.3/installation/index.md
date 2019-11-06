@@ -1,10 +1,8 @@
 ---
-layout: plugins/katello/documentation
 robots: noindex
 title: Katello Installation
 version: 3.3
 foreman_version: 1.14
-latest: '3.13'
 script: osmenu.js
 ---
 

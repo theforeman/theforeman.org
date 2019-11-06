@@ -1,5 +1,4 @@
 ---
-layout: plugins/katello/documentation
 robots: noindex
 title: Puppet Integration
 version: 3.7

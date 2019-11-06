@@ -1,8 +1,6 @@
 ---
-layout: plugins/katello/documentation
 title: Documentation
-version: 3.13
-# uncomment for older versions than stable or 3.13
+# uncomment for older versions than stable or nightly
 #robots: noindex
 ---
 

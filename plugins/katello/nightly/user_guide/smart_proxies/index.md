@@ -1,7 +1,5 @@
 ---
-layout: plugins/katello/documentation
 title: Smart Proxies
-version: nightly
 ---
 
 # Smart Proxies

@@ -1,7 +1,5 @@
 ---
-layout: plugins/katello/documentation
 title: Errata
-version: nightly
 ---
 
 # Errata

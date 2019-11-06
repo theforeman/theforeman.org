@@ -1,8 +1,5 @@
 ---
-layout: plugins/katello/documentation
 title: Annotated Requests
-version: nightly
-foreman_version: nightly
 script: osmenu.js
 ---
 # Repository Sync (default settings)

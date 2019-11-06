@@ -1,5 +1,4 @@
 ---
-layout: plugins/katello/documentation
 robots: noindex
 title: Use Foreman with Remote Databases
 version: '3.11'

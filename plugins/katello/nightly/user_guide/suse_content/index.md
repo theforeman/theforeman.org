@@ -1,7 +1,5 @@
 ---
-layout: plugins/katello/documentation
 title: SUSE Content
-version: nightly
 ---
 
 # SUSE Content

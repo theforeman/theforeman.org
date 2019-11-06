@@ -1,7 +1,5 @@
 ---
-layout: plugins/katello/documentation
 title: Source RPMs
-version: nightly
 ---
 
 # Source RPMs

@@ -1,7 +1,5 @@
 ---
-layout: plugins/katello/documentation
 title: CLI
-version: 3.13
 ---
 
 # Hammer

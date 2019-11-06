@@ -1,8 +1,5 @@
 ---
-layout: plugins/katello/documentation
 title: Smart Proxy Upgrade
-version: nightly
-foreman_version: nightly
 ---
 
 # Smart Proxy Upgrade

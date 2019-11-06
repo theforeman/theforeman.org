@@ -1,7 +1,5 @@
 ---
-layout: plugins/katello/documentation
 title: Content Credentials
-version: 3.13
 ---
 
 # Content Credentials

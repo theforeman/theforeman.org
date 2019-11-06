@@ -1,5 +1,4 @@
 ---
-layout: plugins/katello/documentation
 title: Use Foreman with Remote Databases
 version: '3.12'
 ---

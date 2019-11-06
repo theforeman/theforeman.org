@@ -1,7 +1,5 @@
 ---
-layout: plugins/katello/documentation
 title: Source RPMs
-version: '3.13'
 ---
 
 # Source RPMs

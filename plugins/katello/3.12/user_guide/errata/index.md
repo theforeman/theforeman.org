@@ -1,5 +1,4 @@
 ---
-layout: plugins/katello/documentation
 title: Errata
 version: '3.12'
 ---

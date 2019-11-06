@@ -1,7 +1,5 @@
 ---
-layout: plugins/katello/documentation
 title: Content Hosts
-version: nightly
 ---
 
 # Content Hosts

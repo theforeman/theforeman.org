@@ -1,8 +1,5 @@
 ---
-layout: plugins/katello/documentation
 title: Client Installation
-version: 3.13
-foreman_version: 1.23
 script: osmenu.js
 ---
 

@@ -1,5 +1,4 @@
 ---
-layout: plugins/katello/documentation
 title: Content
 version: '3.12'
 ---

@@ -1,5 +1,4 @@
 ---
-layout: plugins/katello/documentation
 title: Certificates
 version: '3.12'
 ---

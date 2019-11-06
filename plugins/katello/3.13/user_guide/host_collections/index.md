@@ -1,7 +1,5 @@
 ---
-layout: plugins/katello/documentation
 title: Host Collections
-version: 3.13
 ---
 
 # Managing Content Hosts using Host Collections

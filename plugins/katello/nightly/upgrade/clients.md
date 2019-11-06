@@ -1,8 +1,5 @@
 ---
-layout: plugins/katello/documentation
 title: Client Upgrade
-version: nightly
-foreman_version: nightly
 script: osmenu.js
 ---
 
