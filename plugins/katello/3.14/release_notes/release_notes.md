@@ -1,0 +1,14 @@
+---
+title: Release Notes
+---
+
+# Katello {{ page.version }} Release Notes
+
+For the full release notes, see the [Changelog](https://github.com/Katello/katello/blob/master/CHANGELOG.md).
+
+## Features
+
+## Deprecation Warnings
+
+## Contributors
+
