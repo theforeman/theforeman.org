@@ -1,7 +1,5 @@
 ---
-layout: plugins/katello/documentation
 title: Red Hat Content
-version: 3.13
 ---
 
 # Red Hat Content

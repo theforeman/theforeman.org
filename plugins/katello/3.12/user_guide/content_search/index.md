@@ -1,5 +1,4 @@
 ---
-layout: plugins/katello/documentation
 title: Content Search
 version: '3.12'
 ---

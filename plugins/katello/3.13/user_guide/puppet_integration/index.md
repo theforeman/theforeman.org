@@ -1,7 +1,5 @@
 ---
-layout: plugins/katello/documentation
 title: Puppet Integration
-version: 3.13
 ---
 
 # Managing Puppet Content

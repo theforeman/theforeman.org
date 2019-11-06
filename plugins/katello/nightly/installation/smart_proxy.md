@@ -1,7 +1,5 @@
 ---
-layout: plugins/katello/documentation
 title: Smart Proxy Installation
-version: nightly
 ---
 
 # Smart Proxy Installation

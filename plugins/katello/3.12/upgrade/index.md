@@ -1,5 +1,4 @@
 ---
-layout: plugins/katello/documentation
 title: Katello Upgrade
 version: '3.12'
 foreman_version: 1.22

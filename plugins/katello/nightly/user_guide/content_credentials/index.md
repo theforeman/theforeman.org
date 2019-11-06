@@ -1,7 +1,5 @@
 ---
-layout: plugins/katello/documentation
 title: Content Credentials
-version: nightly
 ---
 
 # Content Credentials

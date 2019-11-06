@@ -1,5 +1,4 @@
 ---
-layout: plugins/katello/documentation
 version: '3.12'
 title: Troubleshooting
 ---

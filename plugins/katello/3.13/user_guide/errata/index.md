@@ -1,7 +1,5 @@
 ---
-layout: plugins/katello/documentation
 title: Errata
-version: 3.13
 ---
 
 # Errata

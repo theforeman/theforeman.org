@@ -1,8 +1,5 @@
 ---
-layout: plugins/katello/documentation
 title: Katello Upgrade
-version: nightly
-foreman_version: nightly
 ---
 
 # Katello Upgrade

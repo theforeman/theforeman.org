@@ -1,6 +1,4 @@
 ---
-layout: plugins/katello/documentation
-version: nightly
 title: Troubleshooting Content Hosts
 ---
 

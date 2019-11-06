@@ -1,7 +1,5 @@
 ---
-layout: plugins/katello/documentation
 title: Backup
-version: 3.13
 ---
 
 # Backup

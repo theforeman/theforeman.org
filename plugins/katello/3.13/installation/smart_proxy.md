@@ -1,7 +1,5 @@
 ---
-layout: plugins/katello/documentation
 title: Smart Proxy Installation
-version: 3.13
 ---
 
 # Smart Proxy Installation

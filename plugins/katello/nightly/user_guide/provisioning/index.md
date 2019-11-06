@@ -1,7 +1,5 @@
 ---
-layout: plugins/katello/documentation
 title: Provisioning
-version: nightly
 ---
 
 # Provisioning

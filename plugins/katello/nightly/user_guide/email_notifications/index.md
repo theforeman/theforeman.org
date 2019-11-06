@@ -1,7 +1,5 @@
 ---
-layout: plugins/katello/documentation
 title: Email Notifications
-version: nightly
 ---
 
 # Email Notifications

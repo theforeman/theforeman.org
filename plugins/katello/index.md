@@ -1,8 +1,6 @@
 ---
 layout: plugin_index
-robots: noindex
 title: Katello Documentation
-versions: [{name: '3.13', display: '3.13'}, {name: '3.12', display: '3.12'}, {name: '3.11', display: '3.11'}, {name: '3.10', display: '3.10'}, {name: 3.9, display: '3.9'}, {name: 3.8, display: '3.8'}, {name: 3.7, display: '3.7'}, {name: 3.6, display: '3.6'}, {name: 3.5, display: '3.5'}, {name: 3.4, display: '3.4'}, {name: 3.3, display: '3.3'}, {name: 3.2, 'display': '3.2'}, {name: 3.1, display: '3.1'}, {name: 3.0, display: '3.0'}, {name: 2.4, display: '2.4'}, {name: 'nightly', display: 'nightly'}]
 ---
 
 <div class="row" style="min-height: 700px">
@@ -54,7 +52,7 @@ versions: [{name: '3.13', display: '3.13'}, {name: '3.12', display: '3.12'}, {na
       Troubleshooting
     </h4>
     <p style="font-size: 14px">
-      Having issues with your Katello? Check the <a href="/support.html">support page</a> for information on how to get help or the <a href="/plugins/katello/{{ page.versions[0].name }}/troubleshooting/index.html">troubleshooting guide</a> for common issues.
+      Having issues with your Katello? Check the <a href="/support.html">support page</a> for information on how to get help or the <a href="/plugins/katello/{{ site.data.plugins.katello.versions[0].name }}/troubleshooting/index.html">troubleshooting guide</a> for common issues.
     </p>
 
     <br/>
@@ -69,7 +67,7 @@ versions: [{name: '3.13', display: '3.13'}, {name: '3.12', display: '3.12'}, {na
 
   <div class="col-sm-2 pull-right">
     <h3 style="border-bottom: 1px solid #CCC;">Versions</h3>
-    {% for version in page.versions %}
+    {% for version in site.data.plugins.katello.versions %}
 		<a href="plugins/katello/{{ version.name }}/index.html" class="btn" style="text-transform: none">
 			<i class="fa fa-newspaper-o"></i>
 			<span id='manual'>{{ version.display }}</span>

@@ -1,9 +1,7 @@
 ---
-layout: plugins/katello/documentation
 title: Documentation
-version: nightly
 # uncomment for older versions than stable or nightly
-#robots: noindex
+robots: noindex
 ---
 
 # Katello Documentation

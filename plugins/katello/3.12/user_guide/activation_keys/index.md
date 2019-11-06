@@ -1,5 +1,4 @@
 ---
-layout: plugins/katello/documentation
 title: Activation Keys
 version: '3.12'
 ---

@@ -1,6 +1,4 @@
 ---
-layout: plugins/katello/documentation
-version: 3.13
 title: Troubleshooting
 ---
 

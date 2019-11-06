@@ -1,5 +1,4 @@
 ---
-layout: plugins/katello/documentation
 title: User Guide
 version: '3.12'
 ---

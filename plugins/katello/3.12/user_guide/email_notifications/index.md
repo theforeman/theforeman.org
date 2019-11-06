@@ -1,5 +1,4 @@
 ---
-layout: plugins/katello/documentation
 title: Email Notifications
 version: '3.12'
 ---

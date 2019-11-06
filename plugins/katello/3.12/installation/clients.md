@@ -1,5 +1,4 @@
 ---
-layout: plugins/katello/documentation
 title: Client Installation
 version: '3.12'
 foreman_version: 1.22

@@ -1,5 +1,4 @@
 ---
-layout: plugins/katello/documentation
 title: Disconnected
 version: '3.12'
 ---
