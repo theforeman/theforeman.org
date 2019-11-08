@@ -16,10 +16,9 @@ script: osmenu.js
   </div>
 {% endif %}
 
-Note: After installation of Katello, be sure to trust Katello's CA certificate
-on your system.  This is required for the encrypted NoVNC connections. You
-will find `katello-server-ca.crt` in the `/pub` directory of your Katello
-server (e.g. `http://katello.example.com/pub/katello-server-ca.crt`).
+<div class="alert alert-info" markdown="1">
+After installation of Katello, navigate to the `/pub` directory and trust Katello's CA certificate for identifying web sites (e.g. `http://katello.example.com/pub/katello-server-ca.crt`).
+</div>
 
 ## Important Note for Existing Installations
 
