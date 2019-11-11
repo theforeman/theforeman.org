@@ -17,8 +17,8 @@ Install the appropriate Katello client release packages.
      <option value="el5">Enterprise Linux 5 (CentOS, etc.)</option>
      <option value="el6">Enterprise Linux 6 (CentOS, etc.)</option>
      <option value="el7" selected="selected">Enterprise Linux 7 (CentOS, etc.)</option>
-     <option value="f27">Fedora 27</option>
      <option value="f28">Fedora 28</option>
+     <option value="f29">Fedora 29</option>
      <option value="sles11">Suse Enterprise Linux Server 11</option>
      <option value="sles12">Suse Enterprise Linux Server 12</option>
   </select>
@@ -45,15 +45,15 @@ yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/el7/
 {% endhighlight %}
 </div>
 
-<div id="f27" markdown="1">
-{% highlight bash %}
-yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/fc27/x86_64/foreman-client-release.rpm
-{% endhighlight %}
-</div>
-
 <div id="f28" markdown="1">
 {% highlight bash %}
 yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/fc28/x86_64/foreman-client-release.rpm
+{% endhighlight %}
+</div>
+
+<div id="f29" markdown="1">
+{% highlight bash %}
+yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/fc29/x86_64/foreman-client-release.rpm
 {% endhighlight %}
 </div>
 
