@@ -306,6 +306,8 @@ previous_version: "1.23"
 {%include manuals/{{ page.version }}/5.7.5_populate_users_attributes_groups.md %}
 ### 5.7.6 Namespace separation
 {%include manuals/{{ page.version }}/5.7.6_namespace_separation.md %}
+### 5.7.7 Single Sign-on for Foreman using OpenID Connect protocol
+{%include manuals/{{ page.version }}/5.7.7_openid_sso.md %}
 
 ## 5.8 Multiple Foreman instances
 {%include manuals/{{ page.version }}/5.8_multiple_foremen.md %}
