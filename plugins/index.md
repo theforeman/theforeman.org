@@ -47,12 +47,6 @@ Foreman plugins are implemented as [Rails engines](http://guides.rubyonrails.org
 			Column view
 		</a>
 	</div>
- 	<div class='col-xs-3 center'>
-		<a href="plugins/foreman_cockpit/" class="btn-doc btn">
-			<p class='h2 doc-icon'><i class="fa fa-rocket"></i></p>
-			Cockpit
-		</a>
-	</div>
 	<div class='col-xs-3 center'>
 		<a href="https://github.com/theforeman/foreman_default_hostgroup/" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-check-circle"></i></p>
