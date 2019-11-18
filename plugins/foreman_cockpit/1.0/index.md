@@ -3,8 +3,12 @@ layout: plugin
 title: Foreman Cockpit 1.0 manual
 version: 1.0
 # uncomment for older versions than stable or nightly
-#robots: noindex
+robots: noindex
 ---
+
+<div class="bs-callout-info bs-callout">
+This plugin is not compatible with Foreman since Foreman 1.17 and its functionality is now integrated in <a href="plugins/foreman_remote_execution/">Foreman Remote Execution</a>.
+</div>
 
 # 1. {{ page.title }}
 
