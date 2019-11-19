@@ -6,7 +6,7 @@ version: 0.12.0
 version_short: 0.12
 foreman_version: '1.21'
 # uncomment for older versions than stable or nightly
-#robots: noindex
+robots: noindex
 ---
 
 # 1. {{ page.title }}
