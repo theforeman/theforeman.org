@@ -8,7 +8,6 @@ Components include the Foreman web UI, Smart Proxy, Passenger, a Puppet master (
 * Debian 9 (Stretch), i386/amd64/aarch64
 * Debian 10 (Buster), i386/amd64/aarch64
 * Red Hat Enterprise Linux 7, x86_64
-* Ubuntu 16.04 (Xenial), i386/amd64/aarch64
 * Ubuntu 18.04 (Bionic), i386/amd64/aarch64
 
 Other operating systems will need to use alternative installation methods (see the manual).
