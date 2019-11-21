@@ -38,6 +38,8 @@ previous_version: "1.23"
 {%include manuals/{{ page.version }}/3.2.2_installer_options.md %}
 ### 3.2.3 Installation Scenarios
 {%include manuals/{{ page.version }}/3.2.3_installation_scenarios.md %}
+### 3.2.4 Tuning options
+{%include manuals/{{ page.version }}/3.2.4_tuning_options.md %}
 ## 3.3 Install From Packages
 {%include manuals/{{ page.version }}/3.3_install_from_packages.md %}
 ### 3.3.1 RPM Packages
