@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Foreman Community Newsletter (November 2019)
-date: 2019-11-24 13:46:53
+date: 2019-11-24 10:46:53
 author:
  name: Ori Rabin
  uri: orabin
