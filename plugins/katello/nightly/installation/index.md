@@ -171,6 +171,65 @@ arguments. Multiple entries can be entered via
         reverse: true
         contact: hostmaster.example.com.
 
+## Tuning options
+The Foreman installer supports automatic tuning of your environment using predefined tuning profiles.  These tuning profiles are the result of a culmination of extensive learning from Foreman environments deployed at scale in large user environments.
+
+When the foreman-installer is run, it is deployed with a predefined tuning profile named `default`. The definition of the `default` profile can be found in `/usr/share/foreman-installer/config/foreman.hiera/tuning/common.yaml`.
+
+Other than the default tuned profile, foreman-installer supports 4 different tuning profiles:
+
+  * medium
+  * large
+  * extra-large
+  * extra-extra-large
+
+Definitions of various tuning profiles can be found in this directory `/usr/share/foreman-installer/config/foreman.hiera/tuning/sizes/`.  Based on your environment needs, use one of the tuning profiles (`medium`, `large`, `extra-large`, `extra-extra-large`) in the installer.  For example, `medium` profile can be applied like:
+
+```bash
+foreman-installer --tuning medium
+```
+
+To reset to the default profile:
+
+```bash
+foreman-installer --tuning default
+```
+
+**Note**
+
+- Using the `--tuning` option does not update `/etc/foreman-installer/custom-hiera.yml`, instead it directly updates the required configuration as specified in the corresponding tuning profile. You can still use `custom-hiera.yml` to override any configuration if really needed.
+- If you had already used `custom-hiera.yml` and starting to use the tuned profiles, you may want to review the definition of tuned profiles (`/usr/share/foreman-installer/config/foreman.hiera/tuning/sizes/`) and remove the duplicated configuration entries from your `custom-hiera.yml`.
+- Use `foreman-installer --help | grep tuning` to identify the current tuning level.
+
+Sample output for `default` tuning:
+
+```bash
+foreman-installer --help | grep tuning
+    --tuning INSTALLATION_SIZE    Tune for an installation size. Choices: default, medium, large, extra-large, extra-extra-large (default: "default")
+```
+
+Sample output for `medium` tuning:
+
+```bash
+foreman-installer --help | grep tuning
+    --tuning INSTALLATION_SIZE    Tune for an installation size. Choices: default, medium, large, extra-large, extra-extra-large (default: "medium")
+```
+
+It is difficult to find the exact tuning profile for a specific environment in the first attempt because it depends on various factors like the number of managed hosts, the features used in scale (E.g., Remote Execution), the bulk action on hosts, the total amount of content, amount of host traffic to foreman, etc.  Our recommendation is that you start with the tuning profile guidance as shown in the below table based on the number of managed hosts and scale up your environment as needed.
+
+**Note**
+
+- The information in the table below is just a guidance.  It is strongly recommended that you monitor the foreman environment regularly and tune up as required.
+- The RAM and CPU Cores check is also integrated into the foreman-installer now. Use `disable-system-checks` if you like to skip this check in the installer.
+
+| Tuned profile     |    Number of Managed hosts  |  Minimum Recommended RAM | Minimum Recommended CPU Cores |
+|:------------------|:---------------------------:|:------------------------:|------------------------------:|
+| default           |          up-to 5000         |            20G           |                4              |
+| medium            |        5000 - 10000         |            32G           |                8              |
+| large             |       10000 - 20000         |            64G           |               16              |
+| extra-large       |       20000 - 60000         |           128G           |               32              |
+| extra-extra-large |       20000 - 60000         |           256G           |               48              |
+
 ## Forklift
 
 Foreman provides a git repository designed to streamline setup by setting up all the proper repositories. Forklift provides the ability to deploy a virtual machine instance via Vagrant or direct deployment on an already provisioned machine. For details on how to install using forklift, please see the [README](https://github.com/theforeman/forklift/blob/master/README.md).
