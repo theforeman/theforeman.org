@@ -182,22 +182,10 @@ Other than the default tuned profile, foreman-installer supports 4 different tun
   * extra-large
   * extra-extra-large
 
-Definitions of various tuning profiles can be found in this directory `/usr/share/foreman-installer/config/foreman.hiera/tuning/sizes/`.  Based on your environment needs, use one of the tuning profiles in the installer as shown below.
+Definitions of various tuning profiles can be found in this directory `/usr/share/foreman-installer/config/foreman.hiera/tuning/sizes/`.  Based on your environment needs, use one of the tuning profiles (`medium`, `large`, `extra-large`, `extra-extra-large`) in the installer.  For example, `medium` profile can be applied like:
 
 ```bash
 foreman-installer --tuning medium
-```
-
-```bash
-foreman-installer --tuning large
-```
-
-```bash
-foreman-installer --tuning extra-large
-```
-
-```bash
-foreman-installer --tuning extra-extra-large
 ```
 
 To reset to the default profile:
@@ -228,15 +216,18 @@ foreman-installer --help | grep tuning
 
 It is difficult to find the exact tuning profile for a specific environment in the first attempt because it depends on various factors like the number of managed hosts, the features used in scale (E.g., Remote Execution), the bulk action on hosts, the total amount of content, amount of host traffic to foreman, etc.  Our recommendation is that you start with the tuning profile guidance as shown in the below table based on the number of managed hosts and scale up your environment as needed.
 
-**Note** The information in the table below is just a guidance.  It is strongly recommended that you monitor the foreman environment regularly and tune up as required.
+**Note**
 
-| Tuned profile     |    Number of Managed hosts  |  Minimum Recommended RAM | Minimum Recommended Cores |
-|:------------------|:---------------------------:|:------------------------:|--------------------------:|
-| default           |          up-to 5000         |            20G           |             4             |
-| medium            |        5000 - 10000         |            32G           |             8             |
-| large             |       10000 - 20000         |            64G           |            16             |
-| extra-large       |       20000 - 60000         |           128G           |            32             |
-| extra-extra-large |       20000 - 60000         |           256G           |            48             |
+- The information in the table below is just a guidance.  It is strongly recommended that you monitor the foreman environment regularly and tune up as required.
+- The RAM and CPU Cores check is also integrated into the foreman-installer now. Use `disable-system-checks` if you like to skip this check in the installer.
+
+| Tuned profile     |    Number of Managed hosts  |  Minimum Recommended RAM | Minimum Recommended CPU Cores |
+|:------------------|:---------------------------:|:------------------------:|------------------------------:|
+| default           |          up-to 5000         |            20G           |                4              |
+| medium            |        5000 - 10000         |            32G           |                8              |
+| large             |       10000 - 20000         |            64G           |               16              |
+| extra-large       |       20000 - 60000         |           128G           |               32              |
+| extra-extra-large |       20000 - 60000         |           256G           |               48              |
 
 ## Forklift
 
