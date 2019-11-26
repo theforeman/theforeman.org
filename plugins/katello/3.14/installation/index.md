@@ -194,11 +194,7 @@ To reset to the default profile:
 foreman-installer --tuning default
 ```
 
-**Note**
-
-- Using the `--tuning` option does not update `/etc/foreman-installer/custom-hiera.yml`, instead it directly updates the required configuration as specified in the corresponding tuning profile. You can still use `custom-hiera.yml` to override any configuration if really needed.
-- If you had already used `custom-hiera.yml` and starting to use the tuned profiles, you may want to review the definition of tuned profiles (`/usr/share/foreman-installer/config/foreman.hiera/tuning/sizes/`) and remove the duplicated configuration entries from your `custom-hiera.yml`.
-- Use `foreman-installer --help | grep tuning` to identify the current tuning level.
+Use `foreman-installer --help | grep tuning` to identify the current tuning level.
 
 Sample output for `default` tuning:
 
@@ -213,6 +209,13 @@ Sample output for `medium` tuning:
 foreman-installer --help | grep tuning
     --tuning INSTALLATION_SIZE    Tune for an installation size. Choices: default, medium, large, extra-large, extra-extra-large (default: "medium")
 ```
+
+**Note**
+
+- Using the `--tuning` option does not update `/etc/foreman-installer/custom-hiera.yml`, instead it directly updates the required configuration as specified in the corresponding tuning profile. You can still use `custom-hiera.yml` to override any configuration if really needed.
+- If you had already used `custom-hiera.yml` and starting to use the tuned profiles, you may want to review the definition of tuned profiles (`/usr/share/foreman-installer/config/foreman.hiera/tuning/sizes/`) and remove the duplicated configuration entries from your `custom-hiera.yml`.
+
+### Which tuning profile should you choose?
 
 It is difficult to find the exact tuning profile for a specific environment in the first attempt because it depends on various factors like the number of managed hosts, the features used in scale (E.g., Remote Execution), the bulk action on hosts, the total amount of content, amount of host traffic to foreman, etc.  Our recommendation is that you start with the tuning profile guidance as shown in the below table based on the number of managed hosts and scale up your environment as needed.
 
