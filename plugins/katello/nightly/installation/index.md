@@ -174,16 +174,14 @@ arguments. Multiple entries can be entered via
 ## Tuning options
 The Foreman installer supports automatic tuning of your environment using predefined tuning profiles.  These tuning profiles are the result of a culmination of extensive learning from Foreman environments deployed at scale in large user environments.
 
-When the foreman-installer is run, it is deployed with a predefined tuning profile named `default`. The definition of the `default` profile can be found in `/usr/share/foreman-installer/config/foreman.hiera/tuning/common.yaml`.
-
-Other than the default tuned profile, foreman-installer supports 4 different tuning profiles:
+When the foreman-installer is run, it is deployed with a `default` predefined tuning profile. Other than the default tuned profile, foreman-installer supports 4 different tuning profiles:
 
   * medium
   * large
   * extra-large
   * extra-extra-large
 
-Definitions of various tuning profiles can be found in this directory `/usr/share/foreman-installer/config/foreman.hiera/tuning/sizes/`.  Based on your environment needs, use one of the tuning profiles (`medium`, `large`, `extra-large`, `extra-extra-large`) in the installer.  For example, `medium` profile can be applied like:
+Based on your environment needs, use one of the tuning profiles (`medium`, `large`, `extra-large`, `extra-extra-large`) in the installer.  For example, `medium` profile can be applied like:
 
 ```bash
 foreman-installer --tuning medium
@@ -197,13 +195,6 @@ foreman-installer --tuning default
 
 Use `foreman-installer --help | grep tuning` to identify the current tuning level.
 
-Sample output for `default` tuning:
-
-```bash
-foreman-installer --help | grep tuning
-    --tuning INSTALLATION_SIZE    Tune for an installation size. Choices: default, medium, large, extra-large, extra-extra-large (default: "default")
-```
-
 Sample output for `medium` tuning:
 
 ```bash
@@ -211,10 +202,19 @@ foreman-installer --help | grep tuning
     --tuning INSTALLATION_SIZE    Tune for an installation size. Choices: default, medium, large, extra-large, extra-extra-large (default: "medium")
 ```
 
+Sample output for `default` tuning:
+
+```bash
+foreman-installer --help | grep tuning
+    --tuning INSTALLATION_SIZE    Tune for an installation size. Choices: default, medium, large, extra-large, extra-extra-large (default: "default")
+```
+
 **Note**
 
+- Definitions of various tuning profiles can be found in this directory `/usr/share/foreman-installer/config/foreman.hiera/tuning/sizes/`.  Note that `common.yaml` is always applied and the selected tuning profile (e.g., `medium`) is applied on top and takes precedence.
 - Using the `--tuning` option does not update `/etc/foreman-installer/custom-hiera.yml`, instead it directly updates the required configuration as specified in the corresponding tuning profile. You can still use `custom-hiera.yml` to override any configuration if really needed.
-- If you had already used `custom-hiera.yml` and starting to use the tuned profiles, you may want to review the definition of tuned profiles (`/usr/share/foreman-installer/config/foreman.hiera/tuning/sizes/`) and remove the duplicated configuration entries from your `custom-hiera.yml`.
+- If you had already used `custom-hiera.yml` and starting to use the tuned profiles, you may want to review the definition of tuned profiles (`/usr/share/foreman-installer/config/foreman.hiera/tuning/common.yaml` and `/usr/share/foreman-installer/config/foreman.hiera/tuning/sizes/`) and remove the duplicated configuration entries from your `custom-hiera.yml`.
+- You can also use `foreman-installer --noop` to run the installer in a test mode and identify what configurations are changed before actually running the installer.
 
 ### Which tuning profile should you choose?
 
@@ -232,7 +232,6 @@ It is difficult to find the exact tuning profile for a specific environment in t
 | large             |       10000 - 20000         |            64G           |               16              |
 | extra-large       |       20000 - 60000         |           128G           |               32              |
 | extra-extra-large |       20000 - 60000         |           256G           |               48              |
-
 ## Forklift
 
 Foreman provides a git repository designed to streamline setup by setting up all the proper repositories. Forklift provides the ability to deploy a virtual machine instance via Vagrant or direct deployment on an already provisioned machine. For details on how to install using forklift, please see the [README](https://github.com/theforeman/forklift/blob/master/README.md).
