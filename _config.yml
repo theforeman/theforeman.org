@@ -108,7 +108,11 @@ defaults:
       path: "plugins/katello"
     values:
       layout: "plugins/katello/documentation"
-      latest: "3.13"
+      latest: "3.14"
+  - scope:
+      path: "plugins/katello/*/api"
+    values:
+      layout: "plugins/katello/documentation_no_menu"
   - scope:
       path: "plugins/katello/nightly"
     values:
