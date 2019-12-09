@@ -570,6 +570,17 @@ hammer job-invocation create --job-template "Run Command - SSH Default" \
 hammer job-invocation output --id 155 --host rex01.example.com
 ```
 
+## 3.6 Cockpit integration
+
+To automatically sign to managed host's Cockpit web interface, click on "Web
+Console" button on the host detail page. The button only appears when plugin
+was installed with `--enable-foreman-proxy-plugin-remote-execution-cockpit`
+option. The managed host must also have the `cockpit-system` package installed.
+
+Foreman and Cockpit exchange token via SSH, there is no need to enable Cockpit
+web service or create firewall rule to connect to port 9090. All communication
+is tunelled via SSH.
+
 # 4. Advanced topics
 
 In this section we try to explain how things work behind the scenes.
