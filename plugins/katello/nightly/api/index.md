@@ -1,5 +1,6 @@
 ---
 title: Documentation
+layout: plugins/katello/documentation
 ---
 
 <div id="wrap">

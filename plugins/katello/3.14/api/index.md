@@ -1,5 +1,4 @@
 ---
-layout: plugins/katello/documentation_no_menu
 title: Documentation
 ---
 
