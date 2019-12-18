@@ -90,7 +90,7 @@ on Foreman.
 * **Facts**: Inventory of facts reported by configuration management agents (Facter, Ansible, Salt grains).
 * **Trends**: Track changes in Foreman infrastructure over time, including key Foreman resources or facts.
 * **Audit**: Detailed audit trail with per-field granularity and `diff` feature for config templates and reports.
-* **Report templates **: Thanks to report templates you can generate custom text reports based on data that are available in Foreman. The output can be csv, yaml, json. Templates can contain additional logic and the report can be customized when it's generated.
+* **Report templates**: Thanks to report templates you can generate custom text reports based on data that are available in Foreman. The output can be csv, yaml, json. Templates can contain additional logic and the report can be customized when it's generated.
 
 **Remote execution (plugin)**
 
