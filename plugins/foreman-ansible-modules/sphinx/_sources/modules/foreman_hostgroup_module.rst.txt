@@ -157,6 +157,19 @@ Parameters
             </tr>
                                 <tr>
                                                                 <td colspan="2">
+                    <b>kickstart_repository</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Kickstart repository name. Only available for katello installations.</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="2">
                     <b>lifecycle_environment</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
@@ -178,7 +191,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>List of locations names</div>
+                                                                        <div>List of locations the entity should be assigned to</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -258,7 +271,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>List of organizations names</div>
+                                                                        <div>List of organizations the entity should be assigned to</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -394,6 +407,19 @@ Parameters
             </tr>
                                 <tr>
                                                                 <td colspan="2">
+                    <b>puppetclasses</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">list</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>List of puppet classes to include in this host group. Must exist for hostgroup&#x27;s puppet environment.</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="2">
                     <b>pxe_loader</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
@@ -474,7 +500,7 @@ Parameters
                                                                                     </ul>
                                                                             </td>
                                                                 <td>
-                                                                        <div>Hostgroup presence</div>
+                                                                        <div>State of the entity in Foreman</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -596,7 +622,7 @@ Examples
         parent: "new_hostgroup"
         name: "my nested hostgroup"
 
-    - name: "My hostgroup with ome proxies"
+    - name: "My hostgroup with some proxies"
       foreman_hostgroup:
         name: "my hostgroup"
         environment: production
@@ -650,4 +676,4 @@ Authors
 
 
 .. hint::
-    If you notice any issues in this documentation you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/foreman_hostgroup.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr>`_ to improve it.
+    If you notice any issues in this documentation, you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/plugins/modules/foreman_hostgroup.py>`_ to improve it.

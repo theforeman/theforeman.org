@@ -149,24 +149,24 @@
 <span id="foreman-compute-resource-module"></span><h1>foreman_compute_resource – Manage Foreman Compute resources using Foreman API<a class="headerlink" href="#foreman-compute-resource-manage-foreman-compute-resources-using-foreman-api" title="Permalink to this headline">¶</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></li>
-<li><a class="reference internal" href="#requirements" id="id2">Requirements</a></li>
-<li><a class="reference internal" href="#parameters" id="id3">Parameters</a></li>
-<li><a class="reference internal" href="#examples" id="id4">Examples</a></li>
-<li><a class="reference internal" href="#status" id="id5">Status</a></li>
+<li><p><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></p></li>
+<li><p><a class="reference internal" href="#requirements" id="id2">Requirements</a></p></li>
+<li><p><a class="reference internal" href="#parameters" id="id3">Parameters</a></p></li>
+<li><p><a class="reference internal" href="#examples" id="id4">Examples</a></p></li>
+<li><p><a class="reference internal" href="#status" id="id5">Status</a></p></li>
 </ul>
 </div>
 <div class="section" id="synopsis">
 <h2><a class="toc-backref" href="#id1">Synopsis</a><a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Create, update and delete Foreman Compute Resources using Foreman API</li>
+<li><p>Create, update and delete Foreman Compute Resources using Foreman API</p></li>
 </ul>
 </div>
 <div class="section" id="requirements">
 <h2><a class="toc-backref" href="#id2">Requirements</a><a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <p>The below requirements are needed on the host that executes this module.</p>
 <ul class="simple">
-<li>apypie</li>
+<li><p>apypie</p></li>
 </ul>
 </div>
 <div class="section" id="parameters">
@@ -200,7 +200,7 @@
                             <td>
                                                                                                                                                         </td>
                                                             <td>
-                                                                    <div>List of locations the compute resource should be assigned to</div>
+                                                                    <div>List of locations the entity should be assigned to</div>
                                                                             </td>
         </tr>
                             <tr>
@@ -226,7 +226,7 @@
                             <td>
                                                                                                                                                         </td>
                                                             <td>
-                                                                    <div>List of organizations the compute resource should be assigned to</div>
+                                                                    <div>List of organizations the entity should be assigned to</div>
                                                                             </td>
         </tr>
                             <tr>
@@ -399,12 +399,12 @@
                             <td>
                                                                                                                         <ul style="margin: 0; padding: 0"><b>Choices:</b>
                                                                                                                                                             <li><div style="color: blue"><b>present</b>&nbsp;&larr;</div></li>
-                                                                                                                                                                                            <li>absent</li>
                                                                                                                                                                                             <li>present_with_defaults</li>
+                                                                                                                                                                                            <li>absent</li>
                                                                                 </ul>
                                                                         </td>
                                                             <td>
-                                                                    <div>compute resource presence</div>
+                                                                    <div>State of the entity in Foreman</div>
                                                 <div><code>present_with_defaults</code> will ensure the entity exists, but won&#x27;t update existing ones</div>
                                                                             </td>
         </tr>
@@ -456,103 +456,103 @@
 <br/></div>
 <div class="section" id="examples">
 <h2><a class="toc-backref" href="#id4">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Create livirt compute resource</span>
-  <span class="l l-Scalar l-Scalar-Plain">foreman_compute_resource</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">example_compute_resource</span>
-    <span class="l l-Scalar l-Scalar-Plain">locations</span><span class="p p-Indicator">:</span>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Create livirt compute resource</span>
+  <span class="nt">foreman_compute_resource</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">example_compute_resource</span>
+    <span class="nt">locations</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Munich</span>
-    <span class="l l-Scalar l-Scalar-Plain">organizations</span><span class="p p-Indicator">:</span>
+    <span class="nt">organizations</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ATIX</span>
-    <span class="l l-Scalar l-Scalar-Plain">provider</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">libvirt</span>
-    <span class="l l-Scalar l-Scalar-Plain">provider_params</span><span class="p p-Indicator">:</span>
-      <span class="l l-Scalar l-Scalar-Plain">url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">libvirt.example.com</span>
-      <span class="l l-Scalar l-Scalar-Plain">display_type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">vnc</span>
-    <span class="l l-Scalar l-Scalar-Plain">server_url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">foreman.example.com</span>
-    <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
-    <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
-    <span class="l l-Scalar l-Scalar-Plain">state</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">libvirt</span>
+    <span class="nt">provider_params</span><span class="p">:</span>
+      <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">libvirt.example.com</span>
+      <span class="nt">display_type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">vnc</span>
+    <span class="nt">server_url</span><span class="p">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
+    <span class="nt">username</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
+    <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
+    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
 
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Update livirt compute resource</span>
-  <span class="l l-Scalar l-Scalar-Plain">foreman_compute_resource</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">example_compute_resource</span>
-    <span class="l l-Scalar l-Scalar-Plain">description</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">updated compute resource</span>
-    <span class="l l-Scalar l-Scalar-Plain">locations</span><span class="p p-Indicator">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Update livirt compute resource</span>
+  <span class="nt">foreman_compute_resource</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">example_compute_resource</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">updated compute resource</span>
+    <span class="nt">locations</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Munich</span>
-    <span class="l l-Scalar l-Scalar-Plain">organizations</span><span class="p p-Indicator">:</span>
+    <span class="nt">organizations</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ATIX</span>
-    <span class="l l-Scalar l-Scalar-Plain">provider</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">libvirt</span>
-    <span class="l l-Scalar l-Scalar-Plain">provider_params</span><span class="p p-Indicator">:</span>
-      <span class="l l-Scalar l-Scalar-Plain">url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">libvirt.example.com</span>
-      <span class="l l-Scalar l-Scalar-Plain">display_type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">vnc</span>
-    <span class="l l-Scalar l-Scalar-Plain">server_url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">foreman.example.com</span>
-    <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
-    <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
-    <span class="l l-Scalar l-Scalar-Plain">state</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">libvirt</span>
+    <span class="nt">provider_params</span><span class="p">:</span>
+      <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">libvirt.example.com</span>
+      <span class="nt">display_type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">vnc</span>
+    <span class="nt">server_url</span><span class="p">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
+    <span class="nt">username</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
+    <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
+    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
 
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Delete livirt compute resource</span>
-  <span class="l l-Scalar l-Scalar-Plain">foreman_compute_resource</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">example_compute_resource</span>
-    <span class="l l-Scalar l-Scalar-Plain">server_url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">foreman.example.com</span>
-    <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
-    <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
-    <span class="l l-Scalar l-Scalar-Plain">state</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">absent</span>
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Delete livirt compute resource</span>
+  <span class="nt">foreman_compute_resource</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">example_compute_resource</span>
+    <span class="nt">server_url</span><span class="p">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
+    <span class="nt">username</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
+    <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
+    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">absent</span>
 
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Create vmware compute resource</span>
-  <span class="l l-Scalar l-Scalar-Plain">foreman_compute_resource</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">example_compute_resource</span>
-    <span class="l l-Scalar l-Scalar-Plain">locations</span><span class="p p-Indicator">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Create vmware compute resource</span>
+  <span class="nt">foreman_compute_resource</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">example_compute_resource</span>
+    <span class="nt">locations</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Munich</span>
-    <span class="l l-Scalar l-Scalar-Plain">organizations</span><span class="p p-Indicator">:</span>
+    <span class="nt">organizations</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ATIX</span>
-    <span class="l l-Scalar l-Scalar-Plain">provider</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">vmware</span>
-    <span class="l l-Scalar l-Scalar-Plain">provider_params</span><span class="p p-Indicator">:</span>
-      <span class="l l-Scalar l-Scalar-Plain">url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">vsphere.example.com</span>
-      <span class="l l-Scalar l-Scalar-Plain">user</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
-      <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
-      <span class="l l-Scalar l-Scalar-Plain">datacenter</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ax01</span>
-    <span class="l l-Scalar l-Scalar-Plain">server_url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">foreman.example.com</span>
-    <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
-    <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
-    <span class="l l-Scalar l-Scalar-Plain">state</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">vmware</span>
+    <span class="nt">provider_params</span><span class="p">:</span>
+      <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">vsphere.example.com</span>
+      <span class="nt">user</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
+      <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
+      <span class="nt">datacenter</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ax01</span>
+    <span class="nt">server_url</span><span class="p">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
+    <span class="nt">username</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
+    <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
+    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
 
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Create ovirt compute resource</span>
-  <span class="l l-Scalar l-Scalar-Plain">foreman_compute_resource</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ovirt_compute_resource</span>
-    <span class="l l-Scalar l-Scalar-Plain">locations</span><span class="p p-Indicator">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Create ovirt compute resource</span>
+  <span class="nt">foreman_compute_resource</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ovirt_compute_resource</span>
+    <span class="nt">locations</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">France/Toulouse</span>
-    <span class="l l-Scalar l-Scalar-Plain">organizations</span><span class="p p-Indicator">:</span>
+    <span class="nt">organizations</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Example Org</span>
-    <span class="l l-Scalar l-Scalar-Plain">provider</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ovirt</span>
-    <span class="l l-Scalar l-Scalar-Plain">provider_params</span><span class="p p-Indicator">:</span>
-      <span class="l l-Scalar l-Scalar-Plain">url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ovirt.example.com</span>
-      <span class="l l-Scalar l-Scalar-Plain">user</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ovirt-admin@example.com</span>
-      <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ovirtsecret</span>
-      <span class="l l-Scalar l-Scalar-Plain">datacenter</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">aa92fb54-0736-4066-8fa8-b8b9e3bd75ac</span>
-      <span class="l l-Scalar l-Scalar-Plain">ovirt_quota</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">24868ab9-c2a1-47c3-87e7-706f17d215ac</span>
-      <span class="l l-Scalar l-Scalar-Plain">use_v4</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-    <span class="l l-Scalar l-Scalar-Plain">server_url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">foreman.example.com</span>
-    <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
-    <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
-    <span class="l l-Scalar l-Scalar-Plain">state</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ovirt</span>
+    <span class="nt">provider_params</span><span class="p">:</span>
+      <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ovirt.example.com</span>
+      <span class="nt">user</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ovirt-admin@example.com</span>
+      <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ovirtsecret</span>
+      <span class="nt">datacenter</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">aa92fb54-0736-4066-8fa8-b8b9e3bd75ac</span>
+      <span class="nt">ovirt_quota</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">24868ab9-c2a1-47c3-87e7-706f17d215ac</span>
+      <span class="nt">use_v4</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+    <span class="nt">server_url</span><span class="p">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
+    <span class="nt">username</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
+    <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
+    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="status">
 <h2><a class="toc-backref" href="#id5">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>This module is not guaranteed to have a backwards compatible interface. <em>[preview]</em></li>
-<li>This module is <a class="reference external" href="https://docs.ansible.com/ansible/latest/user_guide/modules_support.html#modules-support" title="(in Ansible v2.8)"><span class="xref std std-ref">maintained by the Ansible Community</span></a>. <em>[community]</em></li>
+<li><p>This module is not guaranteed to have a backwards compatible interface. <em>[preview]</em></p></li>
+<li><p>This module is <a class="reference external" href="https://docs.ansible.com/ansible/latest/user_guide/modules_support.html#modules-support" title="(in Ansible v2.9)"><span class="xref std std-ref">maintained by the Ansible Community</span></a>. <em>[community]</em></p></li>
 </ul>
 <div class="section" id="authors">
 <h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Philipp Joos (&#64;philippj)</li>
-<li>Baptiste Agasse (&#64;bagasse)</li>
-<li>Manisha Singhal (&#64;Manisha15) ATIX AG</li>
+<li><p>Philipp Joos (&#64;philippj)</p></li>
+<li><p>Baptiste Agasse (&#64;bagasse)</p></li>
+<li><p>Manisha Singhal (&#64;Manisha15) ATIX AG</p></li>
 </ul>
 <div class="admonition hint">
-<p class="first admonition-title">Hint</p>
-<p class="last">If you notice any issues in this documentation you can <a class="reference external" href="https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/foreman_compute_resource.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr">edit this document</a> to improve it.</p>
+<p class="admonition-title">Hint</p>
+<p>If you notice any issues in this documentation, you can <a class="reference external" href="https://github.com/theforeman/foreman-ansible-modules/edit/master/plugins/modules/foreman_compute_resource.py">edit this document</a> to improve it.</p>
 </div>
 </div>
 </div>

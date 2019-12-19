@@ -149,24 +149,24 @@
 <span id="foreman-compute-profile-module"></span><h1>foreman_compute_profile – Manage Foreman Compute Profiles using Foreman API<a class="headerlink" href="#foreman-compute-profile-manage-foreman-compute-profiles-using-foreman-api" title="Permalink to this headline">¶</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></li>
-<li><a class="reference internal" href="#requirements" id="id2">Requirements</a></li>
-<li><a class="reference internal" href="#parameters" id="id3">Parameters</a></li>
-<li><a class="reference internal" href="#examples" id="id4">Examples</a></li>
-<li><a class="reference internal" href="#status" id="id5">Status</a></li>
+<li><p><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></p></li>
+<li><p><a class="reference internal" href="#requirements" id="id2">Requirements</a></p></li>
+<li><p><a class="reference internal" href="#parameters" id="id3">Parameters</a></p></li>
+<li><p><a class="reference internal" href="#examples" id="id4">Examples</a></p></li>
+<li><p><a class="reference internal" href="#status" id="id5">Status</a></p></li>
 </ul>
 </div>
 <div class="section" id="synopsis">
 <h2><a class="toc-backref" href="#id1">Synopsis</a><a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Create and delete Foreman Compute Profiles using Foreman API</li>
+<li><p>Create and delete Foreman Compute Profiles using Foreman API</p></li>
 </ul>
 </div>
 <div class="section" id="requirements">
 <h2><a class="toc-backref" href="#id2">Requirements</a><a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <p>The below requirements are needed on the host that executes this module.</p>
 <ul class="simple">
-<li>apypie</li>
+<li><p>apypie</p></li>
 </ul>
 </div>
 <div class="section" id="parameters">
@@ -273,7 +273,7 @@
                                                                                 </ul>
                                                                         </td>
                                                             <td>
-                                                                    <div>compute profile presence</div>
+                                                                    <div>State of the entity in Foreman</div>
                                                                             </td>
         </tr>
                             <tr>
@@ -324,94 +324,97 @@
 <br/></div>
 <div class="section" id="examples">
 <h2><a class="toc-backref" href="#id4">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">compute profile</span>
-  <span class="l l-Scalar l-Scalar-Plain">foreman_compute_profile</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">example_compute_profile</span>
-    <span class="l l-Scalar l-Scalar-Plain">server_url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">foreman.example.com</span>
-    <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
-    <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
-    <span class="l l-Scalar l-Scalar-Plain">state</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">compute profile</span>
+  <span class="nt">foreman_compute_profile</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">example_compute_profile</span>
+    <span class="nt">server_url</span><span class="p">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
+    <span class="nt">username</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
+    <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
+    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
 
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">another compute profile</span>
-  <span class="l l-Scalar l-Scalar-Plain">foreman_compute_profile</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">another_example_compute_profile</span>
-    <span class="l l-Scalar l-Scalar-Plain">compute_attributes</span><span class="p p-Indicator">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">compute_resource</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ovirt_compute_resource1</span>
-      <span class="l l-Scalar l-Scalar-Plain">vm_attrs</span><span class="p p-Indicator">:</span>
-        <span class="l l-Scalar l-Scalar-Plain">cluster</span><span class="p p-Indicator">:</span> <span class="s">&#39;a96d44a4-f14a-1015-82c6-f80354acdf01&#39;</span>
-        <span class="l l-Scalar l-Scalar-Plain">template</span><span class="p p-Indicator">:</span> <span class="s">&#39;c88af4b7-a24a-453b-9ac2-bc647ca2ef99&#39;</span>
-        <span class="l l-Scalar l-Scalar-Plain">instance_type</span><span class="p p-Indicator">:</span> <span class="s">&#39;cb8927e7-a404-40fb-a6c1-06cbfc92e077&#39;</span>
-    <span class="l l-Scalar l-Scalar-Plain">server_url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">foreman.example.com</span>
-    <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
-    <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
-    <span class="l l-Scalar l-Scalar-Plain">state</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">another compute profile</span>
+  <span class="nt">foreman_compute_profile</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">another_example_compute_profile</span>
+    <span class="nt">compute_attributes</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">compute_resource</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ovirt_compute_resource1</span>
+      <span class="nt">vm_attrs</span><span class="p">:</span>
+        <span class="nt">cluster</span><span class="p">:</span> <span class="s">&#39;a96d44a4-f14a-1015-82c6-f80354acdf01&#39;</span>
+        <span class="nt">template</span><span class="p">:</span> <span class="s">&#39;c88af4b7-a24a-453b-9ac2-bc647ca2ef99&#39;</span>
+        <span class="nt">instance_type</span><span class="p">:</span> <span class="s">&#39;cb8927e7-a404-40fb-a6c1-06cbfc92e077&#39;</span>
+    <span class="nt">server_url</span><span class="p">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
+    <span class="nt">username</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
+    <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
+    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
 
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">compute profile2</span>
-  <span class="l l-Scalar l-Scalar-Plain">foreman_compute_profile</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">example_compute_profile2</span>
-    <span class="l l-Scalar l-Scalar-Plain">compute_attributes</span><span class="p p-Indicator">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">compute_resource</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ovirt_compute_resource01</span>
-      <span class="l l-Scalar l-Scalar-Plain">vm_attrs</span><span class="p p-Indicator">:</span>
-        <span class="l l-Scalar l-Scalar-Plain">cluster</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">a96d44a4-f14a-1015-82c6-f80354acdf01</span>
-        <span class="l l-Scalar l-Scalar-Plain">cores</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
-        <span class="l l-Scalar l-Scalar-Plain">sockets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
-        <span class="l l-Scalar l-Scalar-Plain">memory</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1073741824</span>
-        <span class="l l-Scalar l-Scalar-Plain">ha</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
-        <span class="l l-Scalar l-Scalar-Plain">interfaces_attributes</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">0</span><span class="p p-Indicator">:</span>
-            <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&quot;&quot;</span>
-            <span class="l l-Scalar l-Scalar-Plain">network</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">390666e1-dab3-4c99-9f96-006b2e2fd801</span>
-            <span class="l l-Scalar l-Scalar-Plain">interface</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">virtio</span>
-        <span class="l l-Scalar l-Scalar-Plain">volumes_attributes</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">0</span><span class="p p-Indicator">:</span>
-            <span class="l l-Scalar l-Scalar-Plain">size_gb</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">16</span>
-            <span class="l l-Scalar l-Scalar-Plain">storage_domain</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">19c50090-1ab4-4023-a63f-75ee1018ed5e</span>
-            <span class="l l-Scalar l-Scalar-Plain">preallocate</span><span class="p p-Indicator">:</span> <span class="s">&#39;1&#39;</span>
-            <span class="l l-Scalar l-Scalar-Plain">wipe_after_delete</span><span class="p p-Indicator">:</span> <span class="s">&#39;0&#39;</span>
-            <span class="l l-Scalar l-Scalar-Plain">interface</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">virtio_scsi</span>
-            <span class="l l-Scalar l-Scalar-Plain">bootable</span><span class="p p-Indicator">:</span> <span class="s">&#39;true&#39;</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">compute_resource</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">libvirt_compute_resource03</span>
-      <span class="l l-Scalar l-Scalar-Plain">vm_attrs</span><span class="p p-Indicator">:</span>
-        <span class="l l-Scalar l-Scalar-Plain">cpus</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
-        <span class="l l-Scalar l-Scalar-Plain">memory</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">2147483648</span>
-        <span class="l l-Scalar l-Scalar-Plain">nics_attributes</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">0</span><span class="p p-Indicator">:</span>
-            <span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">bridge</span>
-            <span class="l l-Scalar l-Scalar-Plain">bridge</span><span class="p p-Indicator">:</span> <span class="s">&quot;&quot;</span>
-            <span class="l l-Scalar l-Scalar-Plain">model</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">virtio</span>
-        <span class="l l-Scalar l-Scalar-Plain">volumes_attributes</span><span class="p p-Indicator">:</span>
-          <span class="l l-Scalar l-Scalar-Plain">0</span><span class="p p-Indicator">:</span>
-            <span class="l l-Scalar l-Scalar-Plain">pool_name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
-            <span class="l l-Scalar l-Scalar-Plain">capacity</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">16G</span>
-            <span class="l l-Scalar l-Scalar-Plain">allocation</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">16G</span>
-            <span class="l l-Scalar l-Scalar-Plain">format_type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">raw</span>
-    <span class="l l-Scalar l-Scalar-Plain">server_url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">foreman.example.com</span>
-    <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
-    <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
-    <span class="l l-Scalar l-Scalar-Plain">state</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">compute profile2</span>
+  <span class="nt">foreman_compute_profile</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">example_compute_profile2</span>
+    <span class="nt">compute_attributes</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">compute_resource</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ovirt_compute_resource01</span>
+      <span class="nt">vm_attrs</span><span class="p">:</span>
+        <span class="nt">cluster</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">a96d44a4-f14a-1015-82c6-f80354acdf01</span>
+        <span class="nt">cores</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+        <span class="nt">sockets</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+        <span class="nt">memory</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1073741824</span>
+        <span class="nt">ha</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+        <span class="nt">interfaces_attributes</span><span class="p">:</span>
+          <span class="nt">0</span><span class="p">:</span>
+            <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
+            <span class="nt">network</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">390666e1-dab3-4c99-9f96-006b2e2fd801</span>
+            <span class="nt">interface</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">virtio</span>
+        <span class="nt">volumes_attributes</span><span class="p">:</span>
+          <span class="nt">0</span><span class="p">:</span>
+            <span class="nt">size_gb</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">16</span>
+            <span class="nt">storage_domain</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">19c50090-1ab4-4023-a63f-75ee1018ed5e</span>
+            <span class="nt">preallocate</span><span class="p">:</span> <span class="s">&#39;1&#39;</span>
+            <span class="nt">wipe_after_delete</span><span class="p">:</span> <span class="s">&#39;0&#39;</span>
+            <span class="nt">interface</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">virtio_scsi</span>
+            <span class="nt">bootable</span><span class="p">:</span> <span class="s">&#39;true&#39;</span>
+    <span class="p p-Indicator">-</span> <span class="nt">compute_resource</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">libvirt_compute_resource03</span>
+      <span class="nt">vm_attrs</span><span class="p">:</span>
+        <span class="nt">cpus</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+        <span class="nt">memory</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2147483648</span>
+        <span class="nt">nics_attributes</span><span class="p">:</span>
+          <span class="nt">0</span><span class="p">:</span>
+            <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bridge</span>
+            <span class="nt">bridge</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
+            <span class="nt">model</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">virtio</span>
+        <span class="nt">volumes_attributes</span><span class="p">:</span>
+          <span class="nt">0</span><span class="p">:</span>
+            <span class="nt">pool_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
+            <span class="nt">capacity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">16G</span>
+            <span class="nt">allocation</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">16G</span>
+            <span class="nt">format_type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">raw</span>
+    <span class="nt">server_url</span><span class="p">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
+    <span class="nt">username</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
+    <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
+    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
 
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Remove compute profile</span>
-  <span class="l l-Scalar l-Scalar-Plain">foreman_compute_profile</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">example_compute_profile2</span>
-    <span class="l l-Scalar l-Scalar-Plain">state</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">absent</span>
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Remove compute profile</span>
+  <span class="nt">foreman_compute_profile</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">example_compute_profile2</span>
+    <span class="nt">server_url</span><span class="p">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
+    <span class="nt">username</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
+    <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
+    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">absent</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="status">
 <h2><a class="toc-backref" href="#id5">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>This module is not guaranteed to have a backwards compatible interface. <em>[preview]</em></li>
-<li>This module is <a class="reference external" href="https://docs.ansible.com/ansible/latest/user_guide/modules_support.html#modules-support" title="(in Ansible v2.8)"><span class="xref std std-ref">maintained by the Ansible Community</span></a>. <em>[community]</em></li>
+<li><p>This module is not guaranteed to have a backwards compatible interface. <em>[preview]</em></p></li>
+<li><p>This module is <a class="reference external" href="https://docs.ansible.com/ansible/latest/user_guide/modules_support.html#modules-support" title="(in Ansible v2.9)"><span class="xref std std-ref">maintained by the Ansible Community</span></a>. <em>[community]</em></p></li>
 </ul>
 <div class="section" id="authors">
 <h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Philipp Joos (&#64;philippj)</li>
-<li>Baptiste Agasse (&#64;bagasse)</li>
+<li><p>Philipp Joos (&#64;philippj)</p></li>
+<li><p>Baptiste Agasse (&#64;bagasse)</p></li>
 </ul>
 <div class="admonition hint">
-<p class="first admonition-title">Hint</p>
-<p class="last">If you notice any issues in this documentation you can <a class="reference external" href="https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/foreman_compute_profile.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr">edit this document</a> to improve it.</p>
+<p class="admonition-title">Hint</p>
+<p>If you notice any issues in this documentation, you can <a class="reference external" href="https://github.com/theforeman/foreman-ansible-modules/edit/master/plugins/modules/foreman_compute_profile.py">edit this document</a> to improve it.</p>
 </div>
 </div>
 </div>

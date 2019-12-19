@@ -34,12 +34,30 @@ Parameters
 
     <table  border=0 cellpadding=0 class="documentation-table">
         <tr>
-            <th colspan="1">Parameter</th>
+            <th colspan="2">Parameter</th>
             <th>Choices/<font color="blue">Defaults</font></th>
                         <th width="100%">Comments</th>
         </tr>
                     <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
+                    <b>all_repositories</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">boolean</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                                        <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                                <li>no</li>
+                                                                                                                                                                                                <li>yes</li>
+                                                                                    </ul>
+                                                                            </td>
+                                                                <td>
+                                                                        <div>Affect all available repositories in the repository set instead of listing them in <em>repositories</em>.</div>
+                                                    <div>Required when <em>repositories</em> is unset or an empty list.</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="2">
                     <b>label</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
@@ -52,7 +70,7 @@ Parameters
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
                     <b>name</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
@@ -65,7 +83,7 @@ Parameters
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
                     <b>organization</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
@@ -74,11 +92,11 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Organization name that the repository set is in</div>
+                                                                        <div>Organization that the entity is in</div>
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
                     <b>password</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
@@ -91,7 +109,7 @@ Parameters
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
                     <b>product</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
@@ -104,20 +122,50 @@ Parameters
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
                     <b>repositories</b>
                     <div style="font-size: small">
                         <span style="color: purple">list</span>
-                                                 / <span style="color: red">required</span>                    </div>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Release version and base architecture of the repositories to enable</div>
+                                                                        <div>Release version and base architecture of the repositories to enable.</div>
+                                                    <div>Required when <em>all_repositories</em> is unset or <code>false</code>.</div>
+                                                                                </td>
+            </tr>
+                                                            <tr>
+                                                    <td class="elbow-placeholder"></td>
+                                                <td colspan="1">
+                    <b>basearch</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Basearch of the repository to enable.</div>
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                    <td class="elbow-placeholder"></td>
+                                                <td colspan="1">
+                    <b>releasever</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Releasever of the repository to enable.</div>
+                                                                                </td>
+            </tr>
+                    
+                                                <tr>
+                                                                <td colspan="2">
                     <b>server_url</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
@@ -130,7 +178,7 @@ Parameters
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
                     <b>state</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
@@ -147,7 +195,7 @@ Parameters
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
                     <b>username</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
@@ -160,7 +208,7 @@ Parameters
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
                     <b>validate_certs</b>
                     <div style="font-size: small">
                         <span style="color: purple">boolean</span>
@@ -246,7 +294,7 @@ Examples
         organization: "Default Organization"
         label: rhel-8-for-x86_64-baseos-rpms
         repositories:
-          - releasever: 8
+          - releasever: "8"
 
 
 
@@ -274,4 +322,4 @@ Authors
 
 
 .. hint::
-    If you notice any issues in this documentation you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/katello_repository_set.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr>`_ to improve it.
+    If you notice any issues in this documentation, you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/plugins/modules/katello_repository_set.py>`_ to improve it.

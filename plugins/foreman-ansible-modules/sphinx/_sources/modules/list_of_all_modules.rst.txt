@@ -31,6 +31,8 @@ All modules
   * :ref:`foreman_ptable_module` 
   * :ref:`foreman_realm_module` 
   * :ref:`foreman_role_module` 
+  * :ref:`foreman_scc_account_module` 
+  * :ref:`foreman_scc_product_module` 
   * :ref:`foreman_search_facts_module` 
   * :ref:`foreman_setting_module` 
   * :ref:`foreman_snapshot_module` 

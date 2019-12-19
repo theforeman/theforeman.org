@@ -87,7 +87,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Organization name that the lifecycle environment is in</div>
+                                                                        <div>Organization that the entity is in</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -138,12 +138,12 @@ Parameters
                                     </td>
                                 <td>
                                                                                                                             <ul style="margin: 0; padding: 0"><b>Choices:</b>
-                                                                                                                                                                <li>absent</li>
-                                                                                                                                                                                                <li><div style="color: blue"><b>present</b>&nbsp;&larr;</div></li>
+                                                                                                                                                                <li><div style="color: blue"><b>present</b>&nbsp;&larr;</div></li>
+                                                                                                                                                                                                <li>absent</li>
                                                                                     </ul>
                                                                             </td>
                                                                 <td>
-                                                                        <div>Whether the lifecycle environment should be present or absent on the server</div>
+                                                                        <div>State of the entity in Foreman</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -228,4 +228,4 @@ Authors
 
 
 .. hint::
-    If you notice any issues in this documentation you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/katello_lifecycle_environment.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr>`_ to improve it.
+    If you notice any issues in this documentation, you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/plugins/modules/katello_lifecycle_environment.py>`_ to improve it.

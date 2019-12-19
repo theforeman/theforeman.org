@@ -211,6 +211,9 @@ Parameters
                                                                                                                             <ul style="margin: 0; padding: 0"><b>Choices:</b>
                                                                                                                                                                 <li><div style="color: blue"><b>DHCP</b>&nbsp;&larr;</div></li>
                                                                                                                                                                                                 <li>Internal DB</li>
+                                                                                                                                                                                                <li>Random DB</li>
+                                                                                                                                                                                                <li>EUI-64</li>
+                                                                                                                                                                                                <li>None</li>
                                                                                     </ul>
                                                                             </td>
                                                                 <td>
@@ -227,7 +230,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>List of locations the subnet should be assigned to</div>
+                                                                        <div>List of locations the entity should be assigned to</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -309,7 +312,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>List of oganizations the subnet should be assigned to</div>
+                                                                        <div>List of organizations the entity should be assigned to</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -432,7 +435,20 @@ Parameters
                                                                                     </ul>
                                                                             </td>
                                                                 <td>
-                                                                        <div>subnet presence</div>
+                                                                        <div>State of the entity in Foreman</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="2">
+                    <b>template_proxy</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Template Smart proxy for this subnet</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -543,6 +559,7 @@ Examples
         dhcp_proxy: "smart-proxy1.foo.example.com"
         tftp_proxy: "smart-proxy1.foo.example.com"
         dns_proxy: "smart-proxy2.foo.example.com"
+        template_proxy: "smart-proxy2.foo.example.com"
         vlanid: 452
         mtu: 9000
         domains:
@@ -583,4 +600,4 @@ Authors
 
 
 .. hint::
-    If you notice any issues in this documentation you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/foreman_subnet.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr>`_ to improve it.
+    If you notice any issues in this documentation, you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/plugins/modules/foreman_subnet.py>`_ to improve it.

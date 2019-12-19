@@ -149,36 +149,36 @@
 <span id="foreman-role-module"></span><h1>foreman_role – Manage Foreman Roles using Foreman API<a class="headerlink" href="#foreman-role-manage-foreman-roles-using-foreman-api" title="Permalink to this headline">¶</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></li>
-<li><a class="reference internal" href="#requirements" id="id2">Requirements</a></li>
-<li><a class="reference internal" href="#parameters" id="id3">Parameters</a></li>
-<li><a class="reference internal" href="#examples" id="id4">Examples</a></li>
-<li><a class="reference internal" href="#status" id="id5">Status</a></li>
+<li><p><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></p></li>
+<li><p><a class="reference internal" href="#requirements" id="id2">Requirements</a></p></li>
+<li><p><a class="reference internal" href="#parameters" id="id3">Parameters</a></p></li>
+<li><p><a class="reference internal" href="#examples" id="id4">Examples</a></p></li>
+<li><p><a class="reference internal" href="#status" id="id5">Status</a></p></li>
 </ul>
 </div>
 <div class="section" id="synopsis">
 <h2><a class="toc-backref" href="#id1">Synopsis</a><a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Create and Delete Foreman Roles using Foreman API</li>
+<li><p>Create and Delete Foreman Roles using Foreman API</p></li>
 </ul>
 </div>
 <div class="section" id="requirements">
 <h2><a class="toc-backref" href="#id2">Requirements</a><a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <p>The below requirements are needed on the host that executes this module.</p>
 <ul class="simple">
-<li>apypie</li>
+<li><p>apypie</p></li>
 </ul>
 </div>
 <div class="section" id="parameters">
 <h2><a class="toc-backref" href="#id3">Parameters</a><a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
 <table  border=0 cellpadding=0 class="documentation-table">
     <tr>
-        <th colspan="1">Parameter</th>
+        <th colspan="2">Parameter</th>
         <th>Choices/<font color="blue">Defaults</font></th>
                     <th width="100%">Comments</th>
     </tr>
                 <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>description</b>
                 <div style="font-size: small">
                     <span style="color: purple">string</span>
@@ -191,11 +191,11 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>filters</b>
                 <div style="font-size: small">
                     <span style="color: purple">list</span>
-                                                                </div>
+                     / <span style="color: purple">elements=dictionary</span>                                            </div>
                                 </td>
                             <td>
                                                                                                                                                         </td>
@@ -203,8 +203,37 @@
                                                                     <div>Filters with permissions for this role</div>
                                                                             </td>
         </tr>
+                                                        <tr>
+                                                <td class="elbow-placeholder"></td>
+                                            <td colspan="1">
+                <b>permissions</b>
+                <div style="font-size: small">
+                    <span style="color: purple">list</span>
+                                             / <span style="color: red">required</span>                    </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>List of permissions</div>
+                                                                            </td>
+        </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                <td class="elbow-placeholder"></td>
+                                            <td colspan="1">
+                <b>search</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>Filter condition for the resources</div>
+                                                                            </td>
+        </tr>
+
+                                            <tr>
+                                                            <td colspan="2">
                 <b>locations</b>
                 <div style="font-size: small">
                     <span style="color: purple">list</span>
@@ -213,11 +242,11 @@
                             <td>
                                                                                                                                                         </td>
                                                             <td>
-                                                                    <div>List of locations the role should be assigned to</div>
+                                                                    <div>List of locations the entity should be assigned to</div>
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>name</b>
                 <div style="font-size: small">
                     <span style="color: purple">string</span>
@@ -230,7 +259,7 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>organizations</b>
                 <div style="font-size: small">
                     <span style="color: purple">list</span>
@@ -239,11 +268,11 @@
                             <td>
                                                                                                                                                         </td>
                                                             <td>
-                                                                    <div>List of organizations the role should be assigned to</div>
+                                                                    <div>List of organizations the entity should be assigned to</div>
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>password</b>
                 <div style="font-size: small">
                     <span style="color: purple">string</span>
@@ -256,7 +285,7 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>server_url</b>
                 <div style="font-size: small">
                     <span style="color: purple">string</span>
@@ -269,7 +298,7 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>state</b>
                 <div style="font-size: small">
                     <span style="color: purple">string</span>
@@ -282,11 +311,11 @@
                                                                                 </ul>
                                                                         </td>
                                                             <td>
-                                                                    <div>role presence</div>
+                                                                    <div>State of the entity in Foreman</div>
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>username</b>
                 <div style="font-size: small">
                     <span style="color: purple">string</span>
@@ -299,7 +328,7 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>validate_certs</b>
                 <div style="font-size: small">
                     <span style="color: purple">boolean</span>
@@ -320,40 +349,39 @@
 <br/></div>
 <div class="section" id="examples">
 <h2><a class="toc-backref" href="#id4">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">role</span>
-  <span class="l l-Scalar l-Scalar-Plain">foreman_role</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&quot;Provisioner&quot;</span>
-    <span class="l l-Scalar l-Scalar-Plain">description</span><span class="p p-Indicator">:</span> <span class="s">&quot;Only</span><span class="nv"> </span><span class="s">provision</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">libvirt&quot;</span>
-    <span class="l l-Scalar l-Scalar-Plain">locations</span><span class="p p-Indicator">:</span>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">role</span>
+  <span class="nt">foreman_role</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;Provisioner&quot;</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="s">&quot;Only</span><span class="nv"> </span><span class="s">provision</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">libvirt&quot;</span>
+    <span class="nt">locations</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="s">&quot;Uppsala&quot;</span>
-    <span class="l l-Scalar l-Scalar-Plain">organizations</span><span class="p p-Indicator">:</span>
+    <span class="nt">organizations</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="s">&quot;Basalt&quot;</span>
-    <span class="l l-Scalar l-Scalar-Plain">filters</span><span class="p p-Indicator">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">resource</span><span class="p p-Indicator">:</span> <span class="s">&#39;Host&#39;</span>
-        <span class="l l-Scalar l-Scalar-Plain">permissions</span><span class="p p-Indicator">:</span>
+    <span class="nt">filters</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">permissions</span><span class="p">:</span>
           <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">view_hosts</span>
-        <span class="l l-Scalar l-Scalar-Plain">search</span><span class="p p-Indicator">:</span> <span class="s">&quot;owner_type</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">Usergroup</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">owner_id</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">4&quot;</span>
-    <span class="l l-Scalar l-Scalar-Plain">server_url</span><span class="p p-Indicator">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
-    <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="s">&quot;admin&quot;</span>
-    <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="s">&quot;secret&quot;</span>
-    <span class="l l-Scalar l-Scalar-Plain">state</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
+        <span class="nt">search</span><span class="p">:</span> <span class="s">&quot;owner_type</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">Usergroup</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">owner_id</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">4&quot;</span>
+    <span class="nt">server_url</span><span class="p">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
+    <span class="nt">username</span><span class="p">:</span> <span class="s">&quot;admin&quot;</span>
+    <span class="nt">password</span><span class="p">:</span> <span class="s">&quot;secret&quot;</span>
+    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="status">
 <h2><a class="toc-backref" href="#id5">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>This module is not guaranteed to have a backwards compatible interface. <em>[preview]</em></li>
-<li>This module is <a class="reference external" href="https://docs.ansible.com/ansible/latest/user_guide/modules_support.html#modules-support" title="(in Ansible v2.8)"><span class="xref std std-ref">maintained by the Ansible Community</span></a>. <em>[community]</em></li>
+<li><p>This module is not guaranteed to have a backwards compatible interface. <em>[preview]</em></p></li>
+<li><p>This module is <a class="reference external" href="https://docs.ansible.com/ansible/latest/user_guide/modules_support.html#modules-support" title="(in Ansible v2.9)"><span class="xref std std-ref">maintained by the Ansible Community</span></a>. <em>[community]</em></p></li>
 </ul>
 <div class="section" id="authors">
 <h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Christoffer Reijer (&#64;ephracis) Basalt AB</li>
+<li><p>Christoffer Reijer (&#64;ephracis) Basalt AB</p></li>
 </ul>
 <div class="admonition hint">
-<p class="first admonition-title">Hint</p>
-<p class="last">If you notice any issues in this documentation you can <a class="reference external" href="https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/foreman_role.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr">edit this document</a> to improve it.</p>
+<p class="admonition-title">Hint</p>
+<p>If you notice any issues in this documentation, you can <a class="reference external" href="https://github.com/theforeman/foreman-ansible-modules/edit/master/plugins/modules/foreman_role.py">edit this document</a> to improve it.</p>
 </div>
 </div>
 </div>
