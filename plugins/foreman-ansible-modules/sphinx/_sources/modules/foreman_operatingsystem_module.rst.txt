@@ -66,36 +66,6 @@ Parameters
             </tr>
                                 <tr>
                                                                 <td colspan="2">
-                    <b>family</b>
-                    <div style="font-size: small">
-                        <span style="color: purple">string</span>
-                                                                    </div>
-                                    </td>
-                                <td>
-                                                                                                                            <ul style="margin: 0; padding: 0"><b>Choices:</b>
-                                                                                                                                                                <li>AIX</li>
-                                                                                                                                                                                                <li>Altlinux</li>
-                                                                                                                                                                                                <li>Archlinux</li>
-                                                                                                                                                                                                <li>Coreos</li>
-                                                                                                                                                                                                <li>Debian</li>
-                                                                                                                                                                                                <li>Freebsd</li>
-                                                                                                                                                                                                <li>Gentoo</li>
-                                                                                                                                                                                                <li>Junos</li>
-                                                                                                                                                                                                <li>NXOS</li>
-                                                                                                                                                                                                <li>Rancheros</li>
-                                                                                                                                                                                                <li>Redhat</li>
-                                                                                                                                                                                                <li>Solaris</li>
-                                                                                                                                                                                                <li>Suse</li>
-                                                                                                                                                                                                <li>Windows</li>
-                                                                                                                                                                                                <li>Xenserver</li>
-                                                                                    </ul>
-                                                                            </td>
-                                                                <td>
-                                                                        <div>distribution family of the Operating System</div>
-                                                                                </td>
-            </tr>
-                                <tr>
-                                                                <td colspan="2">
                     <b>major</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
@@ -145,6 +115,37 @@ Parameters
                                                                 <td>
                                                                         <div>Name of the Operating System</div>
                                                                                 </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="2">
+                    <b>os_family</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                            <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                                <li>AIX</li>
+                                                                                                                                                                                                <li>Altlinux</li>
+                                                                                                                                                                                                <li>Archlinux</li>
+                                                                                                                                                                                                <li>Coreos</li>
+                                                                                                                                                                                                <li>Debian</li>
+                                                                                                                                                                                                <li>Freebsd</li>
+                                                                                                                                                                                                <li>Gentoo</li>
+                                                                                                                                                                                                <li>Junos</li>
+                                                                                                                                                                                                <li>NXOS</li>
+                                                                                                                                                                                                <li>Rancheros</li>
+                                                                                                                                                                                                <li>Redhat</li>
+                                                                                                                                                                                                <li>Solaris</li>
+                                                                                                                                                                                                <li>Suse</li>
+                                                                                                                                                                                                <li>Windows</li>
+                                                                                                                                                                                                <li>Xenserver</li>
+                                                                                    </ul>
+                                                                            </td>
+                                                                <td>
+                                                                        <div>Distribution family of the Operating System</div>
+                                                                                        <div style="font-size: small; color: darkgreen"><br/>aliases: family</div>
+                                    </td>
             </tr>
                                 <tr>
                                                                 <td colspan="2">
@@ -314,7 +315,7 @@ Parameters
                                                                                     </ul>
                                                                             </td>
                                                                 <td>
-                                                                        <div>State of the Operating System</div>
+                                                                        <div>State of the entity in Foreman</div>
                                                     <div><code>present_with_defaults</code> will ensure the entity exists, but won&#x27;t update existing ones</div>
                                                                                 </td>
             </tr>
@@ -436,4 +437,4 @@ Authors
 
 
 .. hint::
-    If you notice any issues in this documentation you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/foreman_operatingsystem.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr>`_ to improve it.
+    If you notice any issues in this documentation, you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/plugins/modules/foreman_operatingsystem.py>`_ to improve it.

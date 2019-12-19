@@ -94,6 +94,7 @@ Parameters
                                                                                                                             <ul style="margin: 0; padding: 0"><b>Choices:</b>
                                                                                                                                                                 <li>enabled</li>
                                                                                                                                                                                                 <li>disabled</li>
+                                                                                                                                                                                                <li>default</li>
                                                                                     </ul>
                                                                             </td>
                                                                 <td>
@@ -142,6 +143,20 @@ Parameters
             </tr>
                                 <tr>
                                                                 <td colspan="2">
+                    <b>max_hosts</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">integer</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Maximum number of registered content hosts.</div>
+                                                    <div>Required if <em>unlimited_hosts=false</em></div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="2">
                     <b>name</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
@@ -176,7 +191,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Organization name that the activation key is in</div>
+                                                                        <div>Organization that the entity is in</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -190,6 +205,45 @@ Parameters
                                                                                                                                                             </td>
                                                                 <td>
                                                                         <div>Password of the user accessing the Foreman server</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="2">
+                    <b>purpose_addons</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">list</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Sets the system purpose add-ons</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="2">
+                    <b>purpose_role</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Sets the system purpose role</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="2">
+                    <b>purpose_usage</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Sets the system purpose usage</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -304,6 +358,23 @@ Parameters
                     
                                                 <tr>
                                                                 <td colspan="2">
+                    <b>unlimited_hosts</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">boolean</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                                        <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                                <li>no</li>
+                                                                                                                                                                                                <li>yes</li>
+                                                                                    </ul>
+                                                                            </td>
+                                                                <td>
+                                                                        <div>Can the activation key have unlimited hosts</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="2">
                     <b>username</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
@@ -394,4 +465,4 @@ Authors
 
 
 .. hint::
-    If you notice any issues in this documentation you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/katello_activation_key.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr>`_ to improve it.
+    If you notice any issues in this documentation, you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/plugins/modules/katello_activation_key.py>`_ to improve it.

@@ -61,7 +61,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>List of locations the compute resource should be assigned to</div>
+                                                                        <div>List of locations the entity should be assigned to</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -87,7 +87,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>List of organizations the compute resource should be assigned to</div>
+                                                                        <div>List of organizations the entity should be assigned to</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -260,12 +260,12 @@ Parameters
                                 <td>
                                                                                                                             <ul style="margin: 0; padding: 0"><b>Choices:</b>
                                                                                                                                                                 <li><div style="color: blue"><b>present</b>&nbsp;&larr;</div></li>
-                                                                                                                                                                                                <li>absent</li>
                                                                                                                                                                                                 <li>present_with_defaults</li>
+                                                                                                                                                                                                <li>absent</li>
                                                                                     </ul>
                                                                             </td>
                                                                 <td>
-                                                                        <div>compute resource presence</div>
+                                                                        <div>State of the entity in Foreman</div>
                                                     <div><code>present_with_defaults</code> will ensure the entity exists, but won&#x27;t update existing ones</div>
                                                                                 </td>
             </tr>
@@ -336,7 +336,7 @@ Examples
         provider_params:
           url: libvirt.example.com
           display_type: vnc
-        server_url: foreman.example.com
+        server_url: "https://foreman.example.com"
         username: admin
         password: secret
         state: present
@@ -353,7 +353,7 @@ Examples
         provider_params:
           url: libvirt.example.com
           display_type: vnc
-        server_url: foreman.example.com
+        server_url: "https://foreman.example.com"
         username: admin
         password: secret
         state: present
@@ -361,7 +361,7 @@ Examples
     - name: Delete livirt compute resource
       foreman_compute_resource:
         name: example_compute_resource
-        server_url: foreman.example.com
+        server_url: "https://foreman.example.com"
         username: admin
         password: secret
         state: absent
@@ -379,7 +379,7 @@ Examples
           user: admin
           password: secret
           datacenter: ax01
-        server_url: foreman.example.com
+        server_url: "https://foreman.example.com"
         username: admin
         password: secret
         state: present
@@ -399,7 +399,7 @@ Examples
           datacenter: aa92fb54-0736-4066-8fa8-b8b9e3bd75ac
           ovirt_quota: 24868ab9-c2a1-47c3-87e7-706f17d215ac
           use_v4: true
-        server_url: foreman.example.com
+        server_url: "https://foreman.example.com"
         username: admin
         password: secret
         state: present
@@ -432,4 +432,4 @@ Authors
 
 
 .. hint::
-    If you notice any issues in this documentation you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/foreman_compute_resource.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr>`_ to improve it.
+    If you notice any issues in this documentation, you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/plugins/modules/foreman_compute_resource.py>`_ to improve it.

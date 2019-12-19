@@ -61,6 +61,62 @@ Parameters
             </tr>
                                 <tr>
                                                                 <td colspan="1">
+                    <b>deb_architectures</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>comma separated list of architectures to be synced from deb-archive</div>
+                                                    <div>only available for <em>content_type=deb</em></div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>deb_components</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>comma separated list of repo components to be synced from deb-archive</div>
+                                                    <div>only available for <em>content_type=deb</em></div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>deb_releases</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>comma separated list of releases to be synced from deb-archive</div>
+                                                    <div>only available for <em>content_type=deb</em></div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>docker_tags_whitelist</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">list</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>list of tags to sync for Container Image repository</div>
+                                                    <div>only available for <em>content_type=docker</em></div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
                     <b>docker_upstream_name</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
@@ -70,6 +126,7 @@ Parameters
                                                                                                                                                             </td>
                                                                 <td>
                                                                         <div>name of the upstream docker repository</div>
+                                                    <div>only available for <em>content_type=docker</em></div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -156,7 +213,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Organization that the Product is in</div>
+                                                                        <div>Organization that the entity is in</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -207,14 +264,40 @@ Parameters
                                     </td>
                                 <td>
                                                                                                                             <ul style="margin: 0; padding: 0"><b>Choices:</b>
-                                                                                                                                                                <li>present_with_defaults</li>
-                                                                                                                                                                                                <li><div style="color: blue"><b>present</b>&nbsp;&larr;</div></li>
+                                                                                                                                                                <li><div style="color: blue"><b>present</b>&nbsp;&larr;</div></li>
+                                                                                                                                                                                                <li>present_with_defaults</li>
                                                                                                                                                                                                 <li>absent</li>
                                                                                     </ul>
                                                                             </td>
                                                                 <td>
-                                                                        <div>State of the Repository</div>
+                                                                        <div>State of the entity in Foreman</div>
                                                     <div><code>present_with_defaults</code> will ensure the entity exists, but won&#x27;t update existing ones</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>upstream_password</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>password to access upstream repository</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>upstream_username</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>username to access upstream repository</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -328,4 +411,4 @@ Authors
 
 
 .. hint::
-    If you notice any issues in this documentation you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/katello_repository.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr>`_ to improve it.
+    If you notice any issues in this documentation, you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/plugins/modules/katello_repository.py>`_ to improve it.

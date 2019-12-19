@@ -58,6 +58,33 @@ Parameters
             </tr>
                                 <tr>
                                                                 <td colspan="1">
+                    <b>organization</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Scope the searched resource by organization</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>params</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">dictionary</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Add parameters to the API call if necessary</div>
+                                                    <div>If not specified, no additional parameters are passed</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
                     <b>password</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
@@ -145,6 +172,12 @@ Parameters
     <br/>
 
 
+Notes
+-----
+
+.. note::
+   - Some resources don't support scoping and will return errors when you pass *organization* or unknown data in *params*.
+
 
 
 Examples
@@ -186,6 +219,29 @@ Examples
     - debug:
         var: result.resources
 
+    - name: Get all existing subscriptions for organization with id 1
+      foreman_search_facts:
+        username: "admin"
+        password: "changeme"
+        server_url: "https://foreman.example.com"
+        resource: subscriptions
+        params:
+          organization_id: 1
+      register: result
+    - debug:
+        var: result
+
+    - name: Get all existing activation keys for organization ACME
+      foreman_search_facts:
+        username: "admin"
+        password: "changeme"
+        server_url: "https://foreman.example.com"
+        resource: activation_keys
+        organization: ACME
+      register: result
+    - debug:
+        var: result
+
 
 
 
@@ -204,7 +260,9 @@ Common return values are documented :ref:`here <common_return_values>`, the foll
                     <tr>
                                 <td colspan="1">
                     <b>resources</b>
-                    <div style="font-size: small; color: purple">list</div>
+                    <div style="font-size: small">
+                      <span style="color: purple">list</span>
+                                          </div>
                                     </td>
                 <td>always</td>
                 <td>
@@ -238,4 +296,4 @@ Authors
 
 
 .. hint::
-    If you notice any issues in this documentation you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/foreman_search_facts.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr>`_ to improve it.
+    If you notice any issues in this documentation, you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/plugins/modules/foreman_search_facts.py>`_ to improve it.

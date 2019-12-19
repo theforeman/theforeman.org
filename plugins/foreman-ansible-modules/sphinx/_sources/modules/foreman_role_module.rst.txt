@@ -34,12 +34,12 @@ Parameters
 
     <table  border=0 cellpadding=0 class="documentation-table">
         <tr>
-            <th colspan="1">Parameter</th>
+            <th colspan="2">Parameter</th>
             <th>Choices/<font color="blue">Defaults</font></th>
                         <th width="100%">Comments</th>
         </tr>
                     <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
                     <b>description</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
@@ -52,11 +52,11 @@ Parameters
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
                     <b>filters</b>
                     <div style="font-size: small">
                         <span style="color: purple">list</span>
-                                                                    </div>
+                         / <span style="color: purple">elements=dictionary</span>                                            </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -64,8 +64,37 @@ Parameters
                                                                         <div>Filters with permissions for this role</div>
                                                                                 </td>
             </tr>
+                                                            <tr>
+                                                    <td class="elbow-placeholder"></td>
+                                                <td colspan="1">
+                    <b>permissions</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">list</span>
+                                                 / <span style="color: red">required</span>                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>List of permissions</div>
+                                                                                </td>
+            </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                    <td class="elbow-placeholder"></td>
+                                                <td colspan="1">
+                    <b>search</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Filter condition for the resources</div>
+                                                                                </td>
+            </tr>
+                    
+                                                <tr>
+                                                                <td colspan="2">
                     <b>locations</b>
                     <div style="font-size: small">
                         <span style="color: purple">list</span>
@@ -74,11 +103,11 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>List of locations the role should be assigned to</div>
+                                                                        <div>List of locations the entity should be assigned to</div>
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
                     <b>name</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
@@ -91,7 +120,7 @@ Parameters
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
                     <b>organizations</b>
                     <div style="font-size: small">
                         <span style="color: purple">list</span>
@@ -100,11 +129,11 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>List of organizations the role should be assigned to</div>
+                                                                        <div>List of organizations the entity should be assigned to</div>
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
                     <b>password</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
@@ -117,7 +146,7 @@ Parameters
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
                     <b>server_url</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
@@ -130,7 +159,7 @@ Parameters
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
                     <b>state</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
@@ -143,11 +172,11 @@ Parameters
                                                                                     </ul>
                                                                             </td>
                                                                 <td>
-                                                                        <div>role presence</div>
+                                                                        <div>State of the entity in Foreman</div>
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
                     <b>username</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
@@ -160,7 +189,7 @@ Parameters
                                                                                 </td>
             </tr>
                                 <tr>
-                                                                <td colspan="1">
+                                                                <td colspan="2">
                     <b>validate_certs</b>
                     <div style="font-size: small">
                         <span style="color: purple">boolean</span>
@@ -198,8 +227,7 @@ Examples
         organizations:
           - "Basalt"
         filters:
-          - resource: 'Host'
-            permissions:
+          - permissions:
               - view_hosts
             search: "owner_type = Usergroup and owner_id = 4"
         server_url: "https://foreman.example.com"
@@ -233,4 +261,4 @@ Authors
 
 
 .. hint::
-    If you notice any issues in this documentation you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/foreman_role.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr>`_ to improve it.
+    If you notice any issues in this documentation, you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/plugins/modules/foreman_role.py>`_ to improve it.

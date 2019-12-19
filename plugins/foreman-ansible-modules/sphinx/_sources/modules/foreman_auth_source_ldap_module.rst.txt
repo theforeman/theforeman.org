@@ -61,7 +61,9 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Account password to use when accessing the LDAP server. Required when using `onthefly_register`</div>
+                                                                        <div>Account password to use when accessing the LDAP server.</div>
+                                                    <div>Required when using <em>onthefly_register</em>.</div>
+                                                    <div>When this parameter is set, the module will not be idempotent.</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -74,7 +76,8 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Attribute containing first name. Required when using `onthefly_register`</div>
+                                                                        <div>Attribute containing first name.</div>
+                                                    <div>Required when using <em>onthefly_register</em>.</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -87,7 +90,8 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Attribute containing last name. Required when using `onthefly_register`</div>
+                                                                        <div>Attribute containing last name.</div>
+                                                    <div>Required when using <em>onthefly_register</em>.</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -100,7 +104,8 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Attribute containing login ID. Required when using `onthefly_register`</div>
+                                                                        <div>Attribute containing login ID.</div>
+                                                    <div>Required when using <em>onthefly_register</em>.</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -113,7 +118,8 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Attribute containing email address. Required when using `onthefly_register`</div>
+                                                                        <div>Attribute containing email address.</div>
+                                                    <div>Required when using <em>onthefly_register</em>.</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -191,7 +197,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>List of locations the authentication source should be assigned to</div>
+                                                                        <div>List of locations the entity should be assigned to</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -234,7 +240,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>List of organizations the authentication source should be assigned to</div>
+                                                                        <div>List of organizations the entity should be assigned to</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -309,7 +315,7 @@ Parameters
                                                                                     </ul>
                                                                             </td>
                                                                 <td>
-                                                                        <div>State ot the LDAP authentication source</div>
+                                                                        <div>State of the entity in Foreman</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -327,6 +333,23 @@ Parameters
                                                                             </td>
                                                                 <td>
                                                                         <div>Whether or not to use TLS when contacting the LDAP server.</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>use_netgroups</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">boolean</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                                        <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                                <li>no</li>
+                                                                                                                                                                                                <li>yes</li>
+                                                                                    </ul>
+                                                                            </td>
+                                                                <td>
+                                                                        <div>Whether to use NIS netgroups instead of posix groups, not valid for <em>server_type=active_directory</em></div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -448,4 +471,4 @@ Authors
 
 
 .. hint::
-    If you notice any issues in this documentation you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/modules/foreman_auth_source_ldap.py?description=%3C!---%20Your%20description%20here%20--%3E%0A%0A%2Blabel:%20docsite_pr>`_ to improve it.
+    If you notice any issues in this documentation, you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/plugins/modules/foreman_auth_source_ldap.py>`_ to improve it.

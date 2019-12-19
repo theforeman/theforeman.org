@@ -1,12 +1,12 @@
-:source: foreman_host_power.py
+:source: foreman_scc_product.py
 
 :orphan:
 
-.. _foreman_host_power_module:
+.. _foreman_scc_product_module:
 
 
-foreman_host_power -- Manage Foreman hosts power state
-++++++++++++++++++++++++++++++++++++++++++++++++++++++
+foreman_scc_product -- Subscribe Foreman Suse Customer Center Account Product
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 .. contents::
@@ -16,8 +16,9 @@ foreman_host_power -- Manage Foreman hosts power state
 
 Synopsis
 --------
-- Manage power state of Foreman host
-- This beta version can start and stop an existing foreman host and question the current power state.
+- Manage Foreman Suse Customer Center Product Entities
+- This module requires the foreman_scc_manager plugin set up in the server
+- See: https://github.com/ATIX-AG/foreman_scc_manager
 
 
 
@@ -41,7 +42,7 @@ Parameters
         </tr>
                     <tr>
                                                                 <td colspan="1">
-                    <b>name</b>
+                    <b>friendly_name</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
                                                  / <span style="color: red">required</span>                    </div>
@@ -49,9 +50,21 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Name (FQDN) of the host</div>
-                                                                                        <div style="font-size: small; color: darkgreen"><br/>aliases: hostname</div>
+                                                                        <div>Full name of the product of suse customer center account</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>organization</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Organization that the entity is in</div>
+                                                                                </td>
             </tr>
                                 <tr>
                                                                 <td colspan="1">
@@ -68,6 +81,19 @@ Parameters
             </tr>
                                 <tr>
                                                                 <td colspan="1">
+                    <b>scc_account</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                 / <span style="color: red">required</span>                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Name of the suse customer center account associated with product</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
                     <b>server_url</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
@@ -77,31 +103,6 @@ Parameters
                                                                                                                                                             </td>
                                                                 <td>
                                                                         <div>URL of the Foreman server</div>
-                                                                                </td>
-            </tr>
-                                <tr>
-                                                                <td colspan="1">
-                    <b>state</b>
-                    <div style="font-size: small">
-                        <span style="color: purple">string</span>
-                                                                    </div>
-                                    </td>
-                                <td>
-                                                                                                                            <ul style="margin: 0; padding: 0"><b>Choices:</b>
-                                                                                                                                                                <li>on</li>
-                                                                                                                                                                                                <li>start</li>
-                                                                                                                                                                                                <li>off</li>
-                                                                                                                                                                                                <li>stop</li>
-                                                                                                                                                                                                <li>soft</li>
-                                                                                                                                                                                                <li>reboot</li>
-                                                                                                                                                                                                <li>cycle</li>
-                                                                                                                                                                                                <li>reset</li>
-                                                                                                                                                                                                <li><div style="color: blue"><b>state</b>&nbsp;&larr;</div></li>
-                                                                                                                                                                                                <li>status</li>
-                                                                                    </ul>
-                                                                            </td>
-                                                                <td>
-                                                                        <div>Desired power state</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -147,67 +148,14 @@ Examples
 .. code-block:: yaml+jinja
 
     
-    - name: "Switch a host on"
-      foreman_host_power:
-        username: "admin"
-        password: "changeme"
-        server_url: "https://foreman.example.com"
-        hostname: "test-host.domain.test"
-        state: on
-
-    - name: "Switch a host off"
-      foreman_host_power:
-        username: "admin"
-        password: "changeme"
-        server_url: "https://foreman.example.com"
-        hostname: "test-host.domain.test"
-        state: off
-
-    - name: "Query host power state"
-      foreman_host_power:
-        username: "admin"
-        password: "changeme"
-        server_url: "https://foreman.example.com"
-        hostname: "test-host.domain.test"
-        state: state
-        register: result
-    - debug:
-        msg: "Host power state is {{ result.power_state }}"
+    - name: "Subscribe to suse customer center product"
+      foreman_scc_product:
+        friendly_name: "Product1"
+        scc_account_name: "Test"
+        organization: "Test Organization"
 
 
 
-
-
-
-Return Values
--------------
-Common return values are documented :ref:`here <common_return_values>`, the following are the fields unique to this module:
-
-.. raw:: html
-
-    <table border=0 cellpadding=0 class="documentation-table">
-        <tr>
-            <th colspan="1">Key</th>
-            <th>Returned</th>
-            <th width="100%">Description</th>
-        </tr>
-                    <tr>
-                                <td colspan="1">
-                    <b>power_state</b>
-                    <div style="font-size: small">
-                      <span style="color: purple">string</span>
-                                          </div>
-                                    </td>
-                <td>always</td>
-                <td>
-                                            <div>current power state of host</div>
-                                        <br/>
-                                            <div style="font-size: smaller"><b>Sample:</b></div>
-                                                <div style="font-size: smaller; color: blue; word-wrap: break-word; word-break: break-all;">off</div>
-                                    </td>
-            </tr>
-                        </table>
-    <br/><br/>
 
 
 Status
@@ -228,9 +176,8 @@ Status
 Authors
 ~~~~~~~
 
-- Bernhard Hopfenmueller (@Fobhep) ATIX AG
-- Baptiste Agasse (@bagasse)
+- Manisha Singhal (@manisha15) ATIX AG
 
 
 .. hint::
-    If you notice any issues in this documentation, you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/plugins/modules/foreman_host_power.py>`_ to improve it.
+    If you notice any issues in this documentation, you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/plugins/modules/foreman_scc_product.py>`_ to improve it.

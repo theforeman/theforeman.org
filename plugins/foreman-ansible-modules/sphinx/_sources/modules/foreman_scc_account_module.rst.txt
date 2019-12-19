@@ -1,12 +1,12 @@
-:source: foreman_global_parameter.py
+:source: foreman_scc_account.py
 
 :orphan:
 
-.. _foreman_global_parameter_module:
+.. _foreman_scc_account_module:
 
 
-foreman_global_parameter -- Manage Foreman Global Parameters
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+foreman_scc_account -- Manage Foreman SccAccount
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 .. contents::
@@ -16,7 +16,9 @@ foreman_global_parameter -- Manage Foreman Global Parameters
 
 Synopsis
 --------
-- Manage Foreman Global Parameter Entities
+- Manage Foreman Suse Customer Center Account Entities
+- This module requires the foreman_scc_manager plugin set up in the server
+- See: https://github.com/ATIX-AG/foreman_scc_manager
 
 
 
@@ -40,6 +42,51 @@ Parameters
         </tr>
                     <tr>
                                                                 <td colspan="1">
+                    <b>base_url</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>URL of SUSE for suse customer center account</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>interval</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                            <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                                <li>never</li>
+                                                                                                                                                                                                <li>daily</li>
+                                                                                                                                                                                                <li>weekly</li>
+                                                                                                                                                                                                <li>monthly</li>
+                                                                                    </ul>
+                                                                            </td>
+                                                                <td>
+                                                                        <div>Interval for syncing suse customer center account</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>login</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Login id of suse customer center account</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
                     <b>name</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
@@ -48,30 +95,20 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Name of the Global Parameter</div>
+                                                                        <div>Name of the suse customer center account</div>
                                                                                 </td>
             </tr>
                                 <tr>
                                                                 <td colspan="1">
-                    <b>parameter_type</b>
+                    <b>organization</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
-                                                                    </div>
+                                                 / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
-                                                                                                                            <ul style="margin: 0; padding: 0"><b>Choices:</b>
-                                                                                                                                                                <li><div style="color: blue"><b>string</b>&nbsp;&larr;</div></li>
-                                                                                                                                                                                                <li>boolean</li>
-                                                                                                                                                                                                <li>integer</li>
-                                                                                                                                                                                                <li>real</li>
-                                                                                                                                                                                                <li>array</li>
-                                                                                                                                                                                                <li>hash</li>
-                                                                                                                                                                                                <li>yaml</li>
-                                                                                                                                                                                                <li>json</li>
-                                                                                    </ul>
-                                                                            </td>
+                                                                                                                                                            </td>
                                                                 <td>
-                                                                        <div>Type of value</div>
+                                                                        <div>Name of related organization</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -85,6 +122,19 @@ Parameters
                                                                                                                                                             </td>
                                                                 <td>
                                                                         <div>Password of the user accessing the Foreman server</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>scc_account_password</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Password of suse customer center account</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -110,13 +160,42 @@ Parameters
                                 <td>
                                                                                                                             <ul style="margin: 0; padding: 0"><b>Choices:</b>
                                                                                                                                                                 <li><div style="color: blue"><b>present</b>&nbsp;&larr;</div></li>
-                                                                                                                                                                                                <li>present_with_defaults</li>
                                                                                                                                                                                                 <li>absent</li>
+                                                                                                                                                                                                <li>synced</li>
                                                                                     </ul>
                                                                             </td>
                                                                 <td>
-                                                                        <div>State of the entity in Foreman</div>
-                                                    <div><code>present_with_defaults</code> will ensure the entity exists, but won&#x27;t update existing ones</div>
+                                                                        <div>State of the suse customer center account</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>sync_date</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Last Sync time of suse customer center account</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>test_connection</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">boolean</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                                                                                    <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                                <li><div style="color: blue"><b>no</b>&nbsp;&larr;</div></li>
+                                                                                                                                                                                                <li>yes</li>
+                                                                                    </ul>
+                                                                            </td>
+                                                                <td>
+                                                                        <div>Test suse customer center account credentials that connects to the server</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -129,7 +208,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>New name of the Global Parameter. When this parameter is set, the module will not be idempotent.</div>
+                                                                        <div>Name to be updated of suse customer center account</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -163,28 +242,9 @@ Parameters
                                                                                         <div style="font-size: small; color: darkgreen"><br/>aliases: verify_ssl</div>
                                     </td>
             </tr>
-                                <tr>
-                                                                <td colspan="1">
-                    <b>value</b>
-                    <div style="font-size: small">
-                        <span style="color: purple">raw</span>
-                                                                    </div>
-                                    </td>
-                                <td>
-                                                                                                                                                            </td>
-                                                                <td>
-                                                                        <div>Value of the Global Parameter</div>
-                                                                                </td>
-            </tr>
                         </table>
     <br/>
 
-
-Notes
------
-
-.. note::
-   - The *parameter_type* only has an effect on Foreman >= 1.22
 
 
 
@@ -194,30 +254,31 @@ Examples
 .. code-block:: yaml+jinja
 
     
-    - name: "Create a Global Parameter"
-      foreman_global_parameter:
+    - name: "Create a suse customer center account"
+      foreman_scc_account:
         username: "admin"
         password: "changeme"
         server_url: "https://foreman.example.com"
-        name: "TheAnswer"
-        value: "42"
-        state: present_with_defaults
-
-    - name: "Update a Global Parameter"
-      foreman_global_parameter:
-        username: "admin"
-        password: "changeme"
-        server_url: "https://foreman.example.com"
-        name: "TheAnswer"
-        value: "43"
+        name: "Test"
+        login: "abcde"
+        scc_account_password: "12345"
+        base_url: "https://scc.suse.com"
         state: present
 
-    - name: "Delete a Global Parameter"
-      foreman_global_parameter:
+    - name: "Update a suse customer center account"
+      foreman_scc_account:
         username: "admin"
         password: "changeme"
         server_url: "https://foreman.example.com"
-        name: "TheAnswer"
+        name: "Test1"
+        state: present
+
+    - name: "Delete a suse customer center account"
+      foreman_scc_account:
+        username: "admin"
+        password: "changeme"
+        server_url: "https://foreman.example.com"
+        name: "Test"
         state: absent
 
 
@@ -242,10 +303,8 @@ Status
 Authors
 ~~~~~~~
 
-- Bernhard Hopfenmueller (@Fobhep) ATIX AG
-- Matthias Dellweg (@mdellweg) ATIX AG
 - Manisha Singhal (@manisha15) ATIX AG
 
 
 .. hint::
-    If you notice any issues in this documentation, you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/plugins/modules/foreman_global_parameter.py>`_ to improve it.
+    If you notice any issues in this documentation, you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/plugins/modules/foreman_scc_account.py>`_ to improve it.
