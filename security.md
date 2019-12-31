@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](https://cve.mitre.org/).
 
+* [CVE-2019-14825: Registry credentials are captured in plain text in dynflow task during repository discovery](security.html#2019-14825)
 * [CVE-2019-10198: Information disclosure in foreman tasks plugin](security.html#2019-10198)
 * [CVE-2019-3845: Lack of access control around Qpid message broker](security.html#2019-3845)
 * [CVE-2019-3893: Compute resource credentials exposed during deletion on API](security.html#2019-3893)
@@ -78,6 +79,13 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2019-14825"></a>CVE-2019-14825: Registry credentials are captured in plain text in dynflow task during repository discover
+A cleartext password storage issue was discovered in Katello. Registry credentials used during container image discovery were inadvertently logged without being masked. This could expose the registry credentials to other privileged users.
+
+* Affects Katello 3.4 and higher.
+* Fix released in Katello 3.14.0 and higher.
+* Redmine issue [#27485](https://projects.theforeman.org/issues/27485)
 
 #### <a id="2019-10198"></a>CVE-2019-10198: Authorization bypass in foreman tasks plugin
 The Foreman tasks plugin allowed authenticated users to view task details even if they lack the permission to do so. This bypass requires prior knowledge of the task UUID, which can not be easily guessed.
