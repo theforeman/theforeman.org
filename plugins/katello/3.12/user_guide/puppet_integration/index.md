@@ -6,7 +6,7 @@ version: '3.12'
 # Managing Puppet Content
 
 ### Importing the Puppet Forge
-The [Puppet Forge](https://forge.puppetlabs.com/) is a collection of puppet modules written by the community which can be used to manage hosts in Katello. These modules can be used in content views as described in the [content views guide](/plugins/katello/{{ page.version }}/user_guide/content_views/content_views.html#adding-a-puppet-module) in order to configure the running hosts.
+The [Puppet Forge](https://forge.puppetlabs.com/) is a collection of puppet modules written by the community which can be used to manage hosts in Katello. These modules can be used in content views as described in the [content views guide](/plugins/katello/{{ page.version }}/user_guide/content_views/index.html#adding-a-puppet-module) in order to configure the running hosts.
 
 To import the puppet forge navigate to
 
@@ -35,7 +35,7 @@ hammer repository create
 
 ```
 
-The repository can [now be synced](/plugins/katello/{{ page.version }}/user_guide/content/content.html#syncing-a-repository).
+The repository can [now be synced](/plugins/katello/{{ page.version }}/user_guide/content/index.html#syncing-a-repository).
 
 ### Importing Puppet Modules from Git
 

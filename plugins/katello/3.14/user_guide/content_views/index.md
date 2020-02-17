@@ -17,12 +17,12 @@ What can a Content View be used for?
  * Composite Content View - a Content View that contains a collection of other Content Views.
  * Filter - provides finer grained control over content in a Content View.  Can be used to include or exclude specific packages, package groups, or errata.
  * Publishing - Content Views are 'published' in order to lock their contents in place.  The content of the Content View is cloned and all filters applied.  Publishing creates a new version of the Content View.
- * Promoting - Content Views can be cloned to different [Lifecycle Environments](/plugins/katello/{{ page.version }}/user_guide/lifecycle_environments/environment.html) (Dev, Test, Production).
+ * Promoting - Content Views can be cloned to different [Lifecycle Environments](/plugins/katello/{{ page.version }}/user_guide/lifecycle_environments/index.html) (Dev, Test, Production).
 
 
 ## General Workflow
 
-First [create a product and repository](/plugins/katello/{{ page.version }}/user_guide/content/content.html#creating-a-product) in the library environment and populate the repository with content (by syncing it or uploading content).
+First [create a product and repository](/plugins/katello/{{ page.version }}/user_guide/content/index.html#creating-a-product) in the library environment and populate the repository with content (by syncing it or uploading content).
 A [Content Host](/plugins/katello/{{ page.version }}/user_guide/content_hosts/index.html) can now register directly to library and be attached to the content therein.  Updates will be available as soon as new content is synced or uploaded.
 
 To utilize Content Views for filtering and snapshoting:
@@ -74,7 +74,7 @@ hammer content-view create \
 ## Adding Repositories
 
 Adding a repository to a Content View means whenever a Content View is published, all of the content contained within the repository at that time is included in the Content View.
-If the [repository is synced](/plugins/katello/{{ page.version }}/user_guide/content/content.html#syncing-a-repository) after publishing the Content View, the Content View will contain the state of the repository prior to syncing.
+If the [repository is synced](/plugins/katello/{{ page.version }}/user_guide/content/index.html#syncing-a-repository) after publishing the Content View, the Content View will contain the state of the repository prior to syncing.
 A new version of the Content View must be published in order for the new version to get the contents of the newly synced repository.
 
 To add a repository using the web UI, navigate to:
