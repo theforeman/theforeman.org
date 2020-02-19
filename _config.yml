@@ -9,7 +9,7 @@ url: https://theforeman.org
 baseurl: "" #keep at "" for the Atom feed
 
 # latest *stable* version
-foreman_version: '1.24'
+foreman_version: '2.0'
 
 paginate: 5
 paginate_path: "blog/page:num"
@@ -119,6 +119,11 @@ defaults:
     values:
       version: "nightly"
       foreman_version: "nightly"
+  - scope:
+      path: "plugins/katello/3.15"
+    values:
+      version: "3.15"
+      foreman_version: "2.0"
   - scope:
       path: "plugins/katello/3.14"
     values:
