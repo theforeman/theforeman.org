@@ -55,3 +55,25 @@ For the full release notes, see the [Changelog](https://github.com/Katello/katel
 
 ## Contributors
 
+Avi Sharvit
+Brad Buckingham
+Chris Roberts
+Dhananjay Gupte
+Eric Helms
+Ian Ballou
+James Jeffers
+Jeremy Lenz
+John Mitsch
+Jonathon Turel
+Justin Sherrill
+Marek Hulán
+bbucking
+Michael Moll
+Partha Aji
+Ranjan Kumar
+Ron Lavi
+Samir Jha
+Shimon Shtein
+Shira Maximov
+Swetha Seelam Lakshmi Narayanan
+Walden Raines
