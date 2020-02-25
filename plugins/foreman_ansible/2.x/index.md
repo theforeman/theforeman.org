@@ -268,7 +268,7 @@ For more information about scheduled jobs, check out the [Foreman Remote Executi
 template: src=foo.cfg.j2 dest={% raw %}{{ remote_install_path }}{% endraw %}/foo.cfg
 ```
 
-uses the 'remote_install_path' variable. You can use Foreman to override these variables. The variables will only be overridden if you run your roles from Foreman, as Foreman sends an inventory with a dictionary contianing variable names and values when it runs Ansible roles.
+uses the 'remote_install_path' variable. You can use Foreman to override these variables. The variables will only be overridden if you run your roles from Foreman, as Foreman sends an inventory with a dictionary containing variable names and values when it runs Ansible roles.
 
 There are three ways to override an Ansible variable:
 
