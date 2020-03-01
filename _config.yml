@@ -120,6 +120,11 @@ defaults:
       version: "nightly"
       foreman_version: "nightly"
   - scope:
+      path: "plugins/katello/3.15"
+    values:
+      version: "3.15"
+      foreman_version: "2.0"
+  - scope:
       path: "plugins/katello/3.14"
     values:
       version: "3.14"
