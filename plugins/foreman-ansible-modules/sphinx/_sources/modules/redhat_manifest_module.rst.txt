@@ -109,7 +109,7 @@ Parameters
                                                                     </div>
                                     </td>
                                 <td>
-                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">"https://subscription.rhn.redhat.com"</div>
+                                                                                                                                                                    <b>Default:</b><br/><div style="color: blue">"https://subscription.rhsm.redhat.com"</div>
                                     </td>
                                                                 <td>
                                                                         <div>Red Hat Portal subscription access address</div>

@@ -1,12 +1,12 @@
-:source: foreman_environment.py
+:source: foreman_model.py
 
 :orphan:
 
-.. _foreman_environment_module:
+.. _foreman_model_module:
 
 
-foreman_environment -- Manage Foreman Environment (Puppet) using Foreman API
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+foreman_model -- Manage Foreman hardware models
++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 .. contents::
@@ -16,7 +16,7 @@ foreman_environment -- Manage Foreman Environment (Puppet) using Foreman API
 
 Synopsis
 --------
-- Create and Delete Foreman Environment using Foreman API
+- Manage Foreman hardware models
 
 
 
@@ -40,15 +40,29 @@ Parameters
         </tr>
                     <tr>
                                                                 <td colspan="1">
-                    <b>locations</b>
+                    <b>hardware_model</b>
                     <div style="font-size: small">
-                        <span style="color: purple">list</span>
-                         / <span style="color: purple">elements=string</span>                                            </div>
+                        <span style="color: purple">string</span>
+                                                                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>List of locations the entity should be assigned to</div>
+                                                                        <div>The class of CPU supplied in this machine.</div>
+                                                    <div>This is primarily used by Sparc Solaris builds and can be left blank for other architectures.</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>info</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>General description of the hardware model</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -61,20 +75,7 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>The full environment name</div>
-                                                                                </td>
-            </tr>
-                                <tr>
-                                                                <td colspan="1">
-                    <b>organizations</b>
-                    <div style="font-size: small">
-                        <span style="color: purple">list</span>
-                         / <span style="color: purple">elements=string</span>                                            </div>
-                                    </td>
-                                <td>
-                                                                                                                                                            </td>
-                                                                <td>
-                                                                        <div>List of organizations the entity should be assigned to</div>
+                                                                        <div>Name of the Foreman hardware model</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -151,6 +152,20 @@ Parameters
                                                                                         <div style="font-size: small; color: darkgreen"><br/>aliases: verify_ssl</div>
                                     </td>
             </tr>
+                                <tr>
+                                                                <td colspan="1">
+                    <b>vendor_class</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>The class of the machine as reported by the OpenBoot PROM.</div>
+                                                    <div>This is primarily used by Solaris SPARC builds and can be left blank for other architectures.</div>
+                                                                                </td>
+            </tr>
                         </table>
     <br/>
 
@@ -163,16 +178,13 @@ Examples
 .. code-block:: yaml+jinja
 
     
-    - name: create new environment
-      foreman_environment:
-        name: "testing"
-        locations:
-          - "Munich"
-        organizations:
-          - "ATIX"
-        server_url: "https://foreman.example.com"
+    - name: "Create ACME Laptop model"
+      foreman_model:
         username: "admin"
-        password: "secret"
+        password: "changeme"
+        server_url: "https://foreman.example.com"
+        name: "acme laptop"
+        info: "this is the acme laptop"
         state: present
 
 
@@ -197,9 +209,8 @@ Status
 Authors
 ~~~~~~~
 
-- Bernhard Suttner (@_sbernhard) ATIX AG
-- Christoffer Reijer (@ephracis) Basalt AB
+- Evgeni Golov (@evgeni)
 
 
 .. hint::
-    If you notice any issues in this documentation, you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/plugins/modules/foreman_environment.py>`_ to improve it.
+    If you notice any issues in this documentation, you can `edit this document <https://github.com/theforeman/foreman-ansible-modules/edit/master/plugins/modules/foreman_model.py>`_ to improve it.

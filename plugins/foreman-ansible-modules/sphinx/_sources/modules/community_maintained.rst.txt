@@ -38,6 +38,7 @@ Modules Maintained by the Ansible Community
   * :ref:`foreman_installation_medium_module` 
   * :ref:`foreman_job_template_module` 
   * :ref:`foreman_location_module` 
+  * :ref:`foreman_model_module` 
   * :ref:`foreman_operatingsystem_module` 
   * :ref:`foreman_organization_module` 
   * :ref:`foreman_os_default_template_module` 
