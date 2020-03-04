@@ -228,6 +228,21 @@
         </tr>
                             <tr>
                                                             <td colspan="1">
+                <b>deb_errata_url</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>URL to sync Debian or Ubuntu errata information from</div>
+                                                <div>only available on Orcharhino</div>
+                                                <div>only available for <em>content_type=deb</em></div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                            <td colspan="1">
                 <b>deb_releases</b>
                 <div style="font-size: small">
                     <span style="color: purple">string</span>
@@ -245,7 +260,7 @@
                 <b>docker_tags_whitelist</b>
                 <div style="font-size: small">
                     <span style="color: purple">list</span>
-                                                                </div>
+                     / <span style="color: purple">elements=string</span>                                            </div>
                                 </td>
                             <td>
                                                                                                                                                         </td>
@@ -392,6 +407,45 @@
                                                                                                                                                         </td>
                                                             <td>
                                                                     <div>URL of the Foreman server</div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                            <td colspan="1">
+                <b>ssl_ca_cert</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>Repository SSL CA certificate</div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                            <td colspan="1">
+                <b>ssl_client_cert</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>Repository SSL client certificate</div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                            <td colspan="1">
+                <b>ssl_client_key</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>Repository SSL client private key</div>
                                                                             </td>
         </tr>
                             <tr>

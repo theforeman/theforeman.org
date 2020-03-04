@@ -70,7 +70,7 @@ Parameters
                     <b>permissions</b>
                     <div style="font-size: small">
                         <span style="color: purple">list</span>
-                                                 / <span style="color: red">required</span>                    </div>
+                         / <span style="color: purple">elements=string</span>                         / <span style="color: red">required</span>                    </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -98,7 +98,7 @@ Parameters
                     <b>locations</b>
                     <div style="font-size: small">
                         <span style="color: purple">list</span>
-                                                                    </div>
+                         / <span style="color: purple">elements=string</span>                                            </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -124,7 +124,7 @@ Parameters
                     <b>organizations</b>
                     <div style="font-size: small">
                         <span style="color: purple">list</span>
-                                                                    </div>
+                         / <span style="color: purple">elements=string</span>                                            </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>

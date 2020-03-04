@@ -82,7 +82,7 @@ Parameters
                     <b>config_groups</b>
                     <div style="font-size: small">
                         <span style="color: purple">list</span>
-                                                                    </div>
+                         / <span style="color: purple">elements=string</span>                                            </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -100,7 +100,8 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Katello Content source. Only available for katello installations.</div>
+                                                                        <div>Katello Content source.</div>
+                                                    <div>Only available for Katello installations.</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -113,7 +114,8 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Katello Content view. Only available for katello installations.</div>
+                                                                        <div>Katello Content view.</div>
+                                                    <div>Only available for Katello installations.</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -165,7 +167,10 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Kickstart repository name. Only available for katello installations.</div>
+                                                                        <div>Kickstart repository name.</div>
+                                                    <div>You need to provide this to use the &quot;Synced Content&quot; feature of Katello.</div>
+                                                    <div>Mutually exclusive with <em>medium</em>.</div>
+                                                    <div>Only available for Katello installations.</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -178,7 +183,8 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Katello Lifecycle environment. Only available for katello installations.</div>
+                                                                        <div>Katello Lifecycle environment.</div>
+                                                    <div>Only available for Katello installations.</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -186,7 +192,7 @@ Parameters
                     <b>locations</b>
                     <div style="font-size: small">
                         <span style="color: purple">list</span>
-                                                                    </div>
+                         / <span style="color: purple">elements=string</span>                                            </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -205,6 +211,7 @@ Parameters
                                                                                                                                                             </td>
                                                                 <td>
                                                                         <div>Medium name</div>
+                                                    <div>Mutually exclusive with <em>kickstart_repository</em>.</div>
                                                                                         <div style="font-size: small; color: darkgreen"><br/>aliases: media</div>
                                     </td>
             </tr>
@@ -257,7 +264,8 @@ Parameters
                                 <td>
                                                                                                                                                             </td>
                                                                 <td>
-                                                                        <div>Organization for scoped resources attached to the hostgroup. Only used for katello installations.</div>
+                                                                        <div>Organization for scoped resources attached to the hostgroup.</div>
+                                                    <div>Only used for Katello installations.</div>
                                                     <div>This organization will implicitly be added to the <em>organizations</em> parameter if needed.</div>
                                                                                 </td>
             </tr>
@@ -266,7 +274,7 @@ Parameters
                     <b>organizations</b>
                     <div style="font-size: small">
                         <span style="color: purple">list</span>
-                                                                    </div>
+                         / <span style="color: purple">elements=string</span>                                            </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -410,7 +418,7 @@ Parameters
                     <b>puppetclasses</b>
                     <div style="font-size: small">
                         <span style="color: purple">list</span>
-                                                                    </div>
+                         / <span style="color: purple">elements=string</span>                                            </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>

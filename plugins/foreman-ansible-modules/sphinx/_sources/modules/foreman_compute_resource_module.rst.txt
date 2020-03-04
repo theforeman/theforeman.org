@@ -56,7 +56,7 @@ Parameters
                     <b>locations</b>
                     <div style="font-size: small">
                         <span style="color: purple">list</span>
-                                                                    </div>
+                         / <span style="color: purple">elements=string</span>                                            </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -82,7 +82,7 @@ Parameters
                     <b>organizations</b>
                     <div style="font-size: small">
                         <span style="color: purple">list</span>
-                                                                    </div>
+                         / <span style="color: purple">elements=string</span>                                            </div>
                                     </td>
                                 <td>
                                                                                                                                                             </td>
@@ -115,6 +115,9 @@ Parameters
                                                                                                                                                                 <li>vmware</li>
                                                                                                                                                                                                 <li>libvirt</li>
                                                                                                                                                                                                 <li>ovirt</li>
+                                                                                                                                                                                                <li>EC2</li>
+                                                                                                                                                                                                <li>AzureRm</li>
+                                                                                                                                                                                                <li>GCE</li>
                                                                                     </ul>
                                                                             </td>
                                                                 <td>
@@ -135,6 +138,20 @@ Parameters
                                                                                 </td>
             </tr>
                                                             <tr>
+                                                    <td class="elbow-placeholder"></td>
+                                                <td colspan="1">
+                    <b>app_ident</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>AzureRM client id</div>
+                                                                                </td>
+            </tr>
+                                <tr>
                                                     <td class="elbow-placeholder"></td>
                                                 <td colspan="1">
                     <b>datacenter</b>
@@ -165,6 +182,34 @@ Parameters
                                 <tr>
                                                     <td class="elbow-placeholder"></td>
                                                 <td colspan="1">
+                    <b>email</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Email for <em>provider=GCE</em></div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                    <td class="elbow-placeholder"></td>
+                                                <td colspan="1">
+                    <b>key_path</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Certificate path for <em>provider=GCE</em></div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                    <td class="elbow-placeholder"></td>
+                                                <td colspan="1">
                     <b>ovirt_quota</b>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
@@ -188,6 +233,48 @@ Parameters
                                                                                                                                                             </td>
                                                                 <td>
                                                                         <div>Password for the compute resource connection, not valid for <em>provider=libvirt</em></div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                    <td class="elbow-placeholder"></td>
+                                                <td colspan="1">
+                    <b>project</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>Project id for <em>provider=GCE</em></div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                    <td class="elbow-placeholder"></td>
+                                                <td colspan="1">
+                    <b>region</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>AWS region, AZURE region</div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                    <td class="elbow-placeholder"></td>
+                                                <td colspan="1">
+                    <b>tenant</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>AzureRM tenant</div>
                                                                                 </td>
             </tr>
                                 <tr>
@@ -234,6 +321,20 @@ Parameters
                                                                                                                                                             </td>
                                                                 <td>
                                                                         <div>Username for the compute resource connection, not valid for <em>provider=libvirt</em></div>
+                                                                                </td>
+            </tr>
+                                <tr>
+                                                    <td class="elbow-placeholder"></td>
+                                                <td colspan="1">
+                    <b>zone</b>
+                    <div style="font-size: small">
+                        <span style="color: purple">string</span>
+                                                                    </div>
+                                    </td>
+                                <td>
+                                                                                                                                                            </td>
+                                                                <td>
+                                                                        <div>zone for <em>provider=GCE</em></div>
                                                                                 </td>
             </tr>
                     
@@ -404,6 +505,64 @@ Examples
         password: secret
         state: present
 
+    - name: create EC2 compute resource
+      foreman_compute_resource:
+        name: EC2_compute_resource
+        description: EC2
+        locations:
+          - AWS
+        organizations:
+          - ATIX
+        provider: EC2
+        provider_params:
+          user: AWS_ACCESS_KEY
+          password: AWS_SECRET_KEY
+          region: eu-west-1
+        server_url: "https://foreman.example.com"
+        username: admin
+        password: secret
+        state: present
+
+    - name: create Azure compute resource
+      foreman_compute_resource:
+        name: AzureRm_compute_resource
+        description: AzureRm
+        locations:
+          - Azure
+        organizations:
+          - ATIX
+        provider: AzureRm
+        provider_params:
+          user: SUBSCRIPTION_ID
+          tenant: TENANT_ID
+          app_ident: CLIENT_ID
+          password: CLIENT_SECRET
+          region: westeurope
+        server_url: "https://foreman.example.com"
+        username: admin
+        password: secret
+        state: present
+
+    - name: create GCE compute resource
+      foreman_compute_resource:
+        name: GCE compute resource
+        description: Google Cloud Engine
+        locations:
+          - GCE
+        organizations:
+          - ATIX
+        provider: GCE
+        provider_params:
+          project: orcharhino
+          email: myname@atix.de
+          key_path: "/usr/share/foreman/gce_orcharhino_key.json"
+          zone: europe-west3-b
+        server_url: "https://foreman.example.com"
+        username: admin
+        password: secret
+        state: present
+
+
 
 
 
@@ -429,6 +588,7 @@ Authors
 - Philipp Joos (@philippj)
 - Baptiste Agasse (@bagasse)
 - Manisha Singhal (@Manisha15) ATIX AG
+- Mark Hlawatschek (@hlawatschek) ATIX AG
 
 
 .. hint::

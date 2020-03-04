@@ -174,12 +174,12 @@
 <h2><a class="toc-backref" href="#id3">Parameters</a><a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
 <table  border=0 cellpadding=0 class="documentation-table">
     <tr>
-        <th colspan="1">Parameter</th>
+        <th colspan="2">Parameter</th>
         <th>Choices/<font color="blue">Defaults</font></th>
                     <th width="100%">Comments</th>
     </tr>
                 <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>build</b>
                 <div style="font-size: small">
                     <span style="color: purple">boolean</span>
@@ -196,7 +196,20 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
+                <b>comment</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>Comment about the host.</div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                            <td colspan="2">
                 <b>compute_profile</b>
                 <div style="font-size: small">
                     <span style="color: purple">string</span>
@@ -209,7 +222,7 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>compute_resource</b>
                 <div style="font-size: small">
                     <span style="color: purple">string</span>
@@ -222,7 +235,7 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>domain</b>
                 <div style="font-size: small">
                     <span style="color: purple">string</span>
@@ -235,7 +248,7 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>enabled</b>
                 <div style="font-size: small">
                     <span style="color: purple">boolean</span>
@@ -252,7 +265,7 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>hostgroup</b>
                 <div style="font-size: small">
                     <span style="color: purple">string</span>
@@ -266,7 +279,20 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
+                <b>ip</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>IP address of the primary interface of the host.</div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                            <td colspan="2">
                 <b>location</b>
                 <div style="font-size: small">
                     <span style="color: purple">string</span>
@@ -279,7 +305,22 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
+                <b>mac</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>MAC address of the primary interface of the host.</div>
+                                                <div>Please include leading zeros and separate nibbles by colons, otherwise the execution will not be idempotent.</div>
+                                                <div>Example EE:BB:01:02:03:04</div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                            <td colspan="2">
                 <b>managed</b>
                 <div style="font-size: small">
                     <span style="color: purple">boolean</span>
@@ -297,7 +338,7 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>name</b>
                 <div style="font-size: small">
                     <span style="color: purple">string</span>
@@ -310,7 +351,7 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>organization</b>
                 <div style="font-size: small">
                     <span style="color: purple">string</span>
@@ -323,7 +364,101 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
+                <b>owner</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>Owner (user) of the host.</div>
+                                                <div>Mutually exclusive with <em>owner_group</em>.</div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                            <td colspan="2">
+                <b>owner_group</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>Owner (user group) of the host.</div>
+                                                <div>Mutually excluside with <em>owner</em>.</div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                            <td colspan="2">
+                <b>parameters</b>
+                <div style="font-size: small">
+                    <span style="color: purple">list</span>
+                     / <span style="color: purple">elements=dictionary</span>                                            </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>Entity domain specific host parameters</div>
+                                                                            </td>
+        </tr>
+                                                        <tr>
+                                                <td class="elbow-placeholder"></td>
+                                            <td colspan="1">
+                <b>name</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                             / <span style="color: red">required</span>                    </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>Name of the parameter</div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                <td class="elbow-placeholder"></td>
+                                            <td colspan="1">
+                <b>parameter_type</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                        <ul style="margin: 0; padding: 0"><b>Choices:</b>
+                                                                                                                                                            <li><div style="color: blue"><b>string</b>&nbsp;&larr;</div></li>
+                                                                                                                                                                                            <li>boolean</li>
+                                                                                                                                                                                            <li>integer</li>
+                                                                                                                                                                                            <li>real</li>
+                                                                                                                                                                                            <li>array</li>
+                                                                                                                                                                                            <li>hash</li>
+                                                                                                                                                                                            <li>yaml</li>
+                                                                                                                                                                                            <li>json</li>
+                                                                                </ul>
+                                                                        </td>
+                                                            <td>
+                                                                    <div>Type of the parameter</div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                <td class="elbow-placeholder"></td>
+                                            <td colspan="1">
+                <b>value</b>
+                <div style="font-size: small">
+                    <span style="color: purple">raw</span>
+                                             / <span style="color: red">required</span>                    </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>Value of the parameter</div>
+                                                                            </td>
+        </tr>
+
+                                            <tr>
+                                                            <td colspan="2">
                 <b>password</b>
                 <div style="font-size: small">
                     <span style="color: purple">string</span>
@@ -336,7 +471,21 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
+                <b>root_pass</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>Root password.</div>
+                                                <div>Will result in the entity always being updated, as the current password cannot be retrieved.</div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                            <td colspan="2">
                 <b>server_url</b>
                 <div style="font-size: small">
                     <span style="color: purple">string</span>
@@ -349,7 +498,7 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>state</b>
                 <div style="font-size: small">
                     <span style="color: purple">string</span>
@@ -366,7 +515,7 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>subnet</b>
                 <div style="font-size: small">
                     <span style="color: purple">string</span>
@@ -379,7 +528,7 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>subnet6</b>
                 <div style="font-size: small">
                     <span style="color: purple">string</span>
@@ -392,7 +541,7 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>username</b>
                 <div style="font-size: small">
                     <span style="color: purple">string</span>
@@ -405,7 +554,7 @@
                                                                             </td>
         </tr>
                             <tr>
-                                                            <td colspan="1">
+                                                            <td colspan="2">
                 <b>validate_certs</b>
                 <div style="font-size: small">
                     <span style="color: purple">boolean</span>

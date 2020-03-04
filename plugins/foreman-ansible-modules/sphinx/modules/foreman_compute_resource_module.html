@@ -195,7 +195,7 @@
                 <b>locations</b>
                 <div style="font-size: small">
                     <span style="color: purple">list</span>
-                                                                </div>
+                     / <span style="color: purple">elements=string</span>                                            </div>
                                 </td>
                             <td>
                                                                                                                                                         </td>
@@ -221,7 +221,7 @@
                 <b>organizations</b>
                 <div style="font-size: small">
                     <span style="color: purple">list</span>
-                                                                </div>
+                     / <span style="color: purple">elements=string</span>                                            </div>
                                 </td>
                             <td>
                                                                                                                                                         </td>
@@ -254,6 +254,9 @@
                                                                                                                                                             <li>vmware</li>
                                                                                                                                                                                             <li>libvirt</li>
                                                                                                                                                                                             <li>ovirt</li>
+                                                                                                                                                                                            <li>EC2</li>
+                                                                                                                                                                                            <li>AzureRm</li>
+                                                                                                                                                                                            <li>GCE</li>
                                                                                 </ul>
                                                                         </td>
                                                             <td>
@@ -274,6 +277,20 @@
                                                                             </td>
         </tr>
                                                         <tr>
+                                                <td class="elbow-placeholder"></td>
+                                            <td colspan="1">
+                <b>app_ident</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>AzureRM client id</div>
+                                                                            </td>
+        </tr>
+                            <tr>
                                                 <td class="elbow-placeholder"></td>
                                             <td colspan="1">
                 <b>datacenter</b>
@@ -304,6 +321,34 @@
                             <tr>
                                                 <td class="elbow-placeholder"></td>
                                             <td colspan="1">
+                <b>email</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>Email for <em>provider=GCE</em></div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                <td class="elbow-placeholder"></td>
+                                            <td colspan="1">
+                <b>key_path</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>Certificate path for <em>provider=GCE</em></div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                <td class="elbow-placeholder"></td>
+                                            <td colspan="1">
                 <b>ovirt_quota</b>
                 <div style="font-size: small">
                     <span style="color: purple">string</span>
@@ -327,6 +372,48 @@
                                                                                                                                                         </td>
                                                             <td>
                                                                     <div>Password for the compute resource connection, not valid for <em>provider=libvirt</em></div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                <td class="elbow-placeholder"></td>
+                                            <td colspan="1">
+                <b>project</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>Project id for <em>provider=GCE</em></div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                <td class="elbow-placeholder"></td>
+                                            <td colspan="1">
+                <b>region</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>AWS region, AZURE region</div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                <td class="elbow-placeholder"></td>
+                                            <td colspan="1">
+                <b>tenant</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>AzureRM tenant</div>
                                                                             </td>
         </tr>
                             <tr>
@@ -373,6 +460,20 @@
                                                                                                                                                         </td>
                                                             <td>
                                                                     <div>Username for the compute resource connection, not valid for <em>provider=libvirt</em></div>
+                                                                            </td>
+        </tr>
+                            <tr>
+                                                <td class="elbow-placeholder"></td>
+                                            <td colspan="1">
+                <b>zone</b>
+                <div style="font-size: small">
+                    <span style="color: purple">string</span>
+                                                                </div>
+                                </td>
+                            <td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>zone for <em>provider=GCE</em></div>
                                                                             </td>
         </tr>
 
@@ -534,6 +635,63 @@
     <span class="nt">username</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
     <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
     <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
+
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">create EC2 compute resource</span>
+  <span class="nt">foreman_compute_resource</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">EC2_compute_resource</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">EC2</span>
+    <span class="nt">locations</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">AWS</span>
+    <span class="nt">organizations</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ATIX</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">EC2</span>
+    <span class="nt">provider_params</span><span class="p">:</span>
+      <span class="nt">user</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">AWS_ACCESS_KEY</span>
+      <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">AWS_SECRET_KEY</span>
+      <span class="nt">region</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">eu-west-1</span>
+    <span class="nt">server_url</span><span class="p">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
+    <span class="nt">username</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
+    <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
+    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
+
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">create Azure compute resource</span>
+  <span class="nt">foreman_compute_resource</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">AzureRm_compute_resource</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">AzureRm</span>
+    <span class="nt">locations</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Azure</span>
+    <span class="nt">organizations</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ATIX</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">AzureRm</span>
+    <span class="nt">provider_params</span><span class="p">:</span>
+      <span class="nt">user</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">SUBSCRIPTION_ID</span>
+      <span class="nt">tenant</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">TENANT_ID</span>
+      <span class="nt">app_ident</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">CLIENT_ID</span>
+      <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">CLIENT_SECRET</span>
+      <span class="nt">region</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">westeurope</span>
+    <span class="nt">server_url</span><span class="p">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
+    <span class="nt">username</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
+    <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
+    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
+
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">create GCE compute resource</span>
+  <span class="nt">foreman_compute_resource</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">GCE compute resource</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Google Cloud Engine</span>
+    <span class="nt">locations</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">GCE</span>
+    <span class="nt">organizations</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ATIX</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">GCE</span>
+    <span class="nt">provider_params</span><span class="p">:</span>
+      <span class="nt">project</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">orcharhino</span>
+      <span class="nt">email</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">myname@atix.de</span>
+      <span class="nt">key_path</span><span class="p">:</span> <span class="s">&quot;/usr/share/foreman/gce_orcharhino_key.json&quot;</span>
+      <span class="nt">zone</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">europe-west3-b</span>
+    <span class="nt">server_url</span><span class="p">:</span> <span class="s">&quot;https://foreman.example.com&quot;</span>
+    <span class="nt">username</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
+    <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">secret</span>
+    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">present</span>
 </pre></div>
 </div>
 </div>
@@ -549,6 +707,7 @@
 <li><p>Philipp Joos (&#64;philippj)</p></li>
 <li><p>Baptiste Agasse (&#64;bagasse)</p></li>
 <li><p>Manisha Singhal (&#64;Manisha15) ATIX AG</p></li>
+<li><p>Mark Hlawatschek (&#64;hlawatschek) ATIX AG</p></li>
 </ul>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
