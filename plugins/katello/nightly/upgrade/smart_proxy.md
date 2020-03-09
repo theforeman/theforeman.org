@@ -61,11 +61,10 @@ scp ~/myproxy.example.com-certs.tar myproxy.example.com:
 
 ## Step 5 - Run Installer
 
-The installer with the --upgrade flag will run the right database migrations for all component services, as well as adjusting the configuration to reflect what's new in Katello {{ page.version }}
+The installer will run the right database migrations for all component services, as well as adjusting the configuration to reflect what's new in Katello {{ page.version }}
 
 {% highlight bash %}
-foreman-installer --scenario foreman-proxy-content --upgrade\
-                  --certs-tar-file ~/myproxy.example.com-certs.tar\
+foreman-installer --certs-tar-file ~/myproxy.example.com-certs.tar\
                   --certs-update-all --certs-regenerate true --certs-deploy true
 {% endhighlight %}
 

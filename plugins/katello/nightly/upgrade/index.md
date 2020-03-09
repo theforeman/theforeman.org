@@ -54,10 +54,10 @@ yum -y update
 
 ## Step 5 - Run Installer
 
-The installer with the --upgrade flag will run the right database migrations for all component services, as well as adjust the configuration to reflect what's new in Katello {{ page.version }}.
+The installer will run the right database migrations for all component services, as well as adjust the configuration to reflect what's new in Katello {{ page.version }}.
 
 {% highlight bash %}
-foreman-installer --scenario katello --upgrade
+foreman-installer
 {% endhighlight %}
 
 ## Step 6 - Reboot if necessary
