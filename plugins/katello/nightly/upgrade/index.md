@@ -74,9 +74,9 @@ For a rundown of what was added, please see the [release notes](/plugins/katello
 If the above steps failed, please review /var/log/foreman-installer/katello.log and [let us know about it](https://community.theforeman.org/c/support) if unable to resolve.
 
 
-## Pulp3 Migration ##
+## Pulp3 Migration
 
-Katello 3.15 introduces Pulp 3 alongside Pulp 2.  For this release only Docker and File repos will be migrated to Pulp 3 via the migration process.  This process will need to be complete before upgrading to 3.16, but can be done at any time.  Depending on how much File and Docker content is present, this can take a very long time.  The largest part of the process can be run without downtime.
+Katello 3.15 introduces Pulp 3 alongside Pulp 2.  For this release only Docker and File content types will be migrated to Pulp 3 via the migration process.  This process will need to be completed before upgrading to 3.16, but can be done at any time.  Depending on how much File and Docker content is present, this can take a very long time.  The largest part of the process can be run without downtime.
 
 1.  Migrate the content:
 
