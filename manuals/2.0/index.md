@@ -90,12 +90,10 @@ previous_version: "1.24"
 {%include manuals/{{ page.version }}/4.2.2_puppet_classes.md %}
 ### 4.2.3 Parameters
 {%include manuals/{{ page.version }}/4.2.3_puppet_params.md %}
-### 4.2.4 Smart Variables
-{%include manuals/{{ page.version }}/4.2.4_smart_vars.md %}
-### 4.2.5 Parameterized Classes
-{%include manuals/{{ page.version }}/4.2.5_param_classes.md %}
-### 4.2.6 Smart Matchers
-{%include manuals/{{ page.version }}/4.2.6_matchers.md %}
+### 4.2.4 Parameterized Classes
+{%include manuals/{{ page.version }}/4.2.4_param_classes.md %}
+### 4.2.5 Smart Matchers
+{%include manuals/{{ page.version }}/4.2.5_matchers.md %}
 
 ## 4.3 Smart Proxies
 {%include manuals/{{ page.version }}/4.3_smartproxy.md %}
