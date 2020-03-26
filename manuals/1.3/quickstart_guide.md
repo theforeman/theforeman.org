@@ -2,6 +2,7 @@
 layout: quickstart
 title: Foreman Quickstart Guide
 version: "1.3"
+robots: noindex, follow
 ---
 
 # Quickstart Guide
