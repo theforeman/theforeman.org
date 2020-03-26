@@ -15,7 +15,7 @@ tags:
 - newsletter
 modified_time: '2015-10-07T15:28:10.512+03:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-7066927474050736906
-blogger_orig_url: http://blog.theforeman.org/2015/10/foreman-community-newsletter-october.html
+blogger_orig_url: /2015/10/foreman-community-newsletter-october.html
 excerpt: |
   Foreman 1.9.2 was released at the end of September, Katello 2.3.1 is out, new
   plugins, events, and a new community manager. So much is happening this month!

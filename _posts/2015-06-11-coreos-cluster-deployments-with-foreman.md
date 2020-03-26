@@ -6,7 +6,7 @@ author: Daniel Lobato
 tags: 
 modified_time: '2015-06-11T17:05:40.896+03:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-4810446073191972741
-blogger_orig_url: http://blog.theforeman.org/2015/06/coreos-cluster-deployments-with-foreman.html
+blogger_orig_url: /2015/06/coreos-cluster-deployments-with-foreman.html
 guest_post: true
 guest_url: http://blog.daniellobato.me/coreos-cluster-deployments-with-foreman
 excerpt: |

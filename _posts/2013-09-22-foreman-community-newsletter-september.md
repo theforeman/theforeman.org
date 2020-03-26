@@ -9,7 +9,7 @@ tags:
 - newsletter
 modified_time: '2013-09-22T06:36:49.029+03:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-2110216780103561064
-blogger_orig_url: http://blog.theforeman.org/2013/09/foreman-community-newsletter-september.html
+blogger_orig_url: /2013/09/foreman-community-newsletter-september.html
 ---
 
 This is the first edition of what I hope will continue as a monthly

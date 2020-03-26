@@ -20,7 +20,7 @@ tags:
 - use cases
 modified_time: '2015-02-23T14:02:07.075+02:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-5796790676124730022
-blogger_orig_url: http://blog.theforeman.org/2015/02/foreman-community-survey-results.html
+blogger_orig_url: /2015/02/foreman-community-survey-results.html
 ---
 
 February has been an intense month for the Foreman team. We gave a few

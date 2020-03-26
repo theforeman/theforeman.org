@@ -12,7 +12,7 @@ tags:
 - use cases
 modified_time: '2015-07-09T13:52:29.898+03:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-2299346763897428216
-blogger_orig_url: http://blog.theforeman.org/2015/07/foreman-community-newsletter-june-2015.html
+blogger_orig_url: /2015/07/foreman-community-newsletter-june-2015.html
 excerpt: |
   Foreman 1.8.2 bugfix release, 1.9 RC1 is ready for testing, changes in
   community-templates, new videos, and more!

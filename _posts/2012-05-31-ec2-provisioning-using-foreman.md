@@ -13,7 +13,7 @@ tags:
 - virtualizaition
 modified_time: '2014-06-17T16:47:12.955+03:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-7871075604990928685
-blogger_orig_url: http://blog.theforeman.org/2012/05/ec2-provisioning-using-foreman.html
+blogger_orig_url: /2012/05/ec2-provisioning-using-foreman.html
 ---
 
 **Update**

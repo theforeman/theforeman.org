@@ -10,7 +10,7 @@ tags:
 - newsletter
 modified_time: '2014-01-28T23:56:22.600+02:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-4645622021234825583
-blogger_orig_url: http://blog.theforeman.org/2014/01/foreman-community-newsletter-january.html
+blogger_orig_url: /2014/01/foreman-community-newsletter-january.html
 ---
 
 Welcome to a new year, already with lots of exciting developments.  

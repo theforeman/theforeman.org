@@ -9,7 +9,7 @@ tags:
 - newsletter
 modified_time: '2013-11-25T11:09:33.219+02:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-4514542471446322799
-blogger_orig_url: http://blog.theforeman.org/2013/11/foreman-community-newsletter-november.html
+blogger_orig_url: /2013/11/foreman-community-newsletter-november.html
 ---
 
 Welcome to the November 2013 issue of the Foreman newsletter.  

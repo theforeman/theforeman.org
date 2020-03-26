@@ -7,7 +7,7 @@ tags:
 - foreman
 modified_time: '2015-03-02T10:42:38.361+02:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-4976536779190314981
-blogger_orig_url: http://blog.theforeman.org/2012/01/re-provision-host-without-pxeboot.html
+blogger_orig_url: /2012/01/re-provision-host-without-pxeboot.html
 ---
 
 So, yet another feature not many people know about Foreman.
