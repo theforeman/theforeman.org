@@ -12,7 +12,7 @@ tags:
 - newsletter
 modified_time: '2015-08-09T18:43:08.943+03:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-1639745625553251730
-blogger_orig_url: http://blog.theforeman.org/2015/08/foreman-community-newsletter-august-2015.html
+blogger_orig_url: /2015/08/foreman-community-newsletter-august-2015.html
 excerpt: |
   Foreman is six years old this month! Also, 1.9 RCs, Katello RCs, plugin updates
   and a bunch of events coming your way.

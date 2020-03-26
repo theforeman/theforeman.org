@@ -11,7 +11,7 @@ tags:
 - newsletter
 modified_time: '2014-02-28T23:54:13.930+02:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-7060546141333872609
-blogger_orig_url: http://blog.theforeman.org/2014/02/foreman-community-newsletter-february.html
+blogger_orig_url: /2014/02/foreman-community-newsletter-february.html
 ---
 
 With a number of events and the Foreman 1.4 release, February's been

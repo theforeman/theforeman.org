@@ -15,7 +15,7 @@ tags:
 - API
 modified_time: '2014-10-01T13:13:10.376+03:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-4950955162759776515
-blogger_orig_url: http://blog.theforeman.org/2014/10/foreman-community-newsletter-september.html
+blogger_orig_url: /2014/10/foreman-community-newsletter-september.html
 ---
 
 <!--more-->

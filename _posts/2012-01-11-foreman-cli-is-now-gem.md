@@ -9,7 +9,7 @@ tags:
 - cli
 modified_time: '2012-01-11T09:26:27.471+02:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-4262998233202487687
-blogger_orig_url: http://blog.theforeman.org/2012/01/foreman-cli-is-now-gem.html
+blogger_orig_url: /2012/01/foreman-cli-is-now-gem.html
 ---
 
 [Brian Gupta](mailto:brian.gupta@brandorr.com) did a great job with

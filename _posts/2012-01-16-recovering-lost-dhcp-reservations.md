@@ -8,7 +8,7 @@ tags:
 - cli
 modified_time: '2015-01-13T14:38:48.308+02:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-8262621859582876813
-blogger_orig_url: http://blog.theforeman.org/2012/01/recovering-lost-dhcp-reservations.html
+blogger_orig_url: /2012/01/recovering-lost-dhcp-reservations.html
 ---
 
 Someone asked me today on IRC how to recover his dhcp reservations, as

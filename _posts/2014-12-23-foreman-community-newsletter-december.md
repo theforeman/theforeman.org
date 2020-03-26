@@ -13,7 +13,7 @@ tags:
 - newsletter
 modified_time: '2014-12-31T13:34:11.918+02:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-2936277795545705845
-blogger_orig_url: http://blog.theforeman.org/2014/12/foreman-community-newsletter-december.html
+blogger_orig_url: /2014/12/foreman-community-newsletter-december.html
 ---
 
 <!--more-->

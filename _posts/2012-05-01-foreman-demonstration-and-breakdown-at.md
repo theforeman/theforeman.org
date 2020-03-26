@@ -9,7 +9,7 @@ tags:
 modified_time: '2012-05-01T17:30:36.896+03:00'
 thumbnail: https://img.youtube.com/vi/CqX-heDl9VM/default.jpg
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-433138637596669436
-blogger_orig_url: http://blog.theforeman.org/2012/05/foreman-demonstration-and-breakdown-at.html
+blogger_orig_url: /2012/05/foreman-demonstration-and-breakdown-at.html
 ---
 
 A couple of weeks ago, I had the pleasure of visiting NYC puppet user
