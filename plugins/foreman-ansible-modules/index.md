@@ -5,7 +5,7 @@ title: Documentation
 
 <div id="wrap">
         <div id="content">
-                <iframe src="plugins/foreman-ansible-modules/sphinx/modules/list_of_all_modules.html" frameborder="0" width="100%" height="1000px" onload='resizeIframe(this);'></iframe>
+                <iframe src="https://theforeman.github.io/foreman-ansible-modules/" frameborder="0" width="100%" height="1000px" onload='resizeIframe(this);'></iframe>
         </div>
 </div>
 
