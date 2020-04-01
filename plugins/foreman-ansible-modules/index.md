@@ -1,6 +1,6 @@
 ---
-layout: plugins/katello/documentation_no_menu
-title: Documentation
+layout: plugin_index
+title: Foreman Ansible Modules documentation
 ---
 
 <div id="wrap">
