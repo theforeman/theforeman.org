@@ -9,7 +9,7 @@ Components include the Foreman web UI, Smart Proxy, Passenger, a Puppet master (
 * Red Hat Enterprise Linux 7, x86_64
 * Ubuntu 18.04 (Bionic), i386/amd64/aarch64
 
-#### Untested platforms(CentOS packages may not work on these)
+#### Untested platforms (CentOS packages may not work on these)
 * Scientific Linux and Oracle Linux
 
 Other operating systems will need to use alternative installation methods (see the manual).
