@@ -4,10 +4,13 @@ The Foreman installer is a collection of Puppet modules that installs everything
 Components include the Foreman web UI, Smart Proxy, Passenger, a Puppet master (either Puppet Server or under Passenger), and optionally TFTP, DNS and DHCP servers.  It is configurable and the Puppet modules can be read or run in "no-op" mode to see what changes it will make.
 
 #### Supported platforms
-* CentOS, Scientific Linux or Oracle Linux 7, x86_64
+* CentOS 7 x86_64
 * Debian 10 (Buster), i386/amd64/aarch64
 * Red Hat Enterprise Linux 7, x86_64
 * Ubuntu 18.04 (Bionic), i386/amd64/aarch64
+
+#### Untested platforms(CentOS packages may not work on these)
+* Scientific Linux and Oracle Linux
 
 Other operating systems will need to use alternative installation methods (see the manual).
 
