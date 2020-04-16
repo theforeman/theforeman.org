@@ -29,7 +29,7 @@ Katello does not currently support installation on existing Foreman deployments.
 Katello may be installed onto a baremetal host or on a virtual guest.  The minimum requirements are:
 
 * Two Logical CPUs
-* 8 GB of memory (12 GB highly recommended)
+* 12 GB of memory (16 GB or greater may be required depending on the amount of managed content)
 * The filesystem holding /var/lib/pulp needs to be large, but may vary depending on how many different Operating Systems you wish to syncronize:
   * Allocate 30 GB of space for each operating system.  Even though an operating system may not take up this much space now, this allows space for future updates that will be syncronized later.
 * The path /var/spool/squid/ is used as a temporary location for some types of repository syncs and may grow to consume 10s of GB of space before the files are migrated to /var/lib/pulp.  You may wish to put this on the same partition as /var/lib/pulp.
