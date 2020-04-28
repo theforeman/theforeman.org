@@ -10,7 +10,10 @@ Components include the Foreman web UI, Smart Proxy, Passenger, a Puppet master (
 * Ubuntu 18.04 (Bionic), i386/amd64/aarch64
 
 #### Untested platforms (packages may not work on these)
-* Scientific Linux and Oracle Linux
+
+These platforms are not tested by automatic installations. They are generally close to supported platforms so the packages may work, but additional work may be needed. For any queries for these platforms raise a question in [discourse support section](https://community.theforeman.org/c/support/10)
+
+  * Scientific Linux and Oracle Linux 7, x86_64
 
 Other operating systems will need to use alternative installation methods (see the manual).
 
