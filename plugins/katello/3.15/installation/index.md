@@ -10,7 +10,7 @@ script: osmenu.js
   <div class="alert alert-danger">
     These are the instructions for installing the unstable nightly release of Katello!
   </div>
-{% elsif page.version != page.latest %}
+{% elsif page.version.to_s != page.latest.to_s %}
   <div class="alert alert-danger">
     These instructions are for installing Katello {{ page.version }}, but the latest stable is <a href="/plugins/katello/{{ page.latest }}/installation/index.html">{{ page.latest }}</a>.
   </div>
