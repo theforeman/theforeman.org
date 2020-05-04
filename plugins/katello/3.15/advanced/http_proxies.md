@@ -15,18 +15,6 @@ HTTP proxies can be created and then assigned to a product though bulk selection
 
 ## Creation
 
-There are two ways of creating a HTTP Proxy for use in Katello: through the Foreman installer or the Foreman UI.
-
-### Creating an HTTP Proxy with the Foreman Installer
-
-Additional installer parameters are provided for creating an HTTP proxy:
-```
---katello-proxy-password Proxy password for authentication (default: nil)
---katello-proxy-port Port the proxy is running on (default: nil)
---katello-proxy-url URL of the proxy server (default: nil)
---katello-proxy-username Proxy username for authentication (default: nil)
-```
-
 ### Creating an HTTP Proxy through the web UI
 
   - navigate to: Infrastructure > HTTP Proxies
