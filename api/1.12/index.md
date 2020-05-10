@@ -1,5 +1,5 @@
 ---
-layout: api_v2
-title: API v2
-version: '1.12'
+layout: api_missing
+title: API
+version: 1.12
 ---
