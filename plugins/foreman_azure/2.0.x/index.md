@@ -3,7 +3,7 @@ layout: plugin
 title: Foreman AzureRM 2.0.x Manual
 version: 2.0.x
 # uncomment for older versions than stable or nightly
-#robots: noindex
+robots: noindex
 ---
 
 # 1. Basics
