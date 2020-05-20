@@ -242,6 +242,8 @@ previous_version: "1.24"
 {%include manuals/{{ page.version }}/5.1.10_apipie-bindings.md %}
 ### 5.1.11 Using Graphql
 {%include manuals/{{ page.version }}/5.1.11_graphql.md %}
+### 5.1.12 Dynflow scaling
+{%include manuals/{{ page.version }}/5.1.12_dynflow_scaling.md %}
 
 ## 5.2 Compute Resources
 {%include manuals/{{ page.version }}/5.2_compute_resources.md %}
