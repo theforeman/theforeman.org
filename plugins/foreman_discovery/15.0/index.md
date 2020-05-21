@@ -991,7 +991,8 @@ option, run:
 
 Keep in mind that kernel command line option is limited, Red Hat Enterprise
 Linux 7 (or CentOS 7) has limitation of 2048 characters and there are already a
-lot of characters, so in practice the script option must be shorter than this in total. When it exceeds the threshold, the rest of the kernel command
+lot of characters, so in practice the script option must be shorter than this in total. 
+When it exceeds the threshold, the rest of the kernel command
 line option will be ignored, therefore it will likely fail. Typically the script
 can be used to download a larger script using `curl` command from a remote
 HTTP(s) server.
