@@ -78,6 +78,7 @@ plugins:
 
 foreman_versions:
   - nightly
+  - "2.1"
   - "2.0"
   - "1.24"
   - "1.23"
