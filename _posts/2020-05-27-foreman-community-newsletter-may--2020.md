@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Foreman Community Newsletter (May 2020)
-date: 2020-05-29 18:00:00
+date: 2020-05-27 18:00:00
 author:
   name: Melanie Corr
   uri: mcorr
