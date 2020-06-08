@@ -22,6 +22,8 @@ For the full release notes, see the [Changelog](https://github.com/Katello/katel
 * katello-agent will be removed in Katello 4.0
 * Background download policy will be removed in Katello 4.0
 * Pulp 3 will replace Pulp 2 in Katello 4.0
+    * MongoDB will be removed in Katello 4.0
+    * The Foreman installer MongoDB Storage Engine Migration Hook will be removed for Katello 4.0 
 
 ## Bug Fixes
 
