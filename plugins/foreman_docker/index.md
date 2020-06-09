@@ -1,7 +1,7 @@
 ---
 layout: plugin_index
 title: Foreman docker documentation
-versions: [1.x, 3.x]
+versions: [1.x, 3.x,5.x]
 ---
 
 # Foreman docker manuals

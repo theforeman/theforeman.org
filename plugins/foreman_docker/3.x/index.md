@@ -7,6 +7,14 @@ version: 3.x
 #robots: noindex
 ---
 
+---
+**NOTE**
+
+This plugin has been discontinued. The latest release helps only with its removal. If you’re interested in taking over the maintenance, let us know.
+
+---
+
+
 # 1. {{ page.title }}
 
 Docker is an open source project that automates the deployment of applications inside Linux Containers, and provides the capability to package an application with its runtime dependencies into a container. Linux containers enable rapid application deployment, simpler testing, maintenance, and troubleshooting while improving security.
@@ -186,8 +194,8 @@ In Foreman, you can deploy containers only on a compute resource of the Docker p
 
               $ service docker restart
               $ service docker status
-              
-   
+
+
         *  You should see that there is an additional -H parameter after you restart docker service
 
               ```
