@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Foreman Ansible Modules v1.0.0 released
-date: 2020-06-22 14:43:21
+date: 2020-06-22 12:43:21
 author: Evgeni Golov
 tags:
 - foreman

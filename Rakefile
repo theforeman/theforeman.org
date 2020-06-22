@@ -32,7 +32,7 @@ task :new_post, [:title] do |t, args|
 ---
 layout: post
 title: #{args.title}
-date: #{Time.now.strftime('%Y-%m-%d %k:%M:%S')}
+date: #{Time.now.utc.strftime('%Y-%m-%d %k:%M:%S')}
 author: Foreman
 tags:
 - foreman
