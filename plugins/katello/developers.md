@@ -257,18 +257,24 @@ At this point you can bring Tomcat back: `foreman-maintain service start --only 
    - Performing various actions around activation keys
    - Registering a content host
    - Creating a custom product and adding it to a content host
+   - Verifying all services are OK in the Ping API
 
    If you're aware of a particularly impactful change in the new Candlepin version be sure to test it explicitly.
    Save some time by running the glue tests in parallel: `record=true mode=all rake test:katello:test:glue`
 
 4. If everything checked out - great! If not - fix those broken tests and open a PR.
 
-5. Once any issues are addressed (PRs merged) you can submit the SRPM to Koji with the nightly tag: `koji build katello-thirdparty-candlepin-rhel7 /path/to/srpm`
+5. Once any issues are addressed (PRs merged) you can submit the SRPM to Koji.
+   - For EL7: `koji build katello-thirdparty-candlepin-rhel7 /path/to/srpm`
+   - For EL8: `koji build katello-candlepin-nightly-el8 /path/to/srpm`
 
    The new Candlepin will be included in the next nightly build which will subject it to even more testing.
 
 6. If the nightly build is green the new RPM can be tagged into a specific Katello release. If you don't have sufficient Koji access, reach out to someone who
-does in #theforeman-dev and ask them to tag it accordingly. Here's an example for Katello 3.5: `koji-katello tag-pkg katello-3.5-thirdparty-candlepin-rhel7 candlepin-2.1.3-1.el7`
+does in #theforeman-dev and ask them to tag it accordingly. Some examples for Katello 3.16:
+   - For EL7: `koji tag-pkg katello-3.16-thirdparty-candlepin-rhel7 candlepin-3.1.14-1.el7`
+   - For EL8: `koji tag-pkg katello-candlepin-3.16-el8 candlepin-3.1.14-1.el8`
+
 Be sure to substitute your own version numbers for the tag name and RPM.
 
 All done!
