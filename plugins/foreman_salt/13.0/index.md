@@ -1,7 +1,7 @@
 ---
 layout: plugin
-title: Foreman Salt 12.0 Manual
-version: 12.0
+title: Foreman Salt 13.0 Manual
+version: 13.0
 ---
 
 # 1. {{ page.title }}
@@ -15,32 +15,48 @@ The core plugin major version will increment with the specific Foreman release, 
     <th>Foreman</th>
     <th>foreman_salt</th>
     <th>smart_proxy_salt</th>
+    <th>smart_proxy_salt_core</th>
   </tr>
   <tr>
     <td>1.13.x</td>
     <td>7.x</td>
     <td>2.x</td>
+    <td>-</td>
   </tr>
   <tr>
     <td>1.14.x</td>
     <td>8.x</td>
     <td>2.x</td>
+    <td>-</td>
   </tr>
   <tr>
     <td>1.15.x</td>
     <td>10.x</td>
     <td>2.x</td>
+    <td>-</td>
   </tr>
   <tr>
     <td>&gt;= 1.21.x</td>
     <td>11.0.x</td>
     <td>2.x</td>
+    <td>0.0.1</td>
+  </tr>
+  <tr>
+    <td>&gt;= 1.24.x</td>
+    <td>13.0.x</td>
+    <td>3.x</td>
+    <td>0.0.3</td>
   </tr>
 </table>
 
 ## 1.1 Release Notes
 
 ### 1.1.1 Foreman plugin
+
+- **13.0**:
+  - Adding Salt Variables
+  - Adding salt environment to pillar as saltenv
+  - Translations
 
 - **12.0**:
   - Use Salt as a Remote Execution provider
@@ -284,7 +300,7 @@ The Salt Keys interface allows you to manually accept, reject, or delete keys.  
 
 There are two ways to trigger `state.highstate` on Foreman:
 
-  - use the "Run Salt" button (old behavior)
+  - use the "Run Salt" button (old behavior) which will use the shell command 'salt' on the smart proxy
   - use Schedule Remote Job / Run Salt via Foreman Remote Execution (Foreman Remote Execution Plugin needs to be installed)
 
 Results of a highstate run will show up in Monitor / Reports if using the upload-salt-reports feature of the Smart Proxy.
@@ -310,7 +326,14 @@ Disabling the "Administer / Settings / Salt" setting `salt_hide_run_salt_button`
 
 ## 4.5 Salt with Foreman Remote Execution Plugin
 
-Use the foreman_remote_execution plugin to 
+Currenly, there are 2 ways to run salt via the remote execution plugin:
+
+  - Via a SSH tunnel: in this case SSH authentication to the host needs to work. After connection to the host via SSH, 'salt-call' is used to run the salt command.
+  - Via salt provider: salt will be used itself to connect to the host and run the salt command.
+
+### 4.5.1 Salt with REX using SSH provider
+
+Use the foreman_remote_execution plugin via SSH to 
 
   - run salt `state.highstate` on one host / multiple hosts
   - schedule a `state.highstate` run and let it run recurrently
@@ -319,17 +342,19 @@ Use the foreman_remote_execution plugin to
 
 For more information regarding Foreman Remote Execution Plugin, have a look at the [Foreman Remote Execution](plugins/foreman_remote_execution) documentation.
 
-The job templates to run a job and to execution a salt function exists and can be used. 
+The job templates to run a job via ssh provider and to execute a salt function exists and can be used: 'Salt Run state.highstate - SSH default'
 
 ![](/static/images/plugins/foreman_salt/rex_details.png)
 
-### 4.5.1 Salt as Remote Execution provider
+### 4.5.2 Salt with REX using salt provider
 
 Starting with version 12.0, Salt can be used as a Remote Execution provider. This means Salt can be used to drive Remote Execution without having to rely on SSH at all. In order for this mode to work, the master's publisher access control list needs to be modified:
 
     publisher_acl:
       foreman-proxy:
-        - .*
+        - state.template_str
+
+To run apply.highstate use the following job template: 'Salt Run state.highstate - Salt default'
 
 ## 4.6 Pillars
 
