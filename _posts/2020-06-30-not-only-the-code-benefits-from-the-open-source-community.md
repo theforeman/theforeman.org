@@ -10,7 +10,7 @@ tags:
 - documentation
 ---
 
-The upstream versions of the Foreman and Katello projects become among other projects like Atix's Orcarhino, the Red Hat Satellite of tomorrow. The discussions and contributions that take place in the vibrant upstream community shape the Red Hat Satellite code base. The code base for Satellite begins upstream and moves downstream. Until now, the Satellite documentation did not follow the same journey.
+The upstream versions of the Foreman and Katello projects become, among other downstream projects like Atix's Orcarhino, the Red Hat Satellite of tomorrow. The discussions and contributions that take place in the vibrant upstream community shape the Red Hat Satellite code base. The code base for Satellite begins upstream and moves downstream. Until now, the Satellite documentation did not follow the same journey.. This blog post talks about how sharing the Red Hat Satellite documentation with upstream community benefits both upstream and downstream.
 
 <!--more-->
 
