@@ -40,9 +40,9 @@ After this situation was articulated by Lukáš Zapletal, Principal Software Eng
 4. Add notes for items that require an additional explanation for Foreman users, for example, that some procedures work only with the Katello plug-in installed.
 5. The writing team collaborated with the wider community to make the Installation guide work for Debian. You can view the result in [Installing Foreman on Debian/Ubuntu](http://docs.theforeman.org/guides/build/doc-Installing_Server_on_Debian/index-foreman-deb.html).
 
-The vast majority of guides are now [available](http://docs.theforeman.org/web/) in the upstream, but there is still work to be done to consolidate Foreman manuals and ensure that the documentation provides the best possible experience both upstream and downstream. Although the work is still in progress, Foreman community users have provided feedback, for example:
+The vast majority of guides are now [available](http://docs.theforeman.org/web/) in the upstream, but there is still work to be done to consolidate Foreman manuals and ensure that the documentation provides the best possible experience both upstream and downstream. Although the work is still in progress, Foreman community users have provided feedback, for example in [Problem with Foreman 2.1rc2 with Remote Execution on CentOS 8](https://community.theforeman.org/t/problem-with-foreman-2-1rc2-with-remote-execution-on-centos-8/19084/33):
 
-“The guides on these pages greatly assisted in my understanding of the system…The “Provisioning Guide” was well written, and showed off the [very cool IMHO] hammer(1) CLI interface.” in [Problem with Foreman 2.1rc2 with Remote Execution on CentOS 8](https://community.theforeman.org/t/problem-with-foreman-2-1rc2-with-remote-execution-on-centos-8/19084/33).
+> “The guides on these pages greatly assisted in my understanding of the system…The “Provisioning Guide” was well written, and showed off the [very cool IMHO] hammer(1) CLI interface.”
 
 From a Foreman perspective, we believe that the new Foreman documentation solves some of the problems around lack of focus on user scenarios of the traditional Foreman manuals and implements a better user experience. As the writing team is moving upstream, this also ensures that future content is reviewed by technical writers and therefore has a higher quality.
 
