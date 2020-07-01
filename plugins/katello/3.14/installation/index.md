@@ -224,6 +224,7 @@ It is difficult to find the exact tuning profile for a specific environment in t
 - The information in the table below is just a guidance.  It is strongly recommended that you monitor the foreman environment regularly and tune up as required.
 - The RAM and CPU Cores check is also integrated into the foreman-installer now. Use `disable-system-checks` if you like to skip this check in the installer.
 
+{:class="table table-bordered table-condensed"}
 | Tuned profile     |    Number of Managed hosts  |  Minimum Recommended RAM | Minimum Recommended CPU Cores |
 |:------------------|:---------------------------:|:------------------------:|------------------------------:|
 | default           |          up-to 5000         |            20G           |                4              |

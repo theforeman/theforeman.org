@@ -225,6 +225,7 @@ It is difficult to find the exact tuning profile for a specific environment in t
 - The information in the table below is just a guidance.  It is strongly recommended that you monitor the foreman environment regularly and tune up as required.
 - The RAM and CPU Cores check is also integrated into the foreman-installer now. Use `disable-system-checks` if you like to skip this check in the installer.
 
+{:class="table table-bordered table-condensed"}
 | Tuned profile     |    Number of Managed hosts  |  Minimum Recommended RAM | Minimum Recommended CPU Cores |
 |:------------------|:---------------------------:|:------------------------:|------------------------------:|
 | default           |          up-to 5000         |            20G           |                4              |
@@ -232,6 +233,7 @@ It is difficult to find the exact tuning profile for a specific environment in t
 | large             |       10000 - 20000         |            64G           |               16              |
 | extra-large       |       20000 - 60000         |           128G           |               32              |
 | extra-extra-large |       20000 - 60000         |           256G           |               48              |
+
 ## Forklift
 
 Foreman provides a git repository designed to streamline setup by setting up all the proper repositories. Forklift provides the ability to deploy a virtual machine instance via Vagrant or direct deployment on an already provisioned machine. For details on how to install using forklift, please see the [README](https://github.com/theforeman/forklift/blob/master/README.md).
