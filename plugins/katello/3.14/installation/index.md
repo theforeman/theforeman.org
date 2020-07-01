@@ -47,32 +47,10 @@ The following ports need to be open to external connections:
 
 ## Production
 
-Katello provides a puppet based installer for deploying production installations. Production installations are supported on the following OSes:
+Katello provides a Puppet based installer for deploying production installations. Production installations are supported on the following operating systems:
 
-<div class="row">
-  <div class="col-sm-3">
-    <table class="table table-bordered table-condensed">
-      <thead>
-        <tr>
-          <th>OS</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>CentOS 7</td>
-          <td>X</td>
-        </tr>
-        <tr>
-          <td>RHEL 7</td>
-          <td>X</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-Katello can only run on an x86_64 operating systems.
+* CentOS 7 (x86_64)
+* Red Hat Enterprise Linux 7 (x86_64)
 
 Installation may be done manually or via our recommended approach of using [forklift](/plugins/katello/{{ page.version }}/installation/index.html#forklift).
 
