@@ -49,7 +49,7 @@ There were two livestreamed demos of new Foreman core and Katello features in Ju
 
 ### Overview of Single Sign On in Foreman
 
-Community member [@rabajaj](https://community.theforeman.org/u/rabajaj) gave complete overview of the Single Sign On feature in Foreman at [Stackconf](https://stackconf.eu/) in June. Check out the [full presentation](https://stackconf.eu/talks/securing-infrastructure-with-keycloak/)
+Community member [@rabajaj](https://community.theforeman.org/u/rabajaj) gave ca omplete overview of the Single Sign On feature in Foreman at [Stackconf](https://stackconf.eu/) in June. Check out the [full presentation](https://stackconf.eu/talks/securing-infrastructure-with-keycloak/).
 
 ### RFC: Redesign Certificate Handling within Foreman Deployments
 
