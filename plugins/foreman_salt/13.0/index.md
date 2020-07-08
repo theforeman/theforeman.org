@@ -175,14 +175,8 @@ In `/etc/salt/foreman.yaml`, make the following changes:
     :timeout:  10
     :salt:  /usr/bin/salt
     :upload_grains:  true
-    :filecache: false
 
 If your Smart Proxy uses SSL, then the certs and key configured in the YAML should be the same ones it uses to talk to Foreman. If you're already using Puppet in Foreman, consult `/etc/puppet/foreman.yaml` or `/etc/puppet/node.rb` for those settings.
-
-The :filecache: option makes foreman-node read the grains cache from files rather than using salt-run. 
-
-Please note this will only work if the master is not configured to use an external minion cache module. With salt's default configuration the filecache option works fine and should be used as it is much faster than getting the cache using salt-run. Please note that for this to work, the "msgpack" rubygem needs to be present.
-If your salt-master is configured to use a different data directory for cache, you can also set the :cachedir: option to the same directory you configured in the salt master configuration.
 
 ### 2.1.3 Salt API Configuration
 
