@@ -175,8 +175,11 @@ In `/etc/salt/foreman.yaml`, make the following changes:
     :timeout:  10
     :salt:  /usr/bin/salt
     :upload_grains:  true
+    :filecache: false
 
 If your Smart Proxy uses SSL, then the certs and key configured in the YAML should be the same ones it uses to talk to Foreman. If you're already using Puppet in Foreman, consult `/etc/puppet/foreman.yaml` or `/etc/puppet/node.rb` for those settings.
+
+The filecache option makes the ENC script (foreman-node) use the filesystem based cache, by default located in /var/cache/salt/master/minions. In case your salt-master is configured to use a different directory for the cache you can add the :cachedir: option pointing to the directory configured in your salt-master configuration. In order to use filecache, the msgpack rubygem needs to be present.  
 
 ### 2.1.3 Salt API Configuration
 
