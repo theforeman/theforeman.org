@@ -242,25 +242,26 @@ The following steps are guidelines for testing and submitting a new build of Can
 
  - Koji access
  - The Candlepin RPM you'd like to upgrade to and the SRPM from which it was built
- - Familiarality with the changes in the new Candlepin version for focused testing
- - A Katello development environment (ex: centos7-devel from Forklift) for testing the new version
+ - Familiarity with the changes in the new Candlepin version for focused testing
+ - A Katello development environment (ex: centos7-katello-devel from Forklift) for testing the new version
 
 ### Steps
 
 1. Stop the Tomcat service in your development environment in order to stop Candlepin: `foreman-maintain service stop --only tomcat`
-2. Install the new Candlepin RPM. If there are schema changes in the build you'll need to run `/usr/share/candlepin/cpdb --update` to migrate the database.
+2. Install the new Candlepin RPMs (`sudo yum install <url1> <url2>`) (For noarch RPMs, install the candlepin-selinux RPM first, then the Candlepin RPM)
+3. If there are schema changes in the build you'll need to run `/usr/share/candlepin/cpdb --update` to migrate the database.
 At this point you can bring Tomcat back: `foreman-maintain service start --only tomcat`
 
 3. Validate the new version. A thorough test of Candlepin integration includes the following:
 
+   - Running the glue tests: `record=true mode=all bundle exec rake test:katello:test:glue` (save some time by doing other testing concurrently)
    - Importing and refreshing a manifest
    - Performing various actions around activation keys
    - Registering a content host
    - Creating a custom product and adding it to a content host
-   - Verifying all services are OK in the Ping API
+   - Verifying all services are OK in `hammer ping` or your preferred method of calling the API
 
-   If you're aware of a particularly impactful change in the new Candlepin version be sure to test it explicitly.
-   Save some time by running the glue tests in parallel: `record=true mode=all rake test:katello:test:glue`
+   If you're aware of a particularly impactful change in the new Candlepin version, be sure to test it explicitly.
 
 4. If everything checked out - great! If not - fix those broken tests and open a PR.
 
