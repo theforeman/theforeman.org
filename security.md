@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](https://cve.mitre.org/).
 
+* [CVE-2020-14334: World readable cache directory on RPM installs](security.html#2020-14334)
 * [CVE-2019-14825: Registry credentials are captured in plain text in dynflow task during repository discovery](security.html#2019-14825)
 * [CVE-2019-10198: Information disclosure in foreman tasks plugin](security.html#2019-10198)
 * [CVE-2019-3845: Lack of access control around Qpid message broker](security.html#2019-3845)
@@ -79,6 +80,22 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2020-14334"></a>CVE-2020-14334: World readable cache could expose sensitive settigs
+Even encrypted settings have their raw values cached. Too permissive mode on cache dir caused, that anyone with access to the hosting system could read this encrypted settings.
+
+*Mitigation:* override `/run/foreman` directory mode to `0750`.
+To do so in a manner that survives reboot, update the file `/usr/lib/tmpfiles.d/foreman.conf`.
+```
+d /run/foreman 0750 foreman foreman -
+```
+For the change to have effect immediatelly run `systemd-tmpfiles --create`.
+
+In case the system may have been accessed locally by an un-trusted user, it may be prudent to change any secrets stored in the settings, such as OAuth keys or remote execution passwords.
+
+* Affects RPM installations using file cache since Foreman 1.3
+* Fix released in Foreman 2.2.0, 2.1.1 and 2.0.2 and higher
+* Redmine issue [#30490](https://projects.theforeman.org/issues/30490)
 
 #### <a id="2019-14825"></a>CVE-2019-14825: Registry credentials are captured in plain text in dynflow task during repository discover
 A cleartext password storage issue was discovered in Katello. Registry credentials used during container image discovery were inadvertently logged without being masked. This could expose the registry credentials to other privileged users.
