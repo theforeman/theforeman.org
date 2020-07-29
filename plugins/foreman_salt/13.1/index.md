@@ -384,7 +384,26 @@ When running `state.highstate`, you can have Foreman process the results and sho
 
 ![](/static/images/plugins/foreman_salt/reports.gif)
 
-Uploading the salt reports is done by `/usr/sbin/upload-salt-reports` and is scheduled by a cron job running on the smart proxy.  By default, reports are uploaded to Foreman once every 10 minutes from the Salt master's job cache. You may modify the smart_proxy_salt cron job to customize this by editing `/etc/cron.d/smart_proxy_salt`.
+There are two ways to upload the highstate reports to foreman:
+
+Either use the script `/usr/sbin/upload-salt-reports` scheduled by a cron job running on the smart proxy.  By default, reports are uploaded to Foreman once every 10 minutes from the Salt master's job cache. You may modify the smart_proxy_salt cron job to customize this by editing `/etc/cron.d/smart_proxy_salt`.
+
+The other way is to use the report upload reactor/runner.
+
+An example configuration may look like this, but please note that configuration may differ in your environment (ie. if you are already using reactors or have runner_dirs defined).
+
+`/etc/salt/master.d/upload-salt-reports.conf`:
+
+```
+runner_dirs:
+  - /usr/share/foreman-salt/runner
+
+reactor:
+  - 'salt/job/*/ret/*':
+    - /usr/share/foreman-salt/reactor/foreman_report_upload.sls
+```
+
+In case you decide to use the reactor/runner solution, please also remove the cronjob triggering `/usr/sbin/upload-salt-reports` from `/etc/cron.d/smart_proxy_salt`.
 
 <b>Why not use a returner?</b>
 
