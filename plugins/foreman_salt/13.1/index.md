@@ -1,7 +1,7 @@
 ---
 layout: plugin
-title: Foreman Salt 13.0 Manual
-version: 13.0
+title: Foreman Salt 13.1 Manual
+version: 13.1
 ---
 
 # 1. {{ page.title }}
@@ -52,6 +52,10 @@ The core plugin major version will increment with the specific Foreman release, 
 ## 1.1 Release Notes
 
 ### 1.1.1 Foreman plugin
+
+- **13.1**:
+  - Adding option to read grains from salt's cache files in foreman-node
+  - Adding salt-report-upload runner/reactor to static dirs in package
 
 - **13.0**:
   - Adding Salt Variables
@@ -183,7 +187,7 @@ The :filecache: option makes foreman-node read the grains cache from files rathe
 
 Please note this will only work if the master is not configured to use an external minion cache module. With salt's default configuration the filecache option works fine and should be used as it is much faster than getting the cache using salt-run. Please note that for this to work, the "msgpack" rubygem needs to be present.
 
-If your salt-master is configured to use a different data directory for cache, you can also set the :cachedir: option to the same directory you configured in the salt master configuration.
+If your salt-master is configured to use a different data directory for cache, you also have to set the :cachedir: option to the same directory you configured in the salt master configuration.
 
 ### 2.1.3 Salt API Configuration
 
@@ -384,7 +388,7 @@ When running `state.highstate`, you can have Foreman process the results and sho
 
 ![](/static/images/plugins/foreman_salt/reports.gif)
 
-There are two ways to upload the highstate reports to foreman:
+There are two ways to upload the highstate reports to Foreman:
 
 Either use the script `/usr/sbin/upload-salt-reports` scheduled by a cron job running on the smart proxy.  By default, reports are uploaded to Foreman once every 10 minutes from the Salt master's job cache. You may modify the smart_proxy_salt cron job to customize this by editing `/etc/cron.d/smart_proxy_salt`.
 
@@ -403,7 +407,7 @@ reactor:
     - /usr/share/foreman-salt/reactor/foreman_report_upload.sls
 ```
 
-In case you decide to use the reactor/runner solution, please also remove the cronjob triggering `/usr/sbin/upload-salt-reports` from `/etc/cron.d/smart_proxy_salt`.
+In case you decide to use the reactor/runner solution, please also remove the cronjob triggering `/usr/sbin/upload-salt-reports` from `/etc/cron.d/smart_proxy_salt` to prevent duplicate report uploads.
 
 <b>Why not use a returner?</b>
 
