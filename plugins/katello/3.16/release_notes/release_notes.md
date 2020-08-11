@@ -8,7 +8,8 @@ For the full release notes, see the [Changelog](https://github.com/Katello/katel
 
 ## Features
 
-* Support for Pulpcore 3.5
+* Support for Pulpcore 3.4
+* Support for Pulp 3 RPM plugin 3.5
 * Pulp 2 to Pulp 3 File and Docker improvements
 * Pulp 3 Yum support for new installations
 * Qpid replaced with ActiveMQ Artemis for messaging between Candlepin and Katello
