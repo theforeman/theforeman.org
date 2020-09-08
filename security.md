@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](https://cve.mitre.org/).
 
+* [CVE-2020-14380: Users can gain elevated rights when logging in with SSO accounts](security.html#2020-14380)
 * [CVE-2020-14334: World readable cache directory on RPM installs](security.html#2020-14334)
 * [CVE-2019-14825: Registry credentials are captured in plain text in dynflow task during repository discovery](security.html#2019-14825)
 * [CVE-2019-10198: Information disclosure in foreman tasks plugin](security.html#2019-10198)
@@ -81,7 +82,15 @@ All security advisories made for Foreman are listed below with their correspondi
 
 ### Disclosure details
 
-#### <a id="2020-14334"></a>CVE-2020-14334: World readable cache could expose sensitive settigs
+#### <a id="2020-14380"></a>CVE-2020-14380: Users can gain elevated rights when logging via external authentication
+
+Users that are authenticated using `external` authentication methods such as Kerberos, OpenID Connect or Apache SSO can gain the rights of an `internal` user. This is possible only when the username of an internal and external user is the same.
+
+- Affects external user authentication since Foreman 1.4
+- Fix released in Foreman 2.2.0, 2.1.3 and 2.0.3 and higher
+- Redmine issue [#30739](https://projects.theforeman.org/issues/30739)
+
+#### <a id="2020-14334"></a>CVE-2020-14334: World readable cache could expose sensitive settings
 Even encrypted settings have their raw values cached. Too permissive mode on cache dir caused, that anyone with access to the hosting system could read this encrypted settings.
 
 *Mitigation:* override `/run/foreman` directory mode to `0750`.
