@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](https://cve.mitre.org/).
 
+* [CVE-2020-14335: World readable dhcp OMAPI secret](security.html#2020-14335)
 * [CVE-2020-14380: Users can gain elevated rights when logging in with SSO accounts](security.html#2020-14380)
 * [CVE-2020-14334: World readable cache directory on RPM installs](security.html#2020-14334)
 * [CVE-2019-14825: Registry credentials are captured in plain text in dynflow task during repository discovery](security.html#2019-14825)
@@ -81,6 +82,22 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2020-14335"></a>CVE-2020-14335: World readable dhcp OMAPI secret could expose dhcp API access
+
+OMAPI key used to secure dhcp API access could have been read by anyone with access to the hosting system.
+
+*Mitigation:* override `/etc/dhcp/dhcpd.conf` file mode to `0640` and ensure access to the file for user `foreman-proxy` by other means.
+
+On Red Hat based systems, acls are used by default, so you need to only set less permissive mode and you should be set.
+On Debian based systems, you need to install acls and set read access to the `/etc/dhcp` directory by acls.
+To set correct acls install `acl` package and use `setfacl -R -m u:foreman-proxy:rx /etc/dhcp`.
+
+In case the system may have been accessed locally by an un-trusted user, it may be prudent to change the OMAPI secret for dhcp.
+
+* Affects foreman-proxy installations with dhcp feature protected by `dhcp_key_secret` since Foreman 1.0
+* Fix released in Foreman 2.2.0 and 2.1.3 and higher
+* Redmine issue [#30489](https://projects.theforeman.org/issues/30489)
 
 #### <a id="2020-14380"></a>CVE-2020-14380: Users can gain elevated rights when logging via external authentication
 
