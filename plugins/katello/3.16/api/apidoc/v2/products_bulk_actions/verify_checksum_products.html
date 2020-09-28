@@ -23,22 +23,22 @@
     <span class='divider'>/</span>
   </li>
   <li>
-    <a href='../../../apidoc/v2/host_tracer.html'>
-      Host tracer
+    <a href='../../../apidoc/v2/products_bulk_actions.html'>
+      Products bulk actions
       
     </a>
     <span class='divider'>/</span>
   </li>
-  <li class='active'>index</li>
+  <li class='active'>verify_checksum_products</li>
   
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      GET /katello/api/hosts/:host_id/traces
+      PUT /katello/api/products/bulk/verify_checksum
       <br>
-      <small>List services that need restarting on the host</small>
+      <small>Verify checksum for one or more products</small>
     </h1>
   </div>
 
@@ -60,7 +60,7 @@
     <tbody>
         <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>host_id </strong><br>
+      <strong>ids </strong><br>
       <small>
         required
         
@@ -68,12 +68,12 @@
     </td>
     <td>
       
-<p>ID of the host</p>
+<p>List of product ids</p>
 
         <p><strong>Validations:</strong></p>
         <ul>
             <li>
-<p>Must be a number.</p>
+<p>Must be an array of any type</p>
 </li>
         </ul>
 
