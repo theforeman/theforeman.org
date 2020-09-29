@@ -7,7 +7,7 @@ tags:
 - foreman
 ---
 
-As outlined in [Adding a vendor list to theforeman.org site](https://community.theforeman.org/t/adding-a-vendor-list-to-theforeman-org-site/20581?u=mcorr), over the next few weeks, we will host some guest posts from different companies and consultants who offer professional services based on or extending Foreman for their customers. In this post, we hear from [iRonin.IT](https://www.ironin.it/) and how they've interacted with the Foreman community to date. If you want to contribute to this series, please contact [@mcorr](https://community.theforeman.org/u/mcorr/).
+As outlined in [Adding a vendor list to theforeman.org site](https://community.theforeman.org/t/adding-a-vendor-list-to-theforeman-org-site/20581?u=mcorr), over the next few weeks, we will host some guest posts from different companies and consultants who offer professional services based on or extending Foreman for their customers. In this post, we hear from [iRonin.IT](https://www.ironin.it/foreman-development-services.html?utm_source=mailing&utm_medium=email&utm_campaign=foreman&utm_term=october ) and how they've interacted with the Foreman community to date. If you want to contribute to this series, please contact [@mcorr](https://community.theforeman.org/u/mcorr/).
 
 <!--more-->
 
@@ -34,4 +34,4 @@ The code for this feature was developed as a separate Foreman plugin. We added s
 
 ## Being part of a wonderful community
 
-Members of [iRonin.IT](https://www.ironin.it/)’s team have greatly enjoyed working on Foreman. The experience was not only interesting thanks to its technical challenges and puzzles, but we also loved participating in a fantastic community effort to build a useful, beloved tool for sysops experts. We hope to continue contributing.
+Members of [iRonin.IT](https://www.ironin.it/foreman-development-services.html?utm_source=mailing&utm_medium=email&utm_campaign=foreman&utm_term=october )’s team have greatly enjoyed working on Foreman. The experience was not only interesting thanks to its technical challenges and puzzles, but we also loved participating in a fantastic community effort to build a useful, beloved tool for sysops experts. We hope to continue contributing.
