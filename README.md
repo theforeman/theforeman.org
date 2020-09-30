@@ -5,7 +5,7 @@ This repo contains the source code for
 [Markdown](http://daringfireball.net/projects/markdown/syntax). If you're not familiar with it, fear not; it's easy
 to learn and to become rapidly productive!
 
-Everything you push into the gh-pages branch goes live immediately!
+Everything you push into the GH-pages branch goes live immediately!
 
 ## Testing
 
