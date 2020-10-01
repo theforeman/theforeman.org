@@ -15,7 +15,7 @@ To test your changes locally use
 
     # rake
 
-to generate your site in the \_site directory, or
+To generate your site in the \_site directory, or
 
     # rake server
 
