@@ -48,7 +48,7 @@ Dana Singleterry of the Red Hat Product Management team gave a Red Hat roadmap u
 
 ## Subscription Manager for Debian and Ubuntu for Foreman users
 
-For a long time, community members who manage Debian systems have dropped by the Foreman Community Discourse and looked for consumable repositories with a packaged subscription manager for Debian and Ubuntu systems. This week, community member [@maximilian](https://community.theforeman.org/u/maximilian/summary) announced that ATIX have made consumable repositories with a packaged subscription manager for Debian 10 and Ubuntu 20.04 along with general usage instructions available for the Foreman community. For more information, see [Maximilian's announcement](https://community.theforeman.org/t/subscription-manager-for-debian-ubuntu-on-apt-atix-de/20667?u=mcorr).
+For a long time, community members who manage Debian systems have dropped by the Foreman Community Discourse and looked for consumable repositories with a packaged subscription manager for Debian and Ubuntu systems. This week, community member [@maximilian](https://community.theforeman.org/u/maximilian/summary) announced that [ATIX](https://atix.de) has made consumable repositories with a packaged subscription manager for Debian 10 and Ubuntu 20.04 along with general usage instructions available for the Foreman community. For more information, see [Maximilian's announcement](https://community.theforeman.org/t/subscription-manager-for-debian-ubuntu-on-apt-atix-de/20667?u=mcorr). You can find documentation and next steps at [https://apt.atix.de/](https://apt.atix.de/).
 
 ## OpenSCAP Tutorial for Debian Users
 
