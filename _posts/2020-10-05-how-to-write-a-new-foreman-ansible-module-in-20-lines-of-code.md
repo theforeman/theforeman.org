@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to write a new Foreman Ansible module in 20 lines of code
-date: 2020-10-05 11:29:55
+date: 2020-10-08 11:29:55
 author: Evgeni Golov
 tags:
 - foreman
@@ -56,7 +56,7 @@ Now we need to add the other fields the API supports as parameters. We'll mark t
     )
 ```
 
-`flat_name` is telling our abstraction layer that the field name in the API differs from the Ansible parameter name.
+`flat_name` is telling our abstraction layer that the field name in the API differs from the Ansible parameter name. See the [specification of the `foreman_spec`](https://theforeman.github.io/foreman-ansible-modules/develop/developing.html#specification-of-the-foreman-spec) for details how it works and extends Ansible's `argument_spec`.
 
 At this point, we can add the code for the API connection and parameter processing and would have a working module:
 
@@ -105,7 +105,7 @@ The rest of the `DOCUMENTATION` section is basic [Ansible module documentation](
 
 Writing tests is tedious and annoying, but at the same time, a lot of bugs can be prevented if you have tests. Or could have been prevented, if there would have been tests ;-)
 
-In Foreman Ansible Modules, we mostly do integration tests -- unit testing modules is not really feasible. Those integration tests consist of an Ansible playbook that executes the module multiple times and analyses the results and a set of recorded API calls that can be used to replay the tests without having a full Foreman running, which saves a lot of resources when running the tests.
+In Foreman Ansible Modules, we mostly do integration tests -- unit testing modules is not really feasible. Those integration tests consist of an Ansible playbook that executes the module multiple times and analyses the results and a set of recorded API calls that can be used to replay the tests without having a full Foreman running, which saves a lot of resources when running the tests and allows the tests to run in parallel.
 
 To write a test, just drop a new playbook into `tests/test_playbooks/` called `<module_name>.yml` -- so in our case `http_proxy.yml`. As this playbook will call the same module over and over again, we have established the practice to have a `tasks/<module_name>.yml` file with the whole module invocation and then simply include it in the main playbook using `import_tasks`.
 
@@ -148,13 +148,14 @@ Those steps follow a pattern: do something and expect a change to happen (`expec
 
 The "things to do" again follow a pattern: create a proxy with minimal information, update a proxy, delete a proxy. This ensures the common workflows of a user are covered.
 
-And last, it has is another play with `hosts: localhost` to tear down anything that has been prepared for this specific test to run.
+At last, it has another play with `hosts: localhost` to tear down anything that has been prepared for this specific test to run.
 
 The differentiation between `hosts: localhost` and `hosts: tests` allows us to execute the `localhost` steps only when we're recording a new set of API interactions and the `tests` steps always, as there is no need for the setup and teardown when running the tests against the recorded data.
 
 The last missing piece between us and working tests is a symlink. To keep the recorded API data clean of the big apidoc JSON and also allow easier updates when the apidoc changes, we keep copies of the JSON in `tests/fixtures/apidoc`. However, we keep only `foreman.json`, `katello.json` and `luna.json` as real files while all the others are symlinks. As the HTTP Proxy is a Foreman feature, we will create a symlink from `http_proxy.json` to `foreman.json`. Would it have been a Katello feature, the link would have been to `katello.json`. And for any other plugin, it's `luna.json` as that's essentially "Foreman with all the nice plugins".
 
 Having all pieces in place (and a running Foreman instance somewhere), we can run `make record_http_proxy` which it will execute our playbook and record the API interactions in `tests/test_playbooks/fixtures`.
+The record step can be re-run as often as required. You can also execute `make livetest_http_proxy` to execute the whole test playbook *without* recording the interactions.
 
 ## Full code
 
