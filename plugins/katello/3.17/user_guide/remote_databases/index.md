@@ -257,6 +257,21 @@ Mongo database related:
 --katello-pulp-db-write-concern  Write concern of 'majority' or 'all'. When 'all' is specified, 'w' is set to number of
 ```
 
+Remote database related:
+```
+--foreman-proxy-content-pulpcore-manage-postgresql  Manage the Pulpcore PostgreSQL database.
+--foreman-proxy-content-pulpcore-postgresql-db-name  Name of the Pulpcore database in PostgreSQL.
+--foreman-proxy-content-pulpcore-postgresql-host  Host of the Pulpcore PostgreSQL database. Must be specified if external/unmanaged.
+--foreman-proxy-content-pulpcore-postgresql-password  Password of the Pulpcore PostgreSQL database.
+--foreman-proxy-content-pulpcore-postgresql-port  Port of the Pulpcore PostgreSQL database.
+--foreman-proxy-content-pulpcore-postgresql-ssl  Enable SSL connection to the Pulpcore PostgreSQL database. Only meaningful for external/unmanaged DB.
+--foreman-proxy-content-pulpcore-postgresql-ssl-cert  Path to SSL certificate to use for Pulpcore connection to PostgreSQL database.
+--foreman-proxy-content-pulpcore-postgresql-ssl-key  Path to key file to use for Pulpcore connection to PostgreSQL database.
+--foreman-proxy-content-pulpcore-postgresql-ssl-require  Configure Pulpcore to require an encrypted connection to the PostgreSQL database.
+--foreman-proxy-content-pulpcore-postgresql-ssl-root-ca  Path to the root certificate authority to validate the certificate supplied by the PostgreSQL database server.
+--foreman-proxy-content-pulpcore-postgresql-user  User of the Pulpcore PostgreSQL database.
+```
+
 The actual option names may vary between versions. Check the actual naming with foreman-installer --full-help.
 
 ### SSL configuration
