@@ -272,8 +272,8 @@ previous_version: "2.2"
 
 ## 5.4 Securing Communications with SSL
 {%include manuals/{{ page.version }}/5.4_communications.md %}
-### 5.4.1 Securing Puppet Master Requests
-{%include manuals/{{ page.version }}/5.4.1_comms_puppetmaster.md %}
+### 5.4.1 Securing Puppet Server Requests
+{%include manuals/{{ page.version }}/5.4.1_comms_puppetserver.md %}
 ### 5.4.2 Securing Smart Proxy Requests
 {%include manuals/{{ page.version }}/5.4.2_comms_proxy.md %}
 ## 5.5 Backup, Recovery and Migration
