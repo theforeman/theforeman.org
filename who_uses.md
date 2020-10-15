@@ -12,6 +12,7 @@ and we will add you to the page.
 The list is in alphabetical order.
 
 * [AstraZeneca](https://www.astrazeneca.com)
+* [ATIX AG](https://www.atix.de)
 * [bayerlein networks GmbH](https://bayerlein-networks.com)
 * [Brandorr Group](https://www.brandorr.com)
 * [CERN](https://home.cern)
