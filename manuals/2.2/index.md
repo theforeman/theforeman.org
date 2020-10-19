@@ -261,12 +261,10 @@ previous_version: "2.1"
 {%include manuals/{{ page.version }}/5.2.6_cr_openstack.md %}
 ### 5.2.7 oVirt / RHEV Notes
 {%include manuals/{{ page.version }}/5.2.7_cr_ovirt.md %}
-### 5.2.8 Rackspace Notes
-{%include manuals/{{ page.version }}/5.2.8_cr_rackspace.md %}
-### 5.2.9 VMware Notes
-{%include manuals/{{ page.version }}/5.2.9_cr_vmware.md %}
-### 5.2.10 Password Encryption
-{%include manuals/{{ page.version }}/5.2.10_cr_encryption_key.md %}
+### 5.2.8 VMware Notes
+{%include manuals/{{ page.version }}/5.2.8_cr_vmware.md %}
+### 5.2.9 Password Encryption
+{%include manuals/{{ page.version }}/5.2.9_cr_encryption_key.md %}
 
 ## 5.3 Install Locations
 {%include manuals/{{ page.version }}/missing.html %}
