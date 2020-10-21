@@ -90,4 +90,4 @@ Thank you to oVirt, who provided servers for our continuous integration system.
 
 ### Scaleway
 <div class="lead text-left"><a href="https://www.scaleway.com/"><img src="/static/images/sponsors/scaleway.svg" height="100px"/></a></div>
-Thank you to Scaleway, who provided ARM servers for building our arm packages.
+Thank you to Scaleway, who provided ARM servers for building our ARM packages.
