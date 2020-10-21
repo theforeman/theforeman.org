@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ATIX in the Foreman Community
-date: 2020-10-21 08:33:28
+date: 2020-10-20 08:33:28
 author: Maximilian Kolb
 tags:
 - foreman
@@ -40,4 +40,4 @@ The orcharhino documentation, while not being open source itself, is openly avai
 
 Overall, ATIX developers are present on all kinds of channels surrounding Foreman: Redmine, IRC, Foreman Community Forum, Pulp Issue Tracker, as well as mailing lists. ATIX is glad to be part of the vibrant Foreman community from reporting bugs to developing features and bug fixes as well as providing enterprise support - now and in the future.
 
-Talking about the future: we at ATIX also hopes to invite you -post COVID19- to another Foreman Birthday Party and celebrate our achievements in person again as we [already did](https://atix.de/recap-the-foreman-birthday-party-atix/).
+Talking about the future: we at ATIX also hope to invite you -post COVID19- to another Foreman Birthday Party and celebrate our achievements in person again as we [already did](https://atix.de/recap-the-foreman-birthday-party-atix/).
