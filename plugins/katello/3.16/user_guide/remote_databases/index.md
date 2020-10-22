@@ -259,7 +259,7 @@ Mongo database related:
 --katello-pulp-db-write-concern  Write concern of 'majority' or 'all'. When 'all' is specified, 'w' is set to number of
 ```
 
-Remote database related:
+Pulpcore database related:
 ```
 --foreman-proxy-content-pulpcore-manage-postgresql  Manage the Pulpcore PostgreSQL database.
 --foreman-proxy-content-pulpcore-postgresql-db-name  Name of the Pulpcore database in PostgreSQL.
