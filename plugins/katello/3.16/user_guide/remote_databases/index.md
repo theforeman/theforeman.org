@@ -29,7 +29,7 @@ In either scenario, both of the databases don't have to be remote. You can opt t
 
 ### Important notes:
 
-1. Katello 3.15 changes the default database for Pulp from PostgreSQL v9.x to PostgreSQL v12. External databases should be upgraded to avoid conflicts.
+1. Pulpcore installs a separate PostgreSQL database and lacks support for external databases. Databases should be upgraded to avoid conflicts.
 
 2. Katello 3.16 adds dependencies provided by the `rh-postgresql12-postgresql-evr` package. This should be installed on any external PostgreSQL v12 database before applying any db migrations.
 
