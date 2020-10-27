@@ -31,7 +31,7 @@ In either scenario, both of the databases don't have to be remote. You can opt t
 
 1. Pulpcore installs a separate PostgreSQL database and lacks support for external databases. Databases should be upgraded to avoid conflicts.
 
-2. Katello 3.16 adds dependencies provided by the `rh-postgresql12-postgresql-evr` package. This should be installed on any external PostgreSQL v12 database before applying any db migrations.
+2. Katello 3.16 adds a dependency on [postgresql-evr](https://github.com/katello/postgresql-evr). The Katello repository provides the `rh-postgresql12-postgresql-evr` package on EL7. This should be installed on any external PostgreSQL v12 database before applying any db migrations.
 
 Note that [Foreman v2.1 requires PostgreSQL v10+](https://theforeman.org/manuals/2.1/index.html#Headlinefeatures).
 
