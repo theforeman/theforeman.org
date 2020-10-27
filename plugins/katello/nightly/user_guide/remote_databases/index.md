@@ -26,7 +26,7 @@ There are two ways to deploy Foreman with remote databases:
 
 ### Important notes:
 
-1. Pulpcore installs a separate PostgreSQL schema and lacks support for external databases. Databases should be upgraded to avoid conflicts.
+1. Pulpcore installs a separate PostgreSQL schema. Databases should be upgraded to avoid conflicts.
 
 2. Katello 3.16 adds dependencies provided by the `rh-postgresql12-postgresql-evr` package. This should be installed on any external PostgreSQL v12 database before applying any db migrations.
 
