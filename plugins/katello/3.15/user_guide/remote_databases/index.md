@@ -26,7 +26,9 @@ There are two ways to deploy Foreman with remote databases:
 
 ### Important note:
 
-Pulpcore installs a separate PostgreSQL database and lacks support for external databases. Databases should be upgraded to avoid conflicts.
+Pulpcore installs a separate PostgreSQL database and lacks support for external databases. This support is introduced in Katello 3.16.
+
+Foreman and Pulpcore require PostgreSQL 10 or newer. Databases should be upgraded to avoid conflicts. It is recommended to update to version 12.
 
 Note that [Foreman v2.0 requires PostgreSQL v10+](https://theforeman.org/manuals/2.0/index.html#Headlinefeatures).
 
