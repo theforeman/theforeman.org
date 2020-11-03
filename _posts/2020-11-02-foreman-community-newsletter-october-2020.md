@@ -61,6 +61,23 @@ There was great excitement when community member [@thulium-drake](https://commun
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1eDmt-JN4ZQ?start=2178" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## UX Progress Tracker and Foreman UX Meetups
+
+[@Laviro](https://community.theforeman.org/u/laviro/summary) has added a [UX roadmap wiki](https://community.theforeman.org/t/ux-roadmap-for-foreman-2-4/21124?u=mcorr) to track efforts to improve Foreman UX. This will be updated as tasks progress, so if you're interested, keep an eye.
+
+There are fortnightly meetings for anyone interested in Foreman UX. Here are the meetings scheduled for November:
+
+[UX Interest Group Meeting November 16th](https://community.theforeman.org/t/ux-interest-group-meeting/21126?u=mcorr)
+[UX Interest Group Meeting November 30th](https://community.theforeman.org/t/ux-interest-group-meeting-2/21127?u=mcorr)
+
+## Foreman Infrastructure SIG
+
+If you're interested, you can watch/listen to Foreman's October meeting of the Infrastructure SIG. We're always happy to welcome new faces, so please feel free to come along to the next meeting.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PP_jnxAcRxE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Next meeting is scheduled for [November 17](https://community.theforeman.org/t/foreman-infrastructure-sig-meeting-nov-17/21129?u=mcorr). Add this to your calendar if you're interested! 
+
 
 ## Professional Services working with the Foreman Community
 
