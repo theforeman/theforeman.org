@@ -21,7 +21,7 @@ Under normal circumstances, contributors to the Foreman project would have had a
 
 ## Foreman 2.2.0 has been released!
 
-This release contains over 140 bug fixes as well as new features. Among the [headline features](https://theforeman.org/manuals/2.2/index.html#Releasenotesfor2.2), there is a look at an early version of the new host details page. We are hoping that the host detail redesign will help improve your experience managing hosts in Foreman. To do this, we need your feedback on these iterations, so please feel free to let us know your thoughts and [join the discussion](https://community.theforeman.org/t/host-details-page-redesign-survey/19399).
+This release contains over 140 bug fixes as well as new features. Among the [headline features](https://theforeman.org/manuals/2.2/index.html#Releasenotesfor2.2), there is an early version of the new host details page. We are hoping that the host detail redesign will help improve your experience managing hosts in Foreman. To do this, we need your feedback on these iterations, so please feel free to let us know your thoughts and [join the discussion](https://community.theforeman.org/t/host-details-page-redesign-survey/19399).
 
 For more information, see the full [release announcement](https://community.theforeman.org/t/foreman-2-2-0-has-been-released/21067).
 
@@ -57,7 +57,7 @@ There was great excitement when community member [@thulium-drake](https://commun
 
 ## Optimized Reports Storage
 
-[@lzap](https://community.theforeman.org/u/lzap) adds further thoughts to the [optimised reports storage](https://community.theforeman.org/t/rfc-optimized-reports-storage/15573/21?u=mcorr). You can watch [@lzap](https://community.theforeman.org/u/lzap) discuss this on the Foreman Community Demo. Please let us know your thoughts:
+[@lzap](https://community.theforeman.org/u/lzap) adds further thoughts to the [optimized reports storage](https://community.theforeman.org/t/rfc-optimized-reports-storage/15573/21?u=mcorr). You can watch [@lzap](https://community.theforeman.org/u/lzap) discuss this on the Foreman Community Demo. Please let us know your thoughts:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1eDmt-JN4ZQ?start=2178" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -67,8 +67,8 @@ There was great excitement when community member [@thulium-drake](https://commun
 
 There are fortnightly meetings for anyone interested in Foreman UX. Here are the meetings scheduled for November:
 
-[UX Interest Group Meeting November 16th](https://community.theforeman.org/t/ux-interest-group-meeting/21126?u=mcorr)
-[UX Interest Group Meeting November 30th](https://community.theforeman.org/t/ux-interest-group-meeting-2/21127?u=mcorr)
+* [UX Interest Group Meeting November 16th](https://community.theforeman.org/t/ux-interest-group-meeting/21126?u=mcorr)
+* [UX Interest Group Meeting November 30th](https://community.theforeman.org/t/ux-interest-group-meeting-2/21127?u=mcorr)
 
 ## Foreman Infrastructure SIG
 
@@ -76,7 +76,7 @@ If you're interested, you can watch/listen to Foreman's October meeting of the I
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PP_jnxAcRxE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Next meeting is scheduled for [November 17](https://community.theforeman.org/t/foreman-infrastructure-sig-meeting-nov-17/21129?u=mcorr). Add this to your calendar if you're interested! 
+Next meeting is scheduled for [November 17](https://community.theforeman.org/t/foreman-infrastructure-sig-meeting-nov-17/21129?u=mcorr). Add this to your calendar if you're interested!
 
 
 ## Professional Services working with the Foreman Community
