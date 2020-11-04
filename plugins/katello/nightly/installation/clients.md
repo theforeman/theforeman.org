@@ -14,21 +14,13 @@ Install the appropriate Katello client release packages.
 <p>
   Select your Operating System:
   <select id="operatingSystems">
-     <option value="el5">Enterprise Linux 5 (CentOS, etc.)</option>
      <option value="el6">Enterprise Linux 6 (CentOS, etc.)</option>
      <option value="el7" selected="selected">Enterprise Linux 7 (CentOS, etc.)</option>
-     <option value="f29">Fedora 29</option>
+     <option value="el8">Enterprise Linux 8 (CentOS, etc.)</option>
      <option value="sles11">Suse Enterprise Linux Server 11</option>
      <option value="sles12">Suse Enterprise Linux Server 12</option>
   </select>
 </p>
-
-<div id="el5" markdown="1">
-{% highlight bash %}
-yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-5.noarch.rpm
-yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/el5/x86_64/foreman-client-release.rpm
-{% endhighlight %}
-</div>
 
 <div id="el6" markdown="1">
 {% highlight bash %}
@@ -44,9 +36,9 @@ yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/el7/
 {% endhighlight %}
 </div>
 
-<div id="f29" markdown="1">
+<div id="el8" markdown="1">
 {% highlight bash %}
-yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/fc29/x86_64/foreman-client-release.rpm
+yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/el8/x86_64/foreman-client-release.rpm
 {% endhighlight %}
 </div>
 
@@ -68,7 +60,7 @@ Now you are ready to install the client package:
 
 The `katello-host-tools` package reports errata & package profile information, but does not allow you to run remote actions on the clients.
 
-<div class="el5 el6 el7 f29">
+<div class="el6 el7 el8">
 {% highlight bash %}
 yum install katello-host-tools
 {% endhighlight %}
@@ -80,7 +72,7 @@ yum install katello-agent
 {% endhighlight %}
 </div>
 
-<div class="el7 f29">
+<div class="el7 el8">
 Optionally you can also install `katello-host-tools-tracer` and the client will report processes that need restarting after an update back to the Katello server.
 
 {% highlight bash %}
