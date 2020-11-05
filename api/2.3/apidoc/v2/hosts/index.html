@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../../apidoc/v2/hosts.html'>
+      Hosts
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>index</li>
+  
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      GET /api/hosts
+      <br>
+      <small>List all hosts</small>
+    </h1>
+  </div>
+  <div class='page-header'>
+    <h1>
+      GET /api/hostgroups/:hostgroup_id/hosts
+      <br>
+      <small>List all hosts for a host group</small>
+    </h1>
+  </div>
+  <div class='page-header'>
+    <h1>
+      GET /api/locations/:location_id/hosts
+      <br>
+      <small>List hosts per location</small>
+    </h1>
+  </div>
+  <div class='page-header'>
+    <h1>
+      GET /api/organizations/:organization_id/hosts
+      <br>
+      <small>List hosts per organization</small>
+    </h1>
+  </div>
+  <div class='page-header'>
+    <h1>
+      GET /api/environments/:environment_id/hosts
+      <br>
+      <small>List hosts per environment</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+  <h2>Examples</h2>
+    <pre class="prettyprint">GET /api/hosts
+200
+{
+  &quot;total&quot;: 11,
+  &quot;subtotal&quot;: 11,
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 5,
+  &quot;search&quot;: null,
+  &quot;sort&quot;: {
+    &quot;by&quot;: null,
+    &quot;order&quot;: null
+  },
+  &quot;results&quot;: [
+    {
+      &quot;ip&quot;: null,
+      &quot;ip6&quot;: null,
+      &quot;environment_id&quot;: null,
+      &quot;environment_name&quot;: null,
+      &quot;last_report&quot;: null,
+      &quot;mac&quot;: null,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
+      &quot;sp_mac&quot;: null,
+      &quot;sp_ip&quot;: null,
+      &quot;sp_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;architecture_id&quot;: null,
+      &quot;architecture_name&quot;: null,
+      &quot;operatingsystem_id&quot;: null,
+      &quot;operatingsystem_name&quot;: null,
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;sp_subnet_id&quot;: null,
+      &quot;ptable_id&quot;: null,
+      &quot;ptable_name&quot;: null,
+      &quot;medium_id&quot;: null,
+      &quot;medium_name&quot;: null,
+      &quot;pxe_loader&quot;: null,
+      &quot;build&quot;: false,
+      &quot;comment&quot;: null,
+      &quot;disk&quot;: null,
+      &quot;installed_at&quot;: null,
+      &quot;model_id&quot;: null,
+      &quot;hostgroup_id&quot;: null,
+      &quot;owner_id&quot;: 135138680,
+      &quot;owner_name&quot;: &quot;Admin User&quot;,
+      &quot;owner_type&quot;: &quot;User&quot;,
+      &quot;enabled&quot;: true,
+      &quot;managed&quot;: false,
+      &quot;use_image&quot;: null,
+      &quot;image_file&quot;: &quot;&quot;,
+      &quot;uuid&quot;: null,
+      &quot;compute_resource_id&quot;: null,
+      &quot;compute_resource_name&quot;: null,
+      &quot;compute_profile_id&quot;: null,
+      &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
+      &quot;certname&quot;: &quot;host107&quot;,
+      &quot;image_id&quot;: null,
+      &quot;image_name&quot;: null,
+      &quot;created_at&quot;: &quot;2020-11-04 14:59:35 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2020-11-04 14:59:35 UTC&quot;,
+      &quot;last_compile&quot;: null,
+      &quot;global_status&quot;: 0,
+      &quot;global_status_label&quot;: &quot;OK&quot;,
+      &quot;uptime_seconds&quot;: null,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization_name&quot;: &quot;Empty Organization&quot;,
+      &quot;location_id&quot;: 255093256,
+      &quot;location_name&quot;: &quot;Location 1&quot;,
+      &quot;puppet_status&quot;: 0,
+      &quot;model_name&quot;: null,
+      &quot;name&quot;: &quot;host107&quot;,
+      &quot;id&quot;: 69,
+      &quot;puppet_proxy_id&quot;: null,
+      &quot;puppet_proxy_name&quot;: null,
+      &quot;puppet_ca_proxy_id&quot;: null,
+      &quot;puppet_ca_proxy_name&quot;: null,
+      &quot;puppet_proxy&quot;: null,
+      &quot;puppet_ca_proxy&quot;: null,
+      &quot;registration_token&quot;: &quot;eyJhbGciOiJIUzI1NiJ9.eyJob3N0X2lkIjo2OSwiaWF0IjoxNjA0NTAxOTc2LCJqdGkiOiIzODQyYjZlMjQwOTg4NDBhOTU2ZGI4MjAyMTVmZGQzYzA5MTk2NWExYWY4YjU5ZmFkMzMzZGVkMDFmNTc5YjFhIiwiZXhwIjoxNjA0NTg4Mzc2LCJuYmYiOjE2MDQ0OTgzNzZ9.FIR22Uxuq4Q_VhXVsarxS_NUP0-jPJK0YjkY5E20gPk&quot;,
+      &quot;hostgroup_name&quot;: null,
+      &quot;hostgroup_title&quot;: null
+    },
+    {
+      &quot;ip&quot;: null,
+      &quot;ip6&quot;: null,
+      &quot;environment_id&quot;: null,
+      &quot;environment_name&quot;: null,
+      &quot;last_report&quot;: null,
+      &quot;mac&quot;: null,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
+      &quot;sp_mac&quot;: null,
+      &quot;sp_ip&quot;: null,
+      &quot;sp_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;architecture_id&quot;: null,
+      &quot;architecture_name&quot;: null,
+      &quot;operatingsystem_id&quot;: null,
+      &quot;operatingsystem_name&quot;: null,
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;sp_subnet_id&quot;: null,
+      &quot;ptable_id&quot;: null,
+      &quot;ptable_name&quot;: null,
+      &quot;medium_id&quot;: null,
+      &quot;medium_name&quot;: null,
+      &quot;pxe_loader&quot;: null,
+      &quot;build&quot;: false,
+      &quot;comment&quot;: null,
+      &quot;disk&quot;: null,
+      &quot;installed_at&quot;: null,
+      &quot;model_id&quot;: null,
+      &quot;hostgroup_id&quot;: null,
+      &quot;owner_id&quot;: 135138680,
+      &quot;owner_name&quot;: &quot;Admin User&quot;,
+      &quot;owner_type&quot;: &quot;User&quot;,
+      &quot;enabled&quot;: true,
+      &quot;managed&quot;: false,
+      &quot;use_image&quot;: null,
+      &quot;image_file&quot;: &quot;&quot;,
+      &quot;uuid&quot;: null,
+      &quot;compute_resource_id&quot;: null,
+      &quot;compute_resource_name&quot;: null,
+      &quot;compute_profile_id&quot;: null,
+      &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
+      &quot;certname&quot;: &quot;host108&quot;,
+      &quot;image_id&quot;: null,
+      &quot;image_name&quot;: null,
+      &quot;created_at&quot;: &quot;2020-11-04 14:59:35 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2020-11-04 14:59:35 UTC&quot;,
+      &quot;last_compile&quot;: null,
+      &quot;global_status&quot;: 0,
+      &quot;global_status_label&quot;: &quot;OK&quot;,
+      &quot;uptime_seconds&quot;: null,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization_name&quot;: &quot;Empty Organization&quot;,
+      &quot;location_id&quot;: 255093256,
+      &quot;location_name&quot;: &quot;Location 1&quot;,
+      &quot;puppet_status&quot;: 0,
+      &quot;model_name&quot;: null,
+      &quot;name&quot;: &quot;host108&quot;,
+      &quot;id&quot;: 70,
+      &quot;puppet_proxy_id&quot;: null,
+      &quot;puppet_proxy_name&quot;: null,
+      &quot;puppet_ca_proxy_id&quot;: null,
+      &quot;puppet_ca_proxy_name&quot;: null,
+      &quot;puppet_proxy&quot;: null,
+      &quot;puppet_ca_proxy&quot;: null,
+      &quot;registration_token&quot;: &quot;eyJhbGciOiJIUzI1NiJ9.eyJob3N0X2lkIjo3MCwiaWF0IjoxNjA0NTAxOTc2LCJqdGkiOiIyZWU2YTA0N2Y4NzExZGE1OTdjYWZmYWIxMmY3YjQ0Mzk3MjhiMDQ4N2ZiNDNlYTk1M2FkZGFmMjY1NzBmMmQxIiwiZXhwIjoxNjA0NTg4Mzc2LCJuYmYiOjE2MDQ0OTgzNzZ9.hTy94Cg8-8-T0b5zocWYPXujHRRcXfxy8obgMtkD1pQ&quot;,
+      &quot;hostgroup_name&quot;: null,
+      &quot;hostgroup_title&quot;: null
+    },
+    {
+      &quot;ip&quot;: null,
+      &quot;ip6&quot;: null,
+      &quot;environment_id&quot;: null,
+      &quot;environment_name&quot;: null,
+      &quot;last_report&quot;: null,
+      &quot;mac&quot;: null,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
+      &quot;sp_mac&quot;: null,
+      &quot;sp_ip&quot;: null,
+      &quot;sp_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;architecture_id&quot;: null,
+      &quot;architecture_name&quot;: null,
+      &quot;operatingsystem_id&quot;: null,
+      &quot;operatingsystem_name&quot;: null,
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;sp_subnet_id&quot;: null,
+      &quot;ptable_id&quot;: null,
+      &quot;ptable_name&quot;: null,
+      &quot;medium_id&quot;: null,
+      &quot;medium_name&quot;: null,
+      &quot;pxe_loader&quot;: null,
+      &quot;build&quot;: false,
+      &quot;comment&quot;: null,
+      &quot;disk&quot;: null,
+      &quot;installed_at&quot;: null,
+      &quot;model_id&quot;: null,
+      &quot;hostgroup_id&quot;: null,
+      &quot;owner_id&quot;: 135138680,
+      &quot;owner_name&quot;: &quot;Admin User&quot;,
+      &quot;owner_type&quot;: &quot;User&quot;,
+      &quot;enabled&quot;: true,
+      &quot;managed&quot;: false,
+      &quot;use_image&quot;: null,
+      &quot;image_file&quot;: &quot;&quot;,
+      &quot;uuid&quot;: null,
+      &quot;compute_resource_id&quot;: null,
+      &quot;compute_resource_name&quot;: null,
+      &quot;compute_profile_id&quot;: null,
+      &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
+      &quot;certname&quot;: &quot;host109&quot;,
+      &quot;image_id&quot;: null,
+      &quot;image_name&quot;: null,
+      &quot;created_at&quot;: &quot;2020-11-04 14:59:35 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2020-11-04 14:59:35 UTC&quot;,
+      &quot;last_compile&quot;: null,
+      &quot;global_status&quot;: 0,
+      &quot;global_status_label&quot;: &quot;OK&quot;,
+      &quot;uptime_seconds&quot;: null,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization_name&quot;: &quot;Empty Organization&quot;,
+      &quot;location_id&quot;: 255093256,
+      &quot;location_name&quot;: &quot;Location 1&quot;,
+      &quot;puppet_status&quot;: 0,
+      &quot;model_name&quot;: null,
+      &quot;name&quot;: &quot;host109&quot;,
+      &quot;id&quot;: 71,
+      &quot;puppet_proxy_id&quot;: null,
+      &quot;puppet_proxy_name&quot;: null,
+      &quot;puppet_ca_proxy_id&quot;: null,
+      &quot;puppet_ca_proxy_name&quot;: null,
+      &quot;puppet_proxy&quot;: null,
+      &quot;puppet_ca_proxy&quot;: null,
+      &quot;registration_token&quot;: &quot;eyJhbGciOiJIUzI1NiJ9.eyJob3N0X2lkIjo3MSwiaWF0IjoxNjA0NTAxOTc2LCJqdGkiOiIxYjlkODRjMDIwOGVhZGY1NWRmZjAyNzljNWQ1NWJhOGZiOTY2MTc5NjMzYzJmNzI3ZmE0ZjljY2IwY2FhY2YyIiwiZXhwIjoxNjA0NTg4Mzc2LCJuYmYiOjE2MDQ0OTgzNzZ9.KP8Dzv15ZF8ISWJ6RA8GlN86GH7qgAmkhH8PQGsAHD0&quot;,
+      &quot;hostgroup_name&quot;: null,
+      &quot;hostgroup_title&quot;: null
+    },
+    {
+      &quot;ip&quot;: null,
+      &quot;ip6&quot;: null,
+      &quot;environment_id&quot;: null,
+      &quot;environment_name&quot;: null,
+      &quot;last_report&quot;: null,
+      &quot;mac&quot;: null,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
+      &quot;sp_mac&quot;: null,
+      &quot;sp_ip&quot;: null,
+      &quot;sp_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;architecture_id&quot;: null,
+      &quot;architecture_name&quot;: null,
+      &quot;operatingsystem_id&quot;: null,
+      &quot;operatingsystem_name&quot;: null,
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;sp_subnet_id&quot;: null,
+      &quot;ptable_id&quot;: null,
+      &quot;ptable_name&quot;: null,
+      &quot;medium_id&quot;: null,
+      &quot;medium_name&quot;: null,
+      &quot;pxe_loader&quot;: null,
+      &quot;build&quot;: false,
+      &quot;comment&quot;: null,
+      &quot;disk&quot;: null,
+      &quot;installed_at&quot;: null,
+      &quot;model_id&quot;: null,
+      &quot;hostgroup_id&quot;: null,
+      &quot;owner_id&quot;: 135138680,
+      &quot;owner_name&quot;: &quot;Admin User&quot;,
+      &quot;owner_type&quot;: &quot;User&quot;,
+      &quot;enabled&quot;: true,
+      &quot;managed&quot;: false,
+      &quot;use_image&quot;: null,
+      &quot;image_file&quot;: &quot;&quot;,
+      &quot;uuid&quot;: null,
+      &quot;compute_resource_id&quot;: null,
+      &quot;compute_resource_name&quot;: null,
+      &quot;compute_profile_id&quot;: null,
+      &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
+      &quot;certname&quot;: &quot;host110&quot;,
+      &quot;image_id&quot;: null,
+      &quot;image_name&quot;: null,
+      &quot;created_at&quot;: &quot;2020-11-04 14:59:35 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2020-11-04 14:59:35 UTC&quot;,
+      &quot;last_compile&quot;: null,
+      &quot;global_status&quot;: 0,
+      &quot;global_status_label&quot;: &quot;OK&quot;,
+      &quot;uptime_seconds&quot;: null,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization_name&quot;: &quot;Empty Organization&quot;,
+      &quot;location_id&quot;: 255093256,
+      &quot;location_name&quot;: &quot;Location 1&quot;,
+      &quot;puppet_status&quot;: 0,
+      &quot;model_name&quot;: null,
+      &quot;name&quot;: &quot;host110&quot;,
+      &quot;id&quot;: 72,
+      &quot;puppet_proxy_id&quot;: null,
+      &quot;puppet_proxy_name&quot;: null,
+      &quot;puppet_ca_proxy_id&quot;: null,
+      &quot;puppet_ca_proxy_name&quot;: null,
+      &quot;puppet_proxy&quot;: null,
+      &quot;puppet_ca_proxy&quot;: null,
+      &quot;registration_token&quot;: &quot;eyJhbGciOiJIUzI1NiJ9.eyJob3N0X2lkIjo3MiwiaWF0IjoxNjA0NTAxOTc2LCJqdGkiOiJmYzg3YjUxYWViYTZiZDA3NjkxNmQ2NmM0YzZiMjMzOTI5NWU4YjRhN2JmNzkxYTUwMDc3Y2M4NWNkYThmZjdmIiwiZXhwIjoxNjA0NTg4Mzc2LCJuYmYiOjE2MDQ0OTgzNzZ9.CXa-zP2R1hoewlaScRrE7tF5pll4qPHR_87OB2zTni0&quot;,
+      &quot;hostgroup_name&quot;: null,
+      &quot;hostgroup_title&quot;: null
+    },
+    {
+      &quot;ip&quot;: null,
+      &quot;ip6&quot;: null,
+      &quot;environment_id&quot;: null,
+      &quot;environment_name&quot;: null,
+      &quot;last_report&quot;: null,
+      &quot;mac&quot;: null,
+      &quot;realm_id&quot;: null,
+      &quot;realm_name&quot;: null,
+      &quot;sp_mac&quot;: null,
+      &quot;sp_ip&quot;: null,
+      &quot;sp_name&quot;: null,
+      &quot;domain_id&quot;: null,
+      &quot;domain_name&quot;: null,
+      &quot;architecture_id&quot;: null,
+      &quot;architecture_name&quot;: null,
+      &quot;operatingsystem_id&quot;: null,
+      &quot;operatingsystem_name&quot;: null,
+      &quot;subnet_id&quot;: null,
+      &quot;subnet_name&quot;: null,
+      &quot;subnet6_id&quot;: null,
+      &quot;subnet6_name&quot;: null,
+      &quot;sp_subnet_id&quot;: null,
+      &quot;ptable_id&quot;: null,
+      &quot;ptable_name&quot;: null,
+      &quot;medium_id&quot;: null,
+      &quot;medium_name&quot;: null,
+      &quot;pxe_loader&quot;: null,
+      &quot;build&quot;: false,
+      &quot;comment&quot;: null,
+      &quot;disk&quot;: null,
+      &quot;installed_at&quot;: null,
+      &quot;model_id&quot;: null,
+      &quot;hostgroup_id&quot;: null,
+      &quot;owner_id&quot;: 135138680,
+      &quot;owner_name&quot;: &quot;Admin User&quot;,
+      &quot;owner_type&quot;: &quot;User&quot;,
+      &quot;enabled&quot;: true,
+      &quot;managed&quot;: false,
+      &quot;use_image&quot;: null,
+      &quot;image_file&quot;: &quot;&quot;,
+      &quot;uuid&quot;: null,
+      &quot;compute_resource_id&quot;: null,
+      &quot;compute_resource_name&quot;: null,
+      &quot;compute_profile_id&quot;: null,
+      &quot;compute_profile_name&quot;: null,
+      &quot;capabilities&quot;: [
+        &quot;build&quot;
+      ],
+      &quot;provision_method&quot;: &quot;build&quot;,
+      &quot;certname&quot;: &quot;host111&quot;,
+      &quot;image_id&quot;: null,
+      &quot;image_name&quot;: null,
+      &quot;created_at&quot;: &quot;2020-11-04 14:59:36 UTC&quot;,
+      &quot;updated_at&quot;: &quot;2020-11-04 14:59:36 UTC&quot;,
+      &quot;last_compile&quot;: null,
+      &quot;global_status&quot;: 0,
+      &quot;global_status_label&quot;: &quot;OK&quot;,
+      &quot;uptime_seconds&quot;: null,
+      &quot;organization_id&quot;: 114267492,
+      &quot;organization_name&quot;: &quot;Empty Organization&quot;,
+      &quot;location_id&quot;: 255093256,
+      &quot;location_name&quot;: &quot;Location 1&quot;,
+      &quot;puppet_status&quot;: 0,
+      &quot;model_name&quot;: null,
+      &quot;name&quot;: &quot;host111&quot;,
+      &quot;id&quot;: 73,
+      &quot;puppet_proxy_id&quot;: null,
+      &quot;puppet_proxy_name&quot;: null,
+      &quot;puppet_ca_proxy_id&quot;: null,
+      &quot;puppet_ca_proxy_name&quot;: null,
+      &quot;puppet_proxy&quot;: null,
+      &quot;puppet_ca_proxy&quot;: null,
+      &quot;registration_token&quot;: &quot;eyJhbGciOiJIUzI1NiJ9.eyJob3N0X2lkIjo3MywiaWF0IjoxNjA0NTAxOTc2LCJqdGkiOiJhMjEzMjMxZDExMjVmM2ZjYTBkYzBiMTNiZWRjZDAwOWViNGFhZjczMjE3YWMzZDJjNGY4NGZjZWRlMWU0MDE2IiwiZXhwIjoxNjA0NTg4Mzc2LCJuYmYiOjE2MDQ0OTgzNzZ9.ZNduddriMf9Oneh9-XRJXnIzwYihSjuo5i0y4opztBI&quot;,
+      &quot;hostgroup_name&quot;: null,
+      &quot;hostgroup_title&quot;: null
+    }
+  ]
+}</pre>
+
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>thin </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Only list ID and name of hosts</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>hostgroup_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of host group</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of location</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of organization</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of environment</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>include </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Array of extra information types to include</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>parameters</code>, <code>all_parameters</code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>filter results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Sort field and order, eg. ‘id DESC’</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Page number, starting at 1</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Number of results per page to return, ‘all’ to return all results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must match regular expression <code>/\A([1-9]\d<em>|all)\Z$/</em></code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+    <h2>Search fields</h2>
+  <table class='table'>
+  <thead>
+    <tr>
+      <th width="20%">Field name</th>
+      <th width="20%">Type</th>
+      <th width="60%">Possible values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>architecture</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>boot_time</td>
+      <td>datetime</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>build</td>
+      <td></td>
+      <td>true, false</td>
+    </tr>
+    <tr>
+      <td>class</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>comment</td>
+      <td>text</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>compute_resource</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>compute_resource_id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>config_group</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>created_at</td>
+      <td>datetime</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>domain</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>domain_id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>environment</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>facts</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>global_status</td>
+      <td></td>
+      <td>ok, warning, error</td>
+    </tr>
+    <tr>
+      <td>has_ip</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>has_mac</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>hostgroup</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>hostgroup_fullname</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>hostgroup_id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>hostgroup_name</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>hostgroup_title</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>image</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>installed_at</td>
+      <td>datetime</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ip</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>last_report</td>
+      <td>datetime</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>location_id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>mac</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>managed</td>
+      <td></td>
+      <td>true, false</td>
+    </tr>
+    <tr>
+      <td>model</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>organization</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>organization_id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>origin</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>os</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>os_description</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>os_id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>os_major</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>os_minor</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>os_title</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>owner</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>owner_id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>owner_type</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>params</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>params_name</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>parent_hostgroup</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>puppet_ca</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>puppet_proxy_id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>puppetmaster</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>realm</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>realm_id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>smart_proxy</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>status.applied</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>status.enabled</td>
+      <td></td>
+      <td>true, false</td>
+    </tr>
+    <tr>
+      <td>status.failed</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>status.failed_restarts</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>status.interesting</td>
+      <td></td>
+      <td>true, false</td>
+    </tr>
+    <tr>
+      <td>status.pending</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>status.restarted</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>status.skipped</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>subnet</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>subnet.name</td>
+      <td>text</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>subnet6</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>subnet6.name</td>
+      <td>text</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>user.firstname</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>user.lastname</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>user.login</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>user.mail</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>usergroup</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>usergroup.name</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>uuid</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>
