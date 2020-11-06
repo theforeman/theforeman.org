@@ -1,4 +1,6 @@
 versions:
+  - name: "3.18"
+    display: "3.18 RC1"
   - name: "3.17"
     display: "3.17 RC2"
   - name: "3.16"
