@@ -24,12 +24,9 @@ There are two ways to deploy Foreman with remote databases:
     * restore the DBs on remote servers
     * run foreman-installer with right parameters pointing to the databases. It re-configures the databases and start all the services with new DB locations
 
-
 ### Important notes:
 
 * Pulpcore installs a separate PostgreSQL database. Databases should be upgraded to avoid conflicts.
-
-* Katello 3.16 added dependencies provided by the `rh-postgresql12-postgresql-evr` package. This should be installed on any external PostgreSQL v12 database before applying any db migrations.
 
 Note that [Foreman v2.0 requires PostgreSQL v10+](https://theforeman.org/manuals/2.0/index.html#Headlinefeatures).
 
