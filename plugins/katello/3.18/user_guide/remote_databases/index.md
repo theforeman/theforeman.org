@@ -24,6 +24,11 @@ There are two ways to deploy Foreman with remote databases:
     * restore the DBs on remote servers
     * run foreman-installer with right parameters pointing to the databases. It re-configures the databases and start all the services with new DB locations
 
+### Important notes:
+
+* Pulpcore installs a separate PostgreSQL database. Databases should be upgraded to avoid conflicts.
+
+Note that [Foreman v2.0 requires PostgreSQL v10+](https://theforeman.org/manuals/2.0/index.html#Headlinefeatures).
 In either scenario, both of the databases don't have to be remote. You can opt to use only a remote mongo database or only a remote postgresql database. Both postgresql and mongo databases can be on the same host, but this isn't recommended due to the amount of resources mongo can use.
 
 ## Prepare remote Postgres
