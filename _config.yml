@@ -111,7 +111,7 @@ defaults:
       path: "plugins/katello"
     values:
       layout: "plugins/katello/documentation"
-      latest: "3.16"
+      latest: "3.17"
   - scope:
       path: "plugins/katello/*/api"
     values:
