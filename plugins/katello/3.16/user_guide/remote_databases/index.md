@@ -31,8 +31,6 @@ In either scenario, both of the databases don't have to be remote. You can opt t
 
 * Pulpcore installs a separate PostgreSQL database. Databases should be upgraded to avoid conflicts.
 
-Note that [Foreman v2.1 requires PostgreSQL v10+](https://theforeman.org/manuals/2.1/index.html#Headlinefeatures).
-
 ## Prepare remote Postgres
 GOAL: To use remote Postgres database with Foreman we have to:
 * be able to access the databases from foreman box
