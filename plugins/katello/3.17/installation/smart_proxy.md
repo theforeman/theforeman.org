@@ -19,7 +19,9 @@ The Smart Proxy server is only supported on x86_64 Operating Systems
 At a minimum, the following ports need to be open to external connections for installation:
 
 * 80 TCP - HTTP, used for provisioning purposes
-* 443 TCP - HTTPS, used for web access and api communication
+* 443 TCP - HTTPS, used for serving content to clients
+* 5647 TCP - qdrouterd - used for client to connect to Qpid Dispatch Router (used for katello-agent)
+* 8443 TCP - HTTPS, used for client subscription-manager traffic
 * 9090 TCP - HTTPS - used for communication with the Smart Proxy
 
 See the [User Guide](/plugins/katello/{{ page.version }}/user_guide/smart_proxies/index.html) for additional information about Smart Proxy services and required ports.
