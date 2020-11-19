@@ -42,6 +42,7 @@ The following ports need to be open to external connections:
 
 * 80 TCP - HTTP, used for provisioning purposes
 * 443 TCP - HTTPS, used for web access and api communication
+* 5646 TCP - qdrouterd - used for Qpid Dispatch Router on a Smart Proxy to communicate with Qpid Dispatch Router on Foreman server
 * 5647 TCP - qdrouterd - used for client and Smart Proxy actions
 * 9090 TCP - HTTPS - used for communication with the Smart Proxy
 
