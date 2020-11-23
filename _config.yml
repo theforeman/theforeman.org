@@ -52,6 +52,8 @@ navigation:
         url: /training.html
       - title: Support
         url: /support.html
+      - title: Professional Services
+        url: /professional-services.html
   - title: Get involved
     sublinks:
       - title: Community
