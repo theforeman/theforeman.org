@@ -11,7 +11,7 @@ Thanks to everyone who asked and answered questions, opened issues, and made the
 
 <!--more-->
 
-## Foreman 2.2.1 has been released.
+## Foreman 2.2.1 has been released!
 
 This includes updates to correct the logging layout and a fix for the puppetrun removal migration. For more information, see the full [release announcement](https://community.theforeman.org/t/foreman-2-2-1-has-been-released/21285/2?u=mcorr).
 
@@ -23,7 +23,7 @@ Please evaluate this release candidate to help make the next Foreman release as 
 
 Some of the new features include a new simplified process of registering hosts to Foreman, the ability to preview template rendering even when safe mode is disabled, and the new “instance title” to help distinguish different Foreman instances from each other. For more information, check out the [release announcement](https://community.theforeman.org/t/foreman-2-3-0-rc2-is-available-for-testing/21296/2?u=mcorr).
 
-## Katello 3.17
+## Katello 3.17 has been released!
 
 A total of 105 bugs and features have been addressed in this release.
 
@@ -46,21 +46,21 @@ This month, we held a two-day ForemanCon event that was largely focussed on Fore
 
 ### ForemanCon Day 1
 
-|@lzap |  | [New Foreman webhooks plugin](https://youtu.be/sTld0H_PevA)  |
-|@iballou @Justin_Sherrill @sajha @jjeffers   |  |[Pulp 3 & applicability differences & troubleshooting](https://youtu.be/qxJ4sPV3FVE) |
-|@ezr-ondrej |  |[Github actions in Foreman project](https://youtu.be/T8CwceGpViQ) |
-|@Justin_Sherrill |  | [Ruby debugging tips & tricks](https://youtu.be/xLAwl0Es19E) |
-|@ekohl |  | [Writing a good PR to get it merged easily](https://youtu.be/m4xlgX_Vgls) |
+|[@lzap](https://community.theforeman.org/u/lzap) |  | [New Foreman webhooks plugin](https://youtu.be/sTld0H_PevA)  |
+|[@iballou](https://community.theforeman.org/u/iballou) [@Justin_Sherrill](https://community.theforeman.org/u/Justin_Sherrill) [@sajha](https://community.theforeman.org/u/sajha) [@jjeffers](https://community.theforeman.org/u/jjeffers)  |  |[Pulp 3 & applicability differences & troubleshooting](https://youtu.be/qxJ4sPV3FVE) |
+|[@ezr-ondrej](https://community.theforeman.org/u/ezr-ondrej) |  |[Github actions in Foreman project](https://youtu.be/T8CwceGpViQ) |
+|[@Justin_Sherrill](https://community.theforeman.org/u/Justin_Sherrill) |  | [Ruby debugging tips & tricks](https://youtu.be/xLAwl0Es19E) |
+|[@ekohl](https://community.theforeman.org/u/ekohl) |  | [Writing a good PR to get it merged easily](https://youtu.be/m4xlgX_Vgls) |
 
 ### ForemanCon Day 2
 
-| @evgeni |  | [Foreman Ansible Modules, Foreman Collection, where and how to contribute](https://youtu.be/xCO-RAAy6uc) |
-|@aruzicka @ezr-ondrej  |  | [Dynflow on your Foreman](https://youtu.be/3xoTaoG3LOE) |
-|@Zhunting | | [Jenkins and how to use it](https://youtu.be/a-_9I-_hhUs) |
-|@wbclark | | [Installer: architecture and how to contribute](https://youtu.be/0ZRyqX0TrLU) |
-|@tbrisker | |[Foreman security process](https://youtu.be/9rLXxFNakX0) |
+| [@evgeni](https://community.theforeman.org/u/evgeni) |  | [Foreman Ansible Modules, Foreman Collection, where and how to contribute](https://youtu.be/xCO-RAAy6uc) |
+|[@aruzicka](https://community.theforeman.org/u/aruzicka) [@ezr-ondrej](https://community.theforeman.org/u/ezr-ondrej)  |  | [Dynflow on your Foreman](https://youtu.be/3xoTaoG3LOE) |
+|[@Zhunting](https://community.theforeman.org/u/Zhunting) | | [Jenkins and how to use it](https://youtu.be/a-_9I-_hhUs) |
+|[@wbclark](https://community.theforeman.org/u/wbclark) | | [Installer: architecture and how to contribute](https://youtu.be/0ZRyqX0TrLU) |
+|[@tbrisker](https://community.theforeman.org/u/tbrisker) | |[Foreman security process](https://youtu.be/9rLXxFNakX0) |
 
-</ br >
+### ForemanCon YouTube playlist
 
 You can rewatch the entire event on our ForemanCon playlist on the Foreman YouTube channel.
 
