@@ -36,7 +36,7 @@
 
   <div class='page-header'>
     <h1>
-      PUT /katello/api/traces/resolve
+      PUT /api/hosts/:host_id/traces/resolve
       <br>
       <small>Resolve Traces</small>
     </h1>
@@ -59,6 +59,30 @@
     </thead>
     <tbody>
         <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of the host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>trace_ids </strong><br>
       <small>
