@@ -24,11 +24,6 @@ future:      false
 highlighter: rouge
 markdown:    kramdown
 
-# this is a hack to allow Sphinx generated docs for foreman-ansible-modules
-# be included inside the Jekyll site
-include:
-- _static
-
 navigation:
   - title: Get Started
     sublinks:
