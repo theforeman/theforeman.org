@@ -38,7 +38,7 @@
     <h1>
       POST /katello/api/content_view_versions/:id/export
       <br>
-      <small>Export a content view version</small>
+      <small>Export a content view version.  Relevant only for Pulp 2 repositories.</small>
     </h1>
   </div>
 
@@ -84,54 +84,6 @@
   
   <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>destination_server </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Destination Server name, required for Pulp3</p>
-
-        <p><strong>Validations:</strong></p>
-        <ul>
-            <li>
-<p>String</p>
-</li>
-        </ul>
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>chunk_size_mb </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Chunk export-tarfile into pieces of chunk_size mega bytes. Relevant only for Pulp 3 repositories</p>
-
-        <p><strong>Validations:</strong></p>
-        <ul>
-            <li>
-<p>Must be a number.</p>
-</li>
-        </ul>
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
       <strong>export_to_iso </strong><br>
       <small>
         optional
@@ -140,7 +92,7 @@
     </td>
     <td>
       
-<p>Export to ISO format. Relevant only for Pulp 2 repositories</p>
+<p>Export to ISO format.</p>
 
         <p><strong>Validations:</strong></p>
         <ul>

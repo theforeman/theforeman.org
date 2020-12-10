@@ -1145,65 +1145,6 @@
     </tbody>
   </table>
   <h2>
-    <a href='./apidoc/v2/configs.html'>
-      Configs
-    </a>
-    <br>
-    <small></small>
-  </h2>
-  <table class='table'>
-    <thead>
-      <tr>
-        <th>Resource</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/configs/index.html'>GET /foreman_virt_who_configure/api/v2/configs</a>
-            </td>
-            <td width='60%'>List of virt-who configurations</td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/configs/index.html'>GET /foreman_virt_who_configure/api/v2/organizations/:organization_id/configs</a>
-            </td>
-            <td width='60%'>List of virt-who configurations per organization</td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/configs/show.html'>GET /foreman_virt_who_configure/api/v2/configs/:id</a>
-            </td>
-            <td width='60%'>Show a virt-who configuration</td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/configs/deploy_script.html'>GET /foreman_virt_who_configure/api/v2/configs/:id/deploy_script</a>
-            </td>
-            <td width='60%'>Renders a deploy script for the specified virt-who configuration</td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/configs/create.html'>POST /foreman_virt_who_configure/api/v2/configs</a>
-            </td>
-            <td width='60%'>Create a virt-who configuration</td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/configs/update.html'>PUT /foreman_virt_who_configure/api/v2/configs/:id</a>
-            </td>
-            <td width='60%'>Update a virt-who configuration</td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/configs/destroy.html'>DELETE /foreman_virt_who_configure/api/v2/configs/:id</a>
-            </td>
-            <td width='60%'>Delete a virt-who configuration</td>
-          </tr>
-    </tbody>
-  </table>
-  <h2>
     <a href='./apidoc/v2/content_credentials.html'>
       Content credentials
     </a>
@@ -1259,6 +1200,105 @@
               <a href='./apidoc/v2/content_credentials/set_content.html'>POST /katello/api/content_credentials/:id/content</a>
             </td>
             <td width='60%'>Upload content credential contents</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/v2/content_export_incrementals.html'>
+      Content export incrementals
+    </a>
+    <br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/v2/content_export_incrementals/version.html'>POST /katello/api/content_export_incrementals/version</a>
+            </td>
+            <td width='60%'>Performs an incremental-export of a content view version.</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/v2/content_export_incrementals/library.html'>POST /katello/api/content_export_incrementals/library</a>
+            </td>
+            <td width='60%'>Performs an incremental-export of the repositories in library.</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/v2/content_exports.html'>
+      Content exports
+    </a>
+    <br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/v2/content_exports/index.html'>GET /katello/api/content_exports</a>
+            </td>
+            <td width='60%'>List export histories</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/v2/content_exports/api_status.html'>GET /katello/api/content_exports/api_status</a>
+            </td>
+            <td width='60%'>true if the export api is pulp3 ready and usable. This API is intended for use by hammer-cli only.</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/v2/content_exports/version.html'>POST /katello/api/content_exports/version</a>
+            </td>
+            <td width='60%'>Performs a full-export of a content view version.</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/v2/content_exports/library.html'>POST /katello/api/content_exports/library</a>
+            </td>
+            <td width='60%'>Performs a full-export of the repositories in library.</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/v2/content_imports.html'>
+      Content imports
+    </a>
+    <br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/v2/content_imports/version.html'>POST /katello/api/content_imports/version</a>
+            </td>
+            <td width='60%'>Import a content view version</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/v2/content_imports/library.html'>POST /katello/api/content_imports/library</a>
+            </td>
+            <td width='60%'>Import a content view version to the library</td>
           </tr>
     </tbody>
   </table>
@@ -1456,7 +1496,7 @@
           </tr>
           <tr>
             <td>
-              <a href='./apidoc/v2/content_view_filters/destroy.html'>delete /katello/api/content_views/:content_view_id/filters/:id</a>
+              <a href='./apidoc/v2/content_view_filters/destroy.html'>delefind_filterte /katello/api/content_views/:content_view_id/filters/:id</a>
             </td>
             <td width='60%'>delete a filter</td>
           </tr>
@@ -1591,21 +1631,9 @@
           </tr>
           <tr>
             <td>
-              <a href='./apidoc/v2/content_view_versions/export_histories.html'>GET /katello/api/content_view_versions/export_histories</a>
-            </td>
-            <td width='60%'>Show the export history for a content view version</td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/content_view_versions/export_api_status.html'>GET /katello/api/content_view_versions/export_api_status</a>
-            </td>
-            <td width='60%'>true if the export api is pulp3 ready and usable. This API is intended for use by hammer-cli only.</td>
-          </tr>
-          <tr>
-            <td>
               <a href='./apidoc/v2/content_view_versions/export.html'>POST /katello/api/content_view_versions/:id/export</a>
             </td>
-            <td width='60%'>Export a content view version</td>
+            <td width='60%'>Export a content view version.  Relevant only for Pulp 2 repositories.</td>
           </tr>
           <tr>
             <td>
@@ -2380,53 +2408,6 @@
               <a href='./apidoc/v2/filters/destroy.html'>DELETE /api/filters/:id</a>
             </td>
             <td width='60%'>Delete a filter</td>
-          </tr>
-    </tbody>
-  </table>
-  <h2>
-    <a href='./apidoc/v2/foreign_input_sets.html'>
-      Foreign input sets
-    </a>
-    <br>
-    <small></small>
-  </h2>
-  <table class='table'>
-    <thead>
-      <tr>
-        <th>Resource</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/foreign_input_sets/index.html'>GET /api/templates/:template_id/foreign_input_sets</a>
-            </td>
-            <td width='60%'>List foreign input sets</td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/foreign_input_sets/show.html'>GET /api/templates/:template_id/foreign_input_sets/:id</a>
-            </td>
-            <td width='60%'>Show foreign input set details</td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/foreign_input_sets/create.html'>POST /api/templates/:template_id/foreign_input_sets</a>
-            </td>
-            <td width='60%'>Create a foreign input set</td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/foreign_input_sets/destroy.html'>DELETE /api/templates/:template_id/foreign_input_sets/:id</a>
-            </td>
-            <td width='60%'>Delete a foreign input set</td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/foreign_input_sets/update.html'>PUT /api/templates/:template_id/foreign_input_sets/:id</a>
-            </td>
-            <td width='60%'>Update a foreign input set</td>
           </tr>
     </tbody>
   </table>
@@ -3512,148 +3493,6 @@
               <a href='./apidoc/v2/interfaces/destroy.html'>DELETE /api/hosts/:host_id/interfaces/:id</a>
             </td>
             <td width='60%'>Delete a host&#39;s interface</td>
-          </tr>
-    </tbody>
-  </table>
-  <h2>
-    <a href='./apidoc/v2/job_invocations.html'>
-      Job invocations
-    </a>
-    <br>
-    <small></small>
-  </h2>
-  <table class='table'>
-    <thead>
-      <tr>
-        <th>Resource</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/job_invocations/index.html'>GET /api/job_invocations</a>
-            </td>
-            <td width='60%'>List job invocations</td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/job_invocations/show.html'>GET /api/job_invocations/:id</a>
-            </td>
-            <td width='60%'>Show job invocation</td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/job_invocations/create.html'>POST /api/job_invocations</a>
-            </td>
-            <td width='60%'>Create a job invocation</td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/job_invocations/output.html'>GET /api/job_invocations/:id/hosts/:host_id</a>
-            </td>
-            <td width='60%'>Get output for a host</td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/job_invocations/raw_output.html'>GET /api/job_invocations/:id/hosts/:host_id/raw</a>
-            </td>
-            <td width='60%'>Get raw output for a host</td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/job_invocations/cancel.html'>POST /api/job_invocations/:id/cancel</a>
-            </td>
-            <td width='60%'>Cancel job invocation</td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/job_invocations/rerun.html'>POST /api/job_invocations/:id/rerun</a>
-            </td>
-            <td width='60%'>Rerun job on failed hosts</td>
-          </tr>
-    </tbody>
-  </table>
-  <h2>
-    <a href='./apidoc/v2/job_templates.html'>
-      Job templates
-    </a>
-    <br>
-    <small></small>
-  </h2>
-  <table class='table'>
-    <thead>
-      <tr>
-        <th>Resource</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/job_templates/index.html'>GET /api/job_templates</a>
-            </td>
-            <td width='60%'>List job templates</td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/job_templates/index.html'>GET /api/locations/:location_id/job_templates</a>
-            </td>
-            <td width='60%'>List job templates per location</td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/job_templates/index.html'>GET /api/organizations/:organization_id/job_templates</a>
-            </td>
-            <td width='60%'>List job templates per organization</td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/job_templates/import.html'>POST /api/job_templates/import</a>
-            </td>
-            <td width='60%'>Import a job template from ERB</td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/job_templates/export.html'>GET /api/job_templates/:id/export</a>
-            </td>
-            <td width='60%'>Export a job template to ERB</td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/job_templates/show.html'>GET /api/job_templates/:id</a>
-            </td>
-            <td width='60%'>Show job template details</td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/job_templates/create.html'>POST /api/job_templates</a>
-            </td>
-            <td width='60%'>Create a job template</td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/job_templates/update.html'>PUT /api/job_templates/:id</a>
-            </td>
-            <td width='60%'>Update a job template</td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/job_templates/revision.html'>GET /api/job_templates/revision</a>
-            </td>
-            <td width='60%'></td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/job_templates/destroy.html'>DELETE /api/job_templates/:id</a>
-            </td>
-            <td width='60%'>Delete a job template</td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/job_templates/clone.html'>POST /api/job_templates/:id/clone</a>
-            </td>
-            <td width='60%'>Clone a provision template</td>
           </tr>
     </tbody>
   </table>
@@ -5468,41 +5307,6 @@
     </tbody>
   </table>
   <h2>
-    <a href='./apidoc/v2/remote_execution_features.html'>
-      Remote execution features
-    </a>
-    <br>
-    <small></small>
-  </h2>
-  <table class='table'>
-    <thead>
-      <tr>
-        <th>Resource</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/remote_execution_features/index.html'>GET /api/remote_execution_features</a>
-            </td>
-            <td width='60%'>List remote execution features</td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/remote_execution_features/show.html'>GET /api/remote_execution_features/:id</a>
-            </td>
-            <td width='60%'>Show remote execution feature</td>
-          </tr>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/remote_execution_features/update.html'>PUT /api/remote_execution_features/:id</a>
-            </td>
-            <td width='60%'>Update a job template</td>
-          </tr>
-    </tbody>
-  </table>
-  <h2>
     <a href='./apidoc/v2/report_templates.html'>
       Report templates
     </a>
@@ -6670,29 +6474,6 @@
               <a href='./apidoc/v2/template_inputs/update.html'>PUT /api/templates/:template_id/template_inputs/:id</a>
             </td>
             <td width='60%'>Update a template input</td>
-          </tr>
-    </tbody>
-  </table>
-  <h2>
-    <a href='./apidoc/v2/template_invocations.html'>
-      Template invocations
-    </a>
-    <br>
-    <small></small>
-  </h2>
-  <table class='table'>
-    <thead>
-      <tr>
-        <th>Resource</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-          <tr>
-            <td>
-              <a href='./apidoc/v2/template_invocations/template_invocations.html'>GET /api/job_invocations/:job_invocation_id/template_invocations</a>
-            </td>
-            <td width='60%'>List template invocations belonging to job invocation</td>
           </tr>
     </tbody>
   </table>
