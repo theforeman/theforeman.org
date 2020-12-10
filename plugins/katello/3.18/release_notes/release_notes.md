@@ -12,7 +12,7 @@ For the full release notes, see the [Changelog](https://github.com/Katello/katel
 * System Purpose can now be set in bulk from the Content Hosts list
 * Repositories within custom products can now be associated with an OS version for better control over default enablement on Content Hosts (currently Red Hat Enterprise Linux only)
 * Content host Traces can now be resolved with Hammer CLI
- * hammer 
+ * hammer host traces resolve --help
 * The ability to export content to disconnected environments has been added to support Pulp 3 repos. See the API documentation and these new Hammer commands:
   * hammer content-export full library --help
   * hammer content-export full version --help
