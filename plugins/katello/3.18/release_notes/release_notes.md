@@ -17,7 +17,7 @@ For the full release notes, see the [Changelog](https://github.com/Katello/katel
   * hammer content-export full library --help
   * hammer content-export full version --help
   * hammer content-export incremental library --help
-  * hammer content-export inremental version --help
+  * hammer content-export incremental version --help
   * **These commands do not support Pulp 2 repositories**
 
 ## Deprecations
