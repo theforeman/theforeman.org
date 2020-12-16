@@ -11,14 +11,22 @@ For the full release notes, see the [Changelog](https://github.com/Katello/katel
 * Debian content can now be managed with Pulp 3
 * System Purpose can now be set in bulk from the Content Hosts list
 * Repositories within custom products can now be associated with an OS version for better control over default enablement on Content Hosts (currently Red Hat Enterprise Linux only)
-* Content host Traces can now be resolved with hammer CLI
+* Content host Traces can now be resolved with Hammer CLI
+ * hammer host traces resolve --help
+* The ability to export content to disconnected environments has been added to support Pulp 3 repos. See the API documentation and these new Hammer commands:
+  * hammer content-export full library --help
+  * hammer content-export full version --help
+  * hammer content-export incremental library --help
+  * hammer content-export incremental version --help
+  * **These commands do not support Pulp 2 repositories**
 
 ## Deprecations
+* katello-agent will be removed in a future Katello release. Consider migrating to use the Remote Execution plugin for managing content on your hosts
 * Puppet and OSTree repository types will no longer be available in Katello 4.0
 * Background download policy will be removed in Katello 4.0
 * Pulp 3 will replace Pulp 2 in Katello 4.0
-    * MongoDB will be removed in Katello 4.0
-    * The Foreman installer MongoDB Storage Engine Migration Hook will be removed for Katello 4.0 
+  * MongoDB will be removed in Katello 4.0
+  * The Foreman installer MongoDB Storage Engine Migration Hook will be removed for Katello 4.0 
 
 ## Notes
 
