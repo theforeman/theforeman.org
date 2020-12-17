@@ -78,6 +78,16 @@ If the above steps failed, please review /var/log/foreman-installer/katello.log 
 
 Katello 3.18 supports migrations of Content to Pulp 3 for container, yum, and file content.  Depending on how much content is present, this can take a very long time.  The largest part of the process can be run without downtime.  This full process will need to be complete before upgrading to Katello 4.0.
 
+### File system requirements
+
+Upgrading to Pulp 3 does require some additional space, although the bulk of the content is not duplicated.  Ensure you have:
+
+1.  80% of the space /var/lib/mongodb/ consumes available in /var/opt/rh/rh-postgresql12/lib/pgsql/.  (If /var/lib/mongodb is 100GB, then 80GB needs to be free for postgresql).
+2.  200% of the space /var/lib/pulp/published/ consumes available within /var/lib/pulp/ (If /var/lib/pulp/published is taking 10GB, 20GB needs to be free in /var/lib/pulp/)
+
+### Migration Steps
+
+
 1.  Correct pulp 2 content permissions:
 
 Due to a bug in Pulp 2.21.3 and earlier, content permissions need to be changed before migrating content.  If you are fully updated to pulp-rpm-plugins-2.21.4, this only needs to be done once before migrating:
