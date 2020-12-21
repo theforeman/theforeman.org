@@ -64,7 +64,9 @@ The `katello-host-tools` package reports errata & package profile information, b
 {% highlight bash %}
 yum install katello-host-tools
 {% endhighlight %}
+</div>
 
+<div class="el6 el7">
 We generally recommend using Foreman Remote Execution or Ansible for remote actions, but we also offer a messaging bus based client that does have some limitations when used with a large number of clients.
 
 {% highlight bash %}
