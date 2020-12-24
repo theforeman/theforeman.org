@@ -297,7 +297,7 @@ basic information about VMs. Based on provider capabilities, you can power them 
 </p>
 
 Note the little drop down icon next to Power On and Power Off buttons. This is the multi
-action button that we use on many places in Foreman. Clicking the down caret will open
+action button that Foreman uses in many places. Clicking the down caret will open
 other actions that can be performed on the item. In this case, there are three more actions,
 Import as managed Host, Import as unmanaged Host and Delete. **Deleting a VM can delete the VM
 including all hard drives on the compute resource, so be careful with that.** This behavior
