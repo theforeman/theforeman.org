@@ -218,7 +218,7 @@ As of today, these are part of Foreman core:
 * Libvirt
 * OpenStack
 * oVirt / RHV
-* VMware (with vSphere only)
+* VMware vSphere
 
 Some popular compute resource types added by plugins are: Azure,
 HyperV, Scaleway. If your provider is not listed here, you can
