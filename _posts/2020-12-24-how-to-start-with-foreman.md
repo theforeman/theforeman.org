@@ -273,7 +273,7 @@ Here's a table with installer argument for each core provider
 </table>
 
 To install the support for a particular provider, run the *foreman-installer* with the appropriate argument, e.g.
-`foreman-installer --enable-foreman-compute-vmware`
+`foreman-installer --enable-foreman-compute-vmware`. Multiple providers can be installed at the same time.
 
 After you choose the provider in the compute resource form, some additional
 fields show up. This is the form specific to the selected provider. Some providers
