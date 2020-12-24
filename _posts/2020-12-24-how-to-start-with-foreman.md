@@ -288,7 +288,7 @@ verify, that credentials are correct or the account has all required permissions
 The Organizations and Locations tabs can be ignored for now, but make sure at least
 one of each is assigned. Most likely you'll have a single option in both selectors.
 
-After the compute resource is created, user is redirected to its detail page. Click
+After the compute resource is created, you are redirected to its detail page. Click
 the Virtual Machines tab to list VMs on this compute resource. You should see some
 basic information about VMs. Based on provider capabilities, you can power them on and off. 
 
