@@ -199,7 +199,7 @@ In order to get instructions for subscribing the machine, navigate to *Hosts -> 
 and click Register Content Host. Follow the instructions on this page.
 
 To make this easier, you can also use [bootstrap.py](https://github.com/Katello/katello-client-bootstrap),
-that accepts many options. See it's readme for more details. The linked repository
+that accepts many options. See its readme for more details. The linked repository
 also contains an Ansible playbook that can be used to automate a subscription of
 multiple hosts. 
 
