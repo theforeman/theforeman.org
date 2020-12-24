@@ -183,7 +183,7 @@ subscription-manager was recently ported also to Debian (and derivatives). Howev
 to add a custom repository to your machines in order to install it.  When
 the Host is created this way, the second object called Content Host is also automatically created.
 Content Hosts are extensions to the regular Host object, extending its. You can see that in
-Content Host UI. Note that the Host will be unmanaged, however you can convert it later to managed Host.
+Content Host UI. Note that the Host will be unmanaged, however you can convert it later to a managed Host.
 Also if you provisioned the host (meaning it's managed) a Content Host can still be created.
 In fact the subscription is usually performed as part of the provisioning.
 
