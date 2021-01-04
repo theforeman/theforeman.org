@@ -15,13 +15,13 @@ This post targets primarily users new to Foreman. It can be interesting for thos
 who would like to start using Foreman but feel lost or who just installed Foreman
 and would like to investigate its capabilities. We'll assume a fresh Foreman
 installation without any plugin and with the default configuration. The primary focus 
-will be on on filling in the data about the infrastructure. If you're searching for
+will be on filling in the data about the infrastructure. If you're searching for
 installation instructions, please take a look at [Installing Foreman chapter](https://theforeman.org/manuals/latest/index.html#3.InstallingForeman)
 of the Foreman manual. This post assumes installation using the foreman-installer.
 
 <!--more-->
 
-Foreman allows to define many objects, which serve different purposes. But the
+Foreman allows us to define many objects, which serve different purposes. But the
 heart of everything is the Host object, it glues all other objects together.
 A host represents a machine. It can be a device on the network or simply something,
 that you want to install an operating system on. It's typically a thing you want to manage
@@ -36,18 +36,18 @@ They also must belong to some organization and location. This is the bare minimu
 that Foreman requires in order to define a Host. Some use-cases may require more
 attributes. E.g. to provision a host in the cloud, cloud credentials are required
 or in order to provision a host using PXE boot, host MAC address is needed. In order
-to run job though SSH on it, it's FQDN or IP must be set.
+to run job through SSH on it, its FQDN or IP must be set.
 
 Hosts can be either *managed* or *unmanaged*. While it's a simple boolean flag, it
 dramatically changes how Foreman treats them. Managed hosts are seen
-as something, that Foreman tries to manage in external services. Imagine you
-create a new Host in Foreman, you set it's name (FQDN), IP address, MAC address.
+as something that Foreman tries to manage in external services. Imagine you
+create a new Host in Foreman, you set its name (FQDN), IP address, MAC address.
 Based on the managed flag, Foreman can reach out to associated DHCP server to create
 a reservation for the given MAC and IP pair. It would try to create A, AAAA and PTR records
 for the hostname and IP address pair. What exactly happens is driven by what is configured
 in Foreman. We won't go to more details in this post,
 but reading our [manual](https://theforeman.org/manuals/latest/#4.GeneralForeman)
-could give you some idea.
+could give you some ideas.
 
 For unmanaged hosts, Foreman does not reach out to external services
 and modify their configuration. The only exception to his rule is the
@@ -56,11 +56,11 @@ would delete the linked VM when the Host is deleted from Foreman.
 
 Unmanaged Hosts can be used in many use cases. The first and most simple use case is the inventory.
 You can keep track of your infrastructure information. You can have multiple [users and control](https://theforeman.org/manuals/latest/index.html#4.1.2RolesandPermissions),
-who has access to specific subset of data. This data can be searched through
+who has access to a specific subset of data. This data can be searched through
 using advanced, yet easy to use, search syntax. You can generate various reports
 and statistics. Therefore you can e.g. easily tell, how many CentOS 7 and 8 are
 running in your datacenter, search for all hosts in *Subnet* 192.168.0.0/24,
-create CSV list of all hosts that are owned by a specific group of admins.
+create a CSV list of all hosts that are owned by a specific group of admins.
 
 Once you have hosts defined, you can also take advantage of some nice plugins,
 such as [remote execution](https://www.theforeman.org/plugins/foreman_remote_execution/1.7/index.html)
@@ -75,7 +75,7 @@ can be patched on your hosts. You can even manage what package versions or files
 have access to. You can define OpenSCAP based compliance policy and start enforcing it across
 your infrastructure.
 
-All these use-cases deserve it's own post, but we'll start first with how to
+All these use-cases deserve its own post, but we'll start first with how to
 begin, or better to say, how to create some hosts.
 
 ### Adding unmanaged hosts manually
@@ -91,8 +91,8 @@ hammer host create --name my-first-host \
   --location 'Default Location'
 ```
 
-Name is usually the FQDN of the host, but it can be also just a hostname without domain.
-The `managed` parameter tells Foreman, this will be unmanaged host. The build value
+Name is usually the FQDN of the host, but it can also be just a hostname without domain.
+The `managed` parameter tells Foreman, this will be an unmanaged host. The build value
 represents whether the host is currently in build mode, which is only possible
 for managed hosts. Without explaining what exactly it means, it always needs to be set
 to false for unmanaged hosts, otherwise the host record is considered invalid.
@@ -117,8 +117,8 @@ how to configure external services. Therefore it's good to start with unmanaged
 hosts first, unless you plan to provision hosts as the first step.
 
 Once you create the unmanaged host, you can work with it in the UI. Navigate to
-*Hosts -> All Hosts* page and see the entry with name my-first-host. You can click
-Edit button and fill in more information about the host. Clicking on it's name
+*Hosts -> All Hosts* page and see the entry with the name my-first-host. You can click
+Edit button and fill in more information about the host. Clicking on its name
 takes you to its detail page.
 
 <p float='left' align='center'>
@@ -132,8 +132,8 @@ which is based on the Foreman templating system. It is very flexible mechanism t
 can be tweaked to support many infrastructure specifics.
 
 For the successful registration, required Host information are either fetched from the
-machine during the registration process or you can preset them in the registration form.
-For example, the OS is required for Foreman to know, what commands should be executed
+machine during the registration process or you can pre-set them in the registration form.
+For example, the OS is required for Foreman to know what commands should be executed
 during the registration if we e.g. install some package.
 
 The universal flow is to define the Operating System first,
@@ -146,7 +146,7 @@ details as you wish, but for the registration purpose, it should be enough to ju
 the name, version and the OS family.
 2. navigate to *Hosts -> Provisioning Templates* and search for `Linux registration default`. You
 can use the search field above the table. Click on the template name. This will open the
-editing form. Note the template is locked, so you can't modify it's content, however
+editing form. Note the template is locked, so you can't modify its content, however
 you can assign it to existing operating systems. To do so, click on the *Association tab*.
 Then select the OS you've created in step 1. Save the template.
 3. Go back to the OS you created in step 1, open its edit form.
@@ -165,9 +165,9 @@ After thorough investigation, you can execute it manually.
 If the registration was successful you should see something like
 `Successfully enrolled host host.example.com with Foreman.`. If you see this, you can
 see the Host created in your Foreman. The registration process can be tweaked, to e.g. deploy
-SSH keys, preinstall some software etc.
+SSH keys, pre-install some software etc.
 
-Note the command contains a JSON Web Token (JWT), that authenticates the user when curl fetches
+Note the command contains a JSON Web Token (JWT) that authenticates the user when curl fetches
 the registration instructions from Foreman. This token is valid for 4 hours by default.
 The token lifetime can be customized in the registration form. The same command can be used for multiple
 machines, however it also contains the selected OS id, so all such machines would be
@@ -190,7 +190,7 @@ In fact the subscription is usually performed as part of the provisioning.
 Katello provides subscription management and content management features. Meaning you can control
 what product entitlements are consumed by each such Host and what repositories are available to them.
 You can control content versions, e.g. you only want the newest packages installed on your testing environment,
-while in production you want to update packages only after they were tested in the testing evironment.
+while in production you want to update packages only after they were tested in the testing environment.
 
 Based on the information we receive from the host, Foreman also knows, what packages
 are installed on a particular Host and whether there's some update or applicable errata. 
@@ -297,7 +297,7 @@ basic information about VMs. Based on provider capabilities, you can power them 
 </p>
 
 Note the little drop down icon next to Power On and Power Off buttons. This is the multi
-action button that Foreman uses in many places. Clicking the down caret will open
+action button that the Foreman uses in many places. Clicking the down caret will open
 other actions that can be performed on the item. In this case, there are three more actions,
 Import as managed Host, Import as unmanaged Host and Delete. **Deleting a VM can delete the VM
 including all hard drives on the compute resource, so be careful with that.** This behavior
@@ -306,10 +306,10 @@ if turned to *Yes*, this can lead to the permanent loss of the data of your VM.
 
 However the import functionality is what we were searching for.
 
-The difference between importing a manged and unmanaged host should be clear at this point.
+The difference between importing a managed and unmanaged host should be clear at this point.
 Both actions take you to the Host creation form. The form allows to specify more details about
 the Host. For unmanaged hosts, all necessary information is already prefilled, so you can
-go ahead and click Submit button. The information is fetched from the compute resource, so
+go ahead and click the Submit button. The information is fetched from the compute resource, so
 e.g. RAM amount or network interfaces MAC addresses is correctly set. Provided information
 differs per compute resource type, e.g. VMware gives us much more information than Openstack.
 
@@ -330,7 +330,7 @@ For some fields you may not even have objects defined in Foreman yet. The bare m
 usually one *Operating System* already exists. It's the OS of the host running Foreman.
 It's common to create more OSes under *Host -> Operating systems*. For that, you will need to select
 some partition table and installation medium. All information is required for provisioning, but we won't go
-to that details in this post.
+to the details in this post.
 
 Root password is also meant to be used during provisioning. If you don't want to specify
 it for each host, set the default value in *Administer -> Settings -> Provisioning ->
@@ -363,7 +363,7 @@ how to perform some basic operations mentioned in the beginning.
 Go to Hosts overview page *Hosts -> All hosts*, type the following into the search field
 `os_title ~ CentOS and (os_major = 8 or os_major = 7)`.
 The table will filter only matching hosts, the total count is displayed at the bottom of the table.
-You can investigate the search field capabilities through its autocompletion feature.
+You can investigate the search field capabilities through its auto completion feature.
 
 *search for all hosts in subnet 192.168.0.0/24*
 
@@ -373,18 +373,18 @@ to it via their primary interface like this
 
 `subnet.name = lan1`
 
-The other option is to search by IP adresses using a wildcard, e.g.
+The other option is to search by IP addresses using a wildcard, e.g.
 
 `ip ~ 192.168.0.*`
 
-Note that also this will only search in primary interface of hosts. If you want to find
+Note that also this will only search in the primary interface of hosts. If you want to find
 hosts that have any interface with an IP from this range, you can use the following term
 
 `has_ip ~ 192.168.0.*` 
 
 *create CSV list of all hosts that are owned by a specific group of admins*
 
-You can easily generate one of the predefined report or create a custom one. To see all
+You can easily generate one of the predefined reports or create a custom one. To see all
 existing *Report Templates*, navigate to *Monitor -> Report Templates*. Find the one called
 **Host - Statuses** and click on *Generate* button. You can specify a host filter in the hosts
 field. Assuming you have created a user group "linux admins" and set that as owner for some
@@ -395,4 +395,4 @@ any owner, feel free to just generate the report without filter, you'll get the 
 
 We looked at how to create the most important objects in a fresh installation. In the next
 blog post, we'll talk about how to fill in data based on configuration management systems
-and discuss how keep it up to date.
+and discuss how to keep it up to date.
