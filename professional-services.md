@@ -22,7 +22,7 @@ The following companies provide Foreman consulting services. If you would like t
 
 ### ATIX AG
 
-ATIX specialize in support and operation consulting. For more information, check out their [Foreman](https://atix.de/en/theforeman/#) consulting page. You can also about ATIX's areas of focus and contributions to the wider Foreman community in the guest blog [ATIX in the Foreman Community](https://theforeman.org/2020/10/atix-in-the-foreman-community.html).
+ATIX specialize in support and operation consulting. For more information, check out their [Foreman](https://atix.de/en/theforeman/#) consulting page. You can also read about ATIX's areas of focus and contributions to the wider Foreman community in the guest blog [ATIX in the Foreman Community](https://theforeman.org/2020/10/atix-in-the-foreman-community.html).
 
 ### iRonin.IT
 
@@ -36,6 +36,6 @@ Netways specialize in support and operation consulting, as well as training. For
 
 You can also purchase support for open-source solutions based on Foreman:
 
-* [ATIX orcharhino](https://orcharhino.com/en/)
+* [orcharhino by ATIX](https://orcharhino.com/en/)
 
 * [Red Hat Satellite](https://www.redhat.com/en/technologies/management/satellite)
