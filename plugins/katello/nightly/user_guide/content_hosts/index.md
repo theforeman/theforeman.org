@@ -145,6 +145,12 @@ To change Host Collection assignments for a Content Host, navigate to: Hosts > C
 
 ![Host Collections](/plugins/katello/{{ page.version }}/user_guide/content_hosts/host_collections.png)
 
+## Set System Purpose attributes
+
+To set System Purpose attributes for a host, Navigate to the Content Host Details page,  Host > Content Hosts > Click the name of the desired Content Host. You can edit Service Level, Role, Usage Type, and Add-ons from the System Purpose section.
+
+![System Purpose](/plugins/katello/{{ page.version }}/user_guide/content_hosts/system_purpose.png)
+
 ## Bulk Actions
 
 Katello provides the ability to perform actions on many Content Hosts at once such as:
@@ -166,10 +172,20 @@ Next select the 'Bulk Actions' button in the top right.
 
 From here you can select the tab corresponding to any action you wish to perform.
 
-## Set System Purpose attributes
+### Setting System Purpose attributes via Bulk Actions
 
-To set System Purpose attributes for a host, Navigate to the Content Host Details page,  Host > Content Hosts > Click the name of the desired Content Host. You can edit Service Level, Role, Usage Type, and Add-ons from the System Purpose section.
+Select the Content Hosts that you wish to change the System Purpose attributes on.
 
-![System Purpose](/plugins/katello/{{ page.version }}/user_guide/content_hosts/system_purpose.png)
+Next select the 'Bulk Actions' button in the top right, and choose 'Manage System Purpose'
 
+In the following screen, a banner at the top displays how many Content Hosts will be affected by the change. Select the dropdown next to the attributes you want to change, select the desired value and when satisfied with the options, click the 'Assign' button.
 
+![Bulk System Purpose](/plugins/katello/{{ page.version }}/user_guide/content_hosts/bulk_system_purpose.png)
+
+**Note**
+
+* **If "No change" is selected, the value will remain what it was.**
+
+* **If "None (Clear)" is selected, any existing values will be erased.**
+
+After clicking 'Assign' this will transition you to the task details.
