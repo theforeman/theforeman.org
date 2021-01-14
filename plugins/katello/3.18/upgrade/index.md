@@ -30,13 +30,27 @@ yum -y update
 
 Update the Foreman and Katello release packages:
 
-  * RHEL7 / CentOS 7:
+<p>Select your Operating System: <select id="operatingSystems">
+   <option value="rhel7">Red Hat Enterprise Linux 7</option>
+   <option value="el7">Enterprise Linux 7 (CentOS, etc.)</option>
+   </select>
+</p>
 
+<div id="rhel7" markdown="1">
 {% highlight bash %}
   yum update -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/katello/el7/x86_64/katello-repos-latest.rpm
   yum update -y https://yum.theforeman.org/releases/{{ page.foreman_version }}/el7/x86_64/foreman-release.rpm
-  yum update -y foreman-release-scl
+  subscription-manager repos --enable=rhel-server-rhscl-7-rpms
 {% endhighlight %}
+</div>
+
+<div id="el7" markdown="1">
+{% highlight bash %}
+  yum update -y https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/katello/el7/x86_64/katello-repos-latest.rpm
+  yum update -y https://yum.theforeman.org/releases/{{ page.foreman_version }}/el7/x86_64/foreman-release.rpm
+  yum install -y centos-release-scl-rh
+{% endhighlight %}
+</div>
 
 ## Step 4 - Update Packages
 
