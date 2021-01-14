@@ -70,6 +70,7 @@ subscription-manager repos --disable "*"
 subscription-manager repos --enable rhel-7-server-rpms
 subscription-manager repos --enable rhel-7-server-optional-rpms
 subscription-manager repos --enable rhel-7-server-extras-rpms
+subscription-manager repos --enable rhel-server-rhscl-7-rpms
 yum install -y yum-utils
 {% endhighlight %}
 </div>
