@@ -38,6 +38,7 @@ Note the following options:
 
 * Publish via HTTP: allows access to the Repository without any restriction.  Unless you desire to restrict access to your content in this Repository, we recommended to leave this checked.
 * URL: If you are syncing from an external Repository (yum or puppet), this would be filled in. This can be changed, added, or removed later.  For example if you are wanting to create a mirror of EPEL, you would set this to 'https://dl.fedoraproject.org/pub/epel/6/x86_64/'.
+* Restrict to OS Version: The repository will only be available on content hosts with the selected operating system.  Currently this feature works only with Red Hat Enterprise Linux, and is not supported on RHEL 6.9 and older.  Select 'No restriction' to make the repository available regardless of OS version.
 
 ![Creating a Repository](/plugins/katello/{{ page.version }}/user_guide/content/repo_create.png)
 
@@ -117,4 +118,3 @@ Content > Sync Plans > Select your Sync Plan > Products > Add
 Then select the Products you want to add and click "Add Selected" in the upper right.
 
 ![Creating a Sync Plan](/plugins/katello/{{ page.version }}/user_guide/content/sync_plan_assign.png)
-
