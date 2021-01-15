@@ -16,7 +16,7 @@ For the full release notes, see the [Changelog](https://github.com/Katello/katel
 ## Deprecations
 
 * Puppet and OSTree repository types will no longer be available in Katello 4.0
-* katello-agent will be removed in Katello 4.0
+* katello-agent will be removed in a future Katello release. Consider migrating to use the Remote Execution plugin for managing content on your hosts
 * Background download policy will be removed in Katello 4.0
 * Pulp 3 will replace Pulp 2 in Katello 4.0
     * MongoDB will be removed in Katello 4.0

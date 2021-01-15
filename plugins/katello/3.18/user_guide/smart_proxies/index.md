@@ -69,6 +69,10 @@ Required Connectivity:
 
 ### 2 - Katello Agent
 
+<div class="alert alert-danger">
+Katello-agent is deprecated and will be removed in a future release.
+</div>
+
 The Katello agent is a goferd plugin which allows you to schedule remote actions on hosts such as package installation, updates, etc. A Smart Proxy must be running the Qpid Dispatch Router service for this feature to work.
 
 Install Option:
