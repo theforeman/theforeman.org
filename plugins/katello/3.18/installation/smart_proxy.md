@@ -21,6 +21,9 @@ At a minimum, the following ports need to be open to external connections for in
 * 80 TCP - HTTP, used for provisioning purposes
 * 443 TCP - HTTPS, used for serving content to clients
 * 5647 TCP - qdrouterd - used for client to connect to Qpid Dispatch Router (used for katello-agent)
+<div class="alert alert-danger">
+Katello-agent is deprecated and will be removed in a future release.
+</div>
 * 8443 TCP - HTTPS, used for client subscription-manager traffic
 * 9090 TCP - HTTPS - used for communication with the Smart Proxy
 
