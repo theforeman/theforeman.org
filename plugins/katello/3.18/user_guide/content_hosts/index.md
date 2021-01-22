@@ -108,12 +108,14 @@ Navigate to  Hosts > Content Hosts > Select Content Host > Subscriptions > Click
 
 Check the checkbox under the Products you want to add and select "Add Selected" in the upper right.
 
+__Note__: This process is not necessary for organizations with Simple Content Access enabled.
+
 To see existing attached Products, click the "List/Remove" tab.  To remove a Product, select the checkbox under the desired Product in this list and click "Remove Selected".
 
 
 ## Package Management
 
-To perform package actions on a singleContent Host, navigate to: Hosts > Content Hosts > Select Content Host > Packages
+To perform package actions on a single Content Host, navigate to: Hosts > Content Hosts > Select Content Host > Packages
 
 ![Package Management](/plugins/katello/{{ page.version }}/user_guide/content_hosts/packages.png)
 
