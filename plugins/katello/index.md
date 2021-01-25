@@ -17,10 +17,10 @@ title: Katello Documentation
 
     <br/>
     <h4>
-      <i class="fa fa-refresh" style="margin-right: 8px;"></i>Local Yum and Puppet Repositories
+      <i class="fa fa-refresh" style="margin-right: 8px;"></i>Local Yum, Deb, and Puppet Repositories
     </h4>
     <p style="font-size: 14px">
-      Create, organize, and manage local yum and puppet repositories.
+      Create, organize, and manage local yum, deb, and puppet repositories.
       Sync remote repositories or upload content directly to build a library of content that serves as the basis for building custom builds of your content.
       <a href="/plugins/katello/nightly/user_guide/content/index.html">Learn More</a>
     </p>
