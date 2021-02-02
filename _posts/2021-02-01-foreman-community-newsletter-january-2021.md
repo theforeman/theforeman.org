@@ -24,7 +24,7 @@ Please join us for these talks and there will be an opportunity to ask questions
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RS5bVWVyUKA?start=394" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Foreman will also have a [stand presence](stands.fosdem.org) at FOSDEM. The stand has an accompanying [Matrix chatroom](https://matrix.to/#/#foreman-stand:fosdem.org?via=fosdem.org&via=matrix.org) If you're attending FOSDEM, call by and chat with us!
+Foreman will also have a [stand presence](https://stands.fosdem.org) at FOSDEM. The stand has an accompanying [Matrix chatroom](https://matrix.to/#/#foreman-stand:fosdem.org?via=fosdem.org&via=matrix.org) If you're attending FOSDEM, call by and chat with us!
 
 ## Introduction to Foreman resources:
 
