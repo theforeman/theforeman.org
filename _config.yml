@@ -109,7 +109,7 @@ defaults:
       path: "plugins/katello"
     values:
       layout: "plugins/katello/documentation"
-      latest: "3.18"
+      latest: "4.0"
   - scope:
       path: "plugins/katello/*/api"
     values:
@@ -119,6 +119,11 @@ defaults:
     values:
       version: "nightly"
       foreman_version: "nightly"
+  - scope:
+      path: "plugins/katello/4.0"
+    values:
+      version: "4.0"
+      foreman_version: "2.4"
   - scope:
       path: "plugins/katello/3.18"
     values:
