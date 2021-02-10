@@ -4,11 +4,15 @@ title: Release Notes
 
 # Katello {{ page.version }} Release Notes
 
-For the full release notes, see the [Changelog](https://github.com/Katello/katello/blob/master/CHANGELOG.md).
+For the full release notes, see the [Changelog](https://github.com/Katello/katello/blob/KATELLO-4.0/CHANGELOG.md)
 
 ## Features
 
-## Deprecation
+## Deprecations
+* GPG Keys controller was removed
+* "Background" download policy was removed, and by default repositories will be set to use the "Immediate" download policy for content
+* OSTree and Puppet content types are no longer supported
+* The "ignore global proxy" option was removed from the Repositories controller in favor of using the "No defalt http proxy" option
 
 ## Big Fixes
 
