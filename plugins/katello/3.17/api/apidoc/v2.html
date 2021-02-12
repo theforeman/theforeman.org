@@ -1532,10 +1532,21 @@
           </tr>
           <tr>
             <td>
+              <a href='../apidoc/v2/content_view_versions/export_histories.html'>GET /katello/api/content_view_versions/export_histories</a>
+            </td>
+            <td width='60%'>Show the export history for a content view version</td>
+          </tr>
+          <tr>
+            <td>
               <a href='../apidoc/v2/content_view_versions/export.html'>POST /katello/api/content_view_versions/:id/export</a>
-                <code>DEPRECATED</code>
             </td>
             <td width='60%'>Export a content view version</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='../apidoc/v2/content_view_versions/import.html'>POST /katello/api/content_view_versions/import</a>
+            </td>
+            <td width='60%'>Import a content view version</td>
           </tr>
           <tr>
             <td>
@@ -2389,12 +2400,6 @@
           </tr>
           <tr>
             <td>
-              <a href='../apidoc/v2/foreman_tasks/sub_tasks.html'>GET /foreman_tasks/api/tasks/:id/sub_tasks</a>
-            </td>
-            <td width='60%'>Show sub_tasks details</td>
-          </tr>
-          <tr>
-            <td>
               <a href='../apidoc/v2/foreman_tasks/bulk_search.html'>POST /foreman_tasks/api/tasks/bulk_search</a>
             </td>
             <td width='60%'>List dynflow tasks for uuids</td>
@@ -2422,6 +2427,12 @@
               <a href='../apidoc/v2/foreman_tasks/index.html'>GET /foreman_tasks/api/tasks</a>
             </td>
             <td width='60%'>List tasks</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='../apidoc/v2/foreman_tasks/index.html'>GET /foreman_tasks/api/tasks/:parent_task_id/sub_tasks</a>
+            </td>
+            <td width='60%'>Show sub_tasks details</td>
           </tr>
           <tr>
             <td>
@@ -2865,7 +2876,7 @@
           </tr>
           <tr>
             <td>
-              <a href='../apidoc/v2/host_tracer/resolve.html'>PUT /api/traces/resolve</a>
+              <a href='../apidoc/v2/host_tracer/resolve.html'>PUT /api/hosts/:host_id/traces/resolve</a>
             </td>
             <td width='60%'>Resolve Traces</td>
           </tr>
@@ -3230,6 +3241,12 @@
               <a href='../apidoc/v2/hosts_bulk_actions/traces.html'>POST /api/hosts/bulk/traces</a>
             </td>
             <td width='60%'>Fetch traces for one or more hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='../apidoc/v2/hosts_bulk_actions/resolve_traces.html'>PUT /api/hosts/bulk/resolve_traces</a>
+            </td>
+            <td width='60%'>Resolve traces for one or more hosts</td>
           </tr>
           <tr>
             <td>
@@ -4882,6 +4899,12 @@
           </tr>
           <tr>
             <td>
+              <a href='../apidoc/v2/products_bulk_actions/verify_checksum_products.html'>PUT /katello/api/products/bulk/verify_checksum</a>
+            </td>
+            <td width='60%'>Verify checksum for one or more products</td>
+          </tr>
+          <tr>
+            <td>
               <a href='../apidoc/v2/products_bulk_actions/update_http_proxy.html'>PUT /katello/api/products/bulk/http_proxy</a>
             </td>
             <td width='60%'>Update the HTTP proxy configuration on the repositories of one or more products.</td>
@@ -5561,6 +5584,12 @@
               <a href='../apidoc/v2/repositories/sync.html'>POST /katello/api/repositories/:id/sync</a>
             </td>
             <td width='60%'>Sync a repository</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='../apidoc/v2/repositories/verify_checksum.html'>POST /katello/api/repositories/:id/verify_checksum</a>
+            </td>
+            <td width='60%'>Verify checksum of repository contents</td>
           </tr>
           <tr>
             <td>

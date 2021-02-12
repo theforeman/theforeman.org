@@ -374,6 +374,31 @@ are supported</p>
   
   <tr style='background-color:rgb(255,255,255);'>
     <td>
+      <strong>download_concurrency </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Used to determine download concurrency of the repository in pulp3. Use
+value less than 20. Defaults to 10</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
       <strong>mirror_on_sync </strong><br>
       <small>
         optional
@@ -708,32 +733,6 @@ subset of rpm,drpm,srpm,distribution,erratum</p>
         <ul>
             <li>
 <p>Must be a number.</p>
-</li>
-        </ul>
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>auto_enabled </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>if true, the repositories will be automatically enabled on a registered
-host subscribed to this product. Default: true</p>
-
-        <p><strong>Validations:</strong></p>
-        <ul>
-            <li>
-<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
-<code>0</code>.</p>
 </li>
         </ul>
 
