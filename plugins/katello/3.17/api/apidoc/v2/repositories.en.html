@@ -820,11 +820,6 @@ associated with specified object.  Only &#39;content_view&#39; &amp;
       <td></td>
     </tr>
     <tr>
-      <td>distribution_uuid</td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
       <td>distribution_variant</td>
       <td>string</td>
       <td></td>
@@ -1271,6 +1266,31 @@ are supported</p>
   
   <tr style='background-color:rgb(255,255,255);'>
     <td>
+      <strong>download_concurrency </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Used to determine download concurrency of the repository in pulp3. Use
+value less than 20. Defaults to 10</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
       <strong>mirror_on_sync </strong><br>
       <small>
         optional
@@ -1605,32 +1625,6 @@ subset of rpm,drpm,srpm,distribution,erratum</p>
         <ul>
             <li>
 <p>Must be a number.</p>
-</li>
-        </ul>
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>auto_enabled </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>if true, the repositories will be automatically enabled on a registered
-host subscribed to this product. Default: true</p>
-
-        <p><strong>Validations:</strong></p>
-        <ul>
-            <li>
-<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
-<code>0</code>.</p>
 </li>
         </ul>
 
@@ -2018,6 +2012,71 @@ repositories.</p>
             <li>
 <p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
 <code>0</code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/repositories/verify_checksum.en.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-verify_checksum'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/repositories/:id/verify_checksum
+          </a>
+          <br>
+          <small>Verify checksum of repository contents</small>
+        </h2>
+    </div>
+
+
+    <div id='description-verify_checksum' class='collapse accordion-body'>
+      
+
+
+
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>repository ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
 </li>
         </ul>
 
@@ -2521,6 +2580,31 @@ are supported</p>
   
   <tr style='background-color:rgb(255,255,255);'>
     <td>
+      <strong>download_concurrency </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Used to determine download concurrency of the repository in pulp3. Use
+value less than 20. Defaults to 10</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
       <strong>mirror_on_sync </strong><br>
       <small>
         optional
@@ -2855,32 +2939,6 @@ subset of rpm,drpm,srpm,distribution,erratum</p>
         <ul>
             <li>
 <p>Must be a number.</p>
-</li>
-        </ul>
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>auto_enabled </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>if true, the repositories will be automatically enabled on a registered
-host subscribed to this product. Default: true</p>
-
-        <p><strong>Validations:</strong></p>
-        <ul>
-            <li>
-<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
-<code>0</code>.</p>
 </li>
         </ul>
 
