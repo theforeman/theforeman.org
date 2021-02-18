@@ -354,7 +354,7 @@ If on EL7, run `scl enable tfm bash` first for an SCL-enabled shell.
 * Add to the `bundler.d/Gemfile.local.rb` file as detailed below.
 * Restart Foreman with `service foreman restart`
 
-If you hit problems, uninstall the added gems with <pre>gem uninstall -v VERSION GEM</pre>
+If you hit problems, uninstall the added gems with <code>gem uninstall -v VERSION GEM</code>
 
 ### 2.3.2 Debian distributions
 
