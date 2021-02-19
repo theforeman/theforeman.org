@@ -88,7 +88,7 @@ or setup your existing SSH key you already use. The default SSH key pair locatio
 * ~foreman-proxy/.ssh/id_rsa_foreman_proxy.pub
 
 If you replace these files with your own key, either make sure the private key is not
-protected by a passphrase or you need to specify it for every job, similarly to how we
+protected by a passphrase or you need to specify it for every job, similar to how we
 specified the password. To distribute the generated public key, you can use the following
 command
 
