@@ -26,7 +26,7 @@ illustrate the use with home automation, running commands on SSH enabled routers
 
 To add the remote execution feature, a plugin for Foreman and Smart Proxy is required.
 The installer can handle both the installation and the initial configuration.
-The Foreman installer can be run repeatedly. In case you haven’t done manual modifications
+The Foreman installer can be run repeatedly. As long as you haven’t done manual modifications
 to your installation, such as changing configuration files yourself, it will do no harm.
 You don’t have to repeat the same parameters, their values are stored from the previous
 run, therefore you can simply just add new params. The bare minimum to install or extend
