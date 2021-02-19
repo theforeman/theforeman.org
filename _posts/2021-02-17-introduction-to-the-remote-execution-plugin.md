@@ -152,16 +152,16 @@ having direct access to them, e.g. allowing them only to restart stuck services.
 
 It’s the time for the first practical use case. In the previous
 [blog post](https://theforeman.org/2021/01/updating-foreman-inventory-with-system-facts.html),
-it would be handy to automate the setup of the puppet agent. Foreman already comes
+it would be handy to automate the setup of the Puppet agent. Foreman already comes
 with the snippet, that is normally used during the host provisioning to bootstrap the
-puppet agent. However, if you start with Foreman and want to manage an existing
-infrastructure, it’s useful to deploy puppet agents to all existing hosts.
-Puppet agents then ask the puppet server deployed with Foreman for their configuration.
+Puppet agent. However, if you start with Foreman and want to manage an existing
+infrastructure, it’s useful to deploy Puppet agents to all existing hosts.
+Puppet agents then ask the Puppet server deployed with Foreman for their configuration.
 Puppet configuration management goes beyond this post, but this illustrates how
 Remote Execution allows to automate this task.
 
-To deploy a puppet agent, we need to install a package, create a configuration file
-with information about the puppet server and trigger a one puppet agent run.
+To deploy a Puppet agent, we need to install a package, create a configuration file
+with information about the Puppet server and trigger a one Puppet agent run.
 The first template version could look like this
 
 ```
@@ -201,7 +201,7 @@ supported OSes in job templates:
 <%= render_template("Package Action - SSH Default", :action => "install", :package => 'puppet') %>
 ```
 
-In the same way, you could customize the puppet server or ca server based on what is
+In the same way, you could customize the Puppet server or ca server based on what is
 assigned to the host. Before we continue, I want to point out that thanks to the
 fact the remote execution plugin uses the same templating engine, we can easily
 reuse that snippet from provisioning templates. The entire job template would look
@@ -211,8 +211,8 @@ like this:
 <%= snippet 'puppet_setup' %>
 ```
 
-As long as the target host has the right puppet server and CA assigned, the job
-will deploy the puppet agent and perform the initial run.
+As long as the target host has the right Puppet server and CA assigned, the job
+will deploy the Puppet agent and perform the initial run.
 
 ## Real world use case #2 - Home automation
 
