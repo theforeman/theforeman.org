@@ -111,7 +111,7 @@ echo “ssh-rsa AAAAB3NzaC1yc2EAA...” > ~/.ssh/authorized_keys
 
 But we can also use an existing template snippet that also takes care of the right file
 permissions and deploys all public keys that Foreman is configured to use.
-To do that, use the following template content
+To do that, use the following template content:
 
 ```
 <%= snippet 'remote_execution_ssh_keys' %>
