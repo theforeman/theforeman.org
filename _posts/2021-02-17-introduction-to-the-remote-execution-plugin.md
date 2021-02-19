@@ -202,7 +202,7 @@ supported OSes in job templates:
 ```
 
 In the same way, you could customize the puppet server or ca server based on what is
-assigned to the host. Before we go too far, I want to point out that thanks to the
+assigned to the host. Before we continue, I want to point out that thanks to the
 fact the remote execution plugin uses the same templating engine, we can easily
 reuse that snippet from provisioning templates. The entire job template would look
 like this:
