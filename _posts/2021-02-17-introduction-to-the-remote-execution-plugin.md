@@ -332,6 +332,6 @@ this to curl command or fire the similar request form any other (home) automatio
 
 I hope you found this Remote Execution introduction useful and I’ll be happy if
 you share your experience and thoughts in the discussion below. I plan to incorporate
-REX in next posts too. The user interface for triggering the job is now being greatly
+REX in the next posts too. The user interface for triggering the job is now being greatly
 improved. If you have a suggestion for an improvement, please open a new issue in
 our [issue tracker](https://projects.theforeman.org/projects/foreman_remote_execution)
