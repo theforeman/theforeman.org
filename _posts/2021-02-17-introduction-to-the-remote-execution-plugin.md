@@ -281,7 +281,7 @@ The template example will make this clear
 ```
 
 Based on the state input it set the desired configuration. Then it commits the OpenWrt
-configuration and restarts the led service, which is the same code for both cases.
+configuration and restarts the LED service, which is the same code for both cases.
 It’s all wrapped in the OS check, since `uci` would only work on the OpenWrt hosts.
 If an unsupported host is passed, it renders a meaningful error message.
 
