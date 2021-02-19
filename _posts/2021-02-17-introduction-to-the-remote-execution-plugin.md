@@ -17,7 +17,7 @@ tags:
 In this post, we’ll see how to add a remote execution plugin to the Foreman installation 
 and look at its basic functionality. We’ll create some jobs that we execute through SSH 
 on one or more Foreman hosts. Then we’ll look at some real-world use cases of
-useful SSH jobs automation. We’ll show how to deploy puppet agent on the Foreman host and
+useful SSH jobs automation. We’ll show how to deploy the Puppet agent on the Foreman host and
 illustrate the use with home automation, running commands on SSH enabled routers.
 
 <!--more-->
