@@ -96,7 +96,7 @@ command
 ssh-copy-id -i ~foreman-proxy/.ssh/id_rsa_foreman_proxy.pub root@target-machine.example.com
 ```
 
-However you can use a more elegant way and do it from Foreman directly. For that we’ll
+However, you can use a more elegant way and do it from Foreman directly. For that we’ll
 create a new job template, that will configure the SSH key on a machine on which it’s run.
 Navigate to *Hosts -> Job templates* and click the *New Job Template* button.
 Name it e.g. “Setup SSH key”. In the editor field, you can specify any script enriched
