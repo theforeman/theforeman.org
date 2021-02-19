@@ -160,7 +160,7 @@ Puppet agents then ask the puppet server deployed with Foreman for their configu
 Puppet configuration management goes beyond this post, but this illustrates how
 Remote Execution allows to automate this task.
 
-To deploy a puppet agent, we need to install the a package, create a configuration file
+To deploy a puppet agent, we need to install a package, create a configuration file
 with information about the puppet server and trigger a one puppet agent run.
 The first template version could look like this
 
