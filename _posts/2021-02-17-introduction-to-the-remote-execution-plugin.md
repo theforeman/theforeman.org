@@ -24,7 +24,7 @@ illustrate the use with home automation, running commands on SSH enabled routers
 
 ## Plugin installation
 
-To add the remote execution feature, a plugin for Foreman and Smart proxy is required.
+To add the remote execution feature, a plugin for Foreman and Smart Proxy is required.
 The installer can handle the installation and the initial configuration of both for you.
 The Foreman installer can be run repeatedly. In case you haven’t done manual modifications
 to your installation, such as changing configuration files yourself, it will do no harm.
