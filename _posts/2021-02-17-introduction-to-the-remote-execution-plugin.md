@@ -154,7 +154,7 @@ It’s the time for the first practical use case. In the previous
 [blog post](https://theforeman.org/2021/01/updating-foreman-inventory-with-system-facts.html),
 it would be handy to automate the setup of the puppet agent. Foreman already comes
 with the snippet, that is normally used during the host provisioning to bootstrap the
-puppet agent. However if you start with Foreman and want to manage an existing
+puppet agent. However, if you start with Foreman and want to manage an existing
 infrastructure, it’s useful to deploy puppet agents to all existing hosts.
 Puppet agents then ask the puppet server deployed with Foreman for their configuration.
 Puppet configuration management goes beyond this post, but this illustrates how
