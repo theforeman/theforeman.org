@@ -29,7 +29,7 @@ The installer can handle both the installation and the initial configuration.
 The Foreman installer can be run repeatedly. As long as you haven’t done manual modifications
 to your installation, such as changing configuration files yourself, it will do no harm.
 You don’t have to repeat the same parameters, their values are stored from the previous
-run, therefore you can simply just add new params. The bare minimum to install or extend
+run, therefore you can simply just add new parameters. The bare minimum to install or extend
 existing Foreman instance with the Remote Execution, run the following:
 
 ```
