@@ -47,7 +47,7 @@ instance. Let’s try running a job on some host. Make sure the host is running 
 and Foreman can connect to it. Navigate to an existing host detail page and click the
 *Schedule Remote Job* button. Fill in a simple bash command to the command field,
 e.g. “echo Hello world”. Click Advanced fields and specify the password for the user.
-The password will be stored only for necessary time to execute the script,
+The password is stored only for the time it takes to execute the script,
 then it’s wiped out.
 
 <p float='left' align='center'>
