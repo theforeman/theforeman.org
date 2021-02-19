@@ -37,7 +37,7 @@ foreman-installer --enable-foreman-plugin-remote-execution \
               --enable-foreman-proxy-plugin-remote-execution-ssh
 ```
 
-If you plan to use CLI, install a plugin for that, so you can use REX CLI commands by
+If you plan to use CLI commands, you must install a plugin for that, so you can use REX CLI commands by
 adding `--enable-foreman-cli-remote-execution` to the command above.
 
 ## Running the first job
