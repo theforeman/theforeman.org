@@ -69,10 +69,11 @@ bundle install
 npm install
 {% endhighlight %}
 
-You may get some failures when installing the required gems due to some
-native libraries being required (notably libvirt-devel &
-postgresql-devel) so you will need to install these via your distributions
-normal package manager (e.g. `yum install libvirt-devel postgresql-devel`
+You may get some failures when installing the required gems due to some native
+libraries being required (notably libvirt-devel & postgresql-devel) so you will
+need to install these via your distributions normal package manager (e.g. `dnf
+install libvirt-devel postgresql-devel openssl-devel libxml2-devel sqlite-devel
+libxslt-devel zlib-devel readline-devel systemd-devel libcurl-devel krb5-devel`
 for RHEL/Fedora based distributions).
 
 You can also exclude these features by using `bundle install --without libvirt postgresql` etc (groups are under bundler.d/).
