@@ -62,7 +62,7 @@ previous_version: "2.3"
 {%include manuals/{{ page.version }}/3.5.5_facts_and_the_enc.md %}
 ### 3.5.6 CLI
 {%include manuals/{{ page.version }}/3.5.6_cli.md %}
-## 3.6 Upgrade
+## 3.6 Upgrade to {{ page.version }}
 {%include manuals/{{ page.version }}/3.6_upgrade.md %}
 
 # 4. General Foreman
