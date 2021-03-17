@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](https://cve.mitre.org/).
 
+* [CVE-2021-20259: Proxmox compute resource password leak](#2021-20259)
 * [CVE-2021-3413: Azure compute resource secret_key leak](#2021-3413)
 * [CVE-2020-14335: World readable dhcp OMAPI secret](security.html#2020-14335)
 * [CVE-2020-14380: Users can gain elevated rights when logging in with SSO accounts](security.html#2020-14380)
@@ -83,6 +84,13 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2021-20259"></a>CVE-2021-20259: Proxmox compute resource password leak
+
+Proxmox compute resource credentials (`password`) were visible to any user with `view_compute_resource` permission in the API under `/api/compute_resources/` and `/api/compute_resources/:id/`.
+
+* Affects Foreman Fog Proxmox 0.11.0 and higher
+* Fix released in Foreman Fog Proxmox 0.13.1 and higher
 
 #### <a id="2021-3413"></a>CVE-2021-3413: Azure compute resource secret_key leak
 
