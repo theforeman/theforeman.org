@@ -5,15 +5,17 @@ Components include the Foreman web UI, Smart Proxy, a Puppet server, and optiona
 
 #### Supported platforms
 * CentOS 7 x86_64
+* CentOS 8 x86_64
 * Debian 10 (Buster), amd64
 * Red Hat Enterprise Linux 7, x86_64
+* Red Hat Enterprise Linux 8, x86_64
 * Ubuntu 18.04 (Bionic), amd64
 
 #### Untested platforms (packages may not work on these)
 
 These platforms are not tested by automatic installations. They are generally close to supported platforms so the packages may work, but additional work may be needed. For any queries for these platforms raise a question in [discourse support section](https://community.theforeman.org/c/support/10)
 
-  * Scientific Linux and Oracle Linux 7, x86_64
+  * Scientific Linux and Oracle Linux, x86_64
 
 Other operating systems will need to use alternative installation methods (see the manual).
 
