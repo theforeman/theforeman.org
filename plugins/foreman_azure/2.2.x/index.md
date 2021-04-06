@@ -1,16 +1,16 @@
 ---
 layout: plugin
-title: Foreman AzureRm 2.1.x Manual
-version: 2.1.x
+title: Foreman AzureRm 2.2.x Manual
+version: 2.2.x
 # uncomment for older versions than stable or nightly
-robots: noindex
+#robots: noindex
 ---
 
 # 1. Basics
 
 Foreman AzureRm is the plugin for Azure v2 i.e. Azure Resource Manager API. It allows you to provision and manage your hosts in Azure Resource Manager cloud environment. Users do have restricted access within the Azure subscription (such that only they can create hosts) based on Resource Groups in AzureRm.
 
-This plugin 2.1.x series has no dependency of foreman_azure 1.x as they refer to different Azure APIs. This 2.1.x should be compatible with Foreman 1.17 onwards, but it is recommended to use latest Foreman version.
+This plugin 2.2.x series has no dependency on foreman_azure 1.x as they refer to different Azure APIs. This 2.2.x should be compatible with Foreman 2.0 onwards, but it is recommended to use latest Foreman version.
 
 # 2. Installation
 
@@ -35,7 +35,7 @@ Then run `bundle install` from the same directory
 Please refer to our documentation [Github](https://github.com/theforeman/foreman_azure_rm#foreman-azurerm-plugin)
 
 # 4. Usage
-* Creation of the Compute Resource requires using of four credentials: Client ID, Client Secret, Subscription ID and Tenant ID.
+* Creation of the Compute Resource requires using four credentials: Client ID, Client Secret, Subscription ID and Tenant ID.
 
 * A separate compute resource should be created per region. This means, after providing above credentials, you should click _Load Regions_ that loads all the regions available for your Azure subscription. A region must be specified from this list and the cloud instances will then be created based on the region selected for the compute resource.
 
@@ -47,13 +47,28 @@ Please refer to our documentation [Github](https://github.com/theforeman/foreman
 
 * You can now fill in your resource group, size of the VM you want to provision, username and password or sshkey with which the user can login to the provisioned machine.
 
-* Now, you can also select additional disks for the host. Note that the maximum number of these disks depends on the VM Size selected. Please refer to MSFT documentation for more details.
+* Now, you can also select additional disks for the host. Note that the maximum number of these disks depends on the VM Size selected. Please refer to the Microsoft documentation links below for more details.
+
+[General Purpose](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes-general)
+[Compute Optimized](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes-compute)
+[Memory Optimized](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes-memory)
+[Storage Optimized](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes-storage)
+[GPU Optimized](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes-gpu)
+[High Performance](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes-hpc)
+
 
 * In addition to that, you can provide any custom script or command to be executed during the VM creation process.
 
 * In the Operating Systems tab, you must specify the Architecture, OS and the relevant Image that you have created under the compute resource. Although, setting up Root Password is not mandatory.
 
-* Last specification is for the Network Interface. You should select a domain defined under Foreman and then select Azure subnet and Public or Private IP format. Now, you can also select multiple interfaces for your host. The maximum number of these interfaces depends on the VM Size selected. Please refer to MSFT documentation for more details.
+* Last specification is for the Network Interface. You should select a domain defined under Foreman and then select Azure subnet and Public or Private IP format. Now, you can also select multiple interfaces for your host. The maximum number of these interfaces depends on the VM Size selected. Please refer to the Microsoft documentation links below for more details.
+
+[General Purpose](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes-general)
+[Compute Optimized](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes-compute)
+[Memory Optimized](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes-memory)
+[Storage Optimized](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes-storage)
+[GPU Optimized](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes-gpu)
+[High Performance](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes-hpc)
 
 * Upon clicking submit, provisioning should start and VM details will be available on successful provisioning.
 
@@ -77,5 +92,3 @@ Follow the [same process as Foreman]({{site.baseurl}}contribute.html#SubmitPatch
 for contributing.
 
 The source code for the plugin can be found  [github.com/theforeman/foreman_azure_rm](https://github.com/theforeman/foreman_azure_rm).
-
-
