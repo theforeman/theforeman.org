@@ -239,13 +239,14 @@ To provide specific installation instructions, please select your operating syst
   <option value="none">-- select operating system --</option>
   <option value="debian">Debian or Ubuntu</option>
   <option value="el7">Enterprise Linux 7</option>
+  <option value="el8">Enterprise Linux 8</option>
 </select>
 
 <div class="installation_os installation_os_none">
   <i>No operating system selected.</i>
 </div>
 
-<div class="installation_os installation_os_el7">
+<div class="installation_os installation_os_el7 installation_os_el8">
   <p>
     The repositories are available at <a href="https://yum.theforeman.org/plugins/">yum.theforeman.org/plugins</a>.  Separate repositories are available for each Foreman release, containing plugins that are compatible with that particular version.  Packages are not currently GPG signed.
   </p>
@@ -262,6 +263,17 @@ name=Foreman plugins
 baseurl=https://yum.theforeman.org/plugins/{{page.version}}/el7/x86_64/
 enabled=1
 gpgcheck=0
+</pre>
+</div>
+
+<div class="installation_os installation_os_el8">
+<pre>
+[foreman-plugins]
+name=Foreman plugins
+baseurl=https://yum.theforeman.org/plugins/{{page.version}}/el8/x86_64/
+enabled=1
+gpgcheck=0
+module_hotfixes=1
 </pre>
 </div>
 
@@ -291,7 +303,27 @@ deb http://deb.theforeman.org/ plugins {{page.version}}
   <ol>
     <li>Find the package for the plugin with the search function: <code>yum search discovery</code> or by checking the plugin documentation.</li>
     <li>Install the package, e.g. <code>yum install tfm-rubygem-foreman_discovery</code>.</li>
-    <li>Restart Foreman with <code>touch ~foreman/tmp/restart.txt</code> or <code>service httpd restart</code></li>
+    <li>Restart Foreman with <code>touch ~foreman/tmp/restart.txt</code> or <code>systemctl restart foreman</code></li>
+  </ol>
+
+  <p>
+    Some plugins (e.g. foreman_column_view) may also require configuration in <code>/etc/foreman/plugins/</code>, check for any .example files.  Smart proxy plugins can be configured in <code>/etc/foreman-proxy/settings.d/</code>.
+  </p>
+</div>
+
+<div class="installation_os installation_os_el8">
+  <p>
+    Change the version number in the URL to match the Foreman release in use.
+  </p>
+
+  <p>
+    To install a plugin:
+  </p>
+
+  <ol>
+    <li>Find the package for the plugin with the search function: <code>yum search discovery</code> or by checking the plugin documentation.</li>
+    <li>Install the package, e.g. <code>yum install rubygem-foreman_discovery</code>.</li>
+    <li>Restart Foreman with <code>touch ~foreman/tmp/restart.txt</code> or <code>systemctl restart foreman</code></li>
   </ol>
 
   <p>
@@ -322,8 +354,20 @@ deb http://deb.theforeman.org/ plugins {{page.version}}
 
   <ul>
     <li>Packages for Foreman have a <code>tfm-rubygem-foreman_</code> prefix.</li>
-    <li>Smart proxy packages have a <code>rubygem-smart_proxy_</code> prefix.</li>
+    <li>Smart proxy packages have a <code>tfm-rubygem-smart_proxy_</code> prefix.</li>
     <li>Hammer CLI packages have a <code>tfm-rubygem-hammer_cli_</code> prefix.</li>
+  </ul>
+</div>
+
+<div class="installation_os installation_os_el8">
+  <p>
+    The naming of packages is as follows:
+  </p>
+
+  <ul>
+    <li>Packages for Foreman have a <code>rubygem-foreman_</code> prefix.</li>
+    <li>Smart proxy packages have a <code>rubygem-smart_proxy_</code> prefix.</li>
+    <li>Hammer CLI packages have a <code>rubygem-hammer_cli_</code> prefix.</li>
   </ul>
 </div>
 
