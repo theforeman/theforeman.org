@@ -24,7 +24,7 @@ Install the appropriate Katello client release packages.
 
 <div id="el6" markdown="1">
 {% highlight bash %}
-yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
+yum -y install https://archives.fedoraproject.org/pub/archive/epel/6/x86_64/epel-release-6-8.noarch.rpm
 yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/el6/x86_64/foreman-client-release.rpm
 {% endhighlight %}
 </div>
