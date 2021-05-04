@@ -71,7 +71,7 @@ There have been a number of updates to the [Foreman contributor page](https://ww
 
 There are many ways to contribute. If you'd like to give back to the community in some way, but cannot contribute code, check out [the other types of contributions](https://www.theforeman.org/contribute.html#Othertypesofcontribution) section.  Contributions, both great and small, are very welcome.
 
-## Upgrading Postgresql on your Dev Setup
+## Upgrading PostgreSQL on your Dev Setup
 
 A few days ago, Fedora 34 was released. Fedora 34 ships with new major version of PostgreSQL (v13) which requires a manual database upgrade and reindex. [@lzap](https://community.theforeman.org/u/lzap/) added [instructions](https://community.theforeman.org/t/upgrading-postgresql-database-on-your-dev-setup-after-os-upgrade/23336) on how to upgrade.
 
