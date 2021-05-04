@@ -18,7 +18,7 @@ This month, the Katello community reached a major milestone with the release of 
 
 As well as the removal of Pulp 2, here are some of the major highlights of this release:
 
-* Katello repositories are now hosted at [yum.theforeman.org](yum.theforeman.org).
+* Katello repositories are now hosted at [yum.theforeman.org](https://yum.theforeman.org).
 * New Content View page user interface updates.
 * Content View Version added to Reporting Engine Template.
 * Number of Red Hat subscriptions consumed by host added to Entitlements report.
