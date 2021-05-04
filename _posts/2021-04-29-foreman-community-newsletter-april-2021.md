@@ -54,7 +54,7 @@ __The focus of the Open Source Automation Days 2021 will be on Cloud, DevOps/Git
 
 ## Foreman Application Centric Deployment guide is now available!
 
-Application Centric Deployment (ACD) describes a fundamentally different approach to provisioning and configuring hosts in Foreman. Traditionally, Foreman has pursued a host-centric approach. Now, the ACD approach presents a new idea: deploying hosts to run an application that requires a predefined set of services. A [full user guide](https://docs.theforeman.org/nightly/Application_Centric_Deployment/index-foreman-el.html) for ACD is now available on the https://docs.theforeman.org. Let us know what you think!
+Application Centric Deployment (ACD) describes a fundamentally different approach to provisioning and configuring hosts in Foreman. Traditionally, Foreman has pursued a host-centric approach. Now, the ACD approach presents a new idea: deploying hosts to run an application that requires a predefined set of services. A [full user guide](https://docs.theforeman.org/nightly/Application_Centric_Deployment/index-foreman-el.html) for ACD is now available on [our docs site](https://docs.theforeman.org). Let us know what you think!
 
 ## Use Foreman to serve software packages and errata for Debian.
 
