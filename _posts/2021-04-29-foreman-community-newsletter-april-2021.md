@@ -44,7 +44,7 @@ Thank you to everyone who has contributed to efforts to gather feedback to help 
 
 ## Celebrating Foreman's Birthday
 
-The annual Foreman Birthday Party will take place on July 1st. Please save the date and [@Dirk](https://community.theforeman.org/u/dirk/) and his Netways teams will keep you up to date with the agenda and activities! 
+The annual Foreman Birthday Party will take place on July 1st. Please save the date and [@Dirk](https://community.theforeman.org/u/dirk/) and his Netways team will keep you up to date with the agenda and activities! 
 
 ## Open Source Automation Days 2021: Call for Papers
 
