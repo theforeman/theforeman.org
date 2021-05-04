@@ -28,7 +28,7 @@ For more information, check out the [release announcement](https://community.the
 
 ## Introduction to Katello
 
-On the topic of Katello, [@iballou](https://community.theforeman.org/u/iballou/summary) gave an introductory overview of Katello and its main features and workflows. You can rewatch the event on YouTube and if you have any questions, please post to our [Community forum](https://community.theforeman.org/).
+On the topic of Katello, [@iballou](https://community.theforeman.org/u/iballou/summary) gave an introductory overview of Katello and its main features and workflows. You can rewatch the event in the following YouTube video, and if you have any questions, please post to our [Community forum](https://community.theforeman.org/).
 
 If you enjoyed this session, and would like similar sessions on other topics related to Foreman workflows, please reply to this post and let us know what interests you!
 
