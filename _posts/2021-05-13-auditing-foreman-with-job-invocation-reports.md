@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Auditing Foreman with Job Invocation Reports
-date: 2021-05-13 11:55:06
+date: 2021-05-14 10:55:06
 author: Melanie Corr
 tags:
 - foreman
