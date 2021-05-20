@@ -71,7 +71,7 @@ scp discovery_facts.zip root@myforemanhost.example.com:/var/lib/tftpboot/boot/
 
 Now we need to modify a provisioning template to tell the discovery image that there is something additional that it needs to include when it starts. Navigate to the provisioning templates page on your foreman server and search for the `pxelinux_discovery` snippet. You can unlock the snippet to edit it or clone it. For simplicity we will unlock the templates for editing.
 
-Edit the `APPEND` line in `pxelinux_discover`y provisioning snippet on your foreman server to include a parameter that references the zip file. You can use more than one zip file to ease some of the management burden. The file can be located anywhere under `tftpboot`, the `fdi.zips` parameter provides the relative path. It can be beneficial to have separate directories for your code. The line for the example look similar to this:
+Edit the `APPEND` line in `pxelinux_discovery` provisioning snippet on your foreman server to include a parameter that references the zip file. You can use more than one zip file to ease some of the management burden. The file can be located anywhere under `tftpboot`, the `fdi.zips` parameter provides the relative path. It can be beneficial to have separate directories for your code. The line for the example look similar to this:
 
 ```
 APPEND initrd=boot/fdi-image/initrd0.img (...other parameters...) proxy.url=<%= foreman_server_url %> proxy.type=foreman fdi.zips=boot/discovery_facts.zip
