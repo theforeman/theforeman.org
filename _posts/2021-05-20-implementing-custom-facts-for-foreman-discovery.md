@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Automating the discovery an Intel NUC machines cluster with Foreman
+title: Automating the discovery of an Intel NUC machines cluster with Foreman
 date: 2021-05-20  07:43:49
 author: Paul Armstrong
 tags:
