@@ -31,9 +31,8 @@ MyProjectDirectory
 
 As you can see, to generate the facts we want, we implement a bit of ruby code that is consumed by facter. This ruby file is tucked under the facts directory. In the example, we simply created a case statement to map the MAC address to the position where the board is installed within the chassis. A simple row and column model like a spreadsheet is used in this example. All the systems connected by risers are a “Stack” and each is positioned from the connecting side. The ruby code looks like this:
 
-```
-
-nuc_position_facts.rb
+```ruby
+# nuc_position_facts.rb
 
 # Assign a position based on the MAC Address
 Facter.add("chassis_position") do
