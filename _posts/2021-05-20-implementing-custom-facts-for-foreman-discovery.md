@@ -62,7 +62,7 @@ With the example file built, it is time to deploy the code to the Foreman server
 zip -r discovery_facts.zip .
 ```
 
-Copy the resulting zip file to the foreman server and place it in `/var/lib/tftpboot/boot`
+Copy the resulting zip file to the Foreman server and place it in `/var/lib/tftpboot/boot` for Red Hat OSes. For Debian, the corresponding directory is `/srv/tftp` and depending on which version of Ubuntu you use, it might be `/srv/tftp` or `/var/lib/tftpboot`.
 
 ```
 scp discovery_facts.zip root@myforemanhost.example.com:/var/lib/tftpboot/boot/
