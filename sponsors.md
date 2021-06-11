@@ -71,7 +71,7 @@ Thank you to Kentucky WiMax, who provided servers for our continuous integration
 
 ### Enrico Bartz
 
-Thank you to Enrico, who provided ARM and ARM64 could servers for our package build system.
+Thank you to Enrico, who provided ARM and ARM64 cloud servers for our package build system.
 
 ### Stephen Wood
 
