@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](https://cve.mitre.org/).
 
+* [CVE-2021-3584: Remote code execution through Sendmail configuration](#2021-3584)
 * [CVE-2021-20259: Proxmox compute resource password leak](#2021-20259)
 * [CVE-2021-3413: Azure compute resource secret_key leak](#2021-3413)
 * [CVE-2020-14335: World readable dhcp OMAPI secret](security.html#2020-14335)
@@ -84,6 +85,21 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2021-3584"></a>CVE-2021-3584: Remote code execution through Sendmail configuration
+
+Sendmail location and arguments, available via Administer - Settings, both accept arbitrary strings and pass them into shell. By default, only Foreman super administrators can access settings. However, non-admin users can be granted the permission to edit settings.
+
+*Mitigation:* Verify the both settings and remove edit_settings permissions to all roles and users until fixed. Alternatively, create entries in `settings.yaml` to override UI settings and make the read-only:
+
+    :sendmail_location: "/usr/sbin/sendmail"
+    :sendmail_arguments: "-i"
+
+* Affects Foreman version 1.15 and higher
+* Fix released in Foreman 2.4.1, 2.5.1 and higher
+* Redmine issue [#32753](https://projects.theforeman.org/issues/32753)
+
+The issue was reported by Jakub Heba from AFINE.
 
 #### <a id="2021-20259"></a>CVE-2021-20259: Proxmox compute resource password leak
 
