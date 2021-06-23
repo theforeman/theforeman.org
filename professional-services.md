@@ -24,6 +24,10 @@ The following companies provide Foreman consulting services. If you would like t
 
 ATIX specialize in support and operation consulting. For more information, check out their [Foreman](https://atix.de/en/foreman/) consulting page. You can also read about ATIX's areas of focus and contributions to the wider Foreman community in the guest blog [ATIX in the Foreman Community](https://theforeman.org/2020/10/atix-in-the-foreman-community.html).
 
+### inuits.eu
+
+Inuits specialize in open-source consulting and host our beloved ConfigMgmtCamp. For more information about the solutions they implement, check out their [case studies](https://inuits.eu/businesscases/). You can read about [inuits.eu](inuits.eu)'s history with Foreman in the guest blog [inuits.eu in the Foreman Community](https://theforeman.org/2021-06-23-inuitseu-in-the-foreman-community.html).
+
 ### iRonin.IT
 
 iRonin specialize in custom development for Foreman. For more information, check out their [Foreman](https://www.ironin.it/foreman-development-services.html) consulting page. You can read about iRonin's contributions to Foreman in the iRonin guest blog [iRonin in the Foreman Community](https://theforeman.org/2020/09/ironin-in-the-foreman-community.html).
