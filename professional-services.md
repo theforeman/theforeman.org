@@ -26,7 +26,7 @@ ATIX specialize in support and operation consulting. For more information, check
 
 ### inuits.eu
 
-Inuits specialize in open-source consulting and host our beloved ConfigMgmtCamp. For more information about the solutions they implement, check out their [case studies](https://inuits.eu/businesscases/). You can read about [inuits.eu](inuits.eu)'s history with Foreman in the guest blog [inuits.eu in the Foreman Community](https://theforeman.org/2021-06-23-inuitseu-in-the-foreman-community.html).
+Inuits specialize in open-source consulting and host our beloved ConfigMgmtCamp. For more information about the solutions they implement, check out their [case studies](https://inuits.eu/businesscases/). You can read about [inuits.eu](inuits.eu)'s history with Foreman in the guest blog [inuits.eu in the Foreman Community](https://theforeman.org/2021/06/inuitseu-in-the-foreman-community.html)
 
 ### iRonin.IT
 
