@@ -60,7 +60,7 @@ was released. We support the two latest minor versions (1.7 and 1.6 in
 this case) so 86% of the installations are officially supported. If you
 are using 1.5 or older versions, please take into account your
 installation security might be compromised and upgrade. Tell us on
-\#theforeman or \#theforeman-dev (IRC channels on Freenode) if there is
+\#theforeman or \#theforeman-dev (IRC channels on libera.chat) if there is
 any particular bug or feature in new releases that holds you back.
 
 ![Nodes managed](/static/images/blog_images/2015-02-23-foreman-community-survey-results/nodes-managed.png)

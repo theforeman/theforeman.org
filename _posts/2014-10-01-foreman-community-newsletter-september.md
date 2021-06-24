@@ -76,7 +76,7 @@ Foreman will be again taking an intern for the December-March cycle of
 the FOSS outreach program (formerly OPW). You can find more information
 about the program [here.](https://gnome.org/opw/) Here are [the proposed
 projects](http://theforeman.org/gnomeopw.html), you are welcome in
-\#theforeman in Freenode to ask questions.  
+\#theforeman in libera.chat to ask questions.  
 
 ### Featured media 
 

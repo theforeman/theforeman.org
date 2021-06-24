@@ -40,7 +40,7 @@ First of all we had Foreman in place and PXE+DHCP setup. So we are able to netbo
 But then I had find a way to have a lightweight image (that has support for different types of hardware and RAID controllers) to boot and download a image and write it to disk.
 Really I wanted a Linux image or ISO that can PXE boot and directly after execute a script, so I Googled a bit and didn't find anything suiting. And I really didn't want to build and maintain my own image.
 
-So I asked in #theforeman IRC channel on Freenode. And then I was told that [Foreman Discovery Image](https://github.com/theforeman/foreman-discovery-image) was designed to be able to be extended. Foreman Discovery Image is the image that boots via PXE and does a inventory of the machine and then waits for a reboot order from Foreman, in order to run a regular(preseed/kickstart) netboot install after discovery.
+So I asked in #theforeman IRC channel on libera.chat. And then I was told that [Foreman Discovery Image](https://github.com/theforeman/foreman-discovery-image) was designed to be able to be extended. Foreman Discovery Image is the image that boots via PXE and does a inventory of the machine and then waits for a reboot order from Foreman, in order to run a regular(preseed/kickstart) netboot install after discovery.
 
 I then took the discovery image and used it for something that it wasn't intended originally. The extension part was mostly designed to add discovery facts or drivers.
 I used that function to shut down the discovery function and execute a set of scripts that would partition up a disk and write a Linux image to it and then setup grub plus some other stuff and reboot after.

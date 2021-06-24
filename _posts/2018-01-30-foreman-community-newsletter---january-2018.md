@@ -30,7 +30,7 @@ http://goo.gl/RNY8MY
 Time again for the latest round-up of action from the community, covering core,
 proxies, plugins, and more.  As always, you're welcome to participate in the
 show, either via YouTube Live chat, or via our IRC channel
-(Freenode/#theforeman).
+(libera.chat/#theforeman).
 
 * [UX review - Red Hat Repositories page - 12th February](https://www.youtube.com/watch?v=9o1X_Th5Tus)
 This demo will provided a depth look at the new Red Hat Repositories page.

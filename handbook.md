@@ -224,7 +224,7 @@ Write a good description, a good title, and explain why the change is necessary.
 
 Assume reviewers have no idea or background about your patch. Even if the usual reviewers know you personally and you know they know why your change is necessary, maybe not all reviewers are aware of it. Furthermore, after some time, they might not remember well, and new reviewers will not be able to review your code without background and a good explanation.
 
-Generally, if you want to submit significant changes to the code, discuss it first on #theforeman-dev (Freenode) or the Development board on our [forum](https://community.theforeman.org/c/development). If you know who are the usual maintainers for the code you want to change, try to ask them to validate your assumptions, your design, and if they can, ask them to review your code. This will save you a lot of going back and forth with reviewers that do not understand the reasoning behind your pull request.
+Generally, if you want to submit significant changes to the code, discuss it first on #theforeman-dev (libera.chat) or the Development board on our [forum](https://community.theforeman.org/c/development). If you know who are the usual maintainers for the code you want to change, try to ask them to validate your assumptions, your design, and if they can, ask them to review your code. This will save you a lot of going back and forth with reviewers that do not understand the reasoning behind your pull request.
 
 Submit changes incrementally. If you are submitting a pull request that will break compatibility with older APIs, spend the effort to make it compatible first. If you think your feature is not ready for prime time yet, it's OK to submit small changes and hide the feature using feature flags.
 

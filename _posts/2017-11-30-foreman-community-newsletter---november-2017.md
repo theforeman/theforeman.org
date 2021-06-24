@@ -63,7 +63,7 @@ Also, new jenkins slaves from NETWAYS, thanks for that!
 Time again for the latest round-up of action from the community, covering core,
 proxies, plugins, and more.  As always, you're welcome to participate in the
 show, either via YouTube Live chat, or via our IRC channel
-(Freenode/#theforeman).
+(libera.chat/#theforeman).
 
 * UX review - breadcrumbs and item switcher - 5th December (https://www.youtube.com/watch?v=4fX_kjPlzVw)
 The change to vertical navigation made two-pane a little less comfortable because

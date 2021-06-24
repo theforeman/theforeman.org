@@ -101,10 +101,8 @@ number of open/closed bugs, average time to close a bug, etc.
 ## Communication
 
 The Foreman project maintains two public IRC channels on
-[Freenode](https://freenode.net), refer to [Freenode's privacy
-policy][Freenode] for details on how they handle your data. In addition, our
-*public* channels are logged to [BotBot.me](https://botbot.me) who also have a
-[privacy policy][BotBot].
+[libera.chat](https://libera.chat, refer to [libera.chat's privacy
+policy](https://libera.chat/privacy)for details on how they handle your data.
 
 The Foreman community uses a self-hosted forum using the
 [Discourse](https://discourse.org) software. When signing up for a Discourse
@@ -208,7 +206,7 @@ updated on 28th May 2018.
 
 [BotBot]: https://botbot.me/privacy
 [Fastly]: https://www.fastly.com/privacy
-[Freenode]: https://freenode.net/policies
+[libera.chat]: https://libera.chat/privacy
 [foreman debug]: https://github.com/theforeman/foreman/blob/develop/script/foreman-debug
 [GA-anonIP]: https://developers.google.com/analytics/devguides/collection/gajs/methods/gaJSApi_gat#_gat._anonymizeIp
 [GitHub]: https://help.github.com/articles/global-privacy-practices

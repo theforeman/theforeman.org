@@ -318,7 +318,7 @@ hammer salt-minion update --name minion.example.com --salt-states foo.bar
 
 If you find a bug, please file it in
 [Redmine](http://projects.theforeman.org/projects/salt/issues/new).  You can
-find us on freenode on #theforeman as well.
+find us on libera.chat on #theforeman as well.
 
 See the [troubleshooting section]({{ site.baseurl }}manuals/latest/index.html#7.3GettingHelp)
 in the Foreman manual for more info.
