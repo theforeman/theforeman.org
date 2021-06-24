@@ -37,7 +37,7 @@ any issues you find to the [Katello bug tracker][k_issues]!
 Time again for the latest round-up of action from the community, covering core,
 proxies, plugins, and more.  As always, you're welcome to participate in the
 show, either via YouTube Live chat, or via our IRC channel
-(Freenode/#theforeman).
+(libera.chat/#theforeman).
 
 #### Upcoming Conferences
 

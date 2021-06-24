@@ -54,7 +54,7 @@ series.
 Time again for the latest roundup of action from the community, covering core,
 proxies, plugins, and more.  As always, you're welcome to participate in the
 show, either via YouTube Live chat, or via our IRC channel
-(Freenode/#theforeman).
+(libera.chat/#theforeman).
 
 #### Community Demos / Deep Dives
 

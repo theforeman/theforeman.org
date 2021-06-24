@@ -69,16 +69,16 @@ In addition to the [general guidelines](/support.html#CommunityGuidelines) above
 
 (_Credit to the [Fedora Mailing List Guidelines](http://fedoraproject.org/wiki/Communicate/MailingListGuidelines) as a source of ideas, under the Creative Commons Attribution-ShareAlike 3.0 Unported license_)
 
-## ![IRC icon](static/images/freenode.png) [IRC live chat](https://kiwiirc.com/client/irc.freenode.net/?#theforeman)
+## [libera.chat](https://libera.chat)
 A great place to get real-time help with The Foreman is our IRC channel:
 
-* [#theforeman](https://kiwiirc.com/client/irc.freenode.net/?#theforeman) on [irc.freenode.net](http://webchat.freenode.net/)
+* **#theforeman** on [libera.chat](https://libera.chat/)
 
 There are usually many helpful people there in addition to some of the Foreman
 developers.  For discussions about the intricacies of developing Foreman or
 plugins, use the development channel:
 
-* [#theforeman-dev](https://kiwiirc.com/client/irc.freenode.net/?#theforeman-dev) on [irc.freenode.net](http://webchat.freenode.net/)
+* **#theforeman-dev** on [libera.chat](https://libera.chat/)
 
 Please read and understand [this fantastic guide](http://workaround.org/getting-help-on-irc)
 to getting help for open-source projects on IRC before diving in. All of the
@@ -105,7 +105,7 @@ In addition to the [general guidelines](/support.html#CommunityGuidelines) above
 * Don't private message: Ask permission before you send someone a private message (PM). Not everyone likes them. Also, by keeping it in public, others with similar issues can see the solution you were given.
 * Don't highlight specific people unless you are already discussing something with them. Highlighting a specific user with your opening question makes it far less likely others will respond.
 
-More information: This [IRC primer](http://irchelp.org/irchelp/ircprimer.html) for new users and the [general IRC guidelines, from freenode](http://freenode.net/channel_guidelines.shtml), are also useful resources.
+More information: This [IRC primer](http://irchelp.org/irchelp/ircprimer.html) for new users and the [general IRC guidelines, from libera.chat]https://libera.chat/guides), are also useful resources.
 
 (_Thanks to the [Puppet Labs IRC Guidelines](http://docs.puppetlabs.com/community/community_guidelines.html#irc-guidelines) for the original document_)
 

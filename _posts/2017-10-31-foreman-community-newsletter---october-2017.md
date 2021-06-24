@@ -53,7 +53,7 @@ If IRC is a little too "plain" for you, or you just want a persistent
 connection so you don't miss replies, you can now join the Foreman chat
 channels from Matrix.org. The same two rooms exist there
 (#theforeman:matrix.org and #theforeman-dev:matrix.org) and they are bridged to
-Freenode, so you can freely use IRC or Matrix to chat with us. I've personally
+libera.chat, so you can freely use IRC or Matrix to chat with us. I've personally
 moved over to Matrix, and I'm loving it.
 
 Either way, hope to see you in one of the channels sometime soon!
@@ -85,7 +85,7 @@ load, then [get_in_touch][email]!
 Time again for the latest round-up of action from the community, covering core,
 proxies, plugins, and more.  As always, you're welcome to participate in the
 show, either via YouTube Live chat, or via our IRC channel
-(Freenode/#theforeman).
+(libera.chat/#theforeman).
 
 #### Community Demos / Deep Dives
 

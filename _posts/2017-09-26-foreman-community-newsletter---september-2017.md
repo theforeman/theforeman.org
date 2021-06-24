@@ -64,7 +64,7 @@ Thank you for providing ARM servers for building our arm packages!
 Time again for the latest roundup of action from the community, covering core,
 proxies, plugins, and more.  As always, you're welcome to participate in the
 show, either via YouTube Live chat, or via our IRC channel
-(Freenode/#theforeman).
+(libera.chat/#theforeman).
 
 * [Foreman Usability - review of content hosts - 27th September](https://www.youtube.com/watch?v=-hFAfn_yJW8)
 

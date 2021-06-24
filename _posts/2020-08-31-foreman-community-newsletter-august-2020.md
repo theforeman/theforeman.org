@@ -49,7 +49,7 @@ Over the coming months, we want to host a series of deep dives around provisioni
 
 Dana Singleterry of Red Hat Product Management team will present an update of the Red Hat roadmap to the community on September 16. This event will be livestreamed and Dana is happy to take your questions.
 
-If you're interested in attending this event, add it to your [calendar](https://community.theforeman.org/t/red-hat-product-management-community-update-2/20135?u=mcorr). The YouTube livechat and #theforeman Freenode IRC channel will be monitored for questions. However, this meeting is open to all and if you would like to join the meeting and ask questions yourself, reply to the event and a link will be sent to you!
+If you're interested in attending this event, add it to your [calendar](https://community.theforeman.org/t/red-hat-product-management-community-update-2/20135?u=mcorr). The YouTube livechat and #theforeman libera.chat IRC channel will be monitored for questions. However, this meeting is open to all and if you would like to join the meeting and ask questions yourself, reply to the event and a link will be sent to you!
 
 ## Infrastructure Special Interest Group (SIG)
 

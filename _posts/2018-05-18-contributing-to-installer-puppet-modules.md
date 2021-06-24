@@ -64,7 +64,7 @@ foreman_installer : include_tasks --------------------------------------- 0.03s
 katello_repositories : include_tasks ------------------------------------ 0.02s
 ```
 
-If the command was not successful, please reach out to the [foreman-dev discourse list](https://community.theforeman.org/c/development) (preferred), or #theforeman-dev on freenode. We love having new contributors; someone will help you. It's possible that you did everything correctly and there is a bug in forklift, so don't be afraid to reach out for assistance.
+If the command was not successful, please reach out to the [foreman-dev discourse list](https://community.theforeman.org/c/development) (preferred), or #theforeman-dev on libera.chat. We love having new contributors; someone will help you. It's possible that you did everything correctly and there is a bug in forklift, so don't be afraid to reach out for assistance.
 
 Once you have your centos7-katello-nightly VM running, you are ready to develop!  The next step is to ssh to your instance with `vagrant ssh centos7-katello-nightly`. You should be presented with a shell, and can attempt to reproduce the issue. In our example, we will want to add an option to optionally remove indexes from the `/pub` directory.
 
