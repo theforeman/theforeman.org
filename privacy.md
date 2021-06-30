@@ -177,7 +177,7 @@ rights, subject to some limitations, against the Foreman Project:
 * The right to lodge a complaint with your local data protection authority
 
 If you would like to exercise any of these rights, you may do so by contacting
-the Foreman Project at [contact us](mailto:privacy AT community.theforeman.org)
+the Foreman Project at [contact us](mailto:privacy@community.theforeman.org)
 or on [IRC](/support.html#IRClivechat). Please understand, however, the rights
 enumerated above are not absolute in all cases, especially in regards to the
 right to erase your data:
@@ -193,7 +193,7 @@ right to erase your data:
 # Contacting us
 
 If you have any questions about this policy or our use of your data, please
-feel free to [contact us](privacy@community.theforeman.org) or on
+feel free to [contact us](mailto:privacy@community.theforeman.org) or on
 [IRC](/support.html#IRClivechat).
 
 # Changes to this Privacy Statement
