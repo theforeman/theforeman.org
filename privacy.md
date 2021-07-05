@@ -101,8 +101,8 @@ number of open/closed bugs, average time to close a bug, etc.
 ## Communication
 
 The Foreman project maintains two public IRC channels on
-[libera.chat](https://libera.chat, refer to [libera.chat's privacy
-policy](https://libera.chat/privacy)for details on how they handle your data.
+[libera.chat](https://libera.chat), refer to [libera.chat's privacy
+policy](https://libera.chat/privacy) for details on how they handle your data.
 
 The Foreman community uses a self-hosted forum using the
 [Discourse](https://discourse.org) software. When signing up for a Discourse
