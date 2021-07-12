@@ -19,8 +19,20 @@ pagename: Community Demos
 </div>
 {% include footer.html %}
 <script type="text/javascript">
-$(function() {
+	$(function() {
+		var demoFilter = $('<input placeholder="Filter..." class="form-control" style="margin-top: 20px; width: 70%;">')[0]
+		$("#doc")[0].insertBefore(demoFilter, $("#user-focused-demos---foreman")[0]);
+
+		$(demoFilter).keyup(function () {
+			var filter = $(this).val();
+			function filterElements() {
+				var elem = $(this)
+				elem.text().search(new RegExp(filter, "i")) < 0 ? elem.hide() : elem.show();
+			}
+			$("#doc ul li").each(filterElements)
+			$("#doc h3 a").each(filterElements);
+		});
 		//Calls the tocify method on your HTML div.
 		$("#toc").tocify({context: '#doc', scrollTo: '60', selectors: "h2"});
-		});
+	});
 </script>
