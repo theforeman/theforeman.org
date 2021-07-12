@@ -22,6 +22,12 @@ If you've any questions or feedback, we welcome any feedback in our
 
 ## User-focused Demos - Foreman
 
+### [Demo 97](https://www.youtube.com/watch?v=Ly8_DM_01H0)
+
+* [Added search in template editor](https://youtu.be/Ly8_DM_01H0?t=151)
+* [Merge for Ansible/Salt/Puppet hash/yaml types](https://youtu.be/Ly8_DM_01H0?t=1321)
+* [New confirmation modal](https://youtu.be/Ly8_DM_01H0?t=1654)
+
 ### [Demo 96](https://youtu.be/ga5-X_XLk4c)
 
 * [Personal access tokens confirm dialog](https://youtu.be/ga5-X_XLk4c?t=794)  
@@ -84,6 +90,13 @@ If you've any questions or feedback, we welcome any feedback in our
 ## User-focused Demos - Foreman & Katello plugin
 
 
+### [Demo 97](https://www.youtube.com/watch?v=Ly8_DM_01H0)
+
+* [Removal of Red Hat Repos from Repository Details page](https://youtu.be/Ly8_DM_01H0?t=220)
+* [Adding a Python Repo with Generic Registration](https://youtu.be/Ly8_DM_01H0?t=385)
+* [New content host registration settings](https://youtu.be/Ly8_DM_01H0?t=948)
+* [Limiting package versions](https://www.youtube.com/watch?t=1420)
+
 ### [Demo 96](https://youtu.be/ga5-X_XLk4c)
 
 * [katello-agent deprecation and hammer-cli-katello](https://youtu.be/ga5-X_XLk4c?t=1064)
@@ -92,8 +105,8 @@ If you've any questions or feedback, we welcome any feedback in our
 ### [Demo 95](https://youtu.be/qLsnIdKOoMo)
 
 * [Creating REX Job Invocations with the --feature option](https://youtu.be/qLsnIdKOoMo?t=1430)
-* [Katello: Host & host collection errata selection with remote execution](https://youtu.be/qLsnIdKOoMo?t=1632)
-* [Katello: Import/Export other content types + auto create custom types](https://youtu.be/qLsnIdKOoMo?t=1894)
+* [Host & host collection errata selection with remote execution](https://youtu.be/qLsnIdKOoMo?t=1632)
+* [Import/Export other content types + auto create custom types](https://youtu.be/qLsnIdKOoMo?t=1894)
 * [Auto create of RH products/repos on content-import](https://youtu.be/qLsnIdKOoMo?t=2371)
 * [Katello-Agent deprecation warnings in the UI](https://youtu.be/qLsnIdKOoMo?t=2539)
 * [hammer content-export with --chunk-size-gb](https://youtu.be/qLsnIdKOoMo?t=2756)
@@ -141,6 +154,10 @@ If you've any questions or feedback, we welcome any feedback in our
 
 
 ## Foreman developer-focused demos
+
+### [Demo 97](https://www.youtube.com/watch?v=Ly8_DM_01H0)
+
+* [Rethinking React-Redux folder structure](https://youtu.be/Ly8_DM_01H0?t=2096)
 
 ### [Demo 96](https://youtu.be/ga5-X_XLk4c)
 
