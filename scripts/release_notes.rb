@@ -78,7 +78,7 @@ grouped_issues.each do |category, issues|
   puts "#### #{category}"
 
   issues.each do |issue|
-    puts "* #{issue['subject'].gsub('`','\\\`').gsub('<','&lt;').gsub('>','&gt;').gsub('*','\\\*')} ([##{issue['id']}](#{URL}/issues/#{issue['id']}))"
+    puts "* #{issue['subject'].gsub('`','\\\`').gsub('<','&lt;').gsub('>','&gt;').gsub('*','\\\*')} \\- [##{issue['id']}](#{URL}/issues/#{issue['id']})"
   end
 
   puts
