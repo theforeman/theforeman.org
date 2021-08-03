@@ -27,13 +27,13 @@ Keep an eye out for the Foreman 3.0 release candidates that will start appearing
 
 ## Running Foreman under a subfolder?
 
-[@tbrisker](https://community.theforeman.org/u/tbrisker) raised the issue that functionality that allowed users to run Foreman beneath a subfolder, for example `https://example.com/foreman/` rather than `https://foreman.example.com)` has been broken for some time. In this [RFC](https://community.theforeman.org/t/rfc-stop-attempting-to-allow-running-foreman-under-a-sub-folder-in-3-0/24526), he proposes that we remove attempts to support this functionality as part of the Foreman 3.0 release.
+[@tbrisker](https://community.theforeman.org/u/tbrisker) raised the issue that functionality that allowed users to run Foreman beneath a subfolder, for example `https://example.com/foreman/` rather than `https://foreman.example.com` has been broken for some time. In this [RFC](https://community.theforeman.org/t/rfc-stop-attempting-to-allow-running-foreman-under-a-sub-folder-in-3-0/24526), he proposes that we remove attempts to support this functionality as part of the Foreman 3.0 release.
 
 Do you need to run Foreman under a subfolder? If so, please [reply](https://community.theforeman.org/t/rfc-stop-attempting-to-allow-running-foreman-under-a-sub-folder-in-3-0/24526) and let us know why this matters to you.
 
 ## [docs.theforeman.org](https://docs.theforeman.org/)
 
-For a long time now, we have been preparing to make [docs.theforeman.org](https://docs.theforeman.org/) the official Foreman guides. These guides are a combination of both Red Hat and ATIX enterprise customer documentation that has been open sourced so that the wider Foreman community has access to high-quality docs. We do our best to maintain these docs to a high standard, and should have an increasing level of input from some professional writers who will help. You can help by raising PRs against anything you think is missing or wrong. At the moment, we are aiming to make [docs.theforeman.org](https://docs.theforeman.org/) the official home of Foreman documentation for the Foreman 3.0 relase. You can find the [source here](https://github.com/theforeman/foreman-documentation).
+For a long time now, we have been preparing to make [docs.theforeman.org](https://docs.theforeman.org/) the official Foreman guides. These guides are a combination of both Red Hat and ATIX enterprise customer documentation that has been open sourced so that the wider Foreman community has access to high-quality docs. We do our best to maintain these docs to a high standard, and should have an increasing level of input from some professional writers who will help. You can help by raising PRs against anything you think is missing or wrong. At the moment, we are aiming to make [docs.theforeman.org](https://docs.theforeman.org/) the official home of Foreman documentation for the Foreman 3.0 release. You can find the [source here](https://github.com/theforeman/foreman-documentation).
 
 ## Katello 4.1.2 has been released!
 
