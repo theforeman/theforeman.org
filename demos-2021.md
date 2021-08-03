@@ -22,6 +22,14 @@ If you've any questions or feedback, we welcome any feedback in our
 
 ## User-focused Demos - Foreman
 
+### [Demo 98](https://youtu.be/J8Z8SVOhTeA)
+
+* [Host Registration & updating packages](https://youtu.be/J8Z8SVOhTeA?t=274)
+* [UX Proposal: Search bar (research and old-new designs)](https://youtu.be/J8Z8SVOhTeA?t=527)
+* [Puppet extraction status for 3.0](https://youtu.be/J8Z8SVOhTeA?t=1056)
+* [Foreman Maintain: Backup --plaintext option](https://youtu.be/J8Z8SVOhTeA?t=1856)
+* [Azure CR: building a VM with an nvidia gpu in Azure](https://youtu.be/J8Z8SVOhTeA?t=3028)
+
 ### [Demo 97](https://www.youtube.com/watch?v=Ly8_DM_01H0)
 
 * [Added search in template editor](https://youtu.be/Ly8_DM_01H0?t=151)
@@ -89,6 +97,12 @@ If you've any questions or feedback, we welcome any feedback in our
 
 ## User-focused Demos - Foreman & Katello plugin
 
+### [Demo 98](https://youtu.be/J8Z8SVOhTeA)
+
+* [Repository type auto-detection](https://youtu.be/J8Z8SVOhTeA?t=1963)
+* [Index/upload/remove python content and content view publish](https://youtu.be/J8Z8SVOhTeA?t=2283)
+* [New CV UI: Add/Remove components to composite CVs, Create Filters](https://youtu.be/J8Z8SVOhTeA?t=2737)
+* [New CV UI: Delete CV filters](https://youtu.be/J8Z8SVOhTeA?t=2926)
 
 ### [Demo 97](https://www.youtube.com/watch?v=Ly8_DM_01H0)
 
