@@ -1,7 +1,7 @@
 ---
 layout: post
 title: New search design proposal - asking for feedback
-date: 2021-08-04 17:29:01
+date: 2021-08-16
 author: Maria Svirikova
 tags:
   - UX
@@ -22,15 +22,15 @@ During our research a new visual PF4’s component “search input” was introd
 
 **Plain**
 
-![](/static/images/blog_images/2021-08-04-new_search_design_proposal-asking_for_feedback/2021-08-04-plain_search.png)
+![](/static/images/blog_images/2021-08-16-new_search_design_proposal-asking_for_feedback/2021-08-16-plain_search.png)
 
 **Basic with a bookmark**
 
-![](/static/images/blog_images/2021-08-04-new_search_design_proposal-asking_for_feedback/2021-08-04-search1.png)
+![](/static/images/blog_images/2021-08-16-new_search_design_proposal-asking_for_feedback/2021-08-16-search1.png)
 
 **Combination with filter(s)**
 
-![](/static/images/blog_images/2021-08-04-new_search_design_proposal-asking_for_feedback/2021-08-04-combination_search_input_and_filter.png)
+![](/static/images/blog_images/2021-08-16-new_search_design_proposal-asking_for_feedback/2021-08-16-combination_search_input_and_filter.png)
 
 ### **Visual part**
 
@@ -64,3 +64,5 @@ Proposed designs are based on the research driven by the Visual refreshment init
 #### **Tell us what you think**
 
 These designs were discussed just with a small number of users, therefore we would like to invite you to share your opinions with us. You could either [fill out a short questionnaire](https://docs.google.com/forms/d/e/1FAIpQLSd_sx4AQquUKTKQnJZIHU00ZAySRnBj7-4pExcuRCcblZ0h7A/viewform "Questionnaire"), leave a comment under the article, or drop me a message.
+
+This is just a design proposal, which may not be implemented exactly in this way. Recently, PF4 has been looking at our requirements and working on their own solution (not very different from proposed one here).
