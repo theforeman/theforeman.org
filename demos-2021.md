@@ -22,6 +22,15 @@ If you've any questions or feedback, we welcome any feedback in our
 
 ## User-focused Demos - Foreman
 
+### [Demo 99](https://youtu.be/vAU1m-HUsig)
+
+* [Host details page - new cards](https://youtu.be/vAU1m-HUsig?t=260)
+* [Status of REX jobs on dashboard + Rerun button](https://youtu.be/vAU1m-HUsig?t=613)
+* [Ansible details on Host page](https://youtu.be/vAU1m-HUsig?t=852)
+* [Fact parsers moved to core](https://youtu.be/vAU1m-HUsig?t=1050)
+* [Foreman tasks interface scripts](https://youtu.be/vAU1m-HUsig?t=1281)
+
+
 ### [Demo 98](https://youtu.be/J8Z8SVOhTeA)
 
 * [Host Registration & updating packages](https://youtu.be/J8Z8SVOhTeA?t=274)
@@ -97,6 +106,11 @@ If you've any questions or feedback, we welcome any feedback in our
 
 ## User-focused Demos - Foreman & Katello plugin
 
+### [Demo 99](https://youtu.be/vAU1m-HUsig)
+
+* [Katello: New CV UI - Add/Remove Package Group Filter rules & Matching content modal for RPM Filter rules](https://youtu.be/vAU1m-HUsig?t=2045)
+* [Katello: New CV UI - Promote CV + Task presenter](https://youtu.be/vAU1m-HUsig?t=2278)
+
 ### [Demo 98](https://youtu.be/J8Z8SVOhTeA)
 
 * [Repository type auto-detection](https://youtu.be/J8Z8SVOhTeA?t=1963)
@@ -168,6 +182,10 @@ If you've any questions or feedback, we welcome any feedback in our
 
 
 ## Foreman developer-focused demos
+
+### [Demo 99](https://youtu.be/vAU1m-HUsig)
+
+[DSL autocompletion in templates](https://youtu.be/vAU1m-HUsig?t=2476)
 
 ### [Demo 97](https://www.youtube.com/watch?v=Ly8_DM_01H0)
 
