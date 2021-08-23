@@ -10,14 +10,20 @@ require 'json'
 
 URL = 'https://projects.theforeman.org'
 
-unless ARGV.size == 2
-  puts "Usage: #{$0} PROJECTS RELEASE_NAME"
+if ARGV.size < 2
+  puts "Usage: #{$0} PROJECTS RELEASE_NAME [markdown|asciidoc]"
+  puts "Markdown mode is default when unspecified"
   puts "Example: #{$0} foreman 1.18.0"
   exit 1
 end
 
 @project_names = ARGV[0].split(',')
 @current_release_name = ARGV[1]
+@output = ARGV[2] || "markdown"
+unless ["markdown", "asciidoc"].include?(@output)
+  puts "Unknown output type: #{@output}"
+  exit 1
+end
 
 def url_to_json(url)
   uri = URI(URI.escape(url))
@@ -78,7 +84,11 @@ grouped_issues.each do |category, issues|
   puts "#### #{category}"
 
   issues.each do |issue|
-    puts "* #{issue['subject'].gsub('`','\\\`').gsub('<','&lt;').gsub('>','&gt;').gsub('*','\\\*')} \\- [##{issue['id']}](#{URL}/issues/#{issue['id']})"
+    if @output == "markdown"
+      puts "* #{issue['subject'].gsub('`','\\\`').gsub('<','&lt;').gsub('>','&gt;').gsub('*','\\\*')} \\- [##{issue['id']}](#{URL}/issues/#{issue['id']})"
+    else
+      puts "* #{issue['subject'].gsub('`','\\\`').gsub('<','&lt;').gsub('>','&gt;').gsub('*','\\\*')} - #{URL}/issues/#{issue['id']}[##{issue['id']}]"
+    end
   end
 
   puts
