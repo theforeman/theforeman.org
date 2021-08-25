@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Please manually upgrade Ansible and Remote Execution plugins on 2.5
+title: [Action Required: Debian/Ubuntu] Upgrade Ansible and Remote Execution plugins on 2.5
 date: 2021-08-25  8:51:03
 author: Evgeni Golov
 tags:
