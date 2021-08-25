@@ -29,4 +29,4 @@ We have removed the affected package versions from the repository, and published
 # apt install ruby-foreman-remote-execution=4.5.5-1
 ```
 
-Again, sorry for the inconvinience!
+Again, sorry for the inconvenience!
