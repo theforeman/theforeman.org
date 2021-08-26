@@ -12,7 +12,7 @@ version_selector_target: "index"
 					{% capture versioni %}{{ page.version | split: "." | last | plus: versionmaj }}{% endcapture %}
 					{% capture latestmaj %}{{ site.foreman_version | split: "." | first | times: 100 }}{% endcapture %}
 					{% capture latesti %}{{ site.foreman_version | split: "." | last | plus: latestmaj }}{% endcapture %}
-					{% if page.version == "nightly" or versioni > latesti %}
+					{% if page.version == "nightly" %}
 					<div class="alert alert-warning">
 						<p style="margin-bottom: 3px"><strong>Not yet released</strong></p>
 						<p style="margin-bottom: 0">This manual is for Foreman {{ page.version }}, but <a href="{{ site.baseurl }}manuals/{{ site.foreman_version }}/index.html">{{ site.foreman_version }}</a> is the current stable version.</p>
@@ -21,6 +21,11 @@ version_selector_target: "index"
 					<div class="alert alert-warning">
 						<p style="margin-bottom: 3px"><strong>Newer version available</strong></p>
 						<p style="margin-bottom: 0">This manual is for Foreman {{ page.version }}, but the <a href="{{ site.baseurl }}manuals/{{ site.foreman_version }}/index.html">latest version is {{ site.foreman_version }}</a>.</p>
+					</div>
+					{% elsif versioni > latesti and versionmaj >= latestmaj %}
+					<div class="alert alert-warning">
+						<p style="margin-bottom: 3px"><strong>Release Candidate(RC) version</strong></p>
+						<p style="margin-bottom: 0">This manual is for Foreman {{ page.version }}, but <a href="{{ site.baseurl }}manuals/{{ site.foreman_version }}/index.html">{{ site.foreman_version }}</a> is the current stable version.</p>
 					</div>
 					{% endif %}
 				</div>
