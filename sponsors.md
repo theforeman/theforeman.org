@@ -47,6 +47,10 @@ Thank you to CentOS, who provides Jenkins infrastructure and bare metal hardware
 <div class="lead text-left"><a href="https://gandi.net"><img src="/static/images/sponsors/gandi.jpg" height="125px"/></a></div>
 Thank you to gandi.net, who provides domain registration and the DNS that powers all of our websites and infrastructure.
 
+### conova
+<div class="lead text-left"><a href="https://www.conova.com"><img src="/static/images/sponsors/conova.png" height="125px"/></a></div>
+Thank you to conova, who provides servers for our continuous integration system.
+
 ## Former Sponsors
 
 ### Positive Internet
