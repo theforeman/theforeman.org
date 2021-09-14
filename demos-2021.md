@@ -22,6 +22,13 @@ If you've any questions or feedback, we welcome any feedback in our
 
 ## User-focused Demos - Foreman
 
+### [Demo 100](https://youtu.be/4A8GnjynRaM)
+
+* [Host parameter form scrolling](https://youtu.be/4A8GnjynRaM?t=1995)
+* [Comment available in the safe mode](https://youtu.be/4A8GnjynRaM?t=2054)
+* [Ansible support for the passphrased keys](https://youtu.be/4A8GnjynRaM?t=2179)
+* [REX jobs notifications](https://youtu.be/4A8GnjynRaM?t=2270)
+
 ### [Demo 99](https://youtu.be/vAU1m-HUsig)
 
 * [Host details page - new cards](https://youtu.be/vAU1m-HUsig?t=260)
@@ -79,10 +86,10 @@ If you've any questions or feedback, we welcome any feedback in our
 
 * [Improvements to Ansible roles switcher](https://youtu.be/65yWyKxCEoU?t=840)
 * [Ansible improvements](https://youtu.be/65yWyKxCEoU?t=955)
-* [Configuration sub-status link](https://youtu.be/65yWyKxCEoU) |
+* [Configuration sub-status link](https://youtu.be/65yWyKxCEoU)
 * [Highlights for changed matchers](https://youtu.be/65yWyKxCEoU?t=1374)
 * [Registration templates & OS](https://youtu.be/65yWyKxCEoU?t=1485)
-* [Foreman webhooks](https://youtu.be/65yWyKxCEoU?t=1809)|
+* [Foreman webhooks](https://youtu.be/65yWyKxCEoU?t=1809)
 * [New Azure enhancements](https://youtu.be/65yWyKxCEoU?t=2837)
 
 ### [Demo 91](https://youtu.be/F-nkniWJ86w)
@@ -106,10 +113,18 @@ If you've any questions or feedback, we welcome any feedback in our
 
 ## User-focused Demos - Foreman & Katello plugin
 
+### [Demo 100](https://youtu.be/4A8GnjynRaM)
+
+* [foreman-maintain: Multi-line Pulp migration output](https://youtu.be/4A8GnjynRaM?t=1834)
+* [New CV UI - Add RPM Filter rules, bulk add/remove filter rules, set affected repositories on a filter](https://youtu.be/4A8GnjynRaM?t=1263)
+* [New CV UI - Add container tag filter detail page](https://youtu.be/4A8GnjynRaM?t=1459)
+* [New Hosts UI: Content View Host Details](https://youtu.be/4A8GnjynRaM?t=1588)
+* [New Hosts UI: Tracer page](https://youtu.be/4A8GnjynRaM?t=1698)
+
 ### [Demo 99](https://youtu.be/vAU1m-HUsig)
 
-* [Katello: New CV UI - Add/Remove Package Group Filter rules & Matching content modal for RPM Filter rules](https://youtu.be/vAU1m-HUsig?t=2045)
-* [Katello: New CV UI - Promote CV + Task presenter](https://youtu.be/vAU1m-HUsig?t=2278)
+* [New CV UI - Add/Remove Package Group Filter rules & Matching content modal for RPM Filter rules](https://youtu.be/vAU1m-HUsig?t=2045)
+* [New CV UI - Promote CV + Task presenter](https://youtu.be/vAU1m-HUsig?t=2278)
 
 ### [Demo 98](https://youtu.be/J8Z8SVOhTeA)
 
@@ -182,6 +197,11 @@ If you've any questions or feedback, we welcome any feedback in our
 
 
 ## Foreman developer-focused demos
+
+### [Demo 100](https://youtu.be/4A8GnjynRaM)
+
+* [Katello: Python (Generic) Remote Options UI](https://youtu.be/4A8GnjynRaM?t=2473)
+* [Using Patternfly 4 composable tables](https://youtu.be/4A8GnjynRaM?t=2896)
 
 ### [Demo 99](https://youtu.be/vAU1m-HUsig)
 
