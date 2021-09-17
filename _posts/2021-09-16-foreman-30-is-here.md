@@ -22,7 +22,7 @@ testing it and sending us feedback via our community forums or IRC.
 
 To enable the new host page, head over to Administer - Settings - Generic and
 set Show Experimental Labs setting to Yes. At this point, clicking on a host
-detail will still open the current host detail page. To view the new page, on
+will still open the current host detail page. To view the new page, on
 any host, click on its dropdown action button and select *New Details Page*.
 
 <img src="/static/images/blog_images/2021-09-16-new-host-detail-button.png"  />
