@@ -35,7 +35,7 @@ We are looking for your feedback that will help us create the best possible user
 
 Foreman without the plugin no longer includes Puppet environments, config
 groups, Puppet classes and smart class parameters. It is still possible to
-assign Puppet environment to a host using the `puppet_environment` parameter.
+assign a Puppet environment to a host using the `puppet_environment` parameter.
 This is also the case for setting Puppet server and Puppet CA server for
 provisioning, which can be defined using the `puppet_server` and
 `puppet_ca_server`. A rake task will be provided to allow automatically
