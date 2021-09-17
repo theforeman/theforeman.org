@@ -60,7 +60,7 @@ authentication there too.
 
 Fact parsers for Ansible, Chef, Salt and Subscription Manager were moved to the
 Foreman core. This is the first step in refactoring fact handling in Foreman to
-be simpler, faster and easily extendable. Thanks to that it's now possible to
+be simpler, faster and easily extendable. Thanks to that, it's now possible to
 upload facts from these tools even if the respective plugin is not installed.
 
 ### More information
