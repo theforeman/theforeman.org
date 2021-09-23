@@ -51,6 +51,11 @@ Thank you to gandi.net, who provides domain registration and the DNS that powers
 <div class="lead text-left"><a href="https://www.conova.com"><img src="/static/images/sponsors/conova.png" height="125px"/></a></div>
 Thank you to conova, who provides servers for our continuous integration system.
 
+### GitHub
+
+<div class="lead text-left"><a href="https://github.com"><img src="/static/images/sponsors/github.png" height="125px"/></a></div>
+Thank you to GitHub, who have provided a permanent free upgrade of our organization's plan.
+
 ## Former Sponsors
 
 ### Positive Internet
