@@ -106,6 +106,8 @@ previous_version: "3.0"
 {%include manuals/{{ page.version }}/4.3.3_smartproxy_bmc.md %}
 #### 4.3.3.1 SSH BMC
 {%include manuals/{{ page.version }}/4.3.3.1_smartproxy_bmc_ssh.md %}
+#### 4.3.3.2 SSH BMC
+{%include manuals/{{ page.version }}/4.3.3.2_smartproxy_bmc_ipmitool.md %}
 
 ### 4.3.4 DHCP
 
