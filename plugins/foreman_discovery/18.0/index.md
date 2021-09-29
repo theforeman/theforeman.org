@@ -2,15 +2,15 @@
 layout: plugin
 pluginname: foreman_discovery
 title: Foreman Discovery Manual
-version: 15.0
+version: 18.0
 # versions for matrix and snippets
 # (use short version for imgver e.g. 3.0)
-pluginver: 15.0.0
+pluginver: 18.0.0
 proxyver: 1.0.4
 imgver: 3.5
 cliver: 1.0.2
 # uncomment to show warning box for an old release
-warning: old
+#warning: old
 # uncomment to show development version warning
 #warning: unreleased
 ---
@@ -32,166 +32,6 @@ direct access both to the provisioning network and Foreman instance:
 
 ## 1.1 Release Notes
 
-For each Foreman version there is particular version of Foreman Discovery
-plugin:
-
-<table class="table table-bordered table-condensed">
-  <tr>
-    <th>Foreman version</th>
-    <th>Plugin version</th>
-    <th>Proxy version</th>
-    <th>Image version</th>
-    <th>CLI version</th>
-  </tr>
-  <tr>
-    <td>&lt;= 1.2</td>
-    <td>1.0.2</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td>= 1.3</td>
-    <td>1.1.0</td>
-    <td>N/A</td>
-    <td>0.1.1</td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td>= 1.4</td>
-    <td>1.2.0</td>
-    <td>N/A</td>
-    <td>0.3.0</td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td>= 1.5</td>
-    <td>1.3.0</td>
-    <td>N/A</td>
-    <td>0.5.0</td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td>= 1.6</td>
-    <td>1.4.0</td>
-    <td>N/A</td>
-    <td>0.6 or 2.0</td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td>= 1.7</td>
-    <td>2.0.0</td>
-    <td>0.1</td>
-    <td>2.0</td>
-    <td>0.0.1</td>
-  </tr>
-  <tr>
-    <td>= 1.8</td>
-    <td>3.0.0</td>
-    <td>1.0.2</td>
-    <td>2.1</td>
-    <td>0.0.1</td>
-  </tr>
-  <tr>
-    <td>= 1.9</td>
-    <td>4.0.0</td>
-    <td>1.0.2</td>
-    <td>2.1</td>
-    <td>0.0.2</td>
-  </tr>
-  <tr>
-    <td>= 1.10</td>
-    <td>4.1.1</td>
-    <td>1.0.3</td>
-    <td>3.0</td>
-    <td>0.0.2</td>
-  </tr>
-  <tr>
-    <td>= 1.11</td>
-    <td>5.0.2</td>
-    <td>1.0.3</td>
-    <td>3.1</td>
-    <td>0.0.2</td>
-  </tr>
-  <tr>
-    <td>= 1.12</td>
-    <td>6.0.0</td>
-    <td>1.0.3</td>
-    <td>3.1</td>
-    <td>0.0.3</td>
-  </tr>
-  <tr>
-    <td>= 1.13</td>
-    <td>7.0.0</td>
-    <td>1.0.3</td>
-    <td>3.2-3.3</td>
-    <td>0.0.3</td>
-  </tr>
-  <tr>
-    <td>= 1.14</td>
-    <td>8.0.0</td>
-    <td>1.0.3</td>
-    <td>3.2-3.3</td>
-    <td>0.0.3</td>
-  </tr>
-  <tr>
-    <td>= 1.15</td>
-    <td>9.1.0</td>
-    <td>1.0.4</td>
-    <td>3.3-3.4</td>
-    <td>1.0.0</td>
-  </tr>
-  <tr>
-    <td>= 1.16</td>
-    <td>10.0.0</td>
-    <td>1.0.4</td>
-    <td>3.4</td>
-    <td>1.0.0</td>
-  </tr>
-  <tr>
-    <td>= 1.17</td>
-    <td>11.0.0</td>
-    <td>1.0.4</td>
-    <td>3.4</td>
-    <td>1.0.2</td>
-  </tr>
-  <tr>
-    <td>= 1.18</td>
-    <td>12.0.1</td>
-    <td>1.0.4</td>
-    <td>3.4</td>
-    <td>1.0.2</td>
-  </tr>
-  <tr>
-    <td>= 1.19</td>
-    <td>13.0.1</td>
-    <td>1.0.4</td>
-    <td>3.5</td>
-    <td>1.0.2</td>
-  </tr>
-  <tr>
-    <td>= 1.20</td>
-    <td>14.0</td>
-    <td>1.0.4</td>
-    <td>3.5</td>
-    <td>1.0.2</td>
-  </tr>
-  <tr>
-    <td>= 1.21</td>
-    <td>14.0</td>
-    <td>1.0.4</td>
-    <td>3.5</td>
-    <td>1.0.2</td>
-  </tr>
-  <tr>
-    <td>= 1.22</td>
-    <td>{{page.pluginver}}</td>
-    <td>{{page.proxyver}}</td>
-    <td>{{page.imgver}}</td>
-    <td>{{page.cliver}}</td>
-  </tr>
-</table>
-
 To read release announcements for discovery plugin, smart proxy plugin and
 image, visit the [Release Announcement category](https://community.theforeman.org/search?q=%23release-announcements%20tags%3Adiscovery)
 on our site.
@@ -208,9 +48,9 @@ Foreman Discovery plugin is the main component that needs to be installed.
 
 ### 2.1.1 Installer (recommended)
 
-As of Foreman 1.8+, the foreman-installer is able to automatically install the
-package and proceed with all necessary steps. To do this, re-run the installer
-with the following option:
+The foreman-installer is able to automatically install the package and proceed
+with all necessary steps. To do this, re-run the installer with the following
+option:
 
     # foreman-installer --enable-foreman-plugin-discovery
 
@@ -224,7 +64,11 @@ To install Foreman Discovery plugin, do the following
 
     # yum install tfm-rubygem-foreman_discovery
 
-on Fedora and Red Hat systems or
+on EL7 or
+
+    # yum install rubygem-foreman_discovery
+
+on EL8 or
 
     # apt-get install ruby-foreman-discovery
 
@@ -232,11 +76,7 @@ on Debian and Ubuntu systems.
 
 Restart of Foreman is needed when not using the installer:
 
-    # systemctl restart httpd
-
-On Debian-based systems the command is:
-
-    # systemctl restart apache2
+    # systemctl restart foreman
 
 ## 2.2 Smart Proxy Discovery plugin (optional)
 
@@ -246,9 +86,13 @@ on the network where discovery feature is supposed to work.
 
 To install the plugin, do
 
+    # yum install tfm-rubygem-smart_proxy_discovery
+
+on EL7 or
+
     # yum install rubygem-smart_proxy_discovery
 
-on Fedora and Red Hat systems or
+on EL8 or
 
     # apt-get install ruby-smart-proxy-discovery
 
@@ -265,8 +109,8 @@ to install the image.
 
 ### 2.3.1 Download via installer (recommended)
 
-As of Foreman 1.8+, the foreman-installer is able to automatically download
-latest stable image. For this, re-run the installer with the following option:
+The foreman-installer is able to automatically download latest stable image.
+For this, re-run the installer with the following option:
 
     # foreman-installer \
       --enable-foreman-proxy-plugin-discovery \
@@ -277,7 +121,7 @@ The command installs latest available Foreman Discovery Image. If that's not the
     # foreman-installer \
       --enable-foreman-proxy-plugin-discovery \
       --foreman-proxy-plugin-discovery-install-images=true \
-      --foreman-proxy-plugin-discovery-source-url=http://downloads.theforeman.org/discovery/releases/{{page.imgver}}/
+      --foreman-proxy-plugin-discovery-source-url=https://downloads.theforeman.org/discovery/releases/{{page.imgver}}/
 
 Tip: It is possible to install both Discovery plugin and image in one
 installer run by providing both the options.
@@ -301,16 +145,7 @@ combinations are not compatible.
 
 On Debian systems, use `/srv/tftp/boot` instead of `/var/tftpboot/boot`.
 
-### 2.3.3 Verify signatures and checksums
-
-To verify individual ISO/tar files, import our Discovery Plugin key
-[7E81E7B0](http://keys.fedoraproject.org:11371/pks/lookup?search=0x7E81E7B0&op=get)
-and verify individual files:
-
-    # wget 'http://keys.fedoraproject.org:11371/pks/lookup?search=0x7E81E7B0&op=get' -O- | gpg --import
-    # gpg --verify --multifile *.asc
-    gpg: Signature made Fri 06 Nov 2015 09:42:55 AM UTC using RSA key ID 7E81E7B0
-    gpg: Good signature from "Foreman Discovery <foreman-xxx@googlegroups.com>"
+### 2.3.3 Verify checksums
 
 To verify extracted init RAM disk and linux kernel do:
 
@@ -334,17 +169,29 @@ the README for further instructions.
 Before installing make sure you have installed the
 [hammer_cli_foreman plugin](https://github.com/theforeman/hammer-cli/blob/master/doc/installation.md),
 
-On Red Hat compatible systems:
+On Red Hat EL7 compatible systems:
 
-```yum install tfm-rubygem-hammer_cli_foreman_discovery```
+```
+yum install tfm-rubygem-hammer_cli_foreman_discovery
+```
+
+On Red Hat EL8 compatible systems:
+
+```
+yum install rubygem-hammer_cli_foreman_discovery
+```
 
 On Debian/Ubuntu compatible systems:
 
-```apt-get install ruby-hammer-cli-foreman-discovery```
+```
+apt-get install ruby-hammer-cli-foreman-discovery
+```
 
 Or install from rubygems:
 
-```gem install hammer_cli_foreman_discovery```.
+```
+gem install hammer_cli_foreman_discovery
+```
 
 ## 2.5 Upgrade
 

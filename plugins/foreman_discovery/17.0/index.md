@@ -2,10 +2,10 @@
 layout: plugin
 pluginname: foreman_discovery
 title: Foreman Discovery Manual
-version: 15.0
+version: 17.0
 # versions for matrix and snippets
 # (use short version for imgver e.g. 3.0)
-pluginver: 15.0.0
+pluginver: 17.0.0
 proxyver: 1.0.4
 imgver: 3.5
 cliver: 1.0.2
@@ -31,166 +31,6 @@ direct access both to the provisioning network and Foreman instance:
 ![Discovery Communication Workflows](/static/images/diagrams/discovery_comm.png)
 
 ## 1.1 Release Notes
-
-For each Foreman version there is particular version of Foreman Discovery
-plugin:
-
-<table class="table table-bordered table-condensed">
-  <tr>
-    <th>Foreman version</th>
-    <th>Plugin version</th>
-    <th>Proxy version</th>
-    <th>Image version</th>
-    <th>CLI version</th>
-  </tr>
-  <tr>
-    <td>&lt;= 1.2</td>
-    <td>1.0.2</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td>= 1.3</td>
-    <td>1.1.0</td>
-    <td>N/A</td>
-    <td>0.1.1</td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td>= 1.4</td>
-    <td>1.2.0</td>
-    <td>N/A</td>
-    <td>0.3.0</td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td>= 1.5</td>
-    <td>1.3.0</td>
-    <td>N/A</td>
-    <td>0.5.0</td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td>= 1.6</td>
-    <td>1.4.0</td>
-    <td>N/A</td>
-    <td>0.6 or 2.0</td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td>= 1.7</td>
-    <td>2.0.0</td>
-    <td>0.1</td>
-    <td>2.0</td>
-    <td>0.0.1</td>
-  </tr>
-  <tr>
-    <td>= 1.8</td>
-    <td>3.0.0</td>
-    <td>1.0.2</td>
-    <td>2.1</td>
-    <td>0.0.1</td>
-  </tr>
-  <tr>
-    <td>= 1.9</td>
-    <td>4.0.0</td>
-    <td>1.0.2</td>
-    <td>2.1</td>
-    <td>0.0.2</td>
-  </tr>
-  <tr>
-    <td>= 1.10</td>
-    <td>4.1.1</td>
-    <td>1.0.3</td>
-    <td>3.0</td>
-    <td>0.0.2</td>
-  </tr>
-  <tr>
-    <td>= 1.11</td>
-    <td>5.0.2</td>
-    <td>1.0.3</td>
-    <td>3.1</td>
-    <td>0.0.2</td>
-  </tr>
-  <tr>
-    <td>= 1.12</td>
-    <td>6.0.0</td>
-    <td>1.0.3</td>
-    <td>3.1</td>
-    <td>0.0.3</td>
-  </tr>
-  <tr>
-    <td>= 1.13</td>
-    <td>7.0.0</td>
-    <td>1.0.3</td>
-    <td>3.2-3.3</td>
-    <td>0.0.3</td>
-  </tr>
-  <tr>
-    <td>= 1.14</td>
-    <td>8.0.0</td>
-    <td>1.0.3</td>
-    <td>3.2-3.3</td>
-    <td>0.0.3</td>
-  </tr>
-  <tr>
-    <td>= 1.15</td>
-    <td>9.1.0</td>
-    <td>1.0.4</td>
-    <td>3.3-3.4</td>
-    <td>1.0.0</td>
-  </tr>
-  <tr>
-    <td>= 1.16</td>
-    <td>10.0.0</td>
-    <td>1.0.4</td>
-    <td>3.4</td>
-    <td>1.0.0</td>
-  </tr>
-  <tr>
-    <td>= 1.17</td>
-    <td>11.0.0</td>
-    <td>1.0.4</td>
-    <td>3.4</td>
-    <td>1.0.2</td>
-  </tr>
-  <tr>
-    <td>= 1.18</td>
-    <td>12.0.1</td>
-    <td>1.0.4</td>
-    <td>3.4</td>
-    <td>1.0.2</td>
-  </tr>
-  <tr>
-    <td>= 1.19</td>
-    <td>13.0.1</td>
-    <td>1.0.4</td>
-    <td>3.5</td>
-    <td>1.0.2</td>
-  </tr>
-  <tr>
-    <td>= 1.20</td>
-    <td>14.0</td>
-    <td>1.0.4</td>
-    <td>3.5</td>
-    <td>1.0.2</td>
-  </tr>
-  <tr>
-    <td>= 1.21</td>
-    <td>14.0</td>
-    <td>1.0.4</td>
-    <td>3.5</td>
-    <td>1.0.2</td>
-  </tr>
-  <tr>
-    <td>= 1.22</td>
-    <td>{{page.pluginver}}</td>
-    <td>{{page.proxyver}}</td>
-    <td>{{page.imgver}}</td>
-    <td>{{page.cliver}}</td>
-  </tr>
-</table>
 
 To read release announcements for discovery plugin, smart proxy plugin and
 image, visit the [Release Announcement category](https://community.theforeman.org/search?q=%23release-announcements%20tags%3Adiscovery)
