@@ -22,6 +22,11 @@ If you've any questions or feedback, we welcome any feedback in our
 
 ## User-focused Demos - Foreman
 
+### [Demo 101](https://www.youtube.com/watch?v=iW6QE-glh2I)
+
+* [New Ansible module `organization_info`](https://youtu.be/iW6QE-glh2I?t=249)
+* [virt-who-configure: Nutanix support](https://youtu.be/iW6QE-glh2I?t=1938)
+
 ### [Demo 100](https://youtu.be/4A8GnjynRaM)
 
 * [Host parameter form scrolling](https://youtu.be/4A8GnjynRaM?t=1995)
@@ -113,6 +118,18 @@ If you've any questions or feedback, we welcome any feedback in our
 
 ## User-focused Demos - Foreman & Katello plugin
 
+### [Demo 101](https://www.youtube.com/watch?v=iW6QE-glh2I)
+
+* [New Host details UI: Recalculate errata](https://youtu.be/iW6QE-glh2I?t=368)
+* [New Host details UI: Errata table row expansion](https://youtu.be/iW6QE-glh2I?t=495)
+* [New Host details UI: Traces bulk select & restart](https://youtu.be/iW6QE-glh2I?t=538)
+* [Applicable Deb packages](https://youtu.be/iW6QE-glh2I?t=697)
+* [Download Policy on-demand for Debian-repositories](https://youtu.be/iW6QE-glh2I?t=950)
+* [New CV UI: Remove CV from environment/ Delete version](https://youtu.be/iW6QE-glh2I?t=1257)
+* [New CV UI - ComponentView Version Details/Routing](https://youtu.be/iW6QE-glh2I?t=1541)
+* [New CV UI: Module Filter page](https://youtu.be/iW6QE-glh2I?t=1747)
+* [Katello Content View Publishing Update](https://youtu.be/iW6QE-glh2I?t=2467)
+
 ### [Demo 100](https://youtu.be/4A8GnjynRaM)
 
 * [foreman-maintain: Multi-line Pulp migration output](https://youtu.be/4A8GnjynRaM?t=1834)
@@ -197,6 +214,10 @@ If you've any questions or feedback, we welcome any feedback in our
 
 
 ## Foreman developer-focused demos
+
+### [Demo 101](https://www.youtube.com/watch?v=iW6QE-glh2I)
+
+* [Setting DSL](https://youtu.be/iW6QE-glh2I?t=2875)
 
 ### [Demo 100](https://youtu.be/4A8GnjynRaM)
 
