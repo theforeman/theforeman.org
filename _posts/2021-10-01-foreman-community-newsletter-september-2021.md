@@ -88,7 +88,7 @@ See here for a correction of the [Forklift artist question](https://community.th
 
 ## Open Source Automation Days
 
-Open Source Automation Days (OSAD) is an annual manufacturer-independent open source conference in Munich. It takes place from Oct 3 - Oct 5.
+Open Source Automation Days (OSAD) is an annual manufacturer-independent open source conference in Munich. It takes place from Oct 4 - Oct 5.
 
 For more information on the sessions of particular interest to Foreman, checkout [@bernhard_suttner's](https://community.theforeman.org/u/bernhard_suttner/summary) write up on [our event calendar](https://community.theforeman.org/t/open-source-automation-days-2021/25303)
 
