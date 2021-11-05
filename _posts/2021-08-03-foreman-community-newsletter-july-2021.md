@@ -74,7 +74,7 @@ With the introduction of Pulp 3 to Katello [@iballou](https://community.theforem
 
 ## Community Demo Listing Page
 
-Thanks to [@laviro](https://community.theforeman.org/u/laviro) who contributed a nice search bar to our new [demo listings page on theforeman.org](https://theforeman.org/demos-2021.html).
+Thanks to [@laviro](https://community.theforeman.org/u/laviro) who contributed a nice search bar to our new [demo listings page on theforeman.org](https://theforeman.org/demos/2021.html).
 
 ## Thank you
 

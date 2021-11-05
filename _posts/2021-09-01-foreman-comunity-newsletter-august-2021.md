@@ -35,7 +35,7 @@ Help make this release as stable as possible by evaluating the release candidate
 
 ### Katello 4.2 RC1
 
-The first release candidate for Katello 4.2 became available last week. There are a number of  features coming with this release. You can find more information in the [changelog](https://github.com/Katello/katello/blob/KATELLO-4.2/CHANGELOG.md). Many of these features have been [demoed](https://theforeman.org/demos-2021.html#User-focusedDemos-Foreman&Katelloplugin) by the Katello team over the last while.
+The first release candidate for Katello 4.2 became available last week. There are a number of  features coming with this release. You can find more information in the [changelog](https://github.com/Katello/katello/blob/KATELLO-4.2/CHANGELOG.md). Many of these features have been [demoed](https://theforeman.org/demos/2021.html#User-focusedDemos-Foreman&Katelloplugin) by the Katello team over the last while.
 
 You can really help to improve the stability of the next release by testing this release candidate and letting us know how it works for you.
 
