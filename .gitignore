@@ -10,3 +10,7 @@ _site
 Gemfile.lock
 .jekyll-metadata
 .vendor
+/foreman-manual-*.adoc
+/foreman-manual-*.md
+/foreman-manual-*.html
+.byebug_history
