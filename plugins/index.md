@@ -54,21 +54,9 @@ Foreman plugins are implemented as [Rails engines](http://guides.rubyonrails.org
 		</a>
 	</div>
 	<div class='col-xs-3 center'>
-		<a href="https://github.com/theforeman/foreman-digitalocean/" class="btn-doc btn">
-			<p class='h2 doc-icon'><i class="fa fa-pencil"></i></p>
-			DigitalOcean
-		</a>
-	</div>
-	<div class='col-xs-3 center'>
 		<a href="plugins/foreman_discovery" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-wifi"></i></p>
 			Discovery
-		</a>
-	</div>
-	<div class='col-xs-3 center'>
-		<a href="plugins/foreman_docker" class="btn-doc btn">
-			<p class='h2 doc-icon'><i class="fa fa-ship"></i></p>
-			Docker
 		</a>
 	</div>
 	<div class='col-xs-3 center'>
@@ -141,12 +129,6 @@ Foreman plugins are implemented as [Rails engines](http://guides.rubyonrails.org
 		<a href="https://github.com/theforeman/puppetdb_foreman" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-database"></i></p>
 			PuppetDB
-		</a>
-	</div>
-	<div class='col-xs-3 center'>
-		<a href="https://github.com/theforeman/foreman-xen" class="btn-doc btn">
-			<p class='h2 doc-icon'><i class="fa fa-dashboard"></i></p>
-			Xen
 		</a>
 	</div>
 	<div class='col-xs-3 center'>
