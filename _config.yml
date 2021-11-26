@@ -64,7 +64,7 @@ navigation:
       - title: Events
         url: https://theforeman.org/events
       - title: Community Demos
-        url: /demos-2021.html        
+        url: /demos/2021.html
       - title: Videos
         url: /media.html
       - title: Security

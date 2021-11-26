@@ -96,7 +96,7 @@ PRs and docs submissions are always welcome!
 
 ## Community Demos
 
-We have added a [new page](https://theforeman.org/demos-2021.html) to our website where you can find a time-stamped link to every demo that has happened this year so far. We have an upcoming demo this Thursday, July 8.
+We have added a [new page](https://theforeman.org/demos/2021.html) to our website where you can find a time-stamped link to every demo that has happened this year so far. We have an upcoming demo this Thursday, July 8.
 
 ## Automating the discovery of an Intel NUC machines cluster with Foreman
 
