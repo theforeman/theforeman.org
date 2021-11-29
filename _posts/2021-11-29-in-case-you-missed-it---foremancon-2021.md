@@ -21,11 +21,11 @@ We were absolutely thrilled to have Joshua Hoblitt from the Rubin observatory [h
 
 ## Workflow updates
 
-Foreman is a beast. Some call it a "Swiss army knife". While it can help you take control over so many aspects of your infrastructure, sometimes there are so many configuration options that it might feel overwhelming to use. Over the last year, a lot of time and energy has gone into trying to expose the right level of information you need, as well refining workflows so that you can take action as quick and effortlessly as possible. Many of the Foremancon talks focused on design and workflow improvements.
+Foreman is a beast. Some call it a "Swiss army knife". While it can help you take control over so many aspects of your infrastructure, sometimes there are so many configuration options that it might feel overwhelming to use. Over the last year, a lot of time and energy has gone into trying to expose the right level of information you need, as well as refining workflows so that you can take action as quick and effortlessly as possible. Many of the Foremancon talks focused on design and workflow improvements.
 
 ### Introducing the new Foreman host details page
 
-While Amir and the UX team have come and demoed many components of the new host details page, this session takes a closer look over the journey, a live deep dive and some thoughts for the future of displaying host information in a meaningful way within the Foreman web UI. Watch Amir talk about modernizing of the Foreman UI.  
+While Amir and the UX interest group have come and demoed many components of the new host details page, this session takes a closer look over the journey, a live deep dive and some thoughts for the future of displaying host information in a meaningful way within the Foreman web UI. Watch Amir talk about modernizing of the Foreman UI.  
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/UNYiXHv2Sco" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -99,7 +99,7 @@ Over the last few months, Ryan has regularly demoed incremental enhancements to 
 
 ### Katello Applicability Deep Dive
 
-Ian's talk focuses on the code, design diagrams, and performance improvements that can be found in  the new Katello applicability system. He demonstrates how the new applicability request queue works and the Dynflow tasks that consume its resources.
+Ian's talk focuses on the code, design diagrams, and performance improvements that can be found in the new Katello applicability system. He demonstrates how the new applicability request queue works and the Dynflow tasks that consume its resources.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/77hpl5_6c_I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
