@@ -81,6 +81,12 @@ With this information, we can create realistic tuning profiles to help you manag
 
 To contribute to this discussion, reply to [Metrics for better tuning presets](https://community.theforeman.org/t/metrics-for-better-tuning-presets/26224/).
 
+## What do you think about the new Content View page?
+
+If you have been following our community demos, you might be aware that a lot of time and energy has gone into enhancing and simplifying the Content View workflow in the Foreman web UI.
+Now it is time for you to tell us what you think. 
+Please let us know on [Foreman 3.0 new Content View page feedback](https://community.theforeman.org/t/foreman-3-0-new-content-view-page-feedback/26237) thread on our community discourse.
+
 ## New documentation for Katello Debian, SUSE,
 
 Speaking of contributions, a big thank you to [maximilian](https://community.theforeman.org/u/maximilian/summary) and [ATIX AG](https://atix.de/en/) for providing documentation for adding Debian content with Katello.
