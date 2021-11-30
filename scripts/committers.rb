@@ -40,6 +40,7 @@ require 'git'
 @date_to       = '2020-12-01'
 
 @author_map = {
+  "aabramov"       => "Adi Abramovich",
   "abenari"        => "Amos Benari",
   "adamruzicka"    => "Adam Ruzicka",
   "Alexander Fisher" => "Alex Fisher",
