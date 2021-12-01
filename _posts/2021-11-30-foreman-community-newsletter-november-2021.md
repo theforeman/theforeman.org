@@ -52,7 +52,7 @@ Another quick and easy way to help the future of Foreman is to share your opinio
 
 ## Centos 8 sunsets soon; what next?
 
-At the moment, we are preparing for our next steps after Centos 8 sunsets at the end of this year.
+At the moment, we are preparing to change which platform we install Foreman on because Centos 8 becomes EOL at the end of this year.
 
 [ehelms](https://community.theforeman.org/u/ehelms) lays out the options he sees for what to do about building of RPMs and testing of RPMs for future Foreman releases.
 
@@ -63,7 +63,7 @@ He outlines his thoughts on two possible options:
 
 Please let him know what you think over on his post: [RFC - Enterprise Linux 8 and 9 Support](https://community.theforeman.org/t/rfc-enterprise-linux-8-and-9-support/26282).
 
-## How do you use organization/locations in  Foreman?
+## How do you use organization/locations in Foreman?
 
 A few weeks ago, [ezr-ondrej](https://community.theforeman.org/u/ezr-ondrej) posted about how [Foreman's taxonomies are difficult for users and developer's alike](https://community.theforeman.org/t/single-organization-on-resources-to-simplify-taxonomies/25416) and included some initial thoughts about a path forward. As part of this discussion, we want to know how you use Foreman's organizations and locations in your deployment.
 
@@ -84,7 +84,7 @@ To contribute to this discussion, reply to [Metrics for better tuning presets](h
 ## What do you think about the new Content View page?
 
 If you have been following our community demos, you might be aware that a lot of time and energy has gone into enhancing and simplifying the Content View workflow in the Foreman web UI.
-Now it is time for you to tell us what you think. 
+Now it is time for you to tell us what you think.
 Please let us know on [Foreman 3.0 new Content View page feedback](https://community.theforeman.org/t/foreman-3-0-new-content-view-page-feedback/26237) thread on our community discourse.
 
 ## New documentation for Katello Debian, SUSE,
