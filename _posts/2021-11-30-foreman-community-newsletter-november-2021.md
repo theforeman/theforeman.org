@@ -113,7 +113,7 @@ One of the highlights of ForemanCon 2021 was our guest speaker Joshua Hoblitt wh
 
 ## Final Community Demo of 2021
 
-Our final community demo of 2021 takes place on Thurs December 2. We will be dreaming live, and you're welcome to join us and ask questions. Find more information and links at our [Foreman Community Demo 104](https://community.theforeman.org/t/foreman-community-demo-104/26281) post on our community discourse.
+Our final community demo of 2021 takes place on Thurs December 2. We will be streaming live, and you're welcome to join us and ask questions. Find more information and links at our [Foreman Community Demo 104](https://community.theforeman.org/t/foreman-community-demo-104/26281) post on our community discourse.
 
 ## Thank you!
 
