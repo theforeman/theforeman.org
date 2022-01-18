@@ -10,7 +10,6 @@ Components include the Foreman web UI, Smart Proxy, a Puppet server, and optiona
 * Debian 10 (Buster), amd64
 * Red Hat Enterprise Linux 7, x86_64
 * Red Hat Enterprise Linux 8, x86_64
-* Ubuntu 18.04 (Bionic), amd64
 * Ubuntu 20.04 (Focal), amd64
 
 #### Untested platforms (packages may not work on these)
