@@ -254,7 +254,7 @@ At this point you can bring Tomcat back: `foreman-maintain service start --only 
 
 3. Validate the new version. A thorough test of Candlepin integration includes the following:
 
-   - Running the glue tests: `record=true mode=all bundle exec rake test:katello:test:glue` (save some time by doing other testing concurrently)
+   - Running the glue tests: `record=true mode=all ktest ~/katello/test/scenarios/scenario_test.rb` (save some time by doing other testing concurrently)
    - Importing and refreshing a manifest
    - Performing various actions around activation keys
    - Registering a content host
