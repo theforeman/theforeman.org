@@ -17,7 +17,7 @@ After much anticipation, Katello 4.3 landed last week. This is an important rele
 
 * At the time of the release and migration to Pulp 3, [there was no Pulp OSTree content](https://theforeman.org/2020/05/bye-bye-pulp2.html) and many were sorry to see it go. Good news is that from Katello 4.3, you can now upload, sync and publish OSTree content using Katello!
 * Support for Inter-server sync has been added. This feature allows you to sync content from one Katello Instance to another. You can watch a [demo](https://youtu.be/uk9PvytPhsA?t=3200) here.
-* There have been scores of enhancements to the Content View workflow web UI enhancements.  
+* There have been scores of enhancements to the Content View workflow web UI enhancements.
 
 The Foreman of Animal Crossing, [Tom Nook](https://community.theforeman.org/u/cintrix84), talked us through the headlines of Katello 4.3 at the community demo. You can rewatch here:
 
@@ -115,7 +115,7 @@ These are some examples of how engaging with the demos can make a difference to 
 
 ## Enhancements to docs.theforeman.org
 
-After many late nights, [@lzap](https://community.theforeman.org/u/lzap)'s voyage into site navigation and layouts bore fruit. Our next generation documentation has a new look, feel, and better navigation. Check out  [docs.theforeman.org]https://docs.theforeman.org) to see it in action. You can read all about it [here](https://community.theforeman.org/t/documentation-site-navigation-is-live/26858?u=mcorr) and let us know what you think.
+After many late nights, [@lzap](https://community.theforeman.org/u/lzap)'s voyage into site navigation and layouts bore fruit. Our next generation documentation has a new look, feel, and better navigation. Check out [docs.theforeman.org]https://docs.theforeman.org) to see it in action. You can read all about it [here](https://community.theforeman.org/t/documentation-site-navigation-is-live/26858?u=mcorr) and let us know what you think.
 
 ## RFC: Rearchitecting how PXE files are deployed
 
@@ -127,7 +127,7 @@ For more information, see [RFC: Rearchitecting how PXE files are deployed](https
 
 ## Officially support only the recent versions of Firefox and Google Chrome / Chromium browsers
 
-If you love browser compatibility issues, drop a comment on this blog !
+If you love browser compatibility issues, drop a comment on this blog!
 
 [@Ron_Lavi](https://community.theforeman.org/u/Ron_Lavi) posted with the suggestion that Foreman supports only the recent versions of Firefox and Google Chrome / Chromium browsers.
 
