@@ -125,13 +125,13 @@ Because of the implications of this for Foreman Debian provisioning, [@lzap](htt
 
 For more information, see [RFC: Rearchitecting how PXE files are deployed](https://community.theforeman.org/t/rfc-rearchitecting-how-pxe-files-are-deployed/27021) and join the discussion.
 
-## Officially support only the recent versions of Firefox and Google Chrome / Chromium browsers
+## Officially support only the recent versions of Firefox, Safari, Edge, Chrome, & Chromium
 
 If you love browser compatibility issues, drop a comment on this blog!
 
 [@Ron_Lavi](https://community.theforeman.org/u/Ron_Lavi) posted with the suggestion that Foreman supports only the recent versions of Firefox and Google Chrome / Chromium browsers.
 
-For more information, read [Ron's post](https://community.theforeman.org/t/officially-support-only-the-recent-versions-of-firefox-and-google-chrome-chromium-browsers/27138) and let us know if there's something we haven't considered.
+For more information, read [Ron's post](https://community.theforeman.org/t/officially-support-only-the-recent-versions-of-firefox-safari-edge-chrome-chromium-browsers/27139) and let us know if there's something we haven't considered.
 
 There have been many more requests for feedback and comments on proposals over the last month. Click [here](https://community.theforeman.org/c/development/rfcs/18)
 
