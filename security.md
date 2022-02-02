@@ -1056,6 +1056,15 @@ Key management is changing at the time of writing to cycle nightly keys every tw
         <td style='white-space:nowrap'></td>
         <td></td>
       </tr>
+      <tr>
+        <td><a href="{{ site.baseurl }}/static/keys/4300F189E12AD7C63E7988FBE289CB5FE694ABDA.pub">4300F189E12AD7C63E7988FBE289CB5FE694ABDA</a></td>
+        <td>4300 F189 E12A D7C6 3E79  88FB E289 CB5F E694 ABDA</td>
+        <td>Pulpcore Automatic Signing Key (3.17)</td>
+        <td style='white-space:nowrap'>2022-02-02</td>
+        <td style='white-space:nowrap'>2023-02-02</td>
+        <td style='white-space:nowrap'></td>
+        <td></td>
+      </tr>
 
     </tbody>
   </table>
