@@ -1,4 +1,4 @@
-FROM centos:8
+FROM quay.io/centos/centos:stream8
 
 RUN yum -y install https://yum.puppetlabs.com/puppet7/puppet7-release-el-8.noarch.rpm
 
