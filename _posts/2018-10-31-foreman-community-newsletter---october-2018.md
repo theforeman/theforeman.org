@@ -90,9 +90,9 @@ on specific events if you don't wish to import the whole thing.
 Future community demos will now be created much further in advance, so you
 should be able to keep up with upcoming demos there.
 
-* [Freenode #live (2nd-3rd Nov, Bristol)](https://community.theforeman.org/t/freenode-live-conference/11537)
+* [libera.chat #live (2nd-3rd Nov, Bristol)](https://community.theforeman.org/t/freenode-live-conference/11537)
 
-Rahul Bajaj will be presenting a talk on Foreman at Freenode #live, so if
+Rahul Bajaj will be presenting a talk on Foreman at libera.chat #live, so if
 you're in the area, go support him!
 
 * [Open Source Camp on Puppet (8th Nov, Nuremberg)](https://community.theforeman.org/t/open-source-camp-on-puppet/11191)

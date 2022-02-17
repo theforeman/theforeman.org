@@ -6,7 +6,7 @@ author: Daniel Lobato
 tags: 
 modified_time: '2015-06-11T17:01:51.974+03:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-339523326737578400
-blogger_orig_url: http://blog.theforeman.org/2015/06/unattended-deployments-of-fedora-and.html
+blogger_orig_url: /2015/06/unattended-deployments-of-fedora-and.html
 guest_post: true
 guest_url: http://blog.daniellobato.me/unattended-deployments-of-fedora-and-rhel-atomic-with-foreman
 excerpt: |

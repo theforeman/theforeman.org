@@ -18,8 +18,8 @@ currently available projects.
 * Watch a few [demo videos](/media.html)
 * Read a couple posts from the [forum](/support.html#forum)
 * Join us on [IRC](/support.html#IRC):
-  * \#theforeman on Freenode for generally getting to know Foreman and asking user questions
-  * \#theforeman-dev on Freenode for development/mentoring questions. Don't be shy; tell us you're interested in one of our open mentoring projects
+  * \#theforeman on libera.chat for generally getting to know Foreman and asking user questions
+  * \#theforeman-dev on libera.chat for development/mentoring questions. Don't be shy; tell us you're interested in one of our open mentoring projects
 
 ## Open Projects
 
@@ -117,4 +117,4 @@ Original good ideas will be valued. We don't want to impose anything. This is
 Free and Open Source software.
 
 As usual, if you are doubtful about whether your idea is ok or not, feel free
-to ask in #theforeman-dev on Freenode.
+to ask in #theforeman-dev on libera.chat.

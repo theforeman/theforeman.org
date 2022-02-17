@@ -32,7 +32,7 @@ task :new_post, [:title] do |t, args|
 ---
 layout: post
 title: #{args.title}
-date: #{Time.now.strftime('%Y-%m-%d %k:%M:%S')}
+date: #{Time.now.utc.strftime('%Y-%m-%d %k:%M:%S')}
 author: Foreman
 tags:
 - foreman
@@ -50,12 +50,4 @@ EOS
   else
     puts "#{path} is ready for editing."
   end
-end
-
-desc 'Update the foreman-ansible-modules documentation'
-task :update_fam_docs, [:fampath] do |t, args|
-  fampath = args.fampath || ENV['fampath']
-  raise RuntimeError.new("please set the path to foreman-ansible-modules") unless (fampath && File.exist?(fampath))
-  sh "pushd #{fampath}/docs && make html && popd"
-  sh "rm -rf plugins/foreman-ansible-modules/sphinx/ && cp -a #{fampath}/docs/_build/html/ plugins/foreman-ansible-modules/sphinx"
 end

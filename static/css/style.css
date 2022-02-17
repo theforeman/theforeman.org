@@ -1106,16 +1106,23 @@ code {
 .bs-callout + .bs-callout {
 	margin-top: -5px;
 }
-.bs-callout-info {
-	border-left-color: #1B809E;
-}
 
-.bs-callout-info h4 {
-	color: #1B809E;
-}
 .bs-callout h4 {
 	margin-top: 0px;
 	margin-bottom: 5px;
+}
+
+.bs-callout-info {
+	border-left-color: #1B809E;
+}
+.bs-callout-info h4 {
+	color: #1B809E;
+}
+.bs-callout-warning {
+  border-left-color: #f0ad4e;
+}
+.bs-callout-warning h4 {
+  color: #f0ad4e;
 }
 
 .bs-callout p:last-child {

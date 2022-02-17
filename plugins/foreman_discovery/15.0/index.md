@@ -10,7 +10,7 @@ proxyver: 1.0.4
 imgver: 3.5
 cliver: 1.0.2
 # uncomment to show warning box for an old release
-#warning: old
+warning: old
 # uncomment to show development version warning
 #warning: unreleased
 ---
@@ -990,10 +990,10 @@ option, run:
     fdi.script=H4sIAK4hZ1oCA0tNzshXUA/JyCxWAKJEhZLU4hJ1LgA92U9qFgAAAA==
 
 Keep in mind that kernel command line option is limited, Red Hat Enterprise
-Linux 7 (or CentOS 7) has limitation of 512 characters and there are already a
-lot of characters, so in practice the script option must be shorter than 300
-characters in total. When it exceeds the threshold, rest of the kernel command
-line option will be ignored, therefore it will likely fail.Typically the script
+Linux 7 (or CentOS 7) has limitation of 2048 characters and there are already a
+lot of characters, so in practice the script option must be shorter than this in total. 
+When it exceeds the threshold, the rest of the kernel command
+line option will be ignored, therefore it will likely fail. Typically the script
 can be used to download a larger script using `curl` command from a remote
 HTTP(s) server.
 
@@ -1063,12 +1063,7 @@ Since the image is based on CentOS 7, all kernel options are valid and should
 work normally, including `modprobe.blacklist` to blacklist a driver in init
 RAM disk.
 
-## 6.1.4 Maximum length of command line
-
-CentOS 7 distribution ships with COMMAND_LINE_SIZE option set to 2048.
-Therefore kernel command line must not be longer than that.
-
-## 6.1.5 Initial restart problem
+## 6.1.4 Initial restart problem
 
 In typical Foreman workflow, hosts are set to always boot from the network via
 PXE. Unknown hosts boot into Discovery while known hosts boot into installer
@@ -1116,4 +1111,3 @@ Extra facts which are sent along additional facts reported in PXE-less mode:
 
 Follow the [same process as Foreman]({{site.baseurl}}contribute.html#SubmitPatches)
 for contributing.
-

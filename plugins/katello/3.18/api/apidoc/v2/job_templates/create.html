@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../../apidoc/v2/job_templates.html'>
+      Job templates
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>create</li>
+  
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      POST /api/job_templates
+      <br>
+      <small>Create a job template</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>job_template </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_template[name] </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Template name</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_template[description] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_template[job_category] </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Job category</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_template[description_format] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>This template is used to generate the description. Input values can be used using the syntax %{package}. You may also include the job category and template name using %{job_category} and %{template_name}.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_template[template] </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_template[provider_type] </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Provider type</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>SSH</code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_template[snippet] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_template[audit_comment] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_template[locked] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Whether or not the template is locked for editing</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_template[effective_user_attributes] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Effective user options</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>job_template[effective_user_attributes][value] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>What user should be used to run the script (using sudo-like mechanisms)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>job_template[effective_user_attributes][overridable] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Whether it should be allowed to override the effective user from the invocation form.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>job_template[effective_user_attributes][current_user] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Whether the current user login should be used as the effective user</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_template[location_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>REPLACE locations with given ids</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>job_template[organization_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>REPLACE organizations with given ids.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

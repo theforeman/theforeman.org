@@ -12,7 +12,7 @@ tags:
 - networking
 modified_time: '2014-12-02T01:21:02.958+02:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-8503174913725380951
-blogger_orig_url: http://blog.theforeman.org/2014/12/foreman-community-newsletter-november.html
+blogger_orig_url: /2014/12/foreman-community-newsletter-november.html
 ---
 
 <!--more-->

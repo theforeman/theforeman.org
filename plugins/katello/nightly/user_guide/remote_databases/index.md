@@ -24,6 +24,14 @@ There are two ways to deploy Foreman with remote databases:
     * restore the DBs on remote servers
     * run foreman-installer with right parameters pointing to the databases. It re-configures the databases and start all the services with new DB locations
 
+### Important notes:
+
+* Pulpcore installs a separate PostgreSQL database.
+
+* Katello 3.16 added dependencies provided by the `rh-postgresql12-postgresql-evr` package. This should be installed on any external PostgreSQL v12 database before applying any db migrations.
+
+Note that PostgreSQL v10+ is required and users are encouraged to upgrade to PostgreSQL v12.
+
 In either scenario, both of the databases don't have to be remote. You can opt to use only a remote mongo database or only a remote postgresql database. Both postgresql and mongo databases can be on the same host, but this isn't recommended due to the amount of resources mongo can use.
 
 ## Prepare remote Postgres
@@ -248,6 +256,21 @@ Mongo database related:
 --katello-pulp-db-username    The user name to use for authenticating to the MongoDB server
 --katello-pulp-db-verify-ssl  Specifies whether a certificate is required from the other side of the connection, and
 --katello-pulp-db-write-concern  Write concern of 'majority' or 'all'. When 'all' is specified, 'w' is set to number of
+```
+
+Pulpcore database related:
+```
+--foreman-proxy-content-pulpcore-manage-postgresql  Manage the Pulpcore PostgreSQL database.
+--foreman-proxy-content-pulpcore-postgresql-db-name  Name of the Pulpcore database in PostgreSQL.
+--foreman-proxy-content-pulpcore-postgresql-host  Host of the Pulpcore PostgreSQL database. Must be specified if external/unmanaged.
+--foreman-proxy-content-pulpcore-postgresql-password  Password of the Pulpcore PostgreSQL database.
+--foreman-proxy-content-pulpcore-postgresql-port  Port of the Pulpcore PostgreSQL database.
+--foreman-proxy-content-pulpcore-postgresql-ssl  Enable SSL connection to the Pulpcore PostgreSQL database. Only meaningful for external/unmanaged DB.
+--foreman-proxy-content-pulpcore-postgresql-ssl-cert  Path to SSL certificate to use for Pulpcore connection to PostgreSQL database.
+--foreman-proxy-content-pulpcore-postgresql-ssl-key  Path to key file to use for Pulpcore connection to PostgreSQL database.
+--foreman-proxy-content-pulpcore-postgresql-ssl-require  Configure Pulpcore to require an encrypted connection to the PostgreSQL database.
+--foreman-proxy-content-pulpcore-postgresql-ssl-root-ca  Path to the root certificate authority to validate the certificate supplied by the PostgreSQL database server.
+--foreman-proxy-content-pulpcore-postgresql-user  User of the Pulpcore PostgreSQL database.
 ```
 
 The actual option names may vary between versions. Check the actual naming with foreman-installer --full-help.

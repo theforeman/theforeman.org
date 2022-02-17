@@ -234,158 +234,6 @@ Copy the output to a Discourse post in the [release section](https://community.t
 
 From here on out the Release Owner and Release Packager should work to close out each of the respective item lists.
 
-
-## How to Release puppet modules
-
-The release of puppet modules is now part of the foreman-installer release process after the merge of the codebases. This is preserved for now given that this lays out the detailed steps on how to release modules. Building the changelog is a somewhat delicate task. We use [github_changelog_generator](https://github.com/skywinder/github-changelog-generator) which is based on Github pull requests and issues but not everythis has a pull request. Especially cherry picks are sometimes forgotten.
-
-Start with updating the changelog. You will need to [set up a Github token](https://github.com/skywinder/github-changelog-generator#github-token) to avoid rate limits.
-
-```
-CHANGELOG_GITHUB_TOKEN="$my_token" bundle exec rake changelog
-```
-
-Now go through the `git diff` and the actual content. Check if pull requests need a `Bug`, `Breaking` or `Enhancements` label. You can also determine based on these labels if a minor or major version bump is needed.
-
-Also compare it with the actual git log:
-
-```
-tig $(git describe --abbrev=0 --tags)..HEAD
-```
-
-If it needs a major or minor version bump you can use the appropriate rake task. In edge cases it may be needed to do a patch level bump.
-
-```
-bundle exec rake module:bump:major
-bundle exec rake module:bump:minor
-bundle exec rake module:bump:patch
-```
-
-If you've made changes, may need to regenerate the changelog now. When you're satisfied you can create a commit:
-
-```
-git checkout -b release-$(bundle exec rake module:version)
-git add CHANGELOG.md metadata.json
-git commit -m "Release $(bundle exec rake module:version)"
-```
-
-Now create a pull request. The following assumes you have a remote named `$USER` and [hub](https://github.com/github/hub).
-
-```
-git push $USER HEAD -u
-hub pull-request -m "Release $(bundle exec rake module:version)"
-```
-
-When merging a PR note that the date is in the changelog which you may need to update. Now you can tag the module:
-
-```
-bundle exec rake module:tag
-```
-
-When you're satisfied you can push the changes to git and release the module to the forge:
-
-```
-git push --follow-tags
-```
-
-After pushing, it's time to release.
-
-```
-# Push the release to the forge
-# This assumes you have set the credentials previously
-bundle exec rake module:clean module:push
-
-# Automated using pass - https://www.passwordstore.org/
-# Assumes you have a katello/forge or theforeman/forge password configured
-BLACKSMITH_FORGE_USERNAME="$(jq -r .author metadata.json | tr [A-Z] [a-z])" && BLACKSMITH_FORGE_USERNAME=$BLACKSMITH_FORGE_USERNAME BLACKSMITH_FORGE_PASSWORD=$(pass show $BLACKSMITH_FORGE_USERNAME/forge | head -n 1) bundle exec rake module:clean module:push
-```
-
-Afterwards it's time to start the new release cycle by bumping the patch version.
-
-```
-# Start the next minor version
-bundle exec rake module:bump_commit:patch
-
-# And push the new version
-git push
-```
-
-## How to Sign RPMs
-
-##### Download Unsigned RPMs
-
-Now sign the RPMs (or ask someone who can to do this part for you), mash and release. Those you can ask are lzap, mmccune, jsherrill, bkearney.
-
-The first step when signing is to download all of the unsigned RPMs from tags that you will be releasing. We are using the .src.rpm to decide if the build as whole is signed or not. For example, if the key was D5A88496:
-
-```
-cd some empty directory
-VERSION=2.3
-for j in rhel5 rhel6 rhel7 fedora20 fedora21 ; do
-  for i in "katello-$VERSION-$j" "katello-$VERSION-thirdparty-candlepin-$j" "katello-$VERSION-thirdparty-pulp-$j" ; do
-    koji -c ~/.koji/katello-config list-tagged --latest --quiet --inherit --sigs $i ; done \
-    | sed 's!^!:!' \
-    | perl -ane '$F[1] =~ s!\.src$!! or next; $R{$F[1]} = 1; $S{$F[1]} = 1 if $F[0] eq ":D5A88496";
-      END { print map "$_\n", grep { not exists $S{$_} } sort keys %R }' \
-    | while read i ; do koji -c ~/.koji/katello-config download-build --debuginfo $i ;
-  done;
-done;
-```
-
-##### Sign the RPMs
-
-Get (decrypt) Katello key and gpg --import it. Of course, you need to be a person who knows how to decrypt the key. Decrypt the passphrase as well. The key that we've used starting with Katello 1.0 is D5A88496. Before doing the first sign, import katello key. In our git repo with keys do this:
-
-```
-cd gpg-keys/katello-private
-decrypt.sh
-gpg --import katello.private.asc
-cat katello-passphrase.txt
-```
-
-This passphrase will be used for signing the packages. Into ~/.rpmmacros put:
-
-```
-%signature gpg
-%_gpg_name Katello
-%__gpg_sign_cmd %{__gpg} \
-    gpg --force-v3-sigs --digest-algo=sha1 --batch --no-verbose --no-armor \
-    --no-secmem-warning -u "%{_gpg_name}" \
-    -sbo %{__signature_filename} %{__plaintext_filename}
-```
-
-Now run:
-
-```
-rpmsign --addsign *.rpm
-```
-
-##### Import Signatures back to Koji
-
-This step will import only signatures, not packages.
-
-```
-koji -c ~/.koji/katello-config import-sig *.rpm
-```
-
-As list-signed does not seem to work, do a random check in http://koji.katello.org/packages/ that http://koji.katello.org/packages/<name>/<version>/<release>/data/sigcache/d5a88496/ exists and has some content in it.
-
-
-##### Create Back Signed RPMs in Koji
-
-```
-# in that directory where you've signed the rpms
-ls *.src.rpm | sed 's!\.src\.rpm$!!' | xargs koji -c ~/.koji/katello-config write-signed-rpm bc62d13f
-```
-
-Do a random check at http://koji.katello.org/packages/<name>/<version>/<release>/data/signed/d5a88496/ to see if the rpms are there. This step will import whole package.
-
-Finally, the signed packages can be mashed and a final test of the signed RPMs performed to ensure nothng was missed. When doing a .Y release this is especially important. The X.Y branch may need some backported documentation changes. After backporting, you will need to do the following:
-
- * Update latest in \_config.yml to X.Y
- * GA release announcement
- * Update the /project/katello/releases/yum/latest symlink on fedorapeople.org
-
 ## Upgrading Candlepin
 
 The following steps are guidelines for testing and submitting a new build of Candlepin to Koji with the intent of including it in a nightly build and ultimately tagging it for inclusion in a Katello release. Candlepin is a vital component of Katello. Here's how to make sure the process goes according to plan.
@@ -394,33 +242,40 @@ The following steps are guidelines for testing and submitting a new build of Can
 
  - Koji access
  - The Candlepin RPM you'd like to upgrade to and the SRPM from which it was built
- - Familiarality with the changes in the new Candlepin version for focused testing
- - A Katello development environment (ex: centos7-devel from Forklift) for testing the new version
+ - Familiarity with the changes in the new Candlepin version for focused testing
+ - A Katello development environment (ex: centos7-katello-devel from Forklift) for testing the new version
 
 ### Steps
 
 1. Stop the Tomcat service in your development environment in order to stop Candlepin: `foreman-maintain service stop --only tomcat`
-2. Install the new Candlepin RPM. If there are schema changes in the build you'll need to run `/usr/share/candlepin/cpdb --update` to migrate the database.
+2. Install the new Candlepin RPMs (`sudo yum install <url1> <url2>`) (For noarch RPMs, install the candlepin-selinux RPM first, then the Candlepin RPM)
+3. If there are schema changes in the build you'll need to run `/usr/share/candlepin/cpdb --update` to migrate the database.
 At this point you can bring Tomcat back: `foreman-maintain service start --only tomcat`
 
 3. Validate the new version. A thorough test of Candlepin integration includes the following:
 
+   - Running the glue tests: `record=true mode=all ktest ~/katello/test/scenarios/scenario_test.rb` (save some time by doing other testing concurrently)
    - Importing and refreshing a manifest
    - Performing various actions around activation keys
    - Registering a content host
    - Creating a custom product and adding it to a content host
+   - Verifying all services are OK in `hammer ping` or your preferred method of calling the API
 
-   If you're aware of a particularly impactful change in the new Candlepin version be sure to test it explicitly.
-   Save some time by running the glue tests in parallel: `record=true mode=all rake test:katello:test:glue`
+   If you're aware of a particularly impactful change in the new Candlepin version, be sure to test it explicitly.
 
 4. If everything checked out - great! If not - fix those broken tests and open a PR.
 
-5. Once any issues are addressed (PRs merged) you can submit the SRPM to Koji with the nightly tag: `koji build katello-thirdparty-candlepin-rhel7 /path/to/srpm`
+5. Once any issues are addressed (PRs merged) you can submit the SRPM to Koji.
+   - For EL7: `koji build katello-thirdparty-candlepin-rhel7 /path/to/srpm`
+   - For EL8: `koji build katello-candlepin-nightly-el8 /path/to/srpm`
 
    The new Candlepin will be included in the next nightly build which will subject it to even more testing.
 
 6. If the nightly build is green the new RPM can be tagged into a specific Katello release. If you don't have sufficient Koji access, reach out to someone who
-does in #theforeman-dev and ask them to tag it accordingly. Here's an example for Katello 3.5: `koji-katello tag-pkg katello-3.5-thirdparty-candlepin-rhel7 candlepin-2.1.3-1.el7`
+does in #theforeman-dev and ask them to tag it accordingly. Some examples for Katello 3.16:
+   - For EL7: `koji tag-pkg katello-3.16-thirdparty-candlepin-rhel7 candlepin-3.1.14-1.el7`
+   - For EL8: `koji tag-pkg katello-candlepin-3.16-el8 candlepin-3.1.14-1.el8`
+
 Be sure to substitute your own version numbers for the tag name and RPM.
 
 All done!

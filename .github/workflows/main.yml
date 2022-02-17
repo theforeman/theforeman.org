@@ -1,0 +1,16 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  jekyll:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.5'
+          bundler-cache: true
+      - name: Run tests
+        run: bundle exec rake build

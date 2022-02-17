@@ -69,24 +69,4 @@ For each new release we keep stable documentation tree for the record.
 
 ## Updating API Auto-Generated Docs by apipie
 
-Generate API docs in Foreman
-
-1. cd to foreman directory and checkout the relevant stable branch
-1. disable any plugins installed locally 
-1. `APIPIE_RECORD=examples rake test`
-1. `rake apipie:cache`
-
-Prepare folder for the new version (X.Y)
-
-1. cd to theforeman.org/api directory
-1. `cp -r new_version_template X.Y`
-1. edit file X.Y/index.md and set correct version
-
-Copy docs to repo
-
-1. `cp -r dir/to/foreman/public/apipie-cache/apidoc/* Y.Y/apidoc`
-1. `find Y.Y -name *.json -delete`
-
-## Updating Foreman Ansible Modules docs
-
-1. `rake 'update_fam_docs[/path/to/foreman-ansible-modules/]'`
+Follow instructions in the [apidocs github repo](https://github.com/theforeman/apidocs#adding-new-version).

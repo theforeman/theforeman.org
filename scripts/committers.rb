@@ -3,8 +3,8 @@ require 'tmpdir'
 require 'git'
 
 @tagged_repos = %w(foreman smart-proxy foreman-installer foreman-selinux)
-@tag_from     = "1.23.0"
-@tag_to       = "1.24.0"
+@tag_from     = "2.2.0"
+@tag_to       = "2.3.0"
 
 @untagged_repos = %w(
   theforeman.org
@@ -36,10 +36,11 @@ require 'git'
   ovirt-node-plugin-foreman
   puppetdb_foreman
 )
-@date_from     = '2019-09-10'
-@date_to       = '2019-12-10'
+@date_from     = '2020-10-29'
+@date_to       = '2020-12-01'
 
 @author_map = {
+  "aabramov"       => "Adi Abramovich",
   "abenari"        => "Amos Benari",
   "adamruzicka"    => "Adam Ruzicka",
   "Alexander Fisher" => "Alex Fisher",
@@ -94,6 +95,7 @@ require 'git'
   "Ahmet DEMIR" => "Ahmet Demir",
   "arend.lapere@gmail.com" => "Arend Lapere",
   "MariaAga" => "Maria Agaphontzev",
+  "Maria" => "Maria Agaphontzev",
   "magaphon" => "Maria Agaphontzev",
   "stefanlasiewski" => "Stephan Lasiewski",
   "dima" => "Dima Berastau",
@@ -108,7 +110,20 @@ require 'git'
   "sthirugn" => "Sureshkumar Thirugnanasambandan",
   "swetha" => "Swetha Seelam Lakshmi Narayanan",
   "jkalchik" => "Jeff Kalchik",
-
+  "fschaer" => "Frederic Schaer",
+  "ksagarwal007" => "Kaushik Agarwal",
+  "neilfromit" => "Neil Townsend",
+  "William Bradford Clark" => "William Clark",
+  "calvingsmith" => "Calivn Smith",
+  "grizzthedj" => "Chris Smith",
+  "tomabg" => "Thomas Pietzka",
+  "Emil DRAGU" => "Emil Dragu",
+  "vsedmik" => "Vladimir Sedmik",
+  "hsahmed" => "Hesham S. Ahmed",
+  "Mirek Długosz (Mirosław Długosz-Zalewski)" => "Mirek Długosz",
+  "JaskaranNarula" => "Jaskaran Singh Narula",
+  "r.stricklin" => "R. Stricklin",
+  "brimioulle" => "Fabrice Brimioulle",
 }
 
 @authors={}

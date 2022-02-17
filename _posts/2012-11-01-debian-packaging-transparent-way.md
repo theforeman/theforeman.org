@@ -9,7 +9,7 @@ tags:
 - packaging
 modified_time: '2012-11-01T20:19:47.388+02:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-497357445063370416
-blogger_orig_url: http://blog.theforeman.org/2012/11/debian-packaging-transparent-way.html
+blogger_orig_url: /2012/11/debian-packaging-transparent-way.html
 ---
   
 So I've been managing the Debian packages for about 8 months now, and

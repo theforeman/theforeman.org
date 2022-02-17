@@ -1,7 +1,7 @@
 ---
 layout: plugin_index
 title: Foreman Templates documentation
-versions: [6.0, 5.0, 4.0]
+versions: [8.0, 7.0, 6.0, 5.0, 4.0]
 ---
 
 # Foreman Templates manuals

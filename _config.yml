@@ -9,7 +9,7 @@ url: https://theforeman.org
 baseurl: "" #keep at "" for the Atom feed
 
 # latest *stable* version
-foreman_version: '1.24'
+foreman_version: '3.1'
 
 paginate: 5
 paginate_path: "blog/page:num"
@@ -23,11 +23,6 @@ safe:        false
 future:      false
 highlighter: rouge
 markdown:    kramdown
-
-# this is a hack to allow Sphinx generated docs for foreman-ansible-modules
-# be included inside the Jekyll site
-include:
-- _static
 
 navigation:
   - title: Get Started
@@ -47,11 +42,13 @@ navigation:
       - title: Plugins
         url: /plugins/
       - title: API docs
-        url: /api/latest/index.html
+        url: https://apidocs.theforeman.org/foreman/latest/apidoc/v2.html
       - title: Training
         url: /training.html
       - title: Support
         url: /support.html
+      - title: Professional Services
+        url: /professional-services.html
   - title: Get involved
     sublinks:
       - title: Community
@@ -66,6 +63,8 @@ navigation:
         url: /blog/index.html
       - title: Events
         url: https://theforeman.org/events
+      - title: Community Demos
+        url: /demos/2021.html
       - title: Videos
         url: /media.html
       - title: Security
@@ -78,6 +77,15 @@ plugins:
 
 foreman_versions:
   - nightly
+  - "3.2"
+  - "3.1"
+  - "3.0"
+  - "2.5"
+  - "2.4"
+  - "2.3"
+  - "2.2"
+  - "2.1"
+  - "2.0"
   - "1.24"
   - "1.23"
   - "1.22"
@@ -108,7 +116,7 @@ defaults:
       path: "plugins/katello"
     values:
       layout: "plugins/katello/documentation"
-      latest: "3.14"
+      latest: "3.18"
   - scope:
       path: "plugins/katello/*/api"
     values:
@@ -118,6 +126,31 @@ defaults:
     values:
       version: "nightly"
       foreman_version: "nightly"
+  - scope:
+      path: "plugins/katello/4.0"
+    values:
+      version: "4.0"
+      foreman_version: "2.4"
+  - scope:
+      path: "plugins/katello/3.18"
+    values:
+      version: "3.18"
+      foreman_version: "2.3"
+  - scope:
+      path: "plugins/katello/3.17"
+    values:
+      version: "3.17"
+      foreman_version: "2.2"
+  - scope:
+      path: "plugins/katello/3.16"
+    values:
+      version: "3.16"
+      foreman_version: "2.1"
+  - scope:
+      path: "plugins/katello/3.15"
+    values:
+      version: "3.15"
+      foreman_version: "2.0"
   - scope:
       path: "plugins/katello/3.14"
     values:

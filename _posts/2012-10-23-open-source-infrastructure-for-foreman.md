@@ -9,7 +9,7 @@ tags:
 - community
 modified_time: '2012-10-23T14:56:48.306+02:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-2158819999662401007
-blogger_orig_url: http://blog.theforeman.org/2012/10/open-source-infrastructure-for-foreman.html
+blogger_orig_url: /2012/10/open-source-infrastructure-for-foreman.html
 ---
 
 ### Overview

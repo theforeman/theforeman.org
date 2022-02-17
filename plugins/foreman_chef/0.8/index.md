@@ -61,7 +61,7 @@ platforms. Since 0.1.0 you can use it also on Windows.
 
 There are two different components to install: Foreman Chef plugin and
 Foreman Proxy Chef plugin (aka Smart Proxy Chef). Since Foreman 1.8 the
-installer supports both and it's fairly easy to setup them. Supposing
+installer supports both and it's fairly easy to set them up. Supposing
 you added Foreman repositories and installed the foreman-installer package you
 can start the Foreman installation using this command
 

@@ -1,33 +1,11 @@
 versions:
-  - name: "3.14"
-    display: "3.14"
-  - name: "3.13"
-    display: "3.13"
-  - name: "3.12"
-    display: "3.12"
-  - name: "3.11"
-    display: "3.11"
-  - name: "3.10"
-    display: "3.10"
-  - name: 3.9
-    display: "3.9"
-  - name: 3.8
-    display: "3.8"
-  - name: 3.7
-    display: "3.7"
-  - name: 3.6
-    display: "3.6"
-  - name: 3.5
-    display: "3.5"
-  - name: 3.4
-    display: "3.4"
-  - name: 3.3
-    display: "3.3"
-  - name: 3.2
-    display: "3.2"
-  - name: 3.1
-    display: "3.1"
-  - name: 3.0
-    display: "3.0"
+  - name: "4.0"
+    display: "4.0"
+  - name: "3.18"
+    display: "3.18"
+  - name: "3.17"
+    display: "3.17"
+  - name: "legacy"
+    display: "older releases"
   - name: "nightly"
     display: "nightly"

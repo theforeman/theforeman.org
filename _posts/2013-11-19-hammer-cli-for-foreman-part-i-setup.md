@@ -11,7 +11,7 @@ tags:
 - cli
 modified_time: '2013-11-19T14:18:03.059+02:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-4517522316589167569
-blogger_orig_url: http://blog.theforeman.org/2013/11/hammer-cli-for-foreman-part-i-setup.html
+blogger_orig_url: /2013/11/hammer-cli-for-foreman-part-i-setup.html
 ---
 
   

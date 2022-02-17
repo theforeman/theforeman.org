@@ -10,7 +10,7 @@ script: osmenu.js
   <div class="alert alert-danger">
     These are the instructions for installing the unstable nightly release of Katello!
   </div>
-{% elsif page.version != page.latest %}
+{% elsif page.version.to_s != page.latest.to_s %}
   <div class="alert alert-danger">
     These instructions are for installing Katello {{ page.version }}, but the latest stable is <a href="/plugins/katello/{{ page.latest }}/installation/index.html">{{ page.latest }}</a>.
   </div>
@@ -29,7 +29,7 @@ Katello does not currently support installation on existing Foreman deployments.
 Katello may be installed onto a baremetal host or on a virtual guest.  The minimum requirements are:
 
 * Two Logical CPUs
-* 8 GB of memory (12 GB highly recommended)
+* 12 GB of memory (16 GB or greater may be required depending on the amount of managed content)
 * The filesystem holding /var/lib/pulp needs to be large, but may vary depending on how many different Operating Systems you wish to syncronize:
   * Allocate 30 GB of space for each operating system.  Even though an operating system may not take up this much space now, this allows space for future updates that will be syncronized later.
 * The path /var/spool/squid/ is used as a temporary location for some types of repository syncs and may grow to consume 10s of GB of space before the files are migrated to /var/lib/pulp.  You may wish to put this on the same partition as /var/lib/pulp.
@@ -43,37 +43,16 @@ The following ports need to be open to external connections:
 
 * 80 TCP - HTTP, used for provisioning purposes
 * 443 TCP - HTTPS, used for web access and api communication
+* 5646 TCP - qdrouterd - used for Qpid Dispatch Router on a Smart Proxy to communicate with Qpid Dispatch Router on Foreman server
 * 5647 TCP - qdrouterd - used for client and Smart Proxy actions
 * 9090 TCP - HTTPS - used for communication with the Smart Proxy
 
 ## Production
 
-Katello provides a puppet based installer for deploying production installations. Production installations are supported on the following OSes:
+Katello provides a Puppet based installer for deploying production installations. Production installations are supported on the following operating systems:
 
-<div class="row">
-  <div class="col-sm-3">
-    <table class="table table-bordered table-condensed">
-      <thead>
-        <tr>
-          <th>OS</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>CentOS 7</td>
-          <td>X</td>
-        </tr>
-        <tr>
-          <td>RHEL 7</td>
-          <td>X</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-Katello can only run on an x86_64 operating systems.
+* CentOS 7 (x86_64)
+* Red Hat Enterprise Linux 7 (x86_64)
 
 Installation may be done manually or via our recommended approach of using [forklift](/plugins/katello/{{ page.version }}/installation/index.html#forklift).
 
@@ -91,6 +70,7 @@ subscription-manager repos --disable "*"
 subscription-manager repos --enable rhel-7-server-rpms
 subscription-manager repos --enable rhel-7-server-optional-rpms
 subscription-manager repos --enable rhel-7-server-extras-rpms
+subscription-manager repos --enable rhel-server-rhscl-7-rpms
 yum install -y yum-utils
 {% endhighlight %}
 </div>
@@ -100,8 +80,7 @@ yum install -y yum-utils
 yum -y localinstall https://yum.theforeman.org/releases/{{ page.foreman_version }}/el7/x86_64/foreman-release.rpm
 yum -y localinstall https://fedorapeople.org/groups/katello/releases/yum/{{ page.version }}/katello/el7/x86_64/katello-repos-latest.rpm
 yum -y localinstall https://yum.puppet.com/puppet6-release-el-7.noarch.rpm
-yum -y localinstall https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-yum -y install foreman-release-scl
+yum -y install epel-release centos-release-scl-rh
 {% endhighlight %}
 </div>
 
@@ -225,6 +204,7 @@ It is difficult to find the exact tuning profile for a specific environment in t
 - The information in the table below is just a guidance.  It is strongly recommended that you monitor the foreman environment regularly and tune up as required.
 - The RAM and CPU Cores check is also integrated into the foreman-installer now. Use `disable-system-checks` if you like to skip this check in the installer.
 
+{:class="table table-bordered table-condensed"}
 | Tuned profile     |    Number of Managed hosts  |  Minimum Recommended RAM | Minimum Recommended CPU Cores |
 |:------------------|:---------------------------:|:------------------------:|------------------------------:|
 | default           |          up-to 5000         |            20G           |                4              |
@@ -232,6 +212,7 @@ It is difficult to find the exact tuning profile for a specific environment in t
 | large             |       10000 - 20000         |            64G           |               16              |
 | extra-large       |       20000 - 60000         |           128G           |               32              |
 | extra-extra-large |       20000 - 60000         |           256G           |               48              |
+
 ## Forklift
 
 Foreman provides a git repository designed to streamline setup by setting up all the proper repositories. Forklift provides the ability to deploy a virtual machine instance via Vagrant or direct deployment on an already provisioned machine. For details on how to install using forklift, please see the [README](https://github.com/theforeman/forklift/blob/master/README.md).

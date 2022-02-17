@@ -20,7 +20,7 @@ tags:
 - use cases
 modified_time: '2015-02-23T14:02:07.075+02:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-5796790676124730022
-blogger_orig_url: http://blog.theforeman.org/2015/02/foreman-community-survey-results.html
+blogger_orig_url: /2015/02/foreman-community-survey-results.html
 ---
 
 February has been an intense month for the Foreman team. We gave a few
@@ -60,7 +60,7 @@ was released. We support the two latest minor versions (1.7 and 1.6 in
 this case) so 86% of the installations are officially supported. If you
 are using 1.5 or older versions, please take into account your
 installation security might be compromised and upgrade. Tell us on
-\#theforeman or \#theforeman-dev (IRC channels on Freenode) if there is
+\#theforeman or \#theforeman-dev (IRC channels on libera.chat) if there is
 any particular bug or feature in new releases that holds you back.
 
 ![Nodes managed](/static/images/blog_images/2015-02-23-foreman-community-survey-results/nodes-managed.png)

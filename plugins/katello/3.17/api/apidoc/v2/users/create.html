@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../../apidoc/v2/users.html'>
+      Users
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>create</li>
+  
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      POST /api/users
+      <br>
+      <small>Create a user</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+<p>Adds role &#39;Default role&#39; to the user by default</p>
+
+
+
+
+
+  <h2>Params</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>user </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>user[login] </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>user[firstname] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>user[lastname] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>user[mail] </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>user[description] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>user[disabled] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
+<code>0</code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>user[admin] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>is an admin account</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>,
+<code>0</code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>user[password] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Required unless user is in an external authentication source</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>user[default_location_id] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>user[default_organization_id] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>user[auth_source_id] </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>user[timezone] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>User&#39;s timezone</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>International Date Line West</code>, <code>American
+Samoa</code>, <code>Midway Island</code>, <code>Hawaii</code>,
+<code>Alaska</code>, <code>Pacific Time (US &amp;amp; Canada)</code>,
+<code>Tijuana</code>, <code>Arizona</code>, <code>Chihuahua</code>,
+<code>Mazatlan</code>, <code>Mountain Time (US &amp;amp; Canada)</code>,
+<code>Central America</code>, <code>Central Time (US &amp;amp;
+Canada)</code>, <code>Guadalajara</code>, <code>Mexico City</code>,
+<code>Monterrey</code>, <code>Saskatchewan</code>, <code>Bogota</code>,
+<code>Eastern Time (US &amp;amp; Canada)</code>, <code>Indiana
+(East)</code>, <code>Lima</code>, <code>Quito</code>, <code>Atlantic Time
+(Canada)</code>, <code>Caracas</code>, <code>Georgetown</code>, <code>La
+Paz</code>, <code>Puerto Rico</code>, <code>Santiago</code>,
+<code>Newfoundland</code>, <code>Brasilia</code>, <code>Buenos
+Aires</code>, <code>Greenland</code>, <code>Montevideo</code>,
+<code>Mid-Atlantic</code>, <code>Azores</code>, <code>Cape Verde
+Is.</code>, <code>Casablanca</code>, <code>Dublin</code>,
+<code>Edinburgh</code>, <code>Lisbon</code>, <code>London</code>,
+<code>Monrovia</code>, <code>UTC</code>, <code>Amsterdam</code>,
+<code>Belgrade</code>, <code>Berlin</code>, <code>Bern</code>,
+<code>Bratislava</code>, <code>Brussels</code>, <code>Budapest</code>,
+<code>Copenhagen</code>, <code>Ljubljana</code>, <code>Madrid</code>,
+<code>Paris</code>, <code>Prague</code>, <code>Rome</code>,
+<code>Sarajevo</code>, <code>Skopje</code>, <code>Stockholm</code>,
+<code>Vienna</code>, <code>Warsaw</code>, <code>West Central Africa</code>,
+<code>Zagreb</code>, <code>Zurich</code>, <code>Athens</code>,
+<code>Bucharest</code>, <code>Cairo</code>, <code>Harare</code>,
+<code>Helsinki</code>, <code>Jerusalem</code>, <code>Kaliningrad</code>,
+<code>Kyiv</code>, <code>Pretoria</code>, <code>Riga</code>,
+<code>Sofia</code>, <code>Tallinn</code>, <code>Vilnius</code>,
+<code>Baghdad</code>, <code>Istanbul</code>, <code>Kuwait</code>,
+<code>Minsk</code>, <code>Moscow</code>, <code>Nairobi</code>,
+<code>Riyadh</code>, <code>St. Petersburg</code>, <code>Volgograd</code>,
+<code>Tehran</code>, <code>Abu Dhabi</code>, <code>Baku</code>,
+<code>Muscat</code>, <code>Samara</code>, <code>Tbilisi</code>,
+<code>Yerevan</code>, <code>Kabul</code>, <code>Ekaterinburg</code>,
+<code>Islamabad</code>, <code>Karachi</code>, <code>Tashkent</code>,
+<code>Chennai</code>, <code>Kolkata</code>, <code>Mumbai</code>, <code>New
+Delhi</code>, <code>Sri Jayawardenepura</code>, <code>Kathmandu</code>,
+<code>Almaty</code>, <code>Astana</code>, <code>Dhaka</code>,
+<code>Urumqi</code>, <code>Rangoon</code>, <code>Bangkok</code>,
+<code>Hanoi</code>, <code>Jakarta</code>, <code>Krasnoyarsk</code>,
+<code>Novosibirsk</code>, <code>Beijing</code>, <code>Chongqing</code>,
+<code>Hong Kong</code>, <code>Irkutsk</code>, <code>Kuala Lumpur</code>,
+<code>Perth</code>, <code>Singapore</code>, <code>Taipei</code>,
+<code>Ulaanbaatar</code>, <code>Osaka</code>, <code>Sapporo</code>,
+<code>Seoul</code>, <code>Tokyo</code>, <code>Yakutsk</code>,
+<code>Adelaide</code>, <code>Darwin</code>, <code>Brisbane</code>,
+<code>Canberra</code>, <code>Guam</code>, <code>Hobart</code>,
+<code>Melbourne</code>, <code>Port Moresby</code>, <code>Sydney</code>,
+<code>Vladivostok</code>, <code>Magadan</code>, <code>New Caledonia</code>,
+<code>Solomon Is.</code>, <code>Srednekolymsk</code>,
+<code>Auckland</code>, <code>Fiji</code>, <code>Kamchatka</code>,
+<code>Marshall Is.</code>, <code>Wellington</code>, <code>Chatham
+Is.</code>, <code>Nuku&amp;#39;alofa</code>, <code>Samoa</code>,
+<code>Tokelau Is.</code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>user[locale] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>User&#39;s preferred locale</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>ca</code>, <code>cs_CZ</code>, <code>de</code>,
+<code>en</code>, <code>en_GB</code>, <code>es</code>, <code>fr</code>,
+<code>gl</code>, <code>it</code>, <code>ja</code>, <code>ko</code>,
+<code>nl_NL</code>, <code>pl</code>, <code>pt_BR</code>, <code>ru</code>,
+<code>sv_SE</code>, <code>zh_CN</code>, <code>zh_TW</code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>user[role_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>user[location_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>REPLACE locations with given ids</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>user[organization_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>REPLACE organizations with given ids.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

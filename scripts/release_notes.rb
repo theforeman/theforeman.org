@@ -12,7 +12,7 @@ URL = 'https://projects.theforeman.org'
 
 unless ARGV.size == 2
   puts "Usage: #{$0} PROJECTS RELEASE_NAME"
-  puts "Example: #{$0} foreman,puppet-foreman,selinux,smart-proxy 1.18.0"
+  puts "Example: #{$0} foreman 1.18.0"
   exit 1
 end
 
@@ -66,19 +66,19 @@ puts "\n----------[Start of notes]----------\n\n"
 
 puts "### Release notes for #{@current_release_name}"
 
-grouped_issues = gather_issues.group_by { |issue| issue['category']['name'] rescue issue['project']['name'] }
+grouped_issues = gather_issues.group_by { |issue| "#{issue['project']['name']}#{ ' - ' + issue['category']['name'] if issue.key?('category') }" }
 
 grouped_issues['Smart Proxy'] ||= []
 grouped_issues['SELinux'] ||= []
-grouped_issues['Smart Proxy'] += grouped_issues.delete('Core') if grouped_issues.key?('Core')
-grouped_issues['SELinux'] += grouped_issues.delete('General Foreman') if grouped_issues.key?('General Foreman')
+grouped_issues['Smart Proxy'] += grouped_issues.delete('Smart Proxy - Core') if grouped_issues.key?('Smart Proxy - Core')
+grouped_issues['SELinux'] += grouped_issues.delete('SELinux - General Foreman') if grouped_issues.key?('SELinux - General Foreman')
 grouped_issues = Hash[ grouped_issues.sort_by { |key, val| key } ]
 grouped_issues.each do |category, issues|
   next if issues.empty?
   puts "#### #{category}"
 
   issues.each do |issue|
-    puts "* #{issue['subject'].gsub('`','\\\`').gsub('<','&lt;').gsub('>','&gt;')} ([##{issue['id']}](#{URL}/issues/#{issue['id']}))"
+    puts "* #{issue['subject'].gsub('`','\\\`').gsub('<','&lt;').gsub('>','&gt;').gsub('*','\\\*')} ([##{issue['id']}](#{URL}/issues/#{issue['id']}))"
   end
 
   puts

@@ -7,7 +7,7 @@ tags:
 - foreman
 modified_time: '2012-02-01T15:53:30.015+02:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-4847405917653550482
-blogger_orig_url: http://blog.theforeman.org/2012/01/advance-search-tips-in-foreman.html
+blogger_orig_url: /2012/01/advance-search-tips-in-foreman.html
 ---
 
 Foreman uses the wonderful [scoped\_search gem written by Willem van
@@ -18,7 +18,7 @@ worth knowing about some of the extra features.
 Foreman Search functionality can be used both in the web interface, and
 via the API, in a follow up blog I'll describe how to use the API and
 search via puppet directly as an alternative to storeconfigs -
-UPDATED: [here](http://blog.theforeman.org/2012/01/getting-foreman-search-results-into.html)
+UPDATED: [here](/2012/01/getting-foreman-search-results-into.html)
 
 **This blog entry has been updated and incorporated into our regular documentation.
 Please read on from the Foreman manual's [search chapter]({{site.baseurl}}/manuals/latest/index.html#4.1.5Searching).**

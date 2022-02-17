@@ -115,7 +115,7 @@ on Foreman.
 
 **Content management (plugin)**
 
-* **Yum and Puppet Repositories**: Create, organize, and manage local yum and puppet repositories. Sync remote repositories or upload content directly to build a library of content that serves as the basis for building custom builds of your content.
+* **Yum, deb, and Puppet Repositories**: Create, organize, and manage local yum, deb, and puppet repositories. Sync remote repositories or upload content directly to build a library of content that serves as the basis for building custom builds of your content.
 * **Content snapshots**: Take your local content and filter out packages, errata and puppet modules to create custom builds into units called Content Views. Make your custom builds available to your hosts by moving it through environment paths that mimic traditional development workflows (Dev → QE → Stage → Production).
 * **Package and Errata Updates**: Use your locally managed content to install package and errata updates to a host or group of hosts.
 * **Host collections**: A mechanism to statically group multiple Content Hosts. This enables administrators to group Content Hosts based on the needs of their organization. For example, Content Hosts could be grouped by function, department or business unit.

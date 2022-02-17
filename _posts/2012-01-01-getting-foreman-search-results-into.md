@@ -8,7 +8,7 @@ tags:
 - foreman
 modified_time: '2014-06-17T16:44:46.618+03:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-8664636421397627110
-blogger_orig_url: http://blog.theforeman.org/2012/01/getting-foreman-search-results-into.html
+blogger_orig_url: /2012/01/getting-foreman-search-results-into.html
 ---
 
 Lets say you want to know all of the hosts your monitoring host need to
@@ -17,7 +17,7 @@ access to, traditionally, the solution to this problem was using Puppet
 storeconfigs.
 
 In this [blog
-post](http://blog.theforeman.org/2012/01/advance-search-tips-in-foreman.html),
+post](/2012/01/advance-search-tips-in-foreman.html),
 I mentioned how you could utilize foreman search language to get
 customized results.
 

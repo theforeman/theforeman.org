@@ -14,21 +14,13 @@ Install the appropriate Katello client release packages.
 <p>
   Select your Operating System:
   <select id="operatingSystems">
-     <option value="el5">Enterprise Linux 5 (CentOS, etc.)</option>
      <option value="el6">Enterprise Linux 6 (CentOS, etc.)</option>
      <option value="el7" selected="selected">Enterprise Linux 7 (CentOS, etc.)</option>
-     <option value="f29">Fedora 29</option>
+     <option value="el8">Enterprise Linux 8 (CentOS, etc.)</option>
      <option value="sles11">Suse Enterprise Linux Server 11</option>
      <option value="sles12">Suse Enterprise Linux Server 12</option>
   </select>
 </p>
-
-<div id="el5" markdown="1">
-{% highlight bash %}
-yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-5.noarch.rpm
-yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/el5/x86_64/foreman-client-release.rpm
-{% endhighlight %}
-</div>
 
 <div id="el6" markdown="1">
 {% highlight bash %}
@@ -44,9 +36,9 @@ yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/el7/
 {% endhighlight %}
 </div>
 
-<div id="f29" markdown="1">
+<div id="el8" markdown="1">
 {% highlight bash %}
-yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/fc29/x86_64/foreman-client-release.rpm
+yum install -y https://yum.theforeman.org/client/{{ page.foreman_version }}/el8/x86_64/foreman-client-release.rpm
 {% endhighlight %}
 </div>
 
@@ -68,11 +60,16 @@ Now you are ready to install the client package:
 
 The `katello-host-tools` package reports errata & package profile information, but does not allow you to run remote actions on the clients.
 
-<div class="el5 el6 el7 f29">
+<div class="el6 el7 el8">
 {% highlight bash %}
 yum install katello-host-tools
 {% endhighlight %}
+</div>
 
+<div class="el6 el7">
+<div class="alert alert-danger">
+Katello-agent is deprecated and will be removed in a future release.
+</div>
 We generally recommend using Foreman Remote Execution or Ansible for remote actions, but we also offer a messaging bus based client that does have some limitations when used with a large number of clients.
 
 {% highlight bash %}
@@ -80,7 +77,7 @@ yum install katello-agent
 {% endhighlight %}
 </div>
 
-<div class="el7 f29">
+<div class="el7 el8">
 Optionally you can also install `katello-host-tools-tracer` and the client will report processes that need restarting after an update back to the Katello server.
 
 {% highlight bash %}
@@ -97,6 +94,10 @@ zypper install katello-host-tools
 </div>
 
 ## Provisioned
+
+<div class="alert alert-danger">
+Katello-agent is deprecated and will be removed in a future release.
+</div>
 
 In order to install the katello-agent package on a host you are provisioning, you will need to make the appropriate client repository available within your Katello. The first step is to either create a new product or add to an existing product, the appropriate client repository from the dropdown in the [manual](/plugins/katello/{{ page.version }}/installation/clients.html#manual) section above. After you create the new repositories, they will need to be synced locally. Next, you will then need to add them to the relevant content view(s) for the hosts you are wanting to provision. At this point, a new version of the content view can be published and promoted to the appropriate environments that you are wanting to provision a host into. At this point, you can go provision a host and the host will install the katello-agent package during setup.
 

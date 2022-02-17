@@ -7,7 +7,7 @@ tags:
 - newsletter
 modified_time: '2015-04-30T16:56:07.252+03:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-909076368941673869
-blogger_orig_url: http://blog.theforeman.org/2015/04/foreman-community-newsletter-april-2015.html
+blogger_orig_url: /2015/04/foreman-community-newsletter-april-2015.html
 excerpt: |
   Foreman 1.8.0 and 1.7.5, Hammer 0.2.0, Katello 2.2, plugin updates, new media updates..
   Catch up on the latest news in the Foreman world.

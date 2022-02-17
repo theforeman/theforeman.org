@@ -24,7 +24,7 @@ contributors to the project and ask them about their experience working with it.
 
 I like to speak about my work and have done so in various conferences like 
 [TheDevTheory Conf](https://thedevtheory.com/#rahulbajaj), [DevConf.in](https://devconfin2018.sched.com/speaker/rahul_bajaj.1y7e64ly), 
-[Freenode #live](https://freenode.live/), etc. As excinting it is to speak at a conference, 
+[libera.chat #live](https://libera.chat.live/), etc. As excinting it is to speak at a conference, 
 I take immense pleasure in volunteering too and have been a part of conferences 
 like Pycon India, DevConf.in, rails girls, fedora meetups, Pycon India, Ruby Conf, 
 etc. If you are interested in reading any of my experiences then here’s my [blog](https://rahulbajaj05.wordpress.com). 

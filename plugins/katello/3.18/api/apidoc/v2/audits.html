@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc/v2.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Audits
+    
+  </li>
+  
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Audits
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/audits/index.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/audits
+          </a>
+          <br>
+          <small>List all audits</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/hosts/:host_id/audits
+          </a>
+          <br>
+          <small>List all audits for a given host</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>filter results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Sort field and order, eg. ‘id DESC’</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Page number, starting at 1</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Number of results per page to return, ‘all’ to return all results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must match regular expression <code>/\A([1-9]\d<em>|all)\Z$/</em></code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+    <h3>Search fields</h3>
+  <table class='table'>
+  <thead>
+    <tr>
+      <th width="20%">Field name</th>
+      <th width="20%">Type</th>
+      <th width="60%">Possible values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>action</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>auditable_id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>changes</td>
+      <td>text</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>comment</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>host</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>hostgroup</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>hostgroup_title</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>interface_fqdn</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>interface_ip</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>interface_mac</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>location_id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>organization</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>organization_id</td>
+      <td>integer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>os</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>os_title</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>parameter</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>partition_table</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>provisioning_template</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>puppetclass</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>remote_address</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>request_uuid</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>setting</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>time</td>
+      <td>datetime</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>type</td>
+      <td></td>
+      <td>role, ptable, provisioning_template, user, filter, katello/repository, hostgroup, smart_proxy, katello/host/content_facet, katello/hostgroup/content_facet, katello/host/subscription_facet, usergroup, katello/content_view, katello/kt_environment, environment, http_proxy, lookup_value, model, domain, realm, architecture, image, subnet, katello/host_collection, hostgroup_class, puppetclass, medium, auth_source, compute_resource, host, interface, location, organization, os, override_value, parameter, partition_table, setting, smart_class_parameter</td>
+    </tr>
+    <tr>
+      <td>user</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>username</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../../apidoc/v2/audits/show.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/audits/:id
+          </a>
+          <br>
+          <small>Show an audit</small>
+        </h2>
+    </div>
+
+
+    <div id='description-show' class='collapse accordion-body'>
+      
+
+
+
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current location context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Set the current organization context for the request</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

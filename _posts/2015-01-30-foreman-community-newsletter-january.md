@@ -7,7 +7,7 @@ tags:
 - newsletter
 modified_time: '2015-01-30T14:38:53.060+02:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-4344260925100932853
-blogger_orig_url: http://blog.theforeman.org/2015/01/foreman-community-newsletter-january.html
+blogger_orig_url: /2015/01/foreman-community-newsletter-january.html
 excerpt: |
   Foreman 1.7.2, Katello 2.1, plugin updates, new media updates..
   Catch up on the latest news in the Foreman world.

@@ -1,7 +1,7 @@
 ---
 layout: plugin_index
 title: Foreman Virt Who Configure documentation
-versions: [0.1]
+versions: [0.5]
 ---
 
 # Foreman Virt Who Configure manuals

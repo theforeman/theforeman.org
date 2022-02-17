@@ -2,7 +2,7 @@
 layout: manual
 title: Foreman Nightly Manual
 version: "nightly"
-previous_version: "1.24"
+previous_version: "3.0"
 ---
 
 # 1. {{ page.title }}
@@ -62,10 +62,8 @@ previous_version: "1.24"
 {%include manuals/{{ page.version }}/3.5.5_facts_and_the_enc.md %}
 ### 3.5.6 CLI
 {%include manuals/{{ page.version }}/3.5.6_cli.md %}
-## 3.6 Upgrade
+## 3.6 Upgrade to {{ page.version }}
 {%include manuals/{{ page.version }}/3.6_upgrade.md %}
-## 3.7 Migrating to PostgreSQL
-{%include manuals/{{ page.version }}/3.7_migration.md %}
 
 # 4. General Foreman
 {%include manuals/{{ page.version }}/4_general_foreman.md %}
@@ -92,12 +90,10 @@ previous_version: "1.24"
 {%include manuals/{{ page.version }}/4.2.2_puppet_classes.md %}
 ### 4.2.3 Parameters
 {%include manuals/{{ page.version }}/4.2.3_puppet_params.md %}
-### 4.2.4 Smart Variables
-{%include manuals/{{ page.version }}/4.2.4_smart_vars.md %}
-### 4.2.5 Parameterized Classes
-{%include manuals/{{ page.version }}/4.2.5_param_classes.md %}
-### 4.2.6 Smart Matchers
-{%include manuals/{{ page.version }}/4.2.6_matchers.md %}
+### 4.2.4 Parameterized Classes
+{%include manuals/{{ page.version }}/4.2.4_param_classes.md %}
+### 4.2.5 Smart Matchers
+{%include manuals/{{ page.version }}/4.2.5_matchers.md %}
 
 ## 4.3 Smart Proxies
 {%include manuals/{{ page.version }}/4.3_smartproxy.md %}
@@ -246,6 +242,8 @@ previous_version: "1.24"
 {%include manuals/{{ page.version }}/5.1.10_apipie-bindings.md %}
 ### 5.1.11 Using Graphql
 {%include manuals/{{ page.version }}/5.1.11_graphql.md %}
+### 5.1.12 Dynflow scaling
+{%include manuals/{{ page.version }}/5.1.12_dynflow_scaling.md %}
 
 ## 5.2 Compute Resources
 {%include manuals/{{ page.version }}/5.2_compute_resources.md %}
@@ -263,12 +261,10 @@ previous_version: "1.24"
 {%include manuals/{{ page.version }}/5.2.6_cr_openstack.md %}
 ### 5.2.7 oVirt / RHEV Notes
 {%include manuals/{{ page.version }}/5.2.7_cr_ovirt.md %}
-### 5.2.8 Rackspace Notes
-{%include manuals/{{ page.version }}/5.2.8_cr_rackspace.md %}
-### 5.2.9 VMware Notes
-{%include manuals/{{ page.version }}/5.2.9_cr_vmware.md %}
-### 5.2.10 Password Encryption
-{%include manuals/{{ page.version }}/5.2.10_cr_encryption_key.md %}
+### 5.2.8 VMware Notes
+{%include manuals/{{ page.version }}/5.2.8_cr_vmware.md %}
+### 5.2.9 Password Encryption
+{%include manuals/{{ page.version }}/5.2.9_cr_encryption_key.md %}
 
 ## 5.3 Install Locations
 {%include manuals/{{ page.version }}/missing.html %}
@@ -276,8 +272,8 @@ previous_version: "1.24"
 
 ## 5.4 Securing Communications with SSL
 {%include manuals/{{ page.version }}/5.4_communications.md %}
-### 5.4.1 Securing Puppet Master Requests
-{%include manuals/{{ page.version }}/5.4.1_comms_puppetmaster.md %}
+### 5.4.1 Securing Puppet Server Requests
+{%include manuals/{{ page.version }}/5.4.1_comms_puppetserver.md %}
 ### 5.4.2 Securing Smart Proxy Requests
 {%include manuals/{{ page.version }}/5.4.2_comms_proxy.md %}
 ## 5.5 Backup, Recovery and Migration

@@ -13,7 +13,7 @@ tags:
 - newsletter
 modified_time: '2014-03-28T17:47:05.743+03:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-8093115082349561572
-blogger_orig_url: http://blog.theforeman.org/2014/03/foreman-community-newsletter-march-2014.html
+blogger_orig_url: /2014/03/foreman-community-newsletter-march-2014.html
 ---
 
 Welcome to the March 2014 community newsletter.  Feedback always

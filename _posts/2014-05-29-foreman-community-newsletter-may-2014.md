@@ -10,7 +10,7 @@ tags:
 - opennebula
 modified_time: '2014-05-29T11:23:08.662+03:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-1467880936542123519
-blogger_orig_url: http://blog.theforeman.org/2014/05/foreman-community-newsletter-may-2014.html
+blogger_orig_url: /2014/05/foreman-community-newsletter-may-2014.html
 ---
 
 <!--more-->

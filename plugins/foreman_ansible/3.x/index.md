@@ -122,7 +122,7 @@ You will be presented with a list of possible changes. You can remove the Ansibl
 
 ![ansible variables import](static/images/plugins/foreman_ansible/ansible_variables_import.png)
 
-Variables are imported into Foreman as Lookup Values, hence you may use them exactly like you use Puppet Smart Class Parameters or Smart Variables. Smart Matchers are available for use too. Find more information about how to override Ansible variables in [this section of the manual](plugins/foreman_ansible/2.x/index.html#4.5OverridingAnsibleVariables).
+Variables are imported into Foreman as Lookup Values, hence you may use them exactly like you use Puppet Smart Class Parameters or Smart Variables. Smart Matchers are available for use too. Find more information about how to override Ansible variables in [this section of the manual](plugins/foreman_ansible/3.x/index.html#4.5OverridingAnsibleVariablesinPlaybooks).
 
 ![ansible variables details](static/images/plugins/foreman_ansible/ansible_variables_details.png)
 
@@ -181,7 +181,7 @@ For more information about scheduled jobs, check out the [Foreman Remote Executi
 template: src=foo.cfg.j2 dest={% raw %}{{ remote_install_path }}{% endraw %}/foo.cfg
 ```
 
-uses the `remote_install_path` variable. You can use Foreman to override these variables. The variables will only be overridden if you run your roles from Foreman, as Foreman sends an inventory with a dictionary contianing variable names and values when it runs Ansible roles.
+uses the `remote_install_path` variable. You can use Foreman to override these variables. The variables will only be overridden if you run your roles from Foreman, as Foreman sends an inventory with a dictionary containing variable names and values when it runs Ansible roles.
 
 There are several ways to override an Ansible variable:
 

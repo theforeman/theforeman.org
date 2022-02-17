@@ -17,7 +17,7 @@ tags:
 - newsletter
 modified_time: '2015-10-06T13:43:53.260+03:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-1715269517448905299
-blogger_orig_url: http://blog.theforeman.org/2015/09/foreman-community-newsletter-september.html
+blogger_orig_url: /2015/09/foreman-community-newsletter-september.html
 excerpt: |
   Foreman 1.9 released, another update to the 1.8 series, Katello 2.3, and the 
   usual round up of plugins and other news.

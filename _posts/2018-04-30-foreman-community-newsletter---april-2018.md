@@ -53,7 +53,7 @@ Thanks!
 Time again for the latest round-up of action from the community, covering core,
 proxies, plugins, and more.  As always, you're welcome to participate in the
 show, either via YouTube Live chat, or via our IRC channel
-(Freenode/#theforeman).
+(libera.chat/#theforeman).
 
 * UX review - Breadcrumb Bar - 2nd May (https://www.youtube.com/watch?v=L6vrs1rtjAo)
 Breadcrumbs display a users location within an application hierarchy.

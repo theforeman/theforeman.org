@@ -15,6 +15,11 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](https://cve.mitre.org/).
 
+* [CVE-2021-20259: Proxmox compute resource password leak](#2021-20259)
+* [CVE-2021-3413: Azure compute resource secret_key leak](#2021-3413)
+* [CVE-2020-14335: World readable dhcp OMAPI secret](security.html#2020-14335)
+* [CVE-2020-14380: Users can gain elevated rights when logging in with SSO accounts](security.html#2020-14380)
+* [CVE-2020-14334: World readable cache directory on RPM installs](security.html#2020-14334)
 * [CVE-2019-14825: Registry credentials are captured in plain text in dynflow task during repository discovery](security.html#2019-14825)
 * [CVE-2019-10198: Information disclosure in foreman tasks plugin](security.html#2019-10198)
 * [CVE-2019-3845: Lack of access control around Qpid message broker](security.html#2019-3845)
@@ -79,6 +84,61 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2021-20259"></a>CVE-2021-20259: Proxmox compute resource password leak
+
+Proxmox compute resource credentials (`password`) were visible to any user with `view_compute_resource` permission in the API under `/api/compute_resources/` and `/api/compute_resources/:id/`.
+
+* Affects Foreman Fog Proxmox 0.11.0 and higher
+* Fix released in Foreman Fog Proxmox 0.13.1 and higher
+
+#### <a id="2021-3413"></a>CVE-2021-3413: Azure compute resource secret_key leak
+
+Azure compute resource credentials (`secret_key`) were visible to any user with `view_compute_resource` permission in the API under `/api/compute_resources/` and `/api/compute_resources/:id/`.
+
+* Affects Foreman Azure RM 2.0.1 and higher
+* Fix released in Foreman Azure RM 2.2.0 and higher
+* Redmine issue [#31938](https://projects.theforeman.org/issues/31938)
+
+#### <a id="2020-14335"></a>CVE-2020-14335: World readable dhcp OMAPI secret could expose dhcp API access
+
+OMAPI key used to secure dhcp API access could have been read by anyone with access to the hosting system.
+
+*Mitigation:* override `/etc/dhcp/dhcpd.conf` file mode to `0640` and ensure access to the file for user `foreman-proxy` by other means.
+
+On Red Hat based systems, acls are used by default, so you need to only set less permissive mode and you should be set.
+On Debian based systems, you need to install acls and set read access to the `/etc/dhcp` directory by acls.
+To set correct acls install `acl` package and use `setfacl -R -m u:foreman-proxy:rx /etc/dhcp`.
+
+In case the system may have been accessed locally by an un-trusted user, it may be prudent to change the OMAPI secret for dhcp.
+
+* Affects foreman-proxy installations with dhcp feature protected by `dhcp_key_secret` since Foreman 1.0
+* Fix released in Foreman 2.2.0 and 2.1.3 and higher
+* Redmine issue [#30489](https://projects.theforeman.org/issues/30489)
+
+#### <a id="2020-14380"></a>CVE-2020-14380: Users can gain elevated rights when logging via external authentication
+
+Users that are authenticated using `external` authentication methods such as Kerberos, OpenID Connect or Apache SSO can gain the rights of an `internal` user. This is possible only when the username of an internal and external user is the same.
+
+- Affects external user authentication since Foreman 1.4
+- Fix released in Foreman 2.2.0, 2.1.3 and 2.0.3 and higher
+- Redmine issue [#30739](https://projects.theforeman.org/issues/30739)
+
+#### <a id="2020-14334"></a>CVE-2020-14334: World readable cache could expose sensitive settings
+Even encrypted settings have their raw values cached. Too permissive mode on cache dir caused, that anyone with access to the hosting system could read this encrypted settings.
+
+*Mitigation:* override `/run/foreman` directory mode to `0750`.
+To do so in a manner that survives reboot, update the file `/usr/lib/tmpfiles.d/foreman.conf`.
+```
+d /run/foreman 0750 foreman foreman -
+```
+For the change to have effect immediatelly run `systemd-tmpfiles --create`.
+
+In case the system may have been accessed locally by an un-trusted user, it may be prudent to change any secrets stored in the settings, such as OAuth keys or remote execution passwords.
+
+* Affects RPM installations using file cache since Foreman 1.3
+* Fix released in Foreman 2.2.0, 2.1.1 and 2.0.2 and higher
+* Redmine issue [#30490](https://projects.theforeman.org/issues/30490)
 
 #### <a id="2019-14825"></a>CVE-2019-14825: Registry credentials are captured in plain text in dynflow task during repository discover
 A cleartext password storage issue was discovered in Katello. Registry credentials used during container image discovery were inadvertently logged without being masked. This could expose the registry credentials to other privileged users.
@@ -914,6 +974,98 @@ Key management is changing at the time of writing to cycle nightly keys every tw
         <td style='white-space:nowrap'></td>
         <td></td>
       </tr>
+      <tr>
+        <td><a href="{{ site.baseurl }}/static/keys/06ABEFE26C1997E0C9E56508926EA0100579BAEE.pub">06ABEFE26C1997E0C9E56508926EA0100579BAEE</a></td>
+        <td>06AB EFE2 6C19 97E0 C9E5  6508 926E A010 0579 BAEE</td>
+        <td>Foreman Release Signing Key (2.0)</td>
+        <td style='white-space:nowrap'>2020-02-11</td>
+        <td style='white-space:nowrap'>2021-02-10</td>
+        <td style='white-space:nowrap'></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="{{ site.baseurl }}/static/keys/0F71D9EAC889A0F2C2CD8190628005A4B6F08CCF.pub">0F71D9EAC889A0F2C2CD8190628005A4B6F08CCF</a></td>
+        <td>0F71 D9EA C889 A0F2 C2CD  8190 6280 05A4 B6F0 8CCF</td>
+        <td>Foreman Release Signing Key (2.1)</td>
+        <td style='white-space:nowrap'>2020-05-12</td>
+        <td style='white-space:nowrap'>2021-05-12</td>
+        <td style='white-space:nowrap'></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="{{ site.baseurl }}/static/keys/939E2FD66DF9A4104869FD182A63B068C7C509FA.pub">939E2FD66DF9A4104869FD182A63B068C7C509FA</a></td>
+        <td>939E 2FD6 6DF9 A410 4869  FD18 2A63 B068 C7C5 09FA</td>
+        <td>Foreman Release Signing Key (2.2)</td>
+        <td style='white-space:nowrap'>2020-08-03</td>
+        <td style='white-space:nowrap'>2021-08-03</td>
+        <td style='white-space:nowrap'></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="{{ site.baseurl }}/static/keys/1CC363863DD64AF30638DB79C101586BE0745924.pub">1CC363863DD64AF30638DB79C101586BE0745924</a></td>
+        <td>1CC3 6386 3DD6 4AF3 0638  DB79 C101 586B E074 5924</td>
+        <td>Foreman Automatic Signing Key (2.3)</td>
+        <td style='white-space:nowrap'>2020-11-02</td>
+        <td style='white-space:nowrap'>2021-11-02</td>
+        <td style='white-space:nowrap'></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="{{ site.baseurl }}/static/keys/643253F71B82B1BEAF2E1D4FA439BD55AC2AD9F1.pub">643253F71B82B1BEAF2E1D4FA439BD55AC2AD9F1</a></td>
+        <td>6432 53F7 1B82 B1BE AF2E  1D4F A439 BD55 AC2A D9F1</td>
+        <td>Foreman Automatic Signing Key (2.4)</td>
+        <td style='white-space:nowrap'>2021-02-01</td>
+        <td style='white-space:nowrap'>2022-02-01</td>
+        <td style='white-space:nowrap'></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="{{ site.baseurl }}/static/keys/7EF7E6EA4022F241BB89A149955C283E7522CC3F.pub">7EF7E6EA4022F241BB89A149955C283E7522CC3F</a></td>
+        <td>7EF7 E6EA 4022 F241 BB89  A149 955C 283E 7522 CC3F</td>
+        <td>Foreman Automatic Signing Key (2.5)</td>
+        <td style='white-space:nowrap'>2021-04-26</td>
+        <td style='white-space:nowrap'>2022-04-26</td>
+        <td style='white-space:nowrap'></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="{{ site.baseurl }}/static/keys/C8B9E30B0DBCAB595E98DF5C965467189B776908.pub">C8B9E30B0DBCAB595E98DF5C965467189B776908</a></td>
+        <td>C8B9 E30B 0DBC AB59 5E98  DF5C 9654 6718 9B77 6908</td>
+        <td>Foreman Automatic Signing Key (3.0)</td>
+        <td style='white-space:nowrap'>2021-08-02</td>
+        <td style='white-space:nowrap'>2022-08-02</td>
+        <td style='white-space:nowrap'></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="{{ site.baseurl }}/static/keys/5B7C3E5A735BCB4D615829DC0BDDA991FD7AAC8A.pub">5B7C3E5A735BCB4D615829DC0BDDA991FD7AAC8A</a></td>
+        <td>5B7C 3E5A 735B CB4D 6158  29DC 0BDD A991 FD7A AC8A</td>
+        <td>Foreman Automatic Signing Key (2021)</td>
+        <td style='white-space:nowrap'>2021-07-23</td>
+        <td style='white-space:nowrap'>2023-07-23</td>
+        <td style='white-space:nowrap'></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="{{ site.baseurl }}/static/keys/1CD4BC6A65EB598E53C66E176A3BF4ED1434F5D3.pub">1CD4BC6A65EB598E53C66E176A3BF4ED1434F5D3</a></td>
+        <td>1CD4 BC6A 65EB 598E 53C6  6E17 6A3B F4ED 1434 F5D3</td>
+        <td>Foreman Automatic Signing Key (3.1)</td>
+        <td style='white-space:nowrap'>2021-11-09</td>
+        <td style='white-space:nowrap'>2022-11-09</td>
+        <td style='white-space:nowrap'></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="{{ site.baseurl }}/static/keys/77F7076DFD4F373EF0F0E9AC8D746ED06DA7EB32.pub">77F7076DFD4F373EF0F0E9AC8D746ED06DA7EB32</a></td>
+        <td>77F7 076D FD4F 373E F0F0  E9AC 8D74 6ED0 6DA7 EB32</td>
+        <td>Foreman Automatic Signing Key (3.2)</td>
+        <td style='white-space:nowrap'>2022-02-07</td>
+        <td style='white-space:nowrap'>2023-02-07</td>
+        <td style='white-space:nowrap'></td>
+        <td></td>
+      </tr>
+
     </tbody>
   </table>
 </div>

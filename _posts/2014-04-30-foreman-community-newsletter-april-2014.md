@@ -11,7 +11,7 @@ tags:
 - newsletter
 modified_time: '2014-06-15T08:47:28.942+03:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-8814707785129550858
-blogger_orig_url: http://blog.theforeman.org/2014/05/foreman-community-newsletter-april-2014.html
+blogger_orig_url: /2014/05/foreman-community-newsletter-april-2014.html
 ---
 
 <!--more-->

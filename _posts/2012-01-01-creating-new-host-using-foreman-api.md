@@ -9,7 +9,7 @@ tags:
 - API
 modified_time: '2014-04-09T15:36:02.160+03:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-6387106321044045589
-blogger_orig_url: http://blog.theforeman.org/2012/01/creating-new-host-using-foreman-api.html
+blogger_orig_url: /2012/01/creating-new-host-using-foreman-api.html
 ---
 
 Using [foreman API](http://theforeman.org/projects/foreman/wiki/API) is

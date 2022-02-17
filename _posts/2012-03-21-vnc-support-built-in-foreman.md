@@ -9,7 +9,7 @@ tags:
 - oVirt
 modified_time: '2012-03-21T16:06:13.304+02:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-8565444256951587230
-blogger_orig_url: http://blog.theforeman.org/2012/03/vnc-support-built-in-foreman.html
+blogger_orig_url: /2012/03/vnc-support-built-in-foreman.html
 ---
 
 Now that oVirt integration is done, it was important to have a way to

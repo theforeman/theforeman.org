@@ -10,7 +10,7 @@ tags:
 modified_time: '2012-07-19T09:35:56.902+03:00'
 thumbnail: https://img.youtube.com/vi/2uerwTQscdE/default.jpg
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-5887235979167259717
-blogger_orig_url: http://blog.theforeman.org/2012/07/foreman-10-demo-talk.html
+blogger_orig_url: /2012/07/foreman-10-demo-talk.html
 ---
 
 Last week I had the pleasure of presenting Foreman 1.0 at redhat offices

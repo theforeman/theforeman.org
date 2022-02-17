@@ -2,6 +2,7 @@
 layout: quickstart
 title: Foreman Quickstart Guide
 version: "1.5"
+robots: noindex, follow
 ---
 
 # Quickstart Guide
@@ -26,7 +27,6 @@ Or view the quickstart screencasts:
 
 * [Manual installation and further reading](/manuals/1.5/index.html)
 * [More installation options and scenarios](/manuals/1.5/index.html#3.2.2InstallerOptions)
-* [Managing a datacenter with Foreman and Puppet](http://engineering.yakaz.com/managing-an-infrastructure-datacenter-with-foreman-and-puppet.html)
-* [EC2 provisioning using Foreman](http://blog.theforeman.org/2012/05/ec2-provisioning-using-foreman.html)
-* [Creating a new host using the Foreman API](http://blog.theforeman.org/2012/01/creating-new-host-using-foreman-api.html)
-* [Re-provisioning without PXE](http://blog.theforeman.org/2012/01/re-provision-host-without-pxeboot.html)
+* [EC2 provisioning using Foreman](/2012/05/ec2-provisioning-using-foreman.html)
+* [Creating a new host using the Foreman API](/2012/01/creating-new-host-using-foreman-api.html)
+* [Re-provisioning without PXE](/2012/01/re-provision-host-without-pxeboot.html)

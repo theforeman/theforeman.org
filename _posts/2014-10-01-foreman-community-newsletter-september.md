@@ -15,7 +15,7 @@ tags:
 - API
 modified_time: '2014-10-01T13:13:10.376+03:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-4950955162759776515
-blogger_orig_url: http://blog.theforeman.org/2014/10/foreman-community-newsletter-september.html
+blogger_orig_url: /2014/10/foreman-community-newsletter-september.html
 ---
 
 <!--more-->
@@ -76,7 +76,7 @@ Foreman will be again taking an intern for the December-March cycle of
 the FOSS outreach program (formerly OPW). You can find more information
 about the program [here.](https://gnome.org/opw/) Here are [the proposed
 projects](http://theforeman.org/gnomeopw.html), you are welcome in
-\#theforeman in Freenode to ask questions.  
+\#theforeman in libera.chat to ask questions.  
 
 ### Featured media 
 

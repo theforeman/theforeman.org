@@ -10,7 +10,7 @@ tags:
 - newsletter
 modified_time: '2013-12-24T15:29:09.239+02:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-3684389818963932366
-blogger_orig_url: http://blog.theforeman.org/2013/12/foreman-community-newsletter-december.html
+blogger_orig_url: /2013/12/foreman-community-newsletter-december.html
 ---
 
 Welcome to the last community newsletter of the year, for December

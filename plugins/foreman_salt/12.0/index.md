@@ -228,7 +228,7 @@ Salt feature.
 
 # 3. Upgrade
 
-Ensure you have the latest stable foreman-release package, and follow the [Foreman upgrade instructions]((/manuals/latest/index.html#3.6Upgrade), including backing up your database.
+Ensure you have the latest stable foreman-release package, and follow the [Foreman upgrade instructions](/manuals/latest/index.html#3.6Upgrade), including backing up your database.
 
 To support state and environment importing, configure salt-api as per the [Salt documentation](https://docs.saltstack.com/en/latest/ref/netapi/all/salt.netapi.rest_cherrypy.html), and ensure the service is started on boot.  See the [Smart Proxy installation section]({{ page.url }}#2.1.3SaltAPIConfiguration) for an example of how to configure the API.
 
@@ -406,7 +406,7 @@ hammer salt-minion update --name minion.example.com --salt-states foo.bar
 
 ## 5.1 Troubleshooting
 
-If you find a bug, please file it in [Redmine](http://projects.theforeman.org/projects/salt/issues/new).  You can find us on freenode on #theforeman as well.
+If you find a bug, please file it in [Redmine](http://projects.theforeman.org/projects/salt/issues/new).  You can find us on libera.chat on #theforeman as well.
 
 See the [troubleshooting section](/manuals/latest/index.html#7.3GettingHelp) in the Foreman manual for more info.
 

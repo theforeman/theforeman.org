@@ -10,7 +10,7 @@ tags:
 - newsletter
 modified_time: '2013-10-22T11:53:05.041+03:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-873929383129529196
-blogger_orig_url: http://blog.theforeman.org/2013/10/foreman-community-newsletter-october.html
+blogger_orig_url: /2013/10/foreman-community-newsletter-october.html
 ---
 
 Welcome to the October 2013 issue of the Foreman newsletter.  

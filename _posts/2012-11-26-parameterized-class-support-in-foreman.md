@@ -8,7 +8,7 @@ tags:
 - foreman
 modified_time: '2012-11-26T14:34:25.836+02:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-8485465307878080476
-blogger_orig_url: http://blog.theforeman.org/2012/11/parameterized-class-support-in-foreman.html
+blogger_orig_url: /2012/11/parameterized-class-support-in-foreman.html
 ---
 
 We've got Parameterized Class support in Foreman now, and it'll be in

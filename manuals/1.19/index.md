@@ -3,6 +3,7 @@ layout: manual
 title: Foreman 1.19 Manual
 version: "1.19"
 previous_version: "1.18"
+robots: noindex, follow
 ---
 
 # 1. {{ page.title }}

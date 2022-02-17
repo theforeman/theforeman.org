@@ -9,7 +9,7 @@ tags:
 - virtualizaition
 modified_time: '2012-01-30T23:05:33.395+02:00'
 blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-7489330083065027477
-blogger_orig_url: http://blog.theforeman.org/2012/01/ovirt-installation-part-1.html
+blogger_orig_url: /2012/01/ovirt-installation-part-1.html
 ---
 
 In this post, we'll see how to install [oVirt](http://ovirt.org/). for
