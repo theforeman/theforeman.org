@@ -7,7 +7,6 @@ Components include the Foreman web UI, Smart Proxy, a Puppet server, and optiona
 * CentOS 7 x86_64
 * CentOS 8 x86_64
 * CentOS 8 Stream x86_64
-* Debian 10 (Buster), amd64
 * Debian 11 (Bullseye), amd64
 * Red Hat Enterprise Linux 7, x86_64
 * Red Hat Enterprise Linux 8, x86_64
