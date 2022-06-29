@@ -42,10 +42,8 @@ previous_version: "3.0"
 {%include manuals/{{ page.version }}/3.3_install_from_packages.md %}
 ### 3.3.1 RPM Packages
 {%include manuals/{{ page.version }}/3.3.1_rpm_packages.md %}
-### 3.3.2 Software Collections
-{%include manuals/{{ page.version }}/3.3.2_software_collections.md %}
-### 3.3.3 Debian Packages
-{%include manuals/{{ page.version }}/3.3.3_debian_packages.md %}
+### 3.3.2 Debian Packages
+{%include manuals/{{ page.version }}/3.3.2_debian_packages.md %}
 ## 3.4 Install From Source
 {%include manuals/{{ page.version }}/3.4_install_from_source.md %}
 ## 3.5 Configuration
