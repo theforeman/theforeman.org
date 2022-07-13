@@ -37,8 +37,8 @@ navigation:
         url: /sponsors.html
   - title: Get Help
     sublinks:
-      - title: Manual
-        url: /manuals/latest/index.html
+      - title: Documentation
+        url: https://docs.theforeman.org/
       - title: Plugins
         url: /plugins/
       - title: API docs
