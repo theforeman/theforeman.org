@@ -9,7 +9,7 @@ url: https://theforeman.org
 baseurl: "" #keep at "" for the Atom feed
 
 # latest *stable* version
-foreman_version: '3.3'
+foreman_version: '3.4'
 
 paginate: 5
 paginate_path: "blog/page:num"
