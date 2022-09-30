@@ -4,7 +4,6 @@ The Foreman installer is a collection of Puppet modules that installs everything
 Components include the Foreman web UI, Smart Proxy, a Puppet server, and optionally TFTP, DNS and DHCP servers. It is configurable and the Puppet modules can be read or run in "no-op" mode to see what changes it will make.
 
 #### Supported platforms
-* CentOS 7 x86_64
 * CentOS 8 x86_64
 * CentOS 8 Stream x86_64
 * Debian 11 (Bullseye), amd64
