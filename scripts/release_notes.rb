@@ -11,16 +11,16 @@ require 'json'
 URL = 'https://projects.theforeman.org'
 
 unless ARGV.size == 2
-  puts "Usage: #{$0} PROJECTS RELEASE_NAME"
+  puts "Usage: #{$0} PROJECT RELEASE_NAME"
   puts "Example: #{$0} foreman 1.18.0"
   exit 1
 end
 
-@project_names = ARGV[0].split(',')
+@project_name = ARGV[0]
 @current_release_name = ARGV[1]
 
 def url_to_json(url)
-  uri = URI(URI.escape(url))
+  uri = URI(url)
   response = Net::HTTP.get(uri)
   JSON.parse(response)
 end
@@ -33,24 +33,28 @@ def get_version_id(project)
   result = result['versions'].detect{|v| v['name'] == @current_release_name }
   return nil if result.nil?
   result['id']
-rescue
-  puts "Error getting version list from #{url}"
+rescue StandardError => e
+  puts "Error getting version list from #{url}: #{e}"
   exit 1
 end
 
-@current_release_ids = @project_names.map{|project| get_version_id(project)}.compact
+@current_release_id = get_version_id(@project_name)
 
-if @current_release_ids.empty?
-  puts "Release #{@current_release_name} not found in any of the projects #{@project_names}"
+if @current_release_id.nil?
+  puts "Release #{@current_release_name} not found in any of the projects #{@project_name}"
   exit 1
-end
-
-def releases_filter
-  @current_release_ids.uniq.map{|release| "v[cf_12][]=#{release}"}.join('&')
 end
 
 def gather_issues(offset = 0)
-  url = "#{URL}/issues.json?status_id=closed&offset=#{offset}&limit=100&f[]=cf_12&op[cf_12]==&#{releases_filter}"
+  params = {
+    'status_id' => 'closed',
+    'offset' => offset,
+    'limit' => 100,
+    'f[]' => 'cf_12',
+    'op[cf_12]' => '=',
+    'v[cf_12][]' => @current_release_id,
+  }
+  url = "#{URL}/issues.json?#{URI.encode_www_form(params)}"
   result = url_to_json(url)
   if result['total_count'].to_i - offset - 100 <= 0
     result['issues']
@@ -84,13 +88,10 @@ grouped_issues.each do |category, issues|
   puts
 end
 
-puts "*A full list of changes in #{@current_release_name} is available via [Redmine](https://projects.theforeman.org/issues?set_filter=1&sort=id%3Adesc&status_id=closed&f[]=cf_12&op[cf_12]=%3D&#{releases_filter})*"
+puts "*A full list of changes in #{@current_release_name} is available via [Redmine](https://projects.theforeman.org/issues?set_filter=1&sort=id%3Adesc&status_id=closed&f[]=cf_12&op[cf_12]=%3D&v[cf_12]=#{@current_release_id})*"
 
 puts "\n----------[End of notes]----------\n"
 
 # Close the releases
-puts "If this isn't an RC release, the relevant releases should be closed (not possible via API):"
-@current_release_ids.each do |release|
-  puts "Close the release #{URL}/versions/#{release}/edit"
-end
-
+puts "If this isn't an RC release, the relevant releases should be closed:"
+puts "Close the release #{URL}/versions/#{@current_release_id}/edit"
