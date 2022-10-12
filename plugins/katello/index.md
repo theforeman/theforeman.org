@@ -11,6 +11,12 @@ title: Katello Documentation
     </h1>
 
     <br/>
+	<b style="font-size: 26px">
+	  Katello's documentation for versions 4.0+ has moved to <a href="https://docs.theforeman.org">docs.theforeman.org</a>.
+	</b>
+
+	<br/>
+	<br/>
     <p>
       Katello brings the full power of content management alongside the provisioning and configuration capabilities of <a href="http://theforeman.org">Foreman.</a>
     </p>
