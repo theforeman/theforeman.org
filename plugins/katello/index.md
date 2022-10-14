@@ -23,12 +23,11 @@ title: Katello Documentation
 
     <br/>
     <h4>
-      <i class="fa fa-refresh" style="margin-right: 8px;"></i>Local Yum, Deb, and Puppet Repositories
+      <i class="fa fa-refresh" style="margin-right: 8px;"></i>Local Software Repositories
     </h4>
     <p style="font-size: 14px">
-      Create, organize, and manage local yum, deb, and puppet repositories.
+      Create, organize, and manage local software repositories of rpm and deb packages, container images, miscellaneous files, and more.
       Sync remote repositories or upload content directly to build a library of content that serves as the basis for building custom builds of your content.
-      <a href="/plugins/katello/nightly/user_guide/content/index.html">Learn More</a>
     </p>
 
     <br/>
@@ -37,9 +36,8 @@ title: Katello Documentation
       Snapshot Content and Configuration for Reproducible Builds
     </h4>
     <p style="font-size: 14px">
-      Take your local content and filter out packages, errata and puppet modules to create custom builds into units called Content Views.
+      Take your local content and filter out packages, errata, and more to create custom builds into units called Content Views.
       Make your custom builds available to your hosts by moving it through environment paths that mimic traditional development workflows (Dev &#x2192; QE &#x2192; Stage &#x2192; Production).
-      <a href="/plugins/katello/nightly/user_guide/content_views/index.html">Learn More</a>
     </p>
 
     <br/>
@@ -49,7 +47,6 @@ title: Katello Documentation
     </h4>
     <p style="font-size: 14px">
       Use your locally managed content to install package and errata updates to a host or group of hosts.
-      <a href="/plugins/katello/nightly/user_guide/content_hosts/index.html">Learn More</a>
     </p>
 
     <br/>
@@ -58,7 +55,7 @@ title: Katello Documentation
       Troubleshooting
     </h4>
     <p style="font-size: 14px">
-      Having issues with your Katello? Check the <a href="/support.html">support page</a> for information on how to get help or the <a href="/plugins/katello/{{ site.data.plugins.katello.versions[0].name }}/troubleshooting/index.html">troubleshooting guide</a> for common issues.
+      Having issues with your Katello? Check the <a href="/support.html">support page</a> for information on how to get help.
     </p>
 
     <br/>
