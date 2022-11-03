@@ -36,12 +36,6 @@ Foreman plugins are implemented as [Rails engines](http://guides.rubyonrails.org
 		</a>
 	</div>
 	<div class='col-xs-3 center'>
-		<a href="plugins/foreman_chef" class="btn-doc btn">
-			<p class='h2 doc-icon'><i class="fa fa-cutlery"></i></p>
-			Chef
-		</a>
-	</div>
-	<div class='col-xs-3 center'>
 		<a href="https://github.com/GregSutcliffe/foreman_column_view" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-bar-chart"></i></p>
 			Column view
