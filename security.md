@@ -1083,6 +1083,15 @@ Key management is changing at the time of writing to cycle nightly keys every tw
         <td style='white-space:nowrap'></td>
         <td></td>
       </tr>
+      <tr>
+        <td><a href="{{ site.baseurl }}/static/keys/51B9D1D1BADA3F001C8774046F7F9C618F5CA95B.pub">51B9D1D1BADA3F001C8774046F7F9C618F5CA95B</a></td>
+        <td>51B9 D1D1 BADA 3F00 1C87  7404 6F7F 9C61 8F5C A95B</td>
+        <td>Foreman Automatic Signing Key (3.5)</td>
+        <td style='white-space:nowrap'>2022-11-07</td>
+        <td style='white-space:nowrap'>2023-11-07</td>
+        <td style='white-space:nowrap'></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
 </div>
