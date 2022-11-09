@@ -22,21 +22,14 @@ require 'git'
   kafo_parsers
   hammer-cli
   hammer-cli-foreman
-  community-templates
-  chef-handler-foreman
   foreman_ansible
-  foreman-bats
   foreman_bootdisk
-  foreman_chef
   foreman_discovery
-  foreman-docker
   foreman_hooks
   foreman_openscap
   foreman_setup
-  foreman_snapshot
   foreman-tasks
   foreman_templates
-  ovirt-node-plugin-foreman
   puppetdb_foreman
 )
 
