@@ -9,14 +9,24 @@ require 'git'
 
 @tagged_repos = %w(foreman smart-proxy foreman-installer foreman-selinux)
 
+# Sources: https://github.com/theforeman/foreman-installer-modulesync/blob/master/managed_modules.yml
 @untagged_repos = %w(
   theforeman.org
-  puppet-foreman
-  puppet-foreman_proxy
-  puppet-puppet
+  puppet-candlepin
+  puppet-certs
   puppet-dhcp
   puppet-dns
+  puppet-foreman
+  puppet-foreman_proxy
+  puppet-foreman_proxy_content
   puppet-git
+  puppet-katello
+  puppet-katello_devel
+  puppet-motd
+  puppet-pulpcore
+  puppet-puppet
+  puppet-puppetserver_foreman
+  puppet-qpid
   puppet-tftp
   kafo
   kafo_parsers
