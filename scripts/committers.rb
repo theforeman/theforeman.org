@@ -2,9 +2,12 @@
 require 'tmpdir'
 require 'git'
 
+@tag_from  = "3.4.0"
+@tag_to    = "3.5.0-rc1"
+@date_from = nil # derived from the tag
+@date_to   = nil # derived from the tag
+
 @tagged_repos = %w(foreman smart-proxy foreman-installer foreman-selinux)
-@tag_from     = "3.4.0"
-@tag_to       = "3.5.0-rc1"
 
 @untagged_repos = %w(
   theforeman.org
@@ -36,8 +39,6 @@ require 'git'
   ovirt-node-plugin-foreman
   puppetdb_foreman
 )
-@date_from     = '2020-10-29'
-@date_to       = '2020-12-01'
 
 @author_map = {
   "aabramov"       => "Adi Abramovich",
@@ -141,6 +142,10 @@ def get_repo_committers repo, tagged = false
   g.chdir do
     if tagged
       raw = `git log #{@tag_from}..#{@tag_to} --pretty="%aN" --abbrev-commit`.split("\n")
+
+      # Determine from and to date
+      @date_from = `git tag -l --format='%(creatordate:short)' #{@tag_from}`.chomp unless @date_from
+      @date_to = `git tag -l --format='%(creatordate:short)' #{@tag_to}`.chomp unless @date_to
     else
       raw = `git log --since=#{@date_from} --until=#{@date_to} --pretty="%aN" --abbrev-commit`.split("\n")
     end
