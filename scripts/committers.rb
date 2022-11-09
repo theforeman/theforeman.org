@@ -151,9 +151,9 @@ def get_repo_committers repo, tagged = false
     end
   end
   raw.each do |author|
-    author = @author_map.keys.include?(author) ? @author_map[author] : author
-    @authors[author] = {} unless @authors.keys.include?(author)
-    @authors[author].keys.include?(repo) ? @authors[author][repo] +=1 : @authors[author][repo] = 1
+    author = @author_map.fetch(author, author)
+    @authors[author] ||= Hash.new(0)
+    @authors[author][repo] += 1
   end
 end
 
@@ -191,4 +191,4 @@ else
     puts @authors.keys.sort.join(", ")
   end
 end
-$stderr.puts "Total committers: #{@authors.keys.size}"
+$stderr.puts "Total committers: #{@authors.size}"
