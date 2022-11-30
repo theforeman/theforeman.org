@@ -9,5 +9,6 @@ The demos are organized on [our Discourse](https://community.theforeman.org). Th
 
 ## By year
 
+* [2022](/demos/2022.html)
 * [2021](/demos/2021.html)
 * [2015 - 2018](/demos/historic.html)
