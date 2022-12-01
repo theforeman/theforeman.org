@@ -15,6 +15,8 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](https://cve.mitre.org/).
 
+* [CVE-2021-3584: Remote code execution through Sendmail configuration](#2021-3584)
+* [CVE-2021-20256: BMC controller credential leak via API](#2021-20256)
 * [CVE-2021-20259: Proxmox compute resource password leak](#2021-20259)
 * [CVE-2021-3413: Azure compute resource secret_key leak](#2021-3413)
 * [CVE-2020-14335: World readable dhcp OMAPI secret](security.html#2020-14335)
@@ -84,6 +86,23 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2021-3584"></a>CVE-2021-3584: Remote code execution through Sendmail configuration
+
+Sendmail location and arguments, available via Administer - Settings, both accept arbitrary strings and pass them into shell.
+By default, only Foreman super administrator can access settings.
+
+* Affects Foreman 1.15.0 and higher
+* Fix released in Foreman 2.4.1, 2.5.1 and 3.0.0
+* Redmine issue [#32753](https://projects.theforeman.org/issues/32753)
+
+#### <a id="2021-20256"></a>CVE-2021-20256: BMC controller credential leak via API
+
+A password leak was identified on Foreman which will expose BMC password in plaintext through the host API.
+
+* Affects Foreman 1.4.0 and higher
+* Fix released in Foreman 2.5.0
+* Redmine issue [#31937](https://projects.theforeman.org/issues/31937)
 
 #### <a id="2021-20259"></a>CVE-2021-20259: Proxmox compute resource password leak
 
