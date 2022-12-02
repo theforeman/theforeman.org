@@ -15,10 +15,10 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](https://cve.mitre.org/).
 
-* [CVE-2021-3584: Remote code execution through Sendmail configuration](#2021-3584)
-* [CVE-2021-20256: BMC controller credential leak via API](#2021-20256)
-* [CVE-2021-20259: Proxmox compute resource password leak](#2021-20259)
-* [CVE-2021-3413: Azure compute resource secret_key leak](#2021-3413)
+* [CVE-2021-3584: Remote code execution through Sendmail configuration](security.html#2021-3584)
+* [CVE-2021-20256: BMC controller credential leak via API](security.html#2021-20256)
+* [CVE-2021-20259: Proxmox compute resource password leak](security.html#2021-20259)
+* [CVE-2021-3413: Azure compute resource secret_key leak](security.html#2021-3413)
 * [CVE-2020-14335: World readable dhcp OMAPI secret](security.html#2020-14335)
 * [CVE-2020-14380: Users can gain elevated rights when logging in with SSO accounts](security.html#2020-14380)
 * [CVE-2020-14334: World readable cache directory on RPM installs](security.html#2020-14334)
