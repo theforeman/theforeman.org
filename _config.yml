@@ -144,23 +144,3 @@ defaults:
     values:
       version: "3.17"
       foreman_version: "2.2"
-  - scope:
-      path: "plugins/katello/3.16"
-    values:
-      version: "3.16"
-      foreman_version: "2.1"
-  - scope:
-      path: "plugins/katello/3.15"
-    values:
-      version: "3.15"
-      foreman_version: "2.0"
-  - scope:
-      path: "plugins/katello/3.14"
-    values:
-      version: "3.14"
-      foreman_version: "1.24"
-  - scope:
-      path: "plugins/katello/3.13"
-    values:
-      version: "3.13"
-      foreman_version: "1.23"
