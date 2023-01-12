@@ -10,20 +10,12 @@ Simple Content Access is a feature to simplify subscription management.  When an
 
 ## Enabling or disabling Simple Content Access from Katello
 
-To turn Simple Content Access on or off, navigate to either of the following places:
+To turn Simple Content Access on or off, navigate to Administer > Organizations > (your organization) > Primary, Check or uncheck the _Simple Content Access_ checkbox, then click Submit.
 
-* Administer > Organizations > (your organization) > Details
-  - Check or uncheck the _Simple Content Access_ checkbox, then click Submit.
-* Content > Subscriptions > Manage Manifest
-  - Toggle the _Simple Content Access_ toggle switch.
-
-If the checkbox is not present, or the toggle switch is disabled, it could be for one of the following reasons:
+If the checkbox is not present, it could be for one of the following reasons:
 * There is no manifest imported for the organization
 * The organization administrator has disabled Simple Content Access for the organization
-
-Note that toggling Simple Content Access will cause a manifest refresh.  When the task is complete, you'll get a notification in the notification drawer.
-
-If Simple Content Access is turned on or off from Katello, changes will be reflected immediately in the Red Hat Customer Portal.
+* Permissions issue
 
 If Simple Content Access is turned on or off from outside Katello (e.g. the Red Hat Customer Portal), the changes will be reflected in Katello upon the next manifest refresh.
 
