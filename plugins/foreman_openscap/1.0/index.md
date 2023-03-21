@@ -71,10 +71,10 @@ The easiest and recommended way is using foreman-installer. It's as easy as runn
 
 If you prefer the manual way, you can install it from package like this:
 
-	> yum install tfm-rubygem-foreman_openscap
+	> yum install rubygem-foreman_openscap
 	> foreman-rake db:migrate
 	> foreman-rake db:seed
-	> service httpd reload
+	> systemctl restart foreman
 
 Please refer to the Foreman plugin [manual]({{site.baseurl}}/manuals/latest/index.html#6.1InstallaPlugin) for more information about installing Foreman plugins.
 
@@ -130,7 +130,11 @@ It is important to make sure *foreman_scap_client* package is available to your 
 
 ### 2.3.1 Puppet
 
-Recommended way is to install the packaged version from our repositories:
+Recommended way is to install the packaged version from our repositories using the installer:
+
+	foreman-installer --enable-foreman-proxy-plugin-openscap --foreman-proxy-plugin-openscap-puppet-module true
+
+Though it can also be manually installed:
 
     yum -y install puppet-foreman_scap_client
 
@@ -146,7 +150,7 @@ Detailed parameter description can be found in the module's [documentation](http
 
 Please read [section](plugins/foreman_openscap/{{page.version_short}}/index.html#4.6.1Authenticatingclients) about client authentication if running Foreman without Katello. Recommended way is to install the packaged version from our repositories:
 
-    yum -y install ansible-foreman_scap_client
+    yum -y install ansiblerole-foreman_scap_client
 
 Then [import](plugins/foreman_ansible/{{page.foreman_ansible_version}}/index.html#4.1.1ImportingRoles) the role into Foreman.
 
