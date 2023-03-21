@@ -277,7 +277,7 @@ deb http://deb.theforeman.org/ plugins {{page.version}}
   <ol>
     <li>Find the package for the plugin: <code>apt-cache search discovery</code></li>
     <li>Install the package, e.g. <code>apt-get install ruby-foreman-discovery</code></li>
-    <li>Restart Foreman: <code>service apache2 restart</code></li>
+    <li>Restart Foreman: <code>systemctl restart foreman</code></li>
   </ol>
 
   <p>
@@ -320,7 +320,7 @@ Ensure the plugin you want is available from rubygems.org as a gem. Plugins that
 * Install *without* dependencies: `gem install --ignore-dependencies foreman_column_view`
 * If you need other dependencies (see the rubygems.org page), check the yum repo above (e.g. deface, nokogiri) or install the same way with 'gem'
 * Add to the `bundler.d/Gemfile.local.rb` file as detailed below.
-* Restart Foreman with `service foreman restart`
+* Restart Foreman with `systemctl restart foreman`
 
 If you hit problems, uninstall the added gems with <code>gem uninstall -v VERSION GEM</code>
 
