@@ -261,7 +261,7 @@ deb http://deb.theforeman.org/ plugins {{page.version}}
   <ol>
     <li>Find the package for the plugin with the search function: <code>yum search discovery</code> or by checking the plugin documentation.</li>
     <li>Install the package, e.g. <code>yum install rubygem-foreman_discovery</code>.</li>
-    <li>Restart Foreman with <code>touch ~foreman/tmp/restart.txt</code> or <code>systemctl restart foreman</code></li>
+    <li>Restart Foreman with <code>systemctl restart foreman</code></li>
   </ol>
 
   <p>
@@ -277,7 +277,7 @@ deb http://deb.theforeman.org/ plugins {{page.version}}
   <ol>
     <li>Find the package for the plugin: <code>apt-cache search discovery</code></li>
     <li>Install the package, e.g. <code>apt-get install ruby-foreman-discovery</code></li>
-    <li>Restart Foreman: <code>touch ~foreman/tmp/restart.txt</code> or <code>service apache2 restart</code></li>
+    <li>Restart Foreman: <code>service apache2 restart</code></li>
   </ol>
 
   <p>
@@ -334,7 +334,7 @@ It is recommended to use `~foreman/bundler.d/Gemfile.local.rb` so that it is not
 <pre>gem 'foreman_sample_plugin', :git => "https://github.com/example/foreman_sample_plugin.git"</pre>
 * Next, as user `foreman` (**not root!**), run the following command: `$ /usr/bin/foreman-ruby /usr/bin/bundle install`
 * Once the plugin has been installed for the first time, you can use `$ /usr/bin/foreman-ruby /usr/bin/bundle update foreman_sample_plugin` to update it
-* Then restart Foreman with `touch ~foreman/tmp/restart.txt`
+* Then restart Foreman with `systemctl restart foreman`
 
 # 3. Writing Your Own
 
