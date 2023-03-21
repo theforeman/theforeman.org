@@ -1048,33 +1048,6 @@ fieldset[disabled] .btn-primary.active {
 	width: auto !important;
 }
 
-pre {
-  font-size: 14px;
-  padding: 10px;
-  display: inline-block;
-  position: relative;
-  font-family: FreeMono,monospace;
-  color: white;
-  background-color: #2f2f2f;
-  line-height: 14px;
-  height: auto;
-  max-width: 850px;
-}
-
-pre code {
-  background-color: #2f2f2f;
-}
-
-pre.highlight {
-  background-color: #2f2f2f;
-}
-
-code {
-  color: #000;
-	background-color: white;
-	font-size: 14px;
-}
-
 .alert {
 	padding: 10px;
 	margin-bottom: 10px;
