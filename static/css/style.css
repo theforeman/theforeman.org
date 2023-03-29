@@ -694,6 +694,10 @@ border-radius: 4px;
   margin-bottom: 0;
 }
 
+.version-marker a + a::before {
+  content: " / ";
+}
+
 .tease {
   margin-top: 20px;
   text-align: center;

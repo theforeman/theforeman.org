@@ -1,8 +1,8 @@
 <div class="version-marker">
   <p>
     Latest versions:
-      <a href="{{ site.baseurl }}manuals/3.4/index.html#Releasenotesfor3.6">3.6.0</a>
-      /
-      <a href="{{ site.baseurl }}manuals/3.5/index.html#Releasenotesfor3.5">3.5.2</a>
+    {% for release in site.foreman_latest_releases %}
+    <a href="{{ site.baseurl }}manuals/{{ release.minmaj }}/index.html#Releasenotesfor{{ release.minmaj }}">{{ release.minmaj }}.{{ release.patch }}</a>
+    {% endfor %}
   </p>
 </div>
