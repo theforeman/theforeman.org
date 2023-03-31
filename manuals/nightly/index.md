@@ -81,17 +81,9 @@ previous_version: "3.6"
 {%include manuals/{{ page.version }}/4.1.6_user_management.md %}
 
 ## 4.2 Managing Puppet
-{%include manuals/{{ page.version }}/4.2_managing_puppet.md %}
-### 4.2.1 Environments
-{%include manuals/{{ page.version }}/4.2.1_puppet_envs.md %}
-### 4.2.2 Classes
-{%include manuals/{{ page.version }}/4.2.2_puppet_classes.md %}
-### 4.2.3 Parameters
-{%include manuals/{{ page.version }}/4.2.3_puppet_params.md %}
-### 4.2.4 Parameterized Classes
-{%include manuals/{{ page.version }}/4.2.4_param_classes.md %}
-### 4.2.5 Smart Matchers
-{%include manuals/{{ page.version }}/4.2.5_matchers.md %}
+
+You can use Puppet to configure managed hosts.
+For more information, see [Configuring Hosts Using Puppet](https://docs.theforeman.org/{{page.version}}/Managing_Configurations_Puppet/index-katello.html) on _docs.theforeman.org_.
 
 ## 4.3 Smart Proxies
 {%include manuals/{{ page.version }}/4.3_smartproxy.md %}
