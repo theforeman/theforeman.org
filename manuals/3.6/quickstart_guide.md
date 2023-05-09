@@ -1,7 +1,7 @@
 ---
 layout: quickstart
 title: Foreman Quickstart Guide
-version: "nightly"
+version: "3.6"
 ---
 
 # Quickstart Guide
