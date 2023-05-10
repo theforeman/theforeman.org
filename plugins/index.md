@@ -36,12 +36,6 @@ Foreman plugins are implemented as [Rails engines](http://guides.rubyonrails.org
 		</a>
 	</div>
 	<div class='col-xs-3 center'>
-		<a href="https://github.com/GregSutcliffe/foreman_column_view" class="btn-doc btn">
-			<p class='h2 doc-icon'><i class="fa fa-bar-chart"></i></p>
-			Column view
-		</a>
-	</div>
-	<div class='col-xs-3 center'>
 		<a href="https://github.com/theforeman/foreman_default_hostgroup/" class="btn-doc btn">
 			<p class='h2 doc-icon'><i class="fa fa-check-circle"></i></p>
 			Default host group
@@ -265,7 +259,7 @@ deb http://deb.theforeman.org/ plugins {{page.version}}
   </ol>
 
   <p>
-    Some plugins (e.g. foreman_column_view) may also require configuration in <code>/etc/foreman/plugins/</code>, check for any .example files.  Smart proxy plugins can be configured in <code>/etc/foreman-proxy/settings.d/</code>.
+    Some plugins (e.g. foreman_default_hostgroup) may also require configuration in <code>/etc/foreman/plugins/</code>, check for any .example files.  Smart proxy plugins can be configured in <code>/etc/foreman-proxy/settings.d/</code>.
   </p>
 </div>
 
@@ -281,7 +275,7 @@ deb http://deb.theforeman.org/ plugins {{page.version}}
   </ol>
 
   <p>
-    Some plugins (e.g. foreman_column_view) may also require configuration in <code>/etc/foreman/plugins/</code>, check for any .example files.  Smart proxy plugins can be configured in <code>/etc/foreman-proxy/settings.d/</code>.
+    Some plugins (e.g. foreman_default_hostgroup) may also require configuration in <code>/etc/foreman/plugins/</code>, check for any .example files.  Smart proxy plugins can be configured in <code>/etc/foreman-proxy/settings.d/</code>.
   </p>
 </div>
 
@@ -317,7 +311,7 @@ Ensure the plugin you want is available from rubygems.org as a gem. Plugins that
 
 ### 2.3.1 Red Hat distributions
 
-* Install *without* dependencies: `gem install --ignore-dependencies foreman_column_view`
+* Install *without* dependencies: `gem install --ignore-dependencies foreman_default_hostgroup`
 * If you need other dependencies (see the rubygems.org page), check the yum repo above (e.g. deface, nokogiri) or install the same way with 'gem'
 * Add to the `bundler.d/Gemfile.local.rb` file as detailed below.
 * Restart Foreman with `systemctl restart foreman`
