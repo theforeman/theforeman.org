@@ -1,8 +1,8 @@
 ---
 layout: manual
-title: Foreman Nightly Manual
-version: "nightly"
-previous_version: "3.7"
+title: Foreman 3.7 Manual
+version: "3.7"
+previous_version: "3.6"
 ---
 
 # 1. {{ page.title }}
