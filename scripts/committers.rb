@@ -2,8 +2,8 @@
 require 'tmpdir'
 require 'git'
 
-@tag_from  = "3.4.0"
-@tag_to    = "3.5.0-rc1"
+@tag_from  = "3.7.0"
+@tag_to    = "3.8.0-rc1"
 @date_from = nil # derived from the tag
 @date_to   = nil # derived from the tag
 
