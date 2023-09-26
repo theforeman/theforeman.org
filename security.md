@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](https://cve.mitre.org/).
 
+* [CVE-2022-3874: OS command injection via ct_command and fcct_command](security.html#2022-3874)
 * [CVE-2021-3584: Remote code execution through Sendmail configuration](security.html#2021-3584)
 * [CVE-2021-20256: BMC controller credential leak via API](security.html#2021-20256)
 * [CVE-2021-20259: Proxmox compute resource password leak](security.html#2021-20259)
@@ -86,6 +87,16 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2022-3874"></a>CVE-2022-3874: OS command injection via ct_command and fcct_command
+
+`ct_command` and `fcct_command` settings, available via Administer - Settings, both accept arbitrary
+strings as the command name and calling CoreOS templates will execute those commands as the user Foreman runs under.
+By default, only Foreman super administrator can access settings.
+
+* Affects Foreman 3.2.0 and higher
+* Fix released in Foreman 3.8.0
+* Redmine issue [#36759](https://projects.theforeman.org/issues/36759)
 
 #### <a id="2021-3584"></a>CVE-2021-3584: Remote code execution through Sendmail configuration
 
