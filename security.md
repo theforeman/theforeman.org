@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](https://cve.mitre.org/).
 
+* [CVE-2022-4130: Blind SSRF via Referer header](security.html#2022-4130)
 * [CVE-2022-3874: OS command injection via ct_command and fcct_command](security.html#2022-3874)
 * [CVE-2021-3584: Remote code execution through Sendmail configuration](security.html#2021-3584)
 * [CVE-2021-20256: BMC controller credential leak via API](security.html#2021-20256)
@@ -87,6 +88,15 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2022-4130"></a>CVE-2022-4130: Blind SSRF via Referer header
+
+A blind site-to-site request forgery vulnerability was found in Satellite server.
+It is possible to trigger an external interaction to an attacker's server by modifying the Referer header in an HTTP request of specific resources in the server.
+
+* Affects Foreman
+* Fix released in Foreman 3.8.0
+* Redmine issue [#36768](https://projects.theforeman.org/issues/36768)
 
 #### <a id="2022-3874"></a>CVE-2022-3874: OS command injection via ct_command and fcct_command
 
