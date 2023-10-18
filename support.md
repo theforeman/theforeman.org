@@ -69,61 +69,41 @@ In addition to the [general guidelines](/support.html#CommunityGuidelines) above
 
 (_Credit to the [Fedora Mailing List Guidelines](http://fedoraproject.org/wiki/Communicate/MailingListGuidelines) as a source of ideas, under the Creative Commons Attribution-ShareAlike 3.0 Unported license_)
 
-## [libera.chat](https://libera.chat) {#IRClivechat}
-A great place to get real-time help with The Foreman is our IRC channel:
+## ![Matrix icon](static/images/matrix.png) [Matrix.org live chat](https://app.element.io/#/room/#theforeman:matrix.org)
 
-* **#theforeman** on [libera.chat](https://libera.chat/)
+A great place to get real-time help with The Foreman is our Matrix room:
 
-There are usually many helpful people there in addition to some of the Foreman
-developers.  For discussions about the intricacies of developing Foreman or
-plugins, use the development channel:
+Matrix has many [clients](https://matrix.org/docs/projects/try-matrix-now.html)
+available, including browser-based, desktop & mobile apps, and even plugins for
+venerable clients like WeeChat. Our rooms are in the public directory, but for
+reference:
 
-* **#theforeman-dev** on [libera.chat](https://libera.chat/)
+* https://app.element.io/#/room/#theforeman:matrix.org
+* https://app.element.io/#/room/#theforeman-dev:matrix.org 
 
-Please read and understand [this fantastic guide](http://workaround.org/getting-help-on-irc)
-to getting help for open-source projects on IRC before diving in. All of the
-points there apply to #theforeman, especially "Don't repeat yourself", "Don't
-ask to ask", and "Stick around".  #theforeman in particular has concentrations
-of people in Europe (CEST) and East-coast US (EST), so asking your question
-when those time zones are in business hours is more likely to get a good
-result.
+The Matrix rooms are no longer bridged to the IRC channels (see below).
 
-Be aware that the IRC channel is not an official support channel, it's an ad-hoc
-group of people (some of whom work on Foreman for a living) self-organizing
-to help each other out. If you do not receive an answer to your question,
-(especially if you have not followed the getting help on IRC best practices!),
-that doesn’t mean you are out of options; the software may [have a
-bug](http://projects.theforeman.org/projects/foreman/issues), the docs may be
-lacking, or it's possible Foreman doesn't yet support your use case. It just
-means you need to keep troubleshooting to find out which.
+### Chat Guidelines
 
-### IRC Guidelines
-
-In addition to the [general guidelines](/support.html#CommunityGuidelines) above, we also have a few IRC-specific guidelines:
+In addition to the [general guidelines](/support.html#CommunityGuidelines) above, we also have a few chat-specific guidelines:
 
 * Don't post chunks: Avoid posting big chunks of text - use a [pastebin](http://pastie.org/) or similar service to shorten it to a link. Likewise, try not to spam the channel with many messages, it breaks the flow of other conversations.
 * Don't private message: Ask permission before you send someone a private message (PM). Not everyone likes them. Also, by keeping it in public, others with similar issues can see the solution you were given.
 * Don't highlight specific people unless you are already discussing something with them. Highlighting a specific user with your opening question makes it far less likely others will respond.
 
-More information: This [IRC primer](https://www.irchelp.org/faq/ircprimer.html) for new users and the [general IRC guidelines, from libera.chat](https://libera.chat/guides), are also useful resources.
+Be aware that the support room is not an official support channel, it's an ad-hoc
+group of people (some of whom work on Foreman for a living) self-organizing
+to help each other out. If you do not receive an answer to your question,
+that doesn’t mean you are out of options; the software may [have a
+bug](http://projects.theforeman.org/projects/foreman/issues), the docs may be
+lacking, or it's possible Foreman doesn't yet support your use case. It just
+means you need to keep troubleshooting to find out which.
 
-(_Thanks to the [Puppet Labs IRC Guidelines](https://puppet.com/community/community-guidelines/#slack-irc-guidelines) for the original document_)
+## [libera.chat](https://libera.chat) {#IRClivechat}
 
-## ![Matrix icon](static/images/matrix.png) [Matrix.org live chat](https://riot.im/app/#/room/#theforeman:matrix.org)
-
-For those wanting something a little less "basic" than IRC, or just would like a
-persistent connection, you can also find us on [Matrix.org](https://matrix.org)
-- an open standard for interoperable, decentralised, real-time communication
-over IP. Matrix has many
-[clients](https://matrix.org/docs/projects/try-matrix-now.html) available,
-including browser-based, desktop & mobile apps, and even plugins for venerable
-clients like WeeChat. Our rooms are in the public directory, but for reference:
-
-* https://riot.im/app/#/room/#theforeman:matrix.org
-* https://riot.im/app/#/room/#theforeman-dev:matrix.org
-
-The Matrix rooms are bridged to the IRC channels, so we're all in the same chat.
-Pick which you prefer!
+Previously, we had IRC channels here. After the bridging has been decommisioned,
+we came to an [agreement](https://community.theforeman.org/t/proposal-on-consolidation-our-chat-platforms/35258) to migrate to Matrix.
+While you may still see these channels, they are no longer monitored and are not considered a primary contact.
 
 ## ![YouTube icon](static/images/youtube.png) [YouTube channel](https://www.youtube.com/channel/UCCo7AZ1oG6TbG0-dwjRqCmw)
 Please subscribe to our [YouTube channel](https://www.youtube.com/channel/UCCo7AZ1oG6TbG0-dwjRqCmw). We regularly upload deep dives on Foreman features, screencasts to learn how to use the different features and plugins of Foreman, discussions and much more.
