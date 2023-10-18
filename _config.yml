@@ -9,14 +9,14 @@ url: https://theforeman.org
 baseurl: "" #keep at "" for the Atom feed
 
 # latest *stable* version
-foreman_version: '3.7'
+foreman_version: '3.8'
 
 # Latest releases
 foreman_latest_releases:
+  - minmaj: '3.8'
+    patch: '0'
   - minmaj: '3.7'
     patch: '0'
-  - minmaj: '3.6'
-    patch: '2'
 
 paginate: 5
 paginate_path: "blog/page:num"
