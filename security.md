@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](https://cve.mitre.org/).
 
+* [CVE-2023-4886: World readable tomcat server.xml contains passwords](security.html#2023-4886)
 * [CVE-2022-4130: Blind SSRF via Referer header](security.html#2022-4130)
 * [CVE-2022-3874: OS command injection via ct_command and fcct_command](security.html#2022-3874)
 * [CVE-2021-3584: Remote code execution through Sendmail configuration](security.html#2021-3584)
@@ -88,6 +89,15 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2023-4886"></a>CVE-2023-4886: World readable tomcat server.xml contains passwords
+
+The world readable file /etc/tomcat/server.xml contains passwords for the keystore and truststore.
+The actual stores are limited by file permissions, but server.xml should also be limited.
+
+* Affects Katello
+* Fix released in Foreman 3.8.0
+* Redmine issue [#36760](https://projects.theforeman.org/issues/36760)
 
 #### <a id="2022-4130"></a>CVE-2022-4130: Blind SSRF via Referer header
 
