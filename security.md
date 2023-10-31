@@ -92,8 +92,8 @@ All security advisories made for Foreman are listed below with their correspondi
 
 #### <a id="2023-4886"></a>CVE-2023-4886: World readable tomcat server.xml contains passwords
 
-The world readable file /etc/tomcat/server.xml contains passwords for the keystore and truststore.
-The actual stores are limited by file permissions, but server.xml should also be limited.
+The world readable file `/etc/tomcat/server.xml` contains passwords for the keystore and truststore.
+The actual stores are limited by file permissions, but `server.xml` should also be limited.
 
 * Affects Katello
 * Fix released in Foreman 3.8.0
