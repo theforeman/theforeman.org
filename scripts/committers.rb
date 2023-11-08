@@ -46,6 +46,7 @@ require 'git'
 @author_map = {
   "aabramov"       => "Adi Abramovich",
   "abenari"        => "Amos Benari",
+  "archanaserver"  => "Archana Kumari",
   "adamruzicka"    => "Adam Ruzicka",
   "Alexander Fisher" => "Alex Fisher",
   "alongoldboim"   => "Alon Goldboim",
@@ -54,6 +55,7 @@ require 'git'
   "Dirk Goetz"     => "Dirk Götz",
   "Eric D Helms"   => "Eric D. Helms",
   "Eric Helms"     => "Eric D. Helms",
+  "girijaasoni"    => "Girija Soni",
   "Joseph Magen"   => "Joseph Mitchell Magen",
   "Ivan Necas"     => "Ivan Nečas",
   "Lukas Zapletal" => "Lukáš Zapletal",
@@ -134,6 +136,8 @@ require 'git'
   "tux93" => "Marcel Kühlhorn",
   "snemeth" => "Štefan Németh",
   "Stejskal Leos" => "Leos Stejskal",
+  "pkoprda" => "Peter Koprda",
+  "vijaysawant" => "Vijaykumar Sawant",
 }
 
 @authors={}
