@@ -1,13 +1,32 @@
 #!/usr/bin/ruby
 require 'tmpdir'
 require 'git'
+require 'optparse'
 
 MAILMAP = File.join(__dir__, '..', '.mailmap')
 
-@tag_from  = "3.4.0"
-@tag_to    = "3.5.0-rc1"
+with_repo = false
+with_count = false
+
+OptionParser.new do |opts|
+  opts.on("--with-repo") do
+    with_repo = true
+  end
+
+  opts.on("--with-count") do
+    with_count = true
+  end
+end.parse!
+
+@tag_from  = ARGV.shift
+@tag_to    = ARGV.shift
 @date_from = nil # derived from the tag
 @date_to   = nil # derived from the tag
+
+unless @tag_from && @tag_to
+  $stderr.puts "Usage: #{$0} [--with-repo] [--with-count] TAG_FROM TAG_TO"
+  exit 1
+end
 
 @tagged_repos = %w(foreman smart-proxy foreman-installer foreman-selinux)
 
@@ -80,8 +99,6 @@ Dir.mktmpdir do |dir|
   end
 end
 
-with_repo  = ARGV.delete("--with-repo")
-with_count =  ARGV.delete("--with-count")
 $stderr.puts "---"
 if with_repo
   if with_count
