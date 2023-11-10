@@ -7,6 +7,7 @@ MAILMAP = File.join(__dir__, '..', '.mailmap')
 
 with_repo = false
 with_count = false
+multi_line = false
 
 OptionParser.new do |opts|
   opts.on("--with-repo") do
@@ -15,6 +16,10 @@ OptionParser.new do |opts|
 
   opts.on("--with-count") do
     with_count = true
+  end
+
+  opts.on("--multi-line") do
+    multi_line = true
   end
 end.parse!
 
@@ -116,6 +121,8 @@ elsif with_count
     total = repos.values.reduce( :+ )
     puts "#{author}: #{total}"
   end
+elsif multi_line
+  puts @authors.keys.sort.join(",\n")
 else
   puts @authors.keys.sort.join(",")
 end
