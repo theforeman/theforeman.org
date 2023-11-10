@@ -111,14 +111,12 @@ if with_repo
   else
     @authors.sort.map {|a,r| puts "#{a}: #{r.keys.join(',')}" }
   end
-else
-  if with_count
-    @authors.sort.map do |author,repos|
-      total = repos.values.reduce( :+ )
-      puts "#{author}: #{total}"
-    end
-  else
-    puts @authors.keys.sort.join(", ")
+elsif with_count
+  @authors.sort.map do |author,repos|
+    total = repos.values.reduce( :+ )
+    puts "#{author}: #{total}"
   end
+else
+  puts @authors.keys.sort.join(",")
 end
 $stderr.puts "Total committers: #{@authors.size}"
