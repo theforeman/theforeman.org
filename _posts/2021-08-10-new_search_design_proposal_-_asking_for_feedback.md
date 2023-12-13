@@ -40,7 +40,7 @@ It's similar to PF4’s basic search input.
 Main elements within a search input field are:
 
 - **Magnifying glass** on the left side
-- **Placeholder** (dependant on a content pf the page e.g. Search hosts)
+- **Placeholder** (dependent on a content pf the page e.g. Search hosts)
 - **Deletion X** appears upon interaction with a search input inside the field
 
 ### **Functionalities**
