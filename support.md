@@ -78,8 +78,8 @@ available, including browser-based, desktop & mobile apps, and even plugins for
 venerable clients like WeeChat. Our rooms are in the public directory, but for
 reference:
 
-* https://app.element.io/#/room/#theforeman:matrix.org
-* https://app.element.io/#/room/#theforeman-dev:matrix.org 
+* [#theforeman on matrix.org](https://app.element.io/#/room/#theforeman:matrix.org)
+* [#theforeman-dev on matrix.org](https://app.element.io/#/room/#theforeman-dev:matrix.org)
 
 The Matrix rooms are no longer bridged to the IRC channels (see below).
 
