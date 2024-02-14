@@ -81,6 +81,7 @@ plugins:
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
+  - jekyll-redirect-from
 
 foreman_versions:
   - nightly
