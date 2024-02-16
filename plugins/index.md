@@ -146,11 +146,7 @@ Foreman plugins are implemented as [Rails engines](http://guides.rubyonrails.org
 
 ## 1.2 More plugins
 
-Full lists of plugins are available:
-
-* [Foreman plugins](https://projects.theforeman.org/projects/foreman/wiki/List_of_Plugins)
-* [Smart proxy plugins](https://projects.theforeman.org/projects/foreman/wiki/List_of_Smart-Proxy_Plugins)
-* [Hammer CLI plugins](https://projects.theforeman.org/projects/hammer-cli/wiki/List_of_Plugins)
+Full lists of plugins are available on the [Foreman landscape](https://theforeman.github.io/foreman-plugin-overview/).
 
 # 2. Installation
 
