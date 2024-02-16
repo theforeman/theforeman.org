@@ -1,7 +1,6 @@
 ---
 layout: plugin
 title: Plugins
-version: '1.21'
 ---
 
 # 1. Plugins
@@ -223,7 +222,7 @@ To provide specific installation instructions, please select your operating syst
 <pre>
 [foreman-plugins]
 name=Foreman plugins
-baseurl=https://yum.theforeman.org/plugins/{{page.version}}/el8/x86_64/
+baseurl=https://yum.theforeman.org/plugins/{{site.foreman_version}}/el8/x86_64/
 enabled=1
 gpgcheck=0
 </pre>
@@ -239,7 +238,7 @@ gpgcheck=0
   </p>
 
 <pre>
-deb http://deb.theforeman.org/ plugins {{page.version}}
+deb http://deb.theforeman.org/ plugins {{site.foreman_version}}
 </pre>
 </div>
 
