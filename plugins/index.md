@@ -198,13 +198,14 @@ To provide specific installation instructions, please select your operating syst
   <option value="none">-- select operating system --</option>
   <option value="debian">Debian or Ubuntu</option>
   <option value="el8">Enterprise Linux 8</option>
+  <option value="el9">Enterprise Linux 9</option>
 </select>
 
 <div class="installation_os installation_os_none">
   <i>No operating system selected.</i>
 </div>
 
-<div class="installation_os installation_os_el8">
+<div class="installation_os installation_os_el8 installation_os_el9">
   <p>
     The repositories are available at <a href="https://yum.theforeman.org/plugins/">yum.theforeman.org/plugins</a>.  Separate repositories are available for each Foreman release, containing plugins that are compatible with that particular version.  Packages are not currently GPG signed.
   </p>
@@ -224,6 +225,16 @@ gpgcheck=0
 </pre>
 </div>
 
+<div class="installation_os installation_os_el9">
+<pre>
+[foreman-plugins]
+name=Foreman plugins
+baseurl=https://yum.theforeman.org/plugins/{{site.foreman_version}}/el9/x86_64/
+enabled=1
+gpgcheck=0
+</pre>
+</div>
+
 <div class="installation_os installation_os_debian">
   <p>
     The repositories are available at <code>https://deb.theforeman.org plugins &lt;version&gt;</code>. Separate repositories are available for each Foreman release, containing plugins that are compatible with that particular version. They are signed with the Foreman APT key.
@@ -238,7 +249,7 @@ deb http://deb.theforeman.org/ plugins {{site.foreman_version}}
 </pre>
 </div>
 
-<div class="installation_os installation_os_el8">
+<div class="installation_os installation_os_el8 installation_os_el9">
   <p>
     Change the version number in the URL to match the Foreman release in use.
   </p>
@@ -274,7 +285,7 @@ deb http://deb.theforeman.org/ plugins {{site.foreman_version}}
   </p>
 </div>
 
-<div class="installation_os installation_os_el8">
+<div class="installation_os installation_os_el8 installation_os_el9">
   <p>
     The naming of packages is as follows:
   </p>
