@@ -8,9 +8,10 @@ The installation will require 4GB of memory, see [System Requirements](manuals/{
 #### Supported platforms
 
 * Enterprise Linux 8, x86_64
+* Enterprise Linux 9, x86_64
 * Debian 11 (Bullseye), amd64
 * Ubuntu 20.04 (Focal), amd64
 
 #### Enterprise Linux
 
-The Foreman packages and installer are tested on AlmaLinux 8 and CentOS 8 Stream, but other RHEL derivatives can work because they're similar. Sometimes additional work may be needed. For any queries for these platforms raise a question in [discourse support section](https://community.theforeman.org/c/support/10)
+The Foreman packages and installer are tested on AlmaLinux 8, AlmaLinux 9, CentOS Stream 8 and CentOS Stream 9, but other RHEL derivatives can work because they're similar. Sometimes additional work may be needed. For any queries for these platforms raise a question in [discourse support section](https://community.theforeman.org/c/support/10)
