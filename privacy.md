@@ -32,12 +32,7 @@ information or set cookies. There is no account for the website itself. The
 webserver (Apache) logs will contain IP addresses, timestamps, and UserAgent
 strings - these are log-rotated and deleted after 4 weeks.
 
-The website also uses Google Analytics, but we only collect anonymous data. IP
-addresses are [anonymised][GA-anonIP], and we do not use User-ID, or any linked
-Google product (e.g. AdWords). Google Analytics data is deleted after 26 months
-(the default for Google Analytics).
-
-The webserver logs and Google Analytics are used to produce aggregated
+The webserver logs are used to produce aggregated
 statistics about the community, such as popularity of different browsers,
 operating system packages, plugins, etc.
 
