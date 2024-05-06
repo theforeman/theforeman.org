@@ -16,7 +16,7 @@ foreman_latest_releases:
   - minmaj: '3.10'
     patch: '0'
   - minmaj: '3.9'
-    patch: '1'
+    patch: '3'
 
 paginate: 5
 paginate_path: "blog/page:num"
