@@ -197,13 +197,12 @@ Foreman reserves the right to update this policy from time to time. Material
 changes will be posted to the [Announcements
 list](https://community.theforeman.org/c/release-announcements) and posted to
 the front page of the [website](https://theforeman.org). This policy was last
-updated on 28th May 2018.
+updated on 25th March 2024.
 
 [BotBot]: https://botbot.me/privacy
 [Fastly]: https://www.fastly.com/privacy
 [libera.chat]: https://libera.chat/privacy
 [foreman debug]: https://github.com/theforeman/foreman/blob/develop/script/foreman-debug
-[GA-anonIP]: https://developers.google.com/analytics/devguides/collection/gajs/methods/gaJSApi_gat#_gat._anonymizeIp
 [GitHub]: https://help.github.com/articles/global-privacy-practices
 [SlideShare]: https://www.linkedin.com/legal/privacy-policy
 [YouTube]: https://support.google.com/youtube/answer/7671399?hl=en
