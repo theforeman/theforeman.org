@@ -38,6 +38,17 @@ operating system packages, plugins, etc.
 
 * Legal basis for this data usage: Legitimate interest
 
+### Documentation
+
+[The Foreman documentation](https://docs.theforeman.org) is static site which
+does not track, collect, store information or set cookies. There is no account
+for the documentation itself.
+
+The documentation is hosted on [GitHub Pages](https://pages.github.com/),
+which [logs the visitor's IP address for security purposes][GitHubPagesDataCollection].
+
+Refer to [GitHub's privacy policy][GitHub] for details.
+
 ### Website videos
 
 The website does embed videos from YouTube, FOSDEM, and Slideshare - see the
@@ -197,12 +208,13 @@ Foreman reserves the right to update this policy from time to time. Material
 changes will be posted to the [Announcements
 list](https://community.theforeman.org/c/release-announcements) and posted to
 the front page of the [website](https://theforeman.org). This policy was last
-updated on 25th March 2024.
+updated on 10th May 2024.
 
 [BotBot]: https://botbot.me/privacy
 [Fastly]: https://www.fastly.com/privacy
 [libera.chat]: https://libera.chat/privacy
 [foreman debug]: https://github.com/theforeman/foreman/blob/develop/script/foreman-debug
 [GitHub]: https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement
+[GitHubPagesDataCollection]: https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#data-collection
 [SlideShare]: https://www.linkedin.com/legal/privacy-policy
 [YouTube]: https://support.google.com/youtube/answer/7671399?hl=en
