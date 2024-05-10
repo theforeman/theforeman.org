@@ -203,6 +203,6 @@ updated on 25th March 2024.
 [Fastly]: https://www.fastly.com/privacy
 [libera.chat]: https://libera.chat/privacy
 [foreman debug]: https://github.com/theforeman/foreman/blob/develop/script/foreman-debug
-[GitHub]: https://help.github.com/articles/global-privacy-practices
+[GitHub]: https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement
 [SlideShare]: https://www.linkedin.com/legal/privacy-policy
 [YouTube]: https://support.google.com/youtube/answer/7671399?hl=en
