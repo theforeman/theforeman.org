@@ -49,6 +49,17 @@ which [logs the visitor's IP address for security purposes][GitHubPagesDataColle
 
 Refer to [GitHub's privacy policy][GitHub] for details.
 
+### API Documentation
+
+[The Foreman API documentation](https://apidocs.theforeman.org) is static site which
+does not track, collect, store information or set cookies. There is no account
+for the documentation itself.
+
+The documentation is hosted on [GitHub Pages](https://pages.github.com/),
+which [logs the visitor's IP address for security purposes][GitHubPagesDataCollection].
+
+Refer to [GitHub's privacy policy][GitHub] for details.
+
 ### Website videos
 
 The website does embed videos from YouTube, FOSDEM, and Slideshare - see the
