@@ -13,11 +13,11 @@ Everything you push into the gh-pages branch goes live immediately!
 
 To test your changes locally use
 
-    # rake
+    # bundle exec rake
 
 to generate your site in the \_site directory, or
 
-    # rake server
+    # bundle exec rake server
 
 To start Jekyll server locally.
 
@@ -42,7 +42,7 @@ Navigate to http://localhost:4000
 ## Contributing a blog post
 
 1. (following on from step 5 above)
-2. Run `rake new_post['title of my post']` to generate a new empty blog post
+2. Run `bundle exec rake new_post['title of my post']` to generate a new empty blog post
 3. Edit _posts/YYYY-MM-DD-title\_of\_my\_post.md
 4. Set the author correctly, and appropriate tags (see previous posts for examples)
 5. Add content, and preview as above.
