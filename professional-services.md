@@ -24,6 +24,10 @@ The following companies provide Foreman consulting services. If you would like t
 
 ATIX specialize in support and operation consulting. For more information, check out their [Foreman](https://atix.de/en/foreman/) consulting page. You can also read about ATIX's areas of focus and contributions to the wider Foreman community in the guest blog [ATIX in the Foreman Community](https://theforeman.org/2020/10/atix-in-the-foreman-community.html).
 
+### betadots
+
+betadots specialize in operation consulting and training. Fore more information, check out their [homepage](https://www.betadots.de). You can read about betadots's focus and their contributions to the Foreman community in the blog post [betadots consulting services](https://theforeman.org/2024/06/betadots-consulting-services.html).
+
 ### inuits.eu
 
 Inuits specialize in open-source consulting and host our beloved ConfigMgmtCamp. For more information about the solutions they implement, check out their [case studies](https://inuits.eu/businesscases/). You can read about [inuits.eu](inuits.eu)'s history with Foreman in the guest blog [inuits.eu in the Foreman Community](https://theforeman.org/2021/06/inuitseu-in-the-foreman-community.html)
