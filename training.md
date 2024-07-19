@@ -22,6 +22,20 @@ more than welcome!
 [adfinis-slides]: https://docs.adfinis-sygroup.ch/public/trainings/#training-Foreman
 [adfinis-github]: https://github.com/adfinis-sygroup/adsy-trainings
 
+## betadots Training Course
+
+The [training][betadots-training] by [betadots][betadots] is designed as a three-day
+hands-on training in German language. It covers topics from the initial installation
+over content management with Katello, integration of configuration management and
+provisioning to plugins including their Hiera data manager and advanced topics.
+
+They provide [courses][betadots-schedule] together with training partners like Linuxhotel in Essen or
+Heinlein Academy in Berlin regularly. Also remote trainings are available as direct order.
+
+[betadots]: https://www.betadots.de
+[betadots-training]: https://github.com/betadots/foreman-training
+[betadots-schedule]: https://www.betadots.de/training
+
 ## Guru Labs Training Course
 
 The [GL650 - FOREMAN/KATELLO ADMINISTRATION][GL650] is a 4-day instructor led course that provides comprehensive hands on coverage all the of the major features of a Foreman+Katello deployment starting from best practices in installation and initial configuration, managing subscriptions, products and repositories, content views, lifecycles, activation keys, system registration of existing system, bare metal and virtualization provisioning including discovery, provisioning templates, configuration management with Puppet and Ansible, IdM integration, smart proxies/capsule servers, virt-who, and subscription management.
