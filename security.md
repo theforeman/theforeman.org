@@ -182,7 +182,7 @@ To do so in a manner that survives reboot, update the file `/usr/lib/tmpfiles.d/
 ```
 d /run/foreman 0750 foreman foreman -
 ```
-For the change to have effect immediatelly run `systemd-tmpfiles --create`.
+For the change to have effect immediately run `systemd-tmpfiles --create`.
 
 In case the system may have been accessed locally by an un-trusted user, it may be prudent to change any secrets stored in the settings, such as OAuth keys or remote execution passwords.
 
@@ -221,7 +221,7 @@ When deleting a compute resource via the API, the API responded with details of 
 
 #### <a id="2018-14664"></a>CVE-2018-14664: Persisted XSS on all pages that use breadcrumbs
 
-If user has the permission to edit resource which attribute is user in the breadcrumbs bar, it's not properly escaped allowing attacker to store code, that will be executed on client side. E.g. create a domain with name test.com, the go to it's edit form. See the breadcrumb didn't escape the HTML code.
+If user has the permission to edit resource which attribute is user in the breadcrumbs bar, it's not properly escaped allowing attacker to store code, that will be executed on client side. E.g. create a domain with name test.com, then go to its edit form. See the breadcrumb didn't escape the HTML code.
 
 * Affects Foreman 1.18 and higher
 * Fix released with Foreman 1.18.3
