@@ -48,8 +48,10 @@ navigation:
         url: /manuals/latest/index.html
       - title: Plugins
         url: /plugins/
-      - title: API docs
+      - title: Foreman API docs
         url: https://apidocs.theforeman.org/foreman/latest/apidoc/v2.html
+      - title: Foreman+Katello API docs
+        url: https://apidocs.theforeman.org/katello/latest/apidoc/v2.html
       - title: Training
         url: /training.html
       - title: Support
