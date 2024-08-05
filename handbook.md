@@ -147,6 +147,8 @@ We use eslint to enforce linting rules. Run eslint by typing `npm run lint` in t
 * Add all new JavaScript files to the project in the 'webpack/assets/javascripts' folder or a sub-folder.
 * Use es2015 syntax and features.
 * Use exporting/importing values from/to modules to manage dependencies.
+* Try to reuse components from Patternfly as much as possible 
+* Use specific css selectors to avoid conflicts with other plugins or the core.
 
 #### Don't
 * Pollute the global namespace. If, for some reason, you must expose a function/value globally, use the ```window.tfm``` object as implemented in ```bundle.js```.
@@ -264,6 +266,7 @@ If there is conflict, point to this handbook for reference.
 - Code follows the style rules mentioned above
 - New Javascript files are added to config/environments/production.rb if not in app.js
 - No new "stylesheet" tags are added to views, they're already in app.css
+- If the function is used in other places, check other places for compatibility
 
 #### Labels
 
