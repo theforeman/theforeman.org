@@ -7,7 +7,7 @@ title: Contributing to Foreman
 
 The Foreman is an open-source project that's licensed under the GNU General Public License version 3. Contributions of all types are gladly accepted! Before setting up your development environment, check out our [issue tracker](https://projects.theforeman.org/projects). We have a list of [trivial or easy](https://projects.theforeman.org/projects/foreman/issues?query_id=42) issues in the Foreman core project. Similar queries can be done in other projects on the issue tracker.
 
-Before writing any code, read the Foreman [handbook](/handbook.html) for some code guidelines and recommendations. You can find us on both our forum and IRC if you run into trouble when selecting issues or setting up your development environment. See our [Support](/support) page for all the details on how to come chat with us.
+Before writing any code, read the Foreman [handbook](/handbook.html) for some code guidelines and recommendations. You can find us on both our forum and Matrix.org if you run into trouble when selecting issues or setting up your development environment. See our [Support](/support) page for all the details on how to come chat with us.
 
 ### Setting up a development environment
 
