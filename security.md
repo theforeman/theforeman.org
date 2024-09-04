@@ -15,6 +15,8 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](https://cve.mitre.org/).
 
+* [CVE-2024-7923: Authentication bypass in Pulpcore](security.html#2024-7923)
+* [CVE-2024-7012: Authentication bypass in Foreman](security.html#2024-7012)
 * [CVE-2023-4886: World readable tomcat server.xml contains passwords](security.html#2023-4886)
 * [CVE-2022-4130: Blind SSRF via Referer header](security.html#2022-4130)
 * [CVE-2022-3874: OS command injection via ct_command and fcct_command](security.html#2022-3874)
@@ -89,6 +91,32 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2024-7923"></a>CVE-2024-7923: Authentication bypass in Pulpcore
+
+An authentication bypass vulnerability has been identified in Pulpcore when
+deployed by the Foreman Installer with Gunicorn versions prior to 22.0.
+
+This issue arises from the way Apache is configured to do certificate authentication and
+pass this information to the Gunicorn backend,
+without unsetting all headers coming from a possibly malicious client.
+
+* Affects Katello 4.0.0 and higher
+* Fix released in Foreman 3.10.1, 3.11.2, 3.12.0
+* GitHub PR [puppet-pulpcore#357](https://github.com/theforeman/puppet-pulpcore/pull/357)
+
+#### <a id="2024-7012"></a>CVE-2024-7012: Authentication bypass in Foreman
+
+An authentication bypass vulnerability has been identified in Foreman when
+deployed by the Foreman Installer with External Authentication.
+
+This issue arises from the way Apache is configured to do certificate authentication and
+pass this information to the Puma backend,
+without unsetting all headers coming from a possibly malicious client.
+
+* Affects Foreman 2.2.0 and higher
+* Fix released in Foreman 3.10.1, 3.11.2, 3.12.0
+* GitHub PR [puppet-foreman#1181](https://github.com/theforeman/puppet-foreman/pull/1181)
 
 #### <a id="2023-4886"></a>CVE-2023-4886: World readable tomcat server.xml contains passwords
 
