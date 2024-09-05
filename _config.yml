@@ -14,9 +14,9 @@ foreman_version: '3.11'
 # Latest releases
 foreman_latest_releases:
   - minmaj: '3.11'
-    patch: '1'
+    patch: '2'
   - minmaj: '3.10'
-    patch: '0'
+    patch: '1'
 
 paginate: 5
 paginate_path: "blog/page:num"
