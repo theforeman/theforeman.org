@@ -117,9 +117,9 @@ number of open/closed bugs, average time to close a bug, etc.
 
 ## Communication
 
-The Foreman project maintains two public IRC channels on
-[libera.chat](https://libera.chat), refer to [libera.chat's privacy
-policy](https://libera.chat/privacy) for details on how they handle your data.
+The Foreman project maintains two public Matrix rooms on
+[matrix.org](https://matrix.org), refer to [Matrix.org's privacy
+policy](https://matrix.org/_matrix/consent) for details on how they handle your data.
 
 The Foreman community uses a self-hosted forum using the
 [Discourse](https://discourse.org) software. When signing up for a Discourse
@@ -195,7 +195,7 @@ rights, subject to some limitations, against the Foreman Project:
 
 If you would like to exercise any of these rights, you may do so by contacting
 the Foreman Project at [contact us](mailto:privacy@community.theforeman.org)
-or on [IRC](/support.html#IRClivechat). Please understand, however, the rights
+or on [Matrix](/support.html#Matrix.orglivechat). Please understand, however, the rights
 enumerated above are not absolute in all cases, especially in regards to the
 right to erase your data:
 
@@ -211,7 +211,7 @@ right to erase your data:
 
 If you have any questions about this policy or our use of your data, please
 feel free to [contact us](mailto:privacy@community.theforeman.org) or on
-[IRC](/support.html#IRClivechat).
+[Matrix](/support.html#Matrix.orglivechat).
 
 # Changes to this Privacy Statement
 
