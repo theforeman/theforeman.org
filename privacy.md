@@ -223,7 +223,6 @@ updated on 10th May 2024.
 
 [BotBot]: https://botbot.me/privacy
 [Fastly]: https://www.fastly.com/privacy
-[libera.chat]: https://libera.chat/privacy
 [foreman debug]: https://github.com/theforeman/foreman/blob/develop/script/foreman-debug
 [GitHub]: https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement
 [GitHubPagesDataCollection]: https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#data-collection

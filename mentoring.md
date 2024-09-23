@@ -117,4 +117,4 @@ Original good ideas will be valued. We don't want to impose anything. This is
 Free and Open Source software.
 
 As usual, if you are doubtful about whether your idea is ok or not, feel free
-to ask in #theforeman-dev on libera.chat.
+to ask in #theforeman-dev.
