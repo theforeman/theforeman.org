@@ -18,8 +18,8 @@ currently available projects.
 * Watch a few [demo videos](/media.html)
 * Read a couple posts from the [forum](/support.html#forum)
 * Join us on [Matrix.org](/support.html#Matrix.orglivechat):
-  * \#theforeman on libera.chat for generally getting to know Foreman and asking user questions
-  * \#theforeman-dev on libera.chat for development/mentoring questions. Don't be shy; tell us you're interested in one of our open mentoring projects
+  * \#theforeman for generally getting to know Foreman and asking user questions
+  * \#theforeman-dev for development/mentoring questions. Don't be shy; tell us you're interested in one of our open mentoring projects
 
 ## Open Projects
 
