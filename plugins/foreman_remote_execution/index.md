@@ -1,7 +1,7 @@
 ---
 layout: plugin_index
 title: Foreman Remote Execution Documentation
-versions: [1.7, 1.3, 0.3, 0.2, 0.1, 0.0]
+versions: [10.0, 1.7, 1.3, 0.3, 0.2, 0.1, 0.0]
 ---
 
 # Foreman Remote Execution manuals
