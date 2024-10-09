@@ -16,6 +16,10 @@ pagename: Media
 					frameborder="0" allowfullscreen>
 				</iframe>
 			</div>
+
+			<div id="tips">
+  		</div>
+
 			<div id="talks">
   		</div>
 			<div id="screencasts">
@@ -127,6 +131,17 @@ function createVideosLayout(title, selector, videos_list) {
 		});
 		$(selector).html(html_result);
 };
+
+var tips = [
+  { id: "RkCKG-sruKc", title: "The EASIEST Git workflow guide you'll ever watch", author: "Waldirio M Pinheiro" },
+  { id: "rtTw6xqFtIE", title: "Setting Up the Foreman and Katello Development Environment: A Step-by-Step Guide", author: "Waldirio M Pinheiro" },
+  { id: "SS0vvQFygvM", title: "How to Set Up VScode Icons Extension (2024)", author: "Waldirio M Pinheiro" },
+  { id: "Dyjy85MfFOo", title: "Setting Up The Best VIM Extension for VScode (2024)", author: "Waldirio M Pinheiro" },
+  { id: "LZbi9YwkQ-0", title: "How to Set Up Trailing Spaces Extension in VS Code", author: "Waldirio M Pinheiro" },
+  { id: "b-T14EKqSvI", title: "Setting up Remote SSH in VScode is *really* this easy", author: "Waldirio M Pinheiro" },
+  { id: "V5hVEr6Nt8Q", title: " How to Use Git via VSCode Like a Pro! ", author: "Waldirio M Pinheiro" }
+];
+createVideosLayout('Tips', 'div#tips', tips);
 
 var talks = [
 	{ html: '<video width="397.5" src="https://video.fosdem.org/2022/D.infra/foreman_katello_leapp_elevate.webm" controls></video><h4><strong>FOSDEM2022: Migrating Foreman/Katello from EL7 to EL8 using LEAPP/ELevate</strong> - Evgeni Golov</h4>' },
