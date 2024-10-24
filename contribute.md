@@ -15,7 +15,7 @@ These types of tasks generally require a familiarity with Linux, Ruby, Ruby on R
 
 To get you started, we've prepared a short video demonstrating the process of both documented options.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/A2eCNVvrciU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rtTw6xqFtIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 #### Option A: Preconfigured virtual machine
 
