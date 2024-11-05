@@ -20,6 +20,6 @@ cd $(dirname $0)
 
 TAG=foreman-installer:$FOREMAN_VERSION
 $PROGRAM build --build-arg FOREMAN_VERSION=$FOREMAN_VERSION -t $TAG .
-$PROGRAM run --rm $TAG foreman-installer -h | grep enable- | grep -v enable-scenario | sed 's/ (default: \(true\|false\))//' | ./installer-enable-to-table > installer-$FOREMAN_VERSION-help.html
-$PROGRAM run --rm $TAG kafo-export-params -c /etc/foreman-installer/scenarios.d/foreman.yaml -f html | sed 's/installer-options/all-installer-options/' > installer-$FOREMAN_VERSION-params.html
+$PROGRAM run --rm $TAG foreman-installer -h | grep enable- | grep -v enable-scenario | sed 's/ (default: \(true\|false\))//' | ./installer-enable-to-table > ../../../manuals/$FOREMAN_VERSION/3.2.2_installer_options-help.md
+$PROGRAM run --rm $TAG kafo-export-params -c /etc/foreman-installer/scenarios.d/foreman.yaml -f html | sed 's/installer-options/all-installer-options/' > ../../../manuals/$FOREMAN_VERSION/3.2.2_installer_options-params.md
 $PROGRAM rmi $TAG
