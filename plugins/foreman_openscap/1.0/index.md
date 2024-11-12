@@ -186,7 +186,7 @@ __Creating default SCAP content__
 
 * Install smart_proxy_openscap on one (or more) of your proxies
 * Refresh features of that proxy (so it will register with OpenSCAP feature on the Foreman)
-* from terminal run `foreman-rake foreman_openscap:bulk_upload:default`
+* from terminal run `hammer scap-content bulk-upload --type default`
 
 This will search for scap-security-guide SCAP contents and create SCAP content on the Foreman.
 
