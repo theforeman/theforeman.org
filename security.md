@@ -1193,7 +1193,7 @@ Key management is changing at the time of writing to cycle nightly keys every tw
         <td>79AA D6C6 E922 580D BC7B  F46A 0959 620C CBE5 0FBE</td>
         <td>Foreman Automatic Signing Key (3.8)</td>
         <td style='white-space:nowrap'>2023-08-22</td>
-        <td style='white-space:nowrap'>2023-08-21</td>
+        <td style='white-space:nowrap'>2024-08-21</td>
         <td style='white-space:nowrap'></td>
         <td></td>
       </tr>
@@ -1220,7 +1220,7 @@ Key management is changing at the time of writing to cycle nightly keys every tw
         <td>CD41 E7A8 7E35 3C3A 26F8  91D2 4E70 8246 1790 A6E6</td>
         <td>Foreman Automatic Signing Key (3.11)</td>
         <td style='white-space:nowrap'>2024-05-20</td>
-        <td style='white-space:nowrap'>2024-05-19</td>
+        <td style='white-space:nowrap'>2025-05-19</td>
         <td style='white-space:nowrap'></td>
         <td></td>
       </tr>
