@@ -12,7 +12,7 @@ blogger_id: tag:blogger.com,1999:blog-6789674575954398874.post-63871063210440455
 blogger_orig_url: /2012/01/creating-new-host-using-foreman-api.html
 ---
 
-Using [foreman API](http://theforeman.org/projects/foreman/wiki/API) is
+Using [foreman API](https://projects.theforeman.org/projects/foreman/wiki/API) is
 fairly simple, in here I'll show an example using curl.
 
 Using this simple script, you could automate your VM/Bare metal
@@ -32,7 +32,7 @@ given hostgroup, or simply override certain default attributes ( such as
 memory size, or host operation system etc).
 
 Best way to figure out the additional attributes (besides
-[RTFM](http://theforeman.org/projects/foreman/wiki/API)) is simply to
+[RTFM](https://projects.theforeman.org/projects/foreman/wiki/API)) is simply to
 look at foreman log during the creation POST command.
 
 a typical response from foreman, would include the ipaddress (that

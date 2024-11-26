@@ -38,9 +38,9 @@ order to provision a new instance in EC2.
 
 -   You should be using a recent version of foreman, either directly
     from
-    [git](http://theforeman.org/projects/foreman/wiki/Installing_latest_code),
+    [git](https://projects.theforeman.org/projects/foreman/wiki/Installing_latest_code),
     or using the nightly, see for git instruction, or use the
-    [debian](http://theforeman.org/projects/foreman/wiki/Installing_latest_code),[redhat
+    [debian](https://projects.theforeman.org/projects/foreman/wiki/Installing_latest_code),[redhat
     or fedora](http://people.redhat.com/jmontleo/foreman/)
     nightly packages.
 -   Have a working foreman server, this should include operating

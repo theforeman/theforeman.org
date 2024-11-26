@@ -31,7 +31,7 @@ To install, simply run:
             --json                       JSON output
             --yaml                       YAML output
             --status                     Foreman status
-            --custom COLLECTION          Custom COLLECTION string, see: http://theforeman.org/projects/foreman/wiki/API
+            --custom COLLECTION          Custom COLLECTION string, see: https://projects.theforeman.org/projects/foreman/wiki/API
             --architectures [filter]     Retreive a list of architectures
             --common_parameters [filter] Retreive a list of common_parameters
             --config_templates [filter]  Retreive a list of config_templates
@@ -72,7 +72,7 @@ To install, simply run:
          FILTERS:
 
          Please see:
-         http://theforeman.org/projects/foreman/wiki/Search_API
+         https://projects.theforeman.org/projects/foreman/wiki/Search_API
 
          Examples:
          --hosts "domain = domain.com AND class = squid"

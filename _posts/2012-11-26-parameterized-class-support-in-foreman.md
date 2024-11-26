@@ -18,4 +18,4 @@ use:
 
   
 You can find the mentioned wiki page
-at [wiki:Parameterized\_class\_support](http://theforeman.org/projects/foreman/wiki/Parameterized_class_support)
+at [wiki:Parameterized\_class\_support](https://projects.theforeman.org/projects/foreman/wiki/Parameterized_class_support)
