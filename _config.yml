@@ -71,7 +71,7 @@ navigation:
       - title: Blog
         url: /blog/index.html
       - title: Events
-        url: https://theforeman.org/events
+        url: https://community.theforeman.org/c/events/l/calendar
       - title: Community Demos
         url: /demos/
       - title: Videos
