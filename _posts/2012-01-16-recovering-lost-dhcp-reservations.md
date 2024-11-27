@@ -15,7 +15,7 @@ Someone asked me today on IRC how to recover his dhcp reservations, as
 he was using foreman to create those, and his dhcp server died.
 
 Since we are slow on delivering
-[ \#944](http://theforeman.org/issues/944), here is a short snippet that
+[ \#944](https://projects.theforeman.org/issues/944), here is a short snippet that
 would get the job done.
 
 <!--more-->
