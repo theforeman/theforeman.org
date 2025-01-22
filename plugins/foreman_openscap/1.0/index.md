@@ -126,7 +126,7 @@ Edit ```/etc/foreman-proxy/settings.d/openscap.yml``` with the appropriate setti
 
 Workflow with Puppet and Ansible is similar. In the first step, you install appropriate package and import module or role which takes care of the client deployment. Foreman overrides parameters/variables for port, server and policies behind the scenes to make sure appropriate configuration is available to the client. When configuration is applied to host, foreman_scap_client is installed, client config is written to ```/etc/foreman_scap_client/config.yaml``` and a cron that will upload reports based on configuration of each policy is created.
 
-It is important to make sure the *foreman_scap_client* package is available on your client system. The package is included in the [Foreman client repository](https://yum.theforeman.org/client/3.13/el9/x86_64/).
+It is important to make sure the *rubygem-foreman_scap_client* package is available on your client system. The package is included in the [Foreman client repository](https://yum.theforeman.org/client/3.13/el9/x86_64/).
 
 ### 2.3.1 Puppet
 
