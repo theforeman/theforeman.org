@@ -128,8 +128,6 @@ Workflow with Puppet and Ansible is similar. In the first step, you install appr
 
 It is important to make sure the *foreman_scap_client* package is available on your client system. The package is included in the [Foreman client repository](https://yum.theforeman.org/client/3.13/el9/x86_64/).
 
-Do not enable the Foreman plugins repository on client systems. It is intended for Foreman server components. You can optionally enable the repo using the appropriate parameters/variables. It is disabled by default as users may prefer to use their own mirror.
-
 ### 2.3.1 Puppet
 
 Recommended way is to install the packaged version from our repositories using the installer:
