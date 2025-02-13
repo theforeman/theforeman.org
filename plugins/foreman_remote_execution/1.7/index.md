@@ -116,7 +116,7 @@ manual](/manuals/latest/index.html#3.InstallingForeman) for more information.
 You can install both the Foreman and Smart Proxy plugin with the installer:
 
     foreman-installer --enable-foreman-plugin-remote-execution\
-                      --enable-foreman-proxy-plugin-remote-execution-ssh
+                      --enable-foreman-proxy-plugin-remote-execution-script
 
 The installer will automatically configure an SSH key for you, or you may use an existing see.
 See `foreman-installer --help` for more information.
