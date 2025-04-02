@@ -27,17 +27,17 @@ There is a tool called [Forklift](https://github.com/theforeman/forklift) that c
 
 There are couple of installation profiles available, namely:
 
-* centos7-katello-devel: Git clones of foreman, remote execution and katello plugins and all required backend systems running on CentOS 7.
-* centos7-luna-devel: Git clones of foreman and all plugins which are shipped as Red Hat Satellite product running on CentOS 7.
-* centos7-foreman-nightly: Installation of nightly build of Foreman from RPM packages running on CentOS Linux 7. This can be used for evaluation or pilot installation. You can substitute `centos7` with `centos8`, `centos8-stream`, `debian10` or `ubuntu1804` to get another base OS. Similarly, `nightly` can be replaced by `2.4` or any other supported version. Instead of `foreman`, `katello` can also be used.
+* centos9-stream-katello-devel: Git clones of foreman, remote execution and katello plugins and all required backend systems running on CentOS Stream 9.
+* centos9-stream-luna-devel: Git clones of foreman and all plugins which are shipped as Red Hat Satellite product running on CentOS Stream 9.
+* centos9-stream-foreman-nightly: Installation of nightly build of Foreman from RPM packages running on CentOS Stream 9. This can be used for evaluation or pilot installation. You can substitute `centos9-stream` with `centos10-stream` or any tag from files in [forklift/vagrant/boxes.d](https://github.com/theforeman/forklift/tree/master/vagrant/boxes.d). Similarly, `nightly` can be replaced by `2.4` or any other supported version. Instead of `foreman`, `katello` can also be used.
 
 Follow instructions from the Forklift github repository README, in short it is as easy as:
 
 ```
 host# git clone https://github.com/theforeman/forklift.git
 host# cd forklift
-host# vagrant up --provision centos7-katello-devel
-host# vagrant ssh centos7-katello-devel
+host# vagrant up --provision centos9-stream-katello-devel
+host# vagrant ssh centos9-stream-katello-devel
 ```
 
 The last command connects as user `vagrant` with sudo permissions, then start foreman as usual:
@@ -49,7 +49,7 @@ npm install
 bundle exec foreman start
 ```
 
-Although you will see a message from Rails (Puma web server) about listening on port `5000`, there is an Apache httpd listening on 443 configured under virtual host named `VAGRANT_NAME.HOSTNAME.example.com` (e.g. for `myserver` host it is `centos7-katello-devel.myserver.example.com`). In order to connect from browser, a DNS or `/etc/hosts` entry will be required.
+Although you will see a message from Rails (Puma web server) about listening on port `5000`, there is an Apache httpd listening on 443 configured under virtual host named `VAGRANT_NAME.HOSTNAME.example.com` (e.g. for `myserver` host it is `centos9-stream-katello-devel.myserver.example.com`). In order to connect from browser, a DNS or `/etc/hosts` entry will be required.
 
 Sign in as admin with password `changeme`. See the following instructions on how to change admin's password if you forget it.
 
@@ -97,10 +97,14 @@ In general, any Ruby version supported by Rails version required by Foreman will
 
 The Rails version is found by opening the [Gemfile](https://github.com/theforeman/foreman/blob/develop/Gemfile) and searching for `gem 'rails'` line. Then find out which Ruby versions are supported for that particular Ruby on Rails version. Another, perhaps faster way, is to visit our [Jenkins CI server](http://ci.theforeman.org/view/Foreman%20pipeline/job/test_develop) to see matrix of supported versions. Then pick any version from that list.
 
-Instructions for Fedora, CentOS 8, CentOS 8 Stream or Red Hat Enterprise Linux 8:
+Instructions for Enterprise Linux (Almalinux, CentOS Stream, Red Hat Enterprise Linux, Rocky Linux) 9:
 
 ```
-dnf module enable ruby:2.7
+# (OPTIONAL) Change Ruby module version before installing
+dnf module enable ruby:3.3
+# (OPTIONAL) Switch Ruby module version if packages are already installed
+dnf module switch-to ruby:3.3
+# Install ruby packages
 dnf install ruby ruby-devel
 ```
 
@@ -108,37 +112,37 @@ dnf install ruby ruby-devel
 
 In general, the latest stable Node.js should work. However if you are just starting out, you might want to develop against one of the versions that we test against to reduce the chances of you hitting an unexpected issue, although this is not required.
 
-You can view our [Github Actions configuration](https://github.com/theforeman/foreman/blob/develop/.github/workflows/js_tests.yml) to see supported NodeJS versions. Any version from that list will do. For populating the node_modules folder, npm version 4 or later is required. Alternatively, [yarn](https://yarnpkg.com) can also be used.
+You can view our [package.json configuration](https://github.com/theforeman/foreman/blob/develop/package.json) to see supported NodeJS versions. Any version from that list will do. For populating the node_modules folder, npm version 6 or later is required.
 
-Instructions for Fedora, CentOS 8, CentOS 8 Stream or Red Hat Enterprise Linux:
+Instructions for Enterprise Linux 9:
 
 ```
-dnf module enable nodejs:14
+# (OPTIONAL) Change Ruby module version before installing
+dnf module enable nodejs:18
+# (OPTIONAL) Switch Ruby module version if packages are already installed
+dnf module switch-to nodejs:18
+# Install Node.js
 dnf install nodejs
 ```
 
 #### Supported PostgreSQL versions
 
-In general, the latest version of PostgreSQL will work. Minimum version is currently 10, anything newer than that will do the job.
+In general, the latest version of PostgreSQL will work. Minimum version is currently 13, anything newer than that will do the job.
 
-Instructions for Fedora, CentOS 8, CentOS 8 Stream or Red Hat Enterprise Linux:
+Instructions for Enterprise Linux 9:
 
 ```
-dnf module enable postgresql:12
+# (OPTIONAL) Change Ruby module version before installing
+dnf module enable postgresql:18
+# (OPTIONAL) Switch Ruby module version if packages are already installed
+dnf module enable postgresql:18
+# Install PostgreSQL
 dnf install postgresql-server
 ```
 
-#### Libraries and database
+##### Database setup
 
-Some Ruby libraries (rubygems) require development tools (compilers, make), libraries and header files and Chrome driver to be present on the host. Instructions for Fedora, CentOS 8, CentOS 8 Stream or Red Hat Enterprise Linux:
-
-```
-dnf groupinstall "Development Tools"
-dnf install libvirt-devel postgresql-devel openssl-devel libxml2-devel sqlite-devel libxslt-devel zlib-devel readline-devel systemd-devel libcurl-devel krb5-devel
-dnf install chromedriver
-```
-
-Foreman requires PostgreSQL, even for development. SQLite is no longer supported and will not work. Instructions for Fedora, CentOS 8, CentOS 8 Stream or Red Hat Enterprise Linux:
+Instructions for Enterprise Linux 9:
 
 ```
 postgresql-setup --initdb
@@ -162,11 +166,34 @@ sudo -u postgres createdb foreman
 sudo -u postgres createdb foreman-test
 ```
 
+#### Libraries
+
+Some Ruby libraries (rubygems) require development tools (compilers, make), libraries and header files and Chrome driver to be present on the host.
+
+Instructions for Enterprise Linux 9:
+
+```
+# Enable CRB (RHEL)
+subscription-manager repos --enable codeready-builder-for-rhel-9-$(arch)-rpms
+# Enable CRB (Almalinux, CentOS Stream, Rocky Linux)
+dnf install dnf-plugins-core
+dnf config-manager --set-enabled crb
+# Install tools
+dnf groupinstall "Development Tools"
+dnf install libvirt-devel postgresql-devel openssl-devel libxml2-devel \
+  sqlite-devel libxslt-devel zlib-devel readline-devel systemd-devel libcurl-devel krb5-devel
+# Enable EPEL
+dnf install epel-release
+# Install ChromeDriver
+dnf install chromedriver
+```
+
 #### Configure Foreman
 
 In the Foreman git repository, create and review necessary configuration files. If you named the databases "foreman" and "foreman-test" then no change is actually needed, but we do recommend to review configuration files because a change will be necessary depending on what you are planning to work on:
 
 ```
+cd foreman
 cp config/settings.yaml.example config/settings.yaml
 cp config/database.yml.example config/database.yml
 ```
@@ -174,7 +201,7 @@ cp config/database.yml.example config/database.yml
 Install the required Ruby gems. If you encounter a compilation error during rubygems installation, you are probably missing either development tools or library or headers. See above.
 
 ```
-bundle config set --local path vendor/
+bundle config set --local path .vendor/
 bundle install
 ```
 
@@ -190,9 +217,9 @@ Install the required Javascript modules:
 npm install
 ```
 
-You can delete at any point `vendor/ruby` or `npm_modules` directories if you run into some issues and reinstall all libraries from scratch.
+You can delete at any point `.vendor/ruby` or `npm_modules` directories if you run into some issues and reinstall all libraries from scratch.
 
-To run integration tests, it's best to install the **chromedriver** package from your distribution as it comes with compatible chromium headless browser. See the previous section for instructions on how to do this for Fedora and Red Hat compatible distributions. If you don't do this, npm will install chromedriver that might be not compatible with your Chrome or Chromium browser which can lead to error "Chrome version must be between XX and YY."
+To run integration tests, it's best to install the **chromedriver** package from your distribution as it comes with compatible chromium headless browser. See the previous section for instructions on how to do this for Fedora and Red Hat compatible distributions. If you don't do this, npm will install a chromedriver version that might be not compatible with your Chrome or Chromium browser which can lead to error "Chrome version must be between XX and YY."
 
 When using the system chromedriver, set the correct path to it via a variable. For Fedora that would be: `TESTDRIVER_PATH=/usr/bin/chromedriver`.
 
@@ -210,15 +237,22 @@ Create database tables and seed the initial data. New administrator password, in
 * SEED_ORGANIZATION
 * SEED_LOCATION
 
+Choose an environment from `config/environments` to set RAILS_ENV:
+
+* development: the default environment that you will normally use
+* production
+* test: only intended to run tests (that can randomly wipe the DB)
+
 ```
-bundle exec rake db:migrate
-SEED_ADMIN_PASSWORD=changeme bundle exec rake db:seed
+RAILS_ENV=development bundle exec rake db:create
+RAILS_ENV=development bundle exec rake db:migrate
+RAILS_ENV=development bundle exec rake db:seed SEED_ADMIN_PASSWORD=changeme
 ```
 
 The seed process will print a random admin password that you need to remember or copy. If you want to set your own admin password:
 
 ```
-bundle exec rake permissions:reset password=changeme
+RAILS_ENV=development bundle exec rake permissions:reset password=changeme
 ```
 
 #### Start up Foreman
@@ -226,23 +260,23 @@ bundle exec rake permissions:reset password=changeme
 Start the Ruby on Rails and Webpack application servers:
 
 ```
-bundle exec foreman start
+RAILS_ENV=development bundle exec foreman start
 ```
 
-Navigate to `https://centos7-katello-devel.$HOSTNAME.example.com` and login as `admin` with the password from the db:seed step earlier.
+Navigate to `https://centos9-stream-katello-devel.$HOSTNAME.example.com` and login as `admin` with the password from the db:seed step earlier.
 
 #### Running tests
 
 To run the whole test suite:
 
 ```
-bundle exec bin/rake test
+RAILS_ENV=test bundle exec bin/rake test
 ```
 
 To run a single test:
 
 ```
-bundle exec bin/rake test TEST=test/functional/your_test.rb
+RAILS_ENV=test bundle exec bin/rake test TEST=test/functional/your_test.rb
 ```
 
 Once done, stop any background processes with `bundle exec spring stop` ([more info](/handbook.html#UsingtheSpringpreloaderindevelopment))
