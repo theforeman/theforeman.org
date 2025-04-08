@@ -41,7 +41,7 @@ There are couple of installation profiles available, namely:
   This can be used for evaluation or pilot installation.
 
 You can substitute `centos9-stream` with `centos10-stream` or any tag from files in [forklift/vagrant/boxes.d](https://github.com/theforeman/forklift/tree/master/vagrant/boxes.d).
-Similarly, `nightly` can be replaced by `2.4` or any other supported version.
+Similarly, `nightly` can be replaced by `3.17` or any other supported version.
 Instead of `foreman`, `katello` can also be used.
 
 Follow instructions from the Forklift github repository README, in short it is as easy as:
@@ -117,15 +117,15 @@ However, if you are just starting out, you might want to develop against one of 
 
 The Rails version is found by opening the [Gemfile](https://github.com/theforeman/foreman/blob/develop/Gemfile) and searching for `gem 'rails'` line.
 Then find out which Ruby versions are supported for that particular Ruby on Rails version.
-Another, perhaps faster way, is to visit our [Jenkins CI server](http://ci.theforeman.org/view/Foreman%20pipeline/job/test_develop) to see matrix of supported versions.
-Then pick any version from that list.
+Another, perhaps faster way, is to visit [matrix.json in Foreman repository](https://github.com/theforeman/foreman/blob/develop/.github/matrix.json) to see a matrix of versions used in tests.
 
 Instructions for Enterprise Linux (Almalinux, CentOS Stream, Red Hat Enterprise Linux, Rocky Linux) 9:
 
 ```
-# (OPTIONAL) Change Ruby module version before installing
+# EL9 default is Ruby 3.0, which is fine
+# (OPTIONAL) For testing/development it is possible to change Ruby module version to an *unsupported* version before installing
 dnf module enable ruby:3.3
-# (OPTIONAL) Switch Ruby module version if packages are already installed
+# (OPTIONAL) Or switch Ruby module to an *unsupported* version if packages are already installed
 dnf module switch-to ruby:3.3
 # Install ruby packages
 dnf install ruby ruby-devel
@@ -138,17 +138,17 @@ However if you are just starting out, you might want to develop against one of t
 
 You can view our [package.json configuration](https://github.com/theforeman/foreman/blob/develop/package.json) to see supported NodeJS versions.
 Any version from that list will do.
-For populating the node_modules folder, npm version 6 or later is required.
+For populating the node_modules folder, npm version 8 or later is required.
 
 Instructions for Enterprise Linux 9:
 
 ```
-# (OPTIONAL) Change Ruby module version before installing
-dnf module enable nodejs:18
-# (OPTIONAL) Switch Ruby module version if packages are already installed
-dnf module switch-to nodejs:18
-# Install Node.js
+# EL9 default is Node.js 16, that is not supported
+# Change Node.js module version before installing
+dnf module enable nodejs:22
 dnf install nodejs
+# Or switch Node.js module version if packages are already installed
+dnf module switch-to nodejs:22
 ```
 
 #### Supported PostgreSQL versions
@@ -159,9 +159,10 @@ Minimum version is currently 13, anything newer than that will do the job.
 Instructions for Enterprise Linux 9:
 
 ```
-# (OPTIONAL) Change Ruby module version before installing
+# EL9 default is PostgreSQL 13, which is fine
+# (OPTIONAL) Change PostgreSQL module version before installing
 dnf module enable postgresql:18
-# (OPTIONAL) Switch Ruby module version if packages are already installed
+# (OPTIONAL) Or switch PostgreSQL module version if packages are already installed
 dnf module enable postgresql:18
 # Install PostgreSQL
 dnf install postgresql-server
