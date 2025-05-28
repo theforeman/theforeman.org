@@ -404,6 +404,22 @@ git push origin develop
 
 Now follow step 4 to the end from above.
 
+#### Labelling pull requests for QA
+If your PR makes a change that would cause a Robottelo (not unit) test to fail, add the following comment to the PR:
+
+{% highlight bash %}
+/label breaks-robottelo
+{% endhighlight %}
+
+Changes that can cause Robottelo tests to fail include changes that break interface in a way that a user would notice or changes that affect parts of the WebUI used to navigate our automated tests. For example:
+
+* id, classname or ouia id changes, especially (but not only) on interactable items like links and buttons
+* WebUI DOM change (including package updates leading to it)
+* API changes (endpoint gets removed, parameters change, return value/type changes)
+* adding or adjusting required flags for CLI procedures
+
+Adding the comment marks your PR with the `breaks-robottelo` label. The label helps QA with early detection of changes that would break tests in Robottelo.
+
 ### Projects / mentoring
 Please see [this page](/mentoring.html) for details on our current projects.
 
