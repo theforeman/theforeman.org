@@ -149,10 +149,14 @@ We use eslint to enforce linting rules. Run eslint by typing `npm run lint` in t
 * Use exporting/importing values from/to modules to manage dependencies.
 * Try to reuse components from Patternfly as much as possible 
 * Use specific css selectors to avoid conflicts with other plugins or the core.
+* Write tests in React Testing Library for simple component tests, and write [system tests](https://guides.rubyonrails.org/testing.html#system-testing) using Capybara for more complex scenarios.
+* Use hooks where possible instead of redux
+
 
 #### Don't
 * Pollute the global namespace. If, for some reason, you must expose a function/value globally, use the ```window.tfm``` object as implemented in ```bundle.js```.
 * Remove global functions from existing code without deprecating them first. Deprecation can be done by calling the `tfm.tools.deprecate` function.
+* Use snapshot testing or any Enzyme tests
 
 #### Shared modules
 
@@ -264,9 +268,12 @@ If there is conflict, point to this handbook for reference.
 - All string extractions follows our rules.
 - Commit message follows the [format](Commit messages)
 - Code follows the style rules mentioned above
-- New Javascript files are added to config/environments/production.rb if not in app.js
-- No new "stylesheet" tags are added to views, they're already in app.css
-- If the function is used in other places, check other places for compatibility
+- If the function is used in other places, check other places for compatibility. [Foreman plugin list](https://theforeman.github.io/foreman-plugin-overview/#foreman). Searching in Github's theforeman and katello orgs helps with this, [search query example](https://github.com/search?q=org%3Atheforeman+OR+org%3Akatello+component_to_remove&type=code)
+- All tests are passing
+- Packages added/updated have a packaging PR
+- Tests are added/changed
+- No developer console errors or warnings while testing the changes
+- If the PR updates a snapshot from a test, either read the whole updated snapshot to make sure the update is correct, or request React Testing Libray tests, or Capybara tests to replace the snapshot test
 
 #### Labels
 
