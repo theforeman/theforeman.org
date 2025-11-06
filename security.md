@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](https://cve.mitre.org/).
 
+* [CVE-2025-10622: OS command injection via ct_location and fcct_location parameters](security.html#2025-10622)
 * [CVE-2024-7923: Authentication bypass in Pulpcore](security.html#2024-7923)
 * [CVE-2024-7012: Authentication bypass in Foreman](security.html#2024-7012)
 * [CVE-2023-4886: World readable tomcat server.xml contains passwords](security.html#2023-4886)
@@ -117,6 +118,21 @@ without unsetting all headers coming from a possibly malicious client.
 * Affects Foreman 2.2.0 and higher
 * Fix released in Foreman 3.10.1, 3.11.2, 3.12.0
 * GitHub PR [puppet-foreman#1181](https://github.com/theforeman/puppet-foreman/pull/1181)
+
+#### <a id="2025-10622"></a>CVE-2025-10622: OS command injection via ct_location and fcct_location parameters
+
+A command injection vulnerability was found in Foreman. Although a whitelist for CoreOS Transpiler Command
+and Fedora CoreOS Transpiler Command is implemented, the whitelist is only enforced on the client-side
+and is not validated on the server-side. This allows an authenticated user with `edit_settings` permissions
+to modify the `ct_location` and `fcct_location` parameters to achieve arbitrary command execution on the
+underlying operating system and bypass safe mode rendering.
+
+By default, only Foreman super administrators can access settings.
+
+* Affects Foreman 3.12.0 and higher
+* Fix released in Foreman 3.16.1, 3.15.1
+* Redmine issue [#38885](https://projects.theforeman.org/issues/38885)
+* GitHub PR [#10750](https://github.com/theforeman/foreman/pull/10750)
 
 #### <a id="2023-4886"></a>CVE-2023-4886: World readable tomcat server.xml contains passwords
 
