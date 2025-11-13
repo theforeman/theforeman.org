@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
 require 'tmpdir'
 require 'git'
 require 'optparse'
