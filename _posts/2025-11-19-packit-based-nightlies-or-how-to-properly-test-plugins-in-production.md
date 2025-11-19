@@ -18,7 +18,7 @@ The downside is that you don't get the absolute latest changes to try out.
 For a while now, we had [Packit](https://packit.dev) available for GitHub Pull Requests, which meant you could get an [RPM with the changes from a PR](https://community.theforeman.org/t/packit-for-foreman-get-production-rpms-from-prs/32412) and install that on a regular nightly setup.
 Those builds are only kept for 60 days and easily get out-of-date once the PR is merged, which means they are great to test that explicit change, but not suitable for full integration testing of all components.
 
-Enter the [`@theoreman/develop` COPR](https://copr.fedorainfracloud.org/coprs/g/theforeman/develop/)!
+Enter the [`@theforeman/develop` COPR](https://copr.fedorainfracloud.org/coprs/g/theforeman/develop/)!
 This is a new COPR repository we offer, [built by Packit](https://community.theforeman.org/t/rfc-packit-based-nightlies-for-everyone/44268), that contains builds of every single commit made to the main branches of our git repositories.
 
 There is no testing or verification of the contents in this COPR.
