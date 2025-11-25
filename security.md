@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](https://cve.mitre.org/).
 
+* [CVE-2025-9572: Information disclosure via GraphQL resolver taxonomy scoping bypass](security.html#2025-9572)
 * [CVE-2025-10622: OS command injection via ct_location and fcct_location parameters](security.html#2025-10622)
 * [CVE-2024-7923: Authentication bypass in Pulpcore](security.html#2024-7923)
 * [CVE-2024-7012: Authentication bypass in Foreman](security.html#2024-7012)
@@ -92,6 +93,16 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2025-9572"></a>CVE-2025-9572: Information disclosure via GraphQL resolver taxonomy scoping bypass
+
+A vulnerability was found in Foreman where the GraphQL resolver implementation does not apply taxonomy scoping filters.
+This allows authenticated users to view location and organizational structure data beyond their authorized scope.
+
+* Affects Foreman 1.22.0 and higher
+* Fix released in Foreman 3.16.2, 3.17.0
+* Redmine issue [#38913](https://projects.theforeman.org/issues/38913)
+* GitHub PR [#10779](https://github.com/theforeman/foreman/pull/10779), [#10778](https://github.com/theforeman/foreman/pull/10778), [#10780](https://github.com/theforeman/foreman/pull/10780)
 
 #### <a id="2024-7923"></a>CVE-2024-7923: Authentication bypass in Pulpcore
 
