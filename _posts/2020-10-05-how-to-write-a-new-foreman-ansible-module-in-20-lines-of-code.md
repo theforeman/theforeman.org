@@ -111,6 +111,7 @@ To write a test, just drop a new playbook into `tests/test_playbooks/` called `<
 
 For the HTTP Proxy module, the tasks file looks like this:
 
+{% raw %}
 ```yaml
 ---
 - name: "Create/Update/Delete HTTP Proxy"
@@ -136,6 +137,7 @@ For the HTTP Proxy module, the tasks file looks like this:
   when: expected_change is defined
 ...
 ```
+{% endraw %}
 
 In this task file, there are two tasks. The first one calls the `http_proxy` module, passing in the connection information and the module-specific parameters, most of which have `default(omit)` specified, which means these parameters won't be passed to the module if the variable isn't set -- super useful when you need to test the module with different sets of parameters. And the second one that ensures that the module reported the `changed` attribute correctly.
 
