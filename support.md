@@ -23,10 +23,12 @@ There are also a few extra medium-specific guidelines, listed with each type of 
 
 ### Reporting Violations
 
-Should you need to speak with someone about another Foreman member's behaviour,
-email *Greg Sutcliffe* (greg at emeraldreverie.org, male) and/or *Ori Rabin*
-(orabin at redhat.com, female).  We'll do our best to listen to your issue fairly
-and take appropriate action.
+If you need to raise a concern about the behaviour of a Foreman community member, please contact one of the following community conduct contacts:
+**Aneta Petrova (Red Hat, Female), 
+Dirk Götz (NETWAYS, Male), 
+Marek Hulan (Red Hat, Male)**
+
+We'll do our best to listen to your issue fairly and take appropriate action.
 
 ## Gathering information
 
