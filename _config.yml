@@ -14,7 +14,7 @@ foreman_version: '3.17'
 # Latest releases
 foreman_latest_releases:
   - minmaj: '3.17'
-    patch: '0'
+    patch: '1'
   - minmaj: '3.16'
     patch: '2'
 
