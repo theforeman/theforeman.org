@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](https://cve.mitre.org/).
 
+* [CVE-2026-1961: Remote Code Execution via command injection in WebSocket proxy](security.html#2026-1961)
 * [CVE-2025-10622: OS command injection via ct_location and fcct_location parameters](security.html#2025-10622)
 * [CVE-2025-9572: Information disclosure via GraphQL resolver taxonomy scoping bypass](security.html#2025-9572)
 * [CVE-2024-7923: Authentication bypass in Pulpcore](security.html#2024-7923)
@@ -93,6 +94,15 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2026-1961"></a>CVE-2026-1961: Remote Code Execution via command injection in WebSocket proxy
+
+A command injection vulnerability was found in Foreman's WebSocket proxy implementation. The vulnerability occurs when constructing shell commands using unsanitized hostname values from compute resource providers (VMware vSphere, Libvirt, etc.). An attacker operating a malicious compute resource server can achieve remote code execution on the Foreman server when an administrator accesses VM console functionality.
+
+* Affects Foreman up to and including 3.18.0
+* Fix released in Foreman 3.18.1, 3.17.2, 3.16.3
+* Redmine issue [#39121](https://projects.theforeman.org/issues/39121)
+* GitHub PR [10921](https://github.com/theforeman/foreman/pull/10921)
 
 #### <a id="2025-10622"></a>CVE-2025-10622: OS command injection via ct_location and fcct_location parameters
 
