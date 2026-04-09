@@ -26,3 +26,4 @@ The list is in alphabetical order.
 * [Sixt SE](https://www.sixt.com)
 * [ThinkIT Data Solutions](http://thinkitdata.com/)
 * [Tipsport.net](https://www.tipsport.cz)
+* [Volkswagen AG](https://www.volkswagen-group.com/)
