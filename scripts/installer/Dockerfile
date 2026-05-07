@@ -1,6 +1,6 @@
 FROM quay.io/centos/centos:stream9
 
-RUN dnf -y install https://yum.puppetlabs.com/puppet8-release-el-9.noarch.rpm
+RUN dnf -y install https://yum.voxpupuli.org/openvox8-release-el-9.noarch.rpm
 
 ARG FOREMAN_VERSION
 RUN dnf -y install https://yum.theforeman.org/releases/$FOREMAN_VERSION/el9/x86_64/foreman-release.rpm
