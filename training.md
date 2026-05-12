@@ -55,9 +55,9 @@ members to use for self-study. It is designed as a two-day hands-on training
 course, and as well as the presentation below, it comes with
 [handouts][handouts], [exercises][exercises], and [solutions][solutions].
 
-[handouts]: https://github.com/NETWAYS/foreman-training/releases/download/v1.0/foreman-training-handouts.pdf
-[exercises]: https://github.com/NETWAYS/foreman-training/releases/download/v1.0/foreman-training-exercises.pdf
-[solutions]: https://github.com/NETWAYS/foreman-training/releases/download/v1.0/foreman-training-solutions.pdf
+[handouts]: https://github.com/NETWAYS/foreman-training/releases/download/v1.10/foreman-training-handouts.pdf
+[exercises]: https://github.com/NETWAYS/foreman-training/releases/download/v1.10/foreman-training-exercises.pdf
+[solutions]: https://github.com/NETWAYS/foreman-training/releases/download/v1.10/foreman-training-solutions.pdf
 
 A full-page version of the presentation can be found at
 [netways.github.io/foreman-training/][rendered]

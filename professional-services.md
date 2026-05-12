@@ -36,9 +36,9 @@ Inuits specialize in open-source consulting and host our beloved ConfigMgmtCamp.
 
 iRonin specialize in custom development for Foreman. For more information, check out their [Foreman](https://www.ironin.it/foreman-development-services.html) consulting page. You can read about iRonin's contributions to Foreman in the iRonin guest blog [iRonin in the Foreman Community](https://theforeman.org/2020/09/ironin-in-the-foreman-community.html).
 
-### Netways
+### NETWAYS
 
-Netways specialize in support and operation consulting, as well as training. For more information, check out their [Foreman](https://www.netways.de/en/automation/foreman/) consulting page. You can read about their contributions to the Foreman community in the blog post [What does Netways do with Foreman?](https://theforeman.org/2020/10/what-does-netways-do-with-foreman.html)
+NETWAYS specialize in support and operation consulting, as well as training. For more information, check out their [Foreman](https://netways.de/en/products/foreman/) consulting page. You can read about their contributions to the Foreman community in the blog post [What does NETWAYS do with Foreman?](https://theforeman.org/2020/10/what-does-netways-do-with-foreman.html)
 
 ## Products based on Foreman
 
