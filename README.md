@@ -21,18 +21,21 @@ to generate your site in the \_site directory, or
 
 To start Jekyll server locally.
 
-### With Docker
+### With Docker/Podman
 
+Build the container image:
 ```
-docker run -it --rm -v `pwd`:/srv/jekyll:Z -p 4000:4000 jekyll/jekyll jekyll serve --watch
+podman build -t theforeman-org .
 ```
 
-For Podman (rootless), install gems first (container lacks github-pages):
+Run the container:
 ```
-podman run --rm -v "$(pwd)":/srv/jekyll:Z -p 4000:4000 jekyll/jekyll bash -c "bundle install && jekyll serve --watch"
+podman run --rm -v "$(pwd)":/srv/jekyll:Z -p 4000:4000 theforeman-org
 ```
 
 Navigate to http://localhost:4000
+
+**Note:** Replace `podman` with `docker` if using Docker.
 
 ## Contributing
 
