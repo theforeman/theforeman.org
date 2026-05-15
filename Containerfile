@@ -1,8 +1,7 @@
-FROM docker.io/library/ruby:3.1-alpine
+FROM docker.io/library/ruby:3.4-alpine
 WORKDIR /srv/jekyll
 
 RUN apk add --no-cache build-base
-RUN gem install bundler
 
 COPY Gemfile ./
 RUN bundle install
