@@ -27,6 +27,11 @@ To start Jekyll server locally.
 docker run -it --rm -v `pwd`:/srv/jekyll:Z -p 4000:4000 jekyll/jekyll jekyll serve --watch
 ```
 
+For Podman (rootless), install gems first (container lacks github-pages):
+```
+podman run --rm -v "$(pwd)":/srv/jekyll:Z -p 4000:4000 jekyll/jekyll bash -c "bundle install && jekyll serve --watch"
+```
+
 Navigate to http://localhost:4000
 
 ## Contributing
