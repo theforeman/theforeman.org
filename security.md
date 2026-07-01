@@ -15,6 +15,10 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](https://cve.mitre.org/).
 
+* [CVE-2026-5136: Privilege escalation via usergroup role assignment manipulation](security.html#2026-5136)
+* [CVE-2026-5142: Cross-tenant private SSH key disclosure via taxonomy scoping bypass](security.html#2026-5142)
+* [CVE-2026-5135: Unauthorized modification of host configurations via broken access control](security.html#2026-5135)
+* [CVE-2026-5138: Information disclosure via improper validation of nested request parameters](security.html#2026-5138)
 * [CVE-2026-1961: Remote Code Execution via command injection in WebSocket proxy](security.html#2026-1961)
 * [CVE-2025-10622: OS command injection via ct_location and fcct_location parameters](security.html#2025-10622)
 * [CVE-2025-9572: Information disclosure via GraphQL resolver taxonomy scoping bypass](security.html#2025-9572)
@@ -94,6 +98,42 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2026-5136"></a>CVE-2026-5136: Privilege escalation via usergroup role assignment manipulation
+
+A privilege escalation vulnerability was found in Foreman's usergroup management. The Usergroup model does not validate whether the calling user is permitted to assign the specified roles, unlike the User model which enforces `ensure_roles_not_escalated`. A user with `create_usergroups` or `edit_usergroups` permission can attach arbitrary roles (including "System admin") to a usergroup via the API, add themselves as a member, and inherit those elevated privileges.
+
+* Affects all Foreman versions
+* Fix released in Foreman 3.18.2, 3.19.1
+* Redmine issue [#39478](https://projects.theforeman.org/issues/39478)
+* GitHub PR [#11066](https://github.com/theforeman/foreman/pull/11066)
+
+#### <a id="2026-5142"></a>CVE-2026-5142: Cross-tenant private SSH key disclosure via taxonomy scoping bypass
+
+A broken access control vulnerability was found in Foreman's `KeyPairsController#show` action. The `show` action is excluded from the `find_compute_resource` callback that enforces taxonomy scoping on all other key pair actions. This allows an authenticated user with the `view_keypairs` permission (included in the built-in Viewer role) to download the full PEM private key of any compute resource by database ID, bypassing organization and location boundaries.
+
+* Affects all Foreman versions since 1.15.0
+* Fix released in Foreman 3.18.2, 3.19.1
+* Redmine issue [#39479](https://projects.theforeman.org/issues/39479)
+* GitHub PR [#11069](https://github.com/theforeman/foreman/pull/11069)
+
+#### <a id="2026-5135"></a>CVE-2026-5135: Unauthorized modification of host configurations via broken access control
+
+A broken access control vulnerability was found in Foreman's handling of lookup value overrides. When lookup values are submitted as nested attributes during host or hostgroup updates, the `match` field is permitted and applied without ownership validation. A user with host-edit rights can retarget an existing lookup value override to point at a different host, injecting configuration values into hosts they are not authorized to edit. The injected values are served by the ENC/classification pipeline.
+
+* Affects all Foreman versions
+* Fix released in Foreman 3.18.2, 3.19.1
+* Redmine issue [#39480](https://projects.theforeman.org/issues/39480)
+* GitHub PR [#11072](https://github.com/theforeman/foreman/pull/11072)
+
+#### <a id="2026-5138"></a>CVE-2026-5138: Information disclosure via improper validation of nested request parameters
+
+An information disclosure vulnerability was found in Foreman's `taxonomy_scope` controller method. The method loads organization and location IDs from nested request parameters via `find_by_id` without checking the user's taxonomy membership, overriding the validated context set by `set_taxonomy`. An authenticated user with host-edit permissions can supply a foreign organization ID in nested parameters to scope AJAX queries to a tenant they do not belong to, leaking infrastructure metadata such as domains, subnets, and IP availability across organization boundaries.
+
+* Affects all Foreman versions since 1.7.0
+* Fix released in Foreman 3.18.2, 3.19.1
+* Redmine issue [#39481](https://projects.theforeman.org/issues/39481)
+* GitHub PR [#11075](https://github.com/theforeman/foreman/pull/11075)
 
 #### <a id="2026-1961"></a>CVE-2026-1961: Remote Code Execution via command injection in WebSocket proxy
 
