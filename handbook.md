@@ -56,6 +56,14 @@ All pull requests need to have an associated issue in the Foreman [issue tracker
 Foreman's [PR processor](http://projects.theforeman.org/projects/foreman/wiki/PrProcessor) will parse all pull requests, assign labels, and run tests for all major projects.
 Pull requests are always *rebased* on top of the develop branch so that the git log stays linear.
 
+### Artificial intelligence
+
+AI-assisted contributions are welcome and reviewed to the same standards as any other contribution. AI assistance does not replace testing, documentation, or review. Use it to lower the barrier to high-quality contributions, not to generate volume.
+
+The contributor is accountable for every line submitted and must understand and be able to explain it. "The AI wrote it" is not an explanation. Substantial AI assistance is expected to be disclosed using an Assisted-By: <tool> or Co-Authored-By: <tool> commit trailer (see [Commit messages](#commit-messages)).
+
+Reusable context files, skills, agents, and guardrails should be contributed to [foreman-ai-harness](https://github.com/theforeman/foreman-ai-harness) using the same community practices as other project assets. Prefer open, tool-independent formats (Markdown, YAML). Organisation-specific tooling does not need to be contributed.
+
 ### Commit messages
 
 Provide a brief description of the change in the first line (50 chars or less), including a issue number.
@@ -98,6 +106,8 @@ changes to the API were not necessary.
 * More tips for writing better commit messages can be found [here](http://chris.beams.io/posts/git-commit/).
 * By adding 'Refs #<issue number>' PR processor will auto add the commit to an existing issue. Usually an already closed issue, or just to add some code to a existing issue with another PR open.
 * Only use "refs" when when adding to a commit that has not already shipped. If it has shipped in a release already, please file a new issue and use "fixes".
+
+**AI assistance disclosure:** For substantial AI assistance, add a `Co-Authored-By: <tool>` or an `Assisted-By: <tool>` trailer to the commit message. Trivial assistance such as autocomplete or isolated wording suggestions does not need to be disclosed.
 
 ### Ruby
 We follow the [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide) and the [Rails Style Guide](https://github.com/bbatsov/rails-style-guide). We use Rubocop (in Jenkins) to enforce most of these rules. New projects such as plugins should enforce all Rubocop rules and disabling them should be done under a very specific circumstances.
@@ -238,6 +248,8 @@ Feel free to bring the attention of reviewers by calling them using '@' on GitHu
 
 Remember the old saying, you are not your code. Reviewers will be consistent with style and good practice, and it's important to know you're not being criticised personally when that happens.
 
+Regardless of how a change was produced, the pull request author is responsible for the complete contribution. Be prepared to explain the reasoning behind the implementation and any part of the submitted change.
+
 ### Reviewers
 
 #### How to become a reviewer
@@ -258,6 +270,8 @@ Back up your reviews by facts when they are not obvious or when contributors mig
 
 Use '@' to raise the attention of the contributor about any issue. If an user is not 'watching' the project on GitHub or is not subscribed to a particular issue, GitHub will not show notifications nor send emails to that user.
 
+Review the contribution, not the tool used to produce it. Apply the same quality bar and checklist to AI-assisted and non-AI-assisted contributions alike — AI assistance is neither grounds for rejection nor a shortcut past review.
+
 If there is conflict, point to this handbook for reference.
 
 #### Checklist
@@ -274,6 +288,7 @@ If there is conflict, point to this handbook for reference.
 - Tests are added/changed
 - No developer console errors or warnings while testing the changes
 - If the PR updates a snapshot from a test, either read the whole updated snapshot to make sure the update is correct, or request React Testing Libray tests, or Capybara tests to replace the snapshot test
+- The implementation and its reasoning are understandable, and the contributor can explain why the change works.
 
 #### Labels
 
@@ -361,6 +376,7 @@ Special thanks to Chromium, Mozilla, V8, FreeBSD and Apache Hive for providing t
  * Do not merge your own commits unless the other committers in the group accept this behavior (usual in small plugins)
  * Do not merge commits blindly. If you do not fully understand a pull request, ask existing committers to take a look
  * Do not merge if the build is failing. Wait until tests are green to merge.
+ * AI assistance does not change your responsibility for code that you merge.
 
 ## API usability and versioning
 
