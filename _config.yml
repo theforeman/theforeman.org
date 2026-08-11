@@ -87,6 +87,7 @@ plugins:
 
 foreman_versions:
   - nightly
+  - "5.0"
   - "3.19"
   - "3.18"
   - "3.17"
