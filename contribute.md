@@ -351,7 +351,7 @@ bundle install
 By default, smart-proxy does not listen on any port and SSL is not configured, so uncomment the `http_port` configuration value:
 
 ```
-grep http_port config/settings.yaml
+grep http_port config/settings.yml
 :http_port: 8000
 ```
 
@@ -360,7 +360,7 @@ This depends on how your system connects to the proxy (IPv4 or IPv6) and also on
 The following list of trusted entries should do the trick:
 
 ```
-grep -A10 trusted_hosts config/settings.yaml
+grep -A10 trusted_hosts config/settings.yml
 :trusted_hosts:
 - localhost
 - localhost4
