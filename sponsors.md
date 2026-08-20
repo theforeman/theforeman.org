@@ -23,7 +23,7 @@ Thank you to JetBrains, who provide licenses for Rubymine/IntelliJ IDE.
 
 ### ATIX
 
-<div class="lead text-left"><a href="https://www.atix.de"><img src="/static/images/sponsors/atix.png" height="125px"/></a></div>
+<div class="lead text-left"><a href="https://www.atix.de"><img src="/static/images/sponsors/atix.svg" height="125px"/></a></div>
 Thank you to ATIX, for their many ongoing contributions to the codebase.
 
 ### dm
