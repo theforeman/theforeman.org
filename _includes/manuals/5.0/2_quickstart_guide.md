@@ -8,9 +8,10 @@ The installation will require 4GB of memory, see [System Requirements](manuals/{
 #### Supported platforms
 
 * Enterprise Linux 9, x86_64
-* Debian 11 (Bullseye), amd64
 * Debian 12 (Bookworm), amd64
+* Debian 13 (Trixie), amd64
 * Ubuntu 22.04 (Jammy), amd64
+* Ubuntu 24.04 (Noble), amd64
 
 #### Enterprise Linux
 
