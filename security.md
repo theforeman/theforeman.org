@@ -15,6 +15,7 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](https://cve.mitre.org/).
 
+* [CVE-2026-79654: Katello: missing content view authorization in history API exposes cross-organization existence](security.html#2026-79654)
 * [CVE-2026-12515: Katello: missing repository authorization in content_uploads exposes cross-product content existence](security.html#2026-12515)
 * [CVE-2026-5136: Privilege escalation via usergroup role assignment manipulation](security.html#2026-5136)
 * [CVE-2026-5142: Cross-tenant private SSH key disclosure via taxonomy scoping bypass](security.html#2026-5142)
@@ -99,6 +100,15 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2026-79654"></a>CVE-2026-79654: Katello: missing content view authorization in history API exposes cross-organization existence
+
+In Katello, a content view history API-endpoint where insufficient authorization checks in the ContentViewHistoriesController allowed users to query content information for content views outside the organization the user was authorized for. An authenticated attacker could exploit this issue to determine whether specific content exists within content views that should otherwise be inaccessible. This issue does not allow unauthorized modification, import, or publication of content.
+
+* Affects all Katello versions at or above version 2.4.0.
+* Fix to be released in Katello 5.1.
+* Redmine issue: [#39701](https://projects.theforeman.org/issues/39701)
+* GitHub PR [#11847](https://github.com/Katello/katello/pull/11847)
 
 #### <a id="2026-12515"></a>CVE-2026-12515: Katello: missing repository authorization in content_uploads exposes cross-product content existence
 
