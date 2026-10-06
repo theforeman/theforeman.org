@@ -16,6 +16,17 @@ The policy of the project is to treat all newly reported issues as private, and 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](https://cve.mitre.org/).
 
 * [CVE-2026-79654: Katello: missing content view authorization in history API exposes cross-organization existence](security.html#2026-79654)
+* [CVE-2026-12405: Foreman Remote Execution: command injection via effective_user](security.html#2026-12405)
+* [CVE-2026-12423: Foreman: provisioning token validation flaw](security.html#2026-12423)
+* [CVE-2026-12540: Foreman: command injection in foreman-rake errors:fetch_log](security.html#2026-12540)
+* [CVE-2026-12541: Foreman: command injection in foreman-rake database tasks](security.html#2026-12541)
+* [CVE-2026-12542: Foreman: command injection in foreman-tail](security.html#2026-12542)
+* [CVE-2026-12544: Foreman: SSTI and unsafe deserialization in foreman-rake configuration](security.html#2026-12544)
+* [CVE-2026-12545: Hammer CLI: editor command injection](security.html#2026-12545)
+* [CVE-2026-56097: Katello: SQL injection in Registry Proxy labels](security.html#2026-56097)
+* [CVE-2026-56098: Katello: Registry Proxy authorization bypass](security.html#2026-56098)
+* [CVE-2026-96658: Foreman: Safemode bypass leading to RCE](security.html#2026-96658)
+* [CVE-2026-96659: Foreman: excessive Viewer permissions on preview](security.html#2026-96659)
 * [CVE-2026-12515: Katello: missing repository authorization in content_uploads exposes cross-product content existence](security.html#2026-12515)
 * [CVE-2026-5136: Privilege escalation via usergroup role assignment manipulation](security.html#2026-5136)
 * [CVE-2026-5142: Cross-tenant private SSH key disclosure via taxonomy scoping bypass](security.html#2026-5142)
@@ -109,6 +120,152 @@ In Katello, a content view history API-endpoint where insufficient authorization
 * Fix to be released in Katello 5.1.
 * Redmine issue: [#39701](https://projects.theforeman.org/issues/39701)
 * GitHub PR [#11847](https://github.com/Katello/katello/pull/11847)
+
+#### <a id="2026-12405"></a>CVE-2026-12405: Foreman Remote Execution: command injection via effective_user
+
+An authenticated user with permission to execute job templates can inject
+commands through the overridable `effective_user` parameter during job
+invocation. Improper input handling allows command execution with the
+execution user's privileges on managed hosts.
+
+* Affects Foreman Remote Execution 0.1.2–16.6.5, 16.7.0, 17.0.0–17.2.1, and 18.0.0
+* CVSS: 8.8, `CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H`; vendor severity: Important
+* CWE: CWE-78
+* Fix released in Foreman Remote Execution 18.0.1, 17.2.2, and 16.6.6
+* Redmine issue: [#39836](https://projects.theforeman.org/issues/39836)
+* GitHub PR [1072](https://github.com/theforeman/foreman_remote_execution/pull/1072)
+
+#### <a id="2026-12423"></a>CVE-2026-12423: Foreman: provisioning token validation flaw
+
+An unauthenticated request can reach build-host provisioning through an IP/MAC
+fallback when no valid provisioning token is supplied. The fallback is
+reachable in token-enabled Red Hat-family provisioning configurations and can
+expose provisioning data.
+
+* Affects Foreman 1.1 through 3.19.1, and 5.0.0
+* CVSS: 7.5, `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N`; vendor severity: Important
+* CWE: CWE-306
+* Fix released in Foreman 3.19.2 and 5.0.1
+* Redmine issue: [#39837](https://projects.theforeman.org/issues/39837)
+* GitHub PR [11310](https://github.com/theforeman/foreman/pull/11310)
+
+#### <a id="2026-12540"></a>CVE-2026-12540: Foreman: command injection in foreman-rake errors:fetch_log
+
+A user allowed to run the restricted `foreman-rake` log task can cause command
+execution through its request identifier parameter. Unsafe shell handling can
+compromise the Foreman server.
+
+* Affects Foreman 2.2.0 through 3.19.1, and 5.0.0
+* CVSS: 8.2, `CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H`; vendor severity: Important
+* CWE: CWE-78
+* Fix released in Foreman 3.19.2 and 5.0.1
+* Redmine issue: [#39838](https://projects.theforeman.org/issues/39838)
+* GitHub PR [11310](https://github.com/theforeman/foreman/pull/11310)
+
+#### <a id="2026-12541"></a>CVE-2026-12541: Foreman: command injection in foreman-rake database tasks
+
+A user allowed to run restricted `foreman-rake` database tasks can cause
+command execution through file path parameters. Unsafe shell handling can
+compromise the Foreman server and its database.
+
+* Affects Foreman 1.5.0 through 3.19.1, and 5.0.0
+* CVSS: 8.2, `CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H`; vendor severity: Important
+* CWE: CWE-78
+* Fix released in Foreman 3.19.2 and 5.0.1
+* Redmine issue: [#39839](https://projects.theforeman.org/issues/39839)
+* GitHub PR [11310](https://github.com/theforeman/foreman/pull/11310)
+
+#### <a id="2026-12542"></a>CVE-2026-12542: Foreman: command injection in foreman-tail
+
+A local user with access to `foreman-tail` can inject commands because user
+input is evaluated unsafely. Successful exploitation allows arbitrary command
+execution on the Foreman server.
+
+* Affects Foreman 1.5.0 through 3.19.1, and 5.0.0
+* CVSS: 5.3, `CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L`; vendor severity: Moderate
+* CWE: CWE-78
+* Fix released in Foreman 3.19.2 and 5.0.1
+* Redmine issue: [#39840](https://projects.theforeman.org/issues/39840)
+* GitHub PR [11310](https://github.com/theforeman/foreman/pull/11310)
+
+#### <a id="2026-12544"></a>CVE-2026-12544: Foreman: SSTI and unsafe deserialization in foreman-rake configuration
+
+An attacker who can influence Foreman configuration can trigger server-side
+template evaluation or unsafe deserialization during `foreman-rake` startup,
+leading to code execution in a privileged service context.
+
+* Affects Foreman 1.0 through 3.19.1, and 5.0.0; the ERB execution path starts
+  at 1.15.0
+* CVSS: 7.7, `CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:H`; vendor severity: Important
+* CWE: CWE-502
+* Fix released in Foreman 3.19.2 and 5.0.1
+* Redmine issue: [#39841](https://projects.theforeman.org/issues/39841)
+* GitHub PR [11310](https://github.com/theforeman/foreman/pull/11310)
+
+#### <a id="2026-12545"></a>CVE-2026-12545: Hammer CLI: editor command injection
+
+A local attacker who can influence Hammer CLI's editor configuration can cause
+commands to execute when a user invokes the affected editor flow. If Hammer CLI
+runs with elevated privileges, this can result in privilege escalation.
+
+* Affects Hammer CLI 0.15.1 through 3.19.0, and 5.0.0
+* CVSS: 6.7, `CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H`; vendor severity: Moderate
+* CWE: CWE-78
+* Fix released in Hammer CLI 5.0.1 and 3.19.1
+* Redmine issue: [#39842](https://projects.theforeman.org/issues/39842)
+* GitHub PR [407](https://github.com/theforeman/hammer-cli/pull/407)
+
+#### <a id="2026-56097"></a>CVE-2026-56097: Katello: SQL injection in Registry Proxy labels
+
+An authenticated low-privilege user can inject SQL through Katello Registry
+Proxy label parameters because input is interpolated into database queries
+without sufficient sanitization. This can expose data across authorization
+boundaries.
+
+* Affects Katello 4.13.0 through 4.21.1.1, and 5.0.0
+* CVSS: 6.5, `CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N`; vendor severity: Moderate
+* CWE: CWE-89
+* Fix released in Katello 5.0.1 and 4.21.2; master contains the fix
+* Redmine issue: [#39843](https://projects.theforeman.org/issues/39843)
+* GitHub PR [11887](https://github.com/Katello/katello/pull/11887)
+
+#### <a id="2026-56098"></a>CVE-2026-56098: Katello: Registry Proxy authorization bypass
+
+An authenticated low-privilege user can bypass Registry Proxy authorization
+checks and enumerate organizations and products through response differences.
+
+* Affects Katello 4.13.0 through 4.21.1.1, and 5.0.0
+* CVSS: 4.3, `CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N`; vendor severity: Moderate
+* CWE: CWE-203
+* Fix released in Katello 5.0.1 and 4.21.2; master contains the fix
+* Redmine issue: [#39844](https://projects.theforeman.org/issues/39844)
+* GitHub PR [11887](https://github.com/Katello/katello/pull/11887)
+
+#### <a id="2026-96658"></a>CVE-2026-96658: Foreman: Safemode bypass leading to RCE
+
+A low-privilege user permitted to render supplied template content can bypass
+Foreman's Safemode restrictions and reach Ruby code execution with Foreman
+service privileges.
+
+* Affects Foreman releases bundling Safemode before 2.0.1, including Foreman 3.19.0, 3.19.1, and 5.0.0
+* CVSS: 9.9, `CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H`; vendor severity: Critical
+* CWE: CWE-94
+* Fix released in Foreman 3.19.2 and 5.0.1; verify Safemode 2.0.1 or later is installed
+* Redmine issue: [#39845](https://projects.theforeman.org/issues/39845)
+* GitHub PR [68](https://github.com/theforeman/safemode/pull/68) and dependency update [69](https://github.com/theforeman/safemode/pull/69)
+
+#### <a id="2026-96659"></a>CVE-2026-96659: Foreman: excessive Viewer permissions on preview
+
+The Viewer role can access data through template preview beyond intended
+authorization boundaries. In configurations where Safemode is disabled or
+bypassed, this can lead to code execution as the Foreman service account.
+
+* Affects Foreman 1.9.0 through 3.19.1, and 5.0.0
+* CVSS: 9.1, `CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L`; vendor severity: Important
+* CWE: CWE-267
+* Fix released in Foreman 3.19.2 and 5.0.1
+* Redmine issue: [#39846](https://projects.theforeman.org/issues/39846)
+* GitHub PR [11310](https://github.com/theforeman/foreman/pull/11310)
 
 #### <a id="2026-12515"></a>CVE-2026-12515: Katello: missing repository authorization in content_uploads exposes cross-product content existence
 
