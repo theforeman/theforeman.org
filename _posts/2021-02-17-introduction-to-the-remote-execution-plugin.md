@@ -34,7 +34,7 @@ existing Foreman instance with the Remote Execution, run the following:
 
 ```
 foreman-installer --enable-foreman-plugin-remote-execution \
-              --enable-foreman-proxy-plugin-remote-execution-ssh
+              --enable-foreman-proxy-plugin-remote-execution-script
 ```
 
 If you plan to use CLI commands, you must install a plugin for that, so you can use REX CLI commands by
