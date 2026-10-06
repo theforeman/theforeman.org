@@ -1,0 +1,35 @@
+name: Deployment
+
+concurrency:
+  group: production
+
+on:
+  push:
+    branches:
+      - gh-pages
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3'
+          bundler-cache: true
+      - name: Build website
+        run: bundle exec rake build
+      - name: Set up SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+      - name: Create a log file
+        run: echo "rsync_log=$(mktemp)" >> "$GITHUB_ENV"
+      - name: Copy files
+        run: rsync --log-file "${rsync_log}" --log-file-format 'CHANGED %f' --archive --checksum --verbose --one-file-system --compress --stats --delete-after ./_site/ ${{ secrets.DEPLOY_TARGET }}
+      - name: Purge CDN
+        run: awk '/ CHANGED /{print $5}' "${rsync_log}" | xargs --no-run-if-empty fastly-purge 'https://theforeman.org/'
