@@ -1,4 +1,6 @@
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
+# Run with: bundle exec --gemfile=scripts/Gemfile ruby ./committers.rb TAG_FROM TAG_TO
+# Or from scripts directory: bundle exec ./committers.rb TAG_FROM TAG_TO
 require 'tmpdir'
 require 'git'
 require 'optparse'
