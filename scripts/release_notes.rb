@@ -88,7 +88,7 @@ grouped_issues.each do |category, issues|
   puts
 end
 
-puts "*A full list of changes in #{@current_release_name} is available via [Redmine](https://projects.theforeman.org/issues?set_filter=1&sort=id%3Adesc&status_id=closed&f[]=cf_12&op[cf_12]=%3D&v[cf_12]=#{@current_release_id})*"
+puts "*A full list of changes in #{@current_release_name} is available via [Redmine](https://projects.theforeman.org/issues?set_filter=1&sort=id%3Adesc&status_id=closed&f[]=cf_12&op[cf_12]=%3D&v[cf_12][]=#{@current_release_id})*"
 
 puts "\n----------[End of notes]----------\n"
 
