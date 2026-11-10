@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 763" width="720" height="763" role="img" aria-labelledby="t d">
+<title id="t">Your GL650 lab: seven machines</title>
+<desc id="d">Each student gets seven machines. On the lab network (example.com): an IdM server (Enterprise Linux 9), a registered host (Enterprise Linux 10), an upgrade host for Leapp 9 to 10 (Enterprise Linux 9), the Satellite server (Foreman and Katello, Enterprise Linux 9, 20 GB RAM, 4 CPU) and a Capsule server (Enterprise Linux 9, 12 GB RAM, 4 CPU). The Satellite server serves DHCP and TFTP on the isolated satellite network, 192.168.50.0/24, where a blank system network boots as a provisioning target. The Capsule serves DHCP, TFTP and DNS on the isolated capsule network, 192.168.60.0/24, where a blank system is the KVM compute resource.</desc>
+<defs><filter id="lift" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#003C60" flood-opacity="0.10"/></filter></defs>
+<text x="30" y="34" font-family="'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace" font-size="15" font-weight="700" fill="#003C60" text-anchor="start">lab network</text>
+<text x="690" y="34" font-family="'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace" font-size="15" font-weight="400" fill="#707070" text-anchor="end">example.com</text>
+<path d="M30 64L690 64" stroke="#003C60" stroke-width="4" stroke-linecap="round"/>
+<path d="M133.0 64L133.0 100" stroke="#003C60" stroke-width="3" stroke-linecap="round"/>
+<g filter="url(#lift)"><rect x="30" y="100" width="206" height="140" rx="10" fill="#fff" stroke="#E5E7EB"/></g>
+<rect x="30" y="100" width="206" height="5" rx="2.5" fill="#003C60"/>
+<text x="48" y="132" font-family="'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#003C60" text-anchor="start" letter-spacing="0.08em">IDENTITY</text>
+<text x="48" y="160" font-family="'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#003C60" text-anchor="start">IdM server</text>
+<text x="48" y="190" font-family="'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#404041" text-anchor="start">Enterprise Linux 9</text>
+<text x="48" y="215" font-family="'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace" font-size="16" font-weight="400" fill="#707070" text-anchor="start">4 GB RAM · 2 CPU</text>
+<path d="M360.0 64L360.0 100" stroke="#003C60" stroke-width="3" stroke-linecap="round"/>
+<g filter="url(#lift)"><rect x="257" y="100" width="206" height="140" rx="10" fill="#fff" stroke="#E5E7EB"/></g>
+<rect x="257" y="100" width="206" height="5" rx="2.5" fill="#003C60"/>
+<text x="275" y="132" font-family="'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#003C60" text-anchor="start" letter-spacing="0.08em">HOST</text>
+<text x="275" y="160" font-family="'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#003C60" text-anchor="start">Registered host</text>
+<text x="275" y="190" font-family="'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#404041" text-anchor="start">Enterprise Linux 10</text>
+<text x="275" y="215" font-family="'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace" font-size="16" font-weight="400" fill="#707070" text-anchor="start">4 GB RAM · 2 CPU</text>
+<path d="M587.0 64L587.0 100" stroke="#003C60" stroke-width="3" stroke-linecap="round"/>
+<g filter="url(#lift)"><rect x="484" y="100" width="206" height="140" rx="10" fill="#fff" stroke="#E5E7EB"/></g>
+<rect x="484" y="100" width="206" height="5" rx="2.5" fill="#003C60"/>
+<text x="502" y="132" font-family="'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#003C60" text-anchor="start" letter-spacing="0.08em">UPGRADE</text>
+<text x="502" y="160" font-family="'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#003C60" text-anchor="start">Leapp 9 → 10</text>
+<text x="502" y="190" font-family="'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#404041" text-anchor="start">Enterprise Linux 9</text>
+<text x="502" y="215" font-family="'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace" font-size="16" font-weight="400" fill="#707070" text-anchor="start">4 GB RAM · 2 CPU</text>
+<path d="M246.5 64V270H286V300" fill="none" stroke="#003C60" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M473.5 64V270H434V300" fill="none" stroke="#003C60" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<g filter="url(#lift)"><rect x="30" y="300" width="316" height="170" rx="10" fill="#fff" stroke="#E5E7EB"/></g>
+<rect x="30" y="300" width="316" height="5" rx="2.5" fill="#0078C1"/>
+<text x="48" y="332" font-family="'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0078C1" text-anchor="start" letter-spacing="0.08em">SATELLITE SERVER</text>
+<text x="48" y="360" font-family="'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#003C60" text-anchor="start">Foreman + Katello</text>
+<text x="48" y="390" font-family="'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#404041" text-anchor="start">Enterprise Linux 9</text>
+<text x="48" y="415" font-family="'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace" font-size="16" font-weight="400" fill="#707070" text-anchor="start">20 GB RAM · 4 CPU</text>
+<text x="48" y="440" font-family="'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#404041" text-anchor="start">DHCP, TFTP for its network</text>
+<g filter="url(#lift)"><rect x="374" y="300" width="316" height="170" rx="10" fill="#fff" stroke="#E5E7EB"/></g>
+<rect x="374" y="300" width="316" height="5" rx="2.5" fill="#7EB132"/>
+<text x="392" y="332" font-family="'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#4F7A1C" text-anchor="start" letter-spacing="0.08em">CAPSULE SERVER</text>
+<text x="392" y="360" font-family="'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#003C60" text-anchor="start">Capsule</text>
+<text x="392" y="390" font-family="'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#404041" text-anchor="start">Enterprise Linux 9</text>
+<text x="392" y="415" font-family="'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace" font-size="16" font-weight="400" fill="#707070" text-anchor="start">12 GB RAM · 4 CPU</text>
+<text x="392" y="440" font-family="'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#404041" text-anchor="start">DHCP, TFTP, DNS for its network</text>
+<path d="M188.0 470L188.0 514" stroke="#0078C1" stroke-width="3" stroke-linecap="round"/>
+<path d="M30 514L346 514" stroke="#0078C1" stroke-width="4" stroke-linecap="round"/>
+<text x="30" y="542" font-family="'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace" font-size="14" font-weight="700" fill="#0078C1" text-anchor="start">satellite network</text>
+<text x="346" y="542" font-family="'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace" font-size="14" font-weight="400" fill="#0078C1" text-anchor="end">192.168.50.0/24</text>
+<path d="M188.0 514L188.0 526" stroke="#0078C1" stroke-width="3" stroke-linecap="round"/>
+<path d="M188.0 554V578" stroke="#0078C1" stroke-width="3" stroke-linecap="round"/>
+<path d="M532.0 470L532.0 514" stroke="#7EB132" stroke-width="3" stroke-linecap="round"/>
+<path d="M374 514L690 514" stroke="#7EB132" stroke-width="4" stroke-linecap="round"/>
+<text x="374" y="542" font-family="'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace" font-size="14" font-weight="700" fill="#4F7A1C" text-anchor="start">capsule network</text>
+<text x="690" y="542" font-family="'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace" font-size="14" font-weight="400" fill="#4F7A1C" text-anchor="end">192.168.60.0/24</text>
+<path d="M532.0 514L532.0 526" stroke="#7EB132" stroke-width="3" stroke-linecap="round"/>
+<path d="M532.0 554V578" stroke="#7EB132" stroke-width="3" stroke-linecap="round"/>
+<g filter="url(#lift)"><rect x="30" y="578" width="316" height="145" rx="10" fill="#fff" stroke="#E5E7EB"/></g>
+<rect x="30" y="578" width="316" height="5" rx="2.5" fill="#0078C1"/>
+<text x="48" y="610" font-family="'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0078C1" text-anchor="start" letter-spacing="0.08em">PROVISIONING TARGET</text>
+<text x="48" y="638" font-family="'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#003C60" text-anchor="start">Blank system</text>
+<text x="48" y="668" font-family="'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#404041" text-anchor="start">network boot, satellite network only</text>
+<text x="48" y="693" font-family="'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace" font-size="16" font-weight="400" fill="#707070" text-anchor="start">4 GB RAM · 2 CPU</text>
+<g filter="url(#lift)"><rect x="374" y="578" width="316" height="145" rx="10" fill="#fff" stroke="#E5E7EB"/></g>
+<rect x="374" y="578" width="316" height="5" rx="2.5" fill="#7EB132"/>
+<text x="392" y="610" font-family="'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#4F7A1C" text-anchor="start" letter-spacing="0.08em">COMPUTE RESOURCE</text>
+<text x="392" y="638" font-family="'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#003C60" text-anchor="start">KVM host</text>
+<text x="392" y="668" font-family="'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#404041" text-anchor="start">blank system</text>
+<text x="392" y="693" font-family="'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace" font-size="16" font-weight="400" fill="#707070" text-anchor="start">4 GB RAM · 2 CPU</text>
+<text x="30" y="745" font-family="'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#707070" text-anchor="start">Both provisioning networks are isolated.</text>
+</svg>

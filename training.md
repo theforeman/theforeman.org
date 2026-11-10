@@ -8,7 +8,11 @@ title: Training Materials
 This page lists the materials available for those wishing to study/practice working
 with Foreman, as an alternative style to reading the manual.
 
+<hr/>
+
 ## Adfinis SyGroup Training Course
+
+<p class="text-muted small">OPEN MATERIALS &middot; SLIDES, EXERCISES AND DEMOS</p>
 
 This [training][adfinis-slides] by [Adfinis SyGroup][adfinis] gives a basic
 overview of Foreman and its concepts. It covers the installation, configuration
@@ -22,7 +26,11 @@ more than welcome!
 [adfinis-slides]: https://docs.adfinis-sygroup.ch/public/trainings/#training-Foreman
 [adfinis-github]: https://github.com/adfinis-sygroup/adsy-trainings
 
+<hr/>
+
 ## betadots Training Course
+
+<p class="text-muted small">3 DAYS &middot; GERMAN &middot; INSTRUCTOR-LED &middot; OPEN MATERIALS</p>
 
 The [training][betadots-training] by [betadots][betadots] is designed as a three-day
 hands-on training in German language. It covers topics from the initial installation
@@ -36,18 +44,35 @@ Heinlein Academy in Berlin regularly. Also remote trainings are available as dir
 [betadots-training]: https://github.com/betadots/foreman-training
 [betadots-schedule]: https://www.betadots.de/training
 
+<hr/>
+
 ## Guru Labs Training Course
 
-The [GL650 - FOREMAN/KATELLO ADMINISTRATION][GL650] is a 4-day instructor led course that provides comprehensive hands on coverage all the of the major features of a Foreman+Katello deployment starting from best practices in installation and initial configuration, managing subscriptions, products and repositories, content views, lifecycles, activation keys, system registration of existing system, bare metal and virtualization provisioning including discovery, provisioning templates, configuration management with Puppet and Ansible, IdM integration, smart proxies/capsule servers, virt-who, and subscription management.
+<p class="text-muted small">5 DAYS &middot; INSTRUCTOR-LED &middot; ONLINE, IN PERSON OR ONSITE</p>
 
-The class is [regularly scheduled][schedule] and offered on-line, in person, or onsite. Each student gets their own 6 node classroom environment to perform their in-depth lab exercises that mirror real world scenarios.
+The [GL650 - FOREMAN/KATELLO ADMINISTRATION][GL650] is a 5-day instructor-led course on Foreman 3.18 and Katello 4.20, the releases behind Red Hat Satellite 6.19, with EL10 managed hosts. Its 31 hands-on labs cover installation and tuning, foreman-maintain and backups, organizations, locations and RBAC, content management (Simple Content Access, sync plans, alternate content sources, lifecycle environments, composite and rolling content views, multiple content view environments per host, errata and incremental updates, container and bootable container images), global registration, remote execution over SSH and pull mode, job templates and webhooks, configuration management with Ansible, IdM integration for realm enrollment and DNS, provisioning with PXE, UEFI HTTP boot, Discovery, templates and host groups, image mode (bootc) hosts, Smart Proxies, Inter-Satellite Sync for disconnected sites, and Leapp upgrades from EL9 to EL10. Where Foreman/Katello and Satellite differ, the course teaches both.
 
-![online_classroom](static/images/training/online-training-classroom.png "Example Student Lab Environment"){:width="45%"} ![online_classroom_topo](static/images/training/online-training-classroom-topology.png "Lab Topology"){:width="45%"}
+The class is [regularly scheduled][schedule] and offered online, in person, or onsite. Labs run in LabConsole, the Guru Labs browser-based classroom. Each student gets seven machines on isolated networks: a Foreman/Katello server, a Smart Proxy for a remote site, an IdM server, managed hosts, and two blank machines that PXE boot from the Foreman server and the Smart Proxy. Students use each machine's console, power and network boot from the browser, and the instructor sees every student's screen live.
 
-[GL650]: https://gurulabs.com/linux-training/courses/GL650/
-[schedule]: https://gurulabs.com/linux-training/schedule/
+<div class="row">
+  <div class="col-sm-8">
+    <img src="static/images/training/gl650-labconsole-room.png" alt="A LabConsole classroom showing the seven GL650 lab machines" class="img-responsive img-thumbnail"/>
+    <p class="text-muted small">Example lab environment</p>
+  </div>
+  <div class="col-sm-4">
+    <img src="static/images/training/gl650-lab-topology.svg" alt="GL650 lab topology: seven machines on the lab, satellite and capsule networks" class="img-responsive img-thumbnail"/>
+    <p class="text-muted small">Lab topology</p>
+  </div>
+</div>
+
+[GL650]: https://gurulabs.com/training/courses/GL650/
+[schedule]: https://gurulabs.com/training/schedule/
+
+<hr/>
 
 ## NETWAYS Training Course
+
+<p class="text-muted small">2 DAYS &middot; OPEN MATERIALS &middot; SLIDES, HANDOUTS, EXERCISES AND SOLUTIONS</p>
 
 This course was developed by NETWAYS and made available to the Foreman
 community for use in developing training courses of their own, or for community
@@ -64,17 +89,13 @@ A full-page version of the presentation can be found at
 
 [rendered]: //netways.github.io/foreman-training/static
 
-<hr/>
-<div class='row'>
-  <div class='center'>
-    <iframe width="1024" height="710" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
-            style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;"
-            src="//netways.github.io/foreman-training/"
-            frameBorder="0" allowfullscreen>
-    </iframe>
+<div class="row">
+  <div class="col-sm-8 col-md-6">
+    <div class="embed-responsive embed-responsive-4by3" style="border:1px solid #CCC; margin-bottom:10px;">
+      <iframe class="embed-responsive-item" src="//netways.github.io/foreman-training/" allowfullscreen></iframe>
+    </div>
   </div>
 </div>
-<hr/>
 
 The source for this training material, along with handouts and
 excercises/solutions can be found on the [NETWAYS GitHub page][source].
