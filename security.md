@@ -15,6 +15,9 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](https://cve.mitre.org/).
 
+* [CVE-2026-86322: Personal access token authorization bypass](security.html#2026-86322)
+* [CVE-2026-86323: Mail notification authorization flaws](security.html#2026-86323)
+* [CVE-2026-86324: Unauthorized SSH key creation for another user](security.html#2026-86324)
 * [CVE-2026-79654: Katello: missing content view authorization in history API exposes cross-organization existence](security.html#2026-79654)
 * [CVE-2026-12405: Foreman Remote Execution: command injection via effective_user](security.html#2026-12405)
 * [CVE-2026-12423: Foreman: provisioning token validation flaw](security.html#2026-12423)
@@ -111,6 +114,33 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2026-86322"></a>CVE-2026-86322: Personal access token authorization bypass
+
+An authenticated user with `create_personal_access_tokens` permission could create a personal access token for another user through the user-scoped API. The token could then be used to authenticate as that user, potentially taking over an administrator account.
+
+* Severity: High (CVSS 3.1 score 8.8)
+* [CVE record](https://www.cve.org/CVERecord?id=CVE-2026-86322) and [Red Hat advisory](https://access.redhat.com/security/cve/CVE-2026-86322)
+* Redmine issue: [#40032](https://projects.theforeman.org/issues/40032)
+* Discovered by [Sandipan Roy](mailto:bytehackr@redhat.com).
+
+#### <a id="2026-86323"></a>CVE-2026-86323: Mail notification authorization flaws
+
+Insufficient authorization checks in the user-scoped mail notification API could expose another user's notification settings, including mail queries. Where write permissions applied, a user could also create or change another user's notification settings even after access was denied.
+
+* Severity: Medium (CVSS 3.1 score 4.3)
+* [CVE record](https://www.cve.org/CVERecord?id=CVE-2026-86323) and [Red Hat advisory](https://access.redhat.com/security/cve/CVE-2026-86323)
+* Redmine issue: [#40033](https://projects.theforeman.org/issues/40033)
+* Discovered by [Sandipan Roy](mailto:bytehackr@redhat.com) and [Tej Rathi](mailto:trathi@redhat.com).
+
+#### <a id="2026-86324"></a>CVE-2026-86324: Unauthorized SSH key creation for another user
+
+An authenticated user with `create_ssh_keys` permission could add their public SSH key to another user's account through the user-scoped API. The key could then be installed on hosts provisioned by that user, potentially giving the attacker SSH access to those hosts.
+
+* Severity: Medium (CVSS 3.1 score 4.3)
+* [CVE record](https://www.cve.org/CVERecord?id=CVE-2026-86324) and [Red Hat advisory](https://access.redhat.com/security/cve/CVE-2026-86324)
+* Redmine issue: [#40034](https://projects.theforeman.org/issues/40034)
+* Discovered by [Sandipan Roy](mailto:bytehackr@redhat.com) and [Tej Rathi](mailto:trathi@redhat.com).
 
 #### <a id="2026-79654"></a>CVE-2026-79654: Katello: missing content view authorization in history API exposes cross-organization existence
 
