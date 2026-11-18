@@ -15,6 +15,8 @@ The policy of the project is to treat all newly reported issues as private, and 
 
 All security advisories made for Foreman are listed below with their corresponding [CVE identifier](https://cve.mitre.org/).
 
+* [CVE-2026-107445: Katello: flatpak remote repositories api cross-organization authorization bypass](security.html#2026-107445)
+* [CVE-2026-107444: Katello: docker tags repositories api cross-organization authorization bypass](security.html#2026-107444)
 * [CVE-2026-79654: Katello: missing content view authorization in history API exposes cross-organization existence](security.html#2026-79654)
 * [CVE-2026-12405: Foreman Remote Execution: command injection via effective_user](security.html#2026-12405)
 * [CVE-2026-12423: Foreman: provisioning token validation flaw](security.html#2026-12423)
@@ -111,6 +113,28 @@ All security advisories made for Foreman are listed below with their correspondi
 * [CVE-2012-5477: world writable files in proxy](security.html#2012-5477)
 
 ### Disclosure details
+
+#### <a id="2026-107445"></a>CVE-2026-107445: Katello: flatpak remote repositories api cross-organization authorization bypass
+
+In Katello the Flatpak Remote Repositories API does not properly enforce authorization when accessing a flatpak remote repository by identifier.
+An authenticated user with permission to view flatpak remotes in one organization may be able to access flatpak remote repository information belonging to another organization.
+The same unscoped lookup is used by the mirror action, which may allow creating a repository in a product the user can edit that is configured with another organization's flatpak remote URL and stored remote credentials.
+
+* Affects all Katello versions at or above version 4.16.0.
+* Fix to be released in Katello 5.1.
+* Redmine issue: [#39920](https://projects.theforeman.org/issues/39920)
+* GitHub PR [#11921](https://github.com/Katello/katello/pull/11921)
+
+#### <a id="2026-107444"></a>CVE-2026-107444: Katello: docker tags repositories api cross-organization authorization bypass
+
+In Katello the Docker Tags repositories API does not properly enforce organization scoping when listing repositories for a Docker meta tag.
+An authenticated user with permission to view products in one organization may be able to retrieve repository metadata associated with Docker tags belonging to another organization by supplying the tag identifier.
+This can result in unauthorized disclosure of repository configuration information across organization boundaries.
+
+* Affects all Katello versions at or above version 2.4.0.
+* Fix to be released in Katello 5.1.
+* Redmine issue: [#39919](https://projects.theforeman.org/issues/39919)
+* GitHub PR [#11920](https://github.com/Katello/katello/pull/11920)
 
 #### <a id="2026-79654"></a>CVE-2026-79654: Katello: missing content view authorization in history API exposes cross-organization existence
 
