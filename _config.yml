@@ -47,7 +47,7 @@ navigation:
       - title: Manual
         url: /manuals/latest/index.html
       - title: Foreman+Katello documentation
-        url: https://docs.theforeman.org/release/nightly/
+        url: https://docs.theforeman.org
       - title: Plugins
         url: /plugins/
       - title: Foreman API docs
