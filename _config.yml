@@ -48,6 +48,8 @@ navigation:
         url: /manuals/latest/index.html
       - title: Plugins
         url: /plugins/
+      - title: Foreman Release Cycle
+        url: /release_cycle.html
       - title: Foreman API docs
         url: https://apidocs.theforeman.org/foreman/latest/apidoc/v2.html
       - title: Foreman+Katello API docs
